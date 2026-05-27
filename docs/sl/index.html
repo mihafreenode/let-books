@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Let Books Dokumentacija</title>
+    <meta name="description" content="Pregledna dokumentacija za Let Books, praktično platformo za popis, deljenje in prevzem izobraževalnih knjig.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="overview" data-locale="sl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="index.html">
+            <img class="brand-mark" src="../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Delimo znanje. Gradimo skupnost.</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link is-current" href="index.html">Pregled</a>
+            <a class="nav-link" href="posamezniki.html">Posamezniki</a>
+            <a class="nav-link" href="institucije.html">Institucije</a>
+            <a class="nav-link" href="skrbniki.html">Skrbniki</a>
+            <div class="lang-switch" aria-label="Jezikovne možnosti">
+              <a class="lang-link is-current" href="index.html" lang="sl">SL</a>
+              <a class="lang-link" href="../index.html">Vsi jeziki</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section hero">
+          <div>
+            <span class="eyebrow">Praktična dokumentacija</span>
+            <h1>Naj kakovostne knjige ne obležijo v škatlah.</h1>
+            <p class="lead">Let Books pomaga ljudem, knjižnicam in prihodnjim gostiteljskim organizacijam popisati pomembne knjige, uskladiti pregled donacij in pozneje brez ugibanja najti točno tiste izvode, ki jih nekdo želi prevzeti.</p>
+            <div class="hero-actions">
+              <a class="button-link" href="posamezniki.html">Za posameznike</a>
+              <a class="button-link secondary" href="../../static-demo/">Odpri demo</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img src="../assets/images/mock-sl-overview.png" alt="Koncept Let Books z mobilno aplikacijo in škatlo s QR-kodo">
+          </div>
+        </section>
+
+        <section class="section">
+          <article class="notice-panel" aria-labelledby="early-alpha-title-sl">
+            <h2 id="early-alpha-title-sl">Obvestilo o zgodnji alfa fazi</h2>
+            <p>Let Books je trenutno projekt v zgodnji alfa fazi in fazi preverjanja koncepta.</p>
+            <p>Besedila v dokumentaciji, makete, poteki dela, posnetki zaslona in besedilo uporabniškega vmesnika so trenutno podprti z orodji AI ter lahko vsebujejo netočnosti, začasno vsebino, nepopolne izvedbene podrobnosti ali opise možnih prihodnjih smeri.</p>
+            <p>Vse knjižnice, univerze, arhivi, nevladne organizacije, javne ustanove, podjetja, ponudniki oblaka ali zunanji sistemi, omenjeni v dokumentaciji, so navedeni izključno kot konceptualni primeri ali možne prihodnje integracijske smeri. Nobeno formalno partnerstvo, soglasje, odobritev, sponzorstvo, financiranje ali dejanska uvedba trenutno ne obstajajo, razen če je to izrecno navedeno drugje.</p>
+            <p>Sklici na organizacije, standarde, platforme ali tehnologije, vključno z javnim sektorjem, evropskimi okviri, oblačnimi storitvami ali ponudniki identitete, ne pomenijo povezanosti, podpore, certificiranja, odobritve ali odgovornosti za projekt.</p>
+            <p>Projekt je trenutno raziskovalen in eksperimentalen. Prihodnje izdaje programske opreme bodo objavljene pod licenco Apache 2.0 za javno, izobraževalno, nevladno ali institucionalno uporabo.</p>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Zakaj obstaja Let Books</h2>
+            <p>Veliko uporabnih strokovnih, študijskih in učbeniških knjig konča v kleteh, kabinetih ali garažah, čeprav bi bile lahko še vedno koristne. Let Books se osredotoča na praktični del ohranjanja: popis, pregled, izbor, prevzem in sledljivost.</p>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card">
+              <span class="icon-badge"><img src="../assets/images/icon-book.svg" alt=""></span>
+              <h3>Knjige kot resnični predmeti</h3>
+              <p>En naslov ni vedno ena knjiga. Vsak izvod ima lahko svojo lokacijo, stanje in zgodbo.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon-badge"><img src="../assets/images/icon-qr.svg" alt=""></span>
+              <h3>QR potek dela</h3>
+              <p>Skenirate škatlo, vidite njeno vsebino, dodate novo knjigo in pozneje lažje sestavite seznam za prevzem.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon-badge"><img src="../assets/images/icon-library.svg" alt=""></span>
+              <h3>Pregled, prijazen knjižnicam</h3>
+              <p>Seznam knjig lahko izvozite, institucija ga pregleda, nato pa odločitve uvozite nazaj in pripravite pick list.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Trenutno stanje</h2>
+            <p>Ta pregled jasno ločuje med javnim prototipom, ki že obstaja, in prihodnjimi arhitekturnimi ali integracijskimi smermi.</p>
+          </div>
+          <div class="status-grid">
+            <article class="status-card">
+              <span class="status-label">Na voljo zdaj</span>
+              <h3>Dokumentacijski prototip obstaja</h3>
+              <p>Na voljo je statični javni dokumentacijski prototip v angleščini in slovenščini z vsebino za različne skupine uporabnikov.</p>
+            </article>
+            <article class="status-card">
+              <span class="status-label">V nastajanju</span>
+              <h3>Prototip static-demo PWA</h3>
+              <p>Brskalniški lokalni demo se uporablja za izpopolnjevanje popisa, QR potekov, večjezičnega uporabniškega vmesnika in praktične logistike shranjevanja.</p>
+            </article>
+            <article class="status-card">
+              <span class="status-label">Še ni na voljo</span>
+              <h3>Produkcijski backend še ne obstaja</h3>
+              <p>Trenutno ni produkcijskega backenda, gostovanega večuporabniškega okolja ali dejanske institucionalne uvedbe.</p>
+            </article>
+            <article class="status-card">
+              <span class="status-label">Konceptualno</span>
+              <h3>Integracije ostajajo prihodnja smer</h3>
+              <p>Zunanji sistemi, ponudniki in interoperabilnost so opisani le kot smer razvoja in ne pomenijo partnerstva, podpore, certificiranja ali obstoječe uvedbe.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Komu je namenjen</h2>
+            <p>Platforma je namenjena tako ljudem, ki želijo podariti knjige, kot ustanovam, ki jih pregledujejo ali prevzemajo, ter skrbnikom, ki morajo postaviti pravila dostopa in zasebnosti.</p>
+          </div>
+          <div class="page-links">
+            <a href="posamezniki.html">
+              <h3>Posamezniki</h3>
+              <p>Zasebni donatorji, družine, prostovoljci in manjše organizacije, ki popisujejo svoje zbirke.</p>
+            </a>
+            <a href="institucije.html">
+              <h3>Institucije</h3>
+              <p>Najprej knjižnice, pa tudi šole, univerze, arhivi in nevladne organizacije.</p>
+            </a>
+            <a href="skrbniki.html">
+              <h3>Skrbniki</h3>
+              <p>Gostiteljske organizacije, lastniki tenantov in prihodnji operaterji sistema.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Kako poteka delo</h2>
+            <p>Prvi uporaben potek dela mora delovati tudi brez naprednih integracij in brez plačljivih AI storitev.</p>
+          </div>
+          <div class="workflow-grid">
+            <article class="workflow-step"><span class="step-number">1</span><h3>Skeniraj QR kodo škatle</h3><p>Takoj veste, v kateri škatli in na kateri lokaciji delate.</p></article>
+            <article class="workflow-step"><span class="step-number">2</span><h3>Dodajaj knjige po telefonu</h3><p>Naslovnico fotografirate, ISBN po možnosti skenirate, nato hitro shranite.</p></article>
+            <article class="workflow-step"><span class="step-number">3</span><h3>Ohrani točno lokacijo</h3><p>Soba, polica, škatla in zaporedje naj ostanejo vezani na fizični izvod.</p></article>
+            <article class="workflow-step"><span class="step-number">4</span><h3>Izvozi seznam za pregled</h3><p>Iz izbranih knjig naredite donacijsko serijo in jo izvozite v preglednico.</p></article>
+            <article class="workflow-step"><span class="step-number">5</span><h3>Uvozi odločitve</h3><p>Vračajo se statusi želeno, mogoče ali ni želeno, brez ugibanja po naslovu.</p></article>
+            <article class="workflow-step"><span class="step-number">6</span><h3>Pripravi pick list</h3><p>Zahtevane knjige se razvrstijo po dejanski lokaciji za hitrejši prevzem.</p></article>
+          </div>
+        </section>
+
+        <section class="section grid-2">
+          <div class="callout no-ai">
+            <h2>Uporabno tudi brez AI</h2>
+            <ul class="list-check">
+              <li>Ročni vnos knjig</li>
+              <li>Nalaganje fotografij</li>
+              <li>Sledenje lokacijam</li>
+              <li>Excel izvoz in uvoz</li>
+              <li>Pregled odločitev knjižnic</li>
+              <li>Pick list in statusi prevzema</li>
+            </ul>
+          </div>
+          <div class="callout future">
+            <h2>Kje AI pomaga pozneje</h2>
+            <ul class="list-check">
+              <li>OCR naslovnic in naslovnih strani</li>
+              <li>Predlogi metapodatkov</li>
+              <li>Predlogi prevodov</li>
+              <li>Predlogi stanja izvoda, ki še vedno zahtevajo človeški pregled</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Temeljna načela</h2>
+          </div>
+          <div class="grid-3">
+            <article class="card"><h3>Zasebnost naj bo privzeta</h3><p>Točna lokacija v domu ali skladišču ne sme postati javna po nesreči.</p></article>
+            <article class="card"><h3>Izvor podatkov je pomemben</h3><p>Pomembno je vedeti, ali podatek prihaja od človeka, iz OCR, iz zunanjega kataloga ali iz uvoza.</p></article>
+            <article class="card"><h3>Telefon ni stranski kanal</h3><p>Velik del dela se dogaja med škatlami in policami, zato mora biti mobilni potek dela odličen.</p></article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="quote-panel">
+            <p><strong>Primer:</strong> Družina podeduje profesorjevo knjižnico. Škatle označi z QR-kodami, knjige fotografira po policah, izvozi serijo za pregled in nato brez ponovnega odpiranja vseh škatel najde točno tiste izvode, ki jih izbere knjižnica.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Praktična platforma za popis, deljenje in prevzem izobraževalnih knjig.</p>
+            <p class="footer-note">Dogovori o predaji, prevozu in donaciji praviloma potekajo zunaj platforme, dokler jih prihodnja funkcionalnost ne opredeli drugače.</p>
+            <p class="footer-microcopy">Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="posamezniki.html">Posamezniki</a>
+              <a href="institucije.html">Institucije</a>
+              <a href="skrbniki.html">Skrbniki</a>
+              <a href="../../index.html">Domov</a>
+              <a href="../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../index.html">Vsi jeziki</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

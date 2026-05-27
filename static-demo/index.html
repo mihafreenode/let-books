@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Let Books</title>
+    <meta name="description" content="Let Books is a mobile-first installable PWA for cataloging, scanning, boxing, exporting, and moving donated books entirely in the browser.">
+    <meta name="theme-color" content="#0f5b45">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body class="app-booting">
+    <div class="boot-splash" id="boot-splash" aria-hidden="true">
+      <div class="boot-splash-mark-wrap">
+        <img class="boot-splash-mark" src="icons/app-mark.svg" alt="Let Books">
+      </div>
+      <strong class="boot-splash-title">Let Books</strong>
+      <div class="boot-splash-subtitle is-pending" id="boot-splash-subtitle"></div>
+    </div>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <img class="brand-mark" src="icons/app-mark.svg" alt="Let Books">
+          <div>
+            <strong class="brand-title">Let Books</strong>
+            <div class="brand-subtitle" id="brand-subtitle">Books, boxes, and export</div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="add-menu-wrap">
+            <button class="icon-button" id="add-menu-button" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Add">
+              <span class="icon">+</span>
+            </button>
+            <div class="add-menu" id="add-menu" hidden role="menu"></div>
+          </div>
+          <div class="language-picker">
+            <button class="language-trigger" id="language-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <img src="icons/language-globe.svg" alt="">
+              <span id="language-label">English</span>
+            </button>
+            <div class="language-menu" id="language-menu" hidden role="listbox" aria-label="Language selection"></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="demo-banner">
+        <div class="banner-copy banner-copy-compact">
+          <strong id="demo-disclaimer-title">Browser-only pilot. Data stays on this device.</strong>
+        </div>
+      </section>
+
+      <main id="app-root" class="app-main" aria-live="polite"></main>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <a href="#/dashboard" data-nav="dashboard" class="bottom-nav-link is-current">
+          <span class="bottom-nav-icon" aria-hidden="true"><img src="icons/app-mark.svg" alt=""></span>
+          <span data-i18n="nav.dashboardShort">Home</span>
+        </a>
+        <a href="#/boxes" data-nav="boxes" class="bottom-nav-link">
+          <span class="bottom-nav-icon" aria-hidden="true"><img src="icons/box.svg" alt=""></span>
+          <span data-i18n="nav.boxesShort">Boxes</span>
+        </a>
+        <a href="#/scanner" data-nav="scanner" class="bottom-nav-link bottom-nav-link-accent">
+          <span class="bottom-nav-icon" aria-hidden="true"><img src="icons/scan.svg" alt=""></span>
+          <span data-i18n="nav.scanShort">Scan</span>
+        </a>
+        <a href="#/export" data-nav="export" class="bottom-nav-link">
+          <span class="bottom-nav-icon" aria-hidden="true"><img src="icons/export.svg" alt=""></span>
+          <span data-i18n="nav.exportShort">Files</span>
+        </a>
+        <a href="#/settings" data-nav="settings" class="bottom-nav-link">
+          <span class="bottom-nav-icon" aria-hidden="true"><img src="icons/language-globe.svg" alt=""></span>
+          <span data-i18n="nav.moreShort">More</span>
+        </a>
+      </nav>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toast-root" class="toast-root" aria-live="assertive"></div>
+
+    <script src="vendor/dexie.min.js"></script>
+    <script src="vendor/html5-qrcode.min.js"></script>
+    <script src="vendor/qrcode.min.js"></script>
+    <script src="vendor/xlsx.full.min.js"></script>
+    <script src="vendor/jszip.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+  </html>

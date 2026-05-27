@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Let Books za skrbnike</title>
+    <meta name="description" content="Vodič za skrbnike in organizacije gostiteljice, ki upravljajo Let Books.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="administrators" data-locale="sl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="index.html">
+            <img class="brand-mark" src="../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Za skrbnike in organizacije gostiteljice</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="index.html">Pregled</a>
+            <a class="nav-link" href="posamezniki.html">Posamezniki</a>
+            <a class="nav-link" href="institucije.html">Institucije</a>
+            <a class="nav-link is-current" href="skrbniki.html">Skrbniki</a>
+            <div class="lang-switch" aria-label="Jezikovne možnosti">
+              <a class="lang-link is-current" href="skrbniki.html">SL</a>
+              <a class="lang-link" href="../index.html">Vsi jeziki</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section hero">
+          <div>
+            <span class="eyebrow">Vodič za skrbnike</span>
+            <h1>Dostop, zasebnost in logistika morajo biti urejeni od prvega dne.</h1>
+            <p class="lead">Let Books mora biti uporaben tako za zasebnega donatorja kot za nevladno organizacijo ali prihodnjega institucionalnega gostitelja. Skrbniki zato potrebujejo jasna pravila glede uporabnikov, tenantov, vlog, lokacij in neobvezne rabe AI.</p>
+          </div>
+          <div class="hero-visual">
+            <img src="../assets/images/mock-sl-administrators.png" alt="Koncept arhitekture Let Books za skrbnike">
+          </div>
+        </section>
+
+        <section class="section">
+          <article class="notice-inline" aria-label="Obvestilo o zgodnji alfa fazi">
+            <strong>Obvestilo o zgodnji alfa fazi.</strong>
+            <p>Primeri gostovanja in upravljanja na tej strani opisujejo predvideno smer arhitekture in pravil. Ne pomenijo certificiranih uvedb, institucionalne odgovornosti ali že delujočih okolij.</p>
+          </article>
+        </section>
+
+        <section class="section grid-2">
+          <article class="card">
+            <h2>Kaj upravljajo skrbniki</h2>
+            <ul class="list-check">
+              <li>Odobren dostop in članstva</li>
+              <li>Tenante in vloge</li>
+              <li>Lokacijsko strukturo in poteke donacij</li>
+              <li>Zasebnost in pričakovanja glede revizije</li>
+              <li>Neobvezne AI, OCR in prevajalske nastavitve</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h2>Čemu se je treba izogniti</h2>
+            <ul class="list-check">
+              <li>Dostopu, ki temelji samo na zunanji prijavi</li>
+              <li>Javni objavi natančnih skladiščnih podatkov</li>
+              <li>Obvezni uporabi plačljivih AI storitev v osnovnem poteku</li>
+              <li>Pomešanju fizičnega izvoda z zgolj bibliografskim zapisom</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Model dostopa</h2>
+            <p>Prijava lahko pride od zunanjega ponudnika identitete, vendar mora avtorizacija ostati v domeni aplikacije. Sama prijava ne pomeni pravice do vpogleda v zasebne donatorske podatke.</p>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card"><h3>Odobrene prijave</h3><p>Zlasti v zgodnjih ali zasebnih postavitvah mora biti dostop omejen na vnaprej potrjene uporabnike.</p></article>
+            <article class="feature-card"><h3>Članstva v tenantih</h3><p>En uporabnik lahko sodeluje v več tenantih in ima v vsakem drugo vlogo.</p></article>
+            <article class="feature-card"><h3>Vidnost po vlogah</h3><p>Pregledovalci ne smejo samodejno videti zasebnih opomb ali natančnih podatkov o domu donatorja.</p></article>
+          </div>
+        </section>
+
+        <section class="section grid-2">
+          <article class="callout no-ai">
+            <h2>Ključni podatkovni pojmi</h2>
+            <ul class="list-check">
+              <li><strong>Bibliografski zapis:</strong> podatki o delu ali izdaji</li>
+              <li><strong>Fizični izvod:</strong> konkretna knjiga s stanjem in lokacijo</li>
+              <li><strong>Hierarhija lokacij:</strong> soba, polica, škatla, omara, depo in podobno</li>
+              <li><strong>Donacijska serija:</strong> skupina izvodov, ki so ponujeni skupaj</li>
+            </ul>
+          </article>
+          <article class="callout future">
+            <h2>AI mora ostati možnost</h2>
+            <p>Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.</p>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Zasebnost in upravljanje</h2>
+            <p>Let Books ni samo katalog. Če je sistem nepazljiv, lahko razkrije tudi postavitev zasebnega domačega skladišča. Pravila zasebnosti morajo to upoštevati.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card"><h3>Privzeto zasebno</h3><p>Natančne lokacije, zasebne opombe in kontaktni podatki donatorjev morajo ostati omejeni.</p></article>
+            <article class="card"><h3>Revizija občutljivih dejanj</h3><p>Izvozi, uvozi, spremembe vlog in prihodnje AI zahteve morajo biti evidentirani.</p></article>
+            <article class="card"><h3>Premik ni enak statusu</h3><p>Knjiga, premaknjena v donacijsko škatlo, še ni avtomatsko predana. Fizični premik in procesni status naj ostaneta ločena.</p></article>
+          </div>
+        </section>
+
+        <section class="section grid-2">
+          <article class="card">
+            <h2>Smer postavitve sistema</h2>
+            <p>Platforma mora služiti eni zasebni postavitvi in hkrati omogočati poznejši prehod na gostovanje pri knjižnici, univerzi ali drugi instituciji. Arhitektura mora ostati odprta za samostojno ali institucionalno gostovanje.</p>
+          </article>
+          <article class="card">
+            <h2>Operativni kontrolni seznam</h2>
+            <ul class="list-check">
+              <li>Odobrite začetne uporabnike</li>
+              <li>Nastavite podprte jezike</li>
+              <li>Definirajte lokacije</li>
+              <li>Preverite izvoz in uvoz na resničnih vzorcih</li>
+              <li>Preglejte meje zasebnosti pred objavo širše ponudbe</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="quote-panel">
+            <p><strong>Primer gostovanja:</strong> Nevladna organizacija uporablja Let Books za več lokalnih donatorjev in partnerskih knjižnic. En skrbnik upravlja odobren dostop, vsak donator ima svoj tenant, pregledovalci vidijo samo z njimi deljene serije, OCR pa ostane izklopljen, dokler zanj ni pravega proračuna.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Operativna jasnost za donatorje, knjižnice in prihodnje gostitelje.</p>
+            <p class="footer-microcopy">Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="index.html">Pregled</a>
+              <a href="posamezniki.html">Posamezniki</a>
+              <a href="institucije.html">Institucije</a>
+              <a href="../../index.html">Domov</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../index.html">Vsi jeziki</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

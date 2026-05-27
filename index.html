@@ -1,108 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: #fff;
-        }
-
-        .container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 600px;
-        }
-
-        .icon {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 6px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 3px;
-            overflow: hidden;
-            margin-top: 2rem;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background-color: #fff;
-            width: 60%;
-            border-radius: 3px;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.6;
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .icon {
-                font-size: 3rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="icon">🚧</div>
-        <h1>Under Construction</h1>
-        <p>We're working hard to bring you something amazing. Check back soon!</p>
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Let Books</title>
+    <meta name="description" content="Let Books is a practical, preservation-focused project for helping educational books find new homes through mobile-first inventory, QR workflows, and community-oriented donation tools.">
+    <link rel="stylesheet" href="docs/assets/css/style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="index.html" aria-label="Let Books home">
+            <img class="brand-mark" src="docs/assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Preserving educational books with practical tools</span>
+            </span>
+          </a>
+          <nav class="header-nav" aria-label="Primary">
+            <a class="nav-link is-current" href="index.html">Home</a>
+            <a class="nav-link" href="docs/en/index.html">Documentation</a>
+            <a class="nav-link" href="static-demo/">Demo</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <a class="nav-link" href="docs/en/individuals.html">Individuals</a>
+            <a class="nav-link" href="docs/en/institutions.html">Institutions</a>
+            <a class="nav-link" href="docs/en/administrators.html">Administrators</a>
+          </nav>
         </div>
+      </header>
+
+      <main>
+        <section class="section hero">
+          <div>
+            <span class="eyebrow">Early public overview</span>
+            <h1>Helping educational books find new homes.</h1>
+            <p class="lead">Helping educational books find new homes through mobile-first inventory, QR workflows, and community-focused donation tools.</p>
+            <div class="hero-actions">
+              <a class="button-link" href="docs/en/index.html">Open Documentation</a>
+              <a class="button-link secondary" href="static-demo/">Launch Demo</a>
+            </div>
+            <div class="repo-chip-row" aria-label="Quick links">
+              <a class="repo-chip" href="docs/en/index.html"><img src="docs/assets/images/icon-book.svg" alt="">Documentation</a>
+              <a class="repo-chip" href="static-demo/"><img src="docs/assets/images/icon-phone.svg" alt="">Static Demo</a>
+              <a class="repo-chip" href="https://github.com/mihafreenode/let-books"><img src="docs/assets/images/icon-globe.svg" alt="">Repository</a>
+            </div>
+          </div>
+          <div class="landing-hero-panel hero-visual">
+            <img src="marketing-mocks/cover-en-cover-first-book-rescue.png" alt="Let Books concept cover showing mobile-first book rescue and library workflow visuals">
+          </div>
+        </section>
+
+        <section class="section">
+          <article class="notice-panel" aria-labelledby="alpha-notice-title">
+            <h2 id="alpha-notice-title">Early Alpha Notice</h2>
+            <p>Let Books is currently an early alpha and concept-validation project.</p>
+            <p>This repository already includes a public documentation site and a browser-only local demo. Some visuals and workflow examples illustrate the intended direction of the project rather than a finished production system.</p>
+            <p>Any libraries, universities, archives, nonprofits, public institutions, companies, cloud providers, or external systems mentioned in the documentation are referenced only as conceptual examples or possible future integration scenarios. No formal partnerships, endorsements, approvals, sponsorships, funding relationships, or deployments currently exist unless explicitly stated elsewhere.</p>
+            <p>References to organizations, standards, platforms, or technologies, including public-sector, European, cloud, or identity-provider ecosystems, do not imply affiliation, endorsement, certification, approval, or responsibility for the project.</p>
+            <p>This repository is published under the Apache License 2.0 for public, educational, nonprofit, and institutional use.</p>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Why Let Books Exists</h2>
+            <p>Educational books often remain useful long after they stop being actively used. Let Books is focused on the practical work needed to preserve them, reduce waste, make donation manageable, help libraries and communities review them, and keep real storage logistics visible from the beginning.</p>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-book.svg" alt=""></span>
+              <h3>Preserve useful collections</h3>
+              <p>Serious study books, textbooks, academic references, and multilingual collections should not disappear just because they are hard to sort.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-qr.svg" alt=""></span>
+              <h3>Make donation practical</h3>
+              <p>The goal is not only description. It is also being able to scan a box, find a copy, export a review list, and retrieve the right books later.</p>
+            </article>
+            <article class="feature-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-library.svg" alt=""></span>
+              <h3>Support communities and libraries</h3>
+              <p>Structured exports, review workflows, and storage-aware pick lists help books move from forgotten shelves to new readers.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Workflow Preview</h2>
+            <p>The core workflow is intentionally practical, mobile-first, and useful even before production infrastructure or deeper integrations exist.</p>
+          </div>
+          <div class="landing-link-grid">
+            <article class="landing-link-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-qr.svg" alt=""></span>
+              <h3>Scan a box QR code</h3>
+              <p>Open the right box immediately and keep intake tied to a real location.</p>
+            </article>
+            <article class="landing-link-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-phone.svg" alt=""></span>
+              <h3>Add books from phone</h3>
+              <p>Capture covers, scan ISBN where possible, and save quickly with minimal typing.</p>
+            </article>
+            <article class="landing-link-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-excel.svg" alt=""></span>
+              <h3>Export for review</h3>
+              <p>Prepare structured spreadsheets for libraries and other reviewers without requiring accounts first.</p>
+            </article>
+            <article class="landing-link-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-library.svg" alt=""></span>
+              <h3>Import review decisions</h3>
+              <p>Bring wanted, maybe, and not-wanted decisions back into one consistent workflow.</p>
+            </article>
+            <article class="landing-link-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-workflow.svg" alt=""></span>
+              <h3>Generate pick lists</h3>
+              <p>Group requested books by room, shelf, and box so retrieval is realistic.</p>
+            </article>
+            <article class="landing-link-card">
+              <span class="icon-badge"><img src="docs/assets/images/icon-shield.svg" alt=""></span>
+              <h3>Retrieve requested books</h3>
+              <p>Find the correct physical copy again instead of reopening every box from memory.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Documentation Paths</h2>
+            <p>The current docs are organized around practical audiences and concrete workflows.</p>
+          </div>
+          <div class="audience-grid">
+            <a class="audience-card" href="docs/en/individuals.html">
+              <span class="icon-badge"><img src="docs/assets/images/icon-book.svg" alt=""></span>
+              <h3>Individuals</h3>
+              <p>Private donors, families, volunteers, and small groups cataloging books box by box.</p>
+            </a>
+            <a class="audience-card" href="docs/en/institutions.html">
+              <span class="icon-badge"><img src="docs/assets/images/icon-library.svg" alt=""></span>
+              <h3>Institutions</h3>
+              <p>Libraries first, plus schools, universities, archives, and nonprofits reviewing structured offers.</p>
+            </a>
+            <a class="audience-card" href="docs/en/administrators.html">
+              <span class="icon-badge"><img src="docs/assets/images/icon-admin.svg" alt=""></span>
+              <h3>Administrators</h3>
+              <p>People defining access, privacy boundaries, operational rules, and future hosting direction.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header landing-status-intro">
+            <h2>Current Status</h2>
+            <p>Let Books is at an early exploratory stage. The public materials should help people understand the direction clearly without implying that future ideas are already implemented.</p>
+          </div>
+          <div class="status-grid">
+            <article class="status-card">
+              <span class="status-label">Available now</span>
+              <h3>Documentation prototype</h3>
+              <p>A public static documentation site is available with audience-focused pages and multilingual coverage.</p>
+            </article>
+            <article class="status-card">
+              <span class="status-label">Available now</span>
+              <h3>Static-demo PWA</h3>
+              <p>A browser-only static demo is available for local inventory, QR workflows, multilingual UX, and practical storage logistics.</p>
+            </article>
+            <article class="status-card">
+              <span class="status-label">Not built yet</span>
+              <h3>No production backend</h3>
+              <p>There is no production backend, hosted multi-user environment, authentication deployment, or institutional rollout yet.</p>
+            </article>
+            <article class="status-card">
+              <span class="status-label">Conceptual only</span>
+              <h3>Integrations and partnerships</h3>
+              <p>Integrations, institutional references, and architecture discussions describe future direction only and do not imply partnership, endorsement, approval, or deployment.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Preview Gallery</h2>
+            <p>Selected concept visuals are included here as early workflow previews, not as evidence of a finished production system.</p>
+          </div>
+          <div class="gallery-grid-public">
+            <article class="landing-gallery-card"><img src="docs/assets/images/mock-en-workflow.png" alt="Workflow concept showing mobile-first intake and QR-assisted box management"></article>
+            <article class="landing-gallery-card"><img src="docs/assets/images/mock-en-institutions.png" alt="Institution-oriented concept preview for review and coordination workflows"></article>
+            <article class="landing-gallery-card"><img src="docs/assets/images/mock-architecture.png" alt="Architecture concept visual for Let Books future direction"></article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical, preservation-focused project for cataloging, reviewing, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="docs/en/index.html">Documentation</a>
+              <a href="static-demo/">Demo</a>
+              <a href="https://github.com/mihafreenode/let-books">GitHub</a>
+              <a href="docs/en/individuals.html">Individuals</a>
+              <a href="docs/en/institutions.html">Institutions</a>
+              <a href="docs/en/administrators.html">Administrators</a>
+            </div>
+            <p class="footer-note">GitHub Pages entry point for overview, docs, architecture concepts, and workflow previews.</p>
+          </div>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

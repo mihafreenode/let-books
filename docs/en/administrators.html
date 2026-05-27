@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Let Books for Administrators</title>
+    <meta name="description" content="Documentation for administrators and host organizations managing Let Books.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="administrators" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="index.html">
+            <img class="brand-mark" src="../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>For administrators and host organizations</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="index.html">Overview</a>
+            <a class="nav-link" href="individuals.html">Individuals</a>
+            <a class="nav-link" href="institutions.html">Institutions</a>
+            <a class="nav-link is-current" href="administrators.html">Administrators</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="administrators.html">EN</a>
+              <a class="lang-link" href="../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section hero">
+          <div>
+            <span class="eyebrow">Guide for administrators</span>
+            <h1>Keep access, privacy, and logistics aligned from the start.</h1>
+            <p class="lead">Let Books should be useful for a private donor, a nonprofit, or a future institutional host. Administrators need clear boundaries around users, tenants, roles, storage structure, and optional AI usage.</p>
+          </div>
+          <div class="hero-visual">
+            <img src="../assets/images/mock-en-administrators.png" alt="Let Books infrastructure architecture concept">
+          </div>
+        </section>
+
+        <section class="section">
+          <article class="notice-inline" aria-label="Early alpha notice">
+            <strong>Early alpha notice.</strong>
+            <p>Hosting and governance examples on this page describe intended architecture and policy direction. They do not imply certified deployments, institutional responsibility, or live operational environments.</p>
+          </article>
+        </section>
+
+        <section class="section grid-2">
+          <article class="card">
+            <h2>What administrators manage</h2>
+            <ul class="list-check">
+              <li>Approved access and memberships</li>
+              <li>Tenants and role assignments</li>
+              <li>Storage structure and donation workflows</li>
+              <li>Privacy boundaries and audit expectations</li>
+              <li>Optional AI, OCR, and translation settings</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h2>What administrators should avoid</h2>
+            <ul class="list-check">
+              <li>Granting access based on external login alone</li>
+              <li>Publishing exact storage details publicly</li>
+              <li>Making paid AI mandatory in core workflows</li>
+              <li>Merging physical-copy workflows into pure metadata views</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Access model</h2>
+            <p>Authentication can come from external identity providers, but authorization must remain application-managed. A login is not the same thing as permission to view donor data.</p>
+          </div>
+          <div class="grid-3">
+            <article class="feature-card"><h3>Approved logins</h3><p>Private or early deployments should restrict access to pre-approved users.</p></article>
+            <article class="feature-card"><h3>Tenant memberships</h3><p>A user may belong to multiple tenants with different roles and responsibilities.</p></article>
+            <article class="feature-card"><h3>Role-based visibility</h3><p>Reviewers should not automatically see donor private notes or exact home details.</p></article>
+          </div>
+        </section>
+
+        <section class="section grid-2">
+          <article class="callout no-ai">
+            <h2>Core data concepts that affect operations</h2>
+            <ul class="list-check">
+              <li><strong>Bibliographic record:</strong> metadata about a work or edition</li>
+              <li><strong>Physical copy:</strong> one real book with condition and location</li>
+              <li><strong>Storage hierarchy:</strong> room, shelf, box, cabinet, locker, and similar structures</li>
+              <li><strong>Donation batch:</strong> a group of copies offered together</li>
+            </ul>
+          </article>
+          <article class="callout future">
+            <h2>AI should remain optional</h2>
+            <p>Administrators should be able to disable OCR, translation, and condition assessment globally or per tenant. Paid enrichment should be explicit, cost-aware, and tracked.</p>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <h2>Privacy and governance</h2>
+            <p>Let Books is not just a metadata tool. It can reveal a private donor's home storage layout if the system is careless. Governance must reflect that reality.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card"><h3>Default private</h3><p>Exact storage details, private notes, and donor contact details should remain restricted.</p></article>
+            <article class="card"><h3>Audit sensitive actions</h3><p>Exports, imports, role changes, and future AI requests should be logged with accountability in mind.</p></article>
+            <article class="card"><h3>Separate status from movement</h3><p>A book moved into a donation box is not automatically delivered. Physical movement and workflow status must remain distinct.</p></article>
+          </div>
+        </section>
+
+        <section class="section grid-2">
+          <article class="card">
+            <h2>Deployment direction</h2>
+            <p>The platform should work for a single private deployment and still scale toward library or university hosting later. The architecture should stay open to self-hosting, institutional hosting, and provider-agnostic storage.</p>
+          </article>
+          <article class="card">
+            <h2>Operational checklist</h2>
+            <ul class="list-check">
+              <li>Approve initial users</li>
+              <li>Define supported languages</li>
+              <li>Create storage locations</li>
+              <li>Test export and import with real sample data</li>
+              <li>Review privacy boundaries before publishing any feed</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="quote-panel">
+            <p><strong>Example hosting scenario:</strong> A nonprofit runs Let Books for several local donors and partner libraries. One administrator manages approved access, each donor gets a separate tenant, reviewers see only the batches shared with them, and OCR stays disabled until the team is ready to budget for it.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Operational clarity for donors, libraries, and future host organizations.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="index.html">Overview</a>
+              <a href="individuals.html">Individuals</a>
+              <a href="institutions.html">Institutions</a>
+              <a href="../../index.html">Project home</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
