@@ -52,6 +52,23 @@ When documentation pages use visuals derived from this directory:
 - copy selected assets into `docs/assets/images/` with stable descriptive names rather than linking to `marketing-mocks/` directly
 - keep documentation visuals aligned with the project's supported locale set: `en`, `sl`, `hr`, `bs`, `sr-Latn`, `sr-Cyrl`, `mk`, `sq`, `de`, `it`, `fr`, `es`
 
+## Tooling
+
+Shared contributor tooling for UI verification, screenshot generation, localization review, and documentation workflows lives in `../static-demo/README.md` under `Contributor Tooling`.
+
+Use that shared baseline for:
+
+- Playwright setup and browser installation
+- ImageMagick-based image processing and screenshot workflows
+- Hunspell-based localization review
+- common CLI utilities such as `jq`, `rg`, `fd`, `bat`, `delta`, `shellcheck`, `yamllint`, `sqlite3`, `pandoc`, and `ffmpeg`
+
+This directory adds mock-specific tooling on top of that baseline:
+
+- Tesseract OCR and language packs for regenerating OCR JSON sidecars
+- localized spellcheck review for mock copy before assets are promoted into `docs/assets/images/`
+- ImageMagick-based resizing and optimization for exported documentation assets
+
 ## Filename Convention
 
 Files use this format:
@@ -89,10 +106,11 @@ The JSON file stores:
 
 OCR in this directory was generated with Tesseract.
 
-Ubuntu install command:
+Additional Ubuntu or Debian packages for this directory:
 
 ```bash
-sudo apt install \
+sudo apt update
+sudo apt install -y \
   tesseract-ocr \
   tesseract-ocr-eng \
   tesseract-ocr-slv \
@@ -106,6 +124,30 @@ sudo apt install \
   tesseract-ocr-fra \
   tesseract-ocr-spa
 ```
+
+For localized spellcheck review in this directory, also install the Hunspell and MySpell dictionaries listed in `../static-demo/README.md`. In practice that usually means at least:
+
+```bash
+sudo apt install \
+  hunspell \
+  hunspell-tools \
+  hunspell-en-us \
+  hunspell-sl \
+  hunspell-hr \
+  hunspell-bs \
+  hunspell-sr \
+  hunspell-de-de \
+  hunspell-it \
+  hunspell-fr \
+  hunspell-es \
+  myspell-sq
+```
+
+Notes:
+
+- Macedonian Hunspell dictionaries are not usually available in the default Ubuntu repositories, so `mk` mock text may need custom dictionaries or manual review
+- Serbian script differences still need manual checking even when `hunspell-sr` is installed
+- install `jq` from the shared tooling baseline if it is not already available
 
 The OCR JSON files were generated with this command from the `marketing-mocks/` directory:
 
@@ -124,7 +166,7 @@ done
 To regenerate the OCR JSON files:
 
 1. Install Tesseract and the required language packs using the Ubuntu command above.
-2. Install `jq` if it is not already available: `sudo apt install jq`
+2. Install the shared contributor tooling from `../static-demo/README.md`, including `jq` and the locale dictionaries you need for review.
 3. Open a shell in `marketing-mocks/`.
 4. Run the OCR generation command above.
 5. Review the generated `.json` files. OCR is best-effort and may contain recognition noise.

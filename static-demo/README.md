@@ -119,7 +119,9 @@ Then open:
 http://127.0.0.1:8000/static-demo/
 ```
 
-## AI Agent Playwright Skill
+## Contributor Tooling
+
+### AI Agent Playwright Skill
 
 This project uses Playwright extensively for:
 
@@ -151,6 +153,8 @@ Suggested contributor setup should include:
 - mobile viewport testing configuration
 - visual regression baseline management
 
+### Core Tooling
+
 Recommended contributor tooling stack:
 
 Core tooling:
@@ -163,6 +167,8 @@ Core tooling:
 - Docker and Docker Compose
 - GitHub Actions CI
 - ESLint and Prettier
+
+### Recommended CLI Utilities
 
 Strongly recommended CLI utilities:
 
@@ -177,6 +183,8 @@ Strongly recommended CLI utilities:
 - `sqlite3` for lightweight local inspection and debugging
 - `pandoc` for Markdown and document conversion workflows
 - `ffmpeg` for tutorial and demo video generation plus animated workflow captures
+
+### Ubuntu or Debian Installation
 
 Recommended Ubuntu or Debian installation:
 
@@ -195,8 +203,30 @@ sudo apt install -y \
   pandoc \
   ffmpeg \
   hunspell \
-  hunspell-en-us
+  hunspell-tools \
+  hunspell-en-us \
+  hunspell-sl \
+  hunspell-hr \
+  hunspell-bs \
+  hunspell-sr \
+  hunspell-de-de \
+  hunspell-it \
+  hunspell-fr \
+  hunspell-es \
+  myspell-sq
 ```
+
+### Hunspell Coverage Notes
+
+Hunspell coverage notes for supported locales:
+
+- install locale dictionaries for `en`, `sl`, `hr`, `bs`, `sr`, `de`, `it`, `fr`, and `es` when available
+- use `myspell-sq` for Albanian on Ubuntu or Debian when a native `hunspell-sq` package is not present
+- verify Serbian Latin and Serbian Cyrillic output manually even when `hunspell-sr` is installed; script-specific coverage can vary by distro packaging
+- Macedonian Hunspell packages are not typically available in the default Ubuntu repositories, so `mk` spellcheck may require a custom dictionary, an external package source, or manual review
+- if a locale-specific package is unavailable on your distro, document the gap and fall back to human review instead of silently skipping that locale
+
+### Recommended Playwright Setup
 
 Useful local setup examples:
 
@@ -223,6 +253,8 @@ Recommended browser coverage:
 - WebKit
 - Mobile Chrome emulation
 - Mobile Safari emulation
+
+### Verification Expectations
 
 AI-generated tests should verify:
 
@@ -257,6 +289,8 @@ Screenshot and documentation workflows should support automated:
 - responsive viewport documentation
 - localization screenshot matrices
 - Markdown-to-document exports
+
+The `marketing-mocks/` directory uses this same contributor tooling baseline and adds Tesseract language packs for OCR regeneration and mock-asset workflows.
 
 If this repository adds or restores a Playwright test suite, keep screenshot artifacts, traces, and visual baselines in stable, reviewable locations and make locale coverage and mobile viewport coverage explicit in the test configuration.
 
