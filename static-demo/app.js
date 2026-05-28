@@ -141,7 +141,12 @@
       focusMode: "",
       activeDeviceId: "",
       activeDeviceLabel: "",
-      sessionToken: 0
+      sessionToken: 0,
+      lastDecodeValue: null,
+      stableDecodeValue: null,
+      stableDecodeCount: 0,
+      decodeStabilityThreshold: 3,
+      debugExpanded: window.innerWidth >= 900
     },
     photoUrlCache: new Map(),
     transientBoxImport: null,
@@ -1902,6 +1907,13 @@
       case "move-book":
         await openMoveBookModal(target.dataset.bookId);
         return;
+      case "toggle-scanner-debug":
+        appState.scanner.debugExpanded = !appState.scanner.debugExpanded;
+        {
+          const region = document.getElementById("scanner-debug-region");
+          if (region) region.innerHTML = renderScannerDebugMarkup();
+        }
+        return;
       case "start-scanner":
         await maybeStartScanner(true);
         return;
@@ -2622,6 +2634,18 @@
             candidate.source,
             buildScannerConfig(mode),
             async (decodedText) => {
+              const threshold = appState.scanner.decodeStabilityThreshold || 1;
+              if (decodedText === appState.scanner.lastDecodeValue) {
+                appState.scanner.stableDecodeCount++;
+              } else {
+                appState.scanner.lastDecodeValue = decodedText;
+                appState.scanner.stableDecodeCount = 1;
+                return;
+              }
+              if (appState.scanner.stableDecodeCount < threshold) {
+                return;
+              }
+              appState.scanner.stableDecodeValue = decodedText;
               if (appState.scanner.handlingDecode) {
                 return;
               }
@@ -2632,6 +2656,9 @@
               } finally {
                 window.setTimeout(() => {
                   appState.scanner.handlingDecode = false;
+                  appState.scanner.lastDecodeValue = null;
+                  appState.scanner.stableDecodeValue = null;
+                  appState.scanner.stableDecodeCount = 0;
                 }, 900);
               }
             }
@@ -2718,6 +2745,9 @@
     appState.scanner.focusMode = "";
     appState.scanner.activeDeviceId = "";
     appState.scanner.activeDeviceLabel = "";
+    appState.scanner.lastDecodeValue = null;
+    appState.scanner.stableDecodeValue = null;
+    appState.scanner.stableDecodeCount = 0;
     appState.scanner.state = "idle";
     clearScannerIdleHint();
     if (!options.preserveStatus) {
@@ -2814,10 +2844,34 @@
     }
 
     appState.scanner.zoomLevel = readCurrentTrackZoomLevel(track);
-    const trackReport = buildScannerTrackReport(track, cameras, capabilities, readScannerTrackSettings(track));
+    const trackSettings = readScannerTrackSettings(track);
+    const trackReport = buildScannerTrackReport(track, cameras, capabilities, trackSettings);
+    console.log(`[scanner] Camera active: "${trackReport.deviceLabel}" | resolution: ${trackReport.resolution} | facingMode: ${trackReport.facingMode} | deviceId: ${trackReport.deviceId}`);
     appState.scanner.activeDeviceId = trackReport.deviceId;
     appState.scanner.activeDeviceLabel = trackReport.deviceLabel;
+
+    const videoEl = document.querySelector("#scanner-view video");
+    if (videoEl) {
+      videoEl.style.objectFit = "cover";
+    }
+
     syncScannerControlAvailability();
+
+    if (canApplyTrackConstraints && Array.isArray(capabilities?.focusMode) && capabilities.focusMode.length > 0) {
+      const frame = document.querySelector(".scanner-frame");
+      if (frame && !frame._scannerFocusListener) {
+        frame._scannerFocusListener = true;
+        frame.addEventListener("click", async () => {
+          const t = getActiveScannerVideoTrack();
+          if (!t) return;
+          try {
+            await t.applyConstraints({ advanced: [{ focusMode: "single-shot" }] });
+          } catch (_) {
+          }
+        });
+      }
+    }
+
     return trackReport;
   }
 
@@ -2951,6 +3005,13 @@
   async function resolvePreferredScannerSource() {
     const cameras = await listVideoInputDevices();
 
+    function sourceWithResolution(source) {
+      if (typeof source === "string") {
+        return { deviceId: { exact: source }, width: { ideal: 1920 }, height: { ideal: 1080 } };
+      }
+      return { ...source, width: { ideal: 1920 }, height: { ideal: 1080 } };
+    }
+
     if (appState.scanner.facingMode === "user") {
       const frontCamera = findPreferredCameraByFacing(cameras, "user") || cameras[0] || null;
       return {
@@ -2958,8 +3019,8 @@
         rearCameraAvailable: Boolean(findPreferredCameraByFacing(cameras, "environment")),
         candidates: [
           frontCamera?.deviceId
-            ? { label: "front-device", source: frontCamera.deviceId, allowFrontFallback: true }
-            : { label: "front-facing", source: { facingMode: "user" }, allowFrontFallback: true }
+            ? { label: "front-device", source: sourceWithResolution(frontCamera.deviceId), allowFrontFallback: true }
+            : { label: "front-facing", source: sourceWithResolution({ facingMode: "user" }), allowFrontFallback: true }
         ]
       };
     }
@@ -2971,19 +3032,24 @@
     const candidates = [];
 
     if (rearCamera?.deviceId) {
-      candidates.push({ label: "rear-device", source: rearCamera.deviceId, allowFrontFallback: false });
+      candidates.push({ label: "rear-device", source: sourceWithResolution(rearCamera.deviceId), allowFrontFallback: false });
     }
 
-    candidates.push({ label: "environment-exact", source: { facingMode: { exact: "environment" } }, allowFrontFallback: false });
+    candidates.push({ label: "environment-exact", source: sourceWithResolution({ facingMode: { exact: "environment" } }), allowFrontFallback: false });
 
-    if (preflight.deviceId && !candidates.some((candidate) => candidate.source === preflight.deviceId)) {
-      candidates.push({ label: "preflight-device", source: preflight.deviceId, allowFrontFallback: !rearCameraAvailable });
+    if (preflight.deviceId && !candidates.some((candidate) => {
+      const src = typeof candidate.source === "object" && candidate.source.deviceId?.exact
+        ? candidate.source.deviceId.exact
+        : candidate.source;
+      return src === preflight.deviceId;
+    })) {
+      candidates.push({ label: "preflight-device", source: sourceWithResolution(preflight.deviceId), allowFrontFallback: !rearCameraAvailable });
     }
 
-    candidates.push({ label: "environment-ideal", source: { facingMode: { ideal: "environment" } }, allowFrontFallback: !rearCameraAvailable });
+    candidates.push({ label: "environment-ideal", source: sourceWithResolution({ facingMode: { ideal: "environment" } }), allowFrontFallback: !rearCameraAvailable });
 
     if (!rearCameraAvailable && preflightCameras[0]?.deviceId) {
-      candidates.push({ label: "first-camera", source: preflightCameras[0].deviceId, allowFrontFallback: true });
+      candidates.push({ label: "first-camera", source: sourceWithResolution(preflightCameras[0].deviceId), allowFrontFallback: true });
     }
 
     return {
@@ -3113,25 +3179,29 @@
   }
 
   function buildScannerRuntimeDebugLines(error = null) {
-    return [
-      { label: t("scanner.debugLocation"), value: window.location.href },
-      { label: t("scanner.debugProtocol"), value: window.location.protocol },
-      { label: t("scanner.debugSecureContext"), value: formatScannerDebugBoolean(window.isSecureContext) },
-      { label: t("scanner.debugMediaDevices"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices)) },
-      { label: t("scanner.debugGetUserMedia"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices?.getUserMedia)) },
-      ...(error ? [{ label: t("scanner.debugError"), value: formatScannerError(error) }] : [])
+    const lines = [
+      { label: t("scanner.debugSecureContext"), value: formatScannerDebugBoolean(window.isSecureContext), essential: true },
+      { label: t("scanner.debugLocation"), value: window.location.href, essential: false },
+      { label: t("scanner.debugProtocol"), value: window.location.protocol, essential: false },
+      { label: t("scanner.debugMediaDevices"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices)), essential: false },
+      { label: t("scanner.debugGetUserMedia"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices?.getUserMedia)), essential: false }
     ];
+    if (error) {
+      lines.push({ label: t("scanner.debugError"), value: formatScannerError(error), essential: true });
+    }
+    return lines;
   }
 
   function buildScannerActiveDebugLines(trackReport, warning = "") {
     return [
-      ...(warning ? [{ label: t("scanner.debugWarning"), value: warning }] : []),
-      { label: t("scanner.debugDevice"), value: trackReport.deviceLabel || "-" },
+      ...(warning ? [{ label: t("scanner.debugWarning"), value: warning, essential: true }] : []),
+      { label: t("scanner.debugDevice"), value: trackReport.deviceLabel || "-", essential: true },
       {
         label: t("scanner.debugFacingMode"),
-        value: [trackReport.facingMode, trackReport.facingCapability].filter(Boolean).join(" / ") || "-"
+        value: [trackReport.facingMode, trackReport.facingCapability].filter(Boolean).join(" / ") || "-",
+        essential: true
       },
-      { label: t("scanner.debugResolution"), value: trackReport.resolution || "-" },
+      { label: t("scanner.debugResolution"), value: trackReport.resolution || "-", essential: true },
       ...buildScannerRuntimeDebugLines()
     ];
   }
@@ -3218,11 +3288,10 @@
     return {
       fps: mode === "isbn" ? (desktopLikeViewport ? 8 : 10) : 10,
       qrbox: mode === "isbn"
-        ? { width: desktopLikeViewport ? 380 : 300, height: desktopLikeViewport ? 180 : 140 }
+        ? { width: desktopLikeViewport ? 480 : 400, height: desktopLikeViewport ? 200 : 160 }
         : mode === "move"
           ? { width: 260, height: 220 }
-          : { width: 240, height: 240 },
-      aspectRatio: mode === "isbn" ? 1.7777777778 : 1,
+          : { width: 260, height: 260 },
       disableFlip: false,
       experimentalFeatures: {
         useBarCodeDetectorIfSupported: true
@@ -3448,11 +3517,27 @@
     if (!appState.scannerDebug.active) {
       return "";
     }
-    const lines = appState.scannerDebug.lines
-      .filter((line) => line && line.label)
-      .map((line) => `<div class="scanner-debug-row"><span>${escapeHtml(line.label)}</span><strong>${escapeHtml(line.value || "-")}</strong></div>`)
-      .join("");
-    return `<div class="scanner-debug-card"><strong>${escapeHtml(appState.scannerDebug.title)}</strong>${lines}</div>`;
+    const allLines = (appState.scannerDebug.lines || []).filter((line) => line && line.label);
+    const essentialLines = allLines.filter((l) => l.essential !== false);
+    const expandedLines = allLines.filter((l) => l.essential === false);
+    const isExpanded = appState.scanner.debugExpanded;
+    const hasExpandable = expandedLines.length > 0;
+
+    function renderLine(line) {
+      return `<div class="scanner-debug-row"><span>${escapeHtml(line.label)}</span><strong>${escapeHtml(line.value || "-")}</strong></div>`;
+    }
+
+    const toggleIcon = isExpanded ? "▾" : "▸";
+    const visibleClass = isExpanded ? "" : " hidden";
+
+    return `<div class="scanner-debug-section">
+      <button type="button" class="scanner-debug-toggle" data-action="toggle-scanner-debug" aria-expanded="${isExpanded ? "true" : "false"}">${toggleIcon} ${escapeHtml(appState.scannerDebug.title)}</button>
+      <div class="scanner-debug-body${visibleClass}">
+        ${essentialLines.map(renderLine).join("")}
+        ${hasExpandable ? `<div class="scanner-debug-expanded${visibleClass}">${expandedLines.map(renderLine).join("")}</div>` : ""}
+        ${hasExpandable ? `<button type="button" class="scanner-debug-expand-btn" data-action="toggle-scanner-debug" aria-expanded="${isExpanded ? "true" : "false"}">${isExpanded ? "− " + escapeHtml(t("scanner.debugLess")) : "+ " + escapeHtml(t("scanner.debugMore"))}</button>` : ""}
+      </div>
+    </div>`;
   }
 
   function setScannerStatus(title, hint = "", options = {}) {
