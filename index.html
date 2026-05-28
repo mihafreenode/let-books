@@ -31,7 +31,7 @@
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="docs/assets/css/style.css">
   </head>
-  <body>
+  <body data-site-scope="public">
     <div class="page-shell">
       <header class="site-header">
         <div class="header-inner">
@@ -47,9 +47,6 @@
             <a class="nav-link" href="docs/">Documentation</a>
             <a class="nav-link" href="static-demo/">Demo</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
-            <a class="nav-link" href="docs/en/individuals.html">Individuals</a>
-            <a class="nav-link" href="docs/en/institutions.html">Institutions</a>
-            <a class="nav-link" href="docs/en/administrators.html">Administrators</a>
           </nav>
         </div>
       </header>
@@ -61,9 +58,10 @@
             <h1>Helping educational books find new homes.</h1>
             <p class="lead">Helping educational books find new homes through mobile-first inventory, QR workflows, and community-focused donation tools.</p>
             <div class="hero-actions">
-              <a class="button-link" href="docs/">Open Documentation</a>
-              <a class="button-link secondary" href="static-demo/">Launch Demo</a>
+              <a class="button-link" href="static-demo/">Launch Demo</a>
+              <a class="button-link secondary" href="docs/">Open Documentation</a>
             </div>
+            <p class="caption hero-caption">The interactive demo lives under <code>/static-demo/</code>. Documentation lives under <code>/docs/</code>.</p>
             <div class="repo-chip-row" aria-label="Quick links">
               <a class="repo-chip" href="docs/"><img src="docs/assets/images/icon-book.svg" alt="">Documentation</a>
               <a class="repo-chip" href="static-demo/"><img src="docs/assets/images/icon-phone.svg" alt="">Static Demo</a>
@@ -150,6 +148,30 @@
         </section>
 
         <section class="section">
+          <div class="section-header docs-language-section-header">
+            <h2>Read Docs In...</h2>
+            <p>Choose a documentation language or open the full documentation language index. The demo app is separate from the docs.</p>
+          </div>
+          <div class="hero-actions docs-language-actions">
+            <a class="button-link secondary" href="docs/">Open docs language index</a>
+          </div>
+          <div class="language-card-grid" aria-label="Documentation languages">
+            <a class="language-card" href="docs/en/index.html"><strong>English</strong><span>Documentation</span></a>
+            <a class="language-card" href="docs/sl/index.html"><strong>Slovenščina</strong><span>Dokumentacija</span></a>
+            <a class="language-card" href="docs/hr/index.html"><strong>Hrvatski</strong><span>Dokumentacija</span></a>
+            <a class="language-card" href="docs/bs/index.html"><strong>Bosanski</strong><span>Dokumentacija</span></a>
+            <a class="language-card" href="docs/sr-Latn/index.html"><strong>Srpski latinica</strong><span>Dokumentacija</span></a>
+            <a class="language-card" href="docs/sr-Cyrl/index.html"><strong>Српски ћирилица</strong><span>Документација</span></a>
+            <a class="language-card" href="docs/mk/index.html"><strong>Македонски</strong><span>Документација</span></a>
+            <a class="language-card" href="docs/sq/index.html"><strong>Shqip</strong><span>Dokumentim</span></a>
+            <a class="language-card" href="docs/de/index.html"><strong>Deutsch</strong><span>Dokumentation</span></a>
+            <a class="language-card" href="docs/it/index.html"><strong>Italiano</strong><span>Documentazione</span></a>
+            <a class="language-card" href="docs/fr/index.html"><strong>Français</strong><span>Documentation</span></a>
+            <a class="language-card" href="docs/es/index.html"><strong>Español</strong><span>Documentación</span></a>
+          </div>
+        </section>
+
+        <section class="section">
           <div class="section-header">
             <h2>Documentation Paths</h2>
             <p>The current docs are organized around practical audiences and concrete workflows.</p>
@@ -231,10 +253,11 @@
               <a href="docs/en/institutions.html">Institutions</a>
               <a href="docs/en/administrators.html">Administrators</a>
             </div>
-            <p class="footer-note">Public homepage at `/index.html` with documentation under `/docs/`.</p>
+            <p class="footer-note">Public landing page and demo access live here. Documentation language selection starts at <a href="docs/">/docs/</a>.</p>
           </div>
         </div>
       </footer>
     </div>
+    <script src="docs/assets/js/docs-lang.js"></script>
   </body>
 </html>

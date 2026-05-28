@@ -13,7 +13,7 @@ The project is published on GitHub Pages at https://letbooks.org/, with the publ
 Public site structure:
 
 - the canonical public landing page is `index.html` at the site root
-- documentation lives under `docs/`
+- `docs/index.html` is the documentation language hub and localized documentation lives under `docs/`
 - the static demo lives under `static-demo/`
 
 What exists now:
@@ -81,7 +81,7 @@ The first documentation pass is intended to help validate the app concept with r
 
 Included documentation:
 
-- `index.html` as the canonical public landing page
+- `index.html` as the canonical public landing page and demo entry point
 - `docs/index.html` as the documentation language hub
 - locale-specific documentation under `docs/en/`, `docs/sl/`, `docs/hr/`, `docs/bs/`, `docs/sr-Latn/`, `docs/sr-Cyrl/`, `docs/mk/`, `docs/sq/`, `docs/de/`, `docs/it/`, `docs/fr/`, and `docs/es/`
 - a shared page set for each locale covering overview, individuals, institutions, and administrators

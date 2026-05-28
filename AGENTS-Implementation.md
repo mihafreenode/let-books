@@ -21,6 +21,7 @@ When adding new tactical guidance in future work, prefer adding it here instead 
 
 - Public documentation should be implemented as pure static HTML
 - Use one shared stylesheet: `docs/assets/css/style.css`
+- Reuse shared static-site behavior where practical instead of duplicating parallel implementations for the public landing page and docs pages
 - Use shared brand assets under `docs/assets/images/`
 - Copy any mock images used by the docs into `docs/assets/images/` with stable descriptive names instead of referencing files outside the docs tree
 - When documentation uses images derived from `marketing-mocks/`, use the localized mock that matches the documentation language or script
@@ -31,6 +32,26 @@ When adding new tactical guidance in future work, prefer adding it here instead 
 - Documentation expansion should follow the supported locale set defined by the project: `en`, `sl`, `hr`, `bs`, `sr-Latn`, `sr-Cyrl`, `mk`, `sq`, `de`, `it`, `fr`, `es`
 - Keep the same page structure across languages so future languages can be added predictably
 - Use repo-relative references only so the documentation is reproducible on another machine
+
+## Public Site and Docs Split
+
+- The canonical public landing page is the site root `/` and `index.html`
+- The public landing page is the only static marketing-style entry point that should strongly promote or launch the static demo
+- The documentation hub is `/docs/` and `docs/index.html`; it should act as a language chooser, not a second product landing page
+- Avoid internal path explanations in public-facing hero copy unless they are genuinely useful to end users
+- Keep the app demo clearly separated from documentation in both copy and navigation
+- Localized docs pages should provide a path back to `/docs/`, a public-homepage link, and topic-preserving language switching where equivalents exist
+
+## Shared Static Navigation Rules
+
+- The public landing page and docs pages should use one shared responsive mobile-navigation pattern where feasible
+- On mobile widths, headers should collapse to brand plus hamburger button; primary nav links should stay hidden until expanded
+- Mobile nav rows should use compact utility-style heights rather than oversized landing-page pills
+- Avoid horizontal scrolling, clipped nav content, or off-canvas ghost elements in static navigation
+- Docs navigation should remain docs-focused: docs home/language index, public homepage, GitHub, and docs language selection
+- Do not surface the demo as a primary docs-nav item
+- For docs mobile language selection, prefer a native in-flow control such as `<select>` over custom popover/dropdown implementations
+- On larger docs widths, keep language selection compact and utility-like; visible labels may be visually hidden if semantics remain intact for assistive technology
 
 ## Static Site Metadata Rules
 

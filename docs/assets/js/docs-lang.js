@@ -62,14 +62,42 @@ const DOCS_LOCALE_CONFIG = {
     sl: 'Slovenščina',
     hr: 'Hrvatski',
     bs: 'Bosanski',
-    'sr-Latn': 'Srpski (latinica)',
-    'sr-Cyrl': 'Српски (ћирилица)',
+    'sr-Latn': 'Srpski latinica',
+    'sr-Cyrl': 'Српски ћирилица',
     mk: 'Македонски',
     sq: 'Shqip',
     de: 'Deutsch',
     it: 'Italiano',
     fr: 'Français',
     es: 'Español',
+  },
+  localeShortLabels: {
+    en: 'EN',
+    sl: 'SL',
+    hr: 'HR',
+    bs: 'BS',
+    'sr-Latn': 'SR-Latn',
+    'sr-Cyrl': 'SR-Cyrl',
+    mk: 'MK',
+    sq: 'SQ',
+    de: 'DE',
+    it: 'IT',
+    fr: 'FR',
+    es: 'ES',
+  },
+  docsNavLabels: {
+    en: { docsHome: 'Docs', publicHomepage: 'Public site', github: 'GitHub', currentLanguage: 'Current language', language: 'Language' },
+    sl: { docsHome: 'Dokumentacija', publicHomepage: 'Javna stran', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    hr: { docsHome: 'Dokumentacija', publicHomepage: 'Javna stranica', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    bs: { docsHome: 'Dokumentacija', publicHomepage: 'Javna stranica', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    'sr-Latn': { docsHome: 'Dokumentacija', publicHomepage: 'Javni sajt', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    'sr-Cyrl': { docsHome: 'Документација', publicHomepage: 'Јавни сајт', github: 'GitHub', currentLanguage: 'Тренутни језик', language: 'Језик' },
+    mk: { docsHome: 'Документација', publicHomepage: 'Јавна страница', github: 'GitHub', currentLanguage: 'Тековен јазик', language: 'Јазик' },
+    sq: { docsHome: 'Dokumentim', publicHomepage: 'Faqja publike', github: 'GitHub', currentLanguage: 'Gjuha aktuale', language: 'Gjuha' },
+    de: { docsHome: 'Doku', publicHomepage: 'Website', github: 'GitHub', currentLanguage: 'Aktuelle Sprache', language: 'Sprache' },
+    it: { docsHome: 'Documentazione', publicHomepage: 'Sito pubblico', github: 'GitHub', currentLanguage: 'Lingua corrente', language: 'Lingua' },
+    fr: { docsHome: 'Documentation', publicHomepage: 'Site public', github: 'GitHub', currentLanguage: 'Langue actuelle', language: 'Langue' },
+    es: { docsHome: 'Documentación', publicHomepage: 'Sitio público', github: 'GitHub', currentLanguage: 'Idioma actual', language: 'Idioma' },
   },
   footerMicrocopy: {
     en: 'Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.',
@@ -102,6 +130,14 @@ const DOCS_LOCALE_CONFIG = {
 };
 
 const MOBILE_NAV_MEDIA_QUERY = '(max-width: 820px)';
+
+function isDocsSite() {
+  if (document.body.dataset.siteScope) {
+    return document.body.dataset.siteScope === 'docs';
+  }
+
+  return /\/docs\//.test(window.location.pathname);
+}
 
 function createHeadLink(attributes) {
   const link = document.createElement('link');
@@ -170,6 +206,99 @@ function getCurrentPageType() {
   return document.body.dataset.pageType || inferPageTypeFromPath();
 }
 
+function getLocaleShortLabel(locale) {
+  return DOCS_LOCALE_CONFIG.localeShortLabels[locale] || locale;
+}
+
+function getDocsNavLabels(locale) {
+  return DOCS_LOCALE_CONFIG.docsNavLabels[locale] || DOCS_LOCALE_CONFIG.docsNavLabels.en;
+}
+
+function getEquivalentPagePath(locale) {
+  const pageType = getCurrentPageType();
+  return DOCS_LOCALE_CONFIG.pageMap[pageType]?.[locale] || null;
+}
+
+function getEquivalentPageHref(locale) {
+  const path = getEquivalentPagePath(locale);
+  return path ? `../${path}` : '../index.html';
+}
+
+function createNavLink(href, text, { current = false } = {}) {
+  const link = document.createElement('a');
+  link.className = current ? 'nav-link is-current' : 'nav-link';
+  link.href = href;
+  link.textContent = text;
+  if (current) {
+    link.setAttribute('aria-current', 'page');
+  }
+  return link;
+}
+
+function createLanguageLink(locale, href, { current = false, fullLabel = false } = {}) {
+  const link = document.createElement('a');
+  link.className = current ? 'lang-link is-current' : 'lang-link';
+  link.href = href;
+  link.lang = locale;
+  link.textContent = fullLabel ? (DOCS_LOCALE_CONFIG.labels[locale] || locale) : getLocaleShortLabel(locale);
+  if (current) {
+    link.setAttribute('aria-current', 'page');
+  }
+  return link;
+}
+
+function createLanguageSelector(locale, labels) {
+  const menu = document.createElement('div');
+  menu.className = 'nav-language-menu';
+
+  const label = document.createElement('span');
+  label.className = 'nav-language-label';
+  label.textContent = labels.language;
+
+  const select = document.createElement('select');
+  select.className = 'nav-language-select';
+  select.setAttribute('aria-label', labels.currentLanguage);
+
+  const map = DOCS_LOCALE_CONFIG.pageMap[getCurrentPageType()];
+  if (map) {
+    for (const targetLocale of Object.keys(map)) {
+      const option = document.createElement('option');
+      option.value = getEquivalentPageHref(targetLocale);
+      option.textContent = DOCS_LOCALE_CONFIG.labels[targetLocale] || targetLocale;
+      option.selected = targetLocale === locale;
+      select.appendChild(option);
+    }
+  }
+
+  select.addEventListener('change', () => {
+    if (select.value) {
+      window.location.href = select.value;
+    }
+  });
+
+  menu.append(label, select);
+  return menu;
+}
+
+function upgradeDocsNavigation() {
+  const pageType = getCurrentPageType();
+  if (pageType === 'language-hub') return;
+
+  const locale = getCurrentLocale();
+  const labels = getDocsNavLabels(locale);
+  const nav = document.querySelector('.site-header .header-nav');
+  if (!nav) return;
+
+  nav.replaceChildren(
+    createNavLink('../index.html', labels.docsHome),
+    createNavLink('../../index.html', labels.publicHomepage),
+    createNavLink('https://github.com/mihafreenode/let-books', labels.github),
+  );
+
+  nav.setAttribute('aria-label', 'Documentation');
+  nav.appendChild(createLanguageSelector(locale, labels));
+}
+
 function buildEquivalentLanguageLinks() {
   let container = document.querySelector('[data-equivalent-language-list]');
 
@@ -189,13 +318,17 @@ function buildEquivalentLanguageLinks() {
     footerLinks.parentElement.appendChild(container);
   }
 
+  container.classList.add('equivalent-language-list');
+
   const fragment = document.createDocumentFragment();
   for (const [locale, path] of Object.entries(map)) {
     const link = document.createElement('a');
-    link.href = `../${path}`;
+    link.href = path ? `../${path}` : '../index.html';
     link.textContent = DOCS_LOCALE_CONFIG.labels[locale] || locale;
+    link.className = 'footer-language-link';
     if (locale === currentLocale) {
       link.setAttribute('aria-current', 'page');
+      link.classList.add('is-current');
     }
     fragment.appendChild(link);
   }
@@ -218,7 +351,23 @@ function ensureFooterMicrocopy() {
      footerHeading.appendChild(paragraph);
    }
 
-    paragraph.textContent = DOCS_LOCALE_CONFIG.footerMicrocopy[locale] || DOCS_LOCALE_CONFIG.footerMicrocopy.en;
+     paragraph.textContent = DOCS_LOCALE_CONFIG.footerMicrocopy[locale] || DOCS_LOCALE_CONFIG.footerMicrocopy.en;
+}
+
+function normalizeDocsFooter() {
+  const pageType = getCurrentPageType();
+  if (pageType === 'language-hub') return;
+
+  const locale = getCurrentLocale();
+  const labels = getDocsNavLabels(locale);
+  const footerLinks = document.querySelector('.site-footer .footer-links');
+  if (!footerLinks) return;
+
+  footerLinks.replaceChildren(
+    createNavLink('../index.html', labels.docsHome),
+    createNavLink('../../index.html', labels.publicHomepage),
+    createNavLink('https://github.com/mihafreenode/let-books', labels.github),
+  );
 }
 
 function getNavToggleLabels(locale) {
@@ -333,11 +482,18 @@ function setupMobileNav() {
 document.addEventListener('DOMContentLoaded', () => {
     const locale = getCurrentLocale();
     const pageType = getCurrentPageType();
+    const docsSite = isDocsSite();
 
     document.body.dataset.locale = locale;
     document.body.dataset.pageType = pageType;
-    ensureDocsFavicons();
+    if (docsSite) {
+      ensureDocsFavicons();
+      upgradeDocsNavigation();
+    }
     setupMobileNav();
-    buildEquivalentLanguageLinks();
-    ensureFooterMicrocopy();
+    if (docsSite) {
+      buildEquivalentLanguageLinks();
+      normalizeDocsFooter();
+      ensureFooterMicrocopy();
+    }
 });
