@@ -103,6 +103,49 @@ const DOCS_LOCALE_CONFIG = {
 
 const MOBILE_NAV_MEDIA_QUERY = '(max-width: 820px)';
 
+function createHeadLink(attributes) {
+  const link = document.createElement('link');
+  for (const [name, value] of Object.entries(attributes)) {
+    link.setAttribute(name, value);
+  }
+  return link;
+}
+
+function getDocsFaviconBasePath() {
+  const pageType = getCurrentPageType();
+  return pageType === 'language-hub' ? '../public/favicon/' : '../../public/favicon/';
+}
+
+function ensureDocsFavicons() {
+  const head = document.head;
+  if (!head || head.querySelector('[data-docs-favicon]')) return;
+
+  const basePath = getDocsFaviconBasePath();
+  const entries = [
+    { rel: 'icon', href: `${basePath}favicon.svg`, type: 'image/svg+xml' },
+    { rel: 'icon', href: `${basePath}favicon-dark.svg`, type: 'image/svg+xml', media: '(prefers-color-scheme: dark)' },
+    { rel: 'icon', href: `${basePath}favicon.ico`, sizes: 'any' },
+    { rel: 'icon', href: `${basePath}favicon-32x32.png`, type: 'image/png', sizes: '32x32' },
+    { rel: 'icon', href: `${basePath}favicon-16x16.png`, type: 'image/png', sizes: '16x16' },
+    { rel: 'apple-touch-icon', href: `${basePath}apple-touch-icon.png`, sizes: '180x180' },
+    { rel: 'manifest', href: `${basePath}site.webmanifest` },
+  ];
+
+  for (const entry of entries) {
+    const link = createHeadLink(entry);
+    link.dataset.docsFavicon = 'true';
+    head.appendChild(link);
+  }
+
+  if (!head.querySelector('meta[name="theme-color"]')) {
+    const meta = document.createElement('meta');
+    meta.name = 'theme-color';
+    meta.content = '#0f5b45';
+    meta.dataset.docsFavicon = 'true';
+    head.appendChild(meta);
+  }
+}
+
 function inferLocaleFromPath() {
   const match = window.location.pathname.match(/\/docs\/([^/]+)\//);
   if (!match) return 'en';
@@ -293,6 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.body.dataset.locale = locale;
     document.body.dataset.pageType = pageType;
+    ensureDocsFavicons();
     setupMobileNav();
     buildEquivalentLanguageLinks();
     ensureFooterMicrocopy();
