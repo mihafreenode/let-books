@@ -90,6 +90,25 @@ When adding new tactical guidance in future work, prefer adding it here instead 
 - Camera, scanning, and other mobile workflows must remain usable under translated UI labels and longer localized strings
 - When verifying ISBN metadata lookup behavior, keep at least two reproducible test ISBNs in documentation and agent guidance: `9780434912902` as an Open Library-first case and `9789610167525` as a Let Books metadata API fallback case that is not currently resolved by Open Library
 
+## Static Demo Scanner and Camera
+
+These rules apply specifically to camera-driven ISBN/EAN and QR scanning inside `static-demo/`.
+
+- Keep the existing scanner library as the primary decode engine; add device-specific camera improvements around it rather than replacing it casually
+- Prefer the rear camera with `facingMode: { ideal: "environment" }`; keep front-camera switching optional rather than the default path
+- After the camera stream starts, derive scanner capability handling from the active `MediaStreamTrack` instead of assuming the scanner library exposes identical helpers across browsers
+- Use feature detection only for camera controls: `track.getCapabilities?.()`, `track.getSettings?.()`, and `track.applyConstraints?.()`
+- Treat camera focus improvements as progressive enhancement only; unsupported devices and browsers must still be able to start scanning normally
+- If focus controls are supported, try `focusMode` in this order: `continuous`, then `single-shot`, then `manual` only when `focusDistance` is also supported
+- Do not fail scanner startup when focus, zoom, or torch constraints throw; scanning should continue with the browser default camera behavior
+- Limit unsupported-focus or failed-constraint diagnostics to development-style environments such as localhost or `file:` demos; avoid noisy production logging for expected mobile-browser gaps
+- Expect iOS Safari focus control support to be limited; do not promise tap-to-focus or advanced manual camera behavior unless it has been verified on the current implementation
+- If zoom is supported, prefer a conservative default such as `1.5x` for ISBN scanning only when that value is inside the reported capability range
+- Zoom and torch controls should only be shown when the active track reports that the capability exists and constraints can actually be applied
+- Keep fallback scanning paths available at all times: file/image upload and manual entry must remain usable when live camera scanning performs poorly
+- Scanner help text should explicitly tell the user to move closer or farther until the code becomes sharp and should state that focus depends on phone and browser support
+- When refining scanner UI, prefer small scoped changes in `static-demo/app.js`, `static-demo/app.css`, and locale files instead of broad demo-wide camera abstractions unless repeated needs justify them
+
 ## Static Demo Dashboard Hero
 
 These rules apply specifically to the `static-demo/` dashboard hero/banner system.
@@ -309,6 +328,7 @@ Avoid:
 - Verification for public pages should also check favicon URLs, canonical URLs, and representative Open Graph/metadata output where practical
 - Keep commands and guidance reproducible across machines
 - For static demo ISBN lookup verification, explicitly test both the Open Library path and the fallback proxy path using `9780434912902` and `9789610167525`
+- For static demo camera scanning verification, explicitly test Android Chrome and iOS Safari behavior for rear-camera selection, scanner startup resilience, barcode/QR readability, zoom visibility, torch visibility, and file-upload fallback behavior
 
 ## Code Generation Rules
 

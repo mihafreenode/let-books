@@ -127,7 +127,18 @@
     route: { name: "dashboard", params: {}, query: {} },
     previousRoute: null,
     installPrompt: null,
-    scanner: { instance: null, state: "idle", handlingDecode: false, torchOn: false, zoomLevel: 1, facingMode: "environment", sessionToken: 0 },
+    scanner: {
+      instance: null,
+      state: "idle",
+      handlingDecode: false,
+      torchOn: false,
+      torchSupported: false,
+      zoomLevel: 1,
+      zoomSupported: false,
+      facingMode: "environment",
+      focusMode: "",
+      sessionToken: 0
+    },
     photoUrlCache: new Map(),
     transientBoxImport: null,
     dataSummary: { boxes: 0, books: 0, photos: 0 },
@@ -1357,7 +1368,7 @@
           <button type="button" class="ghost-button scanner-top-button scanner-top-button-text" data-action="scanner-back" aria-label="${escapeHtml(t("scanner.back"))}">${escapeHtml(t("scanner.back"))}</button>
           <div class="scanner-top-actions">
             <button type="button" class="ghost-button scanner-top-button scanner-top-button-text" data-action="scanner-switch-camera" aria-label="${escapeHtml(t("scanner.switchCamera"))}">${escapeHtml(t("scanner.cameraShort"))}</button>
-            <button type="button" class="ghost-button scanner-top-button scanner-top-button-text" data-action="scanner-toggle-torch" aria-label="${escapeHtml(t("scanner.torch"))}">${escapeHtml(t("scanner.torch"))}</button>
+            <button type="button" class="ghost-button scanner-top-button scanner-top-button-text ${appState.scanner.torchOn ? "is-active" : ""}" data-action="scanner-toggle-torch" data-scanner-control="torch" aria-pressed="${appState.scanner.torchOn ? "true" : "false"}" aria-label="${escapeHtml(t("scanner.torch"))}" ${appState.scanner.torchSupported ? "" : "hidden"}>${escapeHtml(t("scanner.torch"))}</button>
           </div>
         </div>
         <div class="scanner-shell scanner-shell-fullscreen">
@@ -1376,6 +1387,13 @@
                 <button type="button" class="small-button scanner-mini-button scanner-mini-button-text" data-action="toggle-scanner-manual" aria-label="${escapeHtml(t("scanner.manualShortcut"))}">${escapeHtml(t("scanner.manualShort"))}</button>
                 <button type="button" class="small-button scanner-mini-button scanner-mini-button-text" data-action="scanner-upload-isbn" aria-label="${escapeHtml(t("scanner.upload"))}">${escapeHtml(t("scanner.uploadShort"))}</button>
               </div>
+            </div>
+            <div class="scanner-support-row">
+              <div class="scanner-utility-actions" data-scanner-control="zoom-group" ${appState.scanner.zoomSupported ? "" : "hidden"}>
+                <button type="button" class="small-button scanner-mini-button scanner-icon-button" data-action="scanner-zoom-out" data-scanner-control="zoom" aria-label="${escapeHtml(t("scanner.zoomOut"))}" ${appState.scanner.zoomSupported ? "" : "hidden"}>-</button>
+                <button type="button" class="small-button scanner-mini-button scanner-icon-button" data-action="scanner-zoom-in" data-scanner-control="zoom" aria-label="${escapeHtml(t("scanner.zoomIn"))}" ${appState.scanner.zoomSupported ? "" : "hidden"}>+</button>
+              </div>
+              <p class="scanner-focus-hint">${escapeHtml(t("scanner.focusHint"))}</p>
             </div>
           </div>
           <div class="section-card scanner-manual-card ${appState.route.query.manual === "1" ? "" : "hidden"}">
@@ -2544,7 +2562,7 @@
     clearScannerStatus();
     try {
       await html5QrCode.start(
-        { facingMode: appState.scanner.facingMode || "environment" },
+        buildScannerCameraConfig(),
         buildScannerConfig(mode),
         async (decodedText) => {
           if (appState.scanner.handlingDecode) {
@@ -2579,7 +2597,12 @@
       appState.scanner.running = true;
       appState.scanner.handlingDecode = false;
       appState.scanner.torchOn = false;
-      appState.scanner.zoomLevel = readCurrentZoomLevel(html5QrCode);
+      appState.scanner.torchSupported = false;
+      appState.scanner.zoomSupported = false;
+      appState.scanner.focusMode = "";
+      appState.scanner.zoomLevel = 1;
+      syncScannerControlAvailability();
+      await configureActiveScannerTrack(mode);
       scheduleScannerIdleHint(mode);
     } catch (error) {
       console.warn(error);
@@ -2611,29 +2634,31 @@
     appState.scanner.running = false;
     appState.scanner.handlingDecode = false;
     appState.scanner.torchOn = false;
+    appState.scanner.torchSupported = false;
     appState.scanner.zoomLevel = 1;
+    appState.scanner.zoomSupported = false;
+    appState.scanner.focusMode = "";
     appState.scanner.state = "idle";
     clearScannerIdleHint();
     clearScannerStatus();
     cleanupScannerMediaElements();
+    syncScannerControlAvailability();
   }
 
   async function adjustScannerZoom(delta) {
-    const scanner = appState.scanner.instance;
-    if (!scanner || !scanner.running) return;
+    const track = getActiveScannerVideoTrack();
+    if (!track || !canApplyScannerTrackConstraints(track)) return;
     try {
-      const capabilities = scanner.getRunningTrackCapabilities ? scanner.getRunningTrackCapabilities() : null;
-      const settings = scanner.getRunningTrackSettings ? scanner.getRunningTrackSettings() : null;
-      if (!capabilities || typeof capabilities.zoom === "undefined") {
+      const capabilities = readScannerTrackCapabilities(track);
+      const settings = readScannerTrackSettings(track);
+      const zoomRange = getScannerZoomRange(capabilities);
+      if (!zoomRange) {
         showToast(t("toast.zoomUnsupported"));
         return;
       }
-      const min = Number(capabilities.zoom.min ?? 1);
-      const max = Number(capabilities.zoom.max ?? 4);
-      const step = Number(capabilities.zoom.step ?? 0.25);
-      const current = Number(settings?.zoom ?? appState.scanner.zoomLevel ?? min);
-      const next = clamp(roundToStep(current + delta, step), min, max);
-      await scanner.applyVideoConstraints({ advanced: [{ zoom: next }] });
+      const current = Number(settings?.zoom ?? appState.scanner.zoomLevel ?? zoomRange.min);
+      const next = clamp(roundToStep(current + delta, zoomRange.step), zoomRange.min, zoomRange.max);
+      await track.applyConstraints({ advanced: [{ zoom: next }] });
       appState.scanner.zoomLevel = next;
       showToast(tf("toast.zoomLevel", { value: next.toFixed(2) }));
     } catch (error) {
@@ -2642,30 +2667,209 @@
   }
 
   async function toggleScannerTorch() {
-    const scanner = appState.scanner.instance;
-    if (!scanner || !scanner.running) return;
+    const track = getActiveScannerVideoTrack();
+    if (!track || !canApplyScannerTrackConstraints(track)) return;
     try {
-      const capabilities = scanner.getRunningTrackCapabilities ? scanner.getRunningTrackCapabilities() : null;
+      const capabilities = readScannerTrackCapabilities(track);
       if (!capabilities || typeof capabilities.torch === "undefined") {
         showToast(t("toast.torchUnsupported"));
         return;
       }
       const next = !appState.scanner.torchOn;
-      await scanner.applyVideoConstraints({ advanced: [{ torch: next }] });
+      await track.applyConstraints({ advanced: [{ torch: next }] });
       appState.scanner.torchOn = next;
+      syncScannerControlAvailability();
       showToast(next ? t("toast.torchOn") : t("toast.torchOff"));
     } catch (error) {
       console.warn("Scanner torch failed", error);
     }
   }
 
-  function readCurrentZoomLevel(scanner) {
-    try {
-      const settings = scanner.getRunningTrackSettings ? scanner.getRunningTrackSettings() : null;
-      return Number(settings?.zoom ?? 1);
-    } catch (_) {
-      return 1;
+  async function configureActiveScannerTrack(mode) {
+    const track = getActiveScannerVideoTrack();
+    if (!track) {
+      debugScannerCapabilities("Active scanner track not available after startup.");
+      syncScannerControlAvailability();
+      return;
     }
+
+    const capabilities = readScannerTrackCapabilities(track);
+    const settings = readScannerTrackSettings(track);
+    const canApplyTrackConstraints = canApplyScannerTrackConstraints(track);
+    const zoomRange = getScannerZoomRange(capabilities);
+    appState.scanner.torchSupported = typeof capabilities?.torch !== "undefined" && canApplyTrackConstraints;
+    appState.scanner.zoomSupported = Boolean(zoomRange && canApplyTrackConstraints);
+    appState.scanner.zoomLevel = Number(settings?.zoom ?? 1);
+    syncScannerControlAvailability();
+
+    if (canApplyTrackConstraints) {
+      appState.scanner.focusMode = await applyPreferredFocusMode(track, capabilities, settings);
+    } else {
+      debugScannerCapabilities("Scanner track constraints are unavailable on this device/browser.");
+    }
+
+    if (mode === "isbn" && zoomRange && canApplyTrackConstraints) {
+      const safeIdealZoom = clamp(1.5, zoomRange.min, zoomRange.max);
+      const currentZoom = Number(settings?.zoom ?? appState.scanner.zoomLevel ?? zoomRange.min);
+      if (Number.isFinite(safeIdealZoom) && Math.abs(currentZoom - safeIdealZoom) >= 0.01) {
+        try {
+          await track.applyConstraints({ advanced: [{ zoom: safeIdealZoom }] });
+          appState.scanner.zoomLevel = safeIdealZoom;
+        } catch (error) {
+          debugScannerCapabilities("Initial scanner zoom preference was not applied.", error);
+        }
+      }
+    }
+
+    appState.scanner.zoomLevel = readCurrentTrackZoomLevel(track);
+    syncScannerControlAvailability();
+  }
+
+  async function applyPreferredFocusMode(track, capabilities, settings) {
+    const supportedModes = Array.isArray(capabilities?.focusMode)
+      ? capabilities.focusMode
+      : typeof capabilities?.focusMode === "string"
+        ? [capabilities.focusMode]
+        : [];
+
+    if (!supportedModes.length) {
+      debugScannerCapabilities("Scanner focusMode capability is unavailable on this device/browser.");
+      return "";
+    }
+
+    const focusDistanceRange = getScannerFocusDistanceRange(capabilities);
+    const attempts = [
+      { mode: "continuous", constraints: { advanced: [{ focusMode: "continuous" }] } },
+      { mode: "single-shot", constraints: { advanced: [{ focusMode: "single-shot" }] } }
+    ];
+
+    if (focusDistanceRange) {
+      const focusDistance = clamp(
+        Number(settings?.focusDistance ?? focusDistanceRange.min),
+        focusDistanceRange.min,
+        focusDistanceRange.max
+      );
+      attempts.push({
+        mode: "manual",
+        constraints: { advanced: [{ focusMode: "manual", focusDistance }] }
+      });
+    }
+
+    for (const attempt of attempts) {
+      if (!supportedModes.includes(attempt.mode)) {
+        continue;
+      }
+      try {
+        await track.applyConstraints(attempt.constraints);
+        return attempt.mode;
+      } catch (error) {
+        debugScannerCapabilities(`Scanner focus mode '${attempt.mode}' could not be applied.`, error);
+      }
+    }
+
+    debugScannerCapabilities(`Scanner focus modes were reported but none could be applied: ${supportedModes.join(", ")}`);
+    return "";
+  }
+
+  function getActiveScannerVideoTrack() {
+    const scannerView = document.getElementById("scanner-view");
+    const video = scannerView?.querySelector("video");
+    const stream = video?.srcObject;
+    if (!stream || typeof stream.getVideoTracks !== "function") {
+      return null;
+    }
+    return stream.getVideoTracks().find((track) => track.readyState === "live") || stream.getVideoTracks()[0] || null;
+  }
+
+  function readScannerTrackCapabilities(track) {
+    try {
+      return track?.getCapabilities?.() ?? null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function readScannerTrackSettings(track) {
+    try {
+      return track?.getSettings?.() ?? null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function canApplyScannerTrackConstraints(track) {
+    return typeof track?.applyConstraints === "function";
+  }
+
+  function readCurrentTrackZoomLevel(track) {
+    try {
+      const settings = track?.getSettings?.();
+      return Number(settings?.zoom ?? appState.scanner.zoomLevel ?? 1);
+    } catch (_) {
+      return Number(appState.scanner.zoomLevel ?? 1);
+    }
+  }
+
+  function getScannerZoomRange(capabilities) {
+    const zoom = capabilities?.zoom;
+    const min = Number(zoom?.min);
+    const max = Number(zoom?.max);
+    if (!Number.isFinite(min) || !Number.isFinite(max) || max < min) {
+      return null;
+    }
+    const step = Number(zoom?.step);
+    return {
+      min,
+      max,
+      step: Number.isFinite(step) && step > 0 ? step : 0.25
+    };
+  }
+
+  function getScannerFocusDistanceRange(capabilities) {
+    const focusDistance = capabilities?.focusDistance;
+    const min = Number(focusDistance?.min);
+    const max = Number(focusDistance?.max);
+    if (!Number.isFinite(min) || !Number.isFinite(max) || max < min) {
+      return null;
+    }
+    return { min, max };
+  }
+
+  function syncScannerControlAvailability() {
+    document.querySelectorAll('[data-scanner-control="torch"]').forEach((button) => {
+      button.hidden = !appState.scanner.torchSupported;
+      button.setAttribute("aria-pressed", appState.scanner.torchOn ? "true" : "false");
+      button.classList.toggle("is-active", Boolean(appState.scanner.torchOn));
+    });
+    document.querySelectorAll('[data-scanner-control="zoom"]').forEach((button) => {
+      button.hidden = !appState.scanner.zoomSupported;
+    });
+    document.querySelectorAll('[data-scanner-control="zoom-group"]').forEach((group) => {
+      group.hidden = !appState.scanner.zoomSupported;
+    });
+  }
+
+  function buildScannerCameraConfig() {
+    if (appState.scanner.facingMode === "user") {
+      return { facingMode: "user" };
+    }
+    return { facingMode: { ideal: "environment" } };
+  }
+
+  function debugScannerCapabilities(message, error) {
+    if (!isDevelopmentRuntime()) {
+      return;
+    }
+    if (error) {
+      console.debug(`[scanner] ${message}`, error);
+      return;
+    }
+    console.debug(`[scanner] ${message}`);
+  }
+
+  function isDevelopmentRuntime() {
+    const { hostname, protocol } = window.location;
+    return protocol === "file:" || hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
   }
 
   function buildScannerConfig(mode) {
