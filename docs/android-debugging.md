@@ -163,6 +163,106 @@ Do not treat this as sufficient for final barcode/camera validation.
 
 ---
 
+## Hot Reload Means Serve + Refresh
+
+When the user says:
+
+- "hot reload"
+- "update directly"
+- "upload app.js to phone browser"
+- "test patches on attached Android phone"
+- "static-demo is open on Android Chrome"
+
+do **not** ask what bug to fix first.
+
+First establish the hot reload loop.
+
+### Expected Behavior
+
+1. Confirm adb device is connected.
+2. Serve `static-demo/` locally.
+3. Make Android Chrome load the local served URL.
+4. Use `adb reverse` if the phone is attached through Windows.
+5. After source edits, refresh the Android Chrome tab.
+6. Only then investigate camera/scanner bugs.
+
+The user is asking for infrastructure, not diagnosis.
+
+### Preferred Windows + WSL Flow
+
+```bash
+ADB_EXE="$(wslpath -u "$(powershell.exe -NoProfile -Command "(Get-Command adb.exe).Source" | tr -d '\r')")"
+
+"$ADB_EXE" devices
+"$ADB_EXE" reverse tcp:8080 tcp:8080
+```
+
+The URL depends on which directory is being served:
+
+| Served directory | Android URL |
+|---|---|
+| repo root (e.g. `C:\repo\`) | `http://localhost:8080/static-demo/` |
+| `static-demo/` directly | `http://localhost:8080/` |
+
+Set a variable early to avoid confusion:
+
+```bash
+SERVE_ROOT="$(wslpath -w "$PWD")"       # repo root → /static-demo/
+# or
+SERVE_ROOT="$(wslpath -w "$PWD/static-demo")"  # static-demo only → /
+```
+
+Serve from Windows when using Windows adb:
+
+```bash
+powershell.exe -NoProfile -Command \
+  "Start-Process -WindowStyle Hidden -FilePath python -ArgumentList '-m http.server 8080 -d \"$SERVE_ROOT\"'"
+```
+
+Open on Android:
+
+```bash
+"$ADB_EXE" shell am start \
+  -a android.intent.action.VIEW \
+  -d "http://localhost:8080/static-demo/" \
+  com.android.chrome
+```
+
+After editing `static-demo/app.js`, refresh:
+
+```bash
+"$ADB_EXE" shell input keyevent KEYCODE_F5
+```
+
+or reopen the same URL:
+
+```bash
+"$ADB_EXE" shell am start \
+  -a android.intent.action.VIEW \
+  -d "http://localhost:8080/static-demo/" \
+  com.android.chrome
+```
+
+### Rules
+
+- Do not block on CDP.
+- Do not ask for bug details before the hot reload loop works.
+- Do not try to push `app.js` into Chrome directly; browsers load files from URLs. The correct model is:
+
+  local source file → local static server → Android localhost via adb reverse → browser refresh.
+
+### Fastest Manual Refresh Fallback
+
+If automation becomes flaky:
+
+1. Edit files
+2. Save
+3. Tap refresh in Android Chrome manually
+
+Manual refresh is acceptable during rapid camera/scanner iteration.
+
+Do not block debugging on perfect automation.
+
 ## Mobile Hot Reload / Direct Patch Testing
 
 Goal:
