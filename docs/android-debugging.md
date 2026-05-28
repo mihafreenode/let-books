@@ -51,8 +51,11 @@ Prefer reusing the Windows adb server instead of starting a separate Linux adb i
 # Point WSL adb client to Windows adb server
 export ADB_SERVER_SOCKET=tcp:$(ip route | awk '/default/ {print $3}'):5037
 
+# Resolve the Windows adb executable; repeated runs reuse a persistent cache
+ADB_EXE="$(tools/wsl-find-adb.sh)"
+
 # Verify device visibility
-adb.exe devices
+"$ADB_EXE" devices
 ```
 
 ---
@@ -62,7 +65,7 @@ adb.exe devices
 Forward Chrome DevTools socket:
 
 ```bash
-adb forward tcp:9222 localabstract:chrome_devtools_remote
+"$ADB_EXE" forward tcp:9222 localabstract:chrome_devtools_remote
 ```
 
 Verify:
@@ -190,9 +193,13 @@ The user is asking for infrastructure, not diagnosis.
 
 ### Preferred Windows + WSL Flow
 
-```bash
-ADB_EXE="$(wslpath -u "$(powershell.exe -NoProfile -Command "(Get-Command adb.exe).Source" | tr -d '\r')")"
+Resolve `ADB_EXE` using:
 
+- `tools/wsl-find-adb.sh`
+- [Safe Discovery of Windows Executables from WSL](#safe-discovery-of-windows-executables-from-wsl)
+
+```bash
+ADB_EXE="$(tools/wsl-find-adb.sh)"
 "$ADB_EXE" devices
 "$ADB_EXE" reverse tcp:8080 tcp:8080
 ```
@@ -268,6 +275,191 @@ Do not block debugging on perfect automation.
 Goal:
 Edit local files and verify changes on the attached Android device with the shortest possible loop.
 
+## Low-Question Hot Reload Mode
+
+When the user asks for hot reload or direct patch testing, minimize questions.
+
+Assume the user wants:
+
+- the Android device refreshed
+- the local server or reverse state verified
+- source edits reflected on the phone
+- current state synced
+- camera or scanner debugging to continue
+
+Do not ask what to change unless a source edit is impossible without clarification.
+
+## Continuous Hot Reload Iteration Mode
+
+Once the hot reload loop is established successfully:
+
+- do not repeatedly re-summarize infrastructure state
+- do not repeatedly ask what workflow the user wants
+- do not repeatedly ask broad planning questions
+
+Assume the workflow remains active until:
+
+- `adb` disconnects
+- server fails
+- user explicitly changes workflow
+- repository state changes substantially
+
+### Preferred Iteration Loop
+
+After hot reload setup:
+
+1. inspect relevant changed files
+2. apply requested patch
+3. refresh Android Chrome
+4. continue debugging/testing
+5. report concise results
+
+Avoid repeatedly restating:
+
+- adb device ID
+- server port
+- `adb reverse` state
+- localhost URL
+- WSL topology
+
+unless something breaks.
+
+### Interpret Short User Commands Operationally
+
+| User input | Expected behavior |
+| --- | --- |
+| `sync` | refresh or reopen the Android page |
+| `refresh` | refresh Android Chrome |
+| `again` | retry previous patch or test flow |
+| `still broken` | inspect likely affected files and continue debugging |
+| `camera still bad` | continue camera instrumentation or debugging |
+| `patch it` | edit likely relevant files directly |
+| `css` | inspect or edit relevant CSS files |
+| `app.js` | inspect or edit relevant JavaScript logic |
+| `same issue` | continue previous investigation context |
+
+Do not require the user to restate:
+
+- which files are active
+- that Android hot reload is still desired
+- that the phone is connected
+- that Chrome is already open
+
+unless evidence suggests otherwise.
+
+### Minimize Conversational Reset
+
+Avoid responses like:
+
+- "What would you like to change?"
+- "What issue are you seeing?"
+- "How would you like to proceed?"
+
+when already inside an active debugging loop.
+
+Prefer:
+
+- inspecting likely relevant files
+- applying small reversible patches
+- refreshing Android Chrome
+- reporting concise observations
+
+### Preferred Reporting Style
+
+Good:
+
+```text
+Patched scanner overlay sizing in static-demo/app.css.
+Refreshed Android Chrome.
+Camera stream now fills viewport correctly on rotation.
+```
+
+Bad:
+
+```text
+Hot reload loop is active.
+ADB device connected.
+Server running.
+What would you like me to do next?
+```
+
+### Treat Infrastructure as Persistent Session State
+
+Once verified:
+
+- assume `adb reverse` remains active
+- assume server remains active
+- assume Chrome remains open
+
+Only revalidate infrastructure if:
+
+- refresh fails
+- `adb` commands fail
+- page becomes unreachable
+- user explicitly requests restart or reset
+
+### Expected Behavior After Setup
+
+Once hot reload is established, the agent should:
+
+1. Keep `ADB_EXE` resolved.
+2. Keep `adb reverse tcp:8080 tcp:8080` active.
+3. Keep or restart the local Windows-hosted static server if needed.
+4. Reopen or refresh Android Chrome with:
+
+```bash
+"$ADB_EXE" shell am start \
+  -a android.intent.action.VIEW \
+  -d "http://localhost:8080/static-demo/" \
+  com.android.chrome
+```
+
+5. Continue editing and testing without asking broad workflow questions.
+
+### Verification Behavior
+
+From WSL, `curl http://localhost:8080/...` may fail if the server is hosted on Windows. Do not treat that as proof the phone cannot reach it.
+
+For Windows-hosted server verification from WSL, prefer:
+
+```bash
+powershell.exe -NoProfile -Command \
+  "try { (Invoke-WebRequest -UseBasicParsing http://localhost:8080/static-demo/).StatusCode } catch { exit 1 }"
+```
+
+Also verify:
+
+```bash
+"$ADB_EXE" reverse --list
+```
+
+If the server is missing, restart it instead of asking.
+
+### Question Policy
+
+Avoid questions like:
+
+- "What bug are you seeing?"
+- "What do you want to change?"
+- "Are you using Chrome DevTools?"
+- "What is your workflow?"
+
+Prefer action:
+
+- refresh
+- reopen URL
+- verify reverse
+- restart server
+- inspect active files
+- make a small reversible patch when requested
+
+Only ask when:
+
+- multiple destructive choices exist
+- the requested code change is ambiguous
+- the device is disconnected
+- a required tool is genuinely missing after documented discovery attempts
+
 Important:
 This is different from CDP runtime injection.
 
@@ -302,34 +494,40 @@ Avoid getting stuck in Windows portproxy unless explicitly needed, because `nets
 
 If Windows Python is available:
 
-1. Convert repo path from WSL to Windows path:
+1. Resolve `ADB_EXE` using `tools/wsl-find-adb.sh`:
+
+```bash
+ADB_EXE="$(tools/wsl-find-adb.sh)"
+```
+
+2. Convert repo path from WSL to Windows path:
 
 ```bash
 REPO_WIN=$(wslpath -w "$PWD")
 ```
 
-2. Start a Windows-hosted static server from WSL:
+3. Start a Windows-hosted static server from WSL:
 
 ```bash
 powershell.exe -NoProfile -Command \
-  "Start-Process -WindowStyle Hidden -FilePath python -ArgumentList '-m http.server 8080 -d \"$env:REPO_WIN\"'"
+  "Start-Process -WindowStyle Hidden -FilePath python -ArgumentList '-m http.server 8080 -d \"$REPO_WIN\"'"
 ```
 
-If passing environment variables is awkward, generate the final PowerShell command with the resolved Windows path explicitly.
+If you need to serve `static-demo/` directly instead of the repo root, convert that directory explicitly with `wslpath -w` and reuse the same pattern.
 
-3. Reverse the port to the Android device:
+4. Reverse the port to the Android device:
 
 ```bash
-adb.exe reverse tcp:8080 tcp:8080
+"$ADB_EXE" reverse tcp:8080 tcp:8080
 ```
 
-4. Open the local site on Android Chrome:
+5. Open the local site on Android Chrome:
 
 ```bash
-adb.exe shell am start -a android.intent.action.VIEW -d "http://localhost:8080/static-demo/" com.android.chrome
+"$ADB_EXE" shell am start -a android.intent.action.VIEW -d "http://localhost:8080/static-demo/" com.android.chrome
 ```
 
-5. After edits, refresh the existing tab instead of relaunching Chrome when possible.
+6. After edits, refresh the existing tab instead of relaunching Chrome when possible.
 
 ### If CDP Works
 
@@ -344,13 +542,13 @@ await page.reload({ waitUntil: 'domcontentloaded' });
 Use ADB key events as fallback:
 
 ```bash
-adb.exe shell input keyevent KEYCODE_F5
+"$ADB_EXE" shell input keyevent KEYCODE_F5
 ```
 
 or reopen the same local URL:
 
 ```bash
-adb.exe shell am start -a android.intent.action.VIEW -d "http://localhost:8080/static-demo/" com.android.chrome
+"$ADB_EXE" shell am start -a android.intent.action.VIEW -d "http://localhost:8080/static-demo/" com.android.chrome
 ```
 
 ### Camera Note
@@ -481,6 +679,8 @@ In WSL, Android USB connectivity is typically handled by the Windows host.
 
 ### Connecting to Windows adb Server
 
+This is the Linux `adb` client path. Prefer the `ADB_EXE="$(tools/wsl-find-adb.sh)"` flow elsewhere in this guide unless you intentionally need the Linux client to talk to the Windows adb server.
+
 ```bash
 # Determine Windows host IP
 HOST_IP=$(ip route | grep default | awk '{print $3}')
@@ -492,21 +692,14 @@ adb devices
 
 ### Using Windows adb.exe Directly
 
+Use the canonical helper instead of repeating discovery logic inline:
+
 ```bash
-# If adb.exe is on PATH (e.g., via PlatformTools installed in Windows)
-adb.exe devices
-
-# Safer discovery: query Windows for the actual adb.exe path
-cmd.exe /c where adb.exe
-
-# Or via PowerShell
-powershell.exe -Command "(Get-Command adb.exe).Source"
-
-# The discovered path is a Windows path (e.g., C:\Users\...\adb.exe).
-# Convert or quote it as needed for WSL:
-# - convert backslashes to forward slashes, prepend /mnt/
-# - or wrap in quotes when passing to adb.exe
+ADB_EXE="$(tools/wsl-find-adb.sh)"
+"$ADB_EXE" devices
 ```
+
+See [Safe Discovery of Windows Executables from WSL](#safe-discovery-of-windows-executables-from-wsl) for the canonical search order, normalization, and failure behavior.
 
 ### Critical Rules
 
@@ -561,8 +754,9 @@ Useful when:
 Example:
 
 ```bash
+ADB_EXE="$(tools/wsl-find-adb.sh)"
 WIN_PATH=$(wslpath -w "$PWD/debug-screenshot.png")
-adb.exe push "$WIN_PATH" /sdcard/Download/
+"$ADB_EXE" push "$WIN_PATH" /sdcard/Download/
 ```
 
 ### Windows → WSL Path Conversion
@@ -594,31 +788,57 @@ file "$WSL_PATH"
 
 ### Safe Discovery of Windows Executables from WSL
 
+Use `tools/wsl-find-adb.sh` as the canonical WSL helper for resolving the Windows `adb.exe` path.
+
+If the executable bit is missing:
+
+```bash
+chmod +x tools/wsl-find-adb.sh
+```
+
+```bash
+ADB_EXE="$(tools/wsl-find-adb.sh)"
+"$ADB_EXE" devices
+```
+
 Avoid hardcoding:
 
 - Android SDK paths
 - WinGet package directories
 - user profile paths
 
-Preferred discovery:
+Do not ask the user where `adb.exe` is until after checking common Windows paths. The helper script uses a multi-strategy discovery optimized for low WSL startup latency: cache first, deterministic probes next, recursive filesystem search only as a final fallback.
 
-```bash
-cmd.exe /c where adb.exe
-```
+Key behaviors:
 
-or:
+- Keep a persistent cache at `${XDG_CACHE_HOME:-$HOME/.cache}/letbooks-adb-path` and reuse it when the cached executable still exists.
+- **Do not** ask the user where adb is until after checking common Windows paths.
+- **Do not** run a broad `find /mnt/c` unless necessary; it can be slow on WSL-mounted Windows filesystems.
+- Prefer deterministic path checks and shell globbing under known WinGet and Android SDK locations.
+- Strip CRLF from Windows command output before path handling.
+- If adb was installed by WinGet, expect it under
+  `AppData/Local/Microsoft/WinGet/Packages/.../platform-tools/adb.exe`.
+- Common Android SDK patterns include `AppData/Local/Android/Sdk/platform-tools/adb.exe` and `Android/Sdk/platform-tools/adb.exe`.
+- Convert Windows-style paths to WSL paths automatically with `wslpath -u`.
+- Return a nonzero exit code with a clear error message if discovery fails.
+- Once found, reuse the resolved `ADB_EXE` variable for all later commands.
+- Set `LETBOOKS_DEBUG_ADB_DISCOVERY=1` to print end-to-end discovery timing for slow-environment diagnosis.
 
-```bash
-powershell.exe -Command "(Get-Command adb.exe).Source"
-```
+Search order explained:
 
-Then normalize:
+| Attempt | Method | Covers |
+|---|---|---|
+| 1 | `ADB_EXE` environment variable | Explicit per-session override |
+| 2 | Persistent cache file | Near-instant repeated execution |
+| 3 | `Get-Command adb.exe` via PowerShell | Windows PATH entries |
+| 4 | `where adb.exe` via cmd.exe | Fallback PATH query |
+| 5 | Deterministic WinGet glob | Per-user WinGet installs |
+| 6 | Deterministic Android SDK glob | Per-user and system-wide SDK installs |
+| 7 | Recursive `find` fallback | Last-resort filesystem search |
 
-```bash
-ADB_WIN=$(powershell.exe -Command "(Get-Command adb.exe).Source" | tr -d '\r')
-ADB_WSL=$(wslpath -u "$ADB_WIN")
-"$ADB_WSL" devices
-```
+Windows-style paths returned by PowerShell or `cmd.exe` are normalized automatically by the helper.
+
+The recursive fallback intentionally runs last because traversing `/mnt/c/Users` can be noticeably slow from WSL.
 
 ### Quoting Rules
 
@@ -633,13 +853,13 @@ Always quote paths.
 Preferred:
 
 ```bash
-"$ADB_WSL" devices
+"$ADB_EXE" devices
 ```
 
 Avoid:
 
 ```bash
-$ADB_WSL devices
+$ADB_EXE devices
 ```
 
 ### Common Cross-Environment Pitfalls
@@ -647,6 +867,8 @@ $ADB_WSL devices
 #### CRLF Line Endings
 
 Windows commands may return carriage returns (`\r`).
+
+`tools/wsl-find-adb.sh` already strips these for adb discovery.
 
 Normalize when needed:
 
@@ -687,6 +909,7 @@ When invoking Windows tools from WSL:
 3. Quote paths
 4. Strip CRLF if needed
 5. Reuse resolved executable paths during the session
+6. Let the helper's persistent cache remove repeated startup cost
 
 Avoid:
 
