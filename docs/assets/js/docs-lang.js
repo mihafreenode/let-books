@@ -85,7 +85,23 @@ const DOCS_LOCALE_CONFIG = {
     fr: 'Prototype alpha précoce. La documentation et les textes d\'interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n\'impliquent ni partenariat ni soutien.',
     es: 'Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.',
   },
+  navToggleLabels: {
+    en: { open: 'Open navigation menu', close: 'Close navigation menu' },
+    sl: { open: 'Odpri navigacijski meni', close: 'Zapri navigacijski meni' },
+    hr: { open: 'Otvori navigacijski izbornik', close: 'Zatvori navigacijski izbornik' },
+    bs: { open: 'Otvori navigacijski meni', close: 'Zatvori navigacijski meni' },
+    'sr-Latn': { open: 'Otvori navigacioni meni', close: 'Zatvori navigacioni meni' },
+    'sr-Cyrl': { open: 'Отвори навигациони мени', close: 'Затвори навигациони мени' },
+    mk: { open: 'Отвори мени за навигација', close: 'Затвори мени за навигација' },
+    sq: { open: 'Hap menynë e navigimit', close: 'Mbyll menynë e navigimit' },
+    de: { open: 'Navigationsmenü öffnen', close: 'Navigationsmenü schließen' },
+    it: { open: 'Apri il menu di navigazione', close: 'Chiudi il menu di navigazione' },
+    fr: { open: 'Ouvrir le menu de navigation', close: 'Fermer le menu de navigation' },
+    es: { open: 'Abrir el menú de navegación', close: 'Cerrar el menú de navegación' },
+  },
 };
+
+const MOBILE_NAV_MEDIA_QUERY = '(max-width: 820px)';
 
 function inferLocaleFromPath() {
   const match = window.location.pathname.match(/\/docs\/([^/]+)\//);
@@ -159,15 +175,125 @@ function ensureFooterMicrocopy() {
      footerHeading.appendChild(paragraph);
    }
 
-   paragraph.textContent = DOCS_LOCALE_CONFIG.footerMicrocopy[locale] || DOCS_LOCALE_CONFIG.footerMicrocopy.en;
+    paragraph.textContent = DOCS_LOCALE_CONFIG.footerMicrocopy[locale] || DOCS_LOCALE_CONFIG.footerMicrocopy.en;
+}
+
+function getNavToggleLabels(locale) {
+  return DOCS_LOCALE_CONFIG.navToggleLabels[locale] || DOCS_LOCALE_CONFIG.navToggleLabels.en;
+}
+
+function setupMobileNav() {
+  const headerInner = document.querySelector('.site-header .header-inner');
+  const nav = headerInner?.querySelector('.header-nav');
+
+  if (!headerInner || !nav) return;
+
+  document.body.classList.add('js-nav-ready');
+
+  const locale = getCurrentLocale();
+  const labels = getNavToggleLabels(locale);
+  const navId = nav.id || `docs-nav-${getCurrentPageType()}`;
+  nav.id = navId;
+
+  let topRow = headerInner.querySelector('.header-top-row');
+  if (!topRow) {
+    topRow = document.createElement('div');
+    topRow.className = 'header-top-row';
+
+    while (headerInner.firstChild) {
+      topRow.appendChild(headerInner.firstChild);
+    }
+
+    headerInner.appendChild(topRow);
+    headerInner.appendChild(nav);
+  }
+
+  let toggle = headerInner.querySelector('.nav-toggle');
+  if (!toggle) {
+    toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'nav-toggle';
+    toggle.setAttribute('aria-controls', navId);
+    toggle.innerHTML = '<span aria-hidden="true">☰</span>';
+    topRow.appendChild(toggle);
+  }
+
+  const mobileMedia = window.matchMedia(MOBILE_NAV_MEDIA_QUERY);
+
+  function setExpanded(expanded) {
+    toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    toggle.setAttribute('aria-label', expanded ? labels.close : labels.open);
+    nav.classList.toggle('is-open', expanded);
+
+    if (mobileMedia.matches) {
+      nav.hidden = !expanded;
+    } else {
+      nav.hidden = false;
+    }
+  }
+
+  function closeMenu({ returnFocus = false } = {}) {
+    setExpanded(false);
+    if (returnFocus) {
+      toggle.focus();
+    }
+  }
+
+  function syncWithViewport() {
+    if (mobileMedia.matches) {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      nav.hidden = !isExpanded;
+    } else {
+      nav.classList.remove('is-open');
+      nav.hidden = false;
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', labels.open);
+    }
+  }
+
+  toggle.addEventListener('click', () => {
+    const nextExpanded = toggle.getAttribute('aria-expanded') !== 'true';
+    setExpanded(nextExpanded);
+  });
+
+  toggle.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeMenu({ returnFocus: true });
+    }
+  });
+
+  nav.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeMenu({ returnFocus: true });
+    }
+  });
+
+  nav.addEventListener('click', (event) => {
+    if (!mobileMedia.matches) return;
+    if (event.target.closest('a')) {
+      closeMenu();
+    }
+  });
+
+  if (typeof mobileMedia.addEventListener === 'function') {
+    mobileMedia.addEventListener('change', syncWithViewport);
+  } else {
+    mobileMedia.addListener(syncWithViewport);
+  }
+
+  setExpanded(false);
+  syncWithViewport();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-   const locale = getCurrentLocale();
-   const pageType = getCurrentPageType();
+    const locale = getCurrentLocale();
+    const pageType = getCurrentPageType();
 
-   document.body.dataset.locale = locale;
-   document.body.dataset.pageType = pageType;
-   buildEquivalentLanguageLinks();
-   ensureFooterMicrocopy();
+    document.body.dataset.locale = locale;
+    document.body.dataset.pageType = pageType;
+    setupMobileNav();
+    buildEquivalentLanguageLinks();
+    ensureFooterMicrocopy();
 });
