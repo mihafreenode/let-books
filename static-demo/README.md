@@ -98,6 +98,8 @@ Needs internet:
 
 ## Install and Test
 
+The live static demo app is published on GitHub Pages at https://letbooks.org/static-demo/. The public project landing page is available at https://letbooks.org/, and documentation is available at https://letbooks.org/docs/.
+
 Serve the `static-demo/` folder with a static file server.
 
 Example from repository root:

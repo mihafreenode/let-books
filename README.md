@@ -8,6 +8,14 @@ The project is designed around a simple real-world problem: valuable study books
 
 This repository now contains a real static local demo PWA in addition to the specification and documentation work.
 
+The project is published on GitHub Pages at https://letbooks.org/, with the public landing page at the site root and documentation live under https://letbooks.org/docs/. The live static demo app is available at https://letbooks.org/static-demo/.
+
+Public site structure:
+
+- the canonical public landing page is `index.html` at the site root
+- documentation lives under `docs/`
+- the static demo lives under `static-demo/`
+
 What exists now:
 
 - full product specification in `AGENTS.md`
@@ -73,7 +81,8 @@ The first documentation pass is intended to help validate the app concept with r
 
 Included documentation:
 
-- `docs/index.html` as the central language hub
+- `index.html` as the canonical public landing page
+- `docs/index.html` as the documentation language hub
 - locale-specific documentation under `docs/en/`, `docs/sl/`, `docs/hr/`, `docs/bs/`, `docs/sr-Latn/`, `docs/sr-Cyrl/`, `docs/mk/`, `docs/sq/`, `docs/de/`, `docs/it/`, `docs/fr/`, and `docs/es/`
 - a shared page set for each locale covering overview, individuals, institutions, and administrators
 
@@ -116,7 +125,23 @@ Then open:
 
 - `http://127.0.0.1:8000/`
 
-### Preview the Documentation
+### Preview the Public Site and Documentation
+
+For the GitHub Pages layout, serve the repository root so both `/` and `/docs/` are available.
+
+Example:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+- `http://127.0.0.1:8000/`
+- `http://127.0.0.1:8000/docs/`
+- `http://127.0.0.1:8000/docs/en/index.html`
+
+### Preview Only the Documentation Folder
 
 To preview the documentation locally, serve the `docs/` folder with a simple static file server.
 
@@ -128,6 +153,7 @@ python3 -m http.server 8000 --directory docs
 
 Then open:
 
+- `http://127.0.0.1:8000/`
 - `http://127.0.0.1:8000/en/index.html`
 - `http://127.0.0.1:8000/sl/index.html`
 
