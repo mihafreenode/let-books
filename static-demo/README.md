@@ -119,6 +119,149 @@ Then open:
 http://127.0.0.1:8000/static-demo/
 ```
 
+## AI Agent Playwright Skill
+
+This project uses Playwright extensively for:
+
+- UI regression testing
+- end-to-end workflow verification
+- localization validation
+- accessibility checks
+- screenshot-based documentation and tutorial generation
+- responsive and mobile layout verification
+- static demo validation before Blazor implementation
+- behavioral and specification capture for future parity testing
+
+For AI-assisted development, it is strongly recommended that contributors install a Playwright-oriented skill package for their coding agent environment.
+
+Recommended curated skill:
+
+- OpenAI Playwright Curated Skill: https://github.com/openai/skills/tree/main/skills/.curated/playwright
+
+This recommendation is especially relevant for `Codex CLI`, `OpenCode`, `Claude Code`, `Roo Code`, `Continue.dev`, `Cursor` agent workflows, and similar MCP or agentic coding environments that support reusable skills.
+
+Suggested contributor setup should include:
+
+- skill installation steps
+- Playwright browser installation
+- headless and headed execution examples
+- CI integration examples
+- screenshot artifact storage guidance
+- localization verification workflows
+- mobile viewport testing configuration
+- visual regression baseline management
+
+Recommended contributor tooling stack:
+
+Core tooling:
+
+- Node.js
+- Python
+- Playwright
+- Chrome or Chromium
+- Hunspell dictionaries
+- Docker and Docker Compose
+- GitHub Actions CI
+- ESLint and Prettier
+
+Strongly recommended CLI utilities:
+
+- `jq` for JSON processing, API response validation, localization file inspection, and build/config transformation
+- ImageMagick (`convert`, `magick`) for screenshot comparison, image resizing and optimization, hero and banner asset processing, documentation and tutorial image generation, and visual regression helper workflows
+- `ripgrep` (`rg`) for fast codebase search, localization auditing, translation completeness checks, and accessibility attribute verification
+- `fd` for improved file discovery and cleaner scripting support than traditional `find`
+- `bat` for better terminal file previews and syntax-highlighted logs/configs
+- `delta` for improved Git diff readability
+- `shellcheck` for shell script linting
+- `yamllint` for CI and workflow validation
+- `sqlite3` for lightweight local inspection and debugging
+- `pandoc` for Markdown and document conversion workflows
+- `ffmpeg` for tutorial and demo video generation plus animated workflow captures
+
+Recommended Ubuntu or Debian installation:
+
+```bash
+sudo apt update
+sudo apt install -y \
+  jq \
+  imagemagick \
+  ripgrep \
+  fd-find \
+  bat \
+  git-delta \
+  shellcheck \
+  yamllint \
+  sqlite3 \
+  pandoc \
+  ffmpeg \
+  hunspell \
+  hunspell-en-us
+```
+
+Useful local setup examples:
+
+```bash
+npx playwright install
+```
+
+```bash
+npx playwright test
+```
+
+```bash
+npx playwright test --headed
+```
+
+```bash
+npx playwright install-deps
+```
+
+Recommended browser coverage:
+
+- Chromium
+- Firefox
+- WebKit
+- Mobile Chrome emulation
+- Mobile Safari emulation
+
+AI-generated tests should verify:
+
+- responsive layouts
+- hamburger menu behavior
+- localization rendering
+- Unicode correctness
+- keyboard navigation
+- screen reader compatibility where feasible
+- screenshot consistency
+- hero and dashboard rendering
+- demo-to-Blazor workflow parity
+- offline and PWA behavior
+- touch and mobile interactions
+
+Localization validation should verify:
+
+- proper Unicode rendering
+- Slovenian `č`, `š`, `ž`
+- Serbian Latin vs Serbian Cyrillic correctness
+- Macedonian Cyrillic correctness
+- no untranslated UI fragments
+- screen reader compatibility where feasible
+- mobile menu localization
+- proper RTL handling if future languages require it
+
+Screenshot and documentation workflows should support automated:
+
+- screenshot capture
+- UI regression baselines
+- tutorial generation
+- responsive viewport documentation
+- localization screenshot matrices
+- Markdown-to-document exports
+
+If this repository adds or restores a Playwright test suite, keep screenshot artifacts, traces, and visual baselines in stable, reviewable locations and make locale coverage and mobile viewport coverage explicit in the test configuration.
+
+For AI-assisted development, the Playwright skill improves browser automation, DOM inspection, UI assertions, visual regression workflows, screenshot capture, accessibility auditing, interactive debugging, and stable Playwright test generation. ImageMagick and Playwright should be treated as core infrastructure for screenshot, documentation, and regression workflows.
+
 ## Phone Testing Notes
 
 Camera scanning usually requires:

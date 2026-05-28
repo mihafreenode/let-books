@@ -2296,6 +2296,10 @@ When using coding agents such as GPT, opencode, Copilot, or similar:
 - keep changes small and reviewable
 - write tests with features
 - update docs with user-visible changes
+- strongly recommend installing a Playwright-oriented skill package when the agent environment supports reusable skills
+- preferred curated skill: OpenAI Playwright Curated Skill at `https://github.com/openai/skills/tree/main/skills/.curated/playwright`
+- use that skill to improve browser automation, DOM inspection, UI assertions, screenshot capture, accessibility auditing, localization verification, responsive/mobile checks, and future parity testing
+- treat Playwright, ImageMagick, and the recommended CLI tooling stack as part of the preferred developer environment for UI, localization, screenshot, and documentation workflows
 - do not introduce paid AI calls in default code paths
 - do not hardcode COBISS assumptions
 - keep `.po` localization for UI only

@@ -298,6 +298,12 @@ Avoid:
 
 - Use `hunspell` for spellcheck if available
 - Use `playwright` for browser preview verification if available
+- For AI-assisted UI work, strongly recommend a Playwright-oriented skill package for the coding agent environment; preferred curated skill: `https://github.com/openai/skills/tree/main/skills/.curated/playwright`
+- Prefer the Playwright skill for browser automation, DOM inspection, UI assertions, screenshot capture, accessibility auditing, localization checks, mobile viewport verification, and interactive debugging when the environment supports reusable skills
+- Verification and generated tests should cover responsive layouts, hamburger menu behavior, localization rendering, Unicode correctness, keyboard navigation, screenshot consistency, hero/dashboard rendering, offline/PWA behavior, and touch/mobile interactions where relevant
+- Localization verification should explicitly check Slovenian `č`, `š`, `ž`, Serbian Latin vs Serbian Cyrillic correctness, Macedonian Cyrillic correctness, untranslated UI fragments, and mobile-menu localization; keep RTL readiness in mind for future locales
+- Screenshot and documentation workflows should support automated screenshot capture, regression baselines, tutorial generation, responsive viewport documentation, localization screenshot matrices, and Markdown-to-document export pipelines
+- Keep detailed contributor tooling setup in `static-demo/README.md` rather than duplicating package lists and install commands here
 - Verification should check both desktop and mobile layouts
 - Verification should check navigation, language switching, and asset loading
 - Verification for public pages should also check favicon URLs, canonical URLs, and representative Open Graph/metadata output where practical

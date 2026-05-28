@@ -162,6 +162,16 @@ Then open:
 - `http://127.0.0.1:8000/en/index.html`
 - `http://127.0.0.1:8000/sl/index.html`
 
+## Developer Tooling
+
+This project uses Playwright heavily for UI verification, localization checks, accessibility checks, responsive/mobile validation, screenshot-based documentation, and future parity testing.
+
+Recommended curated skill:
+
+- OpenAI Playwright Curated Skill: https://github.com/openai/skills/tree/main/skills/.curated/playwright
+
+For AI-assisted development, strongly prefer a Playwright-oriented skill package when the environment supports reusable skills. See `static-demo/README.md` for the full contributor tooling stack, Playwright setup, localization validation expectations, and screenshot/documentation workflow guidance.
+
 ## Product Direction
 
 Let Books is not intended to be primarily an AI product.
