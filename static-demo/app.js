@@ -130,6 +130,8 @@
     scanner: {
       instance: null,
       state: "idle",
+      startPending: false,
+      startPromise: null,
       handlingDecode: false,
       torchOn: false,
       torchSupported: false,
@@ -137,13 +139,16 @@
       zoomSupported: false,
       facingMode: "environment",
       focusMode: "",
+      activeDeviceId: "",
+      activeDeviceLabel: "",
       sessionToken: 0
     },
     photoUrlCache: new Map(),
     transientBoxImport: null,
     dataSummary: { boxes: 0, books: 0, photos: 0 },
     dashboardGuardArmed: false,
-    scannerStatus: { active: false, title: "", hint: "" },
+    scannerStatus: { active: false, title: "", hint: "", tone: "info", details: [] },
+    scannerDebug: { active: false, title: "", lines: [] },
     activeToasts: new Map(),
     transientBookDraft: null,
     lastNonScannerHash: "#/dashboard",
@@ -1367,13 +1372,14 @@
         <div class="scanner-page-topbar">
           <button type="button" class="ghost-button scanner-top-button scanner-top-button-text" data-action="scanner-back" aria-label="${escapeHtml(t("scanner.back"))}">${escapeHtml(t("scanner.back"))}</button>
           <div class="scanner-top-actions">
-            <button type="button" class="ghost-button scanner-top-button scanner-top-button-text" data-action="scanner-switch-camera" aria-label="${escapeHtml(t("scanner.switchCamera"))}">${escapeHtml(t("scanner.cameraShort"))}</button>
+            <button type="button" class="ghost-button scanner-top-button scanner-top-button-text" data-action="scanner-switch-camera" data-scanner-pending-disabled="true" aria-label="${escapeHtml(t("scanner.switchCamera"))}" ${appState.scanner.startPending ? "disabled" : ""}>${escapeHtml(t("scanner.cameraShort"))}</button>
             <button type="button" class="ghost-button scanner-top-button scanner-top-button-text ${appState.scanner.torchOn ? "is-active" : ""}" data-action="scanner-toggle-torch" data-scanner-control="torch" aria-pressed="${appState.scanner.torchOn ? "true" : "false"}" aria-label="${escapeHtml(t("scanner.torch"))}" ${appState.scanner.torchSupported ? "" : "hidden"}>${escapeHtml(t("scanner.torch"))}</button>
           </div>
         </div>
         <div class="scanner-shell scanner-shell-fullscreen">
           <div class="scanner-card scanner-card-fullscreen">
             <div id="scanner-status-region">${renderScannerStatusMarkup()}</div>
+            <div id="scanner-debug-region">${renderScannerDebugMarkup()}</div>
             <div class="scanner-frame scanner-frame-${escapeHtml(mode)} scanner-frame-fullscreen">
               <div id="scanner-view" class="scanner-view scanner-view-fullscreen"><div class="scanner-empty">${escapeHtml(t("scanner.cameraHelp"))}</div></div>
               <div class="scanner-overlay ${mode === "isbn" ? "scanner-overlay-barcode" : "scanner-overlay-square"}" style="${escapeHtml(overlayStyle)}" aria-hidden="true">
@@ -2548,67 +2554,139 @@
     if (!container) return;
     if (appState.route.name !== "scanner") return;
     if (appState.route.query.mode === "manual") return;
+    if (appState.scanner.startPromise) {
+      if (!forceRestart) {
+        return appState.scanner.startPromise;
+      }
+      try {
+        await appState.scanner.startPromise;
+      } catch (_) {
+        // A forced restart should continue even if the previous start attempt failed.
+      }
+    }
+
     if (appState.scanner.running && !forceRestart) return;
+
+    const startPromise = startScannerSession(container, forceRestart);
+    appState.scanner.startPromise = startPromise;
+    appState.scanner.startPending = true;
+    syncScannerControlAvailability();
+
+    try {
+      await startPromise;
+    } finally {
+      if (appState.scanner.startPromise === startPromise) {
+        appState.scanner.startPromise = null;
+        appState.scanner.startPending = false;
+        syncScannerControlAvailability();
+      }
+    }
+  }
+
+  async function startScannerSession(container, forceRestart) {
     appState.scanner.sessionToken += 1;
-    await stopScanner({ invalidateSession: false });
+    await stopScanner({ invalidateSession: false, preserveStatus: false, preserveDebug: false });
     const sessionToken = appState.scanner.sessionToken;
+    const mode = appState.route.query.mode || "box";
+
     appState.scanner.state = "starting";
+    appState.scanner.running = false;
+    appState.scanner.handlingDecode = false;
+    clearScannerIdleHint();
+    clearScannerStatus();
+    setScannerDebug(t("scanner.debugTitle"), buildScannerRuntimeDebugLines());
+    setScannerStatus(t("scanner.cameraStarting"), "", { tone: "info" });
+
+    if (!window.isSecureContext) {
+      const error = createScannerError("SecurityError", "window.isSecureContext is false.");
+      throw await handleScannerStartFailure(error, container);
+    }
+    if (!navigator.mediaDevices?.getUserMedia) {
+      const error = createScannerError("NotSupportedError", "navigator.mediaDevices.getUserMedia is unavailable.");
+      throw await handleScannerStartFailure(error, container);
+    }
+
     container.innerHTML = "";
     const scannerId = `letbooks-scanner-region-${sessionToken}`;
     container.innerHTML = `<div id="${scannerId}"></div>`;
     const html5QrCode = new Html5Qrcode(scannerId);
-    const mode = appState.route.query.mode || "box";
-    clearScannerIdleHint();
-    clearScannerStatus();
+
     try {
-      await html5QrCode.start(
-        buildScannerCameraConfig(),
-        buildScannerConfig(mode),
-        async (decodedText) => {
-          if (appState.scanner.handlingDecode) {
+      const cameraPlan = await resolvePreferredScannerSource();
+      let selectedResult = null;
+      let lastError = null;
+
+      for (const candidate of cameraPlan.candidates) {
+        try {
+          await html5QrCode.start(
+            candidate.source,
+            buildScannerConfig(mode),
+            async (decodedText) => {
+              if (appState.scanner.handlingDecode) {
+                return;
+              }
+              clearScannerIdleHint();
+              appState.scanner.handlingDecode = true;
+              try {
+                await handleScannedValue(decodedText, mode, appState.route.query.boxId || "");
+              } finally {
+                window.setTimeout(() => {
+                  appState.scanner.handlingDecode = false;
+                }, 900);
+              }
+            }
+          );
+
+          if (sessionToken !== appState.scanner.sessionToken || appState.route.name !== "scanner") {
+            await disposeScannerInstance(html5QrCode);
             return;
           }
-          clearScannerIdleHint();
-          appState.scanner.handlingDecode = true;
-          try {
-            await handleScannedValue(decodedText, mode, appState.route.query.boxId || "");
-          } finally {
-            window.setTimeout(() => {
-              appState.scanner.handlingDecode = false;
-            }, 900);
+
+          const configuredTrack = await configureActiveScannerTrack(mode, cameraPlan.cameras);
+          const rearAccepted = !cameraPlan.rearCameraAvailable || configuredTrack.isRearLike || candidate.allowFrontFallback;
+          if (!rearAccepted) {
+            await disposeScannerInstance(html5QrCode);
+            lastError = createScannerError("NotFoundError", "Rear camera opened as front-facing; retrying with another source.");
+            continue;
           }
+
+          selectedResult = { candidate, configuredTrack, cameraPlan };
+          break;
+        } catch (error) {
+          lastError = error;
+          debugScannerCapabilities(`Scanner start attempt failed for ${candidate.label}.`, error);
+          await disposeScannerInstance(html5QrCode);
         }
-      );
-      if (sessionToken !== appState.scanner.sessionToken || appState.route.name !== "scanner") {
-        try {
-          await html5QrCode.stop();
-        } catch (_) {
-          // Ignore stop errors for a stale scanner start.
-        }
-        try {
-          await html5QrCode.clear();
-        } catch (_) {
-          // Ignore clear errors for a stale scanner start.
-        }
-        return;
       }
+
+      if (!selectedResult) {
+        throw lastError || createScannerError("NotFoundError", "No suitable camera source could be opened.");
+      }
+
       appState.scanner.instance = html5QrCode;
       appState.scanner.state = "running";
       appState.scanner.running = true;
       appState.scanner.handlingDecode = false;
-      appState.scanner.torchOn = false;
-      appState.scanner.torchSupported = false;
-      appState.scanner.zoomSupported = false;
-      appState.scanner.focusMode = "";
-      appState.scanner.zoomLevel = 1;
-      syncScannerControlAvailability();
-      await configureActiveScannerTrack(mode);
+      clearScannerStatus();
+
+      const warning = selectedResult.cameraPlan.rearCameraAvailable
+        ? ""
+        : t("scanner.rearUnavailableWarning");
+
+      if (warning) {
+        setScannerStatus(warning, "", { tone: "warning" });
+      }
+
+      setScannerDebug(
+        t("scanner.debugTitle"),
+        buildScannerActiveDebugLines(selectedResult.configuredTrack, warning)
+      );
+
       scheduleScannerIdleHint(mode);
     } catch (error) {
       console.warn(error);
-      appState.scanner.state = "error";
-      clearScannerIdleHint();
-      container.innerHTML = `<div class="scanner-empty">${escapeHtml(t("scanner.cameraHelp"))}</div>`;
+      await handleScannerStartFailure(error, container);
+      throw error;
     }
   }
 
@@ -2638,10 +2716,17 @@
     appState.scanner.zoomLevel = 1;
     appState.scanner.zoomSupported = false;
     appState.scanner.focusMode = "";
+    appState.scanner.activeDeviceId = "";
+    appState.scanner.activeDeviceLabel = "";
     appState.scanner.state = "idle";
     clearScannerIdleHint();
-    clearScannerStatus();
+    if (!options.preserveStatus) {
+      clearScannerStatus();
+    }
     cleanupScannerMediaElements();
+    if (!options.preserveDebug) {
+      clearScannerDebug();
+    }
     syncScannerControlAvailability();
   }
 
@@ -2685,12 +2770,19 @@
     }
   }
 
-  async function configureActiveScannerTrack(mode) {
+  async function configureActiveScannerTrack(mode, cameras = []) {
     const track = getActiveScannerVideoTrack();
     if (!track) {
       debugScannerCapabilities("Active scanner track not available after startup.");
       syncScannerControlAvailability();
-      return;
+      return {
+        deviceId: "",
+        deviceLabel: "",
+        facingMode: "",
+        facingCapability: "",
+        resolution: "",
+        isRearLike: false
+      };
     }
 
     const capabilities = readScannerTrackCapabilities(track);
@@ -2722,7 +2814,11 @@
     }
 
     appState.scanner.zoomLevel = readCurrentTrackZoomLevel(track);
+    const trackReport = buildScannerTrackReport(track, cameras, capabilities, readScannerTrackSettings(track));
+    appState.scanner.activeDeviceId = trackReport.deviceId;
+    appState.scanner.activeDeviceLabel = trackReport.deviceLabel;
     syncScannerControlAvailability();
+    return trackReport;
   }
 
   async function applyPreferredFocusMode(track, capabilities, settings) {
@@ -2847,13 +2943,236 @@
     document.querySelectorAll('[data-scanner-control="zoom-group"]').forEach((group) => {
       group.hidden = !appState.scanner.zoomSupported;
     });
+    document.querySelectorAll("[data-scanner-pending-disabled='true']").forEach((button) => {
+      button.disabled = Boolean(appState.scanner.startPending);
+    });
   }
 
-  function buildScannerCameraConfig() {
+  async function resolvePreferredScannerSource() {
+    const cameras = await listVideoInputDevices();
+
     if (appState.scanner.facingMode === "user") {
-      return { facingMode: "user" };
+      const frontCamera = findPreferredCameraByFacing(cameras, "user") || cameras[0] || null;
+      return {
+        cameras,
+        rearCameraAvailable: Boolean(findPreferredCameraByFacing(cameras, "environment")),
+        candidates: [
+          frontCamera?.deviceId
+            ? { label: "front-device", source: frontCamera.deviceId, allowFrontFallback: true }
+            : { label: "front-facing", source: { facingMode: "user" }, allowFrontFallback: true }
+        ]
+      };
     }
-    return { facingMode: { ideal: "environment" } };
+
+    const preflight = await getScannerPreflightInfo();
+    const preflightCameras = preflight.cameras.length ? preflight.cameras : cameras;
+    const rearCamera = findPreferredCameraByFacing(preflightCameras, "environment");
+    const rearCameraAvailable = Boolean(rearCamera || preflight.isRearLike);
+    const candidates = [];
+
+    if (rearCamera?.deviceId) {
+      candidates.push({ label: "rear-device", source: rearCamera.deviceId, allowFrontFallback: false });
+    }
+
+    candidates.push({ label: "environment-exact", source: { facingMode: { exact: "environment" } }, allowFrontFallback: false });
+
+    if (preflight.deviceId && !candidates.some((candidate) => candidate.source === preflight.deviceId)) {
+      candidates.push({ label: "preflight-device", source: preflight.deviceId, allowFrontFallback: !rearCameraAvailable });
+    }
+
+    candidates.push({ label: "environment-ideal", source: { facingMode: { ideal: "environment" } }, allowFrontFallback: !rearCameraAvailable });
+
+    if (!rearCameraAvailable && preflightCameras[0]?.deviceId) {
+      candidates.push({ label: "first-camera", source: preflightCameras[0].deviceId, allowFrontFallback: true });
+    }
+
+    return {
+      cameras: preflightCameras,
+      rearCameraAvailable,
+      candidates
+    };
+  }
+
+  async function getScannerPreflightInfo() {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      audio: false,
+      video: { facingMode: { ideal: "environment" } }
+    });
+
+    try {
+      const track = stream.getVideoTracks()[0] || null;
+      const settings = readScannerTrackSettings(track);
+      const capabilities = readScannerTrackCapabilities(track);
+      const trackReport = buildScannerTrackReport(track, [], capabilities, settings);
+      const cameras = await listVideoInputDevices();
+      return {
+        deviceId: String(settings?.deviceId || ""),
+        cameras,
+        isRearLike: trackReport.isRearLike
+      };
+    } finally {
+      stopMediaStream(stream);
+    }
+  }
+
+  async function listVideoInputDevices() {
+    if (!navigator.mediaDevices?.enumerateDevices) {
+      return [];
+    }
+    try {
+      const devices = await navigator.mediaDevices.enumerateDevices();
+      return devices.filter((device) => device.kind === "videoinput");
+    } catch (error) {
+      debugScannerCapabilities("Camera enumeration failed.", error);
+      return [];
+    }
+  }
+
+  function findPreferredCameraByFacing(cameras, facing) {
+    const preferred = cameras
+      .map((camera) => ({
+        camera,
+        score: scoreCameraLabel(camera?.label || "", facing)
+      }))
+      .filter((entry) => entry.score > 0)
+      .sort((left, right) => right.score - left.score);
+    return preferred[0]?.camera || null;
+  }
+
+  function scoreCameraLabel(label, facing) {
+    const normalized = String(label || "").toLowerCase();
+    if (!normalized) {
+      return 0;
+    }
+    const rearPattern = /(rear|back|environment|main|world|traseira|trasera|arriere|arrière|posterior|zadnja|задн|спољ|back camera)/;
+    const frontPattern = /(front|user|face|facetime|selfie|frontal|anterior|prednja|предн)/;
+    if (facing === "environment") {
+      return rearPattern.test(normalized) ? 2 : frontPattern.test(normalized) ? -1 : 0;
+    }
+    return frontPattern.test(normalized) ? 2 : rearPattern.test(normalized) ? -1 : 0;
+  }
+
+  async function disposeScannerInstance(scanner) {
+    if (!scanner) {
+      return;
+    }
+    try {
+      await scanner.stop();
+    } catch (_) {
+      // Ignore stop errors for stale or failed scanner sessions.
+    }
+    try {
+      await scanner.clear();
+    } catch (_) {
+      // Ignore clear errors after a failed scanner session.
+    }
+    cleanupScannerMediaElements();
+  }
+
+  async function handleScannerStartFailure(error, container) {
+    appState.scanner.state = "error";
+    appState.scanner.running = false;
+    appState.scanner.handlingDecode = false;
+    clearScannerIdleHint();
+    appState.scanner.torchOn = false;
+    appState.scanner.torchSupported = false;
+    appState.scanner.zoomSupported = false;
+    syncScannerControlAvailability();
+    setScannerStatus(t("scanner.cameraStartFailed"), formatScannerError(error), {
+      tone: "error",
+      details: []
+    });
+    setScannerDebug(t("scanner.debugTitle"), buildScannerRuntimeDebugLines(error));
+    container.innerHTML = `<div class="scanner-empty">${escapeHtml(t("scanner.cameraHelp"))}</div>`;
+    cleanupScannerMediaElements();
+    return error;
+  }
+
+  function buildScannerTrackReport(track, cameras = [], capabilities = null, settings = null) {
+    const cameraSettings = settings || readScannerTrackSettings(track);
+    const deviceId = String(cameraSettings?.deviceId || "");
+    const matchedCamera = cameras.find((camera) => camera.deviceId === deviceId) || null;
+    const deviceLabel = String(matchedCamera?.label || track?.label || "").trim();
+    const facingMode = formatFacingMode(cameraSettings?.facingMode);
+    const facingCapability = formatFacingMode(capabilities?.facingMode);
+    const resolution = formatScannerResolution(cameraSettings);
+    const isRearLike = Boolean(
+      scoreCameraLabel(deviceLabel, "environment") > 0 ||
+      facingMode === "environment" ||
+      facingCapability === "environment"
+    );
+
+    return {
+      deviceId,
+      deviceLabel,
+      facingMode,
+      facingCapability,
+      resolution,
+      isRearLike
+    };
+  }
+
+  function buildScannerRuntimeDebugLines(error = null) {
+    return [
+      { label: t("scanner.debugLocation"), value: window.location.href },
+      { label: t("scanner.debugProtocol"), value: window.location.protocol },
+      { label: t("scanner.debugSecureContext"), value: formatScannerDebugBoolean(window.isSecureContext) },
+      { label: t("scanner.debugMediaDevices"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices)) },
+      { label: t("scanner.debugGetUserMedia"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices?.getUserMedia)) },
+      ...(error ? [{ label: t("scanner.debugError"), value: formatScannerError(error) }] : [])
+    ];
+  }
+
+  function buildScannerActiveDebugLines(trackReport, warning = "") {
+    return [
+      ...(warning ? [{ label: t("scanner.debugWarning"), value: warning }] : []),
+      { label: t("scanner.debugDevice"), value: trackReport.deviceLabel || "-" },
+      {
+        label: t("scanner.debugFacingMode"),
+        value: [trackReport.facingMode, trackReport.facingCapability].filter(Boolean).join(" / ") || "-"
+      },
+      { label: t("scanner.debugResolution"), value: trackReport.resolution || "-" },
+      ...buildScannerRuntimeDebugLines()
+    ];
+  }
+
+  function formatScannerResolution(settings) {
+    const width = Number(settings?.width);
+    const height = Number(settings?.height);
+    if (!Number.isFinite(width) || !Number.isFinite(height)) {
+      return "";
+    }
+    return `${Math.round(width)}x${Math.round(height)}`;
+  }
+
+  function formatFacingMode(value) {
+    if (Array.isArray(value)) {
+      return value.filter(Boolean).join(", ");
+    }
+    return typeof value === "string" ? value : "";
+  }
+
+  function formatScannerDebugBoolean(value) {
+    return value ? "true" : "false";
+  }
+
+  function formatScannerError(error) {
+    const name = String(error?.name || "Error");
+    const message = String(error?.message || "Unknown camera error.");
+    return `${name}: ${message}`;
+  }
+
+  function createScannerError(name, message) {
+    const error = new Error(message);
+    error.name = name;
+    return error;
+  }
+
+  function stopMediaStream(stream) {
+    if (!stream || typeof stream.getTracks !== "function") {
+      return;
+    }
+    stream.getTracks().forEach((track) => track.stop());
   }
 
   function debugScannerCapabilities(message, error) {
@@ -3118,11 +3437,32 @@
     if (!appState.scannerStatus.active) {
       return "";
     }
-    return `<div class="scanner-status-card"><span class="scanner-progress-dot" aria-hidden="true"></span><div><strong>${escapeHtml(appState.scannerStatus.title)}</strong>${appState.scannerStatus.hint ? `<p>${escapeHtml(appState.scannerStatus.hint)}</p>` : ""}</div></div>`;
+    const toneClass = appState.scannerStatus.tone ? ` scanner-status-${escapeHtml(appState.scannerStatus.tone)}` : "";
+    const details = Array.isArray(appState.scannerStatus.details)
+      ? appState.scannerStatus.details.filter(Boolean).map((detail) => `<li>${escapeHtml(detail)}</li>`).join("")
+      : "";
+    return `<div class="scanner-status-card${toneClass}"><span class="scanner-progress-dot" aria-hidden="true"></span><div><strong>${escapeHtml(appState.scannerStatus.title)}</strong>${appState.scannerStatus.hint ? `<p>${escapeHtml(appState.scannerStatus.hint)}</p>` : ""}${details ? `<ul class="scanner-status-list">${details}</ul>` : ""}</div></div>`;
   }
 
-  function setScannerStatus(title, hint = "") {
-    appState.scannerStatus = { active: true, title, hint };
+  function renderScannerDebugMarkup() {
+    if (!appState.scannerDebug.active) {
+      return "";
+    }
+    const lines = appState.scannerDebug.lines
+      .filter((line) => line && line.label)
+      .map((line) => `<div class="scanner-debug-row"><span>${escapeHtml(line.label)}</span><strong>${escapeHtml(line.value || "-")}</strong></div>`)
+      .join("");
+    return `<div class="scanner-debug-card"><strong>${escapeHtml(appState.scannerDebug.title)}</strong>${lines}</div>`;
+  }
+
+  function setScannerStatus(title, hint = "", options = {}) {
+    appState.scannerStatus = {
+      active: true,
+      title,
+      hint,
+      tone: options.tone || "info",
+      details: Array.isArray(options.details) ? options.details : []
+    };
     const region = document.getElementById("scanner-status-region");
     if (region) {
       region.innerHTML = renderScannerStatusMarkup();
@@ -3130,8 +3470,28 @@
   }
 
   function clearScannerStatus() {
-    appState.scannerStatus = { active: false, title: "", hint: "" };
+    appState.scannerStatus = { active: false, title: "", hint: "", tone: "info", details: [] };
     const region = document.getElementById("scanner-status-region");
+    if (region) {
+      region.innerHTML = "";
+    }
+  }
+
+  function setScannerDebug(title, lines = []) {
+    appState.scannerDebug = {
+      active: true,
+      title,
+      lines: Array.isArray(lines) ? lines : []
+    };
+    const region = document.getElementById("scanner-debug-region");
+    if (region) {
+      region.innerHTML = renderScannerDebugMarkup();
+    }
+  }
+
+  function clearScannerDebug() {
+    appState.scannerDebug = { active: false, title: "", lines: [] };
+    const region = document.getElementById("scanner-debug-region");
     if (region) {
       region.innerHTML = "";
     }
@@ -3186,6 +3546,9 @@
   }
 
   async function switchScannerCamera() {
+    if (appState.scanner.startPending) {
+      return;
+    }
     appState.scanner.facingMode = appState.scanner.facingMode === "environment" ? "user" : "environment";
     await maybeStartScanner(true);
   }

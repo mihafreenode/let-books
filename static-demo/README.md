@@ -119,6 +119,17 @@ Then open:
 http://127.0.0.1:8000/static-demo/
 ```
 
+## Camera Verification Note
+
+Automated tests may mock camera access, but scanner-camera regressions must also be verified manually on real Android and iOS phones.
+
+Manual expectation for `https://letbooks.org/static-demo/`:
+
+- tapping `Camera` in the scanner workflow should open the rear/main camera, not the selfie camera
+- rear-camera preference should remain stable when reopening the scanner
+- if no rear camera is available, the UI should show a visible warning before using the front camera
+- camera/security errors should show the real browser error instead of a generic HTTPS warning when the page is already running in a secure context
+
 ## Contributor Tooling
 
 ### AI Agent Playwright Skill

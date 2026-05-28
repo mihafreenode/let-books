@@ -1812,6 +1812,11 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(212, 167, 59, 0.44);
 }
 
+.scanner-top-button:disabled {
+  opacity: 0.48;
+  cursor: wait;
+}
+
 .scanner-top-button-text {
   min-width: 0;
   max-width: 88px;
@@ -1851,6 +1856,16 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
 }
 
+.scanner-status-warning {
+  border-color: rgba(212, 167, 59, 0.38);
+  background: rgba(212, 167, 59, 0.12);
+}
+
+.scanner-status-error {
+  border-color: rgba(214, 114, 89, 0.38);
+  background: rgba(214, 114, 89, 0.12);
+}
+
 .scanner-status-card strong {
   display: block;
   margin-bottom: 0.2rem;
@@ -1859,6 +1874,41 @@ a { color: inherit; text-decoration: none; }
 .scanner-status-card p {
   margin: 0;
   color: rgba(255, 248, 240, 0.78);
+}
+
+.scanner-status-list {
+  margin: 0.45rem 0 0;
+  padding-left: 1rem;
+  color: rgba(255, 248, 240, 0.82);
+}
+
+.scanner-status-list li + li {
+  margin-top: 0.2rem;
+}
+
+.scanner-debug-card {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 20px;
+  background: rgba(255, 248, 240, 0.05);
+  border: 1px solid rgba(255, 248, 240, 0.08);
+  color: #fff;
+}
+
+.scanner-debug-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  color: rgba(255, 248, 240, 0.82);
+}
+
+.scanner-debug-row strong {
+  color: #fff;
+  text-align: right;
+  word-break: break-word;
 }
 
 .scanner-progress-dot {
