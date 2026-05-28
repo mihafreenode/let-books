@@ -1,5 +1,48 @@
 <!DOCTYPE html>
 <html lang="sr-Latn">
-  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Let Books za administratore</title><meta name="description" content="Vodič za administratore i organizacije domaćine koje upravljaju Let Books."><link rel="stylesheet" href="../assets/css/style.css"><script src="../assets/js/docs-lang.js" defer></script></head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LetBooks za administratore</title>
+    <meta name="description" content="Vodič za administratore LetBooks za upravljanje pristupom, privatnošću, lokacijama skladištenja i operativnim tokovima donacija knjiga.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/sr-Latn/administrators.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/en/administrators.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/sl/skrbniki.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/hr/administrators.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/bs/administrators.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/sr-Latn/administrators.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/sr-Cyrl/administrators.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/mk/administrators.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/sq/administrators.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/de/administrators.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/it/administrators.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/fr/administrators.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/es/administrators.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="LetBooks za administratore">
+    <meta property="og:description" content="Vodič za administratore LetBooks za upravljanje pristupom, privatnošću, lokacijama skladištenja i operativnim tokovima donacija knjiga.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/sr-Latn/administrators.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LetBooks za administratore">
+    <meta name="twitter:description" content="Vodič za administratore LetBooks za upravljanje pristupom, privatnošću, lokacijama skladištenja i operativnim tokovima donacija knjiga.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/docs-lang.js" defer></script>
+  </head>
   <body data-page-type="administrators" data-locale="sr-Latn"><div class="page-shell"><header class="site-header"><div class="header-inner"><a class="brand-link" href="index.html"><img class="brand-mark" src="../assets/images/logo-mark-symbol.svg" alt="Let Books"><span class="brand-copy"><strong>Let Books</strong><span>Za administratore i organizacije domaćine</span></span></a><div class="header-nav"><a class="nav-link" href="index.html">Pregled</a><a class="nav-link" href="individuals.html">Pojedinci</a><a class="nav-link" href="institutions.html">Institucije</a><a class="nav-link is-current" href="administrators.html">Administratori</a><div class="lang-switch" aria-label="Jezičke opcije"><a class="lang-link is-current" href="administrators.html">SR-Latn</a><a class="lang-link" href="../index.html">Svi jezici</a></div></div></div></header><main><section class="section hero"><div><span class="eyebrow">Vodič za administratore</span><h1>Uskladite pristup, privatnost i logistiku od samog početka.</h1><p class="lead">Let Books mora biti koristan privatnom donatoru, udruženju ili budućem institucionalnom domaćinu. Administratori zato trebaju jasna pravila o korisnicima, tenantima, ulogama, lokacijama i neobaveznoj upotrebi AI-ja.</p></div><div class="hero-visual"><img src="../assets/images/mock-sr-Latn-administrators.png" alt="Srpski latinični arhitekturni vizuel za administratore"></div></section><section class="section"><article class="notice-inline"><strong>Napomena o ranoj alfa fazi.</strong><p>Primeri hostinga i upravljanja opisuju smer arhitekture i pravila, ali ne znače sertifikovane implementacije ili postojeće produkcijske odgovornosti.</p></article></section><section class="section grid-2"><article class="card"><h2>Šta administratori upravljaju</h2><ul class="list-check"><li>Odobrenim pristupom i članstvima</li><li>Tenantima i ulogama</li><li>Strukturom lokacija i tokovima donacija</li><li>Granica privatnosti i revizijom</li><li>Neobaveznim AI, OCR i prevodilačkim podešavanjima</li></ul></article><article class="card"><h2>Šta treba izbegavati</h2><ul class="list-check"><li>Pristup koji se oslanja samo na spoljnu prijavu</li><li>Javno otkrivanje tačnih lokacija skladištenja</li><li>Obavezni plaćeni AI u osnovnim tokovima rada</li><li>Mešanje fizičkog primerka sa čistim metapodacima</li></ul></article></section><section class="section"><div class="section-header"><h2>Model pristupa</h2><p>Autentifikacija može dolaziti od spoljnih pružalaca identiteta, ali autorizacija mora ostati pod upravljanjem aplikacije.</p></div><div class="grid-3"><article class="feature-card"><h3>Odobrene prijave</h3><p>Rane ili privatne implementacije treba da ograniče pristup na unapred odobrene korisnike.</p></article><article class="feature-card"><h3>Članstva u tenantima</h3><p>Isti korisnik može učestvovati u više tenanata s različitim ulogama.</p></article><article class="feature-card"><h3>Vidljivost po ulozi</h3><p>Recenzenti ne smeju automatski videti privatne beleške i detalje doma donatora.</p></article></div></section><section class="section grid-2"><article class="card"><h2>Privatnost i upravljanje</h2><p>Tačne lokacije, privatne beleške i kontakt podaci treba da ostanu ograničeni. Izvoz, uvoz, promene uloga i budući AI zahtevi moraju biti evidentirani.</p></article><article class="card"><h2>Smer implementacije</h2><p>Platforma mora raditi za jednu privatnu implementaciju, ali ostati otvorena za kasnije institucionalno ili samostalno hostovanje uz skladištenje nezavisno od dobavljača.</p></article></section><section class="section"><div class="quote-panel"><p><strong>Primer:</strong> Udruženje koristi Let Books za više lokalnih donatora i partnerskih biblioteka. Jedan administrator odobrava pristup, svaki donator ima svoj tenant, a OCR ostaje isključen dok ne postoji budžet za njega.</p></div></section></main><footer class="site-footer"><div class="footer-inner"><div><h3>Let Books</h3><p>Operativna jasnoća za donatore, biblioteke i buduće domaćine.</p></div><div><div class="footer-links"><a href="index.html">Pregled</a><a href="individuals.html">Pojedinci</a><a href="institutions.html">Institucije</a><a href="../index.html">Svi jezici</a></div><div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div></div></div></footer></div></body>
 </html>

@@ -1,5 +1,48 @@
 <!DOCTYPE html>
 <html lang="sr-Cyrl">
-  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Let Books за администраторе</title><meta name="description" content="Водич за администраторе и организације домаћине које управљају Let Books."><link rel="stylesheet" href="../assets/css/style.css"><script src="../assets/js/docs-lang.js" defer></script></head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LetBooks за администраторе</title>
+    <meta name="description" content="Водич за администраторе LetBooks за управљање приступом, приватношћу, локацијама складиштења и оперативним токовима донација књига.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/sr-Cyrl/administrators.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/en/administrators.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/sl/skrbniki.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/hr/administrators.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/bs/administrators.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/sr-Latn/administrators.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/sr-Cyrl/administrators.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/mk/administrators.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/sq/administrators.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/de/administrators.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/it/administrators.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/fr/administrators.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/es/administrators.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="LetBooks за администраторе">
+    <meta property="og:description" content="Водич за администраторе LetBooks за управљање приступом, приватношћу, локацијама складиштења и оперативним токовима донација књига.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/sr-Cyrl/administrators.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LetBooks за администраторе">
+    <meta name="twitter:description" content="Водич за администраторе LetBooks за управљање приступом, приватношћу, локацијама складиштења и оперативним токовима донација књига.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/docs-lang.js" defer></script>
+  </head>
   <body><div class="page-shell"><header class="site-header"><div class="header-inner"><a class="brand-link" href="index.html"><img class="brand-mark" src="../assets/images/logo-mark-symbol.svg" alt="Let Books"><span class="brand-copy"><strong>Let Books</strong><span>За администраторе и организације домаћине</span></span></a><div class="header-nav"><a class="nav-link" href="index.html">Преглед</a><a class="nav-link" href="individuals.html">Појединци</a><a class="nav-link" href="institutions.html">Институције</a><a class="nav-link is-current" href="administrators.html">Администратори</a><div class="lang-switch" aria-label="Језичке опције"><a class="lang-link is-current" href="administrators.html">SR-Cyrl</a><a class="lang-link" href="../index.html">Сви језици</a></div></div></div></header><main><section class="section hero"><div><span class="eyebrow">Водич за администраторе</span><h1>Ускладите приступ, приватност и логистику од самог почетка.</h1><p class="lead">Let Books мора бити користан приватном донатору, удружењу или будућем институционалном домаћину. Администратори зато требају јасна правила о корисницима, tenantима, улогама, локацијама и необавезној употреби AI-ја.</p></div><div class="hero-visual"><img src="../assets/images/mock-sr-Cyrl-administrators.png" alt="Српски ћирилични архитектонски визуел за администраторе"></div></section><section class="section"><article class="notice-inline"><strong>Напомена о раној алфа фази.</strong><p>Примери хостинга и управљања описују смер архитектуре и правила, али не значе сертификоване имплементације или постојеће продукцијске одговорности.</p></article></section><section class="section grid-2"><article class="card"><h2>Шта администратори управљају</h2><ul class="list-check"><li>Одобреним приступом и чланствима</li><li>Tenantима и улогама</li><li>Структуром локација и токовима донација</li><li>Границама приватности и ревизијом</li><li>Необавезним AI, OCR и преводилачким подешавањима</li></ul></article><article class="card"><h2>Шта треба избегавати</h2><ul class="list-check"><li>Приступ који се ослања само на спољну пријаву</li><li>Јавно откривање тачних локација складиштења</li><li>Обавезни плаћени AI у основним токовима рада</li><li>Мешање физичког примерка са чистим метаподацима</li></ul></article></section><section class="section"><div class="section-header"><h2>Модел приступа</h2><p>Аутентификација може долазити од спољних пружалаца идентитета, али ауторизација мора остати под управљањем апликације.</p></div><div class="grid-3"><article class="feature-card"><h3>Одобрене пријаве</h3><p>Ране или приватне имплементације треба да ограниче приступ на унапред одобрене кориснике.</p></article><article class="feature-card"><h3>Чланства у tenantима</h3><p>Исти корисник може учествовати у више tenantа са различитим улогама.</p></article><article class="feature-card"><h3>Видљивост по улози</h3><p>Рецензенти не смеју аутоматски видети приватне белешке и детаље дома донатора.</p></article></div></section><section class="section grid-2"><article class="card"><h2>Приватност и управљање</h2><p>Тачне локације, приватне белешке и контакт подаци треба да остану ограничени. Извоз, увоз, промене улога и будући AI захтеви морају бити евидентирани.</p></article><article class="card"><h2>Смер имплементације</h2><p>Платформа мора радити за једну приватну имплементацију, али остати отворена за касније институционално или самостално хостовање уз складиштење независно од добављача.</p></article></section><section class="section"><div class="quote-panel"><p><strong>Пример:</strong> Удружење користи Let Books за више локалних донатора и партнерских библиотека. Један администратор одобрава приступ, сваки донатор има свој tenant, а OCR остаје искључен док не постоји буџет за њега.</p></div></section></main><footer class="site-footer"><div class="footer-inner"><div><h3>Let Books</h3><p>Оперативна јасноћа за донаторе, библиотеке и будуће домаћине.</p></div><div><div class="footer-links"><a href="index.html">Преглед</a><a href="individuals.html">Појединци</a><a href="institutions.html">Институције</a><a href="../index.html">Сви језици</a></div></div></div></footer></div></body>
 </html>

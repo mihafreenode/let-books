@@ -32,6 +32,27 @@ When adding new tactical guidance in future work, prefer adding it here instead 
 - Keep the same page structure across languages so future languages can be added predictably
 - Use repo-relative references only so the documentation is reproducible on another machine
 
+## Static Site Metadata Rules
+
+- Static HTML pages must use real `<head>` metadata tags, not framework metadata APIs
+- The public homepage canonical URL is `https://letbooks.org/`
+- Documentation lives under `https://letbooks.org/docs/`
+- The static demo lives under `https://letbooks.org/static-demo/`
+- The favicon package should live under the repository root `favicon/` directory so published URLs resolve as `/favicon/...`
+- Social preview image should live at the repository root as `og-image.png` and be referenced as `https://letbooks.org/og-image.png`
+- Homepage, docs hub, localized docs pages, and the static demo should all include static SEO metadata in the HTML source
+- Required static tags for public pages: `<title>`, `<meta name="description">`, canonical, robots, Open Graph tags, Twitter/X card tags, favicon tags, and theme-color
+- Docs pages must include `hreflang` alternates across the full supported locale set plus `x-default`
+- Each localized docs page must have its own localized title, description, canonical URL, `og:title`, `og:description`, and `og:url`
+- Use English fallback metadata only when a locale-specific translation is genuinely missing
+- Keep descriptions natural and concise, generally around 140 to 160 characters where practical
+- Avoid SEO keyword stuffing and avoid making speculative implementation claims in metadata
+- Use `LetBooks` in metadata and social tags; keep public branding consistent across homepage, docs, demo, and manifests
+- The static demo should keep its own app manifest at `static-demo/manifest.webmanifest`, but can still use the shared `/favicon/` icon links for browser metadata
+- The favicon manifest should be served from `/favicon/site.webmanifest` and use manifest-relative icon paths
+- If metadata must be regenerated across many static pages, use or update the generator script at `tools/generate-static-seo.mjs` instead of manually editing dozens of heads
+- If static metadata is present in HTML, shared docs JavaScript must not inject duplicate favicon or SEO tags at runtime
+
 ## Static Demo Rules
 
 - The installable local workflow prototype lives under `static-demo/`
@@ -234,6 +255,7 @@ Avoid:
 - Use `playwright` for browser preview verification if available
 - Verification should check both desktop and mobile layouts
 - Verification should check navigation, language switching, and asset loading
+- Verification for public pages should also check favicon URLs, canonical URLs, and representative Open Graph/metadata output where practical
 - Keep commands and guidance reproducible across machines
 
 ## Code Generation Rules

@@ -118,7 +118,7 @@ function getDocsFaviconBasePath() {
 
 function ensureDocsFavicons() {
   const head = document.head;
-  if (!head || head.querySelector('[data-docs-favicon]')) return;
+  if (!head || head.querySelector('[data-docs-favicon]') || head.querySelector('link[rel="icon"]')) return;
 
   const basePath = getDocsFaviconBasePath();
   const entries = [
