@@ -1408,6 +1408,7 @@
       db.photos.where("bookId").equals(book.id).sortBy("sortOrder")
     ]);
     const primary = photos.find((photo) => photo.type === "cover") || photos[0] || null;
+    const galleryPhotos = photos.filter((photo) => !primary || photo.id !== primary.id);
 
     return `
       <section class="screen screen-stack mobile-sheet-screen book-detail-sheet-screen">
@@ -1419,26 +1420,20 @@
         </div>
 
         <div class="detail-grid">
-          <div class="gallery-card">
-            <div class="gallery-card-body">
-              <div class="cover-thumb">${await renderBookCover(book, primary, book.title)}</div>
-              <div class="gallery-grid">
-                ${photos.length ? await Promise.all(photos.map(async (photo) => `<div class="photo-thumb">${await renderPhotoImage(photo, photo.type)}</div>`)).then((items) => items.join("")) : getBookThumbnailUrl(book) ? `<div class="photo-thumb">${renderExternalThumbnailImage(getBookThumbnailUrl(book), book.title || "Book cover", renderCoverPlaceholder(book.title, book.authors))}</div>` : `<div class="empty-card"><p>${escapeHtml(t("photo.noImage"))}</p></div>`}
-              </div>
-            </div>
-          </div>
-          <div class="section-card">
-            <div class="screen-stack">
-              <div>
+          <div class="section-card book-detail-info">
+            <div class="screen-stack book-detail-info-stack">
+              <div class="book-detail-intro">
                 <h2 class="section-heading">${escapeHtml(t("common.book"))}</h2>
-                <p class="muted">${escapeHtml(book.description || "")}</p>
+                ${book.description ? `<p class="muted">${escapeHtml(book.description)}</p>` : ""}
               </div>
-              <div class="meta-text"><strong>${escapeHtml(t("book.publisher"))}:</strong> ${escapeHtml(book.publisher || "-")}</div>
-              <div class="meta-text"><strong>${escapeHtml(t("book.year"))}:</strong> ${escapeHtml(book.publishedYear ? String(book.publishedYear) : "-")}</div>
-              <div class="meta-text"><strong>${escapeHtml(t("book.isbn10"))}:</strong> ${escapeHtml(book.isbn10 || "-")}</div>
-              <div class="meta-text"><strong>${escapeHtml(t("book.isbn13"))}:</strong> ${escapeHtml(book.isbn13 || "-")}</div>
-              <div class="meta-text"><strong>${escapeHtml(t("book.sourceUrl"))}:</strong> ${book.sourceUrl ? `<a href="${escapeHtml(book.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(book.sourceUrl)}</a>` : "-"}</div>
-              <div class="meta-text"><strong>${escapeHtml(t("common.box"))}:</strong> ${box ? `<a href="#/boxes/${encodeURIComponent(box.id)}">${escapeHtml(box.code)} - ${escapeHtml(box.name)}</a>` : "-"}</div>
+              <div class="book-detail-meta-list">
+                <div class="meta-text"><strong>${escapeHtml(t("book.publisher"))}:</strong> ${escapeHtml(book.publisher || "-")}</div>
+                <div class="meta-text"><strong>${escapeHtml(t("book.year"))}:</strong> ${escapeHtml(book.publishedYear ? String(book.publishedYear) : "-")}</div>
+                <div class="meta-text"><strong>${escapeHtml(t("book.isbn10"))}:</strong> ${escapeHtml(book.isbn10 || "-")}</div>
+                <div class="meta-text"><strong>${escapeHtml(t("book.isbn13"))}:</strong> ${escapeHtml(book.isbn13 || "-")}</div>
+                <div class="meta-text"><strong>${escapeHtml(t("book.sourceUrl"))}:</strong> ${book.sourceUrl ? `<a href="${escapeHtml(book.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(book.sourceUrl)}</a>` : "-"}</div>
+                <div class="meta-text"><strong>${escapeHtml(t("common.box"))}:</strong> ${box ? `<a href="#/boxes/${encodeURIComponent(box.id)}">${escapeHtml(box.code)} - ${escapeHtml(box.name)}</a>` : "-"}</div>
+              </div>
               <div class="section-card review-section-card">
                 <h2 class="section-heading">${escapeHtml(t("book.libraryReview"))}</h2>
                 <div class="meta-pills">
@@ -1452,6 +1447,12 @@
                 <button type="button" class="ghost-button" data-action="show-book-qr" data-book-id="${book.id}">${escapeHtml(t("book.printLabel"))}</button>
                 <button type="button" class="ghost-button" data-action="move-book" data-book-id="${book.id}">${escapeHtml(t("book.move"))}</button>
               </div>
+            </div>
+          </div>
+          <div class="gallery-card book-detail-gallery ${galleryPhotos.length ? "" : "book-detail-gallery-compact"}">
+            <div class="gallery-card-body">
+              <div class="cover-thumb">${await renderBookCover(book, primary, book.title)}</div>
+              ${galleryPhotos.length ? `<div class="gallery-grid">${await Promise.all(galleryPhotos.map(async (photo) => `<div class="photo-thumb">${await renderPhotoImage(photo, photo.type)}</div>`)).then((items) => items.join(""))}</div>` : ""}
             </div>
           </div>
         </div>

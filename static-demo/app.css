@@ -1475,6 +1475,32 @@ a { color: inherit; text-decoration: none; }
   margin-top: 0.25rem;
 }
 
+.book-detail-info-stack {
+  gap: 0.9rem;
+}
+
+.book-detail-intro {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.book-detail-intro .muted {
+  margin: 0;
+}
+
+.book-detail-meta-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.book-detail-gallery-compact .gallery-card-body {
+  gap: 0;
+}
+
+.book-detail-gallery-compact .cover-thumb {
+  margin: 0 auto;
+}
+
 .box-card-topline,
 .box-card-heading {
   display: flex;
@@ -1684,6 +1710,15 @@ a { color: inherit; text-decoration: none; }
 .detail-grid { grid-template-columns: 1.15fr 0.85fr; }
 .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+
+.book-detail-info {
+  grid-column: 2;
+}
+
+.book-detail-gallery {
+  grid-column: 1;
+  grid-row: 1;
+}
 
 .field { display: grid; gap: 0.38rem; }
 
@@ -2867,13 +2902,13 @@ a { color: inherit; text-decoration: none; }
 
   .mobile-sheet-screen {
     padding-top: 0.55rem;
-    padding-bottom: 0.85rem;
+    padding-bottom: calc(var(--bottom-nav) + env(safe-area-inset-bottom) + 1rem);
     border-radius: 28px 28px 0 0;
   }
 
   .mobile-sheet-header {
     position: sticky;
-    top: 0;
+    top: calc(var(--topbar) + 0.45rem);
     z-index: 5;
     margin: -0.2rem -0.2rem 0;
     padding: 0.1rem 0.15rem 0.35rem;
@@ -2998,7 +3033,47 @@ a { color: inherit; text-decoration: none; }
   }
 
   .book-detail-sheet-screen .detail-grid {
+    grid-template-columns: 1fr;
     gap: 0.9rem;
+  }
+
+  .book-detail-sheet-screen {
+    gap: 0.7rem;
+  }
+
+  .book-detail-sheet-screen .mobile-sheet-header {
+    margin-bottom: 0.1rem;
+  }
+
+  .book-detail-sheet-screen .book-detail-pills {
+    margin-top: 0;
+  }
+
+  .book-detail-sheet-screen .book-detail-info {
+    grid-column: auto;
+    padding: 0.95rem;
+  }
+
+  .book-detail-sheet-screen .book-detail-gallery {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 0.85rem;
+  }
+
+  .book-detail-sheet-screen .book-detail-info-stack {
+    gap: 0.75rem;
+  }
+
+  .book-detail-sheet-screen .book-detail-meta-list {
+    gap: 0.65rem;
+  }
+
+  .book-detail-sheet-screen .meta-text {
+    line-height: 1.45;
+  }
+
+  .book-detail-sheet-screen .book-detail-gallery-compact .cover-thumb {
+    width: min(100%, 260px);
   }
 
   .book-detail-sheet-screen .gallery-grid {

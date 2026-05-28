@@ -127,6 +127,19 @@ Current implementation expectations:
 - The hero renderer performs lightweight image analysis only to support theme suggestion; it must not replace manual art-direction control
 - The hero collage currently uses a restrained archival composition language rather than the earlier shelf/stack metaphor; future work should preserve that direction unless explicitly changed
 
+## Static Demo Book Detail
+
+These rules apply specifically to the `static-demo/` book detail screen.
+
+- On mobile widths, the book detail screen should be metadata-first: title/status/details should appear before the large cover gallery in the reading order
+- Do not rely only on CSS `order` for this behavior; prefer DOM order that already matches the intended mobile reading flow
+- If wider layouts need the gallery on the left and metadata on the right, restore that with explicit grid placement in CSS rather than changing the DOM back to gallery-first
+- The sticky mobile sheet header must clear the sticky topbar; do not allow the detail header to render underneath the top navigation chrome
+- The detail screen should use a single-column layout on small screens; avoid two-column book-detail compositions at phone widths
+- When a book has only a primary cover image, keep the gallery compact and avoid rendering redundant thumbnail/fallback blocks that create empty card space
+- Fixed bottom navigation must not crowd the primary detail content; preserve enough bottom sheet spacing so the final cards do not feel pinned under the nav
+- Verify book-detail refinements in Playwright using an actual navigation flow from the dashboard or boxes list into a seeded book, not only a direct hash route, because fresh local sessions may regenerate demo IDs
+
 ## Localization and Accessibility Rules
 
 - All user-visible text must be localizable except protected trademarks and brand names
