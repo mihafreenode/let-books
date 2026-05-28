@@ -114,6 +114,220 @@ Avoid:
 
 ---
 
+## Choosing the Right Mobile Debugging Workflow
+
+Before running commands, decide which workflow is needed.
+
+### Workflow A: Runtime CDP Injection
+
+Use when:
+- the site is already open on Android Chrome
+- the change is temporary/debug-only
+- testing CSS overlays, console instrumentation, camera logging, barcode overlays, permission checks, or UI probes
+- no committed source change is needed yet
+
+Prefer:
+- `adb forward tcp:9222 localabstract:chrome_devtools_remote`
+- `chromium.connectOverCDP('http://127.0.0.1:9222')`
+- `page.evaluate()`
+- `page.addStyleTag()`
+- `page.addScriptTag()`
+
+Do not start a local server for this workflow.
+
+### Workflow B: Local Source Patch + Phone Refresh
+
+Use when:
+- editing real project files
+- testing actual source patches
+- verifying committed behavior
+- checking scanner/camera fixes after source edits
+
+Prefer:
+- serve the project locally
+- make the Android device access the local server
+- refresh the already-open mobile Chrome tab
+- preserve permissions/session where possible
+
+Do not rely only on runtime-injected code for final validation.
+
+### Workflow C: Desktop/CI Playwright
+
+Use when:
+- running deterministic tests
+- testing non-camera UI logic
+- validating static pages
+- checking regressions without real camera behavior
+
+Do not treat this as sufficient for final barcode/camera validation.
+
+---
+
+## Mobile Hot Reload / Direct Patch Testing
+
+Goal:
+Edit local files and verify changes on the attached Android device with the shortest possible loop.
+
+Important:
+This is different from CDP runtime injection.
+
+Preferred order:
+
+1. Detect host environment.
+2. Confirm ADB device is connected.
+3. Decide whether the server should run on Windows or WSL.
+4. Prefer the simplest reachable localhost path for the Android device.
+5. Open the local URL on Android Chrome.
+6. Edit source files.
+7. Refresh the existing tab.
+8. Preserve camera permissions and browser state.
+
+### Recommended Windows + WSL Strategy
+
+When the phone is attached to Windows and the repository is edited from WSL:
+
+Prefer serving from Windows if using `adb reverse`, because:
+
+```bash
+adb reverse tcp:<device-port> tcp:<host-port>
+```
+
+forwards Android `localhost:<device-port>` to the Windows host adb server, not automatically to the WSL network namespace.
+
+If serving from WSL, do not assume Android can reach the WSL IP directly.
+
+Avoid getting stuck in Windows portproxy unless explicitly needed, because `netsh interface portproxy` requires administrator privileges.
+
+### Preferred Simple Path
+
+If Windows Python is available:
+
+1. Convert repo path from WSL to Windows path:
+
+```bash
+REPO_WIN=$(wslpath -w "$PWD")
+```
+
+2. Start a Windows-hosted static server from WSL:
+
+```bash
+powershell.exe -NoProfile -Command \
+  "Start-Process -WindowStyle Hidden -FilePath python -ArgumentList '-m http.server 8080 -d \"$env:REPO_WIN\"'"
+```
+
+If passing environment variables is awkward, generate the final PowerShell command with the resolved Windows path explicitly.
+
+3. Reverse the port to the Android device:
+
+```bash
+adb.exe reverse tcp:8080 tcp:8080
+```
+
+4. Open the local site on Android Chrome:
+
+```bash
+adb.exe shell am start -a android.intent.action.VIEW -d "http://localhost:8080/static-demo/" com.android.chrome
+```
+
+5. After edits, refresh the existing tab instead of relaunching Chrome when possible.
+
+### If CDP Works
+
+Use CDP to refresh the tab:
+
+```js
+await page.reload({ waitUntil: 'domcontentloaded' });
+```
+
+### If CDP Does Not Work
+
+Use ADB key events as fallback:
+
+```bash
+adb.exe shell input keyevent KEYCODE_F5
+```
+
+or reopen the same local URL:
+
+```bash
+adb.exe shell am start -a android.intent.action.VIEW -d "http://localhost:8080/static-demo/" com.android.chrome
+```
+
+### Camera Note
+
+`http://localhost` on the Android device is acceptable for camera testing because localhost is treated as a secure context by modern browsers.
+
+Do not switch to arbitrary LAN HTTP URLs for camera testing unless secure-context behavior is verified.
+
+### Avoid
+
+- mixing Bash and PowerShell syntax
+- assuming WSL localhost is Windows localhost
+- assuming Android can reach the WSL IP
+- using `netsh interface portproxy` without noting it requires admin
+- starting duplicate adb servers
+- restarting Chrome repeatedly
+- confusing runtime CDP injection with source hot reload
+
+---
+
+## Prefer Convergence Over Exhaustive Infrastructure Setup
+
+When the goal is rapid mobile patch testing:
+
+Prefer:
+- the shortest working path
+- manual refresh over blocked automation
+- partial success over infrastructure perfection
+- immediate feedback loops
+
+Avoid:
+- extended debugging of auxiliary tooling
+- repeated retries of broken CDP setup
+- complex Windows networking setup unless necessary
+- premature automation
+
+---
+
+## Agent Decision Checklist
+
+When asked to test patches on an attached Android phone:
+
+1. Is this a temporary runtime debug change?
+   - Yes: use CDP injection.
+   - No: edit source and serve locally.
+
+2. Is the phone attached to Windows while commands run in WSL?
+   - Yes: prefer Windows `adb.exe`.
+   - Yes: prefer Windows-hosted local server for `adb reverse`.
+
+3. Does CDP respond at `http://127.0.0.1:9222/json/version`?
+   - Yes: use Playwright CDP for refresh/instrumentation.
+   - No: do not get stuck; use local server + adb reverse + manual/ADB refresh fallback.
+
+4. Is camera/scanner behavior being tested?
+   - Yes: final validation must be on real Android Chrome with actual camera stream.
+
+5. Are source files changed?
+   - Yes: refresh local served page.
+   - No: runtime injection is enough for exploratory debugging.
+
+---
+
+## Do Not Spin on Broken CDP
+
+If CDP forwarding fails after:
+- confirming adb device is connected
+- confirming Chrome is running
+- setting `adb forward tcp:9222 localabstract:chrome_devtools_remote`
+- checking `/json/version`
+
+then stop retrying CDP setup and switch to the local-server + `adb reverse` workflow.
+
+CDP is useful but not mandatory for hot reload/source patch testing.
+
+---
+
 ## Runtime Environment Detection
 
 ### Supported Hosts
