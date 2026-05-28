@@ -140,6 +140,16 @@ These rules apply specifically to the `static-demo/` book detail screen.
 - Fixed bottom navigation must not crowd the primary detail content; preserve enough bottom sheet spacing so the final cards do not feel pinned under the nav
 - Verify book-detail refinements in Playwright using an actual navigation flow from the dashboard or boxes list into a seeded book, not only a direct hash route, because fresh local sessions may regenerate demo IDs
 
+## Static Demo Navigation and Scroll
+
+These rules apply specifically to route changes inside the `static-demo/` app shell.
+
+- In-app navigation between tabs and screens should reset scroll position to the top unless a workflow has a clearly better target position
+- Route-level scroll handling should stay centralized near the hash-routing/render pipeline rather than being scattered across individual screens
+- Scanner-driven navigation should follow the same centralized scroll policy; after ISBN/barcode scan flows that open a new screen, default to the top of that destination unless a later workflow explicitly needs field focus or mid-page positioning
+- If browser history restoration interferes with the intended workflow, keep `history.scrollRestoration` in manual mode for the static demo
+- When verifying route scroll behavior in Playwright, prefer in-app hash navigation over full page reloads and be aware that the static demo service worker may cache stale behavior; unregister or bypass it if verification results do not match the current source
+
 ## Localization and Accessibility Rules
 
 - All user-visible text must be localizable except protected trademarks and brand names

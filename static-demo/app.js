@@ -120,6 +120,7 @@
   const appState = {
     language: "en",
     route: { name: "dashboard", params: {}, query: {} },
+    previousRoute: null,
     installPrompt: null,
     scanner: { instance: null, state: "idle", handlingDecode: false, torchOn: false, zoomLevel: 1, facingMode: "environment", sessionToken: 0 },
     photoUrlCache: new Map(),
@@ -188,6 +189,10 @@
   }
 
   function bindGlobalEvents() {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     window.addEventListener("hashchange", () => {
       routeFromHash().catch(console.error);
     });
@@ -657,6 +662,7 @@
 
   async function routeFromHash() {
     await stopScanner({ preserveStatus: false });
+    appState.previousRoute = appState.route;
     appState.route = getRouteFromLocation();
     if (appState.route.name !== "scanner") {
       appState.lastNonScannerHash = window.location.hash || "#/dashboard";
@@ -738,6 +744,7 @@
     root.classList.remove("route-enter");
     void root.offsetWidth;
     root.classList.add("route-enter");
+    applyRouteScrollPosition(appState.previousRoute, appState.route);
 
     if (appState.route.name === "dashboard") {
       armDashboardBackGuard();
@@ -745,6 +752,72 @@
     } else {
       appState.dashboardGuardArmed = false;
     }
+  }
+
+  function applyRouteScrollPosition(previousRoute, nextRoute) {
+    const behavior = getRouteScrollBehavior(previousRoute, nextRoute);
+    if (!behavior) {
+      return;
+    }
+
+    const top = Number.isFinite(behavior.top) ? behavior.top : 0;
+    const applyScroll = () => {
+      const scrollingElement = document.scrollingElement || document.documentElement || document.body;
+      window.scrollTo(0, top);
+      if (scrollingElement) {
+        scrollingElement.scrollTop = top;
+        if (typeof scrollingElement.scrollTo === "function") {
+          scrollingElement.scrollTo(0, top);
+        }
+      }
+      document.documentElement.scrollTop = top;
+      document.body.scrollTop = top;
+
+      if (behavior.focusSelector) {
+        const target = document.querySelector(behavior.focusSelector);
+        if (target instanceof HTMLElement && typeof target.focus === "function") {
+          target.focus({ preventScroll: true });
+        }
+      }
+    };
+
+    applyScroll();
+    window.requestAnimationFrame(applyScroll);
+    window.setTimeout(applyScroll, 120);
+    window.setTimeout(applyScroll, 280);
+  }
+
+  function getRouteScrollBehavior(previousRoute, nextRoute) {
+    if (!nextRoute) {
+      return null;
+    }
+
+    const changedScreen = !previousRoute || previousRoute.name !== nextRoute.name || JSON.stringify(previousRoute.params || {}) !== JSON.stringify(nextRoute.params || {}) || JSON.stringify(previousRoute.query || {}) !== JSON.stringify(nextRoute.query || {});
+    if (!changedScreen) {
+      return null;
+    }
+
+    if (nextRoute.name === "scanner") {
+      return { top: 0 };
+    }
+
+    if (nextRoute.name === "book-new" || nextRoute.name === "book-edit") {
+      return { top: 0 };
+    }
+
+    if (nextRoute.name === "book-detail") {
+      return { top: 0 };
+    }
+
+    if (nextRoute.name === "box-detail") {
+      return { top: 0 };
+    }
+
+    if (nextRoute.name === "dashboard" || nextRoute.name === "boxes" || nextRoute.name === "export" || nextRoute.name === "settings") {
+      return { top: 0 };
+    }
+
+    return { top: 0 };
   }
 
   function armDashboardBackGuard() {
