@@ -85,8 +85,16 @@ Works offline:
 Needs internet:
 
 - Open Library lookup
-- Google Books fallback lookup
+- Let Books metadata API fallback lookup
 - any remote metadata or cover URLs not already cached locally
+
+## Metadata Lookup
+
+- Open Library is queried first
+- Let Books metadata API is used as the fallback
+- manual entry remains available even when lookup fails
+- successful and no-result lookups are cached locally by normalized ISBN
+- provider/source is stored with the matched metadata
 
 ## Install and Test
 

@@ -57,6 +57,16 @@ Try these first:
 3. test ISBN scanning and metadata lookup
 4. export Excel or a ZIP archive from the device
 
+## Book Metadata Lookup
+
+Book metadata lookup currently follows a simple fallback chain:
+
+- Open Library is queried first
+- Let Books metadata API is used as the fallback
+- manual entry is always available if enrichment does not return useful metadata
+- provider/source is tracked on the book record
+- the lookup architecture is designed so additional providers can be added behind the same normalized flow later
+
 ## Documentation
 
 The first documentation pass is intended to help validate the app concept with real audience-focused pages.

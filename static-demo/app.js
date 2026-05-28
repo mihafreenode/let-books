@@ -40,7 +40,15 @@
   ];
 
   const STATUSES = ["missing-metadata", "ready", "exported"];
-  const LOOKUP_PROVIDERS = ["Open Library", "Google Books", "Manual"];
+  const LOOKUP_PROVIDERS = ["Open Library", "Let Books metadata API", "Manual"];
+  const METADATA_API_DEFAULT_BASE_URL = "https://api.letbooks.org";
+  const METADATA_API_QUERY_PARAM = "metadataApiBaseUrl";
+  const METADATA_API_META_NAME = "letbooks:metadata-api-base-url";
+  const LOOKUP_CACHE_PROVIDER = "metadata";
+  const LOOKUP_CACHE_VERSION = "v1";
+  const LOOKUP_SUCCESS_TTL_MS = 14 * 24 * 60 * 60 * 1000;
+  const LOOKUP_NEGATIVE_TTL_MS = 6 * 60 * 60 * 1000;
+  const OFFICIAL_METADATA_APP_ORIGINS = new Set(["https://letbooks.org", "https://www.letbooks.org"]);
   const PORTABLE_BOX_QR_TYPE = "letbooks-box";
   const PORTABLE_BOOK_QR_TYPE = "letbooks-book";
   const DASHBOARD_HERO_ROTATION_MS = 60000;
@@ -1236,7 +1244,7 @@
     const photoMap = await getPrimaryPhotoMap(books.map((book) => book.id));
     return Promise.all(books.map(async (book) => {
       const photo = photoMap.get(book.id);
-      const coverHtml = photo ? await renderPhotoImage(photo, book.title) : renderCoverPlaceholder(book.title, book.authors);
+      const coverHtml = await renderBookCover(book, photo, book.title);
       return `
         <article class="book-card">
           <div class="book-card-body">
@@ -1322,6 +1330,11 @@
 
         <form data-form="book" class="screen-stack" data-book-id="${book.id || ""}">
           <input type="hidden" name="bookId" value="${book.id || ""}">
+          <input type="hidden" name="metadataProvider" value="${escapeHtml(book.metadataProvider || "manual")}">
+          <input type="hidden" name="metadataProviderId" value="${escapeHtml(book.metadataProviderId || "")}">
+          <input type="hidden" name="metadataFetchedAt" value="${escapeHtml(book.metadataFetchedAt || "")}">
+          <input type="hidden" name="thumbnailUrl" value="${escapeHtml(book.thumbnailUrl || "")}">
+          <input type="hidden" name="smallThumbnailUrl" value="${escapeHtml(book.smallThumbnailUrl || "")}">
           <div class="form-grid">
             ${renderField("title", t("book.title"), book.title)}
             ${renderField("authors", t("book.authors"), book.authors)}
@@ -1337,6 +1350,16 @@
             ${renderField("sourceUrl", t("book.sourceUrl"), book.sourceUrl, "url")}
             ${renderTextareaField("description", t("book.description"), book.description)}
             ${renderTextareaField("notes", t("common.notes"), book.notes)}
+          </div>
+
+          <div class="meta-pills">
+            <span class="meta-pill">${escapeHtml(t("book.source"))}: ${escapeHtml(book.source || t("book.sourceManual"))}</span>
+            ${book.metadataFetchedAt ? `<span class="meta-pill">${escapeHtml(book.metadataFetchedAt.slice(0, 10))}</span>` : ""}
+          </div>
+
+          <div class="inline-actions">
+            <button type="button" class="ghost-button" data-action="lookup-book">${escapeHtml(t("book.lookup"))}</button>
+            <button type="button" class="ghost-button" data-action="retry-lookup-book">${escapeHtml(t("book.retryLookup"))}</button>
           </div>
 
           <div class="section-card">
@@ -1398,9 +1421,9 @@
         <div class="detail-grid">
           <div class="gallery-card">
             <div class="gallery-card-body">
-              <div class="cover-thumb">${primary ? await renderPhotoImage(primary, book.title) : renderCoverPlaceholder(book.title, book.authors)}</div>
+              <div class="cover-thumb">${await renderBookCover(book, primary, book.title)}</div>
               <div class="gallery-grid">
-                ${photos.length ? await Promise.all(photos.map(async (photo) => `<div class="photo-thumb">${await renderPhotoImage(photo, photo.type)}</div>`)).then((items) => items.join("")) : `<div class="empty-card"><p>${escapeHtml(t("photo.noImage"))}</p></div>`}
+                ${photos.length ? await Promise.all(photos.map(async (photo) => `<div class="photo-thumb">${await renderPhotoImage(photo, photo.type)}</div>`)).then((items) => items.join("")) : getBookThumbnailUrl(book) ? `<div class="photo-thumb">${renderExternalThumbnailImage(getBookThumbnailUrl(book), book.title || "Book cover", renderCoverPlaceholder(book.title, book.authors))}</div>` : `<div class="empty-card"><p>${escapeHtml(t("photo.noImage"))}</p></div>`}
               </div>
             </div>
           </div>
@@ -1487,6 +1510,7 @@
 
   async function renderSettings() {
     const demoDataPresent = await hasDemoDataPresent();
+    const metadataApiBaseUrl = getConfiguredMetadataApiBaseUrl();
     return `
       <section class="screen screen-stack mobile-sheet-screen settings-sheet-screen">
         ${renderMobileSheetHeader(t("settings.title"), "", "#/dashboard", "", { showClose: false })}
@@ -1529,6 +1553,10 @@
           <div class="section-card screen-stack settings-card">
             <div class="settings-card-icon">✕</div>
             <h2 class="section-heading">${escapeHtml(t("settings.dangerZone"))}</h2>
+            <p>${escapeHtml(tf("settings.metadataApiBaseUrl", { url: metadataApiBaseUrl }))}</p>
+            <div class="inline-actions">
+              <button type="button" class="ghost-button" data-action="clear-lookup-cache">${escapeHtml(t("settings.clearLookupCache"))}</button>
+            </div>
             <button type="button" class="danger-button" data-action="wipe-all-data">${escapeHtml(t("settings.clearAll"))}</button>
           </div>
         </div>
@@ -1604,7 +1632,7 @@
 
     const leadBook = books[0];
     const photo = photoMap.get(leadBook.id);
-    const coverHtml = photo ? await renderPhotoImage(photo, leadBook.title) : renderCoverPlaceholder(leadBook.title, leadBook.authors);
+    const coverHtml = await renderBookCover(leadBook, photo, leadBook.title);
     const stackCount = Math.min(books.length - 1, 2);
     return `
       <div class="collection-collage collection-collage-stack">
@@ -1635,6 +1663,15 @@
     return `<div class="cover-placeholder"><strong>${escapeHtml(title || "Untitled")}</strong><span>${escapeHtml(authors || "Let Books")}</span></div>`;
   }
 
+  function renderExternalThumbnailImage(url, alt, fallbackMarkup) {
+    return `
+      <span class="external-thumb-frame">
+        <img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.hidden=true;if(this.nextElementSibling){this.nextElementSibling.hidden=false;}">
+        <span hidden>${fallbackMarkup}</span>
+      </span>
+    `;
+  }
+
   function statusBadgeClass(status) {
     if (status === "ready") return "badge-ready";
     if (status === "exported") return "badge-exported";
@@ -1644,6 +1681,30 @@
   async function renderPhotoImage(photo, alt) {
     const url = getPhotoObjectUrl(photo);
     return `<img src="${url}" alt="${escapeHtml(alt || photo.type)}">`;
+  }
+
+  async function renderBookCover(book, photo, alt) {
+    if (photo) {
+      return renderPhotoImage(photo, alt);
+    }
+
+    const thumbnailUrl = getBookThumbnailUrl(book);
+    if (thumbnailUrl) {
+      return renderExternalThumbnailImage(thumbnailUrl, alt || book.title || "Book cover", renderCoverPlaceholder(book.title, book.authors));
+    }
+
+    return renderCoverPlaceholder(book.title, book.authors);
+  }
+
+  function getBookThumbnailUrl(book) {
+    if (!book) return "";
+    return normalizeExternalUrl(book.thumbnailUrl || book.smallThumbnailUrl || "");
+  }
+
+  function normalizeExternalUrl(url) {
+    const value = String(url || "").trim();
+    if (!value) return "";
+    return value.replace(/^http:/i, "https:");
   }
 
   function getPhotoObjectUrl(photo) {
@@ -1680,6 +1741,11 @@
       description: "",
       source: "Manual",
       sourceUrl: "",
+      metadataProvider: "manual",
+      metadataProviderId: "",
+      metadataFetchedAt: "",
+      thumbnailUrl: "",
+      smallThumbnailUrl: "",
       status: "missing-metadata",
       wantedStatus: "",
       quantityWanted: "",
@@ -1718,6 +1784,9 @@
         return;
       case "lookup-book":
         await lookupBookFromCurrentForm();
+        return;
+      case "retry-lookup-book":
+        await lookupBookFromCurrentForm({ forceRefresh: true });
         return;
       case "save-and-add-next":
         await submitBookForm(document.querySelector("form[data-form='book']"), true);
@@ -1781,6 +1850,9 @@
         return;
       case "reset-demo":
         await resetDemoData();
+        return;
+      case "clear-lookup-cache":
+        await clearLookupCache();
         return;
       case "wipe-all-data":
         await confirmAndWipeAllData();
@@ -1885,6 +1957,11 @@
       description: String(data.get("description") || "").trim(),
       source: String(data.get("source") || "Manual").trim() || "Manual",
       sourceUrl: String(data.get("sourceUrl") || "").trim(),
+      metadataProvider: String(data.get("metadataProvider") || existing?.metadataProvider || "manual").trim() || "manual",
+      metadataProviderId: String(data.get("metadataProviderId") || existing?.metadataProviderId || "").trim(),
+      metadataFetchedAt: String(data.get("metadataFetchedAt") || existing?.metadataFetchedAt || "").trim(),
+      thumbnailUrl: String(data.get("thumbnailUrl") || existing?.thumbnailUrl || "").trim(),
+      smallThumbnailUrl: String(data.get("smallThumbnailUrl") || existing?.smallThumbnailUrl || "").trim(),
       status: String(data.get("status") || "missing-metadata"),
       notes: String(data.get("notes") || "").trim(),
       boxId: String(data.get("boxId") || "")
@@ -1954,6 +2031,11 @@
           description: String(payload.get("description") || "").trim(),
           source: String(payload.get("source") || "Manual") || "Manual",
           sourceUrl: String(payload.get("sourceUrl") || ""),
+          metadataProvider: String(payload.get("metadataProvider") || "manual") || "manual",
+          metadataProviderId: String(payload.get("metadataProviderId") || ""),
+          metadataFetchedAt: String(payload.get("metadataFetchedAt") || ""),
+          thumbnailUrl: String(payload.get("thumbnailUrl") || ""),
+          smallThumbnailUrl: String(payload.get("smallThumbnailUrl") || ""),
           status: String(payload.get("status") || "missing-metadata"),
           notes: String(payload.get("notes") || ""),
           boxId: String(payload.get("boxId") || "")
@@ -1995,7 +2077,7 @@
     await renderRoute();
   }
 
-  async function lookupBookFromCurrentForm() {
+  async function lookupBookFromCurrentForm(options = {}) {
     const form = document.querySelector("form[data-form='book']");
     if (!form) return;
     const isbnInput = form.querySelector("[name='isbn13']").value || form.querySelector("[name='isbn10']").value;
@@ -2008,60 +2090,64 @@
       showToast(t("lookup.onlineOnly"));
       return;
     }
-    const result = await lookupMetadataByIsbn(isbn);
-    if (!result) {
-      showToast(t("lookup.notFound"));
+    const result = await lookupMetadataByIsbn(isbn, options);
+    if (result.outcome !== "found") {
+      showToast(getLookupMessage(result));
       return;
     }
-    form.querySelector("[name='title']").value = result.title || "";
-    form.querySelector("[name='authors']").value = result.authors || "";
-    form.querySelector("[name='publisher']").value = result.publisher || "";
-    form.querySelector("[name='publishedYear']").value = result.publishedYear || "";
-    form.querySelector("[name='isbn10']").value = result.isbn10 || "";
-    form.querySelector("[name='isbn13']").value = result.isbn13 || "";
-    form.querySelector("[name='language']").value = result.language || "";
-    form.querySelector("[name='description']").value = result.description || "";
-    form.querySelector("[name='source']").value = result.source || "";
-    form.querySelector("[name='sourceUrl']").value = result.sourceUrl || "";
-    if (result.coverBlob) {
-      const bookId = form.querySelector("[name='bookId']").value || makeId("book");
-      form.querySelector("[name='bookId']").value = bookId;
-      const existingPhotos = await db.photos.where({ bookId, type: "cover" }).toArray();
-      for (const existing of existingPhotos) await db.photos.delete(existing.id);
-      await db.photos.put({
-        id: makeId("photo"),
-        bookId,
-        type: "cover",
-        blob: result.coverBlob,
-        mimeType: result.coverBlob.type || "image/jpeg",
-        fileName: "cover.jpg",
-        width: 0,
-        height: 0,
-        createdAt: new Date().toISOString(),
-        sortOrder: 0
-      });
-    }
+    applyLookupResultToForm(form, result.metadata);
     showToast(t("lookup.found"));
     await renderRoute();
   }
 
-  async function lookupMetadataByIsbn(isbn) {
-    const cacheKey = isbn;
-    const cached = await db.lookupCache.where("[key+provider]").equals([cacheKey, "normalized"]).first();
+  async function lookupMetadataByIsbn(isbn, options = {}) {
+    const normalizedIsbn = normalizeIsbn(isbn);
+    const validation = validateIsbn(normalizedIsbn);
+    if (!validation.valid) {
+      return { outcome: "invalid", normalizedIsbn };
+    }
+
+    const canonicalIsbn = validation.isbn13 || validation.isbn10;
+    if (options.forceRefresh) {
+      await clearCachedLookupResult(canonicalIsbn);
+    }
+    const cached = await getCachedLookupResult(canonicalIsbn);
     if (cached) {
-      return cached.normalizedResult;
+      return cached;
     }
-    let result = await fetchOpenLibrary(isbn);
-    if (!result) result = await fetchGoogleBooks(isbn);
-    if (result) {
-      await db.lookupCache.put({ key: cacheKey, provider: "normalized", normalizedResult: result, createdAt: new Date().toISOString() });
+
+    const openLibraryResult = await fetchOpenLibraryMetadata(canonicalIsbn);
+    if (openLibraryResult.outcome === "found" && hasUsefulMetadata(openLibraryResult.metadata)) {
+      const payload = { outcome: "found", metadata: openLibraryResult.metadata };
+      await putCachedLookupResult(canonicalIsbn, payload, LOOKUP_SUCCESS_TTL_MS);
+      return payload;
     }
-    return result;
+
+    const letBooksResult = await fetchLetBooksMetadata(canonicalIsbn);
+    if (letBooksResult.outcome === "found") {
+      const payload = { outcome: "found", metadata: letBooksResult.metadata };
+      await putCachedLookupResult(canonicalIsbn, payload, LOOKUP_SUCCESS_TTL_MS);
+      return payload;
+    }
+
+    if (letBooksResult.outcome === "not_found") {
+      const payload = { outcome: "not_found", normalizedIsbn: canonicalIsbn };
+      await putCachedLookupResult(canonicalIsbn, payload, LOOKUP_NEGATIVE_TTL_MS);
+      return payload;
+    }
+
+    if (openLibraryResult.outcome === "not_found") {
+      return letBooksResult.outcome === "skipped" ? { outcome: "not_found", normalizedIsbn: canonicalIsbn } : letBooksResult;
+    }
+
+    return letBooksResult.outcome === "skipped" ? { outcome: "not_found", normalizedIsbn: canonicalIsbn } : letBooksResult;
   }
 
-  async function fetchOpenLibrary(isbn) {
+  async function fetchOpenLibraryMetadata(isbn) {
     const response = await fetch(`https://openlibrary.org/isbn/${encodeURIComponent(isbn)}.json`).catch(() => null);
-    if (!response || !response.ok) return null;
+    if (!response) return { outcome: "provider_unavailable" };
+    if (response.status === 404) return { outcome: "not_found" };
+    if (!response.ok) return { outcome: "provider_unavailable" };
     const data = await response.json();
     const authors = Array.isArray(data.authors) ? await Promise.all(data.authors.slice(0, 3).map(async (authorRef) => {
       if (!authorRef?.key) return null;
@@ -2070,56 +2156,214 @@
       const authorData = await authorResponse.json();
       return authorData.name;
     })).then((names) => names.filter(Boolean).join(", ")) : "";
-    const coverUrl = `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-L.jpg`;
-    const coverBlob = await tryFetchImageBlob(coverUrl);
-    return {
-      title: data.title || "",
-      authors,
-      publisher: Array.isArray(data.publishers) ? data.publishers.join(", ") : "",
-      publishedYear: data.publish_date ? extractYear(data.publish_date) : "",
+    const normalized = normalizeMetadataResult({
+      provider: "open-library",
+      providerLabel: "Open Library",
+      isbn,
       isbn10: normalizeIsbn(Array.isArray(data.isbn_10) ? data.isbn_10[0] : ""),
       isbn13: normalizeIsbn(Array.isArray(data.isbn_13) ? data.isbn_13[0] : isbn),
-      language: data.languages?.[0]?.key?.split("/").pop() || "",
+      title: data.title || "",
+      subtitle: data.subtitle || "",
+      authors: authors ? authors.split(", ") : [],
+      publisher: Array.isArray(data.publishers) ? data.publishers.join(", ") : "",
+      publishedDate: data.publish_date || "",
+      publishedYear: data.publish_date ? extractYear(data.publish_date) : "",
       description: typeof data.description === "string" ? data.description : data.description?.value || "",
-      source: "Open Library",
-      sourceUrl: `https://openlibrary.org/isbn/${encodeURIComponent(isbn)}`,
-      coverBlob
-    };
+      language: data.languages?.[0]?.key?.split("/").pop() || "",
+      categories: Array.isArray(data.subjects) ? data.subjects.slice(0, 5) : [],
+      thumbnailUrl: `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-M.jpg?default=false`,
+      smallThumbnailUrl: `https://covers.openlibrary.org/b/isbn/${encodeURIComponent(isbn)}-S.jpg?default=false`,
+      infoUrl: `https://openlibrary.org/isbn/${encodeURIComponent(isbn)}`,
+      fetchedAt: new Date().toISOString(),
+      rawAvailable: false
+    });
+    return { outcome: "found", metadata: normalized };
   }
 
-  async function fetchGoogleBooks(isbn) {
-    const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${encodeURIComponent(isbn)}`).catch(() => null);
-    if (!response || !response.ok) return null;
+  async function fetchLetBooksMetadata(isbn) {
+    const baseUrl = getConfiguredMetadataApiBaseUrl();
+    if (!isAllowedMetadataApiBaseUrl(baseUrl)) {
+      return { outcome: "skipped" };
+    }
+
+    const response = await fetch(`${baseUrl}/isbn/${encodeURIComponent(isbn)}`).catch(() => null);
+    if (!response) return { outcome: "provider_unavailable" };
+    if (response.status === 400) return { outcome: "invalid", normalizedIsbn: isbn };
+    if (response.status === 429) return { outcome: "rate_limited" };
+    if ([502, 503, 504].includes(response.status)) return { outcome: "provider_unavailable" };
+    if (!response.ok) return { outcome: "provider_unavailable" };
+
     const data = await response.json();
-    const item = data.items?.[0];
-    if (!item?.volumeInfo) return null;
-    const info = item.volumeInfo;
-    const coverUrl = info.imageLinks?.thumbnail || info.imageLinks?.smallThumbnail || "";
-    const coverBlob = coverUrl ? await tryFetchImageBlob(coverUrl.replace(/^http:/, "https:")) : null;
-    return {
-      title: info.title || "",
-      authors: Array.isArray(info.authors) ? info.authors.join(", ") : "",
-      publisher: info.publisher || "",
-      publishedYear: info.publishedDate ? extractYear(info.publishedDate) : "",
-      isbn10: normalizeIsbn(findIndustryIdentifier(info.industryIdentifiers, "ISBN_10") || ""),
-      isbn13: normalizeIsbn(findIndustryIdentifier(info.industryIdentifiers, "ISBN_13") || isbn),
-      language: info.language || "",
-      description: info.description || "",
-      source: "Google Books",
-      sourceUrl: info.infoLink || `https://books.google.com/`,
-      coverBlob
-    };
-  }
+    if (!data?.found) {
+      return { outcome: "not_found", normalizedIsbn: isbn };
+    }
 
-  async function tryFetchImageBlob(url) {
-    const response = await fetch(url).catch(() => null);
-    if (!response || !response.ok) return null;
-    const blob = await response.blob();
-    return blob.type ? blob : blob.slice(0, blob.size, "image/jpeg");
+    return {
+      outcome: "found",
+      metadata: normalizeMetadataResult({
+        ...data,
+        providerLabel: "Let Books metadata API"
+      })
+    };
   }
 
   function findIndustryIdentifier(list, type) {
     return (list || []).find((item) => item.type === type)?.identifier || "";
+  }
+
+  function normalizeMetadataResult(data) {
+    const authorsList = Array.isArray(data.authors) ? data.authors.filter(Boolean).map((author) => String(author).trim()).filter(Boolean) : String(data.authors || "").split(",").map((author) => author.trim()).filter(Boolean);
+    const isbn = normalizeIsbn(data.isbn || data.isbn13 || data.isbn10 || "");
+    const isbn10 = normalizeIsbn(data.isbn10 || "");
+    const isbn13 = normalizeIsbn(data.isbn13 || "");
+    return {
+      found: true,
+      provider: String(data.provider || "unknown").trim() || "unknown",
+      providerLabel: String(data.providerLabel || "Let Books metadata API").trim() || "Let Books metadata API",
+      providerId: String(data.providerId || "").trim(),
+      isbn,
+      isbn10,
+      isbn13,
+      title: String(data.title || "").trim(),
+      subtitle: String(data.subtitle || "").trim(),
+      authors: authorsList.join(", "),
+      authorsList,
+      publisher: String(data.publisher || "").trim(),
+      publishedDate: String(data.publishedDate || "").trim(),
+      publishedYear: String(data.publishedYear || extractYear(data.publishedDate || "")).trim(),
+      description: String(data.description || "").trim(),
+      pageCount: Number.isFinite(Number(data.pageCount)) ? Number(data.pageCount) : null,
+      language: String(data.language || "").trim(),
+      categories: Array.isArray(data.categories) ? data.categories.map((item) => String(item).trim()).filter(Boolean) : [],
+      thumbnailUrl: normalizeExternalUrl(data.thumbnailUrl || ""),
+      smallThumbnailUrl: normalizeExternalUrl(data.smallThumbnailUrl || ""),
+      infoUrl: String(data.infoUrl || data.sourceUrl || "").trim(),
+      fetchedAt: String(data.fetchedAt || new Date().toISOString()).trim(),
+      rawAvailable: Boolean(data.rawAvailable),
+      source: String(data.providerLabel || "Let Books metadata API").trim() || "Let Books metadata API",
+      sourceUrl: String(data.infoUrl || data.sourceUrl || "").trim()
+    };
+  }
+
+  function hasUsefulMetadata(metadata) {
+    return Boolean(metadata && (metadata.title || metadata.authors || metadata.publisher || metadata.publishedYear || metadata.description));
+  }
+
+  function applyLookupResultToForm(form, metadata) {
+    if (!(form instanceof HTMLFormElement) || !metadata) return;
+
+    setFormValueIfBlank(form, "title", metadata.title || "");
+    setFormValueIfBlank(form, "authors", metadata.authors || "");
+    setFormValueIfBlank(form, "publisher", metadata.publisher || "");
+    setFormValueIfBlank(form, "publishedYear", metadata.publishedYear || "");
+    setFormValueIfBlank(form, "isbn10", metadata.isbn10 || "");
+    setFormValueIfBlank(form, "isbn13", metadata.isbn13 || "");
+    setFormValueIfBlank(form, "language", metadata.language || "");
+    setFormValueIfBlank(form, "description", metadata.description || "");
+
+    const sourceField = form.querySelector("[name='source']");
+    if (sourceField && !String(sourceField.value || "").trim()) {
+      sourceField.value = metadata.source || metadata.providerLabel || "Let Books metadata API";
+    }
+
+    const sourceUrlField = form.querySelector("[name='sourceUrl']");
+    if (sourceUrlField && !String(sourceUrlField.value || "").trim()) {
+      sourceUrlField.value = metadata.sourceUrl || metadata.infoUrl || "";
+    }
+
+    setHiddenFormValue(form, "metadataProvider", metadata.provider || "unknown");
+    setHiddenFormValue(form, "metadataProviderId", metadata.providerId || "");
+    setHiddenFormValue(form, "metadataFetchedAt", metadata.fetchedAt || new Date().toISOString());
+    setHiddenFormValue(form, "thumbnailUrl", metadata.thumbnailUrl || "");
+    setHiddenFormValue(form, "smallThumbnailUrl", metadata.smallThumbnailUrl || "");
+  }
+
+  function setFormValueIfBlank(form, name, nextValue) {
+    const field = form.querySelector(`[name='${name}']`);
+    if (!field) return;
+    if (String(field.value || "").trim()) return;
+    field.value = nextValue;
+  }
+
+  function setHiddenFormValue(form, name, value) {
+    const field = form.querySelector(`[name='${name}']`);
+    if (!field) return;
+    field.value = value;
+  }
+
+  function getLookupMessage(result) {
+    if (!result) return t("lookup.notFound");
+    if (result.outcome === "invalid") return t("lookup.invalidIsbn");
+    if (result.outcome === "rate_limited") return t("lookup.rateLimited");
+    if (result.outcome === "provider_unavailable") return t("lookup.providerUnavailable");
+    return t("lookup.notFound");
+  }
+
+  function buildLookupCacheKey(normalizedIsbn) {
+    return `metadata:merged:${LOOKUP_CACHE_VERSION}:isbn:${normalizedIsbn}`;
+  }
+
+  async function getCachedLookupResult(normalizedIsbn) {
+    const cacheKey = buildLookupCacheKey(normalizedIsbn);
+    const cached = await db.lookupCache.where("[key+provider]").equals([cacheKey, LOOKUP_CACHE_PROVIDER]).first();
+    if (!cached) return null;
+    if (cached.expiresAt && new Date(cached.expiresAt).getTime() <= Date.now()) {
+      await db.lookupCache.delete([cacheKey, LOOKUP_CACHE_PROVIDER]).catch(() => {});
+      return null;
+    }
+    return cached.value || null;
+  }
+
+  async function putCachedLookupResult(normalizedIsbn, value, ttlMs) {
+    const cacheKey = buildLookupCacheKey(normalizedIsbn);
+    await db.lookupCache.put({
+      key: cacheKey,
+      provider: LOOKUP_CACHE_PROVIDER,
+      value,
+      createdAt: new Date().toISOString(),
+      expiresAt: new Date(Date.now() + ttlMs).toISOString()
+    });
+  }
+
+  async function clearCachedLookupResult(normalizedIsbn) {
+    const cacheKey = buildLookupCacheKey(normalizedIsbn);
+    await db.lookupCache.delete([cacheKey, LOOKUP_CACHE_PROVIDER]).catch(() => {});
+  }
+
+  async function clearLookupCache() {
+    await db.lookupCache.clear();
+    showToast(t("toast.lookupCacheCleared"));
+    await renderRoute();
+  }
+
+  function getConfiguredMetadataApiBaseUrl() {
+    const fromQuery = new URLSearchParams(window.location.search).get(METADATA_API_QUERY_PARAM) || "";
+    const fromWindowConfig = globalThis.LET_BOOKS_CONFIG?.metadataApiBaseUrl || globalThis.LET_BOOKS_METADATA_API_BASE_URL || globalThis.VITE_METADATA_API_BASE_URL || "";
+    const fromMeta = document.querySelector(`meta[name='${METADATA_API_META_NAME}']`)?.getAttribute("content") || "";
+    const candidate = fromQuery || fromWindowConfig || fromMeta || METADATA_API_DEFAULT_BASE_URL;
+    return sanitizeMetadataApiBaseUrl(candidate) || METADATA_API_DEFAULT_BASE_URL;
+  }
+
+  function sanitizeMetadataApiBaseUrl(value) {
+    try {
+      const url = new URL(String(value || "").trim());
+      return url.href.replace(/\/$/, "");
+    } catch (_) {
+      return "";
+    }
+  }
+
+  function isAllowedMetadataApiBaseUrl(baseUrl) {
+    try {
+      const url = new URL(baseUrl);
+      const apiOrigin = url.origin;
+      if (apiOrigin !== METADATA_API_DEFAULT_BASE_URL) {
+        return ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname);
+      }
+      return OFFICIAL_METADATA_APP_ORIGINS.has(window.location.origin);
+    } catch (_) {
+      return false;
+    }
   }
 
   async function submitScannerManual(form) {
@@ -2608,50 +2852,39 @@
     setScannerStatus(t("scanner.lookupProgress"), t("scanner.lookupProgressHint"));
 
     const book = createEmptyBook(boxId || "");
-    if (isbn.length === 13) {
-      book.isbn13 = isbn;
-    } else {
-      book.isbn10 = isbn;
+    const validation = validateIsbn(normalizeIsbn(isbn));
+    if (validation.isbn13) {
+      book.isbn13 = validation.isbn13;
+    }
+    if (validation.isbn10) {
+      book.isbn10 = validation.isbn10;
     }
 
     const result = navigator.onLine ? await lookupMetadataByIsbn(isbn) : null;
-    if (result) {
-      book.title = result.title || "";
-      book.authors = result.authors || "";
-      book.publisher = result.publisher || "";
-      book.publishedYear = result.publishedYear || "";
-      book.isbn10 = result.isbn10 || book.isbn10;
-      book.isbn13 = result.isbn13 || book.isbn13;
-      book.language = result.language || "";
-      book.description = result.description || "";
-      book.source = result.source || "Manual";
-      book.sourceUrl = result.sourceUrl || "";
+    if (result?.outcome === "found") {
+      const metadata = result.metadata;
+      book.title = metadata.title || "";
+      book.authors = metadata.authors || "";
+      book.publisher = metadata.publisher || "";
+      book.publishedYear = metadata.publishedYear || "";
+      book.isbn10 = metadata.isbn10 || book.isbn10;
+      book.isbn13 = metadata.isbn13 || book.isbn13;
+      book.language = metadata.language || "";
+      book.description = metadata.description || "";
+      book.source = metadata.source || "Manual";
+      book.sourceUrl = metadata.sourceUrl || "";
+      book.metadataProvider = metadata.provider || "unknown";
+      book.metadataProviderId = metadata.providerId || "";
+      book.metadataFetchedAt = metadata.fetchedAt || "";
+      book.thumbnailUrl = metadata.thumbnailUrl || "";
+      book.smallThumbnailUrl = metadata.smallThumbnailUrl || "";
       book.status = "ready";
     }
 
     await db.books.put(book);
 
-    if (result?.coverBlob) {
-      const existingPhotos = await db.photos.where({ bookId: book.id, type: "cover" }).toArray();
-      for (const existing of existingPhotos) {
-        await db.photos.delete(existing.id);
-      }
-      await db.photos.put({
-        id: makeId("photo"),
-        bookId: book.id,
-        type: "cover",
-        blob: result.coverBlob,
-        mimeType: result.coverBlob.type || "image/jpeg",
-        fileName: "cover.jpg",
-        width: 0,
-        height: 0,
-        createdAt: new Date().toISOString(),
-        sortOrder: 0
-      });
-    }
-
     clearScannerStatus();
-    showToast(result ? t("lookup.found") : t("lookup.notFound"));
+    showToast(result?.outcome === "found" ? t("lookup.found") : getLookupMessage(result));
     window.location.hash = `#/books/${encodeURIComponent(book.id)}`;
   }
 
@@ -2954,12 +3187,12 @@
 
     const books = [
       seedBook(boxes[0].id, "Calculus", "Michael Spivak", "ready", "9780914098911", "en", 1967, "Open Library"),
-      seedBook(boxes[0].id, "Linear Algebra", "Gilbert Strang", "ready", "9780961408800", "en", 2016, "Google Books"),
+      seedBook(boxes[0].id, "Linear Algebra", "Gilbert Strang", "ready", "9780961408800", "en", 2016, "Let Books metadata API"),
       seedBook(boxes[1].id, "Clean Code", "Robert C. Martin", "ready", "9780132350884", "en", 2008, "Open Library"),
       seedBook(boxes[1].id, "Introduction to Algorithms", "Cormen, Leiserson, Rivest, Stein", "missing-metadata", "9780262033848", "en", 2009),
       seedBook(boxes[2].id, "Krst pri Savici", "France Preseren", "exported", "", "sl", 1836),
       seedBook(boxes[2].id, "Zgodovina Evrope", "Razlicni avtorji", "missing-metadata", "", "sl", 1998),
-      seedBook(boxes[3].id, "Organic Chemistry", "T. W. Graham Solomons", "ready", "9781118133576", "en", 2013, "Google Books"),
+      seedBook(boxes[3].id, "Organic Chemistry", "T. W. Graham Solomons", "ready", "9781118133576", "en", 2013, "Let Books metadata API"),
       seedBook(boxes[3].id, "Mechanics of Materials", "Beer, Johnston", "ready", "9780073398235", "en", 2011, "Open Library"),
       seedBook(boxes[4].id, "Na Drini cuprija", "Ivo Andric", "exported", "", "sr", 1945),
       seedBook(boxes[4].id, "Stare Tehniske Knjige", "Razni autori", "missing-metadata", "", "hr", 1986),
@@ -3044,7 +3277,12 @@
       language,
       description: `${title} is part of the seeded sample collection for Let Books.`,
       source,
-      sourceUrl: source === "Open Library" ? `https://openlibrary.org/isbn/${isbn13}` : source === "Google Books" ? `https://books.google.com/?q=${isbn13}` : "",
+      sourceUrl: source === "Open Library" ? `https://openlibrary.org/isbn/${isbn13}` : source === "Let Books metadata API" ? `${METADATA_API_DEFAULT_BASE_URL}/isbn/${isbn13}` : "",
+      metadataProvider: source === "Open Library" ? "open-library" : source === "Let Books metadata API" ? "google-books" : "manual",
+      metadataProviderId: "",
+      metadataFetchedAt: source === "Manual" ? "" : new Date().toISOString(),
+      thumbnailUrl: "",
+      smallThumbnailUrl: "",
       status,
       notes: "",
       createdAt: new Date().toISOString(),
@@ -3217,6 +3455,11 @@
       description: String(data.get("description") || "").trim(),
       source: String(data.get("source") || "Manual").trim() || "Manual",
       sourceUrl: String(data.get("sourceUrl") || "").trim(),
+      metadataProvider: String(data.get("metadataProvider") || "manual").trim() || "manual",
+      metadataProviderId: String(data.get("metadataProviderId") || "").trim(),
+      metadataFetchedAt: String(data.get("metadataFetchedAt") || "").trim(),
+      thumbnailUrl: String(data.get("thumbnailUrl") || "").trim(),
+      smallThumbnailUrl: String(data.get("smallThumbnailUrl") || "").trim(),
       status: String(data.get("status") || "missing-metadata"),
       notes: String(data.get("notes") || "").trim(),
       boxId: String(data.get("boxId") || "")
@@ -3225,6 +3468,64 @@
 
   function normalizeIsbn(value) {
     return String(value || "").replace(/[^0-9Xx]/g, "").toUpperCase();
+  }
+
+  function validateIsbn(value) {
+    const normalized = normalizeIsbn(value);
+    if (normalized.length === 10 && isValidIsbn10(normalized)) {
+      return {
+        valid: true,
+        normalized,
+        isbn10: normalized,
+        isbn13: convertIsbn10ToIsbn13(normalized)
+      };
+    }
+
+    if (normalized.length === 13 && isValidIsbn13(normalized)) {
+      return {
+        valid: true,
+        normalized,
+        isbn10: normalized.startsWith("978") ? convertIsbn13ToIsbn10(normalized) : "",
+        isbn13: normalized
+      };
+    }
+
+    return {
+      valid: false,
+      normalized,
+      isbn10: "",
+      isbn13: ""
+    };
+  }
+
+  function isValidIsbn10(value) {
+    if (!/^\d{9}[\dX]$/.test(value)) return false;
+    const total = value.split("").reduce((sum, char, index) => sum + ((char === "X" ? 10 : Number(char)) * (10 - index)), 0);
+    return total % 11 === 0;
+  }
+
+  function isValidIsbn13(value) {
+    if (!/^\d{13}$/.test(value)) return false;
+    const total = value.slice(0, 12).split("").reduce((sum, char, index) => sum + (Number(char) * (index % 2 === 0 ? 1 : 3)), 0);
+    const checkDigit = (10 - (total % 10)) % 10;
+    return checkDigit === Number(value[12]);
+  }
+
+  function convertIsbn10ToIsbn13(value) {
+    if (!isValidIsbn10(value)) return "";
+    const base = `978${value.slice(0, 9)}`;
+    const total = base.split("").reduce((sum, char, index) => sum + (Number(char) * (index % 2 === 0 ? 1 : 3)), 0);
+    const checkDigit = (10 - (total % 10)) % 10;
+    return `${base}${checkDigit}`;
+  }
+
+  function convertIsbn13ToIsbn10(value) {
+    if (!isValidIsbn13(value) || !value.startsWith("978")) return "";
+    const base = value.slice(3, 12);
+    const total = base.split("").reduce((sum, char, index) => sum + (Number(char) * (10 - index)), 0);
+    const remainder = 11 - (total % 11);
+    const checkDigit = remainder === 10 ? "X" : remainder === 11 ? "0" : String(remainder);
+    return `${base}${checkDigit}`;
   }
 
   function extractYear(value) {
