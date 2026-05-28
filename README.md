@@ -172,6 +172,20 @@ Recommended curated skill:
 
 For AI-assisted development, strongly prefer a Playwright-oriented skill package when the environment supports reusable skills. See `static-demo/README.md` for the full contributor tooling stack, Playwright setup, localization validation expectations, and screenshot/documentation workflow guidance.
 
+## Mobile Debugging
+
+This project strongly prefers real-device Android debugging for camera, barcode, and QR workflows.
+
+See:
+- `docs/android-debugging.md`
+
+The mobile debugging workflow is optimized for:
+- Android Chrome via ADB
+- Playwright CDP attachment
+- real camera streams
+- barcode/QR validation on physical devices
+- rapid runtime instrumentation/debugging
+
 ## Product Direction
 
 Let Books is not intended to be primarily an AI product.

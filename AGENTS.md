@@ -4,6 +4,12 @@ Implementation details beyond this product specification live in `AGENTS-Impleme
 From now on, new implementation-specific guidance should be added there.
 Use both `AGENTS.md` and `AGENTS-Implementation.md` as reference for documentation and code generation.
 
+## Mobile Debugging
+
+Android/mobile debugging workflows are documented separately in `docs/android-debugging.md`.
+
+This project prefers real-device validation for camera and barcode/QR scanning functionality. Do not rely solely on desktop emulation for camera or scan behavior.
+
 # BookDonationRegistry — Full Project Specification
 
 ## 1. Project Purpose

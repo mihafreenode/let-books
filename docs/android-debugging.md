@@ -1,0 +1,951 @@
+# Android Mobile Debugging Guide
+
+This workflow is intentionally optimized for:
+
+- physical Android devices
+- live camera streams
+- runtime instrumentation
+- rapid iteration/debugging
+
+It is **not** intended primarily for generic CI/browser automation.
+
+---
+
+## Purpose
+
+Document the preferred workflow for:
+
+- Android Chrome debugging
+- Playwright mobile debugging
+- ADB usage
+- barcode/QR testing
+- real camera validation
+- runtime instrumentation
+
+---
+
+## Quick Start (Windows + WSL + Android Chrome)
+
+### Windows Host
+
+Install Android platform tools:
+
+```powershell
+winget install -e --id Google.PlatformTools
+adb devices
+```
+
+Enable:
+
+- Android Developer Options
+- USB debugging
+- authorize the computer on the device
+
+---
+
+### WSL Setup
+
+Prefer reusing the Windows adb server instead of starting a separate Linux adb instance.
+
+```bash
+# Point WSL adb client to Windows adb server
+export ADB_SERVER_SOCKET=tcp:$(ip route | awk '/default/ {print $3}'):5037
+
+# Verify device visibility
+adb.exe devices
+```
+
+---
+
+### Chrome Remote Debugging
+
+Forward Chrome DevTools socket:
+
+```bash
+adb forward tcp:9222 localabstract:chrome_devtools_remote
+```
+
+Verify:
+
+```bash
+curl http://127.0.0.1:9222/json/version
+```
+
+---
+
+### Playwright CDP Attach
+
+Preferred workflow:
+
+```js
+const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+
+const context = browser.contexts()[0];
+const page = context.pages()[0];
+```
+
+This preserves:
+
+- login state
+- cookies
+- camera permissions
+- existing Chrome session state
+
+and avoids repeated browser relaunches during mobile camera/barcode debugging.
+
+---
+
+### Preferred Debugging Workflow
+
+Preferred order:
+
+1. Open site manually in Android Chrome
+2. Grant camera permissions manually
+3. Connect Playwright over CDP
+4. Inject runtime instrumentation/debug overlays
+5. Reuse the same browser session during iteration
+
+Avoid:
+
+- repeated browser launches
+- repeated permission prompts
+- unnecessary rebuild/restart cycles
+- relying solely on desktop emulation for barcode/camera validation
+
+---
+
+## Runtime Environment Detection
+
+### Supported Hosts
+
+- WSL2
+- native Linux
+- macOS
+- Windows host
+
+### Detecting WSL
+
+```bash
+# Check kernel version for Microsoft
+uname -r | grep -i microsoft
+
+# Check for WSL environment variable
+echo "$WSL_DISTRO_NAME"
+
+# Check /proc/version
+cat /proc/version | grep -i microsoft
+```
+
+### Environment Inspection
+
+Before assuming any particular tool availability, inspect:
+
+```bash
+# Available adb binaries
+which adb 2>/dev/null; which adb.exe 2>/dev/null
+
+# PATH includes Windows tools (WSL)
+echo "$PATH" | grep -i "/mnt/c"
+
+# Mounted drives (WSL)
+ls /mnt/c/ 2>/dev/null
+```
+
+Adapt automatically instead of assuming a fixed environment.
+
+---
+
+## WSL Behavior
+
+In WSL, Android USB connectivity is typically handled by the Windows host.
+
+### Preferred Approach
+
+- **Do not** start a duplicate Linux adb server
+- **Do not** assume Linux USB access works
+- Reuse the existing Windows adb server
+
+### Connecting to Windows adb Server
+
+```bash
+# Determine Windows host IP
+HOST_IP=$(ip route | grep default | awk '{print $3}')
+
+# Point Linux adb at the Windows adb server
+export ADB_SERVER_SOCKET=tcp:${HOST_IP}:5037
+adb devices
+```
+
+### Using Windows adb.exe Directly
+
+```bash
+# If adb.exe is on PATH (e.g., via PlatformTools installed in Windows)
+adb.exe devices
+
+# Safer discovery: query Windows for the actual adb.exe path
+cmd.exe /c where adb.exe
+
+# Or via PowerShell
+powershell.exe -Command "(Get-Command adb.exe).Source"
+
+# The discovered path is a Windows path (e.g., C:\Users\...\adb.exe).
+# Convert or quote it as needed for WSL:
+# - convert backslashes to forward slashes, prepend /mnt/
+# - or wrap in quotes when passing to adb.exe
+```
+
+### Critical Rules
+
+- Never automatically start duplicate adb servers
+- Prefer reusing the existing adb server on the host
+- Prefer reusing an existing Chrome session and login state
+- If both `adb` and `adb.exe` are available, prefer `adb.exe` on WSL unless explicitly configured for Linux USB
+
+---
+
+## WSL ↔ Windows Path Conversion Guidance
+
+When working across WSL and Windows tools, avoid assuming paths are directly interchangeable.
+
+ADB, Playwright helpers, screenshots, logs, and temporary artifacts may cross:
+
+- Bash
+- PowerShell
+- Windows executables
+- WSL-mounted filesystems
+
+Prefer automatic path normalization.
+
+### Recommended Rules
+
+- Windows executables (`adb.exe`, `chrome.exe`, etc.) may require Windows-style paths
+- Linux/WSL tools generally require POSIX paths
+- Always convert paths explicitly when crossing environments
+- Avoid manual string replacement when reliable conversion tools exist
+
+### WSL → Windows Path Conversion
+
+Preferred tool:
+
+```bash
+wslpath -w /mnt/c/Users/test/file.txt
+```
+
+Example output:
+
+```text
+C:\Users\test\file.txt
+```
+
+Useful when:
+
+- passing files to `adb.exe`
+- invoking PowerShell from WSL
+- launching Windows Chrome from WSL
+- saving screenshots/videos for Windows-native tools
+
+Example:
+
+```bash
+WIN_PATH=$(wslpath -w "$PWD/debug-screenshot.png")
+adb.exe push "$WIN_PATH" /sdcard/Download/
+```
+
+### Windows → WSL Path Conversion
+
+Preferred tool:
+
+```bash
+wslpath -u 'C:\Users\test\file.txt'
+```
+
+Example output:
+
+```text
+/mnt/c/Users/test/file.txt
+```
+
+Useful when:
+
+- processing Windows-generated artifacts in Bash
+- using Linux tooling on Windows-created files
+- sharing Playwright screenshots/logs between environments
+
+Example:
+
+```bash
+WSL_PATH=$(wslpath -u 'C:\temp\barcode-frame.png')
+file "$WSL_PATH"
+```
+
+### Safe Discovery of Windows Executables from WSL
+
+Avoid hardcoding:
+
+- Android SDK paths
+- WinGet package directories
+- user profile paths
+
+Preferred discovery:
+
+```bash
+cmd.exe /c where adb.exe
+```
+
+or:
+
+```bash
+powershell.exe -Command "(Get-Command adb.exe).Source"
+```
+
+Then normalize:
+
+```bash
+ADB_WIN=$(powershell.exe -Command "(Get-Command adb.exe).Source" | tr -d '\r')
+ADB_WSL=$(wslpath -u "$ADB_WIN")
+"$ADB_WSL" devices
+```
+
+### Quoting Rules
+
+Paths may contain:
+
+- spaces
+- parentheses
+- Unicode characters
+
+Always quote paths.
+
+Preferred:
+
+```bash
+"$ADB_WSL" devices
+```
+
+Avoid:
+
+```bash
+$ADB_WSL devices
+```
+
+### Common Cross-Environment Pitfalls
+
+#### CRLF Line Endings
+
+Windows commands may return carriage returns (`\r`).
+
+Normalize when needed:
+
+```bash
+tr -d '\r'
+```
+
+Example:
+
+```bash
+ADB_WIN=$(cmd.exe /c where adb.exe | tr -d '\r')
+```
+
+#### Backslash Escaping
+
+Avoid manually escaping Windows paths in Bash.
+
+Prefer conversion through:
+
+- `wslpath`
+- quoted variables
+
+#### Relative Paths
+
+Avoid passing relative paths across environments.
+
+Prefer:
+
+- absolute normalized paths
+- runtime-generated converted paths
+
+### Recommended Strategy
+
+When invoking Windows tools from WSL:
+
+1. Discover executable dynamically
+2. Normalize path using `wslpath`
+3. Quote paths
+4. Strip CRLF if needed
+5. Reuse resolved executable paths during the session
+
+Avoid:
+
+- hardcoded SDK directories
+- assumptions about usernames
+- assumptions about WinGet install locations
+- manual slash replacement logic
+
+---
+
+## Windows Setup
+
+### Recommended Installation
+
+```powershell
+winget install -e --id Google.PlatformTools
+```
+
+### Verification
+
+```powershell
+adb devices
+```
+
+### Notes
+
+- Avoid assuming fixed SDK install paths like `C:\Android\Sdk\platform-tools\`
+- Prefer PATH-based adb discovery after `winget` install
+- Restart the terminal after installation if `adb` is not immediately found
+
+---
+
+## Android Developer Mode Setup
+
+### Enabling Developer Options
+
+1. Open **Settings** > **About phone**
+2. Tap **Build number** 7 times
+3. Enter your PIN if prompted
+4. **Developer options** now appears in Settings
+
+### Enabling USB Debugging
+
+1. Open **Settings** > **System** > **Developer options**
+2. Toggle **USB debugging** on
+3. Confirm the dialog
+
+### Authorizing adb
+
+When you first connect via USB:
+
+1. The device shows: **"Allow USB debugging?"**
+2. Check **"Always allow from this computer"**
+3. Tap **Allow**
+
+### Handling "unauthorized" State
+
+```bash
+# If device shows as "unauthorized":
+adb devices
+# List of devices attached
+# <serial>    unauthorized
+
+# Revoke USB debugging authorizations on device if needed:
+# Settings > Developer options > Revoke USB debugging authorizations
+# Then reconnect and re-authorize
+```
+
+### Verify Connection
+
+```bash
+adb devices -l
+# Should show:
+# <serial>    device <model-info>
+```
+
+---
+
+## Chrome Remote Debugging
+
+### Forward Chrome DevTools Port
+
+```bash
+adb forward tcp:9222 localabstract:chrome_devtools_remote
+```
+
+### Verify Forwarding
+
+```bash
+curl http://127.0.0.1:9222/json/version
+```
+
+### Open Chrome on Device (if not already running)
+
+```bash
+adb shell am start -n com.google.chrome/com.google.android.apps.chrome.Main
+```
+
+### Connect with Playwright via CDP
+
+```js
+const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+```
+
+### Why CDP Attachment Is Preferred
+
+| Approach | Issues |
+|---|---|
+| `chromium.launch()` | Requires new browser instance, loses session state, loses camera permissions |
+| `chromium.connectOverCDP()` | Preserves session state, preserves camera permissions, avoids repeated launches |
+
+CDP attachment:
+
+- preserves session state (login, navigation history)
+- preserves camera permissions
+- avoids repeated browser launches
+- speeds up the debugging loop significantly
+- allows the human to interact with the device while Playwright observes
+
+### Common CDP Patterns
+
+```js
+// Attach to all existing pages
+const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const context = browser.contexts()[0];
+const page = context.pages()[0];
+
+// Or target a specific page by URL
+const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const context = browser.contexts()[0];
+const page = context.pages().find(p => p.url().includes('letbooks'));
+```
+
+---
+
+## Useful Android Chrome Flags
+
+Sometimes useful during debugging:
+
+```bash
+adb shell am start \
+  -n com.android.chrome/com.google.android.apps.chrome.Main \
+  --esa args '--disable-fre,--disable-background-timer-throttling'
+```
+
+Useful flags:
+
+| Flag | Effect |
+|---|---|
+| `--disable-fre` | Skips the First Run Experience (welcome screens, sign-in prompts) |
+| `--disable-background-timer-throttling` | Prevents Chrome from throttling timers in background tabs |
+| `--disable-renderer-backgrounding` | Keeps renderer process active even when tab is backgrounded |
+| `--disable-features=Translate` | Disables the Translate UI banner |
+
+Not always needed, but valuable during extended debugging sessions where Chrome's normal background behavior would interfere.
+
+---
+
+## Playwright Mobile Debugging Philosophy
+
+### Optimization Goals
+
+Ordered by priority:
+
+1. **shortest edit/test loop** — minimize time from code change to verification
+2. **runtime instrumentation** — prefer `page.evaluate()` over code changes
+3. **preserving browser state** — avoid unnecessary relaunches
+4. **live-device debugging** — real hardware over emulation
+
+### Preferred Techniques
+
+| Technique | Use When |
+|---|---|
+| `page.evaluate()` | Injecting JS to read/modify app state |
+| `page.addStyleTag()` | Temporarily overlaying debug visuals |
+| `page.addScriptTag()` | Adding debug-only instrumentation |
+| `locator.waitFor()` | Waiting for specific elements |
+| `scrollIntoViewIfNeeded()` | Bringing elements into view before interaction |
+| `PWDEBUG=1` | Stepping through Playwright interactions |
+
+```js
+// Example: runtime debug overlay
+await page.addStyleTag({ content: `
+  .debug-highlight { outline: 3px solid red !important; }
+`});
+await page.evaluate(() => {
+  document.querySelectorAll('button').forEach(el => el.classList.add('debug-highlight'));
+});
+```
+
+### What to Avoid
+
+- arbitrary `page.waitForTimeout()` — use explicit locator waits instead
+- unnecessary rebuilds — debug at runtime when possible
+- unnecessary browser relaunches — prefer CDP reconnect
+- permanent debug modifications in committed code
+
+---
+
+## Runtime Debug Helpers
+
+### Touch Target Visualization
+
+```js
+await page.addStyleTag({ content: `
+  *:active { background: rgba(255,0,0,0.1) !important; }
+  button, a, input, select, textarea { outline: 1px dotted rgba(0,0,255,0.3) !important; }
+`});
+```
+
+### Z-Index Visualization
+
+```js
+await page.evaluate(() => {
+  document.querySelectorAll('*').forEach(el => {
+    const z = getComputedStyle(el).zIndex;
+    if (z && z !== 'auto') {
+      el.setAttribute('data-z', z);
+      el.style.outline = `2px solid hsl(${parseInt(z) * 30}, 70%, 50%)`;
+    }
+  });
+});
+```
+
+### Viewport Rulers
+
+```js
+await page.addStyleTag({ content: `
+  .vp-ruler { position: fixed; background: rgba(255,0,0,0.3); z-index: 99999; pointer-events: none; }
+  .vp-ruler-h { top: 0; left: 0; right: 0; height: 1px; }
+  .vp-ruler-v { top: 0; left: 0; bottom: 0; width: 1px; }
+`});
+await page.addScriptTag({ content: `
+  document.body.insertAdjacentHTML('beforeend',
+    '<div class="vp-ruler vp-ruler-h"></div><div class="vp-ruler vp-ruler-v"></div>');
+`});
+```
+
+### Rerender Highlighting
+
+```js
+await page.evaluate(() => {
+  const orig = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function(...args) {
+    orig.apply(this, args);
+    if (args[0] !== 'data-render') {
+      this.setAttribute('data-render', Date.now());
+    }
+  };
+});
+```
+
+### Console Mirroring
+
+```js
+page.on('console', msg => {
+  console.log(`[DEVICE] ${msg.type()}: ${msg.text()}`);
+});
+page.on('pageerror', err => {
+  console.error(`[DEVICE ERROR] ${err.message}`);
+});
+```
+
+### Network Logging
+
+```js
+page.on('request', req => {
+  console.log(`[NET] ${req.method()} ${req.url()}`);
+});
+page.on('response', res => {
+  console.log(`[NET] ${res.status()} ${res.url()}`);
+});
+```
+
+### Failed Locator Screenshots
+
+```js
+async function debugLocator(page, locator, name) {
+  try {
+    await locator.waitFor({ timeout: 5000 });
+    return true;
+  } catch {
+    await page.screenshot({ path: `debug-${name}-${Date.now()}.png`, fullPage: true });
+    console.error(`Locator "${name}" not found. Screenshot saved.`);
+    return false;
+  }
+}
+```
+
+### Debug Labels (Temporary DOM Annotations)
+
+```js
+await page.evaluate(() => {
+  document.querySelectorAll('[data-testid]').forEach(el => {
+    el.insertAdjacentHTML('beforeend',
+      `<span style="position:absolute;top:0;left:0;font-size:10px;background:yellow;z-index:9999">${el.getAttribute('data-testid')}</span>`);
+  });
+});
+```
+
+---
+
+## Barcode / QR Debugging
+
+The main focus of real-device debugging is validating actual mobile camera behavior.
+
+### Key Considerations
+
+| Factor | Impact |
+|---|---|
+| Autofocus delay | Initial frames may be blurry; wait for `focusMode: "continuous"` to stabilize |
+| Motion blur | Hand movement during capture degrades decode |
+| Glare/reflections | Angled lighting can obscure barcodes |
+| Low light | Reduced contrast affects decode confidence |
+| Orientation changes | Rotation may reset camera stream |
+| Zoom behavior | Digital zoom reduces resolution; stay within optical range |
+| Browser camera inconsistencies | Different Chrome versions handle `getCapabilities()` differently |
+| Camera permissions | Must be granted and not revoked |
+| Device pixel density | Affects how scan regions map to physical pixels |
+
+**Desktop emulation is not sufficient for final validation** of camera/barcode behavior.
+
+---
+
+## Camera Handling
+
+### Requirements
+
+- Explicit permission failure handling
+- Waiting for stream readiness
+- Waiting for autofocus stabilization
+- Avoiding flaky timing assumptions
+
+### Permission Debugging
+
+```js
+// Check current permission state
+const state = await page.evaluate(async () => {
+  try {
+    const result = await navigator.permissions.query({ name: 'camera' });
+    return result.state; // 'granted', 'denied', 'prompt'
+  } catch {
+    return 'permissions API not available';
+  }
+});
+console.log('Camera permission state:', state);
+```
+
+### Stream Readiness Monitoring
+
+```js
+await page.evaluate(() => {
+  const origGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+  navigator.mediaDevices.getUserMedia = async (constraints) => {
+    console.log('[CAMERA] getUserMedia called with:', JSON.stringify(constraints));
+    const stream = await origGetUserMedia(constraints);
+    const track = stream.getVideoTracks()[0];
+    console.log('[CAMERA] Track label:', track.label);
+    console.log('[CAMERA] Track settings:', JSON.stringify(track.getSettings()));
+    console.log('[CAMERA] Track capabilities:', JSON.stringify(track.getCapabilities()));
+    return stream;
+  };
+});
+```
+
+### HTTPS Requirement
+
+Modern mobile browsers generally require secure contexts for camera access.
+
+Preferred origins:
+- `https://`
+- `http://localhost`
+- local HTTPS dev certificates
+
+Camera APIs may fail or behave inconsistently on:
+- plain HTTP origins
+- mismatched certificates
+- embedded browsers/webviews with restricted permissions
+
+Always verify:
+- `navigator.mediaDevices`
+- `isSecureContext`
+- browser permission state
+
+### Camera Selection
+
+Android devices often have multiple cameras, and the default selection may not be the rear camera.
+
+Do not assume:
+- first camera in `enumerateDevices()` is the rear camera
+- an environment-facing camera exists
+- labels are populated before permission is granted
+
+Prefer inspecting at runtime:
+- `navigator.mediaDevices.enumerateDevices()`
+- actual selected track settings via `track.getSettings()`
+- `facingMode` constraint: `{ ideal: "environment" }`
+
+```js
+const devices = await navigator.mediaDevices.enumerateDevices();
+const videoInputs = devices.filter(d => d.kind === 'videoinput');
+console.log('Available cameras:', videoInputs.map(d => ({
+  label: d.label,
+  deviceId: d.deviceId,
+  groupId: d.groupId
+})));
+```
+
+### Viewport Stability During Camera Activation
+
+Camera activation may trigger:
+- viewport resize
+- virtual keyboard interactions
+- orientation recalculation
+- safe-area inset changes
+
+Avoid assuming viewport dimensions remain stable after camera initialization. Re-check layout after stream start.
+
+### Thermal Throttling and Battery Concerns
+
+Long-running barcode scanning sessions may be affected by:
+- thermal throttling (CPU/GPU frequency reduction)
+- battery saver mode (reduced frame processing)
+- vendor background restrictions (aggressive OEM power management)
+
+Prefer:
+- charging the device during testing
+- disabling battery optimizations for Chrome
+- keeping the screen awake during debugging sessions
+
+---
+
+## Barcode Debug Instrumentation
+
+### Overlays and Logging
+
+Monitor these properties at runtime:
+
+- detected barcode bounds
+- scan region
+- decode confidence
+- frame processing rate
+- selected camera
+- camera resolution
+- stream readiness
+
+### Logging Decode Attempts
+
+```js
+await page.evaluate(() => {
+  // Intercept scanner library events
+  document.addEventListener('barcodeDetected', (e) => {
+    console.log('[BARCODE] Detected:', {
+      value: e.detail.value,
+      format: e.detail.format,
+      bounds: e.detail.bounds,
+      confidence: e.detail.confidence,
+      timestamp: Date.now()
+    });
+  });
+  document.addEventListener('barcodeError', (e) => {
+    console.error('[BARCODE] Error:', e.detail.error, e.detail.message);
+  });
+});
+```
+
+### What to Log
+
+- decode attempts
+- decode failures with error details
+- browser console errors
+- permission state before camera access
+- scan success/error transitions
+
+### On Failure
+
+- capture screenshots of the current viewport
+- capture video when useful
+- preserve failing frames where possible for later analysis
+- when possible, capture the raw camera frame that failed decode
+- save crop regions around attempted barcode detection
+- log timestamp and camera settings alongside failure artifacts
+
+This frame-level preservation becomes invaluable when debugging decode regressions across device models or Chrome versions.
+
+```js
+// Screenshot on barcode failure
+page.on('console', async (msg) => {
+  if (msg.text().includes('[BARCODE] Error')) {
+    await page.screenshot({ path: `barcode-fail-${Date.now()}.png` });
+    console.log('Camera settings at failure:', await page.evaluate(() => {
+      const track = document.querySelector('video')?.srcObject?.getVideoTracks?.()[0];
+      return track ? track.getSettings() : null;
+    }));
+  }
+});
+```
+
+---
+
+## Testing Strategy
+
+### Supported Approaches
+
+| Method | Use Case |
+|---|---|
+| Generated QR codes | Controlled decode testing (e.g., box QR codes) |
+| Static barcode images | ISBN decode testing via file upload |
+| Prerecorded streams | Regression/performance testing |
+| Real-device scans | Final validation only |
+
+### Preferred Assertions
+
+- **Avoid** arbitrary `page.waitForTimeout()` calls
+- **Use** explicit locator waits (`waitFor()`, `waitForSelector()`)
+- **Verify** scan feedback: the UI should confirm detection (highlight, sound, navigation)
+- **Use** retry-safe logic for flaky camera operations
+
+```js
+// Preferred: wait for scan result feedback
+await page.locator('.scan-success-indicator').waitFor({ timeout: 15000 });
+
+// Not preferred: arbitrary sleep
+await page.waitForTimeout(5000); // avoid
+```
+
+### Final Validation
+
+Must happen on:
+
+- real Android hardware
+- Android Chrome browser
+- actual camera streams
+- representative lighting conditions
+- representative barcode/QR quality (printed, not just screen-displayed)
+
+---
+
+## Command Generation Rules
+
+### Shell Syntax
+
+| Platform | Shell |
+|---|---|
+| Linux | Bash |
+| macOS | Bash |
+| WSL | Bash |
+| Windows (native) | PowerShell |
+
+**Never mix shell syntaxes.** When writing instructions for Windows, write PowerShell. When writing instructions for Linux/macOS/WSL, write Bash.
+
+### Path Normalization
+
+Automatically normalize paths for:
+
+- Linux: `/path/to/file`
+- macOS: `/path/to/file`
+- Windows: `C:\path\to\file`
+- WSL-mounted Windows paths: `/mnt/c/Users/...`
+
+### Uncertainty Handling
+
+When uncertain about the environment:
+
+1. Inspect environment first before running commands
+2. Check adb availability first
+3. Adapt automatically instead of guessing
+4. If environment cannot be determined, prefer the safest fallback
+
+---
+
+## Related Documentation
+
+- `static-demo/README.md` — static demo contributor tooling setup and Playwright workflow guidance
+- Playwright documentation for `connectOverCDP` and mobile emulation APIs
+- ADB documentation for advanced device management

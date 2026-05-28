@@ -313,6 +313,22 @@ Avoid:
 - Use `Let Books` as the public-facing name in README content
 - If `static-demo/` exists, the root README should explicitly describe it as the current executable app deliverable
 
+## Android / Mobile Debugging
+
+Mobile camera and barcode debugging requirements are documented separately in:
+
+- `docs/android-debugging.md`
+
+Important:
+- prefer real Android device validation over desktop emulation
+- preserve browser/device session state during debugging
+- prefer CDP attachment over repeated browser launches
+- runtime instrumentation (`page.evaluate()`, `addStyleTag()`) is preferred over permanent debug code
+- avoid unnecessary browser relaunches
+- optimize for the shortest edit/test loop
+
+Do not duplicate the full ADB/mobile setup workflow here. Keep all camera/barcode debugging practices centralized in `docs/android-debugging.md`.
+
 ## Verification Rules
 
 - Use `hunspell` for spellcheck if available
