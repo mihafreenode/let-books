@@ -75,6 +75,11 @@ Book metadata lookup currently follows a simple fallback chain:
 - provider/source is tracked on the book record
 - the lookup architecture is designed so additional providers can be added behind the same normalized flow later
 
+Useful verification ISBNs:
+
+- `9780434912902` currently resolves through the Open Library-first path in the static demo
+- `9789610167525` currently resolves through the Let Books metadata API fallback and is a good regression check because it is not currently found through Open Library
+
 ## Documentation
 
 The first documentation pass is intended to help validate the app concept with real audience-focused pages.

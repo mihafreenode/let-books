@@ -96,6 +96,11 @@ Needs internet:
 - successful and no-result lookups are cached locally by normalized ISBN
 - provider/source is stored with the matched metadata
 
+Useful verification ISBNs:
+
+- `9780434912902` for the Open Library-first path
+- `9789610167525` for the Let Books metadata API fallback path; this is a useful regression check because Open Library does not currently return it for the demo flow
+
 ## Install and Test
 
 The live static demo app is published on GitHub Pages at https://letbooks.org/static-demo/. The public project landing page is available at https://letbooks.org/, and documentation is available at https://letbooks.org/docs/.

@@ -88,6 +88,7 @@ When adding new tactical guidance in future work, prefer adding it here instead 
 - QR generation and QR scanning should work offline for local workflows; cross-device transfer should rely on portable QR payloads or ZIP import/export rather than hidden sync assumptions
 - Camera capture should be the primary path for photo collection, with file upload/gallery fallback always available
 - Camera, scanning, and other mobile workflows must remain usable under translated UI labels and longer localized strings
+- When verifying ISBN metadata lookup behavior, keep at least two reproducible test ISBNs in documentation and agent guidance: `9780434912902` as an Open Library-first case and `9789610167525` as a Let Books metadata API fallback case that is not currently resolved by Open Library
 
 ## Static Demo Dashboard Hero
 
@@ -301,6 +302,7 @@ Avoid:
 - Verification should check navigation, language switching, and asset loading
 - Verification for public pages should also check favicon URLs, canonical URLs, and representative Open Graph/metadata output where practical
 - Keep commands and guidance reproducible across machines
+- For static demo ISBN lookup verification, explicitly test both the Open Library path and the fallback proxy path using `9780434912902` and `9789610167525`
 
 ## Code Generation Rules
 

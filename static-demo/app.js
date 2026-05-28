@@ -48,7 +48,12 @@
   const LOOKUP_CACHE_VERSION = "v1";
   const LOOKUP_SUCCESS_TTL_MS = 14 * 24 * 60 * 60 * 1000;
   const LOOKUP_NEGATIVE_TTL_MS = 6 * 60 * 60 * 1000;
-  const OFFICIAL_METADATA_APP_ORIGINS = new Set(["https://letbooks.org", "https://www.letbooks.org"]);
+  const OFFICIAL_METADATA_APP_ORIGINS = new Set([
+    "https://letbooks.org",
+    "https://www.letbooks.org",
+    "http://localhost:5173",
+    "http://localhost:5000"
+  ]);
   const PORTABLE_BOX_QR_TYPE = "letbooks-box";
   const PORTABLE_BOOK_QR_TYPE = "letbooks-book";
   const DASHBOARD_HERO_ROTATION_MS = 60000;
@@ -2170,8 +2175,10 @@
       return;
     }
     applyLookupResultToForm(form, result.metadata);
+    persistCurrentBookDraft();
     showToast(t("lookup.found"));
     await renderRoute();
+    revealBookFormStart();
   }
 
   async function lookupMetadataByIsbn(isbn, options = {}) {
@@ -2326,24 +2333,21 @@
   function applyLookupResultToForm(form, metadata) {
     if (!(form instanceof HTMLFormElement) || !metadata) return;
 
-    setFormValueIfBlank(form, "title", metadata.title || "");
-    setFormValueIfBlank(form, "authors", metadata.authors || "");
-    setFormValueIfBlank(form, "publisher", metadata.publisher || "");
-    setFormValueIfBlank(form, "publishedYear", metadata.publishedYear || "");
-    setFormValueIfBlank(form, "isbn10", metadata.isbn10 || "");
-    setFormValueIfBlank(form, "isbn13", metadata.isbn13 || "");
-    setFormValueIfBlank(form, "language", metadata.language || "");
-    setFormValueIfBlank(form, "description", metadata.description || "");
+    const overwriteFields = collectLookupOverwriteFields(form, metadata);
+    const allowOverwrite = !overwriteFields.length || window.confirm(buildLookupOverwriteMessage(overwriteFields));
 
-    const sourceField = form.querySelector("[name='source']");
-    if (sourceField && !String(sourceField.value || "").trim()) {
-      sourceField.value = metadata.source || metadata.providerLabel || "Let Books metadata API";
-    }
-
-    const sourceUrlField = form.querySelector("[name='sourceUrl']");
-    if (sourceUrlField && !String(sourceUrlField.value || "").trim()) {
-      sourceUrlField.value = metadata.sourceUrl || metadata.infoUrl || "";
-    }
+    setFormValueFromLookup(form, "title", metadata.title || "", allowOverwrite);
+    setFormValueFromLookup(form, "authors", metadata.authors || "", allowOverwrite);
+    setFormValueFromLookup(form, "publisher", metadata.publisher || "", allowOverwrite);
+    setFormValueFromLookup(form, "publishedYear", metadata.publishedYear || "", allowOverwrite);
+    setFormValueFromLookup(form, "isbn10", metadata.isbn10 || "", allowOverwrite);
+    setFormValueFromLookup(form, "isbn13", metadata.isbn13 || "", allowOverwrite);
+    setFormValueFromLookup(form, "language", metadata.language || "", allowOverwrite);
+    setFormValueFromLookup(form, "description", metadata.description || "", allowOverwrite);
+    setFormValueFromLookup(form, "source", metadata.source || metadata.providerLabel || "Let Books metadata API", allowOverwrite, {
+      skipConflictValue: t("book.sourceManual")
+    });
+    setFormValueFromLookup(form, "sourceUrl", metadata.sourceUrl || metadata.infoUrl || "", allowOverwrite);
 
     setHiddenFormValue(form, "metadataProvider", metadata.provider || "unknown");
     setHiddenFormValue(form, "metadataProviderId", metadata.providerId || "");
@@ -2352,17 +2356,92 @@
     setHiddenFormValue(form, "smallThumbnailUrl", metadata.smallThumbnailUrl || "");
   }
 
-  function setFormValueIfBlank(form, name, nextValue) {
+  function collectLookupOverwriteFields(form, metadata) {
+    const fields = [
+      ["title", metadata.title || "", t("book.title")],
+      ["authors", metadata.authors || "", t("book.authors")],
+      ["publisher", metadata.publisher || "", t("book.publisher")],
+      ["publishedYear", metadata.publishedYear || "", t("book.year")],
+      ["isbn10", metadata.isbn10 || "", t("book.isbn10")],
+      ["isbn13", metadata.isbn13 || "", t("book.isbn13")],
+      ["language", metadata.language || "", t("book.language")],
+      ["description", metadata.description || "", t("book.description")],
+      ["source", metadata.source || metadata.providerLabel || "Let Books metadata API", t("book.source"), { skipConflictValue: t("book.sourceManual") }],
+      ["sourceUrl", metadata.sourceUrl || metadata.infoUrl || "", t("book.sourceUrl")]
+    ];
+
+    return fields
+      .filter(([name, nextValue, _label, options]) => formFieldNeedsOverwrite(form, name, nextValue, options))
+      .map(([_name, _nextValue, label]) => label);
+  }
+
+  function buildLookupOverwriteMessage(labels) {
+    const fieldList = labels.map((label) => `- ${label}`).join("\n");
+    return tf("lookup.overwriteConfirm", { fields: fieldList });
+  }
+
+  function formFieldNeedsOverwrite(form, name, nextValue, options = {}) {
+    const field = form.querySelector(`[name='${name}']`);
+    if (!field) return false;
+
+    const currentValue = String(field.value || "").trim();
+    const incomingValue = String(nextValue || "").trim();
+    if (!currentValue || !incomingValue) return false;
+    if (options.skipConflictValue && currentValue === options.skipConflictValue) return false;
+    return currentValue !== incomingValue;
+  }
+
+  function setFormValueFromLookup(form, name, nextValue, allowOverwrite, options = {}) {
     const field = form.querySelector(`[name='${name}']`);
     if (!field) return;
-    if (String(field.value || "").trim()) return;
-    field.value = nextValue;
+
+    const currentValue = String(field.value || "").trim();
+    const incomingValue = String(nextValue || "").trim();
+    if (!incomingValue) return;
+    if (!currentValue) {
+      field.value = nextValue;
+      return;
+    }
+    if (options.skipConflictValue && currentValue === options.skipConflictValue) {
+      field.value = nextValue;
+      return;
+    }
+    if (allowOverwrite && currentValue !== incomingValue) {
+      field.value = nextValue;
+    }
   }
 
   function setHiddenFormValue(form, name, value) {
     const field = form.querySelector(`[name='${name}']`);
     if (!field) return;
     field.value = value;
+  }
+
+  function revealBookFormStart() {
+    const applyScroll = () => {
+      const scrollingElement = document.scrollingElement || document.documentElement || document.body;
+      window.scrollTo(0, 0);
+      if (scrollingElement) {
+        scrollingElement.scrollTop = 0;
+        if (typeof scrollingElement.scrollTo === "function") {
+          scrollingElement.scrollTo(0, 0);
+        }
+      }
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      const titleField = document.querySelector("form[data-form='book'] [name='title']");
+      if (titleField instanceof HTMLElement && typeof titleField.focus === "function") {
+        titleField.focus({ preventScroll: true });
+      }
+    };
+
+    if (typeof window.requestAnimationFrame === "function") {
+      window.requestAnimationFrame(applyScroll);
+      return;
+    }
+
+    applyScroll();
   }
 
   function getLookupMessage(result) {
