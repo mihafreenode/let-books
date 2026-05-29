@@ -178,6 +178,7 @@ This project strongly prefers real-device Android debugging for camera, barcode,
 
 See:
 - `docs/android-debugging.md`
+- `docs/android-camera-debugging.md`
 
 The mobile debugging workflow is optimized for:
 - Android Chrome via ADB

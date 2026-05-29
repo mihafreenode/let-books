@@ -4,6 +4,8 @@
   const APP_VERSION = "0.1.0";
   const DB_NAME = "let-books-local-demo";
   const SPLASH_LANGUAGE_STORAGE_KEY = "let-books-language";
+  const SCANNER_CAMERA_PREFERENCE_STORAGE_KEY = "let-books-scanner-preferred-camera";
+  const APP_BOOT_TIMEOUT_MS = 10000;
   const SETTINGS_KEYS = {
     language: "language",
     demoSeeded: "demoSeeded",
@@ -132,6 +134,7 @@
       state: "idle",
       startPending: false,
       startPromise: null,
+      running: false,
       handlingDecode: false,
       torchOn: false,
       torchSupported: false,
@@ -139,8 +142,17 @@
       zoomSupported: false,
       facingMode: "environment",
       focusMode: "",
+      selectedDeviceId: "",
       activeDeviceId: "",
       activeDeviceLabel: "",
+      currentCandidateLabel: "",
+      currentConstraints: null,
+      availableDevices: [],
+      permissionState: "unknown",
+      activeTrackSettings: null,
+      activeTrackCapabilities: null,
+      lastError: null,
+      lastBasicCameraProbe: null,
       sessionToken: 0,
       lastDecodeValue: null,
       stableDecodeValue: null,
@@ -187,14 +199,31 @@
   const languageMenu = document.getElementById("language-menu");
   const addMenuButton = document.getElementById("add-menu-button");
   const addMenu = document.getElementById("add-menu");
+  let bootWatchdogTimer = 0;
+
+  window.__letBooksLifecycle = [];
+
   init().catch((error) => {
+    logLifecycle("app boot failed", {
+      name: error?.name || "Error",
+      message: error?.message || String(error)
+    });
+    showBootFailure(error);
     console.error(error);
     root.innerHTML = `<div class="screen"><div class="empty-card"><h2>Let Books</h2><p>${escapeHtml(t("app.startFailed"))}</p><pre>${escapeHtml(String(error))}</pre></div></div>`;
   });
 
   async function init() {
     const bootStartedAt = performance.now();
+    logLifecycle("app boot started", {
+      href: window.location.href,
+      hash: window.location.hash || "#/dashboard",
+      userAgent: navigator.userAgent
+    });
+    armBootWatchdog();
     bindGlobalEvents();
+    logLifecycle("routes registered");
+    registerCameraDebugHelpers();
     applyBootSplashLanguage(getStoredSplashLanguage() || detectBrowserLanguage());
     await initializeSettingsAndLanguage();
     await applyGlobalUi();
@@ -211,6 +240,10 @@
     await ensureInitialDataState();
     await applyGlobalUi();
     await routeFromHash();
+    clearBootWatchdog();
+    logLifecycle("app boot completed", {
+      durationMs: Math.round(performance.now() - bootStartedAt)
+    });
   }
 
   function bindGlobalEvents() {
@@ -298,6 +331,11 @@
         return;
       }
 
+      if (action === "reload-app") {
+        window.location.reload();
+        return;
+      }
+
       if (action === "close-modal") {
         closeModal();
         return;
@@ -317,6 +355,16 @@
         await submitBookForm(form);
       } else if (form.matches("[data-form='scanner-manual']")) {
         await submitScannerManual(form);
+      }
+    });
+
+    document.addEventListener("change", async (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLSelectElement)) {
+        return;
+      }
+      if (target.matches("[data-scanner-camera-select]")) {
+        await handleScannerCameraSelection(target.value);
       }
     });
   }
@@ -660,6 +708,7 @@
 
   function registerServiceWorker() {
     if (!("serviceWorker" in navigator)) {
+      logLifecycle("service worker unavailable");
       return;
     }
 
@@ -668,13 +717,30 @@
     const canRegisterSafely = protocol === "http:" ? isLoopbackHost : protocol === "https:" ? isLoopbackHost : false;
 
     if (!canRegisterSafely) {
+      logLifecycle("service worker registration skipped", {
+        protocol,
+        hostname
+      });
       console.info("Skipping service worker registration on this host. Use https://localhost or http://localhost for local PWA install/offline behavior.");
       return;
     }
 
-    navigator.serviceWorker.register("service-worker.js").catch((error) => {
-      console.warn("Service worker registration skipped:", error?.message || error);
-    });
+    navigator.serviceWorker.register("service-worker.js")
+      .then((registration) => {
+        logLifecycle("service worker registered", {
+          scope: registration.scope,
+          active: registration.active?.scriptURL || "",
+          waiting: registration.waiting?.scriptURL || "",
+          installing: registration.installing?.scriptURL || ""
+        });
+      })
+      .catch((error) => {
+        logLifecycle("service worker registration failed", {
+          name: error?.name || "Error",
+          message: error?.message || String(error)
+        });
+        console.warn("Service worker registration skipped:", error?.message || error);
+      });
   }
 
   async function triggerInstall() {
@@ -689,6 +755,11 @@
     await stopScanner({ preserveStatus: false });
     appState.previousRoute = appState.route;
     appState.route = getRouteFromLocation();
+    logLifecycle("route matched", {
+      name: appState.route.name,
+      hash: window.location.hash || "#/dashboard",
+      query: appState.route.query
+    });
     if (appState.route.name !== "scanner") {
       appState.lastNonScannerHash = window.location.hash || "#/dashboard";
     }
@@ -743,8 +814,12 @@
         root.innerHTML = await renderBoxDetail(appState.route.params.id);
         break;
       case "scanner":
+        logLifecycle("scanner component mounted", {
+          hash: window.location.hash || "#/scanner"
+        });
         root.innerHTML = await renderScanner();
         await nextFrame();
+        await refreshScannerDiagnostics();
         await maybeStartScanner();
         break;
       case "book-new":
@@ -2599,6 +2674,12 @@
     await stopScanner({ invalidateSession: false, preserveStatus: false, preserveDebug: false });
     const sessionToken = appState.scanner.sessionToken;
     const mode = appState.route.query.mode || "box";
+    logLifecycle("camera init started", {
+      mode,
+      forceRestart: Boolean(forceRestart),
+      selectedDeviceId: appState.scanner.selectedDeviceId || "",
+      facingMode: appState.scanner.facingMode
+    });
 
     appState.scanner.state = "starting";
     appState.scanner.running = false;
@@ -2629,39 +2710,36 @@
 
       for (const candidate of cameraPlan.candidates) {
         try {
-          await html5QrCode.start(
-            candidate.source,
-            buildScannerConfig(mode),
-            async (decodedText) => {
-              const threshold = appState.scanner.decodeStabilityThreshold || 1;
-              if (decodedText === appState.scanner.lastDecodeValue) {
-                appState.scanner.stableDecodeCount++;
-              } else {
-                appState.scanner.lastDecodeValue = decodedText;
-                appState.scanner.stableDecodeCount = 1;
-                return;
-              }
-              if (appState.scanner.stableDecodeCount < threshold) {
-                return;
-              }
-              appState.scanner.stableDecodeValue = decodedText;
-              if (appState.scanner.handlingDecode) {
-                return;
-              }
-              clearScannerIdleHint();
-              appState.scanner.handlingDecode = true;
-              try {
-                await handleScannedValue(decodedText, mode, appState.route.query.boxId || "");
-              } finally {
-                window.setTimeout(() => {
-                  appState.scanner.handlingDecode = false;
-                  appState.scanner.lastDecodeValue = null;
-                  appState.scanner.stableDecodeValue = null;
-                  appState.scanner.stableDecodeCount = 0;
-                }, 900);
-              }
+          appState.scanner.currentCandidateLabel = candidate.label;
+          await startHtml5QrcodeWithCandidate(html5QrCode, candidate, mode, async (decodedText) => {
+            const threshold = appState.scanner.decodeStabilityThreshold || 1;
+            if (decodedText === appState.scanner.lastDecodeValue) {
+              appState.scanner.stableDecodeCount++;
+            } else {
+              appState.scanner.lastDecodeValue = decodedText;
+              appState.scanner.stableDecodeCount = 1;
+              return;
             }
-          );
+            if (appState.scanner.stableDecodeCount < threshold) {
+              return;
+            }
+            appState.scanner.stableDecodeValue = decodedText;
+            if (appState.scanner.handlingDecode) {
+              return;
+            }
+            clearScannerIdleHint();
+            appState.scanner.handlingDecode = true;
+            try {
+              await handleScannedValue(decodedText, mode, appState.route.query.boxId || "");
+            } finally {
+              window.setTimeout(() => {
+                appState.scanner.handlingDecode = false;
+                appState.scanner.lastDecodeValue = null;
+                appState.scanner.stableDecodeValue = null;
+                appState.scanner.stableDecodeCount = 0;
+              }, 900);
+            }
+          });
 
           if (sessionToken !== appState.scanner.sessionToken || appState.route.name !== "scanner") {
             await disposeScannerInstance(html5QrCode);
@@ -2679,7 +2757,10 @@
           selectedResult = { candidate, configuredTrack, cameraPlan };
           break;
         } catch (error) {
-          lastError = error;
+          lastError = snapshotScannerError(error, { candidateLabel: candidate.label, currentConstraints: appState.scanner.currentConstraints });
+          if (candidate.fromStoredPreference) {
+            clearStoredScannerCameraPreference();
+          }
           debugScannerCapabilities(`Scanner start attempt failed for ${candidate.label}.`, error);
           await disposeScannerInstance(html5QrCode);
         }
@@ -2693,6 +2774,15 @@
       appState.scanner.state = "running";
       appState.scanner.running = true;
       appState.scanner.handlingDecode = false;
+      appState.scanner.lastError = null;
+      appState.scanner.lastBasicCameraProbe = null;
+      logLifecycle("camera init succeeded", {
+        candidate: selectedResult.candidate.label,
+        deviceId: selectedResult.configuredTrack.deviceId || "",
+        deviceLabel: selectedResult.configuredTrack.deviceLabel || "",
+        facingMode: selectedResult.configuredTrack.facingMode || "",
+        resolution: selectedResult.configuredTrack.resolution || ""
+      });
       clearScannerStatus();
 
       const warning = selectedResult.cameraPlan.rearCameraAvailable
@@ -2708,9 +2798,11 @@
         buildScannerActiveDebugLines(selectedResult.configuredTrack, warning)
       );
 
+      await refreshScannerDiagnostics();
+
       scheduleScannerIdleHint(mode);
     } catch (error) {
-      console.warn(error);
+      console.warn("[scanner] startScannerSession failed", error);
       await handleScannerStartFailure(error, container);
       throw error;
     }
@@ -2744,6 +2836,10 @@
     appState.scanner.focusMode = "";
     appState.scanner.activeDeviceId = "";
     appState.scanner.activeDeviceLabel = "";
+    appState.scanner.activeTrackSettings = null;
+    appState.scanner.activeTrackCapabilities = null;
+    appState.scanner.currentCandidateLabel = "";
+    appState.scanner.currentConstraints = null;
     appState.scanner.lastDecodeValue = null;
     appState.scanner.stableDecodeValue = null;
     appState.scanner.stableDecodeCount = 0;
@@ -2848,6 +2944,12 @@
     console.log(`[scanner] Camera active: "${trackReport.deviceLabel}" | resolution: ${trackReport.resolution} | facingMode: ${trackReport.facingMode} | deviceId: ${trackReport.deviceId}`);
     appState.scanner.activeDeviceId = trackReport.deviceId;
     appState.scanner.activeDeviceLabel = trackReport.deviceLabel;
+    appState.scanner.activeTrackSettings = trackSettings;
+    appState.scanner.activeTrackCapabilities = capabilities;
+
+    if (trackReport.deviceId && (trackReport.isRearLike || appState.scanner.facingMode === "environment")) {
+      storeScannerCameraPreference(trackReport.deviceId);
+    }
 
     const videoEl = document.querySelector("#scanner-view video");
     if (videoEl) {
@@ -3003,92 +3105,95 @@
 
   async function resolvePreferredScannerSource() {
     const cameras = await listVideoInputDevices();
-
-    function sourceWithResolution(source) {
-      if (typeof source === "string") {
-        return { deviceId: { exact: source }, width: { ideal: 1920 }, height: { ideal: 1080 } };
-      }
-      return { ...source, width: { ideal: 1920 }, height: { ideal: 1080 } };
-    }
-
-    if (appState.scanner.facingMode === "user") {
-      const frontCamera = findPreferredCameraByFacing(cameras, "user") || cameras[0] || null;
-      return {
-        cameras,
-        rearCameraAvailable: Boolean(findPreferredCameraByFacing(cameras, "environment")),
-        candidates: [
-          frontCamera?.deviceId
-            ? { label: "front-device", source: sourceWithResolution(frontCamera.deviceId), allowFrontFallback: true }
-            : { label: "front-facing", source: sourceWithResolution({ facingMode: "user" }), allowFrontFallback: true }
-        ]
-      };
-    }
-
-    const preflight = await getScannerPreflightInfo();
-    const preflightCameras = preflight.cameras.length ? preflight.cameras : cameras;
-    const rearCamera = findPreferredCameraByFacing(preflightCameras, "environment");
-    const rearCameraAvailable = Boolean(rearCamera || preflight.isRearLike);
+    const facingMode = appState.scanner.facingMode === "user" ? "user" : "environment";
+    const storedPreference = facingMode === "environment" ? getStoredScannerCameraPreference() : "";
+    const manualSelection = String(appState.scanner.selectedDeviceId || "").trim();
+    const preferredCamera = findPreferredCameraByFacing(cameras, facingMode);
+    const rearCameraAvailable = Boolean(findPreferredCameraByFacing(cameras, "environment"));
     const candidates = [];
+    const seen = new Set();
 
-    if (rearCamera?.deviceId) {
-      candidates.push({ label: "rear-device", source: sourceWithResolution(rearCamera.deviceId), allowFrontFallback: false });
+    function addCandidate(label, videoConstraints, options = {}) {
+      const signature = JSON.stringify({
+        deviceId: String(videoConstraints?.deviceId?.exact || ""),
+        facingMode: formatFacingMode(videoConstraints?.facingMode),
+        width: Number(videoConstraints?.width?.ideal || 0),
+        height: Number(videoConstraints?.height?.ideal || 0),
+        anyVideo: videoConstraints === true
+      });
+      if (seen.has(signature)) {
+        return;
+      }
+      seen.add(signature);
+
+      const deviceId = String(options.deviceId || videoConstraints?.deviceId?.exact || "").trim();
+      const facing = options.facingMode || facingMode;
+      candidates.push({
+        label,
+        allowFrontFallback: options.allowFrontFallback ?? (facing === "user" || !rearCameraAvailable),
+        html5Source: deviceId || { facingMode: { ideal: facing } },
+        getUserMediaVideo: videoConstraints,
+        deviceId,
+        fromStoredPreference: Boolean(options.fromStoredPreference),
+        fromManualSelection: Boolean(options.fromManualSelection)
+      });
     }
 
-    candidates.push({ label: "environment-exact", source: sourceWithResolution({ facingMode: { exact: "environment" } }), allowFrontFallback: false });
-
-    if (preflight.deviceId && !candidates.some((candidate) => {
-      const src = typeof candidate.source === "object" && candidate.source.deviceId?.exact
-        ? candidate.source.deviceId.exact
-        : candidate.source;
-      return src === preflight.deviceId;
-    })) {
-      candidates.push({ label: "preflight-device", source: sourceWithResolution(preflight.deviceId), allowFrontFallback: !rearCameraAvailable });
+    function addDeviceCandidates(deviceId, labelPrefix, options = {}) {
+      if (!deviceId) {
+        return;
+      }
+      addCandidate(`${labelPrefix}-1280x720`, {
+        deviceId: { exact: deviceId },
+        width: { ideal: 1280 },
+        height: { ideal: 720 }
+      }, { ...options, deviceId });
+      addCandidate(`${labelPrefix}-640x480`, {
+        deviceId: { exact: deviceId },
+        width: { ideal: 640 },
+        height: { ideal: 480 }
+      }, { ...options, deviceId });
     }
 
-    candidates.push({ label: "environment-ideal", source: sourceWithResolution({ facingMode: { ideal: "environment" } }), allowFrontFallback: !rearCameraAvailable });
-
-    if (!rearCameraAvailable && preflightCameras[0]?.deviceId) {
-      candidates.push({ label: "first-camera", source: sourceWithResolution(preflightCameras[0].deviceId), allowFrontFallback: true });
+    function addFacingCandidates(labelPrefix, facing) {
+      addCandidate(`${labelPrefix}-1280x720`, {
+        facingMode: { ideal: facing },
+        width: { ideal: 1280 },
+        height: { ideal: 720 }
+      }, { facingMode: facing });
+      addCandidate(`${labelPrefix}-640x480`, {
+        facingMode: { ideal: facing },
+        width: { ideal: 640 },
+        height: { ideal: 480 }
+      }, { facingMode: facing });
     }
+
+    addDeviceCandidates(manualSelection, "selected-device", { fromManualSelection: true });
+    addDeviceCandidates(storedPreference, "stored-device", { fromStoredPreference: true });
+    addDeviceCandidates(preferredCamera?.deviceId || "", `${facingMode}-device`);
+    addFacingCandidates(facingMode, facingMode);
+    addCandidate("any-camera", true, { allowFrontFallback: true, facingMode });
 
     return {
-      cameras: preflightCameras,
+      cameras,
       rearCameraAvailable,
       candidates
     };
   }
 
-  async function getScannerPreflightInfo() {
-    const stream = await navigator.mediaDevices.getUserMedia({
-      audio: false,
-      video: { facingMode: { ideal: "environment" } }
-    });
-
-    try {
-      const track = stream.getVideoTracks()[0] || null;
-      const settings = readScannerTrackSettings(track);
-      const capabilities = readScannerTrackCapabilities(track);
-      const trackReport = buildScannerTrackReport(track, [], capabilities, settings);
-      const cameras = await listVideoInputDevices();
-      return {
-        deviceId: String(settings?.deviceId || ""),
-        cameras,
-        isRearLike: trackReport.isRearLike
-      };
-    } finally {
-      stopMediaStream(stream);
-    }
-  }
-
   async function listVideoInputDevices() {
     if (!navigator.mediaDevices?.enumerateDevices) {
+      appState.scanner.availableDevices = [];
       return [];
     }
     try {
       const devices = await navigator.mediaDevices.enumerateDevices();
-      return devices.filter((device) => device.kind === "videoinput");
+      const videoInputs = devices.filter((device) => device.kind === "videoinput");
+      appState.scanner.availableDevices = videoInputs;
+      return videoInputs;
     } catch (error) {
       debugScannerCapabilities("Camera enumeration failed.", error);
+      appState.scanner.availableDevices = [];
       return [];
     }
   }
@@ -3134,7 +3239,59 @@
     cleanupScannerMediaElements();
   }
 
+  async function startHtml5QrcodeWithCandidate(html5QrCode, candidate, mode, onDecode) {
+    if (!navigator.mediaDevices?.getUserMedia) {
+      throw createScannerError("NotSupportedError", "navigator.mediaDevices.getUserMedia is unavailable.");
+    }
+
+    const originalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+    appState.scanner.currentConstraints = {
+      audio: false,
+      video: candidate.getUserMediaVideo
+    };
+
+    navigator.mediaDevices.getUserMedia = async (constraints) => {
+      const effectiveConstraints = {
+        ...(constraints && typeof constraints === "object" ? constraints : {}),
+        audio: false,
+        video: candidate.getUserMediaVideo
+      };
+      appState.scanner.currentConstraints = effectiveConstraints;
+      debugScannerCapabilities(`Scanner getUserMedia attempt: ${candidate.label}`, effectiveConstraints);
+      try {
+        return await originalGetUserMedia(effectiveConstraints);
+      } catch (error) {
+        throw snapshotScannerError(error, {
+          candidateLabel: candidate.label,
+          currentConstraints: effectiveConstraints,
+          scannerSource: candidate.html5Source,
+          libraryConstraints: constraints
+        });
+      }
+    };
+
+    try {
+      await html5QrCode.start(candidate.html5Source, buildScannerConfig(mode), onDecode);
+    } catch (error) {
+      throw snapshotScannerError(error, {
+        candidateLabel: candidate.label,
+        currentConstraints: appState.scanner.currentConstraints,
+        scannerSource: candidate.html5Source
+      });
+    } finally {
+      navigator.mediaDevices.getUserMedia = originalGetUserMedia;
+    }
+  }
+
   async function handleScannerStartFailure(error, container) {
+    const normalizedError = snapshotScannerError(error);
+    logLifecycle("camera init failed", {
+      name: normalizedError?.name || "Error",
+      message: normalizedError?.message || "",
+      constraint: normalizedError?.constraint || "",
+      candidate: normalizedError?.candidateLabel || "",
+      selectedDeviceId: normalizedError?.selectedDeviceId || ""
+    });
     appState.scanner.state = "error";
     appState.scanner.running = false;
     appState.scanner.handlingDecode = false;
@@ -3142,12 +3299,24 @@
     appState.scanner.torchOn = false;
     appState.scanner.torchSupported = false;
     appState.scanner.zoomSupported = false;
+    appState.scanner.focusMode = "";
+    appState.scanner.lastError = normalizedError;
+    appState.scanner.activeTrackSettings = null;
+    appState.scanner.activeTrackCapabilities = null;
     syncScannerControlAvailability();
-    setScannerStatus(t("scanner.cameraStartFailed"), formatScannerError(error), {
+
+    if (shouldRunBasicCameraProbe(normalizedError)) {
+      appState.scanner.lastBasicCameraProbe = await testBasicCamera({ updateUi: false, stopScannerFirst: false });
+    }
+
+    await refreshScannerDiagnostics();
+    console.error("[scanner] Camera startup failed", normalizedError, error);
+
+    setScannerStatus(t("scanner.cameraStartFailed"), formatScannerError(normalizedError), {
       tone: "error",
-      details: []
+      details: buildScannerFailureDetails(normalizedError, appState.scanner.lastBasicCameraProbe)
     });
-    setScannerDebug(t("scanner.debugTitle"), buildScannerRuntimeDebugLines(error));
+    setScannerDebug(t("scanner.debugTitle"), buildScannerRuntimeDebugLines(normalizedError));
     container.innerHTML = `<div class="scanner-empty">${escapeHtml(t("scanner.cameraHelp"))}</div>`;
     cleanupScannerMediaElements();
     return error;
@@ -3178,16 +3347,38 @@
   }
 
   function buildScannerRuntimeDebugLines(error = null) {
+    const diagnostics = buildScannerDiagnosticsSnapshot(error);
+    const activeTrack = diagnostics.activeTrackSettings || {};
+    const selectedDevice = diagnostics.selectedDeviceLabel || diagnostics.selectedDeviceId || "-";
+    const lastError = diagnostics.lastError ? formatScannerError(diagnostics.lastError) : "-";
     const lines = [
-      { label: t("scanner.debugSecureContext"), value: formatScannerDebugBoolean(window.isSecureContext), essential: true },
-      { label: t("scanner.debugLocation"), value: window.location.href, essential: false },
-      { label: t("scanner.debugProtocol"), value: window.location.protocol, essential: false },
-      { label: t("scanner.debugMediaDevices"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices)), essential: false },
-      { label: t("scanner.debugGetUserMedia"), value: formatScannerDebugBoolean(Boolean(navigator.mediaDevices?.getUserMedia)), essential: false }
+      { label: t("scanner.debugSecureContext"), value: formatScannerDebugBoolean(diagnostics.secureContext), essential: true },
+      { label: scannerLabel("scanner.debugPermission", "Permission"), value: diagnostics.permissionState || "unknown", essential: true },
+      { label: scannerLabel("scanner.debugDeviceCount", "Video inputs"), value: String(diagnostics.videoInputCount), essential: true },
+      { label: t("scanner.debugDevice"), value: selectedDevice, essential: true },
+      { label: t("scanner.debugFacingMode"), value: formatFacingMode(activeTrack.facingMode) || diagnostics.facingModePreference || "-", essential: true },
+      { label: t("scanner.debugResolution"), value: formatScannerResolution(activeTrack) || "-", essential: true },
+      { label: t("scanner.debugError"), value: lastError, essential: true },
+      { label: t("scanner.debugLocation"), value: diagnostics.location, essential: false },
+      { label: t("scanner.debugProtocol"), value: diagnostics.protocol, essential: false },
+      { label: scannerLabel("scanner.debugUserAgent", "User agent"), value: diagnostics.userAgent, essential: false, multiline: true },
+      { label: t("scanner.debugMediaDevices"), value: formatScannerDebugBoolean(diagnostics.mediaDevicesAvailable), essential: false },
+      { label: t("scanner.debugGetUserMedia"), value: formatScannerDebugBoolean(diagnostics.getUserMediaAvailable), essential: false },
+      { label: scannerLabel("scanner.debugSelectedDeviceId", "Selected deviceId"), value: diagnostics.selectedDeviceId || "-", essential: false, multiline: true },
+      { label: scannerLabel("scanner.debugCurrentConstraints", "Current constraints"), value: formatScannerDebugJson(diagnostics.currentConstraints), essential: false, multiline: true },
+      { label: scannerLabel("scanner.debugTrackSettings", "Track settings"), value: formatScannerDebugJson(diagnostics.activeTrackSettings), essential: false, multiline: true },
+      { label: scannerLabel("scanner.debugTrackCapabilities", "Track capabilities"), value: formatScannerDebugJson(diagnostics.activeTrackCapabilities), essential: false, multiline: true },
+      { label: scannerLabel("scanner.debugDevices", "Devices"), value: formatScannerDeviceList(diagnostics.devices), essential: false, multiline: true },
+      { label: scannerLabel("scanner.debugBasicProbe", "Plain getUserMedia"), value: formatScannerBasicProbe(diagnostics.lastBasicCameraProbe), essential: false, multiline: true }
     ];
-    if (error) {
-      lines.push({ label: t("scanner.debugError"), value: formatScannerError(error), essential: true });
+
+    if (diagnostics.lastError) {
+      lines.push(
+        { label: scannerLabel("scanner.debugErrorConstraint", "Error constraint"), value: diagnostics.lastError.constraint || "-", essential: false },
+        { label: scannerLabel("scanner.debugErrorStack", "Error stack"), value: diagnostics.lastError.stack || "-", essential: false, multiline: true }
+      );
     }
+
     return lines;
   }
 
@@ -3226,15 +3417,263 @@
   }
 
   function formatScannerError(error) {
-    const name = String(error?.name || "Error");
-    const message = String(error?.message || "Unknown camera error.");
+    const normalized = snapshotScannerError(error);
+    const name = String(normalized?.name || "Error");
+    const message = String(normalized?.message || "Unknown camera error.");
     return `${name}: ${message}`;
   }
 
-  function createScannerError(name, message) {
+  function createScannerError(name, message, extra = {}) {
     const error = new Error(message);
     error.name = name;
+    Object.assign(error, extra);
     return error;
+  }
+
+  function scannerLabel(key, fallback) {
+    const translated = t(key);
+    return translated === key ? fallback : translated;
+  }
+
+  function snapshotScannerError(error, extra = {}) {
+    if (!error && Object.keys(extra).length === 0) {
+      return null;
+    }
+
+    const source = error && typeof error === "object" ? error : {};
+    const snapshot = {
+      name: String(source.name || extra.name || "Error"),
+      message: String(source.message || extra.message || "Unknown camera error."),
+      constraint: String(source.constraint || extra.constraint || ""),
+      stack: typeof source.stack === "string" ? source.stack : typeof extra.stack === "string" ? extra.stack : "",
+      candidateLabel: String(extra.candidateLabel || source.candidateLabel || appState.scanner.currentCandidateLabel || ""),
+      currentConstraints: extra.currentConstraints || source.currentConstraints || appState.scanner.currentConstraints || null,
+      selectedDeviceId: String(extra.selectedDeviceId || source.selectedDeviceId || appState.scanner.selectedDeviceId || appState.scanner.activeDeviceId || ""),
+      selectedDeviceLabel: String(extra.selectedDeviceLabel || source.selectedDeviceLabel || appState.scanner.activeDeviceLabel || ""),
+      userAgent: navigator.userAgent,
+      location: window.location.href,
+      scannerSource: extra.scannerSource || source.scannerSource || null,
+      libraryConstraints: extra.libraryConstraints || source.libraryConstraints || null
+    };
+
+    if (error && typeof error === "object") {
+      try {
+        Object.assign(error, snapshot);
+      } catch (_) {
+      }
+    }
+
+    return snapshot;
+  }
+
+  function buildScannerDiagnosticsSnapshot(error = null) {
+    const normalizedError = error ? snapshotScannerError(error) : appState.scanner.lastError;
+    return {
+      secureContext: window.isSecureContext,
+      location: window.location.href,
+      protocol: window.location.protocol,
+      userAgent: navigator.userAgent,
+      mediaDevicesAvailable: Boolean(navigator.mediaDevices),
+      getUserMediaAvailable: Boolean(navigator.mediaDevices?.getUserMedia),
+      permissionState: appState.scanner.permissionState || "unknown",
+      devices: Array.isArray(appState.scanner.availableDevices) ? appState.scanner.availableDevices : [],
+      videoInputCount: Array.isArray(appState.scanner.availableDevices) ? appState.scanner.availableDevices.length : 0,
+      selectedDeviceId: appState.scanner.activeDeviceId || appState.scanner.selectedDeviceId || "",
+      selectedDeviceLabel: appState.scanner.activeDeviceLabel || "",
+      facingModePreference: appState.scanner.facingMode,
+      currentConstraints: appState.scanner.currentConstraints,
+      activeTrackSettings: sanitizeScannerDebugObject(appState.scanner.activeTrackSettings),
+      activeTrackCapabilities: sanitizeScannerDebugObject(appState.scanner.activeTrackCapabilities),
+      lastError: normalizedError,
+      lastBasicCameraProbe: appState.scanner.lastBasicCameraProbe
+    };
+  }
+
+  async function refreshScannerDiagnostics() {
+    appState.scanner.permissionState = await queryCameraPermissionState();
+    appState.scanner.availableDevices = await listVideoInputDevices();
+    const activeTrack = getActiveScannerVideoTrack();
+    appState.scanner.activeTrackSettings = sanitizeScannerDebugObject(readScannerTrackSettings(activeTrack));
+    appState.scanner.activeTrackCapabilities = sanitizeScannerDebugObject(readScannerTrackCapabilities(activeTrack));
+    const region = document.getElementById("scanner-debug-region");
+    if (region && appState.scannerDebug.active) {
+      region.innerHTML = renderScannerDebugMarkup();
+    }
+  }
+
+  async function queryCameraPermissionState() {
+    if (!navigator.permissions?.query) {
+      return "unsupported";
+    }
+    try {
+      const status = await navigator.permissions.query({ name: "camera" });
+      return status?.state || "unknown";
+    } catch (_) {
+      return "unsupported";
+    }
+  }
+
+  function sanitizeScannerDebugObject(value) {
+    if (!value || typeof value !== "object") {
+      return value ?? null;
+    }
+    const entries = Object.entries(value)
+      .filter(([, item]) => typeof item !== "function")
+      .map(([key, item]) => [key, sanitizeScannerDebugValue(item)]);
+    return Object.fromEntries(entries);
+  }
+
+  function sanitizeScannerDebugValue(value) {
+    if (Array.isArray(value)) {
+      return value.map((item) => sanitizeScannerDebugValue(item));
+    }
+    if (!value || typeof value !== "object") {
+      return value;
+    }
+    return sanitizeScannerDebugObject(value);
+  }
+
+  function formatScannerDebugJson(value) {
+    if (value === null || typeof value === "undefined" || value === "") {
+      return "-";
+    }
+    try {
+      return JSON.stringify(value, null, 2);
+    } catch (_) {
+      return String(value);
+    }
+  }
+
+  function formatScannerDeviceList(devices) {
+    if (!Array.isArray(devices) || devices.length === 0) {
+      return "-";
+    }
+    return devices.map((device, index) => `${index + 1}. ${device.label || "(label hidden)"} | ${device.deviceId || "no-deviceId"}`).join("\n");
+  }
+
+  function formatScannerBasicProbe(probe) {
+    if (!probe) {
+      return "not run";
+    }
+    if (probe.ok) {
+      return `success via ${probe.label}\n${formatScannerDebugJson({ constraints: probe.constraints, settings: probe.settings, capabilities: probe.capabilities })}`;
+    }
+    return `failed\n${formatScannerDebugJson(probe.attempts || [])}`;
+  }
+
+  function buildScannerFailureDetails(error, probe) {
+    const details = [];
+    if (error?.candidateLabel) {
+      details.push(`Attempt: ${error.candidateLabel}`);
+    }
+    if (probe?.ok) {
+      details.push(`Plain getUserMedia worked via ${probe.label}.`);
+    } else if (probe && Array.isArray(probe.attempts) && probe.attempts.length > 0) {
+      const lastAttempt = probe.attempts[probe.attempts.length - 1];
+      details.push(`Plain getUserMedia also failed: ${formatScannerError(lastAttempt?.error)}`);
+    }
+    return details;
+  }
+
+  function shouldRunBasicCameraProbe(error) {
+    if (!navigator.mediaDevices?.getUserMedia || !window.isSecureContext) {
+      return false;
+    }
+    const name = String(error?.name || "");
+    return name !== "NotAllowedError" && name !== "SecurityError";
+  }
+
+  function getStoredScannerCameraPreference() {
+    try {
+      return String(window.localStorage.getItem(SCANNER_CAMERA_PREFERENCE_STORAGE_KEY) || "").trim();
+    } catch (_) {
+      return "";
+    }
+  }
+
+  function storeScannerCameraPreference(deviceId) {
+    if (!deviceId) {
+      return;
+    }
+    try {
+      window.localStorage.setItem(SCANNER_CAMERA_PREFERENCE_STORAGE_KEY, deviceId);
+    } catch (_) {
+    }
+  }
+
+  function clearStoredScannerCameraPreference() {
+    try {
+      window.localStorage.removeItem(SCANNER_CAMERA_PREFERENCE_STORAGE_KEY);
+    } catch (_) {
+    }
+  }
+
+  function logLifecycle(event, detail = null) {
+    const entry = {
+      at: new Date().toISOString(),
+      event,
+      detail: detail || null
+    };
+    window.__letBooksLifecycle.push(entry);
+    console.log(`[letbooks:lifecycle] ${event}`, detail || "");
+    return entry;
+  }
+
+  function armBootWatchdog() {
+    clearBootWatchdog();
+    bootWatchdogTimer = window.setTimeout(() => {
+      if (!document.body.classList.contains("app-booting")) {
+        return;
+      }
+      logLifecycle("app boot timeout", {
+        href: window.location.href,
+        hash: window.location.hash || "#/dashboard"
+      });
+      showBootTimeoutFallback();
+    }, APP_BOOT_TIMEOUT_MS);
+  }
+
+  function clearBootWatchdog() {
+    if (!bootWatchdogTimer) {
+      return;
+    }
+    window.clearTimeout(bootWatchdogTimer);
+    bootWatchdogTimer = 0;
+  }
+
+  function showBootTimeoutFallback() {
+    if (!bootSplash) {
+      return;
+    }
+    const existing = bootSplash.querySelector("[data-boot-timeout]");
+    if (existing) {
+      return;
+    }
+    bootSplash.insertAdjacentHTML("beforeend", `
+      <div class="boot-timeout-card" data-boot-timeout>
+        <strong>App did not finish loading.</strong>
+        <p>Try reload / clear cache / open diagnostics.</p>
+        <button type="button" class="ghost-button boot-timeout-button" data-action="reload-app">Reload</button>
+      </div>
+    `);
+  }
+
+  function showBootFailure(error) {
+    clearBootWatchdog();
+    document.body.classList.remove("app-booting");
+    document.body.classList.add("app-ready");
+    showBootTimeoutFallback();
+    if (!bootSplash) {
+      return;
+    }
+    const card = bootSplash.querySelector("[data-boot-timeout]");
+    if (!card) {
+      return;
+    }
+    const detail = card.querySelector("p");
+    if (detail) {
+      detail.textContent = `${error?.name || "Error"}: ${error?.message || String(error)}`;
+    }
   }
 
   function stopMediaStream(stream) {
@@ -3258,6 +3697,74 @@
   function isDevelopmentRuntime() {
     const { hostname, protocol } = window.location;
     return protocol === "file:" || hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
+  }
+
+  async function testBasicCamera(options = {}) {
+    const { updateUi = true, stopScannerFirst = true } = options;
+    if (!navigator.mediaDevices?.getUserMedia) {
+      const result = { ok: false, attempts: [{ label: "unsupported", error: snapshotScannerError(createScannerError("NotSupportedError", "navigator.mediaDevices.getUserMedia is unavailable.")) }] };
+      appState.scanner.lastBasicCameraProbe = result;
+      if (updateUi) {
+        await refreshScannerDiagnostics();
+      }
+      return result;
+    }
+
+    if (stopScannerFirst) {
+      await stopScanner({ preserveStatus: true, preserveDebug: true });
+    }
+
+    const plan = await resolvePreferredScannerSource();
+    const attempts = [];
+    for (const candidate of plan.candidates) {
+      const constraints = { audio: false, video: candidate.getUserMediaVideo };
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        try {
+          const track = stream.getVideoTracks()[0] || null;
+          const settings = sanitizeScannerDebugObject(readScannerTrackSettings(track));
+          const capabilities = sanitizeScannerDebugObject(readScannerTrackCapabilities(track));
+          const result = { ok: true, label: candidate.label, constraints, settings, capabilities };
+          appState.scanner.lastBasicCameraProbe = result;
+          if (updateUi) {
+            await refreshScannerDiagnostics();
+          }
+          return result;
+        } finally {
+          stopMediaStream(stream);
+        }
+      } catch (error) {
+        attempts.push({ label: candidate.label, constraints, error: snapshotScannerError(error, { currentConstraints: constraints, candidateLabel: candidate.label }) });
+      }
+    }
+
+    const result = { ok: false, attempts };
+    appState.scanner.lastBasicCameraProbe = result;
+    if (updateUi) {
+      await refreshScannerDiagnostics();
+    }
+    return result;
+  }
+
+  async function enumerateCameraDevicesForDebug() {
+    await refreshScannerDiagnostics();
+    return appState.scanner.availableDevices;
+  }
+
+  function getLastCameraError() {
+    return appState.scanner.lastError;
+  }
+
+  function registerCameraDebugHelpers() {
+    if (!isDevelopmentRuntime()) {
+      return;
+    }
+    window.__letBooksCameraDebug = {
+      testBasicCamera: (options) => testBasicCamera(options),
+      enumerateDevices: () => enumerateCameraDevicesForDebug(),
+      stopCamera: () => stopScanner({ preserveStatus: true, preserveDebug: true }),
+      getLastCameraError
+    };
   }
 
   function buildScannerConfig(mode) {
@@ -3521,10 +4028,20 @@
     const expandedLines = allLines.filter((l) => l.essential === false);
     const isExpanded = appState.scanner.debugExpanded;
     const hasExpandable = expandedLines.length > 0;
+    const devices = Array.isArray(appState.scanner.availableDevices) ? appState.scanner.availableDevices : [];
+    const showCameraSelector = isExpanded && devices.length > 1;
 
     function renderLine(line) {
+      if (line.multiline) {
+        return `<div class="scanner-debug-row scanner-debug-row-stack"><span>${escapeHtml(line.label)}</span><pre class="scanner-debug-pre">${escapeHtml(line.value || "-")}</pre></div>`;
+      }
       return `<div class="scanner-debug-row"><span>${escapeHtml(line.label)}</span><strong>${escapeHtml(line.value || "-")}</strong></div>`;
     }
+
+    const selectedDeviceId = appState.scanner.selectedDeviceId || appState.scanner.activeDeviceId || "";
+    const selectorMarkup = showCameraSelector
+      ? `<label class="scanner-debug-select-wrap"><span>${escapeHtml(scannerLabel("scanner.debugChooseCamera", "Camera"))}</span><select class="scanner-debug-select" data-scanner-camera-select>${devices.map((device) => `<option value="${escapeHtml(device.deviceId || "")}" ${device.deviceId === selectedDeviceId ? "selected" : ""}>${escapeHtml(device.label || device.deviceId || scannerLabel("scanner.debugUnnamedCamera", "Unnamed camera"))}</option>`).join("")}</select></label>`
+      : "";
 
     const toggleIcon = isExpanded ? "▾" : "▸";
     const visibleClass = isExpanded ? "" : " hidden";
@@ -3533,6 +4050,7 @@
       <button type="button" class="scanner-debug-toggle" data-action="toggle-scanner-debug" aria-expanded="${isExpanded ? "true" : "false"}">${toggleIcon} ${escapeHtml(appState.scannerDebug.title)}</button>
       <div class="scanner-debug-body${visibleClass}">
         ${essentialLines.map(renderLine).join("")}
+        ${selectorMarkup}
         ${hasExpandable ? `<div class="scanner-debug-expanded${visibleClass}">${expandedLines.map(renderLine).join("")}</div>` : ""}
         ${hasExpandable ? `<button type="button" class="scanner-debug-expand-btn" data-action="toggle-scanner-debug" aria-expanded="${isExpanded ? "true" : "false"}">${isExpanded ? "− " + escapeHtml(t("scanner.debugLess")) : "+ " + escapeHtml(t("scanner.debugMore"))}</button>` : ""}
       </div>
@@ -3633,7 +4151,20 @@
     if (appState.scanner.startPending) {
       return;
     }
+    appState.scanner.selectedDeviceId = "";
     appState.scanner.facingMode = appState.scanner.facingMode === "environment" ? "user" : "environment";
+    await maybeStartScanner(true);
+  }
+
+  async function handleScannerCameraSelection(deviceId) {
+    appState.scanner.selectedDeviceId = String(deviceId || "").trim();
+    if (!appState.scanner.selectedDeviceId) {
+      return;
+    }
+    const selectedCamera = appState.scanner.availableDevices.find((device) => device.deviceId === appState.scanner.selectedDeviceId) || null;
+    if (selectedCamera?.label) {
+      appState.scanner.facingMode = scoreCameraLabel(selectedCamera.label, "user") > 0 ? "user" : "environment";
+    }
     await maybeStartScanner(true);
   }
 

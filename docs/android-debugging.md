@@ -115,6 +115,30 @@ Avoid:
 - unnecessary rebuild/restart cycles
 - relying solely on desktop emulation for barcode/camera validation
 
+### CDP Health Check Script
+
+Use `tools/android-cdp-check.sh` when you need a fast PASS/FAIL check for the Android Chrome DevTools path.
+
+It checks:
+
+- adb/device visibility
+- Chrome DevTools socket exposure on the phone
+- `adb forward tcp:9222 ...`
+- `http://127.0.0.1:9222/json/version`
+- `http://127.0.0.1:9222/json/list`
+
+Example:
+
+```bash
+tools/android-cdp-check.sh
+```
+
+This script prefers:
+
+- Windows `adb.exe` resolved through `tools/wsl-find-adb.sh` when running in WSL
+- Linux `adb` when running natively on Linux
+- `adb.exe` on PATH when running from a Windows bash environment
+
 ---
 
 ## Choosing the Right Mobile Debugging Workflow
@@ -436,6 +460,10 @@ Also verify:
 If the server is missing, restart it instead of asking.
 
 ### Scanner Startup Race Check
+
+See also:
+
+- `docs/android-camera-debugging.md`
 
 If the camera error happens only on first load of `#/scanner`, check whether startup is triggering more than one route/render pass.
 

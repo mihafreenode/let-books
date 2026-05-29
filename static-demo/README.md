@@ -135,6 +135,10 @@ Android regression note:
 
 - the scanner startup path must not route twice during `init()`, because the second route can tear down the first live camera session and cause startup-only failures on real phones
 
+Android troubleshooting note:
+
+- `../docs/android-camera-debugging.md`
+
 ## Contributor Tooling
 
 ### AI Agent Playwright Skill
