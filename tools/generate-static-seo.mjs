@@ -333,7 +333,7 @@ function replaceHead(filePath, headContent) {
   const afterHead = current.slice(headEnd);
   const next = `${beforeHead}${headContent}${afterHead}`;
   if (next === current) {
-    throw new Error(`Failed to replace <head> in ${filePath}`);
+    return; // no change needed
   }
   fs.writeFileSync(filePath, next);
 }
