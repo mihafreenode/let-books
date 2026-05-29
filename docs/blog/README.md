@@ -25,7 +25,8 @@ Use this area for technical articles, public-interest essays, project reflection
 
 ## Related Articles
 
-- None yet
+- [ISBN Is Not a Database](en/isbn-not-a-database.md) (English)
+- [ISBN ni podatkovna zbirka](sl/isbn-not-a-database.md) (Slovenian)
 
 ## Related Learning Guides
 

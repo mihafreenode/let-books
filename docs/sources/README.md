@@ -22,7 +22,7 @@ Every substantial claim should be traceable through repository evidence, externa
 
 ## Related Articles
 
-- `../blog/README.md`
+- [ISBN Is Not a Database source map](en/isbn-not-a-database.md) — source map for the first pilot article
 
 ## Related Learning Guides
 

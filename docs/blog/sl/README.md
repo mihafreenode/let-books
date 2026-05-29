@@ -22,7 +22,7 @@ Keep Slovenian article variants aligned with the canonical English source while 
 
 ## Related Articles
 
-- None yet
+- [ISBN ni podatkovna zbirka](isbn-not-a-database.md) — Zakaj so ISBNi identifikatorji in ne metapodatkovni sistemi
 
 ## Related Learning Guides
 

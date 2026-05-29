@@ -22,7 +22,7 @@ Write the approved source version of each article here before localization.
 
 ## Related Articles
 
-- None yet
+- [ISBN Is Not a Database](isbn-not-a-database.md) — Why ISBNs are identifiers, not metadata systems
 
 ## Related Learning Guides
 
