@@ -435,6 +435,33 @@ Also verify:
 
 If the server is missing, restart it instead of asking.
 
+### Scanner Startup Race Check
+
+If the camera error happens only on first load of `#/scanner`, check whether startup is triggering more than one route/render pass.
+
+In `static-demo/app.js`, the scanner route calls `maybeStartScanner()` from `renderRoute()`. If `init()` or another startup path routes twice, Android Chrome can:
+
+1. open the rear camera
+2. immediately stop the stream
+3. attempt a second startup while the first session is still unwinding
+
+On real Android devices this can surface as a startup-only camera failure or flaky first-open behavior.
+
+Preferred validation on a connected phone:
+
+```bash
+ADB_EXE="$(tools/wsl-find-adb.sh)"
+"$ADB_EXE" logcat -c
+"$ADB_EXE" shell am start \
+  -a android.intent.action.VIEW \
+  -d "http://localhost:8080/static-demo/#/scanner?mode=isbn" \
+  com.android.chrome
+sleep 8
+"$ADB_EXE" logcat -d | rg "CameraService::connect call .*com.android.chrome"
+```
+
+For a clean startup, expect one Chrome camera connect call for the scanner open, not an immediate double-open caused by app startup churn.
+
 ### Question Policy
 
 Avoid questions like:

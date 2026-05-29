@@ -199,7 +199,6 @@
     await initializeSettingsAndLanguage();
     await applyGlobalUi();
     registerServiceWorker();
-    await routeFromHash();
     const minSplashDuration = 840;
     const elapsed = performance.now() - bootStartedAt;
     if (elapsed < minSplashDuration) {

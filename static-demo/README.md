@@ -129,6 +129,11 @@ Manual expectation for `https://letbooks.org/static-demo/`:
 - rear-camera preference should remain stable when reopening the scanner
 - if no rear camera is available, the UI should show a visible warning before using the front camera
 - camera/security errors should show the real browser error instead of a generic HTTPS warning when the page is already running in a secure context
+- opening the scanner directly on Android should not trigger an immediate camera stop/restart cycle during app startup
+
+Android regression note:
+
+- the scanner startup path must not route twice during `init()`, because the second route can tear down the first live camera session and cause startup-only failures on real phones
 
 ## Contributor Tooling
 
