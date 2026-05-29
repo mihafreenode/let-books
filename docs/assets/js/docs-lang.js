@@ -191,10 +191,11 @@ function inferLocaleFromPath() {
 
 function inferPageTypeFromPath() {
   if (/\/docs\/?(?:index\.html)?$/.test(window.location.pathname)) return 'language-hub';
-  if (/\/index\.html$/.test(window.location.pathname)) return 'overview';
   if (/\/(individuals|posamezniki)\.html$/.test(window.location.pathname)) return 'individuals';
   if (/\/(institutions|institucije)\.html$/.test(window.location.pathname)) return 'institutions';
   if (/\/(administrators|skrbniki)\.html$/.test(window.location.pathname)) return 'administrators';
+  if (/\/docs\/blog\//.test(window.location.pathname)) return 'article';
+  if (/\/index\.html$/.test(window.location.pathname)) return 'overview';
   return 'overview';
 }
 
@@ -206,6 +207,35 @@ function getCurrentPageType() {
   return document.body.dataset.pageType || inferPageTypeFromPath();
 }
 
+function getPathDepthFromDocs() {
+  const match = window.location.pathname.match(/\/docs\//);
+  if (!match) return 1;
+  const afterDocs = window.location.pathname.substring(match.index + 6);
+  return afterDocs.replace(/\/+$/, '').split('/').filter(Boolean).length;
+}
+
+function getArticlePageMap() {
+  const map = {};
+  const alternates = document.querySelectorAll('link[rel="alternate"][hreflang]');
+  for (const link of alternates) {
+    const hreflang = link.getAttribute('hreflang');
+    if (hreflang === 'x-default') continue;
+    const href = link.getAttribute('href');
+    if (!href) continue;
+    try {
+      const url = new URL(href);
+      const path = url.pathname.replace(/^\/docs\//, '');
+      map[hreflang] = path;
+    } catch (_) {}
+  }
+  return Object.keys(map).length > 0 ? map : null;
+}
+
+function getPageMap(pageType) {
+  if (pageType === 'article') return getArticlePageMap();
+  return DOCS_LOCALE_CONFIG.pageMap[pageType] || null;
+}
+
 function getLocaleShortLabel(locale) {
   return DOCS_LOCALE_CONFIG.localeShortLabels[locale] || locale;
 }
@@ -215,13 +245,15 @@ function getDocsNavLabels(locale) {
 }
 
 function getEquivalentPagePath(locale) {
-  const pageType = getCurrentPageType();
-  return DOCS_LOCALE_CONFIG.pageMap[pageType]?.[locale] || null;
+  const map = getPageMap(getCurrentPageType());
+  return map?.[locale] || null;
 }
 
 function getEquivalentPageHref(locale) {
   const path = getEquivalentPagePath(locale);
-  return path ? `../${path}` : '../index.html';
+  if (!path) return '../index.html';
+  const depth = getPathDepthFromDocs();
+  return '../'.repeat(depth - 1) + path;
 }
 
 function createNavLink(href, text, { current = false } = {}) {
@@ -259,7 +291,7 @@ function createLanguageSelector(locale, labels) {
   select.className = 'nav-language-select';
   select.setAttribute('aria-label', labels.currentLanguage);
 
-  const map = DOCS_LOCALE_CONFIG.pageMap[getCurrentPageType()];
+  const map = getPageMap(getCurrentPageType());
   if (map) {
     for (const targetLocale of Object.keys(map)) {
       const option = document.createElement('option');
@@ -289,9 +321,11 @@ function upgradeDocsNavigation() {
   const nav = document.querySelector('.site-header .header-nav');
   if (!nav) return;
 
+  const depth = getPathDepthFromDocs();
+
   nav.replaceChildren(
-    createNavLink('../index.html', labels.docsHome),
-    createNavLink('../../index.html', labels.publicHomepage),
+    createNavLink('../'.repeat(depth - 1) + 'index.html', labels.docsHome),
+    createNavLink('../'.repeat(depth) + 'index.html', labels.publicHomepage),
     createNavLink('https://github.com/mihafreenode/let-books', labels.github),
   );
 
@@ -304,7 +338,7 @@ function buildEquivalentLanguageLinks() {
 
   const pageType = getCurrentPageType();
   const currentLocale = getCurrentLocale();
-  const map = DOCS_LOCALE_CONFIG.pageMap[pageType];
+  const map = getPageMap(pageType);
 
   if (!map || !currentLocale) return;
 
@@ -320,10 +354,13 @@ function buildEquivalentLanguageLinks() {
 
   container.classList.add('equivalent-language-list');
 
+  const depth = getPathDepthFromDocs();
+  const prefix = '../'.repeat(depth - 1);
+
   const fragment = document.createDocumentFragment();
   for (const [locale, path] of Object.entries(map)) {
     const link = document.createElement('a');
-    link.href = path ? `../${path}` : '../index.html';
+    link.href = path ? `${prefix}${path}` : prefix + 'index.html';
     link.textContent = DOCS_LOCALE_CONFIG.labels[locale] || locale;
     link.className = 'footer-language-link';
     if (locale === currentLocale) {
@@ -363,9 +400,11 @@ function normalizeDocsFooter() {
   const footerLinks = document.querySelector('.site-footer .footer-links');
   if (!footerLinks) return;
 
+  const depth = getPathDepthFromDocs();
+
   footerLinks.replaceChildren(
-    createNavLink('../index.html', labels.docsHome),
-    createNavLink('../../index.html', labels.publicHomepage),
+    createNavLink('../'.repeat(depth - 1) + 'index.html', labels.docsHome),
+    createNavLink('../'.repeat(depth) + 'index.html', labels.publicHomepage),
     createNavLink('https://github.com/mihafreenode/let-books', labels.github),
   );
 }
