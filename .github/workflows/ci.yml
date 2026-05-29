@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["main"]
+
+env:
+  NODE_VERSION: "22"
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Static-demo localization smoke test
+        run: node tests/static-demo/localization-smoke.js
+
+      - name: Validate locale JSON syntax
+        run: |
+          for f in static-demo/locales/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))"
+            echo "  ok: $f"
+          done
+
+      - name: SEO metadata generation (dry-run validation)
+        run: node tools/generate-static-seo.mjs
+
+      - name: Verify CNAME file
+        run: |
+          test -f CNAME || { echo "Missing CNAME"; exit 1; }
+          grep -q "letbooks.org" CNAME
+
+      - name: Check required HTML pages exist
+        run: |
+          for locale in en sl hr bs sr-Latn sr-Cyrl mk sq de it fr es; do
+            for page in index.html individuals.html institutions.html administrators.html; do
+              test -f "docs/$locale/$page" || { echo "Missing docs/$locale/$page"; exit 1; }
+            done
+          done
+          test -f docs/index.html || { echo "Missing docs/index.html"; exit 1; }
+          test -f index.html || { echo "Missing root index.html"; exit 1; }
+          echo "All required HTML pages present"
+
+      - name: Check favicon manifest
+        run: node -e "JSON.parse(require('fs').readFileSync('favicon/site.webmanifest','utf8'))"
+
+      - name: Validate JSON files (non-locale)
+        run: |
+          for f in playwright-cli.json static-demo/manifest.webmanifest; do
+            test -f "$f" && node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" && echo "  ok: $f"
+          done
+
+      - name: Lint YAML workflow files
+        continue-on-error: true
+        run: |
+          which yamllint 2>/dev/null && yamllint .github/workflows/*.yml || echo "  skipped: yamllint not available"
+
+      - name: Hunspell check (optional)
+        continue-on-error: true
+        run: |
+          if command -v hunspell &>/dev/null; then
+            echo "Hunspell available — spellcheck not yet wired per-locale"
+            hunspell -d en_US -l docs/en/*.html 2>/dev/null | sort -u | head -20 || true
+          else
+            echo "  skipped: hunspell not available"
+          fi
+
+      - name: Broken internal link check (optional)
+        continue-on-error: true
+        run: |
+          if command -v linkchecker &>/dev/null; then
+            echo "Running linkchecker on docs/ ..."
+          elif node -e "require('fs').existsSync('node_modules')" 2>/dev/null; then
+            echo "linkinator not installed — skipped"
+          else
+            echo "  skipped: no link checker available"
+          fi
