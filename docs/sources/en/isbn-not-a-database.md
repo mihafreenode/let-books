@@ -27,8 +27,17 @@ status: draft
 - Open Library API documentation — `https://openlibrary.org/isbn/{isbn}.json`
 - Let Books metadata API — `https://api.letbooks.org/isbn/{isbn}`
 
+## Diagrams
+
+| Diagram | Source | Rendered |
+|---|---|---|
+| ISBN Metadata Lookup Chain | `docs/diagrams/source/isbn-lookup-chain.mmd` | `docs/diagrams/isbn-lookup-chain.svg` |
+| ISBN vs Physical Book Copy | `docs/diagrams/source/isbn-vs-physical-book.mmd` | `docs/diagrams/isbn-vs-physical-book.svg` |
+
+Both diagrams were rendered with Mermaid CLI 11.12.0, neutral theme, transparent background.
+
 ## Review Notes
 
-- All claims about the codebase were verified against the current `main` branch (commit `50b9d2b`)
+- All claims about the codebase were verified against the current `main` branch (commit `2ca927c`)
 - The Open Library API returns author references (`/authors/OL...A`) that require a second API call to resolve; the static demo handles this in `fetchOpenLibraryMetadata` at line 2396
 - The Let Books metadata API endpoint is configurable via a `<meta>` tag or query parameter, documented in `docs/book-metadata.md:175-177`

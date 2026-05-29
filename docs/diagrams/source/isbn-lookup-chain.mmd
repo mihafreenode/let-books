@@ -1,0 +1,20 @@
+---
+title: ISBN Metadata Lookup Chain
+---
+flowchart TD
+    A(["ISBN entered"]) --> B[Normalize & validate]
+    B --> C{Checksum valid?}
+    C -->|No| D["Show validation error"]
+    D --> E["Manual entry<br/>(always available)"]
+    C -->|Yes| F["Query Open Library"]
+    F --> G{Found useful<br/>metadata?}
+    G -->|Yes| H["Return metadata<br/>Provider: Open Library"]
+    G -->|No / Unavailable| I["Query Let Books<br/>metadata API"]
+    I --> J{Found useful<br/>metadata?}
+    J -->|Yes| K["Return metadata<br/>Provider: Let Books API"]
+    J -->|No / Unavailable| E
+
+    style H fill:#e8f5e9,stroke:#2e7d32
+    style K fill:#e8f5e9,stroke:#2e7d32
+    style E fill:#fff3e0,stroke:#e65100
+    style D fill:#ffebee,stroke:#c62828

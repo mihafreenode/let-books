@@ -20,9 +20,25 @@ Use this area for architecture diagrams, workflow diagrams, mental models, and t
 - Documentation
 - Architecture explanation
 
+## Available Diagrams
+
+| File | Description |
+|---|---|
+| [isbn-lookup-chain.svg](isbn-lookup-chain.svg) | ISBN metadata lookup fallback chain |
+| [isbn-vs-physical-book.svg](isbn-vs-physical-book.svg) | Edition-level identifier vs instance-level tracking |
+
+Source files are in `source/` (Mermaid `.mmd` format).
+
+Regenerate SVG output:
+
+```bash
+mmdc -i source/isbn-lookup-chain.mmd -o isbn-lookup-chain.svg -t neutral -b transparent -w 700
+mmdc -i source/isbn-vs-physical-book.mmd -o isbn-vs-physical-book.svg -t neutral -b transparent -w 800
+```
+
 ## Related Articles
 
-- `../blog/README.md`
+- [ISBN Is Not a Database](../blog/en/isbn-not-a-database.md) — uses both diagrams
 
 ## Related Learning Guides
 

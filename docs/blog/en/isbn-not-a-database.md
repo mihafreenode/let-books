@@ -13,6 +13,9 @@ evidence:
   - AGENTS.md
 sources:
   - sources/en/isbn-agency-reference.md
+diagrams:
+  - diagrams/isbn-lookup-chain.svg
+  - diagrams/isbn-vs-physical-book.svg
 status: draft
 ---
 
@@ -27,6 +30,10 @@ An ISBN is a unique identifier assigned to a specific edition of a published boo
 The ISBN identifies the edition, not the work. For example, the 2nd and 3rd editions of the same textbook have different ISBNs. A hardcover and a paperback of the same book have different ISBNs. An English translation and the original French edition have different ISBNs.
 
 This is useful precision — but it comes with important limitations.
+
+![ISBN vs Physical Book Copy diagram](../../diagrams/isbn-vs-physical-book.svg)
+
+An ISBN identifies the edition metadata on the left. The physical copy on the right — condition, provenance, storage location, donation status, photos — is tracked separately in the Let Books domain model. The two are related but not the same thing.
 
 ## What ISBN cannot do
 
@@ -53,6 +60,8 @@ Mispressed ISBNs exist. A single ISBN can be accidentally reused by different pu
 ## How Let Books handles ISBN
 
 The metadata lookup chain in the Let Books static demo follows a practical fallback strategy, implemented in `static-demo/app.js:2269`:
+
+![ISBN Metadata Lookup Chain diagram](../../diagrams/isbn-lookup-chain.svg)
 
 1. Normalize and validate the ISBN. Strip spaces and hyphens, uppercase X, validate the checksum.
 2. Query Open Library first, using its public API.
