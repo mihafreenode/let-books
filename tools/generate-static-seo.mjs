@@ -403,8 +403,33 @@ function updateFaviconManifest(rootDir) {
   fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 }
 
+function writeManifest(rootDir) {
+  const files = [path.join(rootDir, 'index.html'), path.join(rootDir, 'docs', 'index.html')];
+  for (const [, locales] of Object.entries(pageMap)) {
+    for (const [, relativePath] of Object.entries(locales)) {
+      files.push(path.join(rootDir, 'docs', relativePath));
+    }
+  }
+  const manifest = { files: files.map((f) => path.relative(rootDir, f).replace(/\\/g, '/')).sort() };
+  fs.writeFileSync(path.join(rootDir, 'docs', '.seo-manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+
+  let ok = true;
+  for (const f of files) {
+    if (!fs.existsSync(f)) {
+      console.error(`Missing: ${path.relative(rootDir, f)}`);
+      ok = false;
+    }
+  }
+  if (!ok) {
+    console.error('One or more required pages are missing — see above.');
+    process.exit(1);
+  }
+  console.log(`All ${files.length} required pages present`);
+}
+
 const rootDir = process.cwd();
 updateHomepage(rootDir);
 updateDocs(rootDir);
 updateStaticDemo(rootDir);
 updateFaviconManifest(rootDir);
+writeManifest(rootDir);
