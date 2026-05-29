@@ -21,7 +21,7 @@ Support French publishing linked to canonical English sources and shared termino
 
 ## Related Articles
 
-- None yet
+- [L'ISBN n'est pas une base de données](isbn-not-a-database.md) — Pourquoi l'ISBN aide à identifier les livres mais ne remplace pas les systèmes de métadonnées
 
 ## Related Learning Guides
 

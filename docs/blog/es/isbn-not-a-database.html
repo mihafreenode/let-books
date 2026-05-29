@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El ISBN no es una base de datos | LetBooks</title>
+    <meta name="description" content="Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos, y cómo funciona la cadena de búsqueda de metadatos en el proyecto Let Books.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/es/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="El ISBN no es una base de datos | LetBooks">
+    <meta property="og:description" content="Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos, y cómo funciona la cadena de búsqueda de metadatos en el proyecto Let Books.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/es/isbn-not-a-database.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="El ISBN no es una base de datos | LetBooks">
+    <meta name="twitter:description" content="Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos, y cómo funciona la cadena de búsqueda de metadatos en el proyecto Let Books.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="es">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../es/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../es/index.html">Resumen</a>
+            <div class="lang-switch" aria-label="Opciones de idioma">
+              <a class="lang-link is-current" href="isbn-not-a-database.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Todos los idiomas</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+          <span class="eyebrow">Blog &middot; Metadatos</span>
+          <h1>El ISBN no es una base de datos</h1>
+          <p class="lead">Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos, y cómo funciona la cadena de búsqueda de metadatos en el proyecto Let Books.</p>
+
+          <p>Cuando sostienes un libro impreso, el código de barras en la contraportada es el identificador más visible que lleva. Ese identificador es el ISBN &mdash; Número Estándar Internacional de Libros. En los catálogos de bibliotecas, tiendas en línea y sistemas de metadatos, a menudo funciona como una clave de base de datos. Pero un ISBN no es una base de datos, y tratarlo como tal genera problemas reales en los procesos de donación de libros.</p>
+
+          <h2>Qué es realmente un ISBN</h2>
+          <p>Un ISBN es un identificador único asignado a una edición específica de un libro publicado. El estándar actual, ISBN-13, utiliza 13 dígitos con un dígito de control para la detección de errores. El formato más antiguo ISBN-10 todavía se encuentra en libros publicados antes de 2007.</p>
+          <p>El ISBN identifica la edición, no la obra. Por ejemplo, la segunda y tercera edición del mismo libro de texto tienen ISBN diferentes. Una tapa dura y un libro de bolsillo de la misma obra tienen ISBN diferentes. Una traducción al inglés y la edición original francesa tienen ISBN diferentes.</p>
+          <p>Esta es una precisión útil &mdash; pero conlleva limitaciones importantes.</p>
+
+          <figure class="image-card blog-figure">
+            <img src="../../diagrams/isbn-vs-physical-book.svg" alt="Diagrama ISBN vs ejemplar físico de libro">
+            <figcaption>Un ISBN identifica los metadatos de la edición a la izquierda. El ejemplar físico a la derecha &mdash; estado, procedencia, ubicación de almacenamiento, estado de donación, fotos &mdash; se rastrea por separado en el modelo de dominio de Let Books. Ambos están relacionados pero no son lo mismo.</figcaption>
+          </figure>
+
+          <h2>Lo que el ISBN no puede hacer</h2>
+
+          <h3>No todos los libros tienen uno</h3>
+          <p>Los libros publicados antes de 1970, las autoediciones, los materiales académicos de tirada limitada y los libros de editoriales pequeñas a menudo carecen por completo de ISBN. En las colecciones de patrimonio académico &mdash; el tipo en el que este proyecto se enfoca &mdash; los libros de texto anteriores a 1970, los apuntes de clase y los materiales impresos localmente son comunes y valiosos.</p>
+
+          <h3>El ISBN no describe el estado</h3>
+          <p>Una biblioteca quiere saber si un ejemplar está dañado por agua, anotado o si le faltan páginas. El ISBN no proporciona ninguna de estas informaciones. El identificador es el mismo para un ejemplar impecable y para uno que ha estado almacenado en un sótano húmedo durante veinte años.</p>
+
+          <h3>El ISBN no describe la procedencia</h3>
+          <p>¿De quién era este ejemplar? ¿Fue recomendado por un profesor? ¿Tiene la firma de un propietario anterior o un sello de biblioteca? ¿Qué institución lo poseyó? El ISBN guarda silencio sobre todo esto.</p>
+
+          <h3>El ISBN no describe la ubicación</h3>
+          <p>Para un proyecto de donación de libros, la segunda pregunta más importante después de "¿qué es?" es "¿dónde está?". El ISBN no tiene respuesta. La ubicación es un asunto logístico físico, rastreado por separado en la jerarquía de almacenamiento.</p>
+
+          <h3>El ISBN puede ser incorrecto o reutilizado</h3>
+          <p>Existen ISBN mal impresos. Un mismo ISBN puede ser reutilizado accidentalmente por diferentes editores. El OCR puede leer mal los dígitos. El dígito de control detecta errores de un solo dígito, pero no todos.</p>
+
+          <h2>Cómo maneja Let Books el ISBN</h2>
+          <p>La cadena de búsqueda de metadatos en la demo estática de Let Books sigue una estrategia práctica de respaldo, implementada en <code>static-demo/app.js:2269</code>:</p>
+
+          <figure class="image-card blog-figure">
+            <img src="../../diagrams/isbn-lookup-chain.svg" alt="Diagrama de la cadena de búsqueda de ISBN">
+          </figure>
+
+          <ol>
+            <li>Normaliza y valida el ISBN. Elimina espacios y guiones, convierte la X a mayúscula, valida el dígito de control.</li>
+            <li>Consulta primero Open Library a través de su API pública.</li>
+            <li>Si Open Library no devuelve datos útiles, consulta la API de metadatos de Let Books.</li>
+            <li>Si ningún proveedor tiene datos, recurre a la entrada manual.</li>
+          </ol>
+
+          <p>La entrada manual nunca se bloquea. Si todos los proveedores fallan &mdash; ya sea por un error de red, limitación de velocidad o ausencia real de datos &mdash; el usuario puede ingresar manualmente el título, autor, editorial y año y continuar con la catalogación.</p>
+          <p>La cadena de respaldo es deliberadamente simple. No hay un único punto de fallo porque ningún proveedor es obligatorio. Cada proveedor es opcional e independientemente reemplazable.</p>
+          <p>Las evidencias de esta cadena en el repositorio están en <code>static-demo/app.js</code> (la función <code>lookupMetadataByIsbn</code> en la línea 2316 y las dos funciones de obtención que la siguen) y en <code>docs/book-metadata.md</code> (la documentación de arquitectura).</p>
+
+          <h2>Por qué esto importa para las donaciones de libros</h2>
+          <p>Cuando un donante cataloga una colección de libros académicos, algunos tendrán ISBN y otros no. Los libros sin ISBN suelen ser los más interesantes &mdash; ediciones más antiguas, materiales publicados localmente, compilaciones para cursos específicos o libros de editoriales de la ex Yugoslavia cuyos identificadores nunca llegaron a las bases de datos globales.</p>
+          <p>El proceso de catalogación no debe castigar al donante por la falta de ISBN. Cada función que funciona con la búsqueda de ISBN debe funcionar también sin él: seguimiento de ubicación, carga de fotos, exportación a Excel, revisión por lotes. El ISBN es una conveniencia, no un requisito.</p>
+
+          <div class="quote-panel">
+            <p><strong>Especificación del proyecto, AGENTS.md:</strong> "El modelo debe permitir datos incompletos. No se requiere ISBN."</p>
+          </div>
+
+          <h2>Cómo se ve el futuro</h2>
+          <p>La cadena de respaldo actual crecerá a medida que se agreguen nuevos proveedores. Crossref, Wikidata, OpenAlex y COBISS son candidatos. Cada uno entrará en la misma cadena: intentar en orden, almacenar en caché agresivamente, retroceder elegantemente.</p>
+          <p>Pero la cadena en sí misma no es el objetivo. El objetivo es pasar de un libro físico a suficientes metadatos para que una biblioteca pueda decidir si quiere el libro. El ISBN ayuda, pero el sistema debe funcionar cuando el ISBN no está disponible.</p>
+
+          <div class="blog-footer-note">
+            <p><strong>El ISBN es un identificador útil. No es una base de datos.</strong></p>
+          </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</p>
+            <p class="footer-microcopy">Prototipo alfa temprano. Las instituciones e integraciones mencionadas en los ejemplos son solo conceptuales y no implican asociación o respaldo.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../es/index.html">Resumen</a>
+              <a href="../../index.html">Inicio</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Todos los idiomas</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

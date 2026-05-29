@@ -21,7 +21,7 @@ Support Bosnian publishing with stable article identifiers and terminology-aware
 
 ## Related Articles
 
-- None yet
+- [ISBN nije baza podataka](isbn-not-a-database.md) — Zašto ISBN pomaže u prepoznavanju knjiga, ali ne zamjenjuje metapodatkovne sisteme
 
 ## Related Learning Guides
 

@@ -21,7 +21,7 @@ Support Albanian publishing with traceable translation links and terminology con
 
 ## Related Articles
 
-- None yet
+- [ISBN nuk është bazë të dhënash](isbn-not-a-database.md) — Pse ISBN ndihmon në identifikimin e librave por nuk zëvendëson sistemet e metatëdhënave
 
 ## Related Learning Guides
 

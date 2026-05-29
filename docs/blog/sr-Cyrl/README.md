@@ -22,7 +22,7 @@ Treat Serbian Cyrillic as its own supported publishing locale rather than a scri
 
 ## Related Articles
 
-- None yet
+- [ISBN није база података](isbn-not-a-database.md) — Зашто ISBN помаже у препознавању књига, али не замењује метаподатковне системе
 
 ## Related Learning Guides
 

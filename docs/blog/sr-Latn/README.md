@@ -22,7 +22,7 @@ Treat Serbian Latin as its own supported publishing locale rather than a script 
 
 ## Related Articles
 
-- None yet
+- [ISBN nije baza podataka](isbn-not-a-database.md) — Zašto ISBN pomaže u prepoznavanju knjiga, ali ne zamenjuje metapodatkovne sisteme
 
 ## Related Learning Guides
 

@@ -21,7 +21,7 @@ Support German publishing linked to canonical English sources and shared termino
 
 ## Related Articles
 
-- None yet
+- [ISBN ist keine Datenbank](isbn-not-a-database.md) — Warum ISBN bei der Identifizierung von Büchern hilft, aber keine Metadatensysteme ersetzt
 
 ## Related Learning Guides
 

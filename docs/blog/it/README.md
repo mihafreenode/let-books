@@ -21,7 +21,7 @@ Support Italian publishing linked to canonical English sources and shared termin
 
 ## Related Articles
 
-- None yet
+- [L'ISBN non è un database](isbn-not-a-database.md) — Perché l'ISBN aiuta a identificare i libri ma non sostituisce i sistemi di metadati
 
 ## Related Learning Guides
 

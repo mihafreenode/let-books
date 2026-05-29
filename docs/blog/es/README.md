@@ -21,7 +21,7 @@ Support Spanish publishing linked to canonical English sources and shared termin
 
 ## Related Articles
 
-- None yet
+- [El ISBN no es una base de datos](isbn-not-a-database.md) — Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos
 
 ## Related Learning Guides
 

@@ -21,7 +21,7 @@ Support high-quality Croatian knowledge publishing with stable article identifie
 
 ## Related Articles
 
-- None yet
+- [ISBN nije baza podataka](isbn-not-a-database.md) — Zašto ISBN pomaže u prepoznavanju knjiga, ali ne zamjenjuje metapodatkovne sustave
 
 ## Related Learning Guides
 

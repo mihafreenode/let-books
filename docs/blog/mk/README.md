@@ -22,7 +22,7 @@ Support Macedonian as a first-class locale with proper orthography and terminolo
 
 ## Related Articles
 
-- None yet
+- [ISBN не е база на податоци](isbn-not-a-database.md) — Зошто ISBN помага во идентификување на книгите, но не ги заменува метаподаточните системи
 
 ## Related Learning Guides
 
