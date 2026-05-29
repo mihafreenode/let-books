@@ -1,6 +1,7 @@
+---
 name: CI
 
-on:
+"on":
   push:
     branches: ["*"]
   pull_request:
@@ -8,6 +9,7 @@ on:
 
 env:
   NODE_VERSION: "22"
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -44,7 +46,9 @@ jobs:
       - name: Check required HTML pages exist
         run: |
           node -e "
-            const m = JSON.parse(require('fs').readFileSync('docs/.seo-manifest.json','utf8'));
+            const m = JSON.parse(
+              require('fs').readFileSync('docs/.seo-manifest.json','utf8')
+            );
             let ok = true;
             for (const f of m.files) {
               if (!require('fs').existsSync(f)) {
@@ -57,25 +61,41 @@ jobs:
           "
 
       - name: Check favicon manifest
-        run: node -e "JSON.parse(require('fs').readFileSync('favicon/site.webmanifest','utf8'))"
+        run: |
+          node -e "
+            JSON.parse(
+              require('fs').readFileSync('favicon/site.webmanifest','utf8')
+            );
+          "
 
       - name: Validate JSON files (non-locale)
         run: |
           for f in playwright-cli.json static-demo/manifest.webmanifest; do
-            test -f "$f" && node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" && echo "  ok: $f"
+            test -f "$f" \
+              && node -e "
+                JSON.parse(
+                  require('fs').readFileSync('$f','utf8')
+                );
+              " \
+              && echo "  ok: $f"
           done
 
       - name: Lint YAML workflow files
         continue-on-error: true
         run: |
-          which yamllint 2>/dev/null && yamllint .github/workflows/*.yml || echo "  skipped: yamllint not available"
+          command -v yamllint 2>/dev/null \
+            && yamllint .github/workflows/*.yml \
+            || echo "  skipped: yamllint not available"
 
       - name: Hunspell check (optional)
         continue-on-error: true
         run: |
           if command -v hunspell &>/dev/null; then
             echo "Hunspell available — spellcheck not yet wired per-locale"
-            hunspell -d en_US -l docs/en/*.html 2>/dev/null | sort -u | head -20 || true
+            hunspell -d en_US -l docs/en/*.html 2>/dev/null \
+              | sort -u \
+              | head -20 \
+              || true
           else
             echo "  skipped: hunspell not available"
           fi
@@ -85,7 +105,9 @@ jobs:
         run: |
           if command -v linkchecker &>/dev/null; then
             echo "Running linkchecker on docs/ ..."
-          elif node -e "require('fs').existsSync('node_modules')" 2>/dev/null; then
+          elif node -e "
+            require('fs').existsSync('node_modules')
+          " 2>/dev/null; then
             echo "linkinator not installed — skipped"
           else
             echo "  skipped: no link checker available"
