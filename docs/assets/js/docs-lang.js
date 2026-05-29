@@ -86,18 +86,18 @@ const DOCS_LOCALE_CONFIG = {
     es: 'ES',
   },
   docsNavLabels: {
-    en: { docsHome: 'Docs', publicHomepage: 'Public site', github: 'GitHub', currentLanguage: 'Current language', language: 'Language' },
-    sl: { docsHome: 'Dokumentacija', publicHomepage: 'Javna stran', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
-    hr: { docsHome: 'Dokumentacija', publicHomepage: 'Javna stranica', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
-    bs: { docsHome: 'Dokumentacija', publicHomepage: 'Javna stranica', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
-    'sr-Latn': { docsHome: 'Dokumentacija', publicHomepage: 'Javni sajt', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
-    'sr-Cyrl': { docsHome: 'Документација', publicHomepage: 'Јавни сајт', github: 'GitHub', currentLanguage: 'Тренутни језик', language: 'Језик' },
-    mk: { docsHome: 'Документација', publicHomepage: 'Јавна страница', github: 'GitHub', currentLanguage: 'Тековен јазик', language: 'Јазик' },
-    sq: { docsHome: 'Dokumentim', publicHomepage: 'Faqja publike', github: 'GitHub', currentLanguage: 'Gjuha aktuale', language: 'Gjuha' },
-    de: { docsHome: 'Doku', publicHomepage: 'Website', github: 'GitHub', currentLanguage: 'Aktuelle Sprache', language: 'Sprache' },
-    it: { docsHome: 'Documentazione', publicHomepage: 'Sito pubblico', github: 'GitHub', currentLanguage: 'Lingua corrente', language: 'Lingua' },
-    fr: { docsHome: 'Documentation', publicHomepage: 'Site public', github: 'GitHub', currentLanguage: 'Langue actuelle', language: 'Langue' },
-    es: { docsHome: 'Documentación', publicHomepage: 'Sitio público', github: 'GitHub', currentLanguage: 'Idioma actual', language: 'Idioma' },
+    en: { docsHome: 'Docs', blog: 'Blog', overview: 'Overview', individuals: 'Individuals', institutions: 'Institutions', administrators: 'Administrators', publicHomepage: 'Public site', github: 'GitHub', currentLanguage: 'Current language', language: 'Language' },
+    sl: { docsHome: 'Dokumentacija', blog: 'Blog', overview: 'Pregled', individuals: 'Posamezniki', institutions: 'Institucije', administrators: 'Skrbniki', publicHomepage: 'Javna stran', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    hr: { docsHome: 'Dokumentacija', blog: 'Blog', overview: 'Pregled', individuals: 'Pojedinci', institutions: 'Institucije', administrators: 'Administratori', publicHomepage: 'Javna stranica', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    bs: { docsHome: 'Dokumentacija', blog: 'Blog', overview: 'Pregled', individuals: 'Pojedinci', institutions: 'Institucije', administrators: 'Administratori', publicHomepage: 'Javna stranica', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    'sr-Latn': { docsHome: 'Dokumentacija', blog: 'Blog', overview: 'Pregled', individuals: 'Pojedinci', institutions: 'Institucije', administrators: 'Administratori', publicHomepage: 'Javni sajt', github: 'GitHub', currentLanguage: 'Trenutni jezik', language: 'Jezik' },
+    'sr-Cyrl': { docsHome: 'Документација', blog: 'Блог', overview: 'Преглед', individuals: 'Појединци', institutions: 'Институције', administrators: 'Администратори', publicHomepage: 'Јавни сајт', github: 'GitHub', currentLanguage: 'Тренутни језик', language: 'Језик' },
+    mk: { docsHome: 'Документација', blog: 'Блог', overview: 'Преглед', individuals: 'Поединци', institutions: 'Институции', administrators: 'Администратори', publicHomepage: 'Јавна страница', github: 'GitHub', currentLanguage: 'Тековен јазик', language: 'Јазик' },
+    sq: { docsHome: 'Dokumentim', blog: 'Blog', overview: 'Përmbledhje', individuals: 'Individë', institutions: 'Institucione', administrators: 'Administratorë', publicHomepage: 'Faqja publike', github: 'GitHub', currentLanguage: 'Gjuha aktuale', language: 'Gjuha' },
+    de: { docsHome: 'Doku', blog: 'Blog', overview: 'Übersicht', individuals: 'Einzelpersonen', institutions: 'Institutionen', administrators: 'Administratoren', publicHomepage: 'Website', github: 'GitHub', currentLanguage: 'Aktuelle Sprache', language: 'Sprache' },
+    it: { docsHome: 'Documentazione', blog: 'Blog', overview: 'Panoramica', individuals: 'Individui', institutions: 'Istituzioni', administrators: 'Amministratori', publicHomepage: 'Sito pubblico', github: 'GitHub', currentLanguage: 'Lingua corrente', language: 'Lingua' },
+    fr: { docsHome: 'Documentation', blog: 'Blog', overview: 'Aperçu', individuals: 'Particuliers', institutions: 'Institutions', administrators: 'Administrateurs', publicHomepage: 'Site public', github: 'GitHub', currentLanguage: 'Langue actuelle', language: 'Langue' },
+    es: { docsHome: 'Documentación', blog: 'Blog', overview: 'Vista general', individuals: 'Particulares', institutions: 'Instituciones', administrators: 'Administradores', publicHomepage: 'Sitio público', github: 'GitHub', currentLanguage: 'Idioma actual', language: 'Idioma' },
   },
   footerMicrocopy: {
     en: 'Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.',
@@ -256,6 +256,13 @@ function getEquivalentPageHref(locale) {
   return '../'.repeat(depth - 1) + path;
 }
 
+const BLOG_ARTICLE_ID = 'isbn-not-a-database';
+
+function getBlogArticleHref(locale, articleId = BLOG_ARTICLE_ID) {
+  const depth = getPathDepthFromDocs();
+  return '../'.repeat(depth - 1) + `blog/${locale}/${articleId}.html`;
+}
+
 function createNavLink(href, text, { current = false } = {}) {
   const link = document.createElement('a');
   link.className = current ? 'nav-link is-current' : 'nav-link';
@@ -314,21 +321,48 @@ function createLanguageSelector(locale, labels) {
 
 function upgradeDocsNavigation() {
   const pageType = getCurrentPageType();
-  if (pageType === 'language-hub') return;
-
   const locale = getCurrentLocale();
   const labels = getDocsNavLabels(locale);
   const nav = document.querySelector('.site-header .header-nav');
   if (!nav) return;
 
   const depth = getPathDepthFromDocs();
+  const pageMap = DOCS_LOCALE_CONFIG.pageMap;
 
-  nav.replaceChildren(
-    createNavLink('../'.repeat(depth - 1) + 'index.html', labels.docsHome),
-    createNavLink('../'.repeat(depth) + 'index.html', labels.publicHomepage),
-    createNavLink('https://github.com/mihafreenode/let-books', labels.github),
-  );
+  if (pageType === 'language-hub') {
+    const items = [
+      createNavLink('.', labels.docsHome, { current: true }),
+      createNavLink(getBlogArticleHref('en'), labels.blog),
+      createNavLink('https://github.com/mihafreenode/let-books', labels.github),
+    ];
+    nav.replaceChildren(...items);
+    nav.setAttribute('aria-label', 'Site navigation');
+    return;
+  }
 
+  if (pageType === 'article') {
+    const items = [
+      createNavLink('../'.repeat(depth - 1) + 'index.html', labels.docsHome),
+      createNavLink('../'.repeat(depth) + 'index.html', labels.publicHomepage),
+      createNavLink('https://github.com/mihafreenode/let-books', labels.github),
+    ];
+    nav.replaceChildren(...items);
+    nav.setAttribute('aria-label', 'Site navigation');
+    nav.appendChild(createLanguageSelector(locale, labels));
+    return;
+  }
+
+  const subPageTypes = ['overview', 'individuals', 'institutions', 'administrators'];
+  const items = [];
+  for (const type of subPageTypes) {
+    const relPath = pageMap[type]?.[locale];
+    if (!relPath) continue;
+    items.push(createNavLink('../'.repeat(depth - 1) + relPath, labels[type], { current: pageType === type }));
+  }
+  items.push(createNavLink(getBlogArticleHref(locale), labels.blog));
+  items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
+
+  nav.replaceChildren(...items);
   nav.setAttribute('aria-label', 'Documentation');
   nav.appendChild(createLanguageSelector(locale, labels));
 }
@@ -373,6 +407,43 @@ function buildEquivalentLanguageLinks() {
   container.replaceChildren(fragment);
 }
 
+function upgradeLanguageHubCards(blogData) {
+  const pageType = getCurrentPageType();
+  if (pageType !== 'language-hub') return;
+  if (!blogData || !blogData.articles) return;
+
+  const primaryArticleId = blogData.articles[0]?.id;
+  if (!primaryArticleId) return;
+
+  for (const article of blogData.articles) {
+    for (const lang of article.languages) {
+      const card = document.querySelector(`.language-card[data-locale="${lang}"]`);
+      if (!card) continue;
+      const link = card.querySelector('.blog-article-link');
+      if (!link) continue;
+      const href = getBlogArticleHref(lang, article.id);
+      link.href = href;
+      if (lang !== 'en') {
+        const articleTitle = article.title?.[lang];
+        if (articleTitle && link.textContent.includes('Read') || link.textContent.includes('Preberi') || link.textContent.includes('Pročitaj') || link.textContent.includes('Прочитај') || link.textContent.includes('Lexo') || link.textContent.includes('Lire') || link.textContent.includes('Lesen') || link.textContent.includes('Leggi') || link.textContent.includes('Leer')) {
+        }
+      }
+    }
+  }
+}
+
+async function fetchBlogData() {
+  try {
+    const depth = getPathDepthFromDocs();
+    const prefix = '../'.repeat(depth - 1);
+    const resp = await fetch(`${prefix}blog/articles.json`);
+    if (!resp.ok) return null;
+    return await resp.json();
+  } catch {
+    return null;
+  }
+}
+
 function ensureFooterMicrocopy() {
   const pageType = getCurrentPageType();
   if (pageType === 'language-hub') return;
@@ -393,20 +464,27 @@ function ensureFooterMicrocopy() {
 
 function normalizeDocsFooter() {
   const pageType = getCurrentPageType();
-  if (pageType === 'language-hub') return;
-
   const locale = getCurrentLocale();
   const labels = getDocsNavLabels(locale);
   const footerLinks = document.querySelector('.site-footer .footer-links');
   if (!footerLinks) return;
 
   const depth = getPathDepthFromDocs();
+  const items = [];
 
-  footerLinks.replaceChildren(
-    createNavLink('../'.repeat(depth - 1) + 'index.html', labels.docsHome),
-    createNavLink('../'.repeat(depth) + 'index.html', labels.publicHomepage),
-    createNavLink('https://github.com/mihafreenode/let-books', labels.github),
-  );
+  if (pageType === 'language-hub') {
+    items.push(createNavLink('.', labels.docsHome, { current: true }));
+    items.push(createNavLink(getBlogArticleHref('en'), labels.blog));
+    items.push(createNavLink('../index.html', labels.publicHomepage));
+    items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
+  } else {
+    items.push(createNavLink('../'.repeat(depth - 1) + 'index.html', labels.docsHome));
+    items.push(createNavLink(getBlogArticleHref(locale), labels.blog));
+    items.push(createNavLink('../'.repeat(depth) + 'index.html', labels.publicHomepage));
+    items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
+  }
+
+  footerLinks.replaceChildren(...items);
 }
 
 function getNavToggleLabels(locale) {
@@ -518,7 +596,7 @@ function setupMobileNav() {
   syncWithViewport();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const locale = getCurrentLocale();
     const pageType = getCurrentPageType();
     const docsSite = isDocsSite();
@@ -535,4 +613,7 @@ document.addEventListener('DOMContentLoaded', () => {
       normalizeDocsFooter();
       ensureFooterMicrocopy();
     }
+
+    const blogData = docsSite ? await fetchBlogData() : null;
+    upgradeLanguageHubCards(blogData);
 });

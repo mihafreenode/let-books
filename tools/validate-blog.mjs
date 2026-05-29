@@ -292,6 +292,121 @@ function checkReadmeCoverage() {
   }
 }
 
+function checkNavigationConsistency() {
+  const navLinkRegex = /<a[^>]+class="nav-link[^"]*"[^>]*href="([^"]+)"[^>]*>/g;
+
+  const checkNavLinksResolve = (filePath) => {
+    if (!existsOnDisk(filePath)) return;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const relPath = rel(filePath);
+    const navHrefs = [];
+    let match;
+    while ((match = navLinkRegex.exec(content)) !== null) {
+      navHrefs.push(match[1]);
+    }
+    for (const href of navHrefs) {
+      const dir = path.dirname(filePath);
+      if (href.startsWith('http://') || href.startsWith('https://')) continue;
+      if (href === '.' || href === './' || href.startsWith('#')) continue;
+      const resolved = resolvePath(dir, href);
+      if (resolved && !existsOnDisk(resolved) && !resolveDir(resolved)) {
+        fail(`${relPath}: nav link "${href}" resolves to missing path`);
+        brokenLinks++;
+      }
+    }
+  };
+
+  const blogPath = (lang) => path.join(BLOG_DIR, lang, 'isbn-not-a-database.html');
+  const docsPagePath = (lang) => path.join(ROOT, 'docs', lang, 'index.html');
+
+  const subPages = {
+    en: ['individuals', 'institutions', 'administrators'],
+    sl: ['posamezniki', 'institucije', 'skrbniki'],
+    hr: ['individuals', 'institutions', 'administrators'],
+    bs: ['individuals', 'institutions', 'administrators'],
+    'sr-Latn': ['individuals', 'institutions', 'administrators'],
+    'sr-Cyrl': ['individuals', 'institutions', 'administrators'],
+    mk: ['individuals', 'institutions', 'administrators'],
+    sq: ['individuals', 'institutions', 'administrators'],
+    de: ['individuals', 'institutions', 'administrators'],
+    it: ['individuals', 'institutions', 'administrators'],
+    fr: ['individuals', 'institutions', 'administrators'],
+    es: ['individuals', 'institutions', 'administrators'],
+  };
+
+  for (const lang of Object.keys(subPages)) {
+    checkNavLinksResolve(docsPagePath(lang));
+    checkNavLinksResolve(blogPath(lang));
+    for (const page of subPages[lang]) {
+      checkNavLinksResolve(path.join(ROOT, 'docs', lang, `${page}.html`));
+    }
+  }
+}
+
+function checkBlogCardLinks() {
+  const hubPath = path.join(ROOT, 'docs/index.html');
+  if (!existsOnDisk(hubPath)) {
+    warn('docs/index.html not found, skipping blog card link validation');
+    return;
+  }
+  const content = fs.readFileSync(hubPath, 'utf8');
+  const dir = path.dirname(hubPath);
+  const blogLinkRegex = /<a[^>]+class="blog-article-link[^"]*"[^>]*href="([^"]+)"/g;
+  let match;
+  let cardCount = 0;
+  let validCards = 0;
+  while ((match = blogLinkRegex.exec(content)) !== null) {
+    cardCount++;
+    const href = match[1];
+    const resolved = resolvePath(dir, href);
+    if (resolved && existsOnDisk(resolved)) {
+      validCards++;
+    } else {
+      fail(`${rel(hubPath)}: blog card link "${href}" resolves to missing path`);
+      brokenLinks++;
+    }
+  }
+  console.log(`  Blog card links checked: ${cardCount}`);
+  console.log(`  Valid card links: ${validCards}`);
+  if (cardCount > 0 && validCards < cardCount) {
+    fail(`${cardCount - validCards} blog card link(s) are broken`);
+  }
+}
+
+function checkNoObsoleteBlogPaths() {
+  const htmlFiles = [];
+  function scanDir(dir) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fp = path.join(dir, entry.name);
+      if (entry.isDirectory() && !entry.name.startsWith('.')) {
+        scanDir(fp);
+      } else if (entry.isFile() && entry.name.endsWith('.html')) {
+        htmlFiles.push(fp);
+      }
+    }
+  }
+  scanDir(path.join(ROOT, 'docs'));
+
+  let filesChecked = 0;
+  let obsoletePaths = 0;
+  for (const fp of htmlFiles) {
+    const content = fs.readFileSync(fp, 'utf8');
+    const relPath = rel(fp);
+    const regex = /href="\/blog\//g;
+    let m;
+    while ((m = regex.exec(content)) !== null) {
+      fail(`${relPath}: contains obsolete absolute path "/blog/" (should be "/docs/blog/")`);
+      obsoletePaths++;
+    }
+    filesChecked++;
+  }
+  console.log(`  HTML files scanned for obsolete paths: ${filesChecked}`);
+  if (obsoletePaths > 0) {
+    fail(`Found ${obsoletePaths} obsolete absolute path(s) to /blog/`);
+  }
+}
+
 function checkKnowledgePlatformLinks() {
   const readmePairs = [
     {
@@ -344,6 +459,9 @@ function main() {
 
   checkReadmeCoverage();
   checkKnowledgePlatformLinks();
+  checkNavigationConsistency();
+  checkBlogCardLinks();
+  checkNoObsoleteBlogPaths();
 
   console.log(`\n\  Blog articles checked: ${articlesChecked}`);
   console.log(`  Language variants checked: ${languageVariantsChecked}`);
