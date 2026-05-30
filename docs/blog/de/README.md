@@ -22,6 +22,10 @@ Support German publishing linked to canonical English sources and shared termino
 ## Related Articles
 
 - [ISBN ist keine Datenbank](isbn-not-a-database.md) — Warum ISBN bei der Identifizierung von Büchern hilft, aber keine Metadatensysteme ersetzt
+- [Spezifikationsgetriebene Entwicklung für KI-Projekte](spec-driven-development-for-ai-projects.md) — Warum KI-gestützte Entwicklung stärkere Spezifikationen und klarere Dokumentation braucht
+- [Spezifikationsgetriebene Entwicklung in Let Books](spec-driven-development-in-let-books.md) — Wie Let Books bereits Spezifikation, Dokumentation und Demo-Grenzen als abgestimmtes System nutzt
+- [Dokumentation ist Teil des Produkts](documentation-is-part-of-the-product.md) — Warum Dokumentation Implementierung, Review und Produktvertrauen prägt
+- [Wann das Demo ein Beleg ist und wann nicht](when-the-demo-is-evidence-and-when-it-is-not.md) — Wie Demos nützliche Belege sein können, ohne still zur Spezifikation zu werden
 
 ## Related Learning Guides
 

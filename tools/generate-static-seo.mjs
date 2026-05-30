@@ -404,14 +404,46 @@ function updateFaviconManifest(rootDir) {
 }
 
 function writeManifest(rootDir) {
-  const files = [path.join(rootDir, 'index.html'), path.join(rootDir, 'docs', 'index.html')];
+  const docsDir = path.join(rootDir, 'docs');
+
+  // Core doc pages
+  const files = [path.join(rootDir, 'index.html'), path.join(docsDir, 'index.html')];
   for (const [, locales] of Object.entries(pageMap)) {
     for (const [, relativePath] of Object.entries(locales)) {
-      files.push(path.join(rootDir, 'docs', relativePath));
+      files.push(path.join(docsDir, relativePath));
     }
   }
+
+  // Blog index pages per locale
+  const locales = Object.keys(pageMap.overview);
+  for (const locale of locales) {
+    files.push(path.join(docsDir, 'blog', locale, 'index.html'));
+  }
+
+  // Learning index pages per locale
+  for (const locale of locales) {
+    files.push(path.join(docsDir, 'learning', locale, 'index.html'));
+  }
+
+  // Wiki index pages per locale
+  for (const locale of locales) {
+    files.push(path.join(docsDir, 'wiki', locale, 'index.html'));
+  }
+
+  // Blog article HTML files
+  for (const locale of locales) {
+    const blogLocaleDir = path.join(docsDir, 'blog', locale);
+    if (!fs.existsSync(blogLocaleDir)) continue;
+    const entries = fs.readdirSync(blogLocaleDir);
+    for (const entry of entries) {
+      if (entry.endsWith('.html') && entry !== 'index.html' && fs.statSync(path.join(blogLocaleDir, entry)).isFile()) {
+        files.push(path.join(blogLocaleDir, entry));
+      }
+    }
+  }
+
   const manifest = { files: files.map((f) => path.relative(rootDir, f).replace(/\\/g, '/')).sort() };
-  fs.writeFileSync(path.join(rootDir, 'docs', '.seo-manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
+  fs.writeFileSync(path.join(docsDir, '.seo-manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 
   let ok = true;
   for (const f of files) {

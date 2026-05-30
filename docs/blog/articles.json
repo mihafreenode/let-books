@@ -1,6 +1,38 @@
 {
   "articles": [
     {
+      "id": "documentation-is-part-of-the-product",
+      "canonical_language": "en",
+      "title": {
+        "en": "Documentation Is Part of the Product",
+        "sl": "Dokumentacija je del izdelka",
+        "hr": "Dokumentacija je dio proizvoda",
+        "bs": "Dokumentacija je dio proizvoda",
+        "sr-Latn": "Dokumentacija je deo proizvoda",
+        "sr-Cyrl": "Документација је део производа",
+        "mk": "Документацијата е дел од производот",
+        "sq": "Dokumentimi është pjesë e produktit",
+        "de": "Dokumentation ist Teil des Produkts",
+        "it": "La documentazione è parte del prodotto",
+        "fr": "La documentation fait partie du produit",
+        "es": "La documentación es parte del producto"
+      },
+      "languages": [
+        "en",
+        "sl",
+        "hr",
+        "bs",
+        "sr-Latn",
+        "sr-Cyrl",
+        "mk",
+        "sq",
+        "de",
+        "it",
+        "fr",
+        "es"
+      ]
+    },
+    {
       "id": "isbn-not-a-database",
       "canonical_language": "en",
       "title": {
@@ -31,40 +63,164 @@
         "fr",
         "es"
       ]
-    }
-  ],
-  "planned": [
-    {
-      "id": "box-workflows",
-      "canonical_language": "en",
-      "languages": ["en", "sl"],
-      "status": "planned"
     },
     {
-      "id": "metadata-provenance",
+      "id": "spec-driven-development-for-ai-projects",
       "canonical_language": "en",
-      "languages": ["en", "sl"],
-      "status": "planned"
+      "title": {
+        "en": "Spec-Driven Development for AI Projects",
+        "sl": "Razvoj na podlagi specifikacij za AI projekte",
+        "hr": "Razvoj vođen specifikacijom za AI projekte",
+        "bs": "Razvoj vođen specifikacijom za AI projekte",
+        "sr-Latn": "Razvoj vođen specifikacijom za AI projekte",
+        "sr-Cyrl": "Развој вођен спецификацијом за AI пројекте",
+        "mk": "Развој воден од спецификации за AI проекти",
+        "sq": "Zhvillim i udhëhequr nga specifikimi për projektet me AI",
+        "de": "Spezifikationsgetriebene Entwicklung für KI-Projekte",
+        "it": "Sviluppo guidato dalle specifiche per progetti di IA",
+        "fr": "Développement guidé par les spécifications pour les projets d'IA",
+        "es": "Desarrollo guiado por especificaciones para proyectos de IA"
+      },
+      "languages": [
+        "en",
+        "sl",
+        "hr",
+        "bs",
+        "sr-Latn",
+        "sr-Cyrl",
+        "mk",
+        "sq",
+        "de",
+        "it",
+        "fr",
+        "es"
+      ]
     },
     {
-      "id": "excel-import-deep-dive",
+      "id": "spec-driven-development-in-let-books",
       "canonical_language": "en",
-      "languages": ["en"],
-      "status": "planned"
+      "title": {
+        "en": "Spec-Driven Development in Let Books",
+        "sl": "Razvoj na podlagi specifikacij v Let Books",
+        "hr": "Razvoj vođen specifikacijom u Let Books",
+        "bs": "Razvoj vođen specifikacijom u Let Books",
+        "sr-Latn": "Razvoj vođen specifikacijom u Let Books",
+        "sr-Cyrl": "Развој вођен спецификацијом у Let Books",
+        "mk": "Развој воден од спецификации во Let Books",
+        "sq": "Zhvillim i udhëhequr nga specifikimi në Let Books",
+        "de": "Spezifikationsgetriebene Entwicklung in Let Books",
+        "it": "Sviluppo guidato dalle specifiche in Let Books",
+        "fr": "Développement guidé par les spécifications dans Let Books",
+        "es": "Desarrollo guiado por especificaciones en Let Books"
+      },
+      "languages": [
+        "en",
+        "sl",
+        "hr",
+        "bs",
+        "sr-Latn",
+        "sr-Cyrl",
+        "mk",
+        "sq",
+        "de",
+        "it",
+        "fr",
+        "es"
+      ]
+    },
+    {
+      "id": "when-the-demo-is-evidence-and-when-it-is-not",
+      "canonical_language": "en",
+      "title": {
+        "en": "When the Demo Is Evidence and When It Is Not",
+        "sl": "Kdaj je demo dokaz in kdaj ni",
+        "hr": "Kada je demo dokaz, a kada nije",
+        "bs": "Kada je demo dokaz, a kada nije",
+        "sr-Latn": "Kada je demo dokaz, a kada nije",
+        "sr-Cyrl": "Када је демо доказ, а када није",
+        "mk": "Кога демото е доказ, а кога не е",
+        "sq": "Kur demoja është provë dhe kur nuk është",
+        "de": "Wann das Demo ein Beleg ist und wann nicht",
+        "it": "Quando la demo è prova e quando non lo è",
+        "fr": "Quand la démo est une preuve et quand elle ne l'est pas",
+        "es": "Cuándo la demo es evidencia y cuándo no lo es"
+      },
+      "languages": [
+        "en",
+        "sl",
+        "hr",
+        "bs",
+        "sr-Latn",
+        "sr-Cyrl",
+        "mk",
+        "sq",
+        "de",
+        "it",
+        "fr",
+        "es"
+      ]
     }
   ],
   "languages": [
-    { "code": "en", "label": "English", "native": "English" },
-    { "code": "sl", "label": "Slovenian", "native": "Slovenščina" },
-    { "code": "hr", "label": "Croatian", "native": "Hrvatski" },
-    { "code": "bs", "label": "Bosnian", "native": "Bosanski" },
-    { "code": "sr-Latn", "label": "Serbian Latin", "native": "Srpski latinica" },
-    { "code": "sr-Cyrl", "label": "Serbian Cyrillic", "native": "Српски ћирилица" },
-    { "code": "mk", "label": "Macedonian", "native": "Македонски" },
-    { "code": "sq", "label": "Albanian", "native": "Shqip" },
-    { "code": "de", "label": "German", "native": "Deutsch" },
-    { "code": "it", "label": "Italian", "native": "Italiano" },
-    { "code": "fr", "label": "French", "native": "Français" },
-    { "code": "es", "label": "Spanish", "native": "Español" }
+    {
+      "code": "en",
+      "label": "English",
+      "native": "English"
+    },
+    {
+      "code": "sl",
+      "label": "Slovenian",
+      "native": "Slovenščina"
+    },
+    {
+      "code": "hr",
+      "label": "Croatian",
+      "native": "Hrvatski"
+    },
+    {
+      "code": "bs",
+      "label": "Bosnian",
+      "native": "Bosanski"
+    },
+    {
+      "code": "sr-Latn",
+      "label": "Serbian Latin",
+      "native": "Srpski latinica"
+    },
+    {
+      "code": "sr-Cyrl",
+      "label": "Serbian Cyrillic",
+      "native": "Српски ћирилица"
+    },
+    {
+      "code": "mk",
+      "label": "Macedonian",
+      "native": "Македонски"
+    },
+    {
+      "code": "sq",
+      "label": "Albanian",
+      "native": "Shqip"
+    },
+    {
+      "code": "de",
+      "label": "German",
+      "native": "Deutsch"
+    },
+    {
+      "code": "it",
+      "label": "Italian",
+      "native": "Italiano"
+    },
+    {
+      "code": "fr",
+      "label": "French",
+      "native": "Français"
+    },
+    {
+      "code": "es",
+      "label": "Spanish",
+      "native": "Español"
+    }
   ]
 }

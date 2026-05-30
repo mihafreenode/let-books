@@ -23,6 +23,10 @@ Write the approved source version of each article here before localization.
 ## Related Articles
 
 - [ISBN Is Not a Database](isbn-not-a-database.md) — Why ISBNs are identifiers, not metadata systems
+- [Spec-Driven Development for AI Projects](spec-driven-development-for-ai-projects.md) — Why AI-assisted delivery needs stronger specs, not weaker ones
+- [Spec-Driven Development in Let Books](spec-driven-development-in-let-books.md) — How the project already uses specs, docs, and demo constraints as a delivery system
+- [Documentation Is Part of the Product](documentation-is-part-of-the-product.md) — Why current, reviewable documentation is part of reliable software delivery
+- [When the Demo Is Evidence and When It Is Not](when-the-demo-is-evidence-and-when-it-is-not.md) — How to keep demos useful without letting prototypes silently rewrite the product
 
 ## Related Learning Guides
 

@@ -19,6 +19,7 @@ Every substantial claim should be traceable through repository evidence, externa
 
 - source maps by article or topic
 - research notes by language when needed
+- localized source-map stubs may point back to canonical English evidence maps
 - links to standards, specs, official docs, and academic references
 - `source-map-template.md` for new article source maps
 

@@ -38,6 +38,18 @@ jobs:
       - name: SEO metadata generation (dry-run validation)
         run: node tools/generate-static-seo.mjs
 
+      - name: Index pages generation (dry-run validation)
+        run: node tools/generate-index-pages.mjs
+
+      - name: Topic nav generation (dry-run validation)
+        run: node tools/generate-topic-nav.mjs
+
+      - name: Sitemap generation (dry-run validation)
+        run: node tools/generate-sitemap.mjs
+
+      - name: Articles.json generation (dry-run validation)
+        run: node tools/generate-articles-json.mjs
+
       - name: Docs link and article validation
         run: node tools/validate-blog.mjs
 
@@ -61,6 +73,112 @@ jobs:
             }
             if (!ok) process.exit(1);
             console.log('All ' + m.files.length + ' required pages present');
+          "
+
+      - name: Check blog/learning/wiki index pages exist per locale
+        run: |
+          node -e "
+            const LOCALES = ['en','sl','hr','bs','sr-Latn','sr-Cyrl','mk','sq','de','it','fr','es'];
+            const {existsSync} = require('fs');
+            let ok = true;
+            for (const l of LOCALES) {
+              for (const section of ['blog','learning','wiki']) {
+                const p = 'docs/' + section + '/' + l + '/index.html';
+                if (!existsSync(p)) { console.log('Missing: ' + p); ok = false; }
+              }
+            }
+            if (ok) console.log('All 36 index pages present');
+            else process.exit(1);
+          "
+
+      - name: Validate blog/learning/wiki index localization
+        run: |
+          node -e "
+            const LOCALES = ['en','sl','hr','bs','sr-Latn','sr-Cyrl','mk','sq','de','it','fr','es'];
+            const SECTIONS = ['blog','learning','wiki'];
+            const {readFileSync,existsSync} = require('fs');
+            let ok = true;
+
+            for (const section of SECTIONS) {
+              for (const locale of LOCALES) {
+                const p = 'docs/' + section + '/' + locale + '/index.html';
+                if (!existsSync(p)) { console.log('Missing: ' + p); ok = false; continue; }
+                const c = readFileSync(p, 'utf8');
+
+                // 1. Check hreflang links for all 12 locales
+                for (const l of LOCALES) {
+                  const tag = 'hreflang=\"' + l + '\" href=\"https://letbooks.org/docs/' + section + '/' + l + '/index.html\"';
+                  if (!c.includes(tag)) {
+                    console.log('MISSING hreflang ' + l + ' in: ' + p);
+                    ok = false;
+                  }
+                }
+
+                // 2. Check lang-switch has links to all 12 locales
+                const shortLabels = {
+                  en:'EN', sl:'SL', hr:'HR', bs:'BS',
+                  'sr-Latn':'SR-Latn', 'sr-Cyrl':'SR-Cyrl',
+                  mk:'MK', sq:'SQ', de:'DE', it:'IT', fr:'FR', es:'ES'
+                };
+                for (const l of LOCALES) {
+                  const langLink = 'class=\"lang-link' + (l === locale ? ' is-current' : '') + '\" href=\"' + (l === locale ? 'index.html' : '../../' + section + '/' + l + '/index.html') + '\" lang=\"' + l + '\">' + shortLabels[l];
+                  if (!c.includes(langLink)) {
+                    console.log('MISSING lang-switch link for ' + l + ' in: ' + p);
+                    ok = false;
+                  }
+                }
+
+                // 3. Check footer description is localized (not English on non-English pages)
+                const footerDesc = c.match(/<footer[^>]*>[\s\S]*?<p>([^<]+)<\/p>/);
+                if (locale !== 'en' && footerDesc) {
+                  const engDesc = 'A practical platform for cataloging, offering, and retrieving educational books.';
+                  if (footerDesc[1] === engDesc) {
+                    console.log('ENGLISH footer description in non-English page: ' + p);
+                    ok = false;
+                  }
+                }
+
+                // 4. Check nav links point to same-locale blog/learning/wiki
+                const sections = ['blog','learning','wiki'];
+                const navLabels = {
+                  docs: 'href=\"../../' + locale + '/index.html\"',
+                  blog: 'href=\"../../blog/' + locale + '/index.html\"',
+                  learning: 'href=\"../../learning/' + locale + '/index.html\"',
+                  wiki: 'href=\"../../wiki/' + locale + '/index.html\"'
+                };
+                for (const key of Object.keys(navLabels)) {
+                  if (!c.includes(navLabels[key])) {
+                    console.log('MISSING nav link for ' + key + ' (' + navLabels[key] + ') in: ' + p);
+                    ok = false;
+                  }
+                }
+              }
+            }
+
+            if (ok) console.log('All localization checks passed for ' + (LOCALES.length * SECTIONS.length) + ' index pages');
+            else process.exit(1);
+          "
+
+      - name: Check topic nav present in blog articles
+        run: |
+          node -e "
+            const LOCALES = ['en','sl','hr','bs','sr-Latn','sr-Cyrl','mk','sq','de','it','fr','es'];
+            const ARTICLES = ['spec-driven-development-in-let-books','spec-driven-development-for-ai-projects','documentation-is-part-of-the-product','when-the-demo-is-evidence-and-when-it-is-not'];
+            const {readFileSync,existsSync} = require('fs');
+            let ok = true;
+            for (const l of LOCALES) {
+              for (const a of ARTICLES) {
+                const p = 'docs/blog/' + l + '/' + a + '.html';
+                if (!existsSync(p)) { console.log('Missing: ' + p); ok = false; continue; }
+                const c = readFileSync(p, 'utf8');
+                if (!c.includes('class=\"topic-nav\"')) {
+                  console.log('Missing topic-nav in: ' + p);
+                  ok = false;
+                }
+              }
+            }
+            if (ok) console.log('Topic nav present in all applicable articles');
+            else process.exit(1);
           "
 
       - name: Check favicon manifest

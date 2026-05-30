@@ -1,6 +1,19 @@
 ---
 article_id: your-article-id
 canonical_language: en
+language_variants:
+  - ../en/your-article-id.md
+  - ../sl/your-article-id.md
+  - ../hr/your-article-id.md
+  - ../bs/your-article-id.md
+  - ../sr-Latn/your-article-id.md
+  - ../sr-Cyrl/your-article-id.md
+  - ../mk/your-article-id.md
+  - ../sq/your-article-id.md
+  - ../de/your-article-id.md
+  - ../it/your-article-id.md
+  - ../fr/your-article-id.md
+  - ../es/your-article-id.md
 title: Your Article Title
 summary: One-sentence summary of the article.
 topics:
@@ -26,6 +39,13 @@ Editorial evidence rule:
 - If a feature is already implemented, mention that only as implementation status.
 - Avoid brittle source-code line references.
 - Replace the example evidence, sources, and diagrams above with article-specific doc/spec references before publishing.
+
+Multilingual requirements (see docs/style-guide/localization/README.md):
+- Every article must have language_variants frontmatter listing all 12 locales.
+- Every article must have an "Other Languages" footer section.
+- Every non-English translation needs a source-map stub under docs/sources/<locale>/.
+- Every flagship English article needs a LinkedIn derivative pack under docs/blog/en/linkedin/.
+- Every article (all locales) needs an HTML version alongside the Markdown source.
 -->
 
 Intro paragraph.
@@ -37,3 +57,23 @@ Write claims so they can be traced to specs and docs.
 ## Implementation Status
 
 If needed, note whether the feature is implemented yet.
+
+## Other Languages
+
+<!--
+Required footer for all translated and canonical articles.
+List all other available translations with the locale's native name.
+Remove the canonical language from the list.
+-->
+
+- Slovenščina (../sl/your-article-id.md)
+- Hrvatski (../hr/your-article-id.md)
+- Bosanski (../bs/your-article-id.md)
+- Srpski (latinica) (../sr-Latn/your-article-id.md)
+- Српски (ћирилица) (../sr-Cyrl/your-article-id.md)
+- Македонски (../mk/your-article-id.md)
+- Shqip (../sq/your-article-id.md)
+- Deutsch (../de/your-article-id.md)
+- Italiano (../it/your-article-id.md)
+- Français (../fr/your-article-id.md)
+- Español (../es/your-article-id.md)

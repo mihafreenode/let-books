@@ -20,6 +20,7 @@ This area exists to turn the repository into a traceable, reusable knowledge bas
 - `assets/` will hold reusable knowledge-platform assets
 - `sources/` will hold source maps and evidence records
 - `style-guide/` will hold writing, localization, publishing, and terminology rules
+- `spec-driven-content-program.md` defines the current spec-driven editorial program and publishing sequence
 - existing localized HTML pages under locale folders remain the current public docs surface
 
 ## Related Topics
@@ -36,15 +37,18 @@ This area exists to turn the repository into a traceable, reusable knowledge bas
 
 ## Related Learning Guides
 
-- None yet
+- `learning/how-to-write-a-spec-that-ai-can-follow.md`
+- `learning/how-to-keep-spec-docs-demo-and-code-aligned.md`
 
 ## Related Wiki Pages
 
-- None yet
+- `wiki/spec-driven-development.md`
+- `wiki/demo-spec-alignment.md`
 
 ## Further Reading
 
 - `../README.md`
 - `knowledge-platform-bootstrap.md`
+- `spec-driven-content-program.md`
 - `../AGENTS.md`
 - `../AGENTS-Implementation.md`
