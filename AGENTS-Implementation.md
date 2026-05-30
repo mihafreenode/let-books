@@ -352,3 +352,59 @@ Do not duplicate the full ADB/mobile setup workflow here. Keep all camera/barcod
 - Shared assets should be reused instead of duplicated
 - Prefer small, reviewable additions
 - When future implementation details are discovered during work, add them here unless they belong in the product specification
+
+## Multilingual Blog Diagram Localization
+
+Every diagram used in a localized blog article must have a localized version. Non-English articles must reference localized diagram assets, not English ones. English remains the canonical source.
+
+### Structure
+
+```
+docs/diagrams/blog/<article-id>/
+  en/
+    diagram-name.mmd       # source
+    diagram-name.svg       # rendered
+  sl/
+    diagram-name.mmd
+    diagram-name.svg
+  hr/
+    diagram-name.mmd
+    diagram-name.svg
+  ...
+```
+
+Use the article `id` from `articles.json` as the diagram folder key.
+
+### Localization rules
+
+- Localize all visible text inside diagrams: labels, captions, legends, node names, arrows, and explanatory notes.
+- Keep technical identifiers (ISBN, UUID, etc.) unchanged.
+- Keep brand/source names (Open Library, Google Books, Let Books, etc.) unchanged unless an official localized name exists.
+- Use natural language, not literal translation.
+- Preserve layout as much as possible across languages; adjust spacing if translated labels are longer.
+- For Serbian Cyrillic and Macedonian, ensure proper script and terminology.
+- For Slovenian, preserve `č`, `š`, `ž`.
+- Use correct Unicode for all languages.
+
+### Article update rules
+
+- English articles reference English diagrams (flat `docs/diagrams/` or `docs/diagrams/blog/*/en/`).
+- Each non-English article references diagrams from its language subdirectory.
+- Update both the Markdown body (`![]()` references) and the frontmatter `diagrams:` list.
+- Update both `.md` source and `.html` rendered files.
+
+### CI validation
+
+`tools/validate-blog.mjs` checks that:
+
+- every diagram referenced by a localized article exists on disk
+- non-English pages do not reference `/en/` diagram assets
+- both `.mmd` source and `.svg` rendered files exist for each published language
+- all localized diagram references are valid relative links
+- `articles.json` is used to determine article ids and available languages
+- missing localized diagrams fail CI for published articles
+- missing localized diagrams warn for draft articles
+
+### Rendering
+
+Prefer the existing diagram format (currently Mermaid via `mmdc`). Do not replace diagrams with screenshots. Do not duplicate English SVG text without localizing it.

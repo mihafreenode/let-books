@@ -14,8 +14,8 @@ evidence:
 sources:
   - sources/en/isbn-agency-reference.md
 diagrams:
-  - diagrams/isbn-lookup-chain.svg
-  - diagrams/isbn-vs-physical-book.svg
+  - ../../diagrams/blog/isbn-not-a-database/en/isbn-lookup-chain.svg
+  - ../../diagrams/blog/isbn-not-a-database/en/isbn-vs-physical-book.svg
 status: draft
 ---
 

@@ -14,8 +14,8 @@ evidence:
 sources:
   - sources/en/isbn-not-a-database.md
 diagrams:
-  - diagrams/isbn-lookup-chain.svg
-  - diagrams/isbn-vs-physical-book.svg
+  - ../../diagrams/blog/isbn-not-a-database/es/isbn-lookup-chain.svg
+  - ../../diagrams/blog/isbn-not-a-database/es/isbn-vs-physical-book.svg
 status: draft
 ---
 
@@ -31,7 +31,7 @@ El ISBN identifica la edición, no la obra. Por ejemplo, la segunda y tercera ed
 
 Esta es una precisión útil — pero conlleva limitaciones importantes.
 
-![Diagrama ISBN vs ejemplar físico de libro](../../diagrams/isbn-vs-physical-book.svg)
+![Diagrama ISBN vs ejemplar físico de libro](../../diagrams/blog/isbn-not-a-database/es/isbn-vs-physical-book.svg)
 
 Un ISBN identifica los metadatos de la edición a la izquierda. El ejemplar físico a la derecha — estado, procedencia, ubicación de almacenamiento, estado de donación, fotos — se rastrea por separado en el modelo de dominio de Let Books. Ambos están relacionados pero no son lo mismo.
 
@@ -61,7 +61,7 @@ Existen ISBN mal impresos. Un mismo ISBN puede ser reutilizado accidentalmente p
 
 La cadena de búsqueda de metadatos en la demo estática de Let Books sigue una estrategia práctica de respaldo, implementada en `static-demo/app.js:2269`:
 
-![Diagrama de la cadena de búsqueda de ISBN](../../diagrams/isbn-lookup-chain.svg)
+![Diagrama de la cadena de búsqueda de ISBN](../../diagrams/blog/isbn-not-a-database/es/isbn-lookup-chain.svg)
 
 1. Normaliza y valida el ISBN. Elimina espacios y guiones, convierte la X a mayúscula, valida el dígito de control.
 2. Consulta primero Open Library a través de su API pública.

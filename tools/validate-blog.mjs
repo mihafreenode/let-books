@@ -16,6 +16,10 @@ let hreflangEntriesValid = 0;
 let brokenLinks = 0;
 let missingTranslations = 0;
 let linksChecked = 0;
+let diagramRefsChecked = 0;
+let localizedDiagramsFound = 0;
+let englishLeaks = 0;
+let missingDraftDiagrams = 0;
 
 function fail(msg) {
   errors.push(msg);
@@ -441,6 +445,113 @@ function rel(absPath) {
   return path.relative(ROOT, absPath);
 }
 
+// --- Diagram Validation ---
+
+function parseFrontmatter(content) {
+  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return null;
+  const yaml = match[1];
+  const result = {};
+  const lines = yaml.split('\n');
+  let currentKey = null;
+  let currentArray = null;
+  for (const line of lines) {
+    const keyMatch = line.match(/^(\w+):\s*(.*)/);
+    if (keyMatch) {
+      if (currentArray !== null) {
+        result[currentKey] = currentArray;
+        currentArray = null;
+      }
+      currentKey = keyMatch[1];
+      const val = keyMatch[2].trim();
+      if (val === '' || val === '[') {
+        currentArray = [];
+      } else {
+        result[currentKey] = val;
+      }
+    } else if (currentArray !== null) {
+      const itemMatch = line.match(/^\s*-\s+(.+)/);
+      if (itemMatch) {
+        currentArray.push(itemMatch[1].trim());
+      }
+    }
+  }
+  if (currentArray !== null) {
+    result[currentKey] = currentArray;
+  }
+  return result;
+}
+
+function validateLocalizedDiagrams(data) {
+  const diagramDir = path.join(ROOT, 'docs/diagrams/blog');
+  console.log('  Checking diagram localization...\n');
+
+  for (const article of data.articles) {
+    for (const lang of article.languages) {
+      const mdPath = path.join(BLOG_DIR, lang, `${article.id}.md`);
+      if (!existsOnDisk(mdPath)) {
+        continue;
+      }
+      const content = fs.readFileSync(mdPath, 'utf8');
+      const frontmatter = parseFrontmatter(content);
+      if (!frontmatter || !frontmatter.diagrams) {
+        continue;
+      }
+
+      const isCanonical = lang === article.canonical_language;
+      const status = frontmatter.status || 'published';
+
+      for (const diagramPath of frontmatter.diagrams) {
+        diagramRefsChecked++;
+
+        // Resolve the diagram reference relative to the MD file
+        const resolvedSvg = resolvePath(path.dirname(mdPath), diagramPath);
+        if (!resolvedSvg) {
+          fail(`${rel(mdPath)}: could not resolve diagram "${diagramPath}"`);
+          continue;
+        }
+
+        // Check rendered SVG exists
+        if (existsOnDisk(resolvedSvg)) {
+          localizedDiagramsFound++;
+        } else {
+          const msg = `${rel(mdPath)}: diagram SVG not found at "${diagramPath}"`;
+          if (status === 'draft') {
+            warn(`${msg} (draft article)`);
+            missingDraftDiagrams++;
+          } else {
+            fail(msg);
+          }
+          continue;
+        }
+
+        // Check source file exists
+        const svgPath = resolvedSvg;
+        const sourcePath = svgPath.replace(/\.svg$/, '.mmd');
+        if (!existsOnDisk(sourcePath)) {
+          const msg = `${rel(mdPath)}: diagram source not found at "${rel(sourcePath)}" (svg exists at "${diagramPath}")`;
+          if (status === 'draft') {
+            warn(`${msg} (draft article)`);
+          } else {
+            fail(msg);
+          }
+        }
+
+        // Check for English diagram leaks on non-English pages
+        if (!isCanonical) {
+          const diagramRel = rel(resolvedSvg);
+          if (diagramRel.includes('/en/')) {
+            fail(`${rel(mdPath)}: non-English page ("${lang}") references English diagram "${diagramRel}"`);
+            englishLeaks++;
+          }
+        }
+      }
+    }
+  }
+}
+
+// --- End Diagram Validation ---
+
 function main() {
   console.log('Blog article validation\n');
 
@@ -462,6 +573,7 @@ function main() {
   checkNavigationConsistency();
   checkBlogCardLinks();
   checkNoObsoleteBlogPaths();
+  validateLocalizedDiagrams(data);
 
   console.log(`\n\  Blog articles checked: ${articlesChecked}`);
   console.log(`  Language variants checked: ${languageVariantsChecked}`);
@@ -469,9 +581,16 @@ function main() {
   console.log(`  Language links valid: ${languageLinksValid}`);
   console.log(`  hreflang entries valid: ${hreflangEntriesValid}`);
   console.log(`  Broken links: ${brokenLinks}`);
+  console.log(`  Articles checked: ${articlesChecked}`);
+  console.log(`  Diagram references checked: ${diagramRefsChecked}`);
+  console.log(`  Localized diagrams found: ${localizedDiagramsFound}`);
+  console.log(`  English diagram leaks on localized pages: ${englishLeaks}`);
 
   if (missingTranslations > 0) {
     console.log(`  ${String.fromCodePoint(0x26A0)} Missing translations: ${missingTranslations}`);
+  }
+  if (missingDraftDiagrams > 0) {
+    console.log(`  ${String.fromCodePoint(0x26A0)} Missing draft diagrams: ${missingDraftDiagrams}`);
   }
   if (warnings.length > 0) {
     console.log(`  ${String.fromCodePoint(0x26A0)} Warnings: ${warnings.length}`);

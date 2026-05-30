@@ -1,0 +1,20 @@
+---
+title: Cadena de búsqueda de metadatos ISBN
+---
+flowchart TD
+    A(["ISBN ingresado"]) --> B[Normalizar y validar]
+    B --> C{Dígito de<br/>control válido?}
+    C -->|No| D["Mostrar error de validación"]
+    D --> E["Ingreso manual<br/>(siempre disponible)"]
+    C -->|Sí| F["Consultar Open Library"]
+    F --> G{¿Metadatos útiles<br/>encontrados?}
+    G -->|Sí| H["Devolver metadatos<br/>Proveedor: Open Library"]
+    G -->|No / No disponible| I["Consultar API de<br/>metadatos de Let Books"]
+    I --> J{¿Metadatos útiles<br/>encontrados?}
+    J -->|Sí| K["Devolver metadatos<br/>Proveedor: Let Books API"]
+    J -->|No / No disponible| E
+
+    style H fill:#e8f5e9,stroke:#2e7d32
+    style K fill:#e8f5e9,stroke:#2e7d32
+    style E fill:#fff3e0,stroke:#e65100
+    style D fill:#ffebee,stroke:#c62828

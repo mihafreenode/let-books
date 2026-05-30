@@ -1,0 +1,20 @@
+---
+title: Veriga iskanja metapodatkov ISBN
+---
+flowchart TD
+    A(["Vnos ISBN"]) --> B[Normaliziraj in potrdi]
+    B --> C{Kontrolna vsota<br/>veljavna?}
+    C -->|Ne| D["Prikaži napako pri validaciji"]
+    D --> E["Ročni vnos<br/>(vedno na voljo)"]
+    C -->|Da| F["Poizvedi pri Open Library"]
+    F --> G{Uporabni<br/>metapodatki?}
+    G -->|Da| H["Vrni metapodatke<br/>Vir: Open Library"]
+    G -->|Ne / Nedosegljiv| I["Poizvedi pri Let Books<br/>metapodatkovnem API"]
+    I --> J{Uporabni<br/>metapodatki?}
+    J -->|Da| K["Vrni metapodatke<br/>Vir: Let Books API"]
+    J -->|Ne / Nedosegljiv| E
+
+    style H fill:#e8f5e9,stroke:#2e7d32
+    style K fill:#e8f5e9,stroke:#2e7d32
+    style E fill:#fff3e0,stroke:#e65100
+    style D fill:#ffebee,stroke:#c62828

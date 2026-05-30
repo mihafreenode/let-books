@@ -14,8 +14,8 @@ evidence:
 sources:
   - sources/en/isbn-not-a-database.md
 diagrams:
-  - diagrams/isbn-lookup-chain.svg
-  - diagrams/isbn-vs-physical-book.svg
+  - ../../diagrams/blog/isbn-not-a-database/fr/isbn-lookup-chain.svg
+  - ../../diagrams/blog/isbn-not-a-database/fr/isbn-vs-physical-book.svg
 status: draft
 ---
 
@@ -31,7 +31,7 @@ L'ISBN identifie l'édition, pas l'œuvre. Par exemple, les 2e et 3e éditions d
 
 C'est une précision utile — mais elle comporte des limitations importantes.
 
-![Diagramme ISBN vs exemplaire physique de livre](../../diagrams/isbn-vs-physical-book.svg)
+![Diagramme ISBN vs exemplaire physique de livre](../../diagrams/blog/isbn-not-a-database/fr/isbn-vs-physical-book.svg)
 
 Un ISBN identifie les métadonnées de l'édition à gauche. L'exemplaire physique à droite — état, provenance, lieu de stockage, statut du don, photos — est suivi séparément dans le modèle de domaine de Let Books. Les deux sont liés mais ne sont pas la même chose.
 
@@ -61,7 +61,7 @@ Des ISBN mal imprimés existent. Un même ISBN peut être accidentellement réut
 
 La chaîne de recherche de métadonnées dans la démo statique de Let Books suit une stratégie de repli pratique, implémentée dans `static-demo/app.js:2269` :
 
-![Diagramme de la chaîne de recherche ISBN](../../diagrams/isbn-lookup-chain.svg)
+![Diagramme de la chaîne de recherche ISBN](../../diagrams/blog/isbn-not-a-database/fr/isbn-lookup-chain.svg)
 
 1. Normalisez et validez l'ISBN. Supprimez les espaces et les tirets, mettez le X en majuscule, validez le chiffre de contrôle.
 2. Interrogez d'abord Open Library via son API publique.

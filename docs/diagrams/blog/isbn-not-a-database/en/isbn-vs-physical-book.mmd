@@ -1,0 +1,28 @@
+---
+title: ISBN vs Physical Book Copy
+---
+flowchart LR
+    subgraph ISBN["ISBN (Edition-level identifier)"]
+        direction TB
+        I1["Title"]
+        I2["Author(s)"]
+        I3["Publisher"]
+        I4["Publication year"]
+        I5["Language"]
+        I6["ISBN-10 / ISBN-13"]
+    end
+
+    subgraph Physical["Physical Book Copy (Instance)"]
+        direction TB
+        P1["Condition<br/>(Like New / Good / Poor)"]
+        P2["Provenance<br/>(signature, stamp, history)"]
+        P3["Storage location<br/>(room → shelf → box)"]
+        P4["Donation status<br/>(offered, requested, picked)"]
+        P5["Photos<br/>(cover, title page, damage)"]
+        P6["Private notes"]
+    end
+
+    ISBN -.->|"identifies the<br/>edition"| Physical
+
+    style ISBN fill:#e3f2fd,stroke:#1565c0
+    style Physical fill:#f3e5f5,stroke:#7b1fa2

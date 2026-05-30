@@ -1,0 +1,20 @@
+---
+title: Lanac pretraživanja metapodataka ISBN
+---
+flowchart TD
+    A(["Unos ISBN"]) --> B[Normaliziraj i potvrdi]
+    B --> C{Kontrolna cifra<br/>ispravna?}
+    C -->|Ne| D["Pokaži grešku validacije"]
+    D --> E["Ručni unos<br/>(uvijek dostupan)"]
+    C -->|Da| F["Upitaj Open Library"]
+    F --> G{Pronađeni korisni<br/>metapodaci?}
+    G -->|Da| H["Vrati metapodatke<br/>Pružatelj: Open Library"]
+    G -->|Ne / Nedostupno| I["Upitaj Let Books<br/>metapodatkovni API"]
+    I --> J{Pronađeni korisni<br/>metapodaci?}
+    J -->|Da| K["Vrati metapodatke<br/>Pružatelj: Let Books API"]
+    J -->|Ne / Nedostupno| E
+
+    style H fill:#e8f5e9,stroke:#2e7d32
+    style K fill:#e8f5e9,stroke:#2e7d32
+    style E fill:#fff3e0,stroke:#e65100
+    style D fill:#ffebee,stroke:#c62828

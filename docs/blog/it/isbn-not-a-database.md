@@ -14,8 +14,8 @@ evidence:
 sources:
   - sources/en/isbn-not-a-database.md
 diagrams:
-  - diagrams/isbn-lookup-chain.svg
-  - diagrams/isbn-vs-physical-book.svg
+  - ../../diagrams/blog/isbn-not-a-database/it/isbn-lookup-chain.svg
+  - ../../diagrams/blog/isbn-not-a-database/it/isbn-vs-physical-book.svg
 status: draft
 ---
 
@@ -31,7 +31,7 @@ L'ISBN identifica l'edizione, non l'opera. Ad esempio, la seconda e la terza edi
 
 Questa è una precisione utile — ma comporta importanti limitazioni.
 
-![Diagramma ISBN vs copia fisica del libro](../../diagrams/isbn-vs-physical-book.svg)
+![Diagramma ISBN vs copia fisica del libro](../../diagrams/blog/isbn-not-a-database/it/isbn-vs-physical-book.svg)
 
 Un ISBN identifica i metadati dell'edizione a sinistra. La copia fisica a destra — condizioni, provenienza, posizione di archiviazione, stato della donazione, foto — è tracciata separatamente nel modello di dominio di Let Books. I due sono correlati ma non sono la stessa cosa.
 
@@ -61,7 +61,7 @@ Esistono ISBN stampati erroneamente. Lo stesso ISBN può essere accidentalmente 
 
 La catena di ricerca dei metadati nella demo statica di Let Books segue una strategia pratica di fallback, implementata in `static-demo/app.js:2269`:
 
-![Diagramma della catena di ricerca ISBN](../../diagrams/isbn-lookup-chain.svg)
+![Diagramma della catena di ricerca ISBN](../../diagrams/blog/isbn-not-a-database/it/isbn-lookup-chain.svg)
 
 1. Normalizza e convalida l'ISBN. Rimuovi spazi e trattini, porta la X in maiuscolo, convalida il carattere di controllo.
 2. Interroga prima Open Library tramite la sua API pubblica.

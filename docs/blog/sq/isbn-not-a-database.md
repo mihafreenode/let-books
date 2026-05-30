@@ -14,8 +14,8 @@ evidence:
 sources:
   - sources/en/isbn-not-a-database.md
 diagrams:
-  - diagrams/isbn-lookup-chain.svg
-  - diagrams/isbn-vs-physical-book.svg
+  - ../../diagrams/blog/isbn-not-a-database/sq/isbn-lookup-chain.svg
+  - ../../diagrams/blog/isbn-not-a-database/sq/isbn-vs-physical-book.svg
 status: draft
 ---
 
@@ -31,7 +31,7 @@ ISBN identifikon botimin, jo veprën. Për shembull, botimi i dytë dhe i tretë
 
 Kjo është precizion i dobishëm — por vjen me kufizime të rëndësishme.
 
-![Diagrami ISBN kundrejt kopjes fizike të librit](../../diagrams/isbn-vs-physical-book.svg)
+![Diagrami ISBN kundrejt kopjes fizike të librit](../../diagrams/blog/isbn-not-a-database/sq/isbn-vs-physical-book.svg)
 
 ISBN identifikon metatëdhënat e botimit në të majtë. Kopja fizike në të djathtë — gjendja, provenienca, vendndodhja e ruajtjes, statusi i dhurimit, fotot — gjurmohet veçmas në modelin domenor të Let Books. Të dyja janë të lidhura por nuk janë e njëjta gjë.
 
@@ -61,7 +61,7 @@ Ekzistojnë ISBN të shtypur gabimisht. I njëjti ISBN mund të ripërdoret aksi
 
 Zinxhiri i kërkimit të metatëdhënave në demon statik të Let Books ndjek një strategji praktike të rënies, të implementuar në `static-demo/app.js:2269`:
 
-![Diagrami i zinxhirit të kërkimit të ISBN](../../diagrams/isbn-lookup-chain.svg)
+![Diagrami i zinxhirit të kërkimit të ISBN](../../diagrams/blog/isbn-not-a-database/sq/isbn-lookup-chain.svg)
 
 1. Normalizo dhe verifiko ISBN-in. Hiq hapësirat dhe vizat, X-in ktheje në të madhe, verifiko shifrën e kontrollit.
 2. Kërko së pari Open Library përmes API-t publik.

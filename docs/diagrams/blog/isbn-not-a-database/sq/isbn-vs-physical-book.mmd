@@ -1,0 +1,28 @@
+---
+title: ISBN kundrejt kopjes fizike të librit
+---
+flowchart LR
+    subgraph ISBN["ISBN (identifikues i botimit)"]
+        direction TB
+        I1["Titulli"]
+        I2["Autori(t)"]
+        I3["Botuesi"]
+        I4["Viti i botimit"]
+        I5["Gjuha"]
+        I6["ISBN-10 / ISBN-13"]
+    end
+
+    subgraph Physical["Kopja fizike e librit (instanca)"]
+        direction TB
+        P1["Gjendja<br/>(si e re / mirë / keq)"]
+        P2["Provenienca<br/>(nënshkrim, vulë, histori)"]
+        P3["Vendndodhja e ruajtjes<br/>(dhomë → raft → kuti)"]
+        P4["Statusi i dhurimit<br/>(oftuar, kërkuar, marrë)"]
+        P5["Fotot<br/>(kopertina, faqja e titullit, dëmtimet)"]
+        P6["Shënime private"]
+    end
+
+    ISBN -.->|"identifikon<br/>botimin"| Physical
+
+    style ISBN fill:#e3f2fd,stroke:#1565c0
+    style Physical fill:#f3e5f5,stroke:#7b1fa2

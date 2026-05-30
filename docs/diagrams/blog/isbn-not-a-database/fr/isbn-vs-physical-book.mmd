@@ -1,0 +1,28 @@
+---
+title: ISBN vs exemplaire physique de livre
+---
+flowchart LR
+    subgraph ISBN["ISBN (identifiant d'édition)"]
+        direction TB
+        I1["Titre"]
+        I2["Auteur(s)"]
+        I3["Éditeur"]
+        I4["Année de publication"]
+        I5["Langue"]
+        I6["ISBN-10 / ISBN-13"]
+    end
+
+    subgraph Physical["Exemplaire physique de livre (instance)"]
+        direction TB
+        P1["État<br/>(comme neuf / bon / mauvais)"]
+        P2["Provenance<br/>(signature, tampon, historique)"]
+        P3["Lieu de stockage<br/>(pièce → étagère → boîte)"]
+        P4["Statut du don<br/>(offert, demandé, retiré)"]
+        P5["Photos<br/>(couverture, page de titre, dommages)"]
+        P6["Notes privées"]
+    end
+
+    ISBN -.->|"identifie<br/>l'édition"| Physical
+
+    style ISBN fill:#e3f2fd,stroke:#1565c0
+    style Physical fill:#f3e5f5,stroke:#7b1fa2

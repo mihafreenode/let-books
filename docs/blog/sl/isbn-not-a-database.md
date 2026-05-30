@@ -14,8 +14,8 @@ evidence:
 sources:
   - sources/en/isbn-not-a-database.md
 diagrams:
-  - diagrams/isbn-lookup-chain.svg
-  - diagrams/isbn-vs-physical-book.svg
+  - ../../diagrams/blog/isbn-not-a-database/sl/isbn-lookup-chain.svg
+  - ../../diagrams/blog/isbn-not-a-database/sl/isbn-vs-physical-book.svg
 status: draft
 ---
 
@@ -31,7 +31,7 @@ ISBN identificira izdajo, ne dela. Drugi in tretji izdaji istega učbenika imata
 
 To je uporabna natančnost — vendar prinaša pomembne omejitve.
 
-![Diagram ISBN v fizični izvod knjige](../../diagrams/isbn-vs-physical-book.svg)
+![Diagram ISBN v fizični izvod knjige](../../diagrams/blog/isbn-not-a-database/sl/isbn-vs-physical-book.svg)
 
 ISBN identificira metapodatke izdaje na levi strani. Fizični izvod na desni — stanje, provenienca, lokacija shranjevanja, status donacije, fotografije — se v domenskem modelu Let Books vodi ločeno. Oboje je povezano, vendar ni isto.
 
@@ -61,7 +61,7 @@ Obstajajo napačno natisnjeni ISBNi. Isti ISBN lahko pomotoma uporabijo različn
 
 Veriga iskanja metapodatkov v statičnem demo okolju Let Books sledi praktični strategiji padanja, implementirani v `static-demo/app.js:2269`:
 
-![Diagram verige iskanja ISBN](../../diagrams/isbn-lookup-chain.svg)
+![Diagram verige iskanja ISBN](../../diagrams/blog/isbn-not-a-database/sl/isbn-lookup-chain.svg)
 
 1. Normaliziraj in potrdi ISBN. Odstrani presledke in vezaje, postavi X kot veliko črko, preveri kontrolno vsoto.
 2. Najprej poizvedi pri Open Library prek njihovega javnega vmesnika.

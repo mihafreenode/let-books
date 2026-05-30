@@ -1,0 +1,20 @@
+---
+title: Zinxhiri i kërkimit të metatëdhënave ISBN
+---
+flowchart TD
+    A(["ISBN i futur"]) --> B[Normalizo dhe verifiko]
+    B --> C{Shifra e kontrollit<br/>e vlefshme?}
+    C -->|Jo| D["Shfaq gabim validimi"]
+    D --> E["Regjistrim manual<br/>(gjithmonë i disponueshëm)"]
+    C -->|Po| F["Kërko Open Library"]
+    F --> G{U gjetën metatëdhëna<br/>të dobishme?}
+    G -->|Po| H["Kthe metatëdhëna<br/>Ofrues: Open Library"]
+    G -->|Jo / Pa disponueshmëri| I["Kërko API-n e<br/>metatëdhënave Let Books"]
+    I --> J{U gjetën metatëdhëna<br/>të dobishme?}
+    J -->|Po| K["Kthe metatëdhëna<br/>Ofrues: Let Books API"]
+    J -->|Jo / Pa disponueshmëri| E
+
+    style H fill:#e8f5e9,stroke:#2e7d32
+    style K fill:#e8f5e9,stroke:#2e7d32
+    style E fill:#fff3e0,stroke:#e65100
+    style D fill:#ffebee,stroke:#c62828
