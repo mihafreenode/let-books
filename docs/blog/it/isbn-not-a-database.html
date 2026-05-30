@@ -103,7 +103,7 @@
           <p>Esistono ISBN stampati erroneamente. Lo stesso ISBN può essere accidentalmente riutilizzato da diversi editori. L'OCR può leggere male le cifre. Il carattere di controllo rileva errori di una singola cifra, ma non tutti.</p>
 
           <h2>Come Let Books gestisce l'ISBN</h2>
-          <p>La catena di ricerca dei metadati nella demo statica di Let Books segue una strategia pratica di fallback, implementata in <code>static-demo/app.js:2269</code>:</p>
+          <p><code>docs/book-metadata.md</code> definisce una strategia pratica di fallback per la ricerca basata su ISBN. Il documento indica anche che questo flusso funziona nell'attuale demo alpha e allo stesso tempo funge da modello per la futura applicazione completa:</p>
 
           <figure class="image-card blog-figure">
             <img src="../../diagrams/blog/isbn-not-a-database/it/isbn-lookup-chain.svg" alt="Diagramma della catena di ricerca ISBN">
@@ -118,7 +118,7 @@
 
           <p>L'inserimento manuale non viene mai bloccato. Se tutti i fornitori falliscono &mdash; sia per un errore di rete, limitazione di velocità o assenza effettiva di dati &mdash; l'utente può inserire manualmente titolo, autore, editore e anno e continuare la catalogazione.</p>
           <p>La catena di fallback è volutamente semplice. Non esiste un singolo punto di errore perché nessun fornitore è obbligatorio. Ogni fornitore è opzionale e indipendentemente sostituibile.</p>
-          <p>Le prove di questa catena nel repository si trovano in <code>static-demo/app.js</code> (la funzione <code>lookupMetadataByIsbn</code> alla riga 2316 e le due funzioni di recupero che la seguono) e in <code>docs/book-metadata.md</code> (la documentazione dell'architettura).</p>
+          <p>I riferimenti canonici del repository per questa catena sono <code>docs/book-metadata.md</code> e <code>AGENTS.md</code>. Se una demo o una build specifica dell'applicazione implementa già parte di questo flusso, indicatelo solo come stato di implementazione, non come evidenza principale.</p>
 
           <h2>Perché questo è importante per le donazioni di libri</h2>
           <p>Quando un donatore cataloga una collezione di libri accademici, alcuni avranno un ISBN e altri no. I libri senza ISBN sono spesso i più interessanti &mdash; edizioni più vecchie, materiali pubblicati localmente, compilazioni per corsi specifici o libri di editori dell'ex Jugoslavia i cui identificatori non sono mai arrivati nei database globali.</p>

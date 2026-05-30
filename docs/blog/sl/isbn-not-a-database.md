@@ -9,7 +9,6 @@ topics:
   - book-donation
 evidence:
   - docs/book-metadata.md
-  - static-demo/app.js
   - AGENTS.md
 sources:
   - sources/en/isbn-not-a-database.md
@@ -59,7 +58,7 @@ Obstajajo napačno natisnjeni ISBNi. Isti ISBN lahko pomotoma uporabijo različn
 
 ## Kako Let Books ravna z ISBNom
 
-Veriga iskanja metapodatkov v statičnem demo okolju Let Books sledi praktični strategiji padanja, implementirani v `static-demo/app.js:2269`:
+`docs/book-metadata.md` določa praktično strategijo padanja za iskanje po ISBN-u. Dokument tudi navaja, da ta tok deluje v trenutnem alfa demu in hkrati služi kot vzorec za prihodnjo polno aplikacijo:
 
 ![Diagram verige iskanja ISBN](../../diagrams/blog/isbn-not-a-database/sl/isbn-lookup-chain.svg)
 
@@ -72,7 +71,7 @@ Ročni vnos ni nikoli blokiran. Če vsi viri odpovejo — bodisi zaradi napake v
 
 Veriga padanja je namenoma preprosta. Ni ene same točke odpovedi, ker noben vir ni obvezen. Vsak vir je izbirno in neodvisno zamenljiv.
 
-Dokazi za to verigo v repozitoriju so v `static-demo/app.js` (funkcija `lookupMetadataByIsbn` v vrstici 2316 in dve sledeči funkciji za poizvedovanje pri ponudnikih) ter v `docs/book-metadata.md` (arhitekturna dokumentacija).
+Kanonična repozitorijska sklica za to verigo sta `docs/book-metadata.md` in `AGENTS.md`. Če določeni demo ali konkretna gradnja aplikacije že izvaja del tega toka, to navedite le kot stanje implementacije, ne kot primarni dokaz.
 
 ## Zakaj je to pomembno za podarjanje knjig
 
@@ -80,7 +79,7 @@ Ko darovalec katalogizira zbirko akademskih knjig, bodo imele nekatere ISBN, dru
 
 Postopek katalogizacije ne sme kaznovati darovalca zaradi manjkajočih ISBNov. Vsaka funkcija, ki deluje z iskanjem ISBN, mora delovati tudi brez njega: sledenje lokaciji, nalaganje fotografij, izvoz v Excel, skupinski pregled. ISBN je pripomoček, ne zahteva.
 
-To načelo je neposredno navedeno v projektni specifikaciji v `AGENTS.md:642`:
+To načelo je neposredno navedeno v projektni specifikaciji v `AGENTS.md`:
 
 > Model mora dovoljevati nepopolne podatke. ISBN ni obvezen.
 

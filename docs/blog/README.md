@@ -10,11 +10,20 @@ English should be the canonical source language, with translated variants linked
 
 Use this area for technical articles, public-interest essays, project reflections, and future long-form writing based on repository evidence.
 
+## Evidence Rules
+
+- Blog articles and related source maps must treat specifications and documentation as the canonical repository evidence.
+- Allowed repository evidence includes `docs/**`, `AGENTS.md`, `AGENTS-Implementation.md`, and other top-level documentation files such as `README.md`.
+- Do not quote or cite `static-demo/`, `src/`, `tests/`, or other app source files as editorial evidence.
+- If a feature exists in a current demo or app build, mention that only as implementation status, not as the primary source of truth.
+- Avoid brittle source-code line references in blog content. If you keep file references in Markdown, they must be maintained when those docs or specs move.
+
 ## Structure
 
 - one subdirectory per language
 - one stable `article_id` across all translations
 - one source map per substantial article
+- `article-template.md` for new canonical article drafts
 
 ## Related Topics
 
@@ -51,3 +60,4 @@ Use this area for technical articles, public-interest essays, project reflection
 - `../style-guide/publishing/README.md`
 - `../style-guide/localization/README.md`
 - `../sources/README.md`
+- `article-template.md`

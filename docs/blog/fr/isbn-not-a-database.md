@@ -9,7 +9,6 @@ topics:
   - book-donation
 evidence:
   - docs/book-metadata.md
-  - static-demo/app.js
   - AGENTS.md
 sources:
   - sources/en/isbn-not-a-database.md
@@ -59,7 +58,7 @@ Des ISBN mal imprimés existent. Un même ISBN peut être accidentellement réut
 
 ## Comment Let Books gère l'ISBN
 
-La chaîne de recherche de métadonnées dans la démo statique de Let Books suit une stratégie de repli pratique, implémentée dans `static-demo/app.js:2269` :
+`docs/book-metadata.md` définit une stratégie pratique de repli pour la recherche par ISBN. Le document indique aussi que ce flux fonctionne dans la démo alpha actuelle tout en servant de modèle pour l'application complète à venir :
 
 ![Diagramme de la chaîne de recherche ISBN](../../diagrams/blog/isbn-not-a-database/fr/isbn-lookup-chain.svg)
 
@@ -72,7 +71,7 @@ La saisie manuelle n'est jamais bloquée. Si tous les fournisseurs échouent —
 
 La chaîne de repli est délibérément simple. Il n'y a pas de point de défaillance unique car aucun fournisseur n'est obligatoire. Chaque fournisseur est optionnel et indépendamment remplaçable.
 
-Les preuves de cette chaîne dans le dépôt se trouvent dans `static-demo/app.js` (la fonction `lookupMetadataByIsbn` à la ligne 2316 et les deux fonctions de récupération qui la suivent) et dans `docs/book-metadata.md` (la documentation d'architecture).
+Les références canoniques du dépôt pour cette chaîne sont `docs/book-metadata.md` et `AGENTS.md`. Si une démo ou une version précise de l'application implémente déjà une partie de ce flux, mentionnez-le uniquement comme état d'implémentation, et non comme preuve principale.
 
 ## Pourquoi cela importe pour les dons de livres
 

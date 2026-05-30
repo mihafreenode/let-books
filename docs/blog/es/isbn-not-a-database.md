@@ -9,7 +9,6 @@ topics:
   - book-donation
 evidence:
   - docs/book-metadata.md
-  - static-demo/app.js
   - AGENTS.md
 sources:
   - sources/en/isbn-not-a-database.md
@@ -59,7 +58,7 @@ Existen ISBN mal impresos. Un mismo ISBN puede ser reutilizado accidentalmente p
 
 ## Cómo maneja Let Books el ISBN
 
-La cadena de búsqueda de metadatos en la demo estática de Let Books sigue una estrategia práctica de respaldo, implementada en `static-demo/app.js:2269`:
+`docs/book-metadata.md` define una estrategia práctica de respaldo para la búsqueda por ISBN. El documento también indica que este flujo funciona en la demo alfa actual y al mismo tiempo sirve como patrón para la futura aplicación completa:
 
 ![Diagrama de la cadena de búsqueda de ISBN](../../diagrams/blog/isbn-not-a-database/es/isbn-lookup-chain.svg)
 
@@ -72,7 +71,7 @@ La entrada manual nunca se bloquea. Si todos los proveedores fallan — ya sea p
 
 La cadena de respaldo es deliberadamente simple. No hay un único punto de fallo porque ningún proveedor es obligatorio. Cada proveedor es opcional e independientemente reemplazable.
 
-Las evidencias de esta cadena en el repositorio están en `static-demo/app.js` (la función `lookupMetadataByIsbn` en la línea 2316 y las dos funciones de obtención que la siguen) y en `docs/book-metadata.md` (la documentación de arquitectura).
+Las referencias canónicas del repositorio para esta cadena son `docs/book-metadata.md` y `AGENTS.md`. Si una demo o compilación concreta de la aplicación ya implementa parte de este flujo, menciónelo solo como estado de implementación, no como evidencia principal.
 
 ## Por qué esto importa para las donaciones de libros
 

@@ -103,7 +103,7 @@
           <p>Des ISBN mal imprimés existent. Un même ISBN peut être accidentellement réutilisé par différents éditeurs. L'OCR peut mal lire les chiffres. Le chiffre de contrôle détecte les erreurs d'un seul chiffre, mais pas toutes.</p>
 
           <h2>Comment Let Books gère l'ISBN</h2>
-          <p>La chaîne de recherche de métadonnées dans la démo statique de Let Books suit une stratégie de repli pratique, implémentée dans <code>static-demo/app.js:2269</code> :</p>
+          <p><code>docs/book-metadata.md</code> définit une stratégie pratique de repli pour la recherche par ISBN. Le document indique aussi que ce flux fonctionne dans la démo alpha actuelle tout en servant de modèle pour l'application complète à venir :</p>
 
           <figure class="image-card blog-figure">
             <img src="../../diagrams/blog/isbn-not-a-database/fr/isbn-lookup-chain.svg" alt="Diagramme de la chaîne de recherche ISBN">
@@ -118,7 +118,7 @@
 
           <p>La saisie manuelle n'est jamais bloquée. Si tous les fournisseurs échouent &mdash; que ce soit en raison d'une erreur réseau, d'une limitation de débit ou d'une absence réelle de données &mdash; l'utilisateur peut saisir manuellement le titre, l'auteur, l'éditeur et l'année et continuer le catalogage.</p>
           <p>La chaîne de repli est délibérément simple. Il n'y a pas de point de défaillance unique car aucun fournisseur n'est obligatoire. Chaque fournisseur est optionnel et indépendamment remplaçable.</p>
-          <p>Les preuves de cette chaîne dans le dépôt se trouvent dans <code>static-demo/app.js</code> (la fonction <code>lookupMetadataByIsbn</code> à la ligne 2316 et les deux fonctions de récupération qui la suivent) et dans <code>docs/book-metadata.md</code> (la documentation d'architecture).</p>
+          <p>Les références canoniques du dépôt pour cette chaîne sont <code>docs/book-metadata.md</code> et <code>AGENTS.md</code>. Si une démo ou une version précise de l'application implémente déjà une partie de ce flux, mentionnez-le uniquement comme état d'implémentation, et non comme preuve principale.</p>
 
           <h2>Pourquoi cela importe pour les dons de livres</h2>
           <p>Lorsqu'un donateur catalogue une collection de livres académiques, certains auront un ISBN et d'autres non. Les livres sans ISBN sont souvent les plus intéressants &mdash; éditions plus anciennes, documents publiés localement, compilations pour des cours spécifiques ou livres d'éditeurs de l'ex-Yougoslavie dont les identifiants n'ont jamais atteint les bases de données mondiales.</p>

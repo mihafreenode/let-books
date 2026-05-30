@@ -103,7 +103,7 @@
           <p>Ekzistojnë ISBN të shtypur gabimisht. I njëjti ISBN mund të ripërdoret aksidentalisht nga botues të ndryshëm. OCR mund të lexojë gabimisht shifrat. Shifra e kontrollit kap gabimet e një shifre të vetme, por jo të gjitha.</p>
 
           <h2>Si trajton Let Books ISBN-in</h2>
-          <p>Zinxhiri i kërkimit të metatëdhënave në demon statik të Let Books ndjek një strategji praktike të rënies, të implementuar në <code>static-demo/app.js:2269</code>:</p>
+          <p><code>docs/book-metadata.md</code> përcakton një strategji praktike rezervë për kërkimin sipas ISBN-së. Dokumenti gjithashtu thotë se ky rrjedh funksionon në demon alfa aktuale, ndërsa shërben si model për aplikacionin e plotë të ardhshëm:</p>
 
           <figure class="image-card blog-figure">
             <img src="../../diagrams/blog/isbn-not-a-database/sq/isbn-lookup-chain.svg" alt="Diagrami i zinxhirit të kërkimit të ISBN">
@@ -118,7 +118,7 @@
 
           <p>Regjistrimi manual nuk bllokohet kurrë. Nëse të gjithë ofruesit dështojnë &mdash; qoftë për shkak të një gabimi rrjeti, kufizimi të shpejtësisë ose mungesës së vërtetë të të dhënave &mdash; përdoruesi mund të fusë manualisht titullin, autorin, botuesin dhe vitin dhe të vazhdojë katalogimin.</p>
           <p>Zinxhiri i rënies është qëllimisht i thjeshtë. Nuk ka një pikë të vetme dështimi sepse asnjë ofrues nuk është i detyrueshëm. Çdo ofrues është opsional dhe i zëvendësueshëm në mënyrë të pavarur.</p>
-          <p>Dëshmitë për këtë zinxhir në depo janë në <code>static-demo/app.js</code> (funksioni <code>lookupMetadataByIsbn</code> në rreshtin 2316 dhe dy funksionet që e ndjekin) dhe në <code>docs/book-metadata.md</code> (dokumentacioni arkitekturor).</p>
+          <p>Referencat kanonike të depos për këtë zinxhir janë <code>docs/book-metadata.md</code> dhe <code>AGENTS.md</code>. Nëse një demo ose një ndërtim specifik i aplikacionit tashmë zbaton një pjesë të këtij rrjedhi, përmendeni këtë vetëm si status zbatimi, jo si dëshmi kryesore.</p>
 
           <h2>Pse kjo ka rëndësi për dhurimin e librave</h2>
           <p>Kur një dhurues katalogizon një koleksion librash akademikë, disa do të kenë ISBN dhe disa jo. Librat pa ISBN janë shpesh më interesantët &mdash; botime më të vjetra, materiale të botuara në nivel lokal, përmbledhje për lëndë specifike ose libra nga botues të ish-Jugosllavisë, identifikuesit e të cilëve nuk arritën kurrë në bazat globale të të dhënave.</p>

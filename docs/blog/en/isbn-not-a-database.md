@@ -9,7 +9,6 @@ topics:
   - book-donation
 evidence:
   - docs/book-metadata.md
-  - static-demo/app.js
   - AGENTS.md
 sources:
   - sources/en/isbn-not-a-database.md
@@ -59,7 +58,7 @@ Mispressed ISBNs exist. A single ISBN can be accidentally reused by different pu
 
 ## How Let Books handles ISBN
 
-The metadata lookup chain in the Let Books static demo follows a practical fallback strategy, implemented in `static-demo/app.js:2269`:
+`docs/book-metadata.md` defines a practical fallback strategy for ISBN-based lookup. It also notes that this flow works in the current alpha demo while serving as a pattern for the future full application:
 
 ![ISBN Metadata Lookup Chain diagram](../../diagrams/isbn-lookup-chain.svg)
 
@@ -72,7 +71,7 @@ Manual entry is never blocked. If all providers fail — whether because of a ne
 
 The fallback chain is deliberately simple. There is no single point of failure because no single provider is mandatory. Each provider is optional and independently replaceable.
 
-Repository evidence for this chain is in `static-demo/app.js` (the `lookupMetadataByIsbn` function at line 2316 and the two provider fetch functions that follow it) and `docs/book-metadata.md` (the architecture documentation).
+The canonical repository references for this chain are `docs/book-metadata.md` and `AGENTS.md`. If a specific demo or app build already implements part of this flow, mention that only as implementation status, not as the primary evidence.
 
 ## Why this matters for book donations
 
@@ -80,7 +79,7 @@ When a donor catalogs a collection of academic books, some will have ISBNs and s
 
 The cataloging workflow must not punish the donor for missing ISBNs. Every feature that works with ISBN lookup must also work without it: location tracking, photo upload, Excel export, batch review. The ISBN is a convenience, not a requirement.
 
-This principle is stated directly in the project specification at `AGENTS.md:642`:
+This principle is stated directly in the project specification in `AGENTS.md`:
 
 > The model should allow incomplete data. Do not require ISBN.
 

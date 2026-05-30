@@ -9,7 +9,6 @@ topics:
   - book-donation
 evidence:
   - docs/book-metadata.md
-  - static-demo/app.js
   - AGENTS.md
 sources:
   - sources/en/isbn-not-a-database.md
@@ -59,7 +58,7 @@ Ekzistojnë ISBN të shtypur gabimisht. I njëjti ISBN mund të ripërdoret aksi
 
 ## Si trajton Let Books ISBN-in
 
-Zinxhiri i kërkimit të metatëdhënave në demon statik të Let Books ndjek një strategji praktike të rënies, të implementuar në `static-demo/app.js:2269`:
+`docs/book-metadata.md` përcakton një strategji praktike rezervë për kërkimin sipas ISBN-së. Dokumenti gjithashtu thotë se ky rrjedh funksionon në demon alfa aktuale, ndërsa shërben si model për aplikacionin e plotë të ardhshëm:
 
 ![Diagrami i zinxhirit të kërkimit të ISBN](../../diagrams/blog/isbn-not-a-database/sq/isbn-lookup-chain.svg)
 
@@ -72,7 +71,7 @@ Regjistrimi manual nuk bllokohet kurrë. Nëse të gjithë ofruesit dështojnë 
 
 Zinxhiri i rënies është qëllimisht i thjeshtë. Nuk ka një pikë të vetme dështimi sepse asnjë ofrues nuk është i detyrueshëm. Çdo ofrues është opsional dhe i zëvendësueshëm në mënyrë të pavarur.
 
-Dëshmitë për këtë zinxhir në depo janë në `static-demo/app.js` (funksioni `lookupMetadataByIsbn` në rreshtin 2316 dhe dy funksionet që e ndjekin) dhe në `docs/book-metadata.md` (dokumentacioni arkitekturor).
+Referencat kanonike të depos për këtë zinxhir janë `docs/book-metadata.md` dhe `AGENTS.md`. Nëse një demo ose një ndërtim specifik i aplikacionit tashmë zbaton një pjesë të këtij rrjedhi, përmendeni këtë vetëm si status zbatimi, jo si dëshmi kryesore.
 
 ## Pse kjo ka rëndësi për dhurimin e librave
 

@@ -103,7 +103,7 @@
           <p>Mispressed ISBNs exist. A single ISBN can be accidentally reused by different publishers. OCR can misread digits. The checksum catches single-digit errors but not all of them.</p>
 
           <h2>How Let Books handles ISBN</h2>
-          <p>The metadata lookup chain in the Let Books static demo follows a practical fallback strategy, implemented in <code>static-demo/app.js:2269</code>:</p>
+          <p><code>docs/book-metadata.md</code> defines a practical fallback strategy for ISBN-based lookup. It also notes that this flow works in the current alpha demo while serving as a pattern for the future full application:</p>
 
           <figure class="image-card blog-figure">
             <img src="../../diagrams/isbn-lookup-chain.svg" alt="ISBN Metadata Lookup Chain diagram">
@@ -118,7 +118,7 @@
 
           <p>Manual entry is never blocked. If all providers fail &mdash; whether because of a network error, rate limiting, or genuine absence of data &mdash; the user can enter the title, author, publisher, and year by hand and continue cataloging.</p>
           <p>The fallback chain is deliberately simple. There is no single point of failure because no single provider is mandatory. Each provider is optional and independently replaceable.</p>
-          <p>Repository evidence for this chain is in <code>static-demo/app.js</code> (the <code>lookupMetadataByIsbn</code> function at line 2316 and the two provider fetch functions that follow it) and <code>docs/book-metadata.md</code> (the architecture documentation).</p>
+          <p>The canonical repository references for this chain are <code>docs/book-metadata.md</code> and <code>AGENTS.md</code>. If a specific demo or app build already implements part of this flow, mention that only as implementation status, not as the primary evidence.</p>
 
           <h2>Why this matters for book donations</h2>
           <p>When a donor catalogs a collection of academic books, some will have ISBNs and some will not. The books without ISBNs are often the most interesting &mdash; older editions, locally published materials, course-specific compilations, or books from former Yugoslav publishers whose identifiers never made it into global databases.</p>

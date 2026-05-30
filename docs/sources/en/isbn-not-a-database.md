@@ -10,15 +10,15 @@ status: draft
 
 | Claim | Repository evidence | External source | Notes |
 |---|---|---|---|
-| ISBN identifies edition, not work | `AGENTS.md:642` — "Do not require ISBN" | ISBN agency specs | Different editions have different ISBNs |
-| Not every book has an ISBN | Project scope in `AGENTS.md` (pre-1970, former Yugoslav, self-published) | UNESCO ISBN manual | Pre-1970 books have no ISBN |
-| ISBN does not describe condition or provenance | `AGENTS.md:2.7` Preserve Provenance | — | Condition and provenance are separate domain models |
-| ISBN does not describe location | `AGENTS.md:2.8` Optimize for Storage Logistics | — | StorageLocation is a separate entity |
-| ISBN can be mispressed, misread, or reused | `static-demo/app.js` — `normalizeIsbn` validates checksum | — | Checksum validation catches single-digit errors only |
-| Let Books uses a fallback chain: OL first, then Let Books API, then manual | `static-demo/app.js:2269-2435` (`lookupMetadataByIsbn`, `fetchOpenLibraryMetadata`, `fetchLetBooksMetadata`) | — | Full implementation in the static demo |
-| No single provider is mandatory | `static-demo/app.js` — each provider returns an `outcome` string, manual entry is always available | — | Provider outcome types: found, not_found, provider_unavailable, rate_limited, skipped |
-| Let Books metadata API is the fallback for the Slovenian ISBN `9789610167525` | `README.md:79-81` — test ISBNs documentation | `https://api.letbooks.org/isbn/9789610167525` | Regression test case |
-| Manual entry is the permanent fallback | `docs/book-metadata.md:152-159` — Manual Entry Fallback section | — | "Do not block the user when enrichment fails" |
+| ISBN identifies edition, not work | `AGENTS.md` and `docs/book-metadata.md` describe an ISBN-first workflow without making ISBN mandatory | ISBN agency specs | ISBN helps identify editions, but it does not replace a complete book record |
+| Not every book has an ISBN | Project scope in `AGENTS.md` emphasizes older academic materials and incomplete data | UNESCO ISBN manual | Pre-1970 books have no ISBN |
+| ISBN does not describe condition or provenance | `AGENTS.md` separates provenance and condition from ISBN-based lookup concerns | — | Condition and provenance are separate domain models |
+| ISBN does not describe location | `AGENTS.md` treats storage logistics as a separate first-class concern | — | `StorageLocation` is separate from bibliographic identifiers |
+| ISBN can be mispressed, misread, or reused | `docs/book-metadata.md` requires normalization and checksum validation before lookup | — | Validation helps, but ISBN alone is not enough |
+| Let Books uses a fallback chain: Open Library first, then Let Books metadata API, then manual entry | `docs/book-metadata.md` Lookup Order section | — | This is the canonical documented lookup order |
+| No single provider is mandatory | `docs/book-metadata.md` says lookup failures must never block cataloging and manual entry must remain available | — | Provider failures fall back to manual entry |
+| Let Books metadata API is part of the documented lookup chain | `docs/book-metadata.md` lists `https://api.letbooks.org/isbn/{isbn}` as the second lookup step | `https://api.letbooks.org/isbn/{isbn}` | Documented endpoint, not a guarantee of every build state |
+| Manual entry is the permanent fallback | `docs/book-metadata.md` Manual Entry Fallback section | — | "Do not block the user when enrichment fails" |
 
 ## External Sources Referenced
 
@@ -38,6 +38,6 @@ Both diagrams were rendered with Mermaid CLI 11.12.0, neutral theme, transparent
 
 ## Review Notes
 
-- All claims about the codebase were verified against the current `main` branch (commit `2ca927c`)
-- The Open Library API returns author references (`/authors/OL...A`) that require a second API call to resolve; the static demo handles this in `fetchOpenLibraryMetadata` at line 2396
-- The Let Books metadata API endpoint is configurable via a `<meta>` tag or query parameter, documented in `docs/book-metadata.md:175-177`
+- All repository claims were aligned to current specs and docs rather than executable source files.
+- If a feature already exists in a current demo or app build, mention that only as implementation status.
+- The Let Books metadata API endpoint is documented in `docs/book-metadata.md`.

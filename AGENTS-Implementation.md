@@ -409,3 +409,30 @@ Use the article `id` from `articles.json` as the diagram folder key.
 ### Rendering
 
 Prefer the existing diagram format (currently Mermaid via `mmdc`). Do not replace diagrams with screenshots. Do not duplicate English SVG text without localizing it.
+
+## Blog Evidence Policy
+
+Public blog posts, source maps, and similar editorial content must cite specifications and documentation, not executable app source.
+
+### Allowed evidence
+
+- `docs/**`
+- `AGENTS.md`
+- `AGENTS-Implementation.md`
+- top-level documentation such as `README.md`, `CONTRIBUTING.md`, and `SECURITY.md`
+
+### Disallowed evidence
+
+- `static-demo/` source files such as `static-demo/app.js`
+- future application source under `src/`
+- test or tooling source used as proof text for public articles
+
+### Editorial wording rule
+
+- If a feature already exists in a current demo or app build, note that as implementation status only.
+- Treat specs and docs as the canonical source of truth for public writing.
+- Avoid fragile source-code line citations in blog content; document references are preferred.
+
+### CI validation
+
+`tools/validate-blog.mjs` must fail when blog articles or source maps cite forbidden source-code paths instead of specs/docs.

@@ -103,7 +103,7 @@
           <p>Postoje pogrešno odštampani ISBNovi. Isti ISBN mogu slučajno koristiti različiti izdavači. Optičko čitanje može pogrešno očitati cifre. Kontrolna cifra otkriva greške u jednoj cifri, ali ne sve.</p>
 
           <h2>Kako Let Books postupa s ISBNom</h2>
-          <p>Lanac pretraživanja metapodataka u statičkom demo okruženju Let Books sledi praktičnu strategiju padanja, implementiranu u <code>static-demo/app.js:2269</code>:</p>
+          <p><code>docs/book-metadata.md</code> definiše praktičnu strategiju rezervnog pada za pretragu po ISBN-u. Dokument takođe navodi da ovaj tok radi u trenutnom alfa demo okruženju, a istovremeno služi kao obrazac za buduću punu aplikaciju:</p>
 
           <figure class="image-card blog-figure">
             <img src="../../diagrams/blog/isbn-not-a-database/sr-Latn/isbn-lookup-chain.svg" alt="Dijagram lanca pretraživanja ISBN-a">
@@ -118,7 +118,7 @@
 
           <p>Ručni unos nikada nije blokiran. Ako svi pružaoci otkažu &mdash; bilo zbog mrežne greške, ograničenja brzine ili stvarne odsutnosti podataka &mdash; korisnik može ručno uneti naslov, autora, izdavača i godinu i nastaviti s katalogizacijom.</p>
           <p>Lanac padanja namerno je jednostavan. Ne postoji jedinstvena tačka otkaza jer nijedan pružalac nije obavezan. Svaki pružalac je izboran i nezavisno zamenjiv.</p>
-          <p>Dokazi za ovaj lanac u repozitorijumu su u <code>static-demo/app.js</code> (funkcija <code>lookupMetadataByIsbn</code> u retku 2316 i dve funkcije koje slede) te u <code>docs/book-metadata.md</code> (arhitekturna dokumentacija).</p>
+          <p>Kanonske reference u repozitorijumu za ovaj lanac su <code>docs/book-metadata.md</code> i <code>AGENTS.md</code>. Ako određeni demo ili konkretna verzija aplikacije već implementira deo ovog toka, navedite to samo kao status implementacije, a ne kao glavni dokaz.</p>
 
           <h2>Zašto je to važno za doniranje knjiga</h2>
           <p>Kada darovalac katalogizuje zbirku akademskih knjiga, neke će imati ISBN, a neke neće. Knjige bez ISBNa često su najzanimljivije &mdash; starija izdanja, lokalno objavljeni materijali, kompilacije za pojedine predmete ili knjige izdavača iz bivše Jugoslavije čiji identifikatori nikad nisu dospeli u globalne baze podataka.</p>

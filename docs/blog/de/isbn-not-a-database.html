@@ -103,7 +103,7 @@
           <p>Es gibt falsch gedruckte ISBNs. Dieselbe ISBN kann versehentlich von verschiedenen Verlagen verwendet werden. OCR kann Ziffern falsch lesen. Die Prüfziffer erfasst Einzelfehler, aber nicht alle.</p>
 
           <h2>Wie Let Books mit ISBN umgeht</h2>
-          <p>Die Metadaten-Suchkette in der statischen Demo von Let Books folgt einer praktischen Fallback-Strategie, implementiert in <code>static-demo/app.js:2269</code>:</p>
+          <p><code>docs/book-metadata.md</code> definiert eine praktische Fallback-Strategie fuer die ISBN-basierte Suche. Das Dokument weist auch darauf hin, dass dieser Ablauf in der aktuellen Alpha-Demo funktioniert und zugleich als Muster fuer die kuenftige vollstaendige Anwendung dient:</p>
 
           <figure class="image-card blog-figure">
             <img src="../../diagrams/blog/isbn-not-a-database/de/isbn-lookup-chain.svg" alt="Diagramm der ISBN-Suchkette">
@@ -118,7 +118,7 @@
 
           <p>Die manuelle Eingabe wird niemals blockiert. Wenn alle Anbieter ausfallen &mdash; sei es aufgrund eines Netzwerkfehlers, einer Ratenbegrenzung oder des tatsächlichen Fehlens von Daten &mdash; kann der Benutzer Titel, Autor, Verlag und Jahr von Hand eingeben und mit der Katalogisierung fortfahren.</p>
           <p>Die Fallback-Kette ist bewusst einfach. Es gibt keine einzelne Ausfallstelle, da kein Anbieter zwingend erforderlich ist. Jeder Anbieter ist optional und unabhängig ersetzbar.</p>
-          <p>Nachweise für diese Kette im Repository finden sich in <code>static-demo/app.js</code> (die Funktion <code>lookupMetadataByIsbn</code> in Zeile 2316 und die beiden folgenden Provider-Fetch-Funktionen) sowie in <code>docs/book-metadata.md</code> (die Architekturdokumentation).</p>
+          <p>Die kanonischen Repository-Referenzen fuer diese Kette sind <code>docs/book-metadata.md</code> und <code>AGENTS.md</code>. Wenn eine bestimmte Demo oder ein bestimmter App-Build bereits Teile dieses Ablaufs implementiert, erwaehnen Sie das nur als Implementierungsstatus, nicht als primaeren Beleg.</p>
 
           <h2>Warum dies für Buchspenden wichtig ist</h2>
           <p>Wenn ein Spender eine Sammlung akademischer Bücher katalogisiert, haben einige eine ISBN und andere nicht. Die Bücher ohne ISBN sind oft die interessantesten &mdash; ältere Ausgaben, lokal veröffentlichte Materialien, kurspezifische Zusammenstellungen oder Bücher von Verlagen aus dem ehemaligen Jugoslawien, deren Identifikatoren es nie in globale Datenbanken geschafft haben.</p>

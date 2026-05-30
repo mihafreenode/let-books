@@ -9,7 +9,6 @@ topics:
   - book-donation
 evidence:
   - docs/book-metadata.md
-  - static-demo/app.js
   - AGENTS.md
 sources:
   - sources/en/isbn-not-a-database.md
@@ -59,7 +58,7 @@ Postoje pogrešno odštampani ISBNovi. Isti ISBN mogu slučajno koristiti razli�
 
 ## Kako Let Books postupa s ISBNom
 
-Lanac pretraživanja metapodataka u statičkom demo okruženju Let Books slijedi praktičnu strategiju padanja, implementiranu u `static-demo/app.js:2269`:
+`docs/book-metadata.md` definira praktičnu strategiju rezervnog pada za pretraživanje po ISBN-u. Dokument također navodi da ovaj tok radi u trenutnom alfa demo okruženju, a istovremeno služi kao obrazac za buduću punu aplikaciju:
 
 ![Dijagram lanca pretraživanja ISBN-a](../../diagrams/blog/isbn-not-a-database/bs/isbn-lookup-chain.svg)
 
@@ -72,7 +71,7 @@ Ručni unos nikada nije blokiran. Ako svi pružatelji otkažu — bilo zbog mre�
 
 Lanac padanja namjerno je jednostavan. Ne postoji jedinstvena tačka otkaza jer nijedan pružatelj nije obavezan. Svaki pružatelj je izboran i nezavisno zamjenjiv.
 
-Dokazi za ovaj lanac u repozitoriju su u `static-demo/app.js` (funkcija `lookupMetadataByIsbn` u retku 2316 i dvije funkcije koje slijede) te u `docs/book-metadata.md` (arhitekturna dokumentacija).
+Kanonske reference u repozitoriju za ovaj lanac su `docs/book-metadata.md` i `AGENTS.md`. Ako određeni demo ili konkretna verzija aplikacije već implementira dio ovog toka, navedite to samo kao status implementacije, a ne kao glavni dokaz.
 
 ## Zašto je to važno za doniranje knjiga
 

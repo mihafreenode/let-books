@@ -103,7 +103,7 @@
           <p>Obstajajo napačno natisnjeni ISBNi. Isti ISBN lahko pomotoma uporabijo različne založbe. Optično branje lahko napačno prebere števke. Kontrolna vsota ujame napake v posamezni števki, ne vseh.</p>
 
           <h2>Kako Let Books ravna z ISBNom</h2>
-          <p>Veriga iskanja metapodatkov v statičnem demo okolju Let Books sledi praktični strategiji padanja, implementirani v <code>static-demo/app.js:2269</code>:</p>
+          <p><code>docs/book-metadata.md</code> določa praktično strategijo padanja za iskanje po ISBN-u. Dokument tudi navaja, da ta tok deluje v trenutnem alfa demu in hkrati služi kot vzorec za prihodnjo polno aplikacijo:</p>
 
           <figure class="image-card blog-figure">
             <img src="../../diagrams/blog/isbn-not-a-database/sl/isbn-lookup-chain.svg" alt="Diagram verige iskanja ISBN">
@@ -118,7 +118,7 @@
 
           <p>Ročni vnos ni nikoli blokiran. Če vsi viri odpovejo &mdash; bodisi zaradi napake v omrežju, omejitve hitrosti ali dejanske odsotnosti podatkov &mdash; lahko uporabnik ročno vpiše naslov, avtorja, založbo in leto ter nadaljuje s katalogizacijo.</p>
           <p>Veriga padanja je namenoma preprosta. Ni ene same točke odpovedi, ker noben vir ni obvezen. Vsak vir je izbirno in neodvisno zamenljiv.</p>
-          <p>Dokazi za to verigo v repozitoriju so v <code>static-demo/app.js</code> (funkcija <code>lookupMetadataByIsbn</code> v vrstici 2316 in dve sledeči funkciji za poizvedovanje pri ponudnikih) ter v <code>docs/book-metadata.md</code> (arhitekturna dokumentacija).</p>
+          <p>Kanonična repozitorijska sklica za to verigo sta <code>docs/book-metadata.md</code> in <code>AGENTS.md</code>. Če določeni demo ali konkretna gradnja aplikacije že izvaja del tega toka, to navedite le kot stanje implementacije, ne kot primarni dokaz.</p>
 
           <h2>Zakaj je to pomembno za podarjanje knjig</h2>
           <p>Ko darovalec katalogizira zbirko akademskih knjig, bodo imele nekatere ISBN, druge ne. Knjige brez ISBNa so pogosto najbolj zanimive &mdash; starejše izdaje, lokalno objavljena gradiva, kompilacije za posamezne predmete ali knjige založb iz nekdanje Jugoslavije, katerih identifikatorji nikoli niso prišli v globalne podatkovne zbirke.</p>

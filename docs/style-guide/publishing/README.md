@@ -8,6 +8,13 @@
 
 Use this area to standardize how topics move from repository evidence to approved and localized published content.
 
+## Editorial Validation Rules
+
+- Blog and source-map evidence must come from specs and docs.
+- Treat `docs/**`, `AGENTS.md`, and related top-level documentation as canonical editorial references.
+- Do not use `static-demo/`, future app source files, or test code as quoted repository evidence in public articles.
+- CI validation in `tools/validate-blog.mjs` should fail when editorial content cites app/source paths instead of docs/specs.
+
 ## Structure
 
 - publishing workflow rules

@@ -9,7 +9,6 @@ topics:
   - book-donation
 evidence:
   - docs/book-metadata.md
-  - static-demo/app.js
   - AGENTS.md
 sources:
   - sources/en/isbn-not-a-database.md
@@ -59,7 +58,7 @@ Es gibt falsch gedruckte ISBNs. Dieselbe ISBN kann versehentlich von verschieden
 
 ## Wie Let Books mit ISBN umgeht
 
-Die Metadaten-Suchkette in der statischen Demo von Let Books folgt einer praktischen Fallback-Strategie, implementiert in `static-demo/app.js:2269`:
+`docs/book-metadata.md` definiert eine praktische Fallback-Strategie fuer die ISBN-basierte Suche. Das Dokument weist auch darauf hin, dass dieser Ablauf in der aktuellen Alpha-Demo funktioniert und zugleich als Muster fuer die kuenftige vollstaendige Anwendung dient:
 
 ![Diagramm der ISBN-Suchkette](../../diagrams/blog/isbn-not-a-database/de/isbn-lookup-chain.svg)
 
@@ -72,7 +71,7 @@ Die manuelle Eingabe wird niemals blockiert. Wenn alle Anbieter ausfallen — se
 
 Die Fallback-Kette ist bewusst einfach. Es gibt keine einzelne Ausfallstelle, da kein Anbieter zwingend erforderlich ist. Jeder Anbieter ist optional und unabhängig ersetzbar.
 
-Nachweise für diese Kette im Repository finden sich in `static-demo/app.js` (die Funktion `lookupMetadataByIsbn` in Zeile 2316 und die beiden folgenden Provider-Fetch-Funktionen) sowie in `docs/book-metadata.md` (die Architekturdokumentation).
+Die kanonischen Repository-Referenzen fuer diese Kette sind `docs/book-metadata.md` und `AGENTS.md`. Wenn eine bestimmte Demo oder ein bestimmter App-Build bereits Teile dieses Ablaufs implementiert, erwaehnen Sie das nur als Implementierungsstatus, nicht als primaeren Beleg.
 
 ## Warum dies für Buchspenden wichtig ist
 

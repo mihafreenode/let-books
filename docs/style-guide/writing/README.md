@@ -8,6 +8,13 @@
 
 LetBooks content should feel human, educational, accurate, respectful, and traceable.
 
+## Evidence Guidance
+
+- Public editorial content should quote specs and docs, not application source code.
+- Use documentation and specification files as the canonical basis for product behavior claims.
+- When implementation status matters, say whether a feature is implemented yet without presenting source files as the proof text.
+- Prefer stable document references over exact source-code line references, which drift quickly.
+
 ## Structure
 
 - tone guidance

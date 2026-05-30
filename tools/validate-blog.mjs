@@ -27,6 +27,33 @@ let localizedDiagramsFound = 0;
 let englishLeaks = 0;
 let missingDraftDiagrams = 0;
 
+let editorialFilesChecked = 0;
+let forbiddenEditorialSourceRefs = 0;
+
+const SOURCES_DIR = path.join(DOCS_DIR, 'sources');
+const ALLOWED_EDITORIAL_EVIDENCE_ROOT_FILES = new Set([
+  'AGENTS.md',
+  'AGENTS-Implementation.md',
+  'README.md',
+  'CONTRIBUTING.md',
+  'SECURITY.md',
+  'CODE_OF_CONDUCT.md',
+]);
+const FORBIDDEN_EDITORIAL_SOURCE_PATTERNS = [
+  {
+    label: 'static-demo source reference',
+    regex: /\bstatic-demo\/[^\s<>()`'"|]+\.(?:js|cjs|mjs|ts|tsx|jsx|css|html|json)\b/g,
+  },
+  {
+    label: 'application source reference',
+    regex: /\bsrc\/[^\s<>()`'"|]+\.(?:cs|razor|cshtml|js|cjs|mjs|ts|tsx|jsx|css|json)\b/g,
+  },
+  {
+    label: 'test source reference',
+    regex: /\btests\/[^\s<>()`'"|]+\.(?:cs|js|cjs|mjs|ts|tsx|jsx|json)\b/g,
+  },
+];
+
 function fail(message) {
   errors.push(message);
   console.error(`  FAIL: ${message}`);
@@ -311,6 +338,9 @@ function validateFrontmatterRef(filePath, href, field) {
 
 function validateHtmlFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
+  if (isEditorialHtmlFile(filePath)) {
+    validateEditorialSourcePolicy(filePath, content);
+  }
   for (const ref of extractHtmlRefs(content)) {
     validateResolvedRef(filePath, ref.href, ref.type);
   }
@@ -318,9 +348,91 @@ function validateHtmlFile(filePath) {
 
 function validateMarkdownFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
-  validateMarkdownFrontmatterPaths(filePath, content);
+  const frontmatter = validateMarkdownFrontmatterPaths(filePath, content);
+  if (isEditorialMarkdownFile(filePath)) {
+    validateEditorialSourcePolicy(filePath, content);
+    validateEditorialFrontmatterPolicy(filePath, frontmatter);
+  }
   for (const ref of extractMarkdownRefs(content)) {
     validateResolvedRef(filePath, ref.href, ref.type);
+  }
+}
+
+function isEditorialMarkdownFile(filePath) {
+  return filePath.startsWith(`${BLOG_DIR}${path.sep}`) || filePath.startsWith(`${SOURCES_DIR}${path.sep}`);
+}
+
+function isEditorialHtmlFile(filePath) {
+  return filePath.startsWith(`${BLOG_DIR}${path.sep}`);
+}
+
+function isAllowedEditorialEvidencePath(resolvedPath) {
+  if (!resolvedPath) {
+    return false;
+  }
+
+  if (resolvedPath === DOCS_DIR || resolvedPath.startsWith(`${DOCS_DIR}${path.sep}`)) {
+    return true;
+  }
+
+  const repoRelative = rel(resolvedPath);
+  return ALLOWED_EDITORIAL_EVIDENCE_ROOT_FILES.has(repoRelative);
+}
+
+function validateEditorialFrontmatterPolicy(filePath, frontmatter) {
+  if (!frontmatter) {
+    return;
+  }
+
+  const evidenceRefs = Array.isArray(frontmatter.evidence) ? frontmatter.evidence : [];
+  for (const href of evidenceRefs) {
+    const resolved = resolveFrontmatterEvidencePath(filePath, href);
+    if (!resolved) {
+      continue;
+    }
+
+    if (!isAllowedEditorialEvidencePath(resolved)) {
+      fail(`${rel(filePath)}: frontmatter evidence reference "${href}" must point to specs or docs, not app/source files`);
+      forbiddenEditorialSourceRefs++;
+    }
+  }
+}
+
+function resolveFrontmatterEvidencePath(filePath, href) {
+  const baseDir = path.dirname(filePath);
+  const cleanHref = href.trim();
+
+  if (!cleanHref) {
+    return null;
+  }
+
+  if (cleanHref.startsWith('./') || cleanHref.startsWith('../') || cleanHref.startsWith('/')) {
+    return resolveRepoPath(baseDir, cleanHref);
+  }
+
+  const rootRelativePrefixes = ['docs/', 'static-demo/', 'AGENTS', '.github/', 'tools/', 'tests/', 'favicon/', 'public/'];
+  const docsRelativePrefixes = ['assets/', 'blog/', 'diagrams/', 'learning/', 'sources/', 'style-guide/', 'wiki/'];
+
+  if (rootRelativePrefixes.some((prefix) => cleanHref.startsWith(prefix))) {
+    return path.join(ROOT, cleanHref);
+  }
+
+  if (docsRelativePrefixes.some((prefix) => cleanHref.startsWith(prefix))) {
+    return path.join(DOCS_DIR, cleanHref);
+  }
+
+  return path.resolve(baseDir, cleanHref);
+}
+
+function validateEditorialSourcePolicy(filePath, content) {
+  editorialFilesChecked++;
+
+  for (const { label, regex } of FORBIDDEN_EDITORIAL_SOURCE_PATTERNS) {
+    const matches = new Set(content.match(regex) || []);
+    for (const match of matches) {
+      fail(`${rel(filePath)}: contains forbidden ${label} "${match}"; blog/source content must cite specs and docs only`);
+      forbiddenEditorialSourceRefs++;
+    }
   }
 }
 
@@ -568,6 +680,8 @@ function main() {
   console.log(`${ok} Diagram references checked: ${diagramRefsChecked}`);
   console.log(`${ok} Localized diagrams found: ${localizedDiagramsFound}`);
   console.log(`${ok} English diagram leaks on localized pages: ${englishLeaks}`);
+  console.log(`${ok} Editorial files checked: ${editorialFilesChecked}`);
+  console.log(`${ok} Forbidden editorial source refs: ${forbiddenEditorialSourceRefs}`);
   console.log(`${ok} Broken links: ${brokenLinks}`);
 
   if (missingTranslations > 0) {
