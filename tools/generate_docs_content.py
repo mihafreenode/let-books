@@ -399,6 +399,51 @@ TOPIC_LABELS = {
     },
 }
 
+FOOTER_DESC = {
+    "en": "A practical platform for cataloging, offering, and retrieving educational books.",
+    "sl": "Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.",
+    "hr": "Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.",
+    "bs": "Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.",
+    "sr-Latn": "Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.",
+    "sr-Cyrl": "Практична платформа за каталогизацију, нуђење и проналажење образовних књига.",
+    "mk": "Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.",
+    "sq": "Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.",
+    "de": "Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.",
+    "it": "Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.",
+    "fr": "Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.",
+    "es": "Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.",
+}
+
+FOOTER_MICROCOPY = {
+    "en": "Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.",
+    "sl": "Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.",
+    "hr": "Rani alfa prototip. Dokumentacija i tekst korisničkog sučelja potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.",
+    "bs": "Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.",
+    "sr-Latn": "Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.",
+    "sr-Cyrl": "Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.",
+    "mk": "Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.",
+    "sq": "Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.",
+    "de": "Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.",
+    "it": "Prototipo alpha iniziale. Documentazione e testi dell'interfaccia sono assistiti dall'IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.",
+    "fr": "Prototype alpha précoce. La documentation et les textes d'interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n'impliquent ni partenariat ni soutien.",
+    "es": "Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.",
+}
+
+FOOTER_LINK_LABELS = {
+    "en": {"overview": "Overview", "projectHome": "Project home", "demo": "Demo", "allLanguages": "All languages"},
+    "sl": {"overview": "Pregled", "projectHome": "Domača stran", "demo": "Demo", "allLanguages": "Vsi jeziki"},
+    "hr": {"overview": "Pregled", "projectHome": "Početna stranica", "demo": "Demo", "allLanguages": "Svi jezici"},
+    "bs": {"overview": "Pregled", "projectHome": "Početna stranica", "demo": "Demo", "allLanguages": "Svi jezici"},
+    "sr-Latn": {"overview": "Pregled", "projectHome": "Početna stranica", "demo": "Demo", "allLanguages": "Svi jezici"},
+    "sr-Cyrl": {"overview": "Преглед", "projectHome": "Почетна страница", "demo": "Демо", "allLanguages": "Сви језици"},
+    "mk": {"overview": "Преглед", "projectHome": "Почетна страница", "demo": "Демо", "allLanguages": "Сите јазици"},
+    "sq": {"overview": "Përmbledhje", "projectHome": "Faqja kryesore", "demo": "Demo", "allLanguages": "Të gjitha gjuhët"},
+    "de": {"overview": "Übersicht", "projectHome": "Startseite", "demo": "Demo", "allLanguages": "Alle Sprachen"},
+    "it": {"overview": "Panoramica", "projectHome": "Home page", "demo": "Demo", "allLanguages": "Tutte le lingue"},
+    "fr": {"overview": "Aperçu", "projectHome": "Page d'accueil", "demo": "Démo", "allLanguages": "Toutes les langues"},
+    "es": {"overview": "Vista general", "projectHome": "Página de inicio", "demo": "Demo", "allLanguages": "Todos los idiomas"},
+}
+
 SECTION_STOP_HEADINGS = {
     "blog": {value.lower() for value in OTHER_LANGUAGE_HEADINGS.values()} | {"other languages"},
     "learning": set(),
@@ -1026,9 +1071,14 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
     )
     lang_switch = "\n".join(render_lang_switch_link(entry, variant.locale, locale) for locale in LOCALES if locale in entry.variants)
     type_label = CONTENT_LABELS[variant.locale][entry.content_type]
+    docs_label = CONTENT_LABELS[variant.locale]["docs"]
     post_nav_block = f"\n{post_nav}" if post_nav else ""
     summary = html.escape(variant.summary)
     title = html.escape(variant.title)
+    locale = variant.locale
+    footer_desc = FOOTER_DESC.get(locale, FOOTER_DESC["en"])
+    footer_microcopy = FOOTER_MICROCOPY.get(locale, FOOTER_MICROCOPY["en"])
+    footer_labels = FOOTER_LINK_LABELS.get(locale, FOOTER_LINK_LABELS["en"])
 
     return f'''<!DOCTYPE html>
 <html lang="{variant.locale}">
@@ -1077,14 +1127,14 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
             </span>
           </a>
           <div class="header-nav">
-            <a class="nav-link" href="../../{variant.locale}/index.html">Docs</a>
+            <a class="nav-link" href="../../{variant.locale}/index.html">{html.escape(docs_label)}</a>
             <a class="nav-link" href="../../blog/{variant.locale}/index.html">Blog</a>
             <a class="nav-link" href="../../learning/{variant.locale}/index.html">Learning</a>
             <a class="nav-link" href="../../wiki/{variant.locale}/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
 {lang_switch}
-              <a class="lang-link" href="../../index.html">All languages</a>
+              <a class="lang-link" href="../../index.html">{html.escape(footer_labels["allLanguages"])}</a>
             </div>
           </div>
         </div>
@@ -1101,17 +1151,17 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
         <div class="footer-inner">
           <div>
             <h3>Let Books</h3>
-            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
-            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+            <p>{html.escape(footer_desc)}</p>
+            <p class="footer-microcopy">{html.escape(footer_microcopy)}</p>
           </div>
           <div>
             <div class="footer-links">
-              <a href="../../en/index.html">Overview</a>
-              <a href="../../index.html">Project home</a>
-              <a href="../../../static-demo/">Demo</a>
+              <a href="../../{variant.locale}/index.html">{html.escape(footer_labels["overview"])}</a>
+              <a href="../../index.html">{html.escape(footer_labels["projectHome"])}</a>
+              <a href="../../../static-demo/">{html.escape(footer_labels["demo"])}</a>
             </div>
             <div class="language-list" style="margin-top: 1rem;">
-              <a href="../../index.html">All languages</a>
+              <a href="../../index.html">{html.escape(footer_labels["allLanguages"])}</a>
             </div>
             <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
           </div>
