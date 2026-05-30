@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Када је демо доказ, а када није | LetBooks</title>
+    <meta name="description" content="Како користити демо и прототипе као корисне доказе имплементације, а да они тихо не постану производна спецификација.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Када је демо доказ, а када није | LetBooks">
+    <meta property="og:description" content="Како користити демо и прототипе као корисне доказе имплементације, а да они тихо не постану производна спецификација.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Када је демо доказ, а када није | LetBooks">
+    <meta name="twitter:description" content="Како користити демо и прототипе као корисне доказе имплементације, а да они тихо не постану производна спецификација.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="sr-Cyrl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../sr-Cyrl/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="en">EN</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sl">SL</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="hr">HR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="bs">BS</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sr-Latn">SR</a>
+              <a class="lang-link is-current" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="mk">МК</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sq">SQ</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="de">DE</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="it">IT</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="fr">FR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">Демо је снажан зато што апстрактне идеје претвара у нешто на шта људи могу да реагују. Ток рада који се у белешци чини разумним може на телефону или у складишту одмах показати стварно трење.</p>
+<p>То је добра страна дема. Опасна је та што људи, када прототип једном постоји, његово понашање често почну да третирају као производну истину.</p>
+<h2 id="зашто-прототипи-постају-случајни-ауторитет">Зашто прототипи постају случајни ауторитет</h2>
+<p>Видљиве ствари су убедљиве. Екран који ради често добије више неформалног ауторитета од записаног правила, чак и када је настао само као експеримент.</p>
+<p>Демо може приказивати:</p>
+<ul>
+<li>брз начин тестирања тока</li>
+<li>привремени компромис</li>
+<li>поједностављену локалну имплементацију</li>
+<li>недовршену интерпретацију намераваног производа</li>
+</ul>
+<p>Ништа од тога само по себи не значи да демо треба да редефинише производ.</p>
+<h2 id="када-је-демо-добар-доказ">Када је демо добар доказ</h2>
+<p>Демо је користан када помаже да се одговори на питања као што су:</p>
+<ul>
+<li>да ли је ток употребљив</li>
+<li>да ли мобилни распоред подржава стварни задатак</li>
+<li>да ли је ток скенирања разумљив</li>
+<li>како корисници реагују на редослед корака</li>
+</ul>
+<p>Тада је демо доказ о употребљивости, изводљивости и комуникацији.</p>
+<h2 id="када-демо-није-ауторитет">Када демо није ауторитет</h2>
+<p>Демо не би смео тихо да надјача производну спецификацију. Није главни одговор на питања попут:</p>
+<ul>
+<li>да ли је овај ток званично у обиму</li>
+<li>да ли је то привремена пречица или производна обавеза</li>
+<li>поништава ли то понашање постојеће правило</li>
+<li>да ли јавна документација то треба да опише као циљни систем</li>
+</ul>
+<p>На таква питања мора одговорити изричита одлука и ажурирање документације.</p>
+<h2 id="правило-let-books-је-добар-модел">Правило Let Books је добар модел</h2>
+<p>Репозиторијум већ дефинише здраво правило: јавно писање треба да користи спецификације и документацију као каноничан доказ, а демо или понашање апликације може да се помиње као статус имплементације.</p>
+<p>То спречава да прототип случајно постане начин управљања производом.</p>
+<h2 id="зашто-је-то-још-важније-са-ai-јем">Зашто је то још важније са AI-јем</h2>
+<p>AI појачава оно што је тренутно најконкретније. Ако је најконкретнији артефакт демо, помоћници и људи брзо ће копирати његово понашање без питања да ли оно одговара производним границама.</p>
+<p>Зато тимови требају видљив ред ауторитета:</p>
+<ol type="1">
+<li>производна спецификација</li>
+<li>имплементациона упутства</li>
+<li>документација тренутног стања</li>
+<li>демо или прототип</li>
+<li>тестови и валидација</li>
+</ol>
+<h2 id="трајна-лекција">Трајна лекција</h2>
+<p>Демо је вредан јер чини производне идеје проверљивим. Опасан постаје када тихо постане политика. Здрав модел је једноставан: нека демо информише производ, али нека спецификације и документација забележе коначну одлуку.</p>
+<h2 id="други-језици">Други језици</h2>
+<ul>
+<li><a href="../en/when-the-demo-is-evidence-and-when-it-is-not.md">English</a></li>
+<li><a href="../sl/when-the-demo-is-evidence-and-when-it-is-not.md">Slovenščina</a></li>
+<li><a href="../hr/when-the-demo-is-evidence-and-when-it-is-not.md">Hrvatski</a></li>
+<li><a href="../bs/when-the-demo-is-evidence-and-when-it-is-not.md">Bosanski</a></li>
+<li><a href="../sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.md">Srpski (latinica)</a></li>
+<li><a href="../mk/when-the-demo-is-evidence-and-when-it-is-not.md">Македонски</a></li>
+<li><a href="../sq/when-the-demo-is-evidence-and-when-it-is-not.md">Shqip</a></li>
+<li><a href="../de/when-the-demo-is-evidence-and-when-it-is-not.md">Deutsch</a></li>
+<li><a href="../it/when-the-demo-is-evidence-and-when-it-is-not.md">Italiano</a></li>
+<li><a href="../fr/when-the-demo-is-evidence-and-when-it-is-not.md">Français</a></li>
+<li><a href="../es/when-the-demo-is-evidence-and-when-it-is-not.md">Español</a></li>
+</ul>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Усклађивање демоа</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Развој вођен спецификацијом</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a></li>
+            <li><a href="spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Документација је део производа</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Документација</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a></li>
+            <li><a href="spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Документација је део производа</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wann das Demo ein Beleg ist und wann nicht | LetBooks</title>
+    <meta name="description" content="Wie Demos und Prototypen als nützliche Implementierungsbelege verwendet werden können, ohne stillschweigend zur Produktspezifikation zu werden.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Wann das Demo ein Beleg ist und wann nicht | LetBooks">
+    <meta property="og:description" content="Wie Demos und Prototypen als nützliche Implementierungsbelege verwendet werden können, ohne stillschweigend zur Produktspezifikation zu werden.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wann das Demo ein Beleg ist und wann nicht | LetBooks">
+    <meta name="twitter:description" content="Wie Demos und Prototypen als nützliche Implementierungsbelege verwendet werden können, ohne stillschweigend zur Produktspezifikation zu werden.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="de">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../de/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="en">EN</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sl">SL</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="hr">HR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="bs">BS</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="mk">МК</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sq">SQ</a>
+              <a class="lang-link is-current" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="de">DE</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="it">IT</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="fr">FR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">Ein Demo ist stark, weil es abstrakte Ideen in etwas verwandelt, auf das Menschen reagieren können. Ein Ablauf, der in einer Notiz vernünftig klingt, kann auf einem Telefon oder in einem Lagerraum sofort echtes Reibungspotenzial zeigen.</p>
+<p>Das ist die gute Seite des Demos. Die gefährliche Seite ist, dass Menschen das Verhalten eines Prototyps oft als Produktwahrheit behandeln, sobald er einmal existiert.</p>
+<h2 id="warum-prototypen-zufällige-autorität-werden">Warum Prototypen zufällige Autorität werden</h2>
+<p>Sichtbare Dinge sind überzeugend. Ein funktionierender Bildschirm erhält oft mehr informelle Autorität als eine geschriebene Regel, selbst wenn er nur als Experiment gebaut wurde.</p>
+<p>Ein Demo kann zeigen:</p>
+<ul>
+<li>eine schnelle Art, einen Ablauf zu testen</li>
+<li>einen vorübergehenden Kompromiss</li>
+<li>eine vereinfachte lokale Implementierung</li>
+<li>eine unfertige Interpretation des beabsichtigten Produkts</li>
+</ul>
+<p>Nichts davon bedeutet automatisch, dass das Demo das Produkt neu definieren sollte.</p>
+<h2 id="wann-das-demo-ein-guter-beleg-ist">Wann das Demo ein guter Beleg ist</h2>
+<p>Ein Demo ist nützlich, wenn es hilft, Fragen zu beantworten wie:</p>
+<ul>
+<li>fühlt sich der Ablauf benutzbar an</li>
+<li>unterstützt das mobile Layout die reale Aufgabe</li>
+<li>ist der Scan- oder Intake-Ablauf verständlich</li>
+<li>wie reagieren Nutzer auf die Reihenfolge der Schritte</li>
+</ul>
+<p>Dann ist das Demo ein Beleg für Nutzbarkeit, Machbarkeit und Kommunikation.</p>
+<h2 id="wann-das-demo-keine-autorität-ist">Wann das Demo keine Autorität ist</h2>
+<p>Ein Demo sollte die Produktspezifikation nicht stillschweigend überstimmen. Es ist nicht die richtige Hauptautorität für Fragen wie:</p>
+<ul>
+<li>ist dieser Ablauf offiziell im Umfang</li>
+<li>ist das eine vorübergehende Abkürzung oder eine Produktzusage</li>
+<li>überschreibt dieses Verhalten eine bestehende Regel</li>
+<li>sollte öffentliche Dokumentation das als Zielsystem beschreiben</li>
+</ul>
+<p>Solche Fragen verlangen eine ausdrückliche Entscheidung und eine Dokumentationsaktualisierung.</p>
+<h2 id="die-let-books-regel-ist-ein-gutes-modell">Die Let-Books-Regel ist ein gutes Modell</h2>
+<p>Das Repository definiert bereits eine gesunde Regel: Öffentliches Schreiben sollte Spezifikationen und Dokumentation als kanonischen Beleg nutzen, während Demo- oder App-Verhalten als Implementierungsstatus erwähnt werden kann.</p>
+<p>Das verhindert, dass Prototypen versehentlich zur Produktsteuerung werden.</p>
+<h2 id="warum-das-mit-ki-noch-wichtiger-ist">Warum das mit KI noch wichtiger ist</h2>
+<p>KI verstärkt das, was im aktuellen Kontext am konkretesten wirkt. Wenn der konkreteste Artefakt ein Demo ist, werden Assistenten und Menschen sein Verhalten schnell kopieren, ohne zu fragen, ob es zu den Produktgrenzen passt.</p>
+<p>Darum brauchen Teams eine sichtbare Autoritätsreihenfolge:</p>
+<ol type="1">
+<li>Produktspezifikation</li>
+<li>Implementierungsleitlinien</li>
+<li>Dokumentation des aktuellen Zustands</li>
+<li>Demo oder Prototyp</li>
+<li>Tests und Validierung</li>
+</ol>
+<h2 id="die-dauerhafte-lehre">Die dauerhafte Lehre</h2>
+<p>Ein Demo ist wertvoll, weil es Produktideen testbar macht. Gefährlich wird es, wenn es stillschweigend zur Politik wird. Das gesunde Modell ist einfach: Das Demo darf das Produkt informieren, aber Spezifikationen und Dokumentation sollten die endgültige Entscheidung festhalten.</p>
+<h2 id="andere-sprachen">Andere Sprachen</h2>
+<ul>
+<li><a href="../en/when-the-demo-is-evidence-and-when-it-is-not.md">English</a></li>
+<li><a href="../sq/when-the-demo-is-evidence-and-when-it-is-not.md">Shqip</a></li>
+<li><a href="../sl/when-the-demo-is-evidence-and-when-it-is-not.md">Slovenščina</a></li>
+<li><a href="../hr/when-the-demo-is-evidence-and-when-it-is-not.md">Hrvatski</a></li>
+<li><a href="../bs/when-the-demo-is-evidence-and-when-it-is-not.md">Bosanski</a></li>
+<li><a href="../sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.md">Srpski (latinica)</a></li>
+<li><a href="../sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.md">Српски (ћирилица)</a></li>
+<li><a href="../mk/when-the-demo-is-evidence-and-when-it-is-not.md">Македонски</a></li>
+<li><a href="../it/when-the-demo-is-evidence-and-when-it-is-not.md">Italiano</a></li>
+<li><a href="../fr/when-the-demo-is-evidence-and-when-it-is-not.md">Français</a></li>
+<li><a href="../es/when-the-demo-is-evidence-and-when-it-is-not.md">Español</a></li>
+</ul>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Demo-Ausrichtung</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Spezifikationsgesteuerte Entwicklung</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a></li>
+            <li><a href="spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Dokumentation</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a></li>
+            <li><a href="spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

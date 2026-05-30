@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>When the Demo Is Evidence and When It Is Not | LetBooks</title>
+    <meta name="description" content="How to use demos and prototypes as useful implementation evidence without letting them silently become the product specification.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="When the Demo Is Evidence and When It Is Not | LetBooks">
+    <meta property="og:description" content="How to use demos and prototypes as useful implementation evidence without letting them silently become the product specification.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="When the Demo Is Evidence and When It Is Not | LetBooks">
+    <meta name="twitter:description" content="How to use demos and prototypes as useful implementation evidence without letting them silently become the product specification.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../en/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="en">EN</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sl">SL</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="hr">HR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="bs">BS</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="mk">МК</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="sq">SQ</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="de">DE</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="it">IT</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="fr">FR</a>
+              <a class="lang-link" href="when-the-demo-is-evidence-and-when-it-is-not.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">Demos are powerful because they turn abstract ideas into something people can react to. A workflow that sounds reasonable in a planning note may reveal real friction the moment someone tries it on a phone, in a storage room, or under time pressure.</p>
+<p>That is the good side of demos.</p>
+<p>The dangerous side is that once a prototype exists, people often start treating it as product truth whether or not anyone officially made that decision.</p>
+<h2 id="why-prototypes-become-accidental-authority">Why prototypes become accidental authority</h2>
+<p>Visible things are persuasive. A working screen often carries more informal authority than a written rule, even when the screen was built as an experiment.</p>
+<p>That is understandable. People trust what they can see.</p>
+<p>But in product work, especially AI-assisted product work, that instinct can create confusion.</p>
+<p>A demo might show:</p>
+<ul>
+<li>a fast way to test a workflow</li>
+<li>a temporary compromise</li>
+<li>a simplified local-only implementation</li>
+<li>an unfinished interpretation of the intended product</li>
+</ul>
+<p>None of those automatically means the demo should redefine the product.</p>
+<h2 id="when-the-demo-is-good-evidence">When the demo is good evidence</h2>
+<p>A demo is valuable evidence when it helps answer questions such as:</p>
+<ul>
+<li>Does the workflow feel usable?</li>
+<li>Does the mobile layout support the real task?</li>
+<li>Is the scanning or intake flow understandable?</li>
+<li>Do users react positively or negatively to the sequence of steps?</li>
+</ul>
+<p>In those cases, the demo is evidence about usability, feasibility, sequencing, and communication.</p>
+<p>That kind of evidence is extremely useful.</p>
+<h2 id="when-the-demo-is-not-the-authority">When the demo is not the authority</h2>
+<p>A demo should not silently outrank the product specification.</p>
+<p>It is not the right primary authority for questions such as:</p>
+<ul>
+<li>Is this workflow officially in scope?</li>
+<li>Is this a temporary shortcut or a product commitment?</li>
+<li>Does this behavior override an existing product rule?</li>
+<li>Should public documentation describe this as the intended system?</li>
+</ul>
+<p>Those questions require an explicit decision and a documentation update.</p>
+<h2 id="the-let-books-rule-is-a-strong-model">The Let Books rule is a strong model</h2>
+<p>The repository already contains a healthy editorial rule for this. Public writing should treat specifications and documentation as canonical evidence, while demo or app behavior can be mentioned as implementation status.</p>
+<p>That rule matters because it prevents accidental governance by prototype.</p>
+<p>If the static demo reveals a better box workflow, better mobile flow, or better intake interaction, that is valuable. But the better workflow should become real authority only after the specification and related docs are updated.</p>
+<h2 id="why-this-matters-more-with-ai">Why this matters more with AI</h2>
+<p>AI amplifies whatever looks most concrete in the current context.</p>
+<p>If the most concrete thing in the repo is a demo, assistants and even human contributors may copy its behavior without asking whether it matches the intended product boundary.</p>
+<p>That can be useful when the demo is already aligned.
+It can also spread temporary assumptions quickly when it is not.</p>
+<p>This is why teams need a visible authority order.</p>
+<h2 id="a-practical-authority-chain">A practical authority chain</h2>
+<p>For work like this, a useful order is:</p>
+<ol type="1">
+<li>product specification</li>
+<li>implementation guidance</li>
+<li>current-state documentation</li>
+<li>demo or prototype behavior</li>
+<li>tests and validation</li>
+</ol>
+<p>The demo still matters. It just matters inside a documented system instead of replacing one.</p>
+<h2 id="what-to-do-when-the-demo-teaches-you-something-new">What to do when the demo teaches you something new</h2>
+<p>Sometimes the prototype is right and the spec is wrong, incomplete, or too abstract.</p>
+<p>That is not a failure. It is exactly one of the reasons to build demos.</p>
+<p>The right response is:</p>
+<ol type="1">
+<li>record the discovery</li>
+<li>decide whether the new behavior should become intentional</li>
+<li>update the specification and docs</li>
+<li>then preserve alignment going forward</li>
+</ol>
+<p>The wrong response is to leave the docs unchanged and hope everyone remembers that the demo is now the real source of truth.</p>
+<h2 id="why-institutions-and-students-should-care">Why institutions and students should care</h2>
+<p>Institutions need to know whether they are evaluating a concept, a prototype, or an approved workflow model.</p>
+<p>Students need to learn that prototypes are not self-justifying. A strong software practice includes knowing when to treat implementation as evidence and when to treat it as an experiment awaiting a decision.</p>
+<h2 id="the-durable-lesson">The durable lesson</h2>
+<p>Demos are valuable because they make product ideas testable. They become dangerous when they quietly become policy.</p>
+<p>The healthiest model is simple: let demos inform the product, but make specifications and documentation record the final decision.</p>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Demo Alignment</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Spec-Driven Development in Let Books</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Spec-Driven Development</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Spec-Driven Development in Let Books</a></li>
+            <li><a href="spec-driven-development-for-ai-projects.html">Spec-Driven Development for AI Projects</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Documentation Is Part of the Product</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Documentation</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Spec-Driven Development in Let Books</a></li>
+            <li><a href="spec-driven-development-for-ai-projects.html">Spec-Driven Development for AI Projects</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Documentation Is Part of the Product</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

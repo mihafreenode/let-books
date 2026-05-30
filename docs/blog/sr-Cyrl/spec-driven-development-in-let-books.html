@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Развој вођен спецификацијом у Let Books | LetBooks</title>
+    <meta name="description" content="Како Let Books већ користи спецификацију, имплементациона упутства, документацију, ограничења дема и правила провере као систем развоја вођеног спецификацијом.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/sr-Cyrl/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/spec-driven-development-in-let-books.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Развој вођен спецификацијом у Let Books | LetBooks">
+    <meta property="og:description" content="Како Let Books већ користи спецификацију, имплементациона упутства, документацију, ограничења дема и правила провере као систем развоја вођеног спецификацијом.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/sr-Cyrl/spec-driven-development-in-let-books.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Развој вођен спецификацијом у Let Books | LetBooks">
+    <meta name="twitter:description" content="Како Let Books већ користи спецификацију, имплементациона упутства, документацију, ограничења дема и правила провере као систем развоја вођеног спецификацијом.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="sr-Cyrl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../sr-Cyrl/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="en">EN</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sl">SL</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="hr">HR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="bs">BS</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sr-Latn">SR</a>
+              <a class="lang-link is-current" href="spec-driven-development-in-let-books.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="mk">МК</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sq">SQ</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="de">DE</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="it">IT</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="fr">FR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">Let Books је користан студијски пример развоја вођеног спецификацијом јер репозиторијум већ садржи више слојева производне намере, а не само имплементационе артефакте.</p>
+<p>Пројекат још није пуна хостована апликација. Тренутно укључује производну спецификацију, имплементациона упутства, јавну документацију и локални статични демо. Због тога је добар пример како пројекат може остати усклађен и пре него што постоји коначни продукциони стек.</p>
+<h2 id="слој-спецификације">Слој спецификације</h2>
+<p><code>AGENTS.md</code> је језгро производне спецификације. Дефинише сврху пројекта, домен, токове рада, границе обима, смер локализације, приватност, необавезност AI-ја и критеријуме прихватања.</p>
+<p>Одговара на питања као што су:</p>
+<ul>
+<li>зашто пројекат постоји</li>
+<li>који су токови рада првокласни</li>
+<li>шта мора да ради без AI-ја</li>
+<li>шта су будуће идеје, а не садашње обавезе</li>
+<li>шта се рачуна као успешан први демо</li>
+</ul>
+<p>То је разлика између општег описа и праве спецификације. Права спецификација ограничава имплементационе изборе.</p>
+<h2 id="слој-тактичких-упутстава">Слој тактичких упутстава</h2>
+<p><code>AGENTS-Implementation.md</code> додаје други слој. Не замењује производну спецификацију, него објашњава како рад у овом репозиторијуму сада треба да се изводи.</p>
+<p>Ту спадају правила о јавном именовању, документацији, статичком сајту, локализацији, провери и доказној политици за јавно писање. То је важно јер нису сва правила производна истина. Нека су тактичка, уредничка или специфична за репозиторијум.</p>
+<h2 id="слој-тренутног-стања">Слој тренутног стања</h2>
+<p><code>README.md</code> представља трећи слој: поштен опис тренутног стања.</p>
+<p>Он објашњава шта данас постоји, чега још нема, чему служи статични демо и како је јавни сајт објављен. То помаже сарадницима, институцијама и рецензентима да не мешају амбицију са имплементацијом.</p>
+<h2 id="слој-документације">Слој документације</h2>
+<p><code>docs/</code> додаје четврти слој. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> и стилски водичи одређују како знање треба да буде организовано, објављено и проверено.</p>
+<p>Ту репозиторијум постаје више од збирке датотека. Постаје платформа знања са:</p>
+<ul>
+<li>архитектуром документације</li>
+<li>правилима уредничких доказа</li>
+<li>вишејезичном издавачком структуром</li>
+<li>правилима објаве и провере</li>
+</ul>
+<h2 id="слој-дема">Слој дема</h2>
+<p>Статични демо је важан, али намерно није једина ауторитет. Правила за блог и изворе већ разликују каноничну документацију од статуса имплементације.</p>
+<p>То значи да демо може проверавати токове рада, откривати проблеме употребљивости и помагати у објашњавању спољним актерима, а да притом сам од себе не постане коначна производна истина.</p>
+<h2 id="слој-провере">Слој провере</h2>
+<p>Let Books већ документује и начин размишљања о провери. <code>docs/Development.md</code> и <code>docs/Deployment.md</code> описују димне тестове локализације, валидацију структурираних датотека, генерисање метаподатака, обавезне датотеке, правописне провере и аутоматизовану објаву.</p>
+<p>То нису само детаљи о алатима. То је доказ да пројекат квалитет третира као поновљив систем.</p>
+<h2 id="главна-лекција">Главна лекција</h2>
+<p>Развој вођен спецификацијом не значи само написати дугачак документ пре кодирања. У пракси значи изградити поуздан ланац између производне намере, тактичких правила, јавне документације, дема, провере и објаве.</p>
+<p>Let Books показује да такав ланац може постојати и пре пуне backend апликације. Управо је то једна од најјачих предности развоја вођеног спецификацијом у AI-подржаном раду.</p>
+<h2 id="други-језици">Други језици</h2>
+<ul>
+<li><a href="../en/spec-driven-development-in-let-books.md">English</a></li>
+<li><a href="../sl/spec-driven-development-in-let-books.md">Slovenščina</a></li>
+<li><a href="../hr/spec-driven-development-in-let-books.md">Hrvatski</a></li>
+<li><a href="../bs/spec-driven-development-in-let-books.md">Bosanski</a></li>
+<li><a href="../sr-Latn/spec-driven-development-in-let-books.md">Srpski (latinica)</a></li>
+<li><a href="../mk/spec-driven-development-in-let-books.md">Македонски</a></li>
+<li><a href="../sq/spec-driven-development-in-let-books.md">Shqip</a></li>
+<li><a href="../de/spec-driven-development-in-let-books.md">Deutsch</a></li>
+<li><a href="../it/spec-driven-development-in-let-books.md">Italiano</a></li>
+<li><a href="../fr/spec-driven-development-in-let-books.md">Français</a></li>
+<li><a href="../es/spec-driven-development-in-let-books.md">Español</a></li>
+</ul>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Развој вођен спецификацијом</h3>
+            <ul>
+            <li><a href="spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Документација је део производа</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Документација</h3>
+            <ul>
+            <li><a href="spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Документација је део производа</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Усклађивање демоа</h3>
+            <ul>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

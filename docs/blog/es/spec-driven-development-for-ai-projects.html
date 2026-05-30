@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desarrollo guiado por especificaciones para proyectos de IA | LetBooks</title>
+    <meta name="description" content="Por qué el desarrollo asistido por IA necesita especificaciones más fuertes, documentación más clara y reglas explícitas de verificación en lugar de un proceso más laxo.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/es/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/spec-driven-development-for-ai-projects.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Desarrollo guiado por especificaciones para proyectos de IA | LetBooks">
+    <meta property="og:description" content="Por qué el desarrollo asistido por IA necesita especificaciones más fuertes, documentación más clara y reglas explícitas de verificación en lugar de un proceso más laxo.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/es/spec-driven-development-for-ai-projects.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Desarrollo guiado por especificaciones para proyectos de IA | LetBooks">
+    <meta name="twitter:description" content="Por qué el desarrollo asistido por IA necesita especificaciones más fuertes, documentación más clara y reglas explícitas de verificación en lugar de un proceso más laxo.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="es">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../es/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="en">EN</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sl">SL</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="hr">HR</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="bs">BS</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="mk">МК</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sq">SQ</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="de">DE</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="it">IT</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="fr">FR</a>
+              <a class="lang-link is-current" href="spec-driven-development-for-ai-projects.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">La IA hace mucho más fácil producir código con rapidez. También hace mucho más fácil producir con rapidez el código equivocado. Precisamente por eso el desarrollo guiado por especificaciones es más importante, no menos importante, en proyectos asistidos por IA.</p>
+<p>Cuando un equipo desarrolla sin una especificación clara, el producto se desvía con el tiempo de su propósito. Cuando la IA participa en ese proceso, esa desviación puede aparecer en una sola tarde. El código puede compilar, la interfaz puede verse pulida y las pruebas pueden incluso pasar. Aun así, el producto puede ser erróneo.</p>
+<h2 id="por-qué-la-ia-cambia-el-perfil-de-riesgo">Por qué la IA cambia el perfil de riesgo</h2>
+<p>La IA acelera el ritmo de la interpretación. Un solo prompt puede producir arquitectura, texto, validación, nomenclatura y flujo de usuario. Eso es útil, pero peligroso cuando la fuente de verdad no es lo bastante clara.</p>
+<p>En la práctica, la IA suele optimizar lo que en ese momento es más visible:</p>
+<ul>
+<li>el último prompt</li>
+<li>el archivo más cercano</li>
+<li>la ruta de implementación más fácil</li>
+<li>el patrón genérico más conocido</li>
+</ul>
+<p>Nada de eso significa automáticamente la decisión correcta de producto.</p>
+<h2 id="qué-hace-una-buena-especificación">Qué hace una buena especificación</h2>
+<p>Una buena especificación cumple al menos cuatro funciones:</p>
+<ul>
+<li>define el propósito</li>
+<li>fija límites</li>
+<li>establece el criterio de revisión</li>
+<li>sirve como memoria del equipo</li>
+</ul>
+<p>Esto es muy claro en Let Books. <code>AGENTS.md</code> insiste varias veces en que el flujo manual debe seguir siendo útil incluso sin servicios de IA de pago y en que las copias físicas de los libros no son lo mismo que los registros bibliográficos. No son detalles técnicos, sino límites de producto.</p>
+<h2 id="por-qué-la-documentación-no-debe-esperar">Por qué la documentación no debe esperar</h2>
+<p>Si la documentación está desactualizada o es confusa, personas y herramientas distintas deducirán productos distintos a partir del mismo repositorio. Una seguirá la demo, otra un README antiguo y otra el archivo más cercano.</p>
+<p>Por eso la documentación no es solo una explicación posterior. Es parte del sistema operativo del proyecto. En este repositorio, <code>README.md</code> describe el estado actual, <code>AGENTS.md</code> la intención del producto, <code>AGENTS-Implementation.md</code> las reglas tácticas y <code>docs/</code> las reglas de publicación y evidencia.</p>
+<h2 id="el-papel-de-las-demos">El papel de las demos</h2>
+<p>Una demo es útil porque muestra lo que existe y revela problemas del flujo de usuario. Pero no debería convertirse silenciosamente en la especificación del producto.</p>
+<p>Las reglas del repositorio ya distinguen entre especificaciones y documentación canónicas por un lado, y estado de implementación por otro. Si una demo revela un flujo mejor, hay que actualizar la especificación y la documentación, en lugar de dejar que la demo gane por sí sola.</p>
+<h2 id="markdown-pruebas-y-ci-forman-una-cadena">Markdown, pruebas y CI forman una cadena</h2>
+<p>En un desarrollo guiado por especificaciones, estas capas no están separadas.</p>
+<ul>
+<li>Markdown almacena la intención en una forma revisable.</li>
+<li>La documentación explica cómo debe interpretarse.</li>
+<li>Las pruebas verifican expectativas ejecutables.</li>
+<li>Las reglas de validación detectan la deriva estructural.</li>
+<li>CI aplica las reglas de forma regular.</li>
+</ul>
+<p>Juntas crean una memoria de producto que sobrevive a la velocidad del desarrollo.</p>
+<h2 id="la-lección-duradera">La lección duradera</h2>
+<p>La IA puede producir rápidamente código, contenido e interfaces. Por sí sola no puede garantizar que todos esos resultados sigan describiendo el mismo producto.</p>
+<p>El desarrollo guiado por especificaciones es la manera en que un equipo evita que la velocidad se convierta en deriva.</p>
+<h2 id="otros-idiomas">Otros idiomas</h2>
+<ul>
+<li><a href="../en/spec-driven-development-for-ai-projects.md">English</a></li>
+<li><a href="../sq/spec-driven-development-for-ai-projects.md">Shqip</a></li>
+<li><a href="../de/spec-driven-development-for-ai-projects.md">Deutsch</a></li>
+<li><a href="../it/spec-driven-development-for-ai-projects.md">Italiano</a></li>
+<li><a href="../sl/spec-driven-development-for-ai-projects.md">Slovenščina</a></li>
+<li><a href="../hr/spec-driven-development-for-ai-projects.md">Hrvatski</a></li>
+<li><a href="../bs/spec-driven-development-for-ai-projects.md">Bosanski</a></li>
+<li><a href="../sr-Latn/spec-driven-development-for-ai-projects.md">Srpski (latinica)</a></li>
+<li><a href="../sr-Cyrl/spec-driven-development-for-ai-projects.md">Српски (ћирилица)</a></li>
+<li><a href="../mk/spec-driven-development-for-ai-projects.md">Македонски</a></li>
+<li><a href="../fr/spec-driven-development-for-ai-projects.md">Français</a></li>
+</ul>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Desarrollo guiado por especificaciones</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Desarrollo guiado por especificaciones en Let Books</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">La documentación es parte del producto</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Cuándo la demo es evidencia y cuándo no lo es</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Entrega asistida por IA</h3>
+            <ul>
+            <li><a href="documentation-is-part-of-the-product.html">La documentación es parte del producto</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Documentación</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Desarrollo guiado por especificaciones en Let Books</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">La documentación es parte del producto</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Cuándo la demo es evidencia y cuándo no lo es</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

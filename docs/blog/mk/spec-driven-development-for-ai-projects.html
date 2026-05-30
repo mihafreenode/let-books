@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Развој воден од спецификации за AI проекти | LetBooks</title>
+    <meta name="description" content="Зошто развојот со помош на AI бара посилни спецификации, појасна документација и изречни правила за проверка наместо полабав процес.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/mk/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/spec-driven-development-for-ai-projects.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/spec-driven-development-for-ai-projects.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Развој воден од спецификации за AI проекти | LetBooks">
+    <meta property="og:description" content="Зошто развојот со помош на AI бара посилни спецификации, појасна документација и изречни правила за проверка наместо полабав процес.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/mk/spec-driven-development-for-ai-projects.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Развој воден од спецификации за AI проекти | LetBooks">
+    <meta name="twitter:description" content="Зошто развојот со помош на AI бара посилни спецификации, појасна документација и изречни правила за проверка наместо полабав процес.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="mk">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../mk/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="en">EN</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sl">SL</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="hr">HR</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="bs">BS</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link is-current" href="spec-driven-development-for-ai-projects.html" lang="mk">МК</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sq">SQ</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="de">DE</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="it">IT</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="fr">FR</a>
+              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">AI многу го олеснува брзото создавање код. Исто така многу го олеснува и брзото создавање погрешен код. Затоа развојот воден од спецификации е поважен, а не помалку важен, во проекти со помош на AI.</p>
+<p>Кога тим работи без јасна спецификација, производот со време се оддалечува од својата цел. Кога во тоа помага AI, тоа може да се случи за едно попладне. Кодот може да се компајлира, интерфејсот може да изгледа уредно, а тестовите може да поминуваат. Производот сепак може да биде погрешен.</p>
+<h2 id="зошто-ai-го-менува-профилот-на-ризик">Зошто AI го менува профилот на ризик</h2>
+<p>AI го забрзува темпото на интерпретација. Еден упит може да произведе архитектура, текст, валидација, именување и кориснички тек. Тоа е корисно, но е опасно кога изворот на вистина не е доволно јасен.</p>
+<p>Во пракса AI често го оптимизира она што во моментот е највидливо:</p>
+<ul>
+<li>последниот упит</li>
+<li>најблиската датотека</li>
+<li>најлесната патека за имплементација</li>
+<li>најгенеричниот познат образец</li>
+</ul>
+<p>Ништо од тоа само по себе не значи исправна продуктна одлука.</p>
+<h2 id="што-прави-добра-спецификација">Што прави добра спецификација</h2>
+<p>Добрата спецификација извршува најмалку четири задачи:</p>
+<ul>
+<li>ја дефинира целта</li>
+<li>поставува граници</li>
+<li>го одредува стандардот за преглед</li>
+<li>служи како меморија на тимот</li>
+</ul>
+<p>Тоа е многу јасно во Let Books. <code>AGENTS.md</code> повеќепати нагласува дека рачниот тек мора да работи и без платени AI услуги и дека физичките примероци книги не се исто што и библиографските записи. Тоа не се технички детали, туку продуктни граници.</p>
+<h2 id="зошто-документацијата-не-смее-да-чека">Зошто документацијата не смее да чека</h2>
+<p>Ако документацијата е застарена или нејасна, различни луѓе и различни алатки од истото складиште ќе заклучат дека постојат различни производи. Еден ќе го следи демото, друг стариот README, трет најблиската датотека.</p>
+<p>Затоа документацијата не е само доцно објаснување. Таа е дел од оперативниот систем на проектот. Во ова складиште <code>README.md</code> ја опишува тековната состојба, <code>AGENTS.md</code> продуктната намера, <code>AGENTS-Implementation.md</code> тактичките правила, а <code>docs/</code> правилата за објавување и евиденција.</p>
+<h2 id="улогата-на-демото">Улогата на демото</h2>
+<p>Демото е корисно затоа што покажува што постои и открива проблеми во корисничкиот тек. Но не треба тивко да стане продуктна спецификација.</p>
+<p>Правилата на складиштето веќе прават разлика меѓу канонска спецификација и документација од една страна и статус на имплементација од друга. Ако демото открие подобар тек, треба да се ажурираат спецификацијата и документацијата, а не да се дозволи демото само по себе да победи.</p>
+<h2 id="markdown-тестови-и-ci-создаваат-синџир">Markdown, тестови и CI создаваат синџир</h2>
+<p>Во развој воден од спецификации овие слоеви не стојат одделно.</p>
+<ul>
+<li>Markdown ја чува намерата во прегледна форма.</li>
+<li>Документацијата објаснува како треба да се толкува.</li>
+<li>Тестовите проверуваат извршливи очекувања.</li>
+<li>Правилата за валидација фаќаат структурно отстапување.</li>
+<li>CI редовно ги спроведува правилата.</li>
+</ul>
+<p>Заедно создаваат продуктна меморија што ја преживува брзината на развојот.</p>
+<h2 id="трајна-лекција">Трајна лекција</h2>
+<p>AI може брзо да произведе код, содржина и интерфејси. Сам по себе не може да гарантира дека сите тие излези сè уште го опишуваат истиот производ.</p>
+<p>Развојот воден од спецификации е начин тимот да спречи брзината да се претвори во отстапување.</p>
+<h2 id="други-јазици">Други јазици</h2>
+<ul>
+<li><a href="../en/spec-driven-development-for-ai-projects.md">English</a></li>
+<li><a href="../sl/spec-driven-development-for-ai-projects.md">Slovenščina</a></li>
+<li><a href="../hr/spec-driven-development-for-ai-projects.md">Hrvatski</a></li>
+<li><a href="../bs/spec-driven-development-for-ai-projects.md">Bosanski</a></li>
+<li><a href="../sr-Latn/spec-driven-development-for-ai-projects.md">Srpski (latinica)</a></li>
+<li><a href="../sr-Cyrl/spec-driven-development-for-ai-projects.md">Српски (ћирилица)</a></li>
+<li><a href="../sq/spec-driven-development-for-ai-projects.md">Shqip</a></li>
+<li><a href="../de/spec-driven-development-for-ai-projects.md">Deutsch</a></li>
+<li><a href="../it/spec-driven-development-for-ai-projects.md">Italiano</a></li>
+<li><a href="../fr/spec-driven-development-for-ai-projects.md">Français</a></li>
+<li><a href="../es/spec-driven-development-for-ai-projects.md">Español</a></li>
+</ul>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Развој воден од спецификации</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Развој воден од спецификации во Let Books</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Документацијата е дел од производот</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Кога демото е доказ, а кога не е</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Достава со помош на AI</h3>
+            <ul>
+            <li><a href="documentation-is-part-of-the-product.html">Документацијата е дел од производот</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Документација</h3>
+            <ul>
+            <li><a href="spec-driven-development-in-let-books.html">Развој воден од спецификации во Let Books</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Документацијата е дел од производот</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Кога демото е доказ, а кога не е</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

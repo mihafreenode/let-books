@@ -1,0 +1,108 @@
+---
+article_id: spec-driven-development-for-ai-projects
+canonical_language: sr-Cyrl
+language_variants:
+  - ../en/spec-driven-development-for-ai-projects.md
+  - ../sl/spec-driven-development-for-ai-projects.md
+  - ../hr/spec-driven-development-for-ai-projects.md
+  - ../bs/spec-driven-development-for-ai-projects.md
+  - ../sr-Latn/spec-driven-development-for-ai-projects.md
+  - ../sr-Cyrl/spec-driven-development-for-ai-projects.md
+  - ../mk/spec-driven-development-for-ai-projects.md
+  - ../sq/spec-driven-development-for-ai-projects.md
+  - ../de/spec-driven-development-for-ai-projects.md
+  - ../it/spec-driven-development-for-ai-projects.md
+  - ../fr/spec-driven-development-for-ai-projects.md
+  - ../es/spec-driven-development-for-ai-projects.md
+title: Развој вођен спецификацијом за AI пројекте
+summary: Зашто развој уз помоћ AI-ја тражи јаче спецификације, јаснију документацију и изричита правила провере уместо лабавијег процеса.
+topics:
+  - spec-driven-development
+  - ai-assisted-delivery
+  - documentation
+  - validation
+evidence:
+  - AGENTS.md
+  - AGENTS-Implementation.md
+  - README.md
+  - docs/Development.md
+  - docs/Deployment.md
+  - docs/spec-driven-content-program.md
+sources:
+  - ../../sources/sr-Cyrl/spec-driven-development-for-ai-projects.md
+status: draft
+---
+
+# Развој вођен спецификацијом за AI пројекте
+
+AI знатно олакшава брзо стварање кода. Исто тако знатно олакшава и брзо стварање погрешног кода. Зато је развој вођен спецификацијом у пројектима уз помоћ AI-ја важнији, а не мање важан.
+
+Када тим развија без јасне спецификације, производ временом одлута од своје сврхе. Када у томе помаже AI, то може да се деси у једном поподневу. Код може да се компајлира, интерфејс може да изгледа уредно, а тестови могу да пролазе. Производ ипак може бити погрешан.
+
+## Зашто AI мења профил ризика
+
+AI убрзава темпо интерпретације. Један упит може да произведе архитектуру, текст, валидацију, именовање и кориснички ток. То је корисно, али опасно када извор истине није довољно јасан.
+
+У пракси AI често оптимизује оно што је у том тренутку највидљивије:
+
+- последњи упит
+- најближу датотеку
+- најлакши имплементациони пут
+- најгенеричкији познати образац
+
+Ништа од тога само по себи не значи исправну производну одлуку.
+
+## Шта ради добра спецификација
+
+Добра спецификација обавља бар четири задатка:
+
+- дефинише сврху
+- поставља границе
+- одређује стандард прегледа
+- служи као меморија тима
+
+То је у пројекту Let Books врло јасно. `AGENTS.md` више пута наглашава да ручни ток мора да ради и без плаћених AI услуга и да физички примерци књига нису исто што и библиографски записи. То нису техничке ситнице него производне границе.
+
+## Зашто документација не сме да чека
+
+Ако је документација застарела или нејасна, различити људи и различити алати из истог репозиторијума закључиће да постоје различити производи. Један ће пратити демо, други стари README, трећи најближу датотеку.
+
+Зато документација није само накнадно објашњење. Она је део оперативног система пројекта. У овом репозиторијуму `README.md` описује тренутно стање, `AGENTS.md` производну намеру, `AGENTS-Implementation.md` тактичка правила, а `docs/` правила објаве и евиденције.
+
+## Улога демоа
+
+Демо је користан јер показује шта постоји и открива проблеме у корисничком току. Али не би смео тихо да постане производна спецификација.
+
+Правила репозиторијума већ разликују каноничне спецификације и документацију од статуса имплементације. Ако демо открије бољи ток, треба ажурирати спецификацију и документацију, а не пустити да демо сам по себи победи.
+
+## Markdown, тестови и CI чине ланац
+
+У развоју вођеном спецификацијом ови слојеви не стоје сваки за себе.
+
+- Markdown чува намеру у прегледном облику.
+- Документација објашњава како треба да се тумачи.
+- Тестови проверавају извршива очекивања.
+- Правила валидације хватају структурно одступање.
+- CI редовно спроводи правила.
+
+Заједно стварају производну меморију која преживљава брзину развоја.
+
+## Трајна лекција
+
+AI може брзо да произведе код, садржај и интерфејсе. Сам по себи не може да гарантује да сви ти излази још увек описују исти производ.
+
+Развој вођен спецификацијом начин је да тим спречи да се брзина претвори у одступање.
+
+## Други језици
+
+- [English](../en/spec-driven-development-for-ai-projects.md)
+- [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
+- [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)
+- [Bosanski](../bs/spec-driven-development-for-ai-projects.md)
+- [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
+- [Македонски](../mk/spec-driven-development-for-ai-projects.md)
+- [Shqip](../sq/spec-driven-development-for-ai-projects.md)
+- [Deutsch](../de/spec-driven-development-for-ai-projects.md)
+- [Italiano](../it/spec-driven-development-for-ai-projects.md)
+- [Français](../fr/spec-driven-development-for-ai-projects.md)
+- [Español](../es/spec-driven-development-for-ai-projects.md)

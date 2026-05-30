@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spec-Driven Development in Let Books | LetBooks</title>
+    <meta name="description" content="How Let Books already uses specification, implementation guidance, documentation, demo constraints, and verification rules as a spec-driven delivery system.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/spec-driven-development-in-let-books.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Spec-Driven Development in Let Books | LetBooks">
+    <meta property="og:description" content="How Let Books already uses specification, implementation guidance, documentation, demo constraints, and verification rules as a spec-driven delivery system.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spec-Driven Development in Let Books | LetBooks">
+    <meta name="twitter:description" content="How Let Books already uses specification, implementation guidance, documentation, demo constraints, and verification rules as a spec-driven delivery system.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../en/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="spec-driven-development-in-let-books.html" lang="en">EN</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sl">SL</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="hr">HR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="bs">BS</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="mk">МК</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sq">SQ</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="de">DE</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="it">IT</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="fr">FR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">Let Books is a useful case study for spec-driven development because the repository already contains multiple layers of product intent, not just implementation artifacts.</p>
+<p>The project is not yet a full hosted application. It currently includes a product specification, implementation guidance, public documentation, and a static local-first demo. That makes it a good example of how a project can stay coherent before the final production stack exists.</p>
+<h2 id="the-specification-layer">The specification layer</h2>
+<p><code>AGENTS.md</code> is the core product specification. It defines the project purpose, the domain model, workflows, scope phases, localization direction, privacy rules, AI optionality, storage logic, and acceptance criteria.</p>
+<p>This matters because it answers questions that code alone cannot answer clearly:</p>
+<ul>
+<li>Why does the product exist?</li>
+<li>Which workflows are first-class?</li>
+<li>What must work without AI?</li>
+<li>Which features are future ideas rather than current commitments?</li>
+<li>What counts as a successful first demo?</li>
+</ul>
+<p>That is the difference between a project description and a real specification. A real specification constrains implementation choices.</p>
+<h2 id="the-tactical-guidance-layer">The tactical guidance layer</h2>
+<p><code>AGENTS-Implementation.md</code> adds the second layer. It does not replace the product spec. It explains how delivery should happen within the repo right now.</p>
+<p>Examples include:</p>
+<ul>
+<li>public naming rules</li>
+<li>documentation implementation rules</li>
+<li>static-site metadata expectations</li>
+<li>demo constraints</li>
+<li>localization and verification expectations</li>
+<li>editorial evidence policy for public writing</li>
+</ul>
+<p>This is important in AI-assisted work because not every rule belongs in the long-term product specification. Some rules are tactical, editorial, or repository-specific. Keeping that distinction explicit reduces noise and avoids turning the product spec into an implementation dump.</p>
+<h2 id="the-current-state-layer">The current-state layer</h2>
+<p><code>README.md</code> provides a third layer: current-state framing.</p>
+<p>It explains what exists now, what does not exist yet, what the static demo is for, and how the published site is structured. That is a crucial piece of alignment because projects often fail when readers confuse aspiration with implementation.</p>
+<p>In Let Books, the README explicitly separates current deliverables from future plans. That helps contributors, institutions, and reviewers understand the maturity of the project without guessing.</p>
+<h2 id="the-documentation-layer">The documentation layer</h2>
+<p>The docs area adds a fourth layer. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code>, and the style-guide and sources areas define how knowledge should be organized, validated, and published.</p>
+<p>This is where the repository becomes more than a codebase. It becomes a knowledge platform with:</p>
+<ul>
+<li>documentation architecture</li>
+<li>editorial evidence rules</li>
+<li>multilingual publishing structure</li>
+<li>deployment rules for public docs</li>
+<li>development and verification guidance</li>
+</ul>
+<p>That is exactly the kind of scaffolding that helps AI-assisted delivery stay traceable.</p>
+<h2 id="the-demo-layer">The demo layer</h2>
+<p>The static demo is important, but it is intentionally not the only authority in the repository.</p>
+<p>The public docs and blog rules already distinguish between canonical documentation evidence and implementation status. That means the demo can validate workflows, reveal UX problems, and help external audiences understand the product, while still remaining subordinate to the documented product intent unless the documentation is updated.</p>
+<p>This is a mature rule. Without it, prototypes often become accidental governance mechanisms. A team starts copying the prototype because it exists, not because it reflects an approved product decision.</p>
+<h2 id="the-verification-layer">The verification layer</h2>
+<p>Let Books also already documents a verification mindset.</p>
+<p><code>docs/Development.md</code> and <code>docs/Deployment.md</code> describe validation layers such as:</p>
+<ul>
+<li>localization smoke tests</li>
+<li>structured file validation</li>
+<li>metadata generation</li>
+<li>required file checks</li>
+<li>optional spellcheck and linting</li>
+<li>deployment automation</li>
+</ul>
+<p>Those are not just tooling details. They are evidence that the project treats quality as a repeatable system instead of a best-effort manual habit.</p>
+<h2 id="why-this-matters-for-ai-assisted-delivery">Why this matters for AI-assisted delivery</h2>
+<p>If an AI assistant contributes to Let Books, it does not need to invent the product from scratch. The repository already contains a chain of intent:</p>
+<ol type="1">
+<li>product direction in <code>AGENTS.md</code></li>
+<li>tactical delivery rules in <code>AGENTS-Implementation.md</code></li>
+<li>current status in <code>README.md</code></li>
+<li>knowledge and publishing rules in <code>docs/</code></li>
+<li>executable prototype status in the static demo</li>
+<li>validation and deployment guidance in the development and deployment docs</li>
+</ol>
+<p>That chain does not eliminate mistakes. It does make them easier to detect and easier to review.</p>
+<h2 id="the-main-lesson">The main lesson</h2>
+<p>Spec-driven development is not only about writing a long requirements document before coding begins.</p>
+<p>In practice, it is about building a reliable chain between:</p>
+<ul>
+<li>product intent</li>
+<li>tactical rules</li>
+<li>public documentation</li>
+<li>demos</li>
+<li>validation</li>
+<li>deployment</li>
+</ul>
+<p>Let Books already shows that this chain can exist before the full backend product exists.</p>
+<p>That is one of the strongest arguments for spec-driven development in AI-assisted work: the clearer the chain of intent, the less likely fast output is to become fast confusion.</p>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Spec-Driven Development</h3>
+            <ul>
+            <li><a href="spec-driven-development-for-ai-projects.html">Spec-Driven Development for AI Projects</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Documentation Is Part of the Product</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">When the Demo Is Evidence and When It Is Not</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Documentation</h3>
+            <ul>
+            <li><a href="spec-driven-development-for-ai-projects.html">Spec-Driven Development for AI Projects</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">Documentation Is Part of the Product</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">When the Demo Is Evidence and When It Is Not</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Demo Alignment</h3>
+            <ul>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">When the Demo Is Evidence and When It Is Not</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

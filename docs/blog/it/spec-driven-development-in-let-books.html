@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sviluppo guidato dalle specifiche in Let Books | LetBooks</title>
+    <meta name="description" content="Come Let Books usa gia specifica, linee guida di implementazione, documentazione, vincoli della demo e regole di verifica come sistema di sviluppo guidato dalle specifiche.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/it/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/spec-driven-development-in-let-books.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/spec-driven-development-in-let-books.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Sviluppo guidato dalle specifiche in Let Books | LetBooks">
+    <meta property="og:description" content="Come Let Books usa gia specifica, linee guida di implementazione, documentazione, vincoli della demo e regole di verifica come sistema di sviluppo guidato dalle specifiche.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/it/spec-driven-development-in-let-books.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sviluppo guidato dalle specifiche in Let Books | LetBooks">
+    <meta name="twitter:description" content="Come Let Books usa gia specifica, linee guida di implementazione, documentazione, vincoli della demo e regole di verifica come sistema di sviluppo guidato dalle specifiche.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-locale="it">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../it/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../index.html">Docs</a>
+            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="en">EN</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sl">SL</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="hr">HR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="bs">BS</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="mk">МК</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sq">SQ</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="de">DE</a>
+              <a class="lang-link is-current" href="spec-driven-development-in-let-books.html" lang="it">IT</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="fr">FR</a>
+              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article">
+<p class="lead">Let Books e un utile caso di studio dello sviluppo guidato dalle specifiche perché il repository contiene gia piu livelli di intenzione di prodotto e non solo artefatti di implementazione.</p>
+<p>Il progetto non e ancora un’applicazione ospitata completa. Al momento include una specifica di prodotto, linee guida di implementazione, documentazione pubblica e una demo statica locale. Per questo e un buon esempio di come un progetto possa restare coerente prima ancora che esista lo stack di produzione finale.</p>
+<h2 id="il-livello-della-specifica">Il livello della specifica</h2>
+<p><code>AGENTS.md</code> e la specifica centrale di prodotto. Definisce lo scopo del progetto, il modello di dominio, i flussi di lavoro, i limiti di ambito, la direzione della localizzazione, la privacy, l’opzionalita dell’IA e i criteri di accettazione.</p>
+<p>Risponde a domande come:</p>
+<ul>
+<li>perché esiste il progetto</li>
+<li>quali flussi di lavoro sono di prima classe</li>
+<li>cosa deve funzionare senza IA</li>
+<li>quali sono idee future e non impegni attuali</li>
+<li>cosa conta come prima demo riuscita</li>
+</ul>
+<p>Questa e la differenza tra una descrizione generale e una vera specifica. Una vera specifica limita le scelte di implementazione.</p>
+<h2 id="il-livello-delle-linee-guida-tattiche">Il livello delle linee guida tattiche</h2>
+<p><code>AGENTS-Implementation.md</code> aggiunge il secondo livello. Non sostituisce la specifica di prodotto, ma spiega come il lavoro debba essere svolto oggi in questo repository.</p>
+<p>Qui rientrano regole su naming pubblico, documentazione, sito statico, localizzazione, verifica e politica delle prove per la scrittura pubblica. Questo e importante perché non ogni regola e una verita di prodotto. Alcune sono tattiche, editoriali o specifiche del repository.</p>
+<h2 id="il-livello-dello-stato-attuale">Il livello dello stato attuale</h2>
+<p><code>README.md</code> rappresenta il terzo livello: una descrizione onesta dello stato attuale.</p>
+<p>Spiega cosa esiste oggi, cosa ancora manca, a cosa serve la demo statica e come viene pubblicato il sito pubblico. Questo aiuta collaboratori, istituzioni e revisori a non confondere l’ambizione con l’implementazione.</p>
+<h2 id="il-livello-della-documentazione">Il livello della documentazione</h2>
+<p><code>docs/</code> aggiunge il quarto livello. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> e le guide di stile definiscono come la conoscenza debba essere organizzata, pubblicata e verificata.</p>
+<p>Qui il repository diventa qualcosa di piu di una raccolta di file. Diventa una piattaforma di conoscenza con:</p>
+<ul>
+<li>architettura della documentazione</li>
+<li>regole di evidenza editoriale</li>
+<li>struttura di pubblicazione multilingue</li>
+<li>regole di pubblicazione e verifica</li>
+</ul>
+<h2 id="il-livello-della-demo">Il livello della demo</h2>
+<p>La demo statica e importante, ma volutamente non e l’unica autorita. Le regole del blog e delle fonti distinguono gia tra documentazione canonica e stato di implementazione.</p>
+<p>Questo significa che la demo puo verificare i flussi di lavoro, rivelare problemi di usabilita e aiutare a spiegare il progetto a soggetti esterni, senza diventare da sola la verita finale di prodotto.</p>
+<h2 id="il-livello-della-verifica">Il livello della verifica</h2>
+<p>Let Books documenta gia anche una mentalita di verifica. <code>docs/Development.md</code> e <code>docs/Deployment.md</code> descrivono smoke test di localizzazione, validazione di file strutturati, generazione di metadati, file obbligatori, controlli ortografici e pubblicazione automatizzata.</p>
+<p>Questi non sono solo dettagli di strumenti. Sono la prova che il progetto tratta la qualita come un sistema ripetibile.</p>
+<h2 id="la-lezione-principale">La lezione principale</h2>
+<p>Lo sviluppo guidato dalle specifiche non significa solo scrivere un lungo documento prima di programmare. In pratica significa costruire una catena affidabile tra intenzione di prodotto, regole tattiche, documentazione pubblica, demo, verifica e pubblicazione.</p>
+<p>Let Books mostra che una catena del genere puo esistere anche prima di un’applicazione backend completa. Questo e uno dei vantaggi piu forti dello sviluppo guidato dalle specifiche nel lavoro supportato dall’IA.</p>
+<h2 id="altre-lingue">Altre lingue</h2>
+<ul>
+<li><a href="../en/spec-driven-development-in-let-books.md">English</a></li>
+<li><a href="../sq/spec-driven-development-in-let-books.md">Shqip</a></li>
+<li><a href="../de/spec-driven-development-in-let-books.md">Deutsch</a></li>
+<li><a href="../sl/spec-driven-development-in-let-books.md">Slovenščina</a></li>
+<li><a href="../hr/spec-driven-development-in-let-books.md">Hrvatski</a></li>
+<li><a href="../bs/spec-driven-development-in-let-books.md">Bosanski</a></li>
+<li><a href="../sr-Latn/spec-driven-development-in-let-books.md">Srpski (latinica)</a></li>
+<li><a href="../sr-Cyrl/spec-driven-development-in-let-books.md">Српски (ћирилица)</a></li>
+<li><a href="../mk/spec-driven-development-in-let-books.md">Македонски</a></li>
+<li><a href="../fr/spec-driven-development-in-let-books.md">Français</a></li>
+<li><a href="../es/spec-driven-development-in-let-books.md">Español</a></li>
+</ul>
+        </article>
+              <section class="topic-nav">
+          <h2>Related Articles</h2>
+          <div class="topic-group">
+            <h3 class="topic-label">Sviluppo guidato da specifiche</h3>
+            <ul>
+            <li><a href="spec-driven-development-for-ai-projects.html">Sviluppo guidato dalle specifiche per progetti di IA</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">La documentazione è parte del prodotto</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Documentazione</h3>
+            <ul>
+            <li><a href="spec-driven-development-for-ai-projects.html">Sviluppo guidato dalle specifiche per progetti di IA</a></li>
+            <li><a href="documentation-is-part-of-the-product.html">La documentazione è parte del prodotto</a></li>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a></li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3 class="topic-label">Allineamento demo</h3>
+            <ul>
+            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
