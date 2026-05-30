@@ -221,6 +221,10 @@ main {
   padding: 2rem 0 4rem;
 }
 
+body[data-page-type="article"] main {
+  padding-bottom: 1.5rem;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -1189,6 +1193,102 @@ a:focus-visible > p {
 .blog-index-link {
   margin-top: 2rem;
   text-align: center;
+}
+
+/* --- Blog article footer navigation --- */
+
+.language-alternatives {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(15, 91, 69, 0.12);
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.language-alternatives h2 {
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--text-muted);
+}
+
+.language-alternatives ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.language-alternatives ul li {
+  margin-bottom: 0;
+}
+
+.language-alternatives a {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(15, 91, 69, 0.08);
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--brand);
+}
+
+.language-alternatives a:hover {
+  text-decoration: underline;
+}
+
+.topic-nav {
+  margin-top: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid rgba(15, 91, 69, 0.12);
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.topic-nav h2 {
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--text-muted);
+}
+
+.topic-nav .topic-group {
+  margin-bottom: 0.5rem;
+}
+
+.topic-nav ul {
+  margin: 0.25rem 0 0.75rem;
+  padding-left: 1rem;
+}
+
+.topic-nav ul li {
+  margin-bottom: 0.15rem;
+}
+
+.topic-nav .topic-label {
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0.25rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.topic-nav a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(15, 91, 69, 0.2);
+}
+
+.topic-nav a:hover {
+  color: var(--brand);
+  text-decoration-color: var(--brand);
 }
 
 @media (max-width: 460px) {
