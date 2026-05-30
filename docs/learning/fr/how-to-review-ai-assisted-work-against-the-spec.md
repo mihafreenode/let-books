@@ -1,11 +1,11 @@
 ---
-title: "Comment Revoir Un Travail Assisté Par L'IA Par Rapport À La Spécification"
+title: "Comment revoir un travail assisté par l'IA par rapport à la spécification"
 topics:
   - product-review
   - ai-assisted-delivery
   - spec-driven-development
 ---
-# Comment Revoir Un Travail Assisté Par L'IA Par Rapport À La Spécification
+# Comment revoir un travail assisté par l'IA par rapport à la spécification
 
 ## Résumé
 

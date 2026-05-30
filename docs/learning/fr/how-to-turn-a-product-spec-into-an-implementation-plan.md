@@ -1,11 +1,11 @@
 ---
-title: "Comment Transformer Une Spécification Produit En Plan D'Implémentation"
+title: "Comment transformer une spécification produit en plan d'implémentation"
 topics:
   - spec-writing
   - implementation-planning
   - project-management
 ---
-# Comment Transformer Une Spécification Produit En Plan D'Implémentation
+# Comment transformer une spécification produit en plan d'implémentation
 
 ## Résumé
 

@@ -1,11 +1,11 @@
 ---
-title: "Kako Napisati Specifikaciju Koju AI Može Da Prati"
+title: "Kako napisati specifikaciju koju AI može da prati"
 topics:
   - spec-writing
   - ai-assisted-delivery
   - documentation
 ---
-# Kako Napisati Specifikaciju Koju AI Može Da Prati
+# Kako napisati specifikaciju koju AI može da prati
 
 ## Sažetak
 

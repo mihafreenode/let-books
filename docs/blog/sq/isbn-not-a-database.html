@@ -8,6 +8,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/blog/sq/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/isbn-not-a-database.html">
     <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/isbn-not-a-database.html">
@@ -20,14 +21,13 @@
     <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/isbn-not-a-database.html">
     <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/isbn-not-a-database.html">
     <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/isbn-not-a-database.html">
-    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
-    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="ISBN nuk është bazë të dhënash | LetBooks">
     <meta property="og:description" content="Pse ISBN ndihmon në identifikimin e librave por nuk zëvendëson sistemet e metatëdhënave, dhe si funksionon zinxhiri i kërkimit të metatëdhënave në projektin Let Books.">
@@ -44,11 +44,11 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
-  <body data-page-type="article" data-locale="sq">
+  <body data-page-type="article" data-content-type="blog" data-locale="sq">
     <div class="page-shell">
       <header class="site-header">
         <div class="header-inner">
-          <a class="brand-link" href="../../sq/index.html">
+          <a class="brand-link" href="../../blog/sq/index.html">
             <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
             <span class="brand-copy">
               <strong>Let Books</strong>
@@ -56,122 +56,200 @@
             </span>
           </a>
           <div class="header-nav">
-            <a class="nav-link" href="../../index.html">Docs</a>
-            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="../../sq/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sq/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
-            <div class="lang-switch" aria-label="Mundësitë gjuhësore">
-              <a class="lang-link is-current" href="isbn-not-a-database.html" lang="sq">SQ</a>
-              <a class="lang-link" href="../../index.html">Të gjitha gjuhët</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/isbn-not-a-database.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/isbn-not-a-database.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/isbn-not-a-database.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/isbn-not-a-database.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/isbn-not-a-database.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/isbn-not-a-database.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/isbn-not-a-database.html" lang="mk">МК</a>
+              <a class="lang-link is-current" href="../../blog/sq/isbn-not-a-database.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/isbn-not-a-database.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/isbn-not-a-database.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/isbn-not-a-database.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/isbn-not-a-database.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
             </div>
           </div>
         </div>
       </header>
 
       <main>
-        <article class="section blog-article">
-          <span class="eyebrow">Blog &middot; Metatëdhëna</span>
-          <h1>ISBN nuk është bazë të dhënash</h1>
-          <p class="lead">Pse ISBN ndihmon në identifikimin e librave por nuk zëvendëson sistemet e metatëdhënave, dhe si funksionon zinxhiri i kërkimit të metatëdhënave në projektin Let Books.</p>
-
-          <p>Kur mbani në dorë një libër të shtypur, barkodi në kopertinën e pasme është identifikuesi më i dukshëm që ai mbart. Ai identifikues është ISBN &mdash; Numri Standard Ndërkombëtar i Librit. Në katalogët e bibliotekave, dyqanet online dhe sistemet e metatëdhënave, shpesh funksionon si një çelës i bazës së të dhënave. Por ISBN nuk është një bazë të dhënash dhe trajtimi i tij si i tillë çon në probleme reale në procesin e dhurimit të librave.</p>
-
-          <h2>Çfarë është ISBN në të vërtetë</h2>
-          <p>ISBN është një identifikues unik i caktuar për një botim specifik të një libri të botuar. Standardi aktual, ISBN-13, përdor 13 shifra me një shifër kontrolli për zbulimin e gabimeve. Formati më i vjetër ISBN-10 gjendet ende në librat e botuar para vitit 2007.</p>
-          <p>ISBN identifikon botimin, jo veprën. Për shembull, botimi i dytë dhe i tretë i të njëjtit tekst shkollor kanë ISBN të ndryshëm. Një libër me kopertinë të fortë dhe ai me kopertinë të butë të së njëjtës vepër kanë ISBN të ndryshëm. Një përkthim në anglisht dhe botimi origjinal frëngjisht kanë ISBN të ndryshëm.</p>
-          <p>Kjo është precizion i dobishëm &mdash; por vjen me kufizime të rëndësishme.</p>
-
-          <figure class="image-card blog-figure">
-            <img src="../../diagrams/blog/isbn-not-a-database/sq/isbn-vs-physical-book.svg" alt="Diagrami ISBN kundrejt kopjes fizike të librit">
-            <figcaption>ISBN identifikon metatëdhënat e botimit në të majtë. Kopja fizike në të djathtë &mdash; gjendja, provenienca, vendndodhja e ruajtjes, statusi i dhurimit, fotot &mdash; gjurmohet veçmas në modelin domenor të Let Books. Të dyja janë të lidhura por nuk janë e njëjta gjë.</figcaption>
-          </figure>
-
-          <h2>Çfarë ISBN nuk mund të bëjë</h2>
-
-          <h3>Jo çdo libër e ka një të tillë</h3>
-          <p>Librat e botuar para vitit 1970, vetëbotimet, materialet akademike me tirazh të kufizuar dhe librat nga botues të vegjël shpesh nuk kanë fare ISBN. Në koleksionet e trashëgimisë akademike &mdash; lloji në të cilin ky projekt fokusohet &mdash; tekstet shkollore para vitit 1970, materialet e leksioneve dhe materialet e shtypura në nivel lokal janë të zakonshme dhe të vlefshme.</p>
-
-          <h3>ISBN nuk përshkruan gjendjen</h3>
-          <p>Një bibliotekë dëshiron të dijë nëse një kopje është e dëmtuar nga uji, e shënuar ose i mungojnë faqe. ISBN nuk jep asnjë nga këto informacione. Identifikuesi është i njëjtë për një kopje të pacenuar dhe për atë që ka qëndruar në një bodrum të lagësht për njëzet vjet.</p>
-
-          <h3>ISBN nuk përshkruan proveniencën</h3>
-          <p>E kujt ishte kjo kopje? A u rekomandua nga një profesor? A ka nënshkrimin e një pronari të mëparshëm ose një vulë biblioteke? Cila institucion e mbajti atë? ISBN hesht për të gjitha këto.</p>
-
-          <h3>ISBN nuk përshkruan vendndodhjen</h3>
-          <p>Për një projekt dhurimi librash, pyetja e dytë më e rëndësishme pas "çfarë është?" është "ku është?". ISBN nuk ka përgjigje. Vendndodhja është një çështje logjistike fizike, e gjurmuar veçmas në hierarkinë e ruajtjes.</p>
-
-          <h3>ISBN mund të jetë i gabuar ose i ripërdorur</h3>
-          <p>Ekzistojnë ISBN të shtypur gabimisht. I njëjti ISBN mund të ripërdoret aksidentalisht nga botues të ndryshëm. OCR mund të lexojë gabimisht shifrat. Shifra e kontrollit kap gabimet e një shifre të vetme, por jo të gjitha.</p>
-
-          <h2>Si trajton Let Books ISBN-in</h2>
-          <p><code>docs/book-metadata.md</code> përcakton një strategji praktike rezervë për kërkimin sipas ISBN-së. Dokumenti gjithashtu thotë se ky rrjedh funksionon në demon alfa aktuale, ndërsa shërben si model për aplikacionin e plotë të ardhshëm:</p>
-
-          <figure class="image-card blog-figure">
-            <img src="../../diagrams/blog/isbn-not-a-database/sq/isbn-lookup-chain.svg" alt="Diagrami i zinxhirit të kërkimit të ISBN">
-          </figure>
-
-          <ol>
-            <li>Normalizo dhe verifiko ISBN-in. Hiq hapësirat dhe vizat, X-in ktheje në të madhe, verifiko shifrën e kontrollit.</li>
-            <li>Kërko së pari Open Library përmes API-t publik.</li>
-            <li>Nëse Open Library nuk kthen të dhëna të dobishme, kërko API-n e metatëdhënave të Let Books.</li>
-            <li>Nëse asnjë ofrues nuk ka të dhëna, kthehu te regjistrimi manual.</li>
-          </ol>
-
-          <p>Regjistrimi manual nuk bllokohet kurrë. Nëse të gjithë ofruesit dështojnë &mdash; qoftë për shkak të një gabimi rrjeti, kufizimi të shpejtësisë ose mungesës së vërtetë të të dhënave &mdash; përdoruesi mund të fusë manualisht titullin, autorin, botuesin dhe vitin dhe të vazhdojë katalogimin.</p>
-          <p>Zinxhiri i rënies është qëllimisht i thjeshtë. Nuk ka një pikë të vetme dështimi sepse asnjë ofrues nuk është i detyrueshëm. Çdo ofrues është opsional dhe i zëvendësueshëm në mënyrë të pavarur.</p>
-          <p>Referencat kanonike të depos për këtë zinxhir janë <code>docs/book-metadata.md</code> dhe <code>AGENTS.md</code>. Nëse një demo ose një ndërtim specifik i aplikacionit tashmë zbaton një pjesë të këtij rrjedhi, përmendeni këtë vetëm si status zbatimi, jo si dëshmi kryesore.</p>
-
-          <h2>Pse kjo ka rëndësi për dhurimin e librave</h2>
-          <p>Kur një dhurues katalogizon një koleksion librash akademikë, disa do të kenë ISBN dhe disa jo. Librat pa ISBN janë shpesh më interesantët &mdash; botime më të vjetra, materiale të botuara në nivel lokal, përmbledhje për lëndë specifike ose libra nga botues të ish-Jugosllavisë, identifikuesit e të cilëve nuk arritën kurrë në bazat globale të të dhënave.</p>
-          <p>Procesi i katalogimit nuk duhet të ndëshkojë dhuruesin për mungesën e ISBN-ve. Çdo veçori që funksionon me kërkimin e ISBN duhet të funksionojë edhe pa të: gjurmimi i vendndodhjes, ngarkimi i fotove, eksportimi në Excel, rishikimi në grup. ISBN është një lehtësi, jo një kërkesë.</p>
-
-          <div class="quote-panel">
-            <p><strong>Specifikimi i projektit, AGENTS.md:</strong> "Modeli duhet të lejojë të dhëna të paplota. ISBN nuk është i detyrueshëm."</p>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sq/index.html">Dokumentim</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/sq/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">ISBN nuk është bazë të dhënash</span>
+            </nav>
+            <h1>ISBN nuk është bazë të dhënash</h1>
+          <p class="content-page-summary">Pse ISBN ndihmon në identifikimin e librave por nuk zëvendëson sistemet e metatëdhënave, dhe si funksionon zinxhiri i kërkimit të metatëdhënave në projektin Let Books.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Tema:</span>
+              <span class="content-tag">Dhurim librash</span>
+              <span class="content-tag">ISBN dhe metadata</span>
+              <span class="content-tag">Sisteme bibliotekare</span>
           </div>
-
-          <h2>Si duket e ardhmja</h2>
-          <p>Zinxhiri aktual i rënies do të zgjerohet me ofrues të rinj. Crossref, Wikidata, OpenAlex dhe COBISS janë kandidatë. Secili do të hyjë në të njëjtin zinxhir: provo sipas radhës, ruaj në cache në mënyrë agresive, bie në mënyrë të hijshme.</p>
-          <p>Por zinxhiri në vetvete nuk është qëllimi. Qëllimi është të arrihet nga një libër fizik në metatëdhëna të mjaftueshme që një bibliotekë të mund të vendosë nëse e dëshiron librin. ISBN ndihmon, por sistemi duhet të funksionojë kur ISBN nuk është i disponueshëm.</p>
-
-          <div class="blog-footer-note">
-            <p><strong>ISBN është një identifikues i dobishëm. Nuk është një bazë të dhënash.</strong></p>
-          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Kur mbani në dorë një libër të shtypur, barkodi në kopertinën e pasme është identifikuesi më i dukshëm që ai mbart. Ai identifikues është ISBN — Numri Standard Ndërkombëtar i Librit. Në katalogët e bibliotekave, dyqanet online dhe sistemet e metatëdhënave, shpesh funksionon si një çelës i bazës së të dhënave. Por ISBN nuk është një bazë të dhënash dhe trajtimi i tij si i tillë çon në probleme reale në procesin e dhurimit të librave.</p>
+<h2 id="çfarë-është-isbn-në-të-vërtetë">Çfarë është ISBN në të vërtetë</h2>
+<p>ISBN është një identifikues unik i caktuar për një botim specifik të një libri të botuar. Standardi aktual, ISBN-13, përdor 13 shifra me një shifër kontrolli për zbulimin e gabimeve. Formati më i vjetër ISBN-10 gjendet ende në librat e botuar para vitit 2007.</p>
+<p>ISBN identifikon botimin, jo veprën. Për shembull, botimi i dytë dhe i tretë i të njëjtit tekst shkollor kanë ISBN të ndryshëm. Një libër me kopertinë të fortë dhe ai me kopertinë të butë të së njëjtës vepër kanë ISBN të ndryshëm. Një përkthim në anglisht dhe botimi origjinal frëngjisht kanë ISBN të ndryshëm.</p>
+<p>Kjo është precizion i dobishëm — por vjen me kufizime të rëndësishme.</p>
+<figure>
+<img src="../../diagrams/blog/isbn-not-a-database/sq/isbn-vs-physical-book.svg" alt="Diagrami ISBN kundrejt kopjes fizike të librit" />
+<figcaption aria-hidden="true">Diagrami ISBN kundrejt kopjes fizike të librit</figcaption>
+</figure>
+<p>ISBN identifikon metatëdhënat e botimit në të majtë. Kopja fizike në të djathtë — gjendja, provenienca, vendndodhja e ruajtjes, statusi i dhurimit, fotot — gjurmohet veçmas në modelin domenor të Let Books. Të dyja janë të lidhura por nuk janë e njëjta gjë.</p>
+<h2 id="çfarë-isbn-nuk-mund-të-bëjë">Çfarë ISBN nuk mund të bëjë</h2>
+<h3 id="jo-çdo-libër-e-ka-një-të-tillë">Jo çdo libër e ka një të tillë</h3>
+<p>Librat e botuar para vitit 1970, vetëbotimet, materialet akademike me tirazh të kufizuar dhe librat nga botues të vegjël shpesh nuk kanë fare ISBN. Në koleksionet e trashëgimisë akademike — lloji në të cilin ky projekt fokusohet — tekstet shkollore para vitit 1970, materialet e leksioneve dhe materialet e shtypura në nivel lokal janë të zakonshme dhe të vlefshme.</p>
+<h3 id="isbn-nuk-përshkruan-gjendjen">ISBN nuk përshkruan gjendjen</h3>
+<p>Një bibliotekë dëshiron të dijë nëse një kopje është e dëmtuar nga uji, e shënuar ose i mungojnë faqe. ISBN nuk jep asnjë nga këto informacione. Identifikuesi është i njëjtë për një kopje të pacenuar dhe për atë që ka qëndruar në një bodrum të lagësht për njëzet vjet.</p>
+<h3 id="isbn-nuk-përshkruan-proveniencën">ISBN nuk përshkruan proveniencën</h3>
+<p>E kujt ishte kjo kopje? A u rekomandua nga një profesor? A ka nënshkrimin e një pronari të mëparshëm ose një vulë biblioteke? Cila institucion e mbajti atë? ISBN hesht për të gjitha këto.</p>
+<h3 id="isbn-nuk-përshkruan-vendndodhjen">ISBN nuk përshkruan vendndodhjen</h3>
+<p>Për një projekt dhurimi librash, pyetja e dytë më e rëndësishme pas “çfarë është?” është “ku është?”. ISBN nuk ka përgjigje. Vendndodhja është një çështje logjistike fizike, e gjurmuar veçmas në hierarkinë e ruajtjes.</p>
+<h3 id="isbn-mund-të-jetë-i-gabuar-ose-i-ripërdorur">ISBN mund të jetë i gabuar ose i ripërdorur</h3>
+<p>Ekzistojnë ISBN të shtypur gabimisht. I njëjti ISBN mund të ripërdoret aksidentalisht nga botues të ndryshëm. OCR mund të lexojë gabimisht shifrat. Shifra e kontrollit kap gabimet e një shifre të vetme, por jo të gjitha.</p>
+<h2 id="si-trajton-let-books-isbn-in">Si trajton Let Books ISBN-in</h2>
+<p><code>docs/book-metadata.md</code> përcakton një strategji praktike rezervë për kërkimin sipas ISBN-së. Dokumenti gjithashtu thotë se ky rrjedh funksionon në demon alfa aktuale, ndërsa shërben si model për aplikacionin e plotë të ardhshëm:</p>
+<figure>
+<img src="../../diagrams/blog/isbn-not-a-database/sq/isbn-lookup-chain.svg" alt="Diagrami i zinxhirit të kërkimit të ISBN" />
+<figcaption aria-hidden="true">Diagrami i zinxhirit të kërkimit të ISBN</figcaption>
+</figure>
+<ol type="1">
+<li>Normalizo dhe verifiko ISBN-in. Hiq hapësirat dhe vizat, X-in ktheje në të madhe, verifiko shifrën e kontrollit.</li>
+<li>Kërko së pari Open Library përmes API-t publik.</li>
+<li>Nëse Open Library nuk kthen të dhëna të dobishme, kërko API-n e metatëdhënave të Let Books.</li>
+<li>Nëse asnjë ofrues nuk ka të dhëna, kthehu te regjistrimi manual.</li>
+</ol>
+<p>Regjistrimi manual nuk bllokohet kurrë. Nëse të gjithë ofruesit dështojnë — qoftë për shkak të një gabimi rrjeti, kufizimi të shpejtësisë ose mungesës së vërtetë të të dhënave — përdoruesi mund të fusë manualisht titullin, autorin, botuesin dhe vitin dhe të vazhdojë katalogimin.</p>
+<p>Zinxhiri i rënies është qëllimisht i thjeshtë. Nuk ka një pikë të vetme dështimi sepse asnjë ofrues nuk është i detyrueshëm. Çdo ofrues është opsional dhe i zëvendësueshëm në mënyrë të pavarur.</p>
+<p>Referencat kanonike të depos për këtë zinxhir janë <code>docs/book-metadata.md</code> dhe <code>AGENTS.md</code>. Nëse një demo ose një ndërtim specifik i aplikacionit tashmë zbaton një pjesë të këtij rrjedhi, përmendeni këtë vetëm si status zbatimi, jo si dëshmi kryesore.</p>
+<h2 id="pse-kjo-ka-rëndësi-për-dhurimin-e-librave">Pse kjo ka rëndësi për dhurimin e librave</h2>
+<p>Kur një dhurues katalogizon një koleksion librash akademikë, disa do të kenë ISBN dhe disa jo. Librat pa ISBN janë shpesh më interesantët — botime më të vjetra, materiale të botuara në nivel lokal, përmbledhje për lëndë specifike ose libra nga botues të ish-Jugosllavisë, identifikuesit e të cilëve nuk arritën kurrë në bazat globale të të dhënave.</p>
+<p>Procesi i katalogimit nuk duhet të ndëshkojë dhuruesin për mungesën e ISBN-ve. Çdo veçori që funksionon me kërkimin e ISBN duhet të funksionojë edhe pa të: gjurmimi i vendndodhjes, ngarkimi i fotove, eksportimi në Excel, rishikimi në grup. ISBN është një lehtësi, jo një kërkesë.</p>
+<blockquote>
+<p><strong>Specifikimi i projektit, AGENTS.md:</strong> “Modeli duhet të lejojë të dhëna të paplota. ISBN nuk është i detyrueshëm.”</p>
+</blockquote>
+<h2 id="si-duket-e-ardhmja">Si duket e ardhmja</h2>
+<p>Zinxhiri aktual i rënies do të zgjerohet me ofrues të rinj. Crossref, Wikidata, OpenAlex dhe COBISS janë kandidatë. Secili do të hyjë në të njëjtin zinxhir: provo sipas radhës, ruaj në cache në mënyrë agresive, bie në mënyrë të hijshme.</p>
+<p>Por zinxhiri në vetvete nuk është qëllimi. Qëllimi është të arrihet nga një libër fizik në metatëdhëna të mjaftueshme që një bibliotekë të mund të vendosë nëse e dëshiron librin. ISBN ndihmon, por sistemi duhet të funksionojë kur ISBN nuk është i disponueshëm.</p>
+<p><strong>ISBN është një identifikues i dobishëm. Nuk është një bazë të dhënash.</strong></p>
         </article>
-
-          <div class="post-article-nav">
+        <div class="post-article-nav">
           <div class="language-alternatives">
-<h2 id="gjuhë-të-tjera">Gjuhë të tjera</h2>
-<ul>
-<li><a href="../en/isbn-not-a-database.html">English</a></li>
-<li><a href="../sl/isbn-not-a-database.html">Slovenščina</a></li>
-<li><a href="../hr/isbn-not-a-database.html">Hrvatski</a></li>
-<li><a href="../bs/isbn-not-a-database.html">Bosanski</a></li>
-<li><a href="../sr-Latn/isbn-not-a-database.html">Srpski (latinica)</a></li>
-<li><a href="../sr-Cyrl/isbn-not-a-database.html">Српски (ћирилица)</a></li>
-<li><a href="../mk/isbn-not-a-database.html">Македонски</a></li>
-<li><a href="../de/isbn-not-a-database.html">Deutsch</a></li>
-<li><a href="../it/isbn-not-a-database.html">Italiano</a></li>
-<li><a href="../fr/isbn-not-a-database.html">Français</a></li>
-<li><a href="../es/isbn-not-a-database.html">Español</a></li>
-</ul>
+            <h2>Gjuhë të tjera</h2>
+            <ul>
+              <li><a href="../../blog/en/isbn-not-a-database.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/isbn-not-a-database.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/isbn-not-a-database.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/isbn-not-a-database.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/isbn-not-a-database.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/isbn-not-a-database.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/isbn-not-a-database.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/de/isbn-not-a-database.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/isbn-not-a-database.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/isbn-not-a-database.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/isbn-not-a-database.html" lang="es">Español</a></li>
+            </ul>
           </div>
-          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Artikuj të ngjashëm</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-blog-ai-assisted-delivery-menu">Dorëzim me AI</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Përputhja e demove</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-ai-assisted-delivery-menu" data-topic-menu="related-blog-ai-assisted-delivery" hidden>
+                      <a href="../../blog/sq/documentation-is-part-of-the-product.html">Dokumentimi është pjesë e produktit</a>
+                      <a href="../../blog/sq/spec-driven-development-for-ai-projects.html">Zhvillim i udhëhequr nga specifikimi për projektet me AI</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html">Kur demoja është provë dhe kur nuk është</a>
+                      <a href="../../blog/sq/spec-driven-development-in-let-books.html">Zhvillim i udhëhequr nga specifikimi në Let Books</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Materiale të ngjashme mësimore</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">Dorëzim me AI</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Planifikim i zbatimit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-learning-demo-alignment-menu">Përputhja e demove</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/sq/how-to-write-a-spec-that-ai-can-follow.html">Si të shkruhet një specifikim që AI mund ta ndjekë</a>
+                      <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html">Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html">Si ta kthesh një specifikim produkti në plan implementimi</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-demo-alignment-menu" data-topic-menu="related-learning-demo-alignment" hidden>
+                      <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html">Si të mbash të përputhura specifikimin, dokumentimin, demon dhe kodin</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Hyrje të ngjashme wiki</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-wiki-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Dokumentim</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-wiki-implementation-planning-menu">Planifikim i zbatimit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-wiki-demo-alignment-menu">Përputhja e demove</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-ci-cd-menu" data-topic-menu="related-wiki-ci-cd" hidden>
+                      <a href="../../wiki/sq/validation-layers.html">Shtresat e validimit</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/sq/documentation-traceability.html">Gjurmueshmëria e dokumentacionit</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-implementation-planning-menu" data-topic-menu="related-wiki-implementation-planning" hidden>
+                      <a href="../../wiki/sq/implementation-guidance.html">Udhëzime për implementim</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-demo-alignment-menu" data-topic-menu="related-wiki-demo-alignment" hidden>
+                      <a href="../../wiki/sq/demo-spec-alignment.html">Përputhja e demos me specifikimin</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
       </main>
 
       <footer class="site-footer">
         <div class="footer-inner">
           <div>
             <h3>Let Books</h3>
-            <p>Një platformë praktike për katalogimin, ofrimin dhe marrjen e librave edukativë.</p>
-            <p class="footer-microcopy">Prototip i hershëm alfa. Institucionet dhe integrimet e përmendura në shembuj janë vetëm konceptuale dhe nuk nënkuptojnë partneritet ose miratim.</p>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
           </div>
           <div>
             <div class="footer-links">
-              <a href="../../sq/index.html">Përmbledhje</a>
-              <a href="../../index.html">Faqja kryesore</a>
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
             <div class="language-list" style="margin-top: 1rem;">
-              <a href="../../index.html">Të gjitha gjuhët</a>
+              <a href="../../index.html">All languages</a>
             </div>
             <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
           </div>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Add Validation Rules and CI Gates in Stages | LetBooks</title>
+    <meta name="description" content="This guide explains how to add validation rules and CI checks incrementally so a project can improve consistency and reduce drift without trying to automate everything at once.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/learning/hr/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="How to Add Validation Rules and CI Gates in Stages | LetBooks">
+    <meta property="og:description" content="This guide explains how to add validation rules and CI checks incrementally so a project can improve consistency and reduce drift without trying to automate everything at once.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Add Validation Rules and CI Gates in Stages | LetBooks">
+    <meta name="twitter:description" content="This guide explains how to add validation rules and CI checks incrementally so a project can improve consistency and reduce drift without trying to automate everything at once.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="learning" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../learning/en/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Learning</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../en/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/en/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/en/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/en/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="en">EN</a>
+              <a class="lang-link" href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../learning/hr/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="de">DE</a>
+              <a class="lang-link" href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="it">IT</a>
+              <a class="lang-link" href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../en/index.html">Docs</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../learning/en/index.html">Learning</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">How to Add Validation Rules and CI Gates in Stages</span>
+            </nav>
+            <h1>How to Add Validation Rules and CI Gates in Stages</h1>
+          <p class="content-page-summary">This guide explains how to add validation rules and CI checks incrementally so a project can improve consistency and reduce drift without trying to automate everything at once.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Topics:</span>
+              <span class="content-tag">CI/CD</span>
+              <span class="content-tag">Spec-Driven Development</span>
+              <span class="content-tag">Validation</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="why-staged-enforcement-matters">Why staged enforcement matters</h2>
+<p class="lead">Teams often know they need stronger validation, but they make one of two mistakes.</p>
+<p>Either they leave quality checks informal for too long, or they try to introduce a large rigid CI system all at once and create frustration.</p>
+<p>A staged approach works better.</p>
+<p>It lets the project turn repeated review expectations into repeatable checks over time.</p>
+<h2 id="start-from-recurring-mistakes">Start from recurring mistakes</h2>
+<p>The best validation rules usually begin as repeated human review findings.</p>
+<p>Ask:</p>
+<ul>
+<li>what mistakes keep happening</li>
+<li>what rules are easy to forget</li>
+<li>what structure must stay consistent across the repo</li>
+<li>what quality checks would save reviewer time</li>
+</ul>
+<p>If the same issue appears several times, it is a good candidate for automation.</p>
+<h2 id="validation-should-follow-the-authority-chain">Validation should follow the authority chain</h2>
+<p>Validation rules should reinforce documented expectations, not replace them.</p>
+<p>That means:</p>
+<ul>
+<li>spec defines the rule</li>
+<li>docs explain the rule</li>
+<li>validation checks the rule where practical</li>
+<li>CI runs the validation consistently</li>
+</ul>
+<p>This keeps the project from enforcing rules that were never actually decided.</p>
+<h2 id="a-useful-maturity-model">A useful maturity model</h2>
+<h3 id="stage-1-manual-review-checklist">Stage 1: manual review checklist</h3>
+<p>Start by naming the rule explicitly.</p>
+<p>Examples:</p>
+<ul>
+<li>all new user-visible text must be localizable</li>
+<li>docs must separate current state from future plans</li>
+<li>new public articles must cite specs and docs, not source files</li>
+</ul>
+<p>At this stage, the rule is real, but still enforced by humans.</p>
+<h3 id="stage-2-lightweight-local-validation">Stage 2: lightweight local validation</h3>
+<p>Add a small script or structured check that contributors can run locally.</p>
+<p>Examples:</p>
+<ul>
+<li>missing locale-key detection</li>
+<li>required-file presence checks</li>
+<li>metadata-generation validation</li>
+<li>link resolution checks</li>
+</ul>
+<p>This stage reduces avoidable errors before CI even runs.</p>
+<h3 id="stage-3-ci-visibility">Stage 3: CI visibility</h3>
+<p>Run the check in CI, even if it is initially non-blocking.</p>
+<p>This gives the team visibility into how often the rule fails and whether the check itself needs refinement.</p>
+<h3 id="stage-4-blocking-ci-gate">Stage 4: blocking CI gate</h3>
+<p>Once the rule is stable and understood, make it required.</p>
+<p>At this point, the project has moved from informal expectation to enforceable standard.</p>
+<h2 id="what-to-automate-first">What to automate first</h2>
+<p>Good early candidates are usually:</p>
+<ul>
+<li>structural consistency</li>
+<li>required files</li>
+<li>localization completeness</li>
+<li>formatting or syntax validity</li>
+<li>broken internal links</li>
+<li>forbidden editorial citations</li>
+</ul>
+<p>These checks are usually cheap, objective, and high-value.</p>
+<h2 id="what-not-to-force-too-early">What not to force too early</h2>
+<p>Some checks are valuable but may need time before becoming hard gates.</p>
+<p>Examples:</p>
+<ul>
+<li>spellcheck in many languages</li>
+<li>screenshot or visual regression checks</li>
+<li>accessibility checks with tuning still in progress</li>
+<li>style or wording rules that are not yet stable</li>
+</ul>
+<p>These can begin as advisory signals before becoming mandatory.</p>
+<h2 id="let-books-examples">Let Books examples</h2>
+<p>The repository already documents several validation patterns, including:</p>
+<ul>
+<li>localization smoke testing</li>
+<li>JSON syntax validation</li>
+<li>required file checks</li>
+<li>SEO metadata generation</li>
+<li>optional spellcheck and linting</li>
+<li>deployment automation</li>
+</ul>
+<p>The docs and style guides also define editorial rules that can become validation targets over time, such as using specs and docs as canonical evidence for public articles.</p>
+<p>That makes Let Books a good example of incremental enforcement rather than all-at-once process.</p>
+<h2 id="a-practical-rule-conversion-workflow">A practical rule-conversion workflow</h2>
+<p>Use this pattern when adding a new validation rule:</p>
+<ol type="1">
+<li>identify the repeated review problem</li>
+<li>write the rule clearly in docs or guidance</li>
+<li>add a local script or check if practical</li>
+<li>run it in CI as visible feedback</li>
+<li>make it blocking only when stable</li>
+</ol>
+<p>This creates less friction than introducing a hard gate before the team understands the rule.</p>
+<h2 id="questions-to-ask-before-adding-a-gate">Questions to ask before adding a gate</h2>
+<ol type="1">
+<li>Is the rule clearly documented?</li>
+<li>Is the check reliable enough to trust?</li>
+<li>Will contributors understand how to fix failures?</li>
+<li>Does the value of the check justify the friction?</li>
+<li>Should it start as warning-only before becoming required?</li>
+</ol>
+<h2 id="ai-assisted-projects-need-this-even-more">AI-assisted projects need this even more</h2>
+<p>AI increases the volume of changes and the speed of change. That means more opportunities for inconsistency.</p>
+<p>Validation and CI are not there to slow teams down. They are there to keep speed from erasing important boundaries.</p>
+<p>In spec-driven work, the goal is not maximum automation. The goal is reliable reinforcement of the rules that matter most.</p>
+<h2 id="the-durable-lesson">The durable lesson</h2>
+<p>The strongest validation systems usually do not appear fully formed. They grow by turning repeated human judgment into documented, reviewable, enforceable checks.</p>
+<p>That staged path is often the most realistic way to make a project stricter without making it brittle.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>how-to-review-ai-assisted-work-against-the-spec.md</code></li>
+<li><code>../wiki/spec-driven-development.md</code></li>
+<li><code>../blog/en/documentation-is-part-of-the-product.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Other languages</h2>
+            <ul>
+              <li><a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../learning/hr/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="mk">Македонски</a></li>
+              <li><a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="sq">Shqip</a></li>
+              <li><a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="de">Deutsch</a></li>
+              <li><a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="it">Italiano</a></li>
+              <li><a href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="fr">Français</a></li>
+              <li><a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Related Articles</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-blog-spec-driven-development-menu">Spec-Driven Development</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-spec-driven-development-menu" data-topic-menu="related-blog-spec-driven-development" hidden>
+                      <a href="../../blog/en/spec-driven-development-for-ai-projects.html">Spec-Driven Development for AI Projects</a>
+                      <a href="../../blog/en/spec-driven-development-in-let-books.html">Spec-Driven Development in Let Books</a>
+                      <a href="../../blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">When the Demo Is Evidence and When It Is Not</a>
+                      <a href="../../blog/en/documentation-is-part-of-the-product.html">Documentation Is Part of the Product</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Related Learning Material</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">AI Delivery</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Implementation Planning</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Spec-Driven Development</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html">How to Write a Spec That AI Can Follow</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html">How to Turn a Product Spec into an Implementation Plan</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">How to Keep Spec, Docs, Demo, and Code Aligned</a>
+                      <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html">How to Review AI-Assisted Work Against the Spec</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Related Wiki Entries</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-wiki-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-wiki-spec-driven-development-menu">Spec-Driven Development</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-ci-cd-menu" data-topic-menu="related-wiki-ci-cd" hidden>
+                      <a href="../../wiki/en/validation-layers.html">Validation Layers</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-spec-driven-development-menu" data-topic-menu="related-wiki-spec-driven-development" hidden>
+                      <a href="../../wiki/en/implementation-guidance.html">Implementation Guidance</a>
+                      <a href="../../wiki/en/markdown-in-product-development.html">Markdown in Product Development</a>
+                      <a href="../../wiki/en/spec-driven-development.html">Spec-Driven Development</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

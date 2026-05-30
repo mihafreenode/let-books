@@ -1,11 +1,11 @@
 ---
-title: "Kako Iz Proizvodne Specifikacije Napraviti Implementacijski Plan"
+title: "Kako iz proizvodne specifikacije napraviti implementacijski plan"
 topics:
   - spec-writing
   - implementation-planning
   - project-management
 ---
-# Kako Iz Proizvodne Specifikacije Napraviti Implementacijski Plan
+# Kako iz proizvodne specifikacije napraviti implementacijski plan
 
 ## Sažetak
 

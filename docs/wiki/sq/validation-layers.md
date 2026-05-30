@@ -1,11 +1,11 @@
 ---
-title: "Shtresat E Validimit"
+title: "Shtresat e validimit"
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Shtresat E Validimit
+# Shtresat e validimit
 
 ## Përmbledhje
 

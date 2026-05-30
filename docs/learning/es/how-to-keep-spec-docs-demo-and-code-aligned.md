@@ -1,11 +1,11 @@
 ---
-title: "Cómo Mantener Alineados La Especificación, La Documentación, La Demo Y El Código"
+title: "Cómo mantener alineados la especificación, la documentación, la demo y el código"
 topics:
   - demo-alignment
   - documentation
   - spec-driven-development
 ---
-# Cómo Mantener Alineados La Especificación, La Documentación, La Demo Y El Código
+# Cómo mantener alineados la especificación, la documentación, la demo y el código
 
 ## Resumen
 

@@ -1,11 +1,11 @@
 ---
-title: "Si Ta Kthesh Një Specifikim Produkti Në Plan Implementimi"
+title: "Si ta kthesh një specifikim produkti në plan implementimi"
 topics:
   - spec-writing
   - implementation-planning
   - project-management
 ---
-# Si Ta Kthesh Një Specifikim Produkti Në Plan Implementimi
+# Si ta kthesh një specifikim produkti në plan implementimi
 
 ## Përmbledhje
 

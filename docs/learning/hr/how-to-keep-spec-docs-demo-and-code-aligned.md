@@ -1,11 +1,11 @@
 ---
-title: "Kako Održati Usklađenost Između Specifikacije, Dokumentacije, Demoa I Koda"
+title: "Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda"
 topics:
   - demo-alignment
   - documentation
   - spec-driven-development
 ---
-# Kako Održati Usklađenost Između Specifikacije, Dokumentacije, Demoa I Koda
+# Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda
 
 ## Sažetak
 

@@ -1,11 +1,11 @@
 ---
-title: "Implementacijska Navodila"
+title: "Implementacijska navodila"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Implementacijska Navodila
+# Implementacijska navodila
 
 ## Povzetek
 

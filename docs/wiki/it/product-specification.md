@@ -1,11 +1,11 @@
 ---
-title: "Specifica Di Prodotto"
+title: "Specifica di prodotto"
 topics:
   - product-specification
   - spec-writing
   - spec-driven-development
 ---
-# Specifica Di Prodotto
+# Specifica di prodotto
 
 ## Riepilogo
 

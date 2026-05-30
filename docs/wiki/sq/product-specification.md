@@ -1,11 +1,11 @@
 ---
-title: "Specifikimi I Produktit"
+title: "Specifikimi i produktit"
 topics:
   - product-specification
   - spec-writing
   - spec-driven-development
 ---
-# Specifikimi I Produktit
+# Specifikimi i produktit
 
 ## Përmbledhje
 

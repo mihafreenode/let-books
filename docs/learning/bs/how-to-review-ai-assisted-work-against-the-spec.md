@@ -1,11 +1,11 @@
 ---
-title: "Kako Pregledavati AI-Podržani Rad Prema Specifikaciji"
+title: "Kako pregledavati AI-podržani rad prema specifikaciji"
 topics:
   - product-review
   - ai-assisted-delivery
   - spec-driven-development
 ---
-# Kako Pregledavati AI-Podržani Rad Prema Specifikaciji
+# Kako pregledavati AI-podržani rad prema specifikaciji
 
 ## Sažetak
 

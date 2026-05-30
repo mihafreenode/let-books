@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="bs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda | LetBooks</title>
+    <meta name="description" content="Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda | LetBooks">
+    <meta property="og:description" content="Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda | LetBooks">
+    <meta name="twitter:description" content="Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="learning" data-locale="bs">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../learning/bs/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Materijali za učenje</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../bs/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/bs/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/bs/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/bs/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="en">EN</a>
+              <a class="lang-link" href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="hr">HR</a>
+              <a class="lang-link is-current" href="../../learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="de">DE</a>
+              <a class="lang-link" href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="it">IT</a>
+              <a class="lang-link" href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../bs/index.html">Dokumentacija</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../learning/bs/index.html">Materijali za učenje</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda</span>
+            </nav>
+            <h1>Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda</h1>
+          <p class="content-page-summary">Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Teme:</span>
+              <span class="content-tag">Usklađenost demoa</span>
+              <span class="content-tag">Dokumentacija</span>
+              <span class="content-tag">Razvoj vođen specifikacijama</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="preporučeni-red-autoriteta">Preporučeni red autoriteta</h2>
+<ol type="1">
+<li>proizvodna specifikacija</li>
+<li>implementacijske smjernice</li>
+<li>dokumentacija trenutnog stanja</li>
+<li>demo ili ponašanje aplikacije</li>
+<li>testovi i validacija</li>
+</ol>
+<h2 id="preporučeni-radni-tok">Preporučeni radni tok</h2>
+<ul>
+<li>najprije ažuriraj specifikaciju ili smjernice</li>
+<li>zatim ažuriraj dokumentaciju trenutnog stanja</li>
+<li>tek nakon toga mijenjaj demo ili kod</li>
+<li>dodaj provjeru ili test gdje je moguće</li>
+</ul>
+<h2 id="šta-uraditi-kada-demo-pokaže-bolje-rješenje">Šta uraditi kada demo pokaže bolje rješenje</h2>
+<p class="lead">Ako demo pokaže bolji tok, to nije razlog da sam postane novi izvor istine. Najprije donesi odluku, zatim ažuriraj specifikaciju i dokumentaciju, a potom učvrsti promjenu u implementaciji.</p>
+<h2 id="ključno-pravilo">Ključno pravilo</h2>
+<p>Ne provjeravaj samo radi li promjena. Provjeravaj i ostaje li usklađena s dokumentiranom namjerom proizvoda.</p>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Drugi jezici</h2>
+            <ul>
+              <li><a href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="en">English</a></li>
+              <li><a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="mk">Македонски</a></li>
+              <li><a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sq">Shqip</a></li>
+              <li><a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="de">Deutsch</a></li>
+              <li><a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="it">Italiano</a></li>
+              <li><a href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="fr">Français</a></li>
+              <li><a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Povezani članci</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-blog-documentation-menu">Dokumentacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Usklađenost demoa</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-documentation-menu" data-topic-menu="related-blog-documentation" hidden>
+                      <a href="../../blog/bs/documentation-is-part-of-the-product.html">Dokumentacija je dio proizvoda</a>
+                      <a href="../../blog/bs/spec-driven-development-for-ai-projects.html">Razvoj vođen specifikacijom za AI projekte</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/bs/spec-driven-development-in-let-books.html">Razvoj vođen specifikacijom u Let Books</a>
+                      <a href="../../blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html">Kada je demo dokaz, a kada nije</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Povezani materijali za učenje</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-learning-documentation-menu">Dokumentacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Planiranje implementacije</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Razvoj vođen specifikacijama</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-documentation-menu" data-topic-menu="related-learning-documentation" hidden>
+                      <a href="../../learning/bs/how-to-write-a-spec-that-ai-can-follow.html">Kako napisati specifikaciju koju AI može slijediti</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html">Kako iz proizvodne specifikacije napraviti implementacijski plan</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/bs/how-to-review-ai-assisted-work-against-the-spec.html">Kako pregledavati AI-podržani rad prema specifikaciji</a>
+                      <a href="../../learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.html">Kako postupno dodavati validacijska pravila i CI vrata</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Povezani wiki unosi</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Dokumentacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-wiki-demo-alignment-menu">Usklađenost demoa</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/bs/markdown-in-product-development.html">Markdown u razvoju proizvoda</a>
+                      <a href="../../wiki/bs/spec-driven-development.html">Razvoj vođen specifikacijom</a>
+                      <a href="../../wiki/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-demo-alignment-menu" data-topic-menu="related-wiki-demo-alignment" hidden>
+                      <a href="../../wiki/bs/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

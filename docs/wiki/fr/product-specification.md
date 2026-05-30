@@ -1,11 +1,11 @@
 ---
-title: "Spécification Produit"
+title: "Spécification produit"
 topics:
   - product-specification
   - spec-writing
   - spec-driven-development
 ---
-# Spécification Produit
+# Spécification produit
 
 ## Résumé
 

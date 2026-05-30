@@ -1,11 +1,11 @@
 ---
-title: "Si Të Mbash Të Përputhura Specifikimin, Dokumentimin, Demon Dhe Kodin"
+title: "Si të mbash të përputhura specifikimin, dokumentimin, demon dhe kodin"
 topics:
   - demo-alignment
   - documentation
   - spec-driven-development
 ---
-# Si Të Mbash Të Përputhura Specifikimin, Dokumentimin, Demon Dhe Kodin
+# Si të mbash të përputhura specifikimin, dokumentimin, demon dhe kodin
 
 ## Përmbledhje
 

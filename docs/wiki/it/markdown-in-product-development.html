@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown nello sviluppo di prodotto | LetBooks</title>
+    <meta name="description" content="Markdown è un formato pratico per conservare intento di prodotto, documentazione, guide ed evidenze in una forma revisionabile, portabile, confrontabile tramite diff e facile da collegare ai flussi di validazione.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/it/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/markdown-in-product-development.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/markdown-in-product-development.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Markdown nello sviluppo di prodotto | LetBooks">
+    <meta property="og:description" content="Markdown è un formato pratico per conservare intento di prodotto, documentazione, guide ed evidenze in una forma revisionabile, portabile, confrontabile tramite diff e facile da collegare ai flussi di validazione.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/it/markdown-in-product-development.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Markdown nello sviluppo di prodotto | LetBooks">
+    <meta name="twitter:description" content="Markdown è un formato pratico per conservare intento di prodotto, documentazione, guide ed evidenze in una forma revisionabile, portabile, confrontabile tramite diff e facile da collegare ai flussi di validazione.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="it">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/it/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Wiki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../it/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/it/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/it/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/markdown-in-product-development.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/markdown-in-product-development.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/markdown-in-product-development.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/markdown-in-product-development.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/markdown-in-product-development.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/markdown-in-product-development.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/markdown-in-product-development.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/markdown-in-product-development.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/markdown-in-product-development.html" lang="de">DE</a>
+              <a class="lang-link is-current" href="../../wiki/it/markdown-in-product-development.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/markdown-in-product-development.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../wiki/es/markdown-in-product-development.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../it/index.html">Documentazione</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/it/index.html">Wiki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Markdown nello sviluppo di prodotto</span>
+            </nav>
+            <h1>Markdown nello sviluppo di prodotto</h1>
+          <p class="content-page-summary">Markdown è un formato pratico per conservare intento di prodotto, documentazione, guide ed evidenze in una forma revisionabile, portabile, confrontabile tramite diff e facile da collegare ai flussi di validazione.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temi:</span>
+              <span class="content-tag">Documentazione</span>
+              <span class="content-tag">Qualità del prodotto</span>
+              <span class="content-tag">Sviluppo guidato dalle specifiche</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="perché-markdown-conta">Perché Markdown conta</h2>
+<p class="lead">Markdown viene spesso trattato come una semplice comodità di scrittura. Nel lavoro guidato dalle specifiche è più utile di così.</p>
+<p>Offre ai team un modo leggero per mantenere la conoscenza del prodotto vicino al repository senza nasconderla dentro strumenti proprietari o documenti difficili da rivedere.</p>
+<p>Questo conta per:</p>
+<ul>
+<li>specifiche</li>
+<li>linee guida di implementazione</li>
+<li>documentazione dello stato attuale</li>
+<li>tutorial e pagine wiki</li>
+<li>mappe delle fonti e note di evidenza</li>
+</ul>
+<h2 id="in-cosa-markdown-è-efficace">In cosa Markdown è efficace</h2>
+<p>Markdown funziona bene quando il contenuto deve essere:</p>
+<ul>
+<li>leggibile in forma grezza</li>
+<li>sotto controllo di versione</li>
+<li>facile da rivedere nei diff</li>
+<li>collegabile tra documenti</li>
+<li>portabile tra ambienti</li>
+<li>convertibile in altri formati di pubblicazione in seguito</li>
+</ul>
+<p>Questo lo rende particolarmente utile per sistemi di prodotto e documentazione che richiedono tracciabilità.</p>
+<h2 id="cosa-markdown-non-fa-da-solo">Cosa Markdown non fa da solo</h2>
+<p>Markdown è utile, ma non impone la correttezza da solo.</p>
+<p>Da solo non può garantire:</p>
+<ul>
+<li>che il contenuto sia attuale</li>
+<li>che le affermazioni siano ben supportate</li>
+<li>che l’implementazione corrisponda alla documentazione</li>
+<li>che la terminologia resti coerente</li>
+<li>che le regole di validazione o CI siano davvero in esecuzione</li>
+</ul>
+<p>Per questo Markdown dovrebbe essere parte di un sistema più ampio, non confuso con l’intero sistema.</p>
+<h2 id="markdown-in-un-flusso-guidato-dalle-specifiche">Markdown in un flusso guidato dalle specifiche</h2>
+<p>In un flusso di questo tipo, Markdown ha più valore quando si trova dentro una catena di autorità.</p>
+<p>Per esempio:</p>
+<ol type="1">
+<li>le specifiche definiscono le regole di prodotto</li>
+<li>le linee guida di implementazione definiscono le regole tattiche</li>
+<li>i documenti dello stato attuale spiegano cosa esiste ora</li>
+<li>le mappe delle fonti tracciano affermazioni pubbliche sostanziali</li>
+<li>validazione e CI rafforzano aspettative stabili</li>
+</ol>
+<p>Markdown è il mezzo che aiuta questi livelli a restare visibili e revisionabili.</p>
+<h2 id="contesto-let-books">Contesto Let Books</h2>
+<p>Il repository Let Books usa già Markdown per diversi livelli di memoria del prodotto, inclusi:</p>
+<ul>
+<li><code>AGENTS.md</code></li>
+<li><code>AGENTS-Implementation.md</code></li>
+<li><code>README.md</code></li>
+<li>README e guide nell’area <code>docs</code></li>
+<li>mappe delle fonti sotto <code>docs/sources/</code></li>
+</ul>
+<p>Questo è un buon esempio di uso di Markdown non solo per la prosa, ma anche per coordinamento a livello di repository, struttura della scrittura pubblica e tracciamento delle evidenze.</p>
+<h2 id="regola-pratica">Regola pratica</h2>
+<p>Una regola utile è semplice:</p>
+<p>Usa Markdown per rendere l’intento di prodotto visibile, revisionabile e collegabile. Non presumere che Markdown da solo mantenga vero quell’intento.</p>
+<h2 id="pagine-correlate">Pagine Correlate</h2>
+<ul>
+<li><code>product-specification.md</code></li>
+<li><code>documentation-traceability.md</code></li>
+<li><code>validation-layers.md</code></li>
+<li><code>../blog/en/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Altre lingue</h2>
+            <ul>
+              <li><a href="../../wiki/en/markdown-in-product-development.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/markdown-in-product-development.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/markdown-in-product-development.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/markdown-in-product-development.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/markdown-in-product-development.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/markdown-in-product-development.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/mk/markdown-in-product-development.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/sq/markdown-in-product-development.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/markdown-in-product-development.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/fr/markdown-in-product-development.html" lang="fr">Français</a></li>
+              <li><a href="../../wiki/es/markdown-in-product-development.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Articoli correlati</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-blog-documentation-menu">Documentazione</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-documentation-menu" data-topic-menu="related-blog-documentation" hidden>
+                      <a href="../../blog/it/spec-driven-development-for-ai-projects.html">Sviluppo guidato dalle specifiche per progetti di IA</a>
+                      <a href="../../blog/it/documentation-is-part-of-the-product.html">La documentazione è parte del prodotto</a>
+                      <a href="../../blog/it/when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a>
+                      <a href="../../blog/it/spec-driven-development-in-let-books.html">Sviluppo guidato dalle specifiche in Let Books</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Materiali didattici correlati</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-learning-documentation-menu">Documentazione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Sviluppo guidato dalle specifiche</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-documentation-menu" data-topic-menu="related-learning-documentation" hidden>
+                      <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">Come mantenere allineati specifica, documentazione, demo e codice</a>
+                      <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html">Come scrivere una specifica che l&#x27;IA può seguire</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html">Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</a>
+                      <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html">Come aggiungere a fasi regole di validazione e gate CI</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Voci wiki correlate</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Documentazione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-wiki-product-quality-menu">Qualità del prodotto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-wiki-spec-driven-development-menu">Sviluppo guidato dalle specifiche</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/it/documentation-traceability.html">Tracciabilità della documentazione</a>
+                      <a href="../../wiki/it/spec-driven-development.html">Sviluppo guidato dalle specifiche</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-product-quality-menu" data-topic-menu="related-wiki-product-quality" hidden>
+                      <a href="../../wiki/it/validation-layers.html">Livelli di validazione</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-spec-driven-development-menu" data-topic-menu="related-wiki-spec-driven-development" hidden>
+                      <a href="../../wiki/it/product-specification.html">Specifica di prodotto</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

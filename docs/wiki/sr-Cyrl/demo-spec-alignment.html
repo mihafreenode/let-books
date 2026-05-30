@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Усклађеност између дема и спецификације | LetBooks</title>
+    <meta name="description" content="Усклађеност између дема и спецификације је пракса одржавања доследности између понашања прототипа или дема и документоване намере производа, уз експлицитно ажурирање спецификације када демо покаже бољи ток рада.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Cyrl/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/demo-spec-alignment.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/demo-spec-alignment.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Усклађеност између дема и спецификације | LetBooks">
+    <meta property="og:description" content="Усклађеност између дема и спецификације је пракса одржавања доследности између понашања прототипа или дема и документоване намере производа, уз експлицитно ажурирање спецификације када демо покаже бољи ток рада.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Cyrl/demo-spec-alignment.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Усклађеност између дема и спецификације | LetBooks">
+    <meta name="twitter:description" content="Усклађеност између дема и спецификације је пракса одржавања доследности између понашања прототипа или дема и документоване намере производа, уз експлицитно ажурирање спецификације када демо покаже бољи ток рада.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="sr-Cyrl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/sr-Cyrl/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Вики</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sr-Cyrl/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/sr-Cyrl/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sr-Cyrl/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/sr-Cyrl/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/demo-spec-alignment.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/demo-spec-alignment.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/demo-spec-alignment.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/demo-spec-alignment.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/demo-spec-alignment.html" lang="sr-Latn">SR</a>
+              <a class="lang-link is-current" href="../../wiki/sr-Cyrl/demo-spec-alignment.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/demo-spec-alignment.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/demo-spec-alignment.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/demo-spec-alignment.html" lang="de">DE</a>
+              <a class="lang-link" href="../../wiki/it/demo-spec-alignment.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/demo-spec-alignment.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../wiki/es/demo-spec-alignment.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sr-Cyrl/index.html">Документација</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/sr-Cyrl/index.html">Вики</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Усклађеност између дема и спецификације</span>
+            </nav>
+            <h1>Усклађеност између дема и спецификације</h1>
+          <p class="content-page-summary">Усклађеност између дема и спецификације је пракса одржавања доследности између понашања прототипа или дема и документоване намере производа, уз експлицитно ажурирање спецификације када демо покаже бољи ток рада.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Теме:</span>
+              <span class="content-tag">Усклађеност демоа</span>
+              <span class="content-tag">Преглед производа</span>
+              <span class="content-tag">Развој вођен спецификацијама</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="зашто-је-важна">Зашто је важна</h2>
+<p class="lead">Демо је користан јер токове рада чини конкретним. Ризик настаје када људи видљиво понашање почну да третирају као одобрену производну истину иако документација није ажурирана.</p>
+<h2 id="препоручени-редослед-ауторитета">Препоручени редослед ауторитета</h2>
+<ol type="1">
+<li>производна спецификација</li>
+<li>имплементациона упутства</li>
+<li>документација тренутног стања</li>
+<li>демо или понашање имплементације</li>
+<li>валидација и тестови</li>
+</ol>
+<p>То не значи да демо није важан. Значи да га треба тумачити унутар документованог система одлука.</p>
+<h2 id="здрава-употреба-дема">Здрава употреба дема</h2>
+<p>Демо користите за:</p>
+<ul>
+<li>откривање проблема у току рада</li>
+<li>откривање проблема употребљивости</li>
+<li>проверу претпоставки са корисницима</li>
+<li>објашњење заинтересованим странама</li>
+</ul>
+<p>Демо не треба користити као тиху замену за производне одлуке.</p>
+<h2 id="када-демо-треба-да-води">Када демо треба да води</h2>
+<p>Ако демо покаже очигледно бољи ток рада, тим треба:</p>
+<ol type="1">
+<li>намерно да прегледа промену</li>
+<li>да ажурира релевантну спецификацију и документацију</li>
+<li>да прилагоди валидацију или очекивања прегледа</li>
+</ol>
+<h2 id="контекст-let-books">Контекст Let Books</h2>
+<p>У репозиторијуму Let Books канонски документациони извори већ су одвојени од статуса имплементације. То је корисна заштита јер спречава да прототипи постану случајни уреднички ауторитет.</p>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Други језици</h2>
+            <ul>
+              <li><a href="../../wiki/en/demo-spec-alignment.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/demo-spec-alignment.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/demo-spec-alignment.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/demo-spec-alignment.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/demo-spec-alignment.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/mk/demo-spec-alignment.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/sq/demo-spec-alignment.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/demo-spec-alignment.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/it/demo-spec-alignment.html" lang="it">Italiano</a></li>
+              <li><a href="../../wiki/fr/demo-spec-alignment.html" lang="fr">Français</a></li>
+              <li><a href="../../wiki/es/demo-spec-alignment.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Повезани чланци</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-blog-spec-driven-development-menu">Развој вођен спецификацијама</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Усклађеност демоа</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-spec-driven-development-menu" data-topic-menu="related-blog-spec-driven-development" hidden>
+                      <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html">Документација је део производа</a>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a>
+                      <a href="../../blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Повезани материјали за учење</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">AI испорука</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-learning-product-review-menu">Преглед производа</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Развој вођен спецификацијама</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-learning-demo-alignment-menu">Усклађеност демоа</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html">Како написати спецификацију коју AI може да прати</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-product-review-menu" data-topic-menu="related-learning-product-review" hidden>
+                      <a href="../../learning/sr-Cyrl/how-to-review-ai-assisted-work-against-the-spec.html">Како прегледавати AI-подржани рад према спецификацији</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено додавати валидациона правила и CI правила</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-demo-alignment-menu" data-topic-menu="related-learning-demo-alignment" hidden>
+                      <a href="../../learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html">Како одржати усклађеност између спецификације, документације, дема и кода</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Повезани вики уноси</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-wiki-spec-driven-development-menu">Развој вођен спецификацијама</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-spec-driven-development-menu" data-topic-menu="related-wiki-spec-driven-development" hidden>
+                      <a href="../../wiki/sr-Cyrl/spec-driven-development.html">Развој вођен спецификацијом</a>
+                      <a href="../../wiki/sr-Cyrl/documentation-traceability.html">Следљивост документације</a>
+                      <a href="../../wiki/sr-Cyrl/markdown-in-product-development.html">Markdown у развоју производа</a>
+                      <a href="../../wiki/sr-Cyrl/implementation-guidance.html">Имплементациона упутства</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

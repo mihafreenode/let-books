@@ -1,11 +1,11 @@
 ---
-title: "Plasti Validacije"
+title: "Plasti validacije"
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Plasti Validacije
+# Plasti validacije
 
 ## Povzetek
 

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Keep Spec, Docs, Demo, and Code Aligned | LetBooks</title>
+    <meta name="description" content="This guide describes a practical workflow for keeping product specification, documentation, demo behavior, and implementation work aligned over time.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="How to Keep Spec, Docs, Demo, and Code Aligned | LetBooks">
+    <meta property="og:description" content="This guide describes a practical workflow for keeping product specification, documentation, demo behavior, and implementation work aligned over time.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Keep Spec, Docs, Demo, and Code Aligned | LetBooks">
+    <meta name="twitter:description" content="This guide describes a practical workflow for keeping product specification, documentation, demo behavior, and implementation work aligned over time.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="learning" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../learning/en/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Learning</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../en/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/en/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/en/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/en/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="en">EN</a>
+              <a class="lang-link" href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="de">DE</a>
+              <a class="lang-link" href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="it">IT</a>
+              <a class="lang-link" href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../en/index.html">Docs</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../learning/en/index.html">Learning</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">How to Keep Spec, Docs, Demo, and Code Aligned</span>
+            </nav>
+            <h1>How to Keep Spec, Docs, Demo, and Code Aligned</h1>
+          <p class="content-page-summary">This guide describes a practical workflow for keeping product specification, documentation, demo behavior, and implementation work aligned over time.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Topics:</span>
+              <span class="content-tag">Demo Alignment</span>
+              <span class="content-tag">Documentation</span>
+              <span class="content-tag">Spec-Driven Development</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="the-core-problem">The core problem</h2>
+<p class="lead">Product drift rarely begins with a dramatic mistake. It usually starts with small misalignments.</p>
+<p>Examples:</p>
+<ul>
+<li>the demo adds a new workflow but the spec is never updated</li>
+<li>docs describe a feature that no longer behaves that way</li>
+<li>code implements a convenient shortcut that violates a product rule</li>
+<li>validation checks enforce only syntax, not product intent</li>
+</ul>
+<p>AI can accelerate all of these if the alignment workflow is weak.</p>
+<h2 id="the-alignment-model">The alignment model</h2>
+<p>Use this order of authority:</p>
+<ol type="1">
+<li>product specification</li>
+<li>implementation guidance</li>
+<li>current-state documentation</li>
+<li>demo or app behavior</li>
+<li>tests and validation rules</li>
+</ol>
+<p>The lower layers should support the higher layers. If they conflict, update the chain intentionally instead of letting the most visible artifact win by default.</p>
+<h2 id="recommended-workflow">Recommended workflow</h2>
+<h3 id="start-with-the-change-in-the-spec">1. Start with the change in the spec</h3>
+<p>If a user-visible workflow or product rule changes, update the relevant specification or guidance first.</p>
+<p>Use:</p>
+<ul>
+<li><code>AGENTS.md</code> for product-level rules and workflows</li>
+<li><code>AGENTS-Implementation.md</code> for tactical repository and delivery rules</li>
+</ul>
+<h3 id="update-current-state-documentation">2. Update current-state documentation</h3>
+<p>If the change affects what exists now, update the docs that describe the current state.</p>
+<p>Typical examples:</p>
+<ul>
+<li><code>README.md</code></li>
+<li><code>docs/Development.md</code></li>
+<li><code>docs/Deployment.md</code></li>
+<li>new or revised learning/wiki/blog content where relevant</li>
+</ul>
+<h3 id="update-the-demo-or-implementation">3. Update the demo or implementation</h3>
+<p>Only after the intent is clear should the demo or app be changed.</p>
+<p>This helps prevent the common pattern where a prototype silently becomes the source of truth.</p>
+<h3 id="add-or-update-validation">4. Add or update validation</h3>
+<p>Then ask what can be checked automatically.</p>
+<p>Examples:</p>
+<ul>
+<li>localization key completeness</li>
+<li>required file presence</li>
+<li>metadata generation</li>
+<li>link validation</li>
+<li>workflow-specific tests</li>
+</ul>
+<p>Not every rule can be automated immediately, but important rules should not remain dependent only on memory.</p>
+<h3 id="review-against-the-spec-not-only-the-output">5. Review against the spec, not only the output</h3>
+<p>When reviewing changes, do not stop at:</p>
+<ul>
+<li>does it run</li>
+<li>does it look good</li>
+<li>do the tests pass</li>
+</ul>
+<p>Also ask:</p>
+<ul>
+<li>does it match the documented workflow</li>
+<li>does it preserve the required product boundary</li>
+<li>did the docs and current-state framing stay honest</li>
+</ul>
+<h2 id="handling-demo-discoveries">Handling demo discoveries</h2>
+<p>Sometimes the demo teaches the team something better than the original spec.</p>
+<p>That is useful. The correct response is:</p>
+<ol type="1">
+<li>document the discovery</li>
+<li>decide whether the workflow change is intentional</li>
+<li>update the spec and docs</li>
+<li>keep the implementation aligned with the updated decision</li>
+</ol>
+<p>The wrong response is to let the demo win silently because it already exists.</p>
+<h2 id="handling-ai-assisted-implementation">Handling AI-assisted implementation</h2>
+<p>With AI, this workflow becomes even more important because assistants often optimize for local plausibility.</p>
+<p>A good alignment loop is:</p>
+<ol type="1">
+<li>write or update the spec</li>
+<li>generate implementation</li>
+<li>compare output against the spec</li>
+<li>update docs if current behavior changed</li>
+<li>add validation where practical</li>
+</ol>
+<h2 id="let-books-example">Let Books example</h2>
+<p>The repository already contains a useful alignment chain:</p>
+<ul>
+<li><code>AGENTS.md</code> for product direction</li>
+<li><code>AGENTS-Implementation.md</code> for tactical rules</li>
+<li><code>README.md</code> for current-state framing</li>
+<li><code>docs/</code> for knowledge and publishing rules</li>
+<li>deployment and development docs for validation guidance</li>
+</ul>
+<p>That structure should be used intentionally whenever new features, docs, or public explanations are added.</p>
+<h2 id="checklist">Checklist</h2>
+<p>Before merging a meaningful change, check:</p>
+<ol type="1">
+<li>Was the product rule or workflow documented clearly?</li>
+<li>Does the current-state documentation still match reality?</li>
+<li>Does the demo or implementation reflect the intended rule?</li>
+<li>Is there at least one validation or review mechanism guarding the change?</li>
+<li>Could a new contributor understand the decision later?</li>
+</ol>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>../wiki/demo-spec-alignment.md</code></li>
+<li><code>../wiki/spec-driven-development.md</code></li>
+<li><code>../blog/en/spec-driven-development-in-let-books.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Other languages</h2>
+            <ul>
+              <li><a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="mk">Македонски</a></li>
+              <li><a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="sq">Shqip</a></li>
+              <li><a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="de">Deutsch</a></li>
+              <li><a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="it">Italiano</a></li>
+              <li><a href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="fr">Français</a></li>
+              <li><a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Related Articles</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Demo Alignment</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-blog-documentation-menu">Documentation</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/en/spec-driven-development-in-let-books.html">Spec-Driven Development in Let Books</a>
+                      <a href="../../blog/en/when-the-demo-is-evidence-and-when-it-is-not.html">When the Demo Is Evidence and When It Is Not</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-documentation-menu" data-topic-menu="related-blog-documentation" hidden>
+                      <a href="../../blog/en/documentation-is-part-of-the-product.html">Documentation Is Part of the Product</a>
+                      <a href="../../blog/en/spec-driven-development-for-ai-projects.html">Spec-Driven Development for AI Projects</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Related Learning Material</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-learning-documentation-menu">Documentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Implementation Planning</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Spec-Driven Development</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-documentation-menu" data-topic-menu="related-learning-documentation" hidden>
+                      <a href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html">How to Write a Spec That AI Can Follow</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html">How to Turn a Product Spec into an Implementation Plan</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html">How to Review AI-Assisted Work Against the Spec</a>
+                      <a href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">How to Add Validation Rules and CI Gates in Stages</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Related Wiki Entries</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-wiki-demo-alignment-menu">Demo Alignment</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Documentation</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-demo-alignment-menu" data-topic-menu="related-wiki-demo-alignment" hidden>
+                      <a href="../../wiki/en/demo-spec-alignment.html">Demo and Spec Alignment</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/en/markdown-in-product-development.html">Markdown in Product Development</a>
+                      <a href="../../wiki/en/spec-driven-development.html">Spec-Driven Development</a>
+                      <a href="../../wiki/en/documentation-traceability.html">Documentation Traceability</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

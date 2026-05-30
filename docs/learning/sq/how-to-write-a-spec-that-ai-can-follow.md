@@ -1,11 +1,11 @@
 ---
-title: "Si Të Shkruhet Një Specifikim Që AI Mund Ta Ndjekë"
+title: "Si të shkruhet një specifikim që AI mund ta ndjekë"
 topics:
   - spec-writing
   - ai-assisted-delivery
   - documentation
 ---
-# Si Të Shkruhet Një Specifikim Që AI Mund Ta Ndjekë
+# Si të shkruhet një specifikim që AI mund ta ndjekë
 
 ## Përmbledhje
 

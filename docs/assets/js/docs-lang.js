@@ -571,6 +571,117 @@ function setupMobileNav() {
   syncWithViewport();
 }
 
+function setupTopicMenus() {
+  const groups = document.querySelectorAll('[data-topic-menu-group]');
+  const currentUrl = new URL(window.location.href);
+  const requestedTopic = currentUrl.searchParams.get('topic');
+
+  function closeGroup(group) {
+    const triggers = group.querySelectorAll('[data-topic-trigger]');
+    const menus = group.querySelectorAll('[data-topic-menu]');
+
+    for (const trigger of triggers) {
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.classList.remove('is-active');
+    }
+
+    for (const menu of menus) {
+      menu.hidden = true;
+    }
+  }
+
+  function openTopic(group, slug) {
+    const trigger = group.querySelector(`[data-topic-slug="${CSS.escape(slug)}"]`);
+    if (!trigger) return false;
+    const key = trigger.getAttribute('data-topic-trigger');
+    if (!key) return false;
+    const menu = group.querySelector(`[data-topic-menu="${key}"]`);
+    if (!menu) return false;
+    closeGroup(group);
+    trigger.setAttribute('aria-expanded', 'true');
+    trigger.classList.add('is-active');
+    menu.hidden = false;
+    return true;
+  }
+
+  function syncTopicQuery(slug) {
+    const url = new URL(window.location.href);
+    if (slug) {
+      url.searchParams.set('topic', slug);
+    } else {
+      url.searchParams.delete('topic');
+    }
+    window.history.replaceState({}, '', url);
+  }
+
+  for (const group of groups) {
+    const triggers = Array.from(group.querySelectorAll('[data-topic-trigger]'));
+
+    for (const trigger of triggers) {
+      trigger.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const key = trigger.getAttribute('data-topic-trigger');
+        if (!key) return;
+
+        const menu = group.querySelector(`[data-topic-menu="${key}"]`);
+        if (!menu) return;
+        const slug = trigger.getAttribute('data-topic-slug');
+
+        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        closeGroup(group);
+        syncTopicQuery(null);
+
+        if (!isOpen) {
+          trigger.setAttribute('aria-expanded', 'true');
+          trigger.classList.add('is-active');
+          menu.hidden = false;
+          if (slug) {
+            syncTopicQuery(slug);
+          }
+        }
+      });
+    }
+
+    if (requestedTopic) {
+      openTopic(group, requestedTopic);
+    }
+  }
+
+  document.addEventListener('click', (event) => {
+    for (const group of groups) {
+      if (!group.contains(event.target)) {
+        closeGroup(group);
+        syncTopicQuery(null);
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    for (const group of groups) {
+      closeGroup(group);
+    }
+    syncTopicQuery(null);
+  });
+}
+
+function preserveTopicContextForSwitcher() {
+  const currentUrl = new URL(window.location.href);
+  const currentTopic = currentUrl.searchParams.get('topic');
+  if (!currentTopic) return;
+
+  const links = document.querySelectorAll('[data-content-switcher-link]');
+  for (const link of links) {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      const target = new URL(href, window.location.href);
+      target.searchParams.set('topic', currentTopic);
+      link.setAttribute('href', `${target.pathname.replace(window.location.origin, '')}${target.search}`);
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const locale = getCurrentLocale();
     const pageType = getCurrentPageType();
@@ -589,5 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ensureFooterMicrocopy();
     }
 
+    setupTopicMenus();
+    preserveTopicContextForSwitcher();
     upgradeLanguageHubCards();
 });

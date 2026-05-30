@@ -1,11 +1,11 @@
 ---
-title: "Kako Ohraniti Usklajenost Med Specifikacijo, Dokumentacijo, Demom In Kodo"
+title: "Kako ohraniti usklajenost med specifikacijo, dokumentacijo, demom in kodo"
 topics:
   - demo-alignment
   - documentation
   - spec-driven-development
 ---
-# Kako Ohraniti Usklajenost Med Specifikacijo, Dokumentacijo, Demom In Kodo
+# Kako ohraniti usklajenost med specifikacijo, dokumentacijo, demom in kodo
 
 ## Povzetek
 

@@ -1,11 +1,11 @@
 ---
-title: "Comment Garder Alignés Spécification, Documentation, Démo Et Code"
+title: "Comment garder alignés spécification, documentation, démo et code"
 topics:
   - demo-alignment
   - documentation
   - spec-driven-development
 ---
-# Comment Garder Alignés Spécification, Documentation, Démo Et Code
+# Comment garder alignés spécification, documentation, démo et code
 
 ## Résumé
 

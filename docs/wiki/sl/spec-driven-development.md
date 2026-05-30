@@ -1,11 +1,11 @@
 ---
-title: "Razvoj Na Podlagi Specifikacij"
+title: "Razvoj na podlagi specifikacij"
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Razvoj Na Podlagi Specifikacij
+# Razvoj na podlagi specifikacij
 
 ## Povzetek
 

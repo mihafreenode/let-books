@@ -1,11 +1,11 @@
 ---
-title: "Markdown U Razvoju Proizvoda"
+title: "Markdown u razvoju proizvoda"
 topics:
   - documentation
   - product-quality
   - spec-driven-development
 ---
-# Markdown U Razvoju Proizvoda
+# Markdown u razvoju proizvoda
 
 ## Sažetak
 

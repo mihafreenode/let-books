@@ -1,11 +1,11 @@
 ---
-title: "Livelli Di Validazione"
+title: "Livelli di validazione"
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Livelli Di Validazione
+# Livelli di validazione
 
 ## Riepilogo
 

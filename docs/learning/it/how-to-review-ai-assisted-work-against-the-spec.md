@@ -1,11 +1,11 @@
 ---
-title: "Come Rivedere Il Lavoro Assistito Dall'IA Rispetto Alla Specifica"
+title: "Come rivedere il lavoro assistito dall'IA rispetto alla specifica"
 topics:
   - product-review
   - ai-assisted-delivery
   - spec-driven-development
 ---
-# Come Rivedere Il Lavoro Assistito Dall'IA Rispetto Alla Specifica
+# Come rivedere il lavoro assistito dall'IA rispetto alla specifica
 
 ## Riepilogo
 

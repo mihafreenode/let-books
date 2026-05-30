@@ -1,11 +1,11 @@
 ---
-title: "Alignement Entre Démo Et Spécification"
+title: "Alignement entre démo et spécification"
 topics:
   - demo-alignment
   - spec-driven-development
   - product-review
 ---
-# Alignement Entre Démo Et Spécification
+# Alignement entre démo et spécification
 
 ## Résumé
 

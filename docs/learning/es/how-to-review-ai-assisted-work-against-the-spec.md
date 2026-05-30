@@ -1,11 +1,11 @@
 ---
-title: "Cómo Revisar Trabajo Asistido Por IA Frente A La Especificación"
+title: "Cómo revisar trabajo asistido por IA frente a la especificación"
 topics:
   - product-review
   - ai-assisted-delivery
   - spec-driven-development
 ---
-# Cómo Revisar Trabajo Asistido Por IA Frente A La Especificación
+# Cómo revisar trabajo asistido por IA frente a la especificación
 
 ## Resumen
 

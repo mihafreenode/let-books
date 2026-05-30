@@ -1,11 +1,11 @@
 ---
-title: "Come Aggiungere A Fasi Regole Di Validazione E Gate CI"
+title: "Come aggiungere a fasi regole di validazione e gate CI"
 topics:
   - validation
   - ci-cd
   - spec-driven-development
 ---
-# Come Aggiungere A Fasi Regole Di Validazione E Gate CI
+# Come aggiungere a fasi regole di validazione e gate CI
 
 ## Riepilogo
 

@@ -1,11 +1,11 @@
 ---
-title: "Linee Guida Di Implementazione"
+title: "Linee guida di implementazione"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Linee Guida Di Implementazione
+# Linee guida di implementazione
 
 ## Riepilogo
 

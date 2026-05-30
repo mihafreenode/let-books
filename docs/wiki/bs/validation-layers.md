@@ -1,11 +1,11 @@
 ---
-title: "Slojevi Validacije"
+title: "Slojevi validacije"
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Slojevi Validacije
+# Slojevi validacije
 
 ## Sažetak
 

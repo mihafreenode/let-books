@@ -1,11 +1,11 @@
 ---
-title: "Desarrollo Guiado Por Especificaciones"
+title: "Desarrollo guiado por especificaciones"
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Desarrollo Guiado Por Especificaciones
+# Desarrollo guiado por especificaciones
 
 ## Resumen
 

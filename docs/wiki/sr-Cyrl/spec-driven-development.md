@@ -1,11 +1,11 @@
 ---
-title: "Развој Вођен Спецификацијом"
+title: "Развој вођен спецификацијом"
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Развој Вођен Спецификацијом
+# Развој вођен спецификацијом
 
 ## Сажетак
 

@@ -1,11 +1,11 @@
 ---
-title: "Kako Postepeno Dodavati Validaciona Pravila I CI Pravila"
+title: "Kako postepeno dodavati validaciona pravila i CI pravila"
 topics:
   - validation
   - ci-cd
   - spec-driven-development
 ---
-# Kako Postepeno Dodavati Validaciona Pravila I CI Pravila
+# Kako postepeno dodavati validaciona pravila i CI pravila
 
 ## Sažetak
 

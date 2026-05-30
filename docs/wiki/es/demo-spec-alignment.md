@@ -1,11 +1,11 @@
 ---
-title: "Alineación Entre Demo Y Especificación"
+title: "Alineación entre demo y especificación"
 topics:
   - demo-alignment
   - spec-driven-development
   - product-review
 ---
-# Alineación Entre Demo Y Especificación
+# Alineación entre demo y especificación
 
 ## Resumen
 

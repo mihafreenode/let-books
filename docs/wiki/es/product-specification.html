@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Especificación del producto | LetBooks</title>
+    <meta name="description" content="Una especificación del producto define para qué existe un producto, qué debe hacer, qué límites debe respetar y qué resultados cuentan como éxito.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/es/product-specification.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/product-specification.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/product-specification.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/product-specification.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/product-specification.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/product-specification.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/product-specification.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/product-specification.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/product-specification.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/product-specification.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/product-specification.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/product-specification.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/product-specification.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/product-specification.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Especificación del producto | LetBooks">
+    <meta property="og:description" content="Una especificación del producto define para qué existe un producto, qué debe hacer, qué límites debe respetar y qué resultados cuentan como éxito.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/es/product-specification.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Especificación del producto | LetBooks">
+    <meta name="twitter:description" content="Una especificación del producto define para qué existe un producto, qué debe hacer, qué límites debe respetar y qué resultados cuentan como éxito.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="es">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/es/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Wiki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../es/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/es/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/es/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/product-specification.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/product-specification.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/product-specification.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/product-specification.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/product-specification.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/product-specification.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/product-specification.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/product-specification.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/product-specification.html" lang="de">DE</a>
+              <a class="lang-link" href="../../wiki/it/product-specification.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/product-specification.html" lang="fr">FR</a>
+              <a class="lang-link is-current" href="../../wiki/es/product-specification.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../es/index.html">Documentación</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/es/index.html">Wiki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Especificación del producto</span>
+            </nav>
+            <h1>Especificación del producto</h1>
+          <p class="content-page-summary">Una especificación del producto define para qué existe un producto, qué debe hacer, qué límites debe respetar y qué resultados cuentan como éxito.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temas:</span>
+              <span class="content-tag">Especificación del producto</span>
+              <span class="content-tag">Desarrollo guiado por especificaciones</span>
+              <span class="content-tag">Redacción de especificaciones</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="rol">Rol</h2>
+<p class="lead">La especificación del producto es la descripción práctica de más alto nivel del comportamiento previsto del producto.</p>
+<p>Debe responder a preguntas como:</p>
+<ul>
+<li>por qué existe el producto</li>
+<li>para quién es</li>
+<li>qué flujos de trabajo son de primera clase</li>
+<li>qué debe funcionar incluso en condiciones de fallo</li>
+<li>qué está explícitamente fuera de alcance</li>
+<li>qué criterios de aceptación definen una demo o una versión significativa</li>
+</ul>
+<h2 id="qué-pertenece-a-una-especificación-del-producto">Qué pertenece a una especificación del producto</h2>
+<p>El contenido típico incluye:</p>
+<ul>
+<li>propósito del producto</li>
+<li>filosofía central</li>
+<li>modelo de dominio</li>
+<li>definiciones de flujos de trabajo</li>
+<li>expectativas de privacidad y seguridad</li>
+<li>no objetivos</li>
+<li>orientación sobre la secuencia de implementación cuando afecta al alcance o al orden de entrega</li>
+<li>criterios de aceptación</li>
+</ul>
+<p>La especificación debe centrarse en la verdad del producto, no en cada detalle local de implementación.</p>
+<h2 id="qué-normalmente-no-pertenece-ahí">Qué normalmente no pertenece ahí</h2>
+<p>Estos elementos suelen ir en otro lugar, salvo que afecten directamente a compromisos del producto:</p>
+<ul>
+<li>convenciones temporales del repositorio</li>
+<li>configuración local de herramientas</li>
+<li>decisiones estrechas de pulido de interfaz</li>
+<li>orientación puntual de depuración</li>
+<li>mecánicas editoriales o de publicación que no cambian el modelo del producto</li>
+</ul>
+<h2 id="por-qué-importa-en-el-trabajo-asistido-por-ia">Por qué importa en el trabajo asistido por IA</h2>
+<p>La IA puede generar implementaciones plausibles muy rápido. Sin una especificación clara del producto, esa implementación puede optimizar la conveniencia en lugar de la intención.</p>
+<p>La especificación ofrece a revisores y colaboradores un estándar estable para decidir si la salida generada sigue perteneciendo al producto previsto.</p>
+<h2 id="contexto-de-let-books">Contexto de Let Books</h2>
+<p>En Let Books, <code>AGENTS.md</code> es la especificación principal del producto.</p>
+<p>Define:</p>
+<ul>
+<li>el propósito del proyecto</li>
+<li>el modelo de dominio y de flujos de trabajo</li>
+<li>la dirección de multiinquilinato y localización</li>
+<li>los principios de flujo manual y de IA opcional</li>
+<li>los criterios de aceptación para la primera demo</li>
+</ul>
+<p>Eso lo convierte en algo más que una visión general. Es la principal autoridad de producto del repositorio.</p>
+<h2 id="páginas-relacionadas">Páginas Relacionadas</h2>
+<ul>
+<li><code>implementation-guidance.md</code></li>
+<li><code>documentation-traceability.md</code></li>
+<li><code>spec-driven-development.md</code></li>
+<li><code>../learning/how-to-write-a-spec-that-ai-can-follow.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Otros idiomas</h2>
+            <ul>
+              <li><a href="../../wiki/en/product-specification.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/product-specification.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/product-specification.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/product-specification.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/product-specification.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/product-specification.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/mk/product-specification.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/sq/product-specification.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/product-specification.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/it/product-specification.html" lang="it">Italiano</a></li>
+              <li><a href="../../wiki/fr/product-specification.html" lang="fr">Français</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Artículos relacionados</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-blog-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-spec-driven-development-menu" data-topic-menu="related-blog-spec-driven-development" hidden>
+                      <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html">Cuándo la demo es evidencia y cuándo no lo es</a>
+                      <a href="../../blog/es/documentation-is-part-of-the-product.html">La documentación es parte del producto</a>
+                      <a href="../../blog/es/spec-driven-development-in-let-books.html">Desarrollo guiado por especificaciones en Let Books</a>
+                      <a href="../../blog/es/spec-driven-development-for-ai-projects.html">Desarrollo guiado por especificaciones para proyectos de IA</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Material didáctico relacionado</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="related-learning-spec-writing-menu">Redacción de especificaciones</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">Cómo mantener alineados la especificación, la documentación, la demo y el código</a>
+                      <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-writing-menu" data-topic-menu="related-learning-spec-writing" hidden>
+                      <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html">Cómo escribir una especificación que la IA pueda seguir</a>
+                      <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Entradas wiki relacionadas</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-wiki-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-spec-driven-development-menu" data-topic-menu="related-wiki-spec-driven-development" hidden>
+                      <a href="../../wiki/es/implementation-guidance.html">Directrices de implementación</a>
+                      <a href="../../wiki/es/documentation-traceability.html">Trazabilidad de la documentación</a>
+                      <a href="../../wiki/es/spec-driven-development.html">Desarrollo guiado por especificaciones</a>
+                      <a href="../../wiki/es/demo-spec-alignment.html">Alineación entre demo y especificación</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

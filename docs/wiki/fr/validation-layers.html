@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Couches de validation | LetBooks</title>
+    <meta name="description" content="Les couches de validation sont les différentes façons dont un projet vérifie si l&#x27;implémentation, la documentation et les artefacts de livraison correspondent encore aux règles visées et aux attentes de qualité.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/fr/validation-layers.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/validation-layers.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/validation-layers.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/validation-layers.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/validation-layers.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/validation-layers.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/validation-layers.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/validation-layers.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/validation-layers.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/validation-layers.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/validation-layers.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/validation-layers.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/validation-layers.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/validation-layers.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Couches de validation | LetBooks">
+    <meta property="og:description" content="Les couches de validation sont les différentes façons dont un projet vérifie si l&#x27;implémentation, la documentation et les artefacts de livraison correspondent encore aux règles visées et aux attentes de qualité.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/fr/validation-layers.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Couches de validation | LetBooks">
+    <meta name="twitter:description" content="Les couches de validation sont les différentes façons dont un projet vérifie si l&#x27;implémentation, la documentation et les artefacts de livraison correspondent encore aux règles visées et aux attentes de qualité.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="fr">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/fr/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Wiki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../fr/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/fr/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/validation-layers.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/validation-layers.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/validation-layers.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/validation-layers.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/validation-layers.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/validation-layers.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/validation-layers.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/validation-layers.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/validation-layers.html" lang="de">DE</a>
+              <a class="lang-link" href="../../wiki/it/validation-layers.html" lang="it">IT</a>
+              <a class="lang-link is-current" href="../../wiki/fr/validation-layers.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../wiki/es/validation-layers.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../fr/index.html">Documentation</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/fr/index.html">Wiki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Couches de validation</span>
+            </nav>
+            <h1>Couches de validation</h1>
+          <p class="content-page-summary">Les couches de validation sont les différentes façons dont un projet vérifie si l&#x27;implémentation, la documentation et les artefacts de livraison correspondent encore aux règles visées et aux attentes de qualité.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Sujets :</span>
+              <span class="content-tag">CI/CD</span>
+              <span class="content-tag">Qualité du produit</span>
+              <span class="content-tag">Validation</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="pourquoi-les-couches-comptent">Pourquoi les couches comptent</h2>
+<p class="lead">Aucune méthode unique de validation ne suffit.</p>
+<ul>
+<li>la documentation seule n’impose pas le comportement</li>
+<li>les tests seuls peuvent valider de mauvaises hypothèses</li>
+<li>la CI seule ne peut pas définir les règles qu’elle est censée faire respecter</li>
+</ul>
+<p>Une approche en couches est plus forte, car chaque couche attrape une classe différente de dérive.</p>
+<h2 id="couches-de-validation-courantes">Couches de validation courantes</h2>
+<h3 id="spécification-et-directives">1. Spécification et directives</h3>
+<p>La première couche définit la règle.</p>
+<p>Sans cette couche, les vérifications suivantes peuvent être strictes mais arbitraires.</p>
+<h3 id="revue-manuelle">2. Revue manuelle</h3>
+<p>La revue humaine vérifie l’intention, les cas limites et le sens produit qui ne sont pas encore automatisés.</p>
+<h3 id="validation-locale">3. Validation locale</h3>
+<p>Des scripts et contrôles structurés capturent les problèmes rapides et répétables avant que les changements n’arrivent dans la CI.</p>
+<h3 id="tests">4. Tests</h3>
+<p>Les tests exécutables vérifient le comportement attendu, mais seulement lorsqu’ils sont alignés sur la spécification.</p>
+<h3 id="portes-ci">5. Portes CI</h3>
+<p>La CI rend les contrôles répétables et visibles entre contributeurs et environnements.</p>
+<h3 id="vérifications-de-déploiement">6. Vérifications de déploiement</h3>
+<p>Les workflows de déploiement confirment que les artefacts construits restent publiables et structurellement sains.</p>
+<h2 id="comment-les-couches-doivent-se-relier">Comment les couches doivent se relier</h2>
+<p>Les couches doivent se renforcer dans cet ordre :</p>
+<ul>
+<li>les documents et spécifications définissent les attentes</li>
+<li>la revue interprète ces attentes dans leur contexte</li>
+<li>les scripts de validation et les tests automatisent les parties stables de la revue</li>
+<li>la CI exécute ces contrôles de manière cohérente</li>
+<li>le déploiement garantit que la sortie peut réellement être livrée</li>
+</ul>
+<h2 id="bonnes-cibles-de-validation-précoce">Bonnes cibles de validation précoce</h2>
+<p>Parmi les bons candidats précoces :</p>
+<ul>
+<li>présence des fichiers requis</li>
+<li>complétude de la localisation</li>
+<li>validité syntaxique</li>
+<li>liens internes cassés</li>
+<li>citations éditoriales interdites</li>
+<li>génération de métadonnées réussie</li>
+</ul>
+<p>Ces contrôles ont tendance à être objectifs et peu coûteux.</p>
+<h2 id="contexte-let-books">Contexte Let Books</h2>
+<p>Le dépôt Let Books documente déjà plusieurs couches, notamment :</p>
+<ul>
+<li>les règles produit et d’implémentation dans <code>AGENTS.md</code> et <code>AGENTS-Implementation.md</code></li>
+<li>la validation de développement et de déploiement dans <code>docs/Development.md</code> et <code>docs/Deployment.md</code></li>
+<li>les règles éditoriales de preuve dans <code>docs/blog/README.md</code> et <code>docs/sources/README.md</code></li>
+</ul>
+<p>Cela fait de la validation un système documenté plutôt qu’une simple aspiration future.</p>
+<h2 id="pages-associées">Pages Associées</h2>
+<ul>
+<li><code>documentation-traceability.md</code></li>
+<li><code>implementation-guidance.md</code></li>
+<li><code>../learning/how-to-add-validation-rules-and-ci-gates-in-stages.md</code></li>
+<li><code>../blog/en/documentation-is-part-of-the-product.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Autres langues</h2>
+            <ul>
+              <li><a href="../../wiki/en/validation-layers.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/validation-layers.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/validation-layers.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/validation-layers.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/validation-layers.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/validation-layers.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/mk/validation-layers.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/sq/validation-layers.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/validation-layers.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/it/validation-layers.html" lang="it">Italiano</a></li>
+              <li><a href="../../wiki/es/validation-layers.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Articles apparentés</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Alignement de la démo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-blog-product-quality-menu">Qualité du produit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-blog-validation-menu">Validation</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/fr/spec-driven-development-in-let-books.html">Développement guidé par les spécifications dans Let Books</a>
+                      <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">Quand la démo est une preuve et quand elle ne l&#x27;est pas</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-product-quality-menu" data-topic-menu="related-blog-product-quality" hidden>
+                      <a href="../../blog/fr/documentation-is-part-of-the-product.html">La documentation fait partie du produit</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-validation-menu" data-topic-menu="related-blog-validation" hidden>
+                      <a href="../../blog/fr/spec-driven-development-for-ai-projects.html">Développement guidé par les spécifications pour les projets d&#x27;IA</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Ressources d&#x27;apprentissage liées</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-learning-demo-alignment-menu">Alignement de la démo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-learning-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">Livraison assistée par IA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Planification de l&#x27;implémentation</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-demo-alignment-menu" data-topic-menu="related-learning-demo-alignment" hidden>
+                      <a href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html">Comment garder alignés spécification, documentation, démo et code</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-ci-cd-menu" data-topic-menu="related-learning-ci-cd" hidden>
+                      <a href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html">Comment ajouter progressivement des règles de validation et des garde-fous CI</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html">Comment revoir un travail assisté par l&#x27;IA par rapport à la spécification</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/fr/how-to-turn-a-product-spec-into-an-implementation-plan.html">Comment transformer une spécification produit en plan d&#x27;implémentation</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Entrées wiki liées</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-wiki-implementation-planning-menu">Planification de l&#x27;implémentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-wiki-product-quality-menu">Qualité du produit</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-implementation-planning-menu" data-topic-menu="related-wiki-implementation-planning" hidden>
+                      <a href="../../wiki/fr/implementation-guidance.html">Directives d&#x27;implémentation</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-product-quality-menu" data-topic-menu="related-wiki-product-quality" hidden>
+                      <a href="../../wiki/fr/documentation-traceability.html">Traçabilité de la documentation</a>
+                      <a href="../../wiki/fr/spec-driven-development.html">Développement guidé par les spécifications</a>
+                      <a href="../../wiki/fr/markdown-in-product-development.html">Markdown dans le développement produit</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

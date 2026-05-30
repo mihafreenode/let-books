@@ -1,11 +1,11 @@
 ---
-title: "Продуктна Спецификација"
+title: "Продуктна спецификација"
 topics:
   - product-specification
   - spec-writing
   - spec-driven-development
 ---
-# Продуктна Спецификација
+# Продуктна спецификација
 
 ## Резиме
 

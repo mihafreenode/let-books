@@ -1,11 +1,11 @@
 ---
-title: "Имплементациона Упутства"
+title: "Имплементациона упутства"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Имплементациона Упутства
+# Имплементациона упутства
 
 ## Сажетак
 

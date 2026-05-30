@@ -1,11 +1,11 @@
 ---
-title: "Implementacijske Smjernice"
+title: "Implementacijske smjernice"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Implementacijske Smjernice
+# Implementacijske smjernice
 
 ## Sažetak
 

@@ -44,11 +44,11 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
-  <body data-page-type="article" data-locale="it">
+  <body data-page-type="article" data-content-type="blog" data-locale="it">
     <div class="page-shell">
       <header class="site-header">
         <div class="header-inner">
-          <a class="brand-link" href="../../it/index.html">
+          <a class="brand-link" href="../../blog/it/index.html">
             <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
             <span class="brand-copy">
               <strong>Let Books</strong>
@@ -56,22 +56,24 @@
             </span>
           </a>
           <div class="header-nav">
-            <a class="nav-link" href="../../index.html">Docs</a>
-            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="../../it/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/it/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/it/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="en">EN</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sl">SL</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="hr">HR</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="bs">BS</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sr-Latn">SR</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sr-Cyrl">СР</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="mk">МК</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="sq">SQ</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="de">DE</a>
-              <a class="lang-link is-current" href="spec-driven-development-in-let-books.html" lang="it">IT</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="fr">FR</a>
-              <a class="lang-link" href="spec-driven-development-in-let-books.html" lang="es">ES</a>
+              <a class="lang-link" href="../../blog/en/spec-driven-development-in-let-books.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/spec-driven-development-in-let-books.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/spec-driven-development-in-let-books.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/spec-driven-development-in-let-books.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/spec-driven-development-in-let-books.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/spec-driven-development-in-let-books.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/spec-driven-development-in-let-books.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/spec-driven-development-in-let-books.html" lang="de">DE</a>
+              <a class="lang-link is-current" href="../../blog/it/spec-driven-development-in-let-books.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/spec-driven-development-in-let-books.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/spec-driven-development-in-let-books.html" lang="es">ES</a>
               <a class="lang-link" href="../../index.html">All languages</a>
             </div>
           </div>
@@ -79,7 +81,26 @@
       </header>
 
       <main>
-        <article class="section blog-article">
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../it/index.html">Documentazione</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/it/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Sviluppo guidato dalle specifiche in Let Books</span>
+            </nav>
+            <h1>Sviluppo guidato dalle specifiche in Let Books</h1>
+          <p class="content-page-summary">Come Let Books usa gia specifica, linee guida di implementazione, documentazione, vincoli della demo e regole di verifica come sistema di sviluppo guidato dalle specifiche.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temi:</span>
+              <span class="content-tag">Allineamento del demo</span>
+              <span class="content-tag">Documentazione</span>
+              <span class="content-tag">Let Books</span>
+              <span class="content-tag">Sviluppo guidato dalle specifiche</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
 <p class="lead">Let Books e un utile caso di studio dello sviluppo guidato dalle specifiche perché il repository contiene gia piu livelli di intenzione di prodotto e non solo artefatti di implementazione.</p>
 <p>Il progetto non e ancora un’applicazione ospitata completa. Al momento include una specifica di prodotto, linee guida di implementazione, documentazione pubblica e una demo statica locale. Per questo e un buon esempio di come un progetto possa restare coerente prima ancora che esista lo stack di produzione finale.</p>
 <h2 id="il-livello-della-specifica">Il livello della specifica</h2>
@@ -117,54 +138,91 @@
 <h2 id="la-lezione-principale">La lezione principale</h2>
 <p>Lo sviluppo guidato dalle specifiche non significa solo scrivere un lungo documento prima di programmare. In pratica significa costruire una catena affidabile tra intenzione di prodotto, regole tattiche, documentazione pubblica, demo, verifica e pubblicazione.</p>
 <p>Let Books mostra che una catena del genere puo esistere anche prima di un’applicazione backend completa. Questo e uno dei vantaggi piu forti dello sviluppo guidato dalle specifiche nel lavoro supportato dall’IA.</p>
-
         </article>
-
-          <div class="post-article-nav">
-<div class="language-alternatives">
-<h2 id="altre-lingue">Altre lingue</h2>
-<ul>
-<li><a href="../en/spec-driven-development-in-let-books.html">English</a></li>
-<li><a href="../sq/spec-driven-development-in-let-books.html">Shqip</a></li>
-<li><a href="../de/spec-driven-development-in-let-books.html">Deutsch</a></li>
-<li><a href="../sl/spec-driven-development-in-let-books.html">Slovenščina</a></li>
-<li><a href="../hr/spec-driven-development-in-let-books.html">Hrvatski</a></li>
-<li><a href="../bs/spec-driven-development-in-let-books.html">Bosanski</a></li>
-<li><a href="../sr-Latn/spec-driven-development-in-let-books.html">Srpski (latinica)</a></li>
-<li><a href="../sr-Cyrl/spec-driven-development-in-let-books.html">Српски (ћирилица)</a></li>
-<li><a href="../mk/spec-driven-development-in-let-books.html">Македонски</a></li>
-<li><a href="../fr/spec-driven-development-in-let-books.html">Français</a></li>
-<li><a href="../es/spec-driven-development-in-let-books.html">Español</a></li>
-</ul>
-          </div>
-<section class="topic-nav related-content">
-          <h2>Articoli correlati</h2>
-          <div class="topic-group">
-            <h3 class="topic-label">Sviluppo guidato da specifiche</h3>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Altre lingue</h2>
             <ul>
-            <li><a href="spec-driven-development-for-ai-projects.html">Sviluppo guidato dalle specifiche per progetti di IA</a></li>
-            <li><a href="documentation-is-part-of-the-product.html">La documentazione è parte del prodotto</a></li>
-            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a></li>
+              <li><a href="../../blog/en/spec-driven-development-in-let-books.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/spec-driven-development-in-let-books.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/spec-driven-development-in-let-books.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/spec-driven-development-in-let-books.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/spec-driven-development-in-let-books.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/spec-driven-development-in-let-books.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/spec-driven-development-in-let-books.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/spec-driven-development-in-let-books.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/fr/spec-driven-development-in-let-books.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/spec-driven-development-in-let-books.html" lang="es">Español</a></li>
             </ul>
           </div>
-          <div class="topic-group">
-            <h3 class="topic-label">Documentazione</h3>
-            <ul>
-            <li><a href="spec-driven-development-for-ai-projects.html">Sviluppo guidato dalle specifiche per progetti di IA</a></li>
-            <li><a href="documentation-is-part-of-the-product.html">La documentazione è parte del prodotto</a></li>
-            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a></li>
-            </ul>
-          </div>
-          <div class="topic-group">
-            <h3 class="topic-label">Allineamento demo</h3>
-            <ul>
-            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a></li>
-            </ul>
-          </div>
-        </section>
-
-          </div>
-</main>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Articoli correlati</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Allineamento del demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-blog-documentation-menu">Documentazione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-blog-book-donation-menu">Donazione di libri</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/it/when-the-demo-is-evidence-and-when-it-is-not.html">Quando la demo è prova e quando non lo è</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-documentation-menu" data-topic-menu="related-blog-documentation" hidden>
+                      <a href="../../blog/it/spec-driven-development-for-ai-projects.html">Sviluppo guidato dalle specifiche per progetti di IA</a>
+                      <a href="../../blog/it/documentation-is-part-of-the-product.html">La documentazione è parte del prodotto</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-book-donation-menu" data-topic-menu="related-blog-book-donation" hidden>
+                      <a href="../../blog/it/isbn-not-a-database.html">L&#x27;ISBN non è un database</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Materiali didattici correlati</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-learning-demo-alignment-menu">Allineamento del demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-learning-documentation-menu">Documentazione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Sviluppo guidato dalle specifiche</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-demo-alignment-menu" data-topic-menu="related-learning-demo-alignment" hidden>
+                      <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">Come mantenere allineati specifica, documentazione, demo e codice</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-documentation-menu" data-topic-menu="related-learning-documentation" hidden>
+                      <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html">Come scrivere una specifica che l&#x27;IA può seguire</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html">Come aggiungere a fasi regole di validazione e gate CI</a>
+                      <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html">Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Voci wiki correlate</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-wiki-demo-alignment-menu">Allineamento del demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Documentazione</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-demo-alignment-menu" data-topic-menu="related-wiki-demo-alignment" hidden>
+                      <a href="../../wiki/it/demo-spec-alignment.html">Allineamento tra demo e specifica</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/it/spec-driven-development.html">Sviluppo guidato dalle specifiche</a>
+                      <a href="../../wiki/it/markdown-in-product-development.html">Markdown nello sviluppo di prodotto</a>
+                      <a href="../../wiki/it/documentation-traceability.html">Tracciabilità della documentazione</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
 
       <footer class="site-footer">
         <div class="footer-inner">

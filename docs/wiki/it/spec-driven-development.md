@@ -1,11 +1,11 @@
 ---
-title: "Sviluppo Guidato Dalle Specifiche"
+title: "Sviluppo guidato dalle specifiche"
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Sviluppo Guidato Dalle Specifiche
+# Sviluppo guidato dalle specifiche
 
 ## Riepilogo
 

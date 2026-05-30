@@ -1,11 +1,11 @@
 ---
-title: "Имплементациски Насоки"
+title: "Имплементациски насоки"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Имплементациски Насоки
+# Имплементациски насоки
 
 ## Резиме
 

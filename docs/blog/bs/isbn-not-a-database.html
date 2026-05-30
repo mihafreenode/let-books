@@ -8,6 +8,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/blog/bs/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/isbn-not-a-database.html">
     <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/isbn-not-a-database.html">
@@ -20,14 +21,13 @@
     <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/isbn-not-a-database.html">
     <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/isbn-not-a-database.html">
     <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/isbn-not-a-database.html">
-    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
-    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="ISBN nije baza podataka | LetBooks">
     <meta property="og:description" content="Zašto ISBN pomaže u prepoznavanju knjiga, ali ne zamjenjuje metapodatkovne sisteme, i kako funkcionira lanac pretraživanja metapodataka u projektu Let Books.">
@@ -44,11 +44,11 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
-  <body data-page-type="article" data-locale="bs">
+  <body data-page-type="article" data-content-type="blog" data-locale="bs">
     <div class="page-shell">
       <header class="site-header">
         <div class="header-inner">
-          <a class="brand-link" href="../../bs/index.html">
+          <a class="brand-link" href="../../blog/bs/index.html">
             <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
             <span class="brand-copy">
               <strong>Let Books</strong>
@@ -56,122 +56,200 @@
             </span>
           </a>
           <div class="header-nav">
-            <a class="nav-link" href="../../index.html">Docs</a>
-            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="../../bs/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/bs/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/bs/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/bs/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
-            <div class="lang-switch" aria-label="Jezične mogućnosti">
-              <a class="lang-link is-current" href="isbn-not-a-database.html" lang="bs">BS</a>
-              <a class="lang-link" href="../../index.html">Svi jezici</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/isbn-not-a-database.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/isbn-not-a-database.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/isbn-not-a-database.html" lang="hr">HR</a>
+              <a class="lang-link is-current" href="../../blog/bs/isbn-not-a-database.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/isbn-not-a-database.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/isbn-not-a-database.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/isbn-not-a-database.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/isbn-not-a-database.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/isbn-not-a-database.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/isbn-not-a-database.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/isbn-not-a-database.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/isbn-not-a-database.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
             </div>
           </div>
         </div>
       </header>
 
       <main>
-        <article class="section blog-article">
-          <span class="eyebrow">Blog &middot; Metapodaci</span>
-          <h1>ISBN nije baza podataka</h1>
-          <p class="lead">Zašto ISBN pomaže u prepoznavanju knjiga, ali ne zamjenjuje metapodatkovne sisteme, i kako funkcionira lanac pretraživanja metapodataka u projektu Let Books.</p>
-
-          <p>Kad uzmete u ruke štampanu knjigu, crtični kod na poleđini najvidljiviji je identifikator koji nosi. Taj identifikator je ISBN &mdash; međunarodni standardni knjižni broj. U knjižničnim katalozima, internet trgovinama i metapodatkovnim sistemima često djeluje kao ključ baze podataka. Ali ISBN nije baza podataka, a tretiranje kao takve dovodi do stvarnih problema u doniranju knjiga.</p>
-
-          <h2>Šta je ISBN zapravo</h2>
-          <p>ISBN je jedinstveni identifikator dodijeljen određenom izdanju objavljene knjige. Trenutni standard, ISBN-13, koristi 13 cifara s kontrolnom cifrom za otkrivanje grešaka. Stariji format ISBN-10 još se nalazi na knjigama objavljenim prije 2007.</p>
-          <p>ISBN identificira izdanje, a ne djelo. Na primjer, drugo i treće izdanje istog udžbenika imaju različite ISBNove. Tvrdi i meki povez iste knjige imaju različite ISBNove. Engleski prijevod i izvorno francusko izdanje imaju različite ISBNove.</p>
-          <p>To je korisna preciznost &mdash; ali donosi važna ograničenja.</p>
-
-          <figure class="image-card blog-figure">
-            <img src="../../diagrams/blog/isbn-not-a-database/bs/isbn-vs-physical-book.svg" alt="Dijagram ISBN u odnosu na fizički primjerak knjige">
-            <figcaption>ISBN identificira metapodatke izdanja na lijevoj strani. Fizički primjerak na desnoj &mdash; stanje, provinijencija, lokacija pohrane, status donacije, fotografije &mdash; vodi se odvojeno u domennom modelu Let Books. To dvoje je povezano, ali nije isto.</figcaption>
-          </figure>
-
-          <h2>Šta ISBN ne može</h2>
-
-          <h3>Nema ga svaka knjiga</h3>
-          <p>Knjige objavljene prije 1970, samostalne publikacije, akademski materijali iz ograničenih naklada i knjige manjih izdavača često uopće nemaju ISBN. U akademskim baštinskim zbirkama &mdash; na koje se ovaj projekt fokusira &mdash; udžbenici prije 1970, nastavni materijali i lokalno štampani sadržaji uobičajeni su i vrijedni.</p>
-
-          <h3>ISBN ne opisuje stanje</h3>
-          <p>Knjižnica želi znati je li primjerak oštećen vodom, ima li bilješke ili mu nedostaju stranice. ISBN ne daje nijednu od tih informacija. Identifikator je isti za besprijekoran primjerak i za onaj koji je dvadeset godina ležao u vlažnom podrumu.</p>
-
-          <h3>ISBN ne opisuje provinijenciju</h3>
-          <p>Čiji je ovo primjerak? Je li ga preporučio profesor? Ima li potpis prethodnog vlasnika ili knjižnični pečat? Koja ga je institucija posjedovala? ISBN o svemu tome šuti.</p>
-
-          <h3>ISBN ne opisuje lokaciju</h3>
-          <p>Za projekt doniranja knjiga drugo najvažnije pitanje nakon "šta je to?" jest "gdje je?". ISBN nema odgovor na to. Lokacija je logistički podatak koji se vodi odvojeno u hijerarhiji skladišnih mjesta.</p>
-
-          <h3>ISBN može biti pogrešan ili ponovno korišten</h3>
-          <p>Postoje pogrešno odštampani ISBNovi. Isti ISBN mogu slučajno koristiti različiti izdavači. Optičko čitanje može pogrešno očitati cifre. Kontrolna cifra otkriva greške u jednoj cifri, ali ne sve.</p>
-
-          <h2>Kako Let Books postupa s ISBNom</h2>
-          <p><code>docs/book-metadata.md</code> definira praktičnu strategiju rezervnog pada za pretraživanje po ISBN-u. Dokument također navodi da ovaj tok radi u trenutnom alfa demo okruženju, a istovremeno služi kao obrazac za buduću punu aplikaciju:</p>
-
-          <figure class="image-card blog-figure">
-            <img src="../../diagrams/blog/isbn-not-a-database/bs/isbn-lookup-chain.svg" alt="Dijagram lanca pretraživanja ISBN-a">
-          </figure>
-
-          <ol>
-            <li>Normaliziraj i potvrdi ISBN. Ukloni razmake i crtice, X pretvori u veliko slovo, provjeri kontrolnu cifru.</li>
-            <li>Prvo upitaj Open Library putem njihovog javnog sučelja.</li>
-            <li>Ako Open Library ne vrati korisne podatke, upitaj Let Books metapodatkovni API.</li>
-            <li>Ako nijedan pružatelj nema podatke, osloni se na ručni unos.</li>
-          </ol>
-
-          <p>Ručni unos nikada nije blokiran. Ako svi pružatelji otkažu &mdash; bilo zbog mrežne greške, ograničenja brzine ili stvarne odsutnosti podataka &mdash; korisnik može ručno unijeti naslov, autora, izdavača i godinu te nastaviti s katalogizacijom.</p>
-          <p>Lanac padanja namjerno je jednostavan. Ne postoji jedinstvena tačka otkaza jer nijedan pružatelj nije obavezan. Svaki pružatelj je izboran i nezavisno zamjenjiv.</p>
-          <p>Kanonske reference u repozitoriju za ovaj lanac su <code>docs/book-metadata.md</code> i <code>AGENTS.md</code>. Ako određeni demo ili konkretna verzija aplikacije već implementira dio ovog toka, navedite to samo kao status implementacije, a ne kao glavni dokaz.</p>
-
-          <h2>Zašto je to važno za doniranje knjiga</h2>
-          <p>Kad darovatelj katalogizira zbirku akademskih knjiga, neke će imati ISBN, a neke neće. Knjige bez ISBNa često su najzanimljivije &mdash; starija izdanja, lokalno objavljeni materijali, kompilacije za pojedine predmete ili knjige izdavača iz bivše Jugoslavije čiji identifikatori nikad nisu dospjeli u globalne baze podataka.</p>
-          <p>Postupak katalogizacije ne smije kažnjavati darovatelja zbog nedostatka ISBNova. Svaka značajka koja radi s ISBNom mora raditi i bez njega: praćenje lokacije, učitavanje fotografija, izvoz u Excel, skupni pregled. ISBN je pomagalo, a ne zahtjev.</p>
-
-          <div class="quote-panel">
-            <p><strong>Projektna specifikacija, AGENTS.md:</strong> "Model mora dozvoljavati nepotpune podatke. ISBN nije obavezan."</p>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../bs/index.html">Dokumentacija</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/bs/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">ISBN nije baza podataka</span>
+            </nav>
+            <h1>ISBN nije baza podataka</h1>
+          <p class="content-page-summary">Zašto ISBN pomaže u prepoznavanju knjiga, ali ne zamjenjuje metapodatkovne sisteme, i kako funkcionira lanac pretraživanja metapodataka u projektu Let Books.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Teme:</span>
+              <span class="content-tag">Donacija knjiga</span>
+              <span class="content-tag">ISBN i metapodaci</span>
+              <span class="content-tag">Bibliotečki sistemi</span>
           </div>
-
-          <h2>Šta donosi budućnost</h2>
-          <p>Trenutni lanac padanja širit će se s novim pružateljima. Crossref, Wikidata, OpenAlex i COBISS su kandidati. Svaki će ući u isti lanac: pokušaj redom, agresivno keširaj, elegantno otkaži.</p>
-          <p>Ali lanac sam po sebi nije cilj. Cilj je doći od fizičke knjige do dovoljno metapodataka da knjižnica može odlučiti želi li knjigu. ISBN pomaže, ali sistem mora raditi i kad ISBN nije dostupan.</p>
-
-          <div class="blog-footer-note">
-            <p><strong>ISBN je koristan identifikator. Nije baza podataka.</strong></p>
-          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Kad uzmete u ruke štampanu knjigu, crtični kod na poleđini najvidljiviji je identifikator koji nosi. Taj identifikator je ISBN — međunarodni standardni knjižni broj. U knjižničnim katalozima, internet trgovinama i metapodatkovnim sistemima često djeluje kao ključ baze podataka. Ali ISBN nije baza podataka, a tretiranje kao takve dovodi do stvarnih problema u doniranju knjiga.</p>
+<h2 id="šta-je-isbn-zapravo">Šta je ISBN zapravo</h2>
+<p>ISBN je jedinstveni identifikator dodijeljen određenom izdanju objavljene knjige. Trenutni standard, ISBN-13, koristi 13 cifara s kontrolnom cifrom za otkrivanje grešaka. Stariji format ISBN-10 još se nalazi na knjigama objavljenim prije 2007.</p>
+<p>ISBN identificira izdanje, a ne djelo. Na primjer, drugo i treće izdanje istog udžbenika imaju različite ISBNove. Tvrdi i meki povez iste knjige imaju različite ISBNove. Engleski prijevod i izvorno francusko izdanje imaju različite ISBNove.</p>
+<p>To je korisna preciznost — ali donosi važna ograničenja.</p>
+<figure>
+<img src="../../diagrams/blog/isbn-not-a-database/bs/isbn-vs-physical-book.svg" alt="Dijagram ISBN u odnosu na fizički primjerak knjige" />
+<figcaption aria-hidden="true">Dijagram ISBN u odnosu na fizički primjerak knjige</figcaption>
+</figure>
+<p>ISBN identificira metapodatke izdanja na lijevoj strani. Fizički primjerak na desnoj — stanje, provinijencija, lokacija pohrane, status donacije, fotografije — vodi se odvojeno u domennom modelu Let Books. To dvoje je povezano, ali nije isto.</p>
+<h2 id="šta-isbn-ne-može">Šta ISBN ne može</h2>
+<h3 id="nema-ga-svaka-knjiga">Nema ga svaka knjiga</h3>
+<p>Knjige objavljene prije 1970, samostalne publikacije, akademski materijali iz ograničenih naklada i knjige manjih izdavača često uopće nemaju ISBN. U akademskim baštinskim zbirkama — na koje se ovaj projekt fokusira — udžbenici prije 1970, nastavni materijali i lokalno štampani sadržaji uobičajeni su i vrijedni.</p>
+<h3 id="isbn-ne-opisuje-stanje">ISBN ne opisuje stanje</h3>
+<p>Knjižnica želi znati je li primjerak oštećen vodom, ima li bilješke ili mu nedostaju stranice. ISBN ne daje nijednu od tih informacija. Identifikator je isti za besprijekoran primjerak i za onaj koji je dvadeset godina ležao u vlažnom podrumu.</p>
+<h3 id="isbn-ne-opisuje-provinijenciju">ISBN ne opisuje provinijenciju</h3>
+<p>Čiji je ovo primjerak? Je li ga preporučio profesor? Ima li potpis prethodnog vlasnika ili knjižnični pečat? Koja ga je institucija posjedovala? ISBN o svemu tome šuti.</p>
+<h3 id="isbn-ne-opisuje-lokaciju">ISBN ne opisuje lokaciju</h3>
+<p>Za projekt doniranja knjiga drugo najvažnije pitanje nakon “šta je to?” jest “gdje je?”. ISBN nema odgovor na to. Lokacija je logistički podatak koji se vodi odvojeno u hijerarhiji skladišnih mjesta.</p>
+<h3 id="isbn-može-biti-pogrešan-ili-ponovno-korišten">ISBN može biti pogrešan ili ponovno korišten</h3>
+<p>Postoje pogrešno odštampani ISBNovi. Isti ISBN mogu slučajno koristiti različiti izdavači. Optičko čitanje može pogrešno očitati cifre. Kontrolna cifra otkriva greške u jednoj cifri, ali ne sve.</p>
+<h2 id="kako-let-books-postupa-s-isbnom">Kako Let Books postupa s ISBNom</h2>
+<p><code>docs/book-metadata.md</code> definira praktičnu strategiju rezervnog pada za pretraživanje po ISBN-u. Dokument također navodi da ovaj tok radi u trenutnom alfa demo okruženju, a istovremeno služi kao obrazac za buduću punu aplikaciju:</p>
+<figure>
+<img src="../../diagrams/blog/isbn-not-a-database/bs/isbn-lookup-chain.svg" alt="Dijagram lanca pretraživanja ISBN-a" />
+<figcaption aria-hidden="true">Dijagram lanca pretraživanja ISBN-a</figcaption>
+</figure>
+<ol type="1">
+<li>Normaliziraj i potvrdi ISBN. Ukloni razmake i crtice, X pretvori u veliko slovo, provjeri kontrolnu cifru.</li>
+<li>Prvo upitaj Open Library putem njihovog javnog sučelja.</li>
+<li>Ako Open Library ne vrati korisne podatke, upitaj Let Books metapodatkovni API.</li>
+<li>Ako nijedan pružatelj nema podatke, osloni se na ručni unos.</li>
+</ol>
+<p>Ručni unos nikada nije blokiran. Ako svi pružatelji otkažu — bilo zbog mrežne greške, ograničenja brzine ili stvarne odsutnosti podataka — korisnik može ručno unijeti naslov, autora, izdavača i godinu te nastaviti s katalogizacijom.</p>
+<p>Lanac padanja namjerno je jednostavan. Ne postoji jedinstvena tačka otkaza jer nijedan pružatelj nije obavezan. Svaki pružatelj je izboran i nezavisno zamjenjiv.</p>
+<p>Kanonske reference u repozitoriju za ovaj lanac su <code>docs/book-metadata.md</code> i <code>AGENTS.md</code>. Ako određeni demo ili konkretna verzija aplikacije već implementira dio ovog toka, navedite to samo kao status implementacije, a ne kao glavni dokaz.</p>
+<h2 id="zašto-je-to-važno-za-doniranje-knjiga">Zašto je to važno za doniranje knjiga</h2>
+<p>Kad darovatelj katalogizira zbirku akademskih knjiga, neke će imati ISBN, a neke neće. Knjige bez ISBNa često su najzanimljivije — starija izdanja, lokalno objavljeni materijali, kompilacije za pojedine predmete ili knjige izdavača iz bivše Jugoslavije čiji identifikatori nikad nisu dospjeli u globalne baze podataka.</p>
+<p>Postupak katalogizacije ne smije kažnjavati darovatelja zbog nedostatka ISBNova. Svaka značajka koja radi s ISBNom mora raditi i bez njega: praćenje lokacije, učitavanje fotografija, izvoz u Excel, skupni pregled. ISBN je pomagalo, a ne zahtjev.</p>
+<blockquote>
+<p><strong>Projektna specifikacija, AGENTS.md:</strong> “Model mora dozvoljavati nepotpune podatke. ISBN nije obavezan.”</p>
+</blockquote>
+<h2 id="šta-donosi-budućnost">Šta donosi budućnost</h2>
+<p>Trenutni lanac padanja širit će se s novim pružateljima. Crossref, Wikidata, OpenAlex i COBISS su kandidati. Svaki će ući u isti lanac: pokušaj redom, agresivno keširaj, elegantno otkaži.</p>
+<p>Ali lanac sam po sebi nije cilj. Cilj je doći od fizičke knjige do dovoljno metapodataka da knjižnica može odlučiti želi li knjigu. ISBN pomaže, ali sistem mora raditi i kad ISBN nije dostupan.</p>
+<p><strong>ISBN je koristan identifikator. Nije baza podataka.</strong></p>
         </article>
-
-          <div class="post-article-nav">
+        <div class="post-article-nav">
           <div class="language-alternatives">
-<h2 id="drugi-jezici">Drugi jezici</h2>
-<ul>
-<li><a href="../en/isbn-not-a-database.html">English</a></li>
-<li><a href="../sl/isbn-not-a-database.html">Slovenščina</a></li>
-<li><a href="../hr/isbn-not-a-database.html">Hrvatski</a></li>
-<li><a href="../sr-Latn/isbn-not-a-database.html">Srpski (latinica)</a></li>
-<li><a href="../sr-Cyrl/isbn-not-a-database.html">Српски (ћирилица)</a></li>
-<li><a href="../mk/isbn-not-a-database.html">Македонски</a></li>
-<li><a href="../sq/isbn-not-a-database.html">Shqip</a></li>
-<li><a href="../de/isbn-not-a-database.html">Deutsch</a></li>
-<li><a href="../it/isbn-not-a-database.html">Italiano</a></li>
-<li><a href="../fr/isbn-not-a-database.html">Français</a></li>
-<li><a href="../es/isbn-not-a-database.html">Español</a></li>
-</ul>
+            <h2>Drugi jezici</h2>
+            <ul>
+              <li><a href="../../blog/en/isbn-not-a-database.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/isbn-not-a-database.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/isbn-not-a-database.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/sr-Latn/isbn-not-a-database.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/isbn-not-a-database.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/isbn-not-a-database.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/isbn-not-a-database.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/isbn-not-a-database.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/isbn-not-a-database.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/isbn-not-a-database.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/isbn-not-a-database.html" lang="es">Español</a></li>
+            </ul>
           </div>
-          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Povezani članci</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-blog-ai-assisted-delivery-menu">AI isporuka</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Usklađenost demoa</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-ai-assisted-delivery-menu" data-topic-menu="related-blog-ai-assisted-delivery" hidden>
+                      <a href="../../blog/bs/documentation-is-part-of-the-product.html">Dokumentacija je dio proizvoda</a>
+                      <a href="../../blog/bs/spec-driven-development-for-ai-projects.html">Razvoj vođen specifikacijom za AI projekte</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html">Kada je demo dokaz, a kada nije</a>
+                      <a href="../../blog/bs/spec-driven-development-in-let-books.html">Razvoj vođen specifikacijom u Let Books</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Povezani materijali za učenje</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">AI isporuka</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Planiranje implementacije</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-learning-demo-alignment-menu">Usklađenost demoa</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/bs/how-to-write-a-spec-that-ai-can-follow.html">Kako napisati specifikaciju koju AI može slijediti</a>
+                      <a href="../../learning/bs/how-to-review-ai-assisted-work-against-the-spec.html">Kako pregledavati AI-podržani rad prema specifikaciji</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html">Kako iz proizvodne specifikacije napraviti implementacijski plan</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-demo-alignment-menu" data-topic-menu="related-learning-demo-alignment" hidden>
+                      <a href="../../learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html">Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Povezani wiki unosi</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-wiki-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Dokumentacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-wiki-implementation-planning-menu">Planiranje implementacije</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-wiki-demo-alignment-menu">Usklađenost demoa</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-ci-cd-menu" data-topic-menu="related-wiki-ci-cd" hidden>
+                      <a href="../../wiki/bs/validation-layers.html">Slojevi validacije</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-implementation-planning-menu" data-topic-menu="related-wiki-implementation-planning" hidden>
+                      <a href="../../wiki/bs/implementation-guidance.html">Implementacijske smjernice</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-demo-alignment-menu" data-topic-menu="related-wiki-demo-alignment" hidden>
+                      <a href="../../wiki/bs/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
       </main>
 
       <footer class="site-footer">
         <div class="footer-inner">
           <div>
             <h3>Let Books</h3>
-            <p>Praktična platforma za popis, pregled i preuzimanje obrazovnih knjiga.</p>
-            <p class="footer-microcopy">Rani alfa prototip. Ustanove i integracije spomenute u primjerima samo su konceptualne i ne podrazumijevaju partnerstvo ili podršku.</p>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
           </div>
           <div>
             <div class="footer-links">
-              <a href="../../bs/index.html">Pregled</a>
-              <a href="../../index.html">Početna</a>
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
             <div class="language-list" style="margin-top: 1rem;">
-              <a href="../../index.html">Svi jezici</a>
+              <a href="../../index.html">All languages</a>
             </div>
             <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
           </div>

@@ -1,11 +1,11 @@
 ---
-title: "Kako Postopno Dodajati Validacijska Pravila In CI Vrata"
+title: "Kako postopno dodajati validacijska pravila in CI vrata"
 topics:
   - validation
   - ci-cd
   - spec-driven-development
 ---
-# Kako Postopno Dodajati Validacijska Pravila In CI Vrata
+# Kako postopno dodajati validacijska pravila in CI vrata
 
 ## Povzetek
 

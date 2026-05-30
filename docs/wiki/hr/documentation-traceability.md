@@ -1,11 +1,11 @@
 ---
-title: "Sljedivost Dokumentacije"
+title: "Sljedivost dokumentacije"
 topics:
   - documentation
   - product-quality
   - spec-driven-development
 ---
-# Sljedivost Dokumentacije
+# Sljedivost dokumentacije
 
 ## Sažetak
 

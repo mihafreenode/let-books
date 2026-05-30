@@ -77,21 +77,109 @@
           </div>
         </div>
       </header>
-      <main>
+                                                                        <main>
         <section class="section">
           <div class="section-header">
             <h1>Wiki</h1>
             <p>Trajne referentne stranice o razvoju vođenom specifikacijom, sljedivosti dokumentacije, slojevima validacije i srodnim temama.</p>
           </div>
-          <ul>
-              <li><a href="demo-spec-alignment.md">Usklađenost Između Dema I Specifikacije</a></li>
-              <li><a href="documentation-traceability.md">Sljedivost Dokumentacije</a></li>
-              <li><a href="implementation-guidance.md">Implementacijske Smjernice</a></li>
-              <li><a href="markdown-in-product-development.md">Markdown U Razvoju Proizvoda</a></li>
-              <li><a href="product-specification.md">Proizvodna Specifikacija</a></li>
-              <li><a href="spec-driven-development.md">Razvoj Vođen Specifikacijom</a></li>
-              <li><a href="validation-layers.md">Slojevi Validacije</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Vrsta sadržaja">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/bs/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/bs/index.html" data-content-switcher-link data-content-type="learning">Materijali za učenje</a>
+              <a class="content-type-switcher__link is-active" href="../../wiki/bs/index.html" data-content-switcher-link data-content-type="wiki" aria-current="page">Wiki</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Nedavni wiki unosi</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../wiki/bs/validation-layers.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Slojevi validacije</h3>
+              <p>Slojevi validacije su različiti načini na koje projekt provjerava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju s namjeravanim pravilima i očekivanjima kvaliteta.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/bs/spec-driven-development.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Razvoj vođen specifikacijom</h3>
+              <p>Razvoj vođen specifikacijom pristup je u kojem eksplicitne proizvodne i procesne definicije vode implementaciju, dokumentaciju, pregled i provjeru.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/bs/product-specification.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Proizvodna specifikacija</h3>
+              <p>Proizvodna specifikacija definiše čemu proizvod služi, šta mora raditi, koje granice mora poštovati i koji se ishodi smatraju uspjehom.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/bs/markdown-in-product-development.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Markdown u razvoju proizvoda</h3>
+              <p>Markdown je praktičan format za pohranu namjere proizvoda, dokumentacije, vodiča i dokaza u obliku koji je pregledan, prenosiv, uporediv kroz diffove i lako povezan s validacijskim tokovima rada.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Pregledaj po temama</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-wiki-bs-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-wiki-bs-documentation-menu">Dokumentacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-wiki-bs-product-quality-menu">Kvalitet proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-wiki-bs-spec-writing-menu">Pisanje specifikacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-wiki-bs-implementation-planning-menu">Planiranje implementacije</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-wiki-bs-product-review-menu">Pregled proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-wiki-bs-spec-driven-development-menu">Razvoj vođen specifikacijama</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-wiki-bs-product-specification-menu">Specifikacija proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-wiki-bs-project-management-menu">Upravljanje projektom</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-wiki-bs-demo-alignment-menu">Usklađenost demoa</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-bs-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-wiki-bs-validation-menu">Validacija</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-wiki-bs-ci-cd-menu" data-topic-menu="index-wiki-bs-ci-cd" hidden>
+                      <a href="../../wiki/bs/validation-layers.html">Slojevi validacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-documentation-menu" data-topic-menu="index-wiki-bs-documentation" hidden>
+                      <a href="../../wiki/bs/markdown-in-product-development.html">Markdown u razvoju proizvoda</a>
+                      <a href="../../wiki/bs/spec-driven-development.html">Razvoj vođen specifikacijom</a>
+                      <a href="../../wiki/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-product-quality-menu" data-topic-menu="index-wiki-bs-product-quality" hidden>
+                      <a href="../../wiki/bs/markdown-in-product-development.html">Markdown u razvoju proizvoda</a>
+                      <a href="../../wiki/bs/spec-driven-development.html">Razvoj vođen specifikacijom</a>
+                      <a href="../../wiki/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                      <a href="../../wiki/bs/validation-layers.html">Slojevi validacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-spec-writing-menu" data-topic-menu="index-wiki-bs-spec-writing" hidden>
+                      <a href="../../wiki/bs/product-specification.html">Proizvodna specifikacija</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-implementation-planning-menu" data-topic-menu="index-wiki-bs-implementation-planning" hidden>
+                      <a href="../../wiki/bs/implementation-guidance.html">Implementacijske smjernice</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-product-review-menu" data-topic-menu="index-wiki-bs-product-review" hidden>
+                      <a href="../../wiki/bs/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-spec-driven-development-menu" data-topic-menu="index-wiki-bs-spec-driven-development" hidden>
+                      <a href="../../wiki/bs/implementation-guidance.html">Implementacijske smjernice</a>
+                      <a href="../../wiki/bs/markdown-in-product-development.html">Markdown u razvoju proizvoda</a>
+                      <a href="../../wiki/bs/product-specification.html">Proizvodna specifikacija</a>
+                      <a href="../../wiki/bs/spec-driven-development.html">Razvoj vođen specifikacijom</a>
+                      <a href="../../wiki/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                      <a href="../../wiki/bs/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-product-specification-menu" data-topic-menu="index-wiki-bs-product-specification" hidden>
+                      <a href="../../wiki/bs/product-specification.html">Proizvodna specifikacija</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-project-management-menu" data-topic-menu="index-wiki-bs-project-management" hidden>
+                      <a href="../../wiki/bs/implementation-guidance.html">Implementacijske smjernice</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-demo-alignment-menu" data-topic-menu="index-wiki-bs-demo-alignment" hidden>
+                      <a href="../../wiki/bs/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-bs-validation-menu" data-topic-menu="index-wiki-bs-validation" hidden>
+                      <a href="../../wiki/bs/validation-layers.html">Slojevi validacije</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

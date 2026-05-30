@@ -1,11 +1,11 @@
 ---
-title: "Come Trasformare Una Specifica Di Prodotto In Un Piano Di Implementazione"
+title: "Come trasformare una specifica di prodotto in un piano di implementazione"
 topics:
   - spec-writing
   - implementation-planning
   - project-management
 ---
-# Come Trasformare Una Specifica Di Prodotto In Un Piano Di Implementazione
+# Come trasformare una specifica di prodotto in un piano di implementazione
 
 ## Riepilogo
 

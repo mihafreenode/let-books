@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Имплементациски насоки | LetBooks</title>
+    <meta name="description" content="Имплементациските насоки дефинираат како тимот треба да испорачува работа во рамки на тековниот репозиториум или околина за испорака, без да ја заменат самата продуктна спецификација.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/mk/implementation-guidance.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/implementation-guidance.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/implementation-guidance.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/implementation-guidance.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/implementation-guidance.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/implementation-guidance.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/implementation-guidance.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/implementation-guidance.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/implementation-guidance.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/implementation-guidance.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/implementation-guidance.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/implementation-guidance.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/implementation-guidance.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/implementation-guidance.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Имплементациски насоки | LetBooks">
+    <meta property="og:description" content="Имплементациските насоки дефинираат како тимот треба да испорачува работа во рамки на тековниот репозиториум или околина за испорака, без да ја заменат самата продуктна спецификација.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/mk/implementation-guidance.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Имплементациски насоки | LetBooks">
+    <meta name="twitter:description" content="Имплементациските насоки дефинираат како тимот треба да испорачува работа во рамки на тековниот репозиториум или околина за испорака, без да ја заменат самата продуктна спецификација.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="mk">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/mk/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Вики</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../mk/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/mk/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/mk/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/mk/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/implementation-guidance.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/implementation-guidance.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/implementation-guidance.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/implementation-guidance.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/implementation-guidance.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/implementation-guidance.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link is-current" href="../../wiki/mk/implementation-guidance.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/implementation-guidance.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/implementation-guidance.html" lang="de">DE</a>
+              <a class="lang-link" href="../../wiki/it/implementation-guidance.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/implementation-guidance.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../wiki/es/implementation-guidance.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../mk/index.html">Документација</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/mk/index.html">Вики</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Имплементациски насоки</span>
+            </nav>
+            <h1>Имплементациски насоки</h1>
+          <p class="content-page-summary">Имплементациските насоки дефинираат како тимот треба да испорачува работа во рамки на тековниот репозиториум или околина за испорака, без да ја заменат самата продуктна спецификација.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Теми:</span>
+              <span class="content-tag">Планирање на имплементација</span>
+              <span class="content-tag">Управување со проект</span>
+              <span class="content-tag">Развој воден од спецификации</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="улога">Улога</h2>
+<p class="lead">Имплементациските насоки се наоѓаат под продуктната спецификација.</p>
+<p>Помагаат да се одговори на прашања како:</p>
+<ul>
+<li>како треба да функционира јавното именување</li>
+<li>како треба да биде структурирана документацијата</li>
+<li>кои очекувања за проверка важат сега</li>
+<li>кои правила специфични за репозиториумот соработниците треба да ги следат</li>
+<li>каде треба да живеат тактичките правила како што се развива проектот</li>
+</ul>
+<h2 id="разлика-во-однос-на-продуктната-спецификација">Разлика во однос на продуктната спецификација</h2>
+<p>Продуктната спецификација дефинира што е производот и што мора да постигне.</p>
+<p>Имплементациските насоки дефинираат како соработниците треба да ја спроведуваат работата во тековниот контекст на испорака.</p>
+<p>Оваа разлика е корисна затоа што не секое правило на репозиториумот е продуктна вистина и не секоја продуктна вистина треба да биде скриена во тактички белешки.</p>
+<h2 id="вообичаени-примери">Вообичаени примери</h2>
+<p>Имплементациските насоки често вклучуваат:</p>
+<ul>
+<li>правила за именување и брендирање</li>
+<li>правила за имплементација на документација</li>
+<li>ограничувања на статична страница или демо</li>
+<li>очекувања за проверка</li>
+<li>правила за уредување или генерирање код</li>
+<li>политики за докази за јавно пишување</li>
+</ul>
+<h2 id="контекст-let-books">Контекст Let Books</h2>
+<p>Во Let Books <code>AGENTS-Implementation.md</code> е тактичкиот слој на насоки.</p>
+<p>Покрива области како:</p>
+<ul>
+<li>јавно именување</li>
+<li>правила за документација</li>
+<li>раздвојување на јавен сајт и документација</li>
+<li>правила за метаподатоци и SEO за статични страници</li>
+<li>ограничувања на статично демо</li>
+<li>правила за локализација и пристапност</li>
+<li>правила за проверка</li>
+<li>политика за докази за блог</li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Други јазици</h2>
+            <ul>
+              <li><a href="../../wiki/en/implementation-guidance.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/implementation-guidance.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/implementation-guidance.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/implementation-guidance.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/implementation-guidance.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/implementation-guidance.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/sq/implementation-guidance.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/implementation-guidance.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/it/implementation-guidance.html" lang="it">Italiano</a></li>
+              <li><a href="../../wiki/fr/implementation-guidance.html" lang="fr">Français</a></li>
+              <li><a href="../../wiki/es/implementation-guidance.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Поврзани статии</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-blog-spec-driven-development-menu">Развој воден од спецификации</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-spec-driven-development-menu" data-topic-menu="related-blog-spec-driven-development" hidden>
+                      <a href="../../blog/mk/spec-driven-development-in-let-books.html">Развој воден од спецификации во Let Books</a>
+                      <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html">Кога демото е доказ, а кога не е</a>
+                      <a href="../../blog/mk/documentation-is-part-of-the-product.html">Документацијата е дел од производот</a>
+                      <a href="../../blog/mk/spec-driven-development-for-ai-projects.html">Развој воден од спецификации за AI проекти</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Поврзани материјали за учење</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Планирање на имплементација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Развој воден од спецификации</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html">Како од продуктна спецификација да се направи имплементациски план</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува AI-поддржана работа според спецификацијата</a>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржи усогласеност меѓу спецификација, документација, демо и код</a>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Поврзани вики записи</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-wiki-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-wiki-spec-driven-development-menu">Развој воден од спецификации</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-ci-cd-menu" data-topic-menu="related-wiki-ci-cd" hidden>
+                      <a href="../../wiki/mk/validation-layers.html">Слоеви на валидација</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-spec-driven-development-menu" data-topic-menu="related-wiki-spec-driven-development" hidden>
+                      <a href="../../wiki/mk/product-specification.html">Продуктна спецификација</a>
+                      <a href="../../wiki/mk/documentation-traceability.html">Следливост на документацијата</a>
+                      <a href="../../wiki/mk/demo-spec-alignment.html">Усогласеност меѓу демото и спецификацијата</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

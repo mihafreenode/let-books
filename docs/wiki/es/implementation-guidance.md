@@ -1,11 +1,11 @@
 ---
-title: "Directrices De Implementación"
+title: "Directrices de implementación"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Directrices De Implementación
+# Directrices de implementación
 
 ## Resumen
 

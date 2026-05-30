@@ -1,11 +1,11 @@
 ---
-title: "Directives D'Implémentation"
+title: "Directives d'implémentation"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Directives D'Implémentation
+# Directives d'implémentation
 
 ## Résumé
 

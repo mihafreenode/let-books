@@ -1,11 +1,11 @@
 ---
-title: "Comment Écrire Une Spécification Que L'IA Peut Suivre"
+title: "Comment écrire une spécification que l'IA peut suivre"
 topics:
   - spec-writing
   - ai-assisted-delivery
   - documentation
 ---
-# Comment Écrire Une Spécification Que L'IA Peut Suivre
+# Comment écrire une spécification que l'IA peut suivre
 
 ## Résumé
 

@@ -1,11 +1,11 @@
 ---
-title: "Allineamento Tra Demo E Specifica"
+title: "Allineamento tra demo e specifica"
 topics:
   - demo-alignment
   - spec-driven-development
   - product-review
 ---
-# Allineamento Tra Demo E Specifica
+# Allineamento tra demo e specifica
 
 ## Riepilogo
 

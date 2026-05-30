@@ -1,11 +1,11 @@
 ---
-title: "Capas De Validación"
+title: "Capas de validación"
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Capas De Validación
+# Capas de validación
 
 ## Resumen
 

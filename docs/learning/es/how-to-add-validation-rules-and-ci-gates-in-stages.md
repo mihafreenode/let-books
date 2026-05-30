@@ -1,11 +1,11 @@
 ---
-title: "Cómo Añadir Por Etapas Reglas De Validación Y Controles CI"
+title: "Cómo añadir por etapas reglas de validación y controles CI"
 topics:
   - validation
   - ci-cd
   - spec-driven-development
 ---
-# Cómo Añadir Por Etapas Reglas De Validación Y Controles CI
+# Cómo añadir por etapas reglas de validación y controles CI
 
 ## Resumen
 

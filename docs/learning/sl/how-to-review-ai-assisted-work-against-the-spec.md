@@ -1,11 +1,11 @@
 ---
-title: "Kako Pregledovati AI-Podprto Delo Glede Na Specifikacijo"
+title: "Kako pregledovati AI-podprto delo glede na specifikacijo"
 topics:
   - product-review
   - ai-assisted-delivery
   - spec-driven-development
 ---
-# Kako Pregledovati AI-Podprto Delo Glede Na Specifikacijo
+# Kako pregledovati AI-podprto delo glede na specifikacijo
 
 ## Povzetek
 

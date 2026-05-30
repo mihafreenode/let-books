@@ -1,11 +1,11 @@
 ---
-title: "Развој Воден Од Спецификации"
+title: "Развој воден од спецификации"
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Развој Воден Од Спецификации
+# Развој воден од спецификации
 
 ## Резиме
 

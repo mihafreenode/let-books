@@ -1,11 +1,11 @@
 ---
-title: "Come Mantenere Allineati Specifica, Documentazione, Demo E Codice"
+title: "Come mantenere allineati specifica, documentazione, demo e codice"
 topics:
   - demo-alignment
   - documentation
   - spec-driven-development
 ---
-# Come Mantenere Allineati Specifica, Documentazione, Demo E Codice
+# Come mantenere allineati specifica, documentazione, demo e codice
 
 ## Riepilogo
 

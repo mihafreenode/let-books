@@ -1,11 +1,11 @@
 ---
-title: "Markdown En El Desarrollo De Producto"
+title: "Markdown en el desarrollo de producto"
 topics:
   - documentation
   - product-quality
   - spec-driven-development
 ---
-# Markdown En El Desarrollo De Producto
+# Markdown en el desarrollo de producto
 
 ## Resumen
 

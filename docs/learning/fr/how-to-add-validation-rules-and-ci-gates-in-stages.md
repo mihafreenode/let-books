@@ -1,11 +1,11 @@
 ---
-title: "Comment Ajouter Progressivement Des Règles De Validation Et Des Garde-Fous CI"
+title: "Comment ajouter progressivement des règles de validation et des garde-fous CI"
 topics:
   - validation
   - ci-cd
   - spec-driven-development
 ---
-# Comment Ajouter Progressivement Des Règles De Validation Et Des Garde-Fous CI
+# Comment ajouter progressivement des règles de validation et des garde-fous CI
 
 ## Résumé
 

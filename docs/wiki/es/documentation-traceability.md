@@ -1,11 +1,11 @@
 ---
-title: "Trazabilidad De La Documentación"
+title: "Trazabilidad de la documentación"
 topics:
   - documentation
   - product-quality
   - spec-driven-development
 ---
-# Trazabilidad De La Documentación
+# Trazabilidad de la documentación
 
 ## Resumen
 

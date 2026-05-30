@@ -1,11 +1,11 @@
 ---
-title: "Kako Napisati Specifikaciju Koju AI Može Slijediti"
+title: "Kako napisati specifikaciju koju AI može slijediti"
 topics:
   - spec-writing
   - ai-assisted-delivery
   - documentation
 ---
-# Kako Napisati Specifikaciju Koju AI Može Slijediti
+# Kako napisati specifikaciju koju AI može slijediti
 
 ## Sažetak
 

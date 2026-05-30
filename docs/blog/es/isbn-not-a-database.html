@@ -8,6 +8,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/blog/es/isbn-not-a-database.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/isbn-not-a-database.html">
     <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/isbn-not-a-database.html">
@@ -20,14 +21,13 @@
     <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/isbn-not-a-database.html">
     <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/isbn-not-a-database.html">
     <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/isbn-not-a-database.html">
-    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/isbn-not-a-database.html">
-    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="El ISBN no es una base de datos | LetBooks">
     <meta property="og:description" content="Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos, y cómo funciona la cadena de búsqueda de metadatos en el proyecto Let Books.">
@@ -44,11 +44,11 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
-  <body data-page-type="article" data-locale="es">
+  <body data-page-type="article" data-content-type="blog" data-locale="es">
     <div class="page-shell">
       <header class="site-header">
         <div class="header-inner">
-          <a class="brand-link" href="../../es/index.html">
+          <a class="brand-link" href="../../blog/es/index.html">
             <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
             <span class="brand-copy">
               <strong>Let Books</strong>
@@ -56,122 +56,200 @@
             </span>
           </a>
           <div class="header-nav">
-            <a class="nav-link" href="../../index.html">Docs</a>
-            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="../../es/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/es/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/es/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
-            <div class="lang-switch" aria-label="Opciones de idioma">
-              <a class="lang-link is-current" href="isbn-not-a-database.html" lang="es">ES</a>
-              <a class="lang-link" href="../../index.html">Todos los idiomas</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/isbn-not-a-database.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/isbn-not-a-database.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/isbn-not-a-database.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/isbn-not-a-database.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/isbn-not-a-database.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/isbn-not-a-database.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/isbn-not-a-database.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/isbn-not-a-database.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/isbn-not-a-database.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/isbn-not-a-database.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/isbn-not-a-database.html" lang="fr">FR</a>
+              <a class="lang-link is-current" href="../../blog/es/isbn-not-a-database.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
             </div>
           </div>
         </div>
       </header>
 
       <main>
-        <article class="section blog-article">
-          <span class="eyebrow">Blog &middot; Metadatos</span>
-          <h1>El ISBN no es una base de datos</h1>
-          <p class="lead">Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos, y cómo funciona la cadena de búsqueda de metadatos en el proyecto Let Books.</p>
-
-          <p>Cuando sostienes un libro impreso, el código de barras en la contraportada es el identificador más visible que lleva. Ese identificador es el ISBN &mdash; Número Estándar Internacional de Libros. En los catálogos de bibliotecas, tiendas en línea y sistemas de metadatos, a menudo funciona como una clave de base de datos. Pero un ISBN no es una base de datos, y tratarlo como tal genera problemas reales en los procesos de donación de libros.</p>
-
-          <h2>Qué es realmente un ISBN</h2>
-          <p>Un ISBN es un identificador único asignado a una edición específica de un libro publicado. El estándar actual, ISBN-13, utiliza 13 dígitos con un dígito de control para la detección de errores. El formato más antiguo ISBN-10 todavía se encuentra en libros publicados antes de 2007.</p>
-          <p>El ISBN identifica la edición, no la obra. Por ejemplo, la segunda y tercera edición del mismo libro de texto tienen ISBN diferentes. Una tapa dura y un libro de bolsillo de la misma obra tienen ISBN diferentes. Una traducción al inglés y la edición original francesa tienen ISBN diferentes.</p>
-          <p>Esta es una precisión útil &mdash; pero conlleva limitaciones importantes.</p>
-
-          <figure class="image-card blog-figure">
-            <img src="../../diagrams/blog/isbn-not-a-database/es/isbn-vs-physical-book.svg" alt="Diagrama ISBN vs ejemplar físico de libro">
-            <figcaption>Un ISBN identifica los metadatos de la edición a la izquierda. El ejemplar físico a la derecha &mdash; estado, procedencia, ubicación de almacenamiento, estado de donación, fotos &mdash; se rastrea por separado en el modelo de dominio de Let Books. Ambos están relacionados pero no son lo mismo.</figcaption>
-          </figure>
-
-          <h2>Lo que el ISBN no puede hacer</h2>
-
-          <h3>No todos los libros tienen uno</h3>
-          <p>Los libros publicados antes de 1970, las autoediciones, los materiales académicos de tirada limitada y los libros de editoriales pequeñas a menudo carecen por completo de ISBN. En las colecciones de patrimonio académico &mdash; el tipo en el que este proyecto se enfoca &mdash; los libros de texto anteriores a 1970, los apuntes de clase y los materiales impresos localmente son comunes y valiosos.</p>
-
-          <h3>El ISBN no describe el estado</h3>
-          <p>Una biblioteca quiere saber si un ejemplar está dañado por agua, anotado o si le faltan páginas. El ISBN no proporciona ninguna de estas informaciones. El identificador es el mismo para un ejemplar impecable y para uno que ha estado almacenado en un sótano húmedo durante veinte años.</p>
-
-          <h3>El ISBN no describe la procedencia</h3>
-          <p>¿De quién era este ejemplar? ¿Fue recomendado por un profesor? ¿Tiene la firma de un propietario anterior o un sello de biblioteca? ¿Qué institución lo poseyó? El ISBN guarda silencio sobre todo esto.</p>
-
-          <h3>El ISBN no describe la ubicación</h3>
-          <p>Para un proyecto de donación de libros, la segunda pregunta más importante después de "¿qué es?" es "¿dónde está?". El ISBN no tiene respuesta. La ubicación es un asunto logístico físico, rastreado por separado en la jerarquía de almacenamiento.</p>
-
-          <h3>El ISBN puede ser incorrecto o reutilizado</h3>
-          <p>Existen ISBN mal impresos. Un mismo ISBN puede ser reutilizado accidentalmente por diferentes editores. El OCR puede leer mal los dígitos. El dígito de control detecta errores de un solo dígito, pero no todos.</p>
-
-          <h2>Cómo maneja Let Books el ISBN</h2>
-          <p><code>docs/book-metadata.md</code> define una estrategia práctica de respaldo para la búsqueda por ISBN. El documento también indica que este flujo funciona en la demo alfa actual y al mismo tiempo sirve como patrón para la futura aplicación completa:</p>
-
-          <figure class="image-card blog-figure">
-            <img src="../../diagrams/blog/isbn-not-a-database/es/isbn-lookup-chain.svg" alt="Diagrama de la cadena de búsqueda de ISBN">
-          </figure>
-
-          <ol>
-            <li>Normaliza y valida el ISBN. Elimina espacios y guiones, convierte la X a mayúscula, valida el dígito de control.</li>
-            <li>Consulta primero Open Library a través de su API pública.</li>
-            <li>Si Open Library no devuelve datos útiles, consulta la API de metadatos de Let Books.</li>
-            <li>Si ningún proveedor tiene datos, recurre a la entrada manual.</li>
-          </ol>
-
-          <p>La entrada manual nunca se bloquea. Si todos los proveedores fallan &mdash; ya sea por un error de red, limitación de velocidad o ausencia real de datos &mdash; el usuario puede ingresar manualmente el título, autor, editorial y año y continuar con la catalogación.</p>
-          <p>La cadena de respaldo es deliberadamente simple. No hay un único punto de fallo porque ningún proveedor es obligatorio. Cada proveedor es opcional e independientemente reemplazable.</p>
-          <p>Las referencias canónicas del repositorio para esta cadena son <code>docs/book-metadata.md</code> y <code>AGENTS.md</code>. Si una demo o compilación concreta de la aplicación ya implementa parte de este flujo, menciónelo solo como estado de implementación, no como evidencia principal.</p>
-
-          <h2>Por qué esto importa para las donaciones de libros</h2>
-          <p>Cuando un donante cataloga una colección de libros académicos, algunos tendrán ISBN y otros no. Los libros sin ISBN suelen ser los más interesantes &mdash; ediciones más antiguas, materiales publicados localmente, compilaciones para cursos específicos o libros de editoriales de la ex Yugoslavia cuyos identificadores nunca llegaron a las bases de datos globales.</p>
-          <p>El proceso de catalogación no debe castigar al donante por la falta de ISBN. Cada función que funciona con la búsqueda de ISBN debe funcionar también sin él: seguimiento de ubicación, carga de fotos, exportación a Excel, revisión por lotes. El ISBN es una conveniencia, no un requisito.</p>
-
-          <div class="quote-panel">
-            <p><strong>Especificación del proyecto, AGENTS.md:</strong> "El modelo debe permitir datos incompletos. No se requiere ISBN."</p>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../es/index.html">Documentación</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/es/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">El ISBN no es una base de datos</span>
+            </nav>
+            <h1>El ISBN no es una base de datos</h1>
+          <p class="content-page-summary">Por qué el ISBN ayuda a identificar libros pero no reemplaza los sistemas de metadatos, y cómo funciona la cadena de búsqueda de metadatos en el proyecto Let Books.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temas:</span>
+              <span class="content-tag">Donación de libros</span>
+              <span class="content-tag">ISBN y metadatos</span>
+              <span class="content-tag">Sistemas bibliotecarios</span>
           </div>
-
-          <h2>Cómo se ve el futuro</h2>
-          <p>La cadena de respaldo actual crecerá a medida que se agreguen nuevos proveedores. Crossref, Wikidata, OpenAlex y COBISS son candidatos. Cada uno entrará en la misma cadena: intentar en orden, almacenar en caché agresivamente, retroceder elegantemente.</p>
-          <p>Pero la cadena en sí misma no es el objetivo. El objetivo es pasar de un libro físico a suficientes metadatos para que una biblioteca pueda decidir si quiere el libro. El ISBN ayuda, pero el sistema debe funcionar cuando el ISBN no está disponible.</p>
-
-          <div class="blog-footer-note">
-            <p><strong>El ISBN es un identificador útil. No es una base de datos.</strong></p>
-          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Cuando sostienes un libro impreso, el código de barras en la contraportada es el identificador más visible que lleva. Ese identificador es el ISBN — Número Estándar Internacional de Libros. En los catálogos de bibliotecas, tiendas en línea y sistemas de metadatos, a menudo funciona como una clave de base de datos. Pero un ISBN no es una base de datos, y tratarlo como tal genera problemas reales en los procesos de donación de libros.</p>
+<h2 id="qué-es-realmente-un-isbn">Qué es realmente un ISBN</h2>
+<p>Un ISBN es un identificador único asignado a una edición específica de un libro publicado. El estándar actual, ISBN-13, utiliza 13 dígitos con un dígito de control para la detección de errores. El formato más antiguo ISBN-10 todavía se encuentra en libros publicados antes de 2007.</p>
+<p>El ISBN identifica la edición, no la obra. Por ejemplo, la segunda y tercera edición del mismo libro de texto tienen ISBN diferentes. Una tapa dura y un libro de bolsillo de la misma obra tienen ISBN diferentes. Una traducción al inglés y la edición original francesa tienen ISBN diferentes.</p>
+<p>Esta es una precisión útil — pero conlleva limitaciones importantes.</p>
+<figure>
+<img src="../../diagrams/blog/isbn-not-a-database/es/isbn-vs-physical-book.svg" alt="Diagrama ISBN vs ejemplar físico de libro" />
+<figcaption aria-hidden="true">Diagrama ISBN vs ejemplar físico de libro</figcaption>
+</figure>
+<p>Un ISBN identifica los metadatos de la edición a la izquierda. El ejemplar físico a la derecha — estado, procedencia, ubicación de almacenamiento, estado de donación, fotos — se rastrea por separado en el modelo de dominio de Let Books. Ambos están relacionados pero no son lo mismo.</p>
+<h2 id="lo-que-el-isbn-no-puede-hacer">Lo que el ISBN no puede hacer</h2>
+<h3 id="no-todos-los-libros-tienen-uno">No todos los libros tienen uno</h3>
+<p>Los libros publicados antes de 1970, las autoediciones, los materiales académicos de tirada limitada y los libros de editoriales pequeñas a menudo carecen por completo de ISBN. En las colecciones de patrimonio académico — el tipo en el que este proyecto se enfoca — los libros de texto anteriores a 1970, los apuntes de clase y los materiales impresos localmente son comunes y valiosos.</p>
+<h3 id="el-isbn-no-describe-el-estado">El ISBN no describe el estado</h3>
+<p>Una biblioteca quiere saber si un ejemplar está dañado por agua, anotado o si le faltan páginas. El ISBN no proporciona ninguna de estas informaciones. El identificador es el mismo para un ejemplar impecable y para uno que ha estado almacenado en un sótano húmedo durante veinte años.</p>
+<h3 id="el-isbn-no-describe-la-procedencia">El ISBN no describe la procedencia</h3>
+<p>¿De quién era este ejemplar? ¿Fue recomendado por un profesor? ¿Tiene la firma de un propietario anterior o un sello de biblioteca? ¿Qué institución lo poseyó? El ISBN guarda silencio sobre todo esto.</p>
+<h3 id="el-isbn-no-describe-la-ubicación">El ISBN no describe la ubicación</h3>
+<p>Para un proyecto de donación de libros, la segunda pregunta más importante después de “¿qué es?” es “¿dónde está?”. El ISBN no tiene respuesta. La ubicación es un asunto logístico físico, rastreado por separado en la jerarquía de almacenamiento.</p>
+<h3 id="el-isbn-puede-ser-incorrecto-o-reutilizado">El ISBN puede ser incorrecto o reutilizado</h3>
+<p>Existen ISBN mal impresos. Un mismo ISBN puede ser reutilizado accidentalmente por diferentes editores. El OCR puede leer mal los dígitos. El dígito de control detecta errores de un solo dígito, pero no todos.</p>
+<h2 id="cómo-maneja-let-books-el-isbn">Cómo maneja Let Books el ISBN</h2>
+<p><code>docs/book-metadata.md</code> define una estrategia práctica de respaldo para la búsqueda por ISBN. El documento también indica que este flujo funciona en la demo alfa actual y al mismo tiempo sirve como patrón para la futura aplicación completa:</p>
+<figure>
+<img src="../../diagrams/blog/isbn-not-a-database/es/isbn-lookup-chain.svg" alt="Diagrama de la cadena de búsqueda de ISBN" />
+<figcaption aria-hidden="true">Diagrama de la cadena de búsqueda de ISBN</figcaption>
+</figure>
+<ol type="1">
+<li>Normaliza y valida el ISBN. Elimina espacios y guiones, convierte la X a mayúscula, valida el dígito de control.</li>
+<li>Consulta primero Open Library a través de su API pública.</li>
+<li>Si Open Library no devuelve datos útiles, consulta la API de metadatos de Let Books.</li>
+<li>Si ningún proveedor tiene datos, recurre a la entrada manual.</li>
+</ol>
+<p>La entrada manual nunca se bloquea. Si todos los proveedores fallan — ya sea por un error de red, limitación de velocidad o ausencia real de datos — el usuario puede ingresar manualmente el título, autor, editorial y año y continuar con la catalogación.</p>
+<p>La cadena de respaldo es deliberadamente simple. No hay un único punto de fallo porque ningún proveedor es obligatorio. Cada proveedor es opcional e independientemente reemplazable.</p>
+<p>Las referencias canónicas del repositorio para esta cadena son <code>docs/book-metadata.md</code> y <code>AGENTS.md</code>. Si una demo o compilación concreta de la aplicación ya implementa parte de este flujo, menciónelo solo como estado de implementación, no como evidencia principal.</p>
+<h2 id="por-qué-esto-importa-para-las-donaciones-de-libros">Por qué esto importa para las donaciones de libros</h2>
+<p>Cuando un donante cataloga una colección de libros académicos, algunos tendrán ISBN y otros no. Los libros sin ISBN suelen ser los más interesantes — ediciones más antiguas, materiales publicados localmente, compilaciones para cursos específicos o libros de editoriales de la ex Yugoslavia cuyos identificadores nunca llegaron a las bases de datos globales.</p>
+<p>El proceso de catalogación no debe castigar al donante por la falta de ISBN. Cada función que funciona con la búsqueda de ISBN debe funcionar también sin él: seguimiento de ubicación, carga de fotos, exportación a Excel, revisión por lotes. El ISBN es una conveniencia, no un requisito.</p>
+<blockquote>
+<p><strong>Especificación del proyecto, AGENTS.md:</strong> “El modelo debe permitir datos incompletos. No se requiere ISBN.”</p>
+</blockquote>
+<h2 id="cómo-se-ve-el-futuro">Cómo se ve el futuro</h2>
+<p>La cadena de respaldo actual crecerá a medida que se agreguen nuevos proveedores. Crossref, Wikidata, OpenAlex y COBISS son candidatos. Cada uno entrará en la misma cadena: intentar en orden, almacenar en caché agresivamente, retroceder elegantemente.</p>
+<p>Pero la cadena en sí misma no es el objetivo. El objetivo es pasar de un libro físico a suficientes metadatos para que una biblioteca pueda decidir si quiere el libro. El ISBN ayuda, pero el sistema debe funcionar cuando el ISBN no está disponible.</p>
+<p><strong>El ISBN es un identificador útil. No es una base de datos.</strong></p>
         </article>
-
-          <div class="post-article-nav">
+        <div class="post-article-nav">
           <div class="language-alternatives">
-<h2 id="otros-idiomas">Otros idiomas</h2>
-<ul>
-<li><a href="../en/isbn-not-a-database.html">English</a></li>
-<li><a href="../sl/isbn-not-a-database.html">Slovenščina</a></li>
-<li><a href="../hr/isbn-not-a-database.html">Hrvatski</a></li>
-<li><a href="../bs/isbn-not-a-database.html">Bosanski</a></li>
-<li><a href="../sr-Latn/isbn-not-a-database.html">Srpski (latinica)</a></li>
-<li><a href="../sr-Cyrl/isbn-not-a-database.html">Српски (ћирилица)</a></li>
-<li><a href="../mk/isbn-not-a-database.html">Македонски</a></li>
-<li><a href="../sq/isbn-not-a-database.html">Shqip</a></li>
-<li><a href="../de/isbn-not-a-database.html">Deutsch</a></li>
-<li><a href="../it/isbn-not-a-database.html">Italiano</a></li>
-<li><a href="../fr/isbn-not-a-database.html">Français</a></li>
-</ul>
+            <h2>Otros idiomas</h2>
+            <ul>
+              <li><a href="../../blog/en/isbn-not-a-database.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/isbn-not-a-database.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/isbn-not-a-database.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/isbn-not-a-database.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/isbn-not-a-database.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/isbn-not-a-database.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/isbn-not-a-database.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/isbn-not-a-database.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/isbn-not-a-database.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/isbn-not-a-database.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/isbn-not-a-database.html" lang="fr">Français</a></li>
+            </ul>
           </div>
-          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Artículos relacionados</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-blog-demo-alignment-menu">Alineación de la demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-blog-ai-assisted-delivery-menu">Entrega asistida por IA</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-demo-alignment-menu" data-topic-menu="related-blog-demo-alignment" hidden>
+                      <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html">Cuándo la demo es evidencia y cuándo no lo es</a>
+                      <a href="../../blog/es/spec-driven-development-in-let-books.html">Desarrollo guiado por especificaciones en Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-ai-assisted-delivery-menu" data-topic-menu="related-blog-ai-assisted-delivery" hidden>
+                      <a href="../../blog/es/documentation-is-part-of-the-product.html">La documentación es parte del producto</a>
+                      <a href="../../blog/es/spec-driven-development-for-ai-projects.html">Desarrollo guiado por especificaciones para proyectos de IA</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Material didáctico relacionado</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-learning-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">Entrega asistida por IA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Planificación de la implementación</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ci-cd-menu" data-topic-menu="related-learning-ci-cd" hidden>
+                      <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">Cómo añadir por etapas reglas de validación y controles CI</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html">Cómo escribir una especificación que la IA pueda seguir</a>
+                      <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Entradas wiki relacionadas</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-wiki-demo-alignment-menu">Alineación de la demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-wiki-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Documentación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-wiki-implementation-planning-menu">Planificación de la implementación</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-demo-alignment-menu" data-topic-menu="related-wiki-demo-alignment" hidden>
+                      <a href="../../wiki/es/demo-spec-alignment.html">Alineación entre demo y especificación</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-ci-cd-menu" data-topic-menu="related-wiki-ci-cd" hidden>
+                      <a href="../../wiki/es/validation-layers.html">Capas de validación</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/es/documentation-traceability.html">Trazabilidad de la documentación</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-implementation-planning-menu" data-topic-menu="related-wiki-implementation-planning" hidden>
+                      <a href="../../wiki/es/implementation-guidance.html">Directrices de implementación</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
       </main>
 
       <footer class="site-footer">
         <div class="footer-inner">
           <div>
             <h3>Let Books</h3>
-            <p>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</p>
-            <p class="footer-microcopy">Prototipo alfa temprano. Las instituciones e integraciones mencionadas en los ejemplos son solo conceptuales y no implican asociación o respaldo.</p>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
           </div>
           <div>
             <div class="footer-links">
-              <a href="../../es/index.html">Resumen</a>
-              <a href="../../index.html">Inicio</a>
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
             <div class="language-list" style="margin-top: 1rem;">
-              <a href="../../index.html">Todos los idiomas</a>
+              <a href="../../index.html">All languages</a>
             </div>
             <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
           </div>

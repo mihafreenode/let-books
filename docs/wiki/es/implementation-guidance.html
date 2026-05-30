@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directrices de implementación | LetBooks</title>
+    <meta name="description" content="Las directrices de implementación definen cómo un equipo debe entregar trabajo dentro del repositorio o del entorno de entrega actual sin sustituir la propia especificación del producto.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/es/implementation-guidance.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/implementation-guidance.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/implementation-guidance.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/implementation-guidance.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/implementation-guidance.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/implementation-guidance.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/implementation-guidance.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/implementation-guidance.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/implementation-guidance.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/implementation-guidance.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/implementation-guidance.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/implementation-guidance.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/implementation-guidance.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/implementation-guidance.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Directrices de implementación | LetBooks">
+    <meta property="og:description" content="Las directrices de implementación definen cómo un equipo debe entregar trabajo dentro del repositorio o del entorno de entrega actual sin sustituir la propia especificación del producto.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/es/implementation-guidance.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Directrices de implementación | LetBooks">
+    <meta name="twitter:description" content="Las directrices de implementación definen cómo un equipo debe entregar trabajo dentro del repositorio o del entorno de entrega actual sin sustituir la propia especificación del producto.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="es">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/es/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Wiki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../es/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/es/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/es/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/implementation-guidance.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/implementation-guidance.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/implementation-guidance.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/implementation-guidance.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/implementation-guidance.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/implementation-guidance.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/implementation-guidance.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/implementation-guidance.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/implementation-guidance.html" lang="de">DE</a>
+              <a class="lang-link" href="../../wiki/it/implementation-guidance.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/implementation-guidance.html" lang="fr">FR</a>
+              <a class="lang-link is-current" href="../../wiki/es/implementation-guidance.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../es/index.html">Documentación</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/es/index.html">Wiki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Directrices de implementación</span>
+            </nav>
+            <h1>Directrices de implementación</h1>
+          <p class="content-page-summary">Las directrices de implementación definen cómo un equipo debe entregar trabajo dentro del repositorio o del entorno de entrega actual sin sustituir la propia especificación del producto.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temas:</span>
+              <span class="content-tag">Planificación de la implementación</span>
+              <span class="content-tag">Gestión del proyecto</span>
+              <span class="content-tag">Desarrollo guiado por especificaciones</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="rol">Rol</h2>
+<p class="lead">Las directrices de implementación se sitúan por debajo de la especificación del producto.</p>
+<p>Ayudan a responder preguntas como:</p>
+<ul>
+<li>cómo debe funcionar la denominación pública</li>
+<li>cómo debe estructurarse la documentación</li>
+<li>qué expectativas de verificación aplican ahora</li>
+<li>qué reglas específicas del repositorio deben seguir los colaboradores</li>
+<li>dónde deben vivir las reglas tácticas a medida que evoluciona el proyecto</li>
+</ul>
+<h2 id="diferencia-frente-a-la-especificación-del-producto">Diferencia frente a la especificación del producto</h2>
+<p>La especificación del producto define qué es el producto y qué debe lograr.</p>
+<p>Las directrices de implementación definen cómo deben realizar el trabajo los colaboradores dentro del contexto actual de entrega.</p>
+<p>Esta distinción es útil porque no toda regla del repositorio es una verdad del producto, y no toda verdad del producto debe quedar enterrada en notas tácticas.</p>
+<h2 id="ejemplos-comunes">Ejemplos comunes</h2>
+<p>Las directrices de implementación suelen incluir:</p>
+<ul>
+<li>reglas de nombres y marca</li>
+<li>reglas de implementación de la documentación</li>
+<li>restricciones del sitio estático o de la demo</li>
+<li>expectativas de verificación</li>
+<li>reglas de edición o generación de código</li>
+<li>políticas de evidencia para la escritura pública</li>
+</ul>
+<p>Estas reglas suelen funcionar bien en Markdown porque necesitan seguir siendo revisables, fáciles de actualizar y cercanas al resto del contexto del repositorio.</p>
+<h2 id="por-qué-importa-en-el-trabajo-asistido-por-ia">Por qué importa en el trabajo asistido por IA</h2>
+<p>Los asistentes de IA suelen seguir la instrucción concreta más cercana. Si las reglas específicas del repositorio son implícitas, la salida se vuelve inconsistente con rapidez.</p>
+<p>Las directrices de implementación hacen visibles esas reglas sin contaminar la especificación del producto con detalle táctico.</p>
+<p>En la práctica, eso significa que un archivo guía en Markdown puede hacer dos trabajos a la vez:</p>
+<ul>
+<li>explicar el flujo de trabajo a un colaborador humano</li>
+<li>orientar a un agente de IA hacia las herramientas, la secuencia y las restricciones preferidas</li>
+</ul>
+<h2 id="contexto-de-let-books">Contexto de Let Books</h2>
+<p>En Let Books, <code>AGENTS-Implementation.md</code> es la capa de guía táctica.</p>
+<p>Cubre áreas como:</p>
+<ul>
+<li>denominación pública</li>
+<li>reglas de documentación</li>
+<li>separación entre sitio público y documentación</li>
+<li>reglas de metadatos y SEO para páginas estáticas</li>
+<li>restricciones de la demo estática</li>
+<li>reglas de localización y accesibilidad</li>
+<li>reglas de verificación</li>
+<li>política de evidencia del blog</li>
+</ul>
+<p>Eso lo convierte en el acompañante operativo de <code>AGENTS.md</code>, no en su sustituto.</p>
+<h2 id="páginas-relacionadas">Páginas Relacionadas</h2>
+<ul>
+<li><code>product-specification.md</code></li>
+<li><code>documentation-traceability.md</code></li>
+<li><code>validation-layers.md</code></li>
+<li><code>../learning/how-to-turn-a-product-spec-into-an-implementation-plan.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Otros idiomas</h2>
+            <ul>
+              <li><a href="../../wiki/en/implementation-guidance.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/implementation-guidance.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/implementation-guidance.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/implementation-guidance.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/implementation-guidance.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/implementation-guidance.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/mk/implementation-guidance.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/sq/implementation-guidance.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/implementation-guidance.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/it/implementation-guidance.html" lang="it">Italiano</a></li>
+              <li><a href="../../wiki/fr/implementation-guidance.html" lang="fr">Français</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Artículos relacionados</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-blog-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-spec-driven-development-menu" data-topic-menu="related-blog-spec-driven-development" hidden>
+                      <a href="../../blog/es/spec-driven-development-in-let-books.html">Desarrollo guiado por especificaciones en Let Books</a>
+                      <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html">Cuándo la demo es evidencia y cuándo no lo es</a>
+                      <a href="../../blog/es/documentation-is-part-of-the-product.html">La documentación es parte del producto</a>
+                      <a href="../../blog/es/spec-driven-development-for-ai-projects.html">Desarrollo guiado por especificaciones para proyectos de IA</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Material didáctico relacionado</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-learning-implementation-planning-menu">Planificación de la implementación</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a>
+                      <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">Cómo mantener alineados la especificación, la documentación, la demo y el código</a>
+                      <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">Cómo añadir por etapas reglas de validación y controles CI</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-implementation-planning-menu" data-topic-menu="related-learning-implementation-planning" hidden>
+                      <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Entradas wiki relacionadas</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-wiki-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-wiki-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-ci-cd-menu" data-topic-menu="related-wiki-ci-cd" hidden>
+                      <a href="../../wiki/es/validation-layers.html">Capas de validación</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-spec-driven-development-menu" data-topic-menu="related-wiki-spec-driven-development" hidden>
+                      <a href="../../wiki/es/product-specification.html">Especificación del producto</a>
+                      <a href="../../wiki/es/documentation-traceability.html">Trazabilidad de la documentación</a>
+                      <a href="../../wiki/es/demo-spec-alignment.html">Alineación entre demo y especificación</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

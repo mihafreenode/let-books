@@ -1,11 +1,11 @@
 ---
-title: "Udhëzime Për Implementim"
+title: "Udhëzime për implementim"
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Udhëzime Për Implementim
+# Udhëzime për implementim
 
 ## Përmbledhje
 

@@ -1,11 +1,11 @@
 ---
-title: "Si Të Rishikosh Punën E Mbështetur Nga AI Kundrejt Specifikimit"
+title: "Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit"
 topics:
   - product-review
   - ai-assisted-delivery
   - spec-driven-development
 ---
-# Si Të Rishikosh Punën E Mbështetur Nga AI Kundrejt Specifikimit
+# Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit
 
 ## Përmbledhje
 

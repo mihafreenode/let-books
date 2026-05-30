@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cómo escribir una especificación que la IA pueda seguir | LetBooks</title>
+    <meta name="description" content="Esta guía explica cómo escribir una especificación de producto o de funcionalidad que ayude a la implementación asistida por IA a mantenerse alineada con los objetivos reales del producto.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/learning/es/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/learning/en/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/learning/hr/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/learning/bs/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/learning/mk/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/learning/sq/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/learning/de/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/learning/it/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/learning/fr/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/learning/es/how-to-write-a-spec-that-ai-can-follow.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Cómo escribir una especificación que la IA pueda seguir | LetBooks">
+    <meta property="og:description" content="Esta guía explica cómo escribir una especificación de producto o de funcionalidad que ayude a la implementación asistida por IA a mantenerse alineada con los objetivos reales del producto.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/learning/es/how-to-write-a-spec-that-ai-can-follow.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cómo escribir una especificación que la IA pueda seguir | LetBooks">
+    <meta name="twitter:description" content="Esta guía explica cómo escribir una especificación de producto o de funcionalidad que ayude a la implementación asistida por IA a mantenerse alineada con los objetivos reales del producto.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="learning" data-locale="es">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../learning/es/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Material de aprendizaje</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../es/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/es/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/es/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html" lang="en">EN</a>
+              <a class="lang-link" href="../../learning/sl/how-to-write-a-spec-that-ai-can-follow.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../learning/hr/how-to-write-a-spec-that-ai-can-follow.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../learning/bs/how-to-write-a-spec-that-ai-can-follow.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../learning/sq/how-to-write-a-spec-that-ai-can-follow.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html" lang="de">DE</a>
+              <a class="lang-link" href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html" lang="it">IT</a>
+              <a class="lang-link" href="../../learning/fr/how-to-write-a-spec-that-ai-can-follow.html" lang="fr">FR</a>
+              <a class="lang-link is-current" href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../es/index.html">Documentación</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../learning/es/index.html">Material de aprendizaje</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Cómo escribir una especificación que la IA pueda seguir</span>
+            </nav>
+            <h1>Cómo escribir una especificación que la IA pueda seguir</h1>
+          <p class="content-page-summary">Esta guía explica cómo escribir una especificación de producto o de funcionalidad que ayude a la implementación asistida por IA a mantenerse alineada con los objetivos reales del producto.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temas:</span>
+              <span class="content-tag">Entrega asistida por IA</span>
+              <span class="content-tag">Documentación</span>
+              <span class="content-tag">Redacción de especificaciones</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="por-qué-es-importante">Por qué es importante</h2>
+<p class="lead">La IA puede generar código rápidamente, pero funciona mejor cuando tiene límites claros. Si la especificación es vaga, a menudo rellenará los huecos con supuestos genéricos.</p>
+<h2 id="qué-debe-contener-una-buena-especificación">Qué debe contener una buena especificación</h2>
+<ul>
+<li>el propósito de la función</li>
+<li>los límites del alcance</li>
+<li>reglas no negociables</li>
+<li>comportamiento ante errores y ruta de respaldo</li>
+<li>criterios de aceptación</li>
+</ul>
+<h2 id="qué-evitar">Qué evitar</h2>
+<ul>
+<li>objetivos vagos como «mejorar la UX»</li>
+<li>detalles de implementación sin propósito de producto</li>
+<li>mezclar ideas futuras con requisitos actuales</li>
+<li>supuestos ocultos sobre el usuario o los datos</li>
+</ul>
+<h2 id="patrón-práctico">Patrón práctico</h2>
+<p>Usa este orden:</p>
+<ol type="1">
+<li>problema</li>
+<li>usuario y contexto</li>
+<li>flujo dentro del alcance</li>
+<li>elementos fuera del alcance</li>
+<li>reglas requeridas</li>
+<li>comportamiento de respaldo</li>
+<li>criterios de aceptación</li>
+<li>notas de verificación</li>
+</ol>
+<h2 id="contexto-de-let-books">Contexto de Let Books</h2>
+<p><code>AGENTS.md</code>, <code>AGENTS-Implementation.md</code> y <code>README.md</code> ya muestran cómo una especificación por capas de este tipo también ayuda a los asistentes de IA.</p>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Otros idiomas</h2>
+            <ul>
+              <li><a href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html" lang="en">English</a></li>
+              <li><a href="../../learning/sl/how-to-write-a-spec-that-ai-can-follow.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../learning/hr/how-to-write-a-spec-that-ai-can-follow.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../learning/bs/how-to-write-a-spec-that-ai-can-follow.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html" lang="mk">Македонски</a></li>
+              <li><a href="../../learning/sq/how-to-write-a-spec-that-ai-can-follow.html" lang="sq">Shqip</a></li>
+              <li><a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html" lang="de">Deutsch</a></li>
+              <li><a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html" lang="it">Italiano</a></li>
+              <li><a href="../../learning/fr/how-to-write-a-spec-that-ai-can-follow.html" lang="fr">Français</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Artículos relacionados</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-blog-documentation-menu">Documentación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-blog-ai-assisted-delivery-menu">Entrega asistida por IA</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-documentation-menu" data-topic-menu="related-blog-documentation" hidden>
+                      <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html">Cuándo la demo es evidencia y cuándo no lo es</a>
+                      <a href="../../blog/es/spec-driven-development-in-let-books.html">Desarrollo guiado por especificaciones en Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-ai-assisted-delivery-menu" data-topic-menu="related-blog-ai-assisted-delivery" hidden>
+                      <a href="../../blog/es/documentation-is-part-of-the-product.html">La documentación es parte del producto</a>
+                      <a href="../../blog/es/spec-driven-development-for-ai-projects.html">Desarrollo guiado por especificaciones para proyectos de IA</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Material didáctico relacionado</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-learning-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-learning-documentation-menu">Documentación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">Entrega asistida por IA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="related-learning-spec-writing-menu">Redacción de especificaciones</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ci-cd-menu" data-topic-menu="related-learning-ci-cd" hidden>
+                      <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">Cómo añadir por etapas reglas de validación y controles CI</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-documentation-menu" data-topic-menu="related-learning-documentation" hidden>
+                      <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">Cómo mantener alineados la especificación, la documentación, la demo y el código</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-writing-menu" data-topic-menu="related-learning-spec-writing" hidden>
+                      <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Entradas wiki relacionadas</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Documentación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="related-wiki-spec-writing-menu">Redacción de especificaciones</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/es/spec-driven-development.html">Desarrollo guiado por especificaciones</a>
+                      <a href="../../wiki/es/markdown-in-product-development.html">Markdown en el desarrollo de producto</a>
+                      <a href="../../wiki/es/documentation-traceability.html">Trazabilidad de la documentación</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-spec-writing-menu" data-topic-menu="related-wiki-spec-writing" hidden>
+                      <a href="../../wiki/es/product-specification.html">Especificación del producto</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-microcopy">Early alpha prototype. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,11 +1,11 @@
 ---
-title: "Si Të Shtosh Me Faza Rregulla Validimi Dhe Porta CI"
+title: "Si të shtosh me faza rregulla validimi dhe porta CI"
 topics:
   - validation
   - ci-cd
   - spec-driven-development
 ---
-# Si Të Shtosh Me Faza Rregulla Validimi Dhe Porta CI
+# Si të shtosh me faza rregulla validimi dhe porta CI
 
 ## Përmbledhje
 

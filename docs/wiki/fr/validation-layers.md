@@ -1,11 +1,11 @@
 ---
-title: "Couches De Validation"
+title: "Couches de validation"
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Couches De Validation
+# Couches de validation
 
 ## Résumé
 

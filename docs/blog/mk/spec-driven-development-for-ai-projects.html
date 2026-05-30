@@ -44,34 +44,36 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
-  <body data-page-type="article" data-locale="mk">
+  <body data-page-type="article" data-content-type="blog" data-locale="mk">
     <div class="page-shell">
       <header class="site-header">
         <div class="header-inner">
-          <a class="brand-link" href="../../mk/index.html">
+          <a class="brand-link" href="../../blog/mk/index.html">
             <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
             <span class="brand-copy">
               <strong>Let Books</strong>
-              <span>Blog</span>
+              <span>Блог</span>
             </span>
           </a>
           <div class="header-nav">
-            <a class="nav-link" href="../../index.html">Docs</a>
-            <a class="nav-link" href="../../../index.html">Public site</a>
+            <a class="nav-link" href="../../mk/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/mk/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/mk/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/mk/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="en">EN</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sl">SL</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="hr">HR</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="bs">BS</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sr-Latn">SR</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sr-Cyrl">СР</a>
-              <a class="lang-link is-current" href="spec-driven-development-for-ai-projects.html" lang="mk">МК</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="sq">SQ</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="de">DE</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="it">IT</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="fr">FR</a>
-              <a class="lang-link" href="spec-driven-development-for-ai-projects.html" lang="es">ES</a>
+              <a class="lang-link" href="../../blog/en/spec-driven-development-for-ai-projects.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/spec-driven-development-for-ai-projects.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/spec-driven-development-for-ai-projects.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/spec-driven-development-for-ai-projects.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/spec-driven-development-for-ai-projects.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link is-current" href="../../blog/mk/spec-driven-development-for-ai-projects.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/spec-driven-development-for-ai-projects.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/spec-driven-development-for-ai-projects.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/spec-driven-development-for-ai-projects.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/spec-driven-development-for-ai-projects.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/spec-driven-development-for-ai-projects.html" lang="es">ES</a>
               <a class="lang-link" href="../../index.html">All languages</a>
             </div>
           </div>
@@ -79,7 +81,26 @@
       </header>
 
       <main>
-        <article class="section blog-article">
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../mk/index.html">Документација</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/mk/index.html">Блог</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Развој воден од спецификации за AI проекти</span>
+            </nav>
+            <h1>Развој воден од спецификации за AI проекти</h1>
+          <p class="content-page-summary">Зошто развојот со помош на AI бара посилни спецификации, појасна документација и изречни правила за проверка наместо полабав процес.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Теми:</span>
+              <span class="content-tag">AI испорака</span>
+              <span class="content-tag">Документација</span>
+              <span class="content-tag">Развој воден од спецификации</span>
+              <span class="content-tag">Валидација</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
 <p class="lead">AI многу го олеснува брзото создавање код. Исто така многу го олеснува и брзото создавање погрешен код. Затоа развојот воден од спецификации е поважен, а не помалку важен, во проекти со помош на AI.</p>
 <p>Кога тим работи без јасна спецификација, производот со време се оддалечува од својата цел. Кога во тоа помага AI, тоа може да се случи за едно попладне. Кодот може да се компајлира, интерфејсот може да изгледа уредно, а тестовите може да поминуваат. Производот сепак може да биде погрешен.</p>
 <h2 id="зошто-ai-го-менува-профилот-на-ризик">Зошто AI го менува профилот на ризик</h2>
@@ -120,54 +141,91 @@
 <h2 id="трајна-лекција">Трајна лекција</h2>
 <p>AI може брзо да произведе код, содржина и интерфејси. Сам по себе не може да гарантира дека сите тие излези сè уште го опишуваат истиот производ.</p>
 <p>Развојот воден од спецификации е начин тимот да спречи брзината да се претвори во отстапување.</p>
-
         </article>
-
-          <div class="post-article-nav">
-<div class="language-alternatives">
-<h2 id="други-јазици">Други јазици</h2>
-<ul>
-<li><a href="../en/spec-driven-development-for-ai-projects.html">English</a></li>
-<li><a href="../sl/spec-driven-development-for-ai-projects.html">Slovenščina</a></li>
-<li><a href="../hr/spec-driven-development-for-ai-projects.html">Hrvatski</a></li>
-<li><a href="../bs/spec-driven-development-for-ai-projects.html">Bosanski</a></li>
-<li><a href="../sr-Latn/spec-driven-development-for-ai-projects.html">Srpski (latinica)</a></li>
-<li><a href="../sr-Cyrl/spec-driven-development-for-ai-projects.html">Српски (ћирилица)</a></li>
-<li><a href="../sq/spec-driven-development-for-ai-projects.html">Shqip</a></li>
-<li><a href="../de/spec-driven-development-for-ai-projects.html">Deutsch</a></li>
-<li><a href="../it/spec-driven-development-for-ai-projects.html">Italiano</a></li>
-<li><a href="../fr/spec-driven-development-for-ai-projects.html">Français</a></li>
-<li><a href="../es/spec-driven-development-for-ai-projects.html">Español</a></li>
-</ul>
-          </div>
-<section class="topic-nav related-content">
-          <h2>Поврзани статии</h2>
-          <div class="topic-group">
-            <h3 class="topic-label">Развој воден од спецификации</h3>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Други јазици</h2>
             <ul>
-            <li><a href="spec-driven-development-in-let-books.html">Развој воден од спецификации во Let Books</a></li>
-            <li><a href="documentation-is-part-of-the-product.html">Документацијата е дел од производот</a></li>
-            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Кога демото е доказ, а кога не е</a></li>
+              <li><a href="../../blog/en/spec-driven-development-for-ai-projects.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/spec-driven-development-for-ai-projects.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/spec-driven-development-for-ai-projects.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/spec-driven-development-for-ai-projects.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/spec-driven-development-for-ai-projects.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/sq/spec-driven-development-for-ai-projects.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/spec-driven-development-for-ai-projects.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/spec-driven-development-for-ai-projects.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/spec-driven-development-for-ai-projects.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/spec-driven-development-for-ai-projects.html" lang="es">Español</a></li>
             </ul>
           </div>
-          <div class="topic-group">
-            <h3 class="topic-label">Достава со помош на AI</h3>
-            <ul>
-            <li><a href="documentation-is-part-of-the-product.html">Документацијата е дел од производот</a></li>
-            </ul>
-          </div>
-          <div class="topic-group">
-            <h3 class="topic-label">Документација</h3>
-            <ul>
-            <li><a href="spec-driven-development-in-let-books.html">Развој воден од спецификации во Let Books</a></li>
-            <li><a href="documentation-is-part-of-the-product.html">Документацијата е дел од производот</a></li>
-            <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Кога демото е доказ, а кога не е</a></li>
-            </ul>
-          </div>
-        </section>
-
-          </div>
-</main>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Поврзани статии</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-blog-ai-assisted-delivery-menu">AI испорака</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-blog-documentation-menu">Документација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-blog-book-donation-menu">Донација на книги</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-ai-assisted-delivery-menu" data-topic-menu="related-blog-ai-assisted-delivery" hidden>
+                      <a href="../../blog/mk/documentation-is-part-of-the-product.html">Документацијата е дел од производот</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-documentation-menu" data-topic-menu="related-blog-documentation" hidden>
+                      <a href="../../blog/mk/spec-driven-development-in-let-books.html">Развој воден од спецификации во Let Books</a>
+                      <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html">Кога демото е доказ, а кога не е</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-book-donation-menu" data-topic-menu="related-blog-book-donation" hidden>
+                      <a href="../../blog/mk/isbn-not-a-database.html">ISBN не е база на податоци</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Поврзани материјали за учење</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">AI испорака</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-learning-documentation-menu">Документација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-learning-spec-driven-development-menu">Развој воден од спецификации</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува AI-поддржана работа според спецификацијата</a>
+                      <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-documentation-menu" data-topic-menu="related-learning-documentation" hidden>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржи усогласеност меѓу спецификација, документација, демо и код</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-spec-driven-development-menu" data-topic-menu="related-learning-spec-driven-development" hidden>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Поврзани вики записи</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-wiki-validation-menu">Валидација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-wiki-documentation-menu">Документација</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-validation-menu" data-topic-menu="related-wiki-validation" hidden>
+                      <a href="../../wiki/mk/validation-layers.html">Слоеви на валидација</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-documentation-menu" data-topic-menu="related-wiki-documentation" hidden>
+                      <a href="../../wiki/mk/spec-driven-development.html">Развој воден од спецификации</a>
+                      <a href="../../wiki/mk/markdown-in-product-development.html">Markdown во развој на производ</a>
+                      <a href="../../wiki/mk/documentation-traceability.html">Следливост на документацијата</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
 
       <footer class="site-footer">
         <div class="footer-inner">

@@ -1,11 +1,11 @@
 ---
-title: "Usklađenost Između Dema I Specifikacije"
+title: "Usklađenost između dema i specifikacije"
 topics:
   - demo-alignment
   - spec-driven-development
   - product-review
 ---
-# Usklađenost Između Dema I Specifikacije
+# Usklađenost između dema i specifikacije
 
 ## Sažetak
 

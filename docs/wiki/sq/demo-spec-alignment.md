@@ -1,11 +1,11 @@
 ---
-title: "Përputhja E Demos Me Specifikimin"
+title: "Përputhja e demos me specifikimin"
 topics:
   - demo-alignment
   - spec-driven-development
   - product-review
 ---
-# Përputhja E Demos Me Specifikimin
+# Përputhja e demos me specifikimin
 
 ## Përmbledhje
 

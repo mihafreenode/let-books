@@ -1,11 +1,11 @@
 ---
-title: "Gjurmueshmëria E Dokumentacionit"
+title: "Gjurmueshmëria e dokumentacionit"
 topics:
   - documentation
   - product-quality
   - spec-driven-development
 ---
-# Gjurmueshmëria E Dokumentacionit
+# Gjurmueshmëria e dokumentacionit
 
 ## Përmbledhje
 

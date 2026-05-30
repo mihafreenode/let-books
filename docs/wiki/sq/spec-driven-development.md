@@ -1,11 +1,11 @@
 ---
-title: "Zhvillim I Udhëhequr Nga Specifikimi"
+title: "Zhvillim i udhëhequr nga specifikimi"
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Zhvillim I Udhëhequr Nga Specifikimi
+# Zhvillim i udhëhequr nga specifikimi
 
 ## Përmbledhje
 
