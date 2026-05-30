@@ -16,6 +16,7 @@
   --radius-lg: 28px;
   --radius-xl: 36px;
   --content-width: 1180px;
+  --article-max-width: 72ch;
   --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
@@ -1107,7 +1108,7 @@ a:focus-visible > p {
 }
 
 .blog-article {
-  max-width: 72ch;
+  max-width: var(--article-max-width);
   margin: 0 auto;
 }
 
@@ -1289,6 +1290,11 @@ a:focus-visible > p {
 .topic-nav a:hover {
   color: var(--brand);
   text-decoration-color: var(--brand);
+}
+
+body[data-page-type="article"] .topic-nav {
+  max-width: var(--article-max-width);
+  margin: 0 auto;
 }
 
 @media (max-width: 460px) {
