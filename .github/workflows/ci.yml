@@ -157,7 +157,8 @@ jobs:
                   const engDesc = 'A practical platform for cataloging,'
                     + ' offering, and retrieving educational books.';
                   if (footerDesc[1] === engDesc) {
-                    console.log('ENGLISH footer description in non-English page: '
+                    console.log('ENGLISH footer description in'
+                      + ' non-English page: '
                       + p);
                     ok = false;
                   }
