@@ -38,7 +38,7 @@ jobs:
       - name: SEO metadata generation (dry-run validation)
         run: node tools/generate-static-seo.mjs
 
-      - name: Blog article validation
+      - name: Docs link and article validation
         run: node tools/validate-blog.mjs
 
       - name: Verify CNAME file

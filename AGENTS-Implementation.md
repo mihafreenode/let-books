@@ -401,6 +401,7 @@ Use the article `id` from `articles.json` as the diagram folder key.
 - non-English pages do not reference `/en/` diagram assets
 - both `.mmd` source and `.svg` rendered files exist for each published language
 - all localized diagram references are valid relative links
+- relative links across `docs/`, `docs/blog/`, `docs/wiki/`, and related documentation areas resolve from the correct file depth
 - `articles.json` is used to determine article ids and available languages
 - missing localized diagrams fail CI for published articles
 - missing localized diagrams warn for draft articles

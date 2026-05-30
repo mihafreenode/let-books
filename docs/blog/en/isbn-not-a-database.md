@@ -12,7 +12,7 @@ evidence:
   - static-demo/app.js
   - AGENTS.md
 sources:
-  - sources/en/isbn-agency-reference.md
+  - sources/en/isbn-not-a-database.md
 diagrams:
   - ../../diagrams/blog/isbn-not-a-database/en/isbn-lookup-chain.svg
   - ../../diagrams/blog/isbn-not-a-database/en/isbn-vs-physical-book.svg

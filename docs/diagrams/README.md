@@ -71,7 +71,7 @@ done
 
 ## Validation
 
-Run diagram validation:
+Run docs validation:
 
 ```bash
 node tools/validate-blog.mjs
@@ -82,6 +82,7 @@ This checks that:
 - non-English pages do not reference `/en/` diagram assets
 - diagram source and rendered SVG exist for each published language
 - all localized diagram references are valid relative links
+- relative links across `docs/`, `docs/blog/`, and related documentation areas resolve from the correct file depth
 
 ## Related Articles
 

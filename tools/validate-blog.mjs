@@ -3,597 +3,581 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const ARTICLES_JSON = path.join(ROOT, 'docs/blog/articles.json');
-const BLOG_DIR = path.join(ROOT, 'docs/blog');
+const DOCS_DIR = path.join(ROOT, 'docs');
+const BLOG_DIR = path.join(DOCS_DIR, 'blog');
+const ARTICLES_JSON = path.join(BLOG_DIR, 'articles.json');
 const SITE_URL = 'https://letbooks.org';
 
 const errors = [];
 const warnings = [];
+
+let docsFilesChecked = 0;
+let htmlFilesChecked = 0;
+let markdownFilesChecked = 0;
+let relativeRefsChecked = 0;
+let brokenLinks = 0;
+
 let articlesChecked = 0;
 let languageVariantsChecked = 0;
-let languageLinksValid = 0;
 let hreflangEntriesValid = 0;
-let brokenLinks = 0;
 let missingTranslations = 0;
-let linksChecked = 0;
+
 let diagramRefsChecked = 0;
 let localizedDiagramsFound = 0;
 let englishLeaks = 0;
 let missingDraftDiagrams = 0;
 
-function fail(msg) {
-  errors.push(msg);
-  console.error(`  FAIL: ${msg}`);
+function fail(message) {
+  errors.push(message);
+  console.error(`  FAIL: ${message}`);
 }
 
-function warn(msg) {
-  warnings.push(msg);
-  console.warn(`  WARN: ${msg}`);
+function warn(message) {
+  warnings.push(message);
+  console.warn(`  WARN: ${message}`);
 }
 
-function resolvePath(baseDir, href) {
-  if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:')) {
-    return null;
-  }
-  if (href === '#' || href.startsWith('#') || href === '') {
-    return null;
-  }
-  const resolved = path.resolve(baseDir, href);
-  if (!resolved.startsWith(ROOT)) {
-    return null;
-  }
-  return resolved;
+function rel(filePath) {
+  return path.relative(ROOT, filePath);
 }
 
-function existsOnDisk(filePath) {
-  if (!filePath) return false;
+function isFile(filePath) {
   try {
-    const stat = fs.statSync(filePath);
-    return stat.isFile();
+    return fs.statSync(filePath).isFile();
   } catch {
     return false;
   }
 }
 
-function resolveDir(dirPath) {
-  if (!dirPath) return false;
+function isDirectory(filePath) {
   try {
-    const stat = fs.statSync(dirPath);
-    return stat.isDirectory();
+    return fs.statSync(filePath).isDirectory();
   } catch {
     return false;
+  }
+}
+
+function stripQueryAndHash(value) {
+  return value.split('#')[0].split('?')[0];
+}
+
+function normalizeMarkdownTarget(rawTarget) {
+  const trimmed = rawTarget.trim();
+  if (!trimmed) return '';
+  if (trimmed.startsWith('<') && trimmed.endsWith('>')) {
+    return trimmed.slice(1, -1);
+  }
+
+  const titleMatch = trimmed.match(/^([^\s]+)\s+".*"$/);
+  if (titleMatch) {
+    return titleMatch[1];
+  }
+
+  const singleQuoteTitleMatch = trimmed.match(/^([^\s]+)\s+'.*'$/);
+  if (singleQuoteTitleMatch) {
+    return singleQuoteTitleMatch[1];
+  }
+
+  return trimmed;
+}
+
+function isExternalUrl(href) {
+  return /^(https?:|mailto:|tel:|data:|javascript:|sms:)/i.test(href) || href.startsWith('//');
+}
+
+function resolveSiteAbsoluteUrl(href) {
+  if (!href.startsWith(SITE_URL)) {
+    return null;
+  }
+
+  const url = new URL(href);
+  const pathname = url.pathname;
+  const candidate = path.join(ROOT, pathname.replace(/^\//, ''));
+  if (!candidate.startsWith(ROOT)) {
+    return null;
+  }
+  return candidate;
+}
+
+function resolveRepoPath(baseDir, href) {
+  if (!href) return null;
+
+  const cleanHref = stripQueryAndHash(href.trim());
+  if (!cleanHref || cleanHref === '#' || cleanHref.startsWith('#')) {
+    return null;
+  }
+
+  if (href.startsWith(SITE_URL)) {
+    return resolveSiteAbsoluteUrl(href);
+  }
+
+  if (isExternalUrl(cleanHref)) {
+    return null;
+  }
+
+  if (cleanHref.startsWith('/')) {
+    const candidate = path.join(ROOT, cleanHref.replace(/^\//, ''));
+    return candidate.startsWith(ROOT) ? candidate : null;
+  }
+
+  const candidate = path.resolve(baseDir, cleanHref);
+  return candidate.startsWith(ROOT) ? candidate : null;
+}
+
+function targetExists(candidate) {
+  if (!candidate) return false;
+  if (isFile(candidate) || isDirectory(candidate)) return true;
+
+  if (!path.extname(candidate) && isFile(`${candidate}.html`)) {
+    return true;
+  }
+
+  if (isDirectory(candidate) && isFile(path.join(candidate, 'index.html'))) {
+    return true;
+  }
+
+  return false;
+}
+
+function listFiles(dir, extensions) {
+  const files = [];
+
+  function walk(currentDir) {
+    const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.name.startsWith('.')) continue;
+      const fullPath = path.join(currentDir, entry.name);
+      if (entry.isDirectory()) {
+        walk(fullPath);
+        continue;
+      }
+      if (extensions.has(path.extname(entry.name))) {
+        files.push(fullPath);
+      }
+    }
+  }
+
+  walk(dir);
+  return files.sort();
+}
+
+function extractHtmlRefs(content) {
+  const refs = [];
+  const patterns = [
+    { type: 'a[href]', regex: /<a[^>]+href="([^"]+)"/g },
+    { type: 'img[src]', regex: /<img[^>]+src="([^"]+)"/g },
+    { type: 'script[src]', regex: /<script[^>]+src="([^"]+)"/g },
+    { type: 'link[href]', regex: /<link[^>]+href="([^"]+)"/g },
+    { type: 'source[srcset]', regex: /<source[^>]+srcset="([^"]+)"/g },
+  ];
+
+  for (const { type, regex } of patterns) {
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      const raw = match[1].trim();
+      if (!raw) continue;
+      if (type === 'source[srcset]') {
+        const first = raw.split(',')[0]?.trim().split(/\s+/)[0];
+        if (first) refs.push({ type, href: first });
+      } else {
+        refs.push({ type, href: raw });
+      }
+    }
+  }
+
+  return refs;
+}
+
+function extractMarkdownRefs(content) {
+  const refs = [];
+  const regex = /!?\[[^\]]*\]\(([^)]+)\)/g;
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    const href = normalizeMarkdownTarget(match[1]);
+    if (href) {
+      refs.push({ type: 'markdown', href });
+    }
+  }
+  return refs;
+}
+
+function parseFrontmatter(content) {
+  const match = content.match(/^---\n([\s\S]*?)\n---/);
+  if (!match) return null;
+
+  const result = {};
+  const lines = match[1].split('\n');
+  let currentKey = null;
+  let currentArray = null;
+
+  for (const line of lines) {
+    const keyMatch = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (keyMatch) {
+      if (currentArray !== null) {
+        result[currentKey] = currentArray;
+        currentArray = null;
+      }
+
+      currentKey = keyMatch[1];
+      const value = keyMatch[2].trim();
+      if (value === '') {
+        currentArray = [];
+      } else {
+        result[currentKey] = value;
+      }
+      continue;
+    }
+
+    if (currentArray !== null) {
+      const itemMatch = line.match(/^\s*-\s+(.+)$/);
+      if (itemMatch) {
+        currentArray.push(itemMatch[1].trim());
+      }
+    }
+  }
+
+  if (currentArray !== null) {
+    result[currentKey] = currentArray;
+  }
+
+  return result;
+}
+
+function validateResolvedRef(filePath, href, sourceType) {
+  const resolved = resolveRepoPath(path.dirname(filePath), href);
+  if (!resolved) {
+    return;
+  }
+
+  relativeRefsChecked++;
+
+  if (!targetExists(resolved)) {
+    fail(`${rel(filePath)}: ${sourceType} reference "${href}" resolves to missing path`);
+    brokenLinks++;
+  }
+}
+
+function validateMarkdownFrontmatterPaths(filePath, content) {
+  const frontmatter = parseFrontmatter(content);
+  if (!frontmatter) return frontmatter;
+
+  const pathFields = ['evidence', 'sources', 'diagrams'];
+  for (const field of pathFields) {
+    const value = frontmatter[field];
+    if (!value) continue;
+
+    const refs = Array.isArray(value) ? value : [value];
+    for (const href of refs) {
+      validateFrontmatterRef(filePath, href, field);
+    }
+  }
+
+  return frontmatter;
+}
+
+function validateFrontmatterRef(filePath, href, field) {
+  const baseDir = path.dirname(filePath);
+  const cleanHref = href.trim();
+  const candidates = [];
+
+  if (cleanHref.startsWith('./') || cleanHref.startsWith('../') || cleanHref.startsWith('/')) {
+    const resolved = resolveRepoPath(baseDir, cleanHref);
+    if (resolved) {
+      candidates.push(resolved);
+    }
+  } else {
+    const rootRelativePrefixes = ['docs/', 'static-demo/', 'AGENTS', '.github/', 'tools/', 'tests/', 'favicon/', 'public/'];
+    const docsRelativePrefixes = ['assets/', 'blog/', 'diagrams/', 'learning/', 'sources/', 'style-guide/', 'wiki/'];
+
+    if (rootRelativePrefixes.some((prefix) => cleanHref.startsWith(prefix))) {
+      candidates.push(path.join(ROOT, cleanHref));
+    }
+
+    if (docsRelativePrefixes.some((prefix) => cleanHref.startsWith(prefix))) {
+      candidates.push(path.join(DOCS_DIR, cleanHref));
+    }
+
+    candidates.push(path.resolve(baseDir, cleanHref));
+  }
+
+  relativeRefsChecked++;
+
+  const validCandidate = candidates.find((candidate) => candidate.startsWith(ROOT) && targetExists(candidate));
+  if (!validCandidate) {
+    fail(`${rel(filePath)}: frontmatter ${field} reference "${href}" resolves to missing path`);
+    brokenLinks++;
+  }
+}
+
+function validateHtmlFile(filePath) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  for (const ref of extractHtmlRefs(content)) {
+    validateResolvedRef(filePath, ref.href, ref.type);
+  }
+}
+
+function validateMarkdownFile(filePath) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  validateMarkdownFrontmatterPaths(filePath, content);
+  for (const ref of extractMarkdownRefs(content)) {
+    validateResolvedRef(filePath, ref.href, ref.type);
   }
 }
 
 function loadArticles() {
+  if (!isFile(ARTICLES_JSON)) {
+    fail(`articles.json not found at ${rel(ARTICLES_JSON)}`);
+    process.exit(1);
+  }
+
   const raw = fs.readFileSync(ARTICLES_JSON, 'utf8');
   const data = JSON.parse(raw);
-  if (!data.articles || !Array.isArray(data.articles)) {
+
+  if (!Array.isArray(data.articles)) {
     fail('articles.json: missing or invalid "articles" array');
     process.exit(1);
   }
+
   return data;
 }
 
 function checkArticleStructure(data) {
   for (const article of data.articles) {
     if (!article.id || typeof article.id !== 'string') {
-      fail(`Article missing string "id"`);
+      fail('articles.json: article missing string "id"');
     }
-    if (!article.canonical_language) {
-      fail(`Article "${article.id}" missing "canonical_language"`);
+
+    if (!article.canonical_language || typeof article.canonical_language !== 'string') {
+      fail(`articles.json: article "${article.id}" missing "canonical_language"`);
     }
-    if (!article.languages || !Array.isArray(article.languages)) {
-      fail(`Article "${article.id}" missing "languages" array`);
+
+    if (!Array.isArray(article.languages) || article.languages.length === 0) {
+      fail(`articles.json: article "${article.id}" missing non-empty "languages" array`);
       continue;
     }
+
     if (!article.languages.includes(article.canonical_language)) {
-      fail(`Article "${article.id}": canonical_language "${article.canonical_language}" not in languages array`);
+      fail(`articles.json: article "${article.id}" canonical_language is not present in languages[]`);
     }
+
     const seen = new Set();
     for (const lang of article.languages) {
       if (seen.has(lang)) {
-        fail(`Article "${article.id}" has duplicate language "${lang}"`);
+        fail(`articles.json: article "${article.id}" has duplicate language "${lang}"`);
       }
       seen.add(lang);
     }
   }
 }
 
-function checkArticleExists(article) {
-  for (const lang of article.languages) {
-    const htmlPath = path.join(BLOG_DIR, lang, `${article.id}.html`);
-    const mdPath = path.join(BLOG_DIR, lang, `${article.id}.md`);
-    const htmlExists = existsOnDisk(htmlPath);
-    const mdExists = existsOnDisk(mdPath);
-
-    if (!htmlExists) {
-      const isCanonical = lang === article.canonical_language;
-      const msg = `Article "${article.id}" missing HTML for "${lang}" (expected docs/blog/${lang}/${article.id}.html)`;
-      if (isCanonical) {
-        fail(msg);
-      } else if (mdExists) {
-        warn(`${msg} — source .md exists but no .html`);
-      } else {
-        warn(msg);
-      }
-      missingTranslations++;
-      continue;
-    }
-
-    languageVariantsChecked++;
-    validateArticleHtml(htmlPath, article, lang);
-
-    if (!mdExists) {
-      warn(`Article "${article.id}" missing source .md for "${lang}"`);
-    }
-  }
-}
-
 function validateArticleHtml(filePath, article, lang) {
   const content = fs.readFileSync(filePath, 'utf8');
-  const dir = path.dirname(filePath);
 
   const localeMatch = content.match(/data-locale="([^"]+)"/);
-  if (localeMatch) {
-    const actual = localeMatch[1];
-    if (actual !== lang) {
-      fail(`${rel(filePath)}: data-locale is "${actual}", expected "${lang}"`);
-    }
+  if (localeMatch && localeMatch[1] !== lang) {
+    fail(`${rel(filePath)}: data-locale is "${localeMatch[1]}", expected "${lang}"`);
   }
 
   const pageTypeMatch = content.match(/data-page-type="([^"]+)"/);
-  if (pageTypeMatch) {
-    if (pageTypeMatch[1] !== 'article') {
-      warn(`${rel(filePath)}: data-page-type is "${pageTypeMatch[1]}", expected "article"`);
-    }
+  if (pageTypeMatch && pageTypeMatch[1] !== 'article') {
+    warn(`${rel(filePath)}: data-page-type is "${pageTypeMatch[1]}", expected "article"`);
   }
 
-  if (lang === article.canonical_language) {
-    const canonicalMatch = content.match(/<link\s+rel="canonical"\s+href="([^"]+)">/);
-    if (canonicalMatch) {
-      const expected = `${SITE_URL}/docs/blog/${lang}/${article.id}.html`;
-      if (canonicalMatch[1] !== expected) {
-        fail(`${rel(filePath)}: canonical href is "${canonicalMatch[1]}", expected "${expected}"`);
-      }
+  const canonicalMatch = content.match(/<link\s+rel="canonical"\s+href="([^"]+)">/);
+  if (canonicalMatch) {
+    const expected = `${SITE_URL}/docs/blog/${lang}/${article.id}.html`;
+    if (canonicalMatch[1] !== expected) {
+      fail(`${rel(filePath)}: canonical href is "${canonicalMatch[1]}", expected "${expected}"`);
     }
   }
 
   const hreflangMap = new Map();
   const hreflangRegex = /<link\s+rel="alternate"\s+hreflang="([^"]+)"\s+href="([^"]+)">/g;
-  let hflMatch;
-  while ((hflMatch = hreflangRegex.exec(content)) !== null) {
-    hreflangMap.set(hflMatch[1], hflMatch[2]);
+  let match;
+  while ((match = hreflangRegex.exec(content)) !== null) {
+    hreflangMap.set(match[1], match[2]);
   }
 
-  const xDefault = hreflangMap.get('x-default');
-  if (!xDefault) {
-    warn(`${rel(filePath)}: missing x-default hreflang`);
-  } else {
-    const expectedDefault = `${SITE_URL}/docs/blog/${article.canonical_language}/${article.id}.html`;
-    if (xDefault !== expectedDefault) {
-      fail(`${rel(filePath)}: x-default hreflang points to "${xDefault}", expected "${expectedDefault}"`);
-    }
+  const expectedDefault = `${SITE_URL}/docs/blog/${article.canonical_language}/${article.id}.html`;
+  if (hreflangMap.get('x-default') !== expectedDefault) {
+    fail(`${rel(filePath)}: x-default hreflang must point to "${expectedDefault}"`);
   }
 
-  for (const alang of article.languages) {
-    const expectedUrl = `${SITE_URL}/docs/blog/${alang}/${article.id}.html`;
-    const actualUrl = hreflangMap.get(alang);
-    if (!actualUrl) {
-      fail(`${rel(filePath)}: missing hreflang for "${alang}"`);
-    } else if (actualUrl !== expectedUrl) {
-      fail(`${rel(filePath)}: hreflang for "${alang}" is "${actualUrl}", expected "${expectedUrl}"`);
+  for (const articleLang of article.languages) {
+    const expected = `${SITE_URL}/docs/blog/${articleLang}/${article.id}.html`;
+    if (hreflangMap.get(articleLang) !== expected) {
+      fail(`${rel(filePath)}: hreflang for "${articleLang}" must point to "${expected}"`);
     } else {
       hreflangEntriesValid++;
     }
   }
+}
 
-  for (const [hflang] of hreflangMap) {
-    if (hflang === 'x-default') continue;
-    if (!article.languages.includes(hflang)) {
-      warn(`${rel(filePath)}: hreflang for "${hflang}" declared but not in articles.json languages`);
-    }
-  }
+function validateLocalizedDiagrams(article, lang, mdPath, frontmatter) {
+  const diagrams = Array.isArray(frontmatter.diagrams) ? frontmatter.diagrams : [];
+  const status = frontmatter.status || 'published';
 
-  const langSwitchHrefs = new Set();
-  const langLinkRegex = /<a[^>]+class="lang-link[^"]*"[^>]*href="([^"]+)"/g;
-  let llMatch;
-  while ((llMatch = langLinkRegex.exec(content)) !== null) {
-    langSwitchHrefs.add(llMatch[1]);
-  }
-
-  const currentLangMatch = content.match(/<a[^>]+class="lang-link[^"]*is-current[^"]*"[^>]*href="([^"]+)"/);
-  if (currentLangMatch) {
-    const expectedHref = `${article.id}.html`;
-    if (currentLangMatch[1] !== expectedHref) {
-      fail(`${rel(filePath)}: current language link href is "${currentLangMatch[1]}", expected "${expectedHref}"`);
-    }
-  } else {
-    warn(`${rel(filePath)}: no current language link with is-current class found`);
-  }
-
-  for (const href of langSwitchHrefs) {
-    const resolved = resolvePath(dir, href);
-    if (resolved && !existsOnDisk(resolved) && !resolveDir(resolved)) {
-      fail(`${rel(filePath)}: language link "${href}" resolves to missing path`);
-      brokenLinks++;
-    }
-  }
-
-  const allHrefs = new Set();
-  const hrefRegex = /<a[^>]+href="([^"]+)"/g;
-  let aMatch;
-  while ((aMatch = hrefRegex.exec(content)) !== null) {
-    allHrefs.add(aMatch[1]);
-  }
-
-  const imgSrcRegex = /<img[^>]+src="([^"]+)"/g;
-  let imgMatch;
-  while ((imgMatch = imgSrcRegex.exec(content)) !== null) {
-    allHrefs.add(imgMatch[1]);
-  }
-
-  const linkHrefRegex = /<link[^>]+href="([^"]+)"/g;
-  let linkMatch;
-  while ((linkMatch = linkHrefRegex.exec(content)) !== null) {
-    const href = linkMatch[1];
-    if (href.endsWith('.css') || href.endsWith('.ico') || href.endsWith('.png') || href.endsWith('.svg')) {
-      allHrefs.add(href);
-    }
-  }
-
-  const scriptSrcRegex = /<script[^>]+src="([^"]+)"/g;
-  let scriptMatch;
-  while ((scriptMatch = scriptSrcRegex.exec(content)) !== null) {
-    allHrefs.add(scriptMatch[1]);
-  }
-
-  for (const href of allHrefs) {
-    linksChecked++;
-    languageLinksValid++;
-
-    if (href.startsWith('http://') || href.startsWith('https://')) {
-      const siteUrlCheck = `${SITE_URL}/docs/blog/`;
-      if (href.startsWith(siteUrlCheck)) {
-        const relativePath = href.slice(SITE_URL.length);
-        const resolved = path.join(ROOT, relativePath);
-        if (!existsOnDisk(resolved)) {
-          fail(`${rel(filePath)}: absolute blog link "${href}" points to non-existent file`);
-          brokenLinks++;
-        }
+  for (const diagramHref of diagrams) {
+    diagramRefsChecked++;
+    const resolvedSvg = resolveRepoPath(path.dirname(mdPath), diagramHref);
+    if (!resolvedSvg || !isFile(resolvedSvg)) {
+      const message = `${rel(mdPath)}: diagram SVG not found at "${diagramHref}"`;
+      if (status === 'draft') {
+        warn(`${message} (draft article)`);
+        missingDraftDiagrams++;
+      } else {
+        fail(message);
       }
       continue;
     }
-    if (href.startsWith('mailto:') || href.startsWith('#')) {
-      continue;
+
+    localizedDiagramsFound++;
+
+    const sourcePath = resolvedSvg.replace(/\.svg$/, '.mmd');
+    if (!isFile(sourcePath)) {
+      const message = `${rel(mdPath)}: diagram source not found at "${rel(sourcePath)}"`;
+      if (status === 'draft') {
+        warn(`${message} (draft article)`);
+      } else {
+        fail(message);
+      }
     }
 
-    const resolved = resolvePath(dir, href);
-    if (!resolved) {
-      continue;
-    }
-
-    if (!existsOnDisk(resolved) && !resolveDir(resolved)) {
-      fail(`${rel(filePath)}: broken link "${href}" resolves to missing path`);
-      brokenLinks++;
+    if (lang !== article.canonical_language && rel(resolvedSvg).includes('/en/')) {
+      fail(`${rel(mdPath)}: non-English page ("${lang}") references English diagram "${rel(resolvedSvg)}"`);
+      englishLeaks++;
     }
   }
 }
 
-function checkReadmeCoverage() {
-  const requiredReadmes = [
+function checkArticleVariant(article, lang) {
+  const htmlPath = path.join(BLOG_DIR, lang, `${article.id}.html`);
+  const mdPath = path.join(BLOG_DIR, lang, `${article.id}.md`);
+  const htmlExists = isFile(htmlPath);
+  const mdExists = isFile(mdPath);
+
+  if (!htmlExists) {
+    const message = `Article "${article.id}" missing HTML for "${lang}" (expected docs/blog/${lang}/${article.id}.html)`;
+    if (lang === article.canonical_language) {
+      fail(message);
+    } else {
+      warn(message);
+      missingTranslations++;
+    }
+    return;
+  }
+
+  languageVariantsChecked++;
+  validateArticleHtml(htmlPath, article, lang);
+
+  if (!mdExists) {
+    warn(`Article "${article.id}" missing source .md for "${lang}"`);
+    return;
+  }
+
+  const mdContent = fs.readFileSync(mdPath, 'utf8');
+  const frontmatter = parseFrontmatter(mdContent);
+  if (frontmatter) {
+    if (frontmatter.article_id && frontmatter.article_id !== article.id) {
+      fail(`${rel(mdPath)}: article_id is "${frontmatter.article_id}", expected "${article.id}"`);
+    }
+    if (frontmatter.canonical_language && frontmatter.canonical_language !== lang) {
+      fail(`${rel(mdPath)}: canonical_language is "${frontmatter.canonical_language}", expected "${lang}"`);
+    }
+    validateLocalizedDiagrams(article, lang, mdPath, frontmatter);
+  }
+}
+
+function checkArticles(data) {
+  checkArticleStructure(data);
+
+  for (const article of data.articles) {
+    articlesChecked++;
+    for (const lang of article.languages) {
+      checkArticleVariant(article, lang);
+    }
+  }
+}
+
+function checkRequiredReadmes() {
+  const required = [
+    'docs/README.md',
     'docs/blog/README.md',
     'docs/learning/README.md',
     'docs/wiki/README.md',
     'docs/style-guide/README.md',
   ];
 
-  for (const readme of requiredReadmes) {
-    const fullPath = path.join(ROOT, readme);
-    if (!existsOnDisk(fullPath)) {
-      warn(`Missing README: ${readme}`);
+  for (const item of required) {
+    if (!isFile(path.join(ROOT, item))) {
+      warn(`Missing README: ${item}`);
     }
   }
 }
 
-function checkNavigationConsistency() {
-  const navLinkRegex = /<a[^>]+class="nav-link[^"]*"[^>]*href="([^"]+)"[^>]*>/g;
-
-  const checkNavLinksResolve = (filePath) => {
-    if (!existsOnDisk(filePath)) return;
+function checkNoObsoleteBlogPaths(htmlFiles) {
+  let scanned = 0;
+  for (const filePath of htmlFiles) {
     const content = fs.readFileSync(filePath, 'utf8');
-    const relPath = rel(filePath);
-    const navHrefs = [];
-    let match;
-    while ((match = navLinkRegex.exec(content)) !== null) {
-      navHrefs.push(match[1]);
+    if (content.includes('href="/blog/')) {
+      fail(`${rel(filePath)}: contains obsolete absolute path "/blog/" (should be "/docs/blog/")`);
     }
-    for (const href of navHrefs) {
-      const dir = path.dirname(filePath);
-      if (href.startsWith('http://') || href.startsWith('https://')) continue;
-      if (href === '.' || href === './' || href.startsWith('#')) continue;
-      const resolved = resolvePath(dir, href);
-      if (resolved && !existsOnDisk(resolved) && !resolveDir(resolved)) {
-        fail(`${relPath}: nav link "${href}" resolves to missing path`);
-        brokenLinks++;
-      }
-    }
-  };
-
-  const blogPath = (lang) => path.join(BLOG_DIR, lang, 'isbn-not-a-database.html');
-  const docsPagePath = (lang) => path.join(ROOT, 'docs', lang, 'index.html');
-
-  const subPages = {
-    en: ['individuals', 'institutions', 'administrators'],
-    sl: ['posamezniki', 'institucije', 'skrbniki'],
-    hr: ['individuals', 'institutions', 'administrators'],
-    bs: ['individuals', 'institutions', 'administrators'],
-    'sr-Latn': ['individuals', 'institutions', 'administrators'],
-    'sr-Cyrl': ['individuals', 'institutions', 'administrators'],
-    mk: ['individuals', 'institutions', 'administrators'],
-    sq: ['individuals', 'institutions', 'administrators'],
-    de: ['individuals', 'institutions', 'administrators'],
-    it: ['individuals', 'institutions', 'administrators'],
-    fr: ['individuals', 'institutions', 'administrators'],
-    es: ['individuals', 'institutions', 'administrators'],
-  };
-
-  for (const lang of Object.keys(subPages)) {
-    checkNavLinksResolve(docsPagePath(lang));
-    checkNavLinksResolve(blogPath(lang));
-    for (const page of subPages[lang]) {
-      checkNavLinksResolve(path.join(ROOT, 'docs', lang, `${page}.html`));
-    }
+    scanned++;
   }
+  return scanned;
 }
 
-function checkBlogCardLinks() {
-  const hubPath = path.join(ROOT, 'docs/index.html');
-  if (!existsOnDisk(hubPath)) {
-    warn('docs/index.html not found, skipping blog card link validation');
-    return;
+function validateDocsTree() {
+  const htmlFiles = listFiles(DOCS_DIR, new Set(['.html']));
+  const markdownFiles = listFiles(DOCS_DIR, new Set(['.md']));
+
+  docsFilesChecked = htmlFiles.length + markdownFiles.length;
+  htmlFilesChecked = htmlFiles.length;
+  markdownFilesChecked = markdownFiles.length;
+
+  for (const filePath of htmlFiles) {
+    validateHtmlFile(filePath);
   }
-  const content = fs.readFileSync(hubPath, 'utf8');
-  const dir = path.dirname(hubPath);
-  const blogLinkRegex = /<a[^>]+class="blog-article-link[^"]*"[^>]*href="([^"]+)"/g;
-  let match;
-  let cardCount = 0;
-  let validCards = 0;
-  while ((match = blogLinkRegex.exec(content)) !== null) {
-    cardCount++;
-    const href = match[1];
-    const resolved = resolvePath(dir, href);
-    if (resolved && existsOnDisk(resolved)) {
-      validCards++;
-    } else {
-      fail(`${rel(hubPath)}: blog card link "${href}" resolves to missing path`);
-      brokenLinks++;
-    }
+
+  for (const filePath of markdownFiles) {
+    validateMarkdownFile(filePath);
   }
-  console.log(`  Blog card links checked: ${cardCount}`);
-  console.log(`  Valid card links: ${validCards}`);
-  if (cardCount > 0 && validCards < cardCount) {
-    fail(`${cardCount - validCards} blog card link(s) are broken`);
-  }
+
+  return { obsoletePathScanCount: checkNoObsoleteBlogPaths(htmlFiles) };
 }
-
-function checkNoObsoleteBlogPaths() {
-  const htmlFiles = [];
-  function scanDir(dir) {
-    const entries = fs.readdirSync(dir, { withFileTypes: true });
-    for (const entry of entries) {
-      const fp = path.join(dir, entry.name);
-      if (entry.isDirectory() && !entry.name.startsWith('.')) {
-        scanDir(fp);
-      } else if (entry.isFile() && entry.name.endsWith('.html')) {
-        htmlFiles.push(fp);
-      }
-    }
-  }
-  scanDir(path.join(ROOT, 'docs'));
-
-  let filesChecked = 0;
-  let obsoletePaths = 0;
-  for (const fp of htmlFiles) {
-    const content = fs.readFileSync(fp, 'utf8');
-    const relPath = rel(fp);
-    const regex = /href="\/blog\//g;
-    let m;
-    while ((m = regex.exec(content)) !== null) {
-      fail(`${relPath}: contains obsolete absolute path "/blog/" (should be "/docs/blog/")`);
-      obsoletePaths++;
-    }
-    filesChecked++;
-  }
-  console.log(`  HTML files scanned for obsolete paths: ${filesChecked}`);
-  if (obsoletePaths > 0) {
-    fail(`Found ${obsoletePaths} obsolete absolute path(s) to /blog/`);
-  }
-}
-
-function checkKnowledgePlatformLinks() {
-  const readmePairs = [
-    {
-      name: 'docs/blog/README.md',
-      expectedLinks: ['../learning/README.md', '../wiki/README.md'],
-    },
-    {
-      name: 'docs/learning/README.md',
-      expectedLinks: ['../blog/README.md', '../wiki/README.md'],
-    },
-    {
-      name: 'docs/wiki/README.md',
-      expectedLinks: ['../blog/README.md', '../learning/README.md'],
-    },
-  ];
-
-  for (const pair of readmePairs) {
-    const fullPath = path.join(ROOT, pair.name);
-    if (!existsOnDisk(fullPath)) {
-      continue;
-    }
-    const content = fs.readFileSync(fullPath, 'utf8');
-    for (const expected of pair.expectedLinks) {
-      if (!content.includes(expected)) {
-        warn(`${pair.name}: expected cross-link to "${expected}" not found`);
-      }
-    }
-  }
-}
-
-function rel(absPath) {
-  return path.relative(ROOT, absPath);
-}
-
-// --- Diagram Validation ---
-
-function parseFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) return null;
-  const yaml = match[1];
-  const result = {};
-  const lines = yaml.split('\n');
-  let currentKey = null;
-  let currentArray = null;
-  for (const line of lines) {
-    const keyMatch = line.match(/^(\w+):\s*(.*)/);
-    if (keyMatch) {
-      if (currentArray !== null) {
-        result[currentKey] = currentArray;
-        currentArray = null;
-      }
-      currentKey = keyMatch[1];
-      const val = keyMatch[2].trim();
-      if (val === '' || val === '[') {
-        currentArray = [];
-      } else {
-        result[currentKey] = val;
-      }
-    } else if (currentArray !== null) {
-      const itemMatch = line.match(/^\s*-\s+(.+)/);
-      if (itemMatch) {
-        currentArray.push(itemMatch[1].trim());
-      }
-    }
-  }
-  if (currentArray !== null) {
-    result[currentKey] = currentArray;
-  }
-  return result;
-}
-
-function validateLocalizedDiagrams(data) {
-  const diagramDir = path.join(ROOT, 'docs/diagrams/blog');
-  console.log('  Checking diagram localization...\n');
-
-  for (const article of data.articles) {
-    for (const lang of article.languages) {
-      const mdPath = path.join(BLOG_DIR, lang, `${article.id}.md`);
-      if (!existsOnDisk(mdPath)) {
-        continue;
-      }
-      const content = fs.readFileSync(mdPath, 'utf8');
-      const frontmatter = parseFrontmatter(content);
-      if (!frontmatter || !frontmatter.diagrams) {
-        continue;
-      }
-
-      const isCanonical = lang === article.canonical_language;
-      const status = frontmatter.status || 'published';
-
-      for (const diagramPath of frontmatter.diagrams) {
-        diagramRefsChecked++;
-
-        // Resolve the diagram reference relative to the MD file
-        const resolvedSvg = resolvePath(path.dirname(mdPath), diagramPath);
-        if (!resolvedSvg) {
-          fail(`${rel(mdPath)}: could not resolve diagram "${diagramPath}"`);
-          continue;
-        }
-
-        // Check rendered SVG exists
-        if (existsOnDisk(resolvedSvg)) {
-          localizedDiagramsFound++;
-        } else {
-          const msg = `${rel(mdPath)}: diagram SVG not found at "${diagramPath}"`;
-          if (status === 'draft') {
-            warn(`${msg} (draft article)`);
-            missingDraftDiagrams++;
-          } else {
-            fail(msg);
-          }
-          continue;
-        }
-
-        // Check source file exists
-        const svgPath = resolvedSvg;
-        const sourcePath = svgPath.replace(/\.svg$/, '.mmd');
-        if (!existsOnDisk(sourcePath)) {
-          const msg = `${rel(mdPath)}: diagram source not found at "${rel(sourcePath)}" (svg exists at "${diagramPath}")`;
-          if (status === 'draft') {
-            warn(`${msg} (draft article)`);
-          } else {
-            fail(msg);
-          }
-        }
-
-        // Check for English diagram leaks on non-English pages
-        if (!isCanonical) {
-          const diagramRel = rel(resolvedSvg);
-          if (diagramRel.includes('/en/')) {
-            fail(`${rel(mdPath)}: non-English page ("${lang}") references English diagram "${diagramRel}"`);
-            englishLeaks++;
-          }
-        }
-      }
-    }
-  }
-}
-
-// --- End Diagram Validation ---
 
 function main() {
-  console.log('Blog article validation\n');
+  console.log('Docs link validation\n');
 
-  if (!fs.existsSync(ARTICLES_JSON)) {
-    fail(`articles.json not found at ${rel(ARTICLES_JSON)}`);
-    process.exit(1);
-  }
+  const articleData = loadArticles();
+  const { obsoletePathScanCount } = validateDocsTree();
+  checkRequiredReadmes();
+  checkArticles(articleData);
 
-  const data = loadArticles();
-  checkArticleStructure(data);
+  const ok = String.fromCodePoint(0x2713);
+  const warnIcon = String.fromCodePoint(0x26A0);
 
-  for (const article of data.articles) {
-    articlesChecked++;
-    checkArticleExists(article);
-  }
-
-  checkReadmeCoverage();
-  checkKnowledgePlatformLinks();
-  checkNavigationConsistency();
-  checkBlogCardLinks();
-  checkNoObsoleteBlogPaths();
-  validateLocalizedDiagrams(data);
-
-  console.log(`\n\  Blog articles checked: ${articlesChecked}`);
-  console.log(`  Language variants checked: ${languageVariantsChecked}`);
-  console.log(`  Language links checked: ${linksChecked}`);
-  console.log(`  Language links valid: ${languageLinksValid}`);
-  console.log(`  hreflang entries valid: ${hreflangEntriesValid}`);
-  console.log(`  Broken links: ${brokenLinks}`);
-  console.log(`  Articles checked: ${articlesChecked}`);
-  console.log(`  Diagram references checked: ${diagramRefsChecked}`);
-  console.log(`  Localized diagrams found: ${localizedDiagramsFound}`);
-  console.log(`  English diagram leaks on localized pages: ${englishLeaks}`);
+  console.log(`${ok} Docs files checked: ${docsFilesChecked}`);
+  console.log(`${ok} HTML files checked: ${htmlFilesChecked}`);
+  console.log(`${ok} Markdown files checked: ${markdownFilesChecked}`);
+  console.log(`${ok} Relative references checked: ${relativeRefsChecked}`);
+  console.log(`${ok} HTML files scanned for obsolete /blog/ paths: ${obsoletePathScanCount}`);
+  console.log(`${ok} Articles checked: ${articlesChecked}`);
+  console.log(`${ok} Article language variants checked: ${languageVariantsChecked}`);
+  console.log(`${ok} hreflang entries valid: ${hreflangEntriesValid}`);
+  console.log(`${ok} Diagram references checked: ${diagramRefsChecked}`);
+  console.log(`${ok} Localized diagrams found: ${localizedDiagramsFound}`);
+  console.log(`${ok} English diagram leaks on localized pages: ${englishLeaks}`);
+  console.log(`${ok} Broken links: ${brokenLinks}`);
 
   if (missingTranslations > 0) {
-    console.log(`  ${String.fromCodePoint(0x26A0)} Missing translations: ${missingTranslations}`);
+    console.log(`${warnIcon} Missing translations: ${missingTranslations}`);
   }
   if (missingDraftDiagrams > 0) {
-    console.log(`  ${String.fromCodePoint(0x26A0)} Missing draft diagrams: ${missingDraftDiagrams}`);
+    console.log(`${warnIcon} Missing draft diagrams: ${missingDraftDiagrams}`);
   }
   if (warnings.length > 0) {
-    console.log(`  ${String.fromCodePoint(0x26A0)} Warnings: ${warnings.length}`);
+    console.log(`${warnIcon} Warnings: ${warnings.length}`);
   }
 
   console.log('');
@@ -603,7 +587,7 @@ function main() {
     process.exit(1);
   }
 
-  console.log('All blog validation checks passed.');
+  console.log('All docs validation checks passed.');
 }
 
 main();
