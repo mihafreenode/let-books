@@ -1,5 +1,19 @@
 const DOCS_LOCALE_CONFIG = {
   pageMap: {
+    'language-hub': {
+      en: 'en/index.html',
+      sl: 'sl/index.html',
+      hr: 'hr/index.html',
+      bs: 'bs/index.html',
+      'sr-Latn': 'sr-Latn/index.html',
+      'sr-Cyrl': 'sr-Cyrl/index.html',
+      mk: 'mk/index.html',
+      sq: 'sq/index.html',
+      de: 'de/index.html',
+      it: 'it/index.html',
+      fr: 'fr/index.html',
+      es: 'es/index.html',
+    },
     overview: {
       en: 'en/index.html',
       sl: 'sl/index.html',
@@ -376,13 +390,19 @@ function upgradeDocsNavigation() {
   const pageMap = DOCS_LOCALE_CONFIG.pageMap;
 
   if (pageType === 'language-hub') {
-    const items = [
-      createNavLink('.', labels.docsHome, { current: true }),
-      createNavLink(getBlogIndexHref('en'), labels.blog),
-      createNavLink('https://github.com/mihafreenode/let-books', labels.github),
-    ];
+    const hubLocale = 'en';
+    const subPageTypes = ['overview', 'individuals', 'institutions'];
+    const items = [];
+    for (const type of subPageTypes) {
+      const relPath = pageMap[type]?.[hubLocale];
+      if (!relPath) continue;
+      items.push(createNavLink(relPath, labels[type]));
+    }
+    items.push(createNavLink(getBlogIndexHref(hubLocale), labels.blog));
+    items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
     nav.replaceChildren(...items);
-    nav.setAttribute('aria-label', 'Site navigation');
+    nav.setAttribute('aria-label', 'Documentation');
+    nav.appendChild(createLanguageSelector(hubLocale, labels));
     return;
   }
 
@@ -468,9 +488,6 @@ function upgradeLanguageHubCards() {
 }
 
 function ensureFooterMicrocopy() {
-  const pageType = getCurrentPageType();
-  if (pageType === 'language-hub') return;
-
   const locale = getCurrentLocale();
   const footerHeading = document.querySelector('.site-footer .footer-inner > div:first-child');
   if (!footerHeading) return;
@@ -496,8 +513,11 @@ function normalizeDocsFooter() {
   const items = [];
 
   if (pageType === 'language-hub') {
-    items.push(createNavLink('.', labels.docsHome, { current: true }));
-    items.push(createNavLink(getBlogIndexHref('en'), labels.blog));
+    const hubLocale = 'en';
+    items.push(createNavLink('en/index.html', labels.overview));
+    items.push(createNavLink('en/individuals.html', labels.individuals));
+    items.push(createNavLink('en/institutions.html', labels.institutions));
+    items.push(createNavLink(getBlogIndexHref(hubLocale), labels.blog));
     items.push(createNavLink('../index.html', labels.publicHomepage));
     items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
   } else {

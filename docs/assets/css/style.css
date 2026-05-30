@@ -99,10 +99,6 @@ svg {
   color: inherit;
 }
 
-body[data-page-type="language-hub"] .brand-link {
-  display: flex;
-}
-
 .brand-mark {
   width: 54px;
   flex: 0 0 54px;
@@ -236,12 +232,6 @@ body[data-page-type="article"] main {
 
 body[data-page-type="language-hub"] main {
   padding-top: 1rem;
-}
-
-body[data-page-type="language-hub"] .site-header {
-  position: static;
-  backdrop-filter: none;
-  background: rgba(252, 250, 245, 0.96);
 }
 
 body[data-page-type="language-hub"] .hero {
@@ -1313,13 +1303,20 @@ a:focus-visible > p {
 }
 
 .post-article-nav > * + * {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .post-article-nav .language-alternatives {
   margin-top: 0;
   padding-top: 0;
   border-top: none;
+  margin-bottom: 1rem;
+}
+
+.post-article-nav .related-content {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(15, 91, 69, 0.12);
 }
 
 .language-alternatives {
@@ -1331,9 +1328,13 @@ a:focus-visible > p {
 .language-alternatives h2 {
   font-size: 0.95rem;
   margin: 0 0 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: var(--font-body);
   color: var(--text-muted);
+}
+
+.related-content h2 {
+  font-weight: 700;
 }
 
 .language-alternatives ul {
@@ -1570,9 +1571,47 @@ a:focus-visible > p {
   text-decoration-color: var(--brand);
 }
 
-.post-article-nav .related-content,
-.post-article-nav .topic-nav {
-  margin-top: 0;
+@media (max-width: 700px) {
+  .site-footer {
+    padding-block: 1.5rem;
+  }
+
+  .footer-inner {
+    gap: 1rem;
+  }
+
+  .footer-links {
+    gap: 0.4rem 0.75rem;
+  }
+
+  .footer-links a {
+    display: inline-flex;
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0.25rem 0.4rem;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-align: left;
+    border: none;
+    border-radius: 0;
+    background: none;
+    font-weight: 400;
+  }
+
+  .language-list {
+    gap: 0.4rem;
+  }
+
+  .language-list a,
+  .footer-language-link {
+    display: inline-flex;
+    min-height: 0;
+    margin: 0;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
 }
 
 @media (max-width: 460px) {
