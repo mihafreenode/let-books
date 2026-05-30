@@ -256,11 +256,9 @@ function getEquivalentPageHref(locale) {
   return '../'.repeat(depth - 1) + path;
 }
 
-const BLOG_ARTICLE_ID = 'isbn-not-a-database';
-
-function getBlogArticleHref(locale, articleId = BLOG_ARTICLE_ID) {
+function getBlogIndexHref(locale) {
   const depth = getPathDepthFromDocs();
-  return '../'.repeat(depth - 1) + `blog/${locale}/${articleId}.html`;
+  return '../'.repeat(depth - 1) + `blog/${locale}/index.html`;
 }
 
 function createNavLink(href, text, { current = false } = {}) {
@@ -332,7 +330,7 @@ function upgradeDocsNavigation() {
   if (pageType === 'language-hub') {
     const items = [
       createNavLink('.', labels.docsHome, { current: true }),
-      createNavLink(getBlogArticleHref('en'), labels.blog),
+      createNavLink(getBlogIndexHref('en'), labels.blog),
       createNavLink('https://github.com/mihafreenode/let-books', labels.github),
     ];
     nav.replaceChildren(...items);
@@ -359,7 +357,7 @@ function upgradeDocsNavigation() {
     if (!relPath) continue;
     items.push(createNavLink('../'.repeat(depth - 1) + relPath, labels[type], { current: pageType === type }));
   }
-  items.push(createNavLink(getBlogArticleHref(locale), labels.blog));
+  items.push(createNavLink(getBlogIndexHref(locale), labels.blog));
   items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
 
   nav.replaceChildren(...items);
@@ -407,40 +405,17 @@ function buildEquivalentLanguageLinks() {
   container.replaceChildren(fragment);
 }
 
-function upgradeLanguageHubCards(blogData) {
+function upgradeLanguageHubCards() {
   const pageType = getCurrentPageType();
   if (pageType !== 'language-hub') return;
-  if (!blogData || !blogData.articles) return;
 
-  const primaryArticleId = blogData.articles[0]?.id;
-  if (!primaryArticleId) return;
-
-  for (const article of blogData.articles) {
-    for (const lang of article.languages) {
-      const card = document.querySelector(`.language-card[data-locale="${lang}"]`);
-      if (!card) continue;
-      const link = card.querySelector('.blog-article-link');
-      if (!link) continue;
-      const href = getBlogArticleHref(lang, article.id);
-      link.href = href;
-      if (lang !== 'en') {
-        const articleTitle = article.title?.[lang];
-        if (articleTitle && link.textContent.includes('Read') || link.textContent.includes('Preberi') || link.textContent.includes('Pročitaj') || link.textContent.includes('Прочитај') || link.textContent.includes('Lexo') || link.textContent.includes('Lire') || link.textContent.includes('Lesen') || link.textContent.includes('Leggi') || link.textContent.includes('Leer')) {
-        }
-      }
-    }
-  }
-}
-
-async function fetchBlogData() {
-  try {
-    const depth = getPathDepthFromDocs();
-    const prefix = '../'.repeat(depth - 1);
-    const resp = await fetch(`${prefix}blog/articles.json`);
-    if (!resp.ok) return null;
-    return await resp.json();
-  } catch {
-    return null;
+  const cards = document.querySelectorAll('.language-card');
+  for (const card of cards) {
+    const locale = card.dataset.locale;
+    if (!locale) continue;
+    const link = card.querySelector('.blog-article-link');
+    if (!link) continue;
+    link.href = getBlogIndexHref(locale);
   }
 }
 
@@ -474,12 +449,12 @@ function normalizeDocsFooter() {
 
   if (pageType === 'language-hub') {
     items.push(createNavLink('.', labels.docsHome, { current: true }));
-    items.push(createNavLink(getBlogArticleHref('en'), labels.blog));
+    items.push(createNavLink(getBlogIndexHref('en'), labels.blog));
     items.push(createNavLink('../index.html', labels.publicHomepage));
     items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
   } else {
     items.push(createNavLink('../'.repeat(depth - 1) + 'index.html', labels.docsHome));
-    items.push(createNavLink(getBlogArticleHref(locale), labels.blog));
+    items.push(createNavLink(getBlogIndexHref(locale), labels.blog));
     items.push(createNavLink('../'.repeat(depth) + 'index.html', labels.publicHomepage));
     items.push(createNavLink('https://github.com/mihafreenode/let-books', labels.github));
   }
@@ -596,7 +571,7 @@ function setupMobileNav() {
   syncWithViewport();
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     const locale = getCurrentLocale();
     const pageType = getCurrentPageType();
     const docsSite = isDocsSite();
@@ -614,6 +589,5 @@ document.addEventListener('DOMContentLoaded', async () => {
       ensureFooterMicrocopy();
     }
 
-    const blogData = docsSite ? await fetchBlogData() : null;
-    upgradeLanguageHubCards(blogData);
+    upgradeLanguageHubCards();
 });
