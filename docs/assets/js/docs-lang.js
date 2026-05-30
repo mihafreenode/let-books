@@ -56,6 +56,48 @@ const DOCS_LOCALE_CONFIG = {
       fr: 'fr/administrators.html',
       es: 'es/administrators.html',
     },
+    'blog-index': {
+      en: 'blog/en/index.html',
+      sl: 'blog/sl/index.html',
+      hr: 'blog/hr/index.html',
+      bs: 'blog/bs/index.html',
+      'sr-Latn': 'blog/sr-Latn/index.html',
+      'sr-Cyrl': 'blog/sr-Cyrl/index.html',
+      mk: 'blog/mk/index.html',
+      sq: 'blog/sq/index.html',
+      de: 'blog/de/index.html',
+      it: 'blog/it/index.html',
+      fr: 'blog/fr/index.html',
+      es: 'blog/es/index.html',
+    },
+    'learning-index': {
+      en: 'learning/en/index.html',
+      sl: 'learning/sl/index.html',
+      hr: 'learning/hr/index.html',
+      bs: 'learning/bs/index.html',
+      'sr-Latn': 'learning/sr-Latn/index.html',
+      'sr-Cyrl': 'learning/sr-Cyrl/index.html',
+      mk: 'learning/mk/index.html',
+      sq: 'learning/sq/index.html',
+      de: 'learning/de/index.html',
+      it: 'learning/it/index.html',
+      fr: 'learning/fr/index.html',
+      es: 'learning/es/index.html',
+    },
+    'wiki-index': {
+      en: 'wiki/en/index.html',
+      sl: 'wiki/sl/index.html',
+      hr: 'wiki/hr/index.html',
+      bs: 'wiki/bs/index.html',
+      'sr-Latn': 'wiki/sr-Latn/index.html',
+      'sr-Cyrl': 'wiki/sr-Cyrl/index.html',
+      mk: 'wiki/mk/index.html',
+      sq: 'wiki/sq/index.html',
+      de: 'wiki/de/index.html',
+      it: 'wiki/it/index.html',
+      fr: 'wiki/fr/index.html',
+      es: 'wiki/es/index.html',
+    },
   },
   labels: {
     en: 'English',
@@ -194,7 +236,13 @@ function inferPageTypeFromPath() {
   if (/\/(individuals|posamezniki)\.html$/.test(window.location.pathname)) return 'individuals';
   if (/\/(institutions|institucije)\.html$/.test(window.location.pathname)) return 'institutions';
   if (/\/(administrators|skrbniki)\.html$/.test(window.location.pathname)) return 'administrators';
+  if (/\/docs\/(blog|learning|wiki)\/[^/]+\/index\.html$/.test(window.location.pathname)) {
+    const section = window.location.pathname.match(/\/(blog|learning|wiki)\//)[1];
+    return `${section}-index`;
+  }
   if (/\/docs\/blog\//.test(window.location.pathname)) return 'article';
+  if (/\/docs\/learning\//.test(window.location.pathname)) return 'article';
+  if (/\/docs\/wiki\//.test(window.location.pathname)) return 'article';
   if (/\/index\.html$/.test(window.location.pathname)) return 'overview';
   return 'overview';
 }
