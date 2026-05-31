@@ -1573,11 +1573,25 @@ a:focus-visible > p {
 
 @media (max-width: 700px) {
   .site-footer {
-    padding-block: 1.5rem;
+    padding-block: 0;
   }
 
   .footer-inner {
     gap: 1rem;
+    padding: 1rem 0 1.5rem;
+  }
+
+  .post-article-nav {
+    margin-top: 1rem;
+  }
+
+  .post-article-nav > * + * {
+    margin-top: 0.75rem;
+  }
+
+  .post-article-nav .related-content {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
   }
 
   .footer-links {
