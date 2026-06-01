@@ -59,7 +59,11 @@ jobs:
         run: node tools/generate-articles-json.mjs
 
       - name: Semantic localization review
-        run: node tools/validate-localized-articles.mjs --require-full-coverage --report-file docs/.localization-semantic-review.md --json-report-file docs/.localization-semantic-review.json
+        run: |
+          node tools/validate-localized-articles.mjs \
+            --require-full-coverage \
+            --report-file docs/.localization-semantic-review.md \
+            --json-report-file docs/.localization-semantic-review.json
 
       - name: Docs link and article validation
         run: node tools/validate-blog.mjs

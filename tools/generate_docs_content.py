@@ -94,6 +94,21 @@ RELATED_HEADINGS = {
     "es": {"blog": "Artículos relacionados", "learning": "Material didáctico relacionado", "wiki": "Entradas wiki relacionadas"},
 }
 
+RELATED_CONTENT_HEADINGS = {
+    "en": "Related content",
+    "sl": "Sorodne vsebine",
+    "hr": "Povezani sadržaji",
+    "bs": "Povezani sadržaji",
+    "sr-Latn": "Povezani sadržaji",
+    "sr-Cyrl": "Повезани садржаји",
+    "mk": "Поврзани содржини",
+    "sq": "Përmbajtje të ngjashme",
+    "de": "Verwandte Inhalte",
+    "it": "Contenuti correlati",
+    "fr": "Contenus liés",
+    "es": "Contenido relacionado",
+}
+
 BROWSE_BY_TOPIC_HEADINGS = {
     "en": "Browse by topic",
     "sl": "Brskaj po temah",
@@ -1054,19 +1069,25 @@ def render_language_alternatives(entry: ContentEntry, current_locale: str) -> st
 
 
 def render_related_content(entries: dict[tuple[str, str], ContentEntry], entry: ContentEntry, locale: str) -> str:
-    sections: list[str] = []
     related = resolve_related(entries, entry, locale)
-    for target_type in CONTENT_TYPES:
-        groups = related.get(target_type, {})
-        if not groups:
-            continue
-        sections.append(render_related_section(locale, target_type, groups, open_first=False))
-    if not sections:
+    if not related:
         return ""
+
+    groups: dict[str, list[tuple[str, ContentVariant]]] = defaultdict(list)
+    seen: set[tuple[str, str]] = set()
+    for target_type in CONTENT_TYPES:
+        for topic, items in related.get(target_type, {}).items():
+            for item in items:
+                key = (item.content_type, item.slug)
+                if key in seen:
+                    continue
+                seen.add(key)
+                groups[topic].append((target_type, item))
+
     return (
         '          <section class="related-content">\n'
-        + "\n".join(sections)
-        + "\n"
+        f'            <h2 class="related-content__title">{html.escape(RELATED_CONTENT_HEADINGS[locale])}</h2>\n'
+        f'{render_related_topic_browser(dict(sorted(groups.items(), key=lambda item: humanize_topic(item[0], locale).lower())), locale)}\n'
         "          </section>"
     )
 
@@ -1148,15 +1169,6 @@ def topic_sort_key(entry: ContentEntry, topic: str, locale: str) -> tuple[int, s
     return (0 if topic in entry.topics else 1, humanize_topic(topic, locale).lower())
 
 
-def render_related_section(locale: str, target_type: str, groups: dict[str, list[ContentVariant]], open_first: bool = False) -> str:
-    return (
-        '              <section class="related-section">\n'
-        f'                <h2>{html.escape(RELATED_HEADINGS[locale][target_type])}</h2>\n'
-        f'{render_topic_browser(groups, prefix=f"related-{target_type}", locale=locale, open_first=open_first)}\n'
-        "              </section>"
-    )
-
-
 def render_topic_browser(groups: dict[str, list[ContentVariant]], prefix: str, locale: str, open_first: bool = False) -> str:
     parts = ['                <div class="related-topic-nav" data-topic-menu-group>']
     sorted_groups = sorted(groups.items(), key=lambda item: humanize_topic(item[0], locale).lower())
@@ -1184,6 +1196,34 @@ def render_topic_browser(groups: dict[str, list[ContentVariant]], prefix: str, l
     parts.extend(trigger_parts)
     parts.extend(panel_parts)
     parts.append("                </div>")
+    return "\n".join(parts)
+
+
+def render_related_topic_browser(groups: dict[str, list[tuple[str, ContentVariant]]], locale: str) -> str:
+    parts = ['            <div class="related-topic-nav" data-topic-menu-group>']
+    trigger_parts: list[str] = ['              <div class="topic-pill-row">']
+    panel_parts: list[str] = ['              <div class="topic-menu-layer">']
+
+    for topic, items in groups.items():
+        topic_key = f"related-{slugify(topic)}"
+        links = "\n".join(
+            f'                  <a href="{relative_cross_link(item)}"><span>{html.escape(item.title)}</span><span class="topic-menu__meta">{html.escape(CONTENT_LABELS[locale][target_type])}</span></a>'
+            for target_type, item in items
+        )
+        trigger_parts.append(
+            f'                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="{topic_key}" data-topic-slug="{html.escape(topic)}" aria-expanded="false" aria-controls="{topic_key}-menu">{html.escape(humanize_topic(topic, locale))}</button>'
+        )
+        panel_parts.append(
+            f'                <div class="topic-menu" id="{topic_key}-menu" data-topic-menu="{topic_key}" hidden>\n'
+            f'{links}\n'
+            '                </div>'
+        )
+
+    trigger_parts.append('              </div>')
+    panel_parts.append('              </div>')
+    parts.extend(trigger_parts)
+    parts.extend(panel_parts)
+    parts.append("            </div>")
     return "\n".join(parts)
 
 
@@ -1290,7 +1330,8 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
         <article class="section blog-article docs-article">
 {header_block}
 {html_body}
-        </article>{post_nav_block}
+{post_nav_block}
+        </article>
       </main>
 
       <footer class="site-footer">
