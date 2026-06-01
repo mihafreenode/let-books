@@ -91,6 +91,19 @@ Let Books tashmë dokumenton edhe një mënyrë të menduari për verifikimin. `
 
 Këto nuk janë vetëm hollësi mjetesh. Ato janë provë se projekti e trajton cilësinë si sistem të përsëritshëm.
 
+## Pse kjo ka rëndësi për dorëzimin e mbështetur nga AI
+
+Nëse një asistent AI kontribuon te Let Books, nuk ka nevojë ta shpikë produktin nga fillimi. Depoja tashmë përmban një zinxhir synimi:
+
+1. drejtimi i produktit në `AGENTS.md`
+2. rregullat taktike të dorëzimit në `AGENTS-Implementation.md`
+3. gjendja aktuale në `README.md`
+4. rregullat e dijes dhe publikimit në `docs/`
+5. statusi i prototipit të ekzekutueshëm në demon statik
+6. udhëzimet e validimit dhe publikimit në dokumentacionin e zhvillimit dhe vendosjes
+
+Ky zinxhir nuk i eliminon gabimet. Por i bën më të lehta për t'u zbuluar dhe shqyrtuar.
+
 ## Mësimi kryesor
 
 Zhvillimi i udhëhequr nga specifikimi nuk do të thotë vetëm të shkruash një dokument të gjatë përpara kodimit. Në praktikë do të thotë të ndërtosh një zinxhir të besueshëm midis qëllimit të produktit, rregullave taktike, dokumentimit publik, demove, verifikimit dhe publikimit.

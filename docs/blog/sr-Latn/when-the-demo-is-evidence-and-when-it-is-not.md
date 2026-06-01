@@ -95,6 +95,29 @@ Zato timovi trebaju vidljiv red autoriteta:
 4. demo ili prototip
 5. testovi i validacija
 
+Demo je i dalje važan. Samo je važan unutar dokumentovanog sistema, umesto da ga zameni.
+
+## Šta uraditi kada vas demo nauči nečemu novom
+
+Ponekad je prototip u pravu, a specifikacija je pogrešna, nepotpuna ili previše apstraktna.
+
+To nije neuspeh. Upravo je to jedan od razloga zašto se demo gradi.
+
+Pravi odgovor je:
+
+1. zabeležiti otkriće
+2. odlučiti da li novo ponašanje treba da postane namerno
+3. ažurirati specifikaciju i dokumentaciju
+4. zatim ubuduće očuvati usklađenost
+
+Pogrešan odgovor je ostaviti dokumentaciju nepromenjenom i nadati se da će svi zapamtiti da je demo sada stvarni izvor istine.
+
+## Zašto bi to trebalo da zanima institucije i studente
+
+Institucije moraju znati da li procenjuju koncept, prototip ili odobren model radnog toka.
+
+Studenti moraju naučiti da se prototipi ne opravdavaju sami od sebe. Dobra softverska praksa uključuje razumevanje kada implementaciju treba tretirati kao dokaz, a kada kao eksperiment koji još čeka odluku.
+
 ## Trajna lekcija
 
 Demo je vredan jer čini proizvodne ideje proverljivim. Opasan postaje kada tiho postane politika. Zdrav model je jednostavan: neka demo informiše proizvod, ali neka specifikacije i dokumentacija zabeleže konačnu odluku.

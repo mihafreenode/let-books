@@ -91,6 +91,19 @@ Let Books documente déjà aussi une manière de penser la vérification. `docs/
 
 Ce ne sont pas de simples détails d'outillage. C'est la preuve que le projet traite la qualité comme un système répétable.
 
+## Pourquoi cela compte pour la livraison assistée par l'IA
+
+Si un assistant IA contribue à Let Books, il n'a pas besoin d'inventer le produit à partir de zéro. Le dépôt contient déjà une chaîne d'intention :
+
+1. direction produit dans `AGENTS.md`
+2. règles tactiques de livraison dans `AGENTS-Implementation.md`
+3. état actuel dans `README.md`
+4. règles de connaissance et de publication dans `docs/`
+5. statut du prototype exécutable dans la démo statique
+6. directives de validation et de publication dans la documentation de développement et de déploiement
+
+Cette chaîne n'élimine pas les erreurs. Mais elle les rend plus faciles à détecter et à relire.
+
 ## La leçon principale
 
 Le développement guidé par les spécifications ne signifie pas seulement écrire un long document avant de coder. En pratique, cela signifie construire une chaîne fiable entre l'intention produit, les règles tactiques, la documentation publique, la démo, la vérification et la publication.

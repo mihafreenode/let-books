@@ -95,6 +95,29 @@ Per questo i team hanno bisogno di un ordine visibile di autorità:
 4. demo o prototipo
 5. test e validazione
 
+La demo resta importante. Semplicemente conta all'interno di un sistema documentato, invece di sostituirlo.
+
+## Cosa fare quando la demo ti insegna qualcosa di nuovo
+
+A volte il prototipo ha ragione e la specifica è sbagliata, incompleta o troppo astratta.
+
+Questo non è un fallimento. È proprio uno dei motivi per cui si costruiscono demo.
+
+La risposta giusta è:
+
+1. registrare la scoperta
+2. decidere se il nuovo comportamento debba diventare intenzionale
+3. aggiornare specifica e documentazione
+4. poi preservare l'allineamento anche in seguito
+
+La risposta sbagliata è lasciare la documentazione invariata e sperare che tutti ricordino che la demo è ormai la vera fonte della verità.
+
+## Perché questo dovrebbe interessare istituzioni e studenti
+
+Le istituzioni devono sapere se stanno valutando un concetto, un prototipo o un modello di flusso di lavoro approvato.
+
+Gli studenti devono imparare che i prototipi non si giustificano da soli. Una buona pratica del software include capire quando trattare l'implementazione come prova e quando come esperimento che attende ancora una decisione.
+
 ## La lezione durevole
 
 La demo è preziosa perché rende testabili le idee di prodotto. Diventa pericolosa quando diventa silenziosamente politica. Il modello sano è semplice: lasciamo che la demo informi il prodotto, ma facciamo sì che specifiche e documentazione registrino la decisione finale.

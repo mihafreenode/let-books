@@ -91,6 +91,19 @@ Let Books već dokumentira i način razmišljanja o provjeri. `docs/Development.
 
 To nisu samo detalji o alatima. To je dokaz da projekt kvalitet tretira kao ponovljiv sistem.
 
+## Zašto je to važno za AI-podržanu isporuku
+
+Ako AI pomoćnik doprinosi Let Booksu, ne mora izmišljati proizvod od početka. Repozitorij već sadrži lanac namjere:
+
+1. proizvodni smjer u `AGENTS.md`
+2. taktička pravila isporuke u `AGENTS-Implementation.md`
+3. trenutno stanje u `README.md`
+4. pravila znanja i objave u `docs/`
+5. status izvršivog prototipa u statičnom demou
+6. smjernice za validaciju i objavu u razvojnoj i implementacijskoj dokumentaciji
+
+Taj lanac ne uklanja greške. Ali ih čini lakšim za otkrivanje i pregled.
+
 ## Glavna lekcija
 
 Razvoj vođen specifikacijom ne znači samo napisati dugačak dokument prije kodiranja. U praksi znači izgraditi pouzdan lanac između proizvodne namjere, taktičkih pravila, javne dokumentacije, demoa, provjere i objave.

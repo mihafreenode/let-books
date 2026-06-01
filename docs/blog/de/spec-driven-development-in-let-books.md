@@ -91,6 +91,19 @@ Let Books dokumentiert bereits auch eine Prüfmentalität. `docs/Development.md`
 
 Das sind nicht nur Werkzeugdetails. Es ist ein Beleg dafür, dass das Projekt Qualität als wiederholbares System behandelt.
 
+## Warum das für KI-gestützte Lieferung wichtig ist
+
+Wenn ein KI-Assistent zu Let Books beiträgt, muss er das Produkt nicht von Grund auf erfinden. Das Repository enthält bereits eine Kette von Absicht:
+
+1. Produktrichtung in `AGENTS.md`
+2. taktische Lieferregeln in `AGENTS-Implementation.md`
+3. aktuellen Status in `README.md`
+4. Wissens- und Veröffentlichungsregeln in `docs/`
+5. ausführbaren Prototypstatus im statischen Demo
+6. Validierungs- und Veröffentlichungsleitlinien in der Entwicklungs- und Bereitstellungsdokumentation
+
+Diese Kette beseitigt Fehler nicht. Sie macht sie aber leichter erkennbar und leichter überprüfbar.
+
 ## Die wichtigste Lehre
 
 Spezifikationsgetriebene Entwicklung bedeutet nicht nur, vor dem Programmieren ein langes Dokument zu schreiben. In der Praxis bedeutet sie, eine verlässliche Kette zwischen Produktabsicht, taktischen Regeln, öffentlicher Dokumentation, Demo, Prüfung und Veröffentlichung aufzubauen.

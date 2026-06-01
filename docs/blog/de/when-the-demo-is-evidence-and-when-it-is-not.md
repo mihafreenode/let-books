@@ -95,6 +95,29 @@ Darum brauchen Teams eine sichtbare Autoritätsreihenfolge:
 4. Demo oder Prototyp
 5. Tests und Validierung
 
+Das Demo bleibt weiterhin wichtig. Es ist nur innerhalb eines dokumentierten Systems wichtig, statt eines zu ersetzen.
+
+## Was zu tun ist, wenn das Demo etwas Neues lehrt
+
+Manchmal hat der Prototyp recht und die Spezifikation ist falsch, unvollständig oder zu abstrakt.
+
+Das ist kein Scheitern. Genau deshalb baut man Demos.
+
+Die richtige Reaktion ist:
+
+1. die Erkenntnis festhalten
+2. entscheiden, ob das neue Verhalten absichtlich werden soll
+3. Spezifikation und Dokumentation aktualisieren
+4. danach die Ausrichtung auch künftig bewahren
+
+Die falsche Reaktion ist, die Dokumentation unverändert zu lassen und darauf zu hoffen, dass alle sich merken, dass das Demo jetzt die eigentliche Quelle der Wahrheit ist.
+
+## Warum Institutionen und Studierende das interessieren sollte
+
+Institutionen müssen wissen, ob sie ein Konzept, einen Prototyp oder ein freigegebenes Workflow-Modell bewerten.
+
+Studierende müssen lernen, dass Prototypen sich nicht selbst rechtfertigen. Gute Softwarepraxis bedeutet auch zu verstehen, wann Implementierung als Beleg und wann sie als Experiment behandelt werden sollte, das noch auf eine Entscheidung wartet.
+
 ## Die dauerhafte Lehre
 
 Ein Demo ist wertvoll, weil es Produktideen testbar macht. Gefährlich wird es, wenn es stillschweigend zur Politik wird. Das gesunde Modell ist einfach: Das Demo darf das Produkt informieren, aber Spezifikationen und Dokumentation sollten die endgültige Entscheidung festhalten.

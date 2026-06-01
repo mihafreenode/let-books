@@ -91,6 +91,19 @@ Let Books también documenta ya una forma de pensar la verificación. `docs/Deve
 
 No son solo detalles de herramientas. Son evidencia de que el proyecto trata la calidad como un sistema repetible.
 
+## Por qué esto importa para la entrega asistida por IA
+
+Si un asistente de IA contribuye a Let Books, no necesita inventar el producto desde cero. El repositorio ya contiene una cadena de intención:
+
+1. dirección del producto en `AGENTS.md`
+2. reglas tácticas de entrega en `AGENTS-Implementation.md`
+3. estado actual en `README.md`
+4. reglas de conocimiento y publicación en `docs/`
+5. estado del prototipo ejecutable en la demo estática
+6. directrices de validación y publicación en la documentación de desarrollo y despliegue
+
+Esa cadena no elimina los errores. Pero sí hace que sean más fáciles de detectar y revisar.
+
 ## La lección principal
 
 El desarrollo guiado por especificaciones no significa solo escribir un documento largo antes de programar. En la práctica significa construir una cadena fiable entre la intención del producto, las reglas tácticas, la documentación pública, la demo, la verificación y la publicación.

@@ -91,6 +91,19 @@ Let Books documenta gia anche una mentalita di verifica. `docs/Development.md` e
 
 Questi non sono solo dettagli di strumenti. Sono la prova che il progetto tratta la qualita come un sistema ripetibile.
 
+## Perché questo conta per la consegna assistita dall'IA
+
+Se un assistente IA contribuisce a Let Books, non deve inventare il prodotto da zero. Il repository contiene già una catena di intenzione:
+
+1. direzione del prodotto in `AGENTS.md`
+2. regole tattiche di consegna in `AGENTS-Implementation.md`
+3. stato attuale in `README.md`
+4. regole di conoscenza e pubblicazione in `docs/`
+5. stato del prototipo eseguibile nella demo statica
+6. linee guida di validazione e pubblicazione nella documentazione di sviluppo e distribuzione
+
+Questa catena non elimina gli errori. Ma li rende più facili da individuare e da rivedere.
+
 ## La lezione principale
 
 Lo sviluppo guidato dalle specifiche non significa solo scrivere un lungo documento prima di programmare. In pratica significa costruire una catena affidabile tra intenzione di prodotto, regole tattiche, documentazione pubblica, demo, verifica e pubblicazione.

@@ -95,6 +95,29 @@ Les équipes ont donc besoin d'un ordre visible d'autorité :
 4. démo ou prototype
 5. tests et validation
 
+La démo reste importante. Elle compte simplement à l'intérieur d'un système documenté, au lieu de le remplacer.
+
+## Que faire quand la démo vous apprend quelque chose de nouveau
+
+Parfois, le prototype a raison et la spécification est erronée, incomplète ou trop abstraite.
+
+Ce n'est pas un échec. C'est précisément l'une des raisons de construire des démos.
+
+La bonne réponse est :
+
+1. consigner la découverte
+2. décider si le nouveau comportement doit devenir intentionnel
+3. mettre à jour la spécification et la documentation
+4. puis préserver l'alignement pour la suite
+
+La mauvaise réponse consiste à laisser la documentation inchangée et à espérer que tout le monde se souvienne que la démo est maintenant la véritable source de vérité.
+
+## Pourquoi cela devrait intéresser les institutions et les étudiants
+
+Les institutions doivent savoir si elles évaluent un concept, un prototype ou un modèle de flux de travail approuvé.
+
+Les étudiants doivent apprendre que les prototypes ne se justifient pas eux-mêmes. Une bonne pratique logicielle consiste aussi à comprendre quand traiter l'implémentation comme une preuve et quand la traiter comme une expérience en attente de décision.
+
 ## La leçon durable
 
 La démo est précieuse parce qu'elle rend les idées produit testables. Elle devient dangereuse lorsqu'elle devient silencieusement politique. Le modèle sain est simple : que la démo informe le produit, mais que les spécifications et la documentation enregistrent la décision finale.

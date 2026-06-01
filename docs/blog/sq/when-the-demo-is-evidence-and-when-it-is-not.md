@@ -95,6 +95,29 @@ Prandaj ekipet kanë nevojë për rend të dukshëm autoriteti:
 4. demoja ose prototipi
 5. testet dhe validimi
 
+Demoja mbetet e rëndësishme. Thjesht është e rëndësishme brenda një sistemi të dokumentuar, në vend që ta zëvendësojë atë.
+
+## Çfarë të bëhet kur demoja ju mëson diçka të re
+
+Ndonjëherë prototipi ka të drejtë, ndërsa specifikimi është i gabuar, i paplotë ose tepër abstrakt.
+
+Ky nuk është dështim. Pikërisht kjo është një nga arsyet pse ndërtohen demot.
+
+Përgjigjja e duhur është:
+
+1. të regjistrohet zbulimi
+2. të vendoset nëse sjellja e re duhet të bëhet e qëllimshme
+3. të përditësohen specifikimi dhe dokumentimi
+4. pastaj të ruhet përputhshmëria edhe në vazhdim
+
+Përgjigjja e gabuar është të lihet dokumentimi i pandryshuar dhe të shpresohet që të gjithë do ta kujtojnë se demoja tani është burimi i vërtetë i së vërtetës.
+
+## Pse kjo duhet t'u interesojë institucioneve dhe studentëve
+
+Institucionet duhet të dinë nëse po vlerësojnë një koncept, një prototip apo një model pune të miratuar.
+
+Studentët duhet të mësojnë se prototipet nuk justifikohen vetvetiu. Një praktikë e fortë softuerike përfshin të kuptuarit se kur implementimi duhet trajtuar si provë dhe kur si eksperiment që ende pret një vendim.
+
 ## Mësimi i qëndrueshëm
 
 Demoja është e vlefshme sepse i bën idetë e produktit të testueshme. Ajo bëhet e rrezikshme kur në heshtje bëhet politikë. Modeli i shëndetshëm është i thjeshtë: le të informojë demoja produktin, por le të regjistrojnë specifikimet dhe dokumentimi vendimin përfundimtar.

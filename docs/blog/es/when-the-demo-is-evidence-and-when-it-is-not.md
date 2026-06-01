@@ -95,6 +95,29 @@ Por eso los equipos necesitan un orden visible de autoridad:
 4. demo o prototipo
 5. pruebas y validación
 
+La demo sigue siendo importante. Simplemente importa dentro de un sistema documentado, en lugar de sustituirlo.
+
+## Qué hacer cuando la demo te enseña algo nuevo
+
+A veces el prototipo tiene razón y la especificación está equivocada, incompleta o es demasiado abstracta.
+
+Eso no es un fracaso. Precisamente esa es una de las razones para construir demos.
+
+La respuesta correcta es:
+
+1. registrar el descubrimiento
+2. decidir si el nuevo comportamiento debe pasar a ser intencional
+3. actualizar la especificación y la documentación
+4. después preservar la alineación en adelante
+
+La respuesta incorrecta es dejar la documentación sin cambios y esperar que todo el mundo recuerde que la demo ahora es la verdadera fuente de verdad.
+
+## Por qué esto debería importarles a las instituciones y a los estudiantes
+
+Las instituciones necesitan saber si están evaluando un concepto, un prototipo o un modelo de flujo de trabajo aprobado.
+
+Los estudiantes deben aprender que los prototipos no se justifican solos. Una práctica sólida de software incluye entender cuándo tratar la implementación como evidencia y cuándo tratarla como un experimento que aún espera una decisión.
+
 ## La lección duradera
 
 La demo es valiosa porque hace que las ideas de producto se puedan poner a prueba. Se vuelve peligrosa cuando se convierte silenciosamente en política. El modelo sano es simple: que la demo informe al producto, pero que las especificaciones y la documentación registren la decisión final.
