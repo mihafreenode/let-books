@@ -37,7 +37,7 @@ La revue humaine vérifie l'intention, les cas limites et le sens produit qui ne
 
 Des scripts et contrôles structurés capturent les problèmes rapides et répétables avant que les changements n'arrivent dans la CI.
 
-### 4. Tests
+### 4. Tests automatisés
 
 Les tests exécutables vérifient le comportement attendu, mais seulement lorsqu'ils sont alignés sur la spécification.
 

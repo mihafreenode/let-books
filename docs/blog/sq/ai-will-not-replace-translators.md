@@ -65,11 +65,7 @@ Rreziku më i madh i përkthimit me AI nuk është vetëm gabimi. Është vetëb
 
 Një model i dobishëm është përkthimi që ruan kuptimin e përgjithshëm, por prapë dështon në rishikimin e një folësi amtar.
 
-AI-generated Slovenian draft:
-
 `Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
-
-Corrected Slovenian:
 
 `Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
 

@@ -65,11 +65,7 @@ El mayor riesgo de la traducción con IA no es solo el error. Es la confianza si
 
 Un patrón útil es la traducción que conserva el significado general pero aun así no supera la revisión de un hablante nativo.
 
-AI-generated Slovenian draft:
-
 `Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
-
-Corrected Slovenian:
 
 `Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
 

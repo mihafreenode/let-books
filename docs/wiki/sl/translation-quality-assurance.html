@@ -58,7 +58,7 @@
           <div class="header-nav">
             <a class="nav-link" href="../../sl/index.html">Dokumentacija</a>
             <a class="nav-link" href="../../blog/sl/index.html">Blog</a>
-            <a class="nav-link" href="../../learning/sl/index.html">Learning</a>
+            <a class="nav-link" href="../../learning/sl/index.html">Učni vodniki</a>
             <a class="nav-link" href="../../wiki/sl/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
@@ -94,8 +94,6 @@
           <p class="content-page-summary">Prevod QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, terminološki pregled, preverjanje dostopnosti in človeško presojo.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
-              <span class="content-tag">Localization</span>
-              <span class="content-tag">QA</span>
               <span class="content-tag">Kakovost prevajanja</span>
           </div>
             <hr class="content-header-divider">
@@ -137,32 +135,6 @@
 <li>ubeseditev pravilnika domene</li>
 <li>besedilo dostopnosti</li>
 </ul>
-<h2 id="lightweight-benchmark-scoring">Lightweight benchmark scoring</h2>
-<p>For repeatable AI-translation evaluation, use a lightweight 0-3 rubric instead of relying only on pass/fail judgment.</p>
-<p>Recommended dimensions:</p>
-<ul>
-<li>meaning accuracy</li>
-<li>grammar and fluency</li>
-<li>terminology and domain fit</li>
-<li>register and style</li>
-<li>review effort</li>
-</ul>
-<p>Recommended release labels:</p>
-<ul>
-<li>blocker</li>
-<li>major revision</li>
-<li>minor revision</li>
-<li>ready with review signoff</li>
-</ul>
-<p>This creates scorecard-friendly data without requiring a heavyweight localization-measurement framework.</p>
-<h2 id="sorodne-strani">Sorodne strani</h2>
-<ul>
-<li><code>localization-ci-cd.md</code></li>
-<li><code>translation-memory-and-glossaries.md</code></li>
-<li><code>../style-guide/localization/ai-translation-review-records.md</code></li>
-<li><code>../style-guide/localization/llm-translation-benchmark-fixtures.md</code></li>
-<li><code>../learning/how-to-run-localization-qa-in-ci.md</code></li>
-</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -185,28 +157,25 @@
             <h2 class="related-content__title">Sorodne vsebine</h2>
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI podprta dostava</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-translation-quality-menu">Kakovost prevajanja</button>
-                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="related-localization-menu">Localization</button>
-                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="related-qa-menu">QA</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Usklajenost demota</button>
               </div>
               <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
+                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati AI-podprto delo glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                </div>
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postopno dodajati validacijska pravila in CI vrata</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                </div>
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/sl/ai-will-not-replace-translators.html"><span>AI ne bo nadomestila prevajalcev</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/sl/how-to-review-ai-assisted-translations.html"><span>Kako pregledovati AI-podprte prevode</span><span class="topic-menu__meta">Učni vodniki</span></a>
                   <a href="../../wiki/sl/ai-assisted-translation-policy.html"><span>AI Politika podprtega prevajanja</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
-                <div class="topic-menu" id="related-localization-menu" data-topic-menu="related-localization" hidden>
-                  <a href="../../blog/sl/localization-at-scale.html"><span>Lokalizacija v velikem obsegu</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/sl/why-every-language-matters.html"><span>Zakaj je vsak jezik pomemben</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/en/how-to-measure-translation-maturity.html"><span>How to Measure Translation Maturity</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../learning/en/how-to-build-a-localization-pipeline.html"><span>How to Build a Localization Pipeline</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../wiki/sl/translation-memory-and-glossaries.html"><span>Pomnilnik prevodov in glosarji</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sl/localization-maturity-model.html"><span>Model zrelosti lokalizacije</span><span class="topic-menu__meta">Wiki</span></a>
-                </div>
-                <div class="topic-menu" id="related-qa-menu" data-topic-menu="related-qa" hidden>
-                  <a href="../../blog/sl/future-of-continuous-localization.html"><span>Prihodnost neprekinjene lokalizacije</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/en/how-to-run-localization-qa-in-ci.html"><span>How to Run Localization QA in CI</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../wiki/sl/localization-ci-cd.html"><span>Lokalizacija CI in CD</span><span class="topic-menu__meta">Wiki</span></a>
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohraniti usklajenost med specifikacijo, dokumentacijo, demom in kodo</span><span class="topic-menu__meta">Učni vodniki</span></a>
                 </div>
               </div>
             </div>

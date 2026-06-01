@@ -22,19 +22,6 @@ Prikazuje, kako lahko projekt:
 - uporabite prvotno avtorstvo v angleščini, ne da bi padli v objavljanje samo v angleščini
 - dokumentirajte vodenje pred prihodom tehtnice
 
-## Slovenian AI-review example
-
-The repository now includes a concrete Slovenian review example where the AI draft preserved the broad meaning but still required native-speaker correction.
-
-Key lessons:
-
-- grammar errors can survive even when the sentence seems understandable
-- modality is especially vulnerable to literal translation
-- policy and product-spec language often needs domain-specific register rather than dictionary-level equivalence
-- automated checks rarely catch subtle fluency and modality issues on their own
-
-This kind of example is valuable because it is small enough for reviewer training, but realistic enough for governance and benchmark use.
-
 ## Primerjalna smer napeljave
 
 Strukturirane primere pregledov je treba shraniti tudi kot primerjalne napeljave za večkratno uporabo, tako da lahko prihodnje vrednotenje LLM meri:

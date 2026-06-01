@@ -22,19 +22,6 @@ Il montre comment un projet peut :
 - utiliser la rédaction en anglais d'abord sans se replier sur la publication en anglais uniquement
 - documenter la gouvernance avant l'arrivée de l'échelle
 
-## Slovenian AI-review example
-
-The repository now includes a concrete Slovenian review example where the AI draft preserved the broad meaning but still required native-speaker correction.
-
-Key lessons:
-
-- grammar errors can survive even when the sentence seems understandable
-- modality is especially vulnerable to literal translation
-- policy and product-spec language often needs domain-specific register rather than dictionary-level equivalence
-- automated checks rarely catch subtle fluency and modality issues on their own
-
-This kind of example is valuable because it is small enough for reviewer training, but realistic enough for governance and benchmark use.
-
 ## Direction du luminaire de référence
 
 Les exemples d'examens structurés doivent également être stockés en tant qu'éléments de référence réutilisables afin que les futures évaluations LLM puissent mesurer :

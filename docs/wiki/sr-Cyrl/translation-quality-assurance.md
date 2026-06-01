@@ -53,27 +53,6 @@ topics:
 - фразирање политике домена
 - формулације приступачности
 
-## Lightweight benchmark scoring
-
-For repeatable AI-translation evaluation, use a lightweight 0-3 rubric instead of relying only on pass/fail judgment.
-
-Recommended dimensions:
-
-- meaning accuracy
-- grammar and fluency
-- terminology and domain fit
-- register and style
-- review effort
-
-Recommended release labels:
-
-- blocker
-- major revision
-- minor revision
-- ready with review signoff
-
-This creates scorecard-friendly data without requiring a heavyweight localization-measurement framework.
-
 ## Повезане странице
 
 - `localization-ci-cd.md`

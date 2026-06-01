@@ -58,7 +58,7 @@
           <div class="header-nav">
             <a class="nav-link" href="../../fr/index.html">Documentation</a>
             <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
-            <a class="nav-link" href="../../learning/fr/index.html">Learning</a>
+            <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
             <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
@@ -94,8 +94,6 @@
           <p class="content-page-summary">La traduction QA combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Sujets :</span>
-              <span class="content-tag">Localization</span>
-              <span class="content-tag">QA</span>
               <span class="content-tag">Qualité de la traduction</span>
           </div>
             <hr class="content-header-divider">
@@ -137,24 +135,6 @@
 <li>formulation de la politique de domaine</li>
 <li>formulation d’accessibilité</li>
 </ul>
-<h2 id="lightweight-benchmark-scoring">Lightweight benchmark scoring</h2>
-<p>For repeatable AI-translation evaluation, use a lightweight 0-3 rubric instead of relying only on pass/fail judgment.</p>
-<p>Recommended dimensions:</p>
-<ul>
-<li>meaning accuracy</li>
-<li>grammar and fluency</li>
-<li>terminology and domain fit</li>
-<li>register and style</li>
-<li>review effort</li>
-</ul>
-<p>Recommended release labels:</p>
-<ul>
-<li>blocker</li>
-<li>major revision</li>
-<li>minor revision</li>
-<li>ready with review signoff</li>
-</ul>
-<p>This creates scorecard-friendly data without requiring a heavyweight localization-measurement framework.</p>
 <h2 id="pages-connexes">Pages connexes</h2>
 <ul>
 <li><code>localization-ci-cd.md</code></li>
@@ -185,23 +165,20 @@
             <h2 class="related-content__title">Contenus liés</h2>
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
-                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="related-localization-menu">Localization</button>
-                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="related-qa-menu">QA</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Alignement de la démo</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Livraison assistée par IA</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-translation-quality-menu">Qualité de la traduction</button>
               </div>
               <div class="topic-menu-layer">
-                <div class="topic-menu" id="related-localization-menu" data-topic-menu="related-localization" hidden>
-                  <a href="../../blog/fr/localization-at-scale.html"><span>La localisation à grande échelle</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/fr/why-every-language-matters.html"><span>Pourquoi chaque langue compte</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/en/how-to-measure-translation-maturity.html"><span>How to Measure Translation Maturity</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../learning/en/how-to-build-a-localization-pipeline.html"><span>How to Build a Localization Pipeline</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../wiki/fr/translation-memory-and-glossaries.html"><span>Mémoire de traduction et glossaires</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/fr/localization-maturity-model.html"><span>Modèle de maturité de localisation</span><span class="topic-menu__meta">Wiki</span></a>
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Comment garder alignés spécification, documentation, démo et code</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
                 </div>
-                <div class="topic-menu" id="related-qa-menu" data-topic-menu="related-qa" hidden>
-                  <a href="../../blog/fr/future-of-continuous-localization.html"><span>L’avenir de la localisation continue</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/en/how-to-run-localization-qa-in-ci.html"><span>How to Run Localization QA in CI</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../wiki/fr/localization-ci-cd.html"><span>Localisation CI et CD</span><span class="topic-menu__meta">Wiki</span></a>
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Comment ajouter progressivement des règles de validation et des garde-fous CI</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                </div>
+                <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
+                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment revoir un travail assisté par l&#x27;IA par rapport à la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
                 </div>
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/fr/ai-will-not-replace-translators.html"><span>L&#x27;IA ne remplacera pas les traducteurs</span><span class="topic-menu__meta">Blog</span></a>

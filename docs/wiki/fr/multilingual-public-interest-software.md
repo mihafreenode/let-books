@@ -17,7 +17,7 @@ Les logiciels d’intérêt public nécessitent souvent une participation multil
 
 - bibliothèques
 - les écoles
-- archives
+- les archives
 - organisations à but non lucratif
 - les institutions régionales
 - services civiques multilingues

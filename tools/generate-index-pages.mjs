@@ -257,7 +257,7 @@ function collectContentTitles(baseDir) {
   for (const locale of LOCALES) {
     titles[locale] = [];
     const localeDir = path.join(baseDir, locale);
-    const dir = locale === 'en' ? baseDir : (isDirectory(localeDir) ? localeDir : baseDir);
+    const dir = locale === 'en' ? baseDir : localeDir;
     if (!isDirectory(dir)) continue;
     const files = fs.readdirSync(dir).sort();
     for (const file of files) {
@@ -419,7 +419,7 @@ function generateLearningIndexes(learningTitles) {
       pageType: 'learning-index',
       info,
       items,
-      itemExt: 'md',
+      itemExt: 'html',
       head,
       linkPrefix,
       section,
@@ -451,7 +451,7 @@ function generateWikiIndexes(wikiTitles) {
       pageType: 'wiki-index',
       info,
       items,
-      itemExt: 'md',
+      itemExt: 'html',
       head,
       linkPrefix,
       section,

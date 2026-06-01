@@ -202,6 +202,9 @@ function buildTopicIndex(articleData) {
 // ─── Insert topic nav into article HTML ────────────────────
 
 function addTopicNavToArticle(filePath, articleId, locale, articleData, topicIndex) {
+  console.log(`  SKIP ${path.relative(ROOT, filePath)} (legacy topic nav disabled; generated docs own related navigation)`);
+  return false;
+
   const info = articleData[locale]?.[articleId];
   if (!info || !info.topics || info.topics.length === 0) return false;
 
@@ -271,6 +274,9 @@ ${navSections.join('\n')}
 // ─── Update blog index pages with topic grouping ───────────
 
 function updateBlogIndexWithTopics(locale, articleData, topicIndex) {
+  console.log(`  SKIP blog/${locale}/index.html (legacy topic grouping disabled; generated docs own topic browser)`);
+  return false;
+
   const indexPath = path.join(BLOG_DIR, locale, 'index.html');
   if (!isFile(indexPath)) {
     console.warn(`  WARN: blog index not found: ${indexPath}`);

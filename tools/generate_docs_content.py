@@ -600,9 +600,22 @@ FOOTER_LINK_LABELS = {
 }
 
 SECTION_STOP_HEADINGS = {
-    "blog": {value.lower() for value in OTHER_LANGUAGE_HEADINGS.values()} | {"other languages"},
+    "blog": {value.lower() for value in OTHER_LANGUAGE_HEADINGS.values()} | {"other languages", "related pages"},
     "learning": set(),
-    "wiki": {"related pages"},
+    "wiki": {
+        "related pages",
+        "povezane stranice",
+        "povezane strane",
+        "verwandte seiten",
+        "pages associées",
+        "pagine correlate",
+        "povezane stranice",
+        "повезане странице",
+        "поврзани страници",
+        "faqe të lidhura",
+        "páginas relacionadas",
+        "sorodne strani",
+    },
 }
 
 TOPIC_FIELDS = ["topics", "tags", "categories", "keywords"]
@@ -778,6 +791,7 @@ def add_variant(entries: dict[tuple[str, str], ContentEntry], content_type: str,
     summary = normalize_whitespace(str(frontmatter.get("summary") or derive_summary(body)))
     body_for_render = strip_generated_sections(body, content_type)
     body_for_render = strip_leading_summary_section(body_for_render, summary, content_type)
+    body_for_render = strip_placeholder_translation_tail(body_for_render, locale)
     topics = collect_topics(frontmatter)
     explicit_related = collect_explicit_related(frontmatter, body, content_type)
     output_path = DOCS / content_type / locale / f"{slug}.html"
@@ -955,6 +969,25 @@ def normalize_whitespace(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
+def strip_placeholder_translation_tail(body: str, locale: str) -> str:
+    if locale == "en":
+        return body
+    markers = [
+        "kanonična angleška vsebina",
+        "canonical english content",
+    ]
+    lowered = body.lower()
+    for marker in markers:
+        index = lowered.find(marker)
+        if index == -1:
+            continue
+        paragraph_end = body.find("\n\n", index)
+        if paragraph_end == -1:
+            return body.strip()
+        return body[:paragraph_end].strip()
+    return body
+
+
 def render_all(entries: dict[tuple[str, str], ContentEntry], args: argparse.Namespace) -> None:
     for entry in entries.values():
         for locale, variant in sorted(entry.variants.items()):
@@ -1016,7 +1049,8 @@ def render_content_page_header(entry: ContentEntry, variant: ContentVariant) -> 
     locale = variant.locale
     content_label = CONTENT_LABELS[locale][entry.content_type]
     docs_label = CONTENT_LABELS[locale]["docs"]
-    summary_html = f'          <p class="content-page-summary">{html.escape(variant.summary)}</p>\n' if variant.summary else ""
+    summary = display_summary(entry, variant)
+    summary_html = f'          <p class="content-page-summary">{html.escape(summary)}</p>\n' if summary else ""
     topics_html = render_content_tags(variant.topics, locale)
     return (
         '          <header class="content-page-header">\n'
@@ -1036,11 +1070,12 @@ def render_content_page_header(entry: ContentEntry, variant: ContentVariant) -> 
 
 
 def render_content_tags(topics: list[str], locale: str) -> str:
-    if not topics:
+    localized_topics = [topic for topic in topics if has_localized_topic_label(topic, locale)]
+    if not localized_topics:
         return ""
     items = "\n".join(
         f'              <span class="content-tag">{html.escape(humanize_topic(topic, locale))}</span>'
-        for topic in topics
+        for topic in localized_topics
     )
     return (
         '          <div class="content-tags" aria-label="Topics">\n'
@@ -1083,6 +1118,14 @@ def render_related_content(entries: dict[tuple[str, str], ContentEntry], entry: 
                     continue
                 seen.add(key)
                 groups[topic].append((target_type, item))
+
+    groups = {
+        topic: items
+        for topic, items in groups.items()
+        if has_localized_topic_label(topic, locale)
+    }
+    if not groups:
+        return ""
 
     return (
         '          <section class="related-content">\n'
@@ -1147,7 +1190,11 @@ def add_related_candidate(results: dict[str, list[ContentVariant]], seen: dict[s
 
 
 def preferred_variant(entry: ContentEntry, locale: str) -> ContentVariant | None:
-    return entry.variants.get(locale) or entry.variants.get("en") or next(iter(entry.variants.values()), None)
+    if locale in entry.variants:
+        return entry.variants[locale]
+    if locale == "en":
+        return entry.variants.get("en") or next(iter(entry.variants.values()), None)
+    return None
 
 
 def similarity_score(entry: ContentEntry, candidate_entry: ContentEntry) -> int:
@@ -1232,6 +1279,21 @@ def humanize_topic(topic: str, locale: str = "en") -> str:
     return labels.get(topic, TOPIC_LABELS["en"].get(topic, topic.replace("-", " ")))
 
 
+def has_localized_topic_label(topic: str, locale: str) -> bool:
+    if locale == "en":
+        return True
+    return topic in TOPIC_LABELS.get(locale, {})
+
+
+def display_summary(entry: ContentEntry, variant: ContentVariant) -> str:
+    if variant.locale == "en":
+        return variant.summary
+    english = entry.variants.get("en")
+    if english and normalize_whitespace(english.summary) == normalize_whitespace(variant.summary):
+        return ""
+    return variant.summary
+
+
 def slugify(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
@@ -1259,7 +1321,7 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
     type_label = CONTENT_LABELS[variant.locale][entry.content_type]
     docs_label = CONTENT_LABELS[variant.locale]["docs"]
     post_nav_block = f"\n{post_nav}" if post_nav else ""
-    summary = html.escape(variant.summary)
+    summary = html.escape(display_summary(entry, variant))
     title = html.escape(variant.title)
     locale = variant.locale
     footer_desc = FOOTER_DESC.get(locale, FOOTER_DESC["en"])
@@ -1314,9 +1376,9 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
           </a>
           <div class="header-nav">
             <a class="nav-link" href="../../{variant.locale}/index.html">{html.escape(docs_label)}</a>
-            <a class="nav-link" href="../../blog/{variant.locale}/index.html">Blog</a>
-            <a class="nav-link" href="../../learning/{variant.locale}/index.html">Learning</a>
-            <a class="nav-link" href="../../wiki/{variant.locale}/index.html">Wiki</a>
+            <a class="nav-link" href="../../blog/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["blog"])}</a>
+            <a class="nav-link" href="../../learning/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["learning"])}</a>
+            <a class="nav-link" href="../../wiki/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["wiki"])}</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
 {lang_switch}
@@ -1383,6 +1445,7 @@ def update_overview_pages(entries: dict[tuple[str, str], ContentEntry]) -> None:
             continue
         text = read_text(path)
         section = render_recent_cards_section(
+            entries,
             locale,
             RECENT_HEADINGS[locale]["overview"],
             [recent_variants(entries, locale, content_type=content_type, limit=1)[0] for content_type in CONTENT_TYPES if recent_variants(entries, locale, content_type=content_type, limit=1)],
@@ -1450,7 +1513,11 @@ def render_index_browser_section(entries: dict[tuple[str, str], ContentEntry], c
         if not variant:
             continue
         for topic in sorted(entry.topics):
+            if not has_localized_topic_label(topic, locale):
+                continue
             topic_groups[topic].append(variant)
+    if not topic_groups:
+        return ""
     browser = render_topic_browser(dict(sorted(topic_groups.items(), key=lambda item: humanize_topic(item[0], locale).lower())), prefix=f"index-{content_type}-{locale}", locale=locale, open_first=False)
     return (
         '          <section class="related-content related-content--index">\n'
@@ -1488,11 +1555,11 @@ def recent_variants(entries: dict[tuple[str, str], ContentEntry], locale: str, c
     return sorted(variants, key=lambda item: (-item.modified_at, item.title.lower(), item.slug))[:limit]
 
 
-def render_recent_cards_section(locale: str, heading: str, cards: list[ContentVariant], description: str = "", path_prefix: str = "../../", wrapper_class: str = "recent-content-section") -> str:
+def render_recent_cards_section(entries: dict[tuple[str, str], ContentEntry], locale: str, heading: str, cards: list[ContentVariant], description: str = "", path_prefix: str = "../../", wrapper_class: str = "recent-content-section") -> str:
     if not cards:
         return ""
     description_html = f'            <p>{html.escape(description)}</p>\n' if description else ""
-    card_html = "\n".join(render_recent_card(locale, card, path_prefix) for card in cards)
+    card_html = "\n".join(render_recent_card(entries, locale, card, path_prefix) for card in cards)
     return (
         f'          <section class="{wrapper_class}">\n'
         '            <div class="section-header">\n'
@@ -1506,9 +1573,11 @@ def render_recent_cards_section(locale: str, heading: str, cards: list[ContentVa
     )
 
 
-def render_recent_card(locale: str, card: ContentVariant, path_prefix: str) -> str:
+def render_recent_card(entries: dict[tuple[str, str], ContentEntry], locale: str, card: ContentVariant, path_prefix: str) -> str:
     type_label = CONTENT_LABELS[locale][card.content_type]
-    summary_html = f'              <p>{html.escape(card.summary)}</p>\n' if card.summary else ""
+    entry = entries[(card.content_type, card.slug)]
+    summary = display_summary(entry, card)
+    summary_html = f'              <p>{html.escape(summary)}</p>\n' if summary else ""
     return (
         f'              <a class="recent-content-card" href="{path_prefix}{card.content_type}/{card.locale}/{card.slug}.html">\n'
         f'                <span class="recent-content-card__type">{html.escape(type_label)}</span>\n'
@@ -1526,6 +1595,7 @@ def rewrite_index_main(text: str, entries: dict[tuple[str, str], ContentEntry], 
     summary = header_match.group(2).strip()
     switcher = render_content_type_switcher(locale, content_type)
     recent = render_recent_cards_section(
+        entries,
         locale,
         RECENT_HEADINGS[locale][content_type],
         recent_variants(entries, locale, content_type=content_type, limit=4),

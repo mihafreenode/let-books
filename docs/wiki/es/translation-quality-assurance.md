@@ -53,27 +53,6 @@ Esto es importante porque incluso cuando se preserva el significado general, las
 - redacción de la política de dominio
 - redacción de accesibilidad
 
-## Lightweight benchmark scoring
-
-For repeatable AI-translation evaluation, use a lightweight 0-3 rubric instead of relying only on pass/fail judgment.
-
-Recommended dimensions:
-
-- meaning accuracy
-- grammar and fluency
-- terminology and domain fit
-- register and style
-- review effort
-
-Recommended release labels:
-
-- blocker
-- major revision
-- minor revision
-- ready with review signoff
-
-This creates scorecard-friendly data without requiring a heavyweight localization-measurement framework.
-
 ## Páginas Relacionadas
 
 - `localization-ci-cd.md`

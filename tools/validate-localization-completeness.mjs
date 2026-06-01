@@ -28,6 +28,11 @@ const EXACT_ALLOWLIST = new Set([
   'isbn',
   'ocr',
   'qr',
+  'documentation',
+  'validation',
+  'institutions',
+  'collocation',
+  'register',
 ]);
 
 const CATEGORY_LABELS = {
@@ -54,6 +59,9 @@ const CATEGORY_LABELS = {
   altText: 'alt text',
   diagramLabel: 'diagram label',
 };
+
+const MARKDOWN_FIRST_RULE =
+  'Treat localized markdown as the source of truth. Fix untranslated reader-facing markdown first, then inspect generated HTML for additional wrapper or navigation leaks.';
 
 main();
 
@@ -87,6 +95,7 @@ function main() {
   }
 
   console.log('Localization completeness validation\n');
+  console.log(`${MARKDOWN_FIRST_RULE}\n`);
   console.log(`Checked localized generated pages: ${checkedPages}`);
   console.log(`Errors: ${errors.length}`);
   console.log('');
@@ -329,6 +338,9 @@ function collectComparableEntries(filePath, content, root) {
         return;
       }
       if (hasAncestor(node, (item) => ['code', 'pre', 'script', 'style'].includes(item.tag))) {
+        return;
+      }
+      if (findFirst(node, (child) => child.tag === 'code')) {
         return;
       }
       if (['p', 'li', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote'].includes(node.tag)) {

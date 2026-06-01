@@ -65,11 +65,7 @@ The biggest AI translation risk is not only error. It is confidence without revi
 
 One useful pattern is the translation that preserves broad meaning but still fails native-speaker quality review.
 
-AI-generated Slovenian draft:
-
 `Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
-
-Corrected Slovenian:
 
 `Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
 

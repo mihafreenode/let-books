@@ -37,7 +37,7 @@ Menschliches Review prüft Absicht, Randfälle und Produktbedeutung, die noch ni
 
 Skripte und strukturierte Prüfungen erkennen schnelle, wiederholbare Probleme, bevor Änderungen CI erreichen.
 
-### 4. Tests
+### 4. Ausfuehrbare Tests
 
 Ausführbare Tests verifizieren erwartetes Verhalten, aber nur dann, wenn sie mit der Spezifikation ausgerichtet sind.
 

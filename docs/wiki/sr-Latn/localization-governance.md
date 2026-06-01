@@ -1,5 +1,5 @@
 ---
-title: "Localization Governance"
+title: "Upravljanje lokalizacijom"
 summary: >-
   Upravljanje lokalizacijom definiše ko može da predloži, pregleda, odobri i ospori promene višejezičnog sadržaja.
 topics:
@@ -7,7 +7,7 @@ topics:
   - localization
   - terminology
 ---
-# Localization Governance
+# Upravljanje lokalizacijom
 
 ## Rezime
 

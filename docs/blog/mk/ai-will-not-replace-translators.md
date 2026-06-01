@@ -65,11 +65,7 @@ AI е најсилна кога се користи за:
 
 Корисен образец е превод што го зачувува општото значење, но сепак не поминува квалитетен преглед од изворен говорител.
 
-AI-generated Slovenian draft:
-
 `Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
-
-Corrected Slovenian:
 
 `Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
 
