@@ -1,6 +1,6 @@
 ---
 article_id: when-the-demo-is-evidence-and-when-it-is-not
-canonical_language: de
+canonical_language: en
 language_variants:
   - ../en/when-the-demo-is-evidence-and-when-it-is-not.md
   - ../sl/when-the-demo-is-evidence-and-when-it-is-not.md

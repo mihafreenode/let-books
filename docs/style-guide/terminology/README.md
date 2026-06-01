@@ -15,6 +15,8 @@ Keep core LetBooks terminology consistent across UI, docs, articles, learning gu
 - forbidden terms
 - language-specific notes
 - domain grouping
+- glossary governance
+- termbase structure
 
 ## Related Topics
 
@@ -37,4 +39,6 @@ Keep core LetBooks terminology consistent across UI, docs, articles, learning gu
 ## Further Reading
 
 - `../localization/README.md`
+- `glossary-governance.md`
+- `termbase-structure.md`
 - `../../knowledge-platform-bootstrap.md`

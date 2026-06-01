@@ -1,6 +1,6 @@
 ---
 article_id: isbn-not-a-database
-canonical_language: de
+canonical_language: en
 title: ISBN ist keine Datenbank
 summary: Warum ISBN bei der Identifizierung von Büchern hilft, aber keine Metadatensysteme ersetzt, und wie die Metadaten-Suchkette in Let Books funktioniert.
 topics:

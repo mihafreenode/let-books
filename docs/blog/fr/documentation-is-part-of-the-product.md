@@ -1,6 +1,6 @@
 ---
 article_id: documentation-is-part-of-the-product
-canonical_language: fr
+canonical_language: en
 language_variants:
   - ../en/documentation-is-part-of-the-product.md
   - ../sl/documentation-is-part-of-the-product.md

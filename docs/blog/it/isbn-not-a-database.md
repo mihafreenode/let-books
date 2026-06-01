@@ -1,6 +1,6 @@
 ---
 article_id: isbn-not-a-database
-canonical_language: it
+canonical_language: en
 title: L'ISBN non è un database
 summary: Perché l'ISBN aiuta a identificare i libri ma non sostituisce i sistemi di metadati, e come funziona la catena di ricerca dei metadati nel progetto Let Books.
 topics:

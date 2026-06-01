@@ -42,6 +42,14 @@ Frontmatter is added by `tools/add-md-frontmatter.mjs`.
 
 ## Related Learning Guides
 
+- `how-to-build-a-localization-pipeline.md`
+- `how-to-review-ai-assisted-translations.md`
+- `how-to-run-localization-qa-in-ci.md`
+- `how-to-localize-accessibility-content.md`
+- `how-to-localize-diagrams-and-screenshots.md`
+- `how-to-manage-terminology-across-languages.md`
+- `how-to-measure-translation-maturity.md`
+- `how-to-design-english-source-content-for-translation.md`
 - `how-to-write-a-spec-that-ai-can-follow.md`
 - `how-to-turn-a-product-spec-into-an-implementation-plan.md`
 - `how-to-keep-spec-docs-demo-and-code-aligned.md`

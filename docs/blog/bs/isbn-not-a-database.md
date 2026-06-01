@@ -1,6 +1,6 @@
 ---
 article_id: isbn-not-a-database
-canonical_language: bs
+canonical_language: en
 title: ISBN nije baza podataka
 summary: Zašto ISBN pomaže u prepoznavanju knjiga, ali ne zamjenjuje metapodatkovne sisteme, i kako funkcionira lanac pretraživanja metapodataka u projektu Let Books.
 topics:

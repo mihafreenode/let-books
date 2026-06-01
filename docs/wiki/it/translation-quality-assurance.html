@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Garanzia di qualità della traduzione | LetBooks</title>
+    <meta name="description" content="La traduzione QA combina convalida automatizzata, controllo ortografico, revisione terminologica, controlli di accessibilità e giudizio umano.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/it/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/translation-quality-assurance.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/translation-quality-assurance.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Garanzia di qualità della traduzione | LetBooks">
+    <meta property="og:description" content="La traduzione QA combina convalida automatizzata, controllo ortografico, revisione terminologica, controlli di accessibilità e giudizio umano.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/it/translation-quality-assurance.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Garanzia di qualità della traduzione | LetBooks">
+    <meta name="twitter:description" content="La traduzione QA combina convalida automatizzata, controllo ortografico, revisione terminologica, controlli di accessibilità e giudizio umano.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="it">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/it/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Wiki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../it/index.html">Documentazione</a>
+            <a class="nav-link" href="../../blog/it/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/it/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/translation-quality-assurance.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/translation-quality-assurance.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/translation-quality-assurance.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/translation-quality-assurance.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/translation-quality-assurance.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/translation-quality-assurance.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/translation-quality-assurance.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/translation-quality-assurance.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/translation-quality-assurance.html" lang="de">DE</a>
+              <a class="lang-link is-current" href="../../wiki/it/translation-quality-assurance.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/translation-quality-assurance.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../wiki/es/translation-quality-assurance.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Tutte le lingue</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../it/index.html">Documentazione</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/it/index.html">Wiki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Garanzia di qualità della traduzione</span>
+            </nav>
+            <h1>Garanzia di qualità della traduzione</h1>
+          <p class="content-page-summary">La traduzione QA combina convalida automatizzata, controllo ortografico, revisione terminologica, controlli di accessibilità e giudizio umano.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temi:</span>
+              <span class="content-tag">Localization</span>
+              <span class="content-tag">QA</span>
+              <span class="content-tag">Qualità della traduzione</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="controlli-comuni">Controlli comuni</h2>
+<ul>
+<li>traduzioni mancanti</li>
+<li>Perdita di inglese</li>
+<li>Mancate corrispondenze dei segnaposto</li>
+<li>collegamenti interrotti</li>
+<li>deriva del glossario</li>
+<li>copertura testuale sull’accessibilità</li>
+<li>parità di screenshot e diagrammi</li>
+</ul>
+<h2 id="prove-di-revisione-umana">Prove di revisione umana</h2>
+<p class="lead">La traduzione QA dovrebbe anche preservare brevi registrazioni di revisione umana per correzioni rappresentative assistite da AI.</p>
+<p>Campi minimi:</p>
+<ul>
+<li>testo originale</li>
+<li>testo corretto</li>
+<li>categoria di errore</li>
+<li>ipotesi della causa principale</li>
+<li>motivazione del revisore</li>
+</ul>
+<p>Ciò è importante perché anche quando il significato generale viene preservato, le traduzioni generate da AI possono richiedere la revisione da parte di un madrelingua per correggere sottili problemi di grammatica, modalità, terminologia e registro specifico del dominio. Questi problemi sono spesso difficili da rilevare solo attraverso i parametri di qualità automatizzati.</p>
+<h2 id="tassonomia-comune-degli-errori-di-traduzione-ai">Tassonomia comune degli errori di traduzione AI</h2>
+<ul>
+<li>grammatica</li>
+<li>modalità</li>
+<li>terminologia</li>
+<li>registrarsi</li>
+<li>scioltezza</li>
+<li>traduzione letterale</li>
+<li>ambiguità</li>
+<li>perdita di contesto</li>
+<li>ordine delle parole</li>
+<li>collocazione</li>
+<li>Scrittura o ortografia</li>
+<li>formulazione della politica del dominio</li>
+<li>formulazione dell’accessibilità</li>
+</ul>
+<h2 id="lightweight-benchmark-scoring">Lightweight benchmark scoring</h2>
+<p>For repeatable AI-translation evaluation, use a lightweight 0-3 rubric instead of relying only on pass/fail judgment.</p>
+<p>Recommended dimensions:</p>
+<ul>
+<li>meaning accuracy</li>
+<li>grammar and fluency</li>
+<li>terminology and domain fit</li>
+<li>register and style</li>
+<li>review effort</li>
+</ul>
+<p>Recommended release labels:</p>
+<ul>
+<li>blocker</li>
+<li>major revision</li>
+<li>minor revision</li>
+<li>ready with review signoff</li>
+</ul>
+<p>This creates scorecard-friendly data without requiring a heavyweight localization-measurement framework.</p>
+<h2 id="pagine-correlate">Pagine correlate</h2>
+<ul>
+<li><code>localization-ci-cd.md</code></li>
+<li><code>translation-memory-and-glossaries.md</code></li>
+<li><code>../style-guide/localization/ai-translation-review-records.md</code></li>
+<li><code>../style-guide/localization/llm-translation-benchmark-fixtures.md</code></li>
+<li><code>../learning/how-to-run-localization-qa-in-ci.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Altre lingue</h2>
+            <ul>
+              <li><a href="../../wiki/en/translation-quality-assurance.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/translation-quality-assurance.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/translation-quality-assurance.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/translation-quality-assurance.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/translation-quality-assurance.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/translation-quality-assurance.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/mk/translation-quality-assurance.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/sq/translation-quality-assurance.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/translation-quality-assurance.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/fr/translation-quality-assurance.html" lang="fr">Français</a></li>
+              <li><a href="../../wiki/es/translation-quality-assurance.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Articoli correlati</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="related-blog-localization-menu">Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="related-blog-qa-menu">QA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-blog-translation-quality-menu">Qualità della traduzione</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-localization-menu" data-topic-menu="related-blog-localization" hidden>
+                      <a href="../../blog/it/localization-at-scale.html">Localizzazione su larga scala</a>
+                      <a href="../../blog/it/why-every-language-matters.html">Perché ogni lingua conta</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-qa-menu" data-topic-menu="related-blog-qa" hidden>
+                      <a href="../../blog/en/future-of-continuous-localization.html">Future of Continuous Localization</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-translation-quality-menu" data-topic-menu="related-blog-translation-quality" hidden>
+                      <a href="../../blog/it/ai-will-not-replace-translators.html">L&#x27;IA non sostituirà i traduttori</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Materiali didattici correlati</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="related-learning-localization-menu">Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="related-learning-qa-menu">QA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-learning-translation-quality-menu">Qualità della traduzione</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-localization-menu" data-topic-menu="related-learning-localization" hidden>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-qa-menu" data-topic-menu="related-learning-qa" hidden>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-translation-quality-menu" data-topic-menu="related-learning-translation-quality" hidden>
+                      <a href="../../learning/it/how-to-review-ai-assisted-translations.html">Come revisionare le traduzioni assistite dall&#x27;IA</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Voci wiki correlate</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="related-wiki-localization-menu">Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="related-wiki-qa-menu">QA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-wiki-translation-quality-menu">Qualità della traduzione</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-localization-menu" data-topic-menu="related-wiki-localization" hidden>
+                      <a href="../../wiki/it/translation-memory-and-glossaries.html">Memorie di traduzione e glossari</a>
+                      <a href="../../wiki/it/localization-maturity-model.html">Modello di maturità della localizzazione</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-qa-menu" data-topic-menu="related-wiki-qa" hidden>
+                      <a href="../../wiki/it/localization-ci-cd.html">Localizzazione CI e CD</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-translation-quality-menu" data-topic-menu="related-wiki-translation-quality" hidden>
+                      <a href="../../wiki/it/ai-assisted-translation-policy.html">AI-Politica di traduzione assistita</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</p>
+            <p class="footer-microcopy">Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../it/index.html">Panoramica</a>
+              <a href="../../index.html">Home page</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Tutte le lingue</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

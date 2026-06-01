@@ -10,6 +10,8 @@ English should be the canonical source language, with translated variants linked
 
 Use this area for technical articles, public-interest essays, project reflections, and future long-form writing based on repository evidence.
 
+It now also hosts the English-first Localization at Scale article series.
+
 ## Evidence Rules
 
 - Blog articles and related source maps must treat specifications and documentation as the canonical repository evidence.
@@ -45,6 +47,16 @@ Use this area for technical articles, public-interest essays, project reflection
 
 ## Related Articles
 
+- [Localization at Scale](en/localization-at-scale.md) (English)
+- [Why Every Language Matters](en/why-every-language-matters.md) (English)
+- [United in Diversity and Open Source](en/united-in-diversity-and-open-source.md) (English)
+- [AI Will Not Replace Translators](en/ai-will-not-replace-translators.md) (English)
+- [The Cost of English-Only Software](en/the-cost-of-english-only-software.md) (English)
+- [Translation and Learning](en/translation-and-learning.md) (English)
+- [Multilingual Accessibility](en/multilingual-accessibility.md) (English)
+- [Economics of Localization](en/economics-of-localization.md) (English)
+- [Preserving Smaller Languages in the Digital Age](en/preserving-smaller-languages-in-the-digital-age.md) (English)
+- [Future of Continuous Localization](en/future-of-continuous-localization.md) (English)
 - [ISBN Is Not a Database](en/isbn-not-a-database.md) (English)
 - [Spec-Driven Development for AI Projects](en/spec-driven-development-for-ai-projects.md) (English)
 - [Spec-Driven Development in Let Books](en/spec-driven-development-in-let-books.md) (English)

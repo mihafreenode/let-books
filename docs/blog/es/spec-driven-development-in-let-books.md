@@ -1,6 +1,6 @@
 ---
 article_id: spec-driven-development-in-let-books
-canonical_language: es
+canonical_language: en
 language_variants:
   - ../en/spec-driven-development-in-let-books.md
   - ../sl/spec-driven-development-in-let-books.md

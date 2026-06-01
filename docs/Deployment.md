@@ -126,16 +126,15 @@ Until the source is changed, pushes to `main` continue using the old branch-base
 - Adding new pages to the documentation site
 - Adding new locale support
 - Running Playwright screenshot and UI regression tests
-- Publishing blog articles (no article system exists yet)
-- Publishing learning guides (no guide system exists yet)
+- Reviewing generated blog, wiki, and learning HTML output
+- Advancing translation maturity from draft to reviewed status
 
 ## Future deployment expansion
 
 The deployment workflow is designed to be extended for:
 
-- Blog generation: add a build step that renders Markdown articles to HTML
-- Wiki generation: add a build step for reference pages
-- Multilingual content: add locale-aware build pipelines
+- Expand the current Markdown-to-HTML generation pipeline with stricter maturity and review metadata
+- Add locale-aware translation reporting and review dashboards
 - Localization QA: add translation coverage reporting
 - Screenshot generation: run Playwright to capture screenshots as part of the build
 - Automated tutorial generation: render tutorial pages from structured data

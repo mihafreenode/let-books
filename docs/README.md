@@ -2,7 +2,7 @@
 
 ## Summary
 
-`docs/` is the home of the LetBooks knowledge platform.
+`docs/` is the home of the LetBooks knowledge platform, including the Localization at Scale initiative.
 
 It should gradually support public documentation, technical writing, learning material, terminology work, source maps, diagrams, and multilingual publishing.
 
@@ -20,6 +20,8 @@ This area exists to turn the repository into a traceable, reusable knowledge bas
 - `assets/` will hold reusable knowledge-platform assets
 - `sources/` will hold source maps and evidence records
 - `style-guide/` will hold writing, localization, publishing, and terminology rules
+- `localization-at-scale-program.md` defines the current multilingual knowledge and governance initiative
+- `sl/`, `hr/`, `bs/`, `sr-Latn/`, `sr-Cyrl/`, `mk/`, `sq/`, `de/`, `it/`, `fr/`, and `es/` hold locale-scoped Markdown copies for pages that are ready for localized rendering and linking
 - `spec-driven-content-program.md` defines the current spec-driven editorial program and publishing sequence
 - existing localized HTML pages under locale folders remain the current public docs surface
 
@@ -28,6 +30,8 @@ This area exists to turn the repository into a traceable, reusable knowledge bas
 - Documentation architecture
 - Multilingual publishing
 - Localization
+- Accessibility
+- Public-interest technology
 - Human-AI collaboration
 - Public-interest technology
 
@@ -48,6 +52,18 @@ This area exists to turn the repository into a traceable, reusable knowledge bas
 ## Further Reading
 
 - `../README.md`
+- `localization-at-scale-program.md`
+- `sl/localization-at-scale-program.md`
+- `hr/localization-at-scale-program.md`
+- `bs/localization-at-scale-program.md`
+- `sr-Latn/localization-at-scale-program.md`
+- `sr-Cyrl/localization-at-scale-program.md`
+- `mk/localization-at-scale-program.md`
+- `sq/localization-at-scale-program.md`
+- `de/localization-at-scale-program.md`
+- `it/localization-at-scale-program.md`
+- `fr/localization-at-scale-program.md`
+- `es/localization-at-scale-program.md`
 - `knowledge-platform-bootstrap.md`
 - `spec-driven-content-program.md`
 - `../AGENTS.md`

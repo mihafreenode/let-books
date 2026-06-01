@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wie man KI-gestützte Übersetzungen prüft | LetBooks</title>
+    <meta name="description" content="Dieser Leitfaden erklärt, wie KI-generierte Übersetzungen im Hinblick auf Bedeutung, Terminologie, Barrierefreiheit, Ton und den nötigen menschlichen Review geprüft werden.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/learning/de/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/learning/en/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/learning/hr/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/learning/bs/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/learning/sr-Latn/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/learning/mk/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/learning/sq/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/learning/de/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/learning/it/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/learning/fr/how-to-review-ai-assisted-translations.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/learning/es/how-to-review-ai-assisted-translations.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Wie man KI-gestützte Übersetzungen prüft | LetBooks">
+    <meta property="og:description" content="Dieser Leitfaden erklärt, wie KI-generierte Übersetzungen im Hinblick auf Bedeutung, Terminologie, Barrierefreiheit, Ton und den nötigen menschlichen Review geprüft werden.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/learning/de/how-to-review-ai-assisted-translations.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wie man KI-gestützte Übersetzungen prüft | LetBooks">
+    <meta name="twitter:description" content="Dieser Leitfaden erklärt, wie KI-generierte Übersetzungen im Hinblick auf Bedeutung, Terminologie, Barrierefreiheit, Ton und den nötigen menschlichen Review geprüft werden.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="learning" data-locale="de">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../learning/de/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Lernmaterial</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../de/index.html">Doku</a>
+            <a class="nav-link" href="../../blog/de/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/de/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../learning/en/how-to-review-ai-assisted-translations.html" lang="en">EN</a>
+              <a class="lang-link" href="../../learning/sl/how-to-review-ai-assisted-translations.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../learning/hr/how-to-review-ai-assisted-translations.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../learning/bs/how-to-review-ai-assisted-translations.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../learning/sr-Latn/how-to-review-ai-assisted-translations.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../learning/sr-Cyrl/how-to-review-ai-assisted-translations.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../learning/mk/how-to-review-ai-assisted-translations.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../learning/sq/how-to-review-ai-assisted-translations.html" lang="sq">SQ</a>
+              <a class="lang-link is-current" href="../../learning/de/how-to-review-ai-assisted-translations.html" lang="de">DE</a>
+              <a class="lang-link" href="../../learning/it/how-to-review-ai-assisted-translations.html" lang="it">IT</a>
+              <a class="lang-link" href="../../learning/fr/how-to-review-ai-assisted-translations.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../learning/es/how-to-review-ai-assisted-translations.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Alle Sprachen</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../de/index.html">Doku</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../learning/de/index.html">Lernmaterial</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Wie man KI-gestützte Übersetzungen prüft</span>
+            </nav>
+            <h1>Wie man KI-gestützte Übersetzungen prüft</h1>
+          <p class="content-page-summary">Dieser Leitfaden erklärt, wie KI-generierte Übersetzungen im Hinblick auf Bedeutung, Terminologie, Barrierefreiheit, Ton und den nötigen menschlichen Review geprüft werden.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Themen:</span>
+              <span class="content-tag">AI-Assisted Translation</span>
+              <span class="content-tag">Governance</span>
+              <span class="content-tag">Übersetzungsqualität</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="checkliste-für-den-review">Checkliste für den Review</h2>
+<ul>
+<li>zuerst die Bedeutung prüfen, erst danach den Stil</li>
+<li>Terminologie mit dem Projektglossar abgleichen</li>
+<li>sensible Formulierungen besonders sorgfältig prüfen</li>
+<li>bestätigen, dass auch Barrierefreiheitstexte lokalisiert wurden</li>
+<li>den Reifegrad des Reviews ehrlich kennzeichnen</li>
+</ul>
+<h2 id="slowenische-fallstudie">Slowenische Fallstudie</h2>
+<h3 id="ursprünglicher-ki-entwurf">Ursprünglicher KI-Entwurf</h3>
+<p><code>Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.</code></p>
+<h3 id="korrigierte-slowenische-fassung">Korrigierte slowenische Fassung</h3>
+<p><code>Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.</code></p>
+<h2 id="feedback-aus-dem-menschlichen-review">Feedback aus dem menschlichen Review</h2>
+<h3 id="problem-1">Problem 1</h3>
+<ul>
+<li>Original: <code>morajo moči</code></li>
+<li>Korrigiert: <code>morajo imeti možnost, da</code></li>
+<li>Kategorien: Grammatik, Modalität</li>
+<li>wahrscheinliche KI-Fehlerursache: wörtliche Übersetzung einer englischen Modal-Konstruktion</li>
+<li>Begründung des Reviewers: Die ursprüngliche Formulierung ist im Slowenischen ungrammatisch; die korrigierte Version verwendet die natürliche Form für Regel- oder Policy-Sprache.</li>
+</ul>
+<h3 id="problem-2">Problem 2</h3>
+<ul>
+<li>Original: <code>po potrebi tudi izklopiti</code></li>
+<li>Korrigiert: <code>da po potrebi izklopijo</code></li>
+<li>Kategorien: Flüssigkeit, Wortstellung</li>
+<li>wahrscheinliche KI-Fehlerursache: unnatürliche Wortstellung aus der Ausgangssprache und schwache Diskurskontrolle</li>
+<li>Begründung des Reviewers: Die korrigierte Reihenfolge ist klarer und entfernt unnötige Hervorhebung.</li>
+</ul>
+<h3 id="problem-3">Problem 3</h3>
+<ul>
+<li>Original: <code>morajo biti izrecne</code></li>
+<li>Korrigiert: <code>morajo biti izrecno omogočene</code></li>
+<li>Kategorien: Terminologie, Register, domänenspezifische Policy-Formulierung</li>
+<li>wahrscheinliche KI-Fehlerursache: lexikalische Wortwahl ohne ausreichend Produkt- oder Policy-Kontext</li>
+<li>Begründung des Reviewers: Die Anforderung betrifft das ausdrückliche Aktivieren kostenpflichtiger Enrichment-Funktionen, nicht die Beschreibung dieser Funktionen als „explizit“.</li>
+</ul>
+<h2 id="häufige-problemkategorien">Häufige Problemkategorien</h2>
+<ul>
+<li>Grammatik</li>
+<li>Modalität</li>
+<li>Terminologie</li>
+<li>Register</li>
+<li>Flüssigkeit</li>
+<li>wörtliche Übersetzung</li>
+<li>Mehrdeutigkeit</li>
+<li>Kontextverlust</li>
+<li>Wortstellung</li>
+<li>Kollokation</li>
+<li>Schrift oder Orthografie</li>
+<li>domänenspezifische Policy-Formulierung</li>
+<li>Formulierungen zur Barrierefreiheit</li>
+</ul>
+<h2 id="bewertungshinweise">Bewertungshinweise</h2>
+<p>Für wiederholbare Reviews eine einfache Skala von 0 bis 3 verwenden.</p>
+<ul>
+<li><code>0</code>: unbrauchbar</li>
+<li><code>1</code>: große Probleme</li>
+<li><code>2</code>: mit Review-Änderungen verwendbar</li>
+<li><code>3</code>: stark oder fast veröffentlichungsreif</li>
+</ul>
+<p>Empfohlene Bewertungsdimensionen:</p>
+<ul>
+<li>Bedeutungsgenauigkeit</li>
+<li>Grammatik und Flüssigkeit</li>
+<li>Terminologie und Domänenpassung</li>
+<li>Register und Stil</li>
+<li>erforderlicher Review-Aufwand</li>
+</ul>
+<h2 id="hinweise-zur-veröffentlichungsfreigabe">Hinweise zur Veröffentlichungsfreigabe</h2>
+<ul>
+<li><code>blocker</code>: nicht für Veröffentlichung oder Nutzersicht geeignet</li>
+<li><code>major_revision</code>: die Bedeutung kann nahe liegen, aber es ist noch deutliche Überarbeitung nötig</li>
+<li><code>minor_revision</code>: brauchbarer Entwurf mit gezielten Korrekturen durch Muttersprachler</li>
+<li><code>ready_with_review_signoff</code>: geeignet nach normaler Reviewer-Freigabe</li>
+</ul>
+<h2 id="nicht-nur-die-korrektur-sondern-auch-den-grund-dokumentieren">Nicht nur die Korrektur, sondern auch den Grund dokumentieren</h2>
+<p>Für wiederverwendbare Review-Arbeit festhalten:</p>
+<ul>
+<li>Originaltext</li>
+<li>korrigierter Text</li>
+<li>Fehlerkategorie</li>
+<li>Hypothese zur Ursache</li>
+<li>Begründung des Reviewers</li>
+</ul>
+<h2 id="wiederverwendbare-lehren-aus-dem-slowenischen-review">Wiederverwendbare Lehren aus dem slowenischen Review</h2>
+<ul>
+<li>die grammatische Bedeutung kann nahe liegen, obwohl der Satz für Muttersprachler noch nicht veröffentlichbar ist</li>
+<li>modale Konstruktionen sind besonders anfällig für wörtliche Übersetzung</li>
+<li>Terminologie und Policy-Sprache brauchen oft domänenbewusste Umformulierung</li>
+<li>automatisiertes QA hilft, reicht aber für feine Registerprobleme selten aus</li>
+</ul>
+<h2 id="localization-at-scale-hinweis">Localization-at-Scale-Hinweis</h2>
+<p>Selbst wenn die Gesamtbedeutung erhalten bleibt, können KI-generierte Übersetzungen einen Muttersprachler-Review benötigen, um feine Probleme in Grammatik, Modalität, Terminologie und domänenspezifischem Register zu korrigieren. Solche Probleme lassen sich allein mit automatisierten Qualitätsmetriken oft nur schwer erkennen.</p>
+<h2 id="wo-solche-beispiele-wiederverwendet-werden-sollten">Wo solche Beispiele wiederverwendet werden sollten</h2>
+<ul>
+<li>Trainingsmaterial für Localization-Reviewer</li>
+<li>Datensätze zur Bewertung von KI-Übersetzung</li>
+<li>Beispiele im Style Guide</li>
+<li>Human-in-the-loop-Dokumentation</li>
+<li>Localization-at-Scale-Artikel und Best-Practice-Leitfäden</li>
+</ul>
+<p>Solche Beispiele helfen Reviewern, ihre Erwartungen zu kalibrieren, und geben Localization-Leads realistisches Referenzmaterial.</p>
+<h2 id="verwandte-seiten">Verwandte Seiten</h2>
+<ul>
+<li><code>../wiki/ai-assisted-translation-policy.md</code></li>
+<li><code>../wiki/translation-quality-assurance.md</code></li>
+<li><code>../style-guide/localization/ai-translation-review-records.md</code></li>
+<li><code>../blog/en/ai-will-not-replace-translators.md</code></li>
+</ul>
+        </article>
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Andere Sprachen</h2>
+            <ul>
+              <li><a href="../../learning/en/how-to-review-ai-assisted-translations.html" lang="en">English</a></li>
+              <li><a href="../../learning/sl/how-to-review-ai-assisted-translations.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../learning/hr/how-to-review-ai-assisted-translations.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../learning/bs/how-to-review-ai-assisted-translations.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../learning/sr-Latn/how-to-review-ai-assisted-translations.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../learning/sr-Cyrl/how-to-review-ai-assisted-translations.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../learning/mk/how-to-review-ai-assisted-translations.html" lang="mk">Македонски</a></li>
+              <li><a href="../../learning/sq/how-to-review-ai-assisted-translations.html" lang="sq">Shqip</a></li>
+              <li><a href="../../learning/it/how-to-review-ai-assisted-translations.html" lang="it">Italiano</a></li>
+              <li><a href="../../learning/fr/how-to-review-ai-assisted-translations.html" lang="fr">Français</a></li>
+              <li><a href="../../learning/es/how-to-review-ai-assisted-translations.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+              <section class="related-section">
+                <h2>Verwandte Artikel</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-ai-assisted-translation" data-topic-slug="ai-assisted-translation" aria-expanded="false" aria-controls="related-blog-ai-assisted-translation-menu">AI-Assisted Translation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-governance" data-topic-slug="governance" aria-expanded="false" aria-controls="related-blog-governance-menu">Governance</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-blog-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-blog-ai-assisted-delivery-menu">KI-gestützte Lieferung</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-blog-ai-assisted-translation-menu" data-topic-menu="related-blog-ai-assisted-translation" hidden>
+                      <a href="../../blog/de/ai-will-not-replace-translators.html">KI wird Übersetzer nicht ersetzen</a>
+                      <a href="../../blog/en/economics-of-localization.html">Economics of Localization</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-governance-menu" data-topic-menu="related-blog-governance" hidden>
+                      <a href="../../blog/de/localization-at-scale.html">Lokalisierung im großen Maßstab</a>
+                    </div>
+                    <div class="topic-menu" id="related-blog-ai-assisted-delivery-menu" data-topic-menu="related-blog-ai-assisted-delivery" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Verwandte Lernmaterialien</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-learning-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-learning-ai-assisted-delivery-menu">KI-gestützte Lieferung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-learning-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-learning-translation-quality-menu">Übersetzungsqualität</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-learning-ci-cd-menu" data-topic-menu="related-learning-ci-cd" hidden>
+                      <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html">Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-ai-assisted-delivery-menu" data-topic-menu="related-learning-ai-assisted-delivery" hidden>
+                      <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html">Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</a>
+                      <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html">Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</a>
+                    </div>
+                    <div class="topic-menu" id="related-learning-translation-quality-menu" data-topic-menu="related-learning-translation-quality" hidden>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="related-section">
+                <h2>Verwandte Wiki-Einträge</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-ai-assisted-translation" data-topic-slug="ai-assisted-translation" aria-expanded="false" aria-controls="related-wiki-ai-assisted-translation-menu">AI-Assisted Translation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-governance" data-topic-slug="governance" aria-expanded="false" aria-controls="related-wiki-governance-menu">Governance</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-wiki-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-wiki-translation-quality-menu">Übersetzungsqualität</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="related-wiki-ai-assisted-translation-menu" data-topic-menu="related-wiki-ai-assisted-translation" hidden>
+                      <a href="../../wiki/de/ai-assisted-translation-policy.html">AI-Richtlinie zur unterstützten Übersetzung</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-governance-menu" data-topic-menu="related-wiki-governance" hidden>
+                      <a href="../../wiki/de/localization-at-scale.html">Lokalisierung im Maßstab</a>
+                      <a href="../../wiki/de/localization-governance.html">Lokalisierungs-Governance</a>
+                    </div>
+                    <div class="topic-menu" id="related-wiki-translation-quality-menu" data-topic-menu="related-wiki-translation-quality" hidden>
+                      <a href="../../wiki/de/translation-quality-assurance.html">Qualitätssicherung von Übersetzungen</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../de/index.html">Übersicht</a>
+              <a href="../../index.html">Startseite</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Alle Sprachen</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

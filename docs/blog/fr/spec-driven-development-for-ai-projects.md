@@ -1,6 +1,6 @@
 ---
 article_id: spec-driven-development-for-ai-projects
-canonical_language: fr
+canonical_language: en
 language_variants:
   - ../en/spec-driven-development-for-ai-projects.md
   - ../sl/spec-driven-development-for-ai-projects.md

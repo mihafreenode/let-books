@@ -31,8 +31,26 @@ jobs:
       - name: Regenerate SEO metadata
         run: node tools/generate-static-seo.mjs
 
+      - name: Generate docs content HTML
+        run: python3 tools/generate_docs_content.py
+
+      - name: Generate docs indexes
+        run: node tools/generate-index-pages.mjs
+
+      - name: Generate blog topic navigation
+        run: node tools/generate-topic-nav.mjs
+
+      - name: Generate articles registry
+        run: node tools/generate-articles-json.mjs
+
+      - name: Generate sitemap
+        run: node tools/generate-sitemap.mjs
+
       - name: Validate static-demo localization
         run: node tests/static-demo/localization-smoke.js
+
+      - name: Validate docs tree
+        run: node tools/validate-blog.mjs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

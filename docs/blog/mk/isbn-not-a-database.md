@@ -1,6 +1,6 @@
 ---
 article_id: isbn-not-a-database
-canonical_language: mk
+canonical_language: en
 title: ISBN не е база на податоци
 summary: Зошто ISBN помага во идентификување на книгите, но не ги заменува метаподаточните системи, и како функционира синџирот за пребарување метаподатоци во проектот Let Books.
 topics:

@@ -11,6 +11,10 @@ const SITE_URL = 'https://letbooks.org';
 const errors = [];
 const warnings = [];
 
+const fileTypeCache = new Map();
+const targetExistsCache = new Map();
+const fileContentCache = new Map();
+
 let docsFilesChecked = 0;
 let htmlFilesChecked = 0;
 let markdownFilesChecked = 0;
@@ -69,19 +73,47 @@ function rel(filePath) {
 }
 
 function isFile(filePath) {
+  const cached = fileTypeCache.get(filePath);
+  if (cached !== undefined) {
+    return cached === 'file';
+  }
+
   try {
-    return fs.statSync(filePath).isFile();
+    const stats = fs.statSync(filePath);
+    const result = stats.isFile() ? 'file' : stats.isDirectory() ? 'dir' : 'other';
+    fileTypeCache.set(filePath, result);
+    return result === 'file';
   } catch {
+    fileTypeCache.set(filePath, 'missing');
     return false;
   }
 }
 
 function isDirectory(filePath) {
+  const cached = fileTypeCache.get(filePath);
+  if (cached !== undefined) {
+    return cached === 'dir';
+  }
+
   try {
-    return fs.statSync(filePath).isDirectory();
+    const stats = fs.statSync(filePath);
+    const result = stats.isFile() ? 'file' : stats.isDirectory() ? 'dir' : 'other';
+    fileTypeCache.set(filePath, result);
+    return result === 'dir';
   } catch {
+    fileTypeCache.set(filePath, 'missing');
     return false;
   }
+}
+
+function readCachedFile(filePath) {
+  if (fileContentCache.has(filePath)) {
+    return fileContentCache.get(filePath);
+  }
+
+  const content = fs.readFileSync(filePath, 'utf8');
+  fileContentCache.set(filePath, content);
+  return content;
 }
 
 function stripQueryAndHash(value) {
@@ -152,18 +184,26 @@ function resolveRepoPath(baseDir, href) {
 }
 
 function targetExists(candidate) {
+  if (targetExistsCache.has(candidate)) {
+    return targetExistsCache.get(candidate);
+  }
+
+  let exists = false;
   if (!candidate) return false;
-  if (isFile(candidate) || isDirectory(candidate)) return true;
-
-  if (!path.extname(candidate) && isFile(`${candidate}.html`)) {
-    return true;
+  if (isFile(candidate) || isDirectory(candidate)) {
+    exists = true;
   }
 
-  if (isDirectory(candidate) && isFile(path.join(candidate, 'index.html'))) {
-    return true;
+  if (!exists && !path.extname(candidate) && isFile(`${candidate}.html`)) {
+    exists = true;
   }
 
-  return false;
+  if (!exists && isDirectory(candidate) && isFile(path.join(candidate, 'index.html'))) {
+    exists = true;
+  }
+
+  targetExistsCache.set(candidate, exists);
+  return exists;
 }
 
 function listFiles(dir, extensions) {
@@ -337,7 +377,7 @@ function validateFrontmatterRef(filePath, href, field) {
 }
 
 function validateHtmlFile(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8');
+  const content = readCachedFile(filePath);
   if (isEditorialHtmlFile(filePath)) {
     validateEditorialSourcePolicy(filePath, content);
   }
@@ -347,7 +387,7 @@ function validateHtmlFile(filePath) {
 }
 
 function validateMarkdownFile(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8');
+  const content = readCachedFile(filePath);
   const frontmatter = validateMarkdownFrontmatterPaths(filePath, content);
   if (isEditorialMarkdownFile(filePath)) {
     validateEditorialSourcePolicy(filePath, content);
@@ -442,7 +482,7 @@ function loadArticles() {
     process.exit(1);
   }
 
-  const raw = fs.readFileSync(ARTICLES_JSON, 'utf8');
+  const raw = readCachedFile(ARTICLES_JSON);
   const data = JSON.parse(raw);
 
   if (!Array.isArray(data.articles)) {
@@ -483,7 +523,7 @@ function checkArticleStructure(data) {
 }
 
 function validateArticleHtml(filePath, article, lang) {
-  const content = fs.readFileSync(filePath, 'utf8');
+  const content = readCachedFile(filePath);
 
   const localeMatch = content.match(/data-locale="([^"]+)"/);
   if (localeMatch && localeMatch[1] !== lang) {
@@ -587,14 +627,14 @@ function checkArticleVariant(article, lang) {
     return;
   }
 
-  const mdContent = fs.readFileSync(mdPath, 'utf8');
+  const mdContent = readCachedFile(mdPath);
   const frontmatter = parseFrontmatter(mdContent);
   if (frontmatter) {
     if (frontmatter.article_id && frontmatter.article_id !== article.id) {
       fail(`${rel(mdPath)}: article_id is "${frontmatter.article_id}", expected "${article.id}"`);
     }
-    if (frontmatter.canonical_language && frontmatter.canonical_language !== lang) {
-      fail(`${rel(mdPath)}: canonical_language is "${frontmatter.canonical_language}", expected "${lang}"`);
+    if (frontmatter.canonical_language && frontmatter.canonical_language !== article.canonical_language) {
+      fail(`${rel(mdPath)}: canonical_language is "${frontmatter.canonical_language}", expected canonical source "${article.canonical_language}"`);
     }
     validateLocalizedDiagrams(article, lang, mdPath, frontmatter);
   }
@@ -630,7 +670,7 @@ function checkRequiredReadmes() {
 function checkNoObsoleteBlogPaths(htmlFiles) {
   let scanned = 0;
   for (const filePath of htmlFiles) {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = readCachedFile(filePath);
     if (content.includes('href="/blog/')) {
       fail(`${rel(filePath)}: contains obsolete absolute path "/blog/" (should be "/docs/blog/")`);
     }

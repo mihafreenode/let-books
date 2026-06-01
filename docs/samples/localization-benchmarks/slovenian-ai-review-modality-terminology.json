@@ -1,0 +1,85 @@
+{
+  "fixture_id": "slovenian-ai-review-modality-terminology",
+  "source_language": "en",
+  "target_language": "sl",
+  "content_type": "policy_text",
+  "domain": "localization_governance",
+  "source_text": "Administrators must be able to disable OCR, translation, and condition assessment when needed. Paid enrichments must be explicitly enabled, traceable, and cost-controlled.",
+  "ai_draft": "Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.",
+  "corrected_text": "Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.",
+  "scoring_rubric": {
+    "scale": "0-3",
+    "dimensions": [
+      "meaning_accuracy",
+      "grammar_and_fluency",
+      "terminology_and_domain_fit",
+      "register_and_style",
+      "review_effort"
+    ],
+    "release_recommendations": [
+      "blocker",
+      "major_revision",
+      "minor_revision",
+      "ready_with_review_signoff"
+    ]
+  },
+  "example_scorecard": {
+    "meaning_accuracy": 2,
+    "grammar_and_fluency": 1,
+    "terminology_and_domain_fit": 1,
+    "register_and_style": 1,
+    "review_effort": 1,
+    "release_recommendation": "major_revision",
+    "reviewer_confidence": "high",
+    "scorecard_note": "The draft preserves most of the intended meaning, but it is not publication-ready because grammar, modality, and policy phrasing require native-speaker correction."
+  },
+  "issues": [
+    {
+      "original_segment": "morajo moči",
+      "corrected_segment": "morajo imeti možnost, da",
+      "error_categories": ["grammar", "modality"],
+      "severity": "major",
+      "root_cause_hypothesis": "literal translation of an English modal construction",
+      "reviewer_rationale": "The AI draft is ungrammatical in Slovenian. The corrected version uses the natural modal construction for policy language."
+    },
+    {
+      "original_segment": "po potrebi tudi izklopiti",
+      "corrected_segment": "da po potrebi izklopijo",
+      "error_categories": ["fluency", "word_order"],
+      "severity": "minor",
+      "root_cause_hypothesis": "awkward source-language word order carried into the target language",
+      "reviewer_rationale": "The corrected wording is more natural and removes unnecessary emphasis that does not fit the sentence context."
+    },
+    {
+      "original_segment": "morajo biti izrecne",
+      "corrected_segment": "morajo biti izrecno omogočene",
+      "error_categories": ["terminology", "register", "domain_policy_phrasing"],
+      "severity": "major",
+      "root_cause_hypothesis": "dictionary-level word choice without enough product-policy context",
+      "reviewer_rationale": "The requirement concerns explicit enablement of paid enrichment, not a descriptive adjective applied to the enrichments themselves."
+    }
+  ],
+  "overall_lesson": "Even when the overall meaning is preserved, AI-generated translations may require native-speaker review to correct subtle issues in grammar, modality, terminology, and domain-specific register. These issues are often difficult to detect through automated quality metrics alone.",
+  "recommended_uses": [
+    {
+      "target": "localization_reviewer_training_materials",
+      "benefit": "Shows reviewers how to document subtle but high-impact corrections that automated QA may miss."
+    },
+    {
+      "target": "ai_translation_evaluation_datasets",
+      "benefit": "Provides a realistic benchmark case for modality, register, and terminology failures in production-style text."
+    },
+    {
+      "target": "style_guide_examples",
+      "benefit": "Supplies a concise before-and-after example of acceptable policy and governance phrasing."
+    },
+    {
+      "target": "human_in_the_loop_workflow_documentation",
+      "benefit": "Demonstrates why review records should capture reasoning and likely failure mode, not only the final correction."
+    },
+    {
+      "target": "localization_at_scale_articles_and_best_practice_guides",
+      "benefit": "Supports the argument that human review remains essential even when AI preserves the broad meaning."
+    }
+  ]
+}

@@ -2,14 +2,31 @@
 
 ## Sažetak
 
-`docs/wiki/hr/` sadrži trajnije referentne stranice na hrvatskom jeziku.
+`docs/wiki/hr/` sadrži zimzelene referentne stranice na ovom jeziku.
 
-## Namjena
+## Svrha
 
-Ovo područje koristite za stabilna objašnjenja pojmova, kratke povezane objašnjivačke stranice i druge wiki sadržaje koji se održavaju kroz vrijeme.
+Koristite ovo područje za stabilne konceptualne stranice, objašnjenja s kratkim vezama i drugi wiki sadržaj koji se ažurira tijekom vremena.
 
-## Lokalizirane Wiki Stranice
+## Lokalizirane Wiki stranice
 
+- `localization-at-scale.md`
+- `localization-roadmap.md`
+- `language-support-matrix.md`
+- `localization-maturity-model.md`
+- `ai-assisted-translation-policy.md`
+- `multilingual-accessibility.md`
+- `localization-governance.md`
+- `translation-quality-assurance.md`
+- `translation-memory-and-glossaries.md`
+- `non-text-asset-localization.md`
+- `localization-ci-cd.md`
+- `unicode-and-script-correctness.md`
+- `multilingual-public-interest-software.md`
+- `let-books-localization-architecture.md`
+- `let-books-localization-case-study.md`
+- `let-books-accessibility-and-localization.md`
+- `let-books-localization-lessons-learned.md`
 - `spec-driven-development.md`
 - `demo-spec-alignment.md`
 - `product-specification.md`

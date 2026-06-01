@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Keep translations traceable, script-correct, and structurally aligned with canonical English sources.
+Keep translations traceable, script-correct, structurally aligned with canonical English sources, and reviewable as a long-term localization system rather than a one-off translation task.
 
 ## Structure
 
@@ -14,6 +14,17 @@ Keep translations traceable, script-correct, and structurally aligned with canon
 - article ID policy
 - cross-language linking rules
 - terminology alignment rules
+- AI review-record rules
+- LLM translation benchmark fixtures
+
+## Core Principles
+
+- English is the canonical authoring language for the knowledge platform unless a document explicitly declares a different policy.
+- Translations are first-class deliverables, but they inherit canonical source authority from the English original.
+- Localization is broader than translation. It includes accessibility text, diagrams, screenshots, captions, navigation, metadata, and governance.
+- Serbian Latin and Serbian Cyrillic are separate locales.
+- Macedonian, Albanian, and Slovenian must preserve correct native orthography and Unicode characters.
+- AI-generated translation is allowed as a draft stage only. It does not replace review.
 
 ## Multilingual Article Requirements
 
@@ -22,6 +33,8 @@ Every blog article published in this repository must follow these rules:
 ### 1. English Canonical First
 
 All blog articles must be written in English first. Translations are derived from the English canonical version. The English article is the authoritative source for evidence and specification references.
+
+For blog frontmatter, `canonical_language` should remain `en` in the translated file as well. The field describes source authority, not the locale of the translated file.
 
 ### 2. Required Frontmatter
 
@@ -88,6 +101,47 @@ HTML versions are generated from the Markdown source using the standard conversi
 - Non-English source-map stubs are short files that reference the English original.
 - Source maps are created only for flagship articles, not for every minor post.
 
+## Translation Maturity Model
+
+Use these levels when discussing or tracking translation quality.
+
+- Level 0: source language only
+- Level 1: machine translated draft
+- Level 2: spellchecked
+- Level 3: automated QA validated
+- Level 4: community reviewed
+- Level 5: native-speaker reviewed
+- Level 6: professionally reviewed
+
+Track maturity by locale and by content category where practical.
+
+## Localization At Scale Expectations
+
+- Localize public-facing knowledge content, not only UI strings.
+- Localize accessibility metadata such as alt text, captions, ARIA labels, and language metadata.
+- Prefer diagrams generated from structured sources so translated variants can be reproduced.
+- Document terminology decisions, reviewer expectations, and dispute-resolution paths.
+- Keep validation and CI close to publishing workflows so localization regressions are treated as product-quality issues.
+- Preserve representative AI-review examples so subtle native-speaker corrections can inform training, governance, and evaluation.
+
+## Actionable documentation update record
+
+The Slovenian AI-review example should update these documents first:
+
+- `../localization/translation-style-guide.md`
+- `../localization/review-workflow.md`
+- `../../wiki/ai-assisted-translation-policy.md`
+- `../../wiki/translation-quality-assurance.md`
+- `../../learning/how-to-review-ai-assisted-translations.md`
+
+Change-record summary for PRs or governance review:
+
+- added a standard review-record format for AI-generated translation corrections
+- added a reusable taxonomy of common AI translation error categories
+- recorded a Slovenian case study showing that meaning-preserving drafts can still fail native-speaker quality standards
+- clarified that automated QA alone is insufficient for modality, register, and subtle terminology issues
+- documented where reviewed examples should be reused in training, scorecards, and evaluation datasets
+
 ## LinkedIn Pack Policy
 
 - LinkedIn packs live in `docs/blog/en/linkedin/`.
@@ -119,4 +173,6 @@ HTML versions are generated from the Markdown source using the standard conversi
 ## Further Reading
 
 - `../terminology/README.md`
+- `ai-translation-review-records.md`
+- `llm-translation-benchmark-fixtures.md`
 - `../../knowledge-platform-bootstrap.md`

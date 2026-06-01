@@ -197,8 +197,29 @@ Its core value is the combination of:
 - storage and retrieval logistics
 - Excel-based review workflows for libraries
 - multilingual documentation and future multilingual UI
+- Localization at Scale as a first-class knowledge, accessibility, and governance initiative
 - optional AI enrichment later
 - preservation of educational and academic heritage
+
+## Localization At Scale
+
+Let Books now treats Localization at Scale as part of the project vision, not a side article.
+
+The initiative lives under `docs/` and is designed to function as:
+
+- a technical handbook
+- an educational resource
+- an accessibility guide
+- a governance reference
+- a case-study collection
+- a practical open-source implementation reference
+
+See:
+
+- `docs/localization-at-scale-program.md`
+- `docs/blog/en/localization-at-scale.md`
+- `docs/wiki/localization-at-scale.md`
+- `docs/learning/how-to-build-a-localization-pipeline.md`
 
 The early product direction prioritizes:
 

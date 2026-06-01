@@ -1,15 +1,32 @@
-# Wiki
+# Вики
 
-## Сажетак
+## Резиме
 
-`docs/wiki/sr-Cyrl/` садржи трајније референтне странице на српској ћирилици.
+`docs/wiki/sr-Cyrl/` садржи зимзелене референтне странице на овом језику.
 
-## Намена
+## Сврха
 
-Ову област користите за стабилна објашњења појмова, кратке повезане објашњавачке странице и друге wiki садржаје који се одржавају током времена.
+Користите ову област за стабилне концептуалне странице, кратке објашњења са везама и други вики садржај који се временом ажурира.
 
-## Локализоване Wiki Странице
+## Локализоване Вики странице
 
+- `localization-at-scale.md`
+- `localization-roadmap.md`
+- `language-support-matrix.md`
+- `localization-maturity-model.md`
+- `ai-assisted-translation-policy.md`
+- `multilingual-accessibility.md`
+- `localization-governance.md`
+- `translation-quality-assurance.md`
+- `translation-memory-and-glossaries.md`
+- `non-text-asset-localization.md`
+- `localization-ci-cd.md`
+- `unicode-and-script-correctness.md`
+- `multilingual-public-interest-software.md`
+- `let-books-localization-architecture.md`
+- `let-books-localization-case-study.md`
+- `let-books-accessibility-and-localization.md`
+- `let-books-localization-lessons-learned.md`
 - `spec-driven-development.md`
 - `demo-spec-alignment.md`
 - `product-specification.md`

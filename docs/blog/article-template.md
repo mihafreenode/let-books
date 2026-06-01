@@ -42,6 +42,7 @@ Editorial evidence rule:
 
 Multilingual requirements (see docs/style-guide/localization/README.md):
 - Every article must have language_variants frontmatter listing all 12 locales.
+- canonical_language should remain `en` in translated variants when English is the canonical source.
 - Every article must have an "Other Languages" footer section.
 - Every non-English translation needs a source-map stub under docs/sources/<locale>/.
 - Every flagship English article needs a LinkedIn derivative pack under docs/blog/en/linkedin/.

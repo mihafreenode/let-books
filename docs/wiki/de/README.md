@@ -1,11 +1,32 @@
-# Wiki Auf Deutsch
+# Wiki
 
 ## Zusammenfassung
 
-Dieses Verzeichnis enthält die lokalisierten Wiki-Seiten auf Deutsch für das spezifikationsgetriebene Dokumentationsprogramm von Let Books.
+`docs/wiki/de/` enthält immergrüne Referenzseiten in dieser Sprache.
 
-## Wiki-Seiten
+## Zweck
 
+Verwenden Sie diesen Bereich für stabile Konzeptseiten, kurze verlinkte Erklärungen und andere Wiki-Inhalte, die im Laufe der Zeit aktualisiert werden.
+
+## Lokalisierte Wiki-Seiten
+
+- `localization-at-scale.md`
+- `localization-roadmap.md`
+- `language-support-matrix.md`
+- `localization-maturity-model.md`
+- `ai-assisted-translation-policy.md`
+- `multilingual-accessibility.md`
+- `localization-governance.md`
+- `translation-quality-assurance.md`
+- `translation-memory-and-glossaries.md`
+- `non-text-asset-localization.md`
+- `localization-ci-cd.md`
+- `unicode-and-script-correctness.md`
+- `multilingual-public-interest-software.md`
+- `let-books-localization-architecture.md`
+- `let-books-localization-case-study.md`
+- `let-books-accessibility-and-localization.md`
+- `let-books-localization-lessons-learned.md`
 - `spec-driven-development.md`
 - `demo-spec-alignment.md`
 - `product-specification.md`

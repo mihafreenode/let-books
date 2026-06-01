@@ -1,6 +1,6 @@
 ---
 article_id: isbn-not-a-database
-canonical_language: sq
+canonical_language: en
 title: ISBN nuk është bazë të dhënash
 summary: Pse ISBN ndihmon në identifikimin e librave por nuk zëvendëson sistemet e metatëdhënave, dhe si funksionon zinxhiri i kërkimit të metatëdhënave në projektin Let Books.
 topics:
