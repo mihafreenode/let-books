@@ -126,6 +126,122 @@ The goal is to shorten the loop between:
 - correcting defects
 - preventing recurrence
 
+## Part 3A - Bidirectional Review
+
+English remains the canonical source language for publication and synchronization purposes.
+
+However, useful insights can originate in any language.
+
+Examples:
+
+- a native-speaker review identifies awkward source phrasing
+- a translator discovers ambiguity
+- a reviewer finds missing context
+- a localized article gains a better example
+- terminology improves in a non-English language
+- cultural review reveals an accessibility issue
+
+These findings may justify changes to the canonical source itself.
+
+### Bidirectional Review Principle
+
+Localization should not be treated as a one-way process:
+
+```text
+English
+↓
+Translations
+```
+
+Instead:
+
+```text
+English
+↕
+Translations
+```
+
+English remains canonical.
+
+Knowledge can flow in both directions.
+
+### Cross-Language Review Event
+
+Any substantial content change should trigger review of related languages.
+
+If English changes, review:
+
+- all localized versions
+- semantic parity
+- metadata
+- summaries
+- diagrams and screenshots where relevant
+
+If a localized version changes, review:
+
+- whether the finding improves the canonical source
+- whether other languages should benefit
+- whether terminology guidance should change
+- whether review guidance should change
+- whether validators should change
+
+### Source Improvement Through Localization
+
+Localization review may reveal:
+
+- ambiguity
+- unnecessary complexity
+- translation-hostile wording
+- hidden assumptions
+- culturally specific phrasing
+- inaccessible terminology
+
+When this happens, improving the source may be better than compensating separately in every translation.
+
+```text
+Problem discovered in Slovenian
+↓
+Root cause found in English
+↓
+English improved
+↓
+All languages benefit
+```
+
+### AI-Agent Review Prompt
+
+When modifying any language version, ask:
+
+```text
+Does this change reveal a source-language issue?
+Does this change improve other language versions?
+Should terminology guidance change?
+Should review guidance change?
+Should validators change?
+```
+
+The answer may be:
+
+```text
+No action needed
+```
+
+or:
+
+```text
+Open cross-language review task
+```
+
+### Core Principle
+
+Canonical source does not mean canonical wisdom.
+
+English may be the synchronization source.
+
+Knowledge, improvements, review findings, and quality insights may originate from any supported language.
+
+A multilingual project should let improvements discovered in one language benefit all languages.
+
 ## Part 4 - Localization Quality Model
 
 Localization quality should be tracked across four dimensions.

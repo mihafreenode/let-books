@@ -1,95 +1,244 @@
 # Programma di localizzazione su larga scala
 
-## Sintesi
+## Riepilogo
 
-Questo documento definisce l'iniziativa Let Books Localization at Scale come un programma di lungo periodo per conoscenza, governance, accessibilità e implementazione.
+Questo manuale definisce la localizzazione su larga scala in Let Books come un modello operativo di lungo periodo per pubblicazione multilingue, revisione, validazione, manutenzione e apprendimento continuo.
 
-## Scopo
+La sua tesi centrale e semplice:
 
-La localizzazione in Let Books non è trattata come un ripensamento della traduzione.
+> La localizzazione su larga scala non e principalmente un problema di traduzione.
+>
+> E un problema di progettazione di sistemi di feedback e di un sistema di conoscenza multilingue.
 
-È un programma combinato per:
+## Idea centrale
 
-- partecipazione multilingue
-- accessibilità educativa
-- inclusione culturale
-- ingegneria dell'accessibilità
-- governance del software di interesse pubblico
-- implementazione pratica open-source
+L'obiettivo non e soltanto tradurre parole.
 
-## Tesi centrale
-
-L'obiettivo non è solo tradurre parole.
-
-L'obiettivo è aiutare le persone a imparare, partecipare, contribuire, insegnare, preservare la conoscenza e accedere alle informazioni nella lingua che comprendono meglio.
+L'obiettivo e aiutare le persone a imparare, partecipare, contribuire, insegnare, conservare conoscenza e accedere alle informazioni nella lingua che comprendono meglio, mantenendo nel tempo sostenibile il sistema multilingue.
 
 ## Livelli del programma
 
-- `docs/blog/` spiega perché la localizzazione conta nella pratica e nelle politiche.
-- `docs/wiki/` definisce regole di riferimento durevoli, modelli e governance.
-- `docs/learning/` trasforma il tema in guide di studio pratiche e flussi di lavoro di implementazione.
+- `docs/blog/` spiega perche la localizzazione conta nella pratica.
+- `docs/wiki/` definisce regole, modelli e governance durevoli.
+- `docs/learning/` trasforma il tema in flussi di lavoro operativi.
 - `docs/style-guide/` definisce regole per collaboratori, terminologia, revisione e pubblicazione.
 - `docs/sources/` mantiene tracciabili le affermazioni principali.
+- `docs/localization-audit-report.md` monitora debito, classi di difetto e stato di chiusura.
 
-## Rilascio iniziale con l'inglese come prima lingua
+## La localizzazione e un sistema, non un progetto
 
-Il primo passaggio di implementazione è in inglese.
+Molti sforzi di localizzazione vengono trattati come progetti finiti:
 
-- L'inglese è la lingua canonica di redazione.
-- La struttura pronta per la traduzione è comunque progettata per tutte le lingue supportate.
-- Ci si aspetta che la qualità della traduzione migliori per fasi, invece di apparire subito completamente matura.
+```text
+Traduci
+Pubblica
+Finisci
+```
 
-## Prima ondata di deliverable in inglese
+La localizzazione su larga scala tratta invece la localizzazione come un sistema operativo:
 
-### Blog
+```text
+Crea
+Traduci
+Valida
+Migliora
+Mantieni
+Aggiorna
+Previeni il drift
+Ripeti
+```
 
-- `blog/en/localization-at-scale.md`
-- `blog/en/why-every-language-matters.md`
-- `blog/en/translation-and-learning.md`
-- `blog/en/multilingual-accessibility.md`
-- `blog/en/the-cost-of-english-only-software.md`
-- `blog/en/ai-will-not-replace-translators.md`
-- `blog/en/economics-of-localization.md`
-- `blog/en/preserving-smaller-languages-in-the-digital-age.md`
-- `blog/en/united-in-diversity-and-open-source.md`
-- `blog/en/future-of-continuous-localization.md`
+La difficolta non e solo produrre traduzioni una volta.
 
-### Wiki
+La difficolta e gestire nel tempo un sistema di conoscenza multilingue senza perdere copertura, completezza, qualita o freschezza.
 
+## L'AI funziona meglio dentro cicli di feedback
+
+L'AI e utile nella localizzazione, ma la sua utilita dipende dalla qualita del sistema di feedback circostante.
+
+I livelli di feedback piu importanti sono:
+
+- controlli CI
+- validatori strutturali
+- controlli ortografici
+- controlli terminologici
+- controlli di parita semantica
+- controlli di accessibilita
+- controlli di browser e rendering
+- validazione dei link
+- revisione di parlanti nativi
+
+Un feedback rapido vale piu di un primo tentativo perfetto.
+
+## Revisione bidirezionale
+
+L'inglese rimane la lingua sorgente canonica per pubblicazione e sincronizzazione.
+
+Tuttavia, intuizioni utili possono nascere in qualsiasi lingua.
+
+Per questo la localizzazione non deve essere trattata come un processo unidirezionale:
+
+```text
+Inglese
+↓
+Traduzioni
+```
+
+Ma come un sistema bidirezionale:
+
+```text
+Inglese
+↕
+Traduzioni
+```
+
+Fonte canonica non significa saggezza canonica.
+
+Se una modifica in una versione localizzata rivela ambiguita, un problema terminologico, contesto mancante o formulazioni ostili alla traduzione nella fonte inglese, bisogna migliorare anche la fonte canonica e rivedere le altre lingue.
+
+Per ogni cambiamento sostanziale chiedi:
+
+- questo cambiamento rivela un problema nella lingua sorgente
+- dovrebbe portare beneficio anche ad altre lingue
+- le linee guida terminologiche devono cambiare
+- le linee guida di revisione devono cambiare
+- i validator devono cambiare
+
+## Modello di qualita della localizzazione
+
+La qualita della localizzazione deve essere monitorata in quattro dimensioni:
+
+### Copertura
+
+Il contenuto esiste affatto in quella lingua?
+
+### Completezza
+
+Tutto il contenuto visibile al lettore e localizzato?
+
+### Qualita
+
+Il testo e naturale, accurato e appropriato per il pubblico di destinazione?
+
+### Freschezza
+
+La versione localizzata riflette ancora la fonte corrente?
+
+## Regola di completezza della localizzazione
+
+Una pagina non e completa solo perche sono localizzati:
+
+- URL
+- titolo
+- navigazione
+- struttura della pagina
+
+Deve essere localizzato tutto il contenuto visibile al lettore, inclusi:
+
+- riepiloghi
+- metadati
+- etichette di argomento
+- titoli e sottotitoli
+- corpo dell'articolo
+- didascalie e testo alternativo
+- diagrammi e testo nei diagrammi
+- contenuti correlati
+
+Copertura senza completezza porta a pubblicazione a lingue miste.
+
+## Corpus dei rilievi dei parlanti nativi
+
+Il corpus dettagliato dei rilievi dei parlanti nativi resta un deliverable di prima classe nel manuale canonico `../localization-at-scale-program.md`.
+
+Il suo scopo e documentare casi in cui la traduzione era:
+
+- tecnicamente corretta
+- fedele nel significato
+- promossa dai controlli automatizzati
+- ma comunque migliorabile da un parlante nativo
+
+Questi esempi sono essenziali per l'apprendimento del sistema, il miglioramento delle linee guida e lo sviluppo dei validator.
+
+## Apprendimento continuo
+
+Ogni problema di localizzazione dovrebbe migliorare il sistema.
+
+Il ciclo raccomandato e:
+
+```text
+Trova il problema
+↓
+Correggi il problema
+↓
+Documenta il problema
+↓
+Classifica il problema
+↓
+Migliora il flusso di lavoro
+↓
+Aggiungi validazione dove e pratico
+↓
+Previeni la ricorrenza
+```
+
+Il risultato ideale e che un problema venga corretto:
+
+- una volta nel contenuto
+- una volta nel sistema
+
+## Debito, classi di difetto e drift
+
+Monitora entrambi gli indicatori:
+
+```text
+Localization Debt = X
+Open Defect Classes = Y
+```
+
+Il debito misura il lavoro di contenuto residuo.
+
+Le classi di difetto misurano la maturita del sistema.
+
+Il drift di localizzazione significa che il contenuto localizzato esiste ma non riflette piu la fonte corrente.
+
+## Regola: correggi prima la classe, poi il file
+
+Non ottimizzare principalmente intorno al numero di file rimanenti.
+
+Ottimizza intorno al numero di classi di difetto rimanenti.
+
+Processo raccomandato:
+
+1. identifica la classe del problema
+2. determina la causa radice
+3. correggi la fonte piu alta possibile
+4. aggiorna il validator
+5. aggiorna il flusso di lavoro
+6. poi correggi le occorrenze residue
+
+## Maturita del repository
+
+Il repository dovrebbe progredire attraverso queste fasi:
+
+1. tradurre il contenuto
+2. rilevare i problemi
+3. creare validator
+4. automatizzare la validazione
+5. prevenire il ritorno del problema
+6. gestire il drift di localizzazione
+7. insegnare a futuri collaboratori e sistemi AI
+
+## Obiettivo operativo
+
+L'obiettivo piu alto della localizzazione su larga scala e:
+
+**copertura linguistica completa, completezza della localizzazione, parita semantica, leggibilita in lingua naturale, appropriatezza culturale, efficacia educativa, miglioramento continuo, prevenzione dei difetti, gestione del drift e pubblicazione multilingue sostenibile tramite forti cicli di feedback.**
+
+## Documenti correlati
+
+- `../localization-at-scale-program.md`
+- `../localization-audit-report.md`
 - `wiki/localization-at-scale.md`
-- `wiki/language-support-matrix.md`
-- `wiki/localization-maturity-model.md`
-- `wiki/ai-assisted-translation-policy.md`
-- `wiki/multilingual-accessibility.md`
-- `wiki/localization-governance.md`
 - `wiki/translation-quality-assurance.md`
-- `wiki/non-text-asset-localization.md`
 - `wiki/localization-ci-cd.md`
-- `wiki/unicode-and-script-correctness.md`
-
-### Learning
-
-- `learning/how-to-build-a-localization-pipeline.md`
-- `learning/how-to-review-ai-assisted-translations.md`
-- `learning/how-to-run-localization-qa-in-ci.md`
-- `learning/how-to-localize-accessibility-content.md`
-- `learning/how-to-localize-diagrams-and-screenshots.md`
-
-## Let Books come caso di studio
-
-Let Books dovrebbe documentare apertamente le proprie decisioni.
-
-Questo include:
-
-- cosa ha funzionato
-- cosa ha fallito
-- cosa rimane costoso
-- cosa può essere automatizzato in sicurezza
-- dove la revisione umana resta essenziale
-
-## Pagine correlate
-
-- `README.md`
-- `wiki/localization-at-scale.md`
-- `wiki/localization-roadmap.md`
 - `style-guide/localization/README.md`
