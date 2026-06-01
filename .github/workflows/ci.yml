@@ -46,6 +46,9 @@ jobs:
       - name: Generate docs content HTML
         run: python3 tools/generate_docs_content.py
 
+      - name: Generated site structural validation
+        run: node tools/validate-generated-site-structure.mjs
+
       - name: Index pages generation (dry-run validation)
         run: node tools/generate-index-pages.mjs
 
