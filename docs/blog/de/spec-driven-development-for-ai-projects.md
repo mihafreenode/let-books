@@ -87,9 +87,27 @@ In einer spezifikationsgetriebenen Entwicklung stehen diese Ebenen nicht für si
 
 Zusammen schaffen sie ein Produktgedächtnis, das die Entwicklungsgeschwindigkeit überlebt.
 
+## Was das für Teams bedeutet, die KI nutzen
+
+Teams, die KI gut einsetzen, entfernen den Prozess nicht. Sie verlagern den Prozess näher an die Quelle der Generierung.
+
+Das bedeutet in der Regel:
+
+- vor der Implementierung klarere Produktspezifikationen zu schreiben
+- Implementierungsleitlinien ausdrücklich festzuhalten
+- die Dokumentation zu aktualisieren, wenn sich das Produktverhalten ändert
+- Demos gegen die Spezifikation zu prüfen, statt Übereinstimmung einfach anzunehmen
+- schrittweise Validierungsregeln hinzuzufügen, damit Konsistenz nicht nur vom menschlichen Gedächtnis abhängt
+
+Das ist nicht gegen KI gerichtet. So wird KI verlässlich.
+
 ## Die dauerhafte Lehre
 
 KI kann schnell Code, Inhalte und Oberflächen erzeugen. Sie kann aber nicht von sich aus garantieren, dass all diese Ausgaben weiterhin dasselbe Produkt beschreiben.
+
+Spezifikationsgetriebene Entwicklung ist die Art, wie ein Team verhindert, dass aus Geschwindigkeit Drift wird.
+
+In KI-gestützten Projekten ist die Spezifikation nicht nachträglicher Papierkram. Sie ist die Grenze, das Gedächtnis und der Prüfmaßstab, die schnelle Lieferung vertrauenswürdig machen.
 
 ## Andere Sprachen
 

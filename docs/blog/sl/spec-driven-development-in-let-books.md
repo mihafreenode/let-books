@@ -91,6 +91,19 @@ Let Books že dokumentira tudi miselnost preverjanja. `docs/Development.md` in `
 
 To niso le podrobnosti o orodjih. So dokaz, da projekt kakovost obravnava kot ponovljiv sistem.
 
+## Zakaj je to pomembno za AI-podprto dostavo
+
+Če k Let Books prispeva AI pomočnik, mu izdelka ni treba izumiti od začetka. Repozitorij že vsebuje verigo namena:
+
+1. produktna smer v `AGENTS.md`
+2. taktična pravila dostave v `AGENTS-Implementation.md`
+3. trenutno stanje v `README.md`
+4. pravila znanja in objavljanja v `docs/`
+5. stanje izvedljivega prototipa v statičnem demu
+6. navodila za validacijo in objavo v razvojni in namestitveni dokumentaciji
+
+Ta veriga napak ne odpravi. Jih pa naredi lažje zaznavne in lažje pregledljive.
+
 ## Glavna lekcija
 
 Razvoj na podlagi specifikacij ne pomeni le tega, da pred kodiranjem napišemo dolg dokument. V praksi pomeni, da zgradimo zanesljivo verigo med produktnim namenom, taktičnimi pravili, javno dokumentacijo, demom, preverjanjem in objavo.

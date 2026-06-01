@@ -94,6 +94,27 @@ Le bon modèle n'est pas un schéma rigide « documentation d'abord, code ensuit
 
 Si un maillon change, ceux qui l'entourent doivent aussi être revus.
 
+<!-- semantic-parity: broad-audiences -->
+## Pourquoi un public plus large devrait aussi s'en soucier
+
+Ce n'est pas seulement une question technique.
+
+Les institutions devraient s'en soucier parce que la documentation influence la gouvernance, la confiance dans les achats, l'intégration, la continuité et l'auditabilité.
+
+Les étudiants devraient s'en soucier parce que documenter l'intention fait partie de l'apprentissage de la construction de systèmes fiables, et non d'un supplément administratif.
+
+Les lecteurs plus généraux devraient s'en soucier parce qu'un produit doté d'une documentation claire est généralement aussi un produit fondé sur des décisions plus claires.
+
+<!-- semantic-parity: practical-test -->
+## Le test pratique
+
+Une question utile pour toute équipe est simple :
+
+Si un nouveau contributeur ou un assistant IA entrait aujourd'hui dans le dépôt, les documents l'aideraient-ils à construire le produit voulu, ou surtout quelque chose qui paraît plausible ?
+
+<!-- semantic-parity: documentation-as-product-distinction -->
+Cette différence est la différence entre une documentation comme commentaire et une documentation comme partie du produit.
+
 ## La leçon durable
 
 La documentation n'est pas séparée de la qualité du produit. Elle façonne l'implémentation, la revue, la communication, la validation et la confiance à long terme. Dans les projets soutenus par l'IA, la documentation fait partie du produit parce qu'elle fait partie du système qui empêche la dérive du produit.

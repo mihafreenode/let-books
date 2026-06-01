@@ -95,6 +95,29 @@ Zato ekipe potrebujejo viden red avtoritete:
 4. demo ali prototip
 5. testi in validacija
 
+Demo je še vedno pomemben. Pomemben je le znotraj dokumentiranega sistema, namesto da bi ga zamenjal.
+
+## Kaj storiti, ko te demo nauči nekaj novega
+
+Včasih ima prototip prav, specifikacija pa je napačna, nepopolna ali preveč abstraktna.
+
+To ni napaka. Prav zato gradimo deme.
+
+Pravi odziv je:
+
+1. zabeležiti ugotovitev
+2. odločiti, ali naj novo vedenje postane namerno
+3. posodobiti specifikacijo in dokumentacijo
+4. nato usklajenost ohranjati tudi naprej
+
+Napačen odziv je, da dokumentacija ostane nespremenjena in vsi upajo, da si bodo zapomnili, da je demo zdaj dejanski vir resnice.
+
+## Zakaj bi to moralo zanimati institucije in študente
+
+Institucije morajo vedeti, ali ocenjujejo koncept, prototip ali odobren model delovnega toka.
+
+Študenti pa se morajo naučiti, da se prototipi ne utemeljijo sami od sebe. Dobra programska praksa vključuje razumevanje, kdaj implementacijo obravnavati kot dokaz in kdaj kot eksperiment, ki še čaka na odločitev.
+
 ## Trajna lekcija
 
 Demo je dragocen, ker naredi produktne ideje preizkusljive. Nevaren pa postane, ko tiho postane politika. Zdrav model je preprost: naj demo informira izdelek, naj pa specifikacije in dokumentacija zapišejo končno odločitev.

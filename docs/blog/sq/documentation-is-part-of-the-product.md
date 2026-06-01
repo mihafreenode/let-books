@@ -94,6 +94,27 @@ Modeli i duhur nuk është një skemë e ngurtë “fillimisht dokumentim, pasta
 
 Nëse ndryshon një hallkë, duhen rishikuar edhe të tjerat pranë saj.
 
+<!-- semantic-parity: broad-audiences -->
+## Pse kjo duhet t'i interesojë një audience më të gjerë
+
+Kjo nuk është vetëm një çështje teknike.
+
+Institucionet duhet të kujdesen për këtë sepse dokumentacioni ndikon te qeverisja, besimi në prokurim, integrimi i njerëzve të rinj, vazhdimësia dhe auditueshmëria.
+
+Studentët duhet të kujdesen për këtë sepse dokumentimi i synimit është pjesë e të mësuarit për të ndërtuar sisteme të besueshme, jo një shtesë administrative.
+
+Lexuesit e përgjithshëm duhet të kujdesen për këtë sepse një produkt me dokumentacion të qartë zakonisht është edhe një produkt me vendime më të qarta pas tij.
+
+<!-- semantic-parity: practical-test -->
+## Testi praktik
+
+Një pyetje e dobishme për çdo ekip është e thjeshtë:
+
+Nëse sot një kontribues i ri ose një asistent AI do të hynte në depo, a do ta ndihmonin dokumentet të ndërtonte produktin e synuar, apo kryesisht diçka që duket e besueshme?
+
+<!-- semantic-parity: documentation-as-product-distinction -->
+Ky dallim është dallimi midis dokumentacionit si koment dhe dokumentacionit si pjesë e produktit.
+
 ## Mësimi i qëndrueshëm
 
 Dokumentimi nuk është i ndarë nga cilësia e produktit. Ai formëson implementimin, rishikimin, komunikimin, validimin dhe besimin afatgjatë. Në projektet e mbështetura nga AI, dokumentimi është pjesë e produktit sepse është pjesë e sistemit që pengon devijimin e produktit.

@@ -94,6 +94,27 @@ Il modello corretto non è uno schema rigido “prima documentazione, poi codice
 
 Se cambia un anello, vanno rivisti anche quelli vicini.
 
+<!-- semantic-parity: broad-audiences -->
+## Perché dovrebbe interessare anche a un pubblico più ampio
+
+Non si tratta solo di una questione tecnica.
+
+Le istituzioni dovrebbero interessarsene perché la documentazione influisce su governance, fiducia negli acquisti, onboarding, continuità e verificabilità.
+
+Gli studenti dovrebbero interessarsene perché documentare l'intento fa parte dell'imparare a costruire sistemi affidabili, non è un'aggiunta amministrativa.
+
+Anche i lettori generali dovrebbero interessarsene perché un prodotto con documentazione chiara di solito è anche un prodotto con decisioni più chiare alle spalle.
+
+<!-- semantic-parity: practical-test -->
+## La prova pratica
+
+Una domanda utile per ogni team è semplice:
+
+Se oggi un nuovo collaboratore o un assistente AI entrasse nel repository, i documenti lo aiuterebbero a costruire il prodotto voluto oppure soprattutto qualcosa che sembra plausibile?
+
+<!-- semantic-parity: documentation-as-product-distinction -->
+Questa differenza è la differenza tra la documentazione come commento e la documentazione come parte del prodotto.
+
 ## La lezione durevole
 
 La documentazione non è separata dalla qualità del prodotto. Modella implementazione, review, comunicazione, validazione e fiducia a lungo termine. Nei progetti supportati dall'IA, la documentazione è parte del prodotto perché è parte del sistema che impedisce la deriva del prodotto.

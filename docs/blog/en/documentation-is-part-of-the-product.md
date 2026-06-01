@@ -103,6 +103,7 @@ The right model is not documentation first and code later in a rigid waterfall s
 
 If any link in that chain changes, the surrounding links should be reviewed too.
 
+<!-- semantic-parity: broad-audiences -->
 ## Why broad audiences should care
 
 This is not only a technical issue.
@@ -113,12 +114,14 @@ Students should care because learning to document intent is part of learning to 
 
 General readers should care because a product with clear documentation is usually a product with clearer decisions behind it.
 
+<!-- semantic-parity: practical-test -->
 ## The practical test
 
 A useful question for any team is simple:
 
 If a new contributor or an AI assistant entered the repository today, would the docs help them build the intended product, or would they mostly help them build something plausible?
 
+<!-- semantic-parity: documentation-as-product-distinction -->
 That difference is the difference between documentation as commentary and documentation as part of the product.
 
 ## The durable lesson

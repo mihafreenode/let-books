@@ -87,11 +87,27 @@ U razvoju vođenom specifikacijom ove razine ne stoje svaka za sebe.
 
 Zajedno stvaraju proizvodnu memoriju koja preživljava brzinu razvoja.
 
+## Šta to znači za timove koji koriste AI
+
+Timovi koji dobro koriste AI ne uklanjaju proces. Oni proces pomjeraju bliže izvoru generisanja.
+
+To obično znači:
+
+- da prije implementacije pišu jasnije produktne specifikacije
+- da održavaju izričite implementacijske smjernice
+- da ažuriraju dokumentaciju kada se ponašanje proizvoda promijeni
+- da demo provjeravaju prema specifikacijama umjesto da pretpostavljaju podudarnost
+- da postepeno dodaju pravila validacije kako usklađenost ne bi zavisila samo od ljudskog pamćenja
+
+Ovo nije protiv AI-ja. Ovako AI postaje pouzdan.
+
 ## Trajna lekcija
 
 AI može brzo proizvesti kod, sadržaj i interfejse. Sam po sebi ne može garantirati da svi ti izlazi još uvijek opisuju isti proizvod.
 
 Razvoj vođen specifikacijom način je da tim spriječi da se brzina pretvori u odstupanje.
+
+U projektima uz pomoć AI-ja specifikacija nije papirologija nakon činjenice. Ona je granica, memorija i standard pregleda koji brzo isporučivanje čine vjerodostojnim.
 
 ## Drugi jezici
 

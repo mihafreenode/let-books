@@ -87,11 +87,27 @@ V razvoju na podlagi specifikacij te plasti ne stojijo vsaka zase.
 
 Skupaj ustvarijo produktni spomin, ki preživi hitrost razvoja.
 
+## Kaj to pomeni za ekipe, ki uporabljajo AI
+
+Ekipe, ki AI uporabljajo dobro, ne odstranjujejo procesa. Proces premaknejo bliže viru generiranja.
+
+To običajno pomeni:
+
+- da pred implementacijo napišejo jasnejše produktne specifikacije
+- da ohranijo izrecna implementacijska navodila
+- da posodobijo dokumentacijo, ko se vedenje izdelka spremeni
+- da demoe preverjajo glede na specifikacije, namesto da predpostavljajo ujemanje
+- da postopno dodajajo validacijska pravila, tako da usklajenost ni odvisna le od človeškega spomina
+
+To ni proti AI. Tako AI postane zanesljiv.
+
 ## Trajna lekcija
 
 AI lahko hitro ustvari kodo, vsebino in vmesnike. Sam od sebe pa ne zagotovi, da vsi ti izhodi še vedno opisujejo isti izdelek.
 
 Razvoj na podlagi specifikacij je način, kako ekipa prepreči, da bi se hitrost spremenila v odmik.
+
+V AI-podprtih projektih specifikacija ni birokracija za nazaj. Je meja, spomin in merilo pregleda, zaradi katerih je hitro dostavljanje vredno zaupanja.
 
 ## Drugi jeziki
 

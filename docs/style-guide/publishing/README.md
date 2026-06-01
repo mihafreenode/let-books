@@ -14,6 +14,7 @@ Use this area to standardize how topics move from repository evidence to approve
 - Treat `docs/**`, `AGENTS.md`, and related top-level documentation as canonical editorial references.
 - Do not use `static-demo/`, future app source files, or test code as quoted repository evidence in public articles.
 - CI validation in `tools/validate-blog.mjs` should fail when editorial content cites app/source paths instead of docs/specs.
+- Semantic localization validation should warn on likely parity drift and fail only when a localized article appears to have lost a major concept or conclusion from the English source.
 
 ## Structure
 
@@ -45,3 +46,4 @@ Use this area to standardize how topics move from repository evidence to approve
 - `ubuntu-tooling.md`
 - `../writing/README.md`
 - `../../sources/README.md`
+- `../localization/semantic-parity.md`

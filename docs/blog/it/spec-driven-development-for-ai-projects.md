@@ -87,11 +87,27 @@ In uno sviluppo guidato dalle specifiche questi livelli non stanno separati.
 
 Insieme creano una memoria di prodotto che sopravvive alla velocita di sviluppo.
 
+## Cosa significa questo per i team che usano l'IA
+
+I team che usano bene l'IA non eliminano il processo. Spostano il processo piu vicino alla fonte della generazione.
+
+Di solito questo significa:
+
+- scrivere specifiche di prodotto piu chiare prima di chiedere l'implementazione
+- mantenere esplicite le linee guida di implementazione
+- aggiornare la documentazione quando cambia il comportamento del prodotto
+- verificare i demo rispetto alle specifiche invece di presupporre la parita
+- aggiungere gradualmente regole di validazione, in modo che la coerenza non dipenda solo dalla memoria umana
+
+Questo non e anti-IA. E il modo in cui l'IA diventa affidabile.
+
 ## La lezione durevole
 
 L'IA puo produrre rapidamente codice, contenuti e interfacce. Da sola non puo garantire che tutti questi output descrivano ancora lo stesso prodotto.
 
 Lo sviluppo guidato dalle specifiche e il modo con cui un team impedisce che la velocita si trasformi in deriva.
+
+Nei progetti assistiti dall'IA, la specifica non e burocrazia a posteriori. E il confine, la memoria e lo standard di revisione che rendono affidabile una consegna veloce.
 
 ## Altre lingue
 

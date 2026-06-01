@@ -94,6 +94,27 @@ Pravi model ni toga shema »najprej dokumentacija, potem koda«. Pravi model je 
 
 Če se spremeni en člen, je treba pregledati tudi okoliške.
 
+<!-- semantic-parity: broad-audiences -->
+## Zakaj bi to moralo zanimati širše občinstvo
+
+To ni samo tehnično vprašanje.
+
+Institucije bi morale to zanimati, ker dokumentacija vpliva na upravljanje, zaupanje pri nabavi, uvajanje novih ljudi, kontinuiteto in sledljivost.
+
+Študenti bi morali to zanimati, ker je sposobnost dokumentiranja namena del učenja gradnje zanesljivih sistemov, ne pa administrativni dodatek.
+
+Splošne bralce bi to moralo zanimati, ker je izdelek z jasno dokumentacijo navadno tudi izdelek z bolj jasnimi odločitvami v ozadju.
+
+<!-- semantic-parity: practical-test -->
+## Praktični preizkus
+
+Uporabno vprašanje za vsako ekipo je preprosto:
+
+Če bi danes v repozitorij vstopil nov sodelavec ali AI pomočnik, bi mu dokumenti pomagali zgraditi nameravani izdelek ali predvsem nekaj, kar se zdi verjetno?
+
+<!-- semantic-parity: documentation-as-product-distinction -->
+Ta razlika je razlika med dokumentacijo kot komentarjem in dokumentacijo kot delom izdelka.
+
 ## Trajna lekcija
 
 Dokumentacija ni ločena od kakovosti izdelka. Oblikuje implementacijo, pregled, komunikacijo, validacijo in dolgoročno zaupanje. V AI-podprtih projektih je dokumentacija del izdelka, ker je del sistema, ki preprečuje produktni odmik.

@@ -87,11 +87,27 @@ Në një zhvillim të udhëhequr nga specifikimi, këto shtresa nuk qëndrojnë 
 
 Së bashku ato krijojnë kujtesë produkti që i mbijeton shpejtësisë së zhvillimit.
 
+## Çfarë do të thotë kjo për ekipet që përdorin AI
+
+Ekipet që e përdorin mirë AI nuk e heqin procesin. Ato e afrojnë procesin më pranë burimit të gjenerimit.
+
+Kjo zakonisht do të thotë:
+
+- të shkruajnë specifikime produkti më të qarta para implementimit
+- të mbajnë të qarta udhëzimet e implementimit
+- ta përditësojnë dokumentimin kur ndryshon sjellja e produktit
+- t'i kontrollojnë demot kundrejt specifikimeve në vend që të supozojnë përputhje
+- të shtojnë gradualisht rregulla validimi që përputhshmëria të mos varet vetëm nga kujtesa njerëzore
+
+Kjo nuk është kundër AI. Kështu AI bëhet i besueshëm.
+
 ## Mësimi i qëndrueshëm
 
 AI mund të prodhojë shpejt kod, përmbajtje dhe ndërfaqe. Ai nuk mund të garantojë vetë që të gjitha këto dalje vazhdojnë të përshkruajnë të njëjtin produkt.
 
 Zhvillimi i udhëhequr nga specifikimi është mënyra si një ekip e pengon shpejtësinë të kthehet në devijim.
+
+Në projektet e asistuara nga AI, specifikimi nuk është burokraci pas faktit. Ai është kufiri, kujtesa dhe standardi i shqyrtimit që e bëjnë të besueshme dorëzimin e shpejtë.
 
 ## Gjuhë të tjera
 

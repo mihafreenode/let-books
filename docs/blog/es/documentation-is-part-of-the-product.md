@@ -94,6 +94,27 @@ El modelo correcto no es un esquema rígido de «primero documentación y luego 
 
 Si cambia un eslabón, también deben revisarse los que están alrededor.
 
+<!-- semantic-parity: broad-audiences -->
+## Por qué esto también debería importarle a una audiencia más amplia
+
+No es solo un tema técnico.
+
+Las instituciones deberían preocuparse por esto porque la documentación afecta a la gobernanza, la confianza en la contratación, la incorporación de nuevas personas, la continuidad y la auditabilidad.
+
+Los estudiantes deberían preocuparse por esto porque documentar la intención forma parte de aprender a construir sistemas fiables, no es un extra administrativo.
+
+Los lectores en general deberían preocuparse por esto porque un producto con documentación clara suele ser también un producto con decisiones más claras detrás.
+
+<!-- semantic-parity: practical-test -->
+## La prueba práctica
+
+Una pregunta útil para cualquier equipo es simple:
+
+Si hoy una persona colaboradora nueva o un asistente de IA entrara en el repositorio, ¿los documentos le ayudarían a construir el producto previsto, o sobre todo algo que parece plausible?
+
+<!-- semantic-parity: documentation-as-product-distinction -->
+Esa diferencia es la diferencia entre la documentación como comentario y la documentación como parte del producto.
+
 ## La lección duradera
 
 La documentación no está separada de la calidad del producto. Da forma a la implementación, la revisión, la comunicación, la validación y la confianza a largo plazo. En proyectos apoyados por IA, la documentación es parte del producto porque es parte del sistema que evita la deriva del producto.

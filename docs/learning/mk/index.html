@@ -77,20 +77,163 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Водичи за учење</h1>
             <p>Структурирани водичи за пишување спецификации, планирање имплементација и усогласување на документација, демо и код.</p>
           </div>
-          <ul>
-              <li><a href="how-to-add-validation-rules-and-ci-gates-in-stages.md">Како постепено да се додаваат правила за валидација и CI ограничувања</a></li>
-              <li><a href="how-to-keep-spec-docs-demo-and-code-aligned.md">Како да се одржи усогласеност меѓу спецификација, документација, демо и код</a></li>
-              <li><a href="how-to-review-ai-assisted-translations.md">Како да се прегледуваат преводи со помош на AI</a></li>
-              <li><a href="how-to-review-ai-assisted-work-against-the-spec.md">Како да се прегледува AI-поддржана работа според спецификацијата</a></li>
-              <li><a href="how-to-turn-a-product-spec-into-an-implementation-plan.md">Како од продуктна спецификација да се направи имплементациски план</a></li>
-              <li><a href="how-to-write-a-spec-that-ai-can-follow.md">Како да се напише спецификација што AI може да ја следи</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Вид на содржина">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/mk/index.html" data-content-switcher-link data-content-type="blog">Блог</a>
+              <a class="content-type-switcher__link is-active" href="../../learning/mk/index.html" data-content-switcher-link data-content-type="learning" aria-current="page">Материјали за учење</a>
+              <a class="content-type-switcher__link" href="../../wiki/mk/index.html" data-content-switcher-link data-content-type="wiki">Вики</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Неодамнешни материјали за учење</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../learning/mk/how-to-review-ai-assisted-translations.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>Како да се прегледуваат преводи со помош на AI</h3>
+              <p>Овој водич објаснува како да се прегледуваат преводи генерирани со AI во однос на значење, терминологија, пристапност, тон и потребниот човечки преглед.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-design-english-source-content-for-translation.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>How to Design English Source Content for Translation</h3>
+              <p>This guide shows how to write English canonical content that is easier to translate, review, and validate later.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-measure-translation-maturity.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>How to Measure Translation Maturity</h3>
+              <p>This guide explains how to measure translation quality in stages so projects can improve honestly instead of hiding uneven coverage.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-manage-terminology-across-languages.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>How to Manage Terminology Across Languages</h3>
+              <p>This guide explains how to keep a multilingual termbase stable across documentation, UI text, and educational content.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Прелистај по теми</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-accessibility" data-topic-slug="accessibility" aria-expanded="false" aria-controls="index-learning-mk-accessibility-menu">Accessibility</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-learning-mk-ai-assisted-delivery-menu">AI испорака</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-ai-assisted-translation" data-topic-slug="ai-assisted-translation" aria-expanded="false" aria-controls="index-learning-mk-ai-assisted-translation-menu">AI-Assisted Translation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-learning-mk-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-continuous-localization" data-topic-slug="continuous-localization" aria-expanded="false" aria-controls="index-learning-mk-continuous-localization-menu">Continuous Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-diagrams" data-topic-slug="diagrams" aria-expanded="false" aria-controls="index-learning-mk-diagrams-menu">Diagrams</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-education" data-topic-slug="education" aria-expanded="false" aria-controls="index-learning-mk-education-menu">Education</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-engineering-systems" data-topic-slug="engineering-systems" aria-expanded="false" aria-controls="index-learning-mk-engineering-systems-menu">Engineering Systems</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-governance" data-topic-slug="governance" aria-expanded="false" aria-controls="index-learning-mk-governance-menu">Governance</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="index-learning-mk-localization-menu">Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-localized-alt-text" data-topic-slug="localized-alt-text" aria-expanded="false" aria-controls="index-learning-mk-localized-alt-text-menu">Localized Alt Text</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="index-learning-mk-qa-menu">QA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-sustainability" data-topic-slug="sustainability" aria-expanded="false" aria-controls="index-learning-mk-sustainability-menu">Sustainability</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-terminology" data-topic-slug="terminology" aria-expanded="false" aria-controls="index-learning-mk-terminology-menu">Terminology</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-learning-mk-validation-menu">Валидација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-learning-mk-documentation-menu">Документација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-learning-mk-translation-quality-menu">Квалитет на превод</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-learning-mk-spec-writing-menu">Пишување спецификации</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-learning-mk-implementation-planning-menu">Планирање на имплементација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-learning-mk-product-review-menu">Преглед на производот</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-learning-mk-spec-driven-development-menu">Развој воден од спецификации</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-learning-mk-project-management-menu">Управување со проект</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-learning-mk-demo-alignment-menu">Усогласеност на демото</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-learning-mk-accessibility-menu" data-topic-menu="index-learning-mk-accessibility" hidden>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-ai-assisted-delivery-menu" data-topic-menu="index-learning-mk-ai-assisted-delivery" hidden>
+                      <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува AI-поддржана работа според спецификацијата</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-ai-assisted-translation-menu" data-topic-menu="index-learning-mk-ai-assisted-translation" hidden>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-translations.html">Како да се прегледуваат преводи со помош на AI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-ci-cd-menu" data-topic-menu="index-learning-mk-ci-cd" hidden>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-continuous-localization-menu" data-topic-menu="index-learning-mk-continuous-localization" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-diagrams-menu" data-topic-menu="index-learning-mk-diagrams" hidden>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-education-menu" data-topic-menu="index-learning-mk-education" hidden>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-engineering-systems-menu" data-topic-menu="index-learning-mk-engineering-systems" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-governance-menu" data-topic-menu="index-learning-mk-governance" hidden>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-translations.html">Како да се прегледуваат преводи со помош на AI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-localization-menu" data-topic-menu="index-learning-mk-localization" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-localized-alt-text-menu" data-topic-menu="index-learning-mk-localized-alt-text" hidden>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-qa-menu" data-topic-menu="index-learning-mk-qa" hidden>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-sustainability-menu" data-topic-menu="index-learning-mk-sustainability" hidden>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-terminology-menu" data-topic-menu="index-learning-mk-terminology" hidden>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-validation-menu" data-topic-menu="index-learning-mk-validation" hidden>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-documentation-menu" data-topic-menu="index-learning-mk-documentation" hidden>
+                      <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржи усогласеност меѓу спецификација, документација, демо и код</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-translation-quality-menu" data-topic-menu="index-learning-mk-translation-quality" hidden>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-translations.html">Како да се прегледуваат преводи со помош на AI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-spec-writing-menu" data-topic-menu="index-learning-mk-spec-writing" hidden>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                      <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a>
+                      <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html">Како од продуктна спецификација да се направи имплементациски план</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-implementation-planning-menu" data-topic-menu="index-learning-mk-implementation-planning" hidden>
+                      <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html">Како од продуктна спецификација да се направи имплементациски план</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-product-review-menu" data-topic-menu="index-learning-mk-product-review" hidden>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува AI-поддржана работа според спецификацијата</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-spec-driven-development-menu" data-topic-menu="index-learning-mk-spec-driven-development" hidden>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржи усогласеност меѓу спецификација, документација, демо и код</a>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува AI-поддржана работа според спецификацијата</a>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-project-management-menu" data-topic-menu="index-learning-mk-project-management" hidden>
+                      <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html">Како од продуктна спецификација да се направи имплементациски план</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-demo-alignment-menu" data-topic-menu="index-learning-mk-demo-alignment" hidden>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржи усогласеност меѓу спецификација, документација, демо и код</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

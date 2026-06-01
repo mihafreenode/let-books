@@ -21,7 +21,9 @@ Keep translations traceable, script-correct, structurally aligned with canonical
 
 - English is the canonical authoring language for the knowledge platform unless a document explicitly declares a different policy.
 - Translations are first-class deliverables, but they inherit canonical source authority from the English original.
+- Coverage is mandatory across all supported languages for published public-facing content. Maturity may vary, but missing articles are not acceptable.
 - Localization is broader than translation. It includes accessibility text, diagrams, screenshots, captions, navigation, metadata, and governance.
+- Semantic parity matters more than literal parity. Localized articles should preserve the same ideas, examples, warnings, and conclusions even when structure changes.
 - Serbian Latin and Serbian Cyrillic are separate locales.
 - Macedonian, Albanian, and Slovenian must preserve correct native orthography and Unicode characters.
 - AI-generated translation is allowed as a draft stage only. It does not replace review.
@@ -64,13 +66,21 @@ Every translated article must include an "Other Languages" footer section at the
 
 English canonical articles must also include this section for parity.
 
-### 4. Localized Source-Map Stubs
+### 4. Semantic Parity
+
+Localized articles must preserve the same meaning and reader outcome as the canonical English source.
+
+They may merge or reorder sections, but they must not lose major arguments, examples, audience explanations, cautions, rhetorical bridges, or conclusions.
+
+Every published article must also exist in every supported language. Coverage and semantic quality are tracked separately.
+
+### 5. Localized Source-Map Stubs
 
 Every flagship English blog article must have a corresponding source map under `docs/sources/en/`. Every non-English locale must have a stub source map under `docs/sources/<locale>/` that links back to the canonical English source map.
 
 Source-map stubs are not full translations. They are short files with a pointer to the English original and language-appropriate context.
 
-### 5. LinkedIn Derivative Packs
+### 6. LinkedIn Derivative Packs
 
 Every flagship English blog article must have a LinkedIn derivative pack under `docs/blog/en/linkedin/<article-id>.md` containing:
 
@@ -81,13 +91,13 @@ Every flagship English blog article must have a LinkedIn derivative pack under `
 
 These are social-media derivatives only. They do not require translation.
 
-### 6. HTML Article Versions
+### 7. HTML Article Versions
 
 Every blog article must have an HTML version alongside the Markdown source. The HTML version follows the same structure as the existing documentation HTML site (`docs/<locale>/index.html` pattern) and is linked from the appropriate locale's documentation index.
 
 HTML versions are generated from the Markdown source using the standard conversion pipeline (pandoc-based) and must maintain parity with the Markdown content.
 
-### 7. HTML Publishing Requirements
+### 8. HTML Publishing Requirements
 
 - Every locale's `docs/<locale>/index.html` must list blog articles available in that locale with direct links to the HTML article pages.
 - The HTML article page uses the same header, footer, stylesheet, and language-switching pattern as the existing documentation pages.
@@ -161,6 +171,7 @@ Change-record summary for PRs or governance review:
 - `../../blog/README.md`
 - `../../spec-driven-content-program.md`
 - `../../blog/article-template.md`
+- `semantic-parity.md`
 
 ## Related Learning Guides
 

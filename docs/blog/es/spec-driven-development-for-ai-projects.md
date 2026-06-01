@@ -87,11 +87,27 @@ En un desarrollo guiado por especificaciones, estas capas no están separadas.
 
 Juntas crean una memoria de producto que sobrevive a la velocidad del desarrollo.
 
+## Lo que esto significa para los equipos que usan IA
+
+Los equipos que usan bien la IA no eliminan el proceso. Acercan el proceso a la fuente de generación.
+
+Eso suele significar:
+
+- escribir especificaciones de producto más claras antes de pedir la implementación
+- mantener explícita la guía de implementación
+- actualizar la documentación cuando cambia el comportamiento del producto
+- comprobar los demos frente a las especificaciones en lugar de asumir la paridad
+- añadir gradualmente reglas de validación para que la coherencia no dependa solo de la memoria humana
+
+Esto no es anti-IA. Es como la IA se vuelve fiable.
+
 ## La lección duradera
 
 La IA puede producir rápidamente código, contenido e interfaces. Por sí sola no puede garantizar que todos esos resultados sigan describiendo el mismo producto.
 
 El desarrollo guiado por especificaciones es la manera en que un equipo evita que la velocidad se convierta en deriva.
+
+En los proyectos asistidos por IA, la especificación no es papeleo posterior. Es el límite, la memoria y el criterio de revisión que hacen fiable una entrega rápida.
 
 ## Otros idiomas
 

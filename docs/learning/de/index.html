@@ -77,20 +77,163 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Lernleitfäden</h1>
             <p>Strukturierte Leitfäden zum Schreiben von Spezifikationen, zur Planung der Implementierung und zur Abstimmung von Dokumentation, Demo und Code.</p>
           </div>
-          <ul>
-              <li><a href="how-to-add-validation-rules-and-ci-gates-in-stages.md">Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</a></li>
-              <li><a href="how-to-keep-spec-docs-demo-and-code-aligned.md">Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</a></li>
-              <li><a href="how-to-review-ai-assisted-translations.md">Wie man KI-gestützte Übersetzungen prüft</a></li>
-              <li><a href="how-to-review-ai-assisted-work-against-the-spec.md">Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</a></li>
-              <li><a href="how-to-turn-a-product-spec-into-an-implementation-plan.md">Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</a></li>
-              <li><a href="how-to-write-a-spec-that-ai-can-follow.md">Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Inhaltstyp">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/de/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link is-active" href="../../learning/de/index.html" data-content-switcher-link data-content-type="learning" aria-current="page">Lernmaterial</a>
+              <a class="content-type-switcher__link" href="../../wiki/de/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Neueste Lernmaterialien</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../learning/de/how-to-review-ai-assisted-translations.html">
+                <span class="recent-content-card__type">Lernmaterial</span>
+                <h3>Wie man KI-gestützte Übersetzungen prüft</h3>
+              <p>Dieser Leitfaden erklärt, wie KI-generierte Übersetzungen im Hinblick auf Bedeutung, Terminologie, Barrierefreiheit, Ton und den nötigen menschlichen Review geprüft werden.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-design-english-source-content-for-translation.html">
+                <span class="recent-content-card__type">Lernmaterial</span>
+                <h3>How to Design English Source Content for Translation</h3>
+              <p>This guide shows how to write English canonical content that is easier to translate, review, and validate later.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-measure-translation-maturity.html">
+                <span class="recent-content-card__type">Lernmaterial</span>
+                <h3>How to Measure Translation Maturity</h3>
+              <p>This guide explains how to measure translation quality in stages so projects can improve honestly instead of hiding uneven coverage.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-manage-terminology-across-languages.html">
+                <span class="recent-content-card__type">Lernmaterial</span>
+                <h3>How to Manage Terminology Across Languages</h3>
+              <p>This guide explains how to keep a multilingual termbase stable across documentation, UI text, and educational content.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Nach Themen durchsuchen</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-accessibility" data-topic-slug="accessibility" aria-expanded="false" aria-controls="index-learning-de-accessibility-menu">Accessibility</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-ai-assisted-translation" data-topic-slug="ai-assisted-translation" aria-expanded="false" aria-controls="index-learning-de-ai-assisted-translation-menu">AI-Assisted Translation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-learning-de-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-continuous-localization" data-topic-slug="continuous-localization" aria-expanded="false" aria-controls="index-learning-de-continuous-localization-menu">Continuous Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-learning-de-demo-alignment-menu">Demo-Abgleich</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-diagrams" data-topic-slug="diagrams" aria-expanded="false" aria-controls="index-learning-de-diagrams-menu">Diagrams</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-learning-de-documentation-menu">Dokumentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-education" data-topic-slug="education" aria-expanded="false" aria-controls="index-learning-de-education-menu">Education</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-engineering-systems" data-topic-slug="engineering-systems" aria-expanded="false" aria-controls="index-learning-de-engineering-systems-menu">Engineering Systems</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-governance" data-topic-slug="governance" aria-expanded="false" aria-controls="index-learning-de-governance-menu">Governance</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-learning-de-implementation-planning-menu">Implementierungsplanung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-learning-de-ai-assisted-delivery-menu">KI-gestützte Lieferung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="index-learning-de-localization-menu">Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-localized-alt-text" data-topic-slug="localized-alt-text" aria-expanded="false" aria-controls="index-learning-de-localized-alt-text-menu">Localized Alt Text</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-learning-de-product-review-menu">Produktprüfung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-learning-de-project-management-menu">Projektmanagement</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="index-learning-de-qa-menu">QA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-learning-de-spec-writing-menu">Spezifikationen schreiben</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-learning-de-spec-driven-development-menu">Spezifikationsgetriebene Entwicklung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-sustainability" data-topic-slug="sustainability" aria-expanded="false" aria-controls="index-learning-de-sustainability-menu">Sustainability</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-terminology" data-topic-slug="terminology" aria-expanded="false" aria-controls="index-learning-de-terminology-menu">Terminology</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-learning-de-validation-menu">Validierung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-de-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-learning-de-translation-quality-menu">Übersetzungsqualität</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-learning-de-accessibility-menu" data-topic-menu="index-learning-de-accessibility" hidden>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-ai-assisted-translation-menu" data-topic-menu="index-learning-de-ai-assisted-translation" hidden>
+                      <a href="../../learning/de/how-to-review-ai-assisted-translations.html">Wie man KI-gestützte Übersetzungen prüft</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-ci-cd-menu" data-topic-menu="index-learning-de-ci-cd" hidden>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                      <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html">Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-continuous-localization-menu" data-topic-menu="index-learning-de-continuous-localization" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-demo-alignment-menu" data-topic-menu="index-learning-de-demo-alignment" hidden>
+                      <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html">Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-diagrams-menu" data-topic-menu="index-learning-de-diagrams" hidden>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-documentation-menu" data-topic-menu="index-learning-de-documentation" hidden>
+                      <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html">Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</a>
+                      <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html">Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-education-menu" data-topic-menu="index-learning-de-education" hidden>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-engineering-systems-menu" data-topic-menu="index-learning-de-engineering-systems" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-governance-menu" data-topic-menu="index-learning-de-governance" hidden>
+                      <a href="../../learning/de/how-to-review-ai-assisted-translations.html">Wie man KI-gestützte Übersetzungen prüft</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-implementation-planning-menu" data-topic-menu="index-learning-de-implementation-planning" hidden>
+                      <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html">Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-ai-assisted-delivery-menu" data-topic-menu="index-learning-de-ai-assisted-delivery" hidden>
+                      <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html">Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</a>
+                      <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html">Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-localization-menu" data-topic-menu="index-learning-de-localization" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-localized-alt-text-menu" data-topic-menu="index-learning-de-localized-alt-text" hidden>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-product-review-menu" data-topic-menu="index-learning-de-product-review" hidden>
+                      <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html">Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-project-management-menu" data-topic-menu="index-learning-de-project-management" hidden>
+                      <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html">Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-qa-menu" data-topic-menu="index-learning-de-qa" hidden>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-spec-writing-menu" data-topic-menu="index-learning-de-spec-writing" hidden>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                      <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html">Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</a>
+                      <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html">Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-spec-driven-development-menu" data-topic-menu="index-learning-de-spec-driven-development" hidden>
+                      <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html">Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</a>
+                      <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html">Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</a>
+                      <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html">Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-sustainability-menu" data-topic-menu="index-learning-de-sustainability" hidden>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-terminology-menu" data-topic-menu="index-learning-de-terminology" hidden>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-validation-menu" data-topic-menu="index-learning-de-validation" hidden>
+                      <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html">Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-de-translation-quality-menu" data-topic-menu="index-learning-de-translation-quality" hidden>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                      <a href="../../learning/de/how-to-review-ai-assisted-translations.html">Wie man KI-gestützte Übersetzungen prüft</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

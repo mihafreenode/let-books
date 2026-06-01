@@ -94,6 +94,27 @@ Das richtige Modell ist keine starre Reihenfolge „erst Dokumentation, dann Cod
 
 Wenn sich ein Glied ändert, sollten auch die benachbarten überprüft werden.
 
+<!-- semantic-parity: broad-audiences -->
+## Warum sich auch ein breiteres Publikum dafür interessieren sollte
+
+Das ist nicht nur ein technisches Thema.
+
+Institutionen sollten sich dafür interessieren, weil Dokumentation Governance, Vertrauen in Beschaffung, Onboarding, Kontinuität und Auditierbarkeit beeinflusst.
+
+Studierende sollten sich dafür interessieren, weil das Dokumentieren von Absicht Teil des Lernens ist, wie man verlässliche Systeme baut, und kein administratives Extra.
+
+Allgemeine Leserinnen und Leser sollten sich dafür interessieren, weil ein Produkt mit klarer Dokumentation meist auch ein Produkt mit klareren Entscheidungen im Hintergrund ist.
+
+<!-- semantic-parity: practical-test -->
+## Der praktische Test
+
+Eine hilfreiche Frage für jedes Team ist einfach:
+
+Wenn heute ein neuer Mitwirkender oder ein KI-Assistent ins Repository käme, würden die Dokumente ihm helfen, das beabsichtigte Produkt zu bauen, oder vor allem etwas, das nur plausibel wirkt?
+
+<!-- semantic-parity: documentation-as-product-distinction -->
+Dieser Unterschied ist der Unterschied zwischen Dokumentation als Kommentar und Dokumentation als Teil des Produkts.
+
 ## Die dauerhafte Lehre
 
 Dokumentation ist nicht von Produktqualität getrennt. Sie prägt Implementierung, Review, Kommunikation, Validierung und langfristiges Vertrauen. In KI-gestützten Projekten ist Dokumentation Teil des Produkts, weil sie Teil des Systems ist, das Produktdrift verhindert.

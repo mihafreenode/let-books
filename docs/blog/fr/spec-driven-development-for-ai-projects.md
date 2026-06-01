@@ -87,11 +87,27 @@ Dans un développement guidé par les spécifications, ces couches ne tiennent p
 
 Ensemble, elles créent une mémoire produit qui survit à la vitesse de développement.
 
+## Ce que cela signifie pour les équipes qui utilisent l'IA
+
+Les équipes qui utilisent bien l'IA ne retirent pas le processus. Elles rapprochent le processus de la source de génération.
+
+Concrètement, cela signifie souvent :
+
+- rédiger des spécifications produit plus claires avant de demander l'implémentation
+- garder des consignes d'implémentation explicites
+- mettre à jour la documentation quand le comportement du produit change
+- vérifier les démos par rapport aux spécifications au lieu de supposer la parité
+- ajouter progressivement des règles de validation pour que la cohérence ne dépende pas seulement de la mémoire humaine
+
+Ce n'est pas anti-IA. C'est ainsi que l'IA devient fiable.
+
 ## La leçon durable
 
 L'IA peut produire rapidement du code, du contenu et des interfaces. À elle seule, elle ne peut pas garantir que toutes ces sorties décrivent encore le même produit.
 
 Le développement guidé par les spécifications est la manière dont une équipe évite que la vitesse ne se transforme en dérive.
+
+Dans les projets assistés par l'IA, la spécification n'est pas de la paperasserie après coup. Elle est la frontière, la mémoire et la norme de revue qui rendent une livraison rapide digne de confiance.
 
 ## Autres langues
 

@@ -77,38 +77,211 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Wiki</h1>
             <p>Faqe referencë afatgjatë që mbulojnë zhvillimin e drejtuar nga specifikimet, gjurmueshmërinë e dokumentacionit, shtresat e vlefshmërisë dhe tema të ngjashme.</p>
           </div>
-          <ul>
-              <li><a href="ai-assisted-translation-policy.md">AI-Politika e përkthimit të asistuar</a></li>
-              <li><a href="demo-spec-alignment.md">Përputhja e demos me specifikimin</a></li>
-              <li><a href="documentation-traceability.md">Gjurmueshmëria e dokumentacionit</a></li>
-              <li><a href="implementation-guidance.md">Udhëzime për implementim</a></li>
-              <li><a href="language-support-matrix.md">Matrica e mbështetjes gjuhësore</a></li>
-              <li><a href="let-books-accessibility-and-localization.md">Let Books Aksesueshmëria dhe Lokalizimi</a></li>
-              <li><a href="let-books-localization-architecture.md">Let Books Arkitektura e Lokalizimit</a></li>
-              <li><a href="let-books-localization-case-study.md">Let Books Rast Studimi i Lokalizimit</a></li>
-              <li><a href="let-books-localization-lessons-learned.md">Let Books Mësimet e nxjerra nga lokalizimi</a></li>
-              <li><a href="localization-at-scale.md">Lokalizimi në shkallë</a></li>
-              <li><a href="localization-ci-cd.md">Lokalizimi CI dhe CD</a></li>
-              <li><a href="localization-governance.md">Qeverisja e Lokalizimit</a></li>
-              <li><a href="localization-maturity-model.md">Modeli i Pjekurisë së Lokalizimit</a></li>
-              <li><a href="localization-roadmap.md">Udhërrëfyesi i lokalizimit</a></li>
-              <li><a href="markdown-in-product-development.md">Markdown në zhvillimin e produktit</a></li>
-              <li><a href="multilingual-accessibility.md">Aksesueshmëri shumëgjuhëshe</a></li>
-              <li><a href="multilingual-public-interest-software.md">Software shumëgjuhësh me interes publik</a></li>
-              <li><a href="non-text-asset-localization.md">Lokalizimi i aseteve pa tekst</a></li>
-              <li><a href="product-specification.md">Specifikimi i produktit</a></li>
-              <li><a href="spec-driven-development.md">Zhvillim i udhëhequr nga specifikimi</a></li>
-              <li><a href="translation-memory-and-glossaries.md">Kujtesa dhe fjalorët e përkthimit</a></li>
-              <li><a href="translation-quality-assurance.md">Sigurimi i cilësisë së përkthimit</a></li>
-              <li><a href="unicode-and-script-correctness.md">Unicode dhe Korrektësia e Skriptit</a></li>
-              <li><a href="validation-layers.md">Shtresat e validimit</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Lloji i përmbajtjes">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/sq/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/sq/index.html" data-content-switcher-link data-content-type="learning">Materiale mësimore</a>
+              <a class="content-type-switcher__link is-active" href="../../wiki/sq/index.html" data-content-switcher-link data-content-type="wiki" aria-current="page">Wiki</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Hyrjet e fundit wiki</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../wiki/sq/let-books-localization-lessons-learned.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Let Books Mësimet e nxjerra nga lokalizimi</h3>
+              <p>Puna e hershme e lokalizimit Let Books tregon vlerën dhe koston e mirëmbajtjes së trajtimit të dokumentacionit shumëgjuhësh si një aset produkti i klasit të parë.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/sq/let-books-accessibility-and-localization.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Let Books Aksesueshmëria dhe Lokalizimi</h3>
+              <p>Let Books e trajton lokalizimin dhe aksesueshmërinë si disiplina të ndërlidhura sepse pjesëmarrja shumëgjuhëshe varet si nga aksesi gjuhësor ashtu edhe nga ai ndihmës.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/sq/let-books-localization-case-study.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Let Books Rast Studimi i Lokalizimit</h3>
+              <p>Let Books është një rast studimor i gjallë në ndërtimin e një platforme njohurish shumëgjuhëshe dhe vizionit të produktit përpara se të ekzistojë një aplikacion i plotë backend.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/sq/let-books-localization-architecture.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Let Books Arkitektura e Lokalizimit</h3>
+              <p>Kjo faqe përmbledh mënyrën se si Let Books organizon dokumentet shumëgjuhëshe, vargjet e ndërfaqes së përdoruesit, gjeneruesit, vlefshmërinë dhe politikën e përmbajtjes të vetëdijshëm për skriptin.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Shfleto sipas temës</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-accessibility" data-topic-slug="accessibility" aria-expanded="false" aria-controls="index-wiki-sq-accessibility-menu">Accessibility</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-ai-assisted-translation" data-topic-slug="ai-assisted-translation" aria-expanded="false" aria-controls="index-wiki-sq-ai-assisted-translation-menu">AI-Assisted Translation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-wiki-sq-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-wiki-sq-product-quality-menu">Cilësia e produktit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-wiki-sq-translation-quality-menu">Cilësia e përkthimit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-continuous-localization" data-topic-slug="continuous-localization" aria-expanded="false" aria-controls="index-wiki-sq-continuous-localization-menu">Continuous Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-diagrams" data-topic-slug="diagrams" aria-expanded="false" aria-controls="index-wiki-sq-diagrams-menu">Diagrams</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-digital-inclusion" data-topic-slug="digital-inclusion" aria-expanded="false" aria-controls="index-wiki-sq-digital-inclusion-menu">Digital Inclusion</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-wiki-sq-documentation-menu">Dokumentim</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-engineering-systems" data-topic-slug="engineering-systems" aria-expanded="false" aria-controls="index-wiki-sq-engineering-systems-menu">Engineering Systems</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-governance" data-topic-slug="governance" aria-expanded="false" aria-controls="index-wiki-sq-governance-menu">Governance</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-wiki-sq-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="index-wiki-sq-localization-menu">Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-wiki-sq-project-management-menu">Menaxhim projekti</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-wiki-sq-implementation-planning-menu">Planifikim i zbatimit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-public-interest-technology" data-topic-slug="public-interest-technology" aria-expanded="false" aria-controls="index-wiki-sq-public-interest-technology-menu">Public-Interest Technology</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-wiki-sq-demo-alignment-menu">Përputhja e demove</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="index-wiki-sq-qa-menu">QA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-wiki-sq-product-review-menu">Rishikimi i produktit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-screen-readers" data-topic-slug="screen-readers" aria-expanded="false" aria-controls="index-wiki-sq-screen-readers-menu">Screen Readers</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-wiki-sq-spec-writing-menu">Shkrim specifikimesh</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-smaller-languages" data-topic-slug="smaller-languages" aria-expanded="false" aria-controls="index-wiki-sq-smaller-languages-menu">Smaller Languages</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-wiki-sq-product-specification-menu">Specifikimi i produktit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-sustainability" data-topic-slug="sustainability" aria-expanded="false" aria-controls="index-wiki-sq-sustainability-menu">Sustainability</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-terminology" data-topic-slug="terminology" aria-expanded="false" aria-controls="index-wiki-sq-terminology-menu">Terminology</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-unicode" data-topic-slug="unicode" aria-expanded="false" aria-controls="index-wiki-sq-unicode-menu">Unicode</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-wiki-sq-validation-menu">Validim</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-sq-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-wiki-sq-spec-driven-development-menu">Zhvillim i drejtuar nga specifikimet</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-wiki-sq-accessibility-menu" data-topic-menu="index-wiki-sq-accessibility" hidden>
+                      <a href="../../wiki/sq/multilingual-accessibility.html">Aksesueshmëri shumëgjuhëshe</a>
+                      <a href="../../wiki/sq/let-books-accessibility-and-localization.html">Let Books Aksesueshmëria dhe Lokalizimi</a>
+                      <a href="../../wiki/sq/non-text-asset-localization.html">Lokalizimi i aseteve pa tekst</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-ai-assisted-translation-menu" data-topic-menu="index-wiki-sq-ai-assisted-translation" hidden>
+                      <a href="../../wiki/sq/ai-assisted-translation-policy.html">AI-Politika e përkthimit të asistuar</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-ci-cd-menu" data-topic-menu="index-wiki-sq-ci-cd" hidden>
+                      <a href="../../wiki/sq/localization-ci-cd.html">Lokalizimi CI dhe CD</a>
+                      <a href="../../wiki/sq/validation-layers.html">Shtresat e validimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-product-quality-menu" data-topic-menu="index-wiki-sq-product-quality" hidden>
+                      <a href="../../wiki/sq/documentation-traceability.html">Gjurmueshmëria e dokumentacionit</a>
+                      <a href="../../wiki/sq/markdown-in-product-development.html">Markdown në zhvillimin e produktit</a>
+                      <a href="../../wiki/sq/validation-layers.html">Shtresat e validimit</a>
+                      <a href="../../wiki/sq/spec-driven-development.html">Zhvillim i udhëhequr nga specifikimi</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-translation-quality-menu" data-topic-menu="index-wiki-sq-translation-quality" hidden>
+                      <a href="../../wiki/sq/ai-assisted-translation-policy.html">AI-Politika e përkthimit të asistuar</a>
+                      <a href="../../wiki/sq/localization-maturity-model.html">Modeli i Pjekurisë së Lokalizimit</a>
+                      <a href="../../wiki/sq/translation-quality-assurance.html">Sigurimi i cilësisë së përkthimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-continuous-localization-menu" data-topic-menu="index-wiki-sq-continuous-localization" hidden>
+                      <a href="../../wiki/sq/localization-ci-cd.html">Lokalizimi CI dhe CD</a>
+                      <a href="../../wiki/sq/localization-roadmap.html">Udhërrëfyesi i lokalizimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-diagrams-menu" data-topic-menu="index-wiki-sq-diagrams" hidden>
+                      <a href="../../wiki/sq/non-text-asset-localization.html">Lokalizimi i aseteve pa tekst</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-digital-inclusion-menu" data-topic-menu="index-wiki-sq-digital-inclusion" hidden>
+                      <a href="../../wiki/sq/multilingual-public-interest-software.html">Software shumëgjuhësh me interes publik</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-documentation-menu" data-topic-menu="index-wiki-sq-documentation" hidden>
+                      <a href="../../wiki/sq/documentation-traceability.html">Gjurmueshmëria e dokumentacionit</a>
+                      <a href="../../wiki/sq/markdown-in-product-development.html">Markdown në zhvillimin e produktit</a>
+                      <a href="../../wiki/sq/spec-driven-development.html">Zhvillim i udhëhequr nga specifikimi</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-engineering-systems-menu" data-topic-menu="index-wiki-sq-engineering-systems" hidden>
+                      <a href="../../wiki/sq/let-books-localization-architecture.html">Let Books Arkitektura e Lokalizimit</a>
+                      <a href="../../wiki/sq/localization-at-scale.html">Lokalizimi në shkallë</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-governance-menu" data-topic-menu="index-wiki-sq-governance" hidden>
+                      <a href="../../wiki/sq/ai-assisted-translation-policy.html">AI-Politika e përkthimit të asistuar</a>
+                      <a href="../../wiki/sq/localization-at-scale.html">Lokalizimi në shkallë</a>
+                      <a href="../../wiki/sq/localization-governance.html">Qeverisja e Lokalizimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-let-books-menu" data-topic-menu="index-wiki-sq-let-books" hidden>
+                      <a href="../../wiki/sq/let-books-accessibility-and-localization.html">Let Books Aksesueshmëria dhe Lokalizimi</a>
+                      <a href="../../wiki/sq/let-books-localization-architecture.html">Let Books Arkitektura e Lokalizimit</a>
+                      <a href="../../wiki/sq/let-books-localization-lessons-learned.html">Let Books Mësimet e nxjerra nga lokalizimi</a>
+                      <a href="../../wiki/sq/let-books-localization-case-study.html">Let Books Rast Studimi i Lokalizimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-localization-menu" data-topic-menu="index-wiki-sq-localization" hidden>
+                      <a href="../../wiki/sq/multilingual-accessibility.html">Aksesueshmëri shumëgjuhëshe</a>
+                      <a href="../../wiki/sq/translation-memory-and-glossaries.html">Kujtesa dhe fjalorët e përkthimit</a>
+                      <a href="../../wiki/sq/let-books-accessibility-and-localization.html">Let Books Aksesueshmëria dhe Lokalizimi</a>
+                      <a href="../../wiki/sq/let-books-localization-architecture.html">Let Books Arkitektura e Lokalizimit</a>
+                      <a href="../../wiki/sq/let-books-localization-lessons-learned.html">Let Books Mësimet e nxjerra nga lokalizimi</a>
+                      <a href="../../wiki/sq/let-books-localization-case-study.html">Let Books Rast Studimi i Lokalizimit</a>
+                      <a href="../../wiki/sq/non-text-asset-localization.html">Lokalizimi i aseteve pa tekst</a>
+                      <a href="../../wiki/sq/localization-at-scale.html">Lokalizimi në shkallë</a>
+                      <a href="../../wiki/sq/language-support-matrix.html">Matrica e mbështetjes gjuhësore</a>
+                      <a href="../../wiki/sq/localization-maturity-model.html">Modeli i Pjekurisë së Lokalizimit</a>
+                      <a href="../../wiki/sq/localization-governance.html">Qeverisja e Lokalizimit</a>
+                      <a href="../../wiki/sq/translation-quality-assurance.html">Sigurimi i cilësisë së përkthimit</a>
+                      <a href="../../wiki/sq/multilingual-public-interest-software.html">Software shumëgjuhësh me interes publik</a>
+                      <a href="../../wiki/sq/localization-roadmap.html">Udhërrëfyesi i lokalizimit</a>
+                      <a href="../../wiki/sq/unicode-and-script-correctness.html">Unicode dhe Korrektësia e Skriptit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-project-management-menu" data-topic-menu="index-wiki-sq-project-management" hidden>
+                      <a href="../../wiki/sq/localization-roadmap.html">Udhërrëfyesi i lokalizimit</a>
+                      <a href="../../wiki/sq/implementation-guidance.html">Udhëzime për implementim</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-implementation-planning-menu" data-topic-menu="index-wiki-sq-implementation-planning" hidden>
+                      <a href="../../wiki/sq/implementation-guidance.html">Udhëzime për implementim</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-public-interest-technology-menu" data-topic-menu="index-wiki-sq-public-interest-technology" hidden>
+                      <a href="../../wiki/sq/let-books-localization-case-study.html">Let Books Rast Studimi i Lokalizimit</a>
+                      <a href="../../wiki/sq/multilingual-public-interest-software.html">Software shumëgjuhësh me interes publik</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-demo-alignment-menu" data-topic-menu="index-wiki-sq-demo-alignment" hidden>
+                      <a href="../../wiki/sq/demo-spec-alignment.html">Përputhja e demos me specifikimin</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-qa-menu" data-topic-menu="index-wiki-sq-qa" hidden>
+                      <a href="../../wiki/sq/localization-ci-cd.html">Lokalizimi CI dhe CD</a>
+                      <a href="../../wiki/sq/translation-quality-assurance.html">Sigurimi i cilësisë së përkthimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-product-review-menu" data-topic-menu="index-wiki-sq-product-review" hidden>
+                      <a href="../../wiki/sq/let-books-localization-lessons-learned.html">Let Books Mësimet e nxjerra nga lokalizimi</a>
+                      <a href="../../wiki/sq/demo-spec-alignment.html">Përputhja e demos me specifikimin</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-screen-readers-menu" data-topic-menu="index-wiki-sq-screen-readers" hidden>
+                      <a href="../../wiki/sq/multilingual-accessibility.html">Aksesueshmëri shumëgjuhëshe</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-spec-writing-menu" data-topic-menu="index-wiki-sq-spec-writing" hidden>
+                      <a href="../../wiki/sq/product-specification.html">Specifikimi i produktit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-smaller-languages-menu" data-topic-menu="index-wiki-sq-smaller-languages" hidden>
+                      <a href="../../wiki/sq/language-support-matrix.html">Matrica e mbështetjes gjuhësore</a>
+                      <a href="../../wiki/sq/unicode-and-script-correctness.html">Unicode dhe Korrektësia e Skriptit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-product-specification-menu" data-topic-menu="index-wiki-sq-product-specification" hidden>
+                      <a href="../../wiki/sq/product-specification.html">Specifikimi i produktit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-sustainability-menu" data-topic-menu="index-wiki-sq-sustainability" hidden>
+                      <a href="../../wiki/sq/translation-memory-and-glossaries.html">Kujtesa dhe fjalorët e përkthimit</a>
+                      <a href="../../wiki/sq/localization-maturity-model.html">Modeli i Pjekurisë së Lokalizimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-terminology-menu" data-topic-menu="index-wiki-sq-terminology" hidden>
+                      <a href="../../wiki/sq/translation-memory-and-glossaries.html">Kujtesa dhe fjalorët e përkthimit</a>
+                      <a href="../../wiki/sq/localization-governance.html">Qeverisja e Lokalizimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-unicode-menu" data-topic-menu="index-wiki-sq-unicode" hidden>
+                      <a href="../../wiki/sq/language-support-matrix.html">Matrica e mbështetjes gjuhësore</a>
+                      <a href="../../wiki/sq/unicode-and-script-correctness.html">Unicode dhe Korrektësia e Skriptit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-validation-menu" data-topic-menu="index-wiki-sq-validation" hidden>
+                      <a href="../../wiki/sq/validation-layers.html">Shtresat e validimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-sq-spec-driven-development-menu" data-topic-menu="index-wiki-sq-spec-driven-development" hidden>
+                      <a href="../../wiki/sq/documentation-traceability.html">Gjurmueshmëria e dokumentacionit</a>
+                      <a href="../../wiki/sq/markdown-in-product-development.html">Markdown në zhvillimin e produktit</a>
+                      <a href="../../wiki/sq/demo-spec-alignment.html">Përputhja e demos me specifikimin</a>
+                      <a href="../../wiki/sq/product-specification.html">Specifikimi i produktit</a>
+                      <a href="../../wiki/sq/implementation-guidance.html">Udhëzime për implementim</a>
+                      <a href="../../wiki/sq/spec-driven-development.html">Zhvillim i udhëhequr nga specifikimi</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

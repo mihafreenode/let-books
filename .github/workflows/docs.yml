@@ -43,6 +43,9 @@ jobs:
       - name: Generate articles registry
         run: node tools/generate-articles-json.mjs
 
+      - name: Semantic localization review
+        run: node tools/validate-localized-articles.mjs --report-file docs/.localization-semantic-review.md --json-report-file docs/.localization-semantic-review.json
+
       - name: Generate sitemap
         run: node tools/generate-sitemap.mjs
 
