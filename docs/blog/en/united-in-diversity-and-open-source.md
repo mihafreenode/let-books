@@ -70,4 +70,14 @@ Multilingual participation is not a political novelty. It is a routine operation
 
 ## Other Languages
 
-English is the canonical first-release language for this article. Translation-ready paths are reserved for all supported Let Books locales.
+- [Slovenščina](../sl/united-in-diversity-and-open-source.md)
+- [Hrvatski](../hr/united-in-diversity-and-open-source.md)
+- [Bosanski](../bs/united-in-diversity-and-open-source.md)
+- [Srpski (latinica)](../sr-Latn/united-in-diversity-and-open-source.md)
+- [Српски (ћирилица)](../sr-Cyrl/united-in-diversity-and-open-source.md)
+- [Македонски](../mk/united-in-diversity-and-open-source.md)
+- [Shqip](../sq/united-in-diversity-and-open-source.md)
+- [Deutsch](../de/united-in-diversity-and-open-source.md)
+- [Italiano](../it/united-in-diversity-and-open-source.md)
+- [Français](../fr/united-in-diversity-and-open-source.md)
+- [Español](../es/united-in-diversity-and-open-source.md)

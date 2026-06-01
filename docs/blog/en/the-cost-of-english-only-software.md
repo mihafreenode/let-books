@@ -65,4 +65,14 @@ English-only software is often cheaper only if the project ignores the hidden co
 
 ## Other Languages
 
-English is the canonical first-release language for this article. Translation-ready paths are reserved for all supported Let Books locales.
+- [Slovenščina](../sl/the-cost-of-english-only-software.md)
+- [Hrvatski](../hr/the-cost-of-english-only-software.md)
+- [Bosanski](../bs/the-cost-of-english-only-software.md)
+- [Srpski (latinica)](../sr-Latn/the-cost-of-english-only-software.md)
+- [Српски (ћирилица)](../sr-Cyrl/the-cost-of-english-only-software.md)
+- [Македонски](../mk/the-cost-of-english-only-software.md)
+- [Shqip](../sq/the-cost-of-english-only-software.md)
+- [Deutsch](../de/the-cost-of-english-only-software.md)
+- [Italiano](../it/the-cost-of-english-only-software.md)
+- [Français](../fr/the-cost-of-english-only-software.md)
+- [Español](../es/the-cost-of-english-only-software.md)

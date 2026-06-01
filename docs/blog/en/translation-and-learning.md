@@ -65,4 +65,14 @@ Localization is not only a convenience feature. In educational contexts, it can 
 
 ## Other Languages
 
-English is the canonical first-release language for this article. Translation-ready paths are reserved for all supported Let Books locales.
+- [Slovenščina](../sl/translation-and-learning.md)
+- [Hrvatski](../hr/translation-and-learning.md)
+- [Bosanski](../bs/translation-and-learning.md)
+- [Srpski (latinica)](../sr-Latn/translation-and-learning.md)
+- [Српски (ћирилица)](../sr-Cyrl/translation-and-learning.md)
+- [Македонски](../mk/translation-and-learning.md)
+- [Shqip](../sq/translation-and-learning.md)
+- [Deutsch](../de/translation-and-learning.md)
+- [Italiano](../it/translation-and-learning.md)
+- [Français](../fr/translation-and-learning.md)
+- [Español](../es/translation-and-learning.md)

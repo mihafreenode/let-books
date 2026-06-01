@@ -67,4 +67,14 @@ A multilingual product is not accessible by default, and an accessible product i
 
 ## Other Languages
 
-English is the canonical first-release language for this article. Translation-ready paths are reserved for all supported Let Books locales.
+- [Slovenščina](../sl/multilingual-accessibility.md)
+- [Hrvatski](../hr/multilingual-accessibility.md)
+- [Bosanski](../bs/multilingual-accessibility.md)
+- [Srpski (latinica)](../sr-Latn/multilingual-accessibility.md)
+- [Српски (ћирилица)](../sr-Cyrl/multilingual-accessibility.md)
+- [Македонски](../mk/multilingual-accessibility.md)
+- [Shqip](../sq/multilingual-accessibility.md)
+- [Deutsch](../de/multilingual-accessibility.md)
+- [Italiano](../it/multilingual-accessibility.md)
+- [Français](../fr/multilingual-accessibility.md)
+- [Español](../es/multilingual-accessibility.md)

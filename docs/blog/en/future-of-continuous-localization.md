@@ -65,4 +65,14 @@ The future of localization is not perfect automation. It is continuous coordinat
 
 ## Other Languages
 
-English is the canonical first-release language for this article. Translation-ready paths are reserved for all supported Let Books locales.
+- [Slovenščina](../sl/future-of-continuous-localization.md)
+- [Hrvatski](../hr/future-of-continuous-localization.md)
+- [Bosanski](../bs/future-of-continuous-localization.md)
+- [Srpski (latinica)](../sr-Latn/future-of-continuous-localization.md)
+- [Српски (ћирилица)](../sr-Cyrl/future-of-continuous-localization.md)
+- [Македонски](../mk/future-of-continuous-localization.md)
+- [Shqip](../sq/future-of-continuous-localization.md)
+- [Deutsch](../de/future-of-continuous-localization.md)
+- [Italiano](../it/future-of-continuous-localization.md)
+- [Français](../fr/future-of-continuous-localization.md)
+- [Español](../es/future-of-continuous-localization.md)

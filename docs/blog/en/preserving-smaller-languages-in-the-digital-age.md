@@ -59,4 +59,14 @@ If a project cares about preserving knowledge, it should also care about whether
 
 ## Other Languages
 
-English is the canonical first-release language for this article. Translation-ready paths are reserved for all supported Let Books locales.
+- [Slovenščina](../sl/preserving-smaller-languages-in-the-digital-age.md)
+- [Hrvatski](../hr/preserving-smaller-languages-in-the-digital-age.md)
+- [Bosanski](../bs/preserving-smaller-languages-in-the-digital-age.md)
+- [Srpski (latinica)](../sr-Latn/preserving-smaller-languages-in-the-digital-age.md)
+- [Српски (ћирилица)](../sr-Cyrl/preserving-smaller-languages-in-the-digital-age.md)
+- [Македонски](../mk/preserving-smaller-languages-in-the-digital-age.md)
+- [Shqip](../sq/preserving-smaller-languages-in-the-digital-age.md)
+- [Deutsch](../de/preserving-smaller-languages-in-the-digital-age.md)
+- [Italiano](../it/preserving-smaller-languages-in-the-digital-age.md)
+- [Français](../fr/preserving-smaller-languages-in-the-digital-age.md)
+- [Español](../es/preserving-smaller-languages-in-the-digital-age.md)

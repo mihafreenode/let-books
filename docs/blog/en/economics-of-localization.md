@@ -69,4 +69,14 @@ Localization does cost time and money. But a staged, transparent, hybrid model i
 
 ## Other Languages
 
-English is the canonical first-release language for this article. Translation-ready paths are reserved for all supported Let Books locales.
+- [Slovenščina](../sl/economics-of-localization.md)
+- [Hrvatski](../hr/economics-of-localization.md)
+- [Bosanski](../bs/economics-of-localization.md)
+- [Srpski (latinica)](../sr-Latn/economics-of-localization.md)
+- [Српски (ћирилица)](../sr-Cyrl/economics-of-localization.md)
+- [Македонски](../mk/economics-of-localization.md)
+- [Shqip](../sq/economics-of-localization.md)
+- [Deutsch](../de/economics-of-localization.md)
+- [Italiano](../it/economics-of-localization.md)
+- [Français](../fr/economics-of-localization.md)
+- [Español](../es/economics-of-localization.md)
