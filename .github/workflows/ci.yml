@@ -239,13 +239,16 @@ jobs:
                   continue;
                 }
                 const c = readFileSync(p, 'utf8');
-                if (!c.includes('class=\"topic-nav\"')) {
-                  console.log('Missing topic-nav in: ' + p);
+                const hasModernNav = c.includes('class=\"post-article-nav\"')
+                  && c.includes('class=\"related-content\"')
+                  && c.includes('class=\"related-topic-nav\"');
+                if (!hasModernNav) {
+                  console.log('Missing related topic navigation in: ' + p);
                   ok = false;
                 }
               }
             }
-            if (ok) console.log('Topic nav present in all applicable articles');
+            if (ok) console.log('Related topic navigation present in all applicable articles');
             else process.exit(1);
           "
 

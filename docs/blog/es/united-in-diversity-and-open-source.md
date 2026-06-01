@@ -15,7 +15,7 @@ language_variants:
   - ../fr/united-in-diversity-and-open-source.md
   - ../es/united-in-diversity-and-open-source.md
 title: Unidos en la diversidad y en el código abierto
-summary: What multilingual public institutions and open-source projects can learn from societies that operate across multiple languages and scripts.
+summary: Qué pueden aprender las instituciones públicas multilingües y los proyectos de código abierto de sociedades que funcionan a través de múltiples lenguas y escrituras.
 topics:
   - multilingual-governance
   - public-interest-technology
@@ -29,41 +29,38 @@ sources:
 status: draft
 ---
 
-
 # Unidos en la diversidad y en el código abierto
 
-Este artículo localizado es un borrador para garantizar la cobertura lingüística completa. El contenido canónico en inglés se conserva provisionalmente a continuación hasta que termine la revisión lingüística natural.
+El software multilingüe suele describirse como inusualmente difícil, como si una participación multilingüe seria fuera una excepción. Las instituciones reales demuestran lo contrario.
 
-Multilingual software is often described as unusually difficult, as if serious multilingual participation were an exception. Real institutions prove otherwise.
+Muchas sociedades ya funcionan con varias lenguas oficiales, lenguas regionales, lenguas minoritarias y más de un sistema de escritura.
 
-Many societies already operate with multiple official languages, regional languages, minority languages, and more than one writing system.
+## Qué pueden aprender los proyectos de código abierto
 
-## What open-source projects can learn
+La lección no es que el trabajo multilingüe sea sin esfuerzo. La lección es que puede gobernarse.
 
-The lesson is not that multilingual work is effortless. The lesson is that it is governable.
+Los ingredientes prácticos son conocidos:
 
-The practical ingredients are familiar:
+- una política lingüística explícita
+- una terminología estable
+- flujos de revisión
+- estándares compartidos
+- niveles realistas de calidad
+- respeto por los detalles específicos de cada lengua
 
-- explicit language policy
-- stable terminology
-- review workflows
-- shared standards
-- realistic quality levels
-- respect for language-specific details
+## Por qué esto importa para las herramientas cívicas y educativas
 
-## Why this matters for civic and educational tools
+Los proyectos de código abierto que sirven a bibliotecas, escuelas, archivos, organizaciones sin ánimo de lucro o instituciones públicas deberían esperar requisitos multilingües antes que muchos productos startup.
 
-Open-source projects serving libraries, schools, archives, nonprofits, or public institutions should expect multilingual requirements earlier than many startup products do.
+Eso no significa que cada idioma deba lanzarse con una paridad perfecta. Significa que la arquitectura debería poder acoger más de una lengua sin sorpresa.
 
-That does not mean every locale must launch at perfect parity. It means the architecture should be able to welcome more than one language without surprise.
+## Contexto de Let Books
 
-## Let Books context
+Let Books ya presupone colecciones de libros multilingües, usuarios multilingües y múltiples escrituras. Eso lo convierte en un útil pequeño caso de estudio sobre cómo una infraestructura de código abierto puede apoyar la participación sin fingir que una sola lengua es neutral para todo el mundo.
 
-Let Books already assumes multilingual book collections, multilingual users, and multiple scripts. That makes it a useful small-scale case study for how open-source infrastructure can support participation without pretending that one language is neutral for everyone.
+## Conclusión duradera
 
-## Durable takeaway
-
-Multilingual participation is not a political novelty. It is a routine operational reality in many places. Open source can learn from that reality instead of treating English-only defaults as inevitable.
+La participación multilingüe no es una novedad política. Es una realidad operativa rutinaria en muchos lugares. El código abierto puede aprender de esa realidad en lugar de tratar los valores predeterminados solo en inglés como inevitables.
 
 ## Páginas relacionadas
 

@@ -15,7 +15,7 @@ language_variants:
   - ../fr/future-of-continuous-localization.md
   - ../es/future-of-continuous-localization.md
 title: Budućnost kontinuirane lokalizacije
-summary: Why modern localization is moving toward automated validation, reusable assets, staged review, and continuous publishing instead of occasional translation projects.
+summary: Zašto se savremena lokalizacija pomjera prema automatizovanoj provjeri, ponovno upotrebljivim resursima, faznom pregledu i kontinuiranom objavljivanju umjesto povremenim prevodilačkim projektima.
 topics:
   - continuous-localization
   - automation
@@ -30,35 +30,32 @@ sources:
 status: draft
 ---
 
-
 # Budućnost kontinuirane lokalizacije
 
-Ova lokalizirana objava je nacrt za potpunu jezičku pokrivenost. Kanonski engleski sadržaj je trenutno zadržan u nastavku dok se ne završi prirodna jezička revizija.
+Lokalizacija postaje sve kontinuiranija iz istog razloga iz kojeg je i isporuka softvera postala kontinuiranija: trošak čekanja često je veći od troška održavanja procesa.
 
-Localization is becoming more continuous for the same reason software delivery became more continuous: the cost of waiting is often higher than the cost of maintaining a pipeline.
+## Šta mijenja tok rada
 
-## What changes the workflow
+Savremeni sistemi lokalizacije sve češće kombinuju:
 
-Modern localization systems increasingly combine:
+- strukturirani izvorni sadržaj
+- prevodilačku memoriju
+- generisanje AI nacrta
+- automatizovanu validaciju
+- pregled snimaka ekrana
+- fazno ljudsko odobravanje
 
-- structured source content
-- translation memory
-- AI draft generation
-- automated validation
-- screenshot review
-- staged human approval
+## Zašto je to važno
 
-## Why this matters
+Ako se lokalizacija događa samo u velikim i rijetkim serijama, odstupanje brzo raste. Navigacija se mijenja, snimci ekrana zastarijevaju, terminologija se pomjera, a saradnici gube povjerenje u to šta je aktuelno.
 
-If localization only happens in large rare batches, drift grows quickly. Navigation changes, screenshots go stale, terminology shifts, and contributors lose confidence about what is current.
+## Smjer Let Booksa
 
-## Let Books direction
+Let Books već ima višejezičnu strukturu platforme znanja, validacijske skripte i generatorske tokove rada. Sljedeći korak je da to još jasnije gura prema modelu kontinuirane lokalizacije, umjesto da se višejezični sadržaj tretira kao poseban sporedni napor.
 
-Let Books already has a multilingual knowledge-platform structure, validation scripts, and generator workflows. The next step is to keep pushing that work toward a more explicit continuous-localization model rather than treating multilingual content as a special side effort.
+## Trajna poruka
 
-## Durable takeaway
-
-The future of localization is not perfect automation. It is continuous coordination between source writing, validation, human review, and publishing.
+Budućnost lokalizacije nije savršena automatizacija. To je kontinuirana koordinacija između izvornog pisanja, validacije, ljudskog pregleda i objavljivanja.
 
 ## Povezane stranice
 

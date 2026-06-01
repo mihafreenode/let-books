@@ -14,8 +14,8 @@ language_variants:
   - ../it/future-of-continuous-localization.md
   - ../fr/future-of-continuous-localization.md
   - ../es/future-of-continuous-localization.md
-title: El futuro de la localización continua
-summary: Why modern localization is moving toward automated validation, reusable assets, staged review, and continuous publishing instead of occasional translation projects.
+title: Futuro de la localización continua
+summary: Por qué la localización moderna se está moviendo hacia la validación automatizada, los recursos reutilizables, la revisión por fases y la publicación continua en lugar de los proyectos de traducción ocasionales.
 topics:
   - continuous-localization
   - automation
@@ -30,35 +30,32 @@ sources:
 status: draft
 ---
 
+# Futuro de la localización continua
 
-# El futuro de la localización continua
+La localización se está volviendo más continua por la misma razón por la que la entrega de software se volvió más continua: el costo de esperar suele ser más alto que el costo de mantener un proceso.
 
-Este artículo localizado es un borrador para garantizar la cobertura lingüística completa. El contenido canónico en inglés se conserva provisionalmente a continuación hasta que termine la revisión lingüística natural.
+## Qué cambia el flujo de trabajo
 
-Localization is becoming more continuous for the same reason software delivery became more continuous: the cost of waiting is often higher than the cost of maintaining a pipeline.
+Los sistemas modernos de localización combinan cada vez más:
 
-## What changes the workflow
+- contenido fuente estructurado
+- memoria de traducción
+- generación de borradores con AI
+- validación automatizada
+- revisión de capturas de pantalla
+- aprobación humana por fases
 
-Modern localization systems increasingly combine:
+## Por qué esto importa
 
-- structured source content
-- translation memory
-- AI draft generation
-- automated validation
-- screenshot review
-- staged human approval
+Si la localización solo ocurre en lotes grandes y poco frecuentes, la deriva crece rápidamente. La navegación cambia, las capturas de pantalla envejecen, la terminología se desplaza y los colaboradores pierden confianza en lo que está al día.
 
-## Why this matters
+## Dirección de Let Books
 
-If localization only happens in large rare batches, drift grows quickly. Navigation changes, screenshots go stale, terminology shifts, and contributors lose confidence about what is current.
+Let Books ya tiene una estructura multilingüe de plataforma de conocimiento, scripts de validación y flujos generadores. El siguiente paso es empujar este trabajo aún más claramente hacia un modelo de localización continua, en lugar de tratar el contenido multilingüe como un esfuerzo lateral especial.
 
-## Let Books direction
+## Conclusión duradera
 
-Let Books already has a multilingual knowledge-platform structure, validation scripts, and generator workflows. The next step is to keep pushing that work toward a more explicit continuous-localization model rather than treating multilingual content as a special side effort.
-
-## Durable takeaway
-
-The future of localization is not perfect automation. It is continuous coordination between source writing, validation, human review, and publishing.
+El futuro de la localización no es la automatización perfecta. Es la coordinación continua entre la escritura fuente, la validación, la revisión humana y la publicación.
 
 ## Páginas relacionadas
 

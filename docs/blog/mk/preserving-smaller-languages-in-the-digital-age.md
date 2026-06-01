@@ -14,51 +14,48 @@ language_variants:
   - ../it/preserving-smaller-languages-in-the-digital-age.md
   - ../fr/preserving-smaller-languages-in-the-digital-age.md
   - ../es/preserving-smaller-languages-in-the-digital-age.md
-title: Зачувување на помалите јазици во дигиталната ера
-summary: Why digital tools should help smaller languages remain usable, visible, and teachable rather than accepting their absence as normal.
+title: Зачувување на помалите јазици во дигиталната доба
+summary: Зошто дигиталните алатки треба да им помогнат на помалите јазици да останат употребливи, видливи и погодни за учење, наместо нивното отсуство да се прифаќа како нормално.
 topics:
   - smaller-languages
-  - cultural-inclusion
-  - knowledge-preservation
+  - digital-inclusion
+  - language-rights
 evidence:
   - AGENTS.md
-  - README.md
   - docs/localization-at-scale-program.md
+  - docs/README.md
 sources:
   - ../../sources/mk/preserving-smaller-languages-in-the-digital-age.md
 status: draft
 ---
 
+# Зачувување на помалите јазици во дигиталната доба
 
-# Зачувување на помалите јазици во дигиталната ера
+Јазиците остануваат живи не само преку книжевноста и училиштата, туку и преку секојдневната употреба во софтвер, документација, интерфејси и дигитални материјали за учење.
 
-Оваа локализирана објава е нацрт за целосна јазична покриеност. Канонската англиска содржина засега е задржана подолу додека не заврши природната јазична ревизија.
+## Проблемот на дигиталното учество
 
-Languages stay alive not only through literature and schools, but through everyday use in software, documentation, interfaces, and digital learning material.
+Кога некој јазик недостасува во дигиталните алатки, говорниците често се прилагодуваат. Но повтореното прилагодување ги учи дека нивниот јазик не се очекува во техничките или институционалните простори.
 
-## The digital participation problem
+Тоа има долгорочни последици за самодовербата, терминологијата и учеството.
 
-When a language is missing from digital tools, speakers often adapt. But repeated adaptation teaches them that their language is not expected in technical or institutional spaces.
+## Зошто софтверот е важен
 
-That has long-term consequences for confidence, terminology, and participation.
+Софтверот одлучува кои јазици се лесни за користење, лесни за подучување и лесни за придонесување. Затоа локализацијата е дел од дигиталното зачувување на јазикот, дури и кога станува збор за практични алатки.
 
-## Why software matters
+## Контекстот на Let Books
 
-Software decides which languages are easy to use, easy to teach, and easy to contribute in. That makes localization part of digital language preservation, even for practical tools.
+Let Books директно се занимава со образовно наследство, книги, библиотеки и повеќејазични збирки. Поддршката за помалите јазици во производот и базата на знаење ја засилува истата мисија на зачувување од уште еден агол.
 
-## Let Books context
+## Трајна порака
 
-Let Books is directly concerned with educational heritage, books, libraries, and multilingual collections. Supporting smaller languages in the product and the knowledge base reinforces the same preservation mission from another angle.
-
-## Durable takeaway
-
-If a project cares about preserving knowledge, it should also care about whether that knowledge can be accessed and discussed in more than one dominant language.
+Ако на проектот му е грижа за зачувувањето на знаењето, треба да му биде грижа и дали до тоа знаење може да се пристапи и да се разговара за него на повеќе од еден доминантен јазик.
 
 ## Поврзани страници
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/unicode-and-script-correctness.md`
-- `../../learning/how-to-manage-terminology-across-languages.md`
+- `../../learning/how-to-design-english-source-content-for-translation.md`
 
 ## Други јазици
 

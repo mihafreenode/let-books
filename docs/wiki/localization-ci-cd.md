@@ -46,6 +46,23 @@ Examples:
 
 CI is not only a gatekeeper. It is the mechanism that keeps closed defect classes from reopening silently.
 
+## Generation order for article navigation
+
+The current public article navigation contract is:
+
+- `post-article-nav`
+- `related-content`
+- `related-topic-nav`
+
+Generation and validation should happen in this order:
+
+1. generate article HTML
+2. generate index pages
+3. run any remaining navigation post-processing only if still required
+4. validate output
+
+If a validator still expects the legacy `topic-nav` block, update the validator to the current contract instead of patching generated HTML.
+
 ## Related Pages
 
 - `translation-quality-assurance.md`

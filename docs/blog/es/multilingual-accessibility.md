@@ -15,52 +15,48 @@ language_variants:
   - ../fr/multilingual-accessibility.md
   - ../es/multilingual-accessibility.md
 title: Accesibilidad multilingüe
-summary: Why accessibility and localization should be designed together across language metadata, screen readers, plain language, captions, and alt text.
+summary: Por qué la accesibilidad y la localización deberían diseñarse juntas a través de metadatos de idioma, lectores de pantalla, lenguaje claro, subtítulos y alt text.
 topics:
   - accessibility
-  - screen-readers
-  - localized-alt-text
-  - plain-language
+  - localization
+  - multilingual-ux
 evidence:
   - AGENTS.md
-  - AGENTS-Implementation.md
   - docs/style-guide/localization/README.md
+  - docs/localization-at-scale-program.md
 sources:
   - ../../sources/es/multilingual-accessibility.md
 status: draft
 ---
 
-
 # Accesibilidad multilingüe
 
-Este artículo localizado es un borrador para garantizar la cobertura lingüística completa. El contenido canónico en inglés se conserva provisionalmente a continuación hasta que termine la revisión lingüística natural.
+La accesibilidad y la localización suelen dividirse en flujos de trabajo separados. En la práctica se superponen constantemente.
 
-Accessibility and localization are often split into separate workstreams. In practice they overlap constantly.
+Si una página está traducida pero los metadatos `lang`, el alt text, los subtítulos o las etiquetas para lectores de pantalla permanecen en otro idioma, la experiencia no es plenamente accesible.
 
-If a page is translated but the `lang` metadata, alt text, captions, or screen-reader labels remain in another language, the experience is not fully accessible.
+## Qué incluye la accesibilidad multilingüe
 
-## What multilingual accessibility includes
+Incluye más que cadenas de interfaz traducidas.
 
-It includes more than translated UI strings.
+- metadatos de idioma correctos
+- etiquetas de formularios y mensajes de validación localizados
+- alt text y subtítulos localizados
+- lenguaje claro cuando sea necesario
+- representación correcta de la escritura
+- pruebas con tecnologías de asistencia a través de idiomas
 
-- correct language metadata
-- localized form labels and validation messages
-- localized alt text and captions
-- plain-language wording where needed
-- script-correct rendering
-- testing with assistive technologies across languages
+## Por qué esto importa para las lenguas más pequeñas
 
-## Why this matters for smaller languages
+Las lenguas más pequeñas suelen ser las primeras en perder el acabado de accesibilidad. Eso crea una experiencia de segunda clase precisamente para los usuarios que quizá ya se enfrentan a más barreras lingüísticas.
 
-Smaller languages are often the first to lose accessibility polish. That creates a second-class experience for exactly the users who may already face more language barriers.
+## Contexto de Let Books
 
-## Let Books context
+Let Books ya trata el texto ARIA localizado, el alt text, los mensajes de estado y la corrección de la escritura como requisitos del producto. Esa es la dirección correcta porque los metadatos de accesibilidad forman parte del significado de la interfaz.
 
-Let Books already treats localized ARIA text, alt text, status messages, and script correctness as product requirements. That is the right direction because accessibility metadata is part of the meaning of the interface.
+## Conclusión duradera
 
-## Durable takeaway
-
-A multilingual product is not accessible by default, and an accessible product is not multilingual by default. Good systems design both together.
+Un producto multilingüe no es accesible por defecto, y un producto accesible no es multilingüe por defecto. Los buenos sistemas diseñan ambas cosas juntas.
 
 ## Páginas relacionadas
 

@@ -15,52 +15,48 @@ language_variants:
   - ../fr/multilingual-accessibility.md
   - ../es/multilingual-accessibility.md
 title: Вишејезична приступачност
-summary: Why accessibility and localization should be designed together across language metadata, screen readers, plain language, captions, and alt text.
+summary: Зашто приступачност и локализацију треба пројектовати заједно кроз језичке метаподатке, читаче екрана, једноставан језик, титлове и alt текст.
 topics:
   - accessibility
-  - screen-readers
-  - localized-alt-text
-  - plain-language
+  - localization
+  - multilingual-ux
 evidence:
   - AGENTS.md
-  - AGENTS-Implementation.md
   - docs/style-guide/localization/README.md
+  - docs/localization-at-scale-program.md
 sources:
   - ../../sources/sr-Cyrl/multilingual-accessibility.md
 status: draft
 ---
 
-
 # Вишејезична приступачност
 
-Ова локализована објава је нацрт за пуну језичку покривеност. Канонски енглески садржај је тренутно задржан у наставку док се не заврши природна језичка ревизија.
+Приступачност и локализација често се третирају као одвојени токови рада. У пракси се стално преклапају.
 
-Accessibility and localization are often split into separate workstreams. In practice they overlap constantly.
+Ако је страница преведена, али `lang` метаподаци, alt текст, титлови или ознаке за читаче екрана остану на другом језику, искуство није потпуно приступачно.
 
-If a page is translated but the `lang` metadata, alt text, captions, or screen-reader labels remain in another language, the experience is not fully accessible.
+## Шта укључује вишејезична приступачност
 
-## What multilingual accessibility includes
+То укључује више од преведених низова корисничког интерфејса.
 
-It includes more than translated UI strings.
+- исправне језичке метаподатке
+- локализоване ознаке образаца и поруке валидације
+- локализовани alt текст и титлове
+- једноставан језик где је потребан
+- исправан приказ писма
+- тестирање са помоћним технологијама кроз језике
 
-- correct language metadata
-- localized form labels and validation messages
-- localized alt text and captions
-- plain-language wording where needed
-- script-correct rendering
-- testing with assistive technologies across languages
+## Зашто је то важно за мање језике
 
-## Why this matters for smaller languages
+Мањи језици често први изгубе углађеност приступачности. То ствара другорazredno искуство управо за кориснике који се можда већ суочавају са већим језичким препрекама.
 
-Smaller languages are often the first to lose accessibility polish. That creates a second-class experience for exactly the users who may already face more language barriers.
+## Контекст Let Booksa
 
-## Let Books context
+Let Books већ третира локализовани ARIA текст, alt текст, статусне поруке и исправност писма као захтеве производа. То је прави смер јер су метаподаци приступачности део значења интерфејса.
 
-Let Books already treats localized ARIA text, alt text, status messages, and script correctness as product requirements. That is the right direction because accessibility metadata is part of the meaning of the interface.
+## Трајна порука
 
-## Durable takeaway
-
-A multilingual product is not accessible by default, and an accessible product is not multilingual by default. Good systems design both together.
+Вишејезични производ није приступачан по подразумеваним поставкама, а приступачан производ није вишејезичан по подразумеваним поставкама. Добри системи пројектују обоје заједно.
 
 ## Повезане странице
 

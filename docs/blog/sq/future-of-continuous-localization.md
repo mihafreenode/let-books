@@ -15,7 +15,7 @@ language_variants:
   - ../fr/future-of-continuous-localization.md
   - ../es/future-of-continuous-localization.md
 title: E ardhmja e lokalizimit të vazhdueshëm
-summary: Why modern localization is moving toward automated validation, reusable assets, staged review, and continuous publishing instead of occasional translation projects.
+summary: Pse lokalizimi modern po lëviz drejt validimit të automatizuar, burimeve të ripërdorshme, rishikimit me faza dhe publikimit të vazhdueshëm në vend të projekteve të rastit të përkthimit.
 topics:
   - continuous-localization
   - automation
@@ -30,35 +30,32 @@ sources:
 status: draft
 ---
 
-
 # E ardhmja e lokalizimit të vazhdueshëm
 
-Ky publikim i lokalizuar është një draft për mbulim të plotë gjuhësor. Përmbajtja kanonike në anglisht ruhet përkohësisht më poshtë derisa të përfundojë rishikimi natyror gjuhësor.
+Lokalizimi po bëhet më i vazhdueshëm për të njëjtën arsye pse edhe shpërndarja e softuerit u bë më e vazhdueshme: kostoja e pritjes shpesh është më e lartë se kostoja e mirëmbajtjes së procesit.
 
-Localization is becoming more continuous for the same reason software delivery became more continuous: the cost of waiting is often higher than the cost of maintaining a pipeline.
+## Çfarë e ndryshon rrjedhën e punës
 
-## What changes the workflow
+Sistemet moderne të lokalizimit gjithnjë e më shumë kombinojnë:
 
-Modern localization systems increasingly combine:
+- përmbajtje burimore të strukturuar
+- memorien e përkthimit
+- gjenerimin e drafteve me AI
+- validimin e automatizuar
+- rishikimin e pamjeve të ekranit
+- miratimin njerëzor me faza
 
-- structured source content
-- translation memory
-- AI draft generation
-- automated validation
-- screenshot review
-- staged human approval
+## Pse kjo ka rëndësi
 
-## Why this matters
+Nëse lokalizimi ndodh vetëm në seri të mëdha dhe të rralla, shmangia rritet shpejt. Navigimi ndryshon, pamjet e ekranit vjetrohen, terminologjia zhvendoset dhe kontribuesit humbasin besimin se çfarë është aktuale.
 
-If localization only happens in large rare batches, drift grows quickly. Navigation changes, screenshots go stale, terminology shifts, and contributors lose confidence about what is current.
+## Drejtimi i Let Books
 
-## Let Books direction
+Let Books tashmë ka një strukturë shumëgjuhëshe të platformës së dijes, skripte validimi dhe rrjedha pune gjeneruese. Hapi tjetër është që kjo punë të shtyhet edhe më qartë drejt një modeli të lokalizimit të vazhdueshëm, në vend që përmbajtja shumëgjuhëshe të trajtohet si një përpjekje e veçantë anësore.
 
-Let Books already has a multilingual knowledge-platform structure, validation scripts, and generator workflows. The next step is to keep pushing that work toward a more explicit continuous-localization model rather than treating multilingual content as a special side effort.
+## Përfundimi i qëndrueshëm
 
-## Durable takeaway
-
-The future of localization is not perfect automation. It is continuous coordination between source writing, validation, human review, and publishing.
+E ardhmja e lokalizimit nuk është automatizimi i përsosur. Ajo është koordinimi i vazhdueshëm ndërmjet shkrimit burimor, validimit, rishikimit njerëzor dhe publikimit.
 
 ## Faqe të lidhura
 

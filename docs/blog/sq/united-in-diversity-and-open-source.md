@@ -14,8 +14,8 @@ language_variants:
   - ../it/united-in-diversity-and-open-source.md
   - ../fr/united-in-diversity-and-open-source.md
   - ../es/united-in-diversity-and-open-source.md
-title: Të bashkuar në larmi dhe në burim të hapur
-summary: What multilingual public institutions and open-source projects can learn from societies that operate across multiple languages and scripts.
+title: Të bashkuar në larmi dhe në kod të hapur
+summary: Çfarë mund të mësojnë institucionet publike shumëgjuhëshe dhe projektet me kod të hapur nga shoqëritë që funksionojnë përmes shumë gjuhëve dhe shkrimeve.
 topics:
   - multilingual-governance
   - public-interest-technology
@@ -29,41 +29,38 @@ sources:
 status: draft
 ---
 
+# Të bashkuar në larmi dhe në kod të hapur
 
-# Të bashkuar në larmi dhe në burim të hapur
+Softueri shumëgjuhësh shpesh përshkruhet si jashtëzakonisht i vështirë, sikur pjesëmarrja serioze shumëgjuhëshe të ishte përjashtim. Institucionet reale dëshmojnë të kundërtën.
 
-Ky publikim i lokalizuar është një draft për mbulim të plotë gjuhësor. Përmbajtja kanonike në anglisht ruhet përkohësisht më poshtë derisa të përfundojë rishikimi natyror gjuhësor.
+Shumë shoqëri tashmë funksionojnë me më shumë se një gjuhë zyrtare, gjuhë rajonale, gjuhë pakicash dhe me më shumë se një sistem shkrimi.
 
-Multilingual software is often described as unusually difficult, as if serious multilingual participation were an exception. Real institutions prove otherwise.
+## Çfarë mund të mësojnë projektet me kod të hapur
 
-Many societies already operate with multiple official languages, regional languages, minority languages, and more than one writing system.
+Mësimi nuk është se puna shumëgjuhëshe është pa përpjekje. Mësimi është se ajo mund të qeveriset.
 
-## What open-source projects can learn
+Përbërësit praktikë janë të njohur:
 
-The lesson is not that multilingual work is effortless. The lesson is that it is governable.
+- politikë e qartë gjuhësore
+- terminologji e qëndrueshme
+- rrjedha pune për rishikim
+- standarde të përbashkëta
+- nivele realiste cilësie
+- respekt për hollësitë specifike të gjuhës
 
-The practical ingredients are familiar:
+## Pse kjo ka rëndësi për mjetet qytetare dhe arsimore
 
-- explicit language policy
-- stable terminology
-- review workflows
-- shared standards
-- realistic quality levels
-- respect for language-specific details
+Projektet me kod të hapur që u shërbejnë bibliotekave, shkollave, arkivave, organizatave jofitimprurëse ose institucioneve publike duhet të presin kërkesa shumëgjuhëshe më herët sesa shumë produkte startup.
 
-## Why this matters for civic and educational tools
+Kjo nuk do të thotë se çdo lokalizim duhet të nisë menjëherë me barazi të plotë. Kjo do të thotë se arkitektura duhet të jetë në gjendje të mirëpresë më shumë se një gjuhë pa u befasuar.
 
-Open-source projects serving libraries, schools, archives, nonprofits, or public institutions should expect multilingual requirements earlier than many startup products do.
+## Konteksti i Let Books
 
-That does not mean every locale must launch at perfect parity. It means the architecture should be able to welcome more than one language without surprise.
+Let Books tashmë supozon koleksione librash shumëgjuhëshe, përdorues shumëgjuhësh dhe më shumë se një shkrim. Kjo e bën atë një studim të dobishëm në shkallë të vogël për mënyrën se si infrastruktura me kod të hapur mund të mbështesë pjesëmarrjen pa u shtirur se një gjuhë është neutrale për të gjithë.
 
-## Let Books context
+## Përfundimi i qëndrueshëm
 
-Let Books already assumes multilingual book collections, multilingual users, and multiple scripts. That makes it a useful small-scale case study for how open-source infrastructure can support participation without pretending that one language is neutral for everyone.
-
-## Durable takeaway
-
-Multilingual participation is not a political novelty. It is a routine operational reality in many places. Open source can learn from that reality instead of treating English-only defaults as inevitable.
+Pjesëmarrja shumëgjuhëshe nuk është një risi politike. Ajo është një realitet operacional rutinë në shumë vende. Kodi i hapur mund të mësojë nga ky realitet, në vend që t'i trajtojë si të pashmangshme parazgjedhjet vetëm në anglisht.
 
 ## Faqe të lidhura
 

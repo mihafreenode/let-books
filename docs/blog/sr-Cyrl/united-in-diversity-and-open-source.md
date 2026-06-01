@@ -14,8 +14,8 @@ language_variants:
   - ../it/united-in-diversity-and-open-source.md
   - ../fr/united-in-diversity-and-open-source.md
   - ../es/united-in-diversity-and-open-source.md
-title: Уједињени у различитости и отвореном коду
-summary: What multilingual public institutions and open-source projects can learn from societies that operate across multiple languages and scripts.
+title: Уједињени у разноликости и отвореном коду
+summary: Шта вишејезичне јавне установе и пројекти отвореног кода могу научити од друштава која функционишу кроз више језика и писама.
 topics:
   - multilingual-governance
   - public-interest-technology
@@ -29,41 +29,38 @@ sources:
 status: draft
 ---
 
+# Уједињени у разноликости и отвореном коду
 
-# Уједињени у различитости и отвореном коду
+Вишејезични софтвер се често описује као необично тежак, као да је озбиљно вишејезично учешће изузетак. Стварне установе доказују супротно.
 
-Ова локализована објава је нацрт за пуну језичку покривеност. Канонски енглески садржај је тренутно задржан у наставку док се не заврши природна језичка ревизија.
+Многа друштва већ функционишу са више службених језика, регионалним језицима, мањинским језицима и са више од једног писма.
 
-Multilingual software is often described as unusually difficult, as if serious multilingual participation were an exception. Real institutions prove otherwise.
+## Шта пројекти отвореног кода могу научити
 
-Many societies already operate with multiple official languages, regional languages, minority languages, and more than one writing system.
+Поука није да је вишејезични рад без напора. Поука је да се њиме може управљати.
 
-## What open-source projects can learn
+Практични састојци су познати:
 
-The lesson is not that multilingual work is effortless. The lesson is that it is governable.
+- јасна језичка политика
+- стабилна терминологија
+- токови рада за преглед
+- заједнички стандарди
+- реалистични нивои квалитета
+- поштовање појединости специфичних за језик
 
-The practical ingredients are familiar:
+## Зашто је то важно за грађанске и образовне алате
 
-- explicit language policy
-- stable terminology
-- review workflows
-- shared standards
-- realistic quality levels
-- respect for language-specific details
+Пројекти отвореног кода који служе библиотекама, школама, архивима, непрофитним организацијама или јавним установама требало би да вишејезичне захтеве очекују раније него многи startup производи.
 
-## Why this matters for civic and educational tools
+То не значи да свака локализација мора одмах почети са пуном равноправношћу. То значи да архитектура треба моћи да прими више од једног језика без изненађења.
 
-Open-source projects serving libraries, schools, archives, nonprofits, or public institutions should expect multilingual requirements earlier than many startup products do.
+## Контекст Let Booksa
 
-That does not mean every locale must launch at perfect parity. It means the architecture should be able to welcome more than one language without surprise.
+Let Books већ претпоставља вишејезичне збирке књига, вишејезичне кориснике и више писама. То га чини корисном малом студијом случаја о томе како инфраструктура отвореног кода може подржати учешће без претварања да је један језик неутралан за све.
 
-## Let Books context
+## Трајна порука
 
-Let Books already assumes multilingual book collections, multilingual users, and multiple scripts. That makes it a useful small-scale case study for how open-source infrastructure can support participation without pretending that one language is neutral for everyone.
-
-## Durable takeaway
-
-Multilingual participation is not a political novelty. It is a routine operational reality in many places. Open source can learn from that reality instead of treating English-only defaults as inevitable.
+Вишејезично учешће није политичка новост. То је рутинска оперативна стварност на многим местима. Отворени код може учити из те стварности уместо да третира подразумеване поставке само на енглеском као неизбежне.
 
 ## Повезане странице
 

@@ -14,8 +14,8 @@ language_variants:
   - ../it/united-in-diversity-and-open-source.md
   - ../fr/united-in-diversity-and-open-source.md
   - ../es/united-in-diversity-and-open-source.md
-title: Unis dans la diversité et dans l’open source
-summary: What multilingual public institutions and open-source projects can learn from societies that operate across multiple languages and scripts.
+title: Unis dans la diversité et dans l'open source
+summary: Ce que des institutions publiques multilingues et des projets open source peuvent apprendre de sociétés qui fonctionnent à travers plusieurs langues et écritures.
 topics:
   - multilingual-governance
   - public-interest-technology
@@ -29,41 +29,38 @@ sources:
 status: draft
 ---
 
+# Unis dans la diversité et dans l'open source
 
-# Unis dans la diversité et dans l’open source
+Le logiciel multilingue est souvent décrit comme inhabituellement difficile, comme si une participation multilingue sérieuse était une exception. Les institutions réelles prouvent le contraire.
 
-Cet article localisé est un brouillon destiné à garantir une couverture linguistique complète. Le contenu canonique anglais est provisoirement conservé ci-dessous jusqu’à la fin de la révision linguistique naturelle.
+De nombreuses sociétés fonctionnent déjà avec plusieurs langues officielles, des langues régionales, des langues minoritaires et plus d'un système d'écriture.
 
-Multilingual software is often described as unusually difficult, as if serious multilingual participation were an exception. Real institutions prove otherwise.
+## Ce que les projets open source peuvent apprendre
 
-Many societies already operate with multiple official languages, regional languages, minority languages, and more than one writing system.
+La leçon n'est pas que le travail multilingue est sans effort. La leçon est qu'il peut être gouverné.
 
-## What open-source projects can learn
+Les ingrédients pratiques sont familiers :
 
-The lesson is not that multilingual work is effortless. The lesson is that it is governable.
+- une politique linguistique explicite
+- une terminologie stable
+- des flux de revue
+- des standards partagés
+- des niveaux de qualité réalistes
+- le respect des détails propres à chaque langue
 
-The practical ingredients are familiar:
+## Pourquoi cela compte pour les outils civiques et éducatifs
 
-- explicit language policy
-- stable terminology
-- review workflows
-- shared standards
-- realistic quality levels
-- respect for language-specific details
+Les projets open source qui servent des bibliothèques, des écoles, des archives, des organisations à but non lucratif ou des institutions publiques devraient s'attendre à des exigences multilingues plus tôt que beaucoup de produits startup.
 
-## Why this matters for civic and educational tools
+Cela ne signifie pas que chaque langue doit démarrer avec une parité parfaite. Cela signifie que l'architecture devrait pouvoir accueillir plus d'une langue sans surprise.
 
-Open-source projects serving libraries, schools, archives, nonprofits, or public institutions should expect multilingual requirements earlier than many startup products do.
+## Contexte Let Books
 
-That does not mean every locale must launch at perfect parity. It means the architecture should be able to welcome more than one language without surprise.
+Let Books suppose déjà des collections de livres multilingues, des utilisateurs multilingues et plusieurs écritures. Cela en fait une petite étude de cas utile sur la manière dont une infrastructure open source peut soutenir la participation sans prétendre qu'une seule langue est neutre pour tout le monde.
 
-## Let Books context
+## Enseignement durable
 
-Let Books already assumes multilingual book collections, multilingual users, and multiple scripts. That makes it a useful small-scale case study for how open-source infrastructure can support participation without pretending that one language is neutral for everyone.
-
-## Durable takeaway
-
-Multilingual participation is not a political novelty. It is a routine operational reality in many places. Open source can learn from that reality instead of treating English-only defaults as inevitable.
+La participation multilingue n'est pas une nouveauté politique. C'est une réalité opérationnelle routinière dans de nombreux endroits. L'open source peut apprendre de cette réalité au lieu de traiter les réglages par défaut uniquement en anglais comme inévitables.
 
 ## Pages associées
 

@@ -15,52 +15,48 @@ language_variants:
   - ../fr/multilingual-accessibility.md
   - ../es/multilingual-accessibility.md
 title: Mehrsprachige Barrierefreiheit
-summary: Why accessibility and localization should be designed together across language metadata, screen readers, plain language, captions, and alt text.
+summary: Warum Barrierefreiheit und Lokalisierung gemeinsam über Sprachmetadaten, Screenreader, einfache Sprache, Bildunterschriften und Alt-Text gestaltet werden sollten.
 topics:
   - accessibility
-  - screen-readers
-  - localized-alt-text
-  - plain-language
+  - localization
+  - multilingual-ux
 evidence:
   - AGENTS.md
-  - AGENTS-Implementation.md
   - docs/style-guide/localization/README.md
+  - docs/localization-at-scale-program.md
 sources:
   - ../../sources/de/multilingual-accessibility.md
 status: draft
 ---
 
-
 # Mehrsprachige Barrierefreiheit
 
-Dieser lokalisierte Beitrag ist ein Entwurf für vollständige Sprachabdeckung. Der kanonische englische Inhalt bleibt vorerst unten erhalten, bis die natürliche sprachliche Überprüfung abgeschlossen ist.
+Barrierefreiheit und Lokalisierung werden oft in getrennte Arbeitsstränge aufgeteilt. In der Praxis überschneiden sie sich ständig.
 
-Accessibility and localization are often split into separate workstreams. In practice they overlap constantly.
+Wenn eine Seite übersetzt ist, aber die `lang`-Metadaten, Alt-Texte, Bildunterschriften oder Screenreader-Beschriftungen in einer anderen Sprache bleiben, ist das Erlebnis nicht vollständig barrierefrei.
 
-If a page is translated but the `lang` metadata, alt text, captions, or screen-reader labels remain in another language, the experience is not fully accessible.
+## Was mehrsprachige Barrierefreiheit umfasst
 
-## What multilingual accessibility includes
+Sie umfasst mehr als übersetzte UI-Zeichenfolgen.
 
-It includes more than translated UI strings.
+- korrekte Sprachmetadaten
+- lokalisierte Formularbeschriftungen und Validierungsmeldungen
+- lokalisierte Alt-Texte und Bildunterschriften
+- einfache Sprache, wo sie nötig ist
+- korrekte Darstellung der Schrift
+- Tests mit unterstützenden Technologien über Sprachen hinweg
 
-- correct language metadata
-- localized form labels and validation messages
-- localized alt text and captions
-- plain-language wording where needed
-- script-correct rendering
-- testing with assistive technologies across languages
+## Warum das für kleinere Sprachen wichtig ist
 
-## Why this matters for smaller languages
+Kleinere Sprachen sind oft die ersten, die den Feinschliff bei der Barrierefreiheit verlieren. Das schafft ein Erlebnis zweiter Klasse genau für jene Nutzerinnen und Nutzer, die möglicherweise bereits mehr sprachliche Hürden haben.
 
-Smaller languages are often the first to lose accessibility polish. That creates a second-class experience for exactly the users who may already face more language barriers.
+## Let-Books-Kontext
 
-## Let Books context
+Let Books behandelt lokalisierten ARIA-Text, Alt-Text, Statusmeldungen und Schriftkorrektheit bereits als Produktanforderungen. Das ist die richtige Richtung, weil Metadaten zur Barrierefreiheit Teil der Bedeutung der Oberfläche sind.
 
-Let Books already treats localized ARIA text, alt text, status messages, and script correctness as product requirements. That is the right direction because accessibility metadata is part of the meaning of the interface.
+## Dauerhafte Erkenntnis
 
-## Durable takeaway
-
-A multilingual product is not accessible by default, and an accessible product is not multilingual by default. Good systems design both together.
+Ein mehrsprachiges Produkt ist nicht automatisch barrierefrei, und ein barrierefreies Produkt ist nicht automatisch mehrsprachig. Gute Systeme entwerfen beides gemeinsam.
 
 ## Verwandte Seiten
 

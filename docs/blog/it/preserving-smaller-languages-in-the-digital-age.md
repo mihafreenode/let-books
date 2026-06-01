@@ -14,51 +14,48 @@ language_variants:
   - ../it/preserving-smaller-languages-in-the-digital-age.md
   - ../fr/preserving-smaller-languages-in-the-digital-age.md
   - ../es/preserving-smaller-languages-in-the-digital-age.md
-title: Preservare le lingue più piccole nell’era digitale
-summary: Why digital tools should help smaller languages remain usable, visible, and teachable rather than accepting their absence as normal.
+title: Preservare le lingue più piccole nell'era digitale
+summary: Perché gli strumenti digitali dovrebbero aiutare le lingue più piccole a restare usabili, visibili e insegnabili, invece di accettarne l'assenza come normale.
 topics:
   - smaller-languages
-  - cultural-inclusion
-  - knowledge-preservation
+  - digital-inclusion
+  - language-rights
 evidence:
   - AGENTS.md
-  - README.md
   - docs/localization-at-scale-program.md
+  - docs/README.md
 sources:
   - ../../sources/it/preserving-smaller-languages-in-the-digital-age.md
 status: draft
 ---
 
+# Preservare le lingue più piccole nell'era digitale
 
-# Preservare le lingue più piccole nell’era digitale
+Le lingue restano vive non solo attraverso la letteratura e le scuole, ma anche attraverso l'uso quotidiano in software, documentazione, interfacce e materiali digitali per l'apprendimento.
 
-Questo articolo localizzato è una bozza per la copertura linguistica completa. Il contenuto canonico in inglese è temporaneamente mantenuto qui sotto finché non sarà completata la revisione linguistica naturale.
+## Il problema della partecipazione digitale
 
-Languages stay alive not only through literature and schools, but through everyday use in software, documentation, interfaces, and digital learning material.
+Quando una lingua manca dagli strumenti digitali, i parlanti spesso si adattano. Ma l'adattamento ripetuto insegna loro che la loro lingua non è prevista negli spazi tecnici o istituzionali.
 
-## The digital participation problem
+Questo ha conseguenze a lungo termine per la fiducia, la terminologia e la partecipazione.
 
-When a language is missing from digital tools, speakers often adapt. But repeated adaptation teaches them that their language is not expected in technical or institutional spaces.
+## Perché il software conta
 
-That has long-term consequences for confidence, terminology, and participation.
+Il software decide quali lingue sono facili da usare, facili da insegnare e facili in cui contribuire. Questo rende la localizzazione parte della preservazione linguistica digitale, anche per strumenti pratici.
 
-## Why software matters
+## Contesto Let Books
 
-Software decides which languages are easy to use, easy to teach, and easy to contribute in. That makes localization part of digital language preservation, even for practical tools.
+Let Books si occupa direttamente di patrimonio educativo, libri, biblioteche e collezioni multilingui. Sostenere le lingue più piccole nel prodotto e nella base di conoscenza rafforza la stessa missione di preservazione da un'altra angolazione.
 
-## Let Books context
+## Conclusione duratura
 
-Let Books is directly concerned with educational heritage, books, libraries, and multilingual collections. Supporting smaller languages in the product and the knowledge base reinforces the same preservation mission from another angle.
-
-## Durable takeaway
-
-If a project cares about preserving knowledge, it should also care about whether that knowledge can be accessed and discussed in more than one dominant language.
+Se a un progetto importa preservare la conoscenza, dovrebbe importargli anche se quella conoscenza può essere accessibile e discussa in più di una lingua dominante.
 
 ## Pagine correlate
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/unicode-and-script-correctness.md`
-- `../../learning/how-to-manage-terminology-across-languages.md`
+- `../../learning/how-to-design-english-source-content-for-translation.md`
 
 ## Altre lingue
 

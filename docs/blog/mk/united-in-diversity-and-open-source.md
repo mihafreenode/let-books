@@ -14,8 +14,8 @@ language_variants:
   - ../it/united-in-diversity-and-open-source.md
   - ../fr/united-in-diversity-and-open-source.md
   - ../es/united-in-diversity-and-open-source.md
-title: Обединети во различноста и отворениот код
-summary: What multilingual public institutions and open-source projects can learn from societies that operate across multiple languages and scripts.
+title: Обединети во разновидноста и отворениот код
+summary: Што можат да научат повеќејазичните јавни установи и проектите со отворен код од општества што функционираат низ повеќе јазици и писма.
 topics:
   - multilingual-governance
   - public-interest-technology
@@ -29,41 +29,38 @@ sources:
 status: draft
 ---
 
+# Обединети во разновидноста и отворениот код
 
-# Обединети во различноста и отворениот код
+Повеќејазичниот софтвер често се опишува како невообичаено тежок, како сериозното повеќејазично учество да е исклучок. Реалните институции го докажуваат спротивното.
 
-Оваа локализирана објава е нацрт за целосна јазична покриеност. Канонската англиска содржина засега е задржана подолу додека не заврши природната јазична ревизија.
+Многу општества веќе функционираат со повеќе службени јазици, регионални јазици, малцински јазици и со повеќе од едно писмо.
 
-Multilingual software is often described as unusually difficult, as if serious multilingual participation were an exception. Real institutions prove otherwise.
+## Што можат да научат проектите со отворен код
 
-Many societies already operate with multiple official languages, regional languages, minority languages, and more than one writing system.
+Поуката не е дека повеќејазичната работа е без напор. Поуката е дека со неа може да се управува.
 
-## What open-source projects can learn
+Практичните состојки се познати:
 
-The lesson is not that multilingual work is effortless. The lesson is that it is governable.
+- јасна јазична политика
+- стабилна терминологија
+- работни текови за преглед
+- заеднички стандарди
+- реалистични нивоа на квалитет
+- почитување на јазично-специфичните детали
 
-The practical ingredients are familiar:
+## Зошто ова е важно за граѓански и образовни алатки
 
-- explicit language policy
-- stable terminology
-- review workflows
-- shared standards
-- realistic quality levels
-- respect for language-specific details
+Проектите со отворен код што им служат на библиотеки, училишта, архиви, непрофитни организации или јавни установи треба да очекуваат повеќејазични барања порано отколку многу startup производи.
 
-## Why this matters for civic and educational tools
+Тоа не значи дека секоја локализација мора веднаш да започне со целосна рамноправност. Тоа значи дека архитектурата треба да може да прими повеќе од еден јазик без изненадување.
 
-Open-source projects serving libraries, schools, archives, nonprofits, or public institutions should expect multilingual requirements earlier than many startup products do.
+## Контекстот на Let Books
 
-That does not mean every locale must launch at perfect parity. It means the architecture should be able to welcome more than one language without surprise.
+Let Books веќе претпоставува повеќејазични колекции на книги, повеќејазични корисници и повеќе писма. Тоа го прави корисен мал случај за тоа како инфраструктурата со отворен код може да поддржи учество без преправање дека еден јазик е неутрален за сите.
 
-## Let Books context
+## Трајна порака
 
-Let Books already assumes multilingual book collections, multilingual users, and multiple scripts. That makes it a useful small-scale case study for how open-source infrastructure can support participation without pretending that one language is neutral for everyone.
-
-## Durable takeaway
-
-Multilingual participation is not a political novelty. It is a routine operational reality in many places. Open source can learn from that reality instead of treating English-only defaults as inevitable.
+Повеќејазичното учество не е политичка новост. Тоа е рутинска оперативна реалност на многу места. Отворениот код може да учи од таа реалност наместо да ги третира подразбираните поставки само на англиски како неизбежни.
 
 ## Поврзани страници
 

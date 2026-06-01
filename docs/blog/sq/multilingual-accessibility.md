@@ -15,52 +15,48 @@ language_variants:
   - ../fr/multilingual-accessibility.md
   - ../es/multilingual-accessibility.md
 title: Aksesueshmëria shumëgjuhëshe
-summary: Why accessibility and localization should be designed together across language metadata, screen readers, plain language, captions, and alt text.
+summary: Pse aksesueshmëria dhe lokalizimi duhet të projektohen së bashku përmes meta të dhënave gjuhësore, lexuesve të ekranit, gjuhës së thjeshtë, titrave dhe alt tekstit.
 topics:
   - accessibility
-  - screen-readers
-  - localized-alt-text
-  - plain-language
+  - localization
+  - multilingual-ux
 evidence:
   - AGENTS.md
-  - AGENTS-Implementation.md
   - docs/style-guide/localization/README.md
+  - docs/localization-at-scale-program.md
 sources:
   - ../../sources/sq/multilingual-accessibility.md
 status: draft
 ---
 
-
 # Aksesueshmëria shumëgjuhëshe
 
-Ky publikim i lokalizuar është një draft për mbulim të plotë gjuhësor. Përmbajtja kanonike në anglisht ruhet përkohësisht më poshtë derisa të përfundojë rishikimi natyror gjuhësor.
+Aksesueshmëria dhe lokalizimi shpesh ndahen në rrjedha të veçanta pune. Në praktikë ato mbivendosen vazhdimisht.
 
-Accessibility and localization are often split into separate workstreams. In practice they overlap constantly.
+Nëse një faqe është përkthyer, por meta të dhënat `lang`, alt teksti, titrat ose etiketat për lexuesit e ekranit mbeten në një gjuhë tjetër, përvoja nuk është plotësisht e aksesueshme.
 
-If a page is translated but the `lang` metadata, alt text, captions, or screen-reader labels remain in another language, the experience is not fully accessible.
+## Çfarë përfshin aksesueshmëria shumëgjuhëshe
 
-## What multilingual accessibility includes
+Ajo përfshin më shumë se vargje të përkthyera të ndërfaqes.
 
-It includes more than translated UI strings.
+- meta të dhëna të sakta për gjuhën
+- etiketa të lokalizuara formularësh dhe mesazhe validimi
+- alt tekst dhe titra të lokalizuar
+- formulim në gjuhë të thjeshtë aty ku nevojitet
+- paraqitje të saktë të shkrimit
+- testim me teknologji ndihmëse nëpër gjuhë
 
-- correct language metadata
-- localized form labels and validation messages
-- localized alt text and captions
-- plain-language wording where needed
-- script-correct rendering
-- testing with assistive technologies across languages
+## Pse kjo ka rëndësi për gjuhët më të vogla
 
-## Why this matters for smaller languages
+Gjuhët më të vogla shpesh janë të parat që humbasin lëmimin e aksesueshmërisë. Kjo krijon një përvojë të dorës së dytë pikërisht për përdoruesit që mund të përballen tashmë me më shumë barriera gjuhësore.
 
-Smaller languages are often the first to lose accessibility polish. That creates a second-class experience for exactly the users who may already face more language barriers.
+## Konteksti i Let Books
 
-## Let Books context
+Let Books tashmë i trajton tekstin e lokalizuar ARIA, alt tekstin, mesazhet e statusit dhe saktësinë e shkrimit si kërkesa të produktit. Ky është drejtimi i duhur sepse meta të dhënat e aksesueshmërisë janë pjesë e kuptimit të ndërfaqes.
 
-Let Books already treats localized ARIA text, alt text, status messages, and script correctness as product requirements. That is the right direction because accessibility metadata is part of the meaning of the interface.
+## Përfundimi i qëndrueshëm
 
-## Durable takeaway
-
-A multilingual product is not accessible by default, and an accessible product is not multilingual by default. Good systems design both together.
+Një produkt shumëgjuhësh nuk është i aksesueshëm si parazgjedhje dhe një produkt i aksesueshëm nuk është shumëgjuhësh si parazgjedhje. Sistemet e mira i projektojnë të dyja së bashku.
 
 ## Faqe të lidhura
 

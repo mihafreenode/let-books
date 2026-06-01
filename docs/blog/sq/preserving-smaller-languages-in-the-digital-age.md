@@ -15,50 +15,47 @@ language_variants:
   - ../fr/preserving-smaller-languages-in-the-digital-age.md
   - ../es/preserving-smaller-languages-in-the-digital-age.md
 title: Ruajtja e gjuhëve më të vogla në epokën digjitale
-summary: Why digital tools should help smaller languages remain usable, visible, and teachable rather than accepting their absence as normal.
+summary: Pse mjetet digjitale duhet të ndihmojnë gjuhët më të vogla të mbeten të përdorshme, të dukshme dhe të mësueshme, në vend që mungesa e tyre të pranohet si normale.
 topics:
   - smaller-languages
-  - cultural-inclusion
-  - knowledge-preservation
+  - digital-inclusion
+  - language-rights
 evidence:
   - AGENTS.md
-  - README.md
   - docs/localization-at-scale-program.md
+  - docs/README.md
 sources:
   - ../../sources/sq/preserving-smaller-languages-in-the-digital-age.md
 status: draft
 ---
 
-
 # Ruajtja e gjuhëve më të vogla në epokën digjitale
 
-Ky publikim i lokalizuar është një draft për mbulim të plotë gjuhësor. Përmbajtja kanonike në anglisht ruhet përkohësisht më poshtë derisa të përfundojë rishikimi natyror gjuhësor.
+Gjuhët mbeten të gjalla jo vetëm përmes letërsisë dhe shkollave, por edhe përmes përdorimit të përditshëm në softuer, dokumentacion, ndërfaqe dhe materiale digjitale mësimore.
 
-Languages stay alive not only through literature and schools, but through everyday use in software, documentation, interfaces, and digital learning material.
+## Problemi i pjesëmarrjes digjitale
 
-## The digital participation problem
+Kur një gjuhë mungon nga mjetet digjitale, folësit shpesh përshtaten. Por përshtatja e përsëritur i mëson ata se gjuha e tyre nuk pritet në hapësira teknike ose institucionale.
 
-When a language is missing from digital tools, speakers often adapt. But repeated adaptation teaches them that their language is not expected in technical or institutional spaces.
+Kjo ka pasoja afatgjata për vetëbesimin, terminologjinë dhe pjesëmarrjen.
 
-That has long-term consequences for confidence, terminology, and participation.
+## Pse softueri ka rëndësi
 
-## Why software matters
+Softueri vendos se cilat gjuhë janë të lehta për t'u përdorur, të lehta për t'u mësuar dhe të lehta për të kontribuar në to. Kjo e bën lokalizimin pjesë të ruajtjes digjitale të gjuhës, edhe për mjete praktike.
 
-Software decides which languages are easy to use, easy to teach, and easy to contribute in. That makes localization part of digital language preservation, even for practical tools.
+## Konteksti i Let Books
 
-## Let Books context
+Let Books merret drejtpërdrejt me trashëgiminë arsimore, librat, bibliotekat dhe koleksionet shumëgjuhëshe. Mbështetja për gjuhët më të vogla në produkt dhe në bazën e dijes e përforcon të njëjtin mision ruajtjeje nga një kënd tjetër.
 
-Let Books is directly concerned with educational heritage, books, libraries, and multilingual collections. Supporting smaller languages in the product and the knowledge base reinforces the same preservation mission from another angle.
+## Përfundimi i qëndrueshëm
 
-## Durable takeaway
-
-If a project cares about preserving knowledge, it should also care about whether that knowledge can be accessed and discussed in more than one dominant language.
+Nëse një projekti i intereson ruajtja e dijes, duhet t'i interesojë edhe nëse ajo dije mund të arrihet dhe të diskutohet në më shumë se një gjuhë dominuese.
 
 ## Faqe të lidhura
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/unicode-and-script-correctness.md`
-- `../../learning/how-to-manage-terminology-across-languages.md`
+- `../../learning/how-to-design-english-source-content-for-translation.md`
 
 ## Gjuhë të tjera
 

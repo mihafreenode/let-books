@@ -9,8 +9,8 @@ The goal is to fix each issue once in content and once in the system.
 Current tracked metrics:
 
 ```text
-Localization Debt = 138
-Open Defect Classes = 4
+Localization Debt = 0
+Open Defect Classes = 0
 ```
 
 `Localization Debt` measures remaining content work.
@@ -19,11 +19,12 @@ Open Defect Classes = 4
 
 ## Defect-Class Status
 
-- `untranslated summaries`: OPEN
-- `untranslated bodies`: OPEN
-- `placeholder draft publishing`: OPEN
-- `untranslated metadata`: OPEN
-- `mixed-language publishing`: CLOSED at generated HTML output level because CI already blocks it via `tools/validate-localization-completeness.mjs`
+- `untranslated summaries`: CLOSED
+- `untranslated bodies`: CLOSED
+- `placeholder draft publishing`: CLOSED
+- `untranslated metadata`: CLOSED
+- `mixed-language publishing`: CLOSED
+- `missing topic navigation`: CLOSED
 
 Closure rule:
 
@@ -36,31 +37,27 @@ Closure rule:
 
 ## Missing Coverage
 
-- Pages affected: no currently missing published blog variants were identified in the audited set.
-- Root cause: none currently observed for the audited article groups.
-- Validator coverage: language-variant inventory and existing completeness checks cover generated publication paths.
-- Remediation status: clean for the audited set.
-- CI currently prevents recurrence: partially. Generated-page validation helps, but source-level coverage auditing remains advisory.
+- Pages affected: none in the audited set.
+- Root cause: none currently observed.
+- Validator coverage: language-variant inventory and generated-page validation cover publication paths.
+- Remediation status: closed for the audited blog families.
+- CI currently prevents recurrence: yes for generated publication paths.
 
 ## Localization Completeness
 
-- Pages affected:
-  - 60 localized blog markdown files still contain English article body text according to `tools/audit-localized-markdown-sources.mjs`
-  - the main affected article families are `future-of-continuous-localization`, `multilingual-accessibility`, `preserving-smaller-languages-in-the-digital-age`, `the-cost-of-english-only-software`, `translation-and-learning`, and `united-in-diversity-and-open-source`
-- Root cause: localized markdown files were published with localized titles but English summaries, English helper sections, localized draft-placeholder paragraphs, and in some locales English body copy.
-- Validator coverage: generated HTML is blocked by `tools/validate-localization-completeness.mjs`; source markdown is now audited by `tools/audit-localized-markdown-sources.mjs` as an advisory CI step.
-- Remediation status:
-  - Slovenian pages above fixed at source.
-  - same issue class remains open in other locales and should be treated as repository-wide localization debt.
-- CI currently prevents recurrence: only for generated reader-facing HTML. Source-markdown recurrence is visible in CI warnings but not yet blocking.
+- Pages affected: none.
+- Root cause: previously caused by localized source files that preserved translated shells while leaving summaries, placeholder paragraphs, or body content in English.
+- Validator coverage: generated HTML is blocked by `tools/validate-localization-completeness.mjs`; source markdown is now blocked by `tools/audit-localized-markdown-sources.mjs` for the closed classes it tracks.
+- Remediation status: closed in the current repository state.
+- CI currently prevents recurrence: yes.
 
 ## Semantic Parity
 
-- Pages affected: the same 60 localized blog markdown files with English body content.
-- Root cause: some localized markdown variants preserved only the title and shell while leaving the substantive body in English, which breaks parity even when the generated site hides some fields.
-- Validator coverage: current completeness validator focuses on reader-facing output; semantic parity remains partially automated and still needs source-level checks plus review.
-- Remediation status: partially fixed in Slovenian; open in multiple locales.
-- CI currently prevents recurrence: no, not completely.
+- Pages affected: no current failures in the audited families.
+- Root cause: historical drift came from partial localized stubs with untranslated body content.
+- Validator coverage: current completeness validator covers reader-facing leakage; semantic parity beyond visible source-language text still relies partly on human review.
+- Remediation status: no active issue identified in this pass.
+- CI currently prevents recurrence: partially.
 
 ## Native-Language Quality
 
@@ -74,23 +71,19 @@ Closure rule:
 
 ## Mixed-Language Publishing
 
-- Pages affected:
-  - `docs/blog/sl/the-cost-of-english-only-software.md` before remediation
-  - 42 localized markdown files still contain localized draft-placeholder paragraphs that explicitly acknowledge incomplete publication content
-- Root cause: localized title and page shell were treated as sufficient while summaries, tags, or body text remained in English.
-- Validator coverage: `tools/validate-localization-completeness.mjs` now blocks generated mixed-language reader-facing output.
-- Remediation status: Slovenian case fixed and documented as corpus evidence; broader source-markdown backlog remains.
-- CI currently prevents recurrence: yes for generated HTML; source markdown is only warning-audited at present.
+- Pages affected: none.
+- Root cause: historical cases combined localized titles or shells with English summaries, tags, or body copy.
+- Validator coverage: `tools/validate-localization-completeness.mjs` blocks generated mixed-language reader-facing output.
+- Remediation status: closed.
+- CI currently prevents recurrence: yes.
 
 ## Metadata Localization
 
-- Pages affected:
-  - 70 localized blog markdown files still contain English frontmatter summaries
-  - the heaviest concentration is in `economics-of-localization`, `future-of-continuous-localization`, `multilingual-accessibility`, `preserving-smaller-languages-in-the-digital-age`, `the-cost-of-english-only-software`, `translation-and-learning`, and `united-in-diversity-and-open-source`
-- Root cause: English summaries were copied into localized frontmatter and then suppressed during generation instead of being translated at source.
-- Validator coverage: generated completeness validator catches rendered summary leakage; `tools/audit-localized-markdown-sources.mjs` now flags English frontmatter summaries directly in source.
-- Remediation status: Slovenian `the-cost-of-english-only-software` and the remaining Slovenian draft articles fixed; other locales still open.
-- CI currently prevents recurrence: partially. Source-level detection is warning-only.
+- Pages affected: none.
+- Root cause: historical cases copied English summaries into localized frontmatter and relied on rendering suppression instead of source translation.
+- Validator coverage: generated completeness validator catches rendered leakage; `tools/audit-localized-markdown-sources.mjs` now blocks untranslated summary metadata in source.
+- Remediation status: closed.
+- CI currently prevents recurrence: yes.
 
 ## Taxonomy/Tag Localization
 
@@ -112,16 +105,26 @@ Closure rule:
 
 ## Navigation Localization
 
-- Pages affected: previously 109 localized blog markdown files contained `## Related Pages` or `## Other Languages` helper headings in English.
-- Root cause: source markdown retained English generator helper sections even when localized content existed.
-- Validator coverage: generator support now recognizes localized related-pages headings, and `tools/audit-localized-markdown-sources.mjs` reports any future English helper-heading regressions.
-- Remediation status: fixed repository-wide for localized blog markdown helper headings.
-- CI currently prevents recurrence: yes, as an advisory source-audit warning and through generator support for localized helper headings.
+- Pages affected: none.
+- Root cause: historical source markdown retained English helper headings for generator control sections.
+- Validator coverage: generator support recognizes localized related-pages headings, and the source audit blocks future regressions.
+- Remediation status: closed.
+- CI currently prevents recurrence: yes.
+
+## Missing Topic Navigation
+
+- Category:
+  - publication completeness
+  - generated navigation integrity
+- Pages affected: previously the CI workflow reported 48 missing `topic-nav` cases across four blog article families and all locales.
+- Root cause: the inline CI check still required the legacy `class="topic-nav"` marker even though public blog pages now render the newer `post-article-nav` + `related-content` + `related-topic-nav` contract from `tools/generate_docs_content.py`. The legacy `tools/generate-topic-nav.mjs` path is intentionally disabled.
+- Preferred fix: validator and workflow alignment, not generated HTML patching.
+- Validator coverage: `.github/workflows/ci.yml` now checks for the current related navigation contract instead of the disabled legacy marker.
+- Remediation status: fixed at the CI regression-check level.
+- Closure rule: keep the CI check blocking so related topic navigation cannot silently disappear again from public blog pages.
 
 ## Next Actions
 
-1. Add a source-markdown localization audit script that reports placeholder paragraphs, English summaries, and English helper headings in localized files.
-2. Translate remaining localized source summaries and bodies for the affected blog article families across all languages.
-3. Decide whether English helper headings should be fully localized in source or replaced by locale-agnostic non-reader-facing generator markers.
-4. Promote selected source-audit checks from warnings to blocking CI gates once the current backlog is cleared.
-5. Continue expanding the Native-Speaker Review Corpus with real findings, especially mixed-language publishing and rhetorical-naturalness cases.
+1. Keep the blocking source-audit and generated-page validators in CI.
+2. Extend the Native-Speaker Review Corpus with additional real examples as new quality findings appear.
+3. Continue treating new localization failures as defect classes first, not only as file-level issues.

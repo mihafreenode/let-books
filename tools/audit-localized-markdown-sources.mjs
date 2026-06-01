@@ -73,6 +73,8 @@ const localizationDebt = defectClasses.untranslatedSummaries.count
   + defectClasses.untranslatedBodies.count
   + defectClasses.placeholderDraftPublishing.count;
 const openDefectClasses = Object.values(defectClasses).filter((item) => item.count > 0).length;
+const blockingFindings = localizationDebt
+  + findings.navigationLocalization.length;
 
 for (const [category, items] of Object.entries(findings)) {
   if (items.length === 0) {
@@ -83,7 +85,7 @@ for (const [category, items] of Object.entries(findings)) {
 
 console.log('Localized markdown source audit');
 console.log('');
-console.log('This audit is advisory until the remaining source-localization backlog is cleared.');
+console.log('This audit is blocking for closed defect classes.');
 console.log('Fix source markdown and metadata first, then regenerate derived artifacts.');
 console.log('');
 console.log(`Localization Debt = ${localizationDebt}`);
@@ -118,6 +120,12 @@ for (const [name, item] of Object.entries(defectClasses)) {
   console.log(`  validator coverage: ${item.validatorCoverage}`);
   console.log(`  recurrence risk: ${item.recurrenceRisk}`);
   console.log(`  closure plan: ${item.closurePlan}`);
+}
+
+if (blockingFindings > 0) {
+  console.error('');
+  console.error(`Localized markdown source audit failed with ${blockingFindings} blocking finding(s).`);
+  process.exit(1);
 }
 
 function walk(dir) {
