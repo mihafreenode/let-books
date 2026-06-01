@@ -85,12 +85,12 @@ Zato so zreli lokalizacijski sistemi vse bolj podprti z AI, ne pa popolnoma prep
 
 Če projekt želi večjezično sodelovanje, mora biti lokalizacija del zasnove sistema, ne pozni izvozni korak.
 
-## Related Pages
+## Sorodne strani
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/localization-maturity-model.md`
 - `../../learning/how-to-build-a-localization-pipeline.md`
 
-## Other Languages
+## Drugi jeziki
 
 - English (../en/localization-at-scale.md)

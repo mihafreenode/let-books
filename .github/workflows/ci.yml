@@ -74,6 +74,9 @@ jobs:
             --report-file docs/.localization-completeness-report.md \
             --json-report-file docs/.localization-completeness-report.json
 
+      - name: Localized markdown source audit
+        run: node tools/audit-localized-markdown-sources.mjs
+
       - name: Docs link and article validation
         run: node tools/validate-blog.mjs
 

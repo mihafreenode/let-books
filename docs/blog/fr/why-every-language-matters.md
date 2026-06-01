@@ -68,12 +68,12 @@ Concevez le projet de sorte qu'il puisse appartenir à plus d'une langue dès le
 
 Toutes les langues n'ont pas besoin du même niveau de maturité le premier jour. Mais chaque langue qu'un projet affirme prendre en charge devrait être traitée comme une destination légitime, et non comme une simple case décorative.
 
-## Related Pages
+## Pages associées
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Autres langues
 
 - English (../en/why-every-language-matters.md)

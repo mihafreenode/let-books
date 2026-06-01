@@ -94,7 +94,7 @@ function main() {
     fs.writeFileSync(path.resolve(ROOT, jsonReportFile), jsonReport);
   }
 
-  console.log('Localization completeness validation\n');
+  console.log('Reader-Facing Localization Validator\n');
   console.log(`${MARKDOWN_FIRST_RULE}\n`);
   console.log(`Checked localized generated pages: ${checkedPages}`);
   console.log(`Errors: ${errors.length}`);

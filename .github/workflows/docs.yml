@@ -64,6 +64,9 @@ jobs:
             --report-file docs/.localization-completeness-report.md \
             --json-report-file docs/.localization-completeness-report.json
 
+      - name: Localized markdown source audit
+        run: node tools/audit-localized-markdown-sources.mjs
+
       - name: Generate sitemap
         run: node tools/generate-sitemap.mjs
 

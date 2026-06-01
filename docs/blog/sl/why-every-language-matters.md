@@ -68,12 +68,12 @@ Projekt zasnuj tako, da lahko že od začetka resnično pripada več kot enemu j
 
 Ni nujno, da imajo vsi jeziki prvi dan enako zrelost. Vsak jezik, za katerega projekt trdi, da ga podpira, pa bi moral biti obravnavan kot legitimna destinacija, ne kot okrasna kljukica.
 
-## Related Pages
+## Sorodne strani
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Drugi jeziki
 
 - English (../en/why-every-language-matters.md)

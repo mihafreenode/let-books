@@ -117,6 +117,62 @@
 <p>Projects that delay localization usually discover that their information architecture, screenshots, and testing assumptions are already English-shaped.</p>
 <h2 id="let-books-context">Let Books context</h2>
 <p>Let Books is explicitly multilingual in product direction, documentation, and UI expectations. That makes localization architecture a core product concern.</p>
+<h2 id="reader-facing-localization-completeness">Reader-facing localization completeness</h2>
+<p>Localized URLs, titles, navigation, and page shells are not enough.</p>
+<p>A localized page is only complete when all reader-facing content is localized, including:</p>
+<ul>
+<li>summaries and descriptions</li>
+<li>tags and category labels</li>
+<li>article body copy</li>
+<li>headings and lists</li>
+<li>callouts and captions</li>
+<li>diagram labels and alt text</li>
+<li>related-content descriptions</li>
+<li>localized breadcrumbs where variants exist</li>
+</ul>
+<p>If a page still exposes source-language reader-facing text outside quotations, proper nouns, technical identifiers, or explicitly marked source material, localization completeness has failed.</p>
+<h2 id="localization-as-a-feedback-system">Localization as a feedback system</h2>
+<p>Localization at scale is also a feedback-system design problem.</p>
+<p>Typical feedback stages include:</p>
+<ol type="1">
+<li>AI-generated draft</li>
+<li>spellcheck and terminology validation</li>
+<li>structural completeness checks</li>
+<li>semantic parity checks</li>
+<li>accessibility and asset validation</li>
+<li>link and navigation validation</li>
+<li>native-language review</li>
+<li>publication review</li>
+</ol>
+<p>Each stage identifies the next problem to solve. That is why CI, review, and contributor guidance matter as much as translation itself.</p>
+<p>Kent Beck summarized the general principle clearly: “Optimism is an occupational hazard of programming; feedback is the treatment.” The same idea applies to multilingual publishing.</p>
+<p>Norbert Wiener described feedback as “a method of controlling a system by reinserting into it the results of its past performance.” Localization validators and review systems play exactly that role in a multilingual publishing workflow.</p>
+<h2 id="source-first-remediation">Source-first remediation</h2>
+<p>When localization fails, fix the source first.</p>
+<p>Recommended investigation order:</p>
+<ol type="1">
+<li>source markdown</li>
+<li>localization metadata</li>
+<li>article registries</li>
+<li>generation scripts</li>
+<li>generated indexes and navigation</li>
+<li>generated HTML</li>
+</ol>
+<p>Generated HTML should not be hand-patched when the underlying localized source is still incomplete.</p>
+<h2 id="native-speaker-review-corpus">Native-speaker review corpus</h2>
+<p>Let Books should maintain a living corpus of native-speaker review findings.</p>
+<p>Each record should keep:</p>
+<ul>
+<li>source article</li>
+<li>language</li>
+<li>original English text</li>
+<li>original localized text</li>
+<li>improved localized text</li>
+<li>explanation</li>
+<li>issue category</li>
+<li>whether automated QA would likely detect it</li>
+</ul>
+<p>The point is not only to fix awkward phrasing. The point is to build evidence showing where automation helps, where semantic validation helps, and where native-language judgment still adds unique value.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

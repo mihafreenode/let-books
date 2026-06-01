@@ -15,7 +15,7 @@ language_variants:
   - ../fr/economics-of-localization.md
   - ../es/economics-of-localization.md
 title: Ekonomia e lokalizimit
-summary: How volunteer translation, professional review, AI drafts, and automation fit together in realistic localization budgets.
+summary: Si përkthimi vullnetar, rishikimi profesional, draftet me AI dhe automatizimi përshtaten me buxhete reale të lokalizimit.
 topics:
   - sustainability
   - ai-assisted-translation
@@ -29,42 +29,39 @@ sources:
 status: draft
 ---
 
-
 # Ekonomia e lokalizimit
 
-Ky publikim i lokalizuar është një draft për mbulim të plotë gjuhësor. Përmbajtja kanonike në anglisht ruhet përkohësisht më poshtë derisa të përfundojë rishikimi natyror gjuhësor.
+Lokalizimi shpesh paraqitet si një shpenzim gjithçka ose asgjë. Kjo mënyrë paraqitjeje është çorientuese.
 
-Localization is often framed as an all-or-nothing expense. That framing is misleading.
+Projektet zakonisht veprojnë përgjatë një spektri të tërë mundësish.
 
-Projects usually operate across a spectrum.
+## Modele të zakonshme
 
-## Common models
+- përkthim vullnetar
+- draft me AI plus rishikim nga komuniteti
+- draft me AI plus rishikim nga folës vendas
+- përkthim profesional për përmbajtje kritike
+- pjekuri e përzier sipas gjuhës dhe llojit të përmbajtjes
 
-- volunteer translation
-- AI draft plus community review
-- AI draft plus native-speaker review
-- professional translation for critical content
-- mixed maturity by language and content type
+## Çfarë e ul koston pa u shtirur se cilësia është falas
 
-## What lowers cost without pretending quality is free
+Zakonisht ulësit më të dobishëm të kostos janë:
 
-The most useful cost reducers are usually:
+- terminologjia e ripërdorshme
+- memoria e përkthimit
+- shkrimi i strukturuar i burimit
+- pritshmëri të shkallëzuara për cilësinë
+- QA i automatizuar
 
-- reusable terminology
-- translation memory
-- structured source writing
-- staged quality expectations
-- automated QA
+## Pse transparenca ka rëndësi
 
-## Why transparency matters
+Përdoruesit dhe kontribuesit duhet të dinë nëse një përkthim është gjeneruar nga makina, është rishikuar nga komuniteti apo është rishikuar profesionalisht. Etiketat e ndershme të pjekurisë janë më të mira se premtimet e paqarta.
 
-Users and contributors should know whether a translation is machine-generated, community reviewed, or professionally reviewed. Honest maturity labels are better than vague promises.
+## Përfundimi i qëndrueshëm
 
-## Durable takeaway
+Lokalizimi vërtet kushton kohë dhe para. Por një model i shkallëzuar, transparent dhe hibrid shpesh është i arritshëm shumë përpara se barazia e plotë profesionale të bëhet e përballueshme.
 
-Localization does cost time and money. But a staged, transparent, hybrid model is often achievable long before full professional parity is affordable.
-
-## Related Pages
+## Faqe të lidhura
 
 - `../../wiki/localization-maturity-model.md`
 - `../../wiki/translation-memory-and-glossaries.md`

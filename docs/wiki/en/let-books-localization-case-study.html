@@ -118,6 +118,33 @@
 <li>automated checks rarely catch subtle fluency and modality issues on their own</li>
 </ul>
 <p>This kind of example is valuable because it is small enough for reviewer training, but realistic enough for governance and benchmark use.</p>
+<h2 id="mixed-language-publishing-example">Mixed-language publishing example</h2>
+<p>Source article: <code>docs/blog/sl/the-cost-of-english-only-software.md</code></p>
+<p>Language: Slovenian</p>
+<p>Original localized state:</p>
+<ul>
+<li>localized title: <code>Cena programske opreme samo v angleščini</code></li>
+<li>English summary remained visible in source metadata</li>
+<li>English tags were rendered in generated HTML before taxonomy labels were added</li>
+<li>English body sections followed a localized draft placeholder paragraph</li>
+</ul>
+<p>Improved localized state:</p>
+<ul>
+<li>localized summary</li>
+<li>localized tags</li>
+<li>localized body, headings, and lists</li>
+<li>no draft placeholder paragraph in the published article body</li>
+</ul>
+<p>Explanation:</p>
+<p>This is a mixed-language publishing failure. Coverage existed, but localization completeness did not. The page looked translated at first glance while still exposing English reader-facing content.</p>
+<p>Category:</p>
+<ul>
+<li>mixed-language publishing</li>
+<li>localization completeness</li>
+<li>metadata localization</li>
+</ul>
+<p>Would automated QA detect it?</p>
+<p>Yes, if the validator checks source markdown and generated reader-facing HTML for untranslated summaries, tags, and body content.</p>
 <h2 id="benchmark-fixture-direction">Benchmark fixture direction</h2>
 <p>Structured review examples should also be stored as reusable benchmark fixtures so future LLM evaluation can measure:</p>
 <ul>

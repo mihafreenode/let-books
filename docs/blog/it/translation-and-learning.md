@@ -15,7 +15,7 @@ language_variants:
   - ../fr/translation-and-learning.md
   - ../es/translation-and-learning.md
 title: Traduzione e apprendimento
-summary: Why localized educational material can improve comprehension, reduce cognitive load, and broaden participation.
+summary: Perché il materiale educativo localizzato può migliorare la comprensione, ridurre il carico cognitivo e ampliare la partecipazione.
 topics:
   - education
   - reading-comprehension
@@ -29,38 +29,35 @@ sources:
 status: draft
 ---
 
-
 # Traduzione e apprendimento
 
-Questo articolo localizzato è una bozza per la copertura linguistica completa. Il contenuto canonico in inglese è temporaneamente mantenuto qui sotto finché non sarà completata la revisione linguistica naturale.
+Le persone spesso imparano meglio nella lingua che comprendono più a fondo. Non è una preferenza sentimentale. Incide sulla comprensione, sulla fiducia e sulla memoria.
 
-People often learn best in the language they understand most deeply. That is not a sentimental preference. It affects comprehension, confidence, and memory.
+## Perché la lingua cambia la qualità dell'apprendimento
 
-## Why language changes learning quality
+Quando il materiale arriva in una seconda lingua, una parte dello sforzo del discente va nella decodifica della lingua invece che nella comprensione dell'argomento.
 
-When material arrives in a second language, part of the learner's effort goes into language decoding instead of subject understanding.
+Questo sforzo aggiuntivo può avere valore in alcuni contesti, ma non dovrebbe essere scambiato per una base neutrale.
 
-That extra effort can be worth it in some contexts, but it should not be mistaken for a neutral baseline.
+## Che cosa migliora il materiale educativo localizzato
 
-## What localized educational material improves
+I contenuti localizzati possono migliorare:
 
-Localized content can improve:
+- la velocità di lettura
+- la chiarezza concettuale
+- la disponibilità a fare domande
+- la capacità di insegnare ad altri
+- il riuso a lungo termine della conoscenza
 
-- reading speed
-- conceptual clarity
-- willingness to ask questions
-- ability to teach others
-- long-term reuse of knowledge
+## Perché questo conta per la documentazione
 
-## Why this matters for documentation
+Anche la documentazione tecnica è materiale educativo. Se un progetto vuole che volontari, studenti, bibliotecari o educatori insegnino e riutilizzino il sistema, l'accesso linguistico influenza la qualità di quell'apprendimento.
 
-Technical documentation is also educational material. If a project wants volunteers, students, librarians, or educators to teach and reuse the system, language access affects the quality of that learning.
+## Conclusione duratura
 
-## Durable takeaway
+La localizzazione non è solo una funzione di comodità. Nei contesti educativi può migliorare direttamente i risultati dell'apprendimento.
 
-Localization is not only a convenience feature. In educational contexts, it can improve learning outcomes directly.
-
-## Related Pages
+## Pagine correlate
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/multilingual-accessibility.md`

@@ -161,6 +161,7 @@
 <li>broken internal links</li>
 <li>forbidden editorial citations</li>
 </ul>
+<p>For multilingual publishing, treat mixed-language reader-facing content as one of the earliest high-value CI gates. A page with a localized title but an English summary or English tags is not partially successful. It is incomplete.</p>
 <p>These checks are usually cheap, objective, and high-value.</p>
 <h2 id="what-not-to-force-too-early">What not to force too early</h2>
 <p>Some checks are valuable but may need time before becoming hard gates.</p>
@@ -204,11 +205,22 @@
 </ol>
 <h2 id="ai-assisted-projects-need-this-even-more">AI-assisted projects need this even more</h2>
 <p>AI increases the volume of changes and the speed of change. That means more opportunities for inconsistency.</p>
+<p>It also makes fast feedback more valuable. The practical question is often not whether AI can produce a perfect first attempt. The more useful question is whether the environment can reliably identify the next problem to solve.</p>
 <p>Validation and CI are not there to slow teams down. They are there to keep speed from erasing important boundaries.</p>
 <p>In spec-driven work, the goal is not maximum automation. The goal is reliable reinforcement of the rules that matter most.</p>
 <h2 id="the-durable-lesson">The durable lesson</h2>
 <p>The strongest validation systems usually do not appear fully formed. They grow by turning repeated human judgment into documented, reviewable, enforceable checks.</p>
 <p>That staged path is often the most realistic way to make a project stricter without making it brittle.</p>
+<h2 id="source-first-remediation-checklist">Source-first remediation checklist</h2>
+<p>When a validation rule fails:</p>
+<ol type="1">
+<li>inspect source markdown first</li>
+<li>inspect localized metadata next</li>
+<li>inspect generation inputs and registries</li>
+<li>regenerate artifacts</li>
+<li>inspect generated HTML only after source-level checks</li>
+</ol>
+<p>Do not patch generated output if the source localization is incomplete.</p>
 <h2 id="further-reading">Further Reading</h2>
 <ul>
 <li><code>../spec-driven-content-program.md</code></li>

@@ -68,12 +68,12 @@ Progetta il progetto in modo che fin dall'inizio possa appartenere davvero a pi√
 
 Non ogni lingua deve avere la stessa maturit√† il primo giorno. Ma ogni lingua che un progetto dichiara di supportare dovrebbe essere trattata come una destinazione legittima, non come una casella decorativa.
 
-## Related Pages
+## Pagine correlate
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Altre lingue
 
 - English (../en/why-every-language-matters.md)

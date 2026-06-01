@@ -14,8 +14,8 @@ language_variants:
   - ../it/the-cost-of-english-only-software.md
   - ../fr/the-cost-of-english-only-software.md
   - ../es/the-cost-of-english-only-software.md
-title: Цената на софтверот само на англиски
-summary: English-only defaults look cheap to builders, but they shift comprehension, participation, and maintenance costs onto everyone else.
+title: Цената на софтвер само на англиски
+summary: Подразбираните поставки само на англиски можат на градителите да им изгледаат евтино, но трошокот за разбирање, учество и одржување го префрлаат на сите други.
 topics:
   - digital-inclusion
   - education
@@ -29,38 +29,35 @@ sources:
 status: draft
 ---
 
+# Цената на софтвер само на англиски
 
-# Цената на софтверот само на англиски
+Софтверот само на англиски може да изгледа поевтин затоа што скриените трошоци често не ги плаќа тимот, туку корисниците.
 
-Оваа локализирана објава е нацрт за целосна јазична покриеност. Канонската англиска содржина засега е задржана подолу додека не заврши природната јазична ревизија.
+Корисниците ги плаќаат преку дополнително когнитивно оптоварување, помала самодоверба, побавно воведување, повеќе прашања до поддршката и послабо учество.
 
-English-only software can feel cheaper because the missing costs are often paid by users rather than by the team.
+## Трошокот не е само трошок за превод
 
-Users pay through extra cognitive load, reduced confidence, slower training, more support questions, and lower participation.
+Кога проектот останува само на англиски, често ги зголемува:
 
-## The cost is not only translation cost
+- тешкотиите при воведување
+- празнините во документацијата
+- оптоварувањето на поддршката
+- зависноста од мал број двојазични рецензенти
+- исклученоста од јавни или образовни средини
 
-When a project stays English-only, it often increases:
+## Каде ова е највидливо
 
-- onboarding friction
-- documentation gaps
-- support burden
-- reviewer dependence on a few bilingual people
-- exclusion from public or educational settings
+Овој трошок е особено видлив кај граѓански, непрофитен, образовен и библиотечно насочен софтвер, каде што целта обично е поширок пристап, а не потесно филтрирање.
 
-## Where this matters most
+## Контекстот на Let Books
 
-The cost is especially visible in civic, nonprofit, educational, and library-oriented software, where the goal is usually broader access rather than narrower filtering.
+Let Books е наменет за повеќејазични текови за донирање книги и зачувување знаење. Ако проектот во пракса остане само на англиски, тоа би било спротивно на неговата регионална и образовна цел.
 
-## Let Books context
+## Трајна поента
 
-Let Books is intended for multilingual book-donation and preservation workflows. If the project remained effectively English-only, it would contradict its own regional and educational purpose.
+Софтверот само на англиски често е поевтин само ако проектот ги игнорира скриените трошоци што им ги префрлил на корисниците.
 
-## Durable takeaway
-
-English-only software is often cheaper only if the project ignores the hidden costs it has exported to users.
-
-## Related Pages
+## Поврзани страници
 
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../wiki/language-support-matrix.md`

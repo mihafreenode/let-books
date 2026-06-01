@@ -79,6 +79,21 @@ OTHER_LANGUAGE_HEADINGS = {
     "es": "Otros idiomas",
 }
 
+RELATED_PAGES_SECTION_HEADINGS = {
+    "en": "Related Pages",
+    "sl": "Sorodne strani",
+    "hr": "Povezane stranice",
+    "bs": "Povezane stranice",
+    "sr-Latn": "Povezane stranice",
+    "sr-Cyrl": "Повезане странице",
+    "mk": "Поврзани страници",
+    "sq": "Faqe të lidhura",
+    "de": "Verwandte Seiten",
+    "it": "Pagine correlate",
+    "fr": "Pages associées",
+    "es": "Páginas relacionadas",
+}
+
 RELATED_HEADINGS = {
     "en": {"blog": "Related Articles", "learning": "Related Learning Material", "wiki": "Related Wiki Entries"},
     "sl": {"blog": "Sorodni članki", "learning": "Sorodno učno gradivo", "wiki": "Sorodni wiki vnosi"},
@@ -338,6 +353,8 @@ TOPIC_LABELS = {
         "ci-cd": "CI/CD",
         "demo-alignment": "Usklajenost demota",
         "documentation": "Dokumentacija",
+        "digital-inclusion": "Digitalna vključenost",
+        "education": "Izobraževanje",
         "implementation-planning": "Načrtovanje izvedbe",
         "isbn-metadata": "ISBN in metapodatki",
         "let-books": "Let Books",
@@ -346,6 +363,7 @@ TOPIC_LABELS = {
         "product-review": "Pregled izdelka",
         "product-specification": "Produktna specifikacija",
         "project-management": "Vodenje projekta",
+        "public-sector-software": "Programska oprema za javni sektor",
         "spec-driven-development": "Razvoj na podlagi specifikacij",
         "spec-writing": "Pisanje specifikacij",
         "translation-quality": "Kakovost prevajanja",
@@ -600,7 +618,7 @@ FOOTER_LINK_LABELS = {
 }
 
 SECTION_STOP_HEADINGS = {
-    "blog": {value.lower() for value in OTHER_LANGUAGE_HEADINGS.values()} | {"other languages", "related pages"},
+    "blog": {value.lower() for value in OTHER_LANGUAGE_HEADINGS.values()} | {value.lower() for value in RELATED_PAGES_SECTION_HEADINGS.values()} | {"other languages", "related pages"},
     "learning": set(),
     "wiki": {
         "related pages",
@@ -858,10 +876,11 @@ def parse_related_pages_section(body: str, content_type: str) -> list[ContentRef
     lines = body.splitlines()
     refs: list[ContentRef] = []
     in_section = False
+    section_headings = {value.lower() for value in RELATED_PAGES_SECTION_HEADINGS.values()} | {"related pages"}
     for line in lines:
         if line.startswith("## "):
             heading = line[3:].strip()
-            if heading == "Related Pages":
+            if heading.lower() in section_headings:
                 in_section = True
                 continue
             if in_section:

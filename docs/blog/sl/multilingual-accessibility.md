@@ -15,7 +15,7 @@ language_variants:
   - ../fr/multilingual-accessibility.md
   - ../es/multilingual-accessibility.md
 title: Večjezična dostopnost
-summary: Why accessibility and localization should be designed together across language metadata, screen readers, plain language, captions, and alt text.
+summary: Zakaj bi morali dostopnost in lokalizacijo načrtovati skupaj prek jezikovnih metapodatkov, bralnikov zaslona, preprostega jezika, podnapisov in nadomestnih besedil.
 topics:
   - accessibility
   - screen-readers
@@ -33,36 +33,34 @@ status: draft
 
 # Večjezična dostopnost
 
-Ta lokalizirana objava je osnutek za popolno jezikovno pokritost. Spodaj je trenutno ohranjena kanonična angleška vsebina, dokler ne bo končan naravni jezikovni pregled.
+Dostopnost in lokalizacija sta pogosto razdeljeni na ločena delovna tokova. V praksi pa se prekrivata skoraj ves čas.
 
-Accessibility and localization are often split into separate workstreams. In practice they overlap constantly.
+Če je stran prevedena, vendar metapodatki `lang`, nadomestna besedila, podnapisi ali oznake za bralnike zaslona ostanejo v drugem jeziku, izkušnja ni zares dostopna.
 
-If a page is translated but the `lang` metadata, alt text, captions, or screen-reader labels remain in another language, the experience is not fully accessible.
+## Kaj vključuje večjezična dostopnost
 
-## What multilingual accessibility includes
+Vključuje več kot le prevedene nize uporabniškega vmesnika.
 
-It includes more than translated UI strings.
+- pravilne jezikovne metapodatke
+- lokalizirane oznake obrazcev in validacijska sporočila
+- lokalizirana nadomestna besedila in podnapise
+- preprost jezik tam, kjer je potreben
+- pravilno upodobitev posamezne pisave
+- testiranje s podpornimi tehnologijami v več jezikih
 
-- correct language metadata
-- localized form labels and validation messages
-- localized alt text and captions
-- plain-language wording where needed
-- script-correct rendering
-- testing with assistive technologies across languages
+## Zakaj je to pomembno za manjše jezike
 
-## Why this matters for smaller languages
+Manjši jeziki so pogosto prvi, ki izgubijo dostopnostno dodelanost. To ustvari drugorazredno izkušnjo prav za uporabnike, ki se morda že tako srečujejo z več jezikovnimi ovirami.
 
-Smaller languages are often the first to lose accessibility polish. That creates a second-class experience for exactly the users who may already face more language barriers.
+## Kontekst Let Books
 
-## Let Books context
+Let Books že obravnava lokalizirana besedila ARIA, nadomestna besedila, statusna sporočila in pravilnost pisave kot produktne zahteve. To je prava smer, ker so dostopnostni metapodatki del pomena uporabniškega vmesnika.
 
-Let Books already treats localized ARIA text, alt text, status messages, and script correctness as product requirements. That is the right direction because accessibility metadata is part of the meaning of the interface.
+## Trajna ugotovitev
 
-## Durable takeaway
+Večjezičen produkt ni sam po sebi dostopen, dostopen produkt pa ni sam po sebi večjezičen. Dobri sistemi oboje načrtujejo skupaj.
 
-A multilingual product is not accessible by default, and an accessible product is not multilingual by default. Good systems design both together.
-
-## Related Pages
+## Sorodne strani
 
 - `../../wiki/multilingual-accessibility.md`
 - `../../wiki/unicode-and-script-correctness.md`

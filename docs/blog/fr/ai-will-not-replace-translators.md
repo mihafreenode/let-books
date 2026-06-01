@@ -83,13 +83,13 @@ Même lorsque le sens général est préservé, les traductions générées par 
 
 L'avenir n'est pas traducteur contre IA. L'avenir pratique est une localisation assistée par IA, avec des étapes de relecture claires et des attentes de qualité transparentes.
 
-## Related Pages
+## Pages associées
 
 - `../../wiki/ai-assisted-translation-policy.md`
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
 
-## Other Languages
+## Autres langues
 
 - English (../en/ai-will-not-replace-translators.md)

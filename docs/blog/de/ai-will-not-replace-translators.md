@@ -83,13 +83,13 @@ Selbst wenn die Gesamtbedeutung erhalten bleibt, können KI-generierte Übersetz
 
 Die Zukunft ist nicht Übersetzer gegen KI. Die praktische Zukunft ist KI-gestützte Lokalisierung mit klaren Review-Stufen und transparenten Qualitätserwartungen.
 
-## Related Pages
+## Verwandte Seiten
 
 - `../../wiki/ai-assisted-translation-policy.md`
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
 
-## Other Languages
+## Andere Sprachen
 
 - English (../en/ai-will-not-replace-translators.md)

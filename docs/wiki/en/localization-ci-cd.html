@@ -110,6 +110,24 @@
 <li>accessibility smoke tests</li>
 <li>screenshot and diagram coverage checks</li>
 </ul>
+<h2 id="defect-class-progression">Defect-class progression</h2>
+<p class="lead">Localization CI should track both:</p>
+<ul>
+<li><code>Localization Debt</code></li>
+<li><code>Open Defect Classes</code></li>
+</ul>
+<p>Debt measures remaining source-content work.</p>
+<p>Open defect classes measure whether the system can still permit a category of problem to reappear.</p>
+<p>As soon as a defect class reaches zero occurrences, its validator should move from advisory to blocking where practical.</p>
+<p>Examples:</p>
+<ul>
+<li>placeholder draft publishing</li>
+<li>untranslated summaries</li>
+<li>untranslated metadata</li>
+<li>untranslated bodies</li>
+<li>mixed-language publishing</li>
+</ul>
+<p>CI is not only a gatekeeper. It is the mechanism that keeps closed defect classes from reopening silently.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

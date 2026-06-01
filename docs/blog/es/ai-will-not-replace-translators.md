@@ -83,13 +83,13 @@ Incluso cuando se conserva el significado general, las traducciones generadas po
 
 El futuro no es traductor contra IA. El futuro práctico es la localización asistida por IA, con etapas de revisión claras y expectativas de calidad transparentes.
 
-## Related Pages
+## Páginas relacionadas
 
 - `../../wiki/ai-assisted-translation-policy.md`
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
 
-## Other Languages
+## Otros idiomas
 
 - English (../en/ai-will-not-replace-translators.md)

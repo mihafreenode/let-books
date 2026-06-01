@@ -104,14 +104,47 @@
 <ul>
 <li>missing translations</li>
 <li>English leakage</li>
+<li>reader-facing localization completeness</li>
 <li>placeholder mismatches</li>
 <li>broken links</li>
 <li>glossary drift</li>
 <li>accessibility text coverage</li>
 <li>screenshot and diagram parity</li>
 </ul>
+<h2 id="reader-facing-localization-validator">Reader-facing localization validator</h2>
+<p class="lead">One validator class should explicitly fail CI when a page appears localized but still exposes source-language reader-facing content.</p>
+<p>Examples that should fail:</p>
+<ul>
+<li>localized title with English summary</li>
+<li>localized article with English tags</li>
+<li>localized article with English headings or lists</li>
+<li>localized article with English callouts or captions</li>
+<li>localized article with English diagram labels or alt text</li>
+<li>mixed-language related-content cards</li>
+</ul>
+<p>This is a fail condition, not merely a warning, because readers experience such pages as visibly unfinished.</p>
+<h2 id="defect-class-audit">Defect-class audit</h2>
+<p>Translation QA should maintain explicit defect classes with:</p>
+<ul>
+<li>description</li>
+<li>occurrence count</li>
+<li>root cause</li>
+<li>validator coverage</li>
+<li>recurrence risk</li>
+<li>closure plan</li>
+</ul>
+<p>Required categories include:</p>
+<ul>
+<li>untranslated summaries</li>
+<li>untranslated bodies</li>
+<li>placeholder draft publishing</li>
+<li>untranslated metadata</li>
+<li>mixed-language publishing</li>
+<li>future discovered classes</li>
+</ul>
+<p>A class is closed only when its count reaches zero and CI prevents it from returning without failure.</p>
 <h2 id="human-review-evidence">Human review evidence</h2>
-<p class="lead">Translation QA should also preserve short human review records for representative AI-assisted corrections.</p>
+<p>Translation QA should also preserve short human review records for representative AI-assisted corrections.</p>
 <p>Minimum fields:</p>
 <ul>
 <li>original text</li>
@@ -120,6 +153,7 @@
 <li>root-cause hypothesis</li>
 <li>reviewer rationale</li>
 </ul>
+<p>Native-speaker review findings should be preserved as a growing corpus, not as isolated one-off notes. Repeated findings should feed back into validator design, contributor guidance, and future AI-agent instructions.</p>
 <p>This matters because even when the overall meaning is preserved, AI-generated translations may require native-speaker review to correct subtle issues in grammar, modality, terminology, and domain-specific register. These issues are often difficult to detect through automated quality metrics alone.</p>
 <h2 id="common-ai-translation-error-taxonomy">Common AI translation error taxonomy</h2>
 <ul>

@@ -15,7 +15,7 @@ language_variants:
   - ../fr/the-cost-of-english-only-software.md
   - ../es/the-cost-of-english-only-software.md
 title: Il costo del software solo in inglese
-summary: English-only defaults look cheap to builders, but they shift comprehension, participation, and maintenance costs onto everyone else.
+summary: Le impostazioni predefinite solo in inglese possono sembrare economiche a chi costruisce il software, ma spostano su tutti gli altri il costo della comprensione, della partecipazione e della manutenzione.
 topics:
   - digital-inclusion
   - education
@@ -29,38 +29,35 @@ sources:
 status: draft
 ---
 
-
 # Il costo del software solo in inglese
 
-Questo articolo localizzato è una bozza per la copertura linguistica completa. Il contenuto canonico in inglese è temporaneamente mantenuto qui sotto finché non sarà completata la revisione linguistica naturale.
+Un software solo in inglese puo sembrare piu economico perche i costi nascosti spesso non vengono pagati dal team, ma dagli utenti.
 
-English-only software can feel cheaper because the missing costs are often paid by users rather than by the team.
+Gli utenti li pagano con un maggiore carico cognitivo, meno fiducia, una formazione piu lenta, piu richieste di supporto e una partecipazione minore.
 
-Users pay through extra cognitive load, reduced confidence, slower training, more support questions, and lower participation.
+## Il costo non e solo il costo della traduzione
 
-## The cost is not only translation cost
+Quando un progetto resta solo in inglese, spesso aumenta:
 
-When a project stays English-only, it often increases:
+- l'attrito nell'avvio
+- le lacune nella documentazione
+- il carico sul supporto
+- la dipendenza da poche persone bilingui per la revisione
+- l'esclusione da contesti pubblici o educativi
 
-- onboarding friction
-- documentation gaps
-- support burden
-- reviewer dependence on a few bilingual people
-- exclusion from public or educational settings
+## Dove questo conta di piu
 
-## Where this matters most
+Questo costo e particolarmente visibile nel software civico, non profit, educativo e orientato alle biblioteche, dove l'obiettivo e di solito un accesso piu ampio e non un filtraggio piu ristretto.
 
-The cost is especially visible in civic, nonprofit, educational, and library-oriented software, where the goal is usually broader access rather than narrower filtering.
+## Contesto Let Books
 
-## Let Books context
+Let Books e pensato per flussi di donazione di libri e di conservazione della conoscenza in piu lingue. Se il progetto restasse in pratica solo in inglese, contraddirebbe il proprio scopo regionale ed educativo.
 
-Let Books is intended for multilingual book-donation and preservation workflows. If the project remained effectively English-only, it would contradict its own regional and educational purpose.
+## Conclusione duratura
 
-## Durable takeaway
+Il software solo in inglese e spesso piu economico solo se il progetto ignora i costi nascosti che ha scaricato sugli utenti.
 
-English-only software is often cheaper only if the project ignores the hidden costs it has exported to users.
-
-## Related Pages
+## Pagine correlate
 
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../wiki/language-support-matrix.md`

@@ -15,7 +15,7 @@ language_variants:
   - ../fr/the-cost-of-english-only-software.md
   - ../es/the-cost-of-english-only-software.md
 title: Die Kosten rein englischer Software
-summary: English-only defaults look cheap to builders, but they shift comprehension, participation, and maintenance costs onto everyone else.
+summary: Rein englische Voreinstellungen wirken auf Erbauer vielleicht billig, verlagern die Kosten fuer Verstaendnis, Beteiligung und Pflege aber auf alle anderen.
 topics:
   - digital-inclusion
   - education
@@ -29,38 +29,35 @@ sources:
 status: draft
 ---
 
-
 # Die Kosten rein englischer Software
 
-Dieser lokalisierte Beitrag ist ein Entwurf für vollständige Sprachabdeckung. Der kanonische englische Inhalt bleibt vorerst unten erhalten, bis die natürliche sprachliche Überprüfung abgeschlossen ist.
+Rein englische Software kann guenstiger wirken, weil die versteckten Kosten oft nicht vom Team, sondern von den Nutzerinnen und Nutzern getragen werden.
 
-English-only software can feel cheaper because the missing costs are often paid by users rather than by the team.
+Sie zahlen mit zusaetzlicher kognitiver Belastung, geringerem Vertrauen, langsamerer Einarbeitung, mehr Supportfragen und weniger Beteiligung.
 
-Users pay through extra cognitive load, reduced confidence, slower training, more support questions, and lower participation.
+## Die Kosten sind nicht nur Uebersetzungskosten
 
-## The cost is not only translation cost
+Wenn ein Projekt nur auf Englisch bleibt, erhoeht es oft:
 
-When a project stays English-only, it often increases:
+- Reibung beim Einstieg
+- Luecken in der Dokumentation
+- die Belastung des Supports
+- die Abhaengigkeit von wenigen zweisprachigen Pruefenden
+- den Ausschluss aus oeffentlichen oder bildungsbezogenen Umgebungen
 
-- onboarding friction
-- documentation gaps
-- support burden
-- reviewer dependence on a few bilingual people
-- exclusion from public or educational settings
+## Wo das am deutlichsten wird
 
-## Where this matters most
+Diese Kosten sind besonders in buergernaher, gemeinnuetziger, bildungsbezogener und bibliotheksorientierter Software sichtbar, in der das Ziel meist breiterer Zugang und nicht engere Auswahl ist.
 
-The cost is especially visible in civic, nonprofit, educational, and library-oriented software, where the goal is usually broader access rather than narrower filtering.
+## Let-Books-Kontext
 
-## Let Books context
+Let Books ist fuer mehrsprachige Ablaeufe rund um Buchspenden und Wissensbewahrung gedacht. Wuerde das Projekt praktisch nur auf Englisch bleiben, wuerde es seinem eigenen regionalen und bildungsbezogenen Zweck widersprechen.
 
-Let Books is intended for multilingual book-donation and preservation workflows. If the project remained effectively English-only, it would contradict its own regional and educational purpose.
+## Dauerhafte Erkenntnis
 
-## Durable takeaway
+Rein englische Software ist oft nur dann billiger, wenn ein Projekt die versteckten Kosten ignoriert, die es auf die Nutzerinnen und Nutzer ausgelagert hat.
 
-English-only software is often cheaper only if the project ignores the hidden costs it has exported to users.
-
-## Related Pages
+## Verwandte Seiten
 
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../wiki/language-support-matrix.md`

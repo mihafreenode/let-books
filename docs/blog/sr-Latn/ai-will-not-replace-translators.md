@@ -83,13 +83,13 @@ Upravo ovakvi primeri objašnjavaju zašto je ljudski pregled i dalje važan. Zn
 
 Budućnost nije prevodilac protiv AI-ja. Praktična budućnost je lokalizacija potpomognuta AI-jem sa jasnim fazama pregleda i transparentnim očekivanjima kvaliteta.
 
-## Related Pages
+## Povezane stranice
 
 - `../../wiki/ai-assisted-translation-policy.md`
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
 
-## Other Languages
+## Drugi jezici
 
 - English (../en/ai-will-not-replace-translators.md)

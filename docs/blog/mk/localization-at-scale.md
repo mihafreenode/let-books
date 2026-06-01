@@ -85,12 +85,12 @@ AI помага. Го намалува трошокот за први нацрт
 
 Ако проектот сака повеќејазично учество, локализацијата мора да биде дел од дизајнот на системот, а не доцен извозен чекор.
 
-## Related Pages
+## Поврзани страници
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/localization-maturity-model.md`
 - `../../learning/how-to-build-a-localization-pipeline.md`
 
-## Other Languages
+## Други јазици
 
 - English (../en/localization-at-scale.md)

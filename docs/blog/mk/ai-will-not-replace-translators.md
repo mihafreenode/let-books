@@ -83,13 +83,13 @@ AI е најсилна кога се користи за:
 
 Иднината не е преведувач против AI. Практичната иднина е локализација поддржана со AI, со јасни фази на преглед и транспарентни очекувања за квалитет.
 
-## Related Pages
+## Поврзани страници
 
 - `../../wiki/ai-assisted-translation-policy.md`
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
 
-## Other Languages
+## Други јазици
 
 - English (../en/ai-will-not-replace-translators.md)

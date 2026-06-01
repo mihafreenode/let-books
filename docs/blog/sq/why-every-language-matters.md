@@ -68,12 +68,12 @@ Dizajno projektin në mënyrë që që nga fillimi të mund t'i përkasë më sh
 
 Jo çdo gjuhë duhet të ketë të njëjtin nivel pjekurie ditën e parë. Por çdo gjuhë që projekti pretendon se e mbështet duhet trajtuar si një destinacion legjitim, jo si një kuti dekorative për t'u shënuar.
 
-## Related Pages
+## Faqe të lidhura
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Gjuhë të tjera
 
 - English (../en/why-every-language-matters.md)

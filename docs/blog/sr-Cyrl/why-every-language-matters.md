@@ -68,12 +68,12 @@ Let Books је грађен за вишејезичне збирке књига 
 
 Не мора сваки језик имати једнаку зрелост првог дана. Али сваки језик за који пројекат тврди да га подржава треба третирати као легитимну дестинацију, а не као украсну кућицу за потврду.
 
-## Related Pages
+## Повезане странице
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Други језици
 
 - English (../en/why-every-language-matters.md)

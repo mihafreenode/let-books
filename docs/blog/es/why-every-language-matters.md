@@ -68,12 +68,12 @@ Diseña el proyecto para que desde el principio pueda pertenecer de verdad a má
 
 No todos los idiomas necesitan el mismo nivel de madurez el primer día. Pero cada idioma que un proyecto afirma apoyar debería tratarse como un destino legítimo, no como una casilla decorativa.
 
-## Related Pages
+## Páginas relacionadas
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Otros idiomas
 
 - English (../en/why-every-language-matters.md)

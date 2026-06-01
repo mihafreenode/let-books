@@ -15,7 +15,7 @@ language_variants:
   - ../fr/translation-and-learning.md
   - ../es/translation-and-learning.md
 title: Përkthimi dhe të mësuarit
-summary: Why localized educational material can improve comprehension, reduce cognitive load, and broaden participation.
+summary: Pse materiali arsimor i lokalizuar mund të përmirësojë kuptimin, të ulë ngarkesën njohëse dhe të zgjerojë pjesëmarrjen.
 topics:
   - education
   - reading-comprehension
@@ -29,38 +29,35 @@ sources:
 status: draft
 ---
 
-
 # Përkthimi dhe të mësuarit
 
-Ky publikim i lokalizuar është një draft për mbulim të plotë gjuhësor. Përmbajtja kanonike në anglisht ruhet përkohësisht më poshtë derisa të përfundojë rishikimi natyror gjuhësor.
+Njerëzit shpesh mësojnë më mirë në gjuhën që e kuptojnë më thellë. Kjo nuk është një prirje sentimentale. Ajo ndikon te kuptimi, vetëbesimi dhe kujtesa.
 
-People often learn best in the language they understand most deeply. That is not a sentimental preference. It affects comprehension, confidence, and memory.
+## Pse gjuha e ndryshon cilësinë e të mësuarit
 
-## Why language changes learning quality
+Kur materiali arrin në një gjuhë të dytë, një pjesë e përpjekjes së nxënësit shkon për deshifrimin e gjuhës në vend të kuptimit të përmbajtjes.
 
-When material arrives in a second language, part of the learner's effort goes into language decoding instead of subject understanding.
+Kjo përpjekje shtesë mund të ketë vlerë në disa kontekste, por nuk duhet ngatërruar me një pikënisje neutrale.
 
-That extra effort can be worth it in some contexts, but it should not be mistaken for a neutral baseline.
+## Çfarë përmirëson materiali arsimor i lokalizuar
 
-## What localized educational material improves
+Përmbajtja e lokalizuar mund të përmirësojë:
 
-Localized content can improve:
+- shpejtësinë e leximit
+- qartësinë konceptuale
+- gatishmërinë për të bërë pyetje
+- aftësinë për t'u mësuar të tjerëve
+- ripërdorimin afatgjatë të dijes
 
-- reading speed
-- conceptual clarity
-- willingness to ask questions
-- ability to teach others
-- long-term reuse of knowledge
+## Pse kjo ka rëndësi për dokumentacionin
 
-## Why this matters for documentation
+Edhe dokumentacioni teknik është material arsimor. Nëse një projekt dëshiron që vullnetarët, studentët, bibliotekarët ose edukatorët ta mësojnë dhe ta ripërdorin sistemin, qasja gjuhësore ndikon në cilësinë e atij të mësuari.
 
-Technical documentation is also educational material. If a project wants volunteers, students, librarians, or educators to teach and reuse the system, language access affects the quality of that learning.
+## Përfundimi i qëndrueshëm
 
-## Durable takeaway
+Lokalizimi nuk është vetëm një veçori komoditeti. Në kontekste arsimore, ai mund të përmirësojë drejtpërdrejt rezultatet e të mësuarit.
 
-Localization is not only a convenience feature. In educational contexts, it can improve learning outcomes directly.
-
-## Related Pages
+## Faqe të lidhura
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/multilingual-accessibility.md`

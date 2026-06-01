@@ -54,7 +54,7 @@ Let Books is directly concerned with educational heritage, books, libraries, and
 
 If a project cares about preserving knowledge, it should also care about whether that knowledge can be accessed and discussed in more than one dominant language.
 
-## Related Pages
+## Повезане странице
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/unicode-and-script-correctness.md`

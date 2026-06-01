@@ -17,11 +17,49 @@ Translation QA combines automated validation, spellcheck, terminology review, ac
 
 - missing translations
 - English leakage
+- reader-facing localization completeness
 - placeholder mismatches
 - broken links
 - glossary drift
 - accessibility text coverage
 - screenshot and diagram parity
+
+## Reader-facing localization validator
+
+One validator class should explicitly fail CI when a page appears localized but still exposes source-language reader-facing content.
+
+Examples that should fail:
+
+- localized title with English summary
+- localized article with English tags
+- localized article with English headings or lists
+- localized article with English callouts or captions
+- localized article with English diagram labels or alt text
+- mixed-language related-content cards
+
+This is a fail condition, not merely a warning, because readers experience such pages as visibly unfinished.
+
+## Defect-class audit
+
+Translation QA should maintain explicit defect classes with:
+
+- description
+- occurrence count
+- root cause
+- validator coverage
+- recurrence risk
+- closure plan
+
+Required categories include:
+
+- untranslated summaries
+- untranslated bodies
+- placeholder draft publishing
+- untranslated metadata
+- mixed-language publishing
+- future discovered classes
+
+A class is closed only when its count reaches zero and CI prevents it from returning without failure.
 
 ## Human review evidence
 
@@ -34,6 +72,8 @@ Minimum fields:
 - error category
 - root-cause hypothesis
 - reviewer rationale
+
+Native-speaker review findings should be preserved as a growing corpus, not as isolated one-off notes. Repeated findings should feed back into validator design, contributor guidance, and future AI-agent instructions.
 
 This matters because even when the overall meaning is preserved, AI-generated translations may require native-speaker review to correct subtle issues in grammar, modality, terminology, and domain-specific register. These issues are often difficult to detect through automated quality metrics alone.
 

@@ -15,7 +15,7 @@ language_variants:
   - ../fr/united-in-diversity-and-open-source.md
   - ../es/united-in-diversity-and-open-source.md
 title: Združeni v raznolikosti in odprti kodi
-summary: What multilingual public institutions and open-source projects can learn from societies that operate across multiple languages and scripts.
+summary: Kaj se lahko večjezične javne ustanove in odprtokodni projekti naučijo od družb, ki delujejo v več jezikih in pisavah.
 topics:
   - multilingual-governance
   - public-interest-technology
@@ -32,40 +32,38 @@ status: draft
 
 # Združeni v raznolikosti in odprti kodi
 
-Ta lokalizirana objava je osnutek za popolno jezikovno pokritost. Spodaj je trenutno ohranjena kanonična angleška vsebina, dokler ne bo končan naravni jezikovni pregled.
+Večjezična programska oprema je pogosto opisana kot nekaj izjemno zahtevnega, kot da bi bilo resno večjezično sodelovanje izjema. Resnične ustanove dokazujejo nasprotno.
 
-Multilingual software is often described as unusually difficult, as if serious multilingual participation were an exception. Real institutions prove otherwise.
+Mnoge družbe že delujejo z več uradnimi jeziki, regionalnimi jeziki, manjšinskimi jeziki in več kot enim pisnim sistemom.
 
-Many societies already operate with multiple official languages, regional languages, minority languages, and more than one writing system.
+## Kaj se lahko naučijo odprtokodni projekti
 
-## What open-source projects can learn
+Nauk ni v tem, da je večjezično delo brez napora. Nauk je, da ga je mogoče upravljati.
 
-The lesson is not that multilingual work is effortless. The lesson is that it is governable.
+Praktične sestavine so dobro znane:
 
-The practical ingredients are familiar:
+- jasna jezikovna politika
+- stabilna terminologija
+- pregledni delovni tokovi
+- skupni standardi
+- realistične ravni kakovosti
+- spoštovanje podrobnosti, značilnih za posamezni jezik
 
-- explicit language policy
-- stable terminology
-- review workflows
-- shared standards
-- realistic quality levels
-- respect for language-specific details
+## Zakaj je to pomembno za javna in izobraževalna orodja
 
-## Why this matters for civic and educational tools
+Odprtokodni projekti, namenjeni knjižnicam, šolam, arhivom, neprofitnim organizacijam ali javnim ustanovam, bi morali večjezične zahteve pričakovati prej kot številni zagonski produkti.
 
-Open-source projects serving libraries, schools, archives, nonprofits, or public institutions should expect multilingual requirements earlier than many startup products do.
+To ne pomeni, da mora biti vsak jezikovni različici že ob prvem izidu dosežena popolna enakovrednost. Pomeni pa, da mora biti arhitektura sposobna brez presenečenja sprejeti več kot en jezik.
 
-That does not mean every locale must launch at perfect parity. It means the architecture should be able to welcome more than one language without surprise.
+## Kontekst Let Books
 
-## Let Books context
+Let Books že v izhodišču predpostavlja večjezične knjižne zbirke, večjezične uporabnike in več različnih pisav. Prav zato je uporaben manjši študijski primer, kako lahko odprtokodna infrastruktura podpira sodelovanje, ne da bi se pretvarjala, da je en sam jezik nevtralen za vse.
 
-Let Books already assumes multilingual book collections, multilingual users, and multiple scripts. That makes it a useful small-scale case study for how open-source infrastructure can support participation without pretending that one language is neutral for everyone.
+## Trajna ugotovitev
 
-## Durable takeaway
+Večjezično sodelovanje ni politična novost. V mnogih okoljih je to vsakdanja operativna resničnost. Odprta koda se lahko iz te resničnosti nekaj nauči, namesto da bi privzeto rabo samo angleščine obravnavala kot neizogibno.
 
-Multilingual participation is not a political novelty. It is a routine operational reality in many places. Open source can learn from that reality instead of treating English-only defaults as inevitable.
-
-## Related Pages
+## Sorodne strani
 
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../wiki/localization-governance.md`

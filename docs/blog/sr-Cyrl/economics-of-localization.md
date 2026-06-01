@@ -15,7 +15,7 @@ language_variants:
   - ../fr/economics-of-localization.md
   - ../es/economics-of-localization.md
 title: Економика локализације
-summary: How volunteer translation, professional review, AI drafts, and automation fit together in realistic localization budgets.
+summary: Како се волонтерски превод, професионална ревизија, AI нацрти и аутоматизација уклапају у реалне буџете локализације.
 topics:
   - sustainability
   - ai-assisted-translation
@@ -29,42 +29,39 @@ sources:
 status: draft
 ---
 
-
 # Економика локализације
 
-Ова локализована објава је нацрт за пуну језичку покривеност. Канонски енглески садржај је тренутно задржан у наставку док се не заврши природна језичка ревизија.
+Локализација се често приказује као трошак све или ништа. Такво уоквиривање је погрешно.
 
-Localization is often framed as an all-or-nothing expense. That framing is misleading.
+Пројекти обично функционишу дуж целог спектра могућности.
 
-Projects usually operate across a spectrum.
+## Уобичајени модели
 
-## Common models
+- волонтерско превођење
+- AI нацрт уз заједничку ревизију
+- AI нацрт уз ревизију изворних говорника
+- професионални превод за критичан садржај
+- мешовита зрелост по језику и врсти садржаја
 
-- volunteer translation
-- AI draft plus community review
-- AI draft plus native-speaker review
-- professional translation for critical content
-- mixed maturity by language and content type
+## Шта снижава трошак без претварања да је квалитет бесплатан
 
-## What lowers cost without pretending quality is free
+Најкориснији смањивачи трошка обично су:
 
-The most useful cost reducers are usually:
+- поново употребљива терминологија
+- преводилачка меморија
+- структурирано изворно писање
+- фазна очекивања квалитета
+- аутоматизовани QA
 
-- reusable terminology
-- translation memory
-- structured source writing
-- staged quality expectations
-- automated QA
+## Зашто је транспарентност важна
 
-## Why transparency matters
+Корисници и сарадници треба да знају да ли је превод машински генерисан, прегледан у заједници или професионално прегледан. Поштене ознаке зрелости боље су од неодређених обећања.
 
-Users and contributors should know whether a translation is machine-generated, community reviewed, or professionally reviewed. Honest maturity labels are better than vague promises.
+## Трајна порука
 
-## Durable takeaway
+Локализација заиста кошта време и новац. Али фазни, транспарентни, хибридни модел често је остварив много пре него што пуна професионална равноправност постане приступачна.
 
-Localization does cost time and money. But a staged, transparent, hybrid model is often achievable long before full professional parity is affordable.
-
-## Related Pages
+## Повезане странице
 
 - `../../wiki/localization-maturity-model.md`
 - `../../wiki/translation-memory-and-glossaries.md`

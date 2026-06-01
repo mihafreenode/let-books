@@ -15,7 +15,7 @@ language_variants:
   - ../fr/economics-of-localization.md
   - ../es/economics-of-localization.md
 title: Ökonomie der Lokalisierung
-summary: How volunteer translation, professional review, AI drafts, and automation fit together in realistic localization budgets.
+summary: Wie ehrenamtliche Übersetzung, professionelle Revision, AI-Entwürfe und Automatisierung in realistische Lokalisierungsbudgets passen.
 topics:
   - sustainability
   - ai-assisted-translation
@@ -29,42 +29,39 @@ sources:
 status: draft
 ---
 
-
 # Ökonomie der Lokalisierung
 
-Dieser lokalisierte Beitrag ist ein Entwurf für vollständige Sprachabdeckung. Der kanonische englische Inhalt bleibt vorerst unten erhalten, bis die natürliche sprachliche Überprüfung abgeschlossen ist.
+Lokalisierung wird oft als Alles-oder-nichts-Ausgabe dargestellt. Diese Sichtweise ist irreführend.
 
-Localization is often framed as an all-or-nothing expense. That framing is misleading.
+Projekte arbeiten normalerweise entlang eines ganzen Spektrums von Möglichkeiten.
 
-Projects usually operate across a spectrum.
+## Gängige Modelle
 
-## Common models
+- ehrenamtliche Übersetzung
+- AI-Entwurf plus Community-Review
+- AI-Entwurf plus Review durch Muttersprachler
+- professionelle Übersetzung für kritische Inhalte
+- gemischte Reifegrade nach Sprache und Inhaltstyp
 
-- volunteer translation
-- AI draft plus community review
-- AI draft plus native-speaker review
-- professional translation for critical content
-- mixed maturity by language and content type
+## Was Kosten senkt, ohne so zu tun, als sei Qualität kostenlos
 
-## What lowers cost without pretending quality is free
+Die nützlichsten Kostensenker sind meist:
 
-The most useful cost reducers are usually:
+- wiederverwendbare Terminologie
+- Translation Memory
+- strukturiertes Schreiben im Quelltext
+- abgestufte Qualitätserwartungen
+- automatisiertes QA
 
-- reusable terminology
-- translation memory
-- structured source writing
-- staged quality expectations
-- automated QA
+## Warum Transparenz wichtig ist
 
-## Why transparency matters
+Nutzerinnen, Nutzer und Mitwirkende sollten wissen, ob eine Übersetzung maschinell erzeugt, gemeinschaftlich geprüft oder professionell geprüft wurde. Ehrliche Reifegradkennzeichnungen sind besser als vage Versprechen.
 
-Users and contributors should know whether a translation is machine-generated, community reviewed, or professionally reviewed. Honest maturity labels are better than vague promises.
+## Dauerhafte Erkenntnis
 
-## Durable takeaway
+Lokalisierung kostet tatsächlich Zeit und Geld. Aber ein abgestuftes, transparentes, hybrides Modell ist oft lange erreichbar, bevor volle professionelle Gleichwertigkeit bezahlbar wird.
 
-Localization does cost time and money. But a staged, transparent, hybrid model is often achievable long before full professional parity is affordable.
-
-## Related Pages
+## Verwandte Seiten
 
 - `../../wiki/localization-maturity-model.md`
 - `../../wiki/translation-memory-and-glossaries.md`

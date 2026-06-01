@@ -65,7 +65,7 @@ Let Books already assumes multilingual book collections, multilingual users, and
 
 Multilingual participation is not a political novelty. It is a routine operational reality in many places. Open source can learn from that reality instead of treating English-only defaults as inevitable.
 
-## Related Pages
+## Verwandte Seiten
 
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../wiki/localization-governance.md`

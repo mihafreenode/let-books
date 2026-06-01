@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Večjezična dostopnost | LetBooks</title>
-    <meta name="description" content="">
+    <meta name="description" content="Zakaj bi morali dostopnost in lokalizacijo načrtovati skupaj prek jezikovnih metapodatkov, bralnikov zaslona, preprostega jezika, podnapisov in nadomestnih besedil.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/blog/sl/multilingual-accessibility.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Večjezična dostopnost | LetBooks">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Zakaj bi morali dostopnost in lokalizacijo načrtovati skupaj prek jezikovnih metapodatkov, bralnikov zaslona, preprostega jezika, podnapisov in nadomestnih besedil.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/blog/sl/multilingual-accessibility.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Večjezična dostopnost | LetBooks">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="Zakaj bi morali dostopnost in lokalizacijo načrtovati skupaj prek jezikovnih metapodatkov, bralnikov zaslona, preprostega jezika, podnapisov in nadomestnih besedil.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -91,9 +91,27 @@
               <span aria-current="page">Večjezična dostopnost</span>
             </nav>
             <h1>Večjezična dostopnost</h1>
+          <p class="content-page-summary">Zakaj bi morali dostopnost in lokalizacijo načrtovati skupaj prek jezikovnih metapodatkov, bralnikov zaslona, preprostega jezika, podnapisov in nadomestnih besedil.</p>
             <hr class="content-header-divider">
           </header>
-<p class="lead">Ta lokalizirana objava je osnutek za popolno jezikovno pokritost. Spodaj je trenutno ohranjena kanonična angleška vsebina, dokler ne bo končan naravni jezikovni pregled.</p>
+<p class="lead">Dostopnost in lokalizacija sta pogosto razdeljeni na ločena delovna tokova. V praksi pa se prekrivata skoraj ves čas.</p>
+<p>Če je stran prevedena, vendar metapodatki <code>lang</code>, nadomestna besedila, podnapisi ali oznake za bralnike zaslona ostanejo v drugem jeziku, izkušnja ni zares dostopna.</p>
+<h2 id="kaj-vključuje-večjezična-dostopnost">Kaj vključuje večjezična dostopnost</h2>
+<p>Vključuje več kot le prevedene nize uporabniškega vmesnika.</p>
+<ul>
+<li>pravilne jezikovne metapodatke</li>
+<li>lokalizirane oznake obrazcev in validacijska sporočila</li>
+<li>lokalizirana nadomestna besedila in podnapise</li>
+<li>preprost jezik tam, kjer je potreben</li>
+<li>pravilno upodobitev posamezne pisave</li>
+<li>testiranje s podpornimi tehnologijami v več jezikih</li>
+</ul>
+<h2 id="zakaj-je-to-pomembno-za-manjše-jezike">Zakaj je to pomembno za manjše jezike</h2>
+<p>Manjši jeziki so pogosto prvi, ki izgubijo dostopnostno dodelanost. To ustvari drugorazredno izkušnjo prav za uporabnike, ki se morda že tako srečujejo z več jezikovnimi ovirami.</p>
+<h2 id="kontekst-let-books">Kontekst Let Books</h2>
+<p>Let Books že obravnava lokalizirana besedila ARIA, nadomestna besedila, statusna sporočila in pravilnost pisave kot produktne zahteve. To je prava smer, ker so dostopnostni metapodatki del pomena uporabniškega vmesnika.</p>
+<h2 id="trajna-ugotovitev">Trajna ugotovitev</h2>
+<p>Večjezičen produkt ni sam po sebi dostopen, dostopen produkt pa ni sam po sebi večjezičen. Dobri sistemi oboje načrtujejo skupaj.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -118,6 +136,7 @@
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI podprta dostava</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-digital-inclusion" data-topic-slug="digital-inclusion" aria-expanded="false" aria-controls="related-digital-inclusion-menu">Digitalna vključenost</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Usklajenost demota</button>
               </div>
               <div class="topic-menu-layer">
@@ -126,6 +145,9 @@
                 </div>
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postopno dodajati validacijska pravila in CI vrata</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                </div>
+                <div class="topic-menu" id="related-digital-inclusion-menu" data-topic-menu="related-digital-inclusion" hidden>
+                  <a href="../../blog/sl/why-every-language-matters.html"><span>Zakaj je vsak jezik pomemben</span><span class="topic-menu__meta">Blog</span></a>
                 </div>
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohraniti usklajenost med specifikacijo, dokumentacijo, demom in kodo</span><span class="topic-menu__meta">Učni vodniki</span></a>

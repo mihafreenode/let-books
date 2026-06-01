@@ -85,12 +85,12 @@ Zato su zreli lokalizacijski sustavi sve više AI-potpomognuti, a ne AI-only.
 
 Ako projekt želi višejezično sudjelovanje, lokalizacija mora biti dio dizajna sustava, a ne kasni izvozni korak.
 
-## Related Pages
+## Povezane stranice
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/localization-maturity-model.md`
 - `../../learning/how-to-build-a-localization-pipeline.md`
 
-## Other Languages
+## Drugi jezici
 
 - English (../en/localization-at-scale.md)

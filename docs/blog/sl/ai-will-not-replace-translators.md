@@ -83,13 +83,13 @@ Tudi kadar je splošni pomen ohranjen, lahko AI-ustvarjeni prevodi zahtevajo pre
 
 Prihodnost ni prevajalec proti AI. Praktična prihodnost je lokalizacija, podprta z AI, z jasnimi fazami pregleda in preglednimi pričakovanji glede kakovosti.
 
-## Related Pages
+## Sorodne strani
 
 - `../../wiki/ai-assisted-translation-policy.md`
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
 
-## Other Languages
+## Drugi jeziki
 
 - English (../en/ai-will-not-replace-translators.md)

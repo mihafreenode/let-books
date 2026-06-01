@@ -68,12 +68,12 @@ Dizajniraj projekat tako da od početka može da pripada više od jednom jeziku.
 
 Ne mora svaki jezik imati jednaku zrelost prvog dana. Ali svaki jezik za koji projekat tvrdi da ga podržava treba tretirati kao legitimnu destinaciju, a ne kao ukrasnu kućicu za potvrdu.
 
-## Related Pages
+## Povezane stranice
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Drugi jezici
 
 - English (../en/why-every-language-matters.md)

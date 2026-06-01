@@ -15,7 +15,7 @@ language_variants:
   - ../fr/translation-and-learning.md
   - ../es/translation-and-learning.md
 title: Превођење и учење
-summary: Why localized educational material can improve comprehension, reduce cognitive load, and broaden participation.
+summary: Зашто локализовани образовни материјал може побољшати разумевање, смањити когнитивно оптерећење и проширити учешће.
 topics:
   - education
   - reading-comprehension
@@ -29,38 +29,35 @@ sources:
 status: draft
 ---
 
-
 # Превођење и учење
 
-Ова локализована објава је нацрт за пуну језичку покривеност. Канонски енглески садржај је тренутно задржан у наставку док се не заврши природна језичка ревизија.
+Људи често најбоље уче на језику који најдубље разумеју. То није сентиментална склоност. То утиче на разумевање, самопоуздање и памћење.
 
-People often learn best in the language they understand most deeply. That is not a sentimental preference. It affects comprehension, confidence, and memory.
+## Зашто језик мења квалитет учења
 
-## Why language changes learning quality
+Када градиво стигне на другом језику, део труда ученика одлази на разmrsивање језика уместо на разумевање садржаја.
 
-When material arrives in a second language, part of the learner's effort goes into language decoding instead of subject understanding.
+Тај додатни напор у неким контекстима може имати вредност, али га не треба сматрати неутралном полазном тачком.
 
-That extra effort can be worth it in some contexts, but it should not be mistaken for a neutral baseline.
+## Шта локализовани образовни материјал побољшава
 
-## What localized educational material improves
+Локализовани садржај може побољшати:
 
-Localized content can improve:
+- брзину читања
+- појмовну јасноћу
+- спремност на постављање питања
+- способност подучавања других
+- дугорочну поновну употребу знања
 
-- reading speed
-- conceptual clarity
-- willingness to ask questions
-- ability to teach others
-- long-term reuse of knowledge
+## Зашто је то важно за документацију
 
-## Why this matters for documentation
+И техничка документација је образовни материјал. Ако пројекат жели да волонтери, студенти, библиотекари или едукатори подучавају и поново користе систем, језички приступ утиче на квалитет тог учења.
 
-Technical documentation is also educational material. If a project wants volunteers, students, librarians, or educators to teach and reuse the system, language access affects the quality of that learning.
+## Трајна порука
 
-## Durable takeaway
+Локализација није само функција погодности. У образовним контекстима она може директно побољшати исходе учења.
 
-Localization is not only a convenience feature. In educational contexts, it can improve learning outcomes directly.
-
-## Related Pages
+## Повезане странице
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/multilingual-accessibility.md`

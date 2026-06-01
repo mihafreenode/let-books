@@ -62,7 +62,7 @@ Let Books already treats localized ARIA text, alt text, status messages, and scr
 
 A multilingual product is not accessible by default, and an accessible product is not multilingual by default. Good systems design both together.
 
-## Related Pages
+## Поврзани страници
 
 - `../../wiki/multilingual-accessibility.md`
 - `../../wiki/unicode-and-script-correctness.md`

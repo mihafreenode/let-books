@@ -85,12 +85,12 @@ Por eso los sistemas maduros de localización son cada vez más asistidos por IA
 
 Si un proyecto quiere participación multilingüe, la localización debe formar parte del diseño del sistema y no ser un paso tardío de exportación.
 
-## Related Pages
+## Páginas relacionadas
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/localization-maturity-model.md`
 - `../../learning/how-to-build-a-localization-pipeline.md`
 
-## Other Languages
+## Otros idiomas
 
 - English (../en/localization-at-scale.md)

@@ -85,12 +85,12 @@ C'est pourquoi les systèmes de localisation matures sont de plus en plus assist
 
 Si un projet veut une participation multilingue, la localisation doit faire partie de la conception du système, et non d'une exportation tardive.
 
-## Related Pages
+## Pages associées
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/localization-maturity-model.md`
 - `../../learning/how-to-build-a-localization-pipeline.md`
 
-## Other Languages
+## Autres langues
 
 - English (../en/localization-at-scale.md)

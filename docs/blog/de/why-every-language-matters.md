@@ -68,12 +68,12 @@ Entwirf das Projekt so, dass es von Anfang an mehr als einer Sprache wirklich ge
 
 Nicht jede Sprache braucht am ersten Tag den gleichen Reifegrad. Aber jede Sprache, die ein Projekt als unterstützt bezeichnet, sollte als legitimes Ziel behandelt werden und nicht als dekoratives Kästchen.
 
-## Related Pages
+## Verwandte Seiten
 
 - `../../wiki/language-support-matrix.md`
 - `../../wiki/multilingual-public-interest-software.md`
 - `../../learning/how-to-design-english-source-content-for-translation.md`
 
-## Other Languages
+## Andere Sprachen
 
 - English (../en/why-every-language-matters.md)

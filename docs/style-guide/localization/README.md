@@ -27,6 +27,8 @@ Keep translations traceable, script-correct, structurally aligned with canonical
 - Serbian Latin and Serbian Cyrillic are separate locales.
 - Macedonian, Albanian, and Slovenian must preserve correct native orthography and Unicode characters.
 - AI-generated translation is allowed as a draft stage only. It does not replace review.
+- Reader-facing content must be fully localized before a page is considered complete.
+- Fix localization issues at the highest-level source first. Do not patch generated HTML when the markdown source or metadata is still incomplete.
 
 ## Multilingual Article Requirements
 
@@ -73,6 +75,23 @@ Localized articles must preserve the same meaning and reader outcome as the cano
 They may merge or reorder sections, but they must not lose major arguments, examples, audience explanations, cautions, rhetorical bridges, or conclusions.
 
 Every published article must also exist in every supported language. Coverage and semantic quality are tracked separately.
+
+### 4a. Reader-Facing Localization Completeness
+
+Localization coverage is not satisfied by a localized URL, title, navigation shell, or article stub.
+
+A localized page is considered complete only when reader-facing content is localized, including:
+
+- title and summary
+- metadata descriptions
+- tags and taxonomy labels
+- headings, lists, and callouts
+- article body copy
+- captions, alt text, and diagram labels
+- related-content descriptions
+- localized breadcrumbs where variants exist
+
+Allowed exceptions are limited to quotations, explicitly discussed source material, clearly marked intentional non-translation, proper nouns, and technical identifiers.
 
 ### 5. Localized Source-Map Stubs
 
@@ -133,6 +152,109 @@ Track maturity by locale and by content category where practical.
 - Document terminology decisions, reviewer expectations, and dispute-resolution paths.
 - Keep validation and CI close to publishing workflows so localization regressions are treated as product-quality issues.
 - Preserve representative AI-review examples so subtle native-speaker corrections can inform training, governance, and evaluation.
+- Treat mixed-language publishing as a production bug, not as an editorial inconvenience.
+
+## Source-First Remediation Workflow
+
+When a localization validator fails, investigate in this order:
+
+1. source markdown
+2. localization metadata and frontmatter
+3. article registries and cross-language references
+4. generation scripts
+5. intermediate generated artifacts
+6. generated HTML
+
+Preferred workflow for humans and AI agents:
+
+```text
+Find problem
+↓
+Identify source of truth
+↓
+Fix highest-level source
+↓
+Regenerate artifacts
+↓
+Run validation
+↓
+Repeat until clean
+```
+
+## Localization Debt And Defect Classes
+
+Track both of these metrics throughout localization work:
+
+- `Localization Debt`: remaining content debt such as untranslated summaries, untranslated bodies, placeholder draft pages, and other reader-facing source problems.
+- `Open Defect Classes`: remaining categories of problems that are not yet fully prevented by policy, validators, workflow rules, and CI enforcement.
+
+The objective is not only to reduce file counts. The objective is:
+
+```text
+Localization Debt = 0
+Open Defect Classes = 0
+```
+
+## Defect-Class Closure Rule
+
+When a defect class reaches zero occurrences:
+
+1. make detection blocking in CI
+2. add or retain regression coverage
+3. update contributor guidance
+4. update AI-agent guidance
+5. mark the defect class as closed
+
+Do not wait for the entire repository backlog to reach zero before closing individual defect classes.
+
+## Family Processing Rule
+
+Process article families as units.
+
+For each family:
+
+1. verify the source article
+2. complete all localized variants
+3. localize metadata and summaries
+4. localize tags and taxonomy labels
+5. localize diagrams and captions where present
+6. remove placeholder content
+7. regenerate artifacts
+8. run validators
+9. verify generated HTML, indexes, cards, and related content
+10. recalculate localization debt metrics
+
+Do not leave partially localized families behind.
+
+## AI-Agent Localization Workflow
+
+When an AI agent encounters repeated localization issues, it should switch from file-count thinking to defect-class thinking.
+
+Preferred order:
+
+1. fix generator issues affecting many files
+2. fix metadata issues affecting many files
+3. fix workflow issues affecting future files
+4. fix validator gaps
+5. fix individual content files family by family
+
+When the same correction appears more than three times, stop and determine whether it should become a generator rule, validator rule, workflow rule, or policy rule.
+
+## Native-Speaker Review Corpus Categories
+
+Maintain a growing corpus of real findings, including:
+
+- parallel structure
+- rhetorical transfer
+- hidden-agent constructions
+- anthropomorphic abstractions
+- translationese
+- educational-style mismatch
+- public-sector style mismatch
+- mixed-language publishing
+- semantic preservation gaps
+
+Each entry should record the source article, language, original text, improved text, explanation, category, and whether automated QA would likely detect it.
 
 ## Actionable documentation update record
 

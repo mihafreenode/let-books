@@ -85,12 +85,12 @@ Për këtë arsye sistemet e pjekura të lokalizimit po bëhen gjithnjë e më s
 
 Nëse një projekt dëshiron pjesëmarrje shumëgjuhëshe, lokalizimi duhet të jetë pjesë e dizajnit të sistemit, jo një hap i vonë eksporti.
 
-## Related Pages
+## Faqe të lidhura
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/localization-maturity-model.md`
 - `../../learning/how-to-build-a-localization-pipeline.md`
 
-## Other Languages
+## Gjuhë të tjera
 
 - English (../en/localization-at-scale.md)

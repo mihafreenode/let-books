@@ -85,12 +85,12 @@ Darum sind reife Lokalisierungssysteme zunehmend KI-gestützt und nicht KI-only.
 
 Wenn ein Projekt mehrsprachige Beteiligung will, muss Lokalisierung Teil des Systemdesigns sein und darf kein später Exportschritt sein.
 
-## Related Pages
+## Verwandte Seiten
 
 - `../../wiki/localization-at-scale.md`
 - `../../wiki/localization-maturity-model.md`
 - `../../learning/how-to-build-a-localization-pipeline.md`
 
-## Other Languages
+## Andere Sprachen
 
 - English (../en/localization-at-scale.md)

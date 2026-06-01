@@ -211,6 +211,15 @@ These rules apply specifically to route changes inside the `static-demo/` app sh
 - Playwright/UI regression verification should exercise multiple locales and include accessibility checks where feasible
 - Add automated checks where practical for newly introduced hardcoded user-facing strings
 
+## AI-Agent Localization Guidance
+
+- Track both `Localization Debt` and `Open Defect Classes` during localization work
+- Prefer closing defect classes over merely reducing file counts
+- Use source-first remediation in this order: source markdown, localization source, metadata, registries, generation scripts, generated artifacts, generated HTML
+- Process article families as units; do not leave partially localized families behind
+- When the same localization correction appears more than three times, stop and determine whether the issue should become a generator rule, validator rule, workflow rule, or policy rule
+- When a defect class reaches zero occurrences, make detection blocking in CI where practical and treat the class as closed
+
 ## Static Demo Structure
 
 Expected structure:

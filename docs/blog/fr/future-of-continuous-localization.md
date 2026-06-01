@@ -60,7 +60,7 @@ Let Books already has a multilingual knowledge-platform structure, validation sc
 
 The future of localization is not perfect automation. It is continuous coordination between source writing, validation, human review, and publishing.
 
-## Related Pages
+## Pages associées
 
 - `../../wiki/localization-ci-cd.md`
 - `../../wiki/translation-quality-assurance.md`

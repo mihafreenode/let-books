@@ -31,13 +31,143 @@ The goal is to help people learn, participate, contribute, teach, preserve knowl
 - `docs/style-guide/` defines contributor, terminology, review, and publishing rules.
 - `docs/sources/` keeps flagship claims traceable.
 
-## English-First Rollout
+## Full-Language Coverage Policy
 
-The first implementation pass is English-first.
+Every published content item should exist in every supported language.
 
-- English is the canonical authoring language.
-- Translation-ready structure is still designed for all supported locales.
-- Translation quality is expected to improve in stages rather than appear fully mature at once.
+- blog articles
+- technical articles
+- wiki pages
+- learning guides
+- policy notes
+- case studies
+- contributor guidance
+- validation documentation
+
+Coverage and maturity are separate dimensions.
+
+- Coverage answers whether a reader can access the content in their language at all.
+- Maturity answers how polished that version currently is.
+
+Initial drafts may be AI-assisted or lightly reviewed. Missing published variants are not acceptable as a long-term operating model.
+
+## Reader-Facing Localization Rule
+
+Reader-facing content must be fully localized.
+
+Localization coverage is not satisfied by any of the following on their own:
+
+- localized URL
+- localized title
+- localized navigation
+- localized page shell
+- localized article stub
+
+A localized page is considered complete only when all reader-facing content is localized.
+
+Reader-facing content includes:
+
+- titles
+- subtitles
+- summaries
+- descriptions
+- tags and category names
+- article body copy
+- headings
+- lists
+- callouts
+- captions
+- diagram labels
+- alt text
+- related-content descriptions
+- localized breadcrumbs where variants exist
+
+Source-language reader-facing content may remain visible only when it is:
+
+- a quotation
+- source material being discussed
+- intentionally untranslated and clearly marked
+- a proper noun
+- a technical identifier
+
+Everything else should be localized before the page is considered complete.
+
+## Continuous Learning Rule
+
+Every meaningful localization failure should leave the system stronger than before.
+
+When a new category of issue is discovered:
+
+1. fix the immediate occurrence
+2. document the issue
+3. add it to the native-speaker review corpus
+4. update review guidance
+5. add validator coverage where practical
+6. add troubleshooting and prevention notes
+
+The goal is not only to fix content. The goal is to improve the feedback loops that detect and prevent similar issues.
+
+## Defect-Class Metrics
+
+Localization work should track two numbers continuously:
+
+```text
+Localization Debt = X
+Open Defect Classes = Y
+```
+
+Localization Debt measures remaining content work.
+
+Open Defect Classes measure how many categories of localization failure are still not fully closed by workflow, policy, validators, and CI.
+
+The goal is:
+
+```text
+Localization Debt = 0
+Open Defect Classes = 0
+```
+
+## Incremental Class Closure
+
+Resolved classes should be closed as soon as they reach zero occurrences.
+
+That means:
+
+1. detection becomes blocking in CI where practical
+2. regression coverage remains in place
+3. contributor guidance is updated
+4. AI-agent troubleshooting guidance is updated
+5. the class is marked closed in audit reporting
+
+The repository should become progressively more resistant to localization regressions as experience accumulates.
+
+## Source-First Remediation Policy
+
+When a localization problem is discovered, fix the highest-level source that caused it.
+
+Default investigation order:
+
+1. source markdown
+2. localization source files
+3. metadata
+4. article registries
+5. generation scripts
+6. intermediate generated artifacts
+7. generated HTML
+
+Do not patch generated HTML when the source localization is incomplete.
+
+## Fast Feedback Principle
+
+Fast feedback beats perfect first attempts.
+
+The goal is to shorten the time between:
+
+- creating content
+- discovering problems
+- correcting them
+
+That principle applies to AI-assisted writing, localization, accessibility work, validation design, and CI policy.
 
 ## First-Wave English Deliverables
 

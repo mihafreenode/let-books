@@ -99,6 +99,8 @@ Good early candidates are usually:
 - broken internal links
 - forbidden editorial citations
 
+For multilingual publishing, treat mixed-language reader-facing content as one of the earliest high-value CI gates. A page with a localized title but an English summary or English tags is not partially successful. It is incomplete.
+
 These checks are usually cheap, objective, and high-value.
 
 ## What not to force too early
@@ -153,6 +155,8 @@ This creates less friction than introducing a hard gate before the team understa
 
 AI increases the volume of changes and the speed of change. That means more opportunities for inconsistency.
 
+It also makes fast feedback more valuable. The practical question is often not whether AI can produce a perfect first attempt. The more useful question is whether the environment can reliably identify the next problem to solve.
+
 Validation and CI are not there to slow teams down. They are there to keep speed from erasing important boundaries.
 
 In spec-driven work, the goal is not maximum automation. The goal is reliable reinforcement of the rules that matter most.
@@ -162,6 +166,18 @@ In spec-driven work, the goal is not maximum automation. The goal is reliable re
 The strongest validation systems usually do not appear fully formed. They grow by turning repeated human judgment into documented, reviewable, enforceable checks.
 
 That staged path is often the most realistic way to make a project stricter without making it brittle.
+
+## Source-first remediation checklist
+
+When a validation rule fails:
+
+1. inspect source markdown first
+2. inspect localized metadata next
+3. inspect generation inputs and registries
+4. regenerate artifacts
+5. inspect generated HTML only after source-level checks
+
+Do not patch generated output if the source localization is incomplete.
 
 ## Further Reading
 

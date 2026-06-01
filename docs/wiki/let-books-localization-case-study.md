@@ -35,6 +35,40 @@ Key lessons:
 
 This kind of example is valuable because it is small enough for reviewer training, but realistic enough for governance and benchmark use.
 
+## Mixed-language publishing example
+
+Source article: `docs/blog/sl/the-cost-of-english-only-software.md`
+
+Language: Slovenian
+
+Original localized state:
+
+- localized title: `Cena programske opreme samo v angleščini`
+- English summary remained visible in source metadata
+- English tags were rendered in generated HTML before taxonomy labels were added
+- English body sections followed a localized draft placeholder paragraph
+
+Improved localized state:
+
+- localized summary
+- localized tags
+- localized body, headings, and lists
+- no draft placeholder paragraph in the published article body
+
+Explanation:
+
+This is a mixed-language publishing failure. Coverage existed, but localization completeness did not. The page looked translated at first glance while still exposing English reader-facing content.
+
+Category:
+
+- mixed-language publishing
+- localization completeness
+- metadata localization
+
+Would automated QA detect it?
+
+Yes, if the validator checks source markdown and generated reader-facing HTML for untranslated summaries, tags, and body content.
+
 ## Benchmark fixture direction
 
 Structured review examples should also be stored as reusable benchmark fixtures so future LLM evaluation can measure:

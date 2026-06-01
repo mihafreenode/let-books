@@ -83,13 +83,13 @@ Edhe kur kuptimi i përgjithshëm ruhet, përkthimet e gjeneruara nga AI mund t�
 
 E ardhmja nuk është përkthyesi kundër AI-së. E ardhmja praktike është lokalizimi i asistuar nga AI me faza të qarta rishikimi dhe pritshmëri transparente për cilësinë.
 
-## Related Pages
+## Faqe të lidhura
 
 - `../../wiki/ai-assisted-translation-policy.md`
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
 
-## Other Languages
+## Gjuhë të tjera
 
 - English (../en/ai-will-not-replace-translators.md)
