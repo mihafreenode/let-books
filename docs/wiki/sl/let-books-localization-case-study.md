@@ -22,9 +22,9 @@ Prikazuje, kako lahko projekt:
 - uporabite prvotno avtorstvo v angleščini, ne da bi padli v objavljanje samo v angleščini
 - dokumentirajte vodenje pred prihodom tehtnice
 
-## Primerjalna smer napeljave
+## Referenčni primeri za primerjalno vrednotenje
 
-Strukturirane primere pregledov je treba shraniti tudi kot primerjalne napeljave za večkratno uporabo, tako da lahko prihodnje vrednotenje LLM meri:
+Strukturirane primere pregledov je treba shraniti tudi kot ponovno uporabne referenčne primere za primerjalno vrednotenje, da lahko prihodnje vrednotenje LLM meri:
 
 - slovnična zanesljivost
 - ravnanje z načini

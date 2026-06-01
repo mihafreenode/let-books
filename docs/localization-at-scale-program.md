@@ -293,6 +293,7 @@ Current and expected categories include:
 - unnecessary English terminology
 - unlocalized professional jargon
 - source text optimization for localization
+- technical terminology false friend
 
 ### Source Text Optimization For Localization
 
@@ -307,6 +308,16 @@ When repeated translation problems originate from the source wording itself, imp
 Working principle:
 
 > Better source text often produces better translations in every language.
+
+### Technical Terminology False Friend
+
+Definition:
+
+A technical term is translated using the wrong professional domain meaning even though the surface dictionary meaning appears plausible.
+
+Guideline:
+
+Translate technical vocabulary according to the active domain context. In software localization, testing, QA, benchmarking, and evaluation terms should be resolved using those domains first, not using unrelated physical or everyday meanings.
 
 ### Finding 1 - Parallel Structure
 
@@ -391,6 +402,18 @@ Working principle:
 - Category: source text optimization for localization; translationese prevention; source-friendly writing
 - Would automated QA likely detect it?: No. Structural QA, spellcheck, semantic-parity checks, and completeness checks would all likely pass. The problem appears when native speakers assess naturalness and translatability across languages.
 - Lessons learned: Some localization problems should be solved at the source level, not separately in every locale. If multiple languages struggle with the same compressed English construction, the source wording should be reviewed for localization friendliness.
+
+### Finding 8 - Technical Terminology False Friend
+
+- Source article: `docs/wiki/let-books-localization-case-study.md` and `docs/wiki/sl/let-books-localization-case-study.md`
+- Language: Slovenian review finding triggered by English technical terminology
+- Original English text: `Benchmark fixture direction` and `Structured review examples should also be stored as reusable benchmark fixtures so future LLM evaluation can measure:`
+- Original localized text: `Primerjalna smer napeljave` and `Strukturirane primere pregledov je treba shraniti tudi kot primerjalne napeljave za večkratno uporabo, tako da lahko prihodnje vrednotenje LLM meri:`
+- Improved localized text: `Referenčni primeri za primerjalno vrednotenje` and `Strukturirane primere pregledov je treba shraniti tudi kot ponovno uporabne referenčne primere za primerjalno vrednotenje, da lahko prihodnje vrednotenje LLM meri:`
+- Explanation: The problem is not grammar. It is domain interpretation. In testing, benchmarking, and evaluation contexts, `fixture` usually means a reusable reference example, test case, or evaluation artifact. The Slovenian translation interpreted the term using a physical-infrastructure meaning related to wiring or installation. That produced text that is semantically misleading even though the translator may have selected a dictionary-valid sense. This is a classic technical terminology false friend: the wrong domain won.
+- Category: technical terminology false friend; domain terminology; testing and evaluation vocabulary
+- Would automated QA likely detect it?: No. Spelling, grammar, and broad semantic checks may all pass because the sentence remains superficially coherent. The failure appears when domain-aware human review checks whether the technical term belongs to the right professional context.
+- Lessons learned: Technical terminology should be translated by domain meaning, not by default dictionary meaning. Reusable benchmark examples, benchmark test cases, or reference evaluation examples are appropriate interpretations here; infrastructure-related meanings are not.
 
 ### Operating Rule For The Corpus
 

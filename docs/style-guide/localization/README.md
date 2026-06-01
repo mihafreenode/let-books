@@ -154,6 +154,7 @@ Track maturity by locale and by content category where practical.
 - Localize accessibility metadata such as alt text, captions, ARIA labels, and language metadata.
 - Prefer diagrams generated from structured sources so translated variants can be reproduced.
 - Document terminology decisions, reviewer expectations, and dispute-resolution paths.
+- Translate technical terms by domain meaning, not by the first dictionary meaning. In testing, benchmarking, and evaluation contexts, terms such as `fixture` usually mean reusable reference examples or test cases, not physical infrastructure.
 - Keep validation and CI close to publishing workflows so localization regressions are treated as product-quality issues.
 - Preserve representative AI-review examples so subtle native-speaker corrections can inform training, governance, and evaluation.
 - Treat mixed-language publishing as a production bug, not as an editorial inconvenience.

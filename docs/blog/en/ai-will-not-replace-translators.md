@@ -79,6 +79,56 @@ This is exactly the kind of example that explains why human review still matters
 
 Even when the overall meaning is preserved, AI-generated translations may require native-speaker review to correct subtle issues in grammar, modality, terminology, and domain-specific register. These issues are often difficult to detect through automated quality metrics alone.
 
+## One example per review category
+
+Different categories of review findings require different kinds of human judgment.
+
+### Modality and policy register
+
+Original AI draft:
+
+`Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
+
+Native-speaker correction:
+
+`Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
+
+Lesson:
+
+- preserved meaning is not enough when grammar, modality, and policy phrasing still sound wrong to native speakers
+
+### Source-text optimization for localization
+
+Original English heading:
+
+`The hidden exclusion of English-only systems`
+
+Improved English heading:
+
+`Why English-only systems exclude people`
+
+Lesson:
+
+- some localization problems should be solved by improving the source wording rather than forcing every target language to compensate for compressed English phrasing
+
+### Technical terminology false friend
+
+Original English phrase:
+
+`benchmark fixtures`
+
+Incorrect Slovenian localization:
+
+`primerjalne napeljave`
+
+Improved Slovenian localization:
+
+`referenčni primeri za primerjalno vrednotenje`
+
+Lesson:
+
+- technical terms must be translated by domain meaning; in testing and evaluation contexts, `fixture` means a reusable reference example or test case, not physical infrastructure
+
 ## Durable takeaway
 
 The future is not translator versus AI. The practical future is AI-assisted localization with clear review stages and transparent quality expectations.

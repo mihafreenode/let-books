@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comment localiser le contenu d&#x27;accessibilité | LetBooks</title>
+    <meta name="description" content="Ce guide explique comment localiser le texte alternatif, les légendes, les étiquettes de formulaire, les métadonnées ARIA et d&#x27;autres textes critiques pour l&#x27;accessibilité.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/learning/fr/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/learning/en/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/learning/hr/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/learning/bs/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/learning/sr-Latn/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/learning/mk/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/learning/sq/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/learning/de/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/learning/it/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/learning/fr/how-to-localize-accessibility-content.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/learning/es/how-to-localize-accessibility-content.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Comment localiser le contenu d&#x27;accessibilité | LetBooks">
+    <meta property="og:description" content="Ce guide explique comment localiser le texte alternatif, les légendes, les étiquettes de formulaire, les métadonnées ARIA et d&#x27;autres textes critiques pour l&#x27;accessibilité.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/learning/fr/how-to-localize-accessibility-content.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Comment localiser le contenu d&#x27;accessibilité | LetBooks">
+    <meta name="twitter:description" content="Ce guide explique comment localiser le texte alternatif, les légendes, les étiquettes de formulaire, les métadonnées ARIA et d&#x27;autres textes critiques pour l&#x27;accessibilité.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="learning" data-locale="fr">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../learning/fr/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Ressources d'apprentissage</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../fr/index.html">Documentation</a>
+            <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
+            <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../learning/en/how-to-localize-accessibility-content.html" lang="en">EN</a>
+              <a class="lang-link" href="../../learning/sl/how-to-localize-accessibility-content.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../learning/hr/how-to-localize-accessibility-content.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../learning/bs/how-to-localize-accessibility-content.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../learning/sr-Latn/how-to-localize-accessibility-content.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../learning/sr-Cyrl/how-to-localize-accessibility-content.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../learning/mk/how-to-localize-accessibility-content.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../learning/sq/how-to-localize-accessibility-content.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../learning/de/how-to-localize-accessibility-content.html" lang="de">DE</a>
+              <a class="lang-link" href="../../learning/it/how-to-localize-accessibility-content.html" lang="it">IT</a>
+              <a class="lang-link is-current" href="../../learning/fr/how-to-localize-accessibility-content.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../learning/es/how-to-localize-accessibility-content.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Toutes les langues</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../fr/index.html">Documentation</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Comment localiser le contenu d&#x27;accessibilité</span>
+            </nav>
+            <h1>Comment localiser le contenu d&#x27;accessibilité</h1>
+          <p class="content-page-summary">Ce guide explique comment localiser le texte alternatif, les légendes, les étiquettes de formulaire, les métadonnées ARIA et d&#x27;autres textes critiques pour l&#x27;accessibilité.</p>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="liste-de-contrôle">Liste de contrôle</h2>
+<ul>
+<li>localiser ensemble le texte visible et non visible de l’interface</li>
+<li>garder les métadonnées linguistiques exactes</li>
+<li>préserver la clarté d’un langage simple</li>
+<li>lorsque c’est pratique, tester avec des technologies d’assistance</li>
+</ul>
+<h2 id="pages-associées">Pages associées</h2>
+<ul>
+<li><code>../wiki/multilingual-accessibility.md</code></li>
+<li><code>../wiki/unicode-and-script-correctness.md</code></li>
+<li><code>../blog/en/multilingual-accessibility.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Autres langues</h2>
+            <ul>
+              <li><a href="../../learning/en/how-to-localize-accessibility-content.html" lang="en">English</a></li>
+              <li><a href="../../learning/sl/how-to-localize-accessibility-content.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../learning/hr/how-to-localize-accessibility-content.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../learning/bs/how-to-localize-accessibility-content.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../learning/sr-Latn/how-to-localize-accessibility-content.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../learning/sr-Cyrl/how-to-localize-accessibility-content.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../learning/mk/how-to-localize-accessibility-content.html" lang="mk">Македонски</a></li>
+              <li><a href="../../learning/sq/how-to-localize-accessibility-content.html" lang="sq">Shqip</a></li>
+              <li><a href="../../learning/de/how-to-localize-accessibility-content.html" lang="de">Deutsch</a></li>
+              <li><a href="../../learning/it/how-to-localize-accessibility-content.html" lang="it">Italiano</a></li>
+              <li><a href="../../learning/es/how-to-localize-accessibility-content.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Contenus liés</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Don de livres</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../blog/fr/isbn-not-a-database.html"><span>L&#x27;ISBN n&#x27;est pas une base de données</span><span class="topic-menu__meta">Blog</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</p>
+            <p class="footer-microcopy">Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../fr/index.html">Aperçu</a>
+              <a href="../../index.html">Page d&#x27;accueil</a>
+              <a href="../../../static-demo/">Démo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Toutes les langues</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

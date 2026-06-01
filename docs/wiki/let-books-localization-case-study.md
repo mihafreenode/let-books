@@ -52,9 +52,9 @@ Repository-specific lessons:
 - taxonomy localization matters because English topic labels are visible reader-facing defects
 - generated HTML should be validated, not trusted blindly
 
-## Benchmark fixture direction
+## Reusable benchmark examples
 
-Structured review examples should also be stored as reusable benchmark fixtures so future LLM evaluation can measure:
+Structured review examples should also be stored as reusable benchmark examples so future LLM evaluation can measure:
 
 - grammar reliability
 - modality handling

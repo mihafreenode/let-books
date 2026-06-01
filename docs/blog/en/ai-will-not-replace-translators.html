@@ -135,6 +135,37 @@
 </ul>
 <p>This is exactly the kind of example that explains why human review still matters. The meaning was close, but grammar, modality, terminology, and register still needed native-speaker correction.</p>
 <p>Even when the overall meaning is preserved, AI-generated translations may require native-speaker review to correct subtle issues in grammar, modality, terminology, and domain-specific register. These issues are often difficult to detect through automated quality metrics alone.</p>
+<h2 id="one-example-per-review-category">One example per review category</h2>
+<p>Different categories of review findings require different kinds of human judgment.</p>
+<h3 id="modality-and-policy-register">Modality and policy register</h3>
+<p>Original AI draft:</p>
+<p><code>Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.</code></p>
+<p>Native-speaker correction:</p>
+<p><code>Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.</code></p>
+<p>Lesson:</p>
+<ul>
+<li>preserved meaning is not enough when grammar, modality, and policy phrasing still sound wrong to native speakers</li>
+</ul>
+<h3 id="source-text-optimization-for-localization">Source-text optimization for localization</h3>
+<p>Original English heading:</p>
+<p><code>The hidden exclusion of English-only systems</code></p>
+<p>Improved English heading:</p>
+<p><code>Why English-only systems exclude people</code></p>
+<p>Lesson:</p>
+<ul>
+<li>some localization problems should be solved by improving the source wording rather than forcing every target language to compensate for compressed English phrasing</li>
+</ul>
+<h3 id="technical-terminology-false-friend">Technical terminology false friend</h3>
+<p>Original English phrase:</p>
+<p><code>benchmark fixtures</code></p>
+<p>Incorrect Slovenian localization:</p>
+<p><code>primerjalne napeljave</code></p>
+<p>Improved Slovenian localization:</p>
+<p><code>referenčni primeri za primerjalno vrednotenje</code></p>
+<p>Lesson:</p>
+<ul>
+<li>technical terms must be translated by domain meaning; in testing and evaluation contexts, <code>fixture</code> means a reusable reference example or test case, not physical infrastructure</li>
+</ul>
 <h2 id="durable-takeaway">Durable takeaway</h2>
 <p>The future is not translator versus AI. The practical future is AI-assisted localization with clear review stages and transparent quality expectations.</p>
 
@@ -159,15 +190,18 @@
             <h2 class="related-content__title">Related content</h2>
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-accessibility" data-topic-slug="accessibility" aria-expanded="false" aria-controls="related-accessibility-menu">Accessibility</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI Delivery</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-translation" data-topic-slug="ai-assisted-translation" aria-expanded="false" aria-controls="related-ai-assisted-translation-menu">AI-Assisted Translation</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-automation" data-topic-slug="automation" aria-expanded="false" aria-controls="related-automation-menu">Automation</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Book Donation</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-governance" data-topic-slug="governance" aria-expanded="false" aria-controls="related-governance-menu">Governance</button>
-                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Implementation Planning</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-translation-quality-menu">Translation Quality</button>
               </div>
               <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-accessibility-menu" data-topic-menu="related-accessibility" hidden>
+                  <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html"><span>How to Localize Diagrams and Screenshots</span><span class="topic-menu__meta">Learning</span></a>
+                </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html"><span>How to Review AI-Assisted Work Against the Spec</span><span class="topic-menu__meta">Learning</span></a>
                 </div>
@@ -186,9 +220,6 @@
                   <a href="../../blog/en/localization-at-scale.html"><span>Localization at Scale</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/en/localization-at-scale.html"><span>Localization at Scale</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/en/localization-governance.html"><span>Localization Governance</span><span class="topic-menu__meta">Wiki</span></a>
-                </div>
-                <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>How to Turn a Product Spec into an Implementation Plan</span><span class="topic-menu__meta">Learning</span></a>
                 </div>
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../learning/en/how-to-measure-translation-maturity.html"><span>How to Measure Translation Maturity</span><span class="topic-menu__meta">Learning</span></a>

@@ -14,6 +14,8 @@ Benchmark fixtures let the project reuse real review examples across:
 - human-in-the-loop workflow documentation
 - LLM evaluation benchmarks
 
+In this documentation set, `fixture` is used in the testing and evaluation sense: a reusable reference example or test case. It does not mean physical installation, wiring, or infrastructure.
+
 ## Recommended fixture fields
 
 Each fixture should include:
