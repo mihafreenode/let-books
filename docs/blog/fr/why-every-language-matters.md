@@ -36,7 +36,7 @@ Les gens remarquent quand leur langue est traitée comme une vraie langue et qua
 
 Cette différence influence la confiance, la participation, la compréhension et la volonté de contribuer.
 
-## L'exclusion discrète des systèmes uniquement en anglais
+## Pourquoi les systèmes disponibles uniquement en anglais excluent des personnes
 
 Un logiciel uniquement en anglais peut sembler normal aux personnes qui le construisent, car elles travaillent déjà aisément en anglais. Mais la même interface peut augmenter silencieusement la charge cognitive pour les étudiants, les bénévoles, les bibliothécaires, les administrateurs et les contributeurs communautaires qui pensent, lisent ou enseignent plus naturellement dans une autre langue.
 

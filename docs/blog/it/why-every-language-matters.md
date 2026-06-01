@@ -36,7 +36,7 @@ Le persone si accorgono quando la loro lingua viene trattata come una lingua ver
 
 Questa differenza influenza fiducia, partecipazione, comprensione e disponibilità a contribuire.
 
-## L'esclusione nascosta dei sistemi solo in inglese
+## Perché i sistemi disponibili solo in inglese escludono le persone
 
 Il software solo in inglese può sembrare normale a chi lo costruisce, perché queste persone lavorano già comodamente in inglese. Ma la stessa interfaccia può aumentare in silenzio il carico cognitivo per studenti, volontari, bibliotecari, amministratori e collaboratori di comunità che pensano, leggono o insegnano più naturalmente in un'altra lingua.
 

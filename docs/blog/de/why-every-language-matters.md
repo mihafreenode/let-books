@@ -36,7 +36,7 @@ Menschen merken, ob ihre Sprache wie eine echte Sprache behandelt wird oder wie 
 
 Dieser Unterschied beeinflusst Vertrauen, Teilnahme, Verständnis und die Bereitschaft, etwas beizutragen.
 
-## Die versteckte Ausgrenzung englisch-only Systeme
+## Warum rein englische Systeme Menschen ausschließen
 
 Englisch-only Software wirkt für die Menschen, die sie bauen, oft normal, weil sie selbst bequem auf Englisch arbeiten. Dieselbe Oberfläche kann aber die kognitive Last für Studierende, Freiwillige, Bibliothekspersonal, Administratoren und Community-Beitragende erhöhen, die natürlicher in einer anderen Sprache denken, lesen oder lehren.
 

@@ -36,7 +36,7 @@ La gente nota cuándo su idioma se trata como un idioma real y cuándo se trata 
 
 Esa diferencia afecta a la confianza, la participación, la comprensión y la disposición a contribuir.
 
-## La exclusión oculta de los sistemas solo en inglés
+## Por qué los sistemas disponibles solo en inglés excluyen a las personas
 
 El software solo en inglés puede parecer normal a quienes lo construyen, porque ya trabajan cómodamente en inglés. Pero la misma interfaz puede aumentar silenciosamente la carga cognitiva para estudiantes, voluntarios, bibliotecarios, administradores y colaboradores comunitarios que piensan, leen o enseñan de forma más natural en otro idioma.
 

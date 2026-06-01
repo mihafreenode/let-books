@@ -36,7 +36,7 @@ Ljudi primijete kada se njihov jezik tretira kao pravi jezik, a kada kao naknadn
 
 Ta razlika utiče na povjerenje, učešće, razumijevanje i spremnost da doprinesu.
 
-## Skrivena isključenost engleski-isključivih sistema
+## Zašto sistemi dostupni samo na engleskom isključuju ljude
 
 Softver samo na engleskom može se ljudima koji ga grade činiti normalnim, jer oni već udobno rade na engleskom. Ali isto sučelje može tiho povećati kognitivno opterećenje za studente, volontere, bibliotekare, administratore i saradnike zajednice koji prirodnije misle, čitaju ili podučavaju na drugom jeziku.
 

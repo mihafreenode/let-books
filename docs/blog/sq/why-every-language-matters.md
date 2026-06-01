@@ -36,7 +36,7 @@ Njerëzit e vërejnë kur gjuha e tyre trajtohet si një gjuhë e vërtetë dhe 
 
 Ky dallim ndikon te besimi, pjesëmarrja, kuptimi dhe gatishmëria për të kontribuar.
 
-## Përjashtimi i fshehtë i sistemeve vetëm në anglisht
+## Pse sistemet e disponueshme vetëm në anglisht i përjashtojnë njerëzit
 
 Softueri vetëm në anglisht mund t'u duket normal njerëzve që e ndërtojnë, sepse ata tashmë punojnë rehat në anglisht. Por i njëjti ndërfaqe mund të rrisë në heshtje ngarkesën njohëse për studentë, vullnetarë, bibliotekarë, administratorë dhe bashkëpunëtorë komunitarë që mendojnë, lexojnë ose japin mësim më natyrshëm në një gjuhë tjetër.
 

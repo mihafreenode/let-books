@@ -36,7 +36,7 @@ People notice when their language is treated as a real language and when it is t
 
 That distinction affects trust, participation, comprehension, and willingness to contribute.
 
-## The hidden exclusion of English-only systems
+## Why English-only systems exclude people
 
 English-only software often feels normal to the people building it because they already operate comfortably in English. But the same interface can quietly increase cognitive load for students, volunteers, librarians, administrators, and community contributors who think, read, or teach more naturally in another language.
 

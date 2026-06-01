@@ -36,7 +36,7 @@ Ljudje opazijo, ali je njihov jezik obravnavan kot pravi jezik ali kot naknadna 
 
 Ta razlika vpliva na zaupanje, sodelovanje, razumevanje in pripravljenost za prispevanje.
 
-## Skrita izključitev angleško-izključnih sistemov
+## Zakaj sistemi, ki so na voljo samo v angleščini, izključujejo ljudi
 
 Programska oprema samo v angleščini se lahko ljudem, ki jo gradijo, zdi povsem običajna, ker že udobno delujejo v angleščini. Enak vmesnik pa lahko tiho poveča kognitivno obremenitev za študente, prostovoljce, knjižničarje, administratorje in skupnostne sodelavce, ki lažje mislijo, berejo ali učijo v drugem jeziku.
 

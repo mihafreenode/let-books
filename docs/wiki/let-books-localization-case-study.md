@@ -13,6 +13,8 @@ topics:
 
 Let Books is a living case study in building a multilingual knowledge platform and product vision before a full backend application exists.
 
+The central program model now lives in `../localization-at-scale-program.md`. This page focuses on repository-specific evidence that supports that handbook.
+
 ## Why it is useful
 
 It shows how a project can:
@@ -24,7 +26,9 @@ It shows how a project can:
 
 ## Slovenian AI-review example
 
-The repository now includes a concrete Slovenian review example where the AI draft preserved the broad meaning but still required native-speaker correction.
+The repository includes a concrete Slovenian review example where the AI draft preserved broad meaning but still required native-speaker correction for modality, fluency, and policy-register wording.
+
+The detailed record now lives in the Native-Speaker Review Findings section of `../localization-at-scale-program.md` and in `../style-guide/localization/ai-translation-review-records.md`.
 
 Key lessons:
 
@@ -33,41 +37,20 @@ Key lessons:
 - policy and product-spec language often needs domain-specific register rather than dictionary-level equivalence
 - automated checks rarely catch subtle fluency and modality issues on their own
 
-This kind of example is valuable because it is small enough for reviewer training, but realistic enough for governance and benchmark use.
-
 ## Mixed-language publishing example
 
 Source article: `docs/blog/sl/the-cost-of-english-only-software.md`
 
-Language: Slovenian
+This article family provided a concrete example of a localized title and partial localized shell coexisting with English reader-facing publication surfaces.
 
-Original localized state:
+The detailed program-level interpretation now lives in the Native-Speaker Review Findings section of `../localization-at-scale-program.md` and in `../localization-audit-report.md`.
 
-- localized title: `Cena programske opreme samo v angleščini`
-- English summary remained visible in source metadata
-- English tags were rendered in generated HTML before taxonomy labels were added
-- English body sections followed a localized draft placeholder paragraph
+Repository-specific lessons:
 
-Improved localized state:
-
-- localized summary
-- localized tags
-- localized body, headings, and lists
-- no draft placeholder paragraph in the published article body
-
-Explanation:
-
-This is a mixed-language publishing failure. Coverage existed, but localization completeness did not. The page looked translated at first glance while still exposing English reader-facing content.
-
-Category:
-
-- mixed-language publishing
-- localization completeness
-- metadata localization
-
-Would automated QA detect it?
-
-Yes, if the validator checks source markdown and generated reader-facing HTML for untranslated summaries, tags, and body content.
+- coverage is not the same as completeness
+- source metadata matters because summaries can leak into publication surfaces
+- taxonomy localization matters because English topic labels are visible reader-facing defects
+- generated HTML should be validated, not trusted blindly
 
 ## Benchmark fixture direction
 

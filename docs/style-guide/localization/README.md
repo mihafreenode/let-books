@@ -4,6 +4,10 @@
 
 `docs/style-guide/localization/` defines how multilingual knowledge content should be translated and linked.
 
+The long-form program model, Native-Speaker Review Findings corpus, localization debt model, defect-class model, and drift model now live in `../../localization-at-scale-program.md`.
+
+This guide focuses on contributor-facing rules and operational expectations.
+
 ## Purpose
 
 Keep translations traceable, script-correct, structurally aligned with canonical English sources, and reviewable as a long-term localization system rather than a one-off translation task.

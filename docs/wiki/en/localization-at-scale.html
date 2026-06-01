@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Localization at Scale | LetBooks</title>
-    <meta name="description" content="Localization at scale is the practice of treating multilingual content as a designed system covering writing, governance, assets, accessibility, validation, and review.">
+    <meta name="description" content="Localization at scale is the practice of treating multilingual publishing as a feedback system and a long-term knowledge system, not as a one-off translation task.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/en/localization-at-scale.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Localization at Scale | LetBooks">
-    <meta property="og:description" content="Localization at scale is the practice of treating multilingual content as a designed system covering writing, governance, assets, accessibility, validation, and review.">
+    <meta property="og:description" content="Localization at scale is the practice of treating multilingual publishing as a feedback system and a long-term knowledge system, not as a one-off translation task.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/en/localization-at-scale.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Localization at Scale | LetBooks">
-    <meta name="twitter:description" content="Localization at scale is the practice of treating multilingual content as a designed system covering writing, governance, assets, accessibility, validation, and review.">
+    <meta name="twitter:description" content="Localization at scale is the practice of treating multilingual publishing as a feedback system and a long-term knowledge system, not as a one-off translation task.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -91,7 +91,7 @@
               <span aria-current="page">Localization at Scale</span>
             </nav>
             <h1>Localization at Scale</h1>
-          <p class="content-page-summary">Localization at scale is the practice of treating multilingual content as a designed system covering writing, governance, assets, accessibility, validation, and review.</p>
+          <p class="content-page-summary">Localization at scale is the practice of treating multilingual publishing as a feedback system and a long-term knowledge system, not as a one-off translation task.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Topics:</span>
               <span class="content-tag">Engineering Systems</span>
@@ -101,78 +101,38 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="core-idea">Core idea</h2>
-<p class="lead">Localization is broader than translation.</p>
+<p>Localization is broader than translation.</p>
 <p>It includes:</p>
 <ul>
 <li>source writing</li>
 <li>terminology</li>
+<li>metadata</li>
 <li>navigation</li>
 <li>accessibility text</li>
 <li>diagrams and screenshots</li>
-<li>metadata</li>
 <li>review workflow</li>
 <li>CI and QA</li>
+<li>drift management</li>
+<li>native-speaker review</li>
 </ul>
-<h2 id="why-it-matters">Why it matters</h2>
-<p>Projects that delay localization usually discover that their information architecture, screenshots, and testing assumptions are already English-shaped.</p>
-<h2 id="let-books-context">Let Books context</h2>
-<p>Let Books is explicitly multilingual in product direction, documentation, and UI expectations. That makes localization architecture a core product concern.</p>
-<h2 id="reader-facing-localization-completeness">Reader-facing localization completeness</h2>
-<p>Localized URLs, titles, navigation, and page shells are not enough.</p>
-<p>A localized page is only complete when all reader-facing content is localized, including:</p>
+<h2 id="authoritative-handbook">Authoritative handbook</h2>
+<p>The central operating model for this initiative now lives in:</p>
 <ul>
-<li>summaries and descriptions</li>
-<li>tags and category labels</li>
-<li>article body copy</li>
-<li>headings and lists</li>
-<li>callouts and captions</li>
-<li>diagram labels and alt text</li>
-<li>related-content descriptions</li>
-<li>localized breadcrumbs where variants exist</li>
+<li><code>../localization-at-scale-program.md</code></li>
 </ul>
-<p>If a page still exposes source-language reader-facing text outside quotations, proper nouns, technical identifiers, or explicitly marked source material, localization completeness has failed.</p>
-<h2 id="localization-as-a-feedback-system">Localization as a feedback system</h2>
-<p>Localization at scale is also a feedback-system design problem.</p>
-<p>Typical feedback stages include:</p>
-<ol type="1">
-<li>AI-generated draft</li>
-<li>spellcheck and terminology validation</li>
-<li>structural completeness checks</li>
-<li>semantic parity checks</li>
-<li>accessibility and asset validation</li>
-<li>link and navigation validation</li>
-<li>native-language review</li>
-<li>publication review</li>
-</ol>
-<p>Each stage identifies the next problem to solve. That is why CI, review, and contributor guidance matter as much as translation itself.</p>
-<p>Kent Beck summarized the general principle clearly: “Optimism is an occupational hazard of programming; feedback is the treatment.” The same idea applies to multilingual publishing.</p>
-<p>Norbert Wiener described feedback as “a method of controlling a system by reinserting into it the results of its past performance.” Localization validators and review systems play exactly that role in a multilingual publishing workflow.</p>
-<h2 id="source-first-remediation">Source-first remediation</h2>
-<p>When localization fails, fix the source first.</p>
-<p>Recommended investigation order:</p>
-<ol type="1">
-<li>source markdown</li>
-<li>localization metadata</li>
-<li>article registries</li>
-<li>generation scripts</li>
-<li>generated indexes and navigation</li>
-<li>generated HTML</li>
-</ol>
-<p>Generated HTML should not be hand-patched when the underlying localized source is still incomplete.</p>
-<h2 id="native-speaker-review-corpus">Native-speaker review corpus</h2>
-<p>Let Books should maintain a living corpus of native-speaker review findings.</p>
-<p>Each record should keep:</p>
+<p>That handbook defines:</p>
 <ul>
-<li>source article</li>
-<li>language</li>
-<li>original English text</li>
-<li>original localized text</li>
-<li>improved localized text</li>
-<li>explanation</li>
-<li>issue category</li>
-<li>whether automated QA would likely detect it</li>
+<li>why multilingual publishing matters</li>
+<li>why localization is a system, not a project</li>
+<li>how AI fits inside feedback loops</li>
+<li>the quality model of coverage, completeness, quality, and freshness</li>
+<li>localization debt and open defect classes</li>
+<li>source-first remediation and AI-agent workflow</li>
+<li>localization drift and repository maturity</li>
+<li>the detailed Native-Speaker Review Findings corpus</li>
 </ul>
-<p>The point is not only to fix awkward phrasing. The point is to build evidence showing where automation helps, where semantic validation helps, and where native-language judgment still adds unique value.</p>
+<h2 id="practical-rule">Practical rule</h2>
+<p>A localized page is not complete until all reader-facing content is localized, including summaries, tags, body copy, captions, diagrams, alt text, and related-content surfaces.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -208,15 +168,15 @@
                 <div class="topic-menu" id="related-governance-menu" data-topic-menu="related-governance" hidden>
                   <a href="../../blog/en/ai-will-not-replace-translators.html"><span>AI Will Not Replace Translators</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/en/how-to-review-ai-assisted-translations.html"><span>How to Review AI-Assisted Translations</span><span class="topic-menu__meta">Learning</span></a>
-                  <a href="../../wiki/en/localization-governance.html"><span>Localization Governance</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-localization-menu" data-topic-menu="related-localization" hidden>
                   <a href="../../blog/en/multilingual-accessibility.html"><span>Multilingual Accessibility</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/en/why-every-language-matters.html"><span>Why Every Language Matters</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/en/how-to-design-english-source-content-for-translation.html"><span>How to Design English Source Content for Translation</span><span class="topic-menu__meta">Learning</span></a>
-                  <a href="../../learning/en/how-to-localize-accessibility-content.html"><span>How to Localize Accessibility Content</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html"><span>How to Localize Diagrams and Screenshots</span><span class="topic-menu__meta">Learning</span></a>
                   <a href="../../wiki/en/language-support-matrix.html"><span>Language Support Matrix</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/en/localization-maturity-model.html"><span>Localization Maturity Model</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/en/translation-quality-assurance.html"><span>Translation Quality Assurance</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>

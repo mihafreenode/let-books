@@ -4,6 +4,8 @@
 
 This report classifies repository-wide localization findings discovered during source-first remediation and generated-site validation work.
 
+The long-form operating model for this work now lives in `docs/localization-at-scale-program.md`. This report is the operational audit companion to that handbook.
+
 The goal is to fix each issue once in content and once in the system.
 
 Current tracked metrics:
