@@ -68,6 +68,12 @@ jobs:
             --report-file docs/.localization-semantic-review.md \
             --json-report-file docs/.localization-semantic-review.json
 
+      - name: Localization completeness validation
+        run: |
+          node tools/validate-localization-completeness.mjs \
+            --report-file docs/.localization-completeness-report.md \
+            --json-report-file docs/.localization-completeness-report.json
+
       - name: Docs link and article validation
         run: node tools/validate-blog.mjs
 
