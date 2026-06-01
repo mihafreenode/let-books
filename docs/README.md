@@ -10,6 +10,21 @@ It should gradually support public documentation, technical writing, learning ma
 
 This area exists to turn the repository into a traceable, reusable knowledge base rather than a loose collection of pages and notes.
 
+## Program Status
+
+The main handbook for the Localization at Scale initiative lives in `localization-at-scale-program.md`.
+
+The current operational audit lives in `localization-audit-report.md`.
+
+Current tracked status after the latest full docs verification pass:
+
+```text
+Localization Debt = 0
+Open Defect Classes = 0
+```
+
+This status means the currently tracked localization defect classes are closed in the audited set and are backed by validation and CI coverage. New findings should still be treated as new defect classes, documented in the audit, and added to the Native-Speaker Review Findings corpus when relevant.
+
 ## Structure
 
 - `knowledge-platform-bootstrap.md` records the first platform analysis pass
@@ -21,6 +36,7 @@ This area exists to turn the repository into a traceable, reusable knowledge bas
 - `sources/` will hold source maps and evidence records
 - `style-guide/` will hold writing, localization, publishing, and terminology rules
 - `localization-at-scale-program.md` defines the current multilingual knowledge and governance initiative
+- `localization-audit-report.md` tracks localization debt, open defect classes, and closure status
 - `sl/`, `hr/`, `bs/`, `sr-Latn/`, `sr-Cyrl/`, `mk/`, `sq/`, `de/`, `it/`, `fr/`, and `es/` hold locale-scoped Markdown copies for pages that are ready for localized rendering and linking
 - `spec-driven-content-program.md` defines the current spec-driven editorial program and publishing sequence
 - existing localized HTML pages under locale folders remain the current public docs surface
