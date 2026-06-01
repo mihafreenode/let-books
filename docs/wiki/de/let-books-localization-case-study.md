@@ -22,9 +22,9 @@ Es zeigt, wie ein Projekt:
 - Nutzen Sie die Erstveröffentlichung in englischer Sprache, ohne auf eine ausschließlich englischsprachige Veröffentlichung zu verfallen
 - Dokumenten-Governance, bevor die Skalierung eintrifft
 
-## Benchmark-Geräterichtung
+## Wiederverwendbare Benchmark-Beispiele
 
-Strukturierte Überprüfungsbeispiele sollten auch als wiederverwendbare Benchmark-Vorrichtungen gespeichert werden, damit zukünftige LLM-Bewertungen Folgendes messen können:
+Strukturierte Review-Beispiele sollten auch als wiederverwendbare Benchmark-Beispiele gespeichert werden, damit künftige LLM-Auswertungen Folgendes messen können:
 
 - Grammatikzuverlässigkeit
 - Umgang mit Modalitäten

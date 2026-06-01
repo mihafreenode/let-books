@@ -17,20 +17,20 @@ Let Books est une étude de cas vivante sur la création d'une plate-forme de co
 
 Il montre comment un projet peut :
 
-- définir tôt la portée des paramètres régionaux
-- garder l'accessibilité liée à la localisation
-- utiliser la rédaction en anglais d'abord sans se replier sur la publication en anglais uniquement
-- documenter la gouvernance avant l'arrivée de l'échelle
+- définir tôt le périmètre des locales
+- maintenir l'accessibilité liée à la localisation
+- utiliser une rédaction d'abord en anglais sans retomber dans une publication uniquement en anglais
+- documenter la gouvernance avant que l'échelle n'arrive
 
-## Direction du luminaire de référence
+## Orientation Des Fixtures De Benchmark
 
-Les exemples d'examens structurés doivent également être stockés en tant qu'éléments de référence réutilisables afin que les futures évaluations LLM puissent mesurer :
+Les exemples de relecture structurée devraient aussi être conservés comme fixtures de benchmark réutilisables, c'est-à-dire comme exemples de référence réemployables pour les tests et l'évaluation, afin que les futures évaluations d'LLM puissent mesurer :
 
-- fiabilité grammaticale
-- gestion des modalités
-- précision terminologique
-- précision du registre des politiques
-- qualité de la capture des justifications des évaluateurs
+- la fiabilité grammaticale
+- la gestion des modalités
+- la précision terminologique
+- la justesse du registre de politique publique
+- la qualité de la capture des justifications du relecteur
 
 ## Pages connexes
 

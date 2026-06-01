@@ -22,9 +22,9 @@ Ai tregon se si një projekt mund të:
 - përdorni shkrimin e parë në anglisht pa u shembur në botim vetëm në anglisht
 - Dokumentoni qeverisjen përpara se të arrijë shkalla
 
-## Drejtimi i pajisjes standarde
+## Shembuj të ripërdorshëm për krahasim referencë
 
-Shembujt e rishikimit të strukturuar duhet të ruhen gjithashtu si pajisje standarde të ripërdorshme, në mënyrë që vlerësimi i ardhshëm LLM të mund të masë:
+Shembujt e strukturuar të rishikimit duhet të ruhen gjithashtu si shembuj referencë të ripërdorshëm për krahasim, në mënyrë që vlerësimi i ardhshëm i LLM-ve të mund të masë:
 
 - besueshmëria gramatikore
 - trajtimi i modalitetit

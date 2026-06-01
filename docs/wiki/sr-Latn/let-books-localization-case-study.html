@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Let Books Studija slučaja lokalizacije | LetBooks</title>
-    <meta name="description" content="Let Books je živa studija slučaja u izgradnji višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.">
+    <title>Studija slučaja lokalizacije Let Books | LetBooks</title>
+    <meta name="description" content="Let Books je živa studija slučaja izgradnje višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Latn/let-books-localization-case-study.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Let Books Studija slučaja lokalizacije | LetBooks">
-    <meta property="og:description" content="Let Books je živa studija slučaja u izgradnji višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.">
+    <meta property="og:title" content="Studija slučaja lokalizacije Let Books | LetBooks">
+    <meta property="og:description" content="Let Books je živa studija slučaja izgradnje višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Latn/let-books-localization-case-study.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Let Books Studija slučaja lokalizacije | LetBooks">
-    <meta name="twitter:description" content="Let Books je živa studija slučaja u izgradnji višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.">
+    <meta name="twitter:title" content="Studija slučaja lokalizacije Let Books | LetBooks">
+    <meta name="twitter:description" content="Let Books je živa studija slučaja izgradnje višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -88,32 +88,53 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sr-Latn/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Let Books Studija slučaja lokalizacije</span>
+              <span aria-current="page">Studija slučaja lokalizacije Let Books</span>
             </nav>
-            <h1>Let Books Studija slučaja lokalizacije</h1>
-          <p class="content-page-summary">Let Books je živa studija slučaja u izgradnji višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.</p>
+            <h1>Studija slučaja lokalizacije Let Books</h1>
+          <p class="content-page-summary">Let Books je živa studija slučaja izgradnje višejezične platforme znanja i vizije proizvoda pre nego što postoji potpuna pozadinska aplikacija.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Let Books</span>
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="zašto-je-korisno">Zašto je korisno</h2>
+<h2 id="zašto-je-korisna">Zašto je korisna</h2>
 <p class="lead">Pokazuje kako projekat može:</p>
 <ul>
-<li>rano definisati opseg lokalizacije</li>
-<li>zadržite dostupnost vezanu za lokalizaciju</li>
-<li>koristite prvo pisanje na engleskom bez urušavanja u objavljivanje samo na engleskom</li>
-<li>upravljanje dokumentima pre nego što skala stigne</li>
+<li>rano definisati opseg lokala</li>
+<li>držati pristupačnost usko vezanom za lokalizaciju</li>
+<li>koristiti pisanje prvo na engleskom bez urušavanja u objavljivanje samo na engleskom</li>
+<li>dokumentovati upravljanje pre nego što stigne veći obim</li>
 </ul>
-<h2 id="referentni-smer-učvršćenja">Referentni smer učvršćenja</h2>
-<p>Strukturirani primeri pregleda takođe treba da se čuvaju kao instrumenti za višekratnu upotrebu kako bi buduća LLM evaluacija mogla da meri:</p>
+<h2 id="slovenački-primer-ai-pregleda">Slovenački primer AI pregleda</h2>
+<p>Repozitorijum uključuje konkretan slovenački primer pregleda u kojem je AI nacrt sačuvao opšte značenje, ali je i dalje zahtevao ispravku izvornog govornika zbog modalnosti, tečnosti i jezika registra politike.</p>
+<p>Detaljan zapis sada se nalazi u odeljku Nalazi pregleda izvornih govornika u <code>../localization-at-scale-program.md</code> i u <code>../style-guide/localization/ai-translation-review-records.md</code>.</p>
+<p>Ključne lekcije:</p>
 <ul>
-<li>gramatička pouzdanost</li>
-<li>rukovanje modalitetima</li>
-<li>preciznost terminologije</li>
+<li>gramatičke greške mogu preživeti čak i kada rečenica deluje razumljivo</li>
+<li>modalnost je posebno ranjiva na doslovan prevod</li>
+<li>jezik politika i specifikacija proizvoda često traži domenski prikladan registar, a ne samo rečničku ekvivalenciju</li>
+<li>automatizovane provere retko same uhvate suptilne probleme tečnosti i modalnosti</li>
+</ul>
+<h2 id="primer-mešanojezičnog-objavljivanja">Primer mešanojezičnog objavljivanja</h2>
+<p>Izvorni članak: <code>docs/blog/sl/the-cost-of-english-only-software.md</code></p>
+<p>Ova porodica članaka pružila je konkretan primer lokalizovanog naslova i delimično lokalizovane ljušture koje su koegzistirale sa engleskim objavnim površinama vidljivim čitaocu.</p>
+<p>Detaljno tumačenje na nivou programa sada se nalazi u odeljku Nalazi pregleda izvornih govornika u <code>../localization-at-scale-program.md</code> i u <code>../localization-audit-report.md</code>.</p>
+<p>Lekcije specifične za repozitorijum:</p>
+<ul>
+<li>pokrivenost nije isto što i potpunost</li>
+<li>izvorni metapodaci su važni jer sažeci mogu procureti na objavne površine</li>
+<li>lokalizacija taksonomije je važna jer su engleske oznake tema čitaocu vidljivi nedostaci</li>
+<li>generisani HTML treba validirati, a ne mu slepo verovati</li>
+</ul>
+<h2 id="ponovo-upotrebljivi-referentni-primeri-za-benchmarking">Ponovo upotrebljivi referentni primeri za benchmarking</h2>
+<p>Strukturirane primere pregleda treba čuvati i kao ponovo upotrebljive referentne primere za benchmarking kako bi buduća LLM evaluacija mogla da meri:</p>
+<ul>
+<li>gramatičku pouzdanost</li>
+<li>rukovanje modalnošću</li>
+<li>terminološku preciznost</li>
 <li>tačnost registra politike</li>
-<li>kvalitet hvatanja obrazloženja recenzenta</li>
+<li>kvalitet beleženja obrazloženja recenzenta</li>
 </ul>
 
         <div class="post-article-nav">

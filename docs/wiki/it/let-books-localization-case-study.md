@@ -17,20 +17,20 @@ Let Books è un caso di studio vivente sulla creazione di una piattaforma di con
 
 Mostra come un progetto può:
 
-- definire in anticipo l'ambito locale
+- definire presto l'ambito delle impostazioni locali
 - mantenere l'accessibilità legata alla localizzazione
-- utilizzare la creazione in inglese senza cadere nella pubblicazione solo in inglese
+- usare una redazione iniziale in inglese senza ricadere nella pubblicazione solo in inglese
 - documentare la governance prima che arrivi la scala
 
-## Direzione del dispositivo di riferimento
+## Direzione Dei Fixture Di Benchmark
 
-Gli esempi di revisione strutturata dovrebbero anche essere archiviati come elementi di riferimento riutilizzabili in modo che la futura valutazione LLM possa misurare:
+Gli esempi di revisione strutturata dovrebbero essere archiviati anche come fixture di benchmark riutilizzabili, cioè esempi di riferimento riusabili per test e valutazione, così che la futura valutazione degli LLM possa misurare:
 
 - affidabilità grammaticale
-- gestione delle modalità
+- gestione della modalità
 - precisione terminologica
-- accuratezza del registro delle politiche
-- qualità della cattura delle motivazioni del revisore
+- accuratezza del registro delle policy
+- qualità della raccolta delle motivazioni del revisore
 
 ## Pagine correlate
 
