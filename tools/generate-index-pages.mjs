@@ -411,9 +411,9 @@ function generateLearningIndexes(learningTitles) {
     if (!isDirectory(outDir)) fs.mkdirSync(outDir, { recursive: true });
     const canonical = `${SITE_URL}/docs/learning/${locale}/index.html`;
     const head = buildHeadWithCanonical(`${info.title} | LetBooks`, info.desc, canonical, section);
-    // English learning guides are at docs/learning/*.md (parent level),
-    // other locales at docs/learning/<locale>/*.md (same dir as index)
-    const linkPrefix = locale === 'en' ? '../' : '';
+    // Generated learning HTML pages live alongside the locale index page.
+    // Locale indexes should link to sibling files in the same directory.
+    const linkPrefix = '';
     const html = buildIndexPage({
       locale,
       pageType: 'learning-index',
@@ -444,8 +444,9 @@ function generateWikiIndexes(wikiTitles) {
     if (!isDirectory(outDir)) fs.mkdirSync(outDir, { recursive: true });
     const canonical = `${SITE_URL}/docs/wiki/${locale}/index.html`;
     const head = buildHeadWithCanonical(`${info.title} | LetBooks`, info.desc, canonical, section);
-    // English wiki pages are at docs/wiki/*.md (parent level)
-    const linkPrefix = locale === 'en' ? '../' : '';
+    // Generated wiki HTML pages live alongside the locale index page.
+    // Locale indexes should link to sibling files in the same directory.
+    const linkPrefix = '';
     const html = buildIndexPage({
       locale,
       pageType: 'wiki-index',
