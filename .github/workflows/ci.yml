@@ -25,6 +25,11 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
       - name: Static-demo localization smoke test
         run: node tests/static-demo/localization-smoke.js
 

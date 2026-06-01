@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import html
 import re
+import shutil
 import subprocess
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -964,6 +965,12 @@ def render_variant(entries: dict[tuple[str, str], ContentEntry], entry: ContentE
 
 
 def markdown_to_html(markdown_text: str) -> str:
+    if shutil.which("pandoc") is None:
+        raise RuntimeError(
+            "Missing required dependency 'pandoc'. Install it before running "
+            "tools/generate_docs_content.py. On Ubuntu or GitHub Actions runners, use: "
+            "sudo apt-get update && sudo apt-get install -y pandoc"
+        )
     process = subprocess.run(
         ["pandoc", "-f", "markdown", "-t", "html", "--wrap=preserve"],
         input=markdown_text,
