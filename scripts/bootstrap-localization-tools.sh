@@ -1,4 +1,31 @@
 #!/usr/bin/env bash
+# Purpose:
+# - Bootstrap the project-local Python environment required by
+#   localization validators and localization maintenance tools.
+#
+# Why:
+# - Localization checks depend on extra Python packages and optional MT
+#   backends that are not guaranteed to exist in a contributor shell or
+#   CI runner by default.
+# - The repository wants one repeatable setup path instead of ad-hoc
+#   global pip installs.
+#
+# Protects:
+# - reproducible localization toolchain setup
+# - alignment between local and CI localization behavior
+# - isolation from system Python package drift
+#
+# Limitations:
+# - Focused on the localization toolchain only.
+# - Optional MT backends may still require separate system packages or
+#   language-model installation.
+#
+# Related:
+# - scripts/README.md
+# - tools/validate_translation_parity.py
+# - tools/localization_mt_draft.py
+# - .github/workflows/ci.yml
+# - .github/workflows/docs.yml
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -15,9 +42,15 @@ if [ ! -d "$VENV_DIR" ]; then
   "$PYTHON_BIN" -m venv "$VENV_DIR"
 fi
 
+# Always upgrade pip inside the repo-local environment before install.
+# This reduces avoidable CI/local drift caused by older bundled pip
+# versions handling dependency resolution differently.
 "$VENV_DIR/bin/python" -m pip install --upgrade pip
 "$VENV_DIR/bin/pip" install -r "$ROOT_DIR/requirements-localization.txt"
 
+# Argos Translate is optional because most repository guarantees do not
+# require MT locally. Keeping it opt-in avoids making heavier language
+# tooling a default dependency for every contributor and CI run.
 if [ "${INSTALL_ARGOS_TRANSLATE:-0}" = "1" ]; then
   "$VENV_DIR/bin/pip" install 'argostranslate>=1.9,<2'
 fi
