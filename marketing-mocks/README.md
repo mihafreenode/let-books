@@ -1,6 +1,32 @@
 # Marketing Mocks
 
-This directory stores mock marketing visuals and their OCR output.
+This directory stores repository-approved concept visuals, engineering communication visuals, and their supporting sidecar files.
+
+## Purpose
+
+`marketing-mocks/` exists to preserve visual communication assets that help people understand the repository, the product direction, and the operational workflows around it.
+
+This directory is part of the repository knowledge-preservation system.
+
+It should help communicate:
+
+- product direction and workflow concepts
+- localized UI and documentation examples
+- repository governance and engineering practices
+- architecture and deployment understanding
+- onboarding context for contributors and AI-assisted agents
+
+Visuals in this directory supplement repository guidance.
+
+Source of truth remains:
+
+- validators
+- tests
+- workflows
+- implementation guidance
+- documentation
+
+Visual assets should explain proven practices, not replace them.
 
 ## Disclaimer
 
@@ -34,11 +60,32 @@ The `english-classification` part of the filename indicates the mock category an
 - `brand`: branding and adoption concepts, including standalone identity explorations and co-branded institution-adoption variants
 - `proposal`: concept or partnership-style presentation visuals intended to communicate strategy, mission, ecosystem fit, or institutional framing
 
+Engineering-governance visuals belong under the `diagram` category.
+
+These are not product-marketing posters. They exist to communicate proven repository practices such as validation layering, documentation governance, localization governance, CI/CD guarantees, and engineering workflow discipline.
+
+The new `diagram-*-engineering-governance-overview.png` family should be treated as engineering communication material:
+
+- explain repository practices already implemented or enforced
+- prefer validator-backed and workflow-backed guarantees over aspirational future-state messaging
+- do not present speculative product features as established engineering governance
+
+Current category usage in this directory:
+
+- `cover`: broad campaign and preservation-message visuals; currently partial locale coverage
+- `tutorial`: localized workflow walkthrough visuals; currently broad locale coverage
+- `diagram`: architecture, deployment, and engineering-governance visuals; currently the strongest category for reusable repository communication
+- `dashboard`: summary/dashboard concept visuals; currently limited coverage
+- `mobile-screen`: phone-first concept UI visuals; currently broad locale coverage
+- `brand`: identity exploration visuals; currently limited coverage
+- `proposal`: institutional framing and mission visuals; currently broad locale coverage
+
 For `diagram` files, prefer short, consistent titles grouped by intent:
 
 - platform-overview diagrams: `diagram-{language}-...platform...`
 - infrastructure diagrams: `diagram-{language}-...infrastructure-architecture...` or a localized equivalent
 - deployment overviews: `diagram-{language}-...deployment...`
+- engineering governance overviews: `diagram-{language}-...engineering-governance-overview...`
 
 Keep the localized title concise where possible. Prefer a direct architecture title over a longer "overview of architecture" phrase when both are reasonable.
 
@@ -51,6 +98,42 @@ When documentation pages use visuals derived from this directory:
 - treat `sr-Latn` and `sr-Cyrl` as separate documentation asset targets with script-correct visuals
 - copy selected assets into `docs/assets/images/` with stable descriptive names rather than linking to `marketing-mocks/` directly
 - keep documentation visuals aligned with the project's supported locale set: `en`, `sl`, `hr`, `bs`, `sr-Latn`, `sr-Cyrl`, `mk`, `sq`, `de`, `it`, `fr`, `es`
+
+When using engineering-governance diagrams in documentation:
+
+- place them near validator, workflow, tooling, or governance explanations
+- treat them as supporting explanation, not as the primary source of truth
+- keep the real guarantees in validators, tests, workflows, and repository guidance files
+
+## Naming Convention
+
+Files use this format:
+
+`{category}-{filename-locale}-{localized-title}.{extension}`
+
+Examples:
+
+- `diagram-en-engineering-governance-overview.png`
+- `diagram-sl-engineering-governance-overview.png`
+- `tutorial-en-how-it-works-step-by-step-in-the-mobile-app.png`
+- `tutorial-sl-kako-deluje-vodic-po-korakih-v-mobilni-aplikaciji.png`
+
+Notes:
+
+- filenames use ASCII-only slugs for portability
+- locale segments in filenames are lowercase filename slugs, including `sr-latn` and `sr-cyrl`
+- repository locale identifiers remain `sr-Latn` and `sr-Cyrl` in code, docs, validators, and workflows
+- do not assume filename locale slugs are identical to repository locale identifiers
+
+Category-specific guidance:
+
+- `cover-*`: short preservation or campaign message
+- `tutorial-*`: describe the workflow shown, not a vague slogan
+- `diagram-*`: use intent-oriented titles such as architecture, deployment, infrastructure, or engineering governance
+- `dashboard-*`: summarize the dashboard state or operational message shown
+- `mobile-screen-*`: describe the visible concept message or UI emphasis
+- `brand-*`: describe the institutional/identity concept succinctly
+- `proposal-*`: use mission, partnership, or adoption framing titles
 
 ## Tooling
 
@@ -69,24 +152,30 @@ This directory adds mock-specific tooling on top of that baseline:
 - localized spellcheck review for mock copy before assets are promoted into `docs/assets/images/`
 - ImageMagick-based resizing and optimization for exported documentation assets
 
-## Filename Convention
+## Sidecar Files
 
-Files use this format:
+This directory uses multiple sidecar file types.
 
-`{english-classification}-{language}-{localized-title}.{extension}`
+### `.png`
 
-Examples:
+- the visual asset itself
 
-- `cover-en-cover-first-book-rescue.png`
-- `brand-en-connecting-libraries-sharing-knowledge-strengthening-communities.png`
-- `tutorial-sl-kako-deluje-vodic-po-korakih-v-mobilni-aplikaciji.png`
-- `diagram-en-let-books-platform-deployment-overview.png`
+### `.json`
 
-## Parts
+- OCR/output sidecar for review, searchability, and copy inspection
 
-- `english-classification`: a short English category such as `cover`, `tutorial`, `diagram`, `dashboard`, `mobile-screen`, `brand`, or `proposal`
-- `language`: the primary content language, such as `en`, `sl`, or `mk`
-- `localized-title`: an ASCII-slug version of the image's visible title or best representative heading in its original language
+### `.md`
+
+- source narrative, canonical copy, or review text for engineering-oriented visuals
+
+For engineering-governance visuals, the `.md` file should be treated as part of the asset contract, not as an optional scratch file.
+
+It helps preserve:
+
+- intended message
+- translation review text
+- governance wording
+- reusable engineering ideas represented by the visual
 
 ## OCR Pairing
 
@@ -171,9 +260,101 @@ To regenerate the OCR JSON files:
 4. Run the OCR generation command above.
 5. Review the generated `.json` files. OCR is best-effort and may contain recognition noise.
 
+## Localization Expectations
+
+Localized visuals should:
+
+- use natural professional language suitable for engineers, operators, or institutional readers
+- keep terminology consistent with repository guidance and documentation
+- avoid mixed-language headings where a clean localized phrasing exists
+- preserve script correctness for `sr-latn` and `sr-cyrl`
+- avoid cross-language leakage such as Croatian/Serbian wording in Slovenian assets
+- keep the same conceptual asset family aligned across locales even when the exact phrasing changes naturally
+
+Engineering-governance visuals should prioritize clarity and terminology stability over literal word-for-word translation.
+
+## Repository Knowledge Preservation
+
+Prefer visuals that explain:
+
+- how repository practices work
+- why they exist
+- what failures they prevent
+- what lessons were learned
+- what reusable engineering patterns emerged
+
+Avoid keeping visuals that are only decorative if they no longer improve onboarding or understanding.
+
+## Engineering Visualization Inventory
+
+Engineering-oriented visuals currently represented here include:
+
+- infrastructure architecture diagrams
+- platform deployment overview diagrams
+- engineering governance overview diagrams
+
+The strongest reusable engineering visualization family is currently:
+
+- `diagram-*-engineering-governance-overview.*`
+
+That family represents proven patterns such as:
+
+- validator-first governance
+- documentation as product discipline
+- test and regression documentation
+- CI/CD quality enforcement
+- reusable engineering practice capture
+- continuous improvement cycles
+
+These visuals have high reuse potential because they communicate practices that are broader than a single Let Books feature.
+
+## Repository-Approved Assets
+
+When a visual becomes repository-approved, it should be:
+
+- committed
+- documented here
+- kept aligned with current repository practice
+- reviewed for localization consistency when localized variants exist
+
+Do not leave approved engineering-governance visuals permanently untracked.
+
+The `diagram-*-engineering-governance-overview.{md,png}` family is repository-approved and should remain versioned alongside code, validators, workflows, and documentation.
+
+## Current Review Notes
+
+Current strengths:
+
+- engineering-governance overview diagrams exist for all supported locales in this asset family
+- diagram visuals are the strongest category for reusable repository communication
+- tutorial, proposal, and most mobile-screen families already have broad locale coverage
+
+Current gaps:
+
+- `dashboard` and `brand` categories currently have limited locale coverage
+- `cover` category does not yet cover every supported locale
+- only the engineering-governance family currently uses `.md` source companions; that should remain intentional unless another visual family also benefits from canonical text-source files
+
+Current naming rule:
+
+- continue using existing lowercase ASCII filename locale slugs for consistency with the current asset set
+- do not rename established families casually unless a repository-wide migration is justified
+
+## Pattern Graduation
+
+Engineering visuals should become permanent repository assets only when they:
+
+- communicate proven practices
+- remain useful beyond a single discussion
+- improve onboarding or shared understanding
+- stay understandable without heavy project-specific context
+
+Prefer proven patterns over speculative concepts.
+
 ## Notes
 
 - `cover-*` assets use collage imagery from The New York Public Library Digital Collections. The NYPL believes these items are in the public domain under U.S. law; copyright status may differ in other countries.
+- engineering-governance diagram families should communicate proven repository practices, not generic startup-style process art
 - Filenames are ASCII-only for portability.
 - Localized titles are transliterated/sluggified when the source text contains non-ASCII characters.
 - The OCR text is best-effort and may contain recognition noise.
