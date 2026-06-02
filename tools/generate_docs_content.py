@@ -1435,16 +1435,6 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
         </div>
       </header>
 
-      <div class="site-print-header print-only" aria-hidden="true">
-        <div class="section site-print-header__inner">
-          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
-          <div class="site-print-header__copy">
-            <strong>Let Books</strong>
-            <span>{html.escape(footer_desc)}</span>
-          </div>
-        </div>
-      </div>
-
       <main>
         <article class="section blog-article docs-article">
 {header_block}
@@ -1476,16 +1466,6 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
         </div>
       </footer>
 
-      <div class="site-print-footer print-only" aria-hidden="true">
-        <div class="section site-print-footer__inner">
-          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
-          <div class="site-print-footer__copy">
-            <strong>Let Books</strong>
-            <span>{html.escape(copyright_notice)}</span>
-            <span>{html.escape(footer_microcopy)}</span>
-          </div>
-        </div>
-      </div>
     </div>
   </body>
 </html>
