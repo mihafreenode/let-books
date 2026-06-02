@@ -77,6 +77,9 @@ jobs:
           magick --version || convert --version
           npx playwright --version
 
+      - name: Bootstrap localization Python tooling
+        run: bash scripts/bootstrap-localization-tools.sh
+
       - name: Validate build environment
         run: python3 tools/validate_environment.py
 
@@ -113,6 +116,12 @@ jobs:
             --require-full-coverage \
             --report-file docs/.localization-semantic-review.md \
             --json-report-file docs/.localization-semantic-review.json
+
+      - name: Translation parity validation
+        run: |
+          .venv/bin/python tools/validate_translation_parity.py \
+            --report-file docs/.translation-parity-report.md \
+            --json-report-file docs/.translation-parity-report.json
 
       - name: Localization completeness validation
         run: |

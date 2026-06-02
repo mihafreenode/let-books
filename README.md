@@ -217,6 +217,7 @@ The initiative lives under `docs/` and is designed to function as:
 See:
 
 - `docs/localization-at-scale-program.md`
+- `docs/localization-maintenance-system.md`
 - `docs/blog/en/localization-at-scale.md`
 - `docs/wiki/localization-at-scale.md`
 - `docs/learning/how-to-build-a-localization-pipeline.md`

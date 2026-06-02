@@ -41,6 +41,7 @@ New findings should still be treated as new defect classes, documented in the au
 - `sources/` will hold source maps and evidence records
 - `style-guide/` will hold writing, localization, publishing, and terminology rules
 - `localization-at-scale-program.md` defines the current multilingual knowledge and governance initiative
+- `localization-maintenance-system.md` documents the source-synchronized translation maintenance workflow and local Python tooling
 - `localization-audit-report.md` tracks localization debt, open defect classes, and closure status
 - `sl/`, `hr/`, `bs/`, `sr-Latn/`, `sr-Cyrl/`, `mk/`, `sq/`, `de/`, `it/`, `fr/`, and `es/` hold locale-scoped Markdown copies for pages that are ready for localized rendering and linking
 - `spec-driven-content-program.md` defines the current spec-driven editorial program and publishing sequence
