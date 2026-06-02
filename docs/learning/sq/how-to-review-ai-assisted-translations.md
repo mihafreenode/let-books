@@ -109,6 +109,8 @@ Për punë rishikimi të ripërdorshme regjistro:
 
 ## Mësime të ripërdorshme nga rishikimi slloven
 
+Modeli i studimit të rastit slloven është gjerësisht i ripërdorshëm edhe në gjuhë të tjera:
+
 - kuptimi gramatikor mund të jetë afër, ndërsa fjalia ende mbetet e papublikueshme për një folës vendas
 - ndërtimet modale janë veçanërisht të ndjeshme ndaj përkthimit fjalë për fjalë
 - terminologjia dhe formulimi i politikave shpesh kërkojnë rishkrim të vetëdijshëm për domenin

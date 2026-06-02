@@ -6,6 +6,6 @@ status: draft
 
 # Carte des sources - La documentation fait partie du produit
 
-Cette variante localisée renvoie à la carte canonique des sources en anglais : [../en/documentation-is-part-of-the-product.md](../en/documentation-is-part-of-the-product.md).
+Cette variante localisée renvoie à la carte canonique des sources en anglais : [../en/documentation-is-part-of-the-product.md](../fr/documentation-is-part-of-the-product.md).
 
 L'article en français devrait rester aligné sur les affirmations, preuves et limites éditoriales documentées dans la variante canonique anglaise.

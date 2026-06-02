@@ -69,7 +69,7 @@ La localisation coûte réellement du temps et de l'argent. Mais un modèle prog
 
 ## Autres langues
 
-- [English](../en/economics-of-localization.md)
+- [English](../fr/economics-of-localization.md)
 - [Slovenščina](../sl/economics-of-localization.md)
 - [Hrvatski](../hr/economics-of-localization.md)
 - [Bosanski](../bs/economics-of-localization.md)

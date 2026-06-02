@@ -21,7 +21,7 @@
         10,
         10
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -42,7 +42,7 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -63,8 +63,8 @@
         14,
         14
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-run-localization-qa-in-ci/start-with-stable-checks-heading-start-with-stable-checks-d76aae4f-1",
@@ -84,7 +84,7 @@
         16,
         16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -105,14 +105,14 @@
         18,
         22
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-run-localization-qa-in-ci/add-harder-checks-later-heading-add-harder-checks-later-325504ca-1",
       "sourceHash": "325504ca75d709478e9059ddccabc7186ccaac73febc67c2c95af8440f3bb935",
-      "targetBlockId": "si-të-ekzekutoni-qa-të-lokalizimit-në-ci/faqe-të-lidhura-heading-faqe-të-lidhura-f341dc9e-1",
-      "translationHash": "f341dc9e2ae2eb333928fee91a2942c6924e7c3e9b8260cc8887981d043d7131",
+      "targetBlockId": "si-të-ekzekutoni-qa-të-lokalizimit-në-ci/shtoni-më-vonë-kontrolle-më-të-vështira-heading-shtoni-më-vonë-kontrolle-më-të-vështira-ef597b9f-1",
+      "translationHash": "ef597b9fd63af4213cb72e4a0eb1529f8ef6ad15684f09a636ad2cfd53afe8f3",
       "blockType": "heading",
       "headingPath": [
         "How to Run Localization QA in CI",
@@ -123,10 +123,10 @@
         24
       ],
       "targetLineRange": [
-        31,
-        31
+        24,
+        24
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -147,14 +147,14 @@
         26,
         29
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-run-localization-qa-in-ci/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "si-të-ekzekutoni-qa-të-lokalizimit-në-ci/faqe-të-lidhura-heading-faqe-të-lidhura-f341dc9e-1",
+      "translationHash": "f341dc9e2ae2eb333928fee91a2942c6924e7c3e9b8260cc8887981d043d7131",
       "blockType": "heading",
       "headingPath": [
         "How to Run Localization QA in CI",
@@ -164,9 +164,12 @@
         31,
         31
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        31,
+        31
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "how-to-run-localization-qa-in-ci/related-pages-list-list-cfa37cfd-1",
@@ -186,8 +189,8 @@
         33,
         35
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

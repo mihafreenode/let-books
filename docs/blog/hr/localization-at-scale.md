@@ -93,4 +93,4 @@ Ako projekt želi višejezično sudjelovanje, lokalizacija mora biti dio dizajna
 
 ## Drugi jezici
 
-- English (../en/localization-at-scale.md)
+Engleski je kanonski jezik prvog izdanja ovog članka. Putanje spremne za prijevod rezervirane su za sve podržane lokalizacije projekta Let Books.

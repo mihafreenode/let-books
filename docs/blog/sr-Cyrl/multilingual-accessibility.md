@@ -66,7 +66,7 @@ Let Books већ третира локализовани ARIA текст, alt т
 
 ## Други језици
 
-- [English](../en/multilingual-accessibility.md)
+- [English](../sr-Cyrl/multilingual-accessibility.md)
 - [Slovenščina](../sl/multilingual-accessibility.md)
 - [Hrvatski](../hr/multilingual-accessibility.md)
 - [Bosanski](../bs/multilingual-accessibility.md)

@@ -40,11 +40,17 @@ status: draft
 
 Demo je snažan zato što apstraktne ideje pretvara u nešto na šta ljudi mogu da reaguju. Tok rada koji se u belešci čini razumnim može na telefonu ili u skladištu odmah pokazati stvarno trenje.
 
-To je dobra strana dema. Opasna je ta što ljudi, kada prototip jednom postoji, njegovo ponašanje često počnu da tretiraju kao proizvodnu istinu.
+To je dobra strana dema.
+
+Opasna je ta što ljudi, kada prototip jednom postoji, njegovo ponašanje često počnu da tretiraju kao proizvodnu istinu, čak i ako niko tu odluku nije formalno potvrdio.
 
 ## Zašto prototipi postaju slučajni autoritet
 
-Vidljive stvari su ubedljive. Ekran koji radi često dobije više neformalnog autoriteta od zapisanog pravila, čak i kada je nastao samo kao eksperiment.
+Vidljive stvari su ubedljive. Ekran koji radi često dobije više neformalnog autoriteta od zapisanog pravila, čak i kada je taj ekran nastao kao eksperiment.
+
+To je razumljivo. Ljudi veruju onome što mogu da vide.
+
+Ali u produktnom radu, naročito u radu uz podršku AI-ja, taj instinkt može da stvori zabunu.
 
 Demo može prikazivati:
 
@@ -57,18 +63,22 @@ Ništa od toga samo po sebi ne znači da demo treba da redefiniše proizvod.
 
 ## Kada je demo dobar dokaz
 
-Demo je koristan kada pomaže da se odgovori na pitanja kao što su:
+Demo je vredan dokaz kada pomaže da se odgovori na pitanja kao što su:
 
 - da li je tok upotrebljiv
 - da li mobilni raspored podržava stvaran zadatak
-- da li je tok skeniranja razumljiv
-- kako korisnici reaguju na redosled koraka
+- da li je tok skeniranja ili unosa razumljiv
+- reaguju li korisnici pozitivno ili negativno na redosled koraka
 
-Tada je demo dokaz o upotrebljivosti, izvodljivosti i komunikaciji.
+U tim slučajevima demo je dokaz o upotrebljivosti, izvodljivosti, redosledu koraka i komunikaciji.
+
+Takva vrsta dokaza je izuzetno korisna.
 
 ## Kada demo nije autoritet
 
-Demo ne bi smeo tiho da nadjača proizvodnu specifikaciju. Nije glavni odgovor na pitanja poput:
+Demo ne bi smeo tiho da nadjača proizvodnu specifikaciju.
+
+Nije pravi primarni autoritet za pitanja poput:
 
 - da li je ovaj tok zvanično u obimu
 - da li je to privremena prečica ili proizvodna obaveza
@@ -79,15 +89,26 @@ Na takva pitanja mora odgovoriti izričita odluka i ažuriranje dokumentacije.
 
 ## Pravilo Let Books je dobar model
 
-Repozitorijum već definiše zdravo pravilo: javno pisanje treba da koristi specifikacije i dokumentaciju kao kanoničan dokaz, a demo ili ponašanje aplikacije može da se pominje kao status implementacije.
+Repozitorijum već sadrži zdravo uredničko pravilo za to. Javno pisanje treba da tretira specifikacije i dokumentaciju kao kanoničan dokaz, dok se demo ili ponašanje aplikacije može pominjati kao status implementacije.
 
-To sprečava da prototip slučajno postane način upravljanja proizvodom.
+To je pravilo važno zato što sprečava slučajno upravljanje prototipom.
+
+Ako statični demo otkrije bolji tok za kutije, bolji mobilni tok ili bolju interakciju pri unosu, to je vredno. Ali takav bolji tok postaje pravi autoritet tek nakon ažuriranja specifikacije i povezane dokumentacije.
 
 ## Zašto je to još važnije sa AI-jem
 
-AI pojačava ono što je trenutno najkonkretnije. Ako je najkonkretniji artefakt demo, pomoćnici i ljudi brzo će kopirati njegovo ponašanje bez pitanja da li ono odgovara proizvodnim granicama.
+AI pojačava ono što se u trenutnom kontekstu čini najkonkretnijim.
 
-Zato timovi trebaju vidljiv red autoriteta:
+Ako je najkonkretnija stvar u repozitorijumu demo, pomoćnici pa čak i ljudski saradnici mogu početi da kopiraju njegovo ponašanje bez pitanja da li ono odgovara zamišljenoj granici proizvoda.
+
+To može biti korisno kada je demo već usklađen.
+Može takođe brzo da proširi privremene pretpostavke kada nije.
+
+Zato timovi trebaju vidljiv red autoriteta.
+
+## Praktičan lanac autoriteta
+
+Za ovakav rad koristan je sledeći redosled:
 
 1. proizvodna specifikacija
 2. implementaciona uputstva
@@ -120,14 +141,16 @@ Studenti moraju naučiti da se prototipi ne opravdavaju sami od sebe. Dobra soft
 
 ## Trajna lekcija
 
-Demo je vredan jer čini proizvodne ideje proverljivim. Opasan postaje kada tiho postane politika. Zdrav model je jednostavan: neka demo informiše proizvod, ali neka specifikacije i dokumentacija zabeleže konačnu odluku.
+Demo je vredan jer čini proizvodne ideje proverljivim. Opasan postaje kada tiho postane politika.
+
+Najzdraviji model je jednostavan: neka demo informiše proizvod, a neka specifikacije i dokumentacija zabeleže konačnu odluku.
 
 ## Drugi jezici
 
-- [English](../en/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Slovenščina](../sl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Hrvatski](../hr/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Bosanski](../bs/when-the-demo-is-evidence-and-when-it-is-not.md)
+- [Srpski (latinica)](../sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Српски (ћирилица)](../sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Македонски](../mk/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Shqip](../sq/when-the-demo-is-evidence-and-when-it-is-not.md)

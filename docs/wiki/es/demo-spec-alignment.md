@@ -1,5 +1,7 @@
 ---
 title: "Alineación entre demo y especificación"
+summary: >-
+  La alineación entre la demo y la especificación es la práctica de mantener el comportamiento del prototipo o de la demo coherente con la intención de producto documentada, al mismo tiempo que se actualiza explícitamente la especificación cuando una demo revela un mejor flujo de trabajo.
 topics:
   - demo-alignment
   - spec-driven-development

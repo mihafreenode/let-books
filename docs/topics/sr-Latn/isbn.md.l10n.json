@@ -21,7 +21,7 @@
         16,
         16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -41,72 +41,12 @@
         18,
         18
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "isbn-paragraph-isbns-are-extremely-useful-in-publishing-bookselling-and-lib-71c74bce-1",
       "sourceHash": "71c74bce9fe78ad841368fac80fe81405bcc50a33a6ce76c9b20ee48b3c646a4",
-      "targetBlockId": "isbn-paragraph-istovremeno-isbn-nije-potpun-opis-knjige-u-upotrebi-ne-opisu-246fabca-1",
-      "translationHash": "246fabcadd46471bab589abf6c05f287c3942676f7baaaf216cf2078b0e3f81e",
-      "blockType": "paragraph",
-      "headingPath": [
-        "ISBN"
-      ],
-      "sourceLineRange": [
-        20,
-        20
-      ],
-      "targetLineRange": [
-        22,
-        22
-      ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
-    },
-    {
-      "blockId": "isbn-paragraph-at-the-same-time-an-isbn-is-not-a-complete-description-of-a--4668de1a-1",
-      "sourceHash": "4668de1ac9b74566be8ae0459b33c9940992046681a14ffd3b21f1a2964eae1a",
-      "targetBlockId": "isbn-paragraph-ta-razlika-je-važna-u-let-books-jer-se-projekat-fokusira-na--1fdefaa4-1",
-      "translationHash": "1fdefaa486367fd4f5b5d6b740fdef6cc27fe05e75cd5c92d01d43129ef055fe",
-      "blockType": "paragraph",
-      "headingPath": [
-        "ISBN"
-      ],
-      "sourceLineRange": [
-        22,
-        22
-      ],
-      "targetLineRange": [
-        24,
-        24
-      ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
-    },
-    {
-      "blockId": "isbn-paragraph-that-distinction-matters-in-letbooks-because-the-project-foc-2ab8e09f-1",
-      "sourceHash": "2ab8e09f5436bb909f571999817a1433af36f46727b52f039863bce61eea5a15",
-      "targetBlockId": "isbn-paragraph-drugim-rečima-isbn-je-najbolje-razumeti-kao-snažan-identifik-b0f93b87-1",
-      "translationHash": "b0f93b876730adaa88641489b0497ef24ac7f5a0fab11503c3280f069eb8d8a8",
-      "blockType": "paragraph",
-      "headingPath": [
-        "ISBN"
-      ],
-      "sourceLineRange": [
-        24,
-        24
-      ],
-      "targetLineRange": [
-        26,
-        26
-      ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
-    },
-    {
-      "blockId": "isbn-paragraph-in-other-words-isbn-is-best-understood-as-a-strong-edition-i-129b73f4-1",
-      "sourceHash": "129b73f49cc75ba29209a3f3a29efcc0a53fb72d4b89a2825b23f78e8353a12a",
       "targetBlockId": "isbn-paragraph-isbn-ovi-su-izuzetno-korisni-u-izdavaštvu-prodaji-knjiga-i-b-b44572f8-1",
       "translationHash": "b44572f83f1794ea5e5329ac7f74d965b6a14d1df2fa2123fc782bd488ed50ea",
       "blockType": "paragraph",
@@ -114,15 +54,75 @@
         "ISBN"
       ],
       "sourceLineRange": [
-        26,
-        26
+        20,
+        20
       ],
       "targetLineRange": [
         20,
         20
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
+    },
+    {
+      "blockId": "isbn-paragraph-at-the-same-time-an-isbn-is-not-a-complete-description-of-a--4668de1a-1",
+      "sourceHash": "4668de1ac9b74566be8ae0459b33c9940992046681a14ffd3b21f1a2964eae1a",
+      "targetBlockId": "isbn-paragraph-istovremeno-isbn-nije-potpun-opis-knjige-u-upotrebi-ne-opisu-246fabca-1",
+      "translationHash": "246fabcadd46471bab589abf6c05f287c3942676f7baaaf216cf2078b0e3f81e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "ISBN"
+      ],
+      "sourceLineRange": [
+        22,
+        22
+      ],
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
+    },
+    {
+      "blockId": "isbn-paragraph-that-distinction-matters-in-letbooks-because-the-project-foc-2ab8e09f-1",
+      "sourceHash": "2ab8e09f5436bb909f571999817a1433af36f46727b52f039863bce61eea5a15",
+      "targetBlockId": "isbn-paragraph-ta-razlika-je-važna-u-let-books-jer-se-projekat-fokusira-na--1fdefaa4-1",
+      "translationHash": "1fdefaa486367fd4f5b5d6b740fdef6cc27fe05e75cd5c92d01d43129ef055fe",
+      "blockType": "paragraph",
+      "headingPath": [
+        "ISBN"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
+    },
+    {
+      "blockId": "isbn-paragraph-in-other-words-isbn-is-best-understood-as-a-strong-edition-i-129b73f4-1",
+      "sourceHash": "129b73f49cc75ba29209a3f3a29efcc0a53fb72d4b89a2825b23f78e8353a12a",
+      "targetBlockId": "isbn-paragraph-drugim-rečima-isbn-je-najbolje-razumeti-kao-snažan-identifik-b0f93b87-1",
+      "translationHash": "b0f93b876730adaa88641489b0497ef24ac7f5a0fab11503c3280f069eb8d8a8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "ISBN"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

@@ -65,7 +65,7 @@ Softueri vetëm në anglisht shpesh është më i lirë vetëm nëse projekti i 
 
 ## Gjuhë të tjera
 
-- [English](../en/the-cost-of-english-only-software.md)
+- [English](../sq/the-cost-of-english-only-software.md)
 - [Slovenščina](../sl/the-cost-of-english-only-software.md)
 - [Hrvatski](../hr/the-cost-of-english-only-software.md)
 - [Bosanski](../bs/the-cost-of-english-only-software.md)

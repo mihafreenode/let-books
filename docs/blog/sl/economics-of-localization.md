@@ -69,7 +69,7 @@ Lokalizacija res stane čas in denar. Vendar je postopen, pregleden in hibriden 
 
 ## Drugi jeziki
 
-- [English](../en/economics-of-localization.md)
+- [English](../sl/economics-of-localization.md)
 - [Hrvatski](../hr/economics-of-localization.md)
 - [Bosanski](../bs/economics-of-localization.md)
 - [Srpski (latinica)](../sr-Latn/economics-of-localization.md)

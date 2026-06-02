@@ -59,7 +59,7 @@ Se a un progetto importa preservare la conoscenza, dovrebbe importargli anche se
 
 ## Altre lingue
 
-- [English](../en/preserving-smaller-languages-in-the-digital-age.md)
+- [English](../it/preserving-smaller-languages-in-the-digital-age.md)
 - [Slovenščina](../sl/preserving-smaller-languages-in-the-digital-age.md)
 - [Hrvatski](../hr/preserving-smaller-languages-in-the-digital-age.md)
 - [Bosanski](../bs/preserving-smaller-languages-in-the-digital-age.md)

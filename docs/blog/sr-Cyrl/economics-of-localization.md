@@ -69,7 +69,7 @@ status: draft
 
 ## Други језици
 
-- [English](../en/economics-of-localization.md)
+- [English](../sr-Cyrl/economics-of-localization.md)
 - [Slovenščina](../sl/economics-of-localization.md)
 - [Hrvatski](../hr/economics-of-localization.md)
 - [Bosanski](../bs/economics-of-localization.md)

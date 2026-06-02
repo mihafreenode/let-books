@@ -21,7 +21,7 @@
         10,
         10
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -42,14 +42,14 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "unicode-and-script-correctness/summary-paragraph-unicode-fidelity-and-script-correctness-are-core-localizatio-749b95c5-1",
       "sourceHash": "749b95c594d794ace1876a6db29cd82ea90d00b9892d5dfdd718bda32edc5c7a",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "unicode-и-исправност-на-скрипта/резиме-paragraph-unicode-верноста-и-исправноста-на-скриптата-се-основните-бар-592b101e-1",
+      "translationHash": "592b101e6ce3035578525999679147c9733f814e63717e09353eb903ce8418c8",
       "blockType": "paragraph",
       "headingPath": [
         "Unicode and Script Correctness",
@@ -59,9 +59,12 @@
         14,
         14
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "unicode-and-script-correctness/core-rules-heading-core-rules-a05cbd9d-1",
@@ -81,14 +84,14 @@
         16,
         16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "unicode-and-script-correctness/core-rules-list-do-not-replace-native-characters-with-ascii-approximations-b987403f-1",
       "sourceHash": "b987403f9fe735d4936a21c11a31b6fbb9bfa7ba86e8ff778555c9b6ee946861",
-      "targetBlockId": "unicode-и-исправност-на-скрипта/поврзани-страници-list-list-9e0ba242-1",
-      "translationHash": "9e0ba242ac5a9b731934af759b510039daf40ee471bca8d1da8b67c93614be6f",
+      "targetBlockId": "unicode-и-исправност-на-скрипта/основни-правила-list-не-заменувај-мајчин-знаци-со-ascii-приближни-f6a216c7-1",
+      "translationHash": "f6a216c7cff0a77cb88a862b91c1ea5026720cdc3a1e387df615e4657b5b4065",
       "blockType": "list",
       "headingPath": [
         "Unicode and Script Correctness",
@@ -99,17 +102,17 @@
         21
       ],
       "targetLineRange": [
-        25,
-        27
+        18,
+        21
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "unicode-and-script-correctness/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "unicode-и-исправност-на-скрипта/поврзани-страници-heading-поврзани-страници-bd74261a-1",
+      "translationHash": "bd74261a918bd6dde7393f93095685d6d967bee05cbb40e8aca654bafa79fa0e",
       "blockType": "heading",
       "headingPath": [
         "Unicode and Script Correctness",
@@ -119,15 +122,18 @@
         23,
         23
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        23,
+        23
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "unicode-and-script-correctness/related-pages-list-list-9e0ba242-1",
       "sourceHash": "9e0ba242ac5a9b731934af759b510039daf40ee471bca8d1da8b67c93614be6f",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "unicode-и-исправност-на-скрипта/поврзани-страници-list-list-9e0ba242-1",
+      "translationHash": "9e0ba242ac5a9b731934af759b510039daf40ee471bca8d1da8b67c93614be6f",
       "blockType": "list",
       "headingPath": [
         "Unicode and Script Correctness",
@@ -137,9 +143,12 @@
         25,
         27
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        25,
+        27
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

@@ -70,7 +70,7 @@ Mehrsprachige Teilhabe ist keine politische Neuheit. Sie ist an vielen Orten ein
 
 ## Andere Sprachen
 
-- [English](../en/united-in-diversity-and-open-source.md)
+- [English](../de/united-in-diversity-and-open-source.md)
 - [Slovenščina](../sl/united-in-diversity-and-open-source.md)
 - [Hrvatski](../hr/united-in-diversity-and-open-source.md)
 - [Bosanski](../bs/united-in-diversity-and-open-source.md)

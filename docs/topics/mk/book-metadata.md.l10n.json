@@ -7,8 +7,8 @@
     {
       "blockId": "book-metadata-heading-book-metadata-b057de24-1",
       "sourceHash": "b057de24ef51aa0170bfedbfbc8f5977b9bfbabf7568bb02efa542f2ca31c88f",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "метаподатоци-за-книга-heading-метаподатоци-за-книга-78fcf6a0-1",
+      "translationHash": "78fcf6a07c2c2909cbea799a0fb670662befe7d853b3a4ffd58ad9702e27d8c2",
       "blockType": "heading",
       "headingPath": [
         "Book Metadata"
@@ -17,15 +17,18 @@
         16,
         16
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "book-metadata-paragraph-book-metadata-is-the-descriptive-information-used-to-identif-2912162e-1",
       "sourceHash": "2912162e940265231b9bb23a0a18b61051d0621d14462d7f271e4fcc6e97e7a7",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "метаподатоци-за-книга-paragraph-метаподатоците-за-книга-се-описни-информации-што-се-користат-918f16ef-1",
+      "translationHash": "918f16ef7894993bc73528679588f6327fb522936337b41c4cc6e124a83572ba",
       "blockType": "paragraph",
       "headingPath": [
         "Book Metadata"
@@ -34,15 +37,18 @@
         18,
         18
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "book-metadata-paragraph-metadata-matters-because-users-rarely-make-decisions-from-id-cd2fa152-1",
       "sourceHash": "cd2fa152f877335f87c4c04e6c3a26a04f1fa98157b3eb74076b8622a6bc071e",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "метаподатоци-за-книга-paragraph-метаподатоците-се-важни-затоа-што-корисниците-ретко-носат-од-7415ebb5-1",
+      "translationHash": "7415ebb50546ad87c796a115e7f75b03c587c7fbf4d3c2d3e9981afed10b86ef",
       "blockType": "paragraph",
       "headingPath": [
         "Book Metadata"
@@ -51,15 +57,18 @@
         20,
         20
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "book-metadata-paragraph-no-single-field-is-sufficient-on-its-own-isbn-is-useful-but--a6ce8030-1",
       "sourceHash": "a6ce8030c5dd2a1ff9badf7428b201408995eb3296b6226840b5d96d47fd9159",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "метаподатоци-за-книга-paragraph-ниту-едно-поединечно-поле-не-е-доволно-само-по-себе-isbn-е-к-12d95eac-1",
+      "translationHash": "12d95eacc831b3e58e3bd9642e5c071771560bac4262fecda931891dcc0d2bb4",
       "blockType": "paragraph",
       "headingPath": [
         "Book Metadata"
@@ -68,15 +77,18 @@
         22,
         22
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "book-metadata-paragraph-in-letbooks-metadata-is-also-tied-to-the-distinction-between-3e25d2b0-1",
       "sourceHash": "3e25d2b0950a3b99f7492ea5269a60ab3a308fa81b5df02b3adc85756222d0c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "метаподатоци-за-книга-paragraph-во-let-books-метаподатоците-се-врзани-и-со-разликата-меѓу-би-cfc3cd71-1",
+      "translationHash": "cfc3cd71a32a872a854630164cd66eb877df2030938c59b20303fbaefe3d3d4d",
       "blockType": "paragraph",
       "headingPath": [
         "Book Metadata"
@@ -85,9 +97,12 @@
         24,
         24
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "book-metadata-paragraph-for-a-practical-example-of-how-isbn-based-lookup-fits-into-a-9aaccddd-1",
@@ -106,8 +121,8 @@
         26,
         26
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

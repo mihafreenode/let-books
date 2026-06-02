@@ -1,17 +1,17 @@
 ---
-title: "Lokalizacija u mjerilu"
+title: "Lokalizacija u velikom opsegu"
 summary: >-
-  Lokalizacija na razini je praksa tretiranja višejezičnog sadržaja kao dizajniranog sustava koji pokriva pisanje, upravljanje, imovinu, pristupačnost, provjeru valjanosti i pregled.
+  Lokalizacija u velikom opsegu praksa je tretiranja višejezičnog objavljivanja kao sustava povratne sprege i dugoročnog sustava znanja, a ne kao jednokratnog prevoditeljskog zadatka.
 topics:
   - localization
   - engineering-systems
   - governance
 ---
-# Lokalizacija u mjerilu
+# Lokalizacija u velikom opsegu
 
 ## Sažetak
 
-Lokalizacija na razini je praksa tretiranja višejezičnog sadržaja kao dizajniranog sustava koji pokriva pisanje, upravljanje, imovinu, pristupačnost, provjeru valjanosti i pregled.
+Lokalizacija u velikom opsegu praksa je tretiranja višejezičnog objavljivanja kao sustava povratne sprege i dugoročnog sustava znanja, a ne kao jednokratnog prevoditeljskog zadatka.
 
 ## Osnovna ideja
 
@@ -20,25 +20,39 @@ Lokalizacija je šira od prijevoda.
 Uključuje:
 
 - pisanje izvora
-- terminologija
+- terminologiju
+- metapodatke
 - navigacija
-- tekst o pristupačnosti
-- dijagrami i snimke ekrana
-- metapodaci
+- tekst pristupačnosti
+- dijagrame i snimke zaslona
 - pregled tijeka rada
 - CI i QA
 
-## Zašto je to važno
+## Mjerodavni priručnik
 
-Projekti koji odgađaju lokalizaciju obično otkrivaju da su njihova informacijska arhitektura, snimke zaslona i pretpostavke testiranja već u engleskom obliku.
+Središnji operativni model za ovu inicijativu sada se nalazi u:
 
-## Let Books kontekst
+- `../localization-at-scale-program.md`
 
-Let Books je eksplicitno višejezičan u smjernicama proizvoda, dokumentaciji i očekivanjima korisničkog sučelja. Zbog toga je arhitektura lokalizacije glavna briga proizvoda.
+Taj priručnik definira:
+
+- zašto je višejezično objavljivanje važno
+- zašto je lokalizacija sustav, a ne projekt
+- kako se AI uklapa u povratne petlje
+- model kvalitete pokrivenosti, cjelovitosti, kvalitete i svježine
+- lokalizacijski dug i otvorene klase grešaka
+- sanaciju po načelu source-first i tijek rada za AI agente
+- lokalizacijsko odstupanje i zrelost repozitorija
+- detaljni korpus nalaza pregleda izvornih govornika
+
+## Praktično pravilo
+
+Lokalizirana stranica nije dovršena dok nije lokaliziran sav sadržaj koji čitatelj vidi, uključujući sažetke, oznake, glavni tekst, natpise, dijagrame, alternativni tekst i povezane sadržaje.
 
 ## Povezane stranice
 
+- `../localization-at-scale-program.md`
 - `language-support-matrix.md`
 - `localization-maturity-model.md`
+- `translation-quality-assurance.md`
 - `../learning/how-to-build-a-localization-pipeline.md`
-- `../blog/en/localization-at-scale.md`

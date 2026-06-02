@@ -7,8 +7,8 @@
     {
       "blockId": "localization-governance-heading-localization-governance-9b4eda00-1",
       "sourceHash": "9b4eda0032a7c7c98358df2a284edb64967b73c44e6476b572168bdcfe077e8f",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "управување-со-локализација-heading-управување-со-локализација-08412112-1",
+      "translationHash": "08412112c8a52d4d0c6166485a070f3ad69ba4d6c5c2d2bdc8ffb0966cca63a4",
       "blockType": "heading",
       "headingPath": [
         "Localization Governance"
@@ -17,9 +17,12 @@
         10,
         10
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "localization-governance/summary-heading-summary-30ac03ff-1",
@@ -39,14 +42,14 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "localization-governance/summary-paragraph-localization-governance-defines-who-can-propose-review-appro-1619e5e5-1",
       "sourceHash": "1619e5e575e429bccbc10d254ea7df0e9afb4db2337fdfc0172f56551ea80c1f",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "управување-со-локализација/резиме-paragraph-управувањето-со-локализацијата-дефинира-кој-може-да-предлага-de4aae77-1",
+      "translationHash": "de4aae776df0e2a899d93af4c34a6e3fcbfb953dd68a99f99a4006afd080fe23",
       "blockType": "paragraph",
       "headingPath": [
         "Localization Governance",
@@ -56,15 +59,18 @@
         14,
         14
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-governance/governance-areas-heading-governance-areas-65030466-1",
       "sourceHash": "650304661d4c708da4dda78e91a82f5265134c2fcafd8a85b50c0d57cc8337bd",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "управување-со-локализација/области-на-управување-heading-области-на-управување-a0d54449-1",
+      "translationHash": "a0d54449a9a20de04160ee07eda89386012158a92979732596cdf9cf44653c4f",
       "blockType": "heading",
       "headingPath": [
         "Localization Governance",
@@ -74,15 +80,18 @@
         16,
         16
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "localization-governance/governance-areas-list-source-ownership-d31b7282-1",
       "sourceHash": "d31b72821d332e8759002758bdeb2a158e8a2569a7c932ded72260f17dc9412f",
-      "targetBlockId": "управување-со-локализација/поврзани-страници-list-list-977bc611-1",
-      "translationHash": "977bc611c0b6d2038f2a6e339f087d250b9ef16787ec678b5fca5ad36c789808",
+      "targetBlockId": "управување-со-локализација/области-на-управување-list-сопственост-на-изворот-df557e75-1",
+      "translationHash": "df557e7589cad607e4f5b2ba5a526e3e33994ca9e952f9cd87ac45830d01f186",
       "blockType": "list",
       "headingPath": [
         "Localization Governance",
@@ -93,11 +102,11 @@
         23
       ],
       "targetLineRange": [
-        33,
-        36
+        18,
+        23
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-governance/why-it-matters-heading-why-it-matters-8bab3e63-1",
@@ -117,14 +126,14 @@
         25,
         25
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "localization-governance/why-it-matters-paragraph-without-governance-multilingual-content-drifts-in-tone-termi-394c21e0-1",
       "sourceHash": "394c21e0ac794b8a7460604dcc732c9bc9261a012ba5aaffdb94a483fb3605f3",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "управување-со-локализација/зошто-е-важно-paragraph-без-управување-повеќејазичните-содржини-се-менуваат-во-тонот-8dfb460e-1",
+      "translationHash": "8dfb460e9d6b790ebb7138260b7a79d7fc04526cfdcd77eb729c727389068d98",
       "blockType": "paragraph",
       "headingPath": [
         "Localization Governance",
@@ -134,15 +143,18 @@
         27,
         27
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        27,
+        27
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-governance/why-it-matters-paragraph-review-governance-should-also-define-how-ai-assisted-correct-de3d34cf-1",
       "sourceHash": "de3d34cf85220c3b6adf00e285ee8aca16c6bde3e90cbe282f345543c605b44c",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "управување-со-локализација/зошто-е-важно-paragraph-управувањето-со-прегледот-треба-исто-така-да-дефинира-како-п-8142e190-1",
+      "translationHash": "8142e1906bfe9a6afd8fe7d3ee8eb99b0b3cf0c56ebf791ab492487096471c34",
       "blockType": "paragraph",
       "headingPath": [
         "Localization Governance",
@@ -152,15 +164,18 @@
         29,
         29
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        29,
+        29
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-governance/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "управување-со-локализација/поврзани-страници-heading-поврзани-страници-bd74261a-1",
+      "translationHash": "bd74261a918bd6dde7393f93095685d6d967bee05cbb40e8aca654bafa79fa0e",
       "blockType": "heading",
       "headingPath": [
         "Localization Governance",
@@ -170,15 +185,18 @@
         31,
         31
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        31,
+        31
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "localization-governance/related-pages-list-list-977bc611-1",
       "sourceHash": "977bc611c0b6d2038f2a6e339f087d250b9ef16787ec678b5fca5ad36c789808",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "управување-со-локализација/поврзани-страници-list-list-977bc611-1",
+      "translationHash": "977bc611c0b6d2038f2a6e339f087d250b9ef16787ec678b5fca5ad36c789808",
       "blockType": "list",
       "headingPath": [
         "Localization Governance",
@@ -188,9 +206,12 @@
         33,
         36
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        33,
+        36
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

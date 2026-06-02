@@ -6,6 +6,6 @@ status: draft
 
 # Mapa de fuentes - Cuándo la demo es evidencia y cuándo no lo es
 
-Esta variante localizada remite al mapa canónico de fuentes en inglés: [../en/when-the-demo-is-evidence-and-when-it-is-not.md](../en/when-the-demo-is-evidence-and-when-it-is-not.md).
+Esta variante localizada remite al mapa canónico de fuentes en inglés: [../en/when-the-demo-is-evidence-and-when-it-is-not.md](../es/when-the-demo-is-evidence-and-when-it-is-not.md).
 
 El artículo en español debería mantenerse alineado con las afirmaciones, evidencias y límites editoriales documentados en la variante canónica en inglés.

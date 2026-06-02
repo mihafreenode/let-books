@@ -1,5 +1,7 @@
 ---
 title: "Alignement entre démo et spécification"
+summary: >-
+  L'alignement entre la démo et la spécification est la pratique qui consiste à garder le comportement du prototype ou de la démo cohérent avec l'intention produit documentée, tout en mettant explicitement à jour la spécification lorsqu'une démo révèle un meilleur flux de travail.
 topics:
   - demo-alignment
   - spec-driven-development

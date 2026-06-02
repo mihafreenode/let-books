@@ -65,7 +65,7 @@ Softver samo na engleskom često je jeftiniji samo ako projekt zanemari skrivene
 
 ## Drugi jezici
 
-- [English](../en/the-cost-of-english-only-software.md)
+- [English](../hr/the-cost-of-english-only-software.md)
 - [Slovenščina](../sl/the-cost-of-english-only-software.md)
 - [Bosanski](../bs/the-cost-of-english-only-software.md)
 - [Srpski (latinica)](../sr-Latn/the-cost-of-english-only-software.md)

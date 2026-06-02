@@ -79,6 +79,56 @@ C'est exactement le type d'exemple qui explique pourquoi la relecture humaine re
 
 Même lorsque le sens général est préservé, les traductions générées par IA peuvent nécessiter une relecture par un locuteur natif pour corriger des problèmes subtils de grammaire, de modalité, de terminologie et de registre propre au domaine. Ces problèmes sont souvent difficiles à détecter à l'aide des seules métriques automatiques de qualité.
 
+## Un exemple par catégorie de relecture
+
+Des catégories différentes de constats de relecture exigent des formes différentes de jugement humain.
+
+### Modalité et langage de politique
+
+Brouillon initial de l'IA :
+
+`Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
+
+Correction d'un locuteur natif :
+
+`Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
+
+Leçon :
+
+- préserver le sens ne suffit pas lorsque la grammaire, la modalité et la formulation de la politique sonnent encore faux pour des locuteurs natifs
+
+### Optimisation du texte source pour la localisation
+
+Titre anglais d'origine :
+
+`The hidden exclusion of English-only systems`
+
+Titre anglais amélioré :
+
+`Why English-only systems exclude people`
+
+Leçon :
+
+- certains problèmes de localisation devraient être résolus en améliorant le texte source plutôt qu'en forçant chaque langue cible à compenser une formulation anglaise trop condensée
+
+### Faux ami en terminologie technique
+
+Expression anglaise d'origine :
+
+`benchmark fixtures`
+
+Localisation slovène incorrecte :
+
+`primerjalne napeljave`
+
+Localisation slovène améliorée :
+
+`referenčni primeri za primerjalno vrednotenje`
+
+Leçon :
+
+- les termes techniques doivent être traduits selon leur sens de domaine ; dans les contextes de test et d'évaluation, `fixture` signifie un exemple de référence réutilisable ou un cas de test, et non une infrastructure physique
+
 ## Conclusion durable
 
 L'avenir n'est pas traducteur contre IA. L'avenir pratique est une localisation assistée par IA, avec des étapes de relecture claires et des attentes de qualité transparentes.
@@ -92,4 +142,4 @@ L'avenir n'est pas traducteur contre IA. L'avenir pratique est une localisation 
 
 ## Autres langues
 
-- English (../en/ai-will-not-replace-translators.md)
+L'anglais est la langue canonique de la première publication de cet article. Des chemins prêts pour la traduction sont réservés à toutes les localisations prises en charge par Let Books.

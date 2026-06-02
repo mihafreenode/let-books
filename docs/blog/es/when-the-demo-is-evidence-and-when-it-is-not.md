@@ -40,11 +40,17 @@ status: draft
 
 Una demo es poderosa porque convierte ideas abstractas en algo a lo que la gente puede reaccionar. Un flujo que parece razonable en una nota puede mostrar inmediatamente fricción real en un teléfono o en un almacén.
 
-Ese es el lado bueno de la demo. El lado peligroso es que, una vez que el prototipo existe, la gente suele empezar a tratar su comportamiento como si fuera la verdad del producto.
+Ese es el lado bueno de las demos.
+
+El lado peligroso es que, una vez que existe un prototipo, la gente suele empezar a tratar su comportamiento como si fuera la verdad del producto, tanto si alguien tomó oficialmente esa decisión como si no.
 
 ## Por qué los prototipos se convierten en autoridad accidental
 
-Las cosas visibles son persuasivas. Una pantalla que funciona suele adquirir más autoridad informal que una regla escrita, incluso cuando solo se construyó como experimento.
+Las cosas visibles son persuasivas. Una pantalla que funciona suele tener más autoridad informal que una regla escrita, incluso cuando esa pantalla se construyó como experimento.
+
+Eso es comprensible. La gente confía en lo que puede ver.
+
+Pero en el trabajo de producto, especialmente en el trabajo de producto asistido por IA, ese instinto puede crear confusión.
 
 La demo puede mostrar:
 
@@ -57,18 +63,22 @@ Nada de eso significa automáticamente que la demo deba redefinir el producto.
 
 ## Cuándo la demo es una buena evidencia
 
-La demo es útil cuando ayuda a responder preguntas como:
+La demo es evidencia valiosa cuando ayuda a responder preguntas como:
 
-- si el flujo se siente usable
-- si el diseño móvil apoya la tarea real
-- si el flujo de escaneo se entiende
-- cómo reaccionan los usuarios al orden de los pasos
+- ¿El flujo resulta usable?
+- ¿El diseño móvil apoya la tarea real?
+- ¿Se entiende el flujo de escaneo o de entrada?
+- ¿Los usuarios reaccionan positiva o negativamente a la secuencia de pasos?
 
-Entonces la demo es evidencia de usabilidad, viabilidad y comunicación.
+En esos casos, la demo es evidencia sobre usabilidad, viabilidad, secuenciación y comunicación.
+
+Ese tipo de evidencia es extremadamente útil.
 
 ## Cuándo la demo no es la autoridad
 
-La demo no debería imponerse silenciosamente sobre la especificación del producto. No es la autoridad principal adecuada para preguntas como:
+La demo no debería imponerse silenciosamente sobre la especificación del producto.
+
+No es la autoridad primaria adecuada para preguntas como:
 
 - si este flujo está oficialmente dentro del alcance
 - si es un atajo temporal o un compromiso de producto
@@ -79,15 +89,26 @@ Esas preguntas requieren una decisión explícita y una actualización de la doc
 
 ## La regla de Let Books es un buen modelo
 
-El repositorio ya define una regla sana: la escritura pública debe usar especificaciones y documentación como evidencia canónica, mientras que la demo o el comportamiento de la aplicación pueden mencionarse como estado de implementación.
+El repositorio ya contiene una regla editorial sana para esto. La escritura pública debería tratar las especificaciones y la documentación como evidencia canónica, mientras que el comportamiento de la demo o de la aplicación puede mencionarse como estado de implementación.
 
-Eso impide que los prototipos se conviertan accidentalmente en un mecanismo de gobierno del producto.
+Esa regla importa porque evita una gobernanza accidental por prototipo.
+
+Si la demo estática revela un mejor flujo para cajas, un mejor flujo móvil o una mejor interacción de intake, eso es valioso. Pero ese mejor flujo solo debería convertirse en verdadera autoridad después de actualizar la especificación y la documentación relacionada.
 
 ## Por qué esto importa aún más con IA
 
-La IA amplifica lo que parece más concreto en el contexto actual. Si el artefacto más concreto es una demo, asistentes y personas copiarán rápidamente su comportamiento sin preguntarse si respeta los límites del producto.
+La IA amplifica lo que parece más concreto en el contexto actual.
 
-Por eso los equipos necesitan un orden visible de autoridad:
+Si lo más concreto en el repositorio es una demo, los asistentes e incluso los colaboradores humanos pueden copiar su comportamiento sin preguntarse si coincide con el límite de producto previsto.
+
+Eso puede ser útil cuando la demo ya está alineada.
+También puede propagar rápidamente supuestos temporales cuando no lo está.
+
+Por eso los equipos necesitan un orden visible de autoridad.
+
+## Una cadena práctica de autoridad
+
+Para un trabajo como este, un orden útil es:
 
 1. especificación del producto
 2. directrices de implementación
@@ -95,7 +116,7 @@ Por eso los equipos necesitan un orden visible de autoridad:
 4. demo o prototipo
 5. pruebas y validación
 
-La demo sigue siendo importante. Simplemente importa dentro de un sistema documentado, en lugar de sustituirlo.
+La demo sigue importando. Simplemente importa dentro de un sistema documentado, en lugar de sustituirlo.
 
 ## Qué hacer cuando la demo te enseña algo nuevo
 
@@ -120,11 +141,12 @@ Los estudiantes deben aprender que los prototipos no se justifican solos. Una pr
 
 ## La lección duradera
 
-La demo es valiosa porque hace que las ideas de producto se puedan poner a prueba. Se vuelve peligrosa cuando se convierte silenciosamente en política. El modelo sano es simple: que la demo informe al producto, pero que las especificaciones y la documentación registren la decisión final.
+Las demos son valiosas porque hacen que las ideas de producto sean comprobables. Se vuelven peligrosas cuando pasan silenciosamente a ser política.
+
+El modelo más sano es simple: dejar que las demos informen al producto, pero hacer que las especificaciones y la documentación registren la decisión final.
 
 ## Otros idiomas
 
-- [English](../en/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Shqip](../sq/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Deutsch](../de/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Italiano](../it/when-the-demo-is-evidence-and-when-it-is-not.md)
@@ -135,3 +157,4 @@ La demo es valiosa porque hace que las ideas de producto se puedan poner a prueb
 - [Српски (ћирилица)](../sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Македонски](../mk/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Français](../fr/when-the-demo-is-evidence-and-when-it-is-not.md)
+- [Español](../es/when-the-demo-is-evidence-and-when-it-is-not.md)

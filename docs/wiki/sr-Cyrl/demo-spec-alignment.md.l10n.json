@@ -7,8 +7,8 @@
     {
       "blockId": "demo-and-spec-alignment-heading-demo-and-spec-alignment-2f5ae831-1",
       "sourceHash": "2f5ae83122ee6b70d63153f901d4519f9a104097209d53b54ea00bc8808ee397",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације-heading-усклађеност-између-дема-и-спецификације-96cb0150-1",
+      "translationHash": "96cb01507cb6c8d7a1ebb085d729307e75baa90b10334f49623ca85e93356997",
       "blockType": "heading",
       "headingPath": [
         "Demo and Spec Alignment"
@@ -17,9 +17,12 @@
         10,
         10
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/summary-heading-summary-30ac03ff-1",
@@ -36,17 +39,17 @@
         12
       ],
       "targetLineRange": [
-        10,
-        10
+        12,
+        12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/summary-paragraph-demo-and-spec-alignment-is-the-practice-of-keeping-prototype-1ec17cbd-1",
       "sourceHash": "1ec17cbd95775378458feecc8ede15bedd32c0fc8e4968916de1ea5898c3ae36",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/сажетак-paragraph-усклађеност-између-дема-и-спецификације-је-пракса-одржавања--bf90b208-1",
+      "translationHash": "bf90b20896a7ac73e45ab39736e32bed0242267419c01b57fb63057a2ddf7e35",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -56,9 +59,12 @@
         14,
         14
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/why-this-matters-heading-why-this-matters-7e1d357b-1",
@@ -75,17 +81,17 @@
         16
       ],
       "targetLineRange": [
-        14,
-        14
+        16,
+        16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/why-this-matters-paragraph-demos-are-useful-because-they-make-workflows-concrete-they-a-1c6915a3-1",
       "sourceHash": "1c6915a30d71aeb3693eacaf0b5fa9c195e87a12b48e0a40b6af3dbdf32204a8",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/зашто-је-важна-paragraph-демо-је-користан-јер-токове-рада-чини-конкретним-ризик-наста-857a849f-1",
+      "translationHash": "857a849f9942972c05ca9778a8648c1343cd85d09368c99da9aacc5c6d05deed",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -95,15 +101,18 @@
         18,
         18
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/recommended-authority-order-heading-recommended-authority-order-e1bc3002-1",
       "sourceHash": "e1bc3002ed6b2f55f78820f34e0056b2bf43cd1eae32dbf217f2b5934a095023",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/препоручени-редослед-ауторитета-heading-препоручени-редослед-ауторитета-86a1653d-1",
+      "translationHash": "86a1653d43b3b600f52c9688f5dfb0d70f8fd4904e2f1d967edd0b42e49da014",
       "blockType": "heading",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -113,15 +122,18 @@
         20,
         20
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/recommended-authority-order-list-1-product-specification-4be1b454-1",
       "sourceHash": "4be1b454c900c2cb84c8eb92ca33a81cc24a63936fd5204c1d25f279416a7a67",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/препоручени-редослед-ауторитета-list-1-производна-спецификација-7942f1d7-1",
+      "translationHash": "7942f1d78054e837bcea231ac3db4fae88624721b52e73281e948fc1305b52de",
       "blockType": "list",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -131,15 +143,18 @@
         22,
         26
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        22,
+        26
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/recommended-authority-order-paragraph-this-order-does-not-mean-demos-are-unimportant-it-means-demo-8ca72056-1",
       "sourceHash": "8ca720561efc4db20be31961fdd7407e6663e268132b63ccf3d624f1129a3d98",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/препоручени-редослед-ауторитета-paragraph-то-не-значи-да-демо-није-важан-значи-да-га-треба-тумачити-ун-f2f1234c-1",
+      "translationHash": "f2f1234c371baab181cea302ddb8d65a21021217b1268a558a4d92929f30dbc5",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -149,15 +164,18 @@
         28,
         28
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/healthy-demo-usage-heading-healthy-demo-usage-2e762a6c-1",
       "sourceHash": "2e762a6c9d9ecaa65eb89bb29e39f7043bd87ff55f506e29542ffb80f3ac2259",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/здрава-употреба-дема-heading-здрава-употреба-дема-8e9ebf75-1",
+      "translationHash": "8e9ebf750b6af17f80fa61591734558e1781b4d59672b906e9935c429e960906",
       "blockType": "heading",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -167,15 +185,18 @@
         30,
         30
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/healthy-demo-usage-paragraph-use-demos-to-5593a30e-1",
       "sourceHash": "5593a30ebc8775053d7beb0dd8693f3c23d623801fc0877f063ce77cdec36deb",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/здрава-употреба-дема-paragraph-демо-користите-за-b4660175-1",
+      "translationHash": "b4660175ac60ad89e0612cf33b3de82855d06836d66b4a5bd7c14e3235c58ce6",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -185,15 +206,18 @@
         32,
         32
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/healthy-demo-usage-list-expose-workflow-problems-6c8436e5-1",
       "sourceHash": "6c8436e5ce818c91877cc3912f4ea4b54b65327eb9edf5b6eb3ba74852d255eb",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/здрава-употреба-дема-list-откривање-проблема-у-току-рада-d27db111-1",
+      "translationHash": "d27db11195eeb52558d36c13b2ccb69219ec530d7dea6d70f542a7ceb678b251",
       "blockType": "list",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -203,15 +227,18 @@
         34,
         37
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        34,
+        37
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/healthy-demo-usage-paragraph-do-not-use-demos-as-silent-replacements-for-product-decision-a6b6f6ae-1",
       "sourceHash": "a6b6f6ae3b60384ea524e3b42bc58f54b590d2f504621e6e3b15c42960119555",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/здрава-употреба-дема-paragraph-демо-не-треба-користити-као-тиху-замену-за-производне-одлуке-495ef3f9-1",
+      "translationHash": "495ef3f99209df63268169563292cc005e833c092a5c0719aea9f14e33e71a12",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -221,9 +248,12 @@
         39,
         39
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/when-the-demo-should-lead-heading-when-the-demo-should-lead-a78d9ae6-1",
@@ -240,17 +270,17 @@
         41
       ],
       "targetLineRange": [
-        39,
-        39
+        41,
+        41
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/when-the-demo-should-lead-paragraph-if-the-demo-reveals-a-clearly-better-workflow-the-team-shoul-f2efe601-1",
       "sourceHash": "f2efe60120366e9ce6db309487cdefb1ded5cce578e2b583eaa3e3d426e9a726",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/када-демо-треба-да-води-paragraph-ако-демо-покаже-очигледно-бољи-ток-рада-тим-треба-44050512-1",
+      "translationHash": "44050512798863b7e0da44b12469bdd2d9ac700608cac4e7569463114820860c",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -260,15 +290,18 @@
         43,
         43
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/when-the-demo-should-lead-list-1-review-the-change-intentionally-7f14ab93-1",
       "sourceHash": "7f14ab93974bd1387b5cda10c28dbc19f2819d3e67a4c66495cc583e9e6d9d5a",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/када-демо-треба-да-води-list-1-намерно-да-прегледа-промену-ea188f3e-1",
+      "translationHash": "ea188f3ee991a561b210cb7de04b3cb1e3fa8b0c7c5330412f6c9f62edb44480",
       "blockType": "list",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -278,15 +311,18 @@
         45,
         47
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        45,
+        47
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/when-the-demo-should-lead-paragraph-in-other-words-the-demo-may-inspire-the-next-decision-but-th-1212aa9b-1",
       "sourceHash": "1212aa9b553e6a65f3e0a3cf74b29be9eab6395ea6bf339f4e86b2c1f5183fd7",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/када-демо-треба-да-води-paragraph-другим-речима-демо-може-да-инспирише-следећу-одлуку-али-ажур-daf2c2d7-1",
+      "translationHash": "daf2c2d793ce7bf9d0ef8493571f67b6d573a302cc5622de8ad774698ea82195",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -296,9 +332,12 @@
         49,
         49
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        49,
+        49
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/let-books-context-heading-let-books-context-d3de6b63-1",
@@ -315,17 +354,17 @@
         51
       ],
       "targetLineRange": [
-        47,
-        47
+        51,
+        51
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/let-books-context-paragraph-the-let-books-repository-already-distinguishes-between-canon-03a40f89-1",
       "sourceHash": "03a40f89df6c7ee25001450f461f4c618cc664476359833449848990bc9dd4b8",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/контекст-let-books-paragraph-у-репозиторијуму-let-books-канонски-документациони-извори-ве-e44d614a-1",
+      "translationHash": "e44d614ae7441e127d02fee58c314ea4be92d4e3849cfe984e978a017a6b9047",
       "blockType": "paragraph",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -335,15 +374,18 @@
         53,
         53
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        53,
+        53
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "demo-and-spec-alignment/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/повезане-странице-heading-повезане-странице-09b387a1-1",
+      "translationHash": "09b387a11237f12e04af937bc632541ea557c5e8b0bdca3ccebcc5b0cf308f27",
       "blockType": "heading",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -353,15 +395,18 @@
         55,
         55
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        55,
+        55
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "demo-and-spec-alignment/related-pages-list-list-f75cd961-1",
       "sourceHash": "f75cd9613fd97b2b13b1dac908eeaac48267f155586b84f762af10c222d22923",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "усклађеност-између-дема-и-спецификације/повезане-странице-list-list-46996dc1-1",
+      "translationHash": "46996dc177badf87c868541041d28eb3aac9d0beab1017501b7d55ab54d74a13",
       "blockType": "list",
       "headingPath": [
         "Demo and Spec Alignment",
@@ -371,9 +416,12 @@
         57,
         59
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        57,
+        59
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

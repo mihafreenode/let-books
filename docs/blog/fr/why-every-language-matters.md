@@ -76,4 +76,4 @@ Toutes les langues n'ont pas besoin du même niveau de maturité le premier jour
 
 ## Autres langues
 
-- English (../en/why-every-language-matters.md)
+L'anglais est la langue canonique de la première publication de cet article. Des chemins prêts pour la traduction sont réservés à toutes les localisations prises en charge par Let Books.

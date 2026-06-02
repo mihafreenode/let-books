@@ -66,7 +66,7 @@ Višejezični proizvod nije pristupačan po zadanim postavkama, a pristupačan p
 
 ## Drugi jezici
 
-- [English](../en/multilingual-accessibility.md)
+- [English](../hr/multilingual-accessibility.md)
 - [Slovenščina](../sl/multilingual-accessibility.md)
 - [Bosanski](../bs/multilingual-accessibility.md)
 - [Srpski (latinica)](../sr-Latn/multilingual-accessibility.md)

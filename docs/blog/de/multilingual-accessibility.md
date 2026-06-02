@@ -66,7 +66,7 @@ Ein mehrsprachiges Produkt ist nicht automatisch barrierefrei, und ein barrieref
 
 ## Andere Sprachen
 
-- [English](../en/multilingual-accessibility.md)
+- [English](../de/multilingual-accessibility.md)
 - [Slovenščina](../sl/multilingual-accessibility.md)
 - [Hrvatski](../hr/multilingual-accessibility.md)
 - [Bosanski](../bs/multilingual-accessibility.md)

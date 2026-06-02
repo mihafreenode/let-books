@@ -109,6 +109,8 @@ Za ponovno uporabno pregledovalno delo zabeleži:
 
 ## Ponovno uporabne lekcije iz slovenskega pregleda
 
+Vzorec slovenske študije primera je široko ponovno uporaben tudi v drugih jezikih:
+
 - slovnični pomen je lahko približno pravilen, pa stavek še vedno ni objavljiv za naravnega govorca
 - modalne konstrukcije so posebej občutljive na dobesedni prevod
 - terminologija in pravilniška formulacija pogosto potrebujeta domensko preoblikovanje

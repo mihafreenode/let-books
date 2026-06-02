@@ -48,29 +48,38 @@ AI mund të gjenerojë implementim nga qëllim jo i plotë. Kjo shpesh paraqitet
 
 Nëse dokumentimi është i dobët ose i vjetruar, njerëz dhe mjete të ndryshme do të nxjerrin produkte të ndryshme nga i njëjti depo.
 
+Një bashkëpunëtor mund të ndjekë ndërfaqen aktuale të përdoruesit.
+Një tjetër mund të ndjekë një README të vjetër.
+Një asistent AI mund të ndjekë skedarin më të afërt dhe të shpikë pjesën tjetër.
+
+Problemi nuk është vetëm saktësia në nivel kodi. Problemi është nëse projekti vazhdon të përshkruajë një produkt në vend të disa supozimeve që mbivendosen.
+
 ## Dokumentimi kryen katër punë produkti
 
-Dokumentimi:
+Dokumentimi i mirë bën shumë më tepër sesa të shpjegojë ndërfaqen pas faktit.
 
-- mban qëllimin
-- vendos pritshmëri
-- ul koston e koordinimit
-- mbështet besimin
+Së pari, mban qëllimin. U tregon kontribuesve të ardhshëm se çfarë po përpiqet të arrijë produkti dhe në çfarë shprehimisht nuk po përpiqet të shndërrohet.
 
-Ai u tregon bashkëpunëtorëve, institucioneve, rishikuesve dhe ndihmësve AI çfarë projekti po përpiqet të arrijë dhe çfarë nuk duhet të bëhet.
+Së dyti, vendos pritshmëri. Lexuesit mund të kuptojnë çfarë ekziston tani, çfarë është planifikuar dhe çfarë nuk duhet përshkruar si tashmë e implementuar.
+
+Së treti, ul koston e koordinimit. Kontribuesit e rinj, rishikuesit, institucionet dhe asistentët AI mund të orientohen pa e rindërtuar projektin nga fragmente.
+
+Së katërti, mbështet besimin. Një projekt që ndan qartë gjendjen aktuale, drejtimin e planifikuar dhe rrjedhën eksperimentale të punës është më i lehtë për t'u vlerësuar dhe më i lehtë për t'u mirëmbajtur.
 
 ## Let Books tashmë është ndërtuar kështu
 
-Në depon Let Books:
+Depoja Let Books tashmë e demonstron këtë qasje të shtresëzuar.
 
-- `AGENTS.md` përcakton qëllimin e produktit dhe rrjedhat e punës
-- `AGENTS-Implementation.md` përcakton rregullat taktike të zbatimit
-- `README.md` përshkruan me ndershmëri gjendjen aktuale
-- `docs/` përcakton rregullat e publikimit, shkrimit, lokalizimit dhe evidencës
+- `AGENTS.md` përcakton qëllimin e produktit, rrjedhat e punës, kufijtë e domenit dhe drejtimin afatgjatë.
+- `AGENTS-Implementation.md` përcakton rregullat taktike të implementimit dhe dokumentimit.
+- `README.md` shpjegon gjendjen aktuale të depos dhe dallon dorëzimet e tanishme nga planet e ardhshme.
+- `docs/` përcakton një platformë njohurish me rregulla publikimi, shkrimi, lokalizimi dhe hartëzimi të burimeve.
 
 Kjo do të thotë se dokumentimi këtu nuk është vetëm shpjegim. Ai është pjesë e mënyrës si funksionon projekti.
 
 ## Dokumentimi i vjetruar është borxh produkti
+
+Ekipet shpesh e njohin borxhin teknik vetëm kur ai shfaqet në kod. Por dokumentimi i vjetruar krijon një lloj të ngjashëm fërkimi.
 
 Dokumentimi i vjetruar çon në:
 
@@ -117,17 +126,19 @@ Ky dallim është dallimi midis dokumentacionit si koment dhe dokumentacionit si
 
 ## Mësimi i qëndrueshëm
 
-Dokumentimi nuk është i ndarë nga cilësia e produktit. Ai formëson implementimin, rishikimin, komunikimin, validimin dhe besimin afatgjatë. Në projektet e mbështetura nga AI, dokumentimi është pjesë e produktit sepse është pjesë e sistemit që pengon devijimin e produktit.
+Dokumentimi nuk është i ndarë nga cilësia e produktit.
+
+Ai formëson implementimin, rishikimin, komunikimin, validimin dhe besimin afatgjatë. Në projektet e mbështetura nga AI, dokumentimi është pjesë e produktit sepse është pjesë e sistemit që pengon devijimin e produktit.
 
 ## Gjuhë të tjera
 
-- [English](../en/documentation-is-part-of-the-product.md)
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)
 - [Hrvatski](../hr/documentation-is-part-of-the-product.md)
 - [Bosanski](../bs/documentation-is-part-of-the-product.md)
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
+- [Shqip](../sq/documentation-is-part-of-the-product.md)
 - [Deutsch](../de/documentation-is-part-of-the-product.md)
 - [Italiano](../it/documentation-is-part-of-the-product.md)
 - [Français](../fr/documentation-is-part-of-the-product.md)

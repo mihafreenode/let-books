@@ -7,6 +7,6 @@ status: draft
 
 # Dokumentacija je dio proizvoda - Mapa izvora
 
-Ova lokalizirana mapa izvora za članak "Dokumentacija je dio proizvoda" prati kanoničnu englesku mapu: [../en/documentation-is-part-of-the-product.md](../en/documentation-is-part-of-the-product.md).
+Ova lokalizirana mapa izvora za članak "Dokumentacija je dio proizvoda" prati kanoničnu englesku mapu: [../en/documentation-is-part-of-the-product.md](../hr/documentation-is-part-of-the-product.md).
 
 Lokalizirani članak treba ostati usklađen s kanoničnim engleskim tvrdnjama, dokazima i uredničkim granicama.

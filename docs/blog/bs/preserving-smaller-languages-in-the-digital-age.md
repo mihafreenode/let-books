@@ -59,7 +59,7 @@ Ako je projektu stalo do očuvanja znanja, trebalo bi mu biti stalo i do toga mo
 
 ## Drugi jezici
 
-- [English](../en/preserving-smaller-languages-in-the-digital-age.md)
+- [English](../bs/preserving-smaller-languages-in-the-digital-age.md)
 - [Slovenščina](../sl/preserving-smaller-languages-in-the-digital-age.md)
 - [Hrvatski](../hr/preserving-smaller-languages-in-the-digital-age.md)
 - [Srpski (latinica)](../sr-Latn/preserving-smaller-languages-in-the-digital-age.md)

@@ -52,6 +52,8 @@ En la práctica, la IA suele optimizar lo que en ese momento es más visible:
 
 Nada de eso significa automáticamente la decisión correcta de producto.
 
+Son atajos útiles para la generación. Pero no sustituyen el juicio de producto.
+
 ## Qué hace una buena especificación
 
 Una buena especificación cumple al menos cuatro funciones:
@@ -61,11 +63,28 @@ Una buena especificación cumple al menos cuatro funciones:
 - establece el criterio de revisión
 - sirve como memoria del equipo
 
+Primero, define el propósito. El equipo puede ver si una funcionalidad apoya el producto real o simplemente añade salida.
+
+Segundo, define límites. Aclara qué está dentro del alcance, qué está fuera del alcance, qué es opcional y qué debe seguir funcionando incluso cuando fallen sistemas opcionales.
+
+Tercero, define el criterio de revisión. En lugar de preguntar solo si un cambio funciona técnicamente, los revisores pueden preguntar si coincide con el flujo de trabajo previsto y con los compromisos del producto.
+
+Cuarto, actúa como memoria. Los sistemas de IA no mantienen por sí solos una memoria institucional estable. Una especificación en el repositorio sí.
+
 Esto es muy claro en Let Books. `AGENTS.md` insiste varias veces en que el flujo manual debe seguir siendo útil incluso sin servicios de IA de pago y en que las copias físicas de los libros no son lo mismo que los registros bibliográficos. No son detalles técnicos, sino límites de producto.
+
+No son detalles de implementación. Son límites de producto. Si un asistente de IA genera un flujo que bloquea la entrada manual o mezcla datos de la copia física con metadatos de la edición, el problema no es el estilo. El problema es la deriva del producto.
 
 ## Por qué la documentación no debe esperar
 
 Si la documentación está desactualizada o es confusa, personas y herramientas distintas deducirán productos distintos a partir del mismo repositorio. Una seguirá la demo, otra un README antiguo y otra el archivo más cercano.
+
+Sin documentación actual:
+
+- los prompts se vuelven incoherentes
+- la revisión se vuelve subjetiva
+- las demos empiezan a redefinir el producto por accidente
+- los futuros colaboradores heredan comportamientos sin saber si eran intencionales
 
 Por eso la documentación no es solo una explicación posterior. Es parte del sistema operativo del proyecto. En este repositorio, `README.md` describe el estado actual, `AGENTS.md` la intención del producto, `AGENTS-Implementation.md` las reglas tácticas y `docs/` las reglas de publicación y evidencia.
 
@@ -74,6 +93,8 @@ Por eso la documentación no es solo una explicación posterior. Es parte del si
 Una demo es útil porque muestra lo que existe y revela problemas del flujo de usuario. Pero no debería convertirse silenciosamente en la especificación del producto.
 
 Las reglas del repositorio ya distinguen entre especificaciones y documentación canónicas por un lado, y estado de implementación por otro. Si una demo revela un flujo mejor, hay que actualizar la especificación y la documentación, en lugar de dejar que la demo gane por sí sola.
+
+Si una demo revela un mejor flujo de trabajo, la respuesta no es dejar que gane en silencio. La respuesta es actualizar la especificación, la documentación y el criterio de revisión para que ese mejor flujo pase a ser intencional.
 
 ## Markdown, pruebas y CI forman una cadena
 
@@ -86,6 +107,8 @@ En un desarrollo guiado por especificaciones, estas capas no están separadas.
 - CI aplica las reglas de forma regular.
 
 Juntas crean una memoria de producto que sobrevive a la velocidad del desarrollo.
+
+Cada capa es incompleta por sí sola. Juntas crean una memoria de producto que sobrevive a la velocidad, la iteración y los cambios de equipo.
 
 ## Lo que esto significa para los equipos que usan IA
 
@@ -111,7 +134,6 @@ En los proyectos asistidos por IA, la especificación no es papeleo posterior. E
 
 ## Otros idiomas
 
-- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Deutsch](../de/spec-driven-development-for-ai-projects.md)
 - [Italiano](../it/spec-driven-development-for-ai-projects.md)
@@ -122,3 +144,4 @@ En los proyectos asistidos por IA, la especificación no es papeleo posterior. E
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
 - [Македонски](../mk/spec-driven-development-for-ai-projects.md)
 - [Français](../fr/spec-driven-development-for-ai-projects.md)
+- [Español](../es/spec-driven-development-for-ai-projects.md)

@@ -79,6 +79,56 @@ Ky është pikërisht lloji i shembullit që shpjegon pse rishikimi njerëzor ka
 
 Edhe kur kuptimi i përgjithshëm ruhet, përkthimet e gjeneruara nga AI mund të kërkojnë rishikim nga folës amtarë për të korrigjuar çështje delikate në gramatikë, modalitet, terminologji dhe regjistër specifik për domenin. Këto çështje shpesh janë të vështira për t'u zbuluar vetëm me metrika të automatizuara të cilësisë.
 
+## Një shembull për çdo kategori rishikimi
+
+Kategori të ndryshme të gjetjeve të rishikimit kërkojnë lloje të ndryshme gjykimi njerëzor.
+
+### Modaliteti dhe gjuha e politikave
+
+Drafti fillestar i AI-së:
+
+`Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
+
+Korrigjimi i folësit amtar:
+
+`Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
+
+Mësimi:
+
+- ruajtja e kuptimit nuk mjafton kur gramatika, modaliteti dhe formulimi i politikës ende tingëllojnë gabim për folësit amtarë
+
+### Optimizimi i tekstit burimor për lokalizim
+
+Titulli origjinal në anglisht:
+
+`The hidden exclusion of English-only systems`
+
+Titulli i përmirësuar në anglisht:
+
+`Why English-only systems exclude people`
+
+Mësimi:
+
+- disa probleme lokalizimi duhen zgjidhur duke përmirësuar tekstin burimor në vend që çdo gjuhë e synuar të detyrohet të kompensojë një formulim anglisht tepër të ngjeshur
+
+### Mik i rremë në terminologjinë teknike
+
+Shprehja origjinale në anglisht:
+
+`benchmark fixtures`
+
+Lokalizimi i pasaktë në sllovenisht:
+
+`primerjalne napeljave`
+
+Lokalizimi i përmirësuar në sllovenisht:
+
+`referenčni primeri za primerjalno vrednotenje`
+
+Mësimi:
+
+- termat teknikë duhet të përkthehen sipas kuptimit të domenit; në kontekste testimi dhe vlerësimi, `fixture` do të thotë një shembull referues i ripërdorshëm ose një rast testimi, jo infrastrukturë fizike
+
 ## Përfundimi i qëndrueshëm
 
 E ardhmja nuk është përkthyesi kundër AI-së. E ardhmja praktike është lokalizimi i asistuar nga AI me faza të qarta rishikimi dhe pritshmëri transparente për cilësinë.
@@ -92,4 +142,4 @@ E ardhmja nuk është përkthyesi kundër AI-së. E ardhmja praktike është lok
 
 ## Gjuhë të tjera
 
-- English (../en/ai-will-not-replace-translators.md)
+Anglishtja është gjuha kanonike e botimit të parë të këtij artikulli. Rrugët e gatshme për përkthim janë rezervuar për të gjitha lokalizimet e mbështetura të Let Books.

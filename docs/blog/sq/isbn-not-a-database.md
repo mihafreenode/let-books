@@ -30,7 +30,7 @@ ISBN identifikon botimin, jo veprën. Për shembull, botimi i dytë dhe i tretë
 
 Kjo është precizion i dobishëm — por vjen me kufizime të rëndësishme.
 
-![Diagrami ISBN kundrejt kopjes fizike të librit](../../diagrams/blog/isbn-not-a-database/sq/isbn-vs-physical-book.svg)
+![Diagrami ISBN kundrejt kopjes fizike të librit](../../diagrams/isbn-vs-physical-book.svg)
 
 ISBN identifikon metatëdhënat e botimit në të majtë. Kopja fizike në të djathtë — gjendja, provenienca, vendndodhja e ruajtjes, statusi i dhurimit, fotot — gjurmohet veçmas në modelin domenor të Let Books. Të dyja janë të lidhura por nuk janë e njëjta gjë.
 
@@ -60,7 +60,7 @@ Ekzistojnë ISBN të shtypur gabimisht. I njëjti ISBN mund të ripërdoret aksi
 
 `docs/book-metadata.md` përcakton një strategji praktike rezervë për kërkimin sipas ISBN-së. Dokumenti gjithashtu thotë se ky rrjedh funksionon në demon alfa aktuale, ndërsa shërben si model për aplikacionin e plotë të ardhshëm:
 
-![Diagrami i zinxhirit të kërkimit të ISBN](../../diagrams/blog/isbn-not-a-database/sq/isbn-lookup-chain.svg)
+![Diagrami i zinxhirit të kërkimit të ISBN](../../diagrams/isbn-lookup-chain.svg)
 
 1. Normalizo dhe verifiko ISBN-in. Hiq hapësirat dhe vizat, X-in ktheje në të madhe, verifiko shifrën e kontrollit.
 2. Kërko së pari Open Library përmes API-t publik.
@@ -78,6 +78,8 @@ Referencat kanonike të depos për këtë zinxhir janë `docs/book-metadata.md` 
 Kur një dhurues katalogizon një koleksion librash akademikë, disa do të kenë ISBN dhe disa jo. Librat pa ISBN janë shpesh më interesantët — botime më të vjetra, materiale të botuara në nivel lokal, përmbledhje për lëndë specifike ose libra nga botues të ish-Jugosllavisë, identifikuesit e të cilëve nuk arritën kurrë në bazat globale të të dhënave.
 
 Procesi i katalogimit nuk duhet të ndëshkojë dhuruesin për mungesën e ISBN-ve. Çdo veçori që funksionon me kërkimin e ISBN duhet të funksionojë edhe pa të: gjurmimi i vendndodhjes, ngarkimi i fotove, eksportimi në Excel, rishikimi në grup. ISBN është një lehtësi, jo një kërkesë.
+
+Ky parim shprehet drejtpërdrejt në specifikimin e projektit te `AGENTS.md`:
 
 > **Specifikimi i projektit, AGENTS.md:** "Modeli duhet të lejojë të dhëna të paplota. ISBN nuk është i detyrueshëm."
 

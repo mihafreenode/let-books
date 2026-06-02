@@ -69,7 +69,7 @@ Lokalizacija doista košta vrijeme i novac. Ali fazni, transparentni, hibridni m
 
 ## Drugi jezici
 
-- [English](../en/economics-of-localization.md)
+- [English](../hr/economics-of-localization.md)
 - [Slovenščina](../sl/economics-of-localization.md)
 - [Bosanski](../bs/economics-of-localization.md)
 - [Srpski (latinica)](../sr-Latn/economics-of-localization.md)

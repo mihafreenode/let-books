@@ -60,24 +60,38 @@ To je razlika između opšteg opisa i prave specifikacije. Prava specifikacija o
 
 `AGENTS-Implementation.md` dodaje drugi sloj. Ne zamenjuje proizvodnu specifikaciju, nego objašnjava kako rad u ovom repozitorijumu sada treba da se izvodi.
 
-Tu spadaju pravila o javnom imenovanju, dokumentaciji, statičkom sajtu, lokalizaciji, proveri i dokaznoj politici za javno pisanje. To je važno jer nisu sva pravila proizvodna istina. Neka su taktička, urednička ili specifična za repozitorijum.
+Primeri uključuju:
+
+- pravila javnog imenovanja
+- pravila implementacije dokumentacije
+- očekivanja o metapodacima statičkog sajta
+- ograničenja dema
+- očekivanja o lokalizaciji i proveri
+- uredničku dokaznu politiku za javno pisanje
+
+To je važno u radu uz pomoć AI-ja zato što svako pravilo ne pripada dugoročnoj proizvodnoj specifikaciji. Neka su pravila taktička, urednička ili specifična za repozitorijum. Održavanje te razlike jasnom smanjuje šum i sprečava da se proizvodna specifikacija pretvori u odlagalište implementacionih detalja.
 
 ## Sloj trenutnog stanja
 
-`README.md` predstavlja treći sloj: pošten opis trenutnog stanja.
+`README.md` predstavlja treći sloj: opis trenutnog stanja.
 
-On objašnjava šta danas postoji, čega još nema, čemu služi statični demo i kako je javni sajt objavljen. To pomaže saradnicima, institucijama i recenzentima da ne mešaju ambiciju sa implementacijom.
+Objašnjava šta danas postoji, čega još nema, čemu služi statični demo i kako je javni sajt objavljen. To je ključan deo usklađivanja, jer projekti često podbace kada čitaoci pomešaju ambiciju sa implementacijom.
+
+U Let Booksu README izričito razlikuje trenutne isporuke od budućih planova. To saradnicima, institucijama i recenzentima pomaže da razumeju zrelost projekta bez nagađanja.
 
 ## Sloj dokumentacije
 
-`docs/` dodaje četvrti sloj. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md` i stilski vodiči određuju kako znanje treba da bude organizovano, objavljeno i provereno.
+Područje `docs/` dodaje četvrti sloj. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md`, stilski vodiči i područje `sources` određuju kako znanje treba da bude organizovano, validirano i objavljeno.
 
 Tu repozitorijum postaje više od zbirke datoteka. Postaje platforma znanja sa:
 
 - arhitekturom dokumentacije
 - pravilima uredničkih dokaza
 - višejezičnom izdavačkom strukturom
-- pravilima objave i provere
+- pravilima objave javne dokumentacije
+- razvojnim i validacionim smernicama
+
+To je upravo vrsta okvira koja pomaže da isporuka uz pomoć AI-ja ostane sledljiva.
 
 ## Sloj dema
 
@@ -85,9 +99,20 @@ Statični demo je važan, ali namerno nije jedina autoriteta. Pravila za blog i 
 
 To znači da demo može proveravati tokove rada, otkrivati probleme upotrebljivosti i pomagati u objašnjavanju spoljnim akterima, a da pritom sam od sebe ne postane konačna proizvodna istina.
 
+To je zrelo pravilo. Bez njega prototipi često postanu slučajni mehanizmi upravljanja. Tim počne da kopira prototip zato što postoji, a ne zato što odražava odobrenu proizvodnu odluku.
+
 ## Sloj provere
 
-Let Books već dokumentuje i način razmišljanja o proveri. `docs/Development.md` i `docs/Deployment.md` opisuju dimne testove lokalizacije, validaciju strukturiranih datoteka, generisanje metapodataka, obavezne datoteke, pravopisne provere i automatizovanu objavu.
+Let Books već dokumentuje i način razmišljanja o proveri.
+
+`docs/Development.md` i `docs/Deployment.md` opisuju validacione slojeve kao što su:
+
+- dimni testovi lokalizacije
+- validacija strukturiranih datoteka
+- generisanje metapodataka
+- provera obaveznih datoteka
+- opciona provera pravopisa i linting
+- automatizacija objave
 
 To nisu samo detalji o alatima. To je dokaz da projekat kvalitet tretira kao ponovljiv sistem.
 
@@ -106,16 +131,27 @@ Taj lanac ne uklanja greške. Ali ih čini lakšim za otkrivanje i pregled.
 
 ## Glavna lekcija
 
-Razvoj vođen specifikacijom ne znači samo napisati dugačak dokument pre kodiranja. U praksi znači izgraditi pouzdan lanac između proizvodne namere, taktičkih pravila, javne dokumentacije, dema, provere i objave.
+Razvoj vođen specifikacijom ne znači samo napisati dugačak dokument sa zahtevima pre početka kodiranja.
 
-Let Books pokazuje da takav lanac može postojati i pre pune backend aplikacije. Upravo je to jedna od najjačih prednosti razvoja vođenog specifikacijom u AI-podržanom radu.
+U praksi znači izgraditi pouzdan lanac između:
+
+- proizvodne namere
+- taktičkih pravila
+- javne dokumentacije
+- dema
+- validacije
+- objave
+
+Let Books već pokazuje da takav lanac može postojati i pre pune pozadinske aplikacije.
+
+To je jedan od najjačih argumenata za razvoj vođen specifikacijom u AI-podržanom radu: što je lanac namere jasniji, manja je verovatnoća da će se brz izlaz pretvoriti u brzu zbrku.
 
 ## Drugi jezici
 
-- [English](../en/spec-driven-development-in-let-books.md)
 - [Slovenščina](../sl/spec-driven-development-in-let-books.md)
 - [Hrvatski](../hr/spec-driven-development-in-let-books.md)
 - [Bosanski](../bs/spec-driven-development-in-let-books.md)
+- [Srpski (latinica)](../sr-Latn/spec-driven-development-in-let-books.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-in-let-books.md)
 - [Македонски](../mk/spec-driven-development-in-let-books.md)
 - [Shqip](../sq/spec-driven-development-in-let-books.md)

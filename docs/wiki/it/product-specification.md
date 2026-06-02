@@ -35,7 +35,7 @@ Il contenuto tipico delle specifiche include:
 - modello di dominio
 - definizioni del flusso di lavoro
 - aspettative in materia di privacy e sicurezza
--non gol
+- non-obiettivi
 - indicazioni sulla sequenza di implementazione laddove influiscono sull'ambito o sull'ordine di consegna
 - criteri di accettazione
 

@@ -109,6 +109,8 @@ Za ponovo upotrebljiv pregled zabeleži:
 
 ## Ponovo upotrebljive lekcije iz slovenačkog pregleda
 
+Obrazac iz slovenačke studije slučaja široko je ponovo upotrebljiv u drugim jezicima:
+
 - gramatičko značenje može biti približno tačno, a rečenica i dalje neobjavljiva izvornom govorniku
 - modalne konstrukcije posebno su osetljive na doslovan prevod
 - terminologija i policy formulacija često traže domenski prilagođeno preoblikovanje

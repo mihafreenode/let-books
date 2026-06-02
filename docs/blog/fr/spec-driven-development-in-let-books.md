@@ -60,24 +60,38 @@ C'est la différence entre une description générale et une vraie spécificatio
 
 `AGENTS-Implementation.md` ajoute une deuxième couche. Elle ne remplace pas la spécification produit, mais explique comment le travail doit être mené aujourd'hui dans ce dépôt.
 
-On y trouve des règles sur la dénomination publique, la documentation, le site statique, la localisation, la vérification et la politique de preuve pour l'écriture publique. C'est important, car toute règle n'est pas une vérité produit. Certaines sont tactiques, éditoriales ou spécifiques au dépôt.
+Des exemples incluent :
+
+- des règles de dénomination publique
+- des règles d'implémentation de la documentation
+- des attentes sur les métadonnées du site statique
+- les limites de la démo
+- des attentes sur la localisation et la vérification
+- une politique éditoriale de preuve pour l'écriture publique
+
+Cela compte dans le travail assisté par l'IA, parce que toute règle n'appartient pas à la spécification produit de long terme. Certaines règles sont tactiques, éditoriales ou spécifiques au dépôt. Garder cette distinction claire réduit le bruit et empêche la spécification produit de devenir un dépôt de détails d'implémentation.
 
 ## La couche de l'état actuel
 
-`README.md` représente une troisième couche : une description honnête de l'état actuel.
+`README.md` représente une troisième couche : une description de l'état actuel.
 
-Il explique ce qui existe aujourd'hui, ce qui n'existe pas encore, à quoi sert la démo statique et comment le site public est publié. Cela aide les contributeurs, les institutions et les relecteurs à ne pas confondre ambition et implémentation.
+Il explique ce qui existe aujourd'hui, ce qui n'existe pas encore, à quoi sert la démo statique et comment le site public est publié. C'est une partie essentielle de l'alignement, car les projets échouent souvent quand les lecteurs confondent ambition et implémentation.
+
+Dans Let Books, le README distingue explicitement les livrables actuels des plans futurs. Cela aide contributeurs, institutions et relecteurs à comprendre la maturité du projet sans deviner.
 
 ## La couche de documentation
 
-`docs/` ajoute une quatrième couche. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md` et les guides de style définissent la manière dont la connaissance doit être organisée, publiée et vérifiée.
+La zone `docs/` ajoute une quatrième couche. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md`, les guides de style et la zone `sources` définissent la manière dont la connaissance doit être organisée, validée et publiée.
 
 Ici, le dépôt devient plus qu'un ensemble de fichiers. Il devient une plateforme de connaissance avec :
 
 - une architecture documentaire
 - des règles de preuve éditoriale
 - une structure de publication multilingue
-- des règles de publication et de vérification
+- des règles de publication de la documentation publique
+- des directives de développement et de validation
+
+C'est exactement le type d'ossature qui aide la livraison assistée par l'IA à rester traçable.
 
 ## La couche de démo
 
@@ -85,9 +99,20 @@ La démo statique est importante, mais elle n'est volontairement pas la seule au
 
 Cela signifie que la démo peut vérifier des flux de travail, révéler des problèmes d'utilisabilité et aider à expliquer le projet à des parties prenantes externes, sans devenir d'elle-même la vérité produit finale.
 
+C'est une règle mature. Sans elle, les prototypes deviennent souvent des mécanismes de gouvernance accidentels. Une équipe commence à copier le prototype parce qu'il existe, et non parce qu'il reflète une décision produit approuvée.
+
 ## La couche de vérification
 
-Let Books documente déjà aussi une manière de penser la vérification. `docs/Development.md` et `docs/Deployment.md` décrivent les smoke tests de localisation, la validation de fichiers structurés, la génération de métadonnées, les fichiers requis, les vérifications orthographiques et la publication automatisée.
+Let Books documente déjà aussi une manière de penser la vérification.
+
+`docs/Development.md` et `docs/Deployment.md` décrivent des couches de validation telles que :
+
+- des smoke tests de localisation
+- la validation de fichiers structurés
+- la génération de métadonnées
+- la vérification des fichiers requis
+- la vérification orthographique optionnelle et le linting
+- l'automatisation du déploiement
 
 Ce ne sont pas de simples détails d'outillage. C'est la preuve que le projet traite la qualité comme un système répétable.
 
@@ -106,13 +131,23 @@ Cette chaîne n'élimine pas les erreurs. Mais elle les rend plus faciles à dé
 
 ## La leçon principale
 
-Le développement guidé par les spécifications ne signifie pas seulement écrire un long document avant de coder. En pratique, cela signifie construire une chaîne fiable entre l'intention produit, les règles tactiques, la documentation publique, la démo, la vérification et la publication.
+Le développement guidé par les spécifications ne signifie pas seulement écrire un long document d'exigences avant de commencer à coder.
 
-Let Books montre qu'une telle chaîne peut exister avant même une application backend complète. C'est précisément l'un des avantages les plus forts du développement guidé par les spécifications dans un travail soutenu par l'IA.
+En pratique, cela signifie construire une chaîne fiable entre :
+
+- l'intention produit
+- les règles tactiques
+- la documentation publique
+- les démos
+- la validation
+- la publication
+
+Let Books montre déjà qu'une telle chaîne peut exister avant même que le produit backend complet n'existe.
+
+C'est l'un des arguments les plus forts en faveur du développement guidé par les spécifications dans un travail assisté par l'IA : plus la chaîne d'intention est claire, moins il est probable qu'une sortie rapide devienne une confusion rapide.
 
 ## Autres langues
 
-- [English](../en/spec-driven-development-in-let-books.md)
 - [Shqip](../sq/spec-driven-development-in-let-books.md)
 - [Deutsch](../de/spec-driven-development-in-let-books.md)
 - [Italiano](../it/spec-driven-development-in-let-books.md)
@@ -122,4 +157,5 @@ Let Books montre qu'une telle chaîne peut exister avant même une application b
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-in-let-books.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-in-let-books.md)
 - [Македонски](../mk/spec-driven-development-in-let-books.md)
+- [Français](../fr/spec-driven-development-in-let-books.md)
 - [Español](../es/spec-driven-development-in-let-books.md)

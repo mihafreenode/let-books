@@ -7,6 +7,6 @@ status: draft
 
 # Економика на локализацијата - Source Map
 
-This localized source map for the article "Економика на локализацијата" follows the canonical English map: [../en/economics-of-localization.md](../en/economics-of-localization.md).
+This localized source map for the article "Економика на локализацијата" follows the canonical English map: [../en/economics-of-localization.md](../mk/economics-of-localization.md).
 
 The localized article should remain aligned with the canonical English claims, evidence, and editorial boundaries.

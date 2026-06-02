@@ -52,6 +52,8 @@ En pratique, l'IA optimise souvent ce qui est le plus visible à l'instant donn�
 
 Rien de tout cela ne signifie automatiquement la bonne décision produit.
 
+Ce sont des raccourcis utiles pour la génération. Mais ils ne remplacent pas le jugement produit.
+
 ## Ce qu'apporte une bonne spécification
 
 Une bonne spécification remplit au moins quatre fonctions :
@@ -61,11 +63,28 @@ Une bonne spécification remplit au moins quatre fonctions :
 - elle établit le standard de revue
 - elle sert de mémoire à l'équipe
 
+Premièrement, elle définit le but. L'équipe peut voir si une fonctionnalité soutient le produit réel ou se contente d'ajouter de la sortie.
+
+Deuxièmement, elle définit des limites. Elle clarifie ce qui est dans le périmètre, ce qui est hors périmètre, ce qui est optionnel et ce qui doit fonctionner même lorsque les systèmes optionnels échouent.
+
+Troisièmement, elle définit la norme de revue. Au lieu de demander seulement si un changement fonctionne techniquement, les relecteurs peuvent demander s'il correspond au flux de travail prévu et aux engagements produit.
+
+Quatrièmement, elle agit comme mémoire. Les systèmes d'IA ne conservent pas d'eux-mêmes une mémoire institutionnelle stable. Une spécification dans le dépôt, oui.
+
 Cela est très clair dans Let Books. `AGENTS.md` rappelle plusieurs fois que le flux manuel doit rester utile même sans services d'IA payants et que les exemplaires physiques ne sont pas la même chose que les notices bibliographiques. Ce ne sont pas des détails techniques, mais des limites produit.
+
+Ce ne sont pas des détails d'implémentation. Ce sont des frontières produit. Si un assistant IA génère un flux qui bloque la saisie manuelle ou mélange les données d'exemplaire physique avec les métadonnées d'édition, le problème n'est pas le style. Le problème est la dérive produit.
 
 ## Pourquoi la documentation ne doit pas attendre
 
 Si la documentation est ancienne ou floue, des personnes et des outils différents déduiront des produits différents à partir du même dépôt. L'un suivra la démo, un autre un ancien README, un autre encore le fichier le plus proche.
+
+Sans documentation à jour :
+
+- les prompts deviennent incohérents
+- la revue devient subjective
+- les démos commencent à redéfinir le produit par accident
+- les futurs contributeurs héritent de comportements sans savoir s'ils étaient intentionnels
 
 La documentation n'est donc pas seulement une explication après coup. Elle fait partie du système d'exploitation du projet. Dans ce dépôt, `README.md` décrit l'état actuel, `AGENTS.md` l'intention produit, `AGENTS-Implementation.md` les règles tactiques, et `docs/` les règles de publication et de preuve.
 
@@ -74,6 +93,8 @@ La documentation n'est donc pas seulement une explication après coup. Elle fait
 Une démo est utile parce qu'elle montre ce qui existe et révèle les problèmes du flux utilisateur. Mais elle ne devrait pas devenir silencieusement la spécification produit.
 
 Les règles du dépôt distinguent déjà les spécifications et la documentation canoniques d'un côté, et le statut d'implémentation de l'autre. Si une démo révèle un meilleur flux, il faut mettre à jour la spécification et la documentation, au lieu de laisser la démo gagner seule.
+
+Si une démo révèle un meilleur flux de travail, la bonne réponse n'est pas de la laisser gagner en silence. La bonne réponse est de mettre à jour la spécification, la documentation et la norme de revue afin que ce meilleur flux devienne intentionnel.
 
 ## Markdown, tests et CI forment une chaîne
 
@@ -86,6 +107,8 @@ Dans un développement guidé par les spécifications, ces couches ne tiennent p
 - La CI applique régulièrement les règles.
 
 Ensemble, elles créent une mémoire produit qui survit à la vitesse de développement.
+
+Chaque couche est incomplète à elle seule. Ensemble, elles créent une mémoire produit qui survit à la vitesse, à l'itération et aux changements d'équipe.
 
 ## Ce que cela signifie pour les équipes qui utilisent l'IA
 
@@ -111,7 +134,6 @@ Dans les projets assistés par l'IA, la spécification n'est pas de la paperasse
 
 ## Autres langues
 
-- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Deutsch](../de/spec-driven-development-for-ai-projects.md)
 - [Italiano](../it/spec-driven-development-for-ai-projects.md)
@@ -121,4 +143,5 @@ Dans les projets assistés par l'IA, la spécification n'est pas de la paperasse
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
 - [Македонски](../mk/spec-driven-development-for-ai-projects.md)
+- [Français](../fr/spec-driven-development-for-ai-projects.md)
 - [Español](../es/spec-driven-development-for-ai-projects.md)

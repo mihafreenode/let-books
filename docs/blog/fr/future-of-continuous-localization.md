@@ -65,7 +65,7 @@ L'avenir de la localisation n'est pas l'automatisation parfaite. C'est une coord
 
 ## Autres langues
 
-- [English](../en/future-of-continuous-localization.md)
+- [English](../fr/future-of-continuous-localization.md)
 - [Slovenščina](../sl/future-of-continuous-localization.md)
 - [Hrvatski](../hr/future-of-continuous-localization.md)
 - [Bosanski](../bs/future-of-continuous-localization.md)

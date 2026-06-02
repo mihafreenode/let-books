@@ -1,7 +1,7 @@
 ---
 title: "Localizzazione su larga scala"
 summary: >-
-  La localizzazione su larga scala è la pratica di trattare i contenuti multilingue come un sistema progettato che copre scrittura, governance, risorse, accessibilità, convalida e revisione.
+  La localizzazione su larga scala è la pratica di trattare la pubblicazione multilingue come un sistema di feedback e un sistema di conoscenza a lungo termine, non come un compito di traduzione una tantum.
 topics:
   - localization
   - engineering-systems
@@ -11,7 +11,7 @@ topics:
 
 ## Riepilogo
 
-La localizzazione su larga scala è la pratica di trattare i contenuti multilingue come un sistema progettato che copre scrittura, governance, risorse, accessibilità, convalida e revisione.
+La localizzazione su larga scala è la pratica di trattare la pubblicazione multilingue come un sistema di feedback e un sistema di conoscenza a lungo termine, non come un compito di traduzione una tantum.
 
 ## Idea fondamentale
 
@@ -21,24 +21,38 @@ Include:
 
 - scrittura delle fonti
 - terminologia
-- navigazione
-- testo sull'accessibilità
-- diagrammi e screenshot
 - metadati
-- rivedere il flusso di lavoro
--CI e QA
+- navigazione
+- testo di accessibilità
+- diagrammi e screenshot
+- flusso di revisione
+- CI e QA
 
-## Perché è importante
+## Manuale autorevole
 
-I progetti che ritardano la localizzazione di solito scoprono che la loro architettura dell'informazione, gli screenshot e le ipotesi di test sono già in forma inglese.
+Il modello operativo centrale per questa iniziativa ora si trova in:
 
-## Let Books contesto
+- `../localization-at-scale-program.md`
 
-Let Books è esplicitamente multilingue per quanto riguarda la direzione del prodotto, la documentazione e le aspettative dell'interfaccia utente. Ciò rende l’architettura di localizzazione una preoccupazione fondamentale del prodotto.
+Questo manuale definisce:
+
+- perché la pubblicazione multilingue è importante
+- perché la localizzazione è un sistema e non un progetto
+- come l'IA si inserisce nei cicli di feedback
+- il modello di qualità di copertura, completezza, qualità e freschezza
+- il debito di localizzazione e le classi di difetti aperti
+- la remediation source-first e il flusso di lavoro per agenti IA
+- la deriva di localizzazione e la maturità del repository
+- il corpus dettagliato dei rilievi di revisione di madrelingua
+
+## Regola pratica
+
+Una pagina localizzata non è completa finché tutto il contenuto visibile al lettore non è localizzato, compresi riepiloghi, tag, testo principale, didascalie, diagrammi, testo alternativo e superfici di contenuto correlato.
 
 ## Pagine correlate
 
+- `../localization-at-scale-program.md`
 - `language-support-matrix.md`
 - `localization-maturity-model.md`
+- `translation-quality-assurance.md`
 - `../learning/how-to-build-a-localization-pipeline.md`
-- `../blog/en/localization-at-scale.md`

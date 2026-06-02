@@ -76,4 +76,4 @@ Ni nujno, da imajo vsi jeziki prvi dan enako zrelost. Vsak jezik, za katerega pr
 
 ## Drugi jeziki
 
-- English (../en/why-every-language-matters.md)
+Angleščina je kanonični jezik prve objave za ta članek. Poti za prevode so rezervirane za vse podprte lokalizacije projekta Let Books.

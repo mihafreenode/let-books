@@ -59,7 +59,7 @@ Let Books се директно бави образовним наслеђем, 
 
 ## Други језици
 
-- [English](../en/preserving-smaller-languages-in-the-digital-age.md)
+- [English](../sr-Cyrl/preserving-smaller-languages-in-the-digital-age.md)
 - [Slovenščina](../sl/preserving-smaller-languages-in-the-digital-age.md)
 - [Hrvatski](../hr/preserving-smaller-languages-in-the-digital-age.md)
 - [Bosanski](../bs/preserving-smaller-languages-in-the-digital-age.md)

@@ -66,7 +66,7 @@ Lokalizacija ni samo funkcija za udobje. V izobraževalnih okoljih lahko neposre
 
 ## Drugi jeziki
 
-- [English](../en/translation-and-learning.md)
+- [English](../sl/translation-and-learning.md)
 - [Hrvatski](../hr/translation-and-learning.md)
 - [Bosanski](../bs/translation-and-learning.md)
 - [Srpski (latinica)](../sr-Latn/translation-and-learning.md)

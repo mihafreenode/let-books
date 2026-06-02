@@ -68,7 +68,7 @@ Večjezičen produkt ni sam po sebi dostopen, dostopen produkt pa ni sam po sebi
 
 ## Drugi jeziki
 
-- [English](../en/multilingual-accessibility.md)
+- [English](../sl/multilingual-accessibility.md)
 - [Hrvatski](../hr/multilingual-accessibility.md)
 - [Bosanski](../bs/multilingual-accessibility.md)
 - [Srpski (latinica)](../sr-Latn/multilingual-accessibility.md)

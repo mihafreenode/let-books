@@ -52,6 +52,8 @@ In der Praxis optimiert KI oft das, was im Moment am sichtbarsten ist:
 
 Nichts davon bedeutet automatisch die richtige Produktentscheidung.
 
+Das sind nützliche Abkürzungen für die Generierung. Sie sind aber kein Ersatz für Produkturteil.
+
 ## Was eine gute Spezifikation leistet
 
 Eine gute Spezifikation erfüllt mindestens vier Aufgaben:
@@ -61,11 +63,28 @@ Eine gute Spezifikation erfüllt mindestens vier Aufgaben:
 - sie bestimmt den Prüfmaßstab
 - sie dient als Gedächtnis des Teams
 
+Erstens definiert sie den Zweck. Das Team kann erkennen, ob eine Funktion das eigentliche Produkt unterstützt oder nur zusätzlichen Output erzeugt.
+
+Zweitens definiert sie Grenzen. Sie klärt, was im Umfang liegt, was außerhalb des Umfangs liegt, was optional ist und was selbst dann funktionieren muss, wenn optionale Systeme ausfallen.
+
+Drittens definiert sie den Review-Maßstab. Statt nur zu fragen, ob eine Änderung technisch funktioniert, können Reviewer fragen, ob sie zum beabsichtigten Workflow und zu den Produktzusagen passt.
+
+Viertens wirkt sie als Gedächtnis. KI-Systeme halten keine stabile institutionelle Erinnerung von selbst. Eine Spezifikation im Repository tut es.
+
 Das ist bei Let Books sehr klar. `AGENTS.md` betont mehrfach, dass der manuelle Ablauf auch ohne kostenpflichtige KI-Dienste funktionieren muss und dass physische Buchexemplare nicht dasselbe sind wie bibliografische Datensätze. Das sind keine technischen Details, sondern Produktgrenzen.
+
+Das sind keine Implementierungsdetails. Das sind Produktgrenzen. Wenn ein KI-Assistent einen Ablauf erzeugt, der die manuelle Eingabe blockiert oder Daten physischer Exemplare in Editionsmetadaten zusammenfallen lässt, ist das Problem nicht Stil. Das Problem ist Produktdrift.
 
 ## Warum Dokumentation nicht warten darf
 
 Wenn Dokumentation veraltet oder unklar ist, leiten verschiedene Menschen und verschiedene Werkzeuge aus demselben Repository verschiedene Produkte ab. Einer folgt dem Demo, ein anderer einer alten README-Datei, ein dritter der nächstgelegenen Datei.
+
+Ohne aktuelle Dokumentation:
+
+- werden Prompts inkonsistent
+- wird Review subjektiv
+- beginnen Demos das Produkt versehentlich neu zu definieren
+- übernehmen künftige Mitwirkende Verhalten, ohne zu wissen, ob es beabsichtigt war
 
 Deshalb ist Dokumentation nicht nur eine nachträgliche Erklärung. Sie ist Teil des Betriebssystems des Projekts. In diesem Repository beschreibt `README.md` den aktuellen Stand, `AGENTS.md` die Produktabsicht, `AGENTS-Implementation.md` die taktischen Regeln und `docs/` die Veröffentlichungs- und Nachweisregeln.
 
@@ -74,6 +93,8 @@ Deshalb ist Dokumentation nicht nur eine nachträgliche Erklärung. Sie ist Teil
 Ein Demo ist nützlich, weil es zeigt, was existiert, und Probleme im Benutzerfluss sichtbar macht. Es sollte jedoch nicht stillschweigend zur Produktspezifikation werden.
 
 Die Regeln des Repositories unterscheiden bereits zwischen kanonischen Spezifikationen und Dokumentation einerseits und Implementierungsstatus andererseits. Wenn ein Demo einen besseren Ablauf zeigt, müssen Spezifikation und Dokumentation aktualisiert werden, statt das Demo still gewinnen zu lassen.
+
+Wenn ein Demo einen besseren Ablauf zeigt, ist die Antwort nicht, das Demo stillschweigend gewinnen zu lassen. Die Antwort ist, Spezifikation, Dokumentation und den Review-Maßstab zu aktualisieren, damit der bessere Ablauf absichtlich wird.
 
 ## Markdown, Tests und CI bilden eine Kette
 
@@ -86,6 +107,8 @@ In einer spezifikationsgetriebenen Entwicklung stehen diese Ebenen nicht für si
 - CI setzt die Regeln regelmäßig durch.
 
 Zusammen schaffen sie ein Produktgedächtnis, das die Entwicklungsgeschwindigkeit überlebt.
+
+Jede Ebene ist für sich unvollständig. Zusammen schaffen sie ein Produktgedächtnis, das Geschwindigkeit, Iteration und Teamwechsel überlebt.
 
 ## Was das für Teams bedeutet, die KI nutzen
 
@@ -111,7 +134,6 @@ In KI-gestützten Projekten ist die Spezifikation nicht nachträglicher Papierkr
 
 ## Andere Sprachen
 
-- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
 - [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)
@@ -122,5 +144,3 @@ In KI-gestützten Projekten ist die Spezifikation nicht nachträglicher Papierkr
 - [Italiano](../it/spec-driven-development-for-ai-projects.md)
 - [Français](../fr/spec-driven-development-for-ai-projects.md)
 - [Español](../es/spec-driven-development-for-ai-projects.md)
-
-Spezifikationsgetriebene Entwicklung ist die Art, wie ein Team verhindert, dass Geschwindigkeit in Drift umschlägt.

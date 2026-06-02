@@ -21,7 +21,7 @@
         17,
         17
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -41,8 +41,8 @@
         19,
         19
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "documentation-is-more-than-a-website-paragraph-when-documentation-is-treated-as-web-only-teams-tend-to-opti-2c5057d3-1",
@@ -61,8 +61,8 @@
         21,
         21
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "documentation-is-more-than-a-website-paragraph-print-support-also-has-accessibility-value-some-readers-reta-d615da57-1",
@@ -81,52 +81,12 @@
         23,
         23
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "documentation-is-more-than-a-website-paragraph-letbooks-now-treats-this-explicitly-the-documentation-platfo-d4e71b2c-1",
       "sourceHash": "d4e71b2cd1e88bc1ffd6c8bb50769bcd3b5e1e45ea54af740f50ec2f86070d5d",
-      "targetBlockId": "dokumentation-ist-mehr-als-eine-website-paragraph-diese-richtlinie-spiegelt-auch-ein-bewahrungsdenken-wider-ei-44235a62-1",
-      "translationHash": "44235a6255eca75e9836c07434247215f6bd402e0e0ca9eb421a4b5c81636677",
-      "blockType": "paragraph",
-      "headingPath": [
-        "Documentation Is More Than a Website"
-      ],
-      "sourceLineRange": [
-        25,
-        25
-      ],
-      "targetLineRange": [
-        27,
-        27
-      ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
-    },
-    {
-      "blockId": "documentation-is-more-than-a-website-paragraph-this-policy-also-reflects-a-preservation-mindset-a-documenta-43317194-1",
-      "sourceHash": "43317194e4a6f4b8821edef0847a969318e57cab683fbb1c939eb2679d994021",
-      "targetBlockId": "dokumentation-ist-mehr-als-eine-website-paragraph-dokumentation-ist-also-mehr-als-eine-website-weil-das-darin--b2c3226c-1",
-      "translationHash": "b2c3226c75997ba9ad7375d9ce5f144e135e10d0b9c938279a9d1e38d0970b76",
-      "blockType": "paragraph",
-      "headingPath": [
-        "Documentation Is More Than a Website"
-      ],
-      "sourceLineRange": [
-        27,
-        27
-      ],
-      "targetLineRange": [
-        29,
-        29
-      ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
-    },
-    {
-      "blockId": "documentation-is-more-than-a-website-paragraph-documentation-is-therefore-more-than-a-website-because-the-k-9a0f5c59-1",
-      "sourceHash": "9a0f5c5977343274854439a6a349586923eb25678df1a77314633b3e19601881",
       "targetBlockId": "dokumentation-ist-mehr-als-eine-website-paragraph-letbooks-behandelt-das-inzwischen-ausdrücklich-so-die-dokume-bff3a4be-1",
       "translationHash": "bff3a4bec7fc51346c13dcf09999f1b77f09e8877ea31026b404d4a23f3be2ab",
       "blockType": "paragraph",
@@ -134,15 +94,55 @@
         "Documentation Is More Than a Website"
       ],
       "sourceLineRange": [
-        29,
-        29
+        25,
+        25
       ],
       "targetLineRange": [
         25,
         25
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
+    },
+    {
+      "blockId": "documentation-is-more-than-a-website-paragraph-this-policy-also-reflects-a-preservation-mindset-a-documenta-43317194-1",
+      "sourceHash": "43317194e4a6f4b8821edef0847a969318e57cab683fbb1c939eb2679d994021",
+      "targetBlockId": "dokumentation-ist-mehr-als-eine-website-paragraph-diese-richtlinie-spiegelt-auch-ein-bewahrungsdenken-wider-ei-44235a62-1",
+      "translationHash": "44235a6255eca75e9836c07434247215f6bd402e0e0ca9eb421a4b5c81636677",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Documentation Is More Than a Website"
+      ],
+      "sourceLineRange": [
+        27,
+        27
+      ],
+      "targetLineRange": [
+        27,
+        27
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
+    },
+    {
+      "blockId": "documentation-is-more-than-a-website-paragraph-documentation-is-therefore-more-than-a-website-because-the-k-9a0f5c59-1",
+      "sourceHash": "9a0f5c5977343274854439a6a349586923eb25678df1a77314633b3e19601881",
+      "targetBlockId": "dokumentation-ist-mehr-als-eine-website-paragraph-dokumentation-ist-also-mehr-als-eine-website-weil-das-darin--b2c3226c-1",
+      "translationHash": "b2c3226c75997ba9ad7375d9ce5f144e135e10d0b9c938279a9d1e38d0970b76",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Documentation Is More Than a Website"
+      ],
+      "sourceLineRange": [
+        29,
+        29
+      ],
+      "targetLineRange": [
+        29,
+        29
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

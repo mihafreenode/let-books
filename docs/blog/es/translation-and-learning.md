@@ -65,7 +65,7 @@ La localización no es solo una función de comodidad. En contextos educativos, 
 
 ## Otros idiomas
 
-- [English](../en/translation-and-learning.md)
+- [English](../es/translation-and-learning.md)
 - [Slovenščina](../sl/translation-and-learning.md)
 - [Hrvatski](../hr/translation-and-learning.md)
 - [Bosanski](../bs/translation-and-learning.md)

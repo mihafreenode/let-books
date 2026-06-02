@@ -1,5 +1,7 @@
 ---
 title: "Përputhja e demos me specifikimin"
+summary: >-
+  Përputhja e demos me specifikimin është praktika e mbajtjes së sjelljes së prototipit ose demos në përputhje me qëllimin e dokumentuar të produktit, ndërsa specifikimi përditësohet qartë kur demoja zbulon një rrjedhë pune më të mirë.
 topics:
   - demo-alignment
   - spec-driven-development

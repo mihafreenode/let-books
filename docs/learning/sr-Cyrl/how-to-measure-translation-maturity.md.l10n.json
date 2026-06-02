@@ -7,8 +7,8 @@
     {
       "blockId": "how-to-measure-translation-maturity-heading-how-to-measure-translation-maturity-78a3ef3d-1",
       "sourceHash": "78a3ef3daa36238176117adf3bf9ba714af928cc43ec87c2a93222b5d3e7171d",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "како-мерити-зрелост-превода-heading-како-мерити-зрелост-превода-a811fec9-1",
+      "translationHash": "a811fec98619b3a0736627f3631de8c16db0b6a4eef6728adeb80fb4b8428e36",
       "blockType": "heading",
       "headingPath": [
         "How to Measure Translation Maturity"
@@ -17,9 +17,12 @@
         10,
         10
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "how-to-measure-translation-maturity/summary-heading-summary-30ac03ff-1",
@@ -39,14 +42,14 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "how-to-measure-translation-maturity/summary-paragraph-this-guide-explains-how-to-measure-translation-quality-in-st-fb9180d9-1",
       "sourceHash": "fb9180d9026424e1a1fef3c652f106752efc8d267b03a120becddf6334137d4c",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "како-мерити-зрелост-превода/сажетак-paragraph-овај-водич-објашњава-како-мерити-квалитет-превода-по-фазама--07f33f74-1",
+      "translationHash": "07f33f745181e84d2c5341c13641eed8ad2e8ca2ef9e1eda7fc4d4b77576d349",
       "blockType": "paragraph",
       "headingPath": [
         "How to Measure Translation Maturity",
@@ -56,9 +59,12 @@
         14,
         14
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-measure-translation-maturity/measure-by-heading-measure-by-151e309f-1",
@@ -78,14 +84,14 @@
         16,
         16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "how-to-measure-translation-maturity/measure-by-list-locale-aef1ea8b-1",
       "sourceHash": "aef1ea8b769d184cc3a79ee5e699abd1153fb882e44616065dcf7ad2199ac2e3",
-      "targetBlockId": "како-мерити-зрелост-превода/повезане-странице-list-list-eafef450-1",
-      "translationHash": "eafef4505315faaace4f1c527ba3859b39ccead1641e5f59867eda941ae42b9d",
+      "targetBlockId": "како-мерити-зрелост-превода/мери-према-list-језику-60717768-1",
+      "translationHash": "60717768c2f2e217569825408c42fb4a5f499344e74a698b75b27ee4b15c23a3",
       "blockType": "list",
       "headingPath": [
         "How to Measure Translation Maturity",
@@ -96,17 +102,17 @@
         22
       ],
       "targetLineRange": [
-        26,
-        28
+        18,
+        22
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-measure-translation-maturity/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "како-мерити-зрелост-превода/повезане-странице-heading-повезане-странице-09b387a1-1",
+      "translationHash": "09b387a11237f12e04af937bc632541ea557c5e8b0bdca3ccebcc5b0cf308f27",
       "blockType": "heading",
       "headingPath": [
         "How to Measure Translation Maturity",
@@ -116,15 +122,18 @@
         24,
         24
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "how-to-measure-translation-maturity/related-pages-list-list-eafef450-1",
       "sourceHash": "eafef4505315faaace4f1c527ba3859b39ccead1641e5f59867eda941ae42b9d",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "како-мерити-зрелост-превода/повезане-странице-list-list-eafef450-1",
+      "translationHash": "eafef4505315faaace4f1c527ba3859b39ccead1641e5f59867eda941ae42b9d",
       "blockType": "list",
       "headingPath": [
         "How to Measure Translation Maturity",
@@ -134,9 +143,12 @@
         26,
         28
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        26,
+        28
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

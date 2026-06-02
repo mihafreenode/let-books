@@ -34,6 +34,9 @@ Activate the environment:
 
 Common commands:
   python tools/validate_translation_parity.py --help
+  python tools/audit_translation_parity.py --help
+  python tools/audit_translation_warnings.py --help
+  python tools/repair_localized_internal_links.py --help
   python tools/localization_mt_draft.py --help
   python tools/localization_patch_assist.py --help
   python tools/generate_translation_sidecars.py --help

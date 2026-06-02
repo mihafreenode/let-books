@@ -7,6 +7,6 @@ status: draft
 
 # E ardhmja e lokalizimit të vazhdueshëm - Source Map
 
-This localized source map for the article "E ardhmja e lokalizimit të vazhdueshëm" follows the canonical English map: [../en/future-of-continuous-localization.md](../en/future-of-continuous-localization.md).
+This localized source map for the article "E ardhmja e lokalizimit të vazhdueshëm" follows the canonical English map: [../en/future-of-continuous-localization.md](../sq/future-of-continuous-localization.md).
 
 The localized article should remain aligned with the canonical English claims, evidence, and editorial boundaries.

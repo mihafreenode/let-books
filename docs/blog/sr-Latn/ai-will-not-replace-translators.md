@@ -79,6 +79,56 @@ Upravo ovakvi primeri objašnjavaju zašto je ljudski pregled i dalje važan. Zn
 
 Čak i kada je opšte značenje očuvano, AI-generisani prevodi mogu zahtevati pregled izvornog govornika kako bi se ispravile suptilne poteškoće u gramatici, modalnosti, terminologiji i registru specifičnom za domen. Takve je poteškoće često teško otkriti samo automatizovanim metrikama kvaliteta.
 
+## Jedan primer za svaku kategoriju pregleda
+
+Različite kategorije nalaza u pregledu zahtevaju različite vrste ljudske procene.
+
+### Modalnost i jezik pravilnika
+
+Izvorni AI nacrt:
+
+`Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
+
+Ispravka izvornog govornika:
+
+`Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
+
+Pouka:
+
+- očuvano značenje nije dovoljno kada gramatika, modalnost i formulacija pravilnika izvornim govornicima i dalje zvuče pogrešno
+
+### Optimizacija izvornog teksta za lokalizaciju
+
+Izvorni engleski naslov:
+
+`The hidden exclusion of English-only systems`
+
+Poboljšani engleski naslov:
+
+`Why English-only systems exclude people`
+
+Pouka:
+
+- neke lokalizacijske probleme bolje je rešiti poboljšanjem izvornog teksta nego primoravanjem svakog ciljnog jezika da kompenzuje sabijenu englesku formulaciju
+
+### Lažni prijatelj u tehničkoj terminologiji
+
+Izvorna engleska fraza:
+
+`benchmark fixtures`
+
+Netačna slovenačka lokalizacija:
+
+`primerjalne napeljave`
+
+Poboljšana slovenačka lokalizacija:
+
+`referenčni primeri za primerjalno vrednotenje`
+
+Pouka:
+
+- tehničke termine treba prevoditi prema domenskom značenju; u kontekstima testiranja i vrednovanja `fixture` znači višekratno upotrebljiv referentni primer ili testni slučaj, a ne fizičku infrastrukturu
+
 ## Trajna pouka
 
 Budućnost nije prevodilac protiv AI-ja. Praktična budućnost je lokalizacija potpomognuta AI-jem sa jasnim fazama pregleda i transparentnim očekivanjima kvaliteta.
@@ -92,4 +142,4 @@ Budućnost nije prevodilac protiv AI-ja. Praktična budućnost je lokalizacija p
 
 ## Drugi jezici
 
-- English (../en/ai-will-not-replace-translators.md)
+Engleski je kanonski jezik prvog izdanja ovog članka. Putanje spremne za prevođenje rezervisane su za sve podržane lokalizacije projekta Let Books.

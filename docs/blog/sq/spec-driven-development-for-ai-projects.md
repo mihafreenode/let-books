@@ -52,6 +52,8 @@ Në praktikë, AI shpesh optimizon atë që është më e dukshme në atë momen
 
 Asgjë nga këto nuk do të thotë vetvetiu vendim i saktë produkti.
 
+Këto janë shkurtore të dobishme për gjenerim. Por nuk janë zëvendësim për gjykimin e produktit.
+
 ## Çfarë bën një specifikim i mirë
 
 Një specifikim i mirë kryen të paktën katër role:
@@ -61,11 +63,28 @@ Një specifikim i mirë kryen të paktën katër role:
 - përcakton standardin e shqyrtimit
 - shërben si kujtesë e ekipit
 
+Së pari, ai përcakton qëllimin. Ekipi mund të shohë nëse një veçori mbështet produktin real apo thjesht shton dalje.
+
+Së dyti, ai përcakton kufijtë. Qartëson çfarë është në fushëveprim, çfarë është jashtë fushëveprimit, çfarë është opsionale dhe çfarë duhet të funksionojë edhe kur sistemet opsionale dështojnë.
+
+Së treti, ai përcakton standardin e shqyrtimit. Në vend që të pyetet vetëm nëse një ndryshim funksionon teknikisht, shqyrtuesit mund të pyesin nëse ai përputhet me rrjedhën e synuar të punës dhe angazhimet e produktit.
+
+Së katërti, ai vepron si kujtesë. Sistemet e AI nuk mbajnë vetë kujtesë institucionale të qëndrueshme. Një specifikim në depo po.
+
 Kjo është shumë e qartë te Let Books. `AGENTS.md` thekson disa herë se rrjedha manuale duhet të funksionojë edhe pa shërbime AI me pagesë dhe se kopjet fizike të librave nuk janë e njëjta gjë me regjistrat bibliografikë. Këto nuk janë hollësi teknike, por kufij produkti.
+
+Këto nuk janë hollësi implementimi. Janë kufij produkti. Nëse një ndihmës AI gjeneron një rrjedhë që bllokon futjen manuale ose shkrin të dhënat e kopjes fizike në metadata të botimit, problemi nuk është stili. Problemi është devijimi i produktit.
 
 ## Pse dokumentimi nuk duhet të presë
 
 Nëse dokumentimi është i vjetruar ose i paqartë, njerëz dhe mjete të ndryshme do të nxjerrin përfundime të ndryshme nga i njëjti depo. Njëri do të ndjekë demon, tjetri një README të vjetër, një tjetër skedarin më të afërt.
+
+Pa dokumentim të përditësuar:
+
+- kërkesat bëhen të paqëndrueshme
+- shqyrtimi bëhet subjektiv
+- demot fillojnë ta ripërcaktojnë produktin aksidentalisht
+- kontribuesit e ardhshëm trashëgojnë sjellje pa e ditur nëse ajo ishte e qëllimshme
 
 Prandaj dokumentimi nuk është vetëm shpjegim i mëvonshëm. Ai është pjesë e sistemit operativ të projektit. Në këtë depo, `README.md` përshkruan gjendjen aktuale, `AGENTS.md` qëllimin e produktit, `AGENTS-Implementation.md` rregullat taktike, ndërsa `docs/` rregullat e publikimit dhe evidencës.
 
@@ -74,6 +93,8 @@ Prandaj dokumentimi nuk është vetëm shpjegim i mëvonshëm. Ai është pjesë
 Demoja është e dobishme sepse tregon çfarë ekziston dhe zbulon probleme në rrjedhën e përdoruesit. Por ajo nuk duhet të bëhet në heshtje specifikim produkti.
 
 Rregullat e depos tashmë bëjnë dallimin mes specifikimeve dhe dokumentimit kanonik nga njëra anë dhe statusit të implementimit nga ana tjetër. Nëse demoja zbulon një rrjedhë më të mirë, duhet të përditësohen specifikimi dhe dokumentimi, jo të lihet demoja të fitojë vetë.
+
+Nëse një demo zbulon një rrjedhë pune më të mirë, përgjigjja nuk është ta lëmë të fitojë në heshtje. Përgjigjja është të përditësohen specifikimi, dokumentimi dhe standardi i shqyrtimit që ajo rrjedhë më e mirë të bëhet e qëllimshme.
 
 ## Markdown, testet dhe CI formojnë një zinxhir
 
@@ -86,6 +107,8 @@ Në një zhvillim të udhëhequr nga specifikimi, këto shtresa nuk qëndrojnë 
 - CI i zbaton rregullat rregullisht.
 
 Së bashku ato krijojnë kujtesë produkti që i mbijeton shpejtësisë së zhvillimit.
+
+Çdo shtresë është e paplotë më vete. Së bashku ato krijojnë kujtesë produkti që i mbijeton shpejtësisë, iterimit dhe ndryshimeve të ekipit.
 
 ## Çfarë do të thotë kjo për ekipet që përdorin AI
 
@@ -111,13 +134,13 @@ Në projektet e asistuara nga AI, specifikimi nuk është burokraci pas faktit. 
 
 ## Gjuhë të tjera
 
-- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
 - [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)
 - [Bosanski](../bs/spec-driven-development-for-ai-projects.md)
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
 - [Македонски](../mk/spec-driven-development-for-ai-projects.md)
+- [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Deutsch](../de/spec-driven-development-for-ai-projects.md)
 - [Italiano](../it/spec-driven-development-for-ai-projects.md)
 - [Français](../fr/spec-driven-development-for-ai-projects.md)

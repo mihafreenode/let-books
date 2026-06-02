@@ -46,7 +46,7 @@ Das Projekt ist noch keine vollständige gehostete Anwendung. Es umfasst derzeit
 
 `AGENTS.md` ist die zentrale Produktspezifikation. Sie definiert den Zweck des Projekts, das Domänenmodell, Arbeitsabläufe, Umfangsgrenzen, Lokalisierungsrichtung, Datenschutz, KI-Optionalität und Abnahmekriterien.
 
-Sie beantwortet Fragen wie:
+Das ist wichtig, weil sie Fragen beantwortet, auf die Code allein keine klare Antwort geben kann:
 
 - warum das Projekt existiert
 - welche Arbeitsabläufe erstklassig sind
@@ -60,24 +60,38 @@ Das ist der Unterschied zwischen einer allgemeinen Beschreibung und einer echten
 
 `AGENTS-Implementation.md` ergänzt die zweite Ebene. Sie ersetzt die Produktspezifikation nicht, sondern erklärt, wie die Arbeit in diesem Repository derzeit ausgeführt werden soll.
 
-Dazu gehören Regeln für öffentliche Benennung, Dokumentation, statische Seiten, Lokalisierung, Prüfung und Nachweispolitik für öffentliches Schreiben. Das ist wichtig, weil nicht jede Regel Produktwahrheit ist. Manche sind taktisch, redaktionell oder repositoriespezifisch.
+Beispiele dafür sind:
+
+- Regeln für öffentliche Benennung
+- Regeln für die Dokumentationsimplementierung
+- Erwartungen an Metadaten der statischen Website
+- Grenzen des Demos
+- Erwartungen an Lokalisierung und Prüfung
+- redaktionelle Nachweispolitik für öffentliches Schreiben
+
+Das ist für KI-gestützte Arbeit wichtig, weil nicht jede Regel in die langfristige Produktspezifikation gehört. Manche Regeln sind taktisch, redaktionell oder repositoriespezifisch. Diese Unterscheidung klar zu halten, reduziert Rauschen und verhindert, dass die Produktspezifikation zu einer Ablage für Implementierungsdetails wird.
 
 ## Die Ebene des aktuellen Zustands
 
-`README.md` bildet die dritte Ebene: eine ehrliche Beschreibung des aktuellen Zustands.
+`README.md` bildet die dritte Ebene: eine Beschreibung des aktuellen Zustands.
 
-Sie erklärt, was heute existiert, was noch fehlt, wozu das statische Demo dient und wie die öffentliche Seite veröffentlicht wird. Das hilft Mitwirkenden, Institutionen und Prüfern, Ambition nicht mit Implementierung zu verwechseln.
+Sie erklärt, was heute existiert, was noch fehlt, wozu das statische Demo dient und wie die öffentliche Seite veröffentlicht wird. Das ist ein zentraler Teil der Ausrichtung, weil Projekte oft scheitern, wenn Lesende Ambition mit Implementierung verwechseln.
+
+In Let Books unterscheidet die README ausdrücklich zwischen aktuellen Ergebnissen und zukünftigen Plänen. Das hilft Mitwirkenden, Institutionen und Prüfern, die Reife des Projekts ohne Rätselraten zu verstehen.
 
 ## Die Ebene der Dokumentation
 
-`docs/` fügt die vierte Ebene hinzu. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md` und die Stilrichtlinien legen fest, wie Wissen organisiert, veröffentlicht und geprüft werden soll.
+Der Bereich `docs/` fügt die vierte Ebene hinzu. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md`, die Stilrichtlinien und der Bereich `sources` legen fest, wie Wissen organisiert, validiert und veröffentlicht werden soll.
 
 Hier wird das Repository mehr als eine Sammlung von Dateien. Es wird zu einer Wissensplattform mit:
 
 - Dokumentationsarchitektur
 - redaktionellen Nachweisregeln
 - mehrsprachiger Veröffentlichungsstruktur
-- Regeln für Veröffentlichung und Prüfung
+- Veröffentlichungsregeln für öffentliche Dokumentation
+- Entwicklungs- und Validierungsleitlinien
+
+Genau diese Art von Gerüst hilft dabei, KI-gestützte Lieferung nachvollziehbar zu halten.
 
 ## Die Demo-Ebene
 
@@ -85,9 +99,20 @@ Das statische Demo ist wichtig, aber bewusst nicht die einzige Autorität. Die R
 
 Das bedeutet, dass das Demo Arbeitsabläufe prüfen, Nutzbarkeitsprobleme offenlegen und externen Beteiligten helfen kann, ohne von selbst zur endgültigen Produktwahrheit zu werden.
 
+Das ist eine reife Regel. Ohne sie werden Prototypen oft zu zufälligen Governance-Mechanismen. Ein Team beginnt, den Prototyp zu kopieren, weil er existiert, nicht weil er eine freigegebene Produktentscheidung widerspiegelt.
+
 ## Die Prüfungsebene
 
-Let Books dokumentiert bereits auch eine Prüfmentalität. `docs/Development.md` und `docs/Deployment.md` beschreiben Lokalisierungs-Smoketests, Validierung strukturierter Dateien, Metadatengenerierung, Pflichtdateien, Rechtschreibprüfungen und automatisierte Veröffentlichung.
+Let Books dokumentiert bereits auch eine Prüfmentalität.
+
+`docs/Development.md` und `docs/Deployment.md` beschreiben Validierungsebenen wie:
+
+- Lokalisierungs-Smoketests
+- Validierung strukturierter Dateien
+- Metadatengenerierung
+- Prüfungen auf Pflichtdateien
+- optionale Rechtschreibprüfung und Linting
+- Veröffentlichungsautomatisierung
 
 Das sind nicht nur Werkzeugdetails. Es ist ein Beleg dafür, dass das Projekt Qualität als wiederholbares System behandelt.
 
@@ -106,13 +131,23 @@ Diese Kette beseitigt Fehler nicht. Sie macht sie aber leichter erkennbar und le
 
 ## Die wichtigste Lehre
 
-Spezifikationsgetriebene Entwicklung bedeutet nicht nur, vor dem Programmieren ein langes Dokument zu schreiben. In der Praxis bedeutet sie, eine verlässliche Kette zwischen Produktabsicht, taktischen Regeln, öffentlicher Dokumentation, Demo, Prüfung und Veröffentlichung aufzubauen.
+Spezifikationsgetriebene Entwicklung bedeutet nicht nur, vor Beginn des Programmierens ein langes Anforderungsdokument zu schreiben.
 
-Let Books zeigt, dass eine solche Kette schon vor einer vollständigen Backend-Anwendung existieren kann. Genau das ist einer der stärksten Vorteile spezifikationsgetriebener Entwicklung in KI-gestützter Arbeit.
+In der Praxis bedeutet sie, eine verlässliche Kette aufzubauen zwischen:
+
+- Produktabsicht
+- taktischen Regeln
+- öffentlicher Dokumentation
+- Demos
+- Validierung
+- Veröffentlichung
+
+Let Books zeigt bereits, dass eine solche Kette existieren kann, bevor das vollständige Backend-Produkt existiert.
+
+Das ist eines der stärksten Argumente für spezifikationsgetriebene Entwicklung in KI-gestützter Arbeit: Je klarer die Kette der Absicht ist, desto unwahrscheinlicher wird schneller Output zu schneller Verwirrung.
 
 ## Andere Sprachen
 
-- [English](../en/spec-driven-development-in-let-books.md)
 - [Shqip](../sq/spec-driven-development-in-let-books.md)
 - [Slovenščina](../sl/spec-driven-development-in-let-books.md)
 - [Hrvatski](../hr/spec-driven-development-in-let-books.md)
@@ -120,6 +155,7 @@ Let Books zeigt, dass eine solche Kette schon vor einer vollständigen Backend-A
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-in-let-books.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-in-let-books.md)
 - [Македонски](../mk/spec-driven-development-in-let-books.md)
+- [Deutsch](../de/spec-driven-development-in-let-books.md)
 - [Italiano](../it/spec-driven-development-in-let-books.md)
 - [Français](../fr/spec-driven-development-in-let-books.md)
 - [Español](../es/spec-driven-development-in-let-books.md)

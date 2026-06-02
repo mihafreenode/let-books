@@ -65,7 +65,7 @@ Budućnost lokalizacije nije savršena automatizacija. To je kontinuirana koordi
 
 ## Drugi jezici
 
-- [English](../en/future-of-continuous-localization.md)
+- [English](../hr/future-of-continuous-localization.md)
 - [Slovenščina](../sl/future-of-continuous-localization.md)
 - [Bosanski](../bs/future-of-continuous-localization.md)
 - [Srpski (latinica)](../sr-Latn/future-of-continuous-localization.md)

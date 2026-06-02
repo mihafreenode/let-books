@@ -38,13 +38,19 @@ status: draft
 
 # Kdaj je demo dokaz in kdaj ni
 
-Demo je močan zato, ker abstraktne ideje spremeni v nekaj, na kar se ljudje lahko odzovejo. Delovni tok, ki se v zapisku zdi smiseln, lahko na telefonu ali v skladišču takoj pokaže resnično trenje.
+Demonstracije so močne zato, ker abstraktne ideje spremenijo v nekaj, na kar se ljudje lahko odzovejo. Delovni tok, ki se v načrtovalnem zapisku zdi smiseln, lahko pokaže resnično trenje že v trenutku, ko ga nekdo preizkusi na telefonu, v skladišču ali pod časovnim pritiskom.
 
-To je dobra stran dema. Nevarna stran pa je, da ljudje, ko prototip enkrat obstaja, pogosto začnejo njegovo vedenje obravnavati kot produktno resnico.
+To je dobra stran demonstracij.
+
+Nevarna stran pa je, da ljudje, ko prototip enkrat obstaja, pogosto začnejo z njim ravnati kot s produktno resnico, ne glede na to, ali je kdo to odločitev sploh uradno sprejel.
 
 ## Zakaj prototipi postanejo naključna avtoriteta
 
 Vidne stvari so prepričljive. Delujoč zaslon pogosto dobi več neformalne avtoritete kot zapisano pravilo, tudi če je bil zgrajen samo kot eksperiment.
+
+To je razumljivo. Ljudje zaupajo temu, kar lahko vidijo.
+
+Toda pri produktnem delu, še posebej pri produktnem delu z AI-podporo, lahko tak instinkt hitro ustvari zmedo.
 
 Demo lahko prikazuje:
 
@@ -57,23 +63,27 @@ Nič od tega še ne pomeni, da mora demo redefinirati izdelek.
 
 ## Kdaj je demo dober dokaz
 
-Demo je koristen, ko pomaga odgovoriti na vprašanja, kot so:
+Demo je koristen dokaz, kadar pomaga odgovoriti na vprašanja, kot so:
 
 - ali je potek uporaben
 - ali mobilni zaslon podpira resnično nalogo
-- ali je tok skeniranja razumljiv
-- kako se uporabniki odzovejo na zaporedje korakov
+- ali je tok skeniranja ali vnosa razumljiv
+- ali se uporabniki na zaporedje korakov odzivajo pozitivno ali negativno
 
-Takrat je demo dokaz o uporabnosti, izvedljivosti in komunikaciji.
+V takih primerih je demo dokaz o uporabnosti, izvedljivosti, zaporedju korakov in komunikaciji.
+
+Takšna vrsta dokaza je izjemno koristna.
 
 ## Kdaj demo ni avtoriteta
 
-Demo ne bi smel tiho preglasiti produktne specifikacije. Ni pravi glavni odgovor na vprašanja, kot so:
+Demo ne bi smel tiho preglasiti produktne specifikacije.
+
+Ni prava primarna avtoriteta za vprašanja, kot so:
 
 - ali je ta tok uradno v obsegu
-- ali je to začasen bližnjica ali produktna zaveza
+- ali je to začasna bližnjica ali produktna zaveza
 - ali to vedenje razveljavlja obstoječe pravilo
-- ali naj javna dokumentacija to opiše kot ciljni sistem
+- ali naj javna dokumentacija to opiše kot nameravani sistem
 
 Na taka vprašanja mora odgovoriti izrecna odločitev in posodobitev dokumentacije.
 
@@ -83,16 +93,27 @@ Repozitorij že določa zdravo pravilo: javno pisanje naj uporablja specifikacij
 
 To preprečuje, da bi prototip po naključju postal način upravljanja izdelka.
 
+Če statični demo razkrije boljši potek za škatle, boljši mobilni tok ali boljšo interakcijo pri vnosu, je to dragoceno. Toda tak boljši potek postane resnična avtoriteta šele po tem, ko se posodobijo specifikacija in povezana dokumentacija.
+
 ## Zakaj je to še pomembnejše z AI
 
-AI okrepi tisto, kar je trenutno najbolj konkretno. Če je najbolj konkreten artefakt demo, bodo pomočniki in ljudje njegovo vedenje hitro kopirali, ne da bi vprašali, ali se ujema s produktnimi mejami.
+AI okrepi tisto, kar je v trenutnem kontekstu videti najbolj konkretno.
 
-Zato ekipe potrebujejo viden red avtoritete:
+Če je najbolj konkretna stvar v repozitoriju demo, lahko pomočniki in tudi človeški sodelavci začnejo kopirati njegovo vedenje, ne da bi vprašali, ali se to ujema z nameravano mejo produkta.
+
+To je lahko koristno, kadar je demo že usklajen.
+Lahko pa tudi hitro razširi začasne predpostavke, kadar ni.
+
+Zato ekipe potrebujejo viden red avtoritete.
+
+## Praktična veriga avtoritete
+
+Za delo, kot je to, je uporaben naslednji vrstni red:
 
 1. produktna specifikacija
 2. implementacijska navodila
 3. dokumentacija trenutnega stanja
-4. demo ali prototip
+4. vedenje dema ali prototipa
 5. testi in validacija
 
 Demo je še vedno pomemben. Pomemben je le znotraj dokumentiranega sistema, namesto da bi ga zamenjal.
@@ -108,7 +129,7 @@ Pravi odziv je:
 1. zabeležiti ugotovitev
 2. odločiti, ali naj novo vedenje postane namerno
 3. posodobiti specifikacijo in dokumentacijo
-4. nato usklajenost ohranjati tudi naprej
+4. nato usklajenost ohranjati tudi v prihodnje
 
 Napačen odziv je, da dokumentacija ostane nespremenjena in vsi upajo, da si bodo zapomnili, da je demo zdaj dejanski vir resnice.
 
@@ -120,11 +141,14 @@ Institucije morajo vedeti, ali ocenjujejo koncept, prototip ali odobren model de
 
 ## Trajna lekcija
 
-Demo je dragocen, ker naredi produktne ideje preizkusljive. Nevaren pa postane, ko tiho postane politika. Zdrav model je preprost: naj demo informira izdelek, naj pa specifikacije in dokumentacija zapišejo končno odločitev.
+Demonstracije so dragocene, ker naredijo produktne ideje preizkusljive. Nevarne pa postanejo, ko tiho postanejo politika.
+
+Najbolj zdrav model je preprost: naj demonstracije informirajo produkt, specifikacije in dokumentacija pa naj zabeležijo končno odločitev.
 
 ## Drugi jeziki
 
-- [English](../en/when-the-demo-is-evidence-and-when-it-is-not.md)
+- [Slovenščina](../sl/when-the-demo-is-evidence-and-when-it-is-not.md)
+- [English](../sl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Hrvatski](../hr/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Bosanski](../bs/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Srpski (latinica)](../sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.md)

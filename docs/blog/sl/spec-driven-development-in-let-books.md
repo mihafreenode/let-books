@@ -40,56 +40,81 @@ status: draft
 
 Let Books je uporaben študijski primer razvoja na podlagi specifikacij, ker repozitorij že vsebuje več plasti produktnega namena, ne le implementacijskih artefaktov.
 
-Projekt še ni polna gostovana aplikacija. Trenutno vključuje produktno specifikacijo, implementacijska navodila, javno dokumentacijo in lokalni statični demo. Zaradi tega je dober primer, kako lahko projekt ostane usklajen, še preden obstaja končni produkcijski sklad.
+Projekt še ni polna gostovana aplikacija. Trenutno vključuje produktno specifikacijo, implementacijska navodila, javno dokumentacijo in statični lokalni demo. Zaradi tega je dober primer, kako lahko projekt ostane usklajen, še preden obstaja končni produkcijski sklad.
 
 ## Plast specifikacije
 
-`AGENTS.md` je jedrna produktna specifikacija. Določa namen projekta, domeno, delovne tokove, meje obsega, lokalizacijsko smer, zasebnost, neobveznost AI in merila sprejema.
+`AGENTS.md` je jedrna produktna specifikacija. Določa namen projekta, domeni model, delovne tokove, faze obsega, lokalizacijsko smer, pravila zasebnosti, neobveznost AI in merila sprejema.
 
-Odgovarja na vprašanja, kot so:
+To je pomembno, ker odgovarja na vprašanja, na katera sama koda ne more jasno odgovoriti:
 
-- zakaj projekt obstaja
+- zakaj produkt obstaja
 - kateri delovni tokovi so prvovrstni
 - kaj mora delovati brez AI
-- kaj so prihodnje ideje in ne sedanje zaveze
+- katere funkcije so prihodnje ideje in ne sedanje zaveze
 - kaj šteje kot uspešen prvi demo
 
-To je razlika med splošnim opisom in pravo specifikacijo. Prava specifikacija omejuje izbire implementacije.
+To je razlika med opisom projekta in pravo specifikacijo. Prava specifikacija omejuje izbire implementacije.
 
 ## Plast taktičnih navodil
 
-`AGENTS-Implementation.md` doda drugo plast. Ne nadomešča produktne specifikacije, ampak pojasnjuje, kako naj se delo v tem repozitoriju trenutno izvaja.
+`AGENTS-Implementation.md` doda drugo plast. Ne nadomešča produktne specifikacije. Pojasnjuje, kako naj se delo v tem repozitoriju trenutno izvaja.
 
-Sem sodijo pravila o javnem poimenovanju, dokumentaciji, statičnem mestu, lokalizaciji, preverjanju in dokazni politiki za javno pisanje. To je pomembno, ker niso vsa pravila produktne resnice. Nekatera so taktična, uredniška ali repozitorijsko specifična.
+Primeri vključujejo:
+
+- pravila javnega poimenovanja
+- pravila implementacije dokumentacije
+- pričakovanja glede metapodatkov statičnega mesta
+- omejitve dema
+- pričakovanja glede lokalizacije in preverjanja
+- uredniško dokazno politiko za javno pisanje
+
+To je pomembno pri AI-podprtem delu, ker vsako pravilo ne spada v dolgoročno produktno specifikacijo. Nekatera pravila so taktična, uredniška ali specifična za repozitorij. Če to razliko ohranimo jasno, zmanjšamo šum in preprečimo, da bi se produktna specifikacija spremenila v odlagališče implementacijskih podrobnosti.
 
 ## Plast trenutnega stanja
 
-`README.md` predstavlja tretjo plast: pošten opis trenutnega stanja.
+`README.md` predstavlja tretjo plast: opis trenutnega stanja.
 
-Pojasni, kaj danes obstaja, česa še ni, čemu je namenjen statični demo in kako je javna stran objavljena. To pomaga, da sodelavci, institucije in pregledovalci ne zamenjujejo ambicije z implementacijo.
+Pojasni, kaj danes obstaja, česa še ni, čemu je namenjen statični demo in kako je objavljena javna stran. To je ključen del usklajevanja, saj projekti pogosto propadejo, ko bralci zamenjajo ambicijo z implementacijo.
+
+V Let Books README izrecno ločuje med trenutnimi dostavljivimi rezultati in prihodnjimi načrti. To sodelavcem, institucijam in pregledovalcem pomaga razumeti zrelost projekta brez ugibanja.
 
 ## Plast dokumentacije
 
-`docs/` doda četrto plast. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md` in slogovni vodniki določajo, kako naj bo znanje organizirano, objavljeno in preverjeno.
+Območje `docs/` doda četrto plast. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md` ter slogovni vodniki in območje `sources` določajo, kako naj bo znanje organizirano, validirano in objavljeno.
 
-Tu repozitorij postane več kot le zbirka datotek. Postane platforma znanja s:
+Tu repozitorij postane več kot le zbirka kode. Postane platforma znanja z:
 
 - arhitekturo dokumentacije
 - pravili uredniških dokazov
 - večjezično založniško strukturo
-- pravili objave in preverjanja
+- pravili objavljanja javne dokumentacije
+- razvojnimi in validacijskimi navodili
+
+To je natanko tista vrsta ogrodja, ki pomaga, da AI-podprta dostava ostane sledljiva.
 
 ## Plast dema
 
-Statični demo je pomemben, vendar namerno ni edina avtoriteta. Pravila za bloge in vire že ločujejo med kanonično dokumentacijo in stanjem implementacije.
+Statični demo je pomemben, vendar namerno ni edina avtoriteta v repozitoriju.
 
-To pomeni, da lahko demo preverja delovne tokove, razkriva težave uporabnosti in pomaga pri razlagi zunanjim deležnikom, ne da bi sam od sebe postal dokončna produktna resnica.
+Pravila javne dokumentacije in bloga že ločujejo med kanoničnim dokumentacijskim dokazom in stanjem implementacije. To pomeni, da lahko demo potrjuje delovne tokove, razkriva UX-težave in pomaga zunanjim občinstvom razumeti produkt, hkrati pa ostaja podrejen dokumentiranemu produktnemu namenu, dokler se dokumentacija ne posodobi.
+
+To je zrelo pravilo. Brez njega prototipi pogosto postanejo naključni mehanizmi upravljanja. Ekipa začne kopirati prototip zato, ker obstaja, ne pa zato, ker odraža odobreno produktno odločitev.
 
 ## Plast preverjanja
 
-Let Books že dokumentira tudi miselnost preverjanja. `docs/Development.md` in `docs/Deployment.md` opisujeta dimne teste lokalizacije, validacijo strukturiranih datotek, generiranje metapodatkov, zahtevane datoteke, črkovalne preglede in avtomatizirano objavo.
+Let Books že dokumentira tudi miselnost preverjanja.
 
-To niso le podrobnosti o orodjih. So dokaz, da projekt kakovost obravnava kot ponovljiv sistem.
+`docs/Development.md` in `docs/Deployment.md` opisujeta validacijske plasti, kot so:
+
+- dimni testi lokalizacije
+- validacija strukturiranih datotek
+- generiranje metapodatkov
+- preverjanje obveznih datotek
+- neobvezni črkovalniki in linting
+- avtomatizacija objave
+
+To niso le podrobnosti o orodjih. So dokaz, da projekt kakovost obravnava kot ponovljiv sistem namesto kot ročno navado po najboljših močeh.
 
 ## Zakaj je to pomembno za AI-podprto dostavo
 
@@ -106,13 +131,25 @@ Ta veriga napak ne odpravi. Jih pa naredi lažje zaznavne in lažje pregledljive
 
 ## Glavna lekcija
 
-Razvoj na podlagi specifikacij ne pomeni le tega, da pred kodiranjem napišemo dolg dokument. V praksi pomeni, da zgradimo zanesljivo verigo med produktnim namenom, taktičnimi pravili, javno dokumentacijo, demom, preverjanjem in objavo.
+Razvoj na podlagi specifikacij ne pomeni le tega, da pred začetkom kodiranja napišemo dolg dokument z zahtevami.
 
-Let Books pokaže, da takšna veriga lahko obstaja še preden obstaja celotna zaledna aplikacija. Prav to je ena najmočnejših prednosti razvoja na podlagi specifikacij v AI-podprtem delu.
+V praksi pomeni, da zgradimo zanesljivo verigo med:
+
+- produktnim namenom
+- taktičnimi pravili
+- javno dokumentacijo
+- demonstracijami
+- validacijo
+- objavo
+
+Let Books že kaže, da taka veriga lahko obstaja še preden obstaja celoten zaledni produkt.
+
+To je eden najmočnejših argumentov za razvoj na podlagi specifikacij pri AI-podprtem delu: bolj ko je veriga namena jasna, manj verjetno je, da se bo hiter izhod spremenil v hitro zmedo.
 
 ## Drugi jeziki
 
-- [English](../en/spec-driven-development-in-let-books.md)
+- [Slovenščina](../sl/spec-driven-development-in-let-books.md)
+- [English](../sl/spec-driven-development-in-let-books.md)
 - [Hrvatski](../hr/spec-driven-development-in-let-books.md)
 - [Bosanski](../bs/spec-driven-development-in-let-books.md)
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-in-let-books.md)

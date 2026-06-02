@@ -7,8 +7,8 @@
     {
       "blockId": "multilingual-accessibility-heading-multilingual-accessibility-a9950538-1",
       "sourceHash": "a9950538f6709e2d2cb12a2acec2a2bceb046a92b792aab95ee5ef1297caff3e",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "повеќејазична-пристапност-heading-повеќејазична-пристапност-05f278e4-1",
+      "translationHash": "05f278e4d23f6004ea7ab2fe0b710508a51cff45e3ad3f99b772aa1744fcc55b",
       "blockType": "heading",
       "headingPath": [
         "Multilingual Accessibility"
@@ -17,9 +17,12 @@
         10,
         10
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "multilingual-accessibility/summary-heading-summary-30ac03ff-1",
@@ -39,14 +42,14 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "multilingual-accessibility/summary-paragraph-multilingual-accessibility-covers-localized-language-metadat-a313b712-1",
       "sourceHash": "a313b71252df6214faaac57e050f78d353301bb702843c376fbbead00d13f8af",
-      "targetBlockId": "повеќејазична-пристапност/поврзани-страници-list-list-8be9b163-1",
-      "translationHash": "8be9b16323d4ac256957c7974b87ccc6990ff9837eb353e60e701526834a6d24",
+      "targetBlockId": "повеќејазична-пристапност/резиме-paragraph-повеќејазичната-пристапност-опфаќа-локализирани-јазични-мета-4514ef94-1",
+      "translationHash": "4514ef942b23d06a4ff2ee446b9f6f4674ff7639c7c91c690433f59f76fe7264",
       "blockType": "paragraph",
       "headingPath": [
         "Multilingual Accessibility",
@@ -57,11 +60,11 @@
         14
       ],
       "targetLineRange": [
-        26,
-        28
+        14,
+        14
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "multilingual-accessibility/requirements-heading-requirements-98c33b0a-1",
@@ -81,14 +84,14 @@
         16,
         16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "multilingual-accessibility/requirements-list-localize-aria-labels-and-form-labels-347cd36f-1",
       "sourceHash": "347cd36fda75cee87eadd6ceef1ac7fa484441a86f0789a5d1e1143da182575b",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "повеќејазична-пристапност/барања-list-локализирајте-aria-етикети-и-формирајте-етикети-4e6ea2d5-1",
+      "translationHash": "4e6ea2d540ab67a7bd4d405fd0cc13fe3a13b88ad01f1007e0be334eb2b88fd9",
       "blockType": "list",
       "headingPath": [
         "Multilingual Accessibility",
@@ -98,15 +101,18 @@
         18,
         22
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        18,
+        22
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "multilingual-accessibility/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "повеќејазична-пристапност/поврзани-страници-heading-поврзани-страници-bd74261a-1",
+      "translationHash": "bd74261a918bd6dde7393f93095685d6d967bee05cbb40e8aca654bafa79fa0e",
       "blockType": "heading",
       "headingPath": [
         "Multilingual Accessibility",
@@ -116,15 +122,18 @@
         24,
         24
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "multilingual-accessibility/related-pages-list-list-8be9b163-1",
       "sourceHash": "8be9b16323d4ac256957c7974b87ccc6990ff9837eb353e60e701526834a6d24",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "повеќејазична-пристапност/поврзани-страници-list-list-8be9b163-1",
+      "translationHash": "8be9b16323d4ac256957c7974b87ccc6990ff9837eb353e60e701526834a6d24",
       "blockType": "list",
       "headingPath": [
         "Multilingual Accessibility",
@@ -134,9 +143,12 @@
         26,
         28
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        26,
+        28
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

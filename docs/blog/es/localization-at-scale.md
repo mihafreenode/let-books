@@ -93,4 +93,4 @@ Si un proyecto quiere participación multilingüe, la localización debe formar 
 
 ## Otros idiomas
 
-- English (../en/localization-at-scale.md)
+El inglés es la lengua canónica de la primera publicación de este artículo. Las rutas listas para traducción están reservadas para todas las localizaciones compatibles de Let Books.

@@ -76,4 +76,4 @@ No todos los idiomas necesitan el mismo nivel de madurez el primer día. Pero ca
 
 ## Otros idiomas
 
-- English (../en/why-every-language-matters.md)
+El inglés es la lengua canónica de la primera publicación de este artículo. Las rutas listas para traducción están reservadas para todas las localizaciones compatibles de Let Books.

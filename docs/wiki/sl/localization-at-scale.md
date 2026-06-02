@@ -1,7 +1,7 @@
 ---
 title: "Lokalizacija v merilu"
 summary: >-
-  Lokalizacija v obsegu je praksa obravnave večjezične vsebine kot zasnovanega sistema, ki zajema pisanje, upravljanje, sredstva, dostopnost, potrjevanje in pregled.
+  Lokalizacija v merilu je praksa obravnavanja večjezičnega objavljanja kot povratnega sistema in dolgoročnega sistema znanja, ne pa kot enkratne prevajalske naloge.
 topics:
   - localization
   - engineering-systems
@@ -11,7 +11,7 @@ topics:
 
 ## Povzetek
 
-Lokalizacija v obsegu je praksa obravnave večjezične vsebine kot zasnovanega sistema, ki zajema pisanje, upravljanje, sredstva, dostopnost, potrjevanje in pregled.
+Lokalizacija v merilu je praksa obravnavanja večjezičnega objavljanja kot povratnega sistema in dolgoročnega sistema znanja, ne pa kot enkratne prevajalske naloge.
 
 ## Osnovna ideja
 
@@ -21,24 +21,40 @@ Vključuje:
 
 - pisanje vira
 - terminologija
+- metapodatki
 - navigacija
 - besedilo o dostopnosti
 - diagrami in posnetki zaslona
-- metapodatki
 - pregled poteka dela
 - CI in QA
+- upravljanje odmika
+- pregled naravnega govorca
 
-## Zakaj je pomembno
+## Avtoritativni priročnik
 
-Projekti, ki zamujajo z lokalizacijo, običajno odkrijejo, da so njihova informacijska arhitektura, posnetki zaslona in predpostavke testiranja že angleško oblikovani.
+Osrednji operativni model za to pobudo je zdaj zbran v:
 
-## Let Books kontekst
+- `../localization-at-scale-program.md`
 
-Let Books je izrecno večjezičen v navodilih za izdelek, dokumentaciji in pričakovanjih uporabniškega vmesnika. Zaradi tega je arhitektura lokalizacije glavna skrb izdelka.
+Ta priročnik določa:
+
+- zakaj je večjezično objavljanje pomembno
+- zakaj je lokalizacija sistem, ne projekt
+- kako AI sodi v povratne zanke
+- model kakovosti pokritosti, celovitosti, kakovosti in svežine
+- lokalizacijski dolg in odprte razrede napak
+- sanacijo po načelu source-first in delovni tok za AI agente
+- lokalizacijski odmik in zrelost repozitorija
+- podrobni korpus ugotovitev pregledov naravnih govorcev
+
+## Praktično pravilo
+
+Lokalizirana stran ni dokončana, dokler ni lokalizirana vsa vsebina, ki jo vidi bralec, vključno s povzetki, oznakami, glavnim besedilom, napisi, diagrami, nadomestnim besedilom in površinami povezanih vsebin.
 
 ## Sorodne strani
 
+- `../localization-at-scale-program.md`
 - `language-support-matrix.md`
 - `localization-maturity-model.md`
+- `translation-quality-assurance.md`
 - `../learning/how-to-build-a-localization-pipeline.md`
-- `../blog/en/localization-at-scale.md`

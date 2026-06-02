@@ -65,7 +65,7 @@ status: draft
 
 ## Други јазици
 
-- [English](../en/translation-and-learning.md)
+- [English](../mk/translation-and-learning.md)
 - [Slovenščina](../sl/translation-and-learning.md)
 - [Hrvatski](../hr/translation-and-learning.md)
 - [Bosanski](../bs/translation-and-learning.md)

@@ -7,6 +7,6 @@ status: draft
 
 # El costo del software solo en inglés - Source Map
 
-This localized source map for the article "El costo del software solo en inglés" follows the canonical English map: [../en/the-cost-of-english-only-software.md](../en/the-cost-of-english-only-software.md).
+This localized source map for the article "El costo del software solo en inglés" follows the canonical English map: [../en/the-cost-of-english-only-software.md](../es/the-cost-of-english-only-software.md).
 
 The localized article should remain aligned with the canonical English claims, evidence, and editorial boundaries.

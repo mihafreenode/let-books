@@ -69,7 +69,7 @@ Lokalizimi vërtet kushton kohë dhe para. Por një model i shkallëzuar, transp
 
 ## Gjuhë të tjera
 
-- [English](../en/economics-of-localization.md)
+- [English](../sq/economics-of-localization.md)
 - [Slovenščina](../sl/economics-of-localization.md)
 - [Hrvatski](../hr/economics-of-localization.md)
 - [Bosanski](../bs/economics-of-localization.md)

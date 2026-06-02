@@ -66,7 +66,7 @@ Një produkt shumëgjuhësh nuk është i aksesueshëm si parazgjedhje dhe një 
 
 ## Gjuhë të tjera
 
-- [English](../en/multilingual-accessibility.md)
+- [English](../sq/multilingual-accessibility.md)
 - [Slovenščina](../sl/multilingual-accessibility.md)
 - [Hrvatski](../hr/multilingual-accessibility.md)
 - [Bosanski](../bs/multilingual-accessibility.md)

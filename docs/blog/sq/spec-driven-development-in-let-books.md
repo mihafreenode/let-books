@@ -46,7 +46,7 @@ Projekti ende nuk është një aplikacion i plotë i hostuar. Aktualisht ai për
 
 `AGENTS.md` është specifikimi kryesor i produktit. Ai përcakton qëllimin e projektit, modelin e domenit, rrjedhat e punës, kufijtë e fushës, drejtimin e lokalizimit, privatësinë, opsionalitetin e AI dhe kriteret e pranimit.
 
-Ai u përgjigjet pyetjeve si:
+Kjo është e rëndësishme sepse u përgjigjet pyetjeve që vetëm kodi nuk mund t'i sqarojë qartë:
 
 - pse ekziston projekti
 - cilat rrjedha pune janë të klasit të parë
@@ -60,24 +60,38 @@ Ky është dallimi midis një përshkrimi të përgjithshëm dhe një specifikim
 
 `AGENTS-Implementation.md` shton shtresën e dytë. Ai nuk e zëvendëson specifikimin e produktit, por shpjegon se si duhet të kryhet puna aktualisht në këtë depo.
 
-Këtu përfshihen rregullat për emërtimin publik, dokumentimin, faqen statike, lokalizimin, verifikimin dhe politikën e evidencës për shkrimin publik. Kjo është e rëndësishme sepse jo çdo rregull është e vërtetë produkti. Disa janë taktike, editoriale ose specifike për depon.
+Shembuj përfshijnë:
+
+- rregulla të emërtimit publik
+- rregulla të implementimit të dokumentimit
+- pritshmëri për metadata të sajtit statik
+- kufizime të demove
+- pritshmëri për lokalizimin dhe verifikimin
+- politikë editoriale të evidencës për shkrimin publik
+
+Kjo është e rëndësishme në punën e asistuar nga AI, sepse jo çdo rregull i përket specifikimit afatgjatë të produktit. Disa rregulla janë taktike, editoriale ose specifike për depon. Mbajtja e kësaj dallese të qartë ul zhurmën dhe e pengon specifikimin e produktit të shndërrohet në depo të hollësive të implementimit.
 
 ## Shtresa e gjendjes aktuale
 
-`README.md` përfaqëson shtresën e tretë: një përshkrim i ndershëm i gjendjes aktuale.
+`README.md` përfaqëson shtresën e tretë: një përshkrim të gjendjes aktuale.
 
-Ai shpjegon çfarë ekziston sot, çfarë ende nuk ekziston, për çfarë shërben demoja statike dhe si publikohet faqja publike. Kjo i ndihmon bashkëpunëtorët, institucionet dhe rishikuesit të mos ngatërrojnë ambicien me implementimin.
+Ai shpjegon çfarë ekziston sot, çfarë ende nuk ekziston, për çfarë shërben demoja statike dhe si publikohet faqja publike. Kjo është pjesë kyçe e përafrimit, sepse projektet shpesh dështojnë kur lexuesit ngatërrojnë ambicien me implementimin.
+
+Në Let Books, README dallon shprehimisht dorëzimet aktuale nga planet e ardhshme. Kjo i ndihmon bashkëpunëtorët, institucionet dhe rishikuesit të kuptojnë pjekurinë e projektit pa supozime.
 
 ## Shtresa e dokumentimit
 
-`docs/` shton shtresën e katërt. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md` dhe udhëzuesit e stilit përcaktojnë se si duhet të organizohet, publikohet dhe verifikohet njohuria.
+Zona `docs/` shton shtresën e katërt. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md`, udhëzuesit e stilit dhe zona `sources` përcaktojnë se si duhet të organizohet, validohet dhe publikohet njohuria.
 
 Këtu depoja bëhet më shumë se një koleksion skedarësh. Ajo bëhet një platformë dijeje me:
 
 - arkitekturë dokumentimi
 - rregulla të evidencës editoriale
 - strukturë botimi shumëgjuhëshe
-- rregulla publikimi dhe verifikimi
+- rregulla të publikimit të dokumentimit publik
+- udhëzime zhvillimi dhe validimi
+
+Kjo është pikërisht lloji i skeletit që ndihmon dorëzimin e asistuar nga AI të mbetet i gjurmueshëm.
 
 ## Shtresa e demove
 
@@ -85,9 +99,20 @@ Demoja statike është e rëndësishme, por me qëllim nuk është autoriteti i 
 
 Kjo do të thotë se demoja mund të verifikojë rrjedhat e punës, të zbulojë probleme përdorshmërie dhe të ndihmojë në shpjegim për aktorët e jashtëm, pa u bërë vetvetiu e vërteta përfundimtare e produktit.
 
+Ky është një rregull i pjekur. Pa të, prototipet shpesh bëhen mekanizma të rastësishëm qeverisjeje. Një ekip fillon ta kopjojë prototipin sepse ekziston, jo sepse ai pasqyron një vendim të miratuar produkti.
+
 ## Shtresa e verifikimit
 
-Let Books tashmë dokumenton edhe një mënyrë të menduari për verifikimin. `docs/Development.md` dhe `docs/Deployment.md` përshkruajnë teste smoke për lokalizimin, validimin e skedarëve të strukturuar, gjenerimin e metadatave, skedarët e detyrueshëm, kontrollin drejtshkrimor dhe publikimin e automatizuar.
+Let Books tashmë dokumenton edhe një mënyrë të menduari për verifikimin.
+
+`docs/Development.md` dhe `docs/Deployment.md` përshkruajnë shtresa validimi si:
+
+- teste smoke të lokalizimit
+- validim të skedarëve të strukturuar
+- gjenerim metadatash
+- kontrolle për skedarët e detyrueshëm
+- kontroll drejtshkrimor opsional dhe linting
+- automatizim të publikimit
 
 Këto nuk janë vetëm hollësi mjetesh. Ato janë provë se projekti e trajton cilësinë si sistem të përsëritshëm.
 
@@ -106,19 +131,30 @@ Ky zinxhir nuk i eliminon gabimet. Por i bën më të lehta për t'u zbuluar dhe
 
 ## Mësimi kryesor
 
-Zhvillimi i udhëhequr nga specifikimi nuk do të thotë vetëm të shkruash një dokument të gjatë përpara kodimit. Në praktikë do të thotë të ndërtosh një zinxhir të besueshëm midis qëllimit të produktit, rregullave taktike, dokumentimit publik, demove, verifikimit dhe publikimit.
+Zhvillimi i udhëhequr nga specifikimi nuk do të thotë vetëm të shkruash një dokument të gjatë me kërkesa para se të fillojë kodimi.
 
-Let Books tregon se një zinxhir i tillë mund të ekzistojë edhe përpara aplikacionit të plotë backend. Pikërisht kjo është një nga avantazhet më të forta të zhvillimit të udhëhequr nga specifikimi në punën e mbështetur nga AI.
+Në praktikë, do të thotë të ndërtosh një zinxhir të besueshëm midis:
+
+- qëllimit të produktit
+- rregullave taktike
+- dokumentimit publik
+- demove
+- validimit
+- publikimit
+
+Let Books tashmë tregon se një zinxhir i tillë mund të ekzistojë edhe përpara se të ekzistojë produkti i plotë backend.
+
+Ky është një nga argumentet më të forta për zhvillimin e udhëhequr nga specifikimi në punën e mbështetur nga AI: sa më i qartë të jetë zinxhiri i qëllimit, aq më pak gjasa ka që dalja e shpejtë të shndërrohet në konfuzion të shpejtë.
 
 ## Gjuhë të tjera
 
-- [English](../en/spec-driven-development-in-let-books.md)
 - [Slovenščina](../sl/spec-driven-development-in-let-books.md)
 - [Hrvatski](../hr/spec-driven-development-in-let-books.md)
 - [Bosanski](../bs/spec-driven-development-in-let-books.md)
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-in-let-books.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-in-let-books.md)
 - [Македонски](../mk/spec-driven-development-in-let-books.md)
+- [Shqip](../sq/spec-driven-development-in-let-books.md)
 - [Deutsch](../de/spec-driven-development-in-let-books.md)
 - [Italiano](../it/spec-driven-development-in-let-books.md)
 - [Français](../fr/spec-driven-development-in-let-books.md)

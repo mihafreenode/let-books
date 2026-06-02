@@ -30,7 +30,7 @@ El ISBN identifica la edición, no la obra. Por ejemplo, la segunda y tercera ed
 
 Esta es una precisión útil — pero conlleva limitaciones importantes.
 
-![Diagrama ISBN vs ejemplar físico de libro](../../diagrams/blog/isbn-not-a-database/es/isbn-vs-physical-book.svg)
+![Diagrama ISBN vs ejemplar físico de libro](../../diagrams/isbn-vs-physical-book.svg)
 
 Un ISBN identifica los metadatos de la edición a la izquierda. El ejemplar físico a la derecha — estado, procedencia, ubicación de almacenamiento, estado de donación, fotos — se rastrea por separado en el modelo de dominio de Let Books. Ambos están relacionados pero no son lo mismo.
 
@@ -60,7 +60,7 @@ Existen ISBN mal impresos. Un mismo ISBN puede ser reutilizado accidentalmente p
 
 `docs/book-metadata.md` define una estrategia práctica de respaldo para la búsqueda por ISBN. El documento también indica que este flujo funciona en la demo alfa actual y al mismo tiempo sirve como patrón para la futura aplicación completa:
 
-![Diagrama de la cadena de búsqueda de ISBN](../../diagrams/blog/isbn-not-a-database/es/isbn-lookup-chain.svg)
+![Diagrama de la cadena de búsqueda de ISBN](../../diagrams/isbn-lookup-chain.svg)
 
 1. Normaliza y valida el ISBN. Elimina espacios y guiones, convierte la X a mayúscula, valida el dígito de control.
 2. Consulta primero Open Library a través de su API pública.
@@ -78,6 +78,8 @@ Las referencias canónicas del repositorio para esta cadena son `docs/book-metad
 Cuando un donante cataloga una colección de libros académicos, algunos tendrán ISBN y otros no. Los libros sin ISBN suelen ser los más interesantes — ediciones más antiguas, materiales publicados localmente, compilaciones para cursos específicos o libros de editoriales de la ex Yugoslavia cuyos identificadores nunca llegaron a las bases de datos globales.
 
 El proceso de catalogación no debe castigar al donante por la falta de ISBN. Cada función que funciona con la búsqueda de ISBN debe funcionar también sin él: seguimiento de ubicación, carga de fotos, exportación a Excel, revisión por lotes. El ISBN es una conveniencia, no un requisito.
+
+Este principio se afirma directamente en la especificación del proyecto en `AGENTS.md`:
 
 > **Especificación del proyecto, AGENTS.md:** "El modelo debe permitir datos incompletos. No se requiere ISBN."
 

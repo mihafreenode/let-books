@@ -1,5 +1,7 @@
 ---
 title: "Allineamento tra demo e specifica"
+summary: >-
+  L'allineamento tra demo e specifica è la pratica di mantenere coerente il comportamento del prototipo o della demo con l'intento di prodotto documentato, aggiornando esplicitamente la specifica quando la demo rivela un flusso di lavoro migliore.
 topics:
   - demo-alignment
   - spec-driven-development

@@ -7,6 +7,6 @@ status: draft
 
 # Preservare le lingue più piccole nell’era digitale - Source Map
 
-This localized source map for the article "Preservare le lingue più piccole nell’era digitale" follows the canonical English map: [../en/preserving-smaller-languages-in-the-digital-age.md](../en/preserving-smaller-languages-in-the-digital-age.md).
+This localized source map for the article "Preservare le lingue più piccole nell’era digitale" follows the canonical English map: [../en/preserving-smaller-languages-in-the-digital-age.md](../it/preserving-smaller-languages-in-the-digital-age.md).
 
 The localized article should remain aligned with the canonical English claims, evidence, and editorial boundaries.

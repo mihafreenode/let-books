@@ -7,6 +7,6 @@ status: draft
 
 # Aksesueshmëria shumëgjuhëshe - Source Map
 
-This localized source map for the article "Aksesueshmëria shumëgjuhëshe" follows the canonical English map: [../en/multilingual-accessibility.md](../en/multilingual-accessibility.md).
+This localized source map for the article "Aksesueshmëria shumëgjuhëshe" follows the canonical English map: [../en/multilingual-accessibility.md](../sq/multilingual-accessibility.md).
 
 The localized article should remain aligned with the canonical English claims, evidence, and editorial boundaries.

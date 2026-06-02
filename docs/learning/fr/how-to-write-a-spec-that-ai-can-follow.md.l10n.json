@@ -21,7 +21,7 @@
         10,
         10
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -42,7 +42,7 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -63,8 +63,8 @@
         14,
         14
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-heading-why-this-matters-7e1d357b-1",
@@ -84,7 +84,7 @@
         16,
         16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -105,8 +105,8 @@
         18,
         18
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-paragraph-if-a-specification-is-vague-ai-will-often-fill-the-gaps-with-ee7fb170-1",
@@ -126,8 +126,8 @@
         20,
         20
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-list-common-architecture-patterns-36b1ca10-1",
@@ -147,8 +147,8 @@
         22,
         25
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-paragraph-that-output-may-look-polished-and-still-be-wrong-130f0ab0-1",
@@ -168,8 +168,8 @@
         27,
         27
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include-heading-what-a-useful-ai-facing-spec-should-include-5156c573-1",
@@ -189,7 +189,7 @@
         29,
         29
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -211,7 +211,7 @@
         31,
         31
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -233,14 +233,14 @@
         33,
         33
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-paragraph-bad-5ef07ed3-1",
       "sourceHash": "5ef07ed3caf4dedc4c58c70a2b2b2d259a387f919e5b254a3cb769b4fbf9fd0b",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "comment-écrire-une-spécification-que-l-ia-peut-suivre/ce-qu-une-spécification-utile-orientée-ia-doit-contenir/1-finalité-du-produit-paragraph-mauvais-0bd419a8-1",
+      "translationHash": "0bd419a8ee6221101d63ecd0a77a9d5b63cce44ff8f21a031d20a6895abcdc13",
       "blockType": "paragraph",
       "headingPath": [
         "How to Write a Spec That AI Can Follow",
@@ -251,9 +251,12 @@
         35,
         35
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        35,
+        35
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-blockquote-add-a-book-form-fb5c53ee-1",
@@ -274,8 +277,8 @@
         37,
         38
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-paragraph-better-47fdc1f2-1",
@@ -296,8 +299,8 @@
         39,
         39
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-blockquote-add-a-fast-intake-form-that-lets-a-donor-catalog-one-physica-b06917b7-1",
@@ -318,8 +321,8 @@
         41,
         42
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-paragraph-purpose-tells-the-implementer-what-to-optimize-for-dd92a313-1",
@@ -340,8 +343,8 @@
         43,
         43
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-heading-2-scope-boundaries-67e183f9-1",
@@ -362,7 +365,7 @@
         45,
         45
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -384,8 +387,8 @@
         47,
         47
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-paragraph-example-872887e5-1",
@@ -406,8 +409,8 @@
         49,
         49
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-list-in-scope-cover-photo-isbn-entry-storage-location-save-and-co-601de41e-1",
@@ -428,8 +431,8 @@
         51,
         52
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-paragraph-this-prevents-the-assistant-from-inflating-a-small-task-into-73362734-1",
@@ -450,8 +453,8 @@
         54,
         54
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-heading-3-required-behavior-b02cbd7f-1",
@@ -472,7 +475,7 @@
         56,
         56
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -494,8 +497,8 @@
         58,
         58
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-paragraph-examples-from-the-let-books-approach-15635dcf-1",
@@ -516,8 +519,8 @@
         60,
         60
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-list-manual-workflow-must-work-without-ai-195e40f5-1",
@@ -538,8 +541,8 @@
         62,
         65
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-paragraph-these-rules-matter-more-than-implementation-style-04a8a9fa-1",
@@ -560,14 +563,14 @@
         67,
         67
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/4-failure-and-fallback-behavior-heading-4-failure-and-fallback-behavior-80c8838a-1",
       "sourceHash": "80c8838a378b6dba0b3f35db1c17740e3c87ea9926e3ad40e58c7fde4ed23e4f",
-      "targetBlockId": "comment-écrire-une-spécification-que-l-ia-peut-suivre/ce-qu-une-spécification-utile-orientée-ia-doit-contenir/5-critères-d-acceptation-heading-5-critères-d-acceptation-0cb6675a-1",
-      "translationHash": "0cb6675aa5c01b096a69eaa3a898ce1addb7b2078214b65a8370abe63d64418f",
+      "targetBlockId": "comment-écrire-une-spécification-que-l-ia-peut-suivre/ce-qu-une-spécification-utile-orientée-ia-doit-contenir/4-comportement-d-échec-et-de-repli-heading-4-comportement-d-échec-et-de-repli-57f5952c-1",
+      "translationHash": "57f5952c5bad4665f0f2d483309db80ec0673943c8efdbd1c3f7d87655b6993c",
       "blockType": "heading",
       "headingPath": [
         "How to Write a Spec That AI Can Follow",
@@ -579,10 +582,10 @@
         69
       ],
       "targetLineRange": [
-        79,
-        79
+        69,
+        69
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -604,8 +607,8 @@
         71,
         71
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/4-failure-and-fallback-behavior-paragraph-example-872887e5-1",
@@ -626,8 +629,8 @@
         73,
         73
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/4-failure-and-fallback-behavior-list-if-metadata-lookup-fails-manual-entry-remains-available-0eacc074-1",
@@ -648,14 +651,14 @@
         75,
         77
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-heading-5-acceptance-criteria-0d026f5f-1",
       "sourceHash": "0d026f5fd64435e67368a382ca71163c4e4a850fa0ce6ff4100a8fb3409f1701",
-      "targetBlockId": "comment-écrire-une-spécification-que-l-ia-peut-suivre/ce-qu-une-spécification-utile-orientée-ia-doit-contenir/4-comportement-d-échec-et-de-repli-heading-4-comportement-d-échec-et-de-repli-57f5952c-1",
-      "translationHash": "57f5952c5bad4665f0f2d483309db80ec0673943c8efdbd1c3f7d87655b6993c",
+      "targetBlockId": "comment-écrire-une-spécification-que-l-ia-peut-suivre/ce-qu-une-spécification-utile-orientée-ia-doit-contenir/5-critères-d-acceptation-heading-5-critères-d-acceptation-0cb6675a-1",
+      "translationHash": "0cb6675aa5c01b096a69eaa3a898ce1addb7b2078214b65a8370abe63d64418f",
       "blockType": "heading",
       "headingPath": [
         "How to Write a Spec That AI Can Follow",
@@ -667,10 +670,10 @@
         79
       ],
       "targetLineRange": [
-        69,
-        69
+        79,
+        79
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -692,8 +695,8 @@
         81,
         81
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-paragraph-example-872887e5-1",
@@ -714,8 +717,8 @@
         83,
         83
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-list-1-user-selects-a-box-79d358e4-1",
@@ -736,8 +739,8 @@
         85,
         88
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-paragraph-acceptance-criteria-give-reviewers-and-ai-systems-a-stable-t-ec82eda4-1",
@@ -758,8 +761,8 @@
         90,
         90
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/what-to-avoid-heading-what-to-avoid-b7d92d5f-1",
@@ -779,7 +782,7 @@
         92,
         92
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -800,8 +803,8 @@
         94,
         98
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/a-practical-writing-pattern-heading-a-practical-writing-pattern-d376f049-1",
@@ -821,7 +824,7 @@
         100,
         100
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -842,8 +845,8 @@
         102,
         102
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/a-practical-writing-pattern-list-1-problem-171792f4-1",
@@ -863,8 +866,8 @@
         104,
         111
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/how-this-maps-to-let-books-heading-how-this-maps-to-let-books-260fbfd7-1",
@@ -884,7 +887,7 @@
         113,
         113
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -905,8 +908,8 @@
         115,
         115
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/how-this-maps-to-let-books-list-defines-product-purpose-workflows-and-acceptance-criteria-612d3279-1",
@@ -926,8 +929,8 @@
         117,
         119
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/how-this-maps-to-let-books-paragraph-that-layered-approach-is-useful-because-ai-does-better-when--6ba5f0d7-1",
@@ -947,8 +950,8 @@
         121,
         121
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/exercise-heading-exercise-83297eaf-1",
@@ -968,7 +971,7 @@
         123,
         123
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -989,8 +992,8 @@
         125,
         125
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/exercise-paragraph-then-ask-a-coding-assistant-to-implement-it-270c6a2f-1",
@@ -1010,8 +1013,8 @@
         127,
         127
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/exercise-paragraph-afterward-review-the-output-against-the-spec-before-reviewin-32c8688a-1",
@@ -1031,8 +1034,8 @@
         129,
         129
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "how-to-write-a-spec-that-ai-can-follow/further-reading-heading-further-reading-dfd43c88-1",
@@ -1052,7 +1055,7 @@
         131,
         131
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -1073,8 +1076,8 @@
         133,
         136
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

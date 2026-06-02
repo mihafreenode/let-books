@@ -66,7 +66,7 @@ Prihodnost lokalizacije ni popolna avtomatizacija. Je neprekinjeno usklajevanje 
 
 ## Drugi jeziki
 
-- [English](../en/future-of-continuous-localization.md)
+- [English](../sl/future-of-continuous-localization.md)
 - [Hrvatski](../hr/future-of-continuous-localization.md)
 - [Bosanski](../bs/future-of-continuous-localization.md)
 - [Srpski (latinica)](../sr-Latn/future-of-continuous-localization.md)

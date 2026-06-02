@@ -65,7 +65,7 @@ E ardhmja e lokalizimit nuk është automatizimi i përsosur. Ajo është koordi
 
 ## Gjuhë të tjera
 
-- [English](../en/future-of-continuous-localization.md)
+- [English](../sq/future-of-continuous-localization.md)
 - [Slovenščina](../sl/future-of-continuous-localization.md)
 - [Hrvatski](../hr/future-of-continuous-localization.md)
 - [Bosanski](../bs/future-of-continuous-localization.md)

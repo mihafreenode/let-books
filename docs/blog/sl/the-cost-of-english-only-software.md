@@ -66,7 +66,7 @@ Programska oprema samo v angleščini je pogosto cenejša le takrat, ko projekt 
 
 ## Drugi jeziki
 
-- [English](../en/the-cost-of-english-only-software.md)
+- [English](../sl/the-cost-of-english-only-software.md)
 - [Hrvatski](../hr/the-cost-of-english-only-software.md)
 - [Bosanski](../bs/the-cost-of-english-only-software.md)
 - [Srpski (latinica)](../sr-Latn/the-cost-of-english-only-software.md)

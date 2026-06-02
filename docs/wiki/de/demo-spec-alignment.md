@@ -1,5 +1,7 @@
 ---
 title: "Abgleich Von Demo Und Spezifikation"
+summary: >-
+  Der Abgleich von Demo und Spezifikation ist die Praxis, das Verhalten von Prototyp oder Demo mit der dokumentierten Produktabsicht konsistent zu halten und die Spezifikation ausdrücklich zu aktualisieren, wenn eine Demo einen besseren Ablauf zeigt.
 topics:
   - demo-alignment
   - spec-driven-development

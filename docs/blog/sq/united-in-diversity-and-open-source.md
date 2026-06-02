@@ -70,7 +70,7 @@ Pjesëmarrja shumëgjuhëshe nuk është një risi politike. Ajo është një re
 
 ## Gjuhë të tjera
 
-- [English](../en/united-in-diversity-and-open-source.md)
+- [English](../sq/united-in-diversity-and-open-source.md)
 - [Slovenščina](../sl/united-in-diversity-and-open-source.md)
 - [Hrvatski](../hr/united-in-diversity-and-open-source.md)
 - [Bosanski](../bs/united-in-diversity-and-open-source.md)

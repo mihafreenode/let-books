@@ -69,7 +69,7 @@ La localizzazione costa davvero tempo e denaro. Ma un modello graduale, traspare
 
 ## Altre lingue
 
-- [English](../en/economics-of-localization.md)
+- [English](../it/economics-of-localization.md)
 - [Slovenščina](../sl/economics-of-localization.md)
 - [Hrvatski](../hr/economics-of-localization.md)
 - [Bosanski](../bs/economics-of-localization.md)

@@ -35,57 +35,78 @@ status: draft
 
 # Razvoj na podlagi specifikacij za AI projekte
 
-AI zelo olajša hitro ustvarjanje kode. Prav tako pa zelo olajša hitro ustvarjanje napačne kode. Zato je razvoj na podlagi specifikacij v AI-podprtih projektih pomembnejši, ne manj pomemben.
+AI zelo olajša hitro ustvarjanje kode. Prav tako pa zelo olajša hitro ustvarjanje napačne kode. To je osrednji razlog, zakaj je razvoj na podlagi specifikacij v AI-podprtih projektih pomembnejši, ne manj pomemben.
 
-Ko ekipa razvija brez jasne specifikacije, se izdelek sčasoma oddalji od namena. Ko pri tem pomaga AI, se lahko ta odmik zgodi v enem samem popoldnevu. Koda se lahko prevede, vmesnik je lahko videti lepo, testi pa lahko celo uspejo. Izdelek je kljub temu lahko napačen.
+Ko človeška ekipa razvija programsko opremo brez jasne specifikacije, se rezultat običajno sčasoma oddalji od namena. Ko programsko opremo brez jasne specifikacije piše AI pomočnik, se lahko tak odmik zgodi v enem samem popoldnevu. Koda se lahko prevede. Uporabniški vmesnik je lahko videti dovršen. Testi lahko celo uspejo, če so napisani na podlagi napačnih predpostavk. Toda produkt se lahko še vedno oddalji od svojemu resničnemu namenu.
 
 ## Zakaj AI spremeni profil tveganja
 
-AI pospeši tempo interpretacije. En sam poziv lahko ustvari arhitekturo, besedilo, validacijo, poimenovanja in uporabniški tok. To je koristno, vendar nevarno, kadar vir resnice ni dovolj jasen.
+Tradicionalni razvoj programske opreme je že prej imel vrzeli v interpretaciji med produktnim namenom, zasnovo, implementacijo in dokumentacijo. AI to časovnico stisne. En sam poziv lahko hkrati ustvari arhitekturo, besedilo, validacijska pravila, poimenovanja in vzorce vmesnika.
+
+Ta hitrost je koristna. Nevarna pa postane, ko je vir resnice nejasen.
 
 V praksi AI pogosto optimizira tisto, kar je v danem trenutku najbolj vidno:
 
 - zadnji poziv
 - najbližjo datoteko
 - najlažjo implementacijsko pot
-- najbolj generičen znan vzorec
+- najpogostejši vzorec v svoji distribuciji učenja
 
 Nič od tega samo po sebi še ne pomeni pravilne produktne odločitve.
 
-## Kaj naredi dobra specifikacija
+## Kaj specifikacija naredi v AI-podprtem delovnem toku
 
-Dobra specifikacija opravi vsaj štiri naloge:
+Močna produktna specifikacija opravi vsaj štiri naloge.
 
-- določi namen
-- postavi meje
-- določi merilo pregleda
-- deluje kot spomin ekipe
+Prvič, določi namen. Ekipa lahko presodi, ali neka funkcija podpira dejanski produkt ali le dodaja izhod.
 
-To je v Let Books zelo jasno. `AGENTS.md` večkrat poudari, da mora ročni potek delovati tudi brez plačljivih AI storitev in da fizični izvodi knjig niso isto kot bibliografski zapisi. To nista tehnični podrobnosti, temveč produktni meji.
+Drugič, določi meje. Pojasni, kaj je v obsegu, kaj je zunaj obsega, kaj je neobvezno in kaj mora delovati tudi takrat, ko neobvezni sistemi odpovejo.
+
+Tretjič, določi merilo pregleda. Namesto da bi se spraševali le, ali sprememba tehnično deluje, se lahko pregledovalci vprašajo, ali se ujema z nameravanim delovnim tokom in produktnimi zavezami.
+
+Četrtič, deluje kot spomin. AI sistemi sami od sebe nimajo stabilnega institucionalnega spomina. Specifikacija v repozitoriju ga ima.
+
+To je v Let Books še posebej vidno. Projektna specifikacija v `AGENTS.md` večkrat jasno poudari dve stvari:
+
+- ročni delovni tok mora ostati uporaben tudi brez plačljivih AI storitev
+- fizični izvodi knjig in bibliografski zapisi morajo ostati ločena pojma
+
+To nista implementacijski podrobnosti. To sta produktni meji. Če AI pomočnik ustvari tok, ki blokira ročni vnos ali združi podatke o fizičnem izvodu z metapodatki o izdaji, težava ni v slogu. Težava je produktni odmik.
 
 ## Zakaj dokumentacija ne sme čakati
 
-Če je dokumentacija zastarela ali nejasna, bodo različni ljudje in različna orodja iz istega repozitorija razbrali različne izdelke. Eden bo sledil demu, drugi staremu README-ju, tretji najbližji datoteki.
+V mnogih projektih je dokumentacija obravnavana kot pozno čiščenje. Ko je AI del dostave, to postane veliko dražje.
 
-Zato dokumentacija ni le naknadna razlaga. Je del operacijskega sistema projekta. V tem repozitoriju `README.md` opisuje trenutno stanje, `AGENTS.md` produktni namen, `AGENTS-Implementation.md` taktična pravila, `docs/` pa založniške in dokazne konvencije.
+Brez ažurne dokumentacije:
+
+- pozivi postanejo nekonsistentni
+- pregled postane subjektiven
+- demonstracije začnejo po naključju redefinirati produkt
+- prihodnji sodelavci podedujejo vedenje, ne da bi vedeli, ali je bilo namerno
+
+Zato je treba dokumentacijo obravnavati kot operativno sredstvo. V tem repozitoriju `README.md` opisuje trenutno javno stanje, `AGENTS.md` določa produktni namen, `AGENTS-Implementation.md` določa taktična navodila, območje `docs/` pa določa pravila za objavljanje in dokazovanje. Ta večplastna struktura ni birokracija. Tako projekt ohranja pomen povezan z izhodom.
 
 ## Vloga demov
 
-Demo je uporaben, ker pokaže, kaj obstaja, in razkrije težave uporabniškega toka. Ne bi pa smel tiho postati produktna specifikacija.
+Demonstracije so koristne. Pokažejo, kaj obstaja, razkrijejo težave uporabnosti in pomagajo institucijam ali sodelavcem reagirati na nekaj konkretnega. Demo pa ne bi smel tiho postati produktna specifikacija.
 
-Pravila repozitorija že ločijo med kanoničnimi specifikacijami in dokumentacijo na eni strani ter stanjem implementacije na drugi. Če demo pokaže boljši tok, je treba posodobiti specifikacijo in dokumentacijo, ne pa pustiti, da demo sam od sebe zmaga.
+Repozitorij to razliko že jasno vzpostavlja v svojih dokumentacijskih pravilih. Javno pisanje mora specifikacije in dokumentacijo obravnavati kot kanoničen dokaz, medtem ko se lahko implementirano vedenje dema omenja kot stanje implementacije. To je zdravo pravilo, ker preprečuje naključno upravljanje s prototipom.
 
-## Markdown, testi in CI tvorijo verigo
+Če demo razkrije boljši delovni tok, odgovor ni, da mu tiho pustimo zmagati. Odgovor je, da posodobimo specifikacijo, dokumentacijo in merilo pregleda, da boljši tok postane nameren.
 
-V razvoju na podlagi specifikacij te plasti ne stojijo vsaka zase.
+## Markdown, testi in CI niso ločene skrbi
+
+Pogosta napaka je, da pisne specifikacije, tehnično validacijo in CI/CD obravnavamo kot nepovezane plasti.
+
+V razvoju na podlagi specifikacij tvorijo eno samo verigo.
 
 - Markdown shrani namen v pregledljivi obliki.
 - Dokumentacija razloži, kako ga je treba razumeti.
 - Testi preverijo izvedljiva pričakovanja.
 - Validacijska pravila lovijo strukturni odmik.
-- CI pravila redno uveljavlja.
+- CI pravila uveljavlja vedno znova.
 
-Skupaj ustvarijo produktni spomin, ki preživi hitrost razvoja.
+Vsaka plast je sama po sebi nepopolna. Skupaj ustvarijo produktni spomin, ki preživi hitrost, iteracije in spremembe ekipe.
 
 ## Kaj to pomeni za ekipe, ki uporabljajo AI
 
@@ -96,7 +117,7 @@ To običajno pomeni:
 - da pred implementacijo napišejo jasnejše produktne specifikacije
 - da ohranijo izrecna implementacijska navodila
 - da posodobijo dokumentacijo, ko se vedenje izdelka spremeni
-- da demoe preverjajo glede na specifikacije, namesto da predpostavljajo ujemanje
+- da demoe preverjajo glede na specifikacije, namesto da samodejno predpostavljajo enakovrednost
 - da postopno dodajajo validacijska pravila, tako da usklajenost ni odvisna le od človeškega spomina
 
 To ni proti AI. Tako AI postane zanesljiv.
@@ -111,7 +132,8 @@ V AI-podprtih projektih specifikacija ni birokracija za nazaj. Je meja, spomin i
 
 ## Drugi jeziki
 
-- [English](../en/spec-driven-development-for-ai-projects.md)
+- [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
+- [English](../sl/spec-driven-development-for-ai-projects.md)
 - [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)
 - [Bosanski](../bs/spec-driven-development-for-ai-projects.md)
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)

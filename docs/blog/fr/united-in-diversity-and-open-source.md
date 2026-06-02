@@ -70,7 +70,7 @@ La participation multilingue n'est pas une nouveauté politique. C'est une réal
 
 ## Autres langues
 
-- [English](../en/united-in-diversity-and-open-source.md)
+- [English](../fr/united-in-diversity-and-open-source.md)
 - [Slovenščina](../sl/united-in-diversity-and-open-source.md)
 - [Hrvatski](../hr/united-in-diversity-and-open-source.md)
 - [Bosanski](../bs/united-in-diversity-and-open-source.md)

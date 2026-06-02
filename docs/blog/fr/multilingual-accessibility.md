@@ -66,7 +66,7 @@ Un produit multilingue n'est pas accessible par défaut, et un produit accessibl
 
 ## Autres langues
 
-- [English](../en/multilingual-accessibility.md)
+- [English](../fr/multilingual-accessibility.md)
 - [Slovenščina](../sl/multilingual-accessibility.md)
 - [Hrvatski](../hr/multilingual-accessibility.md)
 - [Bosanski](../bs/multilingual-accessibility.md)

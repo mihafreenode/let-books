@@ -38,7 +38,7 @@ status: draft
 
 # Dokumentacija je del izdelka
 
-Mnoge ekipe še vedno govorijo o dokumentaciji, kot da se začne šele po pravem delu. Najprej se izdelek zgradi, nato nekdo opiše, kaj se je zgodilo. Ta model je bil šibek že pred AI-podprtim razvojem. Z AI postane dejansko tvegan.
+Mnoge ekipe še vedno govorijo o dokumentaciji, kot da se začne šele po pravem delu. Najprej se izdelek zgradi, nato nekdo opiše, kaj se je zgodilo. Ta model je bil šibek že pred AI-podprtim razvojem. Z AI postane dejavno tvegan.
 
 Ko lahko kodo, besedilo, vmesnike in delovne tokove ustvarjamo zelo hitro, dokumentacija ni več le prijeten naknadni sloj. Postane del mehanizma, ki izdelek drži skupaj.
 
@@ -48,29 +48,38 @@ AI lahko generira implementacijo iz nepopolnega namena. To se pogosto predstavlj
 
 Če je dokumentacija šibka ali zastarela, bodo različni ljudje in različna orodja iz istega repozitorija razbrali različne izdelke.
 
+En sodelavec lahko sledi trenutnemu uporabniškemu vmesniku.
+Drugi lahko sledi staremu README-ju.
+AI pomočnik lahko sledi najbližji datoteki in si ostalo izmisli.
+
+Težava ni le pravilnost na ravni kode. Težava je, ali projekt še vedno opisuje en sam izdelek namesto več prekrivajočih se ugibanj.
+
 ## Dokumentacija opravlja štiri produktne naloge
 
-Dokumentacija:
+Dobra dokumentacija opravi veliko več kot le to, da naknadno razloži vmesnik.
 
-- nosi namen
-- postavlja pričakovanja
-- zmanjšuje strošek usklajevanja
-- podpira zaupanje
+Prvič, nosi namen. Prihodnjim sodelavcem pove, kaj produkt skuša doseči in kaj izrecno ne želi postati.
 
-Pove sodelavcem, institucijam, pregledovalcem in AI pomočnikom, kaj projekt skuša doseči in česa ne sme postati.
+Drugič, postavlja pričakovanja. Bralci lahko razberejo, kaj obstaja zdaj, kaj je načrtovano in česa ne bi smeli opisovati, kot da je že implementirano.
+
+Tretjič, zmanjšuje strošek usklajevanja. Novi sodelavci, pregledovalci, institucije in AI pomočniki se lahko orientirajo, ne da bi projekt sestavljali iz drobcev.
+
+Četrtič, podpira zaupanje. Projekt, ki jasno ločuje trenutno stanje, načrtovano smer in eksperimentalni delovni tok, je lažje ocenjevati in lažje vzdrževati.
 
 ## Let Books je že zgrajen tako
 
-V repozitoriju Let Books:
+Repozitorij Let Books že kaže tak večplasten pristop.
 
-- `AGENTS.md` določa produktni namen in delovne tokove
-- `AGENTS-Implementation.md` določa taktična pravila izvedbe
-- `README.md` pošteno opiše trenutno stanje
-- `docs/` določa pravila objave, pisanja, lokalizacije in dokazov
+- `AGENTS.md` določa produktni namen, delovne tokove, meje domene in dolgoročno smer.
+- `AGENTS-Implementation.md` določa taktična implementacijska in dokumentacijska pravila.
+- `README.md` razloži trenutno stanje repozitorija in loči sedanje rezultate od prihodnjih načrtov.
+- `docs/` določa platformo znanja s pravili za objavljanje, pisanje, lokalizacijo in preslikavo virov.
 
-To pomeni, da dokumentacija tukaj ni le razlaga. Je del načina delovanja projekta.
+To pomeni, da dokumentacija tukaj ni le razlaga. Je del načina, kako projekt deluje.
 
 ## Zastarela dokumentacija je produktni dolg
+
+Ekipe tehnični dolg pogosto prepoznajo šele, ko se pojavi v kodi. Toda zastarela dokumentacija ustvarja zelo podoben upor.
 
 Zastarela dokumentacija vodi v:
 
@@ -117,11 +126,14 @@ Ta razlika je razlika med dokumentacijo kot komentarjem in dokumentacijo kot del
 
 ## Trajna lekcija
 
-Dokumentacija ni ločena od kakovosti izdelka. Oblikuje implementacijo, pregled, komunikacijo, validacijo in dolgoročno zaupanje. V AI-podprtih projektih je dokumentacija del izdelka, ker je del sistema, ki preprečuje produktni odmik.
+Dokumentacija ni ločena od kakovosti izdelka.
+
+Oblikuje implementacijo, pregled, komunikacijo, validacijo in dolgoročno zaupanje. Še posebej v AI-podprtih projektih je dokumentacija del izdelka, ker je del sistema, ki preprečuje, da bi izdelek sam od sebe odtaval.
 
 ## Drugi jeziki
 
-- [English](../en/documentation-is-part-of-the-product.md)
+- [Slovenščina](../sl/documentation-is-part-of-the-product.md)
+- [English](../sl/documentation-is-part-of-the-product.md)
 - [Hrvatski](../hr/documentation-is-part-of-the-product.md)
 - [Bosanski](../bs/documentation-is-part-of-the-product.md)
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)

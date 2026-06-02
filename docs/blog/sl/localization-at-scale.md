@@ -93,4 +93,4 @@ Zato so zreli lokalizacijski sistemi vse bolj podprti z AI, ne pa popolnoma prep
 
 ## Drugi jeziki
 
-- English (../en/localization-at-scale.md)
+Angleščina je kanonični jezik prve objave za ta članek. Poti za prevode so rezervirane za vse podprte lokalizacije projekta Let Books.

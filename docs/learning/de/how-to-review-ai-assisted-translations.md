@@ -109,6 +109,8 @@ Für wiederverwendbare Review-Arbeit festhalten:
 
 ## Wiederverwendbare Lehren aus dem slowenischen Review
 
+Das Muster der slowenischen Fallstudie ist auch in anderen Sprachen breit wiederverwendbar:
+
 - die grammatische Bedeutung kann nahe liegen, obwohl der Satz für Muttersprachler noch nicht veröffentlichbar ist
 - modale Konstruktionen sind besonders anfällig für wörtliche Übersetzung
 - Terminologie und Policy-Sprache brauchen oft domänenbewusste Umformulierung

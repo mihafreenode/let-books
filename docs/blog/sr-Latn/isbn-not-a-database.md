@@ -30,7 +30,7 @@ ISBN identifikuje izdanje, a ne delo. Na primer, drugo i treće izdanje istog ud
 
 To je korisna preciznost — ali donosi važna ograničenja.
 
-![Dijagram ISBN u odnosu na fizički primerak knjige](../../diagrams/blog/isbn-not-a-database/sr-Latn/isbn-vs-physical-book.svg)
+![Dijagram ISBN u odnosu na fizički primerak knjige](../../diagrams/isbn-vs-physical-book.svg)
 
 ISBN identifikuje metapodatke izdanja na levoj strani. Fizički primerak na desnoj — stanje, provenijencija, lokacija skladištenja, status donacije, fotografije — vodi se odvojeno u domennom modelu Let Books. To dvoje je povezano, ali nije isto.
 
@@ -60,7 +60,7 @@ Postoje pogrešno odštampani ISBNovi. Isti ISBN mogu slučajno koristiti razli�
 
 `docs/book-metadata.md` definiše praktičnu strategiju rezervnog pada za pretragu po ISBN-u. Dokument takođe navodi da ovaj tok radi u trenutnom alfa demo okruženju, a istovremeno služi kao obrazac za buduću punu aplikaciju:
 
-![Dijagram lanca pretraživanja ISBN-a](../../diagrams/blog/isbn-not-a-database/sr-Latn/isbn-lookup-chain.svg)
+![Dijagram lanca pretraživanja ISBN-a](../../diagrams/isbn-lookup-chain.svg)
 
 1. Normalizuj i potvrdi ISBN. Ukloni razmake i crtice, X pretvori u veliko slovo, proveri kontrolnu cifru.
 2. Prvo upitaj Open Library putem njihovog javnog sučelja.
@@ -78,6 +78,8 @@ Kanonske reference u repozitorijumu za ovaj lanac su `docs/book-metadata.md` i `
 Kada darovalac katalogizuje zbirku akademskih knjiga, neke će imati ISBN, a neke neće. Knjige bez ISBNa često su najzanimljivije — starija izdanja, lokalno objavljeni materijali, kompilacije za pojedine predmete ili knjige izdavača iz bivše Jugoslavije čiji identifikatori nikad nisu dospeli u globalne baze podataka.
 
 Postupak katalogizacije ne sme kažnjavati darovaoča zbog nedostatka ISBNova. Svaka funkcija koja radi s ISBNom mora raditi i bez njega: praćenje lokacije, učitavanje fotografija, izvoz u Excel, grupni pregled. ISBN je pomagalo, a ne zahtev.
+
+Ovaj princip je direktno naveden u projektnoj specifikaciji u `AGENTS.md`:
 
 > **Projektna specifikacija, AGENTS.md:** "Model mora dozvoljavati nepotpune podatke. ISBN nije obavezan."
 

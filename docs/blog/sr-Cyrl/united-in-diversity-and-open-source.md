@@ -70,7 +70,7 @@ Let Books већ претпоставља вишејезичне збирке к
 
 ## Други језици
 
-- [English](../en/united-in-diversity-and-open-source.md)
+- [English](../sr-Cyrl/united-in-diversity-and-open-source.md)
 - [Slovenščina](../sl/united-in-diversity-and-open-source.md)
 - [Hrvatski](../hr/united-in-diversity-and-open-source.md)
 - [Bosanski](../bs/united-in-diversity-and-open-source.md)

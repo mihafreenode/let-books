@@ -59,7 +59,7 @@ Nëse një projekti i intereson ruajtja e dijes, duhet t'i interesojë edhe nës
 
 ## Gjuhë të tjera
 
-- [English](../en/preserving-smaller-languages-in-the-digital-age.md)
+- [English](../sq/preserving-smaller-languages-in-the-digital-age.md)
 - [Slovenščina](../sl/preserving-smaller-languages-in-the-digital-age.md)
 - [Hrvatski](../hr/preserving-smaller-languages-in-the-digital-age.md)
 - [Bosanski](../bs/preserving-smaller-languages-in-the-digital-age.md)

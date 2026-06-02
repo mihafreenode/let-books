@@ -65,7 +65,7 @@ Lokalisierung ist nicht nur eine Komfortfunktion. In Bildungskontexten kann sie 
 
 ## Andere Sprachen
 
-- [English](../en/translation-and-learning.md)
+- [English](../de/translation-and-learning.md)
 - [Slovenščina](../sl/translation-and-learning.md)
 - [Hrvatski](../hr/translation-and-learning.md)
 - [Bosanski](../bs/translation-and-learning.md)

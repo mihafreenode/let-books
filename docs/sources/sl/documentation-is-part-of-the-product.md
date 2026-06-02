@@ -7,6 +7,6 @@ status: draft
 
 # Dokumentacija je del izdelka - Izvorni zemljevid
 
-Ta lokalizirani izvorni zemljevid za članek "Dokumentacija je del izdelka" sledi kanoničnemu angleškemu zemljevidu: [../en/documentation-is-part-of-the-product.md](../en/documentation-is-part-of-the-product.md).
+Ta lokalizirani izvorni zemljevid za članek "Dokumentacija je del izdelka" sledi kanoničnemu angleškemu zemljevidu: [../en/documentation-is-part-of-the-product.md](../sl/documentation-is-part-of-the-product.md).
 
 Lokalizirani članek naj ostane usklajen s kanoničnimi angleškimi trditvami, dokazi in uredniškimi mejami.

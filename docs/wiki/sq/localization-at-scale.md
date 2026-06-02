@@ -1,17 +1,17 @@
 ---
-title: "Lokalizimi në shkallë"
+title: "Lokalizimi në shkallë të gjerë"
 summary: >-
-  Lokalizimi në shkallë është praktikë e trajtimit të përmbajtjes shumëgjuhëshe si një sistem i projektuar që mbulon shkrimin, qeverisjen, asetet, aksesueshmërinë, vlefshmërinë dhe rishikimin.
+  Lokalizimi në shkallë të gjerë është praktika e trajtimit të publikimit shumëgjuhësh si një sistem reagimi dhe një sistem afatgjatë njohurie, jo si një detyrë e vetme përkthimi.
 topics:
   - localization
   - engineering-systems
   - governance
 ---
-# Lokalizimi në shkallë
+# Lokalizimi në shkallë të gjerë
 
 ## Përmbledhje
 
-Lokalizimi në shkallë është praktikë e trajtimit të përmbajtjes shumëgjuhëshe si një sistem i projektuar që mbulon shkrimin, qeverisjen, asetet, aksesueshmërinë, vlefshmërinë dhe rishikimin.
+Lokalizimi në shkallë të gjerë është praktika e trajtimit të publikimit shumëgjuhësh si një sistem reagimi dhe një sistem afatgjatë njohurie, jo si një detyrë e vetme përkthimi.
 
 ## Ideja kryesore
 
@@ -20,29 +20,39 @@ Lokalizimi është më i gjerë se përkthimi.
 Ai përfshin:
 
 - shkrim burimor
-- terminologjia
+- terminologjinë
+- metadata
 - navigacion
-- teksti i aksesueshmërisë
-- diagramet dhe pamjet e ekranit
-- meta të dhënat
-- rishikoni rrjedhën e punës
+- tekst aksesueshmërie
+- diagrame dhe pamje ekrani
+- rrjedhën e rishikimit
 - CI dhe QA
 
-## Pse ka rëndësi
+## Manuali autoritativ
 
-Projektet që vonojnë lokalizimin zakonisht zbulojnë se arkitektura e tyre e informacionit, pamjet e ekranit dhe supozimet e testimit janë tashmë në formë angleze.
+Modeli qendror operativ për këtë nismë tani gjendet në:
 
-## Let Books kontekst
+- `../localization-at-scale-program.md`
 
-Let Books është në mënyrë eksplicite shumëgjuhëshe në drejtimin e produktit, dokumentacionin dhe pritshmëritë e ndërfaqes së përdoruesit. Kjo e bën arkitekturën e lokalizimit një shqetësim thelbësor të produktit.
+Ky manual përcakton:
 
-## [[20]]]
-Faqe të ngjashme
+- pse ka rëndësi publikimi shumëgjuhësh
+- pse lokalizimi është sistem, jo projekt
+- si përshtatet AI brenda cikleve të reagimit
+- modelin e cilësisë së mbulimit, plotësisë, cilësisë dhe freskisë
+- borxhin e lokalizimit dhe klasat e hapura të defekteve
+- sanimin source-first dhe rrjedhën e punës për agjentët AI
+- devijimin e lokalizimit dhe pjekurinë e depos
+- korpusin e detajuar të gjetjeve nga rishikimet e folësve vendas
 
-[[21]]]
+## Rregull praktik
+
+Një faqe e lokalizuar nuk është e plotë derisa të lokalizohet i gjithë përmbajtja që e sheh lexuesi, përfshirë përmbledhjet, etiketat, tekstin kryesor, titrat, diagramet, tekstin alternativ dhe sipërfaqet e përmbajtjes së lidhur.
+
+## Faqe të lidhura
+
+- `../localization-at-scale-program.md`
 - `language-support-matrix.md`
-[[22]]]
 - `localization-maturity-model.md`
+- `translation-quality-assurance.md`
 - `../learning/how-to-build-a-localization-pipeline.md`
-[[24]]]
-- `../blog/en/localization-at-scale.md`

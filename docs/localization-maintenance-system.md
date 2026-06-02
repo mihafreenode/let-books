@@ -30,6 +30,9 @@ project root
     ├── localization_alignment.py
     ├── localization_mt_draft.py
     ├── localization_patch_assist.py
+    ├── audit_translation_parity.py
+    ├── audit_translation_warnings.py
+    ├── repair_localized_internal_links.py
     ├── generate_translation_sidecars.py
     └── validate_translation_parity.py
 ```
@@ -196,6 +199,40 @@ python tools/validate_translation_parity.py \
   --json-report-file docs/.translation-parity-report.json
 ```
 
+### `tools/audit_translation_parity.py`
+
+Runs a focused parity audit for one locale, then produces a compact summary with the highest-signal files and category counts.
+
+Example:
+
+```bash
+python tools/audit_translation_parity.py \
+  --locale sl \
+  --summary-file docs/.translation-parity-sl-summary.md \
+  --summary-json-file docs/.translation-parity-sl-summary.json \
+  --report-file docs/.translation-parity-sl.md \
+  --json-report-file docs/.translation-parity-sl.json
+```
+
+Optional filter:
+
+```bash
+python tools/audit_translation_parity.py --locale sl --content-type wiki
+```
+
+### `tools/audit_translation_warnings.py`
+
+Summarizes warning-only localization debt from the parity JSON report so native-language review can focus on the most warning-heavy locales, files, and article families.
+
+Example:
+
+```bash
+python tools/audit_translation_warnings.py \
+  --json-report docs/.translation-parity-all.json \
+  --summary-file docs/.translation-warning-summary.md \
+  --summary-json-file docs/.translation-warning-summary.json
+```
+
 ### `tools/generate_translation_sidecars.py`
 
 Generates or refreshes `.l10n.json` sidecars for every existing source/target article pair.
@@ -210,6 +247,23 @@ Optional filters:
 
 ```bash
 python tools/generate_translation_sidecars.py --content-type wiki --locale sl
+```
+
+To discard stale matches and rebuild sidecars from current source/target content:
+
+```bash
+python tools/generate_translation_sidecars.py --content-type blog --locale sl --rebuild
+```
+
+### `tools/repair_localized_internal_links.py`
+
+Repairs localized Markdown files that still point at English docs URLs or `../en/...` links when a matching localized page exists.
+
+Examples:
+
+```bash
+python tools/repair_localized_internal_links.py --locale sl --write
+python tools/repair_localized_internal_links.py --write
 ```
 
 ## Workflow Rules

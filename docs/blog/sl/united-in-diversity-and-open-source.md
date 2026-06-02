@@ -71,7 +71,7 @@ Večjezično sodelovanje ni politična novost. V mnogih okoljih je to vsakdanja 
 
 ## Drugi jeziki
 
-- [English](../en/united-in-diversity-and-open-source.md)
+- [English](../sl/united-in-diversity-and-open-source.md)
 - [Hrvatski](../hr/united-in-diversity-and-open-source.md)
 - [Bosanski](../bs/united-in-diversity-and-open-source.md)
 - [Srpski (latinica)](../sr-Latn/united-in-diversity-and-open-source.md)

@@ -70,7 +70,7 @@ Višejezično učešće nije politička novost. To je rutinska operativna stvarn
 
 ## Drugi jezici
 
-- [English](../en/united-in-diversity-and-open-source.md)
+- [English](../bs/united-in-diversity-and-open-source.md)
 - [Slovenščina](../sl/united-in-diversity-and-open-source.md)
 - [Hrvatski](../hr/united-in-diversity-and-open-source.md)
 - [Srpski (latinica)](../sr-Latn/united-in-diversity-and-open-source.md)

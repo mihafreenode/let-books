@@ -48,29 +48,38 @@ AI može generirati implementaciju iz nepotpune namjere. To se često predstavlj
 
 Ako je dokumentacija slaba ili zastarjela, različiti ljudi i različiti alati iz istog repozitorija zaključit će da postoje različiti proizvodi.
 
+Jedan suradnik može slijediti trenutačno korisničko sučelje.
+Drugi može slijediti stari README.
+AI pomoćnik može slijediti najbližu datoteku i izmisliti ostalo.
+
+Problem nije samo ispravnost na razini koda. Problem je opisuje li projekt još uvijek jedan proizvod umjesto više preklapajućih nagađanja.
+
 ## Dokumentacija obavlja četiri proizvodna posla
 
-Dokumentacija:
+Dobra dokumentacija čini mnogo više od toga da naknadno objasni sučelje.
 
-- nosi namjeru
-- postavlja očekivanja
-- smanjuje trošak usklađivanja
-- podupire povjerenje
+Prvo, nosi namjeru. Budućim suradnicima govori što proizvod pokušava postići i u što se izričito ne pokušava pretvoriti.
 
-Govori suradnicima, institucijama, recenzentima i AI pomoćnicima što projekt pokušava postići i u što se ne bi smio pretvoriti.
+Drugo, postavlja očekivanja. Čitatelji mogu razabrati što postoji sada, što je planirano i što se ne bi smjelo opisivati kao već implementirano.
+
+Treće, smanjuje trošak usklađivanja. Novi suradnici, recenzenti, institucije i AI pomoćnici mogu se svi orijentirati bez rekonstruiranja projekta iz fragmenata.
+
+Četvrto, podupire povjerenje. Projekt koji jasno razdvaja trenutačno stanje, planirani smjer i eksperimentalni tijek rada lakše je vrednovati i lakše održavati.
 
 ## Let Books je već strukturiran tako
 
-U repozitoriju Let Books:
+Repozitorij Let Books već pokazuje takav slojeviti pristup.
 
-- `AGENTS.md` definira proizvodnu namjeru i tijekove rada
-- `AGENTS-Implementation.md` definira taktička pravila izvođenja
-- `README.md` pošteno opisuje trenutačno stanje
-- `docs/` definira pravila objave, pisanja, lokalizacije i dokaza
+- `AGENTS.md` definira svrhu proizvoda, tijekove rada, granice domene i dugoročni smjer.
+- `AGENTS-Implementation.md` definira taktička pravila implementacije i dokumentacije.
+- `README.md` objašnjava trenutačno stanje repozitorija i razlikuje sadašnje isporuke od budućih planova.
+- `docs/` definira platformu znanja s pravilima objave, pisanja, lokalizacije i mapiranja izvora.
 
 To znači da dokumentacija ovdje nije samo objašnjenje. Ona je dio načina rada projekta.
 
 ## Zastarjela dokumentacija je proizvodni dug
+
+Timovi često prepoznaju tehnički dug tek kada se pojavi u kodu. Ali zastarjela dokumentacija stvara sličnu vrstu trenja.
 
 Zastarjela dokumentacija vodi do:
 
@@ -117,12 +126,14 @@ Ta je razlika razlika između dokumentacije kao komentara i dokumentacije kao di
 
 ## Trajna lekcija
 
-Dokumentacija nije odvojena od kvalitete proizvoda. Ona oblikuje implementaciju, pregled, komunikaciju, validaciju i dugoročno povjerenje. U AI-podržanim projektima dokumentacija je dio proizvoda jer je dio sustava koji sprječava proizvodni odmak.
+Dokumentacija nije odvojena od kvalitete proizvoda.
+
+Ona oblikuje implementaciju, pregled, komunikaciju, validaciju i dugoročno povjerenje. U AI-podržanim projektima dokumentacija je dio proizvoda jer je dio sustava koji sprječava proizvodni odmak.
 
 ## Drugi jezici
 
-- [English](../en/documentation-is-part-of-the-product.md)
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)
+- [Hrvatski](../hr/documentation-is-part-of-the-product.md)
 - [Bosanski](../bs/documentation-is-part-of-the-product.md)
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)

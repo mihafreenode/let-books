@@ -93,4 +93,4 @@ Se un progetto vuole partecipazione multilingue, la localizzazione deve far part
 
 ## Altre lingue
 
-- English (../en/localization-at-scale.md)
+L'inglese è la lingua canonica della prima pubblicazione di questo articolo. I percorsi pronti per la traduzione sono riservati a tutte le localizzazioni supportate di Let Books.

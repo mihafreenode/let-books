@@ -1,5 +1,7 @@
 ---
 title: "Usklajenost med demom in specifikacijo"
+summary: >-
+  Usklajenost med demom in specifikacijo je praksa ohranjanja skladnosti med vedenjem prototipa ali dema ter dokumentiranim produktnim namenom, pri čemer se specifikacija izrecno posodobi, kadar demo razkrije boljši potek dela.
 topics:
   - demo-alignment
   - spec-driven-development
@@ -44,6 +46,14 @@ Demo naj ne postane tiha zamenjava za produktne odločitve.
 2. posodobi ustrezno specifikacijo in dokumentacijo
 3. prilagodi validacijo ali pričakovanja pregleda
 
+Povedano drugače: demo lahko navdihne naslednjo odločitev, vendar mora biti posodobljena odločitev še vedno dokumentirana.
+
 ## Kontekst Let Books
 
 V repozitoriju Let Books so kanonični dokumentacijski viri že ločeni od statusa implementacije. To je uporabna varovalka, ker preprečuje, da bi prototipi postali nenamerna uredniška avtoriteta.
+
+## Sorodne strani
+
+- `spec-driven-development.md`
+- `../learning/how-to-keep-spec-docs-demo-and-code-aligned.md`
+- `../blog/sl/spec-driven-development-in-let-books.md`

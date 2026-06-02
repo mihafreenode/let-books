@@ -40,11 +40,17 @@ status: draft
 
 Demoja është e fuqishme sepse i kthen idetë abstrakte në diçka ndaj së cilës njerëzit mund të reagojnë. Një rrjedhë pune që tingëllon e arsyeshme në një shënim mund të tregojë menjëherë fërkim real në telefon ose në magazinë.
 
-Kjo është ana e mirë e demos. Ana e rrezikshme është se, sapo prototipi ekziston, njerëzit shpesh fillojnë ta trajtojnë sjelljen e tij si të vërtetë produkti.
+Kjo është ana e mirë e demove.
+
+Ana e rrezikshme është se, sapo një prototip ekziston, njerëzit shpesh fillojnë ta trajtojnë sjelljen e tij si të vërtetë produkti, pavarësisht nëse dikush e ka marrë zyrtarisht atë vendim apo jo.
 
 ## Pse prototipet bëhen autoritet i rastësishëm
 
-Gjërat e dukshme janë bindëse. Një ekran që funksionon shpesh fiton më shumë autoritet joformal sesa një rregull i shkruar, edhe kur është ndërtuar vetëm si eksperiment.
+Gjërat e dukshme janë bindëse. Një ekran funksional shpesh mbart më shumë autoritet joformal sesa një rregull i shkruar, edhe kur ai ekran është ndërtuar si eksperiment.
+
+Kjo është e kuptueshme. Njerëzit i besojnë asaj që mund të shohin.
+
+Por në punën e produktit, sidomos në punën e produktit të asistuar nga AI, ky instinkt mund të krijojë konfuzion.
 
 Demoja mund të tregojë:
 
@@ -57,18 +63,22 @@ Asgjë nga këto nuk do të thotë vetvetiu se demoja duhet ta ripërcaktojë pr
 
 ## Kur demoja është provë e mirë
 
-Demoja është e dobishme kur ndihmon të përgjigjemi pyetjeve si:
+Demoja është provë e vlefshme kur ndihmon të përgjigjemi pyetjeve si:
 
-- a ndihet rrjedha e përdorshme
-- a e mbështet faqosja mobile detyrën reale
-- a është e kuptueshme rrjedha e skanimit
-- si reagojnë përdoruesit ndaj rendit të hapave
+- A ndihet rrjedha e përdorshme?
+- A e mbështet faqosja mobile detyrën reale?
+- A është e kuptueshme rrjedha e skanimit ose e futjes?
+- A reagojnë përdoruesit pozitivisht apo negativisht ndaj rendit të hapave?
 
-Atëherë demoja është provë për përdorshmërinë, realizueshmërinë dhe komunikimin.
+Në këto raste, demoja është provë për përdorshmërinë, realizueshmërinë, renditjen e hapave dhe komunikimin.
+
+Ky lloj prove është jashtëzakonisht i dobishëm.
 
 ## Kur demoja nuk është autoritet
 
-Demoja nuk duhet të mbizotërojë në heshtje mbi specifikimin e produktit. Ajo nuk është përgjigjja kryesore për pyetje si:
+Demoja nuk duhet të tejkalojë në heshtje specifikimin e produktit.
+
+Ajo nuk është autoriteti kryesor i duhur për pyetje si:
 
 - a është kjo rrjedhë zyrtarisht në fushëveprim
 - a është kjo një shkurtore e përkohshme apo një angazhim produkti
@@ -79,15 +89,26 @@ Këto pyetje kërkojnë vendim të qartë dhe përditësim dokumentimi.
 
 ## Rregulli i Let Books është model i mirë
 
-Depoja tashmë përcakton një rregull të shëndetshëm: shkrimi publik duhet të përdorë specifikimet dhe dokumentimin si provë kanonike, ndërsa demoja ose sjellja e aplikacionit mund të përmendet si status implementimi.
+Depoja tashmë përmban një rregull të shëndetshëm editorial për këtë. Shkrimi publik duhet t'i trajtojë specifikimet dhe dokumentimin si provë kanonike, ndërsa sjellja e demos ose e aplikacionit mund të përmendet si status implementimi.
 
-Kjo pengon që prototipi të bëhet aksidentalisht mënyrë qeverisjeje e produktit.
+Ky rregull ka rëndësi sepse pengon qeverisjen aksidentale nga prototipi.
+
+Nëse demoja statike zbulon një rrjedhë më të mirë për kutitë, një rrjedhë më të mirë mobile ose një ndërveprim më të mirë të intake, kjo është e vlefshme. Por ajo rrjedhë më e mirë duhet të bëhet autoritet i vërtetë vetëm pasi të përditësohen specifikimi dhe dokumentimi përkatës.
 
 ## Pse kjo ka edhe më shumë rëndësi me AI
 
-AI e përforcon atë që duket më konkrete në atë moment. Nëse artefakti më konkret është demoja, ndihmësit dhe njerëzit do ta kopjojnë shpejt sjelljen e saj pa pyetur nëse përputhet me kufijtë e produktit.
+AI e përforcon atë që duket më konkrete në kontekstin e tanishëm.
 
-Prandaj ekipet kanë nevojë për rend të dukshëm autoriteti:
+Nëse gjëja më konkrete në depo është një demo, ndihmësit dhe madje edhe kontribuesit njerëzorë mund ta kopjojnë sjelljen e saj pa pyetur nëse ajo përputhet me kufirin e synuar të produktit.
+
+Kjo mund të jetë e dobishme kur demoja tashmë është e përputhur.
+Mund gjithashtu të përhapë shpejt supozime të përkohshme kur nuk është.
+
+Prandaj ekipet kanë nevojë për një rend të dukshëm autoriteti.
+
+## Një zinxhir praktik autoriteti
+
+Për një punë të tillë, një rend i dobishëm është:
 
 1. specifikimi i produktit
 2. udhëzimet e implementimit
@@ -95,7 +116,7 @@ Prandaj ekipet kanë nevojë për rend të dukshëm autoriteti:
 4. demoja ose prototipi
 5. testet dhe validimi
 
-Demoja mbetet e rëndësishme. Thjesht është e rëndësishme brenda një sistemi të dokumentuar, në vend që ta zëvendësojë atë.
+Demoja mbetet e rëndësishme. Thjesht ka rëndësi brenda një sistemi të dokumentuar, në vend që ta zëvendësojë atë.
 
 ## Çfarë të bëhet kur demoja ju mëson diçka të re
 
@@ -120,17 +141,19 @@ Studentët duhet të mësojnë se prototipet nuk justifikohen vetvetiu. Një pra
 
 ## Mësimi i qëndrueshëm
 
-Demoja është e vlefshme sepse i bën idetë e produktit të testueshme. Ajo bëhet e rrezikshme kur në heshtje bëhet politikë. Modeli i shëndetshëm është i thjeshtë: le të informojë demoja produktin, por le të regjistrojnë specifikimet dhe dokumentimi vendimin përfundimtar.
+Demot janë të vlefshme sepse i bëjnë idetë e produktit të testueshme. Ato bëhen të rrezikshme kur kthehen në heshtje në politikë.
+
+Modeli më i shëndetshëm është i thjeshtë: le të informojnë demot produktin, por le të regjistrojnë specifikimet dhe dokumentimi vendimin përfundimtar.
 
 ## Gjuhë të tjera
 
-- [English](../en/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Slovenščina](../sl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Hrvatski](../hr/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Bosanski](../bs/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Srpski (latinica)](../sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Српски (ћирилица)](../sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Македонски](../mk/when-the-demo-is-evidence-and-when-it-is-not.md)
+- [Shqip](../sq/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Deutsch](../de/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Italiano](../it/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Français](../fr/when-the-demo-is-evidence-and-when-it-is-not.md)

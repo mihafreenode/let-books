@@ -76,4 +76,4 @@ Non ogni lingua deve avere la stessa maturità il primo giorno. Ma ogni lingua c
 
 ## Altre lingue
 
-- English (../en/why-every-language-matters.md)
+L'inglese è la lingua canonica della prima pubblicazione di questo articolo. I percorsi pronti per la traduzione sono riservati a tutte le localizzazioni supportate di Let Books.

@@ -130,11 +130,11 @@ Diese Art von Markdown hilft einem Agenten, über die erwartete Toolchain nachzu
 Beim Schreiben von Markdown für ein Repository, das von KI-Agenten verwendet werden kann, ist es hilfreich, beim Schreiben zwei Leser im Hinterkopf zu haben:
 
 - der menschliche Mitwirkende, der einer Erklärung bedarf
-– der Agent, der explizite Workflow- und Tool-Einschränkungen benötigt
+- der Agent, der explizite Workflow- und Tool-Einschränkungen benötigt
 
 Die besten Dokumente leisten beides.
 
-Sie bleiben für Menschen lesbare Tutorials oder Leitfäden und sind gleichzeitig spezifisch genug, um das Verhalten von Agenten auf wiederholbare Weise zu steuern.
+Sie bleiben für Menschen lesbare Tutorials oder Leitfäden und sind zugleich konkret genug, um das Verhalten von Agenten auf wiederholbare und nachvollziehbare Weise zu steuern.
 
 ## Let Books Kontext
 

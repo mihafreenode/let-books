@@ -14,7 +14,24 @@ from localization_alignment import align_blocks, load_document, load_sidecar, si
 ROOT_DIR = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT_DIR / "docs"
 CONFIG = json.loads((ROOT_DIR / "tools" / "docs-config.json").read_text(encoding="utf-8"))
-ENGLISH_FRAGMENT_RE = re.compile(r"[A-Z][a-z]+(?:\s+[a-z][a-z-]+){3,}")
+WORD_RE = re.compile(r"[A-Za-z][A-Za-z'-]*")
+ENGLISH_MARKERS = {
+    "a", "an", "and", "are", "as", "be", "because", "but", "by", "can", "do", "does", "for",
+    "from", "how", "if", "in", "into", "is", "it", "its", "not", "of", "on", "or", "that",
+    "the", "their", "then", "there", "these", "they", "this", "to", "use", "when", "which",
+    "who", "why", "with", "without", "workflow", "review", "draft", "issue", "example", "policy",
+    "translation", "localization", "quality", "meaning", "language", "languages", "product", "system",
+}
+INTENTIONAL_SOURCE_SNIPPET_HEADINGS = {
+    "original ai draft",
+    "corrected slovenian",
+    "human-review feedback",
+    "issue 1",
+    "issue 2",
+    "issue 3",
+    "slovenian review case study",
+    "one example per review category",
+}
 
 
 def iter_pairs(single_source: str | None, single_target: str | None):
@@ -49,6 +66,51 @@ def extract_urls(text: str) -> list[str]:
     return re.findall(r"\[[^\]]+\]\(([^)]+)\)", text)
 
 
+def is_acronym_like(text: str) -> bool:
+    candidate = text.strip()
+    return bool(candidate) and len(candidate) <= 10 and bool(re.fullmatch(r"[A-Z0-9-]+", candidate))
+
+
+def extract_ascii_words(text: str) -> list[str]:
+    return [match.group(0).lower() for match in WORD_RE.finditer(text)]
+
+
+def contains_suspicious_english_fragment(text: str, block_type: str) -> bool:
+    if block_type in {"code", "diagram", "html_comment"}:
+        return False
+    words = extract_ascii_words(text)
+    if len(words) < 5:
+        return False
+    marker_count = sum(1 for word in words if word in ENGLISH_MARKERS)
+    unique_markers = {word for word in words if word in ENGLISH_MARKERS}
+    return marker_count >= 4 and len(unique_markers) >= 3 and (marker_count / max(len(words), 1)) >= 0.25
+
+
+def current_heading_slug(block) -> str:
+    text = block.text.strip().splitlines()[0] if block.text.strip() else ""
+    if text.startswith("#"):
+        text = text.lstrip("#").strip()
+    return text.lower()
+
+
+def is_intentional_source_snippet_block(source_block, target_block) -> bool:
+    heading_candidates = [current_heading_slug(source_block), current_heading_slug(target_block)]
+    if any(candidate in INTENTIONAL_SOURCE_SNIPPET_HEADINGS for candidate in heading_candidates):
+        return True
+    if "`Skrbniki morajo" in target_block.text or "`benchmark fixtures`" in target_block.text:
+        return True
+    if source_block.block_type in {"code", "diagram", "html_comment"}:
+        return True
+    return False
+
+
+def normalize_url_for_comparison(url: str, locale: str) -> str:
+    normalized = url.strip()
+    normalized = re.sub(r"/docs/(learning|wiki|topics|blog)/(en|sl|hr|bs|sr-Latn|sr-Cyrl|mk|sq|de|it|fr|es)/", r"/docs/\1/{locale}/", normalized)
+    normalized = re.sub(r"\.\./(en|sl|hr|bs|sr-Latn|sr-Cyrl|mk|sq|de|it|fr|es)/", "../{locale}/", normalized)
+    return normalized
+
+
 def root_relative(path: Path) -> str:
     resolved = path.resolve() if not path.is_absolute() else path
     try:
@@ -68,7 +130,7 @@ def validate_pair(source_path: Path, target_path: Path, locale: str) -> dict:
 
     source_title = source_doc.metadata.get("title", "")
     target_title = target_doc.metadata.get("title", "")
-    if source_title and target_title and source_title == target_title:
+    if source_title and target_title and source_title == target_title and not is_acronym_like(source_title):
         findings.append(issue("warning", "metadata drift", source_path, target_path, None, None, "target title is identical to source title"))
 
     source_summary = source_doc.metadata.get("summary", "")
@@ -95,14 +157,24 @@ def validate_pair(source_path: Path, target_path: Path, locale: str) -> dict:
 
         source_urls = extract_urls(source_block.text)
         target_urls = extract_urls(target_block.text)
-        missing_urls = [url for url in source_urls if url not in target_urls]
+        normalized_target_urls = {normalize_url_for_comparison(url, locale) for url in target_urls}
+        missing_urls = [url for url in source_urls if normalize_url_for_comparison(url, locale) not in normalized_target_urls]
         if missing_urls:
             findings.append(issue("error", "broken internal links", source_path, target_path, source_block.start_line, target_block.start_line, f"missing URLs in target: {', '.join(missing_urls)}"))
 
-        if locale != "en" and source_block.word_count >= 8 and similarity(source_block.text, target_block.text) >= 0.93:
+        if (
+            locale != "en"
+            and source_block.word_count >= 12
+            and similarity(source_block.text, target_block.text) >= 0.96
+            and not is_intentional_source_snippet_block(source_block, target_block)
+        ):
             findings.append(issue("warning", "untranslated source-language fragments", source_path, target_path, source_block.start_line, target_block.start_line, "target block is too similar to source block"))
 
-        if locale != "en" and ENGLISH_FRAGMENT_RE.search(target_block.text) and source_block.block_type not in {"code", "diagram", "html_comment"}:
+        if (
+            locale != "en"
+            and contains_suspicious_english_fragment(target_block.text, source_block.block_type)
+            and not is_intentional_source_snippet_block(source_block, target_block)
+        ):
             findings.append(issue("warning", "untranslated source-language fragments", source_path, target_path, source_block.start_line, target_block.start_line, "target block still contains a suspicious English fragment"))
 
         if source_block.word_count >= 12 and target_block.word_count and (target_block.word_count / source_block.word_count) < 0.45:

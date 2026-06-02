@@ -109,6 +109,8 @@ Pour un travail de relecture réutilisable, consigner :
 
 ## Leçons réutilisables tirées de la relecture slovène
 
+Le schéma de l'étude de cas slovène est largement réutilisable dans d'autres langues :
+
 - le sens grammatical peut être proche alors que la phrase reste impropre à la publication pour un locuteur natif
 - les constructions modales sont particulièrement vulnérables à la traduction littérale
 - la terminologie et la formulation des politiques demandent souvent une reformulation consciente du domaine

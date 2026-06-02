@@ -65,7 +65,7 @@ El software solo en ingles suele ser mas barato solo si el proyecto ignora los c
 
 ## Otros idiomas
 
-- [English](../en/the-cost-of-english-only-software.md)
+- [English](../es/the-cost-of-english-only-software.md)
 - [Slovenščina](../sl/the-cost-of-english-only-software.md)
 - [Hrvatski](../hr/the-cost-of-english-only-software.md)
 - [Bosanski](../bs/the-cost-of-english-only-software.md)

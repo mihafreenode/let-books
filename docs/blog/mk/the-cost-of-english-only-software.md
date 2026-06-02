@@ -65,7 +65,7 @@ Let Books е наменет за повеќејазични текови за д
 
 ## Други јазици
 
-- [English](../en/the-cost-of-english-only-software.md)
+- [English](../mk/the-cost-of-english-only-software.md)
 - [Slovenščina](../sl/the-cost-of-english-only-software.md)
 - [Hrvatski](../hr/the-cost-of-english-only-software.md)
 - [Bosanski](../bs/the-cost-of-english-only-software.md)

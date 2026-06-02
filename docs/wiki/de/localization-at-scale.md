@@ -1,44 +1,58 @@
 ---
-title: "Lokalisierung im Maßstab"
+title: "Lokalisierung im großen Maßstab"
 summary: >-
-  Lokalisierung im großen Maßstab ist die Praxis, mehrsprachige Inhalte als ein entworfenes System zu behandeln, das Schreiben, Governance, Assets, Zugänglichkeit, Validierung und Überprüfung umfasst.
+  Lokalisierung im großen Maßstab ist die Praxis, mehrsprachiges Publizieren als Feedback-System und langfristiges Wissenssystem zu behandeln und nicht als einmalige Übersetzungsaufgabe.
 topics:
   - localization
   - engineering-systems
   - governance
 ---
-# Lokalisierung im Maßstab
+# Lokalisierung im großen Maßstab
 
 ## Zusammenfassung
 
-Lokalisierung im großen Maßstab ist die Praxis, mehrsprachige Inhalte als ein entworfenes System zu behandeln, das Schreiben, Governance, Assets, Zugänglichkeit, Validierung und Überprüfung umfasst.
+Lokalisierung im großen Maßstab ist die Praxis, mehrsprachiges Publizieren als Feedback-System und langfristiges Wissenssystem zu behandeln und nicht als einmalige Übersetzungsaufgabe.
 
 ## Kernidee
 
 Lokalisierung ist umfassender als Übersetzung.
 
-Es beinhaltet:
+Es umfasst:
 
 - Quellenschreiben
 - Terminologie
-- Navigation
-- Text zur Barrierefreiheit
-- Diagramme und Screenshots
 - Metadaten
-- Arbeitsablauf überprüfen
+- Navigation
+- Barrierefreiheitstext
+- Diagramme und Screenshots
+- Review-Workflow
 - CI und QA
 
-## Warum es wichtig ist
+## Maßgebliches Handbuch
 
-Projekte, die die Lokalisierung verzögern, stellen in der Regel fest, dass ihre Informationsarchitektur, Screenshots und Testannahmen bereits auf Englisch ausgerichtet sind.
+Das zentrale Betriebsmodell für diese Initiative befindet sich jetzt in:
 
-## Let Books Kontext
+- `../localization-at-scale-program.md`
 
-Let Books ist in Bezug auf Produktausrichtung, Dokumentation und UI-Erwartungen ausdrücklich mehrsprachig. Das macht die Lokalisierungsarchitektur zu einem zentralen Produktanliegen.
+Dieses Handbuch definiert:
+
+- warum mehrsprachiges Publizieren wichtig ist
+- warum Lokalisierung ein System und kein Projekt ist
+- wie KI in Feedback-Schleifen passt
+- das Qualitätsmodell aus Abdeckung, Vollständigkeit, Qualität und Aktualität
+- Lokalisierungsschulden und offene Defektklassen
+- Source-first-Sanierung und KI-Agenten-Workflow
+- Lokalisierungsdrift und Repository-Reife
+- den detaillierten Korpus der Native-Speaker-Review-Findings
+
+## Praktische Regel
+
+Eine lokalisierte Seite ist nicht vollständig, solange nicht alle leserseitigen Inhalte lokalisiert sind, einschließlich Zusammenfassungen, Tags, Fließtext, Bildunterschriften, Diagrammen, Alternativtext und verwandten Inhaltsflächen.
 
 ## Verwandte Seiten
 
+- `../localization-at-scale-program.md`
 - `language-support-matrix.md`
 - `localization-maturity-model.md`
+- `translation-quality-assurance.md`
 - `../learning/how-to-build-a-localization-pipeline.md`
-- `../blog/en/localization-at-scale.md`

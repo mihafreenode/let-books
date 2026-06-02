@@ -65,7 +65,7 @@ Lokalizacija nije samo značajka pogodnosti. U obrazovnim kontekstima ona može 
 
 ## Drugi jezici
 
-- [English](../en/translation-and-learning.md)
+- [English](../hr/translation-and-learning.md)
 - [Slovenščina](../sl/translation-and-learning.md)
 - [Bosanski](../bs/translation-and-learning.md)
 - [Srpski (latinica)](../sr-Latn/translation-and-learning.md)

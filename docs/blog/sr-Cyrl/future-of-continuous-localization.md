@@ -65,7 +65,7 @@ Let Books већ има вишејезичну структуру платфор
 
 ## Други језици
 
-- [English](../en/future-of-continuous-localization.md)
+- [English](../sr-Cyrl/future-of-continuous-localization.md)
 - [Slovenščina](../sl/future-of-continuous-localization.md)
 - [Hrvatski](../hr/future-of-continuous-localization.md)
 - [Bosanski](../bs/future-of-continuous-localization.md)

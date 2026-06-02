@@ -7,6 +7,6 @@ status: draft
 
 # Ekonomika lokalizacije - Izvorni zemljevid
 
-Ta lokalizirani izvorni zemljevid za članek "Ekonomika lokalizacije" sledi kanoničnemu angleškemu zemljevidu: [../en/economics-of-localization.md](../en/economics-of-localization.md).
+Ta lokalizirani izvorni zemljevid za članek "Ekonomika lokalizacije" sledi kanoničnemu angleškemu zemljevidu: [../en/economics-of-localization.md](../sl/economics-of-localization.md).
 
 Lokalizirani članek naj ostane usklajen s kanoničnimi angleškimi trditvami, dokazi in uredniškimi mejami.

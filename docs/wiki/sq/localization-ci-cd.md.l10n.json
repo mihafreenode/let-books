@@ -21,7 +21,7 @@
         10,
         10
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -42,7 +42,7 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -63,8 +63,8 @@
         14,
         14
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/desired-checks-heading-desired-checks-efb0b2a3-1",
@@ -84,7 +84,7 @@
         16,
         16
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -105,8 +105,8 @@
         18,
         24
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/defect-class-progression-heading-defect-class-progression-1a962182-1",
@@ -126,7 +126,7 @@
         26,
         26
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -147,8 +147,8 @@
         28,
         28
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/defect-class-progression-list-list-7c114c42-1",
@@ -168,14 +168,14 @@
         30,
         31
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/defect-class-progression-paragraph-debt-measures-remaining-source-content-work-38d6120b-1",
       "sourceHash": "38d6120bb55bfc6a6469ffb8d8d2a3d2b5e6b26ad79a9e975bc1cb9c33b516ae",
-      "targetBlockId": "lokalizimi-ci-dhe-cd/përparim-i-klasës-së-defektit-paragraph-klasat-e-defekteve-të-hapura-matin-nëse-sistemi-mund-të-lejo-7b8e1207-1",
-      "translationHash": "7b8e12072ddcb4511bd08db32658651511babb36da3421d5871eb9364c09d101",
+      "targetBlockId": "lokalizimi-ci-dhe-cd/përparim-i-klasës-së-defektit-paragraph-masat-e-borxhit-të-mbetura-punë-burimore-përmbajtje-8c540afa-1",
+      "translationHash": "8c540afa144cc563c2acd678104aec2d1b75d57b91410eb97b1c700adc3be26d",
       "blockType": "paragraph",
       "headingPath": [
         "Localization CI and CD",
@@ -186,15 +186,36 @@
         33
       ],
       "targetLineRange": [
-        35,
-        35
+        33,
+        33
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/defect-class-progression-paragraph-open-defect-classes-measure-whether-the-system-can-still-per-9ef6c32c-1",
       "sourceHash": "9ef6c32c6d5e89e805ef27c5be8055e0e3b549f63935b0355fdbd50f4610a490",
+      "targetBlockId": "lokalizimi-ci-dhe-cd/përparim-i-klasës-së-defektit-paragraph-klasat-e-defekteve-të-hapura-matin-nëse-sistemi-mund-të-lejo-7b8e1207-1",
+      "translationHash": "7b8e12072ddcb4511bd08db32658651511babb36da3421d5871eb9364c09d101",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization CI and CD",
+        "Defect-class progression"
+      ],
+      "sourceLineRange": [
+        35,
+        35
+      ],
+      "targetLineRange": [
+        35,
+        35
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
+    },
+    {
+      "blockId": "localization-ci-and-cd/defect-class-progression-paragraph-as-soon-as-a-defect-class-reaches-zero-occurrences-its-valid-d1e63a59-1",
+      "sourceHash": "d1e63a59be2df77e1836deb23cc68abfbd3ff5f61d67a72040f341cfb99b9ab7",
       "targetBlockId": "lokalizimi-ci-dhe-cd/përparim-i-klasës-së-defektit-paragraph-sapo-një-klasë-defekti-arrin-zero-dukuri-vërtetuesi-i-saj-du-c8d2341a-1",
       "translationHash": "c8d2341af2bab159480d41b6976df97cd6711018fc7cba1d2f17f90a0d1cc96e",
       "blockType": "paragraph",
@@ -203,42 +224,21 @@
         "Defect-class progression"
       ],
       "sourceLineRange": [
-        35,
-        35
+        37,
+        37
       ],
       "targetLineRange": [
         37,
         37
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
-    },
-    {
-      "blockId": "localization-ci-and-cd/defect-class-progression-paragraph-as-soon-as-a-defect-class-reaches-zero-occurrences-its-valid-d1e63a59-1",
-      "sourceHash": "d1e63a59be2df77e1836deb23cc68abfbd3ff5f61d67a72040f341cfb99b9ab7",
-      "targetBlockId": "lokalizimi-ci-dhe-cd/përparim-i-klasës-së-defektit-paragraph-ci-nuk-është-vetëm-një-portier-është-mekanizmi-që-pengon-kla-556a98e7-1",
-      "translationHash": "556a98e70d81ed5d3a57ddf83818a0da4ed1ee7ed1905abd934b9354d666d4f2",
-      "blockType": "paragraph",
-      "headingPath": [
-        "Localization CI and CD",
-        "Defect-class progression"
-      ],
-      "sourceLineRange": [
-        37,
-        37
-      ],
-      "targetLineRange": [
-        47,
-        47
-      ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/defect-class-progression-paragraph-examples-1889f033-1",
       "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "lokalizimi-ci-dhe-cd/përparim-i-klasës-së-defektit-paragraph-shembuj-a7ff90ed-1",
+      "translationHash": "a7ff90ed4ed925b3d5b326bb335caae8e6418689f2d92055b809eefb9afac5f2",
       "blockType": "paragraph",
       "headingPath": [
         "Localization CI and CD",
@@ -248,9 +248,12 @@
         39,
         39
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/defect-class-progression-list-placeholder-draft-publishing-b83d91b6-1",
@@ -270,14 +273,14 @@
         41,
         45
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/defect-class-progression-paragraph-ci-is-not-only-a-gatekeeper-it-is-the-mechanism-that-keeps-c-6378bc95-1",
       "sourceHash": "6378bc95818cebfbfb0bbd1513b97bb1f852fb62fa8c214fbaeea6fa583e5e89",
-      "targetBlockId": "lokalizimi-ci-dhe-cd/rendi-i-gjeneratës-për-lundrimin-e-artikujve-paragraph-kontrata-aktuale-e-lundrimit-të-artikujve-publik-është-3ef0e2ba-1",
-      "translationHash": "3ef0e2bab865b179ebba18bf8010552e805848a786426d3e84ca013c5f65c5f7",
+      "targetBlockId": "lokalizimi-ci-dhe-cd/përparim-i-klasës-së-defektit-paragraph-ci-nuk-është-vetëm-një-portier-është-mekanizmi-që-pengon-kla-556a98e7-1",
+      "translationHash": "556a98e70d81ed5d3a57ddf83818a0da4ed1ee7ed1905abd934b9354d666d4f2",
       "blockType": "paragraph",
       "headingPath": [
         "Localization CI and CD",
@@ -288,11 +291,11 @@
         47
       ],
       "targetLineRange": [
-        51,
-        51
+        47,
+        47
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/generation-order-for-article-navigation-heading-generation-order-for-article-navigation-c85e63ff-1",
@@ -312,14 +315,14 @@
         49,
         49
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "localization-ci-and-cd/generation-order-for-article-navigation-paragraph-the-current-public-article-navigation-contract-is-7e3095fe-1",
       "sourceHash": "7e3095fe95683b22bcfce73b37698eb98ab769872ca83c8170425c7a2f7dec6f",
-      "targetBlockId": "lokalizimi-ci-dhe-cd/rendi-i-gjeneratës-për-lundrimin-e-artikujve-list-list-c82d026e-1",
-      "translationHash": "c82d026e5a49051aab295d9a9afa778e3ccef81db203716de9614517d1dcb3c8",
+      "targetBlockId": "lokalizimi-ci-dhe-cd/rendi-i-gjeneratës-për-lundrimin-e-artikujve-paragraph-kontrata-aktuale-e-lundrimit-të-artikujve-publik-është-3ef0e2ba-1",
+      "translationHash": "3ef0e2bab865b179ebba18bf8010552e805848a786426d3e84ca013c5f65c5f7",
       "blockType": "paragraph",
       "headingPath": [
         "Localization CI and CD",
@@ -330,17 +333,17 @@
         51
       ],
       "targetLineRange": [
-        53,
-        55
+        51,
+        51
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/generation-order-for-article-navigation-list-list-c82d026e-1",
       "sourceHash": "c82d026e5a49051aab295d9a9afa778e3ccef81db203716de9614517d1dcb3c8",
-      "targetBlockId": "lokalizimi-ci-dhe-cd/faqe-të-ngjashme-list-list-e6d13ce2-1",
-      "translationHash": "e6d13ce2ba425dc0e24aa1d96227e73bbf29966abe58f5eb1cf464c098ecd404",
+      "targetBlockId": "lokalizimi-ci-dhe-cd/rendi-i-gjeneratës-për-lundrimin-e-artikujve-list-list-c82d026e-1",
+      "translationHash": "c82d026e5a49051aab295d9a9afa778e3ccef81db203716de9614517d1dcb3c8",
       "blockType": "list",
       "headingPath": [
         "Localization CI and CD",
@@ -351,11 +354,11 @@
         55
       ],
       "targetLineRange": [
-        68,
-        70
+        53,
+        55
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/generation-order-for-article-navigation-paragraph-generation-and-validation-should-happen-in-this-order-9adee1b2-1",
@@ -375,8 +378,8 @@
         57,
         57
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/generation-order-for-article-navigation-list-1-generate-article-html-88b5a273-1",
@@ -396,8 +399,8 @@
         59,
         62
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/generation-order-for-article-navigation-paragraph-if-a-validator-still-expects-the-legacy-block-update-the-val-aa17bc68-1",
@@ -417,8 +420,8 @@
         64,
         64
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "localization-ci-and-cd/related-pages-heading-related-pages-6fb705c8-1",
@@ -438,14 +441,14 @@
         66,
         66
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "localization-ci-and-cd/related-pages-list-list-749bca15-1",
       "sourceHash": "749bca153d98694f897fe3d8fca6603941002d4f014a57261b0344b9419aa7e2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "lokalizimi-ci-dhe-cd/faqe-të-ngjashme-list-list-e6d13ce2-1",
+      "translationHash": "e6d13ce2ba425dc0e24aa1d96227e73bbf29966abe58f5eb1cf464c098ecd404",
       "blockType": "list",
       "headingPath": [
         "Localization CI and CD",
@@ -455,9 +458,12 @@
         68,
         70
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        68,
+        70
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

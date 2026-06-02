@@ -65,7 +65,7 @@ El futuro de la localización no es la automatización perfecta. Es la coordinac
 
 ## Otros idiomas
 
-- [English](../en/future-of-continuous-localization.md)
+- [English](../es/future-of-continuous-localization.md)
 - [Slovenščina](../sl/future-of-continuous-localization.md)
 - [Hrvatski](../hr/future-of-continuous-localization.md)
 - [Bosanski](../bs/future-of-continuous-localization.md)

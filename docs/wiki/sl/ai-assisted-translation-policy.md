@@ -16,7 +16,7 @@ Prevod, ustvarjen s AI, se lahko uporabi kot faza osnutka, vendar so potrebni pr
 ## Pravila
 
 - Izhod AI je osnutek, ne končna resnica.
-– Občutljivo besedilo potrebuje izrecni človeški pregled.
+- Občutljivo besedilo potrebuje izrecni človeški pregled.
 - Terminologijo je treba preveriti glede na smernice projekta.
 - Projekti morajo razkriti strojno ustvarjeno stanje, kjer je to koristno.
 

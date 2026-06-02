@@ -76,4 +76,4 @@ Jo çdo gjuhë duhet të ketë të njëjtin nivel pjekurie ditën e parë. Por �
 
 ## Gjuhë të tjera
 
-- English (../en/why-every-language-matters.md)
+Anglishtja është gjuha kanonike e botimit të parë të këtij artikulli. Rrugët e gatshme për përkthim janë rezervuar për të gjitha lokalizimet e mbështetura të Let Books.

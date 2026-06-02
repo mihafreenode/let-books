@@ -21,7 +21,7 @@
         10,
         10
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -42,14 +42,14 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "let-books-localization-lessons-learned/summary-paragraph-early-let-books-localization-work-shows-both-the-value-and-t-dbbb086e-1",
       "sourceHash": "dbbb086e75a9753fec259b50adece788702c29bfb1eb35e919e4951b4a8d6136",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-научене-лекције-о-локализацији/резиме-paragraph-рани-рад-на-let-books-локализацији-показује-и-вредност-и-тро-6fb9d324-1",
+      "translationHash": "6fb9d3244a90b109b317a0246f4ffe999c64a9c023933e9e48c500600c090f52",
       "blockType": "paragraph",
       "headingPath": [
         "Let Books Localization Lessons Learned",
@@ -59,15 +59,18 @@
         14,
         14
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "let-books-localization-lessons-learned/current-lessons-heading-current-lessons-2e59ffcc-1",
       "sourceHash": "2e59ffccd486631341edbbfb314a7409b713e2e39729cc482a1637fedb753166",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-научене-лекције-о-локализацији/текуће-лекције-heading-текуће-лекције-d9425f99-1",
+      "translationHash": "d9425f9958e00c4e29375a55b57d24518774949842d876a94fa9759134e6bca7",
       "blockType": "heading",
       "headingPath": [
         "Let Books Localization Lessons Learned",
@@ -77,15 +80,18 @@
         16,
         16
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "let-books-localization-lessons-learned/current-lessons-list-policy-drift-is-expensive-if-canonical-language-rules-are-un-8495f3bb-1",
       "sourceHash": "8495f3bb56b4724cc6e97d891e50ca730b787d33371c46678a37f8276a1a28a5",
-      "targetBlockId": "let-books-научене-лекције-о-локализацији/повезане-странице-list-list-9f0d30b4-1",
-      "translationHash": "9f0d30b4546645980409b821bc4099381682c89e98fb1faadec4f54c3ef7e00d",
+      "targetBlockId": "let-books-научене-лекције-о-локализацији/текуће-лекције-list-одступање-политике-је-скупо-ако-су-правила-канонског-језика--af9fe728-1",
+      "translationHash": "af9fe7288e264cbe39d9daef8cbcc2ac208c0ddd2a43e13f3159660c2dc369b1",
       "blockType": "list",
       "headingPath": [
         "Let Books Localization Lessons Learned",
@@ -96,17 +102,17 @@
         21
       ],
       "targetLineRange": [
-        25,
-        27
+        18,
+        21
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "let-books-localization-lessons-learned/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-научене-лекције-о-локализацији/повезане-странице-heading-повезане-странице-09b387a1-1",
+      "translationHash": "09b387a11237f12e04af937bc632541ea557c5e8b0bdca3ccebcc5b0cf308f27",
       "blockType": "heading",
       "headingPath": [
         "Let Books Localization Lessons Learned",
@@ -116,15 +122,18 @@
         23,
         23
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        23,
+        23
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "let-books-localization-lessons-learned/related-pages-list-list-9f0d30b4-1",
       "sourceHash": "9f0d30b4546645980409b821bc4099381682c89e98fb1faadec4f54c3ef7e00d",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-научене-лекције-о-локализацији/повезане-странице-list-list-9f0d30b4-1",
+      "translationHash": "9f0d30b4546645980409b821bc4099381682c89e98fb1faadec4f54c3ef7e00d",
       "blockType": "list",
       "headingPath": [
         "Let Books Localization Lessons Learned",
@@ -134,9 +143,12 @@
         25,
         27
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        25,
+        27
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

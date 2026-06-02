@@ -7,6 +7,6 @@ status: draft
 
 # Развој вођен спецификацијом у Let Books - Мапа извора
 
-Ова локализована мапа извора за чланак "Развој вођен спецификацијом у Let Books" прати канонску енглеску мапу: [../en/spec-driven-development-in-let-books.md](../en/spec-driven-development-in-let-books.md).
+Ова локализована мапа извора за чланак "Развој вођен спецификацијом у Let Books" прати канонску енглеску мапу: [../en/spec-driven-development-in-let-books.md](../sr-Cyrl/spec-driven-development-in-let-books.md).
 
 Локализовани чланак треба да остане усклађен са канонским енглеским тврдњама, доказима и уредничким границама.

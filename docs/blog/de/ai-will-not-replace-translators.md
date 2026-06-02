@@ -79,6 +79,56 @@ Genau solche Beispiele zeigen, warum menschliches Review weiterhin wichtig ist. 
 
 Selbst wenn die Gesamtbedeutung erhalten bleibt, können KI-generierte Übersetzungen ein Muttersprachler-Review erfordern, um feine Probleme bei Grammatik, Modalität, Terminologie und fachspezifischem Register zu korrigieren. Solche Probleme sind allein mit automatisierten Qualitätsmetriken oft schwer zu erkennen.
 
+## Ein Beispiel pro Review-Kategorie
+
+Verschiedene Kategorien von Review-Befunden verlangen unterschiedliche Arten menschlichen Urteils.
+
+### Modalität und Richtliniensprache
+
+Ursprünglicher KI-Entwurf:
+
+`Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
+
+Korrektur durch Muttersprachler:
+
+`Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
+
+Lehre:
+
+- erhaltene Bedeutung reicht nicht aus, wenn Grammatik, Modalität und Richtlinienformulierung für Muttersprachler immer noch falsch klingen
+
+### Optimierung des Ausgangstextes für Lokalisierung
+
+Ursprüngliche englische Überschrift:
+
+`The hidden exclusion of English-only systems`
+
+Verbesserte englische Überschrift:
+
+`Why English-only systems exclude people`
+
+Lehre:
+
+- manche Lokalisierungsprobleme sollten durch Verbesserung des Ausgangstextes gelöst werden, statt jede Zielsprache dafür kompensieren zu lassen, dass die englische Formulierung zu stark verdichtet ist
+
+### Falscher Freund in der Fachterminologie
+
+Ursprüngliche englische Phrase:
+
+`benchmark fixtures`
+
+Falsche slowenische Lokalisierung:
+
+`primerjalne napeljave`
+
+Verbesserte slowenische Lokalisierung:
+
+`referenčni primeri za primerjalno vrednotenje`
+
+Lehre:
+
+- Fachbegriffe müssen nach ihrer Domänenbedeutung übersetzt werden; in Test- und Evaluationskontexten bedeutet `fixture` ein wiederverwendbares Referenzbeispiel oder einen Testfall und nicht physische Infrastruktur
+
 ## Dauerhafte Erkenntnis
 
 Die Zukunft ist nicht Übersetzer gegen KI. Die praktische Zukunft ist KI-gestützte Lokalisierung mit klaren Review-Stufen und transparenten Qualitätserwartungen.
@@ -92,4 +142,4 @@ Die Zukunft ist nicht Übersetzer gegen KI. Die praktische Zukunft ist KI-gestü
 
 ## Andere Sprachen
 
-- English (../en/ai-will-not-replace-translators.md)
+Englisch ist die kanonische Sprache der ersten Veröffentlichung dieses Artikels. Übersetzungsbereite Pfade sind für alle unterstützten Let-Books-Lokalisierungen reserviert.

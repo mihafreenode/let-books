@@ -21,7 +21,7 @@
         39,
         39
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -41,8 +41,8 @@
         41,
         41
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books-paragraph-the-project-is-not-yet-a-full-hosted-application-it-currentl-f2a8a740-1",
@@ -61,8 +61,8 @@
         43,
         43
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-specification-layer-heading-the-specification-layer-c57d8b0d-1",
@@ -82,7 +82,7 @@
         45,
         45
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -103,8 +103,8 @@
         47,
         47
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-specification-layer-paragraph-this-matters-because-it-answers-questions-that-code-alone-ca-ddea26a4-1",
@@ -124,8 +124,8 @@
         49,
         49
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-specification-layer-list-why-does-the-product-exist-2e5a2612-1",
@@ -145,8 +145,8 @@
         51,
         55
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-specification-layer-paragraph-that-is-the-difference-between-a-project-description-and-a-r-25f48ac4-1",
@@ -166,8 +166,8 @@
         57,
         57
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-heading-the-tactical-guidance-layer-b2cfed84-1",
@@ -187,7 +187,7 @@
         59,
         59
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -208,14 +208,14 @@
         61,
         61
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-paragraph-examples-include-ed999dae-1",
       "sourceHash": "ed999daedcb63820ece7af9eb658158112157a53bffc621a0ff09ef8d762ba5a",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-taktičkih-smjernica-paragraph-primjeri-uključuju-47488f49-1",
+      "translationHash": "47488f4903916809975b09235672012d26a9787d741d8204f3519a41b2303f57",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -225,15 +225,18 @@
         63,
         63
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        63,
+        63
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-list-public-naming-rules-c3a49eff-1",
       "sourceHash": "c3a49eff6102c3383c8dacc88a43a1d6e1b8822842e51fa9304d454e14b2afc0",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-dokumentacije-list-arhitekturom-dokumentacije-fa7e5aee-1",
-      "translationHash": "fa7e5aee00ddbf01e61e08f17832191305d9309d4626dc73b948f1c0b4b80b96",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-taktičkih-smjernica-list-pravila-javnog-imenovanja-223979a4-1",
+      "translationHash": "223979a48f3c5a65c121f1769a1f78ff09de1ba979e9daf1cf8301842dbe9b5f",
       "blockType": "list",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -244,17 +247,17 @@
         70
       ],
       "targetLineRange": [
-        77,
-        80
+        65,
+        70
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-paragraph-this-is-important-in-ai-assisted-work-because-not-every-rule-a29fe52a-1",
       "sourceHash": "a29fe52a51c9beff3d5f3445b3d550b1d2dd06fa54b8c18f049341a53e84a6de",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-taktičkih-smjernica-paragraph-tu-spadaju-pravila-o-javnom-imenovanju-dokumentaciji-statičn-ba2452ec-1",
-      "translationHash": "ba2452ec825c5d171e952d6bfaf19175bd78dd9440c9f8663f51a7e34aa43e22",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-taktičkih-smjernica-paragraph-to-je-važno-u-radu-uz-pomoć-ai-ja-zato-što-svako-pravilo-ne--5d350633-1",
+      "translationHash": "5d35063387f76e0d442e99638fe9db333cf4c77cfa4aa05500fd3a4957ac18ed",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -265,17 +268,17 @@
         72
       ],
       "targetLineRange": [
-        63,
-        63
+        72,
+        72
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-current-state-layer-heading-the-current-state-layer-365a3680-1",
       "sourceHash": "365a3680899382a36567e415fee75aa35c90fa2a780e008987fa464fe475765b",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-dokumentacije-heading-sloj-dokumentacije-a8b9f436-1",
-      "translationHash": "a8b9f43624f2ed0ed81e43fdb77c1514c5e6462a17ac65bbc69b0b0ec1ea59a1",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-trenutnog-stanja-heading-sloj-trenutnog-stanja-e2abab04-1",
+      "translationHash": "e2abab04e1cb3f3b8d433476046e705cdb2c60855a9153470fbb7277253920b4",
       "blockType": "heading",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -286,17 +289,17 @@
         74
       ],
       "targetLineRange": [
-        71,
-        71
+        74,
+        74
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-current-state-layer-paragraph-provides-a-third-layer-current-state-framing-e61ff3d2-1",
       "sourceHash": "e61ff3d2d8d23f5a8e406f920e76d17e93710d46fd5639fb312387e49ea9aab4",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-trenutnog-stanja-paragraph-predstavlja-treći-sloj-pošten-opis-trenutnog-stanja-0a2e3abe-1",
-      "translationHash": "0a2e3abefec51fa52867445f388b1639e3eb83c8b2bda5305ac2d6b74d00731b",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-trenutnog-stanja-paragraph-predstavlja-treći-sloj-opis-trenutnog-stanja-31dab731-1",
+      "translationHash": "31dab73161d7c1332db4641c446a915a9230c9efe47b9074119e3f6039548295",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -307,17 +310,17 @@
         76
       ],
       "targetLineRange": [
-        67,
-        67
+        76,
+        76
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-current-state-layer-paragraph-it-explains-what-exists-now-what-does-not-exist-yet-what-the-04c2935b-1",
       "sourceHash": "04c2935b2de8c235cb120c441c6fd63e9aadc549dcb5b0709757521dcdcc7706",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-trenutnog-stanja-paragraph-on-objašnjava-šta-danas-postoji-čega-još-nema-čemu-služi-sta-0e8c2182-1",
-      "translationHash": "0e8c218246a6f191135ff38b9e45d901366718012207083cd25614ae13b70577",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-trenutnog-stanja-paragraph-objašnjava-šta-danas-postoji-čega-još-nema-čemu-služi-statič-e78af061-1",
+      "translationHash": "e78af0615c6fb55e4f47abdd97f2990d744de6410cc462f08097d78981c9518d",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -328,17 +331,17 @@
         78
       ],
       "targetLineRange": [
-        69,
-        69
+        78,
+        78
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-current-state-layer-paragraph-in-let-books-the-readme-explicitly-separates-current-deliver-05fa0dfe-1",
       "sourceHash": "05fa0dfe0d6b78a612d47aa6c5662e6c032b991233bac4f78c7fcc6fae61fd3c",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-dokumentacije-paragraph-dodaje-četvrti-sloj-i-vodiči-za-stil-određuju-kako-znanje-tr-6b14cc26-1",
-      "translationHash": "6b14cc26ce3414693c8c43b9d3a3f0e63b3970cf91b95aa4e3fd1e9159cfc3e6",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-trenutnog-stanja-paragraph-u-let-booksu-readme-izričito-razlikuje-trenutne-isporuke-od--3125f9a9-1",
+      "translationHash": "3125f9a9ad453faa194f7e38966dab8f130ee8f70763443614e45542649a106e",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -349,17 +352,17 @@
         80
       ],
       "targetLineRange": [
-        73,
-        73
+        80,
+        80
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-documentation-layer-heading-the-documentation-layer-ea188017-1",
       "sourceHash": "ea188017ecc73c67d73d78f55c49dc645fa35d95b77dbc500069e0b041e80258",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-demoa-heading-sloj-demoa-6745301b-1",
-      "translationHash": "6745301b02764c8cf3471634901f30ba98f5921202920362e36247149aa10d75",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-dokumentacije-heading-sloj-dokumentacije-a8b9f436-1",
+      "translationHash": "a8b9f43624f2ed0ed81e43fdb77c1514c5e6462a17ac65bbc69b0b0ec1ea59a1",
       "blockType": "heading",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -373,14 +376,14 @@
         82,
         82
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-documentation-layer-paragraph-the-docs-area-adds-a-fourth-layer-and-the-style-guide-and-so-65104655-1",
       "sourceHash": "65104655117372e7295eb06649945975676cbba775e3bb52af4170567c4bb017",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-paragraph-let-books-već-dokumentira-i-način-razmišljanja-o-provjeri-i--4c1bcdf4-1",
-      "translationHash": "4c1bcdf4c231547173a755932fc0a715e21e871c8b0ed44218d5e0ff90606d0c",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-dokumentacije-paragraph-područje-dodaje-četvrti-sloj-vodiči-za-stil-i-područje-određ-1f0ba425-1",
+      "translationHash": "1f0ba4258c7f71274944fe1c065687a209b9853cade7eb051620b51407d7f812",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -391,11 +394,11 @@
         84
       ],
       "targetLineRange": [
-        90,
-        90
+        84,
+        84
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-documentation-layer-paragraph-this-is-where-the-repository-becomes-more-than-a-codebase-it-a2e1b95e-1",
@@ -412,17 +415,17 @@
         86
       ],
       "targetLineRange": [
-        75,
-        75
+        86,
+        86
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-documentation-layer-list-documentation-architecture-79d31d0b-1",
       "sourceHash": "79d31d0b347236628ee7681c4e563172aafcb8476b7d0ea7425e3b8ac3e61085",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-demoa-paragraph-statični-demo-je-važan-ali-namjerno-nije-jedina-autoriteta-p-b537f241-1",
-      "translationHash": "b537f24127cc4b359aba39270127ebc508e09e9721e76d8a22326abc703e747a",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-dokumentacije-list-arhitekturom-dokumentacije-92f8d60a-1",
+      "translationHash": "92f8d60a3e0c23b3b0b1c3e595ec4c6868c9e834142dce497475448568188f2f",
       "blockType": "list",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -433,17 +436,17 @@
         92
       ],
       "targetLineRange": [
-        84,
-        84
+        88,
+        92
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-documentation-layer-paragraph-that-is-exactly-the-kind-of-scaffolding-that-helps-ai-assist-7958d04b-1",
       "sourceHash": "7958d04b89f4737347c72a4532d35aea97c47e231eec0d542eaed42775a629a8",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-paragraph-to-nisu-samo-detalji-o-alatima-to-je-dokaz-da-projekt-kvalit-5579850c-1",
-      "translationHash": "5579850c3748facc9d2d742e18bd843426f70c6b88be6dbe5adcd8ca218df514",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-dokumentacije-paragraph-to-je-upravo-vrsta-okvira-koja-pomaže-da-isporuka-uz-pomoć-a-3cf537ca-1",
+      "translationHash": "3cf537ca9ba488d353d567a77ae1fe8c680df16032b6ca4c72eb88e6e5254109",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -454,17 +457,17 @@
         94
       ],
       "targetLineRange": [
-        92,
-        92
+        94,
+        94
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-demo-layer-heading-the-demo-layer-426b5727-1",
       "sourceHash": "426b5727ecef85b14ccf6c138311b85dd7981267641bf2253633d05dfbae8766",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-heading-sloj-provjere-aa1af0a0-1",
-      "translationHash": "aa1af0a0c63735b1b9795ae6e23d38259b201e665f7c18ac629ac75608920c48",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-demoa-heading-sloj-demoa-6745301b-1",
+      "translationHash": "6745301b02764c8cf3471634901f30ba98f5921202920362e36247149aa10d75",
       "blockType": "heading",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -475,17 +478,17 @@
         96
       ],
       "targetLineRange": [
-        88,
-        88
+        96,
+        96
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-demo-layer-paragraph-the-static-demo-is-important-but-it-is-intentionally-not-the-6433644a-1",
       "sourceHash": "6433644ab38df025dec03c99e085413e2fa47905e74531badadb68fc5e6b9404",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/zašto-je-to-važno-za-ai-podržanu-isporuku-paragraph-ako-ai-pomoćnik-doprinosi-let-booksu-ne-mora-izmišljati-proi-fa8727cd-1",
-      "translationHash": "fa8727cd104ce666a7c0e9bef15bf13278d5b4d5809eb38ca52d0d6132899cf9",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-demoa-paragraph-statični-demo-je-važan-ali-namjerno-nije-jedina-autoriteta-p-b537f241-1",
+      "translationHash": "b537f24127cc4b359aba39270127ebc508e09e9721e76d8a22326abc703e747a",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -496,11 +499,11 @@
         98
       ],
       "targetLineRange": [
-        96,
-        96
+        98,
+        98
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-demo-layer-paragraph-the-public-docs-and-blog-rules-already-distinguish-between-c-374fdaa1-1",
@@ -517,17 +520,17 @@
         100
       ],
       "targetLineRange": [
-        86,
-        86
+        100,
+        100
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-demo-layer-paragraph-this-is-a-mature-rule-without-it-prototypes-often-become-acc-12528bc8-1",
       "sourceHash": "12528bc8ba41bc317f1fce714df108c6321e5d17895cdacb67678c0c11f35b50",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-paragraph-razvoj-vođen-specifikacijom-ne-znači-samo-napisati-dugačak-d-69c5762f-1",
-      "translationHash": "69c5762fc4485f14c54bdf8b1a46187ab0165a1b805a5e21dee96855378b5678",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-demoa-paragraph-to-je-zrelo-pravilo-bez-njega-prototipi-često-postanu-slučaj-6c6b90c1-1",
+      "translationHash": "6c6b90c1ed0bd97e8fe022aa752ddd4b555a75bf3633f43154ba05fad12ba7d3",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -538,17 +541,17 @@
         102
       ],
       "targetLineRange": [
-        109,
-        109
+        102,
+        102
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-verification-layer-heading-the-verification-layer-0e170c11-1",
       "sourceHash": "0e170c11974ddb4a198998d1d9aecf9dc86c5f0f83393a247ed704941526d896",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-heading-glavna-lekcija-d2afde15-1",
-      "translationHash": "d2afde1503ec906fc8a64a0f2aa704a0d3b62a2297c78798cdb3fc8e86032ca5",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-heading-sloj-provjere-aa1af0a0-1",
+      "translationHash": "aa1af0a0c63735b1b9795ae6e23d38259b201e665f7c18ac629ac75608920c48",
       "blockType": "heading",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -559,17 +562,17 @@
         104
       ],
       "targetLineRange": [
-        107,
-        107
+        104,
+        104
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-verification-layer-paragraph-let-books-also-already-documents-a-verification-mindset-47d2ca9a-1",
       "sourceHash": "47d2ca9a6bb3343cff02bd5c03751924c583ba883981f3826b4d89320c54d22a",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-paragraph-let-books-pokazuje-da-takav-lanac-može-postojati-i-prije-pun-0671ba96-1",
-      "translationHash": "0671ba96c578aa9fe203274b4b5d65c3e7eb52b196fa21037b8e8d5af476af23",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-paragraph-let-books-već-dokumentira-i-način-razmišljanja-o-provjeri-13795e61-1",
+      "translationHash": "13795e61bf982788d55ce3ff9302e5ac745bfc435143834ccc23e9c8270274c1",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -580,17 +583,17 @@
         106
       ],
       "targetLineRange": [
-        111,
-        111
+        106,
+        106
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-verification-layer-paragraph-and-describe-validation-layers-such-as-b0e52bde-1",
       "sourceHash": "b0e52bde84fa6ff6f8faff8801fca748bb68c4c293bf012e176b81ae4b25ce2b",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/zašto-je-to-važno-za-ai-podržanu-isporuku-paragraph-taj-lanac-ne-uklanja-greške-ali-ih-čini-lakšim-za-otkrivanje-0a02ebc9-1",
-      "translationHash": "0a02ebc9ad6795603c8f14a49e29bb82a2e0a02b7f8820da225a5149b7378344",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-paragraph-i-opisuju-validacijske-slojeve-kao-što-su-b49a0af9-1",
+      "translationHash": "b49a0af9e9f58a5edbc520b8bdb11ef4e9073b7ac235eedc32e66ca14a557f2b",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -601,17 +604,17 @@
         108
       ],
       "targetLineRange": [
-        105,
-        105
+        108,
+        108
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-verification-layer-list-localization-smoke-tests-9e6d87cd-1",
       "sourceHash": "9e6d87cd7ac04b8dff99a3463873e9a2315fad3e1ae39cdf4998d6c48db4c3f1",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/zašto-je-to-važno-za-ai-podržanu-isporuku-list-1-proizvodni-smjer-u-d1f01ec1-1",
-      "translationHash": "d1f01ec1fea32deba5779843cb222387c27febfc9f9917dbdb901ce45a4574b5",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-list-dimni-testovi-lokalizacije-50eaabb3-1",
+      "translationHash": "50eaabb366b5ab37f0367f3bb274614e6d486ab0bdf93fb0bc80a11c9970c143",
       "blockType": "list",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -622,17 +625,17 @@
         115
       ],
       "targetLineRange": [
-        98,
-        103
+        110,
+        115
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-verification-layer-paragraph-those-are-not-just-tooling-details-they-are-evidence-that-th-756e3b68-1",
       "sourceHash": "756e3b682a3ab3b02cb15edc0d2ac24935003de0bb4c8e541bbefd6f2417c94e",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-provjere-paragraph-to-nisu-samo-detalji-o-alatima-to-je-dokaz-da-projekt-kvalit-5579850c-1",
+      "translationHash": "5579850c3748facc9d2d742e18bd843426f70c6b88be6dbe5adcd8ca218df514",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -642,9 +645,12 @@
         117,
         117
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        117,
+        117
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-heading-why-this-matters-for-ai-assisted-delivery-75c38c71-1",
@@ -661,17 +667,17 @@
         119
       ],
       "targetLineRange": [
-        94,
-        94
+        119,
+        119
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-paragraph-if-an-ai-assistant-contributes-to-let-books-it-does-not-need-59fbf996-1",
       "sourceHash": "59fbf996edf94f6a935985f2f423c2f48c41e4fc54f14b4133e57e06adf5ad40",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/zašto-je-to-važno-za-ai-podržanu-isporuku-paragraph-ako-ai-pomoćnik-doprinosi-let-booksu-ne-mora-izmišljati-proi-fa8727cd-1",
+      "translationHash": "fa8727cd104ce666a7c0e9bef15bf13278d5b4d5809eb38ca52d0d6132899cf9",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -681,15 +687,18 @@
         121,
         121
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        121,
+        121
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-list-1-product-direction-in-2aff4580-1",
       "sourceHash": "2aff4580817d873caaec7ddda765479c69166bf0d6bcd90f2c157986abef7d5c",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/drugi-jezici-list-list-ebf925c5-1",
-      "translationHash": "ebf925c548c9d6cb924ece2bf9f23640b166e2887ae7197d9c624e70ea81a73b",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/zašto-je-to-važno-za-ai-podržanu-isporuku-list-1-proizvodni-smjer-u-d1f01ec1-1",
+      "translationHash": "d1f01ec1fea32deba5779843cb222387c27febfc9f9917dbdb901ce45a4574b5",
       "blockType": "list",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -700,17 +709,17 @@
         128
       ],
       "targetLineRange": [
-        115,
-        125
+        123,
+        128
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-paragraph-that-chain-does-not-eliminate-mistakes-it-does-make-them-eas-0d468da3-1",
       "sourceHash": "0d468da3513c25ce3c56952dbaddeec61d2d996df826438914c3e8e2ae7bea6d",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/zašto-je-to-važno-za-ai-podržanu-isporuku-paragraph-taj-lanac-ne-uklanja-greške-ali-ih-čini-lakšim-za-otkrivanje-0a02ebc9-1",
+      "translationHash": "0a02ebc9ad6795603c8f14a49e29bb82a2e0a02b7f8820da225a5149b7378344",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -720,15 +729,18 @@
         130,
         130
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        130,
+        130
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-main-lesson-heading-the-main-lesson-bec1dc80-1",
       "sourceHash": "bec1dc8031b582be9de7f9bef1ff1f542d01a4f89858c055322c45ef6d6e550f",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/drugi-jezici-heading-drugi-jezici-4f204e39-1",
-      "translationHash": "4f204e393eea07838fefcf5af136e09a1d75e48a3bf6365491ddfb9ba35c079c",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-heading-glavna-lekcija-d2afde15-1",
+      "translationHash": "d2afde1503ec906fc8a64a0f2aa704a0d3b62a2297c78798cdb3fc8e86032ca5",
       "blockType": "heading",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -739,17 +751,17 @@
         132
       ],
       "targetLineRange": [
-        113,
-        113
+        132,
+        132
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-spec-driven-development-is-not-only-about-writing-a-long-req-0250f699-1",
       "sourceHash": "0250f699b7f384a9ecb722a3f047e586cea9c74f08a8e7ea594cbece32421c0a",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-paragraph-razvoj-vođen-specifikacijom-ne-znači-samo-napisati-dugačak-d-2bb73207-1",
+      "translationHash": "2bb73207c571f6a1d422201a8213727834c9e6bdd9454718ff43b2301a27a74c",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -759,15 +771,18 @@
         134,
         134
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        134,
+        134
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-in-practice-it-is-about-building-a-reliable-chain-between-11e73185-1",
       "sourceHash": "11e73185975fd2c369bfdce7b9b45d3c13f685801b9d2645757b20a1a726a595",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-paragraph-u-praksi-znači-izgraditi-pouzdan-lanac-između-2b4cd95d-1",
+      "translationHash": "2b4cd95d1231b518421d8c1f63052214e6bb6f0724b14a59fb707d1f0af1ecb9",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -777,15 +792,18 @@
         136,
         136
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        136,
+        136
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-main-lesson-list-product-intent-09851e91-1",
       "sourceHash": "09851e91f9e0dd863f238286234a34d8976c5d0aab0c209b220aa2d034f256b6",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-list-proizvodne-namjere-42ccbe1a-1",
+      "translationHash": "42ccbe1a88d7968b1f371189a4c215910cc69ddaa1eef4b9b4d4b1ce1a6ce2de",
       "blockType": "list",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -795,15 +813,18 @@
         138,
         143
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        138,
+        143
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-let-books-already-shows-that-this-chain-can-exist-before-the-737e91b6-1",
       "sourceHash": "737e91b61cc991e4c942767936f75846df1a2d48ec467303d5937d0ec37eda62",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-paragraph-let-books-već-pokazuje-da-takav-lanac-može-postojati-i-prije-23ac4e82-1",
+      "translationHash": "23ac4e8273c40d25801551222e3cad9ba6779e664e50c65516a2bbe26b475b99",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -813,15 +834,18 @@
         145,
         145
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        145,
+        145
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-that-is-one-of-the-strongest-arguments-for-spec-driven-devel-a517e3f9-1",
       "sourceHash": "a517e3f953a4ba066483292e0b21d35bd9bcb8405c742f2e9a9d4d9f35de0628",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/glavna-lekcija-paragraph-to-je-jedan-od-najsnažnijih-argumenata-za-razvoj-vođen-speci-67c9d32d-1",
+      "translationHash": "67c9d32d7762ba856b913367fd077462b0adbe9dbde172e7fa8fa1c8fa395bc1",
       "blockType": "paragraph",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -831,15 +855,18 @@
         147,
         147
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        147,
+        147
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "spec-driven-development-in-let-books/other-languages-heading-other-languages-55e5fe0d-1",
       "sourceHash": "55e5fe0d3fa1d4e9edcdd5986cd919f6a3eed9b339b20782d8f1b28f6f6a69e2",
-      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/sloj-trenutnog-stanja-heading-sloj-trenutnog-stanja-e2abab04-1",
-      "translationHash": "e2abab04e1cb3f3b8d433476046e705cdb2c60855a9153470fbb7277253920b4",
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/drugi-jezici-heading-drugi-jezici-4f204e39-1",
+      "translationHash": "4f204e393eea07838fefcf5af136e09a1d75e48a3bf6365491ddfb9ba35c079c",
       "blockType": "heading",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -850,17 +877,17 @@
         149
       ],
       "targetLineRange": [
-        65,
-        65
+        149,
+        149
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "spec-driven-development-in-let-books/other-languages-list-list-71e90d86-1",
       "sourceHash": "71e90d86a286299c891d2b15f2e2adf5177f1f23e7678bcc04550f0de131b376",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "razvoj-vođen-specifikacijom-u-let-books/drugi-jezici-list-list-71e90d86-1",
+      "translationHash": "71e90d86a286299c891d2b15f2e2adf5177f1f23e7678bcc04550f0de131b376",
       "blockType": "list",
       "headingPath": [
         "Spec-Driven Development in Let Books",
@@ -870,9 +897,12 @@
         151,
         161
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        151,
+        161
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

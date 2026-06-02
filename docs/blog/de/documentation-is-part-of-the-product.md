@@ -48,29 +48,38 @@ KI kann Implementierung aus unvollständiger Absicht erzeugen. Das wird oft als 
 
 Wenn die Dokumentation schwach oder veraltet ist, werden verschiedene Menschen und verschiedene Werkzeuge aus demselben Repository verschiedene Produkte ableiten.
 
+Ein Mitwirkender kann der aktuellen Benutzeroberfläche folgen.
+Ein anderer kann einer alten README-Datei folgen.
+Ein KI-Assistent kann der nächstgelegenen Datei folgen und den Rest erfinden.
+
+Das Problem ist nicht nur Korrektheit auf Code-Ebene. Das Problem ist, ob das Projekt noch immer ein Produkt beschreibt statt mehrerer sich überlagernder Vermutungen.
+
 ## Dokumentation erfüllt vier Produktaufgaben
 
-Dokumentation:
+Gute Dokumentation tut weit mehr, als die Oberfläche nachträglich zu erklären.
 
-- trägt die Absicht
-- setzt Erwartungen
-- senkt Koordinationskosten
-- stützt Vertrauen
+Erstens trägt sie Absicht. Sie sagt zukünftigen Mitwirkenden, was das Produkt erreichen will und was es ausdrücklich nicht werden will.
 
-Sie sagt Mitwirkenden, Institutionen, Prüfern und KI-Assistenten, was das Projekt erreichen will und was es ausdrücklich nicht werden soll.
+Zweitens setzt sie Erwartungen. Lesende können erkennen, was jetzt existiert, was geplant ist und was nicht so beschrieben werden sollte, als wäre es bereits implementiert.
+
+Drittens senkt sie Koordinationskosten. Neue Mitwirkende, Reviewer, Institutionen und KI-Assistenten können sich alle orientieren, ohne das Projekt aus Fragmenten rekonstruieren zu müssen.
+
+Viertens stützt sie Vertrauen. Ein Projekt, das aktuellen Zustand, geplante Richtung und experimentellen Workflow klar trennt, ist leichter zu bewerten und leichter zu pflegen.
 
 ## Let Books ist bereits so aufgebaut
 
-Im Repository Let Books:
+Das Let-Books-Repository zeigt diesen mehrschichtigen Ansatz bereits.
 
-- definiert `AGENTS.md` die Produktabsicht und Arbeitsabläufe
-- definiert `AGENTS-Implementation.md` taktische Ausführungsregeln
-- beschreibt `README.md` ehrlich den aktuellen Zustand
-- definiert `docs/` Regeln für Veröffentlichung, Schreiben, Lokalisierung und Nachweise
+- `AGENTS.md` definiert Produktzweck, Workflows, Domänengrenzen und langfristige Richtung.
+- `AGENTS-Implementation.md` definiert taktische Regeln für Implementierung und Dokumentation.
+- `README.md` erklärt den aktuellen Zustand des Repositories und unterscheidet gegenwärtige Liefergegenstände von zukünftigen Plänen.
+- `docs/` definiert eine Wissensplattform mit Konventionen für Veröffentlichung, Schreiben, Lokalisierung und Quellenabbildung.
 
 Das bedeutet: Dokumentation ist hier nicht nur Erklärung. Sie ist Teil der Arbeitsweise des Projekts.
 
 ## Veraltete Dokumentation ist Produktschuld
+
+Teams erkennen technische Schulden oft erst, wenn sie im Code auftauchen. Veraltete Dokumentation erzeugt aber eine ähnliche Art von Reibung.
 
 Veraltete Dokumentation führt zu:
 
@@ -117,11 +126,12 @@ Dieser Unterschied ist der Unterschied zwischen Dokumentation als Kommentar und 
 
 ## Die dauerhafte Lehre
 
-Dokumentation ist nicht von Produktqualität getrennt. Sie prägt Implementierung, Review, Kommunikation, Validierung und langfristiges Vertrauen. In KI-gestützten Projekten ist Dokumentation Teil des Produkts, weil sie Teil des Systems ist, das Produktdrift verhindert.
+Dokumentation ist nicht von Produktqualität getrennt.
+
+Sie prägt Implementierung, Review, Kommunikation, Validierung und langfristiges Vertrauen. In KI-gestützten Projekten ist Dokumentation Teil des Produkts, weil sie Teil des Systems ist, das Produktdrift verhindert.
 
 ## Andere Sprachen
 
-- [English](../en/documentation-is-part-of-the-product.md)
 - [Shqip](../sq/documentation-is-part-of-the-product.md)
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)
 - [Hrvatski](../hr/documentation-is-part-of-the-product.md)
@@ -129,6 +139,7 @@ Dokumentation ist nicht von Produktqualität getrennt. Sie prägt Implementierun
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
+- [Deutsch](../de/documentation-is-part-of-the-product.md)
 - [Italiano](../it/documentation-is-part-of-the-product.md)
 - [Français](../fr/documentation-is-part-of-the-product.md)
 - [Español](../es/documentation-is-part-of-the-product.md)

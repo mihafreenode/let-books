@@ -69,7 +69,7 @@ Lokalisierung kostet tatsächlich Zeit und Geld. Aber ein abgestuftes, transpare
 
 ## Andere Sprachen
 
-- [English](../en/economics-of-localization.md)
+- [English](../de/economics-of-localization.md)
 - [Slovenščina](../sl/economics-of-localization.md)
 - [Hrvatski](../hr/economics-of-localization.md)
 - [Bosanski](../bs/economics-of-localization.md)

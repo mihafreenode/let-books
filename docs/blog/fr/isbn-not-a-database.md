@@ -30,7 +30,7 @@ L'ISBN identifie l'édition, pas l'œuvre. Par exemple, les 2e et 3e éditions d
 
 C'est une précision utile — mais elle comporte des limitations importantes.
 
-![Diagramme ISBN vs exemplaire physique de livre](../../diagrams/blog/isbn-not-a-database/fr/isbn-vs-physical-book.svg)
+![Diagramme ISBN vs exemplaire physique de livre](../../diagrams/isbn-vs-physical-book.svg)
 
 Un ISBN identifie les métadonnées de l'édition à gauche. L'exemplaire physique à droite — état, provenance, lieu de stockage, statut du don, photos — est suivi séparément dans le modèle de domaine de Let Books. Les deux sont liés mais ne sont pas la même chose.
 
@@ -60,7 +60,7 @@ Des ISBN mal imprimés existent. Un même ISBN peut être accidentellement réut
 
 `docs/book-metadata.md` définit une stratégie pratique de repli pour la recherche par ISBN. Le document indique aussi que ce flux fonctionne dans la démo alpha actuelle tout en servant de modèle pour l'application complète à venir :
 
-![Diagramme de la chaîne de recherche ISBN](../../diagrams/blog/isbn-not-a-database/fr/isbn-lookup-chain.svg)
+![Diagramme de la chaîne de recherche ISBN](../../diagrams/isbn-lookup-chain.svg)
 
 1. Normalisez et validez l'ISBN. Supprimez les espaces et les tirets, mettez le X en majuscule, validez le chiffre de contrôle.
 2. Interrogez d'abord Open Library via son API publique.
@@ -78,6 +78,8 @@ Les références canoniques du dépôt pour cette chaîne sont `docs/book-metada
 Lorsqu'un donateur catalogue une collection de livres académiques, certains auront un ISBN et d'autres non. Les livres sans ISBN sont souvent les plus intéressants — éditions plus anciennes, documents publiés localement, compilations pour des cours spécifiques ou livres d'éditeurs de l'ex-Yougoslavie dont les identifiants n'ont jamais atteint les bases de données mondiales.
 
 Le processus de catalogage ne doit pas pénaliser le donateur pour l'absence d'ISBN. Chaque fonctionnalité qui fonctionne avec la recherche ISBN doit également fonctionner sans : suivi de localisation, téléchargement de photos, exportation Excel, révision par lot. L'ISBN est une commodité, pas une exigence.
+
+Ce principe est énoncé directement dans la spécification du projet dans `AGENTS.md` :
 
 > **Spécification du projet, AGENTS.md :** "Le modèle doit permettre des données incomplètes. L'ISBN n'est pas obligatoire."
 

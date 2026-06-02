@@ -76,4 +76,4 @@ Ne mora svaki jezik imati jednaku zrelost prvoga dana. Ali svaki jezik za koji p
 
 ## Drugi jezici
 
-- English (../en/why-every-language-matters.md)
+Engleski je kanonski jezik prvog izdanja ovog članka. Putanje spremne za prijevod rezervirane su za sve podržane lokalizacije projekta Let Books.

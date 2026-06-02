@@ -130,8 +130,16 @@ jobs:
       - name: Translation parity validation
         run: |
           .venv/bin/python tools/validate_translation_parity.py \
+            --fail-on-warnings \
             --report-file docs/.translation-parity-report.md \
             --json-report-file docs/.translation-parity-report.json
+
+      - name: Translation warning audit
+        run: |
+          python3 tools/audit_translation_warnings.py \
+            --json-report docs/.translation-parity-report.json \
+            --summary-file docs/.translation-warning-summary.md \
+            --summary-json-file docs/.translation-warning-summary.json
 
       - name: Localization completeness validation
         run: |

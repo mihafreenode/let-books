@@ -21,7 +21,7 @@
         10,
         10
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
@@ -42,14 +42,14 @@
         12,
         12
       ],
-      "alignmentStrategy": "metadata",
+      "alignmentStrategy": "heading-structure",
       "alignmentScore": 1.0
     },
     {
       "blockId": "let-books-accessibility-and-localization/summary-paragraph-let-books-treats-localization-and-accessibility-as-linked-di-5ddfa412-1",
       "sourceHash": "5ddfa41234a89d98a341b39f3a5b024436cc2ada75f358b7c6ea1ff25c19786f",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-пристапност-и-локализација/резиме-paragraph-let-books-ги-третира-локализацијата-и-пристапноста-како-повр-6fe1611d-1",
+      "translationHash": "6fe1611dbab48c0882ac8f6e509eee3b48f8aa1aeeb156001b51fc122d3817ac",
       "blockType": "paragraph",
       "headingPath": [
         "Let Books Accessibility and Localization",
@@ -59,15 +59,18 @@
         14,
         14
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "let-books-accessibility-and-localization/areas-of-overlap-heading-areas-of-overlap-9e5e6b4f-1",
       "sourceHash": "9e5e6b4f0781c02e758d38f092e02e3785f1317c2cc7d493e7f78ea62654fb3a",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-пристапност-и-локализација/области-на-преклопување-heading-области-на-преклопување-a1257784-1",
+      "translationHash": "a1257784d3f696b59e78afe6a08d3b4e593de085ea6d2951dd340fd2fb96cd67",
       "blockType": "heading",
       "headingPath": [
         "Let Books Accessibility and Localization",
@@ -77,15 +80,18 @@
         16,
         16
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "let-books-accessibility-and-localization/areas-of-overlap-list-localized-aria-and-status-messages-8a001888-1",
       "sourceHash": "8a0018880e786ad89101611ecb6a1196a1e520574d0cc65bd3500360e1c50f7e",
-      "targetBlockId": "let-books-пристапност-и-локализација/поврзани-страници-list-list-77d82a5b-1",
-      "translationHash": "77d82a5b1a5344fe12d1f739a67aebea0da9b5608a9c5ceb7d8db078bd37ef81",
+      "targetBlockId": "let-books-пристапност-и-локализација/области-на-преклопување-list-локализирани-aria-и-пораки-за-статус-f012171b-1",
+      "translationHash": "f012171b0407b18ae18f4f8a72b0ee33e8f664f1c78ad621b7bdfa0a619584dd",
       "blockType": "list",
       "headingPath": [
         "Let Books Accessibility and Localization",
@@ -96,17 +102,17 @@
         21
       ],
       "targetLineRange": [
-        25,
-        27
+        18,
+        21
       ],
-      "alignmentStrategy": "metadata",
-      "alignmentScore": 1.0
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     },
     {
       "blockId": "let-books-accessibility-and-localization/related-pages-heading-related-pages-6fb705c8-1",
       "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-пристапност-и-локализација/поврзани-страници-heading-поврзани-страници-bd74261a-1",
+      "translationHash": "bd74261a918bd6dde7393f93095685d6d967bee05cbb40e8aca654bafa79fa0e",
       "blockType": "heading",
       "headingPath": [
         "Let Books Accessibility and Localization",
@@ -116,15 +122,18 @@
         23,
         23
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        23,
+        23
+      ],
+      "alignmentStrategy": "heading-structure",
+      "alignmentScore": 1.0
     },
     {
       "blockId": "let-books-accessibility-and-localization/related-pages-list-list-77d82a5b-1",
       "sourceHash": "77d82a5b1a5344fe12d1f739a67aebea0da9b5608a9c5ceb7d8db078bd37ef81",
-      "targetBlockId": null,
-      "translationHash": null,
+      "targetBlockId": "let-books-пристапност-и-локализација/поврзани-страници-list-list-77d82a5b-1",
+      "translationHash": "77d82a5b1a5344fe12d1f739a67aebea0da9b5608a9c5ceb7d8db078bd37ef81",
       "blockType": "list",
       "headingPath": [
         "Let Books Accessibility and Localization",
@@ -134,9 +143,12 @@
         25,
         27
       ],
-      "targetLineRange": null,
-      "alignmentStrategy": "unmatched",
-      "alignmentScore": 0.0
+      "targetLineRange": [
+        25,
+        27
+      ],
+      "alignmentStrategy": "section-order",
+      "alignmentScore": 0.95
     }
   ]
 }

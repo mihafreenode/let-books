@@ -48,29 +48,38 @@ L'IA peut générer une implémentation à partir d'une intention incomplète. C
 
 Si la documentation est faible ou dépassée, des personnes et des outils différents déduiront des produits différents à partir du même dépôt.
 
+Un contributeur peut suivre l'interface utilisateur actuelle.
+Un autre peut suivre un ancien README.
+Un assistant IA peut suivre le fichier le plus proche et inventer le reste.
+
+Le problème n'est pas seulement la justesse au niveau du code. Le problème est de savoir si le projet décrit encore un seul produit plutôt que plusieurs suppositions qui se chevauchent.
+
 ## La documentation remplit quatre fonctions produit
 
-La documentation :
+Une bonne documentation fait bien plus qu'expliquer l'interface après coup.
 
-- porte l'intention
-- fixe des attentes
-- réduit le coût de coordination
-- soutient la confiance
+Premièrement, elle porte l'intention. Elle dit aux futurs contributeurs ce que le produit essaie d'accomplir et ce qu'il n'essaie explicitement pas de devenir.
 
-Elle indique aux contributeurs, aux institutions, aux relecteurs et aux assistants IA ce que le projet essaie d'accomplir et ce qu'il ne doit pas devenir.
+Deuxièmement, elle fixe des attentes. Les lecteurs peuvent voir ce qui existe maintenant, ce qui est prévu et ce qui ne devrait pas être décrit comme déjà implémenté.
+
+Troisièmement, elle réduit le coût de coordination. Nouveaux contributeurs, relecteurs, institutions et assistants IA peuvent tous s'orienter sans reconstruire le projet à partir de fragments.
+
+Quatrièmement, elle soutient la confiance. Un projet qui sépare clairement l'état actuel, la direction prévue et le flux de travail expérimental est plus facile à évaluer et plus facile à maintenir.
 
 ## Let Books est déjà structuré ainsi
 
-Dans le dépôt Let Books :
+Le dépôt Let Books démontre déjà cette approche à plusieurs couches.
 
-- `AGENTS.md` définit l'intention produit et les flux de travail
-- `AGENTS-Implementation.md` définit des règles tactiques d'exécution
-- `README.md` décrit honnêtement l'état actuel
-- `docs/` définit les règles de publication, d'écriture, de localisation et de preuve
+- `AGENTS.md` définit le but du produit, les flux de travail, les frontières du domaine et la direction à long terme.
+- `AGENTS-Implementation.md` définit les règles tactiques d'implémentation et de documentation.
+- `README.md` explique l'état actuel du dépôt et distingue les livrables présents des plans futurs.
+- `docs/` définit une plateforme de connaissance avec des conventions de publication, d'écriture, de localisation et de cartographie des sources.
 
 Cela signifie que la documentation ici n'est pas seulement une explication. Elle fait partie de la manière dont le projet fonctionne.
 
 ## Une documentation périmée est une dette produit
+
+Les équipes reconnaissent souvent la dette technique seulement quand elle apparaît dans le code. Mais une documentation périmée crée une forme similaire de friction.
 
 Une documentation périmée conduit à :
 
@@ -117,11 +126,12 @@ Cette différence est la différence entre une documentation comme commentaire e
 
 ## La leçon durable
 
-La documentation n'est pas séparée de la qualité du produit. Elle façonne l'implémentation, la revue, la communication, la validation et la confiance à long terme. Dans les projets soutenus par l'IA, la documentation fait partie du produit parce qu'elle fait partie du système qui empêche la dérive du produit.
+La documentation n'est pas séparée de la qualité du produit.
+
+Elle façonne l'implémentation, la revue, la communication, la validation et la confiance à long terme. Dans les projets soutenus par l'IA, la documentation fait partie du produit parce qu'elle fait partie du système qui empêche la dérive du produit.
 
 ## Autres langues
 
-- [English](../en/documentation-is-part-of-the-product.md)
 - [Shqip](../sq/documentation-is-part-of-the-product.md)
 - [Deutsch](../de/documentation-is-part-of-the-product.md)
 - [Italiano](../it/documentation-is-part-of-the-product.md)
@@ -131,4 +141,5 @@ La documentation n'est pas séparée de la qualité du produit. Elle façonne l'
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
+- [Français](../fr/documentation-is-part-of-the-product.md)
 - [Español](../es/documentation-is-part-of-the-product.md)

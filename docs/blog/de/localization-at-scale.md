@@ -93,4 +93,4 @@ Wenn ein Projekt mehrsprachige Beteiligung will, muss Lokalisierung Teil des Sys
 
 ## Andere Sprachen
 
-- English (../en/localization-at-scale.md)
+Englisch ist die kanonische Sprache der ersten Veröffentlichung dieses Artikels. Übersetzungsbereite Pfade sind für alle unterstützten Let-Books-Lokalisierungen reserviert.

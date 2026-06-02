@@ -46,7 +46,7 @@ Il progetto non e ancora un'applicazione ospitata completa. Al momento include u
 
 `AGENTS.md` e la specifica centrale di prodotto. Definisce lo scopo del progetto, il modello di dominio, i flussi di lavoro, i limiti di ambito, la direzione della localizzazione, la privacy, l'opzionalita dell'IA e i criteri di accettazione.
 
-Risponde a domande come:
+Questo è importante perché risponde a domande a cui il solo codice non può dare una risposta chiara:
 
 - perché esiste il progetto
 - quali flussi di lavoro sono di prima classe
@@ -60,24 +60,38 @@ Questa e la differenza tra una descrizione generale e una vera specifica. Una ve
 
 `AGENTS-Implementation.md` aggiunge il secondo livello. Non sostituisce la specifica di prodotto, ma spiega come il lavoro debba essere svolto oggi in questo repository.
 
-Qui rientrano regole su naming pubblico, documentazione, sito statico, localizzazione, verifica e politica delle prove per la scrittura pubblica. Questo e importante perché non ogni regola e una verita di prodotto. Alcune sono tattiche, editoriali o specifiche del repository.
+Esempi includono:
+
+- regole di denominazione pubblica
+- regole di implementazione della documentazione
+- aspettative sui metadati del sito statico
+- limiti della demo
+- aspettative su localizzazione e verifica
+- politica editoriale delle prove per la scrittura pubblica
+
+Questo è importante nel lavoro assistito dall'IA perché non ogni regola appartiene alla specifica di prodotto a lungo termine. Alcune regole sono tattiche, editoriali o specifiche del repository. Mantenere chiara questa distinzione riduce il rumore e impedisce che la specifica di prodotto diventi un deposito di dettagli implementativi.
 
 ## Il livello dello stato attuale
 
-`README.md` rappresenta il terzo livello: una descrizione onesta dello stato attuale.
+`README.md` rappresenta il terzo livello: una descrizione dello stato attuale.
 
-Spiega cosa esiste oggi, cosa ancora manca, a cosa serve la demo statica e come viene pubblicato il sito pubblico. Questo aiuta collaboratori, istituzioni e revisori a non confondere l'ambizione con l'implementazione.
+Spiega cosa esiste oggi, cosa ancora manca, a cosa serve la demo statica e come viene pubblicato il sito pubblico. Questa è una parte fondamentale dell'allineamento, perché i progetti spesso falliscono quando i lettori confondono l'ambizione con l'implementazione.
+
+In Let Books, il README distingue esplicitamente tra i risultati attuali e i piani futuri. Questo aiuta collaboratori, istituzioni e revisori a comprendere la maturità del progetto senza supposizioni.
 
 ## Il livello della documentazione
 
-`docs/` aggiunge il quarto livello. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md` e le guide di stile definiscono come la conoscenza debba essere organizzata, pubblicata e verificata.
+L'area `docs/` aggiunge il quarto livello. `docs/README.md`, `docs/Development.md`, `docs/Deployment.md`, le guide di stile e l'area `sources` definiscono come la conoscenza debba essere organizzata, validata e pubblicata.
 
 Qui il repository diventa qualcosa di piu di una raccolta di file. Diventa una piattaforma di conoscenza con:
 
 - architettura della documentazione
 - regole di evidenza editoriale
 - struttura di pubblicazione multilingue
-- regole di pubblicazione e verifica
+- regole di pubblicazione della documentazione pubblica
+- linee guida di sviluppo e validazione
+
+Questo è esattamente il tipo di impalcatura che aiuta la consegna assistita dall'IA a rimanere tracciabile.
 
 ## Il livello della demo
 
@@ -85,9 +99,20 @@ La demo statica e importante, ma volutamente non e l'unica autorita. Le regole d
 
 Questo significa che la demo puo verificare i flussi di lavoro, rivelare problemi di usabilita e aiutare a spiegare il progetto a soggetti esterni, senza diventare da sola la verita finale di prodotto.
 
+Questa è una regola matura. Senza di essa, i prototipi diventano spesso meccanismi di governance accidentale. Un team inizia a copiare il prototipo perché esiste, non perché rifletta una decisione di prodotto approvata.
+
 ## Il livello della verifica
 
-Let Books documenta gia anche una mentalita di verifica. `docs/Development.md` e `docs/Deployment.md` descrivono smoke test di localizzazione, validazione di file strutturati, generazione di metadati, file obbligatori, controlli ortografici e pubblicazione automatizzata.
+Let Books documenta già anche una mentalità di verifica.
+
+`docs/Development.md` e `docs/Deployment.md` descrivono livelli di validazione come:
+
+- smoke test di localizzazione
+- validazione di file strutturati
+- generazione di metadati
+- controlli sui file obbligatori
+- controllo ortografico opzionale e linting
+- automazione della pubblicazione
 
 Questi non sono solo dettagli di strumenti. Sono la prova che il progetto tratta la qualita come un sistema ripetibile.
 
@@ -106,13 +131,23 @@ Questa catena non elimina gli errori. Ma li rende più facili da individuare e d
 
 ## La lezione principale
 
-Lo sviluppo guidato dalle specifiche non significa solo scrivere un lungo documento prima di programmare. In pratica significa costruire una catena affidabile tra intenzione di prodotto, regole tattiche, documentazione pubblica, demo, verifica e pubblicazione.
+Lo sviluppo guidato dalle specifiche non significa soltanto scrivere un lungo documento di requisiti prima di iniziare a programmare.
 
-Let Books mostra che una catena del genere puo esistere anche prima di un'applicazione backend completa. Questo e uno dei vantaggi piu forti dello sviluppo guidato dalle specifiche nel lavoro supportato dall'IA.
+In pratica, significa costruire una catena affidabile tra:
+
+- intenzione di prodotto
+- regole tattiche
+- documentazione pubblica
+- demo
+- validazione
+- pubblicazione
+
+Let Books mostra già che una catena del genere può esistere prima ancora che esista il prodotto backend completo.
+
+Questo è uno degli argomenti più forti a favore dello sviluppo guidato dalle specifiche nel lavoro assistito dall'IA: più chiara è la catena dell'intento, meno è probabile che un output rapido diventi una rapida confusione.
 
 ## Altre lingue
 
-- [English](../en/spec-driven-development-in-let-books.md)
 - [Shqip](../sq/spec-driven-development-in-let-books.md)
 - [Deutsch](../de/spec-driven-development-in-let-books.md)
 - [Slovenščina](../sl/spec-driven-development-in-let-books.md)
@@ -121,5 +156,6 @@ Let Books mostra che una catena del genere puo esistere anche prima di un'applic
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-in-let-books.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-in-let-books.md)
 - [Македонски](../mk/spec-driven-development-in-let-books.md)
+- [Italiano](../it/spec-driven-development-in-let-books.md)
 - [Français](../fr/spec-driven-development-in-let-books.md)
 - [Español](../es/spec-driven-development-in-let-books.md)

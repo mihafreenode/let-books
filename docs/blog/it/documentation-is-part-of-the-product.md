@@ -48,29 +48,38 @@ L'IA può generare implementazione a partire da intenzione incompleta. Questo vi
 
 Se la documentazione è debole o datata, persone e strumenti diversi ricaveranno prodotti diversi dallo stesso repository.
 
+Un collaboratore può seguire l'interfaccia utente attuale.
+Un altro può seguire un vecchio README.
+Un assistente IA può seguire il file più vicino e inventare il resto.
+
+Il problema non è solo la correttezza a livello di codice. Il problema è se il progetto descrive ancora un solo prodotto invece di più supposizioni sovrapposte.
+
 ## La documentazione svolge quattro funzioni di prodotto
 
-La documentazione:
+Una buona documentazione fa molto di più che spiegare l'interfaccia a posteriori.
 
-- porta l'intento
-- imposta aspettative
-- riduce il costo di coordinamento
-- sostiene la fiducia
+Primo, porta l'intento. Dice ai futuri collaboratori che cosa il prodotto sta cercando di ottenere e in che cosa esplicitamente non sta cercando di trasformarsi.
 
-Dice a collaboratori, istituzioni, revisori e assistenti IA cosa il progetto sta cercando di fare e in cosa non dovrebbe trasformarsi.
+Secondo, imposta aspettative. I lettori possono capire che cosa esiste ora, che cosa è pianificato e che cosa non dovrebbe essere descritto come già implementato.
+
+Terzo, riduce il costo di coordinamento. Nuovi collaboratori, revisori, istituzioni e assistenti IA possono tutti orientarsi senza ricostruire il progetto a partire da frammenti.
+
+Quarto, sostiene la fiducia. Un progetto che separa chiaramente stato attuale, direzione pianificata e flusso di lavoro sperimentale è più facile da valutare e più facile da mantenere.
 
 ## Let Books è già strutturato così
 
-Nel repository Let Books:
+Il repository Let Books dimostra già questo approccio stratificato.
 
-- `AGENTS.md` definisce l'intento di prodotto e i flussi di lavoro
-- `AGENTS-Implementation.md` definisce le regole tattiche di esecuzione
-- `README.md` descrive onestamente lo stato attuale
-- `docs/` definisce regole di pubblicazione, scrittura, localizzazione e prove
+- `AGENTS.md` definisce lo scopo del prodotto, i flussi di lavoro, i confini del dominio e la direzione a lungo termine.
+- `AGENTS-Implementation.md` definisce le regole tattiche di implementazione e documentazione.
+- `README.md` spiega lo stato attuale del repository e distingue le consegne presenti dai piani futuri.
+- `docs/` definisce una piattaforma di conoscenza con convenzioni per pubblicazione, scrittura, localizzazione e mappatura delle fonti.
 
 Questo significa che qui la documentazione non è solo spiegazione. È parte del modo in cui il progetto opera.
 
 ## La documentazione obsoleta è debito di prodotto
+
+I team spesso riconoscono il debito tecnico solo quando appare nel codice. Ma la documentazione obsoleta crea un tipo simile di attrito.
 
 La documentazione obsoleta porta a:
 
@@ -117,11 +126,12 @@ Questa differenza è la differenza tra la documentazione come commento e la docu
 
 ## La lezione durevole
 
-La documentazione non è separata dalla qualità del prodotto. Modella implementazione, review, comunicazione, validazione e fiducia a lungo termine. Nei progetti supportati dall'IA, la documentazione è parte del prodotto perché è parte del sistema che impedisce la deriva del prodotto.
+La documentazione non è separata dalla qualità del prodotto.
+
+Modella implementazione, review, comunicazione, validazione e fiducia a lungo termine. Nei progetti supportati dall'IA, la documentazione è parte del prodotto perché è parte del sistema che impedisce la deriva del prodotto.
 
 ## Altre lingue
 
-- [English](../en/documentation-is-part-of-the-product.md)
 - [Shqip](../sq/documentation-is-part-of-the-product.md)
 - [Deutsch](../de/documentation-is-part-of-the-product.md)
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)
@@ -130,5 +140,6 @@ La documentazione non è separata dalla qualità del prodotto. Modella implement
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
+- [Italiano](../it/documentation-is-part-of-the-product.md)
 - [Français](../fr/documentation-is-part-of-the-product.md)
 - [Español](../es/documentation-is-part-of-the-product.md)

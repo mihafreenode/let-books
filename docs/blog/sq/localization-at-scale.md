@@ -93,4 +93,4 @@ Nëse një projekt dëshiron pjesëmarrje shumëgjuhëshe, lokalizimi duhet të 
 
 ## Gjuhë të tjera
 
-- English (../en/localization-at-scale.md)
+Anglishtja është gjuha kanonike e botimit të parë të këtij artikulli. Rrugët e gatshme për përkthim janë rezervuar për të gjitha lokalizimet e mbështetura të Let Books.

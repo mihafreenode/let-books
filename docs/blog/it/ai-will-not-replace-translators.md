@@ -79,6 +79,56 @@ Questo è esattamente il tipo di esempio che spiega perché la revisione umana c
 
 Anche quando il significato complessivo è preservato, le traduzioni generate dall'IA possono richiedere la revisione di un madrelingua per correggere problemi sottili di grammatica, modalità, terminologia e registro specifico del dominio. Questi problemi sono spesso difficili da individuare con le sole metriche automatiche di qualità.
 
+## Un esempio per ogni categoria di revisione
+
+Categorie diverse di rilievi di revisione richiedono tipi diversi di giudizio umano.
+
+### Modalità e linguaggio delle policy
+
+Bozza iniziale dell'IA:
+
+`Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
+
+Correzione del madrelingua:
+
+`Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
+
+Lezione:
+
+- il significato preservato non basta quando grammatica, modalità e formulazione della policy continuano a suonare sbagliate ai madrelingua
+
+### Ottimizzazione del testo sorgente per la localizzazione
+
+Titolo inglese originale:
+
+`The hidden exclusion of English-only systems`
+
+Titolo inglese migliorato:
+
+`Why English-only systems exclude people`
+
+Lezione:
+
+- alcuni problemi di localizzazione dovrebbero essere risolti migliorando il testo sorgente, invece di costringere ogni lingua di arrivo a compensare una formulazione inglese troppo compressa
+
+### Falso amico nella terminologia tecnica
+
+Espressione inglese originale:
+
+`benchmark fixtures`
+
+Localizzazione slovena errata:
+
+`primerjalne napeljave`
+
+Localizzazione slovena migliorata:
+
+`referenčni primeri za primerjalno vrednotenje`
+
+Lezione:
+
+- i termini tecnici devono essere tradotti secondo il significato di dominio; nei contesti di test e valutazione, `fixture` indica un esempio di riferimento riutilizzabile o un caso di test, non un'infrastruttura fisica
+
 ## Conclusione duratura
 
 Il futuro non è traduttore contro IA. Il futuro pratico è una localizzazione assistita dall'IA, con fasi di revisione chiare e aspettative di qualità trasparenti.
@@ -92,4 +142,4 @@ Il futuro non è traduttore contro IA. Il futuro pratico è una localizzazione a
 
 ## Altre lingue
 
-- English (../en/ai-will-not-replace-translators.md)
+L'inglese è la lingua canonica della prima pubblicazione di questo articolo. I percorsi pronti per la traduzione sono riservati a tutte le localizzazioni supportate di Let Books.

@@ -65,7 +65,7 @@ Let Books је намењен вишејезичним токовима дари
 
 ## Други језици
 
-- [English](../en/the-cost-of-english-only-software.md)
+- [English](../sr-Cyrl/the-cost-of-english-only-software.md)
 - [Slovenščina](../sl/the-cost-of-english-only-software.md)
 - [Hrvatski](../hr/the-cost-of-english-only-software.md)
 - [Bosanski](../bs/the-cost-of-english-only-software.md)

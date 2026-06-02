@@ -79,6 +79,56 @@ Este es exactamente el tipo de ejemplo que explica por qué la revisión humana 
 
 Incluso cuando se conserva el significado general, las traducciones generadas por IA pueden requerir revisión de hablantes nativos para corregir problemas sutiles de gramática, modalidad, terminología y registro específico del dominio. Estos problemas suelen ser difíciles de detectar solo con métricas automatizadas de calidad.
 
+## Un ejemplo por cada categoría de revisión
+
+Diferentes categorías de hallazgos de revisión requieren distintos tipos de juicio humano.
+
+### Modalidad y lenguaje de políticas
+
+Borrador original de la IA:
+
+`Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.`
+
+Corrección de un hablante nativo:
+
+`Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.`
+
+Lección:
+
+- preservar el significado no basta cuando la gramática, la modalidad y la redacción de la política siguen sonando mal para hablantes nativos
+
+### Optimización del texto fuente para la localización
+
+Encabezado original en inglés:
+
+`The hidden exclusion of English-only systems`
+
+Encabezado mejorado en inglés:
+
+`Why English-only systems exclude people`
+
+Lección:
+
+- algunos problemas de localización deberían resolverse mejorando el texto fuente en lugar de obligar a cada lengua de destino a compensar una formulación inglesa demasiado comprimida
+
+### Falso amigo en terminología técnica
+
+Expresión original en inglés:
+
+`benchmark fixtures`
+
+Localización eslovena incorrecta:
+
+`primerjalne napeljave`
+
+Localización eslovena mejorada:
+
+`referenčni primeri za primerjalno vrednotenje`
+
+Lección:
+
+- los términos técnicos deben traducirse según su significado de dominio; en contextos de prueba y evaluación, `fixture` significa un ejemplo de referencia reutilizable o un caso de prueba, no infraestructura física
+
 ## Conclusión duradera
 
 El futuro no es traductor contra IA. El futuro práctico es la localización asistida por IA, con etapas de revisión claras y expectativas de calidad transparentes.
@@ -92,4 +142,4 @@ El futuro no es traductor contra IA. El futuro práctico es la localización asi
 
 ## Otros idiomas
 
-- English (../en/ai-will-not-replace-translators.md)
+El inglés es la lengua canónica de la primera publicación de este artículo. Las rutas listas para traducción están reservadas para todas las localizaciones compatibles de Let Books.

@@ -52,6 +52,8 @@ U praksi AI često optimizira ono što je u tom trenutku najvidljivije:
 
 Ništa od toga samo po sebi ne znači ispravnu proizvodnu odluku.
 
+To su korisne prečice za generiranje. Ali nisu zamjena za proizvodnu prosudbu.
+
 ## Što radi dobra specifikacija
 
 Dobra specifikacija obavlja barem četiri zadatka:
@@ -61,11 +63,28 @@ Dobra specifikacija obavlja barem četiri zadatka:
 - određuje standard pregleda
 - služi kao memorija tima
 
+Prvo, definira svrhu. Tim može procijeniti podržava li neka značajka stvarni proizvod ili samo dodaje izlaz.
+
+Drugo, definira granice. Pojašnjava što je u opsegu, što je izvan opsega, što je opcionalno i što mora raditi čak i kada opcionalni sustavi zakažu.
+
+Treće, definira standard pregleda. Umjesto da se pita samo radi li promjena tehnički, recenzenti mogu pitati odgovara li ona namjeravanom tijeku rada i proizvodnim obvezama.
+
+Četvrto, djeluje kao memorija. AI sustavi sami po sebi ne drže stabilnu institucionalnu memoriju. Specifikacija u repozitoriju to čini.
+
 To je u projektu Let Books vrlo jasno. `AGENTS.md` više puta naglašava da ručni tijek mora raditi i bez plaćenih AI usluga te da fizički primjerci knjiga nisu isto što i bibliografski zapisi. To nisu tehničke sitnice nego proizvodne granice.
+
+To nisu implementacijski detalji. To su proizvodne granice. Ako AI pomoćnik generira tok koji blokira ručni unos ili spaja podatke o fizičkom primjerku s metapodacima izdanja, problem nije stil. Problem je proizvodno odstupanje.
 
 ## Zašto dokumentacija ne smije čekati
 
 Ako je dokumentacija zastarjela ili nejasna, različiti ljudi i različiti alati iz istog repozitorija zaključit će da postoje različiti proizvodi. Jedan će slijediti demo, drugi stari README, treći najbližu datoteku.
+
+Bez ažurne dokumentacije:
+
+- upiti postaju nedosljedni
+- pregled postaje subjektivan
+- demoi počinju slučajno redefinirati proizvod
+- budući suradnici nasljeđuju ponašanje ne znajući je li bilo namjerno
 
 Zato dokumentacija nije samo naknadno objašnjenje. Ona je dio operativnog sustava projekta. U ovom repozitoriju `README.md` opisuje trenutačno stanje, `AGENTS.md` proizvodnu namjeru, `AGENTS-Implementation.md` taktička pravila, a `docs/` pravila objave i evidencije.
 
@@ -74,6 +93,8 @@ Zato dokumentacija nije samo naknadno objašnjenje. Ona je dio operativnog susta
 Demo je koristan jer pokazuje što postoji i otkriva probleme u korisničkom toku. Ali ne bi smio tiho postati proizvodna specifikacija.
 
 Pravila repozitorija već razlikuju kanonične specifikacije i dokumentaciju od statusa implementacije. Ako demo otkrije bolji tijek, treba ažurirati specifikaciju i dokumentaciju, a ne dopustiti da demo sam po sebi pobijedi.
+
+Ako demo otkrije bolji tijek rada, odgovor nije pustiti da demo tiho pobijedi. Odgovor je ažurirati specifikaciju, dokumentaciju i standard pregleda kako bi taj bolji tijek postao namjeran.
 
 ## Markdown, testovi i CI čine lanac
 
@@ -86,6 +107,8 @@ U razvoju vođenom specifikacijom ove razine ne stoje svaka za sebe.
 - CI redovito provodi pravila.
 
 Zajedno stvaraju proizvodnu memoriju koja preživljava brzinu razvoja.
+
+Svaka je razina sama po sebi nepotpuna. Zajedno stvaraju proizvodnu memoriju koja preživljava brzinu, iteraciju i promjene tima.
 
 ## Što to znači za timove koji koriste AI
 
@@ -111,8 +134,8 @@ U projektima uz pomoć AI-ja specifikacija nije papirologija nakon činjenice. O
 
 ## Drugi jezici
 
-- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
+- [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)
 - [Bosanski](../bs/spec-driven-development-for-ai-projects.md)
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)

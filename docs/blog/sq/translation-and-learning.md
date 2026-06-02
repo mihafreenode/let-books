@@ -65,7 +65,7 @@ Lokalizimi nuk është vetëm një veçori komoditeti. Në kontekste arsimore, a
 
 ## Gjuhë të tjera
 
-- [English](../en/translation-and-learning.md)
+- [English](../sq/translation-and-learning.md)
 - [Slovenščina](../sl/translation-and-learning.md)
 - [Hrvatski](../hr/translation-and-learning.md)
 - [Bosanski](../bs/translation-and-learning.md)

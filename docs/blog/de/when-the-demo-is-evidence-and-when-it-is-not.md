@@ -40,11 +40,17 @@ status: draft
 
 Ein Demo ist stark, weil es abstrakte Ideen in etwas verwandelt, auf das Menschen reagieren können. Ein Ablauf, der in einer Notiz vernünftig klingt, kann auf einem Telefon oder in einem Lagerraum sofort echtes Reibungspotenzial zeigen.
 
-Das ist die gute Seite des Demos. Die gefährliche Seite ist, dass Menschen das Verhalten eines Prototyps oft als Produktwahrheit behandeln, sobald er einmal existiert.
+Das ist die gute Seite von Demos.
+
+Die gefährliche Seite ist, dass Menschen, sobald ein Prototyp einmal existiert, sein Verhalten oft als Produktwahrheit behandeln, auch wenn nie jemand diese Entscheidung offiziell getroffen hat.
 
 ## Warum Prototypen zufällige Autorität werden
 
 Sichtbare Dinge sind überzeugend. Ein funktionierender Bildschirm erhält oft mehr informelle Autorität als eine geschriebene Regel, selbst wenn er nur als Experiment gebaut wurde.
+
+Das ist verständlich. Menschen vertrauen dem, was sie sehen können.
+
+Aber in Produktarbeit, besonders in KI-unterstützter Produktarbeit, kann dieser Instinkt schnell Verwirrung erzeugen.
 
 Ein Demo kann zeigen:
 
@@ -57,18 +63,22 @@ Nichts davon bedeutet automatisch, dass das Demo das Produkt neu definieren soll
 
 ## Wann das Demo ein guter Beleg ist
 
-Ein Demo ist nützlich, wenn es hilft, Fragen zu beantworten wie:
+Ein Demo ist wertvoller Beleg, wenn es hilft, Fragen zu beantworten wie:
 
 - fühlt sich der Ablauf benutzbar an
 - unterstützt das mobile Layout die reale Aufgabe
 - ist der Scan- oder Intake-Ablauf verständlich
-- wie reagieren Nutzer auf die Reihenfolge der Schritte
+- reagieren Nutzer positiv oder negativ auf die Reihenfolge der Schritte
 
-Dann ist das Demo ein Beleg für Nutzbarkeit, Machbarkeit und Kommunikation.
+In diesen Fällen ist das Demo ein Beleg für Nutzbarkeit, Machbarkeit, Schrittfolge und Kommunikation.
+
+Diese Art von Beleg ist äußerst wertvoll.
 
 ## Wann das Demo keine Autorität ist
 
-Ein Demo sollte die Produktspezifikation nicht stillschweigend überstimmen. Es ist nicht die richtige Hauptautorität für Fragen wie:
+Ein Demo sollte die Produktspezifikation nicht stillschweigend überstimmen.
+
+Es ist nicht die richtige primäre Autorität für Fragen wie:
 
 - ist dieser Ablauf offiziell im Umfang
 - ist das eine vorübergehende Abkürzung oder eine Produktzusage
@@ -79,15 +89,25 @@ Solche Fragen verlangen eine ausdrückliche Entscheidung und eine Dokumentations
 
 ## Die Let-Books-Regel ist ein gutes Modell
 
-Das Repository definiert bereits eine gesunde Regel: Öffentliches Schreiben sollte Spezifikationen und Dokumentation als kanonischen Beleg nutzen, während Demo- oder App-Verhalten als Implementierungsstatus erwähnt werden kann.
+Das Repository enthält bereits eine gesunde redaktionelle Regel dafür. Öffentliches Schreiben sollte Spezifikationen und Dokumentation als kanonischen Beleg behandeln, während Demo- oder App-Verhalten als Implementierungsstatus erwähnt werden kann.
 
-Das verhindert, dass Prototypen versehentlich zur Produktsteuerung werden.
+Diese Regel ist wichtig, weil sie versehentliche Steuerung durch Prototypen verhindert.
+
+Wenn das statische Demo einen besseren Box-Workflow, einen besseren mobilen Ablauf oder eine bessere Intake-Interaktion sichtbar macht, ist das wertvoll. Aber dieser bessere Ablauf wird erst dann zur wirklichen Autorität, wenn Spezifikation und zugehörige Dokumentation aktualisiert wurden.
 
 ## Warum das mit KI noch wichtiger ist
 
 KI verstärkt das, was im aktuellen Kontext am konkretesten wirkt. Wenn der konkreteste Artefakt ein Demo ist, werden Assistenten und Menschen sein Verhalten schnell kopieren, ohne zu fragen, ob es zu den Produktgrenzen passt.
 
-Darum brauchen Teams eine sichtbare Autoritätsreihenfolge:
+Das kann nützlich sein, wenn das Demo bereits an der beabsichtigten Produktgrenze ausgerichtet ist.
+
+Es kann aber auch vorübergehende Annahmen schnell verbreiten, wenn das nicht der Fall ist.
+
+Deshalb brauchen Teams eine sichtbare Autoritätsreihenfolge.
+
+## Eine praktische Autoritätskette
+
+Für Arbeit dieser Art ist folgende Reihenfolge nützlich:
 
 1. Produktspezifikation
 2. Implementierungsleitlinien
@@ -120,11 +140,12 @@ Studierende müssen lernen, dass Prototypen sich nicht selbst rechtfertigen. Gut
 
 ## Die dauerhafte Lehre
 
-Ein Demo ist wertvoll, weil es Produktideen testbar macht. Gefährlich wird es, wenn es stillschweigend zur Politik wird. Das gesunde Modell ist einfach: Das Demo darf das Produkt informieren, aber Spezifikationen und Dokumentation sollten die endgültige Entscheidung festhalten.
+Demos sind wertvoll, weil sie Produktideen überprüfbar machen. Gefährlich werden sie, wenn sie stillschweigend zur Politik werden.
+
+Das gesündeste Modell ist einfach: Demos sollen das Produkt informieren, aber Spezifikationen und Dokumentation sollen die endgültige Entscheidung festhalten.
 
 ## Andere Sprachen
 
-- [English](../en/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Shqip](../sq/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Slovenščina](../sl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Hrvatski](../hr/when-the-demo-is-evidence-and-when-it-is-not.md)

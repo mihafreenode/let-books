@@ -76,4 +76,4 @@ Nicht jede Sprache braucht am ersten Tag den gleichen Reifegrad. Aber jede Sprac
 
 ## Andere Sprachen
 
-- English (../en/why-every-language-matters.md)
+Englisch ist die kanonische Sprache der ersten Veröffentlichung dieses Artikels. Übersetzungsbereite Pfade sind für alle unterstützten Let-Books-Lokalisierungen reserviert.

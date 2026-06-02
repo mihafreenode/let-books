@@ -109,6 +109,8 @@ Para trabajo de revisión reutilizable, registra:
 
 ## Lecciones reutilizables del caso esloveno
 
+El patrón del caso de estudio esloveno es ampliamente reutilizable en otros idiomas:
+
 - el significado gramatical puede estar cerca y, aun así, la frase seguir sin ser publicable para un hablante nativo
 - las construcciones modales son especialmente vulnerables a la traducción literal
 - la terminología y la redacción de políticas suelen requerir una reformulación consciente del dominio

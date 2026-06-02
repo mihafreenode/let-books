@@ -7,6 +7,6 @@ status: draft
 
 # Razvoj na podlagi specifikacij v Let Books - Izvorni zemljevid
 
-Ta lokalizirani izvorni zemljevid za članek "Razvoj na podlagi specifikacij v Let Books" sledi kanoničnemu angleškemu zemljevidu: [../en/spec-driven-development-in-let-books.md](../en/spec-driven-development-in-let-books.md).
+Ta lokalizirani izvorni zemljevid za članek "Razvoj na podlagi specifikacij v Let Books" sledi kanoničnemu angleškemu zemljevidu: [../en/spec-driven-development-in-let-books.md](../sl/spec-driven-development-in-let-books.md).
 
 Lokalizirani članek naj ostane usklajen s kanoničnimi angleškimi trditvami, dokazi in uredniškimi mejami.

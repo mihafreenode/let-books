@@ -65,7 +65,7 @@ Lokalizacija nije samo funkcija pogodnosti. U obrazovnim kontekstima ona može d
 
 ## Drugi jezici
 
-- [English](../en/translation-and-learning.md)
+- [English](../sr-Latn/translation-and-learning.md)
 - [Slovenščina](../sl/translation-and-learning.md)
 - [Hrvatski](../hr/translation-and-learning.md)
 - [Bosanski](../bs/translation-and-learning.md)

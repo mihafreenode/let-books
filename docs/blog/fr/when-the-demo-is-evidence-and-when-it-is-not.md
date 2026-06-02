@@ -40,11 +40,17 @@ status: draft
 
 Une démo est puissante parce qu'elle transforme des idées abstraites en quelque chose auquel les gens peuvent réagir. Un flux qui semble raisonnable dans une note peut montrer immédiatement une vraie friction sur un téléphone ou dans un espace de stockage.
 
-Voilà le bon côté de la démo. Le côté dangereux est que, dès qu'un prototype existe, les gens commencent souvent à traiter son comportement comme la vérité produit.
+Voilà le bon côté des démos.
+
+Le côté dangereux est que, dès qu'un prototype existe, les gens commencent souvent à traiter son comportement comme la vérité du produit, qu'une telle décision ait été officiellement prise ou non.
 
 ## Pourquoi les prototypes deviennent une autorité accidentelle
 
-Les choses visibles sont persuasives. Un écran qui fonctionne obtient souvent plus d'autorité informelle qu'une règle écrite, même lorsqu'il a été construit seulement comme expérience.
+Les choses visibles sont persuasives. Un écran qui fonctionne porte souvent plus d'autorité informelle qu'une règle écrite, même lorsqu'il a été construit comme expérience.
+
+C'est compréhensible. Les gens font confiance à ce qu'ils peuvent voir.
+
+Mais dans le travail produit, en particulier dans le travail produit assisté par l'IA, cet instinct peut créer de la confusion.
 
 Une démo peut montrer :
 
@@ -57,18 +63,22 @@ Rien de cela ne signifie automatiquement que la démo devrait redéfinir le prod
 
 ## Quand la démo est une bonne preuve
 
-La démo est utile lorsqu'elle aide à répondre à des questions comme :
+Une démo est une preuve précieuse lorsqu'elle aide à répondre à des questions comme :
 
-- le flux est-il utilisable
-- la mise en page mobile soutient-elle la vraie tâche
-- le flux de scan est-il compréhensible
-- comment les utilisateurs réagissent-ils à l'ordre des étapes
+- Le flux semble-t-il utilisable ?
+- La mise en page mobile soutient-elle la vraie tâche ?
+- Le flux de scan ou de saisie est-il compréhensible ?
+- Les utilisateurs réagissent-ils positivement ou négativement à l'ordre des étapes ?
 
-Alors, la démo est une preuve d'utilisabilité, de faisabilité et de communication.
+Dans ces cas, la démo est une preuve d'utilisabilité, de faisabilité, de séquencement et de communication.
+
+Ce type de preuve est extrêmement utile.
 
 ## Quand la démo n'est pas l'autorité
 
-La démo ne devrait pas surpasser silencieusement la spécification produit. Elle n'est pas la bonne autorité principale pour des questions comme :
+La démo ne devrait pas silencieusement dépasser la spécification produit.
+
+Ce n'est pas la bonne autorité principale pour des questions telles que :
 
 - ce flux est-il officiellement dans le périmètre
 - s'agit-il d'un raccourci temporaire ou d'un engagement produit
@@ -79,15 +89,26 @@ Ces questions demandent une décision explicite et une mise à jour de la docume
 
 ## La règle de Let Books est un bon modèle
 
-Le dépôt définit déjà une règle saine : l'écriture publique doit utiliser spécifications et documentation comme preuve canonique, tandis que la démo ou le comportement de l'application peuvent être mentionnés comme statut d'implémentation.
+Le dépôt contient déjà une règle éditoriale saine pour cela. L'écriture publique devrait traiter les spécifications et la documentation comme preuve canonique, tandis que la démo ou le comportement de l'application peuvent être mentionnés comme statut d'implémentation.
 
-Cela empêche les prototypes de devenir par accident un mécanisme de gouvernement du produit.
+Cette règle importe parce qu'elle empêche une gouvernance accidentelle par prototype.
+
+Si la démo statique révèle un meilleur flux pour les boîtes, un meilleur flux mobile ou une meilleure interaction de saisie, c'est précieux. Mais ce meilleur flux ne devrait devenir une véritable autorité qu'après la mise à jour de la spécification et de la documentation associée.
 
 ## Pourquoi cela compte encore plus avec l'IA
 
-L'IA amplifie ce qui paraît le plus concret dans le contexte actuel. Si l'artefact le plus concret est une démo, assistants et humains copieront vite son comportement sans demander s'il respecte les limites du produit.
+L'IA amplifie ce qui paraît le plus concret dans le contexte actuel.
 
-Les équipes ont donc besoin d'un ordre visible d'autorité :
+Si la chose la plus concrète dans le dépôt est une démo, les assistants et même les contributeurs humains peuvent copier son comportement sans demander s'il correspond à la frontière produit voulue.
+
+Cela peut être utile lorsque la démo est déjà alignée.
+Cela peut aussi diffuser rapidement des hypothèses temporaires lorsqu'elle ne l'est pas.
+
+Voilà pourquoi les équipes ont besoin d'un ordre d'autorité visible.
+
+## Une chaîne d'autorité pratique
+
+Pour un travail de ce type, un ordre utile est :
 
 1. spécification produit
 2. directives d'implémentation
@@ -95,7 +116,7 @@ Les équipes ont donc besoin d'un ordre visible d'autorité :
 4. démo ou prototype
 5. tests et validation
 
-La démo reste importante. Elle compte simplement à l'intérieur d'un système documenté, au lieu de le remplacer.
+La démo reste importante. Elle compte simplement à l'intérieur d'un système documenté au lieu d'en remplacer un.
 
 ## Que faire quand la démo vous apprend quelque chose de nouveau
 
@@ -120,11 +141,12 @@ Les étudiants doivent apprendre que les prototypes ne se justifient pas eux-mê
 
 ## La leçon durable
 
-La démo est précieuse parce qu'elle rend les idées produit testables. Elle devient dangereuse lorsqu'elle devient silencieusement politique. Le modèle sain est simple : que la démo informe le produit, mais que les spécifications et la documentation enregistrent la décision finale.
+Les démos sont précieuses parce qu'elles rendent les idées produit testables. Elles deviennent dangereuses lorsqu'elles deviennent silencieusement politiques.
+
+Le modèle le plus sain est simple : laisser les démos informer le produit, mais faire en sorte que les spécifications et la documentation enregistrent la décision finale.
 
 ## Autres langues
 
-- [English](../en/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Shqip](../sq/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Deutsch](../de/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Italiano](../it/when-the-demo-is-evidence-and-when-it-is-not.md)
@@ -134,4 +156,5 @@ La démo est précieuse parce qu'elle rend les idées produit testables. Elle de
 - [Srpski (latinica)](../sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Српски (ћирилица)](../sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Македонски](../mk/when-the-demo-is-evidence-and-when-it-is-not.md)
+- [Français](../fr/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Español](../es/when-the-demo-is-evidence-and-when-it-is-not.md)

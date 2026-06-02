@@ -60,7 +60,7 @@ Let Books se neposredno ukvarja z izobraževalno dediščino, knjigami, knjižni
 
 ## Drugi jeziki
 
-- [English](../en/preserving-smaller-languages-in-the-digital-age.md)
+- [English](../sl/preserving-smaller-languages-in-the-digital-age.md)
 - [Hrvatski](../hr/preserving-smaller-languages-in-the-digital-age.md)
 - [Bosanski](../bs/preserving-smaller-languages-in-the-digital-age.md)
 - [Srpski (latinica)](../sr-Latn/preserving-smaller-languages-in-the-digital-age.md)

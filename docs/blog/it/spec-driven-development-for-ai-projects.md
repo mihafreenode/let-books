@@ -52,6 +52,8 @@ In pratica l'IA tende spesso a ottimizzare cio che in quel momento e piu visibil
 
 Nulla di tutto questo equivale automaticamente alla giusta decisione di prodotto.
 
+Sono scorciatoie utili per la generazione. Ma non sostituiscono il giudizio di prodotto.
+
 ## Cosa fa una buona specifica
 
 Una buona specifica svolge almeno quattro funzioni:
@@ -61,11 +63,28 @@ Una buona specifica svolge almeno quattro funzioni:
 - stabilisce lo standard di revisione
 - funge da memoria del team
 
+Primo, definisce lo scopo. Il team può capire se una funzionalità sostiene il prodotto reale o aggiunge semplicemente output.
+
+Secondo, definisce i confini. Chiarisce che cosa è nell'ambito, che cosa è fuori ambito, che cosa è opzionale e che cosa deve funzionare anche quando i sistemi opzionali falliscono.
+
+Terzo, definisce lo standard di revisione. Invece di chiedersi solo se una modifica funziona tecnicamente, i revisori possono chiedersi se corrisponde al flusso di lavoro previsto e agli impegni di prodotto.
+
+Quarto, agisce come memoria. I sistemi di IA non mantengono da soli una memoria istituzionale stabile. Una specifica nel repository sì.
+
 Questo e molto chiaro in Let Books. `AGENTS.md` sottolinea piu volte che il flusso manuale deve restare utile anche senza servizi di IA a pagamento e che le copie fisiche dei libri non sono la stessa cosa dei record bibliografici. Questi non sono dettagli tecnici, ma confini di prodotto.
+
+Non sono dettagli di implementazione. Sono confini di prodotto. Se un assistente IA genera un flusso che blocca l'inserimento manuale o fonde i dati della copia fisica nei metadati dell'edizione, il problema non è lo stile. Il problema è la deriva di prodotto.
 
 ## Perché la documentazione non deve aspettare
 
 Se la documentazione e vecchia o poco chiara, persone e strumenti diversi ricaveranno prodotti diversi dallo stesso repository. Uno seguira la demo, un altro un vecchio README, un altro ancora il file piu vicino.
+
+Senza documentazione aggiornata:
+
+- i prompt diventano incoerenti
+- la revisione diventa soggettiva
+- le demo iniziano per errore a ridefinire il prodotto
+- i futuri collaboratori ereditano comportamenti senza sapere se fossero intenzionali
 
 Per questo la documentazione non e solo una spiegazione successiva. E parte del sistema operativo del progetto. In questo repository `README.md` descrive lo stato attuale, `AGENTS.md` l'intento di prodotto, `AGENTS-Implementation.md` le regole tattiche e `docs/` le regole di pubblicazione e tracciabilita.
 
@@ -74,6 +93,8 @@ Per questo la documentazione non e solo una spiegazione successiva. E parte del 
 Una demo e utile perché mostra cosa esiste e rivela problemi nel flusso utente. Non dovrebbe però diventare in silenzio la specifica di prodotto.
 
 Le regole del repository distinguono gia tra specifiche e documentazione canoniche da una parte e stato di implementazione dall'altra. Se una demo rivela un flusso migliore, vanno aggiornate specifica e documentazione, invece di lasciare che la demo vinca da sola.
+
+Se una demo rivela un flusso di lavoro migliore, la risposta non è lasciare che vinca in silenzio. La risposta è aggiornare la specifica, la documentazione e lo standard di revisione in modo che quel flusso migliore diventi intenzionale.
 
 ## Markdown, test e CI formano una catena
 
@@ -86,6 +107,8 @@ In uno sviluppo guidato dalle specifiche questi livelli non stanno separati.
 - La CI applica le regole in modo regolare.
 
 Insieme creano una memoria di prodotto che sopravvive alla velocita di sviluppo.
+
+Ogni livello è incompleto da solo. Insieme creano una memoria di prodotto che sopravvive a velocità, iterazione e cambi di team.
 
 ## Cosa significa questo per i team che usano l'IA
 
@@ -111,7 +134,6 @@ Nei progetti assistiti dall'IA, la specifica non e burocrazia a posteriori. E il
 
 ## Altre lingue
 
-- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Deutsch](../de/spec-driven-development-for-ai-projects.md)
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
@@ -120,5 +142,6 @@ Nei progetti assistiti dall'IA, la specifica non e burocrazia a posteriori. E il
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
 - [Македонски](../mk/spec-driven-development-for-ai-projects.md)
+- [Italiano](../it/spec-driven-development-for-ai-projects.md)
 - [Français](../fr/spec-driven-development-for-ai-projects.md)
 - [Español](../es/spec-driven-development-for-ai-projects.md)

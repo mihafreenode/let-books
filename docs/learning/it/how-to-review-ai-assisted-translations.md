@@ -109,6 +109,8 @@ Per un lavoro di revisione riutilizzabile registra:
 
 ## Lezioni riutilizzabili dalla revisione slovena
 
+Lo schema del caso di studio sloveno è ampiamente riutilizzabile anche in altre lingue:
+
 - il significato grammaticale può essere vicino, mentre la frase resta comunque non pubblicabile per un madrelingua
 - le costruzioni modali sono particolarmente vulnerabili alla traduzione letterale
 - terminologia e linguaggio di policy richiedono spesso riscrittura consapevole del dominio

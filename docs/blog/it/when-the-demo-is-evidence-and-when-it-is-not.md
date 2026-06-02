@@ -40,11 +40,17 @@ status: draft
 
 Una demo è potente perché trasforma idee astratte in qualcosa a cui le persone possono reagire. Un flusso di lavoro che in una nota sembra ragionevole può mostrare subito attrito reale su un telefono o in un deposito.
 
-Questo è il lato positivo della demo. Il lato pericoloso è che, una volta che il prototipo esiste, le persone iniziano spesso a trattarne il comportamento come verità di prodotto.
+Questo è il lato positivo delle demo.
+
+Il lato pericoloso è che, una volta che un prototipo esiste, le persone iniziano spesso a trattarne il comportamento come verità di prodotto, che qualcuno abbia o meno preso ufficialmente quella decisione.
 
 ## Perché i prototipi diventano autorità accidentale
 
-Le cose visibili sono persuasive. Uno schermo funzionante spesso ottiene più autorità informale di una regola scritta, anche quando è stato costruito solo come esperimento.
+Le cose visibili sono persuasive. Uno schermo funzionante spesso ha più autorità informale di una regola scritta, anche quando quello schermo è stato costruito come esperimento.
+
+È comprensibile. Le persone si fidano di ciò che possono vedere.
+
+Ma nel lavoro di prodotto, soprattutto nel lavoro di prodotto assistito dall'IA, questo istinto può creare confusione.
 
 La demo può mostrare:
 
@@ -57,18 +63,22 @@ Nulla di questo significa automaticamente che la demo debba ridefinire il prodot
 
 ## Quando la demo è una buona prova
 
-La demo è utile quando aiuta a rispondere a domande come:
+La demo è una prova preziosa quando aiuta a rispondere a domande come:
 
-- il flusso è usabile
-- il layout mobile supporta il compito reale
-- il flusso di scansione è comprensibile
-- come reagiscono gli utenti alla sequenza dei passi
+- Il flusso risulta usabile?
+- Il layout mobile supporta il compito reale?
+- Il flusso di scansione o di inserimento è comprensibile?
+- Gli utenti reagiscono positivamente o negativamente alla sequenza dei passaggi?
 
-In questi casi la demo è prova di usabilità, fattibilità e comunicazione.
+In questi casi la demo è prova di usabilità, fattibilità, sequenza dei passaggi e comunicazione.
+
+Questo tipo di prova è estremamente utile.
 
 ## Quando la demo non è l'autorità
 
-La demo non dovrebbe sovrastare in silenzio la specifica di prodotto. Non è la giusta autorità principale per domande come:
+La demo non dovrebbe superare in silenzio la specifica di prodotto.
+
+Non è la giusta autorità primaria per domande come:
 
 - questo flusso è ufficialmente nell'ambito
 - è una scorciatoia temporanea o un impegno di prodotto
@@ -79,15 +89,26 @@ Queste domande richiedono una decisione esplicita e un aggiornamento della docum
 
 ## La regola di Let Books è un buon modello
 
-Il repository definisce già una regola sana: la scrittura pubblica dovrebbe usare specifiche e documentazione come prova canonica, mentre la demo o il comportamento dell'app possono essere citati come stato di implementazione.
+Il repository contiene già una sana regola editoriale per questo. La scrittura pubblica dovrebbe trattare specifiche e documentazione come prova canonica, mentre la demo o il comportamento dell'app possono essere citati come stato di implementazione.
 
-Questo impedisce ai prototipi di diventare accidentalmente un meccanismo di governo del prodotto.
+Questa regola conta perché impedisce una governance accidentale da parte del prototipo.
+
+Se la demo statica rivela un flusso migliore per le scatole, un flusso mobile migliore o un'interazione di intake migliore, questo è prezioso. Ma quel flusso migliore dovrebbe diventare vera autorità solo dopo l'aggiornamento della specifica e della documentazione correlata.
 
 ## Perché questo conta ancora di più con l'IA
 
-L'IA amplifica ciò che appare più concreto nel contesto attuale. Se l'artefatto più concreto è una demo, assistenti e persone copieranno rapidamente il suo comportamento senza chiedersi se rispetta i confini del prodotto.
+L'IA amplifica ciò che appare più concreto nel contesto attuale.
 
-Per questo i team hanno bisogno di un ordine visibile di autorità:
+Se la cosa più concreta nel repository è una demo, gli assistenti e perfino i collaboratori umani possono copiarne il comportamento senza chiedersi se corrisponda al confine di prodotto previsto.
+
+Questo può essere utile quando la demo è già allineata.
+Può però diffondere rapidamente assunzioni temporanee quando non lo è.
+
+Per questo i team hanno bisogno di un ordine visibile di autorità.
+
+## Una catena pratica di autorità
+
+Per un lavoro di questo tipo, un ordine utile è:
 
 1. specifica di prodotto
 2. linee guida di implementazione
@@ -95,7 +116,7 @@ Per questo i team hanno bisogno di un ordine visibile di autorità:
 4. demo o prototipo
 5. test e validazione
 
-La demo resta importante. Semplicemente conta all'interno di un sistema documentato, invece di sostituirlo.
+La demo conta ancora. Semplicemente conta dentro un sistema documentato, invece di sostituirlo.
 
 ## Cosa fare quando la demo ti insegna qualcosa di nuovo
 
@@ -120,11 +141,12 @@ Gli studenti devono imparare che i prototipi non si giustificano da soli. Una bu
 
 ## La lezione durevole
 
-La demo è preziosa perché rende testabili le idee di prodotto. Diventa pericolosa quando diventa silenziosamente politica. Il modello sano è semplice: lasciamo che la demo informi il prodotto, ma facciamo sì che specifiche e documentazione registrino la decisione finale.
+Le demo sono preziose perché rendono testabili le idee di prodotto. Diventano pericolose quando diventano silenziosamente politica.
+
+Il modello più sano è semplice: lasciare che le demo informino il prodotto, ma fare in modo che specifiche e documentazione registrino la decisione finale.
 
 ## Altre lingue
 
-- [English](../en/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Shqip](../sq/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Deutsch](../de/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Slovenščina](../sl/when-the-demo-is-evidence-and-when-it-is-not.md)
@@ -133,5 +155,6 @@ La demo è preziosa perché rende testabili le idee di prodotto. Diventa pericol
 - [Srpski (latinica)](../sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Српски (ћирилица)](../sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Македонски](../mk/when-the-demo-is-evidence-and-when-it-is-not.md)
+- [Italiano](../it/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Français](../fr/when-the-demo-is-evidence-and-when-it-is-not.md)
 - [Español](../es/when-the-demo-is-evidence-and-when-it-is-not.md)
