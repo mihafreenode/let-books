@@ -1,4 +1,24 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Audit localized Markdown sources for untranslated or placeholder reader-facing content.
+ *
+ * Why:
+ * - Coverage-first localization created real files before all reader-facing text was fully
+ *   localized. Source debt needs to stay visible instead of hiding behind file presence.
+ *
+ * Detects / Enforces:
+ * - Tracks named defect classes such as untranslated summaries, untranslated bodies,
+ *   placeholder publication text, and navigation localization debt.
+ *
+ * Limitations:
+ * - Pattern-based and tuned to known debt classes.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate-missing-blog-localizations.mjs
+ * - tools/validate-localization-completeness.mjs
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 

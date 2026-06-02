@@ -1,4 +1,31 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Compare localized generated HTML against English generated HTML and fail when
+ *   reader-facing text is still left in English.
+ *
+ * Why:
+ * - Source Markdown can be localized while generated wrappers, metadata, captions, or
+ *   navigation still leak English. This validator protects the final publication surface.
+ *
+ * Detects / Enforces:
+ * - Localized titles, metadata, navigation, breadcrumbs, tags, article text, alt text,
+ *   and diagram labels.
+ *
+ * Examples:
+ * - Localized page with an English figcaption or topic pill.
+ * - Diagram alt text copied from the English page.
+ * - Generated nav wrapper left untranslated even though the article body is localized.
+ *
+ * Limitations:
+ * - Equality-based comparison plus exemptions; it catches visible English leakage, not all
+ *   semantic translation issues.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/audit-localized-markdown-sources.mjs
+ * - tools/validate-localized-articles.mjs
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -207,6 +234,9 @@ function shouldCompare(localizedText, englishText) {
     return false;
   }
 
+  // Some strings are expected to remain shared across locales because they are product
+  // names, acronyms, or intentionally language-neutral labels. Treating them as leaks
+  // would create recurring false positives and train contributors to ignore the validator.
   if (EXACT_ALLOWLIST.has(localized.toLowerCase())) {
     return false;
   }
@@ -240,6 +270,10 @@ function isExplicitlyExempt(node) {
 
 function collectComparableEntries(filePath, content, root) {
   const entries = new Map();
+
+  // Compare the same reader-facing surfaces that a human reader sees, even when they live
+  // outside the article body. Historical leaks frequently appeared in wrappers, cards,
+  // metadata, and image text rather than in the localized Markdown itself.
 
   push(entries, 'title', extractTitle(content), 0, null);
   push(entries, 'metaDescription', extractMeta(content, 'description'), 0, null);

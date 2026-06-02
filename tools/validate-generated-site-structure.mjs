@@ -1,4 +1,24 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Validate generated HTML structure for duplicated, misplaced, or generator-damaged UI
+ *   elements.
+ *
+ * Why:
+ * - Generated HTML can remain syntactically valid while still breaking page structure,
+ *   topic menus, language selectors, or related-content placement.
+ *
+ * Detects / Enforces:
+ * - Enforces one-copy structural elements and expected placement for generated wrappers.
+ *
+ * Limitations:
+ * - Warning-oriented and based on a lightweight parser.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate_docs_content.py
+ * - tools/generate-static-seo.mjs
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 

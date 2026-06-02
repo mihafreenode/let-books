@@ -1,9 +1,20 @@
 #!/usr/bin/env node
 /**
- * generate-sitemap.mjs
+ * Purpose:
+ * - Generate crawler and human-readable sitemap artifacts.
  *
- * Generates docs/sitemap.xml (crawler XML sitemap) and
- * docs/docs-sitemap.md (human-readable sitemap).
+ * Why:
+ * - Search engines and maintainers both need an auditable view of the published page set.
+ *
+ * Detects / Enforces:
+ * - Enforces that sitemap entries map to known page classes and existing files.
+ *
+ * Limitations:
+ * - Priority and change-frequency values are policy-driven.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate-static-seo.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';

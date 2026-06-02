@@ -1,4 +1,20 @@
 #!/usr/bin/env bash
+# Purpose:
+# - Resolve the Windows `adb.exe` path from WSL and cache it for later runs.
+#
+# Why:
+# - Real-device Android debugging is a first-class workflow in this repository, and manual
+#   ADB discovery from WSL is repetitive and fragile.
+#
+# Detects / Enforces:
+# - Enforces a deterministic ADB discovery order with a cached fast path.
+#
+# Limitations:
+# - WSL/Windows-specific helper.
+#
+# Related:
+# - tools/README.md
+# - tools/android-cdp-check.sh
 set -euo pipefail
 
 CACHE_FILE="${XDG_CACHE_HOME:-$HOME/.cache}/letbooks-adb-path"
@@ -69,6 +85,9 @@ if [ -f "$CACHE_FILE" ]; then
   fi
 fi
 
+# Discovery order favors cheap and user-controlled paths first, then progressively more
+# expensive fallbacks. The final filesystem scan is intentionally last because it can be
+# slow on larger Windows installations.
 POWERSHELL_ADB="$({
   powershell.exe -NoProfile -Command "(Get-Command adb.exe -ErrorAction SilentlyContinue).Source" 2>/dev/null
 } | tr -d '\r')"

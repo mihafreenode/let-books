@@ -1,5 +1,24 @@
 #!/usr/bin/env python3
 
+"""
+Purpose:
+- Run browser-oriented layout validation with a temporary local static server when needed.
+
+Why:
+- Layout checks need a served site, but contributors should not need to hand-manage a local
+  server for each validation run.
+
+Detects / Enforces:
+- Enforces a reachable docs base URL for downstream layout validation.
+
+Limitations:
+- Thin wrapper around the actual layout-validation test entry point.
+
+Related:
+- tools/README.md
+- tests/docs/layout-validation.cjs
+"""
+
 from __future__ import annotations
 
 import os

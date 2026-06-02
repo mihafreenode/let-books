@@ -1,5 +1,28 @@
 #!/usr/bin/env python3
-"""Patch localized Markdown files using source-side git diffs and block alignment."""
+"""
+Purpose:
+- Patch localized Markdown files by translating only source blocks changed in git.
+
+Why:
+- Small source edits should stay small in localization maintenance. Reworking whole files
+  increases cost and makes regressions harder to review.
+
+Detects / Enforces:
+- Enforces change-scoped updates, alignment-backed replacement, and explicit reporting when
+  confidence is too low to patch safely.
+
+Examples:
+- Translate a new warning paragraph without touching unaffected sections.
+- Refuse to guess when changed source blocks no longer align confidently.
+
+Limitations:
+- Depends on git diffs and alignment quality.
+
+Related:
+- tools/README.md
+- tools/localization_alignment.py
+- tools/localization_mt_draft.py
+"""
 
 from __future__ import annotations
 
@@ -50,6 +73,9 @@ def changed_line_ranges(base_ref: str, source_path: Path) -> list[tuple[int, int
         stderr = completed.stderr.strip() or "git diff failed"
         raise RuntimeError(stderr)
 
+    # Use added/changed line ranges from the source side of the diff because the goal is to
+    # update only localized blocks whose English source meaning changed. This keeps patching
+    # reviewable and avoids churn in unrelated translated content.
     ranges: list[tuple[int, int]] = []
     for line in completed.stdout.splitlines():
         match = HUNK_RE.match(line)

@@ -1,13 +1,24 @@
 #!/usr/bin/env node
 /**
- * generate-topic-nav.mjs
+ * Purpose:
+ * - Generate topic-oriented navigation for blog articles and blog index pages.
  *
- * 1. Adds "Related articles" sections to blog article HTML pages,
- *    cross-referencing other articles that share topics.
- * 2. Updates blog index pages to group articles by topic.
+ * Why:
+ * - Topic browsing helps readers discover related documentation beyond chronological order.
  *
- * Reads topics from Markdown frontmatter across blog/learning/wiki.
- * Topic display labels are localized per locale.
+ * Detects / Enforces:
+ * - Enforces topic-linked article navigation and topic-grouped browse output when this tool
+ *   is part of the generation flow.
+ *
+ * Limitations:
+ * - Strongly coupled to current blog/topic conventions.
+ * - Overlaps conceptually with newer generator behavior, so maintainers should confirm the
+ *   current ownership of topic UI before extending it.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/add-md-frontmatter.mjs
+ * - tools/generate_docs_content.py
  */
 import fs from 'node:fs';
 import path from 'node:path';

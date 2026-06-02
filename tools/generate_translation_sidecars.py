@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
-"""Generate alignment sidecar metadata for all localized Markdown article pairs."""
+"""
+Purpose:
+- Generate `.l10n.json` alignment sidecars for localized Markdown pairs.
+
+Why:
+- Persisted alignment metadata makes later patching and parity review far more stable than
+  re-deriving every match from scratch.
+
+Detects / Enforces:
+- Enforces the sidecar shape consumed by patch assist and parity validation.
+
+Limitations:
+- Sidecar quality depends on current alignment heuristics.
+
+Related:
+- tools/README.md
+- tools/localization_alignment.py
+- tools/localization_patch_assist.py
+"""
 
 from __future__ import annotations
 

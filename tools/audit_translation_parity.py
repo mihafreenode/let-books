@@ -1,5 +1,23 @@
 #!/usr/bin/env python3
-"""Run a focused translation parity audit and summarize the highest-signal issues."""
+"""
+Purpose:
+- Run translation parity validation and summarize the highest-signal findings.
+
+Why:
+- Raw validator output is useful for CI but too noisy for prioritization across many files
+  and locales.
+
+Detects / Enforces:
+- Enforces visibility into the most concentrated parity issues.
+
+Limitations:
+- Reporting helper only.
+
+Related:
+- tools/README.md
+- tools/validate_translation_parity.py
+- tools/audit_translation_warnings.py
+"""
 
 from __future__ import annotations
 

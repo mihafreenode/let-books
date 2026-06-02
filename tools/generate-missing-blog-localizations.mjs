@@ -1,4 +1,27 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Create missing localized blog Markdown stubs and matching source-map stubs.
+ *
+ * Why:
+ * - The repo used a coverage-first workflow so every locale could participate before all
+ *   natural-language review was complete.
+ *
+ * Detects / Enforces:
+ * - Enforces file presence for localized blog variants.
+ *
+ * Examples:
+ * - New English article exists but several locales still lack a source file.
+ *
+ * Limitations:
+ * - Intentionally creates draft placeholders that downstream validators are expected to
+ *   flag until human localization is complete.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/validate-content-parity.mjs
+ * - tools/audit-localized-markdown-sources.mjs
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -38,6 +61,9 @@ const OTHER_LANGUAGES_HEADINGS = {
 };
 
 const DRAFT_NOTES = {
+  // These notes are intentionally explicit because the generated files are not meant to be
+  // mistaken for publication-ready localization. Other validators rely on recognizable
+  // placeholder language so coverage-first workflows do not silently become publishing.
   sl: 'Ta lokalizirana objava je osnutek za popolno jezikovno pokritost. Spodaj je trenutno ohranjena kanonična angleška vsebina, dokler ne bo končan naravni jezikovni pregled.',
   hr: 'Ova lokalizirana objava je nacrt za potpunu jezičnu pokrivenost. Kanonski engleski sadržaj trenutačno je zadržan u nastavku dok se ne dovrši prirodna jezična revizija.',
   bs: 'Ova lokalizirana objava je nacrt za potpunu jezičku pokrivenost. Kanonski engleski sadržaj je trenutno zadržan u nastavku dok se ne završi prirodna jezička revizija.',

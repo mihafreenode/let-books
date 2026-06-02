@@ -1,7 +1,21 @@
 #!/usr/bin/env bash
+# Purpose:
+# - Rebuild one localized blog article quickly through the main docs generator.
+#
+# Why:
+# - Full-site generation is unnecessary for routine article editing.
+#
+# Detects / Enforces:
+# - Enforces that the requested Markdown source exists before rendering.
+#
+# Limitations:
+# - Blog-only convenience wrapper.
+#
+# Related:
+# - tools/README.md
+# - tools/generate_docs_content.py
 set -euo pipefail
 
-# Generate blog HTML article page from Markdown source.
 # Usage: tools/md-to-html.sh <article-id> <locale>
 # Reads: docs/blog/<locale>/<article-id>.md
 # Writes: docs/blog/<locale>/<article-id>.html

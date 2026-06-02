@@ -1,5 +1,26 @@
 #!/usr/bin/env python3
 
+"""
+Purpose:
+- Validate that a contributor machine has the tooling required for docs generation,
+  validation, and browser-based checks.
+
+Why:
+- Many documentation failures are environment failures first. This script makes missing or
+  outdated dependencies visible before a contributor chases downstream errors.
+
+Detects / Enforces:
+- Enforces minimum versions and basic executability for the repo's external toolchain.
+
+Limitations:
+- Depends on local CLI names and local install shape.
+
+Related:
+- tools/README.md
+- tools/generate_docs_content.py
+- tools/validate_layout_structure.py
+"""
+
 from __future__ import annotations
 
 import re

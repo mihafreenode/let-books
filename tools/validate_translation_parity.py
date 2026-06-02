@@ -1,5 +1,29 @@
 #!/usr/bin/env python3
-"""Granular translation parity validation for Markdown source/target pairs."""
+"""
+Purpose:
+- Validate semantic and structural parity between English Markdown and localized Markdown.
+
+Why:
+- File presence does not protect against missing sections, English leakage, or damaged code
+  and diagram examples.
+
+Detects / Enforces:
+- Enforces block presence, code and diagram preservation, localized metadata, and
+  suspicious-English detection.
+
+Examples:
+- Localized file keeps the English summary.
+- Code block or diagram block diverges from the source.
+
+Limitations:
+- Heuristic checks may still require human review for quotations or intentionally repeated
+  source text.
+
+Related:
+- tools/README.md
+- tools/localization_alignment.py
+- tools/audit_translation_parity.py
+"""
 
 from __future__ import annotations
 
@@ -23,6 +47,9 @@ ENGLISH_MARKERS = {
     "translation", "localization", "quality", "meaning", "language", "languages", "product", "system",
 }
 INTENTIONAL_SOURCE_SNIPPET_HEADINGS = {
+    # Some articles intentionally discuss source-language text or review examples. Treating
+    # those headings as leakage would create noisy parity failures and obscure real missing
+    # translation problems.
     "original ai draft",
     "corrected slovenian",
     "human-review feedback",

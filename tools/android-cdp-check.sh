@@ -1,4 +1,22 @@
 #!/usr/bin/env bash
+# Purpose:
+# - Smoke-test Android Chrome DevTools Protocol connectivity over ADB forwarding.
+#
+# Why:
+# - Mobile debugging often fails before browser automation starts. This script isolates the
+#   failure stage so contributors can fix device, socket, or forwarding issues directly.
+#
+# Detects / Enforces:
+# - Enforces ADB discovery, device visibility, remote-debug socket presence, port forward,
+#   and CDP JSON endpoint reachability.
+#
+# Limitations:
+# - Shell- and environment-specific.
+#
+# Related:
+# - tools/README.md
+# - tools/wsl-find-adb.sh
+# - tools/android-cdp-probe.mjs
 set -euo pipefail
 
 PASS_COUNT=0

@@ -1,4 +1,22 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Report missing localized Markdown variants across docs content families.
+ *
+ * Why:
+ * - Coverage gaps need a fast inventory before deeper semantic validation is useful.
+ *
+ * Detects / Enforces:
+ * - Enforces visibility into file-presence parity by content type and locale.
+ *
+ * Limitations:
+ * - Presence-only. It does not measure translation quality.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate-missing-blog-localizations.mjs
+ * - tools/validate-localized-articles.mjs
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 

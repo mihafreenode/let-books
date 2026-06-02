@@ -1,4 +1,26 @@
 ---
+# Purpose:
+# - Run the main repository validation pipeline for docs, localization, generated artifacts,
+#   static-demo checks, and workflow correctness.
+#
+# Why:
+# - This repository's public product surface includes generated documentation and localized
+#   content, not only application code. Regressions often appear in validators, generators,
+#   or workflow configuration before they appear in app code.
+#
+# Protects:
+# - Workflow correctness, docs generation reproducibility, localization completeness,
+#   semantic parity, generated artifact freshness, and browser-facing docs behavior.
+#
+# Failure Impact:
+# - Broken generators, localization leaks, stale derived artifacts, or invalid workflow
+#   changes could merge unnoticed.
+#
+# Related:
+# - .github/workflows/README.md
+# - tools/validate_environment.py
+# - tools/generate_docs_content.py
+# - tools/validate-blog.mjs
 name: CI
 
 "on":
@@ -49,6 +71,8 @@ jobs:
           curl -sSfL "$ACTIONLINT_SCRIPT_URL" | bash
           sudo mv actionlint /usr/local/bin/
 
+      # Workflows are part of the product's enforcement layer.
+      # Validate the automation itself before trusting any later CI result.
       - name: Validate GitHub Actions workflows
         run: |
           actionlint --version
@@ -74,6 +98,8 @@ jobs:
           magick --version || convert --version
           npx playwright --version
 
+      # The localization validators depend on a managed Python environment with extra
+      # packages. Bootstrapping it explicitly keeps local and CI behavior aligned.
       - name: Bootstrap localization Python tooling
         run: bash scripts/bootstrap-localization-tools.sh
 
@@ -90,6 +116,8 @@ jobs:
             echo "  ok: $f"
           done
 
+      # Regenerate derived metadata before docs HTML so later checks validate current output,
+      # not stale committed artifacts from a previous run.
       - name: SEO metadata generation (dry-run validation)
         run: node tools/generate-static-seo.mjs
 
@@ -114,6 +142,9 @@ jobs:
       - name: Articles.json generation (dry-run validation)
         run: node tools/generate-articles-json.mjs
 
+      # Localization coverage is only the first layer. The following sequence intentionally
+      # moves from file presence to semantic review to source/target parity to rendered-output
+      # leakage so each validator catches a different class of failure.
       - name: Documentation parity audit
         run: |
           node tools/validate-content-parity.mjs \
@@ -158,6 +189,9 @@ jobs:
           test -f CNAME || { echo "Missing CNAME"; exit 1; }
           grep -q "letbooks.org" CNAME
 
+      # The SEO generator writes a manifest of required HTML outputs. Checking the manifest
+      # here turns "generation completed" into a stronger guarantee that every declared page
+      # is actually present on disk.
       - name: Check required HTML pages exist
         run: |
           node -e "
@@ -219,7 +253,9 @@ jobs:
                 }
                 const c = readFileSync(p, 'utf8');
 
-                // 1. Check hreflang links for all 12 locales
+                // 1. Check hreflang links for all locales.
+                // These indexes are language entry points, so broken alternates can hide
+                // complete locale trees from search engines and reviewers.
                 for (const l of LOCALES) {
                   const tag = 'hreflang=\"' + l
                     + '\" href=\"https://letbooks.org/docs/'
@@ -230,7 +266,9 @@ jobs:
                   }
                 }
 
-                // 2. Check lang-switch has links to all 12 locales
+                // 2. Check the visible language switch.
+                // The repo treats docs language switching as a first-class navigation path,
+                // not as optional UI chrome.
                 const shortLabels = {
                   en:'EN', sl:'SL', hr:'HR', bs:'BS',
                   'sr-Latn':'SR-Latn', 'sr-Cyrl':'SR-Cyrl',
@@ -251,8 +289,9 @@ jobs:
                   }
                 }
 
-                // 3. Check footer description is localized
-                //    (not English on non-English pages)
+                // 3. Check footer description localization.
+                // Wrapper text has historically leaked English even when article bodies were
+                // localized, so this explicitly guards the page chrome too.
                 const footerDesc = c.match(
                   /<footer[^>]*>[\s\S]*?<p>([^<]+)<\/p>/
                 );
@@ -267,7 +306,7 @@ jobs:
                   }
                 }
 
-                // 4. Check nav links point to same-locale blog/learning/wiki
+                // 4. Check cross-section navigation stays in the same locale.
                  const navLabels = {
                    docs: 'href=\"../../' + locale + '/index.html\"',
                    blog: 'href=\"../../blog/' + locale + '/index.html\"',
@@ -293,6 +332,8 @@ jobs:
             else process.exit(1);
           "
 
+      # Topic navigation is validated separately because article bodies can exist and still
+      # lose the related-content system after generator changes.
       - name: Check topic nav present in blog articles
         run: |
           node -e "
@@ -333,6 +374,7 @@ jobs:
             else process.exit(1);
           "
 
+      # Search should index topics as first-class content, not only blog/learning/wiki pages.
       - name: Validate search index includes topics
         run: |
           node -e "
@@ -353,6 +395,8 @@ jobs:
             console.log('Search index includes topics entries');
           "
 
+      # Serve generated output locally before browser-facing checks. File-level validators do
+      # not catch print/layout regressions that only appear once pages are loaded in a browser.
       - name: Docs browser validation
         run: |
           set -euo pipefail
@@ -366,6 +410,8 @@ jobs:
             exit 1
           }
 
+          # Preserve the local server log on failure so rendering and asset-loading problems
+          # can be diagnosed from CI output instead of reproduced from scratch.
           cleanup() {
             if [ -n "${SERVER_PID:-}" ] \
               && kill -0 "$SERVER_PID" 2>/dev/null; then
@@ -441,6 +487,8 @@ jobs:
               && echo "  ok: $f"
           done
 
+      # These are currently advisory checks. They preserve operational memory about desirable
+      # future guarantees without blocking merges on tooling that is not fully wired yet.
       - name: Hunspell check (optional)
         continue-on-error: true
         run: |

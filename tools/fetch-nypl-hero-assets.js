@@ -1,12 +1,33 @@
 #!/usr/bin/env node
 "use strict";
 
+/**
+ * Purpose:
+ * - Fetch selected NYPL image assets and persist a local provenance manifest.
+ *
+ * Why:
+ * - Visual assets used in the site/demo need source and rights context preserved near the
+ *   downloaded files.
+ *
+ * Detects / Enforces:
+ * - Enforces that each downloaded asset keeps source URL, rights, and citation metadata.
+ *
+ * Limitations:
+ * - Environment-specific and intentionally narrow.
+ *
+ * Related:
+ * - tools/README.md
+ */
+
 const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
 
 const root = path.resolve(__dirname, "..");
 const outDir = path.join(root, "static-demo", "assets", "hero", "nypl");
+// This is intentionally hardcoded to the local Playwright helper used for the current asset
+// workflow. Keep the dependency obvious so future maintainers do not mistake this script for
+// a portable general-purpose fetcher.
 const pwcli = "/home/miha/.config/opencode/skills/playwright/scripts/playwright_cli.sh";
 const session = "nypl-download";
 

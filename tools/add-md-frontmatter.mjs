@@ -1,10 +1,21 @@
 #!/usr/bin/env node
 /**
- * add-md-frontmatter.mjs
+ * Purpose:
+ * - Add missing frontmatter and topic metadata to learning and wiki Markdown files.
  *
- * Adds YAML frontmatter with topics to learning guide and wiki page
- * Markdown files that currently have no frontmatter.
- * Topics are defined per English filename and applied to all locale variants.
+ * Why:
+ * - Topic-aware navigation and validation require structured metadata, but older content did
+ *   not always include it.
+ *
+ * Detects / Enforces:
+ * - Enforces frontmatter presence and topic coverage for known files.
+ *
+ * Limitations:
+ * - Uses hand-maintained topic maps.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate-topic-nav.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';

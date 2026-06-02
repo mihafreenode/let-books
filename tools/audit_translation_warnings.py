@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
-"""Summarize translation warning debt by locale, article, and file."""
+"""
+Purpose:
+- Summarize translation warning debt by locale, article, and file.
+
+Why:
+- Warning-level debt can hide long-term maintenance risk even when blocking CI is clean.
+
+Detects / Enforces:
+- Enforces visibility into where warning debt is accumulating.
+
+Limitations:
+- Depends on upstream report shape.
+
+Related:
+- tools/README.md
+- tools/validate_translation_parity.py
+- tools/audit_translation_parity.py
+"""
 
 from __future__ import annotations
 

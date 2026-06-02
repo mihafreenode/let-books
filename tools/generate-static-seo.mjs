@@ -1,3 +1,29 @@
+#!/usr/bin/env node
+/**
+ * Purpose:
+ * - Regenerate static SEO and social metadata across homepage, docs pages, and the static
+ *   demo from one central policy file.
+ *
+ * Why:
+ * - Metadata drift across many static pages is difficult to review manually and easy to
+ *   miss in code review.
+ *
+ * Detects / Enforces:
+ * - Canonical URLs, hreflang alternates, favicon package references, social metadata, and
+ *   manifest descriptions.
+ *
+ * Examples:
+ * - Missing hreflang alternates after adding a locale.
+ * - Docs page keeping stale canonical metadata after a route rename.
+ *
+ * Limitations:
+ * - Relies on hand-maintained page maps and controlled `<head>` replacement.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/validate-blog.mjs
+ * - tools/validate-generated-site-structure.mjs
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -301,6 +327,9 @@ function buildAlternateTags(pageType, indent = '    ') {
   const tags = [];
 
   if (pageType === 'language-hub') {
+    // The docs hub is a language chooser rather than a locale-owned article. Each localized
+    // docs overview still deserves an alternate entry, but x-default should resolve to the
+    // neutral `/docs/` hub instead of a specific language page.
     for (const [locale, localePath] of Object.entries(pageMap.overview)) {
       tags.push(`${indent}<link rel="alternate" hreflang="${locale}" href="${getCanonical(`/docs/${localePath}`)}">`);
     }
@@ -331,6 +360,9 @@ function replaceHead(filePath, headContent) {
   const headEnd = headEndMatch.index + headEndMatch[0].length;
   const beforeHead = current.slice(0, headStart).replace(/[ \t]+$/, '');
   const afterHead = current.slice(headEnd);
+  // Replace only the <head> block so page body structure, localized content, and generator
+  // output outside metadata remain untouched. This keeps SEO regeneration safe to run after
+  // other HTML-producing steps without rewriting entire files.
   const next = `${beforeHead}${headContent}${afterHead}`;
   if (next === current) {
     return; // no change needed

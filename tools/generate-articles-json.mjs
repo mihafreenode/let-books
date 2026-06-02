@@ -1,9 +1,21 @@
 #!/usr/bin/env node
 /**
- * generate-articles-json.mjs
+ * Purpose:
+ * - Generate `docs/blog/articles.json` from localized article frontmatter.
  *
- * Generates docs/blog/articles.json from Markdown frontmatter,
- * extracting article titles per locale from the actual files.
+ * Why:
+ * - A shared article registry is easier to validate and consume than re-scanning blog files
+ *   independently in every workflow.
+ *
+ * Detects / Enforces:
+ * - Enforces article ids, canonical language, and language-variant inventory.
+ *
+ * Limitations:
+ * - Discovers articles from English source files.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/validate-blog.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';

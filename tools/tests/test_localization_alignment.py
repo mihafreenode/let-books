@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
 
+"""
+Scenario:
+- Regression coverage for tricky source-to-Slovenian block alignment in a real article pair.
+
+Why It Matters:
+- Alignment heuristics can return plausible but wrong heading matches, which then damages
+  sidecars, patch-assist output, and parity validation.
+
+Expected Outcome:
+- Known protected headings and paragraphs continue to align to the intended localized
+  targets, and specific historical mismatches stay rejected.
+
+Related:
+- tools/README.md
+- tools/localization_alignment.py
+"""
+
 from __future__ import annotations
 
 import unittest
@@ -13,6 +30,9 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 
 class LocalizationAlignmentTests(unittest.TestCase):
     def test_ai_will_not_replace_translators_rejects_wrong_heading_matches(self) -> None:
+        # Historical failure:
+        # structurally nearby headings looked lexically plausible enough to win, causing one
+        # wrong heading match to cascade into later block mismatches.
         source_doc = load_document(ROOT_DIR / "docs/blog/en/ai-will-not-replace-translators.md")
         target_doc = load_document(ROOT_DIR / "docs/blog/sl/ai-will-not-replace-translators.md")
 
@@ -52,6 +72,8 @@ class LocalizationAlignmentTests(unittest.TestCase):
         )
 
     def test_ai_will_not_replace_translators_matches_parallel_structure(self) -> None:
+        # This test protects the intended strategy mix: headings should prefer structural
+        # matching, while repeated paragraph-like labels may need section-order fallback.
         source_doc = load_document(ROOT_DIR / "docs/blog/en/ai-will-not-replace-translators.md")
         target_doc = load_document(ROOT_DIR / "docs/blog/sl/ai-will-not-replace-translators.md")
 

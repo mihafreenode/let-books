@@ -1,5 +1,34 @@
 #!/usr/bin/env python3
 
+"""
+Purpose:
+- Render the multilingual docs site from Markdown sources into publication-ready HTML.
+
+Why:
+- The repository needs more than Markdown-to-HTML conversion. It needs shared wrappers,
+  localized navigation, topic-aware related content, and stable generated structures that
+  downstream validators can inspect.
+
+Detects / Enforces:
+- Enforces the generated-site contract used by SEO, layout, localization, and publication
+  validators.
+
+Examples:
+- Missing localized language switch entries.
+- Broken topic-menu structure after generator changes.
+- Generated placeholder sections that should not reach final HTML.
+
+Limitations:
+- Large and convention-heavy.
+- Uses repo-specific parsing and HTML rewriting rather than a general site framework.
+
+Related:
+- tools/README.md
+- tools/generate-index-pages.mjs
+- tools/generate-static-seo.mjs
+- tools/validate-generated-site-structure.mjs
+"""
+
 from __future__ import annotations
 
 import argparse

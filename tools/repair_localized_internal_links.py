@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
-"""Rewrite localized docs links away from English targets when a locale variant exists."""
+"""
+Purpose:
+- Rewrite localized docs links away from English targets when a locale variant exists.
+
+Why:
+- English cross-link leakage is a recurring multilingual publishing regression.
+
+Detects / Enforces:
+- Enforces local-to-local internal links when the target locale file exists.
+
+Limitations:
+- Only handles known absolute and relative link forms.
+
+Related:
+- tools/README.md
+- tools/validate_translation_parity.py
+- tools/validate-localization-completeness.mjs
+"""
 
 from __future__ import annotations
 

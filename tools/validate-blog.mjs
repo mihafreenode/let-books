@@ -1,4 +1,34 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Validate docs/blog publication safety across links, article registry structure,
+ *   canonical and hreflang output, localized diagrams, and editorial source policy.
+ *
+ * Why:
+ * - Static documentation can be syntactically valid while still being unsafe to publish.
+ *   This validator exists because link drift, localization leaks, and source-citation
+ *   regressions have all occurred on different surfaces.
+ *
+ * Detects / Enforces:
+ * - Internal reference integrity.
+ * - articles.json coherence.
+ * - Canonical and hreflang correctness.
+ * - Localized diagram requirements.
+ * - Editorial policy that public docs cite specs/docs rather than app or test source.
+ *
+ * Examples:
+ * - Non-English article referencing an English diagram.
+ * - x-default hreflang pointing to the wrong language variant.
+ * - Blog content citing src/ or tests/ as public evidence.
+ *
+ * Limitations:
+ * - Broad validator with several repo-specific policies in one pass.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate-articles-json.mjs
+ * - tools/generate-static-seo.mjs
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -45,6 +75,9 @@ const ALLOWED_EDITORIAL_EVIDENCE_ROOT_FILES = new Set([
   'CODE_OF_CONDUCT.md',
 ]);
 const FORBIDDEN_EDITORIAL_SOURCE_PATTERNS = [
+  // Public editorial content should cite durable docs/specs, not implementation files.
+  // Source-code paths are too volatile to function as stable evidence in blog posts,
+  // source maps, or other reader-facing editorial material.
   {
     label: 'static-demo source reference',
     regex: /\bstatic-demo\/[^\s<>()`'"|]+\.(?:js|cjs|mjs|ts|tsx|jsx|css|html|json)\b/g,
@@ -551,6 +584,9 @@ function validateArticleHtml(filePath, article, lang) {
     hreflangMap.set(match[1], match[2]);
   }
 
+  // x-default intentionally points to the canonical article language rather than the
+  // currently validated locale. Search engines should discover the source-of-truth article
+  // first and then branch into language variants through the remaining hreflang entries.
   const expectedDefault = `${SITE_URL}/docs/blog/${article.canonical_language}/${article.id}.html`;
   if (hreflangMap.get('x-default') !== expectedDefault) {
     fail(`${rel(filePath)}: x-default hreflang must point to "${expectedDefault}"`);

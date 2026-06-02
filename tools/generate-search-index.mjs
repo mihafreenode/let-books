@@ -1,4 +1,22 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Build the client-side docs search index from Markdown frontmatter.
+ *
+ * Why:
+ * - Search needs a lightweight generated artifact instead of reparsing source files in the
+ *   browser.
+ *
+ * Detects / Enforces:
+ * - Enforces a predictable search record shape for locale, title, summary, and URL.
+ *
+ * Limitations:
+ * - Frontmatter-only index; does not include full body text.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate_docs_content.py
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 

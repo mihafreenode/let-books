@@ -1,5 +1,25 @@
 #!/usr/bin/env python3
-"""Generate machine-translated Markdown drafts with structure preservation."""
+"""
+Purpose:
+- Generate machine-translated Markdown drafts while preserving structure and protected
+  syntax.
+
+Why:
+- Raw MT output is too risky for Markdown-heavy docs. Draft generation must protect code,
+  links, diagrams, and other syntax that reviewers should not need to reconstruct.
+
+Detects / Enforces:
+- Enforces structure-preserving translation boundaries and backend-normalized translation
+  output.
+
+Limitations:
+- Draft-generation helper only; human review remains required.
+
+Related:
+- tools/README.md
+- tools/localization_alignment.py
+- tools/generate_translation_sidecars.py
+"""
 
 from __future__ import annotations
 

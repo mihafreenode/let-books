@@ -1,5 +1,34 @@
 #!/usr/bin/env python3
-"""Shared Markdown parsing, alignment, and sidecar metadata helpers."""
+"""
+Purpose:
+- Parse Markdown into durable structural blocks, align source and localized blocks, and
+  manage sidecar metadata used by localization tooling.
+
+Why:
+- Small English edits should not force maintainers to rediscover localized structure by
+  hand. The alignment layer preserves enough structure to support patching, parity review,
+  and regression testing.
+
+Detects / Enforces:
+- Enforces a shared block model and alignment contract for sidecars, MT drafting, patch
+  assist workflows, and parity validation.
+
+Examples:
+- Preserve heading-to-heading alignment even when localized headings use different words.
+- Avoid matching a plausible nearby heading when section structure already proves a better
+  target.
+
+Limitations:
+- Heuristic-heavy and intentionally tuned for repository content rather than full
+  CommonMark fidelity.
+
+Related:
+- tools/README.md
+- tools/generate_translation_sidecars.py
+- tools/localization_patch_assist.py
+- tools/validate_translation_parity.py
+- tools/tests/test_localization_alignment.py
+"""
 
 from __future__ import annotations
 
@@ -63,6 +92,13 @@ class AlignmentMatch:
     strategy: str
 
 
+# Thresholds intentionally favor structural confidence over lexical similarity.
+#
+# Historical failure mode:
+# localized headings often share only partial vocabulary with English headings, while
+# nearby sections can look deceptively similar. Stronger thresholds for headings and
+# positional fallback reduce wrong-but-plausible matches that would poison sidecars and
+# downstream patching.
 HEADING_FUZZY_MIN_SCORE = 0.80
 GENERAL_FUZZY_MIN_SCORE = 0.55
 POSITIONAL_MIN_SCORE = 0.72
@@ -417,6 +453,16 @@ def align_blocks(
     matches: list[AlignmentMatch] = []
 
     for source_block in source_blocks:
+        # Strategy order matters.
+        #
+        # Prefer durable evidence first:
+        # 1. sidecar metadata from earlier confirmed alignments
+        # 2. structural heading and section matches
+        # 3. exact heading-path and neighbor-based recovery
+        # 4. fuzzy fallback only when stronger signals fail
+        #
+        # This keeps recurring maintenance work stable and avoids letting one low-quality
+        # fuzzy guess cascade into later incorrect matches.
         entry = sidecar_entries.get(source_block.block_id)
         if entry:
             target_id = entry.get("targetBlockId")
@@ -572,7 +618,6 @@ def match_positional_block(
         return None
 
     previous_match = previous_resolved_match(source_block.index, matches, source_index_by_id)
-    next_match = None
     if previous_match is None or previous_match.target_block_id is None:
         return None
 
@@ -594,7 +639,7 @@ def match_positional_block(
 
     if best_candidate is not None and best_score >= POSITIONAL_MIN_SCORE:
         return AlignmentMatch(source_block.block_id, best_candidate.block_id, round(best_score, 3), "position-neighbor")
-    return next_match
+    return None
 
 
 def previous_resolved_match(source_index: int, matches: Sequence[AlignmentMatch], source_index_by_id: dict[str, int]) -> AlignmentMatch | None:

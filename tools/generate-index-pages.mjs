@@ -1,10 +1,22 @@
 #!/usr/bin/env node
 /**
- * generate-index-pages.mjs
+ * Purpose:
+ * - Generate localized section index pages for blog, learning, wiki, and topics.
  *
- * Generates index.html pages for blog, learning, and wiki sections
- * per locale. Also updates doc index page header nav to point to
- * blog index.html instead of a single article.
+ * Why:
+ * - Browse pages, wrappers, and localized section navigation need to remain consistent
+ *   across the generated docs site.
+ *
+ * Detects / Enforces:
+ * - Enforces predictable index-page presence, nav labels, and section-level metadata.
+ *
+ * Limitations:
+ * - Repo-specific labels and route conventions.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/generate_docs_content.py
+ * - tools/generate-static-seo.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -21,6 +33,8 @@ const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 const LOCALES = DOCS_CONFIG.locales;
 
+// Short labels are used in compact navigation controls where the full locale name would
+// produce unstable layout across scripts and narrow widths.
 const LOCALE_SHORT_LABELS = {
   en: 'EN', sl: 'SL', hr: 'HR', bs: 'BS',
   'sr-Latn': 'SR-Latn', 'sr-Cyrl': 'SR-Cyrl',

@@ -355,6 +355,173 @@ Do not duplicate the full ADB/mobile setup workflow here. Keep all camera/barcod
 - For static demo ISBN lookup verification, explicitly test both the Open Library path and the fallback proxy path using `9780434912902` and `9789610167525`
 - For static demo camera scanning verification, explicitly test Android Chrome and iOS Safari behavior for rear-camera selection, scanner startup resilience, barcode/QR readability, zoom visibility, torch visibility, and file-upload fallback behavior
 
+## Engineering Knowledge Preservation
+
+Documentation is not the only place where engineering knowledge should live.
+
+Comments, validators, tests, regression tests, workflows, and repository tooling should preserve important engineering context.
+
+When reviewing or modifying code, look for opportunities to explain:
+
+- why something exists
+- what problem it solves
+- what failures it prevents
+- important assumptions
+- historical context
+- compatibility requirements
+- limitations and trade-offs
+
+Future maintainers should not need to reconstruct intent from commit history.
+
+## Validator Documentation
+
+Every non-trivial validator should contain concise documentation.
+
+Prefer short, practical explanations aimed at intermediate and senior engineers.
+
+Document:
+
+- Purpose: what the validator checks
+- Why It Exists: what historical problem, regression, maintenance burden, or quality issue motivated it
+- Detects / Enforces: what repository guarantees it protects
+- Examples: representative failures it is expected to catch
+- Limitations: what it intentionally does not validate
+- Related Files: relevant generators, workflows, tests, documentation, or validators
+
+Whenever practical, explain:
+
+- assumptions
+- heuristics
+- matching logic
+- non-obvious implementation choices
+- regular expressions
+
+A future maintainer should understand the validator without reverse-engineering the implementation.
+
+## Test Documentation
+
+Tests should document repository behavior, not merely implementation details.
+
+For significant tests include concise comments describing:
+
+- Scenario: what situation is being simulated
+- Why It Matters: what bug, regression, workflow failure, or edge case is being protected
+- Expected Outcome: what guarantee must remain true
+
+Regression tests should additionally document:
+
+- historical failure
+- root cause
+- protected behavior
+
+The goal is for maintainers to understand what real-world problem a test prevents.
+
+## Educational Comments
+
+Repository tooling should be approachable to engineers unfamiliar with the project.
+
+For validators, generators, migration scripts, CI helpers, localization tools, and maintenance utilities:
+
+Prefer comments that explain:
+
+- reasoning
+- algorithms
+- heuristics
+- assumptions
+- edge cases
+- data flow
+- matching logic
+- regex behavior
+- implementation tricks
+
+Avoid comments that merely restate code.
+
+Good comments answer:
+
+`Why is this here?`
+
+rather than:
+
+`What does this line do?`
+
+Where useful, include lightweight pseudocode or examples.
+
+The repository should gradually become easier to understand for both human maintainers and AI-assisted development tools.
+
+## Reusable Engineering Practices
+
+When a solution proves valuable beyond a single feature, consider whether it represents a reusable engineering pattern.
+
+Examples:
+
+- validators
+- CI checks
+- localization workflows
+- deployment safeguards
+- documentation conventions
+- debugging guides
+
+Document:
+
+- problem solved
+- solution adopted
+- lessons learned
+- reuse potential
+
+## Pattern Graduation
+
+Not every solution should become a reusable pattern.
+
+A candidate pattern should:
+
+- solve a recurring problem
+- be applicable beyond a single feature
+- reduce future maintenance effort
+- be understandable without project-specific context
+
+Prefer proven patterns over speculative frameworks.
+
+## Validator-First Knowledge Preservation
+
+When a recurring failure, regression, inconsistency, or maintenance burden is discovered, prefer capturing the lesson as an automated validator or check whenever practical.
+
+Order of preference:
+
+1. Validator or automated check
+2. Regression test
+3. Documentation
+4. Educational comments
+5. Visual explanation or engineering mock
+
+Documentation should explain the validator.
+Comments should explain the implementation.
+Tests should demonstrate expected behavior.
+Validators should enforce the guarantee.
+
+A repository should not rely solely on human memory when a guarantee can be verified automatically.
+
+## Engineering Visualizations
+
+Engineering diagrams, governance posters, workflow illustrations, and similar visual artifacts may be created when they help communicate reusable engineering practices.
+
+Such artifacts should explain proven patterns rather than replace documentation, tests, or validators.
+
+Examples:
+
+- validation workflows
+- localization governance
+- documentation governance
+- CI/CD guarantees
+- repository engineering governance
+- deployment safeguards
+- debugging workflows
+
+Visual artifacts should reflect practices already validated within the repository whenever possible.
+
+Prefer validator-backed engineering practices over aspirational diagrams.
+
+The repository should gradually accumulate reusable engineering knowledge, not only application code.
+
 ## Code Generation Rules
 
 - Generated code and docs should use repo-relative paths

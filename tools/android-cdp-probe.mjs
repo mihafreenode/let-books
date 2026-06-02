@@ -1,3 +1,22 @@
+#!/usr/bin/env node
+/**
+ * Purpose:
+ * - Connect directly to a CDP page target and print runtime, network, console, dialog,
+ *   and service-worker state.
+ *
+ * Why:
+ * - Some mobile browser failures are only visible through direct CDP inspection.
+ *
+ * Detects / Enforces:
+ * - Enforces visibility into page boot state and runtime failures after CDP is reachable.
+ *
+ * Limitations:
+ * - Assumes CDP is already exposed locally on 127.0.0.1:9222.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/android-cdp-check.sh
+ */
 const targetFilter = process.argv[2] || "letbooks";
 const runSeconds = Number(process.argv[3] || 8);
 const clearOriginData = process.argv.includes("--clear-data");

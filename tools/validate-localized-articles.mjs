@@ -1,4 +1,25 @@
 #!/usr/bin/env node
+/**
+ * Purpose:
+ * - Compare localized Markdown with English source Markdown for suspicious shortening,
+ *   structure loss, and article-specific semantic regressions.
+ *
+ * Why:
+ * - Some localization failures preserve file presence while dropping the examples,
+ *   warnings, or structurally important sections that make the article useful.
+ *
+ * Detects / Enforces:
+ * - Enforces body-size heuristics, heading retention, and strong article-specific semantic
+ *   checkpoints.
+ *
+ * Limitations:
+ * - Heuristic and partially article-specific by design.
+ *
+ * Related:
+ * - tools/README.md
+ * - tools/validate-content-parity.mjs
+ * - tools/validate_translation_parity.py
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -19,6 +40,9 @@ const reports = [];
 const missingCoverage = [];
 
 const STRONG_RULES = {
+  // These targeted rules were added only for articles where generic length and structure
+  // heuristics proved insufficient. They are intentionally specific because losing certain
+  // named examples or conclusions would materially change the article's teaching value.
   'documentation-is-part-of-the-product': {
     locales: Object.fromEntries(
       LOCALES.filter((locale) => locale !== 'en').map((locale) => [locale, [
