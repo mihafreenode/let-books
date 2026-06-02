@@ -338,6 +338,8 @@ function buildAlternateTags(pageType, indent = '    ') {
   }
 
   for (const [locale, localePath] of Object.entries(pageMap[pageType])) {
+    // `pageMap` is the explicit source of truth for publishable localized routes. Using it
+    // directly prevents filesystem accidents from silently creating SEO alternates.
     tags.push(`${indent}<link rel="alternate" hreflang="${locale}" href="${getCanonical(`/docs/${localePath}`)}">`);
   }
   tags.push(`${indent}<link rel="alternate" hreflang="x-default" href="${getCanonical('/docs/')}">`);
@@ -345,6 +347,8 @@ function buildAlternateTags(pageType, indent = '    ') {
 }
 
 function buildHead({ title, description, canonical, alternates, extraHead = '', stylesheetHref, scriptSrc, includeManifest = true }) {
+  // Centralize head generation so validators can assume one canonical SEO shape across docs
+  // overviews, landing pages, and the static demo.
   return `  <head>\n    <meta charset="utf-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1">\n    <title>${title}</title>\n    <meta name="description" content="${description}">\n    <meta name="robots" content="index, follow, max-image-preview:large">\n    <meta name="application-name" content="LetBooks">\n    <link rel="canonical" href="${canonical}">\n${alternates ? `${alternates}\n` : ''}${buildFaviconTags({ includeManifest })}\n    <meta name="theme-color" content="#0f5b45">\n    <meta property="og:title" content="${title}">\n    <meta property="og:description" content="${description}">\n    <meta property="og:image" content="${ogImageUrl}">\n    <meta property="og:image:alt" content="LetBooks social preview image">\n    <meta property="og:url" content="${canonical}">\n    <meta property="og:type" content="website">\n    <meta property="og:site_name" content="LetBooks">\n    <meta name="twitter:card" content="summary_large_image">\n    <meta name="twitter:title" content="${title}">\n    <meta name="twitter:description" content="${description}">\n    <meta name="twitter:image" content="${ogImageUrl}">\n    <meta name="twitter:image:alt" content="LetBooks social preview image">\n${extraHead}${stylesheetHref ? `    <link rel="stylesheet" href="${stylesheetHref}">\n` : ''}${scriptSrc ? `    <script src="${scriptSrc}" defer></script>\n` : ''}  </head>`;
 }
 

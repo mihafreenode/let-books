@@ -36,6 +36,9 @@ for (const contentType of CONFIG.contentTypes) {
     ? path.join(DOCS_DIR, contentType, 'en')
     : path.join(DOCS_DIR, contentType);
 
+  // Blog keeps English under docs/blog/en/, while the other content families use docs/<type>/
+  // as their English source root. Coverage reporting needs to honor that mixed layout.
+
   if (!fs.existsSync(englishDir)) continue;
 
   const englishFiles = fs.readdirSync(englishDir)
@@ -43,6 +46,8 @@ for (const contentType of CONFIG.contentTypes) {
     .sort();
 
   for (const fileName of englishFiles) {
+    // Filename-based slug extraction is enough here because this validator is only proving file
+    // presence and locale coverage, not semantic metadata correctness.
     const slug = fileName.replace(/\.md$/, '');
     const languages = ['en'];
 

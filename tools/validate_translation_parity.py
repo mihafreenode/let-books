@@ -38,6 +38,17 @@ from localization_alignment import align_blocks, load_document, load_sidecar, si
 ROOT_DIR = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT_DIR / "docs"
 CONFIG = json.loads((ROOT_DIR / "tools" / "docs-config.json").read_text(encoding="utf-8"))
+# Match ASCII word-like fragments that are likely to indicate untranslated English prose.
+#
+# Examples matched:
+# - translation
+# - product-quality
+# - user's
+#
+# Representative non-matches:
+# - ISBN
+# - 2026
+# - локализација
 WORD_RE = re.compile(r"[A-Za-z][A-Za-z'-]*")
 ENGLISH_MARKERS = {
     "a", "an", "and", "are", "as", "be", "because", "but", "by", "can", "do", "does", "for",
@@ -90,11 +101,15 @@ def infer_locale_from_path(path: str) -> str:
 
 
 def extract_urls(text: str) -> list[str]:
+    # Only extract Markdown inline-link targets. Parity checking cares about whether navigable
+    # references survived translation, not about every bare URL-like token in prose.
     return re.findall(r"\[[^\]]+\]\(([^)]+)\)", text)
 
 
 def is_acronym_like(text: str) -> bool:
     candidate = text.strip()
+    # Short all-caps strings are often expected to remain identical across locales.
+    # This avoids warning on metadata titles such as ISBN or CI/CD.
     return bool(candidate) and len(candidate) <= 10 and bool(re.fullmatch(r"[A-Z0-9-]+", candidate))
 
 
@@ -108,6 +123,9 @@ def contains_suspicious_english_fragment(text: str, block_type: str) -> bool:
     words = extract_ascii_words(text)
     if len(words) < 5:
         return False
+    # The heuristic intentionally favors recall over precision. A few manual reviews are cheaper
+    # than publishing substantial English fragments inside localized prose. Requiring multiple
+    # markers plus a density threshold keeps short quotations and isolated terms from triggering.
     marker_count = sum(1 for word in words if word in ENGLISH_MARKERS)
     unique_markers = {word for word in words if word in ENGLISH_MARKERS}
     return marker_count >= 4 and len(unique_markers) >= 3 and (marker_count / max(len(words), 1)) >= 0.25
@@ -133,6 +151,12 @@ def is_intentional_source_snippet_block(source_block, target_block) -> bool:
 
 def normalize_url_for_comparison(url: str, locale: str) -> str:
     normalized = url.strip()
+    # Normalize locale-bearing docs paths into a locale-agnostic template so equivalent links are
+    # compared semantically instead of literally.
+    #
+    # Example for locale `fr`:
+    # - /docs/wiki/en/page.html -> /docs/wiki/{locale}/page.html
+    # - ../en/page.md -> ../{locale}/page.md
     normalized = re.sub(r"/docs/(learning|wiki|topics|blog)/(en|sl|hr|bs|sr-Latn|sr-Cyrl|mk|sq|de|it|fr|es)/", r"/docs/\1/{locale}/", normalized)
     normalized = re.sub(r"\.\./(en|sl|hr|bs|sr-Latn|sr-Cyrl|mk|sq|de|it|fr|es)/", "../{locale}/", normalized)
     return normalized
@@ -195,6 +219,8 @@ def validate_pair(source_path: Path, target_path: Path, locale: str) -> dict:
             and similarity(source_block.text, target_block.text) >= 0.96
             and not is_intentional_source_snippet_block(source_block, target_block)
         ):
+            # Similarity is only meaningful on substantial prose. The word-count floor prevents
+            # short headings or labels from looking like untranslated regressions.
             findings.append(issue("warning", "untranslated source-language fragments", source_path, target_path, source_block.start_line, target_block.start_line, "target block is too similar to source block"))
 
         if (

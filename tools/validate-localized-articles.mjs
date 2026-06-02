@@ -46,6 +46,8 @@ const STRONG_RULES = {
   'documentation-is-part-of-the-product': {
     locales: Object.fromEntries(
       LOCALES.filter((locale) => locale !== 'en').map((locale) => [locale, [
+        // These semantic sentinels are intentionally short and stable. They prove that the
+        // article's key conclusions survived translation instead of checking general style.
         /semantic-parity: broad-audiences/u,
         /semantic-parity: practical-test/u,
         /semantic-parity: documentation-as-product-distinction/u,
@@ -238,12 +240,15 @@ function getLocalizedPath(contentType, locale, fileName) {
 }
 
 function stripFrontmatter(content) {
+  // Body heuristics should compare reader-facing prose, not metadata density.
   return content.replace(/^---\n[\s\S]*?\n---\n/, '');
 }
 
 function collectStats(body) {
   return {
     wordCount: countWords(body),
+    // Count only major `##` sections. H2 density is a more stable cross-locale proxy for article
+    // structure than lower-level headings, which vary more during translation.
     headingCount: (body.match(/^##\s+/gm) ?? []).length,
     blockquoteCount: (body.match(/^>\s+/gm) ?? []).length,
     orderedListCount: (body.match(/^\d+\.\s+/gm) ?? []).length,
@@ -251,6 +256,8 @@ function collectStats(body) {
 }
 
 function countWords(body) {
+  // Remove code spans, Markdown links, and punctuation before counting so the shortening
+  // heuristic measures explanatory prose rather than markup density or URL length.
   return body
     .replace(/`[^`]*`/g, ' ')
     .replace(/\[[^\]]*\]\([^)]*\)/g, ' ')

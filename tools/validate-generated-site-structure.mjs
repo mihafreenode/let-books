@@ -79,6 +79,15 @@ function warn(filePath, index, message) {
 
 function parseAttributes(raw) {
   const attrs = new Map();
+  // Minimal attribute parser for controlled generated HTML.
+  //
+  // Matches examples like:
+  // - class="site-header"
+  // - data-page-type="article"
+  // - aria-label="Search"
+  //
+  // It intentionally does not cover every HTML edge case because the validator only needs the
+  // attribute forms emitted by the repo generators.
   const regex = /([:\w-]+)(?:\s*=\s*"([^"]*)")?/g;
   let match;
   while ((match = regex.exec(raw)) !== null) {
@@ -104,6 +113,8 @@ function createNode(tag, attrs, parent, start, openEnd) {
 function parseHtml(content) {
   const root = createNode('root', new Map(), null, 0, 0);
   const stack = [root];
+  // Lightweight scanner for repo-generated HTML. The validator cares about tag nesting,
+  // classes, and wrapper duplication more than full browser-grade parsing fidelity.
   const tagRegex = /<\/?([a-zA-Z][\w:-]*)([^>]*)>/g;
   let match;
 
@@ -207,6 +218,8 @@ function resolveRepoPath(baseDir, href) {
   }
 
   if (cleanHref.startsWith('/')) {
+    // Keep absolute generated links inside the repository tree. This prevents malformed output
+    // from being mistaken for a valid cross-root path.
     const candidate = path.join(ROOT, cleanHref.replace(/^\//, ''));
     return candidate.startsWith(ROOT) ? candidate : null;
   }
@@ -261,6 +274,8 @@ function validateHtmlFile(filePath) {
 
   const legacyRelatedNodes = findAll(root, (node) => hasClass(node, 'related-articles'));
   const modernRelatedNodes = findAll(root, (node) => hasClass(node, 'related-content'));
+  // Compatibility guard: seeing both old and new related-content systems on one page usually
+  // means two renderers ran or cleanup failed during generation.
   if (legacyRelatedNodes.length > 0 && modernRelatedNodes.length > 0) {
     warn(
       filePath,

@@ -34,9 +34,13 @@ function isDirectory(filePath) {
 
 function readFrontmatter(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
+  // Search indexing only needs a small stable metadata subset, so this regex-based extractor is
+  // intentionally narrower than a full YAML parser.
   const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
   if (!match) return {};
   const yaml = match[1];
+  // `field` comes from generator-controlled call sites. The dynamic regex supports quoted and
+  // unquoted one-line frontmatter values without pulling in heavier parsing dependencies.
   const get = (field) => yaml.match(new RegExp(`^${field}:\s+"?([\s\S]*?)"?\s*$`, 'm'))?.[1]?.trim();
   return {
     title: get('title') || path.basename(filePath, '.md'),
@@ -51,6 +55,8 @@ for (const contentType of CONFIG.contentTypes) {
     const dir = path.join(DOCS_DIR, contentType, locale);
     const fallbackDir = path.join(DOCS_DIR, contentType);
     const effectiveDir = locale === 'en' ? fallbackDir : dir;
+    // English source layout is special for non-blog content families. The generated URL still
+    // points at `/docs/<type>/en/...`, but the source Markdown lives one directory higher.
     if (!isDirectory(effectiveDir)) continue;
 
     for (const file of fs.readdirSync(effectiveDir).sort()) {

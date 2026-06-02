@@ -80,6 +80,8 @@ const FORBIDDEN_EDITORIAL_SOURCE_PATTERNS = [
   // source maps, or other reader-facing editorial material.
   {
     label: 'static-demo source reference',
+    // Match concrete file references only. Mentioning the demo concept is allowed; citing
+    // implementation files as reader-facing evidence is what this validator forbids.
     regex: /\bstatic-demo\/[^\s<>()`'"|]+\.(?:js|cjs|mjs|ts|tsx|jsx|css|html|json)\b/g,
   },
   {
@@ -161,6 +163,9 @@ function normalizeMarkdownTarget(rawTarget) {
     return trimmed.slice(1, -1);
   }
 
+  // Markdown links may include an optional title after the path, for example:
+  //   [label](../page.md "Human title")
+  // Strip that decoration so repo-path resolution compares the actual target only.
   const titleMatch = trimmed.match(/^([^\s]+)\s+".*"$/);
   if (titleMatch) {
     return titleMatch[1];
@@ -209,6 +214,8 @@ function resolveRepoPath(baseDir, href) {
   }
 
   if (cleanHref.startsWith('/')) {
+    // Resolve leading-slash paths against the repository root while still preventing path
+    // traversal. Broken absolute links are common generated-output failures.
     const candidate = path.join(ROOT, cleanHref.replace(/^\//, ''));
     return candidate.startsWith(ROOT) ? candidate : null;
   }
@@ -265,6 +272,9 @@ function listFiles(dir, extensions) {
 function extractHtmlRefs(content) {
   const refs = [];
   const patterns = [
+    // These regexes intentionally scrape the limited set of generated HTML references the repo
+    // emits. They are not meant to be a full HTML parser, only a fast broken-link detector for
+    // predictable static output.
     { type: 'a[href]', regex: /<a[^>]+href="([^"]+)"/g },
     { type: 'img[src]', regex: /<img[^>]+src="([^"]+)"/g },
     { type: 'script[src]', regex: /<script[^>]+src="([^"]+)"/g },
@@ -291,6 +301,8 @@ function extractHtmlRefs(content) {
 
 function extractMarkdownRefs(content) {
   const refs = [];
+  // Match both normal and image Markdown links and capture only the target inside parentheses.
+  // This keeps the validator focused on whether local references still resolve.
   const regex = /!?\[[^\]]*\]\(([^)]+)\)/g;
   let match;
   while ((match = regex.exec(content)) !== null) {
@@ -303,6 +315,8 @@ function extractMarkdownRefs(content) {
 }
 
 function parseFrontmatter(content) {
+  // Narrow frontmatter parser for validator use. It only needs simple scalar keys and list-like
+  // path fields such as `evidence`, `sources`, and `diagrams`.
   const match = content.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return null;
 
@@ -559,6 +573,8 @@ function checkArticleStructure(data) {
 function validateArticleHtml(filePath, article, lang) {
   const content = readCachedFile(filePath);
 
+  // Generated pages must expose locale/page-type markers because runtime language-switch code
+  // and browser-facing tests depend on them. This validator protects that shared contract.
   const localeMatch = content.match(/data-locale="([^"]+)"/);
   if (localeMatch && localeMatch[1] !== lang) {
     fail(`${rel(filePath)}: data-locale is "${localeMatch[1]}", expected "${lang}"`);

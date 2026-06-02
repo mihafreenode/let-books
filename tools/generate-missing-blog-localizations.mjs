@@ -119,6 +119,8 @@ function ensureLocalizedArticle(articleId, locale, englishContent) {
   if (fs.existsSync(targetPath)) return;
 
   let content = englishContent;
+  // Preserve the canonical English structure while swapping only the minimum locale-specific
+  // fields needed for a draft article. That keeps stub generation deterministic and reviewable.
   content = content.replace(/^title:\s+.*$/m, `title: ${TITLES[articleId][locale]}`);
   content = content.replace(/^sources:\n\s+-\s+\.\.\/\.\.\/sources\/en\//m, `sources:\n  - ../../sources/${locale}/`);
   content = content.replace(/^# .*$/m, `# ${TITLES[articleId][locale]}`);
@@ -126,6 +128,8 @@ function ensureLocalizedArticle(articleId, locale, englishContent) {
   const body = stripFrontmatter(content);
   const bodyWithNote = body.replace(/^# .*\n/m, `$&\n${DRAFT_NOTES[locale]}\n`);
   const localizedFooter = renderOtherLanguages(locale, articleId);
+  // Replace the trailing language footer wholesale so the draft advertises the locale graph for
+  // the current file instead of copying the English footer text unchanged.
   const replacedBody = bodyWithNote.replace(/## Other Languages[\s\S]*$/m, localizedFooter);
   const frontmatter = extractFrontmatter(content);
 
@@ -157,6 +161,8 @@ function renderOtherLanguages(locale, articleId) {
 }
 
 function extractFrontmatter(content) {
+  // Capture the raw frontmatter block verbatim. Stub generation wants to preserve formatting and
+  // key order rather than parse and reserialize metadata.
   const match = content.match(/^---\n[\s\S]*?\n---\n/);
   return match ? match[0] : '';
 }

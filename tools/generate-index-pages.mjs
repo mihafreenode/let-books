@@ -119,6 +119,8 @@ const FAVICON_TAGS = [
 ].join('\n    ');
 
 function buildHreflangTags(section) {
+  // Section index pages are locale entry points, so they need a complete hreflang matrix rather
+  // than relying on later repair. Validators use this as part of the generated-page contract.
   return LOCALES.map((l) => {
     const href = `${SITE_URL}/docs/${section}/${l}/index.html`;
     return `    <link rel="alternate" hreflang="${l}" href="${href}">`;
@@ -127,6 +129,8 @@ function buildHreflangTags(section) {
 
 function buildHead({ title, description, canonical, stylesheetHref, scriptSrc, hreflangTags }) {
   const escaped = description.replace(/"/g, '&quot;');
+  // Mirror the stylesheet path to derive the default script path. This keeps nested locale pages
+  // on the same relative asset contract without hardcoding each depth manually.
   const defaultScriptSrc = stylesheetHref.replace('/css/', '/js/').replace('style.css', 'docs-lang.js');
   const resolvedScriptSrc = scriptSrc || defaultScriptSrc;
   const head = [
@@ -186,6 +190,8 @@ function isFile(p) {
 
 function extractTitleFromHtml(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
+  // Prefer an existing <title> first because some generated pages use richer SEO titles than the
+  // visible H1. Falling back to H1 keeps the generator resilient for in-progress content.
   const m = content.match(/<title>([^<]+?)\s*(?:\|?\s*LetBooks?)?\s*<\/title>/i);
   if (m) return m[1].trim();
   const h1 = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
@@ -205,6 +211,8 @@ function readFrontmatterValue(filePath, field) {
   const content = fs.readFileSync(filePath, 'utf8');
   const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
   if (!match) return null;
+  // Single-field regex extraction is enough here because index generation reads a very small
+  // frontmatter subset and benefits from staying dependency-light.
   const fieldMatch = match[1].match(new RegExp(`^${field}:\s+"?(.+?)"?\s*$`, 'm'));
   return fieldMatch ? fieldMatch[1] : null;
 }
@@ -667,6 +675,8 @@ function updateDocIndexNavLinks() {
 
     // Match the nav link regardless of localized link text
     // Pattern: <a class="nav-link" href="../blog/<locale>/isbn-not-a-database.html">...</a>
+    // Patch same-locale navigation to explicit `index.html` targets so generated section links
+    // stay stable for static hosting and browser-facing tests.
     const regex = new RegExp(
       `(<a\\s+class="nav-link"\\s+href="../blog/${locale}/)isbn-not-a-database\\.html("[^>]*>.*?</a>)`
     );

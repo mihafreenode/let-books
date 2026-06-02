@@ -70,6 +70,8 @@ function collectPages() {
     for (const doc of docPages) {
       const filePath = path.join(DOCS_DIR, locale, doc);
       if (isFile(filePath)) {
+        // Strip `.html` only to classify the page family. The generated path itself keeps the
+        // explicit filename because static hosting and validators both depend on that shape.
         const name = doc.replace(/\.html$/, '');
         const group = name === 'index.html' ? 'docs-home' : 'doc-page';
         pages.push({ path: `/docs/${locale}/${doc}`, group });
@@ -136,6 +138,8 @@ function generateHumanSitemap(pages) {
 
   for (const p of pages) {
     const info = PRIORITIES[p.group];
+    // Human sitemap labels are derived mechanically from the priority-group keys. This keeps the
+    // report auditable without maintaining a second hand-written label map.
     const label = p.group.replace('-', ' ').replace(/\b\w/g, (c) => c.toUpperCase());
     lines.push(`| [${p.path}](${SITE_URL}${p.path}) | ${label} | ${info.priority} |`);
   }

@@ -734,6 +734,8 @@ def read_text(path: Path) -> str:
 def parse_frontmatter(text: str) -> tuple[dict[str, Any], str]:
     if not text.startswith("---\n"):
         return {}, text
+    # Capture the first frontmatter block only. The generator assumes repo-controlled Markdown
+    # that starts YAML at byte zero, which keeps this fast and deterministic.
     match = re.match(r"^---\n(.*?)\n---\n?(.*)$", text, re.S)
     if not match:
         return {}, text
@@ -749,6 +751,10 @@ def parse_simple_yaml(raw: str) -> dict[str, Any]:
     except Exception:
         pass
 
+    # Fallback parser for the subset of YAML the repo actually uses in frontmatter: scalar keys,
+    # lists, nested maps, and simple block scalars. This avoids making generation depend on
+    # PyYAML everywhere while staying compatible with existing docs metadata.
+
     lines = raw.splitlines()
     data: dict[str, Any] = {}
     i = 0
@@ -757,6 +763,8 @@ def parse_simple_yaml(raw: str) -> dict[str, Any]:
         if not line.strip():
             i += 1
             continue
+        # Match semantic frontmatter keys such as `title`, `article_id`, or
+        # `canonical_language`. Anything more complex is intentionally ignored by this fallback.
         match = re.match(r"^([A-Za-z0-9_-]+):\s*(.*)$", line)
         if not match:
             i += 1
@@ -853,6 +861,8 @@ def add_variant(entries: dict[tuple[str, str], ContentEntry], content_type: str,
     frontmatter, body = parse_frontmatter(raw)
     slug = str(frontmatter.get("article_id") or source.stem)
     title = str(frontmatter.get("title") or source.stem.replace("-", " "))
+    # Normalize summary whitespace because search, SEO, and validator layers compare summary-like
+    # text across multiple artifacts and should not drift on line wrapping alone.
     summary = normalize_whitespace(str(frontmatter.get("summary") or derive_summary(body)))
     body_for_render = strip_generated_sections(body, content_type)
     body_for_render = strip_leading_summary_section(body_for_render, summary, content_type)
@@ -923,6 +933,8 @@ def parse_related_pages_section(body: str, content_type: str) -> list[ContentRef
     lines = body.splitlines()
     refs: list[ContentRef] = []
     in_section = False
+    # Accept every localized "Related Pages" heading plus the English fallback. Missing an
+    # explicit related-page link is more damaging than tolerating a little extra matching logic.
     section_headings = {value.lower() for value in RELATED_PAGES_SECTION_HEADINGS.values()} | {"related pages"}
     for line in lines:
         if line.startswith("## "):
@@ -945,6 +957,12 @@ def parse_related_pages_section(body: str, content_type: str) -> list[ContentRef
 
 
 def resolve_ref_path(raw_ref: str, current_type: str) -> ContentRef | None:
+    # Supported reference examples:
+    # - ../wiki/en/page.md
+    # - ../blog/page.md
+    # - page.md
+    # The generator only needs content type and slug; locale is resolved later when choosing the
+    # best variant to link.
     match = re.match(r"^(?:\.\./)?(?P<content_type>blog|learning|wiki)(?:/(?P<locale>[^/]+))?/(?P<slug>[^/]+)\.md$", raw_ref)
     if match:
         return ContentRef(match.group("content_type"), match.group("slug"))
@@ -1022,6 +1040,8 @@ def strip_leading_summary_section(body: str, summary: str, content_type: str) ->
 def build_keywords(title: str, summary: str, slug: str, topics: list[str]) -> set[str]:
     tokens = set(topics)
     text = f"{title} {summary} {slug.replace('-', ' ')}".lower()
+    # Token regex captures useful Latin and Cyrillic word fragments while filtering punctuation
+    # noise. This is a lightweight keyword helper, not a general linguistic tokenizer.
     for token in re.findall(r"[a-z0-9]{3,}|[\u00c0-\u024f\u0400-\u04ff]{3,}", text):
         tokens.add(token)
     return tokens

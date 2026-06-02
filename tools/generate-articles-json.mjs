@@ -31,12 +31,17 @@ function isFile(p) {
 
 function readFrontmatter(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
+  // The article registry depends on only a few scalar frontmatter fields. Keeping this parser
+  // narrow makes generation portable and avoids coupling the registry to full YAML behavior.
   const m = content.match(/^---\s*\n([\s\S]*?)\n---/);
   if (!m) return {};
   const yaml = m[1];
   const fm = {};
 
-  // Extract title
+  // Regex notes:
+  // - `title` may be quoted or unquoted on one line.
+  // - `canonical_language` and `article_id` are simple scalar fields.
+  // This is a compatibility parser for repo frontmatter conventions, not a general YAML reader.
   const titleMatch = yaml.match(/^title:\s+"?(.+?)"?\s*$/m);
   if (titleMatch) fm.title = titleMatch[1].replace(/^"(.*)"$/, '$1');
 
@@ -53,7 +58,8 @@ function readFrontmatter(filePath) {
 function collectArticles() {
   const articles = {};
 
-  // Discover articles from English files
+  // English remains the canonical discovery root. Discovering from every locale would allow
+  // partially generated localized files to masquerade as first-class new articles.
   const enDir = path.join(BLOG_DIR, 'en');
   const files = fs.readdirSync(enDir).sort();
   for (const file of files) {

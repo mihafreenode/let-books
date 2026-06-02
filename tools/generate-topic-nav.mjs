@@ -143,6 +143,9 @@ function isDirectory(p) {
 
 function readFrontmatter(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
+  // This is a legacy generator with a deliberately narrow frontmatter parser. It extracts only
+  // the fields topic navigation ever used, which keeps the script compatible with older content
+  // files without introducing a heavier parsing dependency.
   const m = content.match(/^---\s*\n([\s\S]*?)\n---/);
   if (!m) return {};
   const yaml = m[1];
@@ -161,6 +164,8 @@ function readFrontmatter(filePath) {
 
 function readHtmlTitle(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
+  // Prefer the generated `<title>` first because it reflects the final published surface. H1 is
+  // only a fallback for older or partially generated files.
   const m = content.match(/<title>([^<]+?)\s*(?:\|?\s*LetBooks?)?\s*<\/title>/i);
   if (m) return m[1].trim();
   const h1 = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
@@ -215,6 +220,11 @@ function buildTopicIndex(articleData) {
 function addTopicNavToArticle(filePath, articleId, locale, articleData, topicIndex) {
   console.log(`  SKIP ${path.relative(ROOT, filePath)} (legacy topic nav disabled; generated docs own related navigation)`);
   return false;
+
+  // Historical note:
+  // this code remains as documented legacy behavior because topic navigation ownership moved to
+  // `generate_docs_content.py`. The early return is intentional compatibility preservation, not
+  // dead code by accident.
 
   const info = articleData[locale]?.[articleId];
   if (!info || !info.topics || info.topics.length === 0) return false;
@@ -368,6 +378,8 @@ ${groupSections}
 
   // Find the <ul> inside the section and replace with topic groups
   // Pattern: <ul>\n              <li><a href="...">...</a></li>\n              ...\n          </ul>
+  // Match the flat article list emitted by the old blog index renderer so legacy topic grouping
+  // can wrap it without trying to parse arbitrary HTML.
   const ulRegex = /<ul>\s*\n((?:\s*<li><a[^>]*>[^<]*<\/a><\/li>\s*\n)+)\s*<\/ul>/;
   const ulMatch = content.match(ulRegex);
 

@@ -246,6 +246,8 @@ function shouldCompare(localizedText, englishText) {
   }
 
   if (/^[A-Z0-9/&+.-]{2,8}$/.test(localized)) {
+    // Short uppercase tokens are usually acronyms or neutral labels like ISBN, OCR, QR, or
+    // CI/CD. Treating them as leaks would create high-noise false positives.
     return false;
   }
 
@@ -406,6 +408,8 @@ function collectComparableEntries(filePath, content, root) {
 }
 
 function validateLocalizedSvgText(filePath, localizedSvgs, englishSvgs) {
+  // Localized Markdown can point at an English SVG even when the surrounding page text is fully
+  // translated. Compare SVG text separately to catch that generated-output-specific failure.
   const limit = Math.min(localizedSvgs.length, englishSvgs.length);
   for (let index = 0; index < limit; index += 1) {
     const localizedSvg = localizedSvgs[index];
@@ -433,6 +437,8 @@ function validateLocalizedSvgText(filePath, localizedSvgs, englishSvgs) {
 }
 
 function extractSvgTexts(content) {
+  // SVG labels are extracted from <text> nodes only. That is the reader-facing surface the repo
+  // currently localizes; path data and style attributes are irrelevant to language leakage.
   return [...content.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/g)]
     .map((match) => normalizeText(decodeEntities(stripTags(match[1]))))
     .filter(Boolean);
@@ -444,6 +450,8 @@ function extractTitle(content) {
 }
 
 function extractMeta(content, name) {
+  // `name` is controlled by the validator. Build the regex dynamically so the same extractor can
+  // check multiple metadata surfaces without duplicating parsing code.
   const regex = new RegExp(`<meta\\s+name="${escapeRegExp(name)}"\\s+content="([^"]*)">`, 'i');
   return content.match(regex)?.[1] || '';
 }
@@ -464,6 +472,8 @@ function push(map, category, text, start, node) {
 }
 
 function normalizeText(value) {
+  // Normalize HTML/text noise away before comparison. The validator is trying to prove that
+  // English reader-facing content leaked through, not that two serialized strings are identical.
   return decodeEntities(String(value || ''))
     .replace(/\s+/g, ' ')
     .replace(/[\u200B-\u200D\uFEFF]/g, '')
@@ -471,6 +481,8 @@ function normalizeText(value) {
 }
 
 function decodeEntities(value) {
+  // Decode the entity set that frequently appears in generated pages and SVG labels so escaping
+  // differences do not hide real localization equality.
   return value
     .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
     .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
@@ -539,6 +551,11 @@ function createNode(tag, attrs, parent, start, openEnd) {
 
 function parseAttributes(raw) {
   const attrs = new Map();
+  // Minimal attribute parser for repo-generated markup.
+  // Matches examples like:
+  // - data-page-type="article"
+  // - aria-current="page"
+  // - class="topic-menu__meta"
   const regex = /([:\w-]+)(?:\s*=\s*"([^"]*)")?/g;
   let match;
   while ((match = regex.exec(raw)) !== null) {
