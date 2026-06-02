@@ -37,6 +37,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate .l10n.json sidecars for all localized docs articles.")
     parser.add_argument("--content-type", choices=CONFIG["contentTypes"], help="Limit generation to one docs content type")
     parser.add_argument("--locale", help="Limit generation to one locale")
+    parser.add_argument("--rebuild", action="store_true", help="Ignore existing sidecar metadata and rebuild matches from current content")
     args = parser.parse_args()
 
     generated = 0
@@ -46,13 +47,13 @@ def main() -> int:
 
         source_doc = load_document(source_path)
         target_doc = load_document(target_path)
-        sidecar = load_sidecar(target_path)
+        sidecar = {} if args.rebuild else load_sidecar(target_path)
         matches = align_blocks(source_doc.blocks, target_doc.blocks, sidecar)
         payload = build_sidecar_entries(source_path, target_path, locale, source_doc.blocks, target_doc.blocks, matches)
         save_sidecar(target_path, payload)
         generated += 1
 
-    print(json.dumps({"generatedSidecars": generated, "contentType": args.content_type, "locale": args.locale}, indent=2))
+    print(json.dumps({"generatedSidecars": generated, "contentType": args.content_type, "locale": args.locale, "rebuilt": args.rebuild}, indent=2))
     return 0
 
 

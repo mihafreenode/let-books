@@ -63,6 +63,12 @@ class AlignmentMatch:
     strategy: str
 
 
+HEADING_FUZZY_MIN_SCORE = 0.80
+GENERAL_FUZZY_MIN_SCORE = 0.55
+POSITIONAL_MIN_SCORE = 0.72
+POSITIONAL_MAX_DISTANCE = 3
+
+
 def split_frontmatter(content: str) -> tuple[str, str]:
     match = FRONTMATTER_RE.match(content)
     if not match:
@@ -403,6 +409,10 @@ def align_blocks(
 ) -> list[AlignmentMatch]:
     sidecar = sidecar or {}
     sidecar_entries = {entry.get("blockId"): entry for entry in sidecar.get("blocks", [])}
+    source_index_by_id = {block.block_id: block.index for block in source_blocks}
+    target_index_by_id = {block.block_id: block.index for block in target_blocks}
+    source_structure = build_block_structure(source_blocks)
+    target_structure = build_block_structure(target_blocks)
     available_target_ids = {block.block_id for block in target_blocks}
     matches: list[AlignmentMatch] = []
 
@@ -415,21 +425,54 @@ def align_blocks(
                 available_target_ids.remove(target_id)
                 continue
 
+        same_type_candidates = [block for block in target_blocks if block.block_id in available_target_ids and block.block_type == source_block.block_type]
+
+        if source_block.block_type == "heading":
+            heading_match = match_heading_block(source_block, same_type_candidates, source_structure, target_structure)
+            if heading_match is not None:
+                matches.append(heading_match)
+                available_target_ids.remove(heading_match.target_block_id)
+            else:
+                matches.append(AlignmentMatch(source_block.block_id, None, 0.0, "unmatched-low-confidence"))
+            continue
+
+        structural_match = match_structural_block(source_block, same_type_candidates, source_structure, target_structure)
+        if structural_match is not None:
+            matches.append(structural_match)
+            available_target_ids.remove(structural_match.target_block_id)
+            continue
+
         exact_heading_candidates = [
-            block
-            for block in target_blocks
-            if block.block_id in available_target_ids
-            and block.block_type == source_block.block_type
-            and block.heading_path == source_block.heading_path
+            candidate
+            for candidate in same_type_candidates
+            if candidate.heading_path == source_block.heading_path
         ]
         if exact_heading_candidates:
-            best = max(exact_heading_candidates, key=lambda candidate: similarity(source_block.text, candidate.text))
-            score = similarity(source_block.text, best.text)
+            best = min(
+                exact_heading_candidates,
+                key=lambda candidate: (
+                    abs(source_block.index - candidate.index),
+                    -similarity(source_block.text, candidate.text),
+                ),
+            )
+            score = max(similarity(source_block.text, best.text), 0.82)
             matches.append(AlignmentMatch(source_block.block_id, best.block_id, score, "heading-path"))
             available_target_ids.remove(best.block_id)
             continue
 
-        fuzzy_candidates = [block for block in target_blocks if block.block_id in available_target_ids]
+        positional_match = match_positional_block(
+            source_block,
+            same_type_candidates,
+            matches,
+            source_index_by_id,
+            target_index_by_id,
+        )
+        if positional_match is not None:
+            matches.append(positional_match)
+            available_target_ids.remove(positional_match.target_block_id)
+            continue
+
+        fuzzy_candidates = same_type_candidates
         best_block = None
         best_score = -1.0
         best_strategy = "unmatched"
@@ -447,15 +490,161 @@ def align_blocks(
             if score > best_score:
                 best_score = score
                 best_block = candidate
-                best_strategy = "fuzzy" if score >= 0.45 else "position"
+                best_strategy = "fuzzy"
 
-        if best_block is not None and best_score >= 0.32:
+        if best_block is not None and best_score >= GENERAL_FUZZY_MIN_SCORE:
             matches.append(AlignmentMatch(source_block.block_id, best_block.block_id, round(best_score, 3), best_strategy))
             available_target_ids.remove(best_block.block_id)
         else:
-            matches.append(AlignmentMatch(source_block.block_id, None, 0.0, "unmatched"))
+            matches.append(AlignmentMatch(source_block.block_id, None, 0.0, "unmatched-low-confidence"))
 
     return matches
+
+
+def match_heading_block(
+    source_block: MarkdownBlock,
+    candidates: Sequence[MarkdownBlock],
+    source_structure: dict[str, dict],
+    target_structure: dict[str, dict],
+) -> AlignmentMatch | None:
+    if not candidates:
+        return None
+
+    source_info = source_structure[source_block.block_id]
+    structural_candidates = [
+        candidate
+        for candidate in candidates
+        if target_structure[candidate.block_id]["section_path"] == source_info["section_path"]
+    ]
+    if len(structural_candidates) == 1:
+        candidate = structural_candidates[0]
+        return AlignmentMatch(source_block.block_id, candidate.block_id, 1.0, "heading-structure")
+
+    source_heading = current_heading_label(source_block)
+    exact_candidates = [candidate for candidate in candidates if current_heading_label(candidate) == source_heading]
+    if len(exact_candidates) == 1:
+        candidate = exact_candidates[0]
+        return AlignmentMatch(source_block.block_id, candidate.block_id, 1.0, "heading-text")
+
+    best_candidate = None
+    best_score = -1.0
+    for candidate in candidates:
+        score = similarity(source_heading, current_heading_label(candidate))
+        if score > best_score:
+            best_score = score
+            best_candidate = candidate
+
+    if best_candidate is not None and best_score >= HEADING_FUZZY_MIN_SCORE:
+        return AlignmentMatch(source_block.block_id, best_candidate.block_id, round(best_score, 3), "heading-fuzzy")
+    return None
+
+
+def match_structural_block(
+    source_block: MarkdownBlock,
+    candidates: Sequence[MarkdownBlock],
+    source_structure: dict[str, dict],
+    target_structure: dict[str, dict],
+) -> AlignmentMatch | None:
+    if not candidates:
+        return None
+
+    source_info = source_structure[source_block.block_id]
+    structural_candidates = [
+        candidate
+        for candidate in candidates
+        if target_structure[candidate.block_id]["section_path"] == source_info["section_path"]
+        and target_structure[candidate.block_id]["ordinal_in_section"] == source_info["ordinal_in_section"]
+    ]
+    if len(structural_candidates) == 1:
+        candidate = structural_candidates[0]
+        return AlignmentMatch(source_block.block_id, candidate.block_id, 0.95, "section-order")
+    return None
+
+
+def match_positional_block(
+    source_block: MarkdownBlock,
+    candidates: Sequence[MarkdownBlock],
+    matches: Sequence[AlignmentMatch],
+    source_index_by_id: dict[str, int],
+    target_index_by_id: dict[str, int],
+) -> AlignmentMatch | None:
+    if not candidates:
+        return None
+
+    previous_match = previous_resolved_match(source_block.index, matches, source_index_by_id)
+    next_match = None
+    if previous_match is None or previous_match.target_block_id is None:
+        return None
+
+    previous_target_index = target_index_by_id.get(previous_match.target_block_id)
+    if previous_target_index is None:
+        return None
+
+    best_candidate = None
+    best_score = -1.0
+    for candidate in candidates:
+        candidate_index = target_index_by_id[candidate.block_id]
+        distance = candidate_index - previous_target_index
+        if distance <= 0 or distance > POSITIONAL_MAX_DISTANCE:
+            continue
+        score = similarity(source_block.text, candidate.text)
+        if score > best_score:
+            best_score = score
+            best_candidate = candidate
+
+    if best_candidate is not None and best_score >= POSITIONAL_MIN_SCORE:
+        return AlignmentMatch(source_block.block_id, best_candidate.block_id, round(best_score, 3), "position-neighbor")
+    return next_match
+
+
+def previous_resolved_match(source_index: int, matches: Sequence[AlignmentMatch], source_index_by_id: dict[str, int]) -> AlignmentMatch | None:
+    for match in reversed(matches):
+        if match.target_block_id is None:
+            continue
+        if source_index_by_id.get(match.source_block_id, -1) < source_index:
+            return match
+    return None
+
+
+def current_heading_label(block: MarkdownBlock) -> str:
+    if block.block_type != "heading":
+        return ""
+    match = HEADING_RE.match(first_text_line(block.text))
+    heading_text = match.group(2) if match else block.text
+    return slugify(heading_text)
+
+
+def build_block_structure(blocks: Sequence[MarkdownBlock]) -> dict[str, dict]:
+    section_path_by_id: dict[str, tuple[int, ...]] = {}
+    ordinal_by_id: dict[str, int] = {}
+    heading_counters = [0] * 6
+    current_section_path: tuple[int, ...] = ()
+    section_type_counts: dict[tuple[tuple[int, ...], str], int] = {}
+
+    for block in blocks:
+        if block.block_type == "heading":
+            match = HEADING_RE.match(first_text_line(block.text))
+            level = len(match.group(1)) if match else max(len(block.heading_path), 1)
+            heading_counters[level - 1] += 1
+            for reset_index in range(level, len(heading_counters)):
+                heading_counters[reset_index] = 0
+            current_section_path = tuple(value for value in heading_counters[:level] if value > 0)
+            section_path = current_section_path
+        else:
+            section_path = current_section_path
+
+        key = (section_path, block.block_type)
+        section_type_counts[key] = section_type_counts.get(key, 0) + 1
+        section_path_by_id[block.block_id] = section_path
+        ordinal_by_id[block.block_id] = section_type_counts[key]
+
+    return {
+        block.block_id: {
+            "section_path": section_path_by_id[block.block_id],
+            "ordinal_in_section": ordinal_by_id[block.block_id],
+        }
+        for block in blocks
+    }
 
 
 def common_prefix_length(left: Sequence[str], right: Sequence[str]) -> int:
