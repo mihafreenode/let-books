@@ -1,17 +1,20 @@
 ---
 # Purpose:
-# - Rebuild, validate, and deploy the documentation site to GitHub Pages from main.
+# - Rebuild, validate, and deploy the documentation site to GitHub
+#   Pages from main.
 #
 # Why:
-# - Deployment should not rely on assumptions from earlier CI runs or on pre-generated local
-#   artifacts. The publish path needs its own trusted rebuild and validation pass.
+# - Deployment should not rely on assumptions from earlier CI runs
+#   or on pre-generated local artifacts. The publish path needs its
+#   own trusted rebuild and validation pass.
 #
 # Protects:
-# - Deployment readiness, generated artifact freshness, localization quality, and GitHub
-#   Pages publishing safety.
+# - Deployment readiness, generated artifact freshness,
+#   localization quality, and GitHub Pages publishing safety.
 #
 # Failure Impact:
-# - A broken, stale, or partially localized site could be published to production.
+# - A broken, stale, or partially localized site could be published
+#   to production.
 #
 # Related:
 # - .github/workflows/README.md
@@ -99,8 +102,9 @@ jobs:
           magick --version || convert --version
           npx playwright --version
 
-      # Deployment rebuilds the site from source instead of trusting earlier CI artifacts.
-      # This keeps the published Pages output tied to the current main branch state.
+      # Deployment rebuilds the site from source instead of trusting
+      # earlier CI artifacts. This keeps the published Pages output
+      # tied to the current main branch state.
       - name: Bootstrap localization Python tooling
         run: bash scripts/bootstrap-localization-tools.sh
 
@@ -128,8 +132,9 @@ jobs:
       - name: Generate articles registry
         run: node tools/generate-articles-json.mjs
 
-      # Keep the same layered localization pipeline as CI so publishing is blocked by the
-      # same source, semantic, parity, and rendered-output guarantees.
+      # Keep the same layered localization pipeline as CI so
+      # publishing is blocked by the same source, semantic, parity,
+      # and rendered-output guarantees.
       - name: Documentation parity audit
         run: |
           node tools/validate-content-parity.mjs \
@@ -169,8 +174,9 @@ jobs:
       - name: Generate sitemap
         run: node tools/generate-sitemap.mjs
 
-      # Browser-facing docs checks stay in the deployment workflow because a page can pass
-      # file-level validation and still fail print or runtime rendering expectations.
+      # Browser-facing docs checks stay in the deployment workflow
+      # because a page can pass file-level validation and still fail
+      # print or runtime rendering expectations.
       - name: Docs browser validation
         run: |
           set -euo pipefail
@@ -184,8 +190,9 @@ jobs:
             exit 1
           }
 
-          # Preserve the local server log on failure so deployment issues can be diagnosed
-          # from workflow output without re-running the full Pages build locally.
+          # Preserve the local server log on failure so deployment
+          # issues can be diagnosed from workflow output without
+          # re-running the full Pages build locally.
           cleanup() {
             if [ -n "${SERVER_PID:-}" ] \
               && kill -0 "$SERVER_PID" 2>/dev/null; then
@@ -244,13 +251,15 @@ jobs:
       - name: Validate static-demo localization
         run: node tests/static-demo/localization-smoke.js
 
-      # Validate the docs tree immediately before artifact upload so Pages publishing depends
-      # on the final generated output, not only on earlier intermediate steps succeeding.
+      # Validate the docs tree immediately before artifact upload so
+      # Pages publishing depends on the final generated output, not
+      # only on earlier intermediate steps succeeding.
       - name: Validate docs tree
         run: node tools/validate-blog.mjs
 
-      # Upload the repository root because the docs site, static demo, favicon package, and
-      # top-level assets are published together as one Pages artifact.
+      # Upload the repository root because the docs site, static demo,
+      # favicon package, and top-level assets are published together
+      # as one Pages artifact.
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -263,8 +272,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # Deployment is intentionally split from build. Pages should only receive an artifact
-      # produced by a fully successful validated build job.
+      # Deployment is intentionally split from build. Pages should
+      # only receive an artifact produced by a fully successful
+      # validated build job.
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
