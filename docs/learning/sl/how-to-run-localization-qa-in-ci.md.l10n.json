@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-run-localization-qa-in-ci.md",
+  "targetPath": "docs/learning/sl/how-to-run-localization-qa-in-ci.md",
+  "locale": "sl",
+  "blocks": [
+    {
+      "blockId": "how-to-run-localization-qa-in-ci-heading-how-to-run-localization-qa-in-ci-4c872ca7-1",
+      "sourceHash": "4c872ca7ae27e0f20aa60c560d86b2f0404cd7972ec6b321bb4d167efc98f80b",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci-heading-kako-izvajati-lokalizacijski-qa-v-ci-edfdfea9-1",
+      "translationHash": "edfdfea9bdbde7ccd781ee8f2f543e283d4a186584cdd1fe9e6f2b261fd2e16c",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Run Localization QA in CI"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/sorodne-strani-heading-sorodne-strani-de8beb6b-1",
+      "translationHash": "de8beb6b72cdb9b27acbd0303cd746b8f93d461deb67dd17bd428af0b0d4240a",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        31,
+        31
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/summary-paragraph-this-guide-outlines-how-to-turn-recurring-localization-revie-e96cf55b-1",
+      "sourceHash": "e96cf55bba060d8f06736cb0b4ac01f6ec53afb6f43db805ed37405435c60341",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/povzetek-paragraph-ta-vodič-opisuje-kako-ponavljajoča-se-pričakovanja-glede-pre-cd6f1b1b-1",
+      "translationHash": "cd6f1b1b9d8437f7dfcff848252718570af54dcadaa1cab16131beafd08e66f3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/start-with-stable-checks-heading-start-with-stable-checks-d76aae4f-1",
+      "sourceHash": "d76aae4fbf72babe3bf31d789b713d56ee722729bbbb7a6f219f999e65f86e32",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/začni-s-stabilnimi-preverjanji-heading-začni-s-stabilnimi-preverjanji-06e9b5df-1",
+      "translationHash": "06e9b5df04bec513f5158a8db817ce774b5e4b597ef9993f570b8c3975f77d05",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Start with stable checks"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/start-with-stable-checks-list-missing-files-3b9c156a-1",
+      "sourceHash": "3b9c156a533da9f6a94a851f3fb1e691979e63382537bb76d28801d8eeefe0c2",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/začni-s-stabilnimi-preverjanji-list-manjkajoče-datoteke-31ab9ac9-1",
+      "translationHash": "31ab9ac958e643e036022f9f81d44ed11d31713cd3e78b43684ede2de8069300",
+      "blockType": "list",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Start with stable checks"
+      ],
+      "sourceLineRange": [
+        18,
+        22
+      ],
+      "targetLineRange": [
+        18,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/add-harder-checks-later-heading-add-harder-checks-later-325504ca-1",
+      "sourceHash": "325504ca75d709478e9059ddccabc7186ccaac73febc67c2c95af8440f3bb935",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/težja-preverjanja-dodaj-pozneje-heading-težja-preverjanja-dodaj-pozneje-d283000c-1",
+      "translationHash": "d283000c78e42b0783b2d73c41335d1822ed6a006cbb089dacadfdbe1db23180",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Add harder checks later"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/add-harder-checks-later-list-spellcheck-in-many-languages-cc1dabf9-1",
+      "sourceHash": "cc1dabf9831c64bd7a41e7c7e340d376d54b80ebad249050ed8cfe3b8142a62c",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/težja-preverjanja-dodaj-pozneje-list-črkovalni-pregled-v-več-jezikih-ad5f272e-1",
+      "translationHash": "ad5f272eca1353f59c8b5d7cffb689361b36b1920481a5ac7bfc7fc113a6e500",
+      "blockType": "list",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Add harder checks later"
+      ],
+      "sourceLineRange": [
+        26,
+        29
+      ],
+      "targetLineRange": [
+        26,
+        29
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/povzetek-heading-povzetek-08850f25-1",
+      "translationHash": "08850f257d79e932092c786638a375dea8449fce5744b6a5c05c4807268fa170",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        31,
+        31
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-run-localization-qa-in-ci/related-pages-list-list-cfa37cfd-1",
+      "sourceHash": "cfa37cfdfd4b9dea810d3e5106a1c090617ba6b4944338a6df317d8bcae7bfa7",
+      "targetBlockId": "kako-izvajati-lokalizacijski-qa-v-ci/sorodne-strani-list-list-cfa37cfd-1",
+      "translationHash": "cfa37cfdfd4b9dea810d3e5106a1c090617ba6b4944338a6df317d8bcae7bfa7",
+      "blockType": "list",
+      "headingPath": [
+        "How to Run Localization QA in CI",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        33,
+        35
+      ],
+      "targetLineRange": [
+        33,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

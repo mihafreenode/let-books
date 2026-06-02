@@ -1,0 +1,521 @@
+{
+  "version": 1,
+  "sourcePath": "docs/blog/en/localization-at-scale.md",
+  "targetPath": "docs/blog/sl/localization-at-scale.md",
+  "locale": "sl",
+  "blocks": [
+    {
+      "blockId": "localization-at-scale-heading-localization-at-scale-806207c8-1",
+      "sourceHash": "806207c88f29079136e50c890c31951afb07a5b1aacae13625548e56c7f12445",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu-heading-lokalizacija-v-velikem-obsegu-69b9789b-1",
+      "translationHash": "69b9789b75a098c55cefaae301d88623ed9d41ede659f2574fafe56881fe4a45",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale"
+      ],
+      "sourceLineRange": [
+        35,
+        35
+      ],
+      "targetLineRange": [
+        35,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale-paragraph-many-software-projects-still-treat-localization-as-the-momen-749b28c7-1",
+      "sourceHash": "749b28c7f60d3eaae70e426eb1abbcbeacc25c9be5e5461d15a619111b289055",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu-paragraph-številni-programski-projekti-lokalizacijo-še-vedno-razumejo--fef58799-1",
+      "translationHash": "fef58799cd22c9a8f8f3d2d851064414f91434aa4aaff79db15843a7b8ba7344",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale"
+      ],
+      "sourceLineRange": [
+        37,
+        37
+      ],
+      "targetLineRange": [
+        37,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale-paragraph-localization-at-scale-is-a-system-it-includes-source-writing-92bc0f5d-1",
+      "sourceHash": "92bc0f5d3ea9e6cfd94d96e2b2b83e7ab455a2ffe817943dc8b45565a8ad641d",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu-paragraph-lokalizacija-v-velikem-obsegu-je-sistem-vključuje-izvorno-pi-32ff10fc-1",
+      "translationHash": "32ff10fc372edff10e49e055c60d9ba3a4f864b532120b622642c79091bb5374",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-common-failure-mode-heading-the-common-failure-mode-3d7a6490-1",
+      "sourceHash": "3d7a6490d73695e36413e9086f54287451d1119278274f1b38d20bfb95d0c9aa",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/praktičen-model-heading-praktičen-model-347bf992-1",
+      "translationHash": "347bf9925526d8dc5d43fc046d0e4ec998587a3347a09089858102b267418d52",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "The common failure mode"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        68,
+        68
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-common-failure-mode-paragraph-the-common-failure-mode-is-waiting-too-long-95859582-1",
+      "sourceHash": "9585958290ed3d6d10d9203b12e8ea1e7605e7342f803c8cb01d5b6684cf3769",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/zakaj-problem-ni-samo-prevajanje-paragraph-če-to-ostane-samo-v-angleščini-izdelek-ni-zares-lokaliziran-757dce52-1",
+      "translationHash": "757dce5252564a7637f3a009efe2e299afda3a291564e0f32d214d9803ec39a6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The common failure mode"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-common-failure-mode-paragraph-by-the-time-a-project-decides-it-wants-to-support-multiple-l-7ff22776-1",
+      "sourceHash": "7ff22776736126f62088309bbfe8eab92c132b064434372d5a8386d5a0b43af8",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/pogosta-napaka-paragraph-ko-projekt-ugotovi-da-želi-podpirati-več-jezikov-so-informac-a9c64d79-1",
+      "translationHash": "a9c64d79b54ea0df574ca54337186854466e4fed72c84504acc06139e91f6c39",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The common failure mode"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-heading-why-the-problem-is-bigger-than-translation-3c449e61-1",
+      "sourceHash": "3c449e617ac6c4d11ca32a15e6da4635023529ecadc1b841fe6f9713dfab5506",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/zakaj-problem-ni-samo-prevajanje-heading-zakaj-problem-ni-samo-prevajanje-cab5c76b-1",
+      "translationHash": "cab5c76b9338d3fc54789fce3f419fc18246f3d6cad9a29003b4f50bf4aed9d7",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-paragraph-a-multilingual-user-does-not-only-read-button-labels-they-al-0624f5b5-1",
+      "sourceHash": "0624f5b5353f34a159afb94ce3ce6c945a8d020ee325c5c9e8b806af025b2bb7",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/zakaj-je-to-pomembno-za-let-books-paragraph-to-pomeni-da-lokalizacija-ni-neobvezni-zaključni-sloj-je-del-657c4bd1-1",
+      "translationHash": "657c4bd1aa69d6a6fb916c3ddba1263738ce3edcf36db4c271dd14e66d690606",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-list-navigation-be6d1722-1",
+      "sourceHash": "be6d172293729fec50131eeb11b40d6af31b44e4c7a992e4c40a66f477a0a1aa",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/zakaj-problem-ni-samo-prevajanje-list-navigacijo-7a437a23-1",
+      "translationHash": "7a437a2332138079e6886cc6b83283b8b931070a48a2570a193e84a82ba781ee",
+      "blockType": "list",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        51,
+        58
+      ],
+      "targetLineRange": [
+        51,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-paragraph-if-those-remain-english-only-the-product-is-not-meaningfully-2fd0f89a-1",
+      "sourceHash": "2fd0f89af54849215fdc6d85c1af42e19e37b14d126f197c18bc63768d977981",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/praktičen-model-paragraph-praktičen-model-lokalizacije-v-velikem-obsegu-ima-običajno-p-04de1214-1",
+      "translationHash": "04de1214a1c8d16d1bef8fc7cecbb3fb1efec24a82691095ecb5731a05635291",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        70,
+        70
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-let-books-cares-heading-why-let-books-cares-ccaf741f-1",
+      "sourceHash": "ccaf741f41dc594ab5879e1741fcd9a43df6af1304c82cb5a73a6d468cad5791",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/zakaj-je-to-pomembno-za-let-books-heading-zakaj-je-to-pomembno-za-let-books-0cecf46e-1",
+      "translationHash": "0cecf46e1ee88ecb9fca30bed908b815f4d28cbbeaef0307c11bf2b1dfa29190",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Why Let Books cares"
+      ],
+      "sourceLineRange": [
+        62,
+        62
+      ],
+      "targetLineRange": [
+        62,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-let-books-cares-paragraph-let-books-is-explicitly-designed-for-multilingual-educationa-f72bbcd4-1",
+      "sourceHash": "f72bbcd43bb582c9da4042993831e5555de318c392591820bbb98a6de4420908",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/zakaj-je-to-pomembno-za-let-books-paragraph-let-books-je-izrecno-zasnovan-za-večjezične-zbirke-izobražev-38e86bb7-1",
+      "translationHash": "38e86bb7d2cf18feccf053c99954ea9d73fab9c6b85b048ba67bbef558cf7994",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why Let Books cares"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-let-books-cares-paragraph-that-means-localization-is-not-optional-polish-it-is-part-of-d3318927-1",
+      "sourceHash": "d3318927c7f561e1806ae91fe9d9f83e108d1ba2520abb4a1ef74780f0651824",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/vloga-ai-paragraph-zato-so-zreli-lokalizacijski-sistemi-vse-bolj-podprti-z-ai-n-54dfeb7c-1",
+      "translationHash": "54dfeb7c631d7aea9a938438584e77cda55eb153a3ff489696e5591c81c510e6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why Let Books cares"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/a-practical-model-heading-a-practical-model-6a4f84a3-1",
+      "sourceHash": "6a4f84a300c744c05aaf7437fee7d6419d5fbf7d1a842b9847db75f4c5418dfe",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/sorodne-strani-heading-sorodne-strani-de8beb6b-1",
+      "translationHash": "de8beb6b72cdb9b27acbd0303cd746b8f93d461deb67dd17bd428af0b0d4240a",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "A practical model"
+      ],
+      "sourceLineRange": [
+        68,
+        68
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/a-practical-model-paragraph-a-practical-localization-at-scale-model-usually-has-five-lay-f0052b60-1",
+      "sourceHash": "f0052b60a8115c5c2374429ad4854f5154eec3dfc96de093d8fbba5b924f7ae3",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/drugi-jeziki-list-english-en-localization-at-scale-md-48496706-1",
+      "translationHash": "484967062406239f238a06124176030762a89cbd2349c980f0eb33a4889ff782",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "A practical model"
+      ],
+      "sourceLineRange": [
+        70,
+        70
+      ],
+      "targetLineRange": [
+        96,
+        96
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/a-practical-model-list-1-write-a-translation-friendly-canonical-source-8dbe07a2-1",
+      "sourceHash": "8dbe07a24b4d05537b36a6edd670c3697506b6c2b2e65a875cee6fdc4b82bd1e",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/praktičen-model-list-1-napiši-izvorno-besedilo-primerno-za-prevajanje-1a61fa47-1",
+      "translationHash": "1a61fa475884407c8d8a666d8ffe0e22d6cfe70952c8b32eff283e26d8b6af16",
+      "blockType": "list",
+      "headingPath": [
+        "Localization at Scale",
+        "A practical model"
+      ],
+      "sourceLineRange": [
+        72,
+        76
+      ],
+      "targetLineRange": [
+        72,
+        76
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-role-of-ai-heading-the-role-of-ai-ea12ddec-1",
+      "sourceHash": "ea12ddeca4286e2954186c509afb16111d4b0d5ef8de429bd7a0abbffc70f271",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/vloga-ai-heading-vloga-ai-f159f709-1",
+      "translationHash": "f159f709fe4d92ef8a572da86907fc5d415322006e45c73d493a7fea846ee215",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "The role of AI"
+      ],
+      "sourceLineRange": [
+        78,
+        78
+      ],
+      "targetLineRange": [
+        78,
+        78
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-role-of-ai-paragraph-ai-helps-it-lowers-the-cost-of-producing-first-drafts-identi-86616711-1",
+      "sourceHash": "866167112f4d0c9c5a2a81584f840a3232e699d4d784d6f9d42295a924fadf8d",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/vloga-ai-paragraph-ai-pomaga-znižuje-strošek-prvih-osnutkov-odkrivanja-terminol-b2a958b2-1",
+      "translationHash": "b2a958b28cd18a3efbbe9b1dd2fd70b950a8592127f4ad98f61f3ce49ccee16b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The role of AI"
+      ],
+      "sourceLineRange": [
+        80,
+        80
+      ],
+      "targetLineRange": [
+        80,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-role-of-ai-paragraph-that-is-why-mature-localization-systems-are-increasingly-ai--5300fb47-1",
+      "sourceHash": "5300fb473c4c41322af9d4924f5bcdae666cbf73c30a50b166651fe9a37146f7",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/trajna-ugotovitev-paragraph-če-projekt-želi-večjezično-sodelovanje-mora-biti-lokalizacij-2ea5c1c6-1",
+      "translationHash": "2ea5c1c60d0d1fa02f8d4a06e2d82aac73918de3cf82d5633cbf427b4b1febd5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The role of AI"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/durable-takeaway-heading-durable-takeaway-2728ce84-1",
+      "sourceHash": "2728ce84a6a2280b0e9bd2b5fca082696cde3ac40c0ee97e9ba6810b45c630ad",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/trajna-ugotovitev-heading-trajna-ugotovitev-dc5833e3-1",
+      "translationHash": "dc5833e3fc34dd878bb0c2d023dcfce17ea5df3c4cbec75211a8ef42be4b3bfe",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Durable takeaway"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": [
+        84,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/durable-takeaway-paragraph-if-a-project-wants-multilingual-participation-localization-m-a4f89f75-1",
+      "sourceHash": "a4f89f759600f68a2dc9e1567a80c71673eb1e9b5343e18d8ca76a5cb3a51a82",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/sorodne-strani-list-list-5c7cb82b-1",
+      "translationHash": "5c7cb82bb6116f3908f5c7f7464e7f4479cecddd2fbb3f6ae6786d081b2a5e1c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Durable takeaway"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": [
+        90,
+        92
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "lokalizacija-v-velikem-obsegu/drugi-jeziki-heading-drugi-jeziki-69d6ffb9-1",
+      "translationHash": "69d6ffb98e080e6fa02afcd452b9c77f92aebb0acf74a176926a80c6301eede8",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        88,
+        88
+      ],
+      "targetLineRange": [
+        94,
+        94
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/related-pages-list-list-5c7cb82b-1",
+      "sourceHash": "5c7cb82bb6116f3908f5c7f7464e7f4479cecddd2fbb3f6ae6786d081b2a5e1c",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Localization at Scale",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        90,
+        92
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "localization-at-scale/other-languages-heading-other-languages-55e5fe0d-1",
+      "sourceHash": "55e5fe0d3fa1d4e9edcdd5986cd919f6a3eed9b339b20782d8f1b28f6f6a69e2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        94,
+        94
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "localization-at-scale/other-languages-paragraph-english-is-the-canonical-first-release-language-for-this-art-c6f893b1-1",
+      "sourceHash": "c6f893b172af0fd0fc5684c1ffb52149d61865c03dfc87f265131c954533684e",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        96,
+        96
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    }
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/implementation-guidance.md",
+  "targetPath": "docs/wiki/hr/implementation-guidance.md",
+  "locale": "hr",
+  "blocks": [
+    {
+      "blockId": "implementation-guidance-heading-implementation-guidance-17406aeb-1",
+      "sourceHash": "17406aeb41ac1286e4f5ec43f74b6fb7cff0b88e51a01c71e8f7394f016fd79f",
+      "targetBlockId": "smjernice-za-provedbu-heading-smjernice-za-provedbu-8d304213-1",
+      "translationHash": "8d304213c48699e52e4bd08d425396636e2a62e403668218d6ba12468a7cde45",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "smjernice-za-provedbu/sažetak-heading-sažetak-0387b161-1",
+      "translationHash": "0387b1618a7d7a13d0724d2df6de75eddfa6c84323159d89bcc4b9a87f9bfdc5",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-paragraph-implementation-guidance-defines-how-a-team-should-deliver-wo-b885753c-1",
+      "sourceHash": "b885753ca6cc4c238f202f3c8b5253b44ced449a17ebd9e17d30099e154a43f5",
+      "targetBlockId": "smjernice-za-provedbu/sažetak-paragraph-smjernice-za-implementaciju-definiraju-kako-tim-treba-isporu-8d3ff71a-1",
+      "translationHash": "8d3ff71a09ac7fd91a7d691932313fc5ac618bc18f80c59a8799f9d2c9e7f387",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-heading-role-ae2d08dc-1",
+      "sourceHash": "ae2d08dcf5603d2b87a9d892befdf02dcb90aeb4464cd78cc4344528268828f2",
+      "targetBlockId": "smjernice-za-provedbu/uloga-heading-uloga-d3a68db9-1",
+      "translationHash": "d3a68db986b62f5ffd306dd8ec62512abf944c909362c3a5880cd53680133001",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-implementation-guidance-sits-below-the-product-specification-a770f1b1-1",
+      "sourceHash": "a770f1b19f1c4ccc2dbdcad371b790de0dd7129121c4b6d621f0e3ec0f2be950",
+      "targetBlockId": "smjernice-za-provedbu/uloga-paragraph-smjernice-za-implementaciju-nalaze-se-ispod-specifikacije-pr-5bca114c-1",
+      "translationHash": "5bca114ce653508374f2479582e4c37e6cc59c4c132c5a34bf32c65c107b59a8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-it-helps-answer-questions-such-as-9fdbda09-1",
+      "sourceHash": "9fdbda0903b09135aa722d09c16c36a00f7bd86f686a4eca2da6fba9679771e7",
+      "targetBlockId": "smjernice-za-provedbu/uloga-paragraph-pomaže-odgovoriti-na-pitanja-kao-što-su-f77b1729-1",
+      "translationHash": "f77b17298f7b15765f3b1b139eac74636a6f99b031b1bb6832d6a904f86ee0b1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-list-how-public-naming-should-work-1d4672ce-1",
+      "sourceHash": "1d4672ce6edb9252fb49c1d64973699d8a33a1b72567e1b7e8f821e2bbf31ea4",
+      "targetBlockId": "smjernice-za-provedbu/uloga-list-kako-bi-javno-imenovanje-trebalo-funkcionirati-8fe817d2-1",
+      "translationHash": "8fe817d2cf8f292b3298b46e61d7f5eff6c574bad1b19d092209478a7f8aa7b8",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        22,
+        26
+      ],
+      "targetLineRange": [
+        22,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-heading-difference-from-product-specification-19aa4de1-1",
+      "sourceHash": "19aa4de108d0c68d0f9399db9a2597530858c1587b202022f3ce4a5068586c9b",
+      "targetBlockId": "smjernice-za-provedbu/razlika-od-specifikacije-proizvoda-heading-razlika-od-specifikacije-proizvoda-2e389462-1",
+      "translationHash": "2e389462ee58ca08a690fd6de46d76e0cc871b2c3a3c41f0ca080f240afe7294",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-the-product-specification-defines-what-the-product-is-and-wh-5f6771d0-1",
+      "sourceHash": "5f6771d0e9d46c39a875b4ea05be3fef8c8745d2c4f264e5ace62430c3a1d92f",
+      "targetBlockId": "smjernice-za-provedbu/razlika-od-specifikacije-proizvoda-paragraph-specifikacija-proizvoda-definira-što-je-proizvod-i-što-mora--89a9de2d-1",
+      "translationHash": "89a9de2d5cbb832f6e586c04f612e5b02dc7f9dbc059d0ab16d71ebd2726e73d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-implementation-guidance-defines-how-contributors-should-carr-ca601bd7-1",
+      "sourceHash": "ca601bd77521b48fbfaa56cd1af17f4129e198bd8dd019fc77373535e5d06daa",
+      "targetBlockId": "smjernice-za-provedbu/razlika-od-specifikacije-proizvoda-paragraph-smjernice-za-implementaciju-definiraju-kako-bi-suradnici-tre-20155925-1",
+      "translationHash": "20155925735521a7bb918cf155e2ceed8dcfb6b009f3ac2f9f9713235a92d648",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-this-distinction-is-useful-because-not-every-repository-rule-87ff1db0-1",
+      "sourceHash": "87ff1db07149d1658e5affe437c66dfcb010b9220d65b3307f6f4fb02ea19a3d",
+      "targetBlockId": "smjernice-za-provedbu/razlika-od-specifikacije-proizvoda-paragraph-ova-je-razlika-korisna-jer-nije-svako-pravilo-repozitorija-i-feb28f97-1",
+      "translationHash": "feb28f97da924d0b47b8fd74b5719f97c111614b06af61e85362dccb62094e80",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": [
+        34,
+        34
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-heading-common-examples-5752ba62-1",
+      "sourceHash": "5752ba6250773f396d4e2eeec55bdd9497ee2aae886fa62b999250ff6cb5cf12",
+      "targetBlockId": "smjernice-za-provedbu/uobičajeni-primjeri-heading-uobičajeni-primjeri-7e9c2ed6-1",
+      "translationHash": "7e9c2ed615eeb0f73c72c306086b671b8fe323201e721c6421408e4c58f8b580",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        36,
+        36
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-implementation-guidance-often-includes-83ad37c7-1",
+      "sourceHash": "83ad37c7ed27c3debb85f041e6439186e383bda0e8ea0fe5c8d9185b0420c5e6",
+      "targetBlockId": "smjernice-za-provedbu/uobičajeni-primjeri-paragraph-smjernice-za-implementaciju-često-uključuju-dc91c709-1",
+      "translationHash": "dc91c70943455a18914bead7c7ea052176d23a459ea0c7e2efec8ee3f8f4a0f5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-list-naming-and-branding-rules-b7cce9dd-1",
+      "sourceHash": "b7cce9ddc123debdb53a24aad3da82351d90a38dbeff1f34b07a497e09618eff",
+      "targetBlockId": "smjernice-za-provedbu/uobičajeni-primjeri-list-pravila-imenovanja-i-brendiranja-90441958-1",
+      "translationHash": "90441958d7cc8a8295777fb240536e9f2c2fc852a5c888079c5757cdb9f1f45b",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        40,
+        45
+      ],
+      "targetLineRange": [
+        40,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-these-rules-often-live-well-in-markdown-because-they-need-to-dc1bded5-1",
+      "sourceHash": "dc1bded5fdc33f2576ccd4e926678a729031ec00cce03af41746fe9c157f0f70",
+      "targetBlockId": "smjernice-za-provedbu/uobičajeni-primjeri-paragraph-ova-pravila-često-dobro-žive-u-markdown-jer-moraju-ostati-pr-2922a1f3-1",
+      "translationHash": "2922a1f34a4b085ecf6f762e9e194adbc75478f67c76acd7baef4c857e01dc3a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-heading-why-it-matters-in-ai-assisted-work-388d76e1-1",
+      "sourceHash": "388d76e10796665a57d3c660e503a64f1c5f36b9bedafab89894aebb6c9d8618",
+      "targetBlockId": "smjernice-za-provedbu/zašto-je-to-važno-u-radu-uz-pomoć-umjetne-inteligencije-heading-zašto-je-to-važno-u-radu-uz-pomoć-umjetne-inteligencije-c6eb07b0-1",
+      "translationHash": "c6eb07b0d03c138d25b365c1ea81721111b98b47d36e65a75146adcb3a1ec943",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": [
+        49,
+        49
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-ai-assistants-often-follow-the-nearest-concrete-instruction--0f14731c-1",
+      "sourceHash": "0f14731c60850e0f3123e2f42275a9baf8a784cc7186a5e3a3c1d0d4353492cc",
+      "targetBlockId": "smjernice-za-provedbu/zašto-je-to-važno-u-radu-uz-pomoć-umjetne-inteligencije-paragraph-ai-pomoćnici-često-slijede-najbliže-konkretne-upute-ako-su-p-2ba90910-1",
+      "translationHash": "2ba90910470b26d7a256df7ca6a93375d2f04765114d4853813f35d8db888a29",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        51,
+        51
+      ],
+      "targetLineRange": [
+        51,
+        51
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-implementation-guidance-makes-those-rules-visible-without-po-08db9b33-1",
+      "sourceHash": "08db9b338bdcbed418f4b508d0c9a6cc08b693213b1996ad434a50b74d18a24a",
+      "targetBlockId": "smjernice-za-provedbu/zašto-je-to-važno-u-radu-uz-pomoć-umjetne-inteligencije-paragraph-smjernice-za-implementaciju-čine-ta-pravila-vidljivima-bez-z-f84b3448-1",
+      "translationHash": "f84b34487f9f9bc6c0ba06eb71691bc718edf43f19f65d122c27158d57561a52",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        53,
+        53
+      ],
+      "targetLineRange": [
+        53,
+        53
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-in-practice-that-means-a-markdown-guidance-file-can-do-two-j-0549c21c-1",
+      "sourceHash": "0549c21c7ded1476d866126afa42c4974a70085fce5b61e4464e4a96ae443d04",
+      "targetBlockId": "smjernice-za-provedbu/zašto-je-to-važno-u-radu-uz-pomoć-umjetne-inteligencije-paragraph-u-praksi-to-znači-da-datoteka-s-uputama-markdown-može-obavlj-07df6809-1",
+      "translationHash": "07df6809760c094a3d6036ebb1aabc376f32131116d39c036fac6b51cf58dfef",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        55,
+        55
+      ],
+      "targetLineRange": [
+        55,
+        55
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-list-explain-the-workflow-to-a-human-contributor-f74c8828-1",
+      "sourceHash": "f74c8828754abe76af0b01bc03008207a992c0d2f483702f15d600a6a41c3de9",
+      "targetBlockId": "smjernice-za-provedbu/zašto-je-to-važno-u-radu-uz-pomoć-umjetne-inteligencije-list-objasni-tijek-rada-ljudskom-suradniku-62e07406-1",
+      "translationHash": "62e07406ac74fb965cf1bc65736adba0abeb08fbd033ac2e6ccb18400c9fa667",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        57,
+        58
+      ],
+      "targetLineRange": [
+        57,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-heading-let-books-kontekst-36b98086-1",
+      "translationHash": "36b98086e92148f1c1f372ed211c62fe8d9e8e21fc4ea2ab4bf0728eb156b3b6",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-in-let-books-is-the-tactical-guidance-layer-ea4f5a74-1",
+      "sourceHash": "ea4f5a74e1505a4d39fce8680b0dc5e760562377dc8453e5cf41237d9144d8f9",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-paragraph-u-let-books-je-sloj-taktičkog-navođenja-28b4c666-1",
+      "translationHash": "28b4c66602dd1c67ba96c82d62fd7c1360dbffc0e0eee5ebed22371e9ae8fcda",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        62,
+        62
+      ],
+      "targetLineRange": [
+        62,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-it-covers-areas-such-as-8c247200-1",
+      "sourceHash": "8c24720082c0b5176a9472d442bda2f9600cc45b70a23a0c14662053bbd93fc4",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-paragraph-pokriva-područja-kao-što-su-e462f64a-1",
+      "translationHash": "e462f64ab2d09f9dd6d1db183499ab02d4d456db2ca9a77a0b8a3775d0157b45",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-public-naming-b5784969-1",
+      "sourceHash": "b5784969c6461e590d4102db31e17728b329563b62099522e59c7b7decc7f6d6",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-list-javno-imenovanje-b4755c32-1",
+      "translationHash": "b4755c328025865f9619551ab60c981a4232ef076793f9055ce6f075b02dfb0b",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        66,
+        73
+      ],
+      "targetLineRange": [
+        66,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-that-makes-it-the-operational-companion-to-not-a-replacement-c99166b6-1",
+      "sourceHash": "c99166b631f2ba172bcb42e39af5c9837314d5c1426afb8e2a0c3da013cb3200",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-paragraph-to-ga-čini-operativnim-pratiocem-a-ne-njegovom-zamjenom-3df9a84f-1",
+      "translationHash": "3df9a84f3ec89e087837440fb3b687e771253c9164cae2e72ea3c6ee22529046",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-other-markdown-guidance-in-the-repo-reinforces-the-same-patt-498165ac-1",
+      "sourceHash": "498165acde9e9411467ddedd51c8d039febd7352d7c380352275f046e943eca2",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-paragraph-druge-smjernice-markdown-u-repo-u-pojačavaju-isti-obrazac-na-4a23bf10-1",
+      "translationHash": "4a23bf10fe53d0bd8ef480adbe0f299a0855cf21b555e1f826bf3c773ee18c16",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-directs-debugging-workflow-choices-such-as-cdp-attach-versus-a6021b0d-1",
+      "sourceHash": "a6021b0dc1a7627da7ce3185f6a7a48b1ecba38f5d0cbe61bdc8f38b860e3392",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-list-usmjerava-izbore-tijeka-rada-za-otklanjanje-pogrešaka-kao-št-5eb2c5ea-1",
+      "translationHash": "5eb2c5ea9b6bf9a9c7e4a23bad3f703516cb0e9d363fe57c76f0e3368f832641",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        80
+      ],
+      "targetLineRange": [
+        79,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-these-documents-are-readable-as-human-guidance-but-they-also-630297df-1",
+      "sourceHash": "630297df4f338ad47a526d14fbdf13c761429fc4e9ab5778185a551b2c462d89",
+      "targetBlockId": "smjernice-za-provedbu/let-books-kontekst-paragraph-ti-su-dokumenti-čitljivi-kao-ljudske-smjernice-ali-također-p-c712ef8b-1",
+      "translationHash": "c712ef8b7eade824db580d523ff65b79ba44cb823de8600fd491869c7fd04ce2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "smjernice-za-provedbu/povezane-stranice-heading-povezane-stranice-0fe9a6ed-1",
+      "translationHash": "0fe9a6ed81c6e36327377add2c955ecc7c3d8c573e04f3a848806a12c4bb5a37",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": [
+        84,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-list-list-67281e84-1",
+      "sourceHash": "67281e846189b0a6088c4a1d84c0ca587e7968ec43f54ce1b74b8953a9b68055",
+      "targetBlockId": "smjernice-za-provedbu/povezane-stranice-list-list-ba92765d-1",
+      "translationHash": "ba92765de87a9503a3193f24b0abda9babd88ebc3839c5314da1d56e0fbfabd0",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        86,
+        89
+      ],
+      "targetLineRange": [
+        86,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

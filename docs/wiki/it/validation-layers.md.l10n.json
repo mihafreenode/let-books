@@ -1,0 +1,731 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/validation-layers.md",
+  "targetPath": "docs/wiki/it/validation-layers.md",
+  "locale": "it",
+  "blocks": [
+    {
+      "blockId": "validation-layers-heading-validation-layers-8fc7d42a-1",
+      "sourceHash": "8fc7d42a448384d07de04eeb8358dbc395893dd434da5d1a0e420c1461a0cfcb",
+      "targetBlockId": "livelli-di-convalida-heading-livelli-di-convalida-d5d07f9f-1",
+      "translationHash": "d5d07f9f12b2d8b786f4bb0183f549380c09ebe659ab4b733307bb85f7cef51f",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "livelli-di-convalida/riepilogo-heading-riepilogo-8241b401-1",
+      "translationHash": "8241b40162207a4f4e561380cc02972ba66531ea63bd8d2e5e875d29e3201269",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-paragraph-validation-layers-are-the-different-ways-a-project-checks-wh-9ca8a81c-1",
+      "sourceHash": "9ca8a81c9d587176b4acf8aa617b67e2c3d3b22275c55ad561fb236c994a5195",
+      "targetBlockId": "livelli-di-convalida/riepilogo-paragraph-i-livelli-di-convalida-sono-i-diversi-modi-in-cui-un-progett-6bdb28ca-1",
+      "translationHash": "6bdb28ca6d42831c976728c42ba10a44f9f470739d36cd7560313a865a04b991",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-heading-why-layers-matter-de7c66ed-1",
+      "sourceHash": "de7c66ed13662850485f1ea31985a3336efba9529f86857fd2c716dcb57e3663",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/2-revisione-manuale-heading-2-revisione-manuale-da0455fb-1",
+      "translationHash": "da0455fbfb8f3f5c68328969c1b39790ab991c232c658f8610987f7f79a36e99",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        34,
+        34
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-no-single-validation-method-is-enough-fe0d1f2a-1",
+      "sourceHash": "fe0d1f2a1f5f6f1b221a3497bc1aae69d96733177d982a7854fba57dda83f128",
+      "targetBlockId": "livelli-di-convalida/perché-i-livelli-sono-importanti-paragraph-nessun-singolo-metodo-di-validazione-è-sufficiente-2fbb63f7-1",
+      "translationHash": "2fbb63f709c62924ad0e8365a482062ce68e2564db39fbf9226568ba9ba1de2a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-list-documentation-alone-does-not-enforce-behavior-9350d201-1",
+      "sourceHash": "9350d20175c42d4972f4868a0f88d65d587ee9cb9bf9d62c7c548280601eb9d9",
+      "targetBlockId": "livelli-di-convalida/perché-i-livelli-sono-importanti-list-la-documentazione-da-sola-non-impone-il-comportamento-64b7d44b-1",
+      "translationHash": "64b7d44b4b0bbf006de223efebdd20fbdad803819e0d353dae90a69640eccd19",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        20,
+        22
+      ],
+      "targetLineRange": [
+        20,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-a-layered-approach-is-stronger-because-each-layer-catches-a--f830c6e2-1",
+      "sourceHash": "f830c6e22d9fb717df4169f2f2721881c55b2c0de79660ca5cd5165bfbfd1a25",
+      "targetBlockId": "livelli-di-convalida/perché-i-livelli-sono-importanti-paragraph-un-approccio-a-strati-è-più-forte-perché-ogni-strato-rileva--3e091413-1",
+      "translationHash": "3e0914133c1027cfdf6fdaf74c717a3c7938bd33df57ce4450ff965c0734966a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers-heading-common-validation-layers-d36d2283-1",
+      "sourceHash": "d36d228311ad2bcedc282493f24a4ae7db2dfbd0beae22b8c48cdd55a24abce8",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni-heading-livelli-di-convalida-comuni-7d06137e-1",
+      "translationHash": "7d06137e426aae5d2b7cab571e17722683a7725c5873f3fe29a7177165753e7e",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-heading-1-specification-and-guidance-9bca2316-1",
+      "sourceHash": "9bca2316f9094450bae48d2cb4e781baf7f9e4661c60bd4c9466631191289539",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/1-specifiche-e-linee-guida-heading-1-specifiche-e-linee-guida-c69cc08f-1",
+      "translationHash": "c69cc08f3f48cff14c5bc8370ddc72335bce86f432b9ad5a8045b27dd4afc74d",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-the-first-layer-defines-the-rule-29e62350-1",
+      "sourceHash": "29e6235038cafbe269f8a8f6fada7c569d13256440a5654b08637cea674f4efd",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/1-specifiche-e-linee-guida-paragraph-il-primo-livello-definisce-la-regola-6bd9c1b3-1",
+      "translationHash": "6bd9c1b351320b5557f4f84096df7c82cb2472c12e3d77affe0abda6e822c5c2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-without-this-layer-later-checks-may-be-strict-but-arbitrary-f8dfa57d-1",
+      "sourceHash": "f8dfa57db065721bcf4868d8ac1e8e25699e8372faf8795bf8447443f37f04f2",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/1-specifiche-e-linee-guida-paragraph-senza-questo-livello-i-controlli-successivi-potrebbero-esser-360c3cf3-1",
+      "translationHash": "360c3cf312720ff1a22672053b68602a65829621e60df28d26163c12acd1e1b4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-heading-2-manual-review-ee208978-1",
+      "sourceHash": "ee208978c302d56366e8efa260c58d736c7a7ee45900f4819fbada21048a3316",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/3-convalida-locale-heading-3-convalida-locale-ce3cbbb0-1",
+      "translationHash": "ce3cbbb02d1da7a3352124781b298c486858de9a10c24521252b4bc343950dfe",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-paragraph-human-review-checks-intent-edge-cases-and-product-meaning-th-0e169630-1",
+      "sourceHash": "0e1696304b449a3f4d598606de98407843596b705c926b7922a65c14da5e0569",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/2-revisione-manuale-paragraph-la-revisione-umana-verifica-l-intento-i-casi-limite-e-il-sig-0ee947f3-1",
+      "translationHash": "0ee947f3f9caba1e02e9e8c4a4749592a44be031a7741a3897359b617d96c890",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        36,
+        36
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-heading-3-local-validation-ac6f1462-1",
+      "sourceHash": "ac6f1462a6d8a68c0247e4a4908a8ae4327d22258e35ca044757c5221ce4cd9b",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/6-controlli-sull-implementazione-heading-6-controlli-sull-implementazione-179c5e3f-1",
+      "translationHash": "179c5e3f527f529be880162cb079091b5ae21292d4d5e4a46bb02518ec7f1e98",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        50,
+        50
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-paragraph-scripts-and-structured-checks-catch-fast-repeatable-issues-b-717e3951-1",
+      "sourceHash": "717e39518bd098103a3aca92706ffbe3da9321f1af5bbf6bf1123685dbb159bf",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/3-convalida-locale-paragraph-gli-script-e-i-controlli-strutturati-rilevano-problemi-rapid-086fb92d-1",
+      "translationHash": "086fb92d83af85470f5e35f4dd9214c3718c6882418249293554424032327b8e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        40,
+        40
+      ],
+      "targetLineRange": [
+        40,
+        40
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-heading-4-tests-a4d52503-1",
+      "sourceHash": "a4d52503e1757f1f98eb5342448e9a426444153393e2c4b16a194303d701c118",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/4-test-heading-4-test-10ef4ce4-1",
+      "translationHash": "10ef4ce48cbcf5e586108e1dc44f3b70825aca0075a5c78d493e110c6b111115",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        42,
+        42
+      ],
+      "targetLineRange": [
+        42,
+        42
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-paragraph-executable-tests-verify-expected-behavior-but-only-when-they-efb4830f-1",
+      "sourceHash": "efb4830fefcaedc6450ff243e40eb900d29dd0f19403993ad27aeb7c4ad82144",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/4-test-paragraph-i-test-eseguibili-verificano-il-comportamento-previsto-ma-so-0b744048-1",
+      "translationHash": "0b744048eeae9d346d39e9e6694c41c01efd8f1ea2be3dca8b760c31c6c05b99",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        44,
+        44
+      ],
+      "targetLineRange": [
+        44,
+        44
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-heading-5-ci-gates-47fd54b5-1",
+      "sourceHash": "47fd54b5bdef619cb4631d58c5c1c10a9c584141306a037a4fc21653bdc0be37",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/5-porte-ci-heading-5-porte-ci-d93b791f-1",
+      "translationHash": "d93b791fdd30c8020b16bdcf584a2fb85c3541e7693cb110d215a68224bf4f8a",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        46,
+        46
+      ],
+      "targetLineRange": [
+        46,
+        46
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-paragraph-ci-makes-checks-repeatable-and-visible-across-contributors-a-c165489d-1",
+      "sourceHash": "c165489d71acba9c6c3ff303ac4b0f2e334219bcf4a4ec39116511d8a31bbe50",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/5-porte-ci-paragraph-la-ci-rende-i-controlli-ripetibili-e-visibili-tra-contributo-a7d1f49a-1",
+      "translationHash": "a7d1f49a0294ba9f1cde577680ab83f9fa4115e5361477c798bcd211a787c8e5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        48,
+        48
+      ],
+      "targetLineRange": [
+        48,
+        48
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-heading-6-deployment-checks-7ded19a6-1",
+      "sourceHash": "7ded19a62e691a0f7dcd180a47dcb512ae038bb1259f6c379bb5d582a39b42f8",
+      "targetBlockId": "livelli-di-convalida/let-books-contesto-heading-let-books-contesto-516dcb81-1",
+      "translationHash": "516dcb817d2e39615afd232943e91b929b5dcadf7b6a5a223a798108ddcb5e21",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        50,
+        50
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-paragraph-deployment-workflows-confirm-that-the-built-artifacts-are-st-57ae91f8-1",
+      "sourceHash": "57ae91f876cb621a35b2b203719e61b95b434b76746f4b860dc32574c239825b",
+      "targetBlockId": "livelli-di-convalida/livelli-di-convalida-comuni/6-controlli-sull-implementazione-paragraph-i-flussi-di-lavoro-di-distribuzione-confermano-che-gli-artef-a3fd87fd-1",
+      "translationHash": "a3fd87fd55710983fbaf503589bcf67dda4bf8b62379a3dbebfe266dc06fac3a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        52,
+        52
+      ],
+      "targetLineRange": [
+        52,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-heading-how-the-layers-should-relate-5abbf685-1",
+      "sourceHash": "5abbf685c82003af4f76f7b17b239c68a5e10886e635fb5d96286135c068391b",
+      "targetBlockId": "livelli-di-convalida/come-dovrebbero-relazionarsi-gli-strati-heading-come-dovrebbero-relazionarsi-gli-strati-5c2968f0-1",
+      "translationHash": "5c2968f0e9e9bc8861ad3fe6bc539c64274fe38987692ee4ae85bf85dc8540a5",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-paragraph-the-layers-should-reinforce-each-other-in-order-ed7696fb-1",
+      "sourceHash": "ed7696fb89dad21de6d0ab78389cef04dd99c26c6029d89ea911f619fb5c8821",
+      "targetBlockId": "livelli-di-convalida/come-dovrebbero-relazionarsi-gli-strati-paragraph-gli-strati-dovrebbero-rinforzarsi-a-vicenda-in-ordine-a115e70e-1",
+      "translationHash": "a115e70ef87ee3fb31947b9f96f675ef140c730d77a6ea4908027a52eb4b1f35",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-list-docs-and-specs-define-expectations-3287c347-1",
+      "sourceHash": "3287c3474c62f9cc18f90bd9b0a629668002cef1f6810d711dd7f46c14c876f7",
+      "targetBlockId": "livelli-di-convalida/come-dovrebbero-relazionarsi-gli-strati-list-documenti-e-specifiche-definiscono-le-aspettative-e7c9ca17-1",
+      "translationHash": "e7c9ca17f4f9d0ea78e2dbc8ddc8125108cc1ba40b2852f1342c3663f6a37adf",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        58,
+        62
+      ],
+      "targetLineRange": [
+        58,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-heading-good-early-validation-targets-9a1bb190-1",
+      "sourceHash": "9a1bb1905706c8f82d135df33b9cb8a22b468f9395fd81c03bd85008e81dd318",
+      "targetBlockId": "livelli-di-convalida/buoni-obiettivi-di-convalida-anticipata-heading-buoni-obiettivi-di-convalida-anticipata-3a3f890f-1",
+      "translationHash": "3a3f890f9bdbc20186d3de8e66ca2119693d007d5bae18c930c9659d1f7ea423",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-examples-of-strong-early-candidates-include-c9763375-1",
+      "sourceHash": "c9763375fa7dedea8405c0ef457b34c593845252cf4081d6ac064481a1961395",
+      "targetBlockId": "livelli-di-convalida/buoni-obiettivi-di-convalida-anticipata-paragraph-esempi-di-forti-candidati-iniziali-includono-352d6194-1",
+      "translationHash": "352d61942294a66dea4226cd4498f5d913fee0f87915a55f5815add4120c8be7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-list-required-file-presence-760814ff-1",
+      "sourceHash": "760814ff407618e41f5aada2fa51cf01046d532216829f9dca95d69315edca08",
+      "targetBlockId": "livelli-di-convalida/buoni-obiettivi-di-convalida-anticipata-list-presenza-del-file-richiesto-222c7167-1",
+      "translationHash": "222c7167ec7315f024c598af259cf983658106509c38a5fdc5ac0a94de5f687c",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        68,
+        73
+      ],
+      "targetLineRange": [
+        68,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-these-checks-tend-to-be-objective-and-inexpensive-8696c3a5-1",
+      "sourceHash": "8696c3a5e12c535ad11726ae0b5fe9fd1fa27cdffc2cfd62e342ab080213a33e",
+      "targetBlockId": "livelli-di-convalida/buoni-obiettivi-di-convalida-anticipata-paragraph-questi-controlli-tendono-ad-essere-oggettivi-e-poco-costosi-1ac5a4f0-1",
+      "translationHash": "1ac5a4f0a027b9e93c02340d9078075cf377de8bee17878d7411f1c64c6695e8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "livelli-di-convalida/pagine-correlate-heading-pagine-correlate-b62a1049-1",
+      "translationHash": "b62a1049b537765051875eea9b2c29248131319df92e1f8e73f1a453e4ce05cd",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-the-let-books-repository-already-documents-several-layers-in-8b6094e1-1",
+      "sourceHash": "8b6094e12930a5e462f2caa7062e957c2c691a02333dd81dd13aac5badb95a9f",
+      "targetBlockId": "livelli-di-convalida/let-books-contesto-paragraph-il-repository-let-books-documenta-già-diversi-livelli-tra-cu-46423688-1",
+      "translationHash": "46423688cfbfd2cf1a0dc568ce7e7e671df9d4367d4ba0fe08b56a5bb2add570",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-list-product-and-implementation-rules-in-and-0ca7f6c8-1",
+      "sourceHash": "0ca7f6c87a125de3c62bcacc00a61e7480fcdc65307f455f134f5c4daf5caf62",
+      "targetBlockId": "livelli-di-convalida/let-books-contesto-list-norme-di-prodotto-e-di-attuazione-ai-e-3015c43c-1",
+      "translationHash": "3015c43c628023df1d86082e00eed778c91145cb35ada0235b40e0ece4485468",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        81,
+        84
+      ],
+      "targetLineRange": [
+        81,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-that-makes-validation-a-documented-system-rather-than-only-a-8bc5c1b0-1",
+      "sourceHash": "8bc5c1b0862f767317ebf7025a19ad05bc66e88134cafe7325fa308bf27cf580",
+      "targetBlockId": "livelli-di-convalida/let-books-contesto-paragraph-ciò-rende-la-convalida-un-sistema-documentato-e-non-solo-un--db0dd401-1",
+      "translationHash": "db0dd40177ff7a25e0c5e48a20496afaf59970fa516969b2021a5fb0891f6038",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        88,
+        88
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-list-list-e4c5a672-1",
+      "sourceHash": "e4c5a672a57bb6464ea2fede5d68552893820dc484ebd4c279acd30d76a07100",
+      "targetBlockId": "livelli-di-convalida/pagine-correlate-list-list-4ace00d5-1",
+      "translationHash": "4ace00d568cdb7465f1fa354edd2ce48732d6ab872e170e2faecea1275f5a647",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        90,
+        93
+      ],
+      "targetLineRange": [
+        90,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

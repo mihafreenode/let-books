@@ -1,0 +1,1490 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-add-validation-rules-and-ci-gates-in-stages.md",
+  "targetPath": "docs/learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.md",
+  "locale": "bs",
+  "blocks": [
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages-heading-how-to-add-validation-rules-and-ci-gates-in-stages-dba48ef8-1",
+      "sourceHash": "dba48ef84a90c0e27e99555cdf15e31d7148bde0af857e01e3544102789fa794",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije-heading-kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije-c71627e7-1",
+      "translationHash": "c71627e74aa7023dabd7097ec18fa5195ae112510e72952c4c6538e845b42683",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/sažetak-heading-sažetak-0387b161-1",
+      "translationHash": "0387b1618a7d7a13d0724d2df6de75eddfa6c84323159d89bcc4b9a87f9bfdc5",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/summary-paragraph-this-guide-explains-how-to-add-validation-rules-and-ci-check-5bce4e60-1",
+      "sourceHash": "5bce4e60ba7eb0f45984b186e8e4b520172766d3b06d20c5485657f33eca5c99",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/sažetak-paragraph-ovaj-vodič-objašnjava-kako-postepeno-dodavati-validacijska-p-e8aa6663-1",
+      "translationHash": "e8aa6663f59b1f24ffa2b569687be5217403e4c82fbf8b96cd7064aed2ff7e37",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-heading-why-staged-enforcement-matters-ca9fc8ac-1",
+      "sourceHash": "ca9fc8acf906027b0d8960fb6e97ce869af4f872f8ad819facbc806a91d7565f",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/zašto-je-postepeno-uvođenje-važno-heading-zašto-je-postepeno-uvođenje-važno-2143054e-1",
+      "translationHash": "2143054eaaf04354c7b63d990fe49a70bf1cfb3209e643dc6a5ea9af81486d0f",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-teams-often-know-they-need-stronger-validation-but-they-make-44bba7b9-1",
+      "sourceHash": "44bba7b91f80c0cee6b59db7ea5e486031ba5139cd5b02c324d63698742363d9",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/zašto-je-postepeno-uvođenje-važno-paragraph-timovi-često-znaju-da-im-treba-snažnija-validacija-ali-napra-c5cdc633-1",
+      "translationHash": "c5cdc633986fc36aa68a9452ccbefcb359d893aadd4248e2138faed483ac3bf6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-either-they-leave-quality-checks-informal-for-too-long-or-th-77d91144-1",
+      "sourceHash": "77d91144bccfc4303194abb95a7dc5ffa9a80ffaa8eb373ba720fc1b61662559",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/zašto-je-postepeno-uvođenje-važno-paragraph-ili-predugo-ostave-provjere-kvaliteta-neformalnim-ili-pokuša-2a588261-1",
+      "translationHash": "2a5882617131829814b0b5c49587521f486cc34e3752fc8047bda7ec6dc1663b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-a-staged-approach-works-better-d7ebd38c-1",
+      "sourceHash": "d7ebd38cc59591fd005666403c4abc958c2d6fee5b321f55da961284ffbbd3ba",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/zašto-je-postepeno-uvođenje-važno-paragraph-postepen-pristup-radi-bolje-f4654924-1",
+      "translationHash": "f46549245bf6fcdc071768ff8b29a080ee8f8445a942106de8d0c3a8f44e75c0",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        22,
+        22
+      ],
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-it-lets-the-project-turn-repeated-review-expectations-into-r-b3030cf4-1",
+      "sourceHash": "b3030cf43f099353e037c2e6dd05ab6a86afdb55227dd2f56d20a84e2591de4b",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/zašto-je-postepeno-uvođenje-važno-paragraph-on-omogućava-projektu-da-ponavljana-očekivanja-iz-pregleda-s-e5fca389-1",
+      "translationHash": "e5fca389be60d823f16b5e5ebcf6e9f2b2b88a7f9297bbfd71cc100968943f80",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-heading-start-from-recurring-mistakes-4bfc9999-1",
+      "sourceHash": "4bfc9999ef8137c057bbb1921d8c0d14f532730670823fe13db16ea6c189a544",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-1-ručna-kontrolna-lista-heading-faza-1-ručna-kontrolna-lista-91872e92-1",
+      "translationHash": "91872e9292faaa3987bfdb2ef342ba6ebd4391c632456be33076b0da8894112c",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-paragraph-the-best-validation-rules-usually-begin-as-repeated-human-re-e07acf4e-1",
+      "sourceHash": "e07acf4edea9d147bbb9314b458274f6f51b1e4bcf2fbf129686ca7f5250e60d",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/počnite-od-ponavljanih-grešaka-paragraph-najbolja-validacijska-pravila-obično-počinju-kao-ponavljani--63a460b9-1",
+      "translationHash": "63a460b93d538d70c5059af023a92a45dea11fb9147a2611522588d588a2f7e2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-paragraph-ask-9cbc440a-1",
+      "sourceHash": "9cbc440ae316798596671ee94b764c09ab468d8d05ffaf6b8e461554b128cbd7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-list-what-mistakes-keep-happening-6aef9456-1",
+      "sourceHash": "6aef9456a204b5fb09553b7b4e1876c8efa6d5a071c02a3de1b78aa770e41b75",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/počnite-od-ponavljanih-grešaka-list-koje-se-greške-stalno-dešavaju-d6bf888e-1",
+      "translationHash": "d6bf888e3f6879625d5cfa4c9434be597e7bf5265e8d49b5389141ebea8e3b8c",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        32,
+        35
+      ],
+      "targetLineRange": [
+        32,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-paragraph-if-the-same-issue-appears-several-times-it-is-a-good-candida-b783daec-1",
+      "sourceHash": "b783daecd13c1eaf519e9b6f2eff840462efed6db3f0744f36f2e3c86decb01f",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/počnite-od-ponavljanih-grešaka-paragraph-ako-se-ista-poteškoća-pojavi-više-puta-dobar-je-kandidat-za--8154fa3b-1",
+      "translationHash": "8154fa3ba106905211e293f9175245bc6d492df7277d9d1a0685adeb90f58def",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        37,
+        37
+      ],
+      "targetLineRange": [
+        37,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-heading-validation-should-follow-the-authority-chain-d2d9f0d2-1",
+      "sourceHash": "d2d9f0d2964d1d9292d1932fba49b13f44a12152a22e9555fa7961eff1fc8e4f",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/validacija-treba-pratiti-lanac-autoriteta-heading-validacija-treba-pratiti-lanac-autoriteta-895103b2-1",
+      "translationHash": "895103b2dfd3553a9792322fb505ee4e6bf8724a617891964341002450abc941",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-paragraph-validation-rules-should-reinforce-documented-expectations-no-5e87f278-1",
+      "sourceHash": "5e87f2783e15951b071949119e1b9091d71baf140c0d230f46441da8e887bc70",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/validacija-treba-pratiti-lanac-autoriteta-paragraph-validacijska-pravila-trebaju-pojačavati-dokumentovana-očekiv-90a54bc7-1",
+      "translationHash": "90a54bc7fda2fc0e3112f8cf004644c1589053880851351ecda9a976b79b7bb6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-paragraph-that-means-b7c8f75b-1",
+      "sourceHash": "b7c8f75b254873c20dcc6a56de2986e2de15c6bdfe1d7dc04b26020eec60497a",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/validacija-treba-pratiti-lanac-autoriteta-paragraph-to-znači-1283b338-1",
+      "translationHash": "1283b3386f64bc20520cf43c0d9e983a14cba67829198cdb2713fdb6ae826c8c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-list-spec-defines-the-rule-a3f19284-1",
+      "sourceHash": "a3f19284cf39632e5673b6fb1670be51f48fbfd752ac9adb635abd1ca4568bb1",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/validacija-treba-pratiti-lanac-autoriteta-list-specifikacija-definiše-pravilo-37398f2d-1",
+      "translationHash": "37398f2d740f7cea9321a90470daf971119939b6a8f249ac33d838626a39aa38",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        45,
+        48
+      ],
+      "targetLineRange": [
+        45,
+        48
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-paragraph-this-keeps-the-project-from-enforcing-rules-that-were-never--63d99da5-1",
+      "sourceHash": "63d99da59dec309e6fa40c22b5c6c8b75ac329f88a5095c7016d148093efa704",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/validacija-treba-pratiti-lanac-autoriteta-paragraph-tako-projekat-ne-počinje-provoditi-pravila-o-kojima-se-zapra-e415123b-1",
+      "translationHash": "e415123b77d6a781882882854a24dae181e3b1159f7e4d69e68d5b99d8e1bd17",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        50,
+        50
+      ],
+      "targetLineRange": [
+        50,
+        50
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model-heading-a-useful-maturity-model-347d8c8f-1",
+      "sourceHash": "347d8c8f5fbe6f55a73f5768ade461b910d91e74fb02eed4e14b834ca6254b78",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti-heading-koristan-model-zrelosti-7135e2ed-1",
+      "translationHash": "7135e2ed9b2a4e6e45e6a420e869ad40b9ced7a87dd5708f0e2cb1686e333ae8",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model"
+      ],
+      "sourceLineRange": [
+        52,
+        52
+      ],
+      "targetLineRange": [
+        52,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-heading-stage-1-manual-review-checklist-43605e6e-1",
+      "sourceHash": "43605e6eeb30ff931d2614edd503fc3832bd2be1f23d8e4c2aa33b94291d40ea",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-2-lagana-lokalna-validacija-heading-faza-2-lagana-lokalna-validacija-404c5b1e-1",
+      "translationHash": "404c5b1e50e2703fd394996cba563f9380edd94062cc8d8541e590edf0c30786",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-paragraph-start-by-naming-the-rule-explicitly-d0db4415-1",
+      "sourceHash": "d0db441563695596e962496d3e9841598fe047902d51d7149c6294f1454ecba1",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-1-ručna-kontrolna-lista-paragraph-počnite-tako-što-ćete-pravilo-izričito-imenovati-d6067460-1",
+      "translationHash": "d6067460568c1485724b1489bac3bfd92c877fa65703d01dea52a43a996ccffa",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/počnite-od-ponavljanih-grešaka-paragraph-zapitajte-se-773e0806-1",
+      "translationHash": "773e0806735d9f3897439485f4cf206544ef327180be92fabd9988d1d7117d15",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        58,
+        58
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-list-all-new-user-visible-text-must-be-localizable-52084587-1",
+      "sourceHash": "52084587867a3ea170ec305618a3a76f8274bf499a943ade1d0d43becbbb1d00",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-1-ručna-kontrolna-lista-list-sav-novi-korisniku-vidljiv-tekst-mora-biti-lokalizabilan-4c146e5b-1",
+      "translationHash": "4c146e5b1551f7eea28c4c9ca7363076e8d30cc71ce84a2cdd5dff89d511ed85",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        60,
+        62
+      ],
+      "targetLineRange": [
+        60,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-paragraph-at-this-stage-the-rule-is-real-but-still-enforced-by-humans-70611195-1",
+      "sourceHash": "7061119538d7aa6a6f3de180d2239c8844cf791992a3ae37bf4c67cfbc8f7d01",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-1-ručna-kontrolna-lista-paragraph-u-ovoj-fazi-pravilo-je-stvarno-ali-ga-još-uvijek-provode-lju-54ca1fcd-1",
+      "translationHash": "54ca1fcdd57741d47cb3a2c3457aaf16fdc8c823ac280d8fed8725892611c528",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-heading-stage-2-lightweight-local-validation-75c97414-1",
+      "sourceHash": "75c97414e2ace71c34e45bc7b506d735c3b10e81c936e856463668c214b7802c",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-3-vidljivost-u-ci-ju-heading-faza-3-vidljivost-u-ci-ju-6d7449e2-1",
+      "translationHash": "6d7449e22020a69615eccb7ca3dc15e979005205923113130d2a82a0c39544a3",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-paragraph-add-a-small-script-or-structured-check-that-contributors-can-34f3207c-1",
+      "sourceHash": "34f3207c4cf2e26afc06f92074d2cdb2120cf68021cebe7883826aacfb2297b0",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-2-lagana-lokalna-validacija-paragraph-dodajte-malu-skriptu-ili-strukturiranu-provjeru-koju-saradni-ef660360-1",
+      "translationHash": "ef660360e7d6b372137deb24d8e984b5ed9c716db2773ed7fcd437013fc88049",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        68,
+        68
+      ],
+      "targetLineRange": [
+        68,
+        68
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-2-lagana-lokalna-validacija-paragraph-primjeri-1e029f39-1",
+      "translationHash": "1e029f392f8b4c9fabaf685a12261ba68fa6c8ecc8441a70d1ca7dcb7b3c91a3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        70,
+        70
+      ],
+      "targetLineRange": [
+        70,
+        70
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-list-missing-locale-key-detection-d9b6de90-1",
+      "sourceHash": "d9b6de90c2cd2a0a3c41b815d5992c6627b4325ca2681413900b393b06697403",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-2-lagana-lokalna-validacija-list-otkrivanje-nedostajućih-ključeva-lokalizacije-734f29dd-1",
+      "translationHash": "734f29dd05cf863f985390cfd51fb8d15666888570e656d85e888589e4c66f81",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        72,
+        75
+      ],
+      "targetLineRange": [
+        72,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-paragraph-this-stage-reduces-avoidable-errors-before-ci-even-runs-d6708736-1",
+      "sourceHash": "d670873663fc847469f59526fe2e4e1a91c74215c2f5d7a9229000288c0736cc",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-2-lagana-lokalna-validacija-paragraph-ta-faza-smanjuje-izbjegljive-greške-prije-nego-što-se-ci-uop-f9a69d76-1",
+      "translationHash": "f9a69d76e560d23fac8fe075de3fe3f2619219daec3aca12dc47cbbf52d21453",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-3-ci-visibility-heading-stage-3-ci-visibility-642f3b72-1",
+      "sourceHash": "642f3b7287c30ae0cc35a58caf214f5250deeb30c665ef12a4f89dc6ddd0888d",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-4-blokirajuća-ci-kapija-heading-faza-4-blokirajuća-ci-kapija-f2dfb5c0-1",
+      "translationHash": "f2dfb5c071ca4a0c4056ae6e33ba607ca4c2463755df734a4ddf9bd6777ff3cf",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 3: CI visibility"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        85,
+        85
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-3-ci-visibility-paragraph-run-the-check-in-ci-even-if-it-is-initially-non-blocking-e7707db8-1",
+      "sourceHash": "e7707db8e1fb358927e39fb730670721b2a16efcdc44449c1de825755e250524",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-3-vidljivost-u-ci-ju-paragraph-pokrenite-provjeru-u-ci-ju-čak-i-ako-u-početku-nije-blokiraj-0a334924-1",
+      "translationHash": "0a334924802e56b39341433b161bbf9eca6ff1cc40006dabacefaeb6a7fd7970",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 3: CI visibility"
+      ],
+      "sourceLineRange": [
+        81,
+        81
+      ],
+      "targetLineRange": [
+        81,
+        81
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-3-ci-visibility-paragraph-this-gives-the-team-visibility-into-how-often-the-rule-fails-825b02e5-1",
+      "sourceHash": "825b02e5c166e6d6d83f9aafc72dc4cce206c21ada58defec890475d309b2601",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-3-vidljivost-u-ci-ju-paragraph-to-timu-daje-vidljivost-u-to-koliko-često-pravilo-pada-i-tre-4501a7de-1",
+      "translationHash": "4501a7de1c2e0f065cb1b3ef007bb82aa6a0fd86e5596f5a3afcb140a2eb8df4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 3: CI visibility"
+      ],
+      "sourceLineRange": [
+        83,
+        83
+      ],
+      "targetLineRange": [
+        83,
+        83
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-4-blocking-ci-gate-heading-stage-4-blocking-ci-gate-62435eee-1",
+      "sourceHash": "62435eeeef9e9f9f3b2336969b7514a7a559791cdab91bf46b92e0a179412c95",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-prvo-automatizirati-heading-šta-prvo-automatizirati-c2480003-1",
+      "translationHash": "c248000314756123cef240b927bd80206758b64c9b251142dc02e3b626d9ac9f",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 4: blocking CI gate"
+      ],
+      "sourceLineRange": [
+        85,
+        85
+      ],
+      "targetLineRange": [
+        91,
+        91
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-4-blocking-ci-gate-paragraph-once-the-rule-is-stable-and-understood-make-it-required-0c6096d7-1",
+      "sourceHash": "0c6096d70682cbae6db24065a9bfaea076eab5e029b3d49a09c069fa880695ef",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-4-blokirajuća-ci-kapija-paragraph-kada-je-pravilo-stabilno-i-dobro-shvaćeno-učinite-ga-obavezn-59c1b022-1",
+      "translationHash": "59c1b022df42d85166b83bed4dba06530724c19f153b6279ca2d8359165d38e3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 4: blocking CI gate"
+      ],
+      "sourceLineRange": [
+        87,
+        87
+      ],
+      "targetLineRange": [
+        87,
+        87
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-4-blocking-ci-gate-paragraph-at-this-point-the-project-has-moved-from-informal-expectatio-2a325b36-1",
+      "sourceHash": "2a325b365e55485ab8190ce5d2bc8f844cf515ebbc5e6cb6e5acfffad4488c34",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/koristan-model-zrelosti/faza-4-blokirajuća-ci-kapija-paragraph-u-toj-tački-projekat-prelazi-iz-neformalnog-očekivanja-u-pro-d2ee5cec-1",
+      "translationHash": "d2ee5cecd7b351c48f0dd48c697c4d0bb9c686761d8a26d07ea7cf5f31a80a7e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 4: blocking CI gate"
+      ],
+      "sourceLineRange": [
+        89,
+        89
+      ],
+      "targetLineRange": [
+        89,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-heading-what-to-automate-first-140085ad-1",
+      "sourceHash": "140085ad54d0c895f55d64a1c892d25ba5681f829a768939a859c17110f34077",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-ne-treba-prerano-forsirati-heading-šta-ne-treba-prerano-forsirati-63638bd3-1",
+      "translationHash": "63638bd3f090a57fe95b28425882093e209a3b26cc097c915c5f2e5f153f3a61",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        91,
+        91
+      ],
+      "targetLineRange": [
+        106,
+        106
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-paragraph-good-early-candidates-are-usually-5c5f94fc-1",
+      "sourceHash": "5c5f94fcc07ff5b4922f844ba0e12f0d18f7180b4d5f86696ef060ec347a7c6a",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-prvo-automatizirati-paragraph-dobri-rani-kandidati-obično-su-d94a0b4b-1",
+      "translationHash": "d94a0b4b5de6143395ad2813d210afb45d7b46db240c34bcd19e153d1fca88bd",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        93,
+        93
+      ],
+      "targetLineRange": [
+        93,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-list-structural-consistency-afa735a0-1",
+      "sourceHash": "afa735a089ae77a6696154c0e2a2594270f55c4bd64a05f386beaa02081f1897",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-prvo-automatizirati-list-strukturna-dosljednost-36d5c379-1",
+      "translationHash": "36d5c3796311833686d5c7274ae016a2a6775ab1f61610451b1feaeeb65b4175",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        95,
+        100
+      ],
+      "targetLineRange": [
+        95,
+        100
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-paragraph-for-multilingual-publishing-treat-mixed-language-reader-faci-49a539ec-1",
+      "sourceHash": "49a539eca373d43b46dbf9a4ce166a83e4e9e765b5ee097f6bad0bfb191823ea",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-prvo-automatizirati-paragraph-za-višejezično-objavljivanje-tretirajte-korisniku-vidljiv-sa-b5c58c3d-1",
+      "translationHash": "b5c58c3d602d720048c800360fbd9fee98bb555343078c327266267a3fdc19c2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        102,
+        102
+      ],
+      "targetLineRange": [
+        102,
+        102
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-paragraph-these-checks-are-usually-cheap-objective-and-high-value-138afbd9-1",
+      "sourceHash": "138afbd9a7a6fdd1d984f0a0cefc928a7b92782c3efd37ad633bd9a92fc6da46",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-prvo-automatizirati-paragraph-ove-provjere-su-obično-jeftine-objektivne-i-vrlo-vrijedne-02cced31-1",
+      "translationHash": "02cced3123aefd1cc6c42b9f73af30c025c9614d3635f22d943e05e6bb3114ad",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        104,
+        104
+      ],
+      "targetLineRange": [
+        104,
+        104
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-heading-what-not-to-force-too-early-18302eca-1",
+      "sourceHash": "18302ecafd10e5492db5527c66dbdecdd60c17ea6defd21b42b9cf207b99e618",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/praktičan-tok-pretvaranja-pravila-heading-praktičan-tok-pretvaranja-pravila-461842a7-1",
+      "translationHash": "461842a7060c07014e84eb71b2b5b7b80c1a80e55eba0f7b1120edfe09f08c01",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        106,
+        106
+      ],
+      "targetLineRange": [
+        134,
+        134
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-paragraph-some-checks-are-valuable-but-may-need-time-before-becoming-h-039dbdd8-1",
+      "sourceHash": "039dbdd84e8a49bd23ad39f24413d4e79b4892a6695654c84abfe1cc033f56e2",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-ne-treba-prerano-forsirati-paragraph-neke-provjere-su-vrijedne-ali-im-možda-treba-vremena-prije-n-b27fae42-1",
+      "translationHash": "b27fae42ee20e51399dc6bdce68e30d861cb9723450ae5602acf761820b8e19b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        108,
+        108
+      ],
+      "targetLineRange": [
+        108,
+        108
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-ne-treba-prerano-forsirati-paragraph-primjeri-1e029f39-1",
+      "translationHash": "1e029f392f8b4c9fabaf685a12261ba68fa6c8ecc8441a70d1ca7dcb7b3c91a3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        110,
+        110
+      ],
+      "targetLineRange": [
+        110,
+        110
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-list-spellcheck-in-many-languages-2bc1e9ec-1",
+      "sourceHash": "2bc1e9ecc675202dfd074f001aff5e6e79c83415f115ab6ad47912e793174f61",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-ne-treba-prerano-forsirati-list-provjera-pravopisa-na-mnogim-jezicima-ee0deed4-1",
+      "translationHash": "ee0deed40bb002132c64d15b37343b775564da0e306bf7bdbb2e217758ca43ab",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        112,
+        115
+      ],
+      "targetLineRange": [
+        112,
+        115
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-paragraph-these-can-begin-as-advisory-signals-before-becoming-mandator-37320110-1",
+      "sourceHash": "3732011068584f7b82def68dd6523b0b627c63570387cbecca1efb49c951c414",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/šta-ne-treba-prerano-forsirati-paragraph-ovo-može-početi-kao-savjetodavni-signal-prije-nego-što-posta-74cac35d-1",
+      "translationHash": "74cac35d91d844f3c7224b799d62c3c78ac96c62aee0262c62680782f34f2e35",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        117,
+        117
+      ],
+      "targetLineRange": [
+        117,
+        117
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-heading-let-books-examples-8ab88745-1",
+      "sourceHash": "8ab887456720dd951d4bf198773c52b392eab32dc53cc16d2283d8da100fa8f1",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/primjeri-iz-let-books-heading-primjeri-iz-let-books-06ec5be5-1",
+      "translationHash": "06ec5be5f947d24b5ced058ef40f1a6083727a87c3ed8690ae14c4cd77d2c01b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        119,
+        119
+      ],
+      "targetLineRange": [
+        119,
+        119
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-paragraph-the-repository-already-documents-several-validation-patterns-e95b8323-1",
+      "sourceHash": "e95b83235fff196170fccc38b390e5c6e0f12483abf6841bdf63d74a1daf8370",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/primjeri-iz-let-books-paragraph-repozitorij-već-dokumentuje-nekoliko-obrazaca-validacije-ukl-ab020dd5-1",
+      "translationHash": "ab020dd56487e1508d0377a848b3cf4e8d0b64d3b5324c7738b8f43cbb850715",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        121,
+        121
+      ],
+      "targetLineRange": [
+        121,
+        121
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-list-localization-smoke-testing-e006f8db-1",
+      "sourceHash": "e006f8db6493d922f9e029eb5c67173506c43effaae83de83fee47cb5bab5b7e",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/primjeri-iz-let-books-list-osnovno-testiranje-lokalizacije-cedd2007-1",
+      "translationHash": "cedd2007507ac5123c3f793796692785a770e10bc507ba0e4926458cc10964a8",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        123,
+        128
+      ],
+      "targetLineRange": [
+        123,
+        128
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-paragraph-the-docs-and-style-guides-also-define-editorial-rules-that-c-bc434b99-1",
+      "sourceHash": "bc434b99dc30e86f7633857545b86498599ec861245fdd1e354f141a7856b324",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/primjeri-iz-let-books-paragraph-dokumentacija-i-stilski-vodiči-također-definišu-urednička-pr-b55dce3b-1",
+      "translationHash": "b55dce3b708cb38cb2454eb88e26d46413f6071aae94055f639b141ea1565aa2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        130,
+        130
+      ],
+      "targetLineRange": [
+        130,
+        130
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-paragraph-that-makes-let-books-a-good-example-of-incremental-enforceme-17c4b202-1",
+      "sourceHash": "17c4b2028858d73149dcd6f0a40340ce7eb1a6b7e29e17f6f519bc76663209fe",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/primjeri-iz-let-books-paragraph-zato-je-let-books-dobar-primjer-postepenog-uvođenja-pravila--0a300010-1",
+      "translationHash": "0a30001072aeb5c0b203ace800e8cc917fcb514e2893cb63eab0cb14d0078a0c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        132,
+        132
+      ],
+      "targetLineRange": [
+        132,
+        132
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-heading-a-practical-rule-conversion-workflow-6701aa6d-1",
+      "sourceHash": "6701aa6d51b2d15eb4129e4e9e11067bcc46b71c5792239bd3e64442759c1836",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/projektima-uz-podršku-ai-ja-to-treba-još-više-heading-projektima-uz-podršku-ai-ja-to-treba-još-više-1072c20a-1",
+      "translationHash": "1072c20ab910997f84b158501ed21f24fe895b6dfe85908d3d29bbe5fe50693b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        134,
+        134
+      ],
+      "targetLineRange": [
+        154,
+        154
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-paragraph-use-this-pattern-when-adding-a-new-validation-rule-adbc0770-1",
+      "sourceHash": "adbc0770f4366dc7c84135324a9d42ca4a5c1adf572a057d007284a19d1826b0",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/praktičan-tok-pretvaranja-pravila-paragraph-koristite-ovaj-obrazac-kada-dodajete-novo-validacijsko-pravi-37bc54cc-1",
+      "translationHash": "37bc54cc64529610ea312d232423b6991ad156ef965b93b3c197f48d94dfd946",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        136,
+        136
+      ],
+      "targetLineRange": [
+        136,
+        136
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-list-1-identify-the-repeated-review-problem-723ad4ca-1",
+      "sourceHash": "723ad4cad93a1963b877a9ccd76f9c8cf44b432ef5bcd8867f9030129b2328f7",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/praktičan-tok-pretvaranja-pravila-list-1-prepoznajte-ponavljajuću-poteškoću-u-pregledima-74fd20f8-1",
+      "translationHash": "74fd20f8e106c5f44e2dfd436715a37b1c87a0697065a946bdfda11f54efe83d",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        138,
+        142
+      ],
+      "targetLineRange": [
+        138,
+        142
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-paragraph-this-creates-less-friction-than-introducing-a-hard-gate-befo-2f90ad09-1",
+      "sourceHash": "2f90ad09ba66f3582ebd83bf30e356a42a0cf420ef654e943ca462b667960ee2",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/praktičan-tok-pretvaranja-pravila-paragraph-to-stvara-manje-trenja-nego-uvođenje-stroge-kapije-prije-neg-bac7e4dc-1",
+      "translationHash": "bac7e4dced4a8b2e61a517f76f17bc4735f9bbb1c0215726ad641a2d49a2217c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        144,
+        144
+      ],
+      "targetLineRange": [
+        144,
+        144
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/questions-to-ask-before-adding-a-gate-heading-questions-to-ask-before-adding-a-gate-a428c013-1",
+      "sourceHash": "a428c013f961296481f17eb49732f9942069f9c97f1b0fac9360ec8cc9ca4155",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/pitanja-prije-dodavanja-kapije-heading-pitanja-prije-dodavanja-kapije-ae439776-1",
+      "translationHash": "ae43977651382fe4f9808a69d6eac32b5aae9f2be48c3b2f788ffde1fb1cce33",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Questions to ask before adding a gate"
+      ],
+      "sourceLineRange": [
+        146,
+        146
+      ],
+      "targetLineRange": [
+        146,
+        146
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/questions-to-ask-before-adding-a-gate-list-1-is-the-rule-clearly-documented-f2ee3689-1",
+      "sourceHash": "f2ee36897e1ebbb3c2bf464ce0e17c9c4a06d34b4cfe4ef65fdac5369eebfc17",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/pitanja-prije-dodavanja-kapije-list-1-je-li-pravilo-jasno-dokumentovano-d4eae91f-1",
+      "translationHash": "d4eae91f86a4fa904932b47c99e5c5c6249798024b44edfdced4c00914215230",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Questions to ask before adding a gate"
+      ],
+      "sourceLineRange": [
+        148,
+        152
+      ],
+      "targetLineRange": [
+        148,
+        152
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-heading-ai-assisted-projects-need-this-even-more-d071d4a9-1",
+      "sourceHash": "d071d4a913b285db0ff2c12198c4b5b3718be5e1162d4ec9b6fc1da4b18b5701",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/kontrolna-lista-za-ispravke-od-izvora-prema-gore-heading-kontrolna-lista-za-ispravke-od-izvora-prema-gore-d5adb58e-1",
+      "translationHash": "d5adb58eba6c14025801d0045489c375e79edf502d63fa80ea96443efc2a7ec1",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        154,
+        154
+      ],
+      "targetLineRange": [
+        170,
+        170
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-ai-increases-the-volume-of-changes-and-the-speed-of-change-t-a5618f90-1",
+      "sourceHash": "a5618f90fa1c8e22b8458a6f439bd63f6ccd026363327e3cbbd09e7d058e1543",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/projektima-uz-podršku-ai-ja-to-treba-još-više-paragraph-validacija-i-ci-nisu-tu-da-uspore-timove-tu-su-da-spriječe-d-a87f7966-1",
+      "translationHash": "a87f79663999a55921e49e3afc0bf1227a9883b2407479094269e70cc746fead",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        156,
+        156
+      ],
+      "targetLineRange": [
+        160,
+        160
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-it-also-makes-fast-feedback-more-valuable-the-practical-ques-c9a6e8dd-1",
+      "sourceHash": "c9a6e8ddb78eaf7529c838063fdf3b00e8f88bbd62e07dfa48b77b55b48cb5e6",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/projektima-uz-podršku-ai-ja-to-treba-još-više-paragraph-zbog-toga-je-brza-povratna-informacija-još-vrijednija-prakti-0a62e32b-1",
+      "translationHash": "0a62e32b2c464b3de6187291c8017d986824c6a9ec1f44fb6eb4bf0c31a3acbe",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        158,
+        158
+      ],
+      "targetLineRange": [
+        158,
+        158
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-validation-and-ci-are-not-there-to-slow-teams-down-they-are--4b42e7d6-1",
+      "sourceHash": "4b42e7d66c15ccd34310133295aa24bca1113a13a4ed148bb5e1a7ec7bacf037",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/trajna-pouka-paragraph-taj-postepeni-put-često-je-najrealniji-način-da-projekat-pos-b2fdd328-1",
+      "translationHash": "b2fdd3286560e463882f0a0b6f5919a4d3c1a14873db48a473a286d648c75d9a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        160,
+        160
+      ],
+      "targetLineRange": [
+        168,
+        168
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-in-spec-driven-work-the-goal-is-not-maximum-automation-the-g-f33cf9e3-1",
+      "sourceHash": "f33cf9e369bc63ac08a6644f45ae30185ffeca080e00097ef47e6b80550a914c",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/projektima-uz-podršku-ai-ja-to-treba-još-više-paragraph-u-radu-vođenom-specifikacijom-cilj-nije-maksimalna-automatiz-9e30f6a6-1",
+      "translationHash": "9e30f6a6f698eb6be2efcd3d04e073c63db81d1cd531ef5e84eecd39c97e61e9",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        162,
+        162
+      ],
+      "targetLineRange": [
+        162,
+        162
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/the-durable-lesson-heading-the-durable-lesson-efa37549-1",
+      "sourceHash": "efa37549901c9fd11f26c47473b9ddbef2258a14e98efc6f7046bb1bf94bb164",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/trajna-pouka-heading-trajna-pouka-717a219d-1",
+      "translationHash": "717a219d02cec94090db2e06aeaf3138058b948013fcc3eccf03511514b8369f",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        164,
+        164
+      ],
+      "targetLineRange": [
+        164,
+        164
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/the-durable-lesson-paragraph-the-strongest-validation-systems-usually-do-not-appear-fully-612bc9c4-1",
+      "sourceHash": "612bc9c496de3044941cb5ac8fbb81afd67c52023188dbc2667eae5f1c193a58",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/trajna-pouka-paragraph-najjači-validacijski-sistemi-obično-se-ne-pojave-potpuno-obl-ad8045d2-1",
+      "translationHash": "ad8045d2b6d053ef4366c28a40fc8d9f480280db7923462ef58e02903e10234b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        166,
+        166
+      ],
+      "targetLineRange": [
+        166,
+        166
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/the-durable-lesson-paragraph-that-staged-path-is-often-the-most-realistic-way-to-make-a-p-6c9cf4f4-1",
+      "sourceHash": "6c9cf4f41db7b820937296091debadd9b7e23192cde9a1d2654b28b0ce01b4d9",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/projektima-uz-podršku-ai-ja-to-treba-još-više-paragraph-ai-povećava-količinu-promjena-i-brzinu-promjene-to-znači-viš-28ca3b49-1",
+      "translationHash": "28ca3b49d5aaa96bb2ca6af162cb7af9fea88291b248030cd275866a59d6a3c0",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        168,
+        168
+      ],
+      "targetLineRange": [
+        156,
+        156
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-heading-source-first-remediation-checklist-f29b4465-1",
+      "sourceHash": "f29b44653d97fa66b9e46571e1693ab2c69a06b1a194d3f2b8b0252beb44b491",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/dodatno-čitanje-heading-dodatno-čitanje-cd7bb10f-1",
+      "translationHash": "cd7bb10fb62283fe7f4bb14a32bc0a5938b4492018cded94df54420c8ca03ed6",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        170,
+        170
+      ],
+      "targetLineRange": [
+        182,
+        182
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-paragraph-when-a-validation-rule-fails-79686387-1",
+      "sourceHash": "79686387aa6e59a8c8b180de1a2781b0f08196a9be02d045bb2e5831f63f1dfc",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/kontrolna-lista-za-ispravke-od-izvora-prema-gore-paragraph-kada-validacijsko-pravilo-padne-bb6dd557-1",
+      "translationHash": "bb6dd557ad4a4da3f9e2aeb7438b52536260364e71e68066bff41346da191b6b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        172,
+        172
+      ],
+      "targetLineRange": [
+        172,
+        172
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-list-1-inspect-source-markdown-first-d17e9e81-1",
+      "sourceHash": "d17e9e81d37300c42651df06e871ab28c0040d43690c33a9bf58d768eb415343",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/kontrolna-lista-za-ispravke-od-izvora-prema-gore-list-1-najprije-pregledajte-izvorni-markdown-63837627-1",
+      "translationHash": "638376274968938cd6dd272656c34986cbbfd5d8f9f7842e30443f871a021492",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        174,
+        178
+      ],
+      "targetLineRange": [
+        174,
+        178
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-paragraph-do-not-patch-generated-output-if-the-source-localization-is--b5d5e535-1",
+      "sourceHash": "b5d5e5355d3c99d6c26415aa75010a107efddc87958aceab8d905c52b5a0b52a",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/kontrolna-lista-za-ispravke-od-izvora-prema-gore-paragraph-nemojte-krpiti-generisani-izlaz-ako-je-izvorna-lokalizacija--609b5ff7-1",
+      "translationHash": "609b5ff7e429b742ee54c690d17a1cf2025374c3320e8afcd92f89170a0681f5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        180,
+        180
+      ],
+      "targetLineRange": [
+        180,
+        180
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/further-reading-heading-further-reading-dfd43c88-1",
+      "sourceHash": "dfd43c88c1cb9723f2a690b08119f3b312da0ad2e460f768fe2e7b2cad613f05",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/počnite-od-ponavljanih-grešaka-heading-počnite-od-ponavljanih-grešaka-048beb83-1",
+      "translationHash": "048beb83d6176d96961285066c741b9084f1d4b78274c67ad6099a29183ccdcd",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        182,
+        182
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/further-reading-list-list-ee54b9a4-1",
+      "sourceHash": "ee54b9a4f0e3602f79666219f51d4484fea233c3c1fc0586930d703107934ed9",
+      "targetBlockId": "kako-postepeno-dodavati-validacijska-pravila-i-ci-kapije/dodatno-čitanje-list-list-24785631-1",
+      "translationHash": "24785631a018e953606771163c8b91d495be67026f642937a2b04f8a83d3ffc1",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        184,
+        188
+      ],
+      "targetLineRange": [
+        184,
+        188
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

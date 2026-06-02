@@ -1,0 +1,1490 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-add-validation-rules-and-ci-gates-in-stages.md",
+  "targetPath": "docs/learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.md",
+  "locale": "es",
+  "blocks": [
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages-heading-how-to-add-validation-rules-and-ci-gates-in-stages-dba48ef8-1",
+      "sourceHash": "dba48ef84a90c0e27e99555cdf15e31d7148bde0af857e01e3544102789fa794",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa-heading-cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa-0a6a27ec-1",
+      "translationHash": "0a6a27ec1ad3bbb95b866b5bb6e0a31c5c9e91bf40ef438171a5e0769eb85ac7",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/resumen-heading-resumen-1b924cc3-1",
+      "translationHash": "1b924cc323054cf3f917fd5c4cde93508d8551224046da2e7d1d7016489c6fa9",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/summary-paragraph-this-guide-explains-how-to-add-validation-rules-and-ci-check-5bce4e60-1",
+      "sourceHash": "5bce4e60ba7eb0f45984b186e8e4b520172766d3b06d20c5485657f33eca5c99",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/resumen-paragraph-esta-guía-explica-cómo-añadir-reglas-de-validación-y-comprob-bd0b294b-1",
+      "translationHash": "bd0b294beb67f005d599a12232503650554d487437b194f76bce92052be95235",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-heading-why-staged-enforcement-matters-ca9fc8ac-1",
+      "sourceHash": "ca9fc8acf906027b0d8960fb6e97ce869af4f872f8ad819facbc806a91d7565f",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/por-qué-importa-la-aplicación-por-etapas-heading-por-qué-importa-la-aplicación-por-etapas-2c5862b6-1",
+      "translationHash": "2c5862b6b057103b9f249c80ccf96d4a47bb39f1f92c9d69cbde91b2cd7662a4",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-teams-often-know-they-need-stronger-validation-but-they-make-44bba7b9-1",
+      "sourceHash": "44bba7b91f80c0cee6b59db7ea5e486031ba5139cd5b02c324d63698742363d9",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/por-qué-importa-la-aplicación-por-etapas-paragraph-los-equipos-suelen-saber-que-necesitan-una-validación-más-só-40077778-1",
+      "translationHash": "40077778b5b17955f73e2732f59985857c34b960359d4ce2d3ff2773925a9ac7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-either-they-leave-quality-checks-informal-for-too-long-or-th-77d91144-1",
+      "sourceHash": "77d91144bccfc4303194abb95a7dc5ffa9a80ffaa8eb373ba720fc1b61662559",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/por-qué-importa-la-aplicación-por-etapas-paragraph-o-bien-dejan-los-controles-de-calidad-informales-durante-dem-4485501b-1",
+      "translationHash": "4485501be5238c2a3cbc4c4fd4dc4c8d3f94c2709a47d504ffcc439995f83150",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-a-staged-approach-works-better-d7ebd38c-1",
+      "sourceHash": "d7ebd38cc59591fd005666403c4abc958c2d6fee5b321f55da961284ffbbd3ba",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/por-qué-importa-la-aplicación-por-etapas-paragraph-un-enfoque-por-etapas-funciona-mejor-b8e4d13e-1",
+      "translationHash": "b8e4d13e2ee37ac6ea6bf0b0b561d26afad85a72af3b9e05ebc098fd5ede2073",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        22,
+        22
+      ],
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/why-staged-enforcement-matters-paragraph-it-lets-the-project-turn-repeated-review-expectations-into-r-b3030cf4-1",
+      "sourceHash": "b3030cf43f099353e037c2e6dd05ab6a86afdb55227dd2f56d20a84e2591de4b",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/por-qué-importa-la-aplicación-por-etapas-paragraph-permite-que-el-proyecto-convierta-expectativas-de-revisión-r-12488224-1",
+      "translationHash": "12488224174eba2395b4789e6dd262181230634e7034aa39b15a546445989fc6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Why staged enforcement matters"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-heading-start-from-recurring-mistakes-4bfc9999-1",
+      "sourceHash": "4bfc9999ef8137c057bbb1921d8c0d14f532730670823fe13db16ea6c189a544",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/empieza-por-los-errores-recurrentes-heading-empieza-por-los-errores-recurrentes-3ce2f2cb-1",
+      "translationHash": "3ce2f2cb6acdc23384deca1f1e9aa0b4ffdac1a41f1ceea753fb23ab6f467aaf",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-paragraph-the-best-validation-rules-usually-begin-as-repeated-human-re-e07acf4e-1",
+      "sourceHash": "e07acf4edea9d147bbb9314b458274f6f51b1e4bcf2fbf129686ca7f5250e60d",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/empieza-por-los-errores-recurrentes-paragraph-las-mejores-reglas-de-validación-suelen-comenzar-como-hallaz-b3eb1758-1",
+      "translationHash": "b3eb1758bf38b31129dc503c472e12fef170efac476aa72cbd9218a765b3af03",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-paragraph-ask-9cbc440a-1",
+      "sourceHash": "9cbc440ae316798596671ee94b764c09ab468d8d05ffaf6b8e461554b128cbd7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-list-what-mistakes-keep-happening-6aef9456-1",
+      "sourceHash": "6aef9456a204b5fb09553b7b4e1876c8efa6d5a071c02a3de1b78aa770e41b75",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/empieza-por-los-errores-recurrentes-list-qué-errores-siguen-ocurriendo-03e0f08f-1",
+      "translationHash": "03e0f08feb1cc1d20e20b62d0dcc6a6e2ff7a329325b7ec1a9e46900d1c9096f",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        32,
+        35
+      ],
+      "targetLineRange": [
+        32,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/start-from-recurring-mistakes-paragraph-if-the-same-issue-appears-several-times-it-is-a-good-candida-b783daec-1",
+      "sourceHash": "b783daecd13c1eaf519e9b6f2eff840462efed6db3f0744f36f2e3c86decb01f",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/empieza-por-los-errores-recurrentes-paragraph-si-el-mismo-problema-aparece-varias-veces-es-un-buen-candida-0a29de6b-1",
+      "translationHash": "0a29de6bba3f032f0021e7ddec1964245a80ea475ec8b2536b23e272da5240d0",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Start from recurring mistakes"
+      ],
+      "sourceLineRange": [
+        37,
+        37
+      ],
+      "targetLineRange": [
+        37,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-heading-validation-should-follow-the-authority-chain-d2d9f0d2-1",
+      "sourceHash": "d2d9f0d2964d1d9292d1932fba49b13f44a12152a22e9555fa7961eff1fc8e4f",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/la-validación-debe-seguir-la-cadena-de-autoridad-heading-la-validación-debe-seguir-la-cadena-de-autoridad-5709366d-1",
+      "translationHash": "5709366d75cdd48c22b014cc54a2b264373cbf2b7729dd3d39cad104c6eb6e0b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-paragraph-validation-rules-should-reinforce-documented-expectations-no-5e87f278-1",
+      "sourceHash": "5e87f2783e15951b071949119e1b9091d71baf140c0d230f46441da8e887bc70",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/la-validación-debe-seguir-la-cadena-de-autoridad-paragraph-las-reglas-de-validación-deben-reforzar-expectativas-documen-11ccbb2b-1",
+      "translationHash": "11ccbb2ba4e109f695e55a0cddd6020f1fd772e43ee5c11f384ba92c23242029",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-paragraph-that-means-b7c8f75b-1",
+      "sourceHash": "b7c8f75b254873c20dcc6a56de2986e2de15c6bdfe1d7dc04b26020eec60497a",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/empieza-por-los-errores-recurrentes-paragraph-pregúntate-5a23279e-1",
+      "translationHash": "5a23279e401f3c35dbea64666959caef853859c31680729161148d0ed8bc1ac5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-list-spec-defines-the-rule-a3f19284-1",
+      "sourceHash": "a3f19284cf39632e5673b6fb1670be51f48fbfd752ac9adb635abd1ca4568bb1",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/la-validación-debe-seguir-la-cadena-de-autoridad-list-la-especificación-define-la-regla-7d67b5f8-1",
+      "translationHash": "7d67b5f800ec38a1d520b9069b3298fdb05c831d729eb9b731a13147878d9f32",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        45,
+        48
+      ],
+      "targetLineRange": [
+        45,
+        48
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/validation-should-follow-the-authority-chain-paragraph-this-keeps-the-project-from-enforcing-rules-that-were-never--63d99da5-1",
+      "sourceHash": "63d99da59dec309e6fa40c22b5c6c8b75ac329f88a5095c7016d148093efa704",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/la-validación-debe-seguir-la-cadena-de-autoridad-paragraph-esto-evita-que-el-proyecto-haga-cumplir-reglas-que-en-realid-a14e6ec1-1",
+      "translationHash": "a14e6ec12ee368d74e23178ae7cc2e3b0aa0f06b48de1b104ce5290c54d07b1f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Validation should follow the authority chain"
+      ],
+      "sourceLineRange": [
+        50,
+        50
+      ],
+      "targetLineRange": [
+        50,
+        50
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model-heading-a-useful-maturity-model-347d8c8f-1",
+      "sourceHash": "347d8c8f5fbe6f55a73f5768ade461b910d91e74fb02eed4e14b834ca6254b78",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil-heading-un-modelo-de-madurez-útil-701ffd19-1",
+      "translationHash": "701ffd19c54dd04d4b59b787e2dfa7c89dc71f075ea1277fb01a3000f6c274b3",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model"
+      ],
+      "sourceLineRange": [
+        52,
+        52
+      ],
+      "targetLineRange": [
+        52,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-heading-stage-1-manual-review-checklist-43605e6e-1",
+      "sourceHash": "43605e6eeb30ff931d2614edd503fc3832bd2be1f23d8e4c2aa33b94291d40ea",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-1-lista-de-revisión-manual-heading-etapa-1-lista-de-revisión-manual-ce5e5a23-1",
+      "translationHash": "ce5e5a239cc0ee045c818afe990ed08c202a5be7b14a33164f8d09aaf9aef70e",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-paragraph-start-by-naming-the-rule-explicitly-d0db4415-1",
+      "sourceHash": "d0db441563695596e962496d3e9841598fe047902d51d7149c6294f1454ecba1",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-1-lista-de-revisión-manual-paragraph-empieza-por-nombrar-la-regla-de-forma-explícita-7280c205-1",
+      "translationHash": "7280c205304a8e02e59e14130a27520a4a68871594c41d63316fe3ba8e833086",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-1-lista-de-revisión-manual-paragraph-ejemplos-5aaf6587-1",
+      "translationHash": "5aaf65879301164eab4b6d1f043a688cb09bf38f3b62a2e91a07887edb0a2862",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        58,
+        58
+      ],
+      "targetLineRange": [
+        58,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-list-all-new-user-visible-text-must-be-localizable-52084587-1",
+      "sourceHash": "52084587867a3ea170ec305618a3a76f8274bf499a943ade1d0d43becbbb1d00",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-1-lista-de-revisión-manual-list-todo-texto-nuevo-visible-para-el-usuario-debe-poder-localiza-3d574d4f-1",
+      "translationHash": "3d574d4f9cc363d2a918d1413a836f780e096c86d1f976e85b896cae1321e4e7",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        60,
+        62
+      ],
+      "targetLineRange": [
+        60,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-1-manual-review-checklist-paragraph-at-this-stage-the-rule-is-real-but-still-enforced-by-humans-70611195-1",
+      "sourceHash": "7061119538d7aa6a6f3de180d2239c8844cf791992a3ae37bf4c67cfbc8f7d01",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-1-lista-de-revisión-manual-paragraph-a-estas-alturas-la-regla-es-real-pero-sigue-aplicándose-por--53ede851-1",
+      "translationHash": "53ede8510d89e43a204f36b3507b38b13aaff14f8e7f61ec3b98c3ea5adc60d2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 1: manual review checklist"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-heading-stage-2-lightweight-local-validation-75c97414-1",
+      "sourceHash": "75c97414e2ace71c34e45bc7b506d735c3b10e81c936e856463668c214b7802c",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-2-validación-local-ligera-heading-etapa-2-validación-local-ligera-cbee831e-1",
+      "translationHash": "cbee831e83e3c2c842d81e17942b61c6a2064a9254fe80edd872217c4f1fe80f",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-paragraph-add-a-small-script-or-structured-check-that-contributors-can-34f3207c-1",
+      "sourceHash": "34f3207c4cf2e26afc06f92074d2cdb2120cf68021cebe7883826aacfb2297b0",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-2-validación-local-ligera-paragraph-añade-un-script-pequeño-o-una-comprobación-estructurada-que--6142b7da-1",
+      "translationHash": "6142b7dabf0a4bbe22fddc0b2f7b0f92ca96ec7291977e3a194e93a42f478be4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        68,
+        68
+      ],
+      "targetLineRange": [
+        68,
+        68
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-2-validación-local-ligera-paragraph-ejemplos-5aaf6587-1",
+      "translationHash": "5aaf65879301164eab4b6d1f043a688cb09bf38f3b62a2e91a07887edb0a2862",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        70,
+        70
+      ],
+      "targetLineRange": [
+        70,
+        70
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-list-missing-locale-key-detection-d9b6de90-1",
+      "sourceHash": "d9b6de90c2cd2a0a3c41b815d5992c6627b4325ca2681413900b393b06697403",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-2-validación-local-ligera-list-detección-de-claves-de-configuración-regional-faltantes-08a25a8d-1",
+      "translationHash": "08a25a8d57264e4d4a7c95a7789f85d2f146ce941030d83d3e0e223a7084f053",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        72,
+        75
+      ],
+      "targetLineRange": [
+        72,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-2-lightweight-local-validation-paragraph-this-stage-reduces-avoidable-errors-before-ci-even-runs-d6708736-1",
+      "sourceHash": "d670873663fc847469f59526fe2e4e1a91c74215c2f5d7a9229000288c0736cc",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-2-validación-local-ligera-paragraph-esta-etapa-reduce-errores-evitables-antes-incluso-de-que-se--060035db-1",
+      "translationHash": "060035db87a4699b20fe6f614b76706f1204d9e2a1a70b0e1ccf0e77bee5a3db",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 2: lightweight local validation"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-3-ci-visibility-heading-stage-3-ci-visibility-642f3b72-1",
+      "sourceHash": "642f3b7287c30ae0cc35a58caf214f5250deeb30c665ef12a4f89dc6ddd0888d",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-3-visibilidad-en-ci-heading-etapa-3-visibilidad-en-ci-615fb6a6-1",
+      "translationHash": "615fb6a6273ea66a98f70e3c20dafaefd8b7548cbba34b07b93854857e512dee",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 3: CI visibility"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-3-ci-visibility-paragraph-run-the-check-in-ci-even-if-it-is-initially-non-blocking-e7707db8-1",
+      "sourceHash": "e7707db8e1fb358927e39fb730670721b2a16efcdc44449c1de825755e250524",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-3-visibilidad-en-ci-paragraph-ejecuta-la-comprobación-en-ci-aunque-al-principio-no-bloquee-b8005d2e-1",
+      "translationHash": "b8005d2ef1aa1eb12f7bed62ac127e6eba25718ffb3829a8366f9ad18c88ab22",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 3: CI visibility"
+      ],
+      "sourceLineRange": [
+        81,
+        81
+      ],
+      "targetLineRange": [
+        81,
+        81
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-3-ci-visibility-paragraph-this-gives-the-team-visibility-into-how-often-the-rule-fails-825b02e5-1",
+      "sourceHash": "825b02e5c166e6d6d83f9aafc72dc4cce206c21ada58defec890475d309b2601",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-3-visibilidad-en-ci-paragraph-esto-da-al-equipo-visibilidad-sobre-la-frecuencia-con-la-que-9e2ff2b2-1",
+      "translationHash": "9e2ff2b20ff47a871247cd6e57aecbbc528b7e88e2567a8e9b65d324a9d7ff19",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 3: CI visibility"
+      ],
+      "sourceLineRange": [
+        83,
+        83
+      ],
+      "targetLineRange": [
+        83,
+        83
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-4-blocking-ci-gate-heading-stage-4-blocking-ci-gate-62435eee-1",
+      "sourceHash": "62435eeeef9e9f9f3b2336969b7514a7a559791cdab91bf46b92e0a179412c95",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-4-control-bloqueante-en-ci-heading-etapa-4-control-bloqueante-en-ci-e6624226-1",
+      "translationHash": "e662422687e521be4c4534a7a08df71434c21b31e0e91e401e6a0a1afe15ac78",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 4: blocking CI gate"
+      ],
+      "sourceLineRange": [
+        85,
+        85
+      ],
+      "targetLineRange": [
+        85,
+        85
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-4-blocking-ci-gate-paragraph-once-the-rule-is-stable-and-understood-make-it-required-0c6096d7-1",
+      "sourceHash": "0c6096d70682cbae6db24065a9bfaea076eab5e029b3d49a09c069fa880695ef",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-4-control-bloqueante-en-ci-paragraph-una-vez-que-la-regla-es-estable-y-se-entiende-bien-conviérte-62ec8696-1",
+      "translationHash": "62ec8696e16ce1ad30d64143b2691ec5842a5e2572dc752d6fc2fa98b4f8a21c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 4: blocking CI gate"
+      ],
+      "sourceLineRange": [
+        87,
+        87
+      ],
+      "targetLineRange": [
+        87,
+        87
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-useful-maturity-model/stage-4-blocking-ci-gate-paragraph-at-this-point-the-project-has-moved-from-informal-expectatio-2a325b36-1",
+      "sourceHash": "2a325b365e55485ab8190ce5d2bc8f844cf515ebbc5e6cb6e5acfffad4488c34",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-modelo-de-madurez-útil/etapa-4-control-bloqueante-en-ci-paragraph-en-este-punto-el-proyecto-ha-pasado-de-una-expectativa-infor-19c321c3-1",
+      "translationHash": "19c321c37bcadd7ee92b0bdf333640eb726e3882d37890f19115fcc01c8e9957",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A useful maturity model",
+        "Stage 4: blocking CI gate"
+      ],
+      "sourceLineRange": [
+        89,
+        89
+      ],
+      "targetLineRange": [
+        89,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-heading-what-to-automate-first-140085ad-1",
+      "sourceHash": "140085ad54d0c895f55d64a1c892d25ba5681f829a768939a859c17110f34077",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-automatizar-primero-heading-qué-automatizar-primero-26bd0a53-1",
+      "translationHash": "26bd0a53bb1b19dd1863b55b3f36263635616fa5fd32b42b76be8de356c639ca",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        91,
+        91
+      ],
+      "targetLineRange": [
+        91,
+        91
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-paragraph-good-early-candidates-are-usually-5c5f94fc-1",
+      "sourceHash": "5c5f94fcc07ff5b4922f844ba0e12f0d18f7180b4d5f86696ef060ec347a7c6a",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-automatizar-primero-paragraph-los-buenos-candidatos-iniciales-suelen-ser-99836127-1",
+      "translationHash": "9983612744eddd8b00f57e2fa284565f1cf70ba58f436f3c89ded60c932cf14e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        93,
+        93
+      ],
+      "targetLineRange": [
+        93,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-list-structural-consistency-afa735a0-1",
+      "sourceHash": "afa735a089ae77a6696154c0e2a2594270f55c4bd64a05f386beaa02081f1897",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-automatizar-primero-list-coherencia-estructural-4903c419-1",
+      "translationHash": "4903c419ca9a7206409a3fbd162fef8d037c27ef0dacce66ef1c1c1e9170ed0e",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        95,
+        100
+      ],
+      "targetLineRange": [
+        95,
+        100
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-paragraph-for-multilingual-publishing-treat-mixed-language-reader-faci-49a539ec-1",
+      "sourceHash": "49a539eca373d43b46dbf9a4ce166a83e4e9e765b5ee097f6bad0bfb191823ea",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-automatizar-primero-paragraph-para-la-publicación-multilingüe-trata-el-contenido-visible-p-7bd2265a-1",
+      "translationHash": "7bd2265a73ebd0d2005cc289af806265fb5aa494fdd0da31ad1ef49d019094d5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        102,
+        102
+      ],
+      "targetLineRange": [
+        102,
+        102
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-to-automate-first-paragraph-these-checks-are-usually-cheap-objective-and-high-value-138afbd9-1",
+      "sourceHash": "138afbd9a7a6fdd1d984f0a0cefc928a7b92782c3efd37ad633bd9a92fc6da46",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-automatizar-primero-paragraph-estas-comprobaciones-suelen-ser-baratas-objetivas-y-de-gran--5b22f548-1",
+      "translationHash": "5b22f5481d736df4b7e03c9c61e390023c52d80980724df1acb30c71e1f28e7f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What to automate first"
+      ],
+      "sourceLineRange": [
+        104,
+        104
+      ],
+      "targetLineRange": [
+        104,
+        104
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-heading-what-not-to-force-too-early-18302eca-1",
+      "sourceHash": "18302ecafd10e5492db5527c66dbdecdd60c17ea6defd21b42b9cf207b99e618",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-no-forzar-demasiado-pronto-heading-qué-no-forzar-demasiado-pronto-d491073b-1",
+      "translationHash": "d491073b0470acdc4c75035f8b8bb33746cbbe870860f2c3b4c02ee851856820",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        106,
+        106
+      ],
+      "targetLineRange": [
+        106,
+        106
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-paragraph-some-checks-are-valuable-but-may-need-time-before-becoming-h-039dbdd8-1",
+      "sourceHash": "039dbdd84e8a49bd23ad39f24413d4e79b4892a6695654c84abfe1cc033f56e2",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-no-forzar-demasiado-pronto-paragraph-algunas-comprobaciones-son-valiosas-pero-pueden-necesitar-ti-cc153e8d-1",
+      "translationHash": "cc153e8da36a5e585a5e06ad8fd9f6b2821f0a5618fd2cdcf1191edd6c65ed8b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        108,
+        108
+      ],
+      "targetLineRange": [
+        108,
+        108
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-no-forzar-demasiado-pronto-paragraph-ejemplos-5aaf6587-1",
+      "translationHash": "5aaf65879301164eab4b6d1f043a688cb09bf38f3b62a2e91a07887edb0a2862",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        110,
+        110
+      ],
+      "targetLineRange": [
+        110,
+        110
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-list-spellcheck-in-many-languages-2bc1e9ec-1",
+      "sourceHash": "2bc1e9ecc675202dfd074f001aff5e6e79c83415f115ab6ad47912e793174f61",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-no-forzar-demasiado-pronto-list-corrector-ortográfico-en-muchos-idiomas-b582cba9-1",
+      "translationHash": "b582cba9295b80f6db2bc356928cba3966247e52c17760990ead0e594f5c261b",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        112,
+        115
+      ],
+      "targetLineRange": [
+        112,
+        115
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/what-not-to-force-too-early-paragraph-these-can-begin-as-advisory-signals-before-becoming-mandator-37320110-1",
+      "sourceHash": "3732011068584f7b82def68dd6523b0b627c63570387cbecca1efb49c951c414",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/qué-no-forzar-demasiado-pronto-paragraph-pueden-empezar-como-señales-informativas-antes-de-hacerse-ob-60e71045-1",
+      "translationHash": "60e71045997597c3ccc95a241385087a779577ef882fa37542a0d15d7d4efb87",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "What not to force too early"
+      ],
+      "sourceLineRange": [
+        117,
+        117
+      ],
+      "targetLineRange": [
+        117,
+        117
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-heading-let-books-examples-8ab88745-1",
+      "sourceHash": "8ab887456720dd951d4bf198773c52b392eab32dc53cc16d2283d8da100fa8f1",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/ejemplos-de-let-books-heading-ejemplos-de-let-books-6a149008-1",
+      "translationHash": "6a149008c0f158406e682cc915455edfd48754dfe27c4cd807afd41c30b78f3f",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        119,
+        119
+      ],
+      "targetLineRange": [
+        119,
+        119
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-paragraph-the-repository-already-documents-several-validation-patterns-e95b8323-1",
+      "sourceHash": "e95b83235fff196170fccc38b390e5c6e0f12483abf6841bdf63d74a1daf8370",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/ejemplos-de-let-books-paragraph-el-repositorio-ya-documenta-varios-patrones-de-validación-en-0c60d521-1",
+      "translationHash": "0c60d52124c8b6b4bf10ca3cc74ed41816aa29a8cd97a07ccea6e0bdde20cd79",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        121,
+        121
+      ],
+      "targetLineRange": [
+        121,
+        121
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-list-localization-smoke-testing-e006f8db-1",
+      "sourceHash": "e006f8db6493d922f9e029eb5c67173506c43effaae83de83fee47cb5bab5b7e",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/ejemplos-de-let-books-list-pruebas-básicas-de-localización-bb6e1e33-1",
+      "translationHash": "bb6e1e338c96ed35f62faa0d5c29a0791170ce7e591ed06e9b679b7a5b5ff138",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        123,
+        128
+      ],
+      "targetLineRange": [
+        123,
+        128
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-paragraph-the-docs-and-style-guides-also-define-editorial-rules-that-c-bc434b99-1",
+      "sourceHash": "bc434b99dc30e86f7633857545b86498599ec861245fdd1e354f141a7856b324",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/ejemplos-de-let-books-paragraph-la-documentación-y-las-guías-de-estilo-también-definen-regla-bdf07683-1",
+      "translationHash": "bdf076835ed535c76521265fb9e077f4ac06a681cd47340876f18792bbb32f56",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        130,
+        130
+      ],
+      "targetLineRange": [
+        130,
+        130
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/let-books-examples-paragraph-that-makes-let-books-a-good-example-of-incremental-enforceme-17c4b202-1",
+      "sourceHash": "17c4b2028858d73149dcd6f0a40340ce7eb1a6b7e29e17f6f519bc76663209fe",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/ejemplos-de-let-books-paragraph-eso-hace-que-let-books-sea-un-buen-ejemplo-de-aplicación-inc-598971cb-1",
+      "translationHash": "598971cbecb06cd202a021a430c44054fa139ade08ec98c226e8979bdb323e59",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        132,
+        132
+      ],
+      "targetLineRange": [
+        132,
+        132
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-heading-a-practical-rule-conversion-workflow-6701aa6d-1",
+      "sourceHash": "6701aa6d51b2d15eb4129e4e9e11067bcc46b71c5792239bd3e64442759c1836",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-flujo-práctico-para-convertir-reglas-heading-un-flujo-práctico-para-convertir-reglas-321d3157-1",
+      "translationHash": "321d3157dc18f526d8f00d0e6931ebef4566bdc8f1e2fc48fbe6c019b7934f47",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        134,
+        134
+      ],
+      "targetLineRange": [
+        134,
+        134
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-paragraph-use-this-pattern-when-adding-a-new-validation-rule-adbc0770-1",
+      "sourceHash": "adbc0770f4366dc7c84135324a9d42ca4a5c1adf572a057d007284a19d1826b0",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-flujo-práctico-para-convertir-reglas-paragraph-usa-este-patrón-al-añadir-una-nueva-regla-de-validación-093c3965-1",
+      "translationHash": "093c3965103e27b270df9c04e4f3c361328c705b54e6c74fb255cdbe1dc79bcb",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        136,
+        136
+      ],
+      "targetLineRange": [
+        136,
+        136
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-list-1-identify-the-repeated-review-problem-723ad4ca-1",
+      "sourceHash": "723ad4cad93a1963b877a9ccd76f9c8cf44b432ef5bcd8867f9030129b2328f7",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-flujo-práctico-para-convertir-reglas-list-1-identifica-el-problema-de-revisión-que-se-repite-3b8ee494-1",
+      "translationHash": "3b8ee49431289c35e4a93980a255fa3bebcae187e45a0c9be40e629377c91bb2",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        138,
+        142
+      ],
+      "targetLineRange": [
+        138,
+        142
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/a-practical-rule-conversion-workflow-paragraph-this-creates-less-friction-than-introducing-a-hard-gate-befo-2f90ad09-1",
+      "sourceHash": "2f90ad09ba66f3582ebd83bf30e356a42a0cf420ef654e943ca462b667960ee2",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/un-flujo-práctico-para-convertir-reglas-paragraph-esto-genera-menos-fricción-que-introducir-un-control-estrict-19255a85-1",
+      "translationHash": "19255a85c7980202f7cfd29e8456013a88c509d499731c3a181ba316cb9d6370",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "A practical rule-conversion workflow"
+      ],
+      "sourceLineRange": [
+        144,
+        144
+      ],
+      "targetLineRange": [
+        144,
+        144
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/questions-to-ask-before-adding-a-gate-heading-questions-to-ask-before-adding-a-gate-a428c013-1",
+      "sourceHash": "a428c013f961296481f17eb49732f9942069f9c97f1b0fac9360ec8cc9ca4155",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/preguntas-que-hacer-antes-de-añadir-un-control-heading-preguntas-que-hacer-antes-de-añadir-un-control-6d193bd1-1",
+      "translationHash": "6d193bd1c22d21b36609f8e588e5187731f3221ccf88b7ccec5d4f5341f0cc64",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Questions to ask before adding a gate"
+      ],
+      "sourceLineRange": [
+        146,
+        146
+      ],
+      "targetLineRange": [
+        146,
+        146
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/questions-to-ask-before-adding-a-gate-list-1-is-the-rule-clearly-documented-f2ee3689-1",
+      "sourceHash": "f2ee36897e1ebbb3c2bf464ce0e17c9c4a06d34b4cfe4ef65fdac5369eebfc17",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/preguntas-que-hacer-antes-de-añadir-un-control-list-1-la-regla-está-documentada-con-claridad-43fe5e69-1",
+      "translationHash": "43fe5e6901684a7f440551ec392f810bbb89cc0db3c832533cafcb64712631b1",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Questions to ask before adding a gate"
+      ],
+      "sourceLineRange": [
+        148,
+        152
+      ],
+      "targetLineRange": [
+        148,
+        152
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-heading-ai-assisted-projects-need-this-even-more-d071d4a9-1",
+      "sourceHash": "d071d4a913b285db0ff2c12198c4b5b3718be5e1162d4ec9b6fc1da4b18b5701",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/los-proyectos-asistidos-por-ia-lo-necesitan-aún-más-heading-los-proyectos-asistidos-por-ia-lo-necesitan-aún-más-5043cf6c-1",
+      "translationHash": "5043cf6cbdfbee637843454b68f2b9c9cfd039929b1e8793e3bd15b4b7c983ff",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        154,
+        154
+      ],
+      "targetLineRange": [
+        154,
+        154
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-ai-increases-the-volume-of-changes-and-the-speed-of-change-t-a5618f90-1",
+      "sourceHash": "a5618f90fa1c8e22b8458a6f439bd63f6ccd026363327e3cbbd09e7d058e1543",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/los-proyectos-asistidos-por-ia-lo-necesitan-aún-más-paragraph-la-ia-aumenta-el-volumen-de-cambios-y-la-velocidad-del-cambi-14cc4783-1",
+      "translationHash": "14cc47831632539ec85657f056bc44f746b58f1bf0e796d3fdbe76a01fe79b6a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        156,
+        156
+      ],
+      "targetLineRange": [
+        156,
+        156
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-it-also-makes-fast-feedback-more-valuable-the-practical-ques-c9a6e8dd-1",
+      "sourceHash": "c9a6e8ddb78eaf7529c838063fdf3b00e8f88bbd62e07dfa48b77b55b48cb5e6",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/los-proyectos-asistidos-por-ia-lo-necesitan-aún-más-paragraph-también-hace-que-la-retroalimentación-rápida-sea-más-valiosa-bd62b1b4-1",
+      "translationHash": "bd62b1b437a00c31f42d7e15caeb81a56086b4abc17d99a038e9699286f25cf7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        158,
+        158
+      ],
+      "targetLineRange": [
+        158,
+        158
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-validation-and-ci-are-not-there-to-slow-teams-down-they-are--4b42e7d6-1",
+      "sourceHash": "4b42e7d66c15ccd34310133295aa24bca1113a13a4ed148bb5e1a7ec7bacf037",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/los-proyectos-asistidos-por-ia-lo-necesitan-aún-más-paragraph-la-validación-y-la-ci-no-están-para-frenar-a-los-equipos-est-4aaa37d4-1",
+      "translationHash": "4aaa37d467e818fcbaa3205c1099caca5b434924137e0c0afc2b42a07a38ddb2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        160,
+        160
+      ],
+      "targetLineRange": [
+        160,
+        160
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/ai-assisted-projects-need-this-even-more-paragraph-in-spec-driven-work-the-goal-is-not-maximum-automation-the-g-f33cf9e3-1",
+      "sourceHash": "f33cf9e369bc63ac08a6644f45ae30185ffeca080e00097ef47e6b80550a914c",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/los-proyectos-asistidos-por-ia-lo-necesitan-aún-más-paragraph-en-el-trabajo-guiado-por-especificaciones-el-objetivo-no-es--94e545cd-1",
+      "translationHash": "94e545cd1d70108848888e130f3b588113ac3e2a6aef3c0abc469cd93caceb16",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "AI-assisted projects need this even more"
+      ],
+      "sourceLineRange": [
+        162,
+        162
+      ],
+      "targetLineRange": [
+        162,
+        162
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/the-durable-lesson-heading-the-durable-lesson-efa37549-1",
+      "sourceHash": "efa37549901c9fd11f26c47473b9ddbef2258a14e98efc6f7046bb1bf94bb164",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/la-lección-duradera-heading-la-lección-duradera-0b9f20fc-1",
+      "translationHash": "0b9f20fca1dd1665e538d961e119c97609ea585d49213f88a4ada67564267149",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        164,
+        164
+      ],
+      "targetLineRange": [
+        164,
+        164
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/the-durable-lesson-paragraph-the-strongest-validation-systems-usually-do-not-appear-fully-612bc9c4-1",
+      "sourceHash": "612bc9c496de3044941cb5ac8fbb81afd67c52023188dbc2667eae5f1c193a58",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/la-lección-duradera-paragraph-los-sistemas-de-validación-más-sólidos-normalmente-no-aparec-7d25fb48-1",
+      "translationHash": "7d25fb48e82392e8479e3491861a493e738790baad9f35aba60d002b466bb468",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        166,
+        166
+      ],
+      "targetLineRange": [
+        166,
+        166
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/the-durable-lesson-paragraph-that-staged-path-is-often-the-most-realistic-way-to-make-a-p-6c9cf4f4-1",
+      "sourceHash": "6c9cf4f41db7b820937296091debadd9b7e23192cde9a1d2654b28b0ce01b4d9",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/la-lección-duradera-paragraph-ese-camino-por-etapas-suele-ser-la-forma-más-realista-de-hac-ed9782b7-1",
+      "translationHash": "ed9782b7418efa0feb4432b969eb2b61df80e6b8a01db2dafbc101cb2c11f850",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        168,
+        168
+      ],
+      "targetLineRange": [
+        168,
+        168
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-heading-source-first-remediation-checklist-f29b4465-1",
+      "sourceHash": "f29b44653d97fa66b9e46571e1693ab2c69a06b1a194d3f2b8b0252beb44b491",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/lista-de-comprobación-para-remediación-desde-el-origen-heading-lista-de-comprobación-para-remediación-desde-el-origen-af04bc51-1",
+      "translationHash": "af04bc513dd14c41beebe3a7f4e381b551ce0ccb8e415ea97fe3e30281eec3ca",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        170,
+        170
+      ],
+      "targetLineRange": [
+        170,
+        170
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-paragraph-when-a-validation-rule-fails-79686387-1",
+      "sourceHash": "79686387aa6e59a8c8b180de1a2781b0f08196a9be02d045bb2e5831f63f1dfc",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/lista-de-comprobación-para-remediación-desde-el-origen-paragraph-cuando-falla-una-regla-de-validación-188de31e-1",
+      "translationHash": "188de31e3ff3bc3fc67edead71b3e8e477b1686a9537b8df9b13134ef168cb50",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        172,
+        172
+      ],
+      "targetLineRange": [
+        172,
+        172
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-list-1-inspect-source-markdown-first-d17e9e81-1",
+      "sourceHash": "d17e9e81d37300c42651df06e871ab28c0040d43690c33a9bf58d768eb415343",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/lista-de-comprobación-para-remediación-desde-el-origen-list-1-inspecciona-primero-el-markdown-de-origen-22ed4bc9-1",
+      "translationHash": "22ed4bc9934da6016e6737fe7164bd3606f65479ff2af7161486c20a4b90cfbc",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        174,
+        178
+      ],
+      "targetLineRange": [
+        174,
+        178
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/source-first-remediation-checklist-paragraph-do-not-patch-generated-output-if-the-source-localization-is--b5d5e535-1",
+      "sourceHash": "b5d5e5355d3c99d6c26415aa75010a107efddc87958aceab8d905c52b5a0b52a",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/lista-de-comprobación-para-remediación-desde-el-origen-paragraph-no-corrijas-la-salida-generada-si-la-localización-de-origen--10e2f094-1",
+      "translationHash": "10e2f0949c197d85a8d1b860cf91c93694637c5ebf7321274f4cec15d5d5487e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Source-first remediation checklist"
+      ],
+      "sourceLineRange": [
+        180,
+        180
+      ],
+      "targetLineRange": [
+        180,
+        180
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/further-reading-heading-further-reading-dfd43c88-1",
+      "sourceHash": "dfd43c88c1cb9723f2a690b08119f3b312da0ad2e460f768fe2e7b2cad613f05",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/lecturas-adicionales-heading-lecturas-adicionales-25b35999-1",
+      "translationHash": "25b35999335edaea63992dc02630c37b43ea463dd7a24beeabad9e0943310c03",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        182,
+        182
+      ],
+      "targetLineRange": [
+        182,
+        182
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-add-validation-rules-and-ci-gates-in-stages/further-reading-list-list-ee54b9a4-1",
+      "sourceHash": "ee54b9a4f0e3602f79666219f51d4484fea233c3c1fc0586930d703107934ed9",
+      "targetBlockId": "cómo-añadir-reglas-de-validación-y-controles-de-ci-por-etapa/lecturas-adicionales-list-list-21e1d7ac-1",
+      "translationHash": "21e1d7ac0113fb6677eb85bbbb7c74d078a51a827ed1fdf8d4fbb762ffb51b85",
+      "blockType": "list",
+      "headingPath": [
+        "How to Add Validation Rules and CI Gates in Stages",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        184,
+        188
+      ],
+      "targetLineRange": [
+        184,
+        188
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

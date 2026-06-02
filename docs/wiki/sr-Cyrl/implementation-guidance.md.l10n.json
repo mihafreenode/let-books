@@ -1,0 +1,574 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/implementation-guidance.md",
+  "targetPath": "docs/wiki/sr-Cyrl/implementation-guidance.md",
+  "locale": "sr-Cyrl",
+  "blocks": [
+    {
+      "blockId": "implementation-guidance-heading-implementation-guidance-17406aeb-1",
+      "sourceHash": "17406aeb41ac1286e4f5ec43f74b6fb7cff0b88e51a01c71e8f7394f016fd79f",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "упутство-за-имплементацију/резиме-heading-резиме-9ab20e79-1",
+      "translationHash": "9ab20e79d7f95e28c71744878896bf0c2a488dac93519cdd7a3c9fd99fcacfa3",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-paragraph-implementation-guidance-defines-how-a-team-should-deliver-wo-b885753c-1",
+      "sourceHash": "b885753ca6cc4c238f202f3c8b5253b44ced449a17ebd9e17d30099e154a43f5",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/role-heading-role-ae2d08dc-1",
+      "sourceHash": "ae2d08dcf5603d2b87a9d892befdf02dcb90aeb4464cd78cc4344528268828f2",
+      "targetBlockId": "упутство-за-имплементацију/улога-heading-улога-f547a61f-1",
+      "translationHash": "f547a61ff1021085b5c54e08e57ad07d3a178d3c7f8da578407fd5cfd25dee27",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-implementation-guidance-sits-below-the-product-specification-a770f1b1-1",
+      "sourceHash": "a770f1b19f1c4ccc2dbdcad371b790de0dd7129121c4b6d621f0e3ec0f2be950",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-it-helps-answer-questions-such-as-9fdbda09-1",
+      "sourceHash": "9fdbda0903b09135aa722d09c16c36a00f7bd86f686a4eca2da6fba9679771e7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/role-list-how-public-naming-should-work-1d4672ce-1",
+      "sourceHash": "1d4672ce6edb9252fb49c1d64973699d8a33a1b72567e1b7e8f821e2bbf31ea4",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        22,
+        26
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-heading-difference-from-product-specification-19aa4de1-1",
+      "sourceHash": "19aa4de108d0c68d0f9399db9a2597530858c1587b202022f3ce4a5068586c9b",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-the-product-specification-defines-what-the-product-is-and-wh-5f6771d0-1",
+      "sourceHash": "5f6771d0e9d46c39a875b4ea05be3fef8c8745d2c4f264e5ace62430c3a1d92f",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-implementation-guidance-defines-how-contributors-should-carr-ca601bd7-1",
+      "sourceHash": "ca601bd77521b48fbfaa56cd1af17f4129e198bd8dd019fc77373535e5d06daa",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-this-distinction-is-useful-because-not-every-repository-rule-87ff1db0-1",
+      "sourceHash": "87ff1db07149d1658e5affe437c66dfcb010b9220d65b3307f6f4fb02ea19a3d",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-heading-common-examples-5752ba62-1",
+      "sourceHash": "5752ba6250773f396d4e2eeec55bdd9497ee2aae886fa62b999250ff6cb5cf12",
+      "targetBlockId": "упутство-за-имплементацију/let-books-контекст-heading-let-books-контекст-c0275bdb-1",
+      "translationHash": "c0275bdb3d94869185aef84ea49993ce5a02cec70817d2a11764e08dc99e91e0",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-implementation-guidance-often-includes-83ad37c7-1",
+      "sourceHash": "83ad37c7ed27c3debb85f041e6439186e383bda0e8ea0fe5c8d9185b0420c5e6",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-list-naming-and-branding-rules-b7cce9dd-1",
+      "sourceHash": "b7cce9ddc123debdb53a24aad3da82351d90a38dbeff1f34b07a497e09618eff",
+      "targetBlockId": "упутство-за-имплементацију/повезане-странице-list-list-df5693d5-1",
+      "translationHash": "df5693d5a1f949b74bebf5988dc60c9e5c80b46ccd02972ae5d350ce6f97d955",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        40,
+        45
+      ],
+      "targetLineRange": [
+        86,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-these-rules-often-live-well-in-markdown-because-they-need-to-dc1bded5-1",
+      "sourceHash": "dc1bded5fdc33f2576ccd4e926678a729031ec00cce03af41746fe9c157f0f70",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-heading-why-it-matters-in-ai-assisted-work-388d76e1-1",
+      "sourceHash": "388d76e10796665a57d3c660e503a64f1c5f36b9bedafab89894aebb6c9d8618",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-ai-assistants-often-follow-the-nearest-concrete-instruction--0f14731c-1",
+      "sourceHash": "0f14731c60850e0f3123e2f42275a9baf8a784cc7186a5e3a3c1d0d4353492cc",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        51,
+        51
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-implementation-guidance-makes-those-rules-visible-without-po-08db9b33-1",
+      "sourceHash": "08db9b338bdcbed418f4b508d0c9a6cc08b693213b1996ad434a50b74d18a24a",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        53,
+        53
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-in-practice-that-means-a-markdown-guidance-file-can-do-two-j-0549c21c-1",
+      "sourceHash": "0549c21c7ded1476d866126afa42c4974a70085fce5b61e4464e4a96ae443d04",
+      "targetBlockId": "упутство-за-имплементацију/зашто-је-то-важно-у-раду-уз-помоћ-вештачке-интелигенције-paragraph-у-пракси-то-значи-да-датотека-са-упутствима-из-markdown-може-d51176ce-1",
+      "translationHash": "d51176ce29b9c060c5e2c00d37b7658e2e6b2fdaf522796105597f66f818abec",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        55,
+        55
+      ],
+      "targetLineRange": [
+        55,
+        55
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-list-explain-the-workflow-to-a-human-contributor-f74c8828-1",
+      "sourceHash": "f74c8828754abe76af0b01bc03008207a992c0d2f483702f15d600a6a41c3de9",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        57,
+        58
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-in-let-books-is-the-tactical-guidance-layer-ea4f5a74-1",
+      "sourceHash": "ea4f5a74e1505a4d39fce8680b0dc5e760562377dc8453e5cf41237d9144d8f9",
+      "targetBlockId": "упутство-за-имплементацију/let-books-контекст-paragraph-у-let-books-је-слој-тактичког-навођења-b0105206-1",
+      "translationHash": "b01052064313b4a4e073f8f9edcaa465e85ab6d6845e71de46c04165211dbedb",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        62,
+        62
+      ],
+      "targetLineRange": [
+        62,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-it-covers-areas-such-as-8c247200-1",
+      "sourceHash": "8c24720082c0b5176a9472d442bda2f9600cc45b70a23a0c14662053bbd93fc4",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-public-naming-b5784969-1",
+      "sourceHash": "b5784969c6461e590d4102db31e17728b329563b62099522e59c7b7decc7f6d6",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        66,
+        73
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-that-makes-it-the-operational-companion-to-not-a-replacement-c99166b6-1",
+      "sourceHash": "c99166b631f2ba172bcb42e39af5c9837314d5c1426afb8e2a0c3da013cb3200",
+      "targetBlockId": "упутство-за-имплементацију/let-books-контекст-paragraph-то-га-чини-оперативним-пратиоцем-а-не-његовом-заменом-3a8793ac-1",
+      "translationHash": "3a8793acdb83179bb77318e626d98776041eb05634456ccbfd382e1597cc04a0",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-other-markdown-guidance-in-the-repo-reinforces-the-same-patt-498165ac-1",
+      "sourceHash": "498165acde9e9411467ddedd51c8d039febd7352d7c380352275f046e943eca2",
+      "targetBlockId": "упутство-за-имплементацију/let-books-контекст-paragraph-остала-упутства-markdown-у-репо-у-појачавају-исти-образац-на-f8e67516-1",
+      "translationHash": "f8e67516d097232a2a463bb1fb0596df5f08dc1c4d11c644815f706e4e50f633",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-directs-debugging-workflow-choices-such-as-cdp-attach-versus-a6021b0d-1",
+      "sourceHash": "a6021b0dc1a7627da7ce3185f6a7a48b1ecba38f5d0cbe61bdc8f38b860e3392",
+      "targetBlockId": "упутство-за-имплементацију/let-books-контекст-list-усмерава-изборе-тока-посла-за-отклањање-грешака-као-што-је-c-7814c4ac-1",
+      "translationHash": "7814c4acd54b5b7c7a1bb300b501d1c861ba28031a4136f8421e400c7aa6f491",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        80
+      ],
+      "targetLineRange": [
+        79,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-these-documents-are-readable-as-human-guidance-but-they-also-630297df-1",
+      "sourceHash": "630297df4f338ad47a526d14fbdf13c761429fc4e9ab5778185a551b2c462d89",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-list-list-67281e84-1",
+      "sourceHash": "67281e846189b0a6088c4a1d84c0ca587e7968ec43f54ce1b74b8953a9b68055",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        86,
+        89
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    }
+  ]
+}

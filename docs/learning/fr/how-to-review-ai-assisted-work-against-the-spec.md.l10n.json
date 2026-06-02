@@ -1,0 +1,1306 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-review-ai-assisted-work-against-the-spec.md",
+  "targetPath": "docs/learning/fr/how-to-review-ai-assisted-work-against-the-spec.md",
+  "locale": "fr",
+  "blocks": [
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec-heading-how-to-review-ai-assisted-work-against-the-spec-01342e36-1",
+      "sourceHash": "01342e3603e3d3b5d90c887bb108649c798c4b4e24de26d65c0f2f66eacff2f6",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc-heading-comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc-0e57f380-1",
+      "translationHash": "0e57f380c0dd42e6f5b4a749665b91f9225ce4a7cb460bf217481fab6c46aa28",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/résumé-heading-résumé-e11bf8b8-1",
+      "translationHash": "e11bf8b82863a5b358b5aab5a60aa85b1801725df6f4ece12c0b6094ba4f626b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/summary-paragraph-this-guide-explains-how-to-review-ai-assisted-implementation-ea6586bd-1",
+      "sourceHash": "ea6586bd5c631bb5218c8fba0946a773ecb0dde3e11292ad4847b088b0cd27d0",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/résumé-paragraph-ce-guide-explique-comment-relire-une-implémentation-assistée-5e187c42-1",
+      "translationHash": "5e187c42a637c6829ceb37036ae742484ad79f9e5ad438380c48011fb002d71f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-heading-why-this-matters-7e1d357b-1",
+      "sourceHash": "7e1d357b45571e5daefa2355f329a5f90663245af72d9cfd3e08f646589419fd",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pourquoi-c-est-important-heading-pourquoi-c-est-important-e1502d52-1",
+      "translationHash": "e1502d525a189cc5d78b1053260bd0e53ac5205debe738537c4500f26d763521",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-ai-can-produce-code-copy-tests-and-interface-changes-that-lo-3ad691fc-1",
+      "sourceHash": "3ad691fcc10af44cfd320d4015c523836193288308016ff41f83aa4a1dc3a3ec",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pourquoi-c-est-important-paragraph-l-ia-peut-produire-très-rapidement-du-code-du-texte-des-test-2e96a4bb-1",
+      "translationHash": "2e96a4bbfd534a4d9814b97500748f45b43be5d405c8e52d847bbaada495eead",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-that-speed-creates-a-review-risk-reviewers-may-unconsciously-b9b50986-1",
+      "sourceHash": "b9b50986722c994b368b4cea47156b0f61f6c1b4c6ae97eda5576b458200ac42",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pourquoi-c-est-important-paragraph-cette-vitesse-crée-un-risque-de-revue-les-personnes-qui-reli-93affc3d-1",
+      "translationHash": "93affc3dbd690e8f2e35d8721e3d1c8a2b7a90f2bc378d068b4a938009d5c403",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-those-are-not-the-same-question-88373092-1",
+      "sourceHash": "883730925adf01a63c51a47c1e97e1074251196d264dbd06d1e5954406e063bc",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pourquoi-c-est-important-paragraph-ce-n-est-pas-la-même-question-67b32134-1",
+      "translationHash": "67b3213446d33996ffc3339276b28de72c548a17429aaaa9d989a5ab473dcef1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        22,
+        22
+      ],
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-in-spec-driven-work-review-should-begin-with-alignment-and-o-4c3fcdf1-1",
+      "sourceHash": "4c3fcdf18095fa704fb8eeb890d096d089a6315caf727c5e61d035a13475bde9",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pourquoi-c-est-important-paragraph-dans-un-travail-piloté-par-les-spécifications-la-revue-doit--3058ce30-1",
+      "translationHash": "3058ce30b548fe0ed133977c1ced27df05652b928c2466ec76623483093a00d5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-heading-start-with-the-source-of-truth-88829d72-1",
+      "sourceHash": "88829d72460e3148d6ab2f31aa853696d9b9b7fc32b862d116d987905e268e65",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/commencer-par-la-source-de-vérité-heading-commencer-par-la-source-de-vérité-6f9cb4db-1",
+      "translationHash": "6f9cb4db618e217db69a8f6015afd09486067c4fc515569668d63ffdd684ea26",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-paragraph-before-reviewing-the-output-identify-the-documents-that-defi-dfe72db7-1",
+      "sourceHash": "dfe72db7e47f9b435364415f66d4a5a318d51579c9b47f8e278ce509c92feffd",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/commencer-par-la-source-de-vérité-paragraph-avant-de-relire-le-résultat-identifiez-les-documents-qui-déf-baaf30c8-1",
+      "translationHash": "baaf30c8475e8b90a4eded598ecd7e52f692628c665ab844dbc8480c53a4c77c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-paragraph-in-the-let-books-repository-that-usually-means-6f745ce5-1",
+      "sourceHash": "6f745ce5c16a6ea85067ed8b1f4dabf9ace776a465d7f524a6e89bed39c0685a",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/commencer-par-la-source-de-vérité-paragraph-dans-le-dépôt-let-books-cela-signifie-généralement-1ab8e168-1",
+      "translationHash": "1ab8e168f43c4f946bd5b9a98f42e7b1a2ede49e8e96a06a448500edd071b60b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-list-for-product-rules-workflows-and-scope-0c4c8946-1",
+      "sourceHash": "0c4c8946dd9200ac3f906346f0fe223d505d58ebf05dd7c07f55674c76b8b239",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/commencer-par-la-source-de-vérité-list-pour-les-règles-produit-les-flux-de-travail-et-le-périmètre-e6da0754-1",
+      "translationHash": "e6da07545035c3db5b4a7a8be1b3171035fe803f065440478dec72f426454e6b",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        32,
+        35
+      ],
+      "targetLineRange": [
+        32,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-paragraph-without-this-step-review-easily-becomes-subjective-and-local-71eee0b3-1",
+      "sourceHash": "71eee0b34f70a0d89d1f85d1e50cee8ff0ffed7827545a10f8b2c43fa62c53ec",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/commencer-par-la-source-de-vérité-paragraph-sans-cette-étape-la-revue-devient-facilement-subjective-et-l-7fed6ae4-1",
+      "translationHash": "7fed6ae4d32ae8029e9527d4b6d97280f8340caf898515dfff8f446c0dca61ba",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        37,
+        37
+      ],
+      "targetLineRange": [
+        37,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order-heading-review-in-the-right-order-ae0afb62-1",
+      "sourceHash": "ae0afb62887d608753518e3087ad3e3ebc9f9c9d6f888911f7403efe9edae218",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre-heading-relire-dans-le-bon-ordre-1d13bed2-1",
+      "translationHash": "1d13bed26889bbf3b096dae4f720a340d8b14c549ff30a4aca88210d61d74d52",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order-paragraph-use-this-order-when-reviewing-ai-assisted-work-511ca06e-1",
+      "sourceHash": "511ca06e93d690aa7e45682d6995f64ddb15e3431e0df2c9ea5db97943b4b855",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre-paragraph-utilisez-cet-ordre-lorsque-vous-relisez-un-travail-assisté-p-db3da95f-1",
+      "translationHash": "db3da95fe5256d950051dda4589d67499ed9d92d0aa4bde980f6dbcf019febb6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-heading-1-product-alignment-a81b572f-1",
+      "sourceHash": "a81b572fae5f30bbc92962c378ebe3c5f0a9a90ba586097befc7536710a501e9",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/1-alignement-produit-heading-1-alignement-produit-7b9a4d10-1",
+      "translationHash": "7b9a4d10f2ffdee14bd4c31f29b472ce9468b812dc66bea1488eff96ad7fabb1",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-paragraph-ask-whether-the-output-matches-the-intended-user-workflow-an-720e1b84-1",
+      "sourceHash": "720e1b84baba4b2f1e7de32fb735360fd83ef5765130d1f737608f15aa142e53",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/1-alignement-produit-paragraph-demandez-vous-si-le-résultat-correspond-au-flux-de-travail-u-5c7faf84-1",
+      "translationHash": "5c7faf8475a61cd59eabfa672a17765583237258fb834854a427e778e0bd1275",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/1-alignement-produit-paragraph-exemples-798e5d90-1",
+      "translationHash": "798e5d90fd18e957417352bd7daa0cc6f3fc3c577470f9bea8b29549d5660ecc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-list-does-manual-entry-still-work-where-the-spec-requires-it-2b6ae9cf-1",
+      "sourceHash": "2b6ae9cfa510a920ddbd2b23ccaee9f3fbd776c7c7001fb9eb390c76eee81983",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/1-alignement-produit-list-la-saisie-manuelle-fonctionne-t-elle-toujours-là-où-la-spéci-4fd0d692-1",
+      "translationHash": "4fd0d6928be4a44faa2e22bdadeb1dab0f7322980426d5ba59b944e93ce61446",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        49,
+        52
+      ],
+      "targetLineRange": [
+        49,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-paragraph-if-the-product-alignment-is-wrong-there-is-no-value-in-spend-2eed780e-1",
+      "sourceHash": "2eed780ea619119d2dfd34c4bb9ec445249b4d78895636b4335a233da8decea2",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/1-alignement-produit-paragraph-si-l-alignement-produit-est-mauvais-cela-n-a-pas-beaucoup-de-063134c1-1",
+      "translationHash": "063134c119683f744d77ffdc102e836f7516a05172f86e59b6b0530afadf43a9",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-heading-2-documentation-alignment-e4a448fc-1",
+      "sourceHash": "e4a448fc5702b216f42f0805c85a868bf6868d1c4f587d1b59ed978d779d962a",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/2-alignement-documentaire-heading-2-alignement-documentaire-2bff9f47-1",
+      "translationHash": "2bff9f47a746fe5c77cbbb76323010181740ccc9b864c0e166755415cacc210f",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-paragraph-ask-whether-the-surrounding-docs-still-describe-reality-hone-02dfd422-1",
+      "sourceHash": "02dfd42236ea8404ff95b05b58a5d36eb9312c0bee0421bed88e38c9c819fb9b",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/2-alignement-documentaire-paragraph-demandez-vous-si-la-documentation-autour-du-changement-décri-928b648b-1",
+      "translationHash": "928b648b839cc7bddbb7788971d4a573a643ae921d95dfd4ea2aff8b85b56cf6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        58,
+        58
+      ],
+      "targetLineRange": [
+        58,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/2-alignement-documentaire-paragraph-exemples-798e5d90-1",
+      "translationHash": "798e5d90fd18e957417352bd7daa0cc6f3fc3c577470f9bea8b29549d5660ecc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-list-was-a-user-visible-workflow-changed-without-updating-the-doc-65a5b4cb-1",
+      "sourceHash": "65a5b4cb7f5b2e0672c2936497d44e346e8daa22ae7923dea89cc3535205b5ad",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/2-alignement-documentaire-list-un-flux-de-travail-visible-par-l-utilisateur-a-t-il-changé-s-7300b33f-1",
+      "translationHash": "7300b33ff1722d1c0d2c566ab46210b56fc9260eb04f37f9d1d8fda1132a6933",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        62,
+        64
+      ],
+      "targetLineRange": [
+        62,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-paragraph-ai-generated-changes-often-modify-behavior-without-rememberi-cffb4cb2-1",
+      "sourceHash": "cffb4cb2471afc3ee2df9e9e971ef750a8d1e1edb72d49e9da34f6fea9025ac5",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/2-alignement-documentaire-paragraph-les-changements-générés-par-ia-modifient-souvent-le-comporte-f2d09db4-1",
+      "translationHash": "f2d09db485599e8aa232bf5b20d75a27c671c81b93020fdc41243ff560d1e736",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-heading-3-validation-and-fallback-behavior-15990490-1",
+      "sourceHash": "1599049034a304569087b8293805275a8f7fe453cd1a991a12702ec18b37cd54",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/3-validation-et-comportement-de-repli-heading-3-validation-et-comportement-de-repli-14e90bdd-1",
+      "translationHash": "14e90bdd555dbd7fcab6adec6045eba5042af2be1c4c9864bb055ae4118dbedd",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        68,
+        68
+      ],
+      "targetLineRange": [
+        68,
+        68
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-paragraph-ask-whether-the-change-preserves-the-failure-and-fallback-ex-56db17b6-1",
+      "sourceHash": "56db17b661440f12d3143215e7276fea225e4ebfc459162b472648749e321273",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/3-validation-et-comportement-de-repli-paragraph-c-est-ici-que-de-nombreuses-implémentations-plausibles-échou-683da8fa-1",
+      "translationHash": "683da8fa33d1dd865b407f1a60c3b26cf25947ee90232153453d09bb4b34370f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        70,
+        70
+      ],
+      "targetLineRange": [
+        78,
+        78
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/3-validation-et-comportement-de-repli-paragraph-exemples-798e5d90-1",
+      "translationHash": "798e5d90fd18e957417352bd7daa0cc6f3fc3c577470f9bea8b29549d5660ecc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        72,
+        72
+      ],
+      "targetLineRange": [
+        72,
+        72
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-list-can-the-workflow-still-succeed-when-an-optional-provider-fai-7a14e5e8-1",
+      "sourceHash": "7a14e5e89b9e09e1fc22b62891357ea874142b9a3baa674b4bfc668f6565e682",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/3-validation-et-comportement-de-repli-list-le-flux-de-travail-peut-il-encore-réussir-lorsqu-un-fourniss-46386cbd-1",
+      "translationHash": "46386cbd262be469a60fc9d0fd06cc29fdbf1910734fc57bd4a04431a45423f1",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        74,
+        76
+      ],
+      "targetLineRange": [
+        74,
+        76
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-paragraph-this-is-where-many-plausible-implementations-fail-the-real-p-e2b4c325-1",
+      "sourceHash": "e2b4c325d31a963837e70edd05f5116e4f8959ad4671ad3996932cb7e2c96c4a",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/4-qualité-technique-paragraph-la-qualité-technique-reste-importante-elle-ne-doit-simplemen-a432a28e-1",
+      "translationHash": "a432a28efc8381e435db74946b773681364ba9c1a4029061c99f261797b6c67f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        78,
+        78
+      ],
+      "targetLineRange": [
+        91,
+        91
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-heading-4-technical-quality-a98667b3-1",
+      "sourceHash": "a98667b3b49d083899894e6e757ea6e36d3dda78027ce9ca13026fd0d645241e",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/4-qualité-technique-heading-4-qualité-technique-e36941d8-1",
+      "translationHash": "e36941d8d70eee340ad98372667f565aa64a48a10b0993045421ca12dbe3f70d",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        80,
+        80
+      ],
+      "targetLineRange": [
+        80,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-paragraph-only-after-the-above-checks-should-you-spend-most-of-your-ti-7105936d-1",
+      "sourceHash": "7105936da93a467f22ee10613cecbf4b97b24c5ca6aeff4bdd52ebbb32eadd7e",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/4-qualité-technique-paragraph-ce-n-est-qu-après-les-vérifications-ci-dessus-que-vous-devez-95460add-1",
+      "translationHash": "95460addcfc2701bf2d8d2288102bf00daee7c76bbb5dc85144f89f5b4db510b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-list-clarity-7d870d84-1",
+      "sourceHash": "7d870d846b3bc84a316189e7b68f3ed1ddca05f0a63996ec87242eccc35b3903",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/relire-dans-le-bon-ordre/4-qualité-technique-list-la-clarté-5c7ee876-1",
+      "translationHash": "5c7ee8765f329a0d971d5bf9a658a44aefbe5be755df36e6cff724bc86b712cf",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        84,
+        89
+      ],
+      "targetLineRange": [
+        84,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-paragraph-technical-quality-still-matters-it-just-should-not-outrank-p-19add9da-1",
+      "sourceHash": "19add9da7d947a51700894bc966ee78a04121e24e226f1645488f1e29c4e1a4b",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-du-résultat-soigné-paragraph-le-résultat-paraît-propre-donc-les-personnes-qui-relisent-su-90ebec97-1",
+      "translationHash": "90ebec97c20bb075a8a64ae0216de596d6b6a022de703cbd29a3f5b656a15829",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        91,
+        91
+      ],
+      "targetLineRange": [
+        99,
+        99
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps-heading-common-review-traps-0ec68cf3-1",
+      "sourceHash": "0ec68cf3793b1e6aab7faeea2093d5217a9a68f5daa8e7f86a38786f37f6820c",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/comment-relire-les-tests-générés-heading-comment-relire-les-tests-générés-1c560346-1",
+      "translationHash": "1c5603460f71ea728514b0ff30da04c427cfa2e30d796f3452616b7aec0a8fa6",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps"
+      ],
+      "sourceLineRange": [
+        93,
+        93
+      ],
+      "targetLineRange": [
+        125,
+        125
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps-paragraph-ai-assisted-work-tends-to-create-several-repeatable-review-t-ad64d06b-1",
+      "sourceHash": "ad64d06b24553b00f9425f47dd931a76df2d560fdc55b0dbfb4814a5d5a30411",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents-paragraph-le-travail-assisté-par-ia-tend-à-créer-plusieurs-pièges-de-r-13c23978-1",
+      "translationHash": "13c23978becb5401c9cfa2864a1a2484f0d905d37d7ec438082cff242c40ec19",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps"
+      ],
+      "sourceLineRange": [
+        95,
+        95
+      ],
+      "targetLineRange": [
+        95,
+        95
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-polished-output-trap-heading-the-polished-output-trap-a3bee1c0-1",
+      "sourceHash": "a3bee1c030f047f55c59cd38eec0d52deb10a9035a5a9729fbc3f3fcc53098fc",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-du-résultat-soigné-heading-le-piège-du-résultat-soigné-fdf1f9a8-1",
+      "translationHash": "fdf1f9a84cf7fe7dd01a7b0a0988953476a3b2b1d347fe4516a6164871338034",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The polished-output trap"
+      ],
+      "sourceLineRange": [
+        97,
+        97
+      ],
+      "targetLineRange": [
+        97,
+        97
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-polished-output-trap-paragraph-the-output-looks-clean-so-reviewers-assume-it-is-correct-3df79dd7-1",
+      "sourceHash": "3df79dd75c66589cb28010e2cd8b63980250fe8d076eabada9ed18eae5a9da1e",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-du-contexte-voisin-paragraph-le-changement-correspond-à-l-implémentation-existante-la-plu-73a902dd-1",
+      "translationHash": "73a902dde188e3374135e4b06ffa99ae64f3067654ee25551249afb4f5875f69",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The polished-output trap"
+      ],
+      "sourceLineRange": [
+        99,
+        99
+      ],
+      "targetLineRange": [
+        103,
+        103
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-nearby-context-trap-heading-the-nearby-context-trap-4ad217ce-1",
+      "sourceHash": "4ad217ce0506e0ff6dba397926c73b7b6c185939b56bc96d8b5d77951fe04519",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-du-contexte-voisin-heading-le-piège-du-contexte-voisin-057c2e75-1",
+      "translationHash": "057c2e75066c50dfd7ba9acd0bb01411f4bf68f9bed4917e896c670fa14b7fd6",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The nearby-context trap"
+      ],
+      "sourceLineRange": [
+        101,
+        101
+      ],
+      "targetLineRange": [
+        101,
+        101
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-nearby-context-trap-paragraph-the-change-matches-the-nearest-existing-implementation-but-t-69d5f530-1",
+      "sourceHash": "69d5f530a2dd9770ac0d3b277cb389b567357491aa654e77485d2a27fd520b12",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-du-périmètre-implicite-paragraph-l-assistant-ajoute-des-fonctionnalités-des-abstractions-ou-d-6bd5dede-1",
+      "translationHash": "6bd5dede9186cda7023b7ca97401d810bd5de1957dbf17555df9becfa32c5ef4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The nearby-context trap"
+      ],
+      "sourceLineRange": [
+        103,
+        103
+      ],
+      "targetLineRange": [
+        107,
+        107
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-implicit-scope-trap-heading-the-implicit-scope-trap-850f13ba-1",
+      "sourceHash": "850f13bacb62bf02f7b506c8b1161f6e99d120c8f3462460c14367f405e72ef0",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-du-périmètre-implicite-heading-le-piège-du-périmètre-implicite-0c449156-1",
+      "translationHash": "0c44915685257297c0f6b70d618d95ffacb3444fd76849a11d5ccd6e196916a2",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The implicit-scope trap"
+      ],
+      "sourceLineRange": [
+        105,
+        105
+      ],
+      "targetLineRange": [
+        105,
+        105
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-implicit-scope-trap-paragraph-the-assistant-adds-features-abstractions-or-assumptions-that-2bcbd6d0-1",
+      "sourceHash": "2bcbd6d0b45249674279e69c81964a2ef7ef2d429068a8f3710caaaa92fd2baa",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-des-tests-qui-passent-paragraph-les-tests-peuvent-réussir-parce-qu-ils-valident-le-comportem-30fde2a5-1",
+      "translationHash": "30fde2a5098ed791e19cc61e5331838df84af969a2dff8e22efd68eb2728bff5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The implicit-scope trap"
+      ],
+      "sourceLineRange": [
+        107,
+        107
+      ],
+      "targetLineRange": [
+        111,
+        111
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-test-pass-trap-heading-the-test-pass-trap-d51caecc-1",
+      "sourceHash": "d51caeccefa83ca90898484ba5a21864255ee34d70c50aa6f44245162174317e",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/pièges-de-revue-fréquents/le-piège-des-tests-qui-passent-heading-le-piège-des-tests-qui-passent-88ee3cea-1",
+      "translationHash": "88ee3ceaecf520c0659ce56588699ea5fa7e8119946275c5b1a2fcd19888211e",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The test-pass trap"
+      ],
+      "sourceLineRange": [
+        109,
+        109
+      ],
+      "targetLineRange": [
+        109,
+        109
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-test-pass-trap-paragraph-tests-may-pass-because-they-validate-the-generated-behavior--ac2b655d-1",
+      "sourceHash": "ac2b655deb89d656c97d53a41f6375702d66de21d26026a3d74b90ed2b44f72d",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/comment-relire-les-tests-générés-paragraph-les-tests-générés-sont-utiles-mais-ils-doivent-eux-aussi-êtr-5bb9b1f9-1",
+      "translationHash": "5bb9b1f96d76384f6156809b8ea3b5c368341041680114f127b2f85c0d3d606e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The test-pass trap"
+      ],
+      "sourceLineRange": [
+        111,
+        111
+      ],
+      "targetLineRange": [
+        127,
+        127
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/a-practical-review-checklist-heading-a-practical-review-checklist-47e285e6-1",
+      "sourceHash": "47e285e65a37da09c4f6526f15043cee945e4fea3b88912b656b18c87a65df98",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/une-liste-de-revue-pratique-heading-une-liste-de-revue-pratique-2fe62ae9-1",
+      "translationHash": "2fe62ae978ed7109173a81fecc65cbef6d125a91ef92b9afbf89ec27987f0ebe",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "A practical review checklist"
+      ],
+      "sourceLineRange": [
+        113,
+        113
+      ],
+      "targetLineRange": [
+        113,
+        113
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/a-practical-review-checklist-paragraph-for-each-substantial-ai-assisted-change-ask-db0b0215-1",
+      "sourceHash": "db0b0215aec8a17294e7c1174d9208de19e3a6ae891311666fb3e74277115315",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/une-liste-de-revue-pratique-paragraph-pour-chaque-changement-substantiel-assisté-par-ia-demandez-v-aa984ae0-1",
+      "translationHash": "aa984ae041af60c9efab0f41ab4d9e35b5c47e67874e229d7052832cd192c6be",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "A practical review checklist"
+      ],
+      "sourceLineRange": [
+        115,
+        115
+      ],
+      "targetLineRange": [
+        115,
+        115
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/a-practical-review-checklist-list-1-what-product-rule-or-workflow-is-this-change-supposed-to-i-8a326ece-1",
+      "sourceHash": "8a326ece04e8671801cd2bf00a01479b5ed14223a3d14efd4a2f1cdc13edebe8",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/une-liste-de-revue-pratique-list-1-quelle-règle-produit-ou-quel-flux-de-travail-ce-changement-42ffe7f1-1",
+      "translationHash": "42ffe7f1fc57b224119ca32c630e8f22d460e56b5337fe3b8e35777b04231b76",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "A practical review checklist"
+      ],
+      "sourceLineRange": [
+        117,
+        123
+      ],
+      "targetLineRange": [
+        117,
+        123
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-heading-how-to-review-generated-tests-3b65ae48-1",
+      "sourceHash": "3b65ae4844b0da4d6f1d5c944b1fe57309ebac66017dd4cfb03b7ead17b5e0d8",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/exemples-let-books-heading-exemples-let-books-8c0a275f-1",
+      "translationHash": "8c0a275fc77a056b2e8aafa4c9049451235e39b4fa6014c24c2239f184f51836",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        125,
+        125
+      ],
+      "targetLineRange": [
+        138,
+        138
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-paragraph-generated-tests-are-useful-but-they-should-also-be-reviewed--556299a8-1",
+      "sourceHash": "556299a8cda21cfe67ff20ed7dbca48030b6aa73c8c1903db98794d9a71c09e2",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/comment-relire-les-tests-générés-paragraph-cela-est-particulièrement-important-dans-un-travail-piloté-p-8885300e-1",
+      "translationHash": "8885300e3816fcf4be2106a3a484bdd4969a3b175d34420c5d441034dc889e3b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        127,
+        127
+      ],
+      "targetLineRange": [
+        136,
+        136
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-paragraph-ask-9cbc440a-1",
+      "sourceHash": "9cbc440ae316798596671ee94b764c09ab468d8d05ffaf6b8e461554b128cbd7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        129,
+        129
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-list-do-the-tests-check-the-intended-workflow-e2d32f53-1",
+      "sourceHash": "e2d32f539995e7b80f02a250025bd70d4f7199bdcec4d43e326f2a9c137fe6cf",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/comment-relire-les-tests-générés-list-les-tests-vérifient-ils-le-flux-de-travail-prévu-19a4e0f5-1",
+      "translationHash": "19a4e0f57f55c3d3c95df3125f5f258766dc0144d76d0bcc4f7d45af94167b4e",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        131,
+        134
+      ],
+      "targetLineRange": [
+        131,
+        134
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-paragraph-this-is-especially-important-in-spec-driven-work-because-a-w-b7b2ac12-1",
+      "sourceHash": "b7b2ac12e78b1e0632da9647c8c4e5306f2d717248e89ef6bd8dd9ea6f2931e8",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/exemples-let-books-paragraph-des-exemples-de-questions-au-niveau-de-la-spécification-dans-f69f6cd5-1",
+      "translationHash": "f69f6cd58760a1050ab68954a1d1880b9b4f14ba5b45b521f9e31114f076a82e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        136,
+        136
+      ],
+      "targetLineRange": [
+        140,
+        140
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-heading-let-books-examples-8ab88745-1",
+      "sourceHash": "8ab887456720dd951d4bf198773c52b392eab32dc53cc16d2283d8da100fa8f1",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/lectures-complémentaires-heading-lectures-complémentaires-c7afb7c2-1",
+      "translationHash": "c7afb7c238b16e507e8b770ce3b3385f60d258f0fc9381bdc841a1b050a4ddf9",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        138,
+        138
+      ],
+      "targetLineRange": [
+        155,
+        155
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-paragraph-examples-of-spec-level-questions-in-this-repository-include-3cf7f339-1",
+      "sourceHash": "3cf7f339731e9f2a3bc766de3e156b302a6f187e1e4bfc829aee80f13341a166",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/exemples-let-books-paragraph-ces-questions-sont-suffisamment-précises-pour-guider-la-revu-e729816f-1",
+      "translationHash": "e729816f9b34fe990d14a3c0c11459eb423a42ef68c07df4afbabece99baea05",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        140,
+        140
+      ],
+      "targetLineRange": [
+        147,
+        147
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-list-does-the-workflow-still-remain-useful-without-paid-ai-servic-22e921aa-1",
+      "sourceHash": "22e921aac475ad7f15f6c33ba0d308bfc0ce0e00f4eb8743efdecc750267bc60",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/exemples-let-books-list-le-flux-de-travail-reste-t-il-utile-sans-services-ia-payants-923468b3-1",
+      "translationHash": "923468b3bbdc6c47fbbb812f44c1293f6ef302047dbff344c80d1e590ac09d2a",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        142,
+        145
+      ],
+      "targetLineRange": [
+        142,
+        145
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-paragraph-those-questions-are-specific-enough-to-guide-review-which-is-87c9a333-1",
+      "sourceHash": "87c9a33309061722e95c1009c0551836bb4ecd681a6105332c8ccf5bb28b9780",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/la-leçon-durable-paragraph-la-meilleure-question-de-revue-n-est-généralement-pas-est-ce-59e01131-1",
+      "translationHash": "59e0113147eeae488e96ec34a5e74cc39cc713b5ea36ee0d7cd7e94bd3efa1fe",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        147,
+        147
+      ],
+      "targetLineRange": [
+        153,
+        153
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/the-durable-lesson-heading-the-durable-lesson-efa37549-1",
+      "sourceHash": "efa37549901c9fd11f26c47473b9ddbef2258a14e98efc6f7046bb1bf94bb164",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/la-leçon-durable-heading-la-leçon-durable-134475a1-1",
+      "translationHash": "134475a1985070ea35bc80dc8b1053f6cab25a576a40ec073b5c7badd37bd855",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        149,
+        149
+      ],
+      "targetLineRange": [
+        149,
+        149
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/the-durable-lesson-paragraph-ai-assisted-review-is-not-about-checking-whether-the-assista-9b4f0d64-1",
+      "sourceHash": "9b4f0d642ba23618b57fd51560fd13dd4d37837042849ba3cfc7c4d8c3e008fb",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/la-leçon-durable-paragraph-la-revue-assistée-par-ia-ne-consiste-pas-à-vérifier-si-l-ass-ae4277e2-1",
+      "translationHash": "ae4277e2ed72aba47774840e179da5a63209bf4e152dfa6633840e72ffe012d8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        151,
+        151
+      ],
+      "targetLineRange": [
+        151,
+        151
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/the-durable-lesson-paragraph-the-best-review-question-is-usually-not-does-this-work-it-is-a26ccc69-1",
+      "sourceHash": "a26ccc695400c348a51765871861357ae3c676c272d218041405383576900bc2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        153,
+        153
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/further-reading-heading-further-reading-dfd43c88-1",
+      "sourceHash": "dfd43c88c1cb9723f2a690b08119f3b312da0ad2e460f768fe2e7b2cad613f05",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        155,
+        155
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/further-reading-list-list-58966e90-1",
+      "sourceHash": "58966e902c77318ff89711fe5815aebc190493b0d9dc0a466fa8cdfe6b221d8d",
+      "targetBlockId": "comment-relire-un-travail-assisté-par-ia-à-l-aune-de-la-spéc/lectures-complémentaires-list-list-6d55a341-1",
+      "translationHash": "6d55a3413f735bb6ab17f0a333d7de3adac712ddf1eb6072731f9ad304c8e444",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        157,
+        162
+      ],
+      "targetLineRange": [
+        157,
+        162
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

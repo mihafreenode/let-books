@@ -1,0 +1,1321 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-turn-a-product-spec-into-an-implementation-plan.md",
+  "targetPath": "docs/learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.md",
+  "locale": "es",
+  "blocks": [
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan-heading-how-to-turn-a-product-spec-into-an-implementation-plan-23df3f82-1",
+      "sourceHash": "23df3f82ba7003fe5ed7388497ebe9bdf86b713f173257adbb79544388ddde96",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de--heading-cómo-convertir-una-especificación-de-producto-en-un-plan-de--d0eef715-1",
+      "translationHash": "d0eef71507d95ec139f12c9163bab125c6da17f39df6726ed15b20eac43fb98c",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/resumen-heading-resumen-1b924cc3-1",
+      "translationHash": "1b924cc323054cf3f917fd5c4cde93508d8551224046da2e7d1d7016489c6fa9",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/summary-paragraph-this-guide-explains-how-to-translate-a-product-specification-41137f95-1",
+      "sourceHash": "41137f95ca0e4f0758d0bbafc5a1fddb9895151792458f707657673057ccfbc7",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/resumen-paragraph-esta-guía-explica-cómo-traducir-una-especificación-de-produc-3998a1ab-1",
+      "translationHash": "3998a1abae9eee0a91c5ee2f513b3997ab56e777edeecb05e05e59a2ebe69d9d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/why-this-step-matters-heading-why-this-step-matters-29cafb84-1",
+      "sourceHash": "29cafb84bc1a00be8284064b3e404d3fa00a68188b332db5cc0677695d5f9baa",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/por-qué-importa-este-paso-heading-por-qué-importa-este-paso-8cbeb502-1",
+      "translationHash": "8cbeb502ece54be495cd1bced45c1ffe23c44031ecc89580ff235b73437069c0",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Why this step matters"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/why-this-step-matters-paragraph-a-specification-describes-what-the-product-should-do-and-why-f5ef8c4c-1",
+      "sourceHash": "f5ef8c4c5435fcb7476ebff68ff66f75e83f45fe153bca1627b9e4a7ffbb3499",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/por-qué-importa-este-paso-paragraph-una-especificación-describe-qué-debe-hacer-el-producto-y-por-9dce3263-1",
+      "translationHash": "9dce3263a81eef5ddd85c065b6c078c4921d724e9ca21d9e096bff60085c39c3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Why this step matters"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/why-this-step-matters-paragraph-an-implementation-plan-describes-how-the-team-will-deliver-t-fbde0b7b-1",
+      "sourceHash": "fbde0b7bcf94857364d7b89bdcc67075cea88815acc15f01d695557e8b1e6370",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/por-qué-importa-este-paso-paragraph-un-plan-de-implementación-describe-cómo-va-a-entregar-el-equ-39200226-1",
+      "translationHash": "39200226110a3c6691d895e185b20cab09af4559b37234cd9a994a9ac7feb956",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Why this step matters"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/why-this-step-matters-paragraph-many-projects-fail-in-the-gap-between-those-two-documents-6ccb146d-1",
+      "sourceHash": "6ccb146d80e5909101b06f510c47f0e83edd22e8efd50f58e73d161007d1862d",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/por-qué-importa-este-paso-paragraph-muchos-proyectos-fracasan-en-el-hueco-entre-esos-dos-documen-89f3e8ac-1",
+      "translationHash": "89f3e8ac6596c692775bcf4279d84d11a79527c98a8543fec85678d37d85f299",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Why this step matters"
+      ],
+      "sourceLineRange": [
+        22,
+        22
+      ],
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/why-this-step-matters-paragraph-the-spec-may-be-good-but-the-plan-becomes-too-vague-too-tech-93dabc1e-1",
+      "sourceHash": "93dabc1ef39ef1a0cadd32854e2f1f8efcd265be9d972011d52885e863b6f97e",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/por-qué-importa-este-paso-paragraph-la-especificación-puede-ser-buena-pero-el-plan-se-vuelve-dem-fdd37dd5-1",
+      "translationHash": "fdd37dd57ae4b551adf73a9d5f7ff6303e0dc3d8cd3a31104c6935b7a8526192",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Why this step matters"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/start-by-extracting-the-product-decisions-heading-start-by-extracting-the-product-decisions-b591db4f-1",
+      "sourceHash": "b591db4f96a05b8c8fb84973914110e34537fa57369e70c484858dd07dc672c3",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/empieza-por-extraer-las-decisiones-de-producto-heading-empieza-por-extraer-las-decisiones-de-producto-607d90a7-1",
+      "translationHash": "607d90a7ac7e8f94f218e728a93f8fcf5100cd81db14ed642aa7d125c911756b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Start by extracting the product decisions"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/start-by-extracting-the-product-decisions-paragraph-before-turning-a-spec-into-tasks-identify-the-decisions-that-29a0af0e-1",
+      "sourceHash": "29a0af0e8874e782e0f91ad10550a87ff4a9bce693aa8888a08f6dc7c7a79deb",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/empieza-por-extraer-las-decisiones-de-producto-paragraph-antes-de-convertir-una-especificación-en-tareas-identifica-l-7d380b3a-1",
+      "translationHash": "7d380b3adb6a7a9a653a8a65cf8f6780f0247ad9fbad0dc9ad7a2dc68c20b4f6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Start by extracting the product decisions"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/start-by-extracting-the-product-decisions-paragraph-look-for-68f61fe0-1",
+      "sourceHash": "68f61fe0efa1733a66a00fdf47bac564092bcd588b9df56e0907f779a97f1d7d",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Start by extracting the product decisions"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/start-by-extracting-the-product-decisions-list-product-purpose-54d9a34a-1",
+      "sourceHash": "54d9a34ad34c8d5460c302b4d94b2bd0cee71faa84d2a5dafd7dd383a65071a0",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/empieza-por-extraer-las-decisiones-de-producto-list-propósito-del-producto-db994edf-1",
+      "translationHash": "db994edfcc1666c0edd06cc70a224b08f564aaf2046e9ad4aab99b07b46de36a",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Start by extracting the product decisions"
+      ],
+      "sourceLineRange": [
+        32,
+        37
+      ],
+      "targetLineRange": [
+        32,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/start-by-extracting-the-product-decisions-paragraph-these-are-the-parts-that-should-survive-the-transition-from--7db0f487-1",
+      "sourceHash": "7db0f487ed420c70c6e94883a8b2253c53ab607dbe6672e44f309f37ead18531",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/empieza-por-extraer-las-decisiones-de-producto-paragraph-estas-son-las-partes-que-deberían-sobrevivir-a-la-transición-3d544433-1",
+      "translationHash": "3d544433906757ea6d6fb5be69ca0e50b3bc16de1c165624473749f20423fe87",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Start by extracting the product decisions"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/start-by-extracting-the-product-decisions-paragraph-if-the-plan-loses-them-it-usually-becomes-a-technical-to-do--8843ff62-1",
+      "sourceHash": "8843ff623a591cd94f5173d8c627b803cdc200e2d5435c102548c79043591dc2",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/empieza-por-extraer-las-decisiones-de-producto-paragraph-si-el-plan-las-pierde-normalmente-se-convierte-en-una-lista--76f1c953-1",
+      "translationHash": "76f1c95358ceb6d582d178dd19df84948488587fd2a3fb6f6ca01b62c7dc6e66",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Start by extracting the product decisions"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers-heading-separate-the-plan-into-layers-2d0d7622-1",
+      "sourceHash": "2d0d76221500da887a4b8d7dfc142a00bafff27bb93a161a730ce1c9094426fa",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas-heading-separa-el-plan-en-capas-caa0fc89-1",
+      "translationHash": "caa0fc89f2f19500c10e2d18d1caf25d882c15640c2224ec94e56f5b568e450b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers-paragraph-a-good-implementation-plan-usually-has-at-least-three-layers-3486af4a-1",
+      "sourceHash": "3486af4a2b1dc2f444994694457befb6a9614d799587ef3b51d4896eb09f2d04",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas-paragraph-un-buen-plan-de-implementación-suele-tener-al-menos-tres-cap-fde6d414-1",
+      "translationHash": "fde6d4145d1f1459f98039b534b671775e38144b3b62ee0dc9d08ae906d5f28f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/1-workflow-layer-heading-1-workflow-layer-6ef1ad9d-1",
+      "sourceHash": "6ef1ad9d87a2cf800765a3902eca8a61ff7a552e036c170f56afde88a395635f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/1-capa-de-flujo-de-trabajo-heading-1-capa-de-flujo-de-trabajo-1e90e478-1",
+      "translationHash": "1e90e478e782b50e0657ba533db863778887a51bf98ab0c0ef04b3a62fb829be",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "1. Workflow layer"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/1-workflow-layer-paragraph-describe-the-user-facing-flow-in-short-concrete-steps-b5633b28-1",
+      "sourceHash": "b5633b281a28303d7f3372d91de1c2dc793f0cca217811cf6a1b01185fd0635b",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/1-capa-de-flujo-de-trabajo-paragraph-describe-el-flujo-orientado-a-la-persona-usuaria-con-pasos-b-49ed0fee-1",
+      "translationHash": "49ed0feec42e41173a18e37d7824790a037eef101913edc171e5d6a39af513ec",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "1. Workflow layer"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": [
+        49,
+        49
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/1-workflow-layer-paragraph-example-872887e5-1",
+      "sourceHash": "872887e563e75957ffc20b021332504f2ddd0a8f3964cb93070863bfaf13cdad",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/1-capa-de-flujo-de-trabajo-paragraph-ejemplo-265eadbe-1",
+      "translationHash": "265eadbe8414b0f92d46601dfda0fd49edf0feba50a10e969c41517693ea8e3f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "1. Workflow layer"
+      ],
+      "sourceLineRange": [
+        51,
+        51
+      ],
+      "targetLineRange": [
+        51,
+        51
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/1-workflow-layer-list-1-user-selects-a-storage-box-376a17ef-1",
+      "sourceHash": "376a17ef77349643352ea07122a65fa99924bf5491653dcaad2815459d12ad88",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/1-capa-de-flujo-de-trabajo-list-1-la-persona-usuaria-selecciona-una-caja-de-almacenamiento-393a5ef5-1",
+      "translationHash": "393a5ef577c27ae90d6429a41498474f54b605e11bb20cb138be6032e9c10f68",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "1. Workflow layer"
+      ],
+      "sourceLineRange": [
+        53,
+        56
+      ],
+      "targetLineRange": [
+        53,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/1-workflow-layer-paragraph-this-layer-protects-the-user-journey-from-getting-buried-und-1d5d0cb5-1",
+      "sourceHash": "1d5d0cb522beb2869e9c206a698e752e1c6756464d27c50a2a90a18fedfbce1b",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/1-capa-de-flujo-de-trabajo-paragraph-esta-capa-protege-el-recorrido-de-la-persona-usuaria-para-qu-7f7f6624-1",
+      "translationHash": "7f7f6624b7a3ef5db9c9a5a23f0c9d543d39f1f6d65bfbbf23da0946d48fd47f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "1. Workflow layer"
+      ],
+      "sourceLineRange": [
+        58,
+        58
+      ],
+      "targetLineRange": [
+        58,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/2-system-layer-heading-2-system-layer-e40dc985-1",
+      "sourceHash": "e40dc985685d3ef526b9e04c3aa6c2b847fac9e4bd739c61e05568923a85051f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/2-capa-de-sistema-heading-2-capa-de-sistema-33196012-1",
+      "translationHash": "3319601210565942f1dae6ee1d4b7d9213c76d5ec03dc4a2984e0278fc3ef39c",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "2. System layer"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/2-system-layer-paragraph-describe-the-parts-of-the-system-that-must-support-that-work-5f4b1f46-1",
+      "sourceHash": "5f4b1f46841eaf7f2db4ec85463d0f34ce7cba85bffea748c1758783da4f7de3",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/2-capa-de-sistema-paragraph-describe-las-partes-del-sistema-que-deben-respaldar-ese-fluj-cd126bf6-1",
+      "translationHash": "cd126bf6f1236f25800d54cbeef3a3fd4b129c013ee8b499374297bb5279f199",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "2. System layer"
+      ],
+      "sourceLineRange": [
+        62,
+        62
+      ],
+      "targetLineRange": [
+        62,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/2-system-layer-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/2-capa-de-sistema-paragraph-ejemplos-5aaf6587-1",
+      "translationHash": "5aaf65879301164eab4b6d1f043a688cb09bf38f3b62a2e91a07887edb0a2862",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "2. System layer"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/2-system-layer-list-data-model-changes-c25d1c4f-1",
+      "sourceHash": "c25d1c4fc66123509b4f43b24cd5f897b734ce8e8081fe9767c5e1ba456a42f9",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/2-capa-de-sistema-list-cambios-en-el-modelo-de-datos-ac90270a-1",
+      "translationHash": "ac90270ad09e23b9cd00dd8d9e64d31d4953ed20a31506ecad7b9a6c3548ea61",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "2. System layer"
+      ],
+      "sourceLineRange": [
+        66,
+        71
+      ],
+      "targetLineRange": [
+        66,
+        71
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/2-system-layer-paragraph-this-layer-connects-product-behavior-to-technical-work-2ad06030-1",
+      "sourceHash": "2ad06030fc67f350c7a03bfb849d3c8831f9236e79f489b739fdf9f92b7daeb8",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/2-capa-de-sistema-paragraph-esta-capa-conecta-el-comportamiento-del-producto-con-el-trab-8e554e32-1",
+      "translationHash": "8e554e324b4a54306421dc50e8d6c1bf8a7bfb5817dc826fff9e1b0cdaaa6b62",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "2. System layer"
+      ],
+      "sourceLineRange": [
+        73,
+        73
+      ],
+      "targetLineRange": [
+        73,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/3-delivery-layer-heading-3-delivery-layer-13140b59-1",
+      "sourceHash": "13140b59e81513754d88bc6deaa04b1691e598e2fb2db9fa72947f66cd57c6ee",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/3-capa-de-entrega-heading-3-capa-de-entrega-077b257b-1",
+      "translationHash": "077b257b5c66b5e63a8d0ce837c614057ca5b32ce58bddddcb69df05a8351cc1",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "3. Delivery layer"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/3-delivery-layer-paragraph-break-the-system-work-into-a-sequence-that-can-actually-be-i-388bd81e-1",
+      "sourceHash": "388bd81efbb6b61e12f68292caef8959f6cacbe336bfcc96012bfd1f329a821e",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/3-capa-de-entrega-paragraph-divide-el-trabajo-del-sistema-en-una-secuencia-que-realmente-1780e36d-1",
+      "translationHash": "1780e36d80ef4ff9ee5cee540dcbcfaaa1e69a08fd5eddf240fd0ced4fdd70cb",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "3. Delivery layer"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/3-delivery-layer-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/3-capa-de-entrega-paragraph-ejemplos-5aaf6587-1",
+      "translationHash": "5aaf65879301164eab4b6d1f043a688cb09bf38f3b62a2e91a07887edb0a2862",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "3. Delivery layer"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/3-delivery-layer-list-1-define-or-update-the-domain-model-cc1ae43b-1",
+      "sourceHash": "cc1ae43b0d749625f33c04c18205ce30a18abdcd882295a948e44c316c036214",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/3-capa-de-entrega-list-1-definir-o-actualizar-el-modelo-de-dominio-4681fae0-1",
+      "translationHash": "4681fae0e03ba10f5d558e935856e88965f14decbfdba16007602fcff4d2c9ff",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "3. Delivery layer"
+      ],
+      "sourceLineRange": [
+        81,
+        85
+      ],
+      "targetLineRange": [
+        81,
+        85
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/separate-the-plan-into-layers/3-delivery-layer-paragraph-this-layer-is-where-the-plan-becomes-schedulable-a6d45637-1",
+      "sourceHash": "a6d45637c1b8df6009ed134244349a7415df34d86ca4fd5e6316613dd11a048f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/separa-el-plan-en-capas/3-capa-de-entrega-paragraph-esta-capa-es-donde-el-plan-pasa-a-ser-programable-en-el-tiem-e6099df0-1",
+      "translationHash": "e6099df0f4a8697ee3ab8d9e31289778e17cb7a0601bd25ee3e15c2240c593f7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Separate the plan into layers",
+        "3. Delivery layer"
+      ],
+      "sourceLineRange": [
+        87,
+        87
+      ],
+      "targetLineRange": [
+        87,
+        87
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/keep-the-plan-shaped-by-constraints-heading-keep-the-plan-shaped-by-constraints-e961e416-1",
+      "sourceHash": "e961e41686b89a805b44bc8229922e90f9b2c9d1520ed50d2c7d60508514163e",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/mantén-el-plan-moldeado-por-las-restricciones-heading-mantén-el-plan-moldeado-por-las-restricciones-e56044c1-1",
+      "translationHash": "e56044c14932d92f21caaed9dfceb62876e58ac41dfed8c4099c7742e7c100e4",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Keep the plan shaped by constraints"
+      ],
+      "sourceLineRange": [
+        89,
+        89
+      ],
+      "targetLineRange": [
+        89,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/keep-the-plan-shaped-by-constraints-paragraph-implementation-plans-often-drift-when-they-get-rewritten-as--6ab5b2db-1",
+      "sourceHash": "6ab5b2db342c0ef7764f3a9dc0fd4d207f77700e2f3bc841bd26ff0ab60a79c1",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/mantén-el-plan-moldeado-por-las-restricciones-paragraph-los-planes-de-implementación-suelen-desviarse-cuando-se-rees-bcf43b5c-1",
+      "translationHash": "bcf43b5ca3fcf20b9cdfe6d003cf8da7ddc4f557d6f408ae3442e6312b4f39b9",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Keep the plan shaped by constraints"
+      ],
+      "sourceLineRange": [
+        91,
+        91
+      ],
+      "targetLineRange": [
+        91,
+        91
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/keep-the-plan-shaped-by-constraints-paragraph-to-avoid-that-keep-key-product-constraints-visible-inside-th-55272f74-1",
+      "sourceHash": "55272f740b64c634b0c741a0a0e71c080691a59485fd7659a10f8f7bfbf4d750",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/mantén-el-plan-moldeado-por-las-restricciones-paragraph-para-evitarlo-mantén-visibles-dentro-del-plan-las-restriccio-9faf5167-1",
+      "translationHash": "9faf5167882cb55eaa4ccb8b3fa332cfce2a7c8df5db44798eaf6034ea33674e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Keep the plan shaped by constraints"
+      ],
+      "sourceLineRange": [
+        93,
+        93
+      ],
+      "targetLineRange": [
+        93,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/keep-the-plan-shaped-by-constraints-paragraph-for-let-books-style-work-that-may-include-constraints-such-a-67219aa0-1",
+      "sourceHash": "67219aa07eaa2e2d3ab7c0eb32f538cce541084b3f6f2e88c1a6ea27e1fc724f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/mantén-el-plan-moldeado-por-las-restricciones-paragraph-para-un-trabajo-al-estilo-let-books-eso-puede-incluir-restri-db4452f4-1",
+      "translationHash": "db4452f4ebc6b9cfa318e8444265767e8b5a98e7c32348fdaf851cc9813ae988",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Keep the plan shaped by constraints"
+      ],
+      "sourceLineRange": [
+        95,
+        95
+      ],
+      "targetLineRange": [
+        95,
+        95
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/keep-the-plan-shaped-by-constraints-list-manual-workflows-must-still-work-without-ai-b680a4e1-1",
+      "sourceHash": "b680a4e1662a5e1291dd039a96c17f881c980db4c3f04da1c131a8d01d2c678f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/mantén-el-plan-moldeado-por-las-restricciones-list-los-flujos-de-trabajo-manuales-deben-seguir-funcionando-sin--d557a9d4-1",
+      "translationHash": "d557a9d4c6b81abf1566eb670f03bf7baeb190722ed186decdc2d66f201d03d5",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Keep the plan shaped by constraints"
+      ],
+      "sourceLineRange": [
+        97,
+        101
+      ],
+      "targetLineRange": [
+        97,
+        101
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/keep-the-plan-shaped-by-constraints-paragraph-these-should-not-live-only-in-the-original-spec-they-should--d2933e55-1",
+      "sourceHash": "d2933e55127cb13be727882f888fd4192cd7f0a052348bd9c11c23846e5f4995",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/mantén-el-plan-moldeado-por-las-restricciones-paragraph-estas-restricciones-no-deberían-vivir-solo-en-la-especificac-201ce31f-1",
+      "translationHash": "201ce31f5b50f64e5226bb1e5d936458a13c61fd854e7072613ebd310a65ecf0",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Keep the plan shaped by constraints"
+      ],
+      "sourceLineRange": [
+        103,
+        103
+      ],
+      "targetLineRange": [
+        103,
+        103
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/use-acceptance-criteria-to-shape-the-task-breakdown-heading-use-acceptance-criteria-to-shape-the-task-breakdown-6c40bff9-1",
+      "sourceHash": "6c40bff9d0b8d8646a02a49616d370c8659681a9850de394338b0a60d1cc463c",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/usa-los-criterios-de-aceptación-para-dar-forma-al-desglose-d-heading-usa-los-criterios-de-aceptación-para-dar-forma-al-desglose-d-6e5e7f21-1",
+      "translationHash": "6e5e7f21cfb89eb403b027f135dc0b4201a06ecaadd5f310562b2c9f5cbcbb15",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Use acceptance criteria to shape the task breakdown"
+      ],
+      "sourceLineRange": [
+        105,
+        105
+      ],
+      "targetLineRange": [
+        105,
+        105
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/use-acceptance-criteria-to-shape-the-task-breakdown-paragraph-one-of-the-easiest-ways-to-turn-a-spec-into-a-plan-is-to-sta-19e80264-1",
+      "sourceHash": "19e80264d44b02f2e60e998455affcac82e05a19af8d6dbbe5244ef18f90ea74",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/usa-los-criterios-de-aceptación-para-dar-forma-al-desglose-d-paragraph-una-de-las-formas-más-fáciles-de-convertir-una-especificació-6b1547d7-1",
+      "translationHash": "6b1547d762e51919807b0f452193b9c76e413c952ecaca8b7e35955703502968",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Use acceptance criteria to shape the task breakdown"
+      ],
+      "sourceLineRange": [
+        107,
+        107
+      ],
+      "targetLineRange": [
+        107,
+        107
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/use-acceptance-criteria-to-shape-the-task-breakdown-paragraph-for-each-criterion-ask-0ea8ab84-1",
+      "sourceHash": "0ea8ab842ec298f241f98746f91311cd3d6028933353604a52fcc18e401358ab",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/usa-los-criterios-de-aceptación-para-dar-forma-al-desglose-d-paragraph-para-cada-criterio-pregunta-11c39d0c-1",
+      "translationHash": "11c39d0c2afcc653d7bdbb09c57d218c1413a20fe1bbf823de5c9b1c572cd630",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Use acceptance criteria to shape the task breakdown"
+      ],
+      "sourceLineRange": [
+        109,
+        109
+      ],
+      "targetLineRange": [
+        109,
+        109
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/use-acceptance-criteria-to-shape-the-task-breakdown-list-what-ui-or-workflow-supports-this-abf7aa79-1",
+      "sourceHash": "abf7aa79239303b8a90944246cbbf0360708a6a6766311ad3d99c20f8af1d4b7",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/usa-los-criterios-de-aceptación-para-dar-forma-al-desglose-d-list-qué-interfaz-o-flujo-de-trabajo-respalda-esto-f13d6265-1",
+      "translationHash": "f13d6265a1c135f232655db2bca813cdfc009e19bb798f5da69e7fe9f4e18a71",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Use acceptance criteria to shape the task breakdown"
+      ],
+      "sourceLineRange": [
+        111,
+        114
+      ],
+      "targetLineRange": [
+        111,
+        114
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/use-acceptance-criteria-to-shape-the-task-breakdown-paragraph-that-method-keeps-the-plan-tied-to-observable-outcomes-inste-5ce1fe75-1",
+      "sourceHash": "5ce1fe75ad1749597840944cfb8b0078717beb0a2c5ee81869c1cd8eecf46777",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/usa-los-criterios-de-aceptación-para-dar-forma-al-desglose-d-paragraph-ese-método-mantiene-el-plan-ligado-a-resultados-observables--442c134f-1",
+      "translationHash": "442c134ff2acd6b7a5be7441f28a7a43a905066070c29287220c3c5fa13ef024",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Use acceptance criteria to shape the task breakdown"
+      ],
+      "sourceLineRange": [
+        116,
+        116
+      ],
+      "targetLineRange": [
+        116,
+        116
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/ai-assisted-planning-what-to-watch-for-heading-ai-assisted-planning-what-to-watch-for-d1a433f5-1",
+      "sourceHash": "d1a433f5a6750250349b85bd52a01f4ff63e865b1295376c3b53eedc527987d0",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/una-plantilla-práctica-de-planificación-heading-una-plantilla-práctica-de-planificación-c554d7a8-1",
+      "translationHash": "c554d7a874191a0ee22e7800c7c58a03144d5173288d2f7e43a2b7ef9fd57004",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "AI-assisted planning: what to watch for"
+      ],
+      "sourceLineRange": [
+        118,
+        118
+      ],
+      "targetLineRange": [
+        130,
+        130
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/ai-assisted-planning-what-to-watch-for-paragraph-ai-can-help-produce-an-implementation-plan-quickly-but-it-of-baef93a9-1",
+      "sourceHash": "baef93a910e531c3a46cc73efa4a3b771088dd14b340eaf40d7aeb693c6e43d8",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/planificación-asistida-por-ia-en-qué-fijarse-paragraph-la-ia-puede-ayudar-a-producir-un-plan-de-implementación-rápi-1781884d-1",
+      "translationHash": "1781884daf488e0467fb36c9f783b57f2b401a22271fd4a6f0fa9f36b9c4f6c4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "AI-assisted planning: what to watch for"
+      ],
+      "sourceLineRange": [
+        120,
+        120
+      ],
+      "targetLineRange": [
+        120,
+        120
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/ai-assisted-planning-what-to-watch-for-list-extra-abstractions-with-no-product-need-234a8292-1",
+      "sourceHash": "234a8292aee9b64fc9dd5e131e9fa4289ce5f8db216581ab0d4328d7099e41d8",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/planificación-asistida-por-ia-en-qué-fijarse-list-abstracciones-adicionales-sin-necesidad-de-producto-06781bc0-1",
+      "translationHash": "06781bc01bda1fd06800afbef7f581033b8aeccfadc28dc00c3ac49f0583c47e",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "AI-assisted planning: what to watch for"
+      ],
+      "sourceLineRange": [
+        122,
+        126
+      ],
+      "targetLineRange": [
+        122,
+        126
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/ai-assisted-planning-what-to-watch-for-paragraph-when-reviewing-an-ai-generated-implementation-plan-ask-wheth-5c78cac3-1",
+      "sourceHash": "5c78cac3ac6e015986262bbf190ccbb8abf84968246e53aee04834e36247af8c",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/planificación-asistida-por-ia-en-qué-fijarse-paragraph-al-revisar-un-plan-de-implementación-generado-por-ia-pregunt-42367aa7-1",
+      "translationHash": "42367aa75f7a0e6026de771b06d795845a3dddba568a7b6cd5d08fc5ac2a5487",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "AI-assisted planning: what to watch for"
+      ],
+      "sourceLineRange": [
+        128,
+        128
+      ],
+      "targetLineRange": [
+        128,
+        128
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/a-practical-planning-template-heading-a-practical-planning-template-9b898aeb-1",
+      "sourceHash": "9b898aeb26603f33998d45185a5da2c4f5bccd39a758e84818d6a8c085fefc6f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/planificación-asistida-por-ia-en-qué-fijarse-heading-planificación-asistida-por-ia-en-qué-fijarse-34a4dba1-1",
+      "translationHash": "34a4dba1b4240d0a8acc42a6ee795427577494aa19321e6b6385c85c7cd2ffd6",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "A practical planning template"
+      ],
+      "sourceLineRange": [
+        130,
+        130
+      ],
+      "targetLineRange": [
+        118,
+        118
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/a-practical-planning-template-paragraph-use-a-structure-like-this-1df4a41f-1",
+      "sourceHash": "1df4a41f32a9ea9898c758e0363453bbd79a45c8d422b7177d8c54e57346b89f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/una-plantilla-práctica-de-planificación-paragraph-usa-una-estructura-como-esta-5fc1acfc-1",
+      "translationHash": "5fc1acfc5b93a62d0c97022977daf4a539e327f5854d7ed12b16849100b925a8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "A practical planning template"
+      ],
+      "sourceLineRange": [
+        132,
+        132
+      ],
+      "targetLineRange": [
+        132,
+        132
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/a-practical-planning-template-list-1-feature-goal-72fb4252-1",
+      "sourceHash": "72fb4252b15737fb747fde2b408e821fb905c1349e463b80f07e2f14f69dc2b1",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/una-plantilla-práctica-de-planificación-list-1-objetivo-de-la-funcionalidad-37cf4051-1",
+      "translationHash": "37cf40514c14723abaef52b20d277b9bcbbc2a44b2a84490469052a671dd825e",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "A practical planning template"
+      ],
+      "sourceLineRange": [
+        134,
+        139
+      ],
+      "targetLineRange": [
+        134,
+        139
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/a-practical-planning-template-paragraph-for-example-a-delivery-slice-might-be-0d480d08-1",
+      "sourceHash": "0d480d0853dec58e7c9c8d8599b4228daf79c86286f8fed592a49e7a50c7ccf7",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/una-plantilla-práctica-de-planificación-paragraph-por-ejemplo-un-bloque-de-entrega-podría-ser-fd797bb8-1",
+      "translationHash": "fd797bb8466a95a3ba591302032a6a1d53b2028cbc57b7b46adc4f093e854c00",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "A practical planning template"
+      ],
+      "sourceLineRange": [
+        141,
+        141
+      ],
+      "targetLineRange": [
+        141,
+        141
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/a-practical-planning-template-list-add-storage-location-selector-to-intake-flow-72749376-1",
+      "sourceHash": "7274937628a636bf05aa166bf4cdcd99834ee34c168c1cee5ee8d19fe609e34f",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/una-plantilla-práctica-de-planificación-list-añadir-selector-de-ubicación-de-almacenamiento-al-flujo-de-e-75d751b7-1",
+      "translationHash": "75d751b7b9711772c22eb4deeffca5373aac5f830ba0eb811ae70ebe1facf8d9",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "A practical planning template"
+      ],
+      "sourceLineRange": [
+        143,
+        146
+      ],
+      "targetLineRange": [
+        143,
+        146
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/a-practical-planning-template-paragraph-that-is-much-stronger-than-a-flat-list-like-079aaba1-1",
+      "sourceHash": "079aaba17fa3860615fd1ae20285b49cda51ceaf6cd19c5a4c03e14bc90b85a4",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/una-plantilla-práctica-de-planificación-paragraph-eso-es-mucho-más-sólido-que-una-lista-plana-como-ef2d0d46-1",
+      "translationHash": "ef2d0d4617bfa4fe7eda59cbbc3a0bda9193e2209b14ba5603b462859d9af0e0",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "A practical planning template"
+      ],
+      "sourceLineRange": [
+        148,
+        148
+      ],
+      "targetLineRange": [
+        148,
+        148
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/a-practical-planning-template-list-create-form-8a901d00-1",
+      "sourceHash": "8a901d0021c2295baeed533bf0c40ab771db6593b6425c45dfb77dc4d109d70c",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/una-plantilla-práctica-de-planificación-list-crear-formulario-d92c5c21-1",
+      "translationHash": "d92c5c21d5ffe288cf7f9a6a4a04e0781cf6ad9015e6de2154b1de995710325a",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "A practical planning template"
+      ],
+      "sourceLineRange": [
+        150,
+        152
+      ],
+      "targetLineRange": [
+        150,
+        152
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/let-books-example-heading-let-books-example-7487aad8-1",
+      "sourceHash": "7487aad8dda22bbfc7f6615d8fb0c272c0c68d9e1cc97319c4eb56ca9f2d9e58",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/ejemplo-de-let-books-heading-ejemplo-de-let-books-cac5f14a-1",
+      "translationHash": "cac5f14a070d9f7d885232ad071deecc51251eb30fa350371069f6c774059da8",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        154,
+        154
+      ],
+      "targetLineRange": [
+        154,
+        154
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/let-books-example-paragraph-the-repository-already-contains-the-raw-inputs-for-this-plan-2b09146b-1",
+      "sourceHash": "2b09146b3e0144d94728f5a11243a06f027782cf0c309e08613cba5ea1864bb7",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/ejemplo-de-let-books-paragraph-el-repositorio-ya-contiene-las-entradas-básicas-para-este-es-624106b9-1",
+      "translationHash": "624106b9e98a4f16a53e83828e37eefe67c8d113df98de0f471680dc83bfa98f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        156,
+        156
+      ],
+      "targetLineRange": [
+        156,
+        156
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/let-books-example-list-for-product-purpose-workflows-and-acceptance-criteria-855880c6-1",
+      "sourceHash": "855880c6ad4c7bf2129456cbcd68792b2717752d865e22c93c9b0d895b5e9de4",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/ejemplo-de-let-books-list-para-propósito-del-producto-flujos-de-trabajo-y-criterios-de-4722e2b2-1",
+      "translationHash": "4722e2b2eb16709555a2bf012ec9c7bba1567d0020d32ef641251398474ce637",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        158,
+        161
+      ],
+      "targetLineRange": [
+        158,
+        161
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/let-books-example-paragraph-that-means-the-implementation-plan-does-not-need-to-invent-i-104422c7-1",
+      "sourceHash": "104422c74b3e8f78ce08a2389ce13ac507120957a2adbaaea3797057e50d0a2b",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/ejemplo-de-let-books-paragraph-eso-significa-que-el-plan-de-implementación-no-necesita-inve-034f5f3f-1",
+      "translationHash": "034f5f3fc89699057dca5873c25b4653f1fcedc98c4ca85a6d3cdb71a6084ed7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        163,
+        163
+      ],
+      "targetLineRange": [
+        163,
+        163
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/review-checklist-heading-review-checklist-4da3cda7-1",
+      "sourceHash": "4da3cda7baadd6451d0efd1304c85d4f2eaf7c3a55926b47d4673a97c286d15c",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/lecturas-adicionales-heading-lecturas-adicionales-25b35999-1",
+      "translationHash": "25b35999335edaea63992dc02630c37b43ea463dd7a24beeabad9e0943310c03",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Review checklist"
+      ],
+      "sourceLineRange": [
+        165,
+        165
+      ],
+      "targetLineRange": [
+        175,
+        175
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/review-checklist-paragraph-before-accepting-an-implementation-plan-check-cd5474b5-1",
+      "sourceHash": "cd5474b5e89df408fe6e9ab2f88b5fc7f3c583f10f774ee400b5b8fa76670907",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/lista-de-comprobación-para-revisión-paragraph-antes-de-aceptar-un-plan-de-implementación-comprueba-63f85760-1",
+      "translationHash": "63f857600a8f497afee271cca3aca3058f4e370b08694b2a91dea16f5e0c4802",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Review checklist"
+      ],
+      "sourceLineRange": [
+        167,
+        167
+      ],
+      "targetLineRange": [
+        167,
+        167
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/review-checklist-list-1-does-it-preserve-the-user-workflow-from-the-spec-b8d600a7-1",
+      "sourceHash": "b8d600a7be72adaabc961e61a42064c0735fe14f32320fae840228c46a7bb294",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/lista-de-comprobación-para-revisión-list-1-preserva-el-flujo-de-trabajo-de-la-persona-usuaria-definid-01816896-1",
+      "translationHash": "01816896bc94b5f3d1bfbf992c51430ef841a70ad5b9dfefe906e0736e0f667e",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Review checklist"
+      ],
+      "sourceLineRange": [
+        169,
+        173
+      ],
+      "targetLineRange": [
+        169,
+        173
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/further-reading-heading-further-reading-dfd43c88-1",
+      "sourceHash": "dfd43c88c1cb9723f2a690b08119f3b312da0ad2e460f768fe2e7b2cad613f05",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/lista-de-comprobación-para-revisión-heading-lista-de-comprobación-para-revisión-ac6574c7-1",
+      "translationHash": "ac6574c7881541273e8acd1d71c15028cf611d436731221926c5c7b45bb54f62",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        175,
+        175
+      ],
+      "targetLineRange": [
+        165,
+        165
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-turn-a-product-spec-into-an-implementation-plan/further-reading-list-list-c27b68b6-1",
+      "sourceHash": "c27b68b6c86b6ae3b63e0546efccb1fbed6073f20a41a7d439fb872c5421eacc",
+      "targetBlockId": "cómo-convertir-una-especificación-de-producto-en-un-plan-de-/lecturas-adicionales-list-list-7351c03e-1",
+      "translationHash": "7351c03ed593e2a55ecbffaa3bc62889b385e13884281d0b146ff82f98b4e414",
+      "blockType": "list",
+      "headingPath": [
+        "How to Turn a Product Spec into an Implementation Plan",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        177,
+        181
+      ],
+      "targetLineRange": [
+        177,
+        181
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

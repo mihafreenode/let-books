@@ -1,0 +1,875 @@
+{
+  "version": 1,
+  "sourcePath": "docs/blog/en/spec-driven-development-in-let-books.md",
+  "targetPath": "docs/blog/de/spec-driven-development-in-let-books.md",
+  "locale": "de",
+  "blocks": [
+    {
+      "blockId": "spec-driven-development-in-let-books-heading-spec-driven-development-in-let-books-f46f4b50-1",
+      "sourceHash": "f46f4b50473bfc00a2e742734d1e51fb968c2365a03e7a63f409f14018d6c1dc",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books-heading-spezifikationsgetriebene-entwicklung-in-let-books-9cb942b1-1",
+      "translationHash": "9cb942b1d44d160ae11ab90007aa60a0610a6b3701d2cb29f97de99fba9970d0",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books-paragraph-let-books-is-a-useful-case-study-for-spec-driven-development-9639dbe6-1",
+      "sourceHash": "9639dbe6b80021257010a469faf11687f70e1dfbcecb4f6561ab38a8711a24c2",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books-paragraph-let-books-ist-ein-nützliches-fallbeispiel-für-spezifikations-80289e6f-1",
+      "translationHash": "80289e6f85e4559b8905955fdcf3fa03ebcd8108e56634890ff0a48300731de6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books-paragraph-the-project-is-not-yet-a-full-hosted-application-it-currentl-f2a8a740-1",
+      "sourceHash": "f2a8a740053f4f48d7816d6e251e90a9066d805c9d1be8a8b7e5174660a7bf41",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books-paragraph-das-projekt-ist-noch-keine-vollständige-gehostete-anwendung--e62478e9-1",
+      "translationHash": "e62478e9df97b370153b57d37254cd29dca23a8b7aa099e491cb04f4cd32d7ab",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-specification-layer-heading-the-specification-layer-c57d8b0d-1",
+      "sourceHash": "c57d8b0d938a9fca32f2864c8606bd39f9aaf6fdf1ee081d8ca05cbfbf274bc1",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-spezifikationsebene-heading-die-spezifikationsebene-1eb5cdad-1",
+      "translationHash": "1eb5cdadb59cfdc96741376830fc4e292be3c28b61c98c3e65ff84ca30af0c7b",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The specification layer"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-specification-layer-paragraph-is-the-core-product-specification-it-defines-the-project-pur-64c540c0-1",
+      "sourceHash": "64c540c0b429b530ae594ab7d498f14dd4e6a3e5b93425b21d6b5ee069ffeff3",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-spezifikationsebene-paragraph-ist-die-zentrale-produktspezifikation-sie-definiert-den-zwec-9cb8ce4a-1",
+      "translationHash": "9cb8ce4a5a138d61a05f66c9b8a99d09e2de7c36ef2b909bfdd4fa4d89deef0b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The specification layer"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-specification-layer-paragraph-this-matters-because-it-answers-questions-that-code-alone-ca-ddea26a4-1",
+      "sourceHash": "ddea26a4e6917211fbf8f28c871747403c18c95e19bce536166159478d9c7754",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-spezifikationsebene-paragraph-das-ist-der-unterschied-zwischen-einer-allgemeinen-beschreib-a7d93a59-1",
+      "translationHash": "a7d93a597900ca3085cc7154f05849613954fe443b666af47a78d777e203bd4b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The specification layer"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": [
+        57,
+        57
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-specification-layer-list-why-does-the-product-exist-2e5a2612-1",
+      "sourceHash": "2e5a26126092c2459b5e7c57b9fb6c8ca9651444d51fe1e0bbf3dd067622b5c4",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-spezifikationsebene-list-warum-das-projekt-existiert-61934694-1",
+      "translationHash": "61934694222b719fd69a1a7edca5ef5baaca40e5650e7a02db5dcd82a6025560",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The specification layer"
+      ],
+      "sourceLineRange": [
+        51,
+        55
+      ],
+      "targetLineRange": [
+        51,
+        55
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-specification-layer-paragraph-that-is-the-difference-between-a-project-description-and-a-r-25f48ac4-1",
+      "sourceHash": "25f48ac4c5e12b9981f7b955c2cf3b88316a563a8e25103b4c506f835405123b",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-der-taktischen-leitlinien-paragraph-ergänzt-die-zweite-ebene-sie-ersetzt-die-produktspezifikatio-5533e95b-1",
+      "translationHash": "5533e95be62c41fc34051402283bee4af9e4ca730066310582af8a344679c9f2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The specification layer"
+      ],
+      "sourceLineRange": [
+        57,
+        57
+      ],
+      "targetLineRange": [
+        61,
+        61
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-heading-the-tactical-guidance-layer-b2cfed84-1",
+      "sourceHash": "b2cfed84e17a482043033261c85641ceb7ab6bd226bdd5272557f27a04fc317d",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-der-taktischen-leitlinien-heading-die-ebene-der-taktischen-leitlinien-537311c8-1",
+      "translationHash": "537311c8464cf127e37fb6622134fd0f51da08b3aa71cacfd8341c9a48d63386",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The tactical guidance layer"
+      ],
+      "sourceLineRange": [
+        59,
+        59
+      ],
+      "targetLineRange": [
+        59,
+        59
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-paragraph-adds-the-second-layer-it-does-not-replace-the-product-spec-i-289589e3-1",
+      "sourceHash": "289589e309d01e903631c60673aa62a4f6741cbc79d1cb9b7c4ab18b6be0ae4d",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-der-taktischen-leitlinien-paragraph-dazu-gehören-regeln-für-öffentliche-benennung-dokumentation--698d5636-1",
+      "translationHash": "698d5636bc6499ca08ddc782500d7c900331e598d7875f19c077e6384e176dbd",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The tactical guidance layer"
+      ],
+      "sourceLineRange": [
+        61,
+        61
+      ],
+      "targetLineRange": [
+        63,
+        63
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-paragraph-examples-include-ed999dae-1",
+      "sourceHash": "ed999daedcb63820ece7af9eb658158112157a53bffc621a0ff09ef8d762ba5a",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-spezifikationsebene-paragraph-sie-beantwortet-fragen-wie-e5954175-1",
+      "translationHash": "e5954175d870f9f481acb5194e87c351d4d825cc68fbfc1c7869225c0deb087e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The tactical guidance layer"
+      ],
+      "sourceLineRange": [
+        63,
+        63
+      ],
+      "targetLineRange": [
+        49,
+        49
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-list-public-naming-rules-c3a49eff-1",
+      "sourceHash": "c3a49eff6102c3383c8dacc88a43a1d6e1b8822842e51fa9304d454e14b2afc0",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-der-dokumentation-list-dokumentationsarchitektur-ac5251e8-1",
+      "translationHash": "ac5251e853c98b85ff9917541a71f79b126af6c52bf5c677d229417e35eed196",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The tactical guidance layer"
+      ],
+      "sourceLineRange": [
+        65,
+        70
+      ],
+      "targetLineRange": [
+        77,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-tactical-guidance-layer-paragraph-this-is-important-in-ai-assisted-work-because-not-every-rule-a29fe52a-1",
+      "sourceHash": "a29fe52a51c9beff3d5f3445b3d550b1d2dd06fa54b8c18f049341a53e84a6de",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-des-aktuellen-zustands-paragraph-sie-erklärt-was-heute-existiert-was-noch-fehlt-wozu-das-stat-eb4d3d7d-1",
+      "translationHash": "eb4d3d7d825cb4d2da343b9fe61a155eb4bbd8e05adaae23bf4f09bcfa1ea94d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The tactical guidance layer"
+      ],
+      "sourceLineRange": [
+        72,
+        72
+      ],
+      "targetLineRange": [
+        69,
+        69
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-current-state-layer-heading-the-current-state-layer-365a3680-1",
+      "sourceHash": "365a3680899382a36567e415fee75aa35c90fa2a780e008987fa464fe475765b",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-der-dokumentation-heading-die-ebene-der-dokumentation-5f2e6080-1",
+      "translationHash": "5f2e6080e849761a576435e660d404378ab3f2a3b2c66c0e15bc14b632336d63",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The current-state layer"
+      ],
+      "sourceLineRange": [
+        74,
+        74
+      ],
+      "targetLineRange": [
+        71,
+        71
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-current-state-layer-paragraph-provides-a-third-layer-current-state-framing-e61ff3d2-1",
+      "sourceHash": "e61ff3d2d8d23f5a8e406f920e76d17e93710d46fd5639fb312387e49ea9aab4",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-des-aktuellen-zustands-paragraph-bildet-die-dritte-ebene-eine-ehrliche-beschreibung-des-aktue-86995e96-1",
+      "translationHash": "86995e961f7675da96bbc07d209c2a99582daade1d4b014d6a6f1343378656e7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The current-state layer"
+      ],
+      "sourceLineRange": [
+        76,
+        76
+      ],
+      "targetLineRange": [
+        67,
+        67
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-current-state-layer-paragraph-it-explains-what-exists-now-what-does-not-exist-yet-what-the-04c2935b-1",
+      "sourceHash": "04c2935b2de8c235cb120c441c6fd63e9aadc549dcb5b0709757521dcdcc7706",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-der-dokumentation-paragraph-fügt-die-vierte-ebene-hinzu-und-die-stilrichtlinien-legen-fe-5a1d969d-1",
+      "translationHash": "5a1d969d1e41ad3d63fcb8d740bcc8af0710016935d58ecbf75d1774bb965d59",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The current-state layer"
+      ],
+      "sourceLineRange": [
+        78,
+        78
+      ],
+      "targetLineRange": [
+        73,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-current-state-layer-paragraph-in-let-books-the-readme-explicitly-separates-current-deliver-05fa0dfe-1",
+      "sourceHash": "05fa0dfe0d6b78a612d47aa6c5662e6c032b991233bac4f78c7fcc6fae61fd3c",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-ebene-der-dokumentation-paragraph-hier-wird-das-repository-mehr-als-eine-sammlung-von-dateien--b201d232-1",
+      "translationHash": "b201d232b329e491fe9ae64688989f41ed3da0e4bad45c0594e89739c2630e74",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The current-state layer"
+      ],
+      "sourceLineRange": [
+        80,
+        80
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-documentation-layer-heading-the-documentation-layer-ea188017-1",
+      "sourceHash": "ea188017ecc73c67d73d78f55c49dc645fa35d95b77dbc500069e0b041e80258",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-demo-ebene-heading-die-demo-ebene-708a0cfe-1",
+      "translationHash": "708a0cfe9c52d2eb3445995861dc7415034cba738befce3130b02378b2657075",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The documentation layer"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-documentation-layer-paragraph-the-docs-area-adds-a-fourth-layer-and-the-style-guide-and-so-65104655-1",
+      "sourceHash": "65104655117372e7295eb06649945975676cbba775e3bb52af4170567c4bb017",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-demo-ebene-paragraph-das-statische-demo-ist-wichtig-aber-bewusst-nicht-die-einzig-5d75de30-1",
+      "translationHash": "5d75de30e0c0c6391c695a742875e457db2e803d68c92b00fae8ce89f1e67dfc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The documentation layer"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": [
+        84,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-documentation-layer-paragraph-this-is-where-the-repository-becomes-more-than-a-codebase-it-a2e1b95e-1",
+      "sourceHash": "a2e1b95e695e58f23f531b7ca6563186c59baf5eee9da8dcb3a1f793c14940a9",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-demo-ebene-paragraph-das-bedeutet-dass-das-demo-arbeitsabläufe-prüfen-nutzbarkeit-154c555c-1",
+      "translationHash": "154c555c9a2c4bdfe5672a7f8faf17b6043cdd23d92395bea35c897280c70842",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The documentation layer"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-documentation-layer-list-documentation-architecture-79d31d0b-1",
+      "sourceHash": "79d31d0b347236628ee7681c4e563172aafcb8476b7d0ea7425e3b8ac3e61085",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/warum-das-für-ki-gestützte-lieferung-wichtig-ist-list-1-produktrichtung-in-5f61e820-1",
+      "translationHash": "5f61e820f78b38107ce86b14bd874c48d404e507abe11c656850290d036e5b32",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The documentation layer"
+      ],
+      "sourceLineRange": [
+        88,
+        92
+      ],
+      "targetLineRange": [
+        98,
+        103
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-documentation-layer-paragraph-that-is-exactly-the-kind-of-scaffolding-that-helps-ai-assist-7958d04b-1",
+      "sourceHash": "7958d04b89f4737347c72a4532d35aea97c47e231eec0d542eaed42775a629a8",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-prüfungsebene-paragraph-das-sind-nicht-nur-werkzeugdetails-es-ist-ein-beleg-dafür-da-30db0ed4-1",
+      "translationHash": "30db0ed4981abcd93c4207bab29cc192e87b721112f72739cfa0ba4cae2f685e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The documentation layer"
+      ],
+      "sourceLineRange": [
+        94,
+        94
+      ],
+      "targetLineRange": [
+        92,
+        92
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-demo-layer-heading-the-demo-layer-426b5727-1",
+      "sourceHash": "426b5727ecef85b14ccf6c138311b85dd7981267641bf2253633d05dfbae8766",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-prüfungsebene-heading-die-prüfungsebene-f5a6dfaf-1",
+      "translationHash": "f5a6dfaf00dec9346fdfb27ce8f92e19e3275d6d62b0fce19ee2e4b20b918415",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The demo layer"
+      ],
+      "sourceLineRange": [
+        96,
+        96
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-demo-layer-paragraph-the-static-demo-is-important-but-it-is-intentionally-not-the-6433644a-1",
+      "sourceHash": "6433644ab38df025dec03c99e085413e2fa47905e74531badadb68fc5e6b9404",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/warum-das-für-ki-gestützte-lieferung-wichtig-ist-paragraph-wenn-ein-ki-assistent-zu-let-books-beiträgt-muss-er-das-prod-5dee80a5-1",
+      "translationHash": "5dee80a539fbc3a9a9124c0256321684bdb9b9095bd388e69b575bab2783c03e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The demo layer"
+      ],
+      "sourceLineRange": [
+        98,
+        98
+      ],
+      "targetLineRange": [
+        96,
+        96
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-demo-layer-paragraph-the-public-docs-and-blog-rules-already-distinguish-between-c-374fdaa1-1",
+      "sourceHash": "374fdaa14ca9615696449a64742c0c5a8f46221f8b2c6da0e1d0acba98b313eb",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-prüfungsebene-paragraph-let-books-dokumentiert-bereits-auch-eine-prüfmentalität-und--d4e92d60-1",
+      "translationHash": "d4e92d6067bf90c2fda048bb2ccabde7ea0b6d0f7598aa40c1d04ddbba01f746",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The demo layer"
+      ],
+      "sourceLineRange": [
+        100,
+        100
+      ],
+      "targetLineRange": [
+        90,
+        90
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-demo-layer-paragraph-this-is-a-mature-rule-without-it-prototypes-often-become-acc-12528bc8-1",
+      "sourceHash": "12528bc8ba41bc317f1fce714df108c6321e5d17895cdacb67678c0c11f35b50",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-wichtigste-lehre-paragraph-let-books-zeigt-dass-eine-solche-kette-schon-vor-einer-volls-cf033e67-1",
+      "translationHash": "cf033e67429e15fd0ab86987ca79d51973ef6ca735a1b91a0a0426a5b92e6651",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The demo layer"
+      ],
+      "sourceLineRange": [
+        102,
+        102
+      ],
+      "targetLineRange": [
+        111,
+        111
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-verification-layer-heading-the-verification-layer-0e170c11-1",
+      "sourceHash": "0e170c11974ddb4a198998d1d9aecf9dc86c5f0f83393a247ed704941526d896",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-wichtigste-lehre-heading-die-wichtigste-lehre-a255d273-1",
+      "translationHash": "a255d273101bf8c042505e33759292be2946ba53b34746e79f347497c4e680e4",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The verification layer"
+      ],
+      "sourceLineRange": [
+        104,
+        104
+      ],
+      "targetLineRange": [
+        107,
+        107
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-verification-layer-paragraph-let-books-also-already-documents-a-verification-mindset-47d2ca9a-1",
+      "sourceHash": "47d2ca9a6bb3343cff02bd5c03751924c583ba883981f3826b4d89320c54d22a",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/warum-das-für-ki-gestützte-lieferung-wichtig-ist-paragraph-diese-kette-beseitigt-fehler-nicht-sie-macht-sie-aber-leicht-b848e671-1",
+      "translationHash": "b848e671bb1ca5e9d84dfc4bd0753c5d495487b101f580cc5fd3cc1c488ee7ed",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The verification layer"
+      ],
+      "sourceLineRange": [
+        106,
+        106
+      ],
+      "targetLineRange": [
+        105,
+        105
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-verification-layer-paragraph-and-describe-validation-layers-such-as-b0e52bde-1",
+      "sourceHash": "b0e52bde84fa6ff6f8faff8801fca748bb68c4c293bf012e176b81ae4b25ce2b",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/die-wichtigste-lehre-paragraph-spezifikationsgetriebene-entwicklung-bedeutet-nicht-nur-vor--18a4d66b-1",
+      "translationHash": "18a4d66b264c0fa15dd45b724c967a329903db8b4348d6c06ba2c178514b2566",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The verification layer"
+      ],
+      "sourceLineRange": [
+        108,
+        108
+      ],
+      "targetLineRange": [
+        109,
+        109
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-verification-layer-list-localization-smoke-tests-9e6d87cd-1",
+      "sourceHash": "9e6d87cd7ac04b8dff99a3463873e9a2315fad3e1ae39cdf4998d6c48db4c3f1",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The verification layer"
+      ],
+      "sourceLineRange": [
+        110,
+        115
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-verification-layer-paragraph-those-are-not-just-tooling-details-they-are-evidence-that-th-756e3b68-1",
+      "sourceHash": "756e3b682a3ab3b02cb15edc0d2ac24935003de0bb4c8e541bbefd6f2417c94e",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The verification layer"
+      ],
+      "sourceLineRange": [
+        117,
+        117
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-heading-why-this-matters-for-ai-assisted-delivery-75c38c71-1",
+      "sourceHash": "75c38c7118b8a0e5207fb393a8fe43f0cb33c1c06827b75301f144107437d366",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/warum-das-für-ki-gestützte-lieferung-wichtig-ist-heading-warum-das-für-ki-gestützte-lieferung-wichtig-ist-df646abf-1",
+      "translationHash": "df646abf6db297d54f2cf387b848b14a7d407260ab5ea02e0b78bfca12f27ddb",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "Why this matters for AI-assisted delivery"
+      ],
+      "sourceLineRange": [
+        119,
+        119
+      ],
+      "targetLineRange": [
+        94,
+        94
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-paragraph-if-an-ai-assistant-contributes-to-let-books-it-does-not-need-59fbf996-1",
+      "sourceHash": "59fbf996edf94f6a935985f2f423c2f48c41e4fc54f14b4133e57e06adf5ad40",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "Why this matters for AI-assisted delivery"
+      ],
+      "sourceLineRange": [
+        121,
+        121
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-list-1-product-direction-in-2aff4580-1",
+      "sourceHash": "2aff4580817d873caaec7ddda765479c69166bf0d6bcd90f2c157986abef7d5c",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/andere-sprachen-list-list-7df797ef-1",
+      "translationHash": "7df797ef0f30e4fff6e42c1c89cc8c9f1c78653e29703062f74b55468b19cad3",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "Why this matters for AI-assisted delivery"
+      ],
+      "sourceLineRange": [
+        123,
+        128
+      ],
+      "targetLineRange": [
+        115,
+        125
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/why-this-matters-for-ai-assisted-delivery-paragraph-that-chain-does-not-eliminate-mistakes-it-does-make-them-eas-0d468da3-1",
+      "sourceHash": "0d468da3513c25ce3c56952dbaddeec61d2d996df826438914c3e8e2ae7bea6d",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "Why this matters for AI-assisted delivery"
+      ],
+      "sourceLineRange": [
+        130,
+        130
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-main-lesson-heading-the-main-lesson-bec1dc80-1",
+      "sourceHash": "bec1dc8031b582be9de7f9bef1ff1f542d01a4f89858c055322c45ef6d6e550f",
+      "targetBlockId": "spezifikationsgetriebene-entwicklung-in-let-books/andere-sprachen-heading-andere-sprachen-dc36d1d2-1",
+      "translationHash": "dc36d1d21fe8c71148536d484de7f3eaa27e9c91d6713f0153dfe1653c11afaf",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The main lesson"
+      ],
+      "sourceLineRange": [
+        132,
+        132
+      ],
+      "targetLineRange": [
+        113,
+        113
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-spec-driven-development-is-not-only-about-writing-a-long-req-0250f699-1",
+      "sourceHash": "0250f699b7f384a9ecb722a3f047e586cea9c74f08a8e7ea594cbece32421c0a",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The main lesson"
+      ],
+      "sourceLineRange": [
+        134,
+        134
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-in-practice-it-is-about-building-a-reliable-chain-between-11e73185-1",
+      "sourceHash": "11e73185975fd2c369bfdce7b9b45d3c13f685801b9d2645757b20a1a726a595",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The main lesson"
+      ],
+      "sourceLineRange": [
+        136,
+        136
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-main-lesson-list-product-intent-09851e91-1",
+      "sourceHash": "09851e91f9e0dd863f238286234a34d8976c5d0aab0c209b220aa2d034f256b6",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The main lesson"
+      ],
+      "sourceLineRange": [
+        138,
+        143
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-let-books-already-shows-that-this-chain-can-exist-before-the-737e91b6-1",
+      "sourceHash": "737e91b61cc991e4c942767936f75846df1a2d48ec467303d5937d0ec37eda62",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The main lesson"
+      ],
+      "sourceLineRange": [
+        145,
+        145
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/the-main-lesson-paragraph-that-is-one-of-the-strongest-arguments-for-spec-driven-devel-a517e3f9-1",
+      "sourceHash": "a517e3f953a4ba066483292e0b21d35bd9bcb8405c742f2e9a9d4d9f35de0628",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "The main lesson"
+      ],
+      "sourceLineRange": [
+        147,
+        147
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/other-languages-heading-other-languages-55e5fe0d-1",
+      "sourceHash": "55e5fe0d3fa1d4e9edcdd5986cd919f6a3eed9b339b20782d8f1b28f6f6a69e2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        149,
+        149
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-in-let-books/other-languages-list-list-71e90d86-1",
+      "sourceHash": "71e90d86a286299c891d2b15f2e2adf5177f1f23e7678bcc04550f0de131b376",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development in Let Books",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        151,
+        161
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    }
+  ]
+}

@@ -30,6 +30,7 @@ project root
     ├── localization_alignment.py
     ├── localization_mt_draft.py
     ├── localization_patch_assist.py
+    ├── generate_translation_sidecars.py
     └── validate_translation_parity.py
 ```
 
@@ -195,6 +196,22 @@ python tools/validate_translation_parity.py \
   --json-report-file docs/.translation-parity-report.json
 ```
 
+### `tools/generate_translation_sidecars.py`
+
+Generates or refreshes `.l10n.json` sidecars for every existing source/target article pair.
+
+Example:
+
+```bash
+python tools/generate_translation_sidecars.py
+```
+
+Optional filters:
+
+```bash
+python tools/generate_translation_sidecars.py --content-type wiki --locale sl
+```
+
 ## Workflow Rules
 
 ### New Source Article
@@ -202,15 +219,17 @@ python tools/validate_translation_parity.py \
 1. run `localization_mt_draft.py`
 2. review the generated AI packet
 3. perform semantic review
-4. run `validate_translation_parity.py`
-5. keep the `.l10n.json` sidecar with the localized file
+4. run `generate_translation_sidecars.py` for the new pair if needed
+5. run `validate_translation_parity.py`
+6. keep the `.l10n.json` sidecar with the localized file
 
 ### Existing Source Article Changed
 
 1. run `localization_patch_assist.py`
 2. inspect low-confidence blocks in the patch report
 3. if needed, fall back to a full MT draft plus merge review
-4. run `validate_translation_parity.py`
+4. refresh the sidecar metadata with `generate_translation_sidecars.py`
+5. run `validate_translation_parity.py`
 
 ### Localized Article Changed Independently
 

@@ -1,0 +1,1306 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-review-ai-assisted-work-against-the-spec.md",
+  "targetPath": "docs/learning/sq/how-to-review-ai-assisted-work-against-the-spec.md",
+  "locale": "sq",
+  "blocks": [
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec-heading-how-to-review-ai-assisted-work-against-the-spec-01342e36-1",
+      "sourceHash": "01342e3603e3d3b5d90c887bb108649c798c4b4e24de26d65c0f2f66eacff2f6",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi-heading-si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi-a24895fd-1",
+      "translationHash": "a24895fdb574e4aeeb9ef0d6d72c4e56c3aff20307c742a1fdce9036ee22008c",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/përmbledhje-heading-përmbledhje-b2a9a257-1",
+      "translationHash": "b2a9a2571fe6b336285bffcb1a9ec375f50a4c8f2b93797d7e499f92b96d2e46",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/summary-paragraph-this-guide-explains-how-to-review-ai-assisted-implementation-ea6586bd-1",
+      "sourceHash": "ea6586bd5c631bb5218c8fba0946a773ecb0dde3e11292ad4847b088b0cd27d0",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/përmbledhje-paragraph-ky-udhëzues-shpjegon-si-të-rishikoni-një-implementim-të-ndih-9cdd3b24-1",
+      "translationHash": "9cdd3b2458f3a42ab9ac88deb277d3a8f7c76ac5f04b09abfaa9044d098dcbb9",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-heading-why-this-matters-7e1d357b-1",
+      "sourceHash": "7e1d357b45571e5daefa2355f329a5f90663245af72d9cfd3e08f646589419fd",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/pse-kjo-ka-rëndësi-heading-pse-kjo-ka-rëndësi-e7ad9713-1",
+      "translationHash": "e7ad9713edb0b62ceb02690c7477a92855dd5ab9ddf04d4508c79a3db5949c9b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-ai-can-produce-code-copy-tests-and-interface-changes-that-lo-3ad691fc-1",
+      "sourceHash": "3ad691fcc10af44cfd320d4015c523836193288308016ff41f83aa4a1dc3a3ec",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/pse-kjo-ka-rëndësi-paragraph-ai-mund-të-prodhojë-shumë-shpejt-kod-tekst-teste-dhe-ndryshi-9d4d9816-1",
+      "translationHash": "9d4d98165639267defd4609c83b8f256a7bdbe8cee391d6ae752884f3eb2d6bf",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-that-speed-creates-a-review-risk-reviewers-may-unconsciously-b9b50986-1",
+      "sourceHash": "b9b50986722c994b368b4cea47156b0f61f6c1b4c6ae97eda5576b458200ac42",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/pse-kjo-ka-rëndësi-paragraph-kjo-shpejtësi-krijon-një-rrezik-rishikimi-rishikuesit-mund-t-a76f2509-1",
+      "translationHash": "a76f25095ac8a85d0752800b7625ea88ef5a3d54e864e019a6c44bf47ad1b144",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-those-are-not-the-same-question-88373092-1",
+      "sourceHash": "883730925adf01a63c51a47c1e97e1074251196d264dbd06d1e5954406e063bc",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/pse-kjo-ka-rëndësi-paragraph-këto-nuk-janë-e-njëjta-pyetje-eefdeb50-1",
+      "translationHash": "eefdeb50b3937784da117724095ef23da41476dd6a7666edd39b93236ead0481",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        22,
+        22
+      ],
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/why-this-matters-paragraph-in-spec-driven-work-review-should-begin-with-alignment-and-o-4c3fcdf1-1",
+      "sourceHash": "4c3fcdf18095fa704fb8eeb890d096d089a6315caf727c5e61d035a13475bde9",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/pse-kjo-ka-rëndësi-paragraph-në-punën-e-drejtuar-nga-specifikimet-rishikimi-duhet-të-fill-6dfc13e5-1",
+      "translationHash": "6dfc13e5e40d845a35de950beb0c2ceaa64995dbf0cfc1e24bc4120e3e6baf6a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-heading-start-with-the-source-of-truth-88829d72-1",
+      "sourceHash": "88829d72460e3148d6ab2f31aa853696d9b9b7fc32b862d116d987905e268e65",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/filloni-me-burimin-e-së-vërtetës-heading-filloni-me-burimin-e-së-vërtetës-93870e49-1",
+      "translationHash": "93870e497379d6de8fac4632d5bc4c28bd30162d3a97cfab0a8ea01b1b619081",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-paragraph-before-reviewing-the-output-identify-the-documents-that-defi-dfe72db7-1",
+      "sourceHash": "dfe72db7e47f9b435364415f66d4a5a318d51579c9b47f8e278ce509c92feffd",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/filloni-me-burimin-e-së-vërtetës-paragraph-përpara-se-të-rishikoni-rezultatin-identifikoni-dokumentet-q-31e83d73-1",
+      "translationHash": "31e83d73d65b5ddb5768531479417c736f18672a8be1f5ea280a768cfa268ad7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-paragraph-in-the-let-books-repository-that-usually-means-6f745ce5-1",
+      "sourceHash": "6f745ce5c16a6ea85067ed8b1f4dabf9ace776a465d7f524a6e89bed39c0685a",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/filloni-me-burimin-e-së-vërtetës-paragraph-në-depon-let-books-kjo-zakonisht-do-të-thotë-9fe0dedc-1",
+      "translationHash": "9fe0dedcff18e5d33ea32bacbfce3a6ba2ad4c24f3ccbc4c918396954424eff1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-list-for-product-rules-workflows-and-scope-0c4c8946-1",
+      "sourceHash": "0c4c8946dd9200ac3f906346f0fe223d505d58ebf05dd7c07f55674c76b8b239",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/filloni-me-burimin-e-së-vërtetës-list-për-rregullat-e-produktit-rrjedhat-e-punës-dhe-shtrirjen-5fd86b83-1",
+      "translationHash": "5fd86b8390cd67975a363d42dfdd963b238a06c577ea10dfeb55275ca8223cee",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        32,
+        35
+      ],
+      "targetLineRange": [
+        32,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/start-with-the-source-of-truth-paragraph-without-this-step-review-easily-becomes-subjective-and-local-71eee0b3-1",
+      "sourceHash": "71eee0b34f70a0d89d1f85d1e50cee8ff0ffed7827545a10f8b2c43fa62c53ec",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/filloni-me-burimin-e-së-vërtetës-paragraph-pa-këtë-hap-rishikimi-bëhet-lehtësisht-subjektiv-dhe-lokal-abf0523f-1",
+      "translationHash": "abf0523fe606e219648da72a0045e097e49924088515cd9528e6dddf69af93e3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Start with the source of truth"
+      ],
+      "sourceLineRange": [
+        37,
+        37
+      ],
+      "targetLineRange": [
+        37,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order-heading-review-in-the-right-order-ae0afb62-1",
+      "sourceHash": "ae0afb62887d608753518e3087ad3e3ebc9f9c9d6f888911f7403efe9edae218",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur-heading-rishikoni-në-rendin-e-duhur-4906d99a-1",
+      "translationHash": "4906d99a9c8b8c51ddd66874d6f845efd2b4d15b377cc5719e4da7ac18cac9d8",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order-paragraph-use-this-order-when-reviewing-ai-assisted-work-511ca06e-1",
+      "sourceHash": "511ca06e93d690aa7e45682d6995f64ddb15e3431e0df2c9ea5db97943b4b855",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur-paragraph-përdoreni-këtë-rend-kur-rishikoni-punë-të-ndihmuar-nga-ai-5ac87362-1",
+      "translationHash": "5ac8736233c128fb9eea5842568ebffb64683aa3fd46d0e7d640aa4e413a5a54",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-heading-1-product-alignment-a81b572f-1",
+      "sourceHash": "a81b572fae5f30bbc92962c378ebe3c5f0a9a90ba586097befc7536710a501e9",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/1-përafrimi-me-produktin-heading-1-përafrimi-me-produktin-5d892cb5-1",
+      "translationHash": "5d892cb5eff855a1e0308ebbf35667a3e05126d9b68bc6298f4436d99ad46155",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-paragraph-ask-whether-the-output-matches-the-intended-user-workflow-an-720e1b84-1",
+      "sourceHash": "720e1b84baba4b2f1e7de32fb735360fd83ef5765130d1f737608f15aa142e53",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/1-përafrimi-me-produktin-paragraph-pyesni-nëse-rezultati-përputhet-me-rrjedhën-e-synuar-të-përd-11f4be06-1",
+      "translationHash": "11f4be06e2976427f4a8e6c2c1a2461694a83669245fee706febde37b73a698b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-list-does-manual-entry-still-work-where-the-spec-requires-it-2b6ae9cf-1",
+      "sourceHash": "2b6ae9cfa510a920ddbd2b23ccaee9f3fbd776c7c7001fb9eb390c76eee81983",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/1-përafrimi-me-produktin-list-a-vazhdon-të-funksionojë-hyrja-manuale-atje-ku-e-kërkon-spec-8cd99ef5-1",
+      "translationHash": "8cd99ef5f226937fad602d6ebcf19b6cc7379001a62a0e2a5c13aad6a84d3354",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        49,
+        52
+      ],
+      "targetLineRange": [
+        49,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/1-product-alignment-paragraph-if-the-product-alignment-is-wrong-there-is-no-value-in-spend-2eed780e-1",
+      "sourceHash": "2eed780ea619119d2dfd34c4bb9ec445249b4d78895636b4335a233da8decea2",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/1-përafrimi-me-produktin-paragraph-nëse-përafrimi-me-produktin-është-i-gabuar-nuk-ka-shumë-vler-936dab78-1",
+      "translationHash": "936dab780075e9d20a75682b9cb05de1105cc5809b07d6d81639177f91f24a2e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "1. Product alignment"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-heading-2-documentation-alignment-e4a448fc-1",
+      "sourceHash": "e4a448fc5702b216f42f0805c85a868bf6868d1c4f587d1b59ed978d779d962a",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/2-përafrimi-me-dokumentacionin-heading-2-përafrimi-me-dokumentacionin-4ab5d767-1",
+      "translationHash": "4ab5d7679199e6377d4e9e5e3011a5b8056112294a0c1f65491ee2e70790284f",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-paragraph-ask-whether-the-surrounding-docs-still-describe-reality-hone-02dfd422-1",
+      "sourceHash": "02dfd42236ea8404ff95b05b58a5d36eb9312c0bee0421bed88e38c9c819fb9b",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/2-përafrimi-me-dokumentacionin-paragraph-pyesni-nëse-dokumentacioni-rreth-ndryshimit-vazhdon-ta-përsh-a9aae48d-1",
+      "translationHash": "a9aae48d49486b451c2d01c8f205a793d9ed18c66c6fce881be311f117e443e5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        58,
+        58
+      ],
+      "targetLineRange": [
+        58,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-list-was-a-user-visible-workflow-changed-without-updating-the-doc-65a5b4cb-1",
+      "sourceHash": "65a5b4cb7f5b2e0672c2936497d44e346e8daa22ae7923dea89cc3535205b5ad",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/2-përafrimi-me-dokumentacionin-list-a-u-ndryshua-një-rrjedhë-pune-e-dukshme-për-përdoruesin-pa-u-504c83c2-1",
+      "translationHash": "504c83c2eb6010419d558a96191eb09420e4290bf2136204d77701aacef12e54",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        62,
+        64
+      ],
+      "targetLineRange": [
+        62,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/2-documentation-alignment-paragraph-ai-generated-changes-often-modify-behavior-without-rememberi-cffb4cb2-1",
+      "sourceHash": "cffb4cb2471afc3ee2df9e9e971ef750a8d1e1edb72d49e9da34f6fea9025ac5",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/2-përafrimi-me-dokumentacionin-paragraph-ndryshimet-e-gjeneruara-nga-ai-shpesh-ndryshojnë-sjelljen-pa-85c87898-1",
+      "translationHash": "85c878987b3fd798f3c4c504e1fd451e774560021946ddd50554f6c7b0922181",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "2. Documentation alignment"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-heading-3-validation-and-fallback-behavior-15990490-1",
+      "sourceHash": "1599049034a304569087b8293805275a8f7fe453cd1a991a12702ec18b37cd54",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/3-validimi-dhe-sjellja-rezervë-heading-3-validimi-dhe-sjellja-rezervë-97881699-1",
+      "translationHash": "9788169992e928c10a68e8210d158ef7539502ccf5a6d8261f35f61e6491b6c4",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        68,
+        68
+      ],
+      "targetLineRange": [
+        68,
+        68
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-paragraph-ask-whether-the-change-preserves-the-failure-and-fallback-ex-56db17b6-1",
+      "sourceHash": "56db17b661440f12d3143215e7276fea225e4ebfc459162b472648749e321273",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/3-validimi-dhe-sjellja-rezervë-paragraph-pyesni-nëse-ndryshimi-i-ruan-pritjet-për-dështim-dhe-sjellje-4da0090b-1",
+      "translationHash": "4da0090b0e119b5f5d577781d95ae099b9105bc404cbfc0319c9a6b79621550e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        70,
+        70
+      ],
+      "targetLineRange": [
+        70,
+        70
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        72,
+        72
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-list-can-the-workflow-still-succeed-when-an-optional-provider-fai-7a14e5e8-1",
+      "sourceHash": "7a14e5e89b9e09e1fc22b62891357ea874142b9a3baa674b4bfc668f6565e682",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/3-validimi-dhe-sjellja-rezervë-list-a-mund-të-ketë-ende-sukses-rrjedha-e-punës-kur-dështon-një-o-c43ade5b-1",
+      "translationHash": "c43ade5ba8170ad17981e06a52429cc6fcc0143d1ce153266af671e30bf69152",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        74,
+        76
+      ],
+      "targetLineRange": [
+        74,
+        76
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/3-validation-and-fallback-behavior-paragraph-this-is-where-many-plausible-implementations-fail-the-real-p-e2b4c325-1",
+      "sourceHash": "e2b4c325d31a963837e70edd05f5116e4f8959ad4671ad3996932cb7e2c96c4a",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/3-validimi-dhe-sjellja-rezervë-paragraph-këtu-dështojnë-shumë-implementime-të-besueshme-në-testin-rea-5529f41e-1",
+      "translationHash": "5529f41e20777cd064a826e841abb2ea30600164c10eff88c0fe054459f0e80e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "3. Validation and fallback behavior"
+      ],
+      "sourceLineRange": [
+        78,
+        78
+      ],
+      "targetLineRange": [
+        78,
+        78
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-heading-4-technical-quality-a98667b3-1",
+      "sourceHash": "a98667b3b49d083899894e6e757ea6e36d3dda78027ce9ca13026fd0d645241e",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/4-cilësia-teknike-heading-4-cilësia-teknike-09bc9df9-1",
+      "translationHash": "09bc9df9d550ff7c233ca4cade19c07e56f4ce5af5dc1cf2a43ea82906bba42a",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        80,
+        80
+      ],
+      "targetLineRange": [
+        80,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-paragraph-only-after-the-above-checks-should-you-spend-most-of-your-ti-7105936d-1",
+      "sourceHash": "7105936da93a467f22ee10613cecbf4b97b24c5ca6aeff4bdd52ebbb32eadd7e",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/4-cilësia-teknike-paragraph-vetëm-pas-kontrolleve-të-mësipërme-duhet-të-shpenzoni-pjesën-ceacaec3-1",
+      "translationHash": "ceacaec3201e9c3fe475b4845de9562b28a3d38a96f0ce857e84127ae5b0bcb4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-list-clarity-7d870d84-1",
+      "sourceHash": "7d870d846b3bc84a316189e7b68f3ed1ddca05f0a63996ec87242eccc35b3903",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/4-cilësia-teknike-list-qartësia-2b268fff-1",
+      "translationHash": "2b268fffef4cbb023fc6689092cb74c13adf9d45913afd043d9473c1cc576c20",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        84,
+        89
+      ],
+      "targetLineRange": [
+        84,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/review-in-the-right-order/4-technical-quality-paragraph-technical-quality-still-matters-it-just-should-not-outrank-p-19add9da-1",
+      "sourceHash": "19add9da7d947a51700894bc966ee78a04121e24e226f1645488f1e29c4e1a4b",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/rishikoni-në-rendin-e-duhur/4-cilësia-teknike-paragraph-cilësia-teknike-ka-ende-rëndësi-thjesht-nuk-duhet-të-jetë-më-d4999a9b-1",
+      "translationHash": "d4999a9bf620156743501950b7cae83791bdd07e34e88e7f583d9fb57f4e7bfa",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Review in the right order",
+        "4. Technical quality"
+      ],
+      "sourceLineRange": [
+        91,
+        91
+      ],
+      "targetLineRange": [
+        91,
+        91
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps-heading-common-review-traps-0ec68cf3-1",
+      "sourceHash": "0ec68cf3793b1e6aab7faeea2093d5217a9a68f5daa8e7f86a38786f37f6820c",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi-heading-kurthe-të-zakonshme-rishikimi-91bcfc1b-1",
+      "translationHash": "91bcfc1bce3dc0ad32e0758010f6524450aceca07f70045fa7e09c81a6bb216a",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps"
+      ],
+      "sourceLineRange": [
+        93,
+        93
+      ],
+      "targetLineRange": [
+        93,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps-paragraph-ai-assisted-work-tends-to-create-several-repeatable-review-t-ad64d06b-1",
+      "sourceHash": "ad64d06b24553b00f9425f47dd931a76df2d560fdc55b0dbfb4814a5d5a30411",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi-paragraph-puna-e-ndihmuar-nga-ai-priret-të-krijojë-disa-kurthe-rishiki-cdf33cdc-1",
+      "translationHash": "cdf33cdc20e7a437e7dc651b092145c9f5c2a0d9eebd62a1bfb85cf66a27e891",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps"
+      ],
+      "sourceLineRange": [
+        95,
+        95
+      ],
+      "targetLineRange": [
+        95,
+        95
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-polished-output-trap-heading-the-polished-output-trap-a3bee1c0-1",
+      "sourceHash": "a3bee1c030f047f55c59cd38eec0d52deb10a9035a5a9729fbc3f3fcc53098fc",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-rezultatit-të-lëmuar-heading-kurthi-i-rezultatit-të-lëmuar-f4c04247-1",
+      "translationHash": "f4c04247a783d3252ccefc1339c3e20508bd98d4092c77b76113359f0daca495",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The polished-output trap"
+      ],
+      "sourceLineRange": [
+        97,
+        97
+      ],
+      "targetLineRange": [
+        97,
+        97
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-polished-output-trap-paragraph-the-output-looks-clean-so-reviewers-assume-it-is-correct-3df79dd7-1",
+      "sourceHash": "3df79dd75c66589cb28010e2cd8b63980250fe8d076eabada9ed18eae5a9da1e",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-rezultatit-të-lëmuar-paragraph-rezultati-duket-i-pastër-prandaj-rishikuesit-supozojnë-se-ës-ea4e8d4c-1",
+      "translationHash": "ea4e8d4ca2af4c75daae9e158f20d238a1eb87a78dd41e30c46075ccca4a6a38",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The polished-output trap"
+      ],
+      "sourceLineRange": [
+        99,
+        99
+      ],
+      "targetLineRange": [
+        99,
+        99
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-nearby-context-trap-heading-the-nearby-context-trap-4ad217ce-1",
+      "sourceHash": "4ad217ce0506e0ff6dba397926c73b7b6c185939b56bc96d8b5d77951fe04519",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-kontekstit-të-afërt-heading-kurthi-i-kontekstit-të-afërt-5758722b-1",
+      "translationHash": "5758722b130890e0a807854bcc77a4299b5bd809122cb93ae7cce35331916340",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The nearby-context trap"
+      ],
+      "sourceLineRange": [
+        101,
+        101
+      ],
+      "targetLineRange": [
+        101,
+        101
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-nearby-context-trap-paragraph-the-change-matches-the-nearest-existing-implementation-but-t-69d5f530-1",
+      "sourceHash": "69d5f530a2dd9770ac0d3b277cb389b567357491aa654e77485d2a27fd520b12",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-kontekstit-të-afërt-paragraph-ndryshimi-përputhet-me-implementimin-ekzistues-më-të-afërt-p-bceda31e-1",
+      "translationHash": "bceda31e7dca1d997d8bdebede3b3a7309aa77b04066132c9f3a4bf84cb586d4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The nearby-context trap"
+      ],
+      "sourceLineRange": [
+        103,
+        103
+      ],
+      "targetLineRange": [
+        103,
+        103
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-implicit-scope-trap-heading-the-implicit-scope-trap-850f13ba-1",
+      "sourceHash": "850f13bacb62bf02f7b506c8b1161f6e99d120c8f3462460c14367f405e72ef0",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-shtrirjes-së-nënkuptuar-heading-kurthi-i-shtrirjes-së-nënkuptuar-aa121232-1",
+      "translationHash": "aa121232e931a02c14ecf575a1da3f86b9d8e07e8e6f7f33a0e93c7482745986",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The implicit-scope trap"
+      ],
+      "sourceLineRange": [
+        105,
+        105
+      ],
+      "targetLineRange": [
+        105,
+        105
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-implicit-scope-trap-paragraph-the-assistant-adds-features-abstractions-or-assumptions-that-2bcbd6d0-1",
+      "sourceHash": "2bcbd6d0b45249674279e69c81964a2ef7ef2d429068a8f3710caaaa92fd2baa",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-shtrirjes-së-nënkuptuar-paragraph-ndihmësi-shton-veçori-abstraksione-ose-supozime-që-nuk-u-kër-4fcfd108-1",
+      "translationHash": "4fcfd1082b06e5f9806935edceb12a0a5e25b1e2a1ebd9b38d7e6129b79f06a3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The implicit-scope trap"
+      ],
+      "sourceLineRange": [
+        107,
+        107
+      ],
+      "targetLineRange": [
+        107,
+        107
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-test-pass-trap-heading-the-test-pass-trap-d51caecc-1",
+      "sourceHash": "d51caeccefa83ca90898484ba5a21864255ee34d70c50aa6f44245162174317e",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-testeve-që-kalojnë-heading-kurthi-i-testeve-që-kalojnë-85aafbcd-1",
+      "translationHash": "85aafbcd621f6be8df243c59436b9fdd1a5514eaf85a4d808740a04695f5d7e7",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The test-pass trap"
+      ],
+      "sourceLineRange": [
+        109,
+        109
+      ],
+      "targetLineRange": [
+        109,
+        109
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/common-review-traps/the-test-pass-trap-paragraph-tests-may-pass-because-they-validate-the-generated-behavior--ac2b655d-1",
+      "sourceHash": "ac2b655deb89d656c97d53a41f6375702d66de21d26026a3d74b90ed2b44f72d",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/kurthe-të-zakonshme-rishikimi/kurthi-i-testeve-që-kalojnë-paragraph-testet-mund-të-kalojnë-sepse-validon-sjelljen-e-gjeneruar-jo-a1011927-1",
+      "translationHash": "a10119271d4ff8dd71230c3730c6edc23ee6ca3921298d5c96eb1f3e9460a1ac",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Common review traps",
+        "The test-pass trap"
+      ],
+      "sourceLineRange": [
+        111,
+        111
+      ],
+      "targetLineRange": [
+        111,
+        111
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/a-practical-review-checklist-heading-a-practical-review-checklist-47e285e6-1",
+      "sourceHash": "47e285e65a37da09c4f6526f15043cee945e4fea3b88912b656b18c87a65df98",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/një-listë-praktike-rishikimi-heading-një-listë-praktike-rishikimi-67af5a8f-1",
+      "translationHash": "67af5a8fc3b0747da3b276dde0aa07dad1102b2ebe8393c6fc75ebb007ce00e5",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "A practical review checklist"
+      ],
+      "sourceLineRange": [
+        113,
+        113
+      ],
+      "targetLineRange": [
+        113,
+        113
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/a-practical-review-checklist-paragraph-for-each-substantial-ai-assisted-change-ask-db0b0215-1",
+      "sourceHash": "db0b0215aec8a17294e7c1174d9208de19e3a6ae891311666fb3e74277115315",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/një-listë-praktike-rishikimi-paragraph-për-çdo-ndryshim-të-rëndësishëm-të-ndihmuar-nga-ai-pyesni-9cd3ea35-1",
+      "translationHash": "9cd3ea354ba1fff9c622232c0b528e08f9576a6241f22913ef668c53d00ab3b8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "A practical review checklist"
+      ],
+      "sourceLineRange": [
+        115,
+        115
+      ],
+      "targetLineRange": [
+        115,
+        115
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/a-practical-review-checklist-list-1-what-product-rule-or-workflow-is-this-change-supposed-to-i-8a326ece-1",
+      "sourceHash": "8a326ece04e8671801cd2bf00a01479b5ed14223a3d14efd4a2f1cdc13edebe8",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/një-listë-praktike-rishikimi-list-1-cilin-rregull-produkti-ose-cilën-rrjedhë-pune-supozohet-të-c10137f0-1",
+      "translationHash": "c10137f0ab075f39f71ee7d6b577164c424b30d2c95a1072ca96c9e4a8d0c7f1",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "A practical review checklist"
+      ],
+      "sourceLineRange": [
+        117,
+        123
+      ],
+      "targetLineRange": [
+        117,
+        123
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-heading-how-to-review-generated-tests-3b65ae48-1",
+      "sourceHash": "3b65ae4844b0da4d6f1d5c944b1fe57309ebac66017dd4cfb03b7ead17b5e0d8",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/si-të-rishikoni-testet-e-gjeneruara-heading-si-të-rishikoni-testet-e-gjeneruara-1a1355b7-1",
+      "translationHash": "1a1355b7bafb0916e9c07939711bba433925b830c30ff55b13baf7c72d3d9d5a",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        125,
+        125
+      ],
+      "targetLineRange": [
+        125,
+        125
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-paragraph-generated-tests-are-useful-but-they-should-also-be-reviewed--556299a8-1",
+      "sourceHash": "556299a8cda21cfe67ff20ed7dbca48030b6aa73c8c1903db98794d9a71c09e2",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/si-të-rishikoni-testet-e-gjeneruara-paragraph-testet-e-gjeneruara-janë-të-dobishme-por-edhe-ato-duhen-rish-31c1d766-1",
+      "translationHash": "31c1d7669c4adf6f890cd9b371c3e30cd1bbcabe4c97a282fa44e090b04f76f2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        127,
+        127
+      ],
+      "targetLineRange": [
+        127,
+        127
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-paragraph-ask-9cbc440a-1",
+      "sourceHash": "9cbc440ae316798596671ee94b764c09ab468d8d05ffaf6b8e461554b128cbd7",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/si-të-rishikoni-testet-e-gjeneruara-paragraph-pyesni-aaaaedfe-1",
+      "translationHash": "aaaaedfeb977a4c925a39f7388eef7d43bb307d12d9cce82ab16ae8bb83e3d87",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        129,
+        129
+      ],
+      "targetLineRange": [
+        129,
+        129
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-list-do-the-tests-check-the-intended-workflow-e2d32f53-1",
+      "sourceHash": "e2d32f539995e7b80f02a250025bd70d4f7199bdcec4d43e326f2a9c137fe6cf",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/si-të-rishikoni-testet-e-gjeneruara-list-a-kontrollojnë-testet-rrjedhën-e-synuar-të-punës-c837b99d-1",
+      "translationHash": "c837b99dc6181fe6376031dcdf111549ba6ff2a251e3ad837c49db60bce512ec",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        131,
+        134
+      ],
+      "targetLineRange": [
+        131,
+        134
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/how-to-review-generated-tests-paragraph-this-is-especially-important-in-spec-driven-work-because-a-w-b7b2ac12-1",
+      "sourceHash": "b7b2ac12e78b1e0632da9647c8c4e5306f2d717248e89ef6bd8dd9ea6f2931e8",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/si-të-rishikoni-testet-e-gjeneruara-paragraph-kjo-është-veçanërisht-e-rëndësishme-në-punën-e-drejtuar-nga--cd219299-1",
+      "translationHash": "cd2192991053a2817002f35b5010952a27b9c03b482f07d0c425f62f69236076",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "How to review generated tests"
+      ],
+      "sourceLineRange": [
+        136,
+        136
+      ],
+      "targetLineRange": [
+        136,
+        136
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-heading-let-books-examples-8ab88745-1",
+      "sourceHash": "8ab887456720dd951d4bf198773c52b392eab32dc53cc16d2283d8da100fa8f1",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/shembuj-nga-let-books-heading-shembuj-nga-let-books-97d65bc9-1",
+      "translationHash": "97d65bc9e230746cc32f9eac20d7cc9dc95303028efa46fce5e083dc155b1623",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        138,
+        138
+      ],
+      "targetLineRange": [
+        138,
+        138
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-paragraph-examples-of-spec-level-questions-in-this-repository-include-3cf7f339-1",
+      "sourceHash": "3cf7f339731e9f2a3bc766de3e156b302a6f187e1e4bfc829aee80f13341a166",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/shembuj-nga-let-books-paragraph-shembuj-të-pyetjeve-në-nivel-specifikimi-në-këtë-depo-përfsh-fc990e75-1",
+      "translationHash": "fc990e7508e9297a4d993f33374ff8792ba45695e30f1726a5294609e31b5d04",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        140,
+        140
+      ],
+      "targetLineRange": [
+        140,
+        140
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-list-does-the-workflow-still-remain-useful-without-paid-ai-servic-22e921aa-1",
+      "sourceHash": "22e921aac475ad7f15f6c33ba0d308bfc0ce0e00f4eb8743efdecc750267bc60",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/shembuj-nga-let-books-list-a-mbetet-rrjedha-e-punës-e-dobishme-pa-shërbime-ai-me-pagesë-0a35030b-1",
+      "translationHash": "0a35030bcc61afcec82c62eab9914880d979c828202a7ceab3cdfce4f636e3b9",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        142,
+        145
+      ],
+      "targetLineRange": [
+        142,
+        145
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/let-books-examples-paragraph-those-questions-are-specific-enough-to-guide-review-which-is-87c9a333-1",
+      "sourceHash": "87c9a33309061722e95c1009c0551836bb4ecd681a6105332c8ccf5bb28b9780",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/shembuj-nga-let-books-paragraph-këto-pyetje-janë-mjaftueshëm-specifike-për-të-drejtuar-rishi-1c75c7f1-1",
+      "translationHash": "1c75c7f19f256b84ce26ee41bc1f93e169346f00059782f88cd1a60baa3d96e3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Let Books examples"
+      ],
+      "sourceLineRange": [
+        147,
+        147
+      ],
+      "targetLineRange": [
+        147,
+        147
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/the-durable-lesson-heading-the-durable-lesson-efa37549-1",
+      "sourceHash": "efa37549901c9fd11f26c47473b9ddbef2258a14e98efc6f7046bb1bf94bb164",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/lexim-i-mëtejshëm-heading-lexim-i-mëtejshëm-f5c8a75a-1",
+      "translationHash": "f5c8a75a6009731504ca8747df29a6b606c8051f3d7d351c3b5c3249b322c53a",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        149,
+        149
+      ],
+      "targetLineRange": [
+        155,
+        155
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/the-durable-lesson-paragraph-ai-assisted-review-is-not-about-checking-whether-the-assista-9b4f0d64-1",
+      "sourceHash": "9b4f0d642ba23618b57fd51560fd13dd4d37837042849ba3cfc7c4d8c3e008fb",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/mësimi-afatgjatë-paragraph-rishikimi-i-ndihmuar-nga-ai-nuk-ka-të-bëjë-me-kontrollimin-n-7fd86d1f-1",
+      "translationHash": "7fd86d1f8db9ddef7dc29d2ca8061abc8a3e6ac1143ecdfd8cfc1f13750bffc9",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        151,
+        151
+      ],
+      "targetLineRange": [
+        151,
+        151
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/the-durable-lesson-paragraph-the-best-review-question-is-usually-not-does-this-work-it-is-a26ccc69-1",
+      "sourceHash": "a26ccc695400c348a51765871861357ae3c676c272d218041405383576900bc2",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/mësimi-afatgjatë-paragraph-pyetja-më-e-mirë-e-rishikimit-zakonisht-nuk-është-a-funksion-0a08fab8-1",
+      "translationHash": "0a08fab82d7e88208258f75a58e840e9a6196cffb5bb27851073abf6feacf6c7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        153,
+        153
+      ],
+      "targetLineRange": [
+        153,
+        153
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/further-reading-heading-further-reading-dfd43c88-1",
+      "sourceHash": "dfd43c88c1cb9723f2a690b08119f3b312da0ad2e460f768fe2e7b2cad613f05",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/mësimi-afatgjatë-heading-mësimi-afatgjatë-76dc0a5d-1",
+      "translationHash": "76dc0a5d2078c4513d3319d5678f12caed88c125e6d717831dfbdfa832a210c2",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        155,
+        155
+      ],
+      "targetLineRange": [
+        149,
+        149
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-review-ai-assisted-work-against-the-spec/further-reading-list-list-58966e90-1",
+      "sourceHash": "58966e902c77318ff89711fe5815aebc190493b0d9dc0a466fa8cdfe6b221d8d",
+      "targetBlockId": "si-të-rishikoni-punë-të-ndihmuar-nga-ai-kundrejt-specifikimi/lexim-i-mëtejshëm-list-list-3593e450-1",
+      "translationHash": "3593e450796f259470071cebd3ad15137bfbd395904e0732e1070ffeee7aff59",
+      "blockType": "list",
+      "headingPath": [
+        "How to Review AI-Assisted Work Against the Spec",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        157,
+        162
+      ],
+      "targetLineRange": [
+        157,
+        162
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

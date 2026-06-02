@@ -1,0 +1,527 @@
+{
+  "version": 1,
+  "sourcePath": "docs/blog/en/localization-at-scale.md",
+  "targetPath": "docs/blog/it/localization-at-scale.md",
+  "locale": "it",
+  "blocks": [
+    {
+      "blockId": "localization-at-scale-heading-localization-at-scale-806207c8-1",
+      "sourceHash": "806207c88f29079136e50c890c31951afb07a5b1aacae13625548e56c7f12445",
+      "targetBlockId": "localizzazione-su-larga-scala-heading-localizzazione-su-larga-scala-5c9021cd-1",
+      "translationHash": "5c9021cd4a2e1a23add58f70d1f9d3f6b74ea694b5f1f3aacbb25b0323866ff2",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale"
+      ],
+      "sourceLineRange": [
+        35,
+        35
+      ],
+      "targetLineRange": [
+        35,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale-paragraph-many-software-projects-still-treat-localization-as-the-momen-749b28c7-1",
+      "sourceHash": "749b28c7f60d3eaae70e426eb1abbcbeacc25c9be5e5461d15a619111b289055",
+      "targetBlockId": "localizzazione-su-larga-scala-paragraph-molti-progetti-software-trattano-ancora-la-localizzazione-co-edef4a3a-1",
+      "translationHash": "edef4a3adc25ac3ad82f8732baad5140695c2db581fc77f4e1529baf63652f60",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale"
+      ],
+      "sourceLineRange": [
+        37,
+        37
+      ],
+      "targetLineRange": [
+        37,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale-paragraph-localization-at-scale-is-a-system-it-includes-source-writing-92bc0f5d-1",
+      "sourceHash": "92bc0f5d3ea9e6cfd94d96e2b2b83e7ab455a2ffe817943dc8b45565a8ad641d",
+      "targetBlockId": "localizzazione-su-larga-scala-paragraph-la-localizzazione-su-larga-scala-è-un-sistema-include-scritt-f7580bbb-1",
+      "translationHash": "f7580bbba9673799ced9bea53a1d53fef52ab921326cf62c50530b4a7f051107",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-common-failure-mode-heading-the-common-failure-mode-3d7a6490-1",
+      "sourceHash": "3d7a6490d73695e36413e9086f54287451d1119278274f1b38d20bfb95d0c9aa",
+      "targetBlockId": "localizzazione-su-larga-scala/il-problema-più-comune-heading-il-problema-più-comune-439769e2-1",
+      "translationHash": "439769e2ecea19d41b79b0e8d366960dc64e2f0a8041c215cecc8da42f0a3c28",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "The common failure mode"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-common-failure-mode-paragraph-the-common-failure-mode-is-waiting-too-long-95859582-1",
+      "sourceHash": "9585958290ed3d6d10d9203b12e8ea1e7605e7342f803c8cb01d5b6684cf3769",
+      "targetBlockId": "localizzazione-su-larga-scala/il-problema-più-comune-paragraph-l-errore-più-comune-è-aspettare-troppo-d4563fd8-1",
+      "translationHash": "d4563fd89c8268cb5f22c23d8986f66023ffbc38e66fb8d8e14cd9cf9b067e67",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The common failure mode"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-common-failure-mode-paragraph-by-the-time-a-project-decides-it-wants-to-support-multiple-l-7ff22776-1",
+      "sourceHash": "7ff22776736126f62088309bbfe8eab92c132b064434372d5a8386d5a0b43af8",
+      "targetBlockId": "localizzazione-su-larga-scala/il-problema-più-comune-paragraph-quando-un-progetto-decide-di-supportare-più-lingue-l-archite-4ac2144f-1",
+      "translationHash": "4ac2144fffb8c43c8af407dff2fd54ec864babb600c43b658f69b6b429060ade",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The common failure mode"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-heading-why-the-problem-is-bigger-than-translation-3c449e61-1",
+      "sourceHash": "3c449e617ac6c4d11ca32a15e6da4635023529ecadc1b841fe6f9713dfab5506",
+      "targetBlockId": "localizzazione-su-larga-scala/perché-il-problema-non-è-solo-la-traduzione-heading-perché-il-problema-non-è-solo-la-traduzione-f8b7315d-1",
+      "translationHash": "f8b7315d4e2fa25663b275bfa9460ab2fb3f21c3bf9100f85fcb115233884d13",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-paragraph-a-multilingual-user-does-not-only-read-button-labels-they-al-0624f5b5-1",
+      "sourceHash": "0624f5b5353f34a159afb94ce3ce6c945a8d020ee325c5c9e8b806af025b2bb7",
+      "targetBlockId": "localizzazione-su-larga-scala/perché-il-problema-non-è-solo-la-traduzione-paragraph-un-utente-multilingue-non-legge-solo-le-etichette-dei-pulsan-cdbd6d2e-1",
+      "translationHash": "cdbd6d2e46b8b3861b48b6c36d148e3823e360d6418eb591f8bb0dad3a5da7f7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": [
+        49,
+        49
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-list-navigation-be6d1722-1",
+      "sourceHash": "be6d172293729fec50131eeb11b40d6af31b44e4c7a992e4c40a66f477a0a1aa",
+      "targetBlockId": "localizzazione-su-larga-scala/perché-il-problema-non-è-solo-la-traduzione-list-la-navigazione-1db61270-1",
+      "translationHash": "1db6127077976f78bb3e84fbba175d9d14dc37f2f2665352e5d445a0948ac1b8",
+      "blockType": "list",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        51,
+        58
+      ],
+      "targetLineRange": [
+        51,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-the-problem-is-bigger-than-translation-paragraph-if-those-remain-english-only-the-product-is-not-meaningfully-2fd0f89a-1",
+      "sourceHash": "2fd0f89af54849215fdc6d85c1af42e19e37b14d126f197c18bc63768d977981",
+      "targetBlockId": "localizzazione-su-larga-scala/perché-il-problema-non-è-solo-la-traduzione-paragraph-se-tutto-questo-resta-solo-in-inglese-il-prodotto-non-è-real-d2ae76cb-1",
+      "translationHash": "d2ae76cbcc4796d52d85d43e97b98ac16f19c9b2875247dd15b0211b4bca14a6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why the problem is bigger than translation"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-let-books-cares-heading-why-let-books-cares-ccaf741f-1",
+      "sourceHash": "ccaf741f41dc594ab5879e1741fcd9a43df6af1304c82cb5a73a6d468cad5791",
+      "targetBlockId": "localizzazione-su-larga-scala/perché-conta-per-let-books-heading-perché-conta-per-let-books-9522f42e-1",
+      "translationHash": "9522f42ee6bc9b17b51113570e4f82b0b3f664891287eb74af9f83f869c7fe70",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Why Let Books cares"
+      ],
+      "sourceLineRange": [
+        62,
+        62
+      ],
+      "targetLineRange": [
+        62,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-let-books-cares-paragraph-let-books-is-explicitly-designed-for-multilingual-educationa-f72bbcd4-1",
+      "sourceHash": "f72bbcd43bb582c9da4042993831e5555de318c392591820bbb98a6de4420908",
+      "targetBlockId": "localizzazione-su-larga-scala/perché-conta-per-let-books-paragraph-let-books-è-pensato-esplicitamente-per-raccolte-multilingui--3612e23a-1",
+      "translationHash": "3612e23a25c2c226995628b54741cbff814f8e49e49090aca18bd40cc7936836",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why Let Books cares"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/why-let-books-cares-paragraph-that-means-localization-is-not-optional-polish-it-is-part-of-d3318927-1",
+      "sourceHash": "d3318927c7f561e1806ae91fe9d9f83e108d1ba2520abb4a1ef74780f0651824",
+      "targetBlockId": "localizzazione-su-larga-scala/perché-conta-per-let-books-paragraph-questo-significa-che-la-localizzazione-non-è-una-rifinitura--c2dd6d41-1",
+      "translationHash": "c2dd6d414f47231138a1b8b168e4a4bf2ff0c59cfcba2ea02923fbb437e329fa",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Why Let Books cares"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/a-practical-model-heading-a-practical-model-6a4f84a3-1",
+      "sourceHash": "6a4f84a300c744c05aaf7437fee7d6419d5fbf7d1a842b9847db75f4c5418dfe",
+      "targetBlockId": "localizzazione-su-larga-scala/un-modello-pratico-heading-un-modello-pratico-025f1a2c-1",
+      "translationHash": "025f1a2c5ab6f5b21c96237bb4da6120a402122e7d9c843e9b5c1b59c969f1a9",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "A practical model"
+      ],
+      "sourceLineRange": [
+        68,
+        68
+      ],
+      "targetLineRange": [
+        68,
+        68
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/a-practical-model-paragraph-a-practical-localization-at-scale-model-usually-has-five-lay-f0052b60-1",
+      "sourceHash": "f0052b60a8115c5c2374429ad4854f5154eec3dfc96de093d8fbba5b924f7ae3",
+      "targetBlockId": "localizzazione-su-larga-scala/un-modello-pratico-paragraph-un-modello-pratico-di-localizzazione-su-larga-scala-ha-di-so-4c112b48-1",
+      "translationHash": "4c112b48df1c67d0f1827e9db039b7f1d28f54d75a8191f36ae1804bc9ce5f48",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "A practical model"
+      ],
+      "sourceLineRange": [
+        70,
+        70
+      ],
+      "targetLineRange": [
+        70,
+        70
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/a-practical-model-list-1-write-a-translation-friendly-canonical-source-8dbe07a2-1",
+      "sourceHash": "8dbe07a24b4d05537b36a6edd670c3697506b6c2b2e65a875cee6fdc4b82bd1e",
+      "targetBlockId": "localizzazione-su-larga-scala/un-modello-pratico-list-1-scrivere-una-fonte-facile-da-tradurre-c38d074c-1",
+      "translationHash": "c38d074c573094225d1b2861152ba54fedc741a204f56a908575dc53ad44b4e3",
+      "blockType": "list",
+      "headingPath": [
+        "Localization at Scale",
+        "A practical model"
+      ],
+      "sourceLineRange": [
+        72,
+        76
+      ],
+      "targetLineRange": [
+        72,
+        76
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-role-of-ai-heading-the-role-of-ai-ea12ddec-1",
+      "sourceHash": "ea12ddeca4286e2954186c509afb16111d4b0d5ef8de429bd7a0abbffc70f271",
+      "targetBlockId": "localizzazione-su-larga-scala/il-ruolo-dell-ai-heading-il-ruolo-dell-ai-241f08ee-1",
+      "translationHash": "241f08eec9eed08273b7d68571ea66f31e0eeabfd25d6d6fc61bdd69870905dd",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "The role of AI"
+      ],
+      "sourceLineRange": [
+        78,
+        78
+      ],
+      "targetLineRange": [
+        78,
+        78
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-role-of-ai-paragraph-ai-helps-it-lowers-the-cost-of-producing-first-drafts-identi-86616711-1",
+      "sourceHash": "866167112f4d0c9c5a2a81584f840a3232e699d4d784d6f9d42295a924fadf8d",
+      "targetBlockId": "localizzazione-su-larga-scala/il-ruolo-dell-ai-paragraph-l-ai-aiuta-riduce-il-costo-delle-prime-bozze-individua-la-de-17d6dd08-1",
+      "translationHash": "17d6dd08b273a6e7ace87b97c25e4231e02485bc15e95efd458ca694f917b3da",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The role of AI"
+      ],
+      "sourceLineRange": [
+        80,
+        80
+      ],
+      "targetLineRange": [
+        80,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/the-role-of-ai-paragraph-that-is-why-mature-localization-systems-are-increasingly-ai--5300fb47-1",
+      "sourceHash": "5300fb473c4c41322af9d4924f5bcdae666cbf73c30a50b166651fe9a37146f7",
+      "targetBlockId": "localizzazione-su-larga-scala/il-ruolo-dell-ai-paragraph-per-questo-i-sistemi-di-localizzazione-maturi-sono-sempre-pi-a9f673c6-1",
+      "translationHash": "a9f673c6a84944e54941ce045f4d1a8cfb9c6c1aafe6f0b67ef0a60886e50125",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "The role of AI"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/durable-takeaway-heading-durable-takeaway-2728ce84-1",
+      "sourceHash": "2728ce84a6a2280b0e9bd2b5fca082696cde3ac40c0ee97e9ba6810b45c630ad",
+      "targetBlockId": "localizzazione-su-larga-scala/pagine-correlate-heading-pagine-correlate-b62a1049-1",
+      "translationHash": "b62a1049b537765051875eea9b2c29248131319df92e1f8e73f1a453e4ce05cd",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Durable takeaway"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/durable-takeaway-paragraph-if-a-project-wants-multilingual-participation-localization-m-a4f89f75-1",
+      "sourceHash": "a4f89f759600f68a2dc9e1567a80c71673eb1e9b5343e18d8ca76a5cb3a51a82",
+      "targetBlockId": "localizzazione-su-larga-scala/conclusione-duratura-paragraph-se-un-progetto-vuole-partecipazione-multilingue-la-localizza-8fb4ee14-1",
+      "translationHash": "8fb4ee141d4dd588da5e43511a065ff3554a993069fa4f8dff5c352f367ba792",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Durable takeaway"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "localizzazione-su-larga-scala/altre-lingue-heading-altre-lingue-de559a06-1",
+      "translationHash": "de559a069d83ceb450e78d5f9c5d7a7fb64637c159651f86cb1a61e85aec3be7",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        88,
+        88
+      ],
+      "targetLineRange": [
+        94,
+        94
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/related-pages-list-list-5c7cb82b-1",
+      "sourceHash": "5c7cb82bb6116f3908f5c7f7464e7f4479cecddd2fbb3f6ae6786d081b2a5e1c",
+      "targetBlockId": "localizzazione-su-larga-scala/pagine-correlate-list-list-5c7cb82b-1",
+      "translationHash": "5c7cb82bb6116f3908f5c7f7464e7f4479cecddd2fbb3f6ae6786d081b2a5e1c",
+      "blockType": "list",
+      "headingPath": [
+        "Localization at Scale",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        90,
+        92
+      ],
+      "targetLineRange": [
+        90,
+        92
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/other-languages-heading-other-languages-55e5fe0d-1",
+      "sourceHash": "55e5fe0d3fa1d4e9edcdd5986cd919f6a3eed9b339b20782d8f1b28f6f6a69e2",
+      "targetBlockId": "localizzazione-su-larga-scala/conclusione-duratura-heading-conclusione-duratura-63e35768-1",
+      "translationHash": "63e357689b3b9d7bd181d6afc6a756bb6e837cabc5ea69bbbd3867612c16014d",
+      "blockType": "heading",
+      "headingPath": [
+        "Localization at Scale",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        94,
+        94
+      ],
+      "targetLineRange": [
+        84,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "localization-at-scale/other-languages-paragraph-english-is-the-canonical-first-release-language-for-this-art-c6f893b1-1",
+      "sourceHash": "c6f893b172af0fd0fc5684c1ffb52149d61865c03dfc87f265131c954533684e",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Localization at Scale",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        96,
+        96
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    }
+  ]
+}

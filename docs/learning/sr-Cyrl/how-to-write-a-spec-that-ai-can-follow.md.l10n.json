@@ -1,0 +1,984 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-write-a-spec-that-ai-can-follow.md",
+  "targetPath": "docs/learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.md",
+  "locale": "sr-Cyrl",
+  "blocks": [
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow-heading-how-to-write-a-spec-that-ai-can-follow-ad29c998-1",
+      "sourceHash": "ad29c9983f3fa568c754000d24f4fd41c1fcefc1011d95ad72c461e2048a3d36",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати-heading-како-написати-спецификацију-коју-ai-може-да-прати-6e206b41-1",
+      "translationHash": "6e206b41d5476f206f557b4b3ee6c529105e6ef295c06575f9eb68891274591d",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/сажетак-heading-сажетак-6429b5ac-1",
+      "translationHash": "6429b5aced5ff9572d6db13887b7ac7569edd54a1f792ab9a5076d7f61a0c769",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/summary-paragraph-this-guide-explains-how-to-write-a-product-or-feature-specif-5631eabe-1",
+      "sourceHash": "5631eabe56f8883393925e94b058e7c4098d17f01f20be8db4db7ebd58f55ee9",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-heading-why-this-matters-7e1d357b-1",
+      "sourceHash": "7e1d357b45571e5daefa2355f329a5f90663245af72d9cfd3e08f646589419fd",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/зашто-је-то-важно-heading-зашто-је-то-важно-10c8f28d-1",
+      "translationHash": "10c8f28d05c570872bf8fbd80694825e8cd4bdc1ca4b350360af34c12c7dc16a",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-paragraph-ai-can-generate-code-quickly-but-it-works-best-when-the-task-add869bd-1",
+      "sourceHash": "add869bd434f988610bf09125dd72dc3c0fb48cd4d746fe19c0a5245ce01d08a",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-paragraph-if-a-specification-is-vague-ai-will-often-fill-the-gaps-with-ee7fb170-1",
+      "sourceHash": "ee7fb1709c2f0bbe80fa53c31e0eabf387eb04836aa57721c3fbf5976370ab39",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-list-common-architecture-patterns-36b1ca10-1",
+      "sourceHash": "36b1ca10e30136abe7725ab40b57d3e5049c89765767ba0d8a0255b0ae6ace8c",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        22,
+        25
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/why-this-matters-paragraph-that-output-may-look-polished-and-still-be-wrong-130f0ab0-1",
+      "sourceHash": "130f0ab0e53d51a09aa904b237f03a27ccc4f2a8e1a70bc71fc1e639e37cde2a",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Why this matters"
+      ],
+      "sourceLineRange": [
+        27,
+        27
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include-heading-what-a-useful-ai-facing-spec-should-include-5156c573-1",
+      "sourceHash": "5156c573e667171c6060d27bf2c9a77ef31fa4ef109279564803e77923befbae",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include"
+      ],
+      "sourceLineRange": [
+        29,
+        29
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-heading-1-product-purpose-4eefc6d1-1",
+      "sourceHash": "4eefc6d1b643745eeb4d52d42155be99875ef318b6641f32ece6112ecc561e63",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-корисна-спецификација-за-ai-треба-да-садржи/1-сврху-производа-heading-1-сврху-производа-5c825b6e-1",
+      "translationHash": "5c825b6e8b2966d09b674853977233236b82473a17c4db2459314980ee898b51",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "1. Product purpose"
+      ],
+      "sourceLineRange": [
+        31,
+        31
+      ],
+      "targetLineRange": [
+        31,
+        31
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-paragraph-state-why-the-feature-exists-a97c12fc-1",
+      "sourceHash": "a97c12fc582bdc5c9106e38eca45e1979db51529508c08f508eedaf4fbf8ef2b",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "1. Product purpose"
+      ],
+      "sourceLineRange": [
+        33,
+        33
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-paragraph-bad-5ef07ed3-1",
+      "sourceHash": "5ef07ed3caf4dedc4c58c70a2b2b2d259a387f919e5b254a3cb769b4fbf9fd0b",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "1. Product purpose"
+      ],
+      "sourceLineRange": [
+        35,
+        35
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-blockquote-add-a-book-form-fb5c53ee-1",
+      "sourceHash": "fb5c53ee9cd8eddb2be807b897b488d58c4ee6dcaed0fa25b26810de54282021",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-корисна-спецификација-за-ai-треба-да-садржи/1-сврху-производа-blockquote-додај-форму-за-књигу-19d0dd5a-1",
+      "translationHash": "19d0dd5ad003e64dd060f06a91555414cb1973cd1e2cdf521aeac03739d4dce5",
+      "blockType": "blockquote",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "1. Product purpose"
+      ],
+      "sourceLineRange": [
+        37,
+        38
+      ],
+      "targetLineRange": [
+        37,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-paragraph-better-47fdc1f2-1",
+      "sourceHash": "47fdc1f20202cd1187b6be1bc38c271c51e4b07217023d4877d057326dd152be",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "1. Product purpose"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-blockquote-add-a-fast-intake-form-that-lets-a-donor-catalog-one-physica-b06917b7-1",
+      "sourceHash": "b06917b724f799d61d891efe1e74a965c3a969edfc464a63c2ac344ca71abe1c",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "blockquote",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "1. Product purpose"
+      ],
+      "sourceLineRange": [
+        41,
+        42
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/1-product-purpose-paragraph-purpose-tells-the-implementer-what-to-optimize-for-dd92a313-1",
+      "sourceHash": "dd92a3138f39c81a363d76c7914a8fe3e1b05736a9766d0e43c5b3845683f3cd",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "1. Product purpose"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-heading-2-scope-boundaries-67e183f9-1",
+      "sourceHash": "67e183f97e61b88802dccae3807c13ef07bf043e3ba44a45fbe36303f5225175",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-корисна-спецификација-за-ai-треба-да-садржи/2-границе-обима-heading-2-границе-обима-72dd6eb0-1",
+      "translationHash": "72dd6eb0bd2324780d749909f2ae8048dae5dffcdb38132b1da229990398e0b7",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "2. Scope boundaries"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-paragraph-state-what-is-in-scope-and-out-of-scope-f4635c40-1",
+      "sourceHash": "f4635c40862015056be1beb55805bef40164be7023e6f81c212af5664d9883d2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "2. Scope boundaries"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-paragraph-example-872887e5-1",
+      "sourceHash": "872887e563e75957ffc20b021332504f2ddd0a8f3964cb93070863bfaf13cdad",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "2. Scope boundaries"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-list-in-scope-cover-photo-isbn-entry-storage-location-save-and-co-601de41e-1",
+      "sourceHash": "601de41e3563330bb10f1fea7d9a5e9960db29f1e81eb6ece332432599beb829",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "2. Scope boundaries"
+      ],
+      "sourceLineRange": [
+        51,
+        52
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/2-scope-boundaries-paragraph-this-prevents-the-assistant-from-inflating-a-small-task-into-73362734-1",
+      "sourceHash": "73362734142c02fe70bae92bb002ba7dd682eb4f77559336306a5458049533ec",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "2. Scope boundaries"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-heading-3-required-behavior-b02cbd7f-1",
+      "sourceHash": "b02cbd7fb300f81ac600bc77bcf5973fdd40e0f2e9d08a61e55a4cc54250835d",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-корисна-спецификација-за-ai-треба-да-садржи/3-захтевано-понашање-heading-3-захтевано-понашање-19f69ff9-1",
+      "translationHash": "19f69ff92449fee1e0e27ca9cdf21c7a95d9d3106f7454a2ae8149d19c18adf4",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "3. Required behavior"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-paragraph-list-non-negotiable-rules-ecbd133d-1",
+      "sourceHash": "ecbd133d1955fc9b4146a2a01a5d69a25b053ca9e279aa4e4931c8706e26e141",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "3. Required behavior"
+      ],
+      "sourceLineRange": [
+        58,
+        58
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-paragraph-examples-from-the-let-books-approach-15635dcf-1",
+      "sourceHash": "15635dcf6ea970df56dec548ad04aba541e3d2a71c3d977860c4a9a6172771ac",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-корисна-спецификација-за-ai-треба-да-садржи/3-захтевано-понашање-paragraph-примери-из-приступа-let-books-c2abb7a0-1",
+      "translationHash": "c2abb7a090bb2547b1d5863ce4f1b2f62637a6320cb7cfe605a06c1492edad52",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "3. Required behavior"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-list-manual-workflow-must-work-without-ai-195e40f5-1",
+      "sourceHash": "195e40f5652fa6f20292ba2be952335d4269239d33688b6e7d763665b6017da3",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "3. Required behavior"
+      ],
+      "sourceLineRange": [
+        62,
+        65
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/3-required-behavior-paragraph-these-rules-matter-more-than-implementation-style-04a8a9fa-1",
+      "sourceHash": "04a8a9faa8278d974c300d0e6c806e5eaddf19056806c82151129a0b83c8d62e",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "3. Required behavior"
+      ],
+      "sourceLineRange": [
+        67,
+        67
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/4-failure-and-fallback-behavior-heading-4-failure-and-fallback-behavior-80c8838a-1",
+      "sourceHash": "80c8838a378b6dba0b3f35db1c17740e3c87ea9926e3ad40e58c7fde4ed23e4f",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-корисна-спецификација-за-ai-треба-да-садржи/4-понашање-при-грешци-и-резервно-понашање-heading-4-понашање-при-грешци-и-резервно-понашање-3d24c35f-1",
+      "translationHash": "3d24c35fafc574eedc7e66ebf06a516154caa78e023258d5a4ed76388ac0cd51",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "4. Failure and fallback behavior"
+      ],
+      "sourceLineRange": [
+        69,
+        69
+      ],
+      "targetLineRange": [
+        69,
+        69
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/4-failure-and-fallback-behavior-paragraph-ai-generated-solutions-often-optimize-for-the-happy-path-a-g-127b8821-1",
+      "sourceHash": "127b8821c766438c3891ea21cf17ae67fd2c9cdac813013f99c0f9a0d20c6af2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "4. Failure and fallback behavior"
+      ],
+      "sourceLineRange": [
+        71,
+        71
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/4-failure-and-fallback-behavior-paragraph-example-872887e5-1",
+      "sourceHash": "872887e563e75957ffc20b021332504f2ddd0a8f3964cb93070863bfaf13cdad",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "4. Failure and fallback behavior"
+      ],
+      "sourceLineRange": [
+        73,
+        73
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/4-failure-and-fallback-behavior-list-if-metadata-lookup-fails-manual-entry-remains-available-0eacc074-1",
+      "sourceHash": "0eacc07407eeb4d954d12b72e80743c8b0535f35b922964a91b551675015e099",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "4. Failure and fallback behavior"
+      ],
+      "sourceLineRange": [
+        75,
+        77
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-heading-5-acceptance-criteria-0d026f5f-1",
+      "sourceHash": "0d026f5fd64435e67368a382ca71163c4e4a850fa0ce6ff4100a8fb3409f1701",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-корисна-спецификација-за-ai-треба-да-садржи/5-критеријуми-прихватања-heading-5-критеријуми-прихватања-3ef11d97-1",
+      "translationHash": "3ef11d97d0d0875ac6273eb17c5ce98ea46756a53f3dfeb5b54499c63bac443c",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "5. Acceptance criteria"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-paragraph-write-the-success-condition-in-observable-terms-22ef70ea-1",
+      "sourceHash": "22ef70eaec112b01be6a442a477d20bb52e1d17a7ce86265d20fa1868b656ddc",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "5. Acceptance criteria"
+      ],
+      "sourceLineRange": [
+        81,
+        81
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-paragraph-example-872887e5-1",
+      "sourceHash": "872887e563e75957ffc20b021332504f2ddd0a8f3964cb93070863bfaf13cdad",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "5. Acceptance criteria"
+      ],
+      "sourceLineRange": [
+        83,
+        83
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-list-1-user-selects-a-box-79d358e4-1",
+      "sourceHash": "79d358e4008cb08c843163a4dea4737a332a38a0983ccd06c0cfd79862c38284",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "5. Acceptance criteria"
+      ],
+      "sourceLineRange": [
+        85,
+        88
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-a-useful-ai-facing-spec-should-include/5-acceptance-criteria-paragraph-acceptance-criteria-give-reviewers-and-ai-systems-a-stable-t-ec82eda4-1",
+      "sourceHash": "ec82eda49af6c3b6914b8aa1b810012d6e4fda8dab7baa98f1442ab894a2eea1",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What a useful AI-facing spec should include",
+        "5. Acceptance criteria"
+      ],
+      "sourceLineRange": [
+        90,
+        90
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-to-avoid-heading-what-to-avoid-b7d92d5f-1",
+      "sourceHash": "b7d92d5f84b46a305852dadad9b0bc59be9d16914ccb6132637e2e775da99473",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/шта-треба-избегавати-heading-шта-треба-избегавати-8be45281-1",
+      "translationHash": "8be45281e56447c72facfbed5d32af5ccfb56e34a9a2bfcf687b52a1597943f2",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What to avoid"
+      ],
+      "sourceLineRange": [
+        92,
+        92
+      ],
+      "targetLineRange": [
+        92,
+        92
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/what-to-avoid-list-vague-goals-such-as-improve-ux-64d5aeba-1",
+      "sourceHash": "64d5aebad83974f329787e000011617493c48439fd5b3ee00a4ebf9fe4022cb0",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "What to avoid"
+      ],
+      "sourceLineRange": [
+        94,
+        98
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/a-practical-writing-pattern-heading-a-practical-writing-pattern-d376f049-1",
+      "sourceHash": "d376f04988f81d7eeee1786407f386d0a9efe2946895e2a1778ddfca71d89213",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "A practical writing pattern"
+      ],
+      "sourceLineRange": [
+        100,
+        100
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/a-practical-writing-pattern-paragraph-use-this-compact-structure-when-drafting-a-feature-spec-ffcd751e-1",
+      "sourceHash": "ffcd751e05afe46253b4d0cf2047e4b2c8a822cfa28d5fa6fec69812f1cb594a",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "A practical writing pattern"
+      ],
+      "sourceLineRange": [
+        102,
+        102
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/a-practical-writing-pattern-list-1-problem-171792f4-1",
+      "sourceHash": "171792f4ea8e2f92444b2bde4c67996daec1e5fd263242851c6d877ce3058e74",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "A practical writing pattern"
+      ],
+      "sourceLineRange": [
+        104,
+        111
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/how-this-maps-to-let-books-heading-how-this-maps-to-let-books-260fbfd7-1",
+      "sourceHash": "260fbfd704f433af595301c06ff0a3a05ec8ec3bfbea791ae69566ccdc446794",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/како-се-ово-мапира-на-let-books-heading-како-се-ово-мапира-на-let-books-733ec1ba-1",
+      "translationHash": "733ec1ba3f5acf10bbfabdbc4ce290e18e1a07804660eca87acc6b02be3057bd",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "How this maps to Let Books"
+      ],
+      "sourceLineRange": [
+        113,
+        113
+      ],
+      "targetLineRange": [
+        113,
+        113
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/how-this-maps-to-let-books-paragraph-the-repository-already-demonstrates-this-pattern-at-multiple-5e4a208f-1",
+      "sourceHash": "5e4a208fe4222f8d47af417725cd5e07559822b5d8b675133d49d05790f15c86",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "How this maps to Let Books"
+      ],
+      "sourceLineRange": [
+        115,
+        115
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/how-this-maps-to-let-books-list-defines-product-purpose-workflows-and-acceptance-criteria-612d3279-1",
+      "sourceHash": "612d32790bfffcc4f0b01f161ed6662f3d322ef755a43def324047d523f1b872",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/како-се-ово-мапира-на-let-books-list-дефинише-сврху-производа-токове-рада-и-критеријуме-прихватањ-44270b5e-1",
+      "translationHash": "44270b5e32046f1168f2c9b3c6964ca7f8c23c8a89e15264716ca9b2d4fcca07",
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "How this maps to Let Books"
+      ],
+      "sourceLineRange": [
+        117,
+        119
+      ],
+      "targetLineRange": [
+        117,
+        119
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/how-this-maps-to-let-books-paragraph-that-layered-approach-is-useful-because-ai-does-better-when--6ba5f0d7-1",
+      "sourceHash": "6ba5f0d7a4cd96782087934fea02d0397322f295f466b20896d0c7fae6b6a730",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "How this maps to Let Books"
+      ],
+      "sourceLineRange": [
+        121,
+        121
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/exercise-heading-exercise-83297eaf-1",
+      "sourceHash": "83297eafa565e96426d9f5268a65ea70f8ef7cb466f9c908b26c422babfff602",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/вежба-heading-вежба-36bfeb6c-1",
+      "translationHash": "36bfeb6c3eff568a0dc081a010558aadaee3469cbec3847795e5e73e9f6b38f2",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Exercise"
+      ],
+      "sourceLineRange": [
+        123,
+        123
+      ],
+      "targetLineRange": [
+        123,
+        123
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/exercise-paragraph-take-one-let-books-feature-such-as-box-qr-scanning-or-excel--1e182e67-1",
+      "sourceHash": "1e182e67ff60ced33d88a6283e4a5028228570253959e4b57bf8e4d4dcaf5405",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/вежба-paragraph-узмите-једну-функционалност-let-books-као-што-је-скенирање-q-de6bfb2c-1",
+      "translationHash": "de6bfb2cd1feff6407359ac0e113a57b57aa1372dce6261243388c702bec3723",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Exercise"
+      ],
+      "sourceLineRange": [
+        125,
+        125
+      ],
+      "targetLineRange": [
+        125,
+        125
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/exercise-paragraph-then-ask-a-coding-assistant-to-implement-it-270c6a2f-1",
+      "sourceHash": "270c6a2f27d771c896555fb4ea73d56e3e4f4f75357a7284117992cdaf104d6e",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Exercise"
+      ],
+      "sourceLineRange": [
+        127,
+        127
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/exercise-paragraph-afterward-review-the-output-against-the-spec-before-reviewin-32c8688a-1",
+      "sourceHash": "32c8688aa3b1f12d953a3cf55dce4c965982a0ad0527a1371aa10279a06f9c68",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Exercise"
+      ],
+      "sourceLineRange": [
+        129,
+        129
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/further-reading-heading-further-reading-dfd43c88-1",
+      "sourceHash": "dfd43c88c1cb9723f2a690b08119f3b312da0ad2e460f768fe2e7b2cad613f05",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/даље-читање-heading-даље-читање-20cae7b2-1",
+      "translationHash": "20cae7b216dd23717f8c23df804e28b2eddc77a55d4fc6489353c57d1e86d12d",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        131,
+        131
+      ],
+      "targetLineRange": [
+        131,
+        131
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-write-a-spec-that-ai-can-follow/further-reading-list-list-db1df76c-1",
+      "sourceHash": "db1df76c518df1cbdfce26015011381a44fc0b6ec6f1c516d0a962289d99a6f7",
+      "targetBlockId": "како-написати-спецификацију-коју-ai-може-да-прати/даље-читање-list-list-41b7abbd-1",
+      "translationHash": "41b7abbd6906700f513dfcb4484c37534b4446763845aa182e815eee6a53f99d",
+      "blockType": "list",
+      "headingPath": [
+        "How to Write a Spec That AI Can Follow",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        133,
+        136
+      ],
+      "targetLineRange": [
+        133,
+        136
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

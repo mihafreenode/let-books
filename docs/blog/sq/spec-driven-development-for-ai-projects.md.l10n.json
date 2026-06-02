@@ -1,0 +1,872 @@
+{
+  "version": 1,
+  "sourcePath": "docs/blog/en/spec-driven-development-for-ai-projects.md",
+  "targetPath": "docs/blog/sq/spec-driven-development-for-ai-projects.md",
+  "locale": "sq",
+  "blocks": [
+    {
+      "blockId": "spec-driven-development-for-ai-projects-heading-spec-driven-development-for-ai-projects-8255592f-1",
+      "sourceHash": "8255592f7924f08460fa2fa9c763001e1a19dd8014822af0ec0f3a8219a6d9f2",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai-heading-zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai-5486b138-1",
+      "translationHash": "5486b13822d5d28e875f51d92aea2ecc8f03860a85e6b2f0af5fc445da0bb773",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        36,
+        36
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects-paragraph-ai-makes-it-much-easier-to-produce-code-quickly-it-also-make-f37327bd-1",
+      "sourceHash": "f37327bd7e1252f6c306db551c3f3bf28791c264a38dfd5a92845253ae286aca",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai-paragraph-ai-e-bën-shumë-më-të-lehtë-prodhimin-e-shpejtë-të-kodit-po-a-b423c7ec-1",
+      "translationHash": "b423c7ece7bc6292fd54b729ed3e604b40d55569e1e3180e91b75c81bb307910",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects-paragraph-when-a-human-team-writes-software-without-a-clear-specificat-ebd10880-1",
+      "sourceHash": "ebd10880514431bfeeb4e14f3f0f6d440346791acd1d4e98a1012bc100c9cb47",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai-paragraph-kur-një-ekip-zhvillon-pa-një-specifikim-të-qartë-produkti-la-6c3ae443-1",
+      "translationHash": "6c3ae443ec272629e218f77267f1d7aa2fb59b18dc2c1a3af2c6404518459bc4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects"
+      ],
+      "sourceLineRange": [
+        40,
+        40
+      ],
+      "targetLineRange": [
+        40,
+        40
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-ai-changes-the-risk-profile-heading-why-ai-changes-the-risk-profile-0117b6ed-1",
+      "sourceHash": "0117b6ed47004c995515fcb156ee0e26560aeb81d4c2ad3baf88f4ab745c2202",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/pse-ai-ndryshon-profilin-e-rrezikut-heading-pse-ai-ndryshon-profilin-e-rrezikut-463583f1-1",
+      "translationHash": "463583f1364028d4f44288ef4164e24bb4e34ad1f23185c61ee96a448b39b0d8",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why AI changes the risk profile"
+      ],
+      "sourceLineRange": [
+        42,
+        42
+      ],
+      "targetLineRange": [
+        42,
+        42
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-ai-changes-the-risk-profile-paragraph-traditional-software-development-already-had-interpretation--3f2ccd7c-1",
+      "sourceHash": "3f2ccd7c5aa95dbd39d2c474b692dcb2cee5488b44da0489624064c8494b12c4",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/pse-ai-ndryshon-profilin-e-rrezikut-paragraph-ai-e-përshpejton-ritmin-e-interpretimit-një-kërkesë-e-vetme--d02c1c65-1",
+      "translationHash": "d02c1c654b90160f6c79b81f2820aa045ff4ace6d6ff9c049afe64ee26c88b1d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why AI changes the risk profile"
+      ],
+      "sourceLineRange": [
+        44,
+        44
+      ],
+      "targetLineRange": [
+        44,
+        44
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-ai-changes-the-risk-profile-paragraph-that-speed-is-useful-it-is-also-dangerous-when-the-source-of-29a37b37-1",
+      "sourceHash": "29a37b3779248f3c26042d3cac44afb7feb87b178ee428d0a48b077b258eb0d3",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/pse-ai-ndryshon-profilin-e-rrezikut-paragraph-në-praktikë-ai-shpesh-optimizon-atë-që-është-më-e-dukshme-në-8bf54b33-1",
+      "translationHash": "8bf54b33610bba11e7f2551443b5fef5f1103cdf866bba9d3769278a663b6185",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why AI changes the risk profile"
+      ],
+      "sourceLineRange": [
+        46,
+        46
+      ],
+      "targetLineRange": [
+        46,
+        46
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-ai-changes-the-risk-profile-paragraph-in-practice-ai-tends-to-optimize-for-what-is-most-visible-in-ad789b13-1",
+      "sourceHash": "ad789b139571a380492bde277566eef425b81e24669457dbe190b45bef6f21d6",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/pse-ai-ndryshon-profilin-e-rrezikut-paragraph-asgjë-nga-këto-nuk-do-të-thotë-vetvetiu-vendim-i-saktë-produ-d92c3011-1",
+      "translationHash": "d92c3011d4b1e6557375508f2b6305dfe31019c2931515b2f98ef875e576fcb2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why AI changes the risk profile"
+      ],
+      "sourceLineRange": [
+        48,
+        48
+      ],
+      "targetLineRange": [
+        53,
+        53
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-ai-changes-the-risk-profile-list-the-latest-prompt-59b38593-1",
+      "sourceHash": "59b385932cb02f513c311342b006903e1dacefdbaa777a20d917971968779403",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/pse-ai-ndryshon-profilin-e-rrezikut-list-kërkesën-e-fundit-96b6b810-1",
+      "translationHash": "96b6b8103826d8eda77b08051f556e8aa6238d8b7f4e9c1a35c9b30bec24848b",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why AI changes the risk profile"
+      ],
+      "sourceLineRange": [
+        50,
+        53
+      ],
+      "targetLineRange": [
+        48,
+        51
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-ai-changes-the-risk-profile-paragraph-none-of-those-automatically-equal-the-correct-product-decisi-6e4fa94a-1",
+      "sourceHash": "6e4fa94afc62f4022ded16df294c201b22b0c71151a5d49a8eb250299d84268a",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-bën-një-specifikim-i-mirë-paragraph-një-specifikim-i-mirë-kryen-të-paktën-katër-role-034f6cb5-1",
+      "translationHash": "034f6cb5dcd9edcb6a39559ffd709cd1942c7a8a9f5435411761a9573ea0a329",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why AI changes the risk profile"
+      ],
+      "sourceLineRange": [
+        55,
+        55
+      ],
+      "targetLineRange": [
+        57,
+        57
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-heading-what-a-spec-does-in-an-ai-assisted-workflow-7c3f5856-1",
+      "sourceHash": "7c3f5856549df25e3a159eaa24bf3ad2fc3cabb9c8e7fa29babe737be8790de7",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-bën-një-specifikim-i-mirë-heading-çfarë-bën-një-specifikim-i-mirë-9124d6cf-1",
+      "translationHash": "9124d6cf54fefb95ba7d21622ef38c1de41b9918c913f04a97948873cd9895b1",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        57,
+        57
+      ],
+      "targetLineRange": [
+        55,
+        55
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-paragraph-a-strong-product-spec-does-at-least-four-jobs-99b255b6-1",
+      "sourceHash": "99b255b66a75905a28c725980ab48b52f1cb0934e37ec47ae47579ef84ad1a81",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/markdown-testet-dhe-ci-formojnë-një-zinxhir-paragraph-së-bashku-ato-krijojnë-kujtesë-produkti-që-i-mbijeton-shpejt-c00c63ae-1",
+      "translationHash": "c00c63ae2bd47d5f3b106c6b50930967c1006b03d1c0be5d3a331080cc96e2d2",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        59,
+        59
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-paragraph-first-it-defines-purpose-the-team-can-tell-whether-a-feature-f87d1cc8-1",
+      "sourceHash": "f87d1cc8432d52296419a62222b7116133f943c694a0d9361c6a8bfc544a350d",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/roli-i-demove-paragraph-demoja-është-e-dobishme-sepse-tregon-çfarë-ekziston-dhe-zbul-139e0e92-1",
+      "translationHash": "139e0e92013281a51000c7996925970a10e029ff7ed980eba5b8a25a37326f0c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        61,
+        61
+      ],
+      "targetLineRange": [
+        74,
+        74
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-paragraph-second-it-defines-boundaries-it-clarifies-what-is-in-scope-w-22e6b91d-1",
+      "sourceHash": "22e6b91de9676688334dd40aa5db3a7fb77ec435559a2269aba3057936b3282b",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-bën-një-specifikim-i-mirë-paragraph-kjo-është-shumë-e-qartë-te-let-books-thekson-disa-herë-se-rr-b9238930-1",
+      "translationHash": "b92389303f4fd7e3dd21b90a150c55edb0ff4370952c85e90d1809c82304d172",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        63,
+        63
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-paragraph-third-it-defines-the-review-standard-instead-of-asking-only--27dafbac-1",
+      "sourceHash": "27dafbac9c30d6d109f27b712787deed0331f4b31a46ec33fbbaf8f7a0473057",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/pse-dokumentimi-nuk-duhet-të-presë-paragraph-nëse-dokumentimi-është-i-vjetruar-ose-i-paqartë-njerëz-dhe-m-52dd1060-1",
+      "translationHash": "52dd10604353533efa80c5306bde521705ae6364a411099ab368b3acd9ccf5a9",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        65,
+        65
+      ],
+      "targetLineRange": [
+        68,
+        68
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-paragraph-fourth-it-acts-as-memory-ai-systems-do-not-hold-stable-insti-01344163-1",
+      "sourceHash": "01344163b8ba46592db99adbbd9d2552987756872f070ba546a7e874e02fa7f3",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/roli-i-demove-paragraph-rregullat-e-depos-tashmë-bëjnë-dallimin-mes-specifikimeve-dh-70cac3dd-1",
+      "translationHash": "70cac3dda552d8f71ac68c7ef9eea288a4b01b90bf0d6e120c8b221ca106a0ec",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        67,
+        67
+      ],
+      "targetLineRange": [
+        76,
+        76
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-paragraph-this-is-especially-visible-in-let-books-the-project-specific-f4617395-1",
+      "sourceHash": "f46173955e1826b18f4428b83a53a61eaaea7d20ad0749042b375d31c468d2b5",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/markdown-testet-dhe-ci-formojnë-një-zinxhir-paragraph-në-një-zhvillim-të-udhëhequr-nga-specifikimi-këto-shtresa-nu-49f92e85-1",
+      "translationHash": "49f92e85e67138f0c04280493b4d1ac20473a82251e97e569b292d8e158a3ffc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        69,
+        69
+      ],
+      "targetLineRange": [
+        80,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-list-the-manual-workflow-must-remain-useful-without-paid-ai-servi-196acf91-1",
+      "sourceHash": "196acf917b85e198f09969d52941e931bfa9c4b871e9371832e3397d6a1146f3",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/markdown-testet-dhe-ci-formojnë-një-zinxhir-list-markdown-ruan-qëllimin-në-formë-të-shqyrtueshme-9c9aed26-1",
+      "translationHash": "9c9aed26d717aad0aef0c63a9eba4fb07f5d064a9ccc78753fee88ae4acfefe8",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        71,
+        72
+      ],
+      "targetLineRange": [
+        82,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-a-spec-does-in-an-ai-assisted-workflow-paragraph-those-are-not-implementation-details-they-are-product-bounda-af15c5cd-1",
+      "sourceHash": "af15c5cd627bbfe3fc885261025c7b9408cd3b0f726a17d3298378ded951771b",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/pse-dokumentimi-nuk-duhet-të-presë-paragraph-prandaj-dokumentimi-nuk-është-vetëm-shpjegim-i-mëvonshëm-ai--963177cb-1",
+      "translationHash": "963177cbd6d0e7a3496899e28501e929ca240d0c8625b4a2bb6dcfd3a5edc000",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What a spec does in an AI-assisted workflow"
+      ],
+      "sourceLineRange": [
+        74,
+        74
+      ],
+      "targetLineRange": [
+        70,
+        70
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-documentation-cannot-wait-until-later-heading-why-documentation-cannot-wait-until-later-4f037412-1",
+      "sourceHash": "4f0374122cd45700dd3af6bb9346366bde9f0dd351a19801e68088084aeb0d31",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/markdown-testet-dhe-ci-formojnë-një-zinxhir-heading-markdown-testet-dhe-ci-formojnë-një-zinxhir-cd9dea64-1",
+      "translationHash": "cd9dea64a546a5b66710ccddb226f41a5e6d5058e69e03c38a4ffceb56970219",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why documentation cannot wait until later"
+      ],
+      "sourceLineRange": [
+        76,
+        76
+      ],
+      "targetLineRange": [
+        78,
+        78
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-documentation-cannot-wait-until-later-paragraph-in-many-projects-documentation-is-treated-as-a-delayed-clean-3137d28e-1",
+      "sourceHash": "3137d28e1d7baf206bec916b44ee7c7ff3c2a57dc9ac4953085c077d373deb50",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-do-të-thotë-kjo-për-ekipet-që-përdorin-ai-paragraph-ekipet-që-e-përdorin-mirë-ai-nuk-e-heqin-procesin-ato-e-afro-f65bcb64-1",
+      "translationHash": "f65bcb64e05a4069f5f3c9c6ce9d7fedcf1d1a903856a0889c1e244d216da2f5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why documentation cannot wait until later"
+      ],
+      "sourceLineRange": [
+        78,
+        78
+      ],
+      "targetLineRange": [
+        92,
+        92
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-documentation-cannot-wait-until-later-paragraph-without-current-documentation-c7241217-1",
+      "sourceHash": "c7241217d1857e8cb547788689cf180605f630ac797a25c9010abe2b75116bb5",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-do-të-thotë-kjo-për-ekipet-që-përdorin-ai-paragraph-kjo-zakonisht-do-të-thotë-bc333312-1",
+      "translationHash": "bc3333125b2eb62bdd88cda74e0b33e568d2bf28071732e8cdc09d80bdf58f7d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why documentation cannot wait until later"
+      ],
+      "sourceLineRange": [
+        80,
+        80
+      ],
+      "targetLineRange": [
+        94,
+        94
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-documentation-cannot-wait-until-later-list-prompts-become-inconsistent-78af98f3-1",
+      "sourceHash": "78af98f3541b4d1333117110b817a9b0ca5cbad64450627f04ab069f226c1d44",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-do-të-thotë-kjo-për-ekipet-që-përdorin-ai-list-të-shkruajnë-specifikime-produkti-më-të-qarta-para-implement-2b950690-1",
+      "translationHash": "2b9506902289027535ad68c8851895dc8fdf11ec148331d914439d26d1e2cd5d",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why documentation cannot wait until later"
+      ],
+      "sourceLineRange": [
+        82,
+        85
+      ],
+      "targetLineRange": [
+        96,
+        100
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/why-documentation-cannot-wait-until-later-paragraph-that-is-why-documentation-should-be-treated-as-an-operating--3298bd01-1",
+      "sourceHash": "3298bd0102652107d92ef4c8cd36dff73c427e974b0a85c6526af0202c6fab2b",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/mësimi-i-qëndrueshëm-paragraph-në-projektet-e-asistuara-nga-ai-specifikimi-nuk-është-burokr-b0599e3d-1",
+      "translationHash": "b0599e3df4630a12c5e9710a0bc8ecf9167ee5a53fbd5b753ad9789fb5c49f93",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Why documentation cannot wait until later"
+      ],
+      "sourceLineRange": [
+        87,
+        87
+      ],
+      "targetLineRange": [
+        110,
+        110
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-role-of-demos-heading-the-role-of-demos-4d516f4f-1",
+      "sourceHash": "4d516f4f76940b8b9ea3d953c1c9289f6a8095405fc16431999c86ecf9a430bb",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/roli-i-demove-heading-roli-i-demove-ce1c34b1-1",
+      "translationHash": "ce1c34b1373558acc415360b40c5fe28d39e458eadb1eb60fc9817e8ce92b516",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The role of demos"
+      ],
+      "sourceLineRange": [
+        89,
+        89
+      ],
+      "targetLineRange": [
+        72,
+        72
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-role-of-demos-paragraph-demos-are-useful-they-show-what-exists-reveal-usability-issu-0ec015bb-1",
+      "sourceHash": "0ec015bb1fd41ffb53ad95c92b70963889d1f6e3159a7f17857f92a9c1cc4416",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/mësimi-i-qëndrueshëm-paragraph-ai-mund-të-prodhojë-shpejt-kod-përmbajtje-dhe-ndërfaqe-ai-nu-ea3d2a99-1",
+      "translationHash": "ea3d2a990d395b4742d0f291f0a6844d929d235a9298eb5afb166b26d5d46dd0",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The role of demos"
+      ],
+      "sourceLineRange": [
+        91,
+        91
+      ],
+      "targetLineRange": [
+        106,
+        106
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-role-of-demos-paragraph-the-repository-already-draws-that-distinction-in-its-documen-13b55111-1",
+      "sourceHash": "13b55111d843d2d3dcfb4a5643a4f2732e942613971cc0c259966f82ad9f8ed7",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/mësimi-i-qëndrueshëm-paragraph-zhvillimi-i-udhëhequr-nga-specifikimi-është-mënyra-si-një-ek-172301bf-1",
+      "translationHash": "172301bfdf94b08ee2a8ca9a06ee85321f19dbedb4424a8a256c59bc7ecc0ed5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The role of demos"
+      ],
+      "sourceLineRange": [
+        93,
+        93
+      ],
+      "targetLineRange": [
+        108,
+        108
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-role-of-demos-paragraph-if-a-demo-reveals-a-better-workflow-the-answer-is-not-to-let-e2c9b2a1-1",
+      "sourceHash": "e2c9b2a1b8589bd8431d1f0f7748e7046a8a279243368827fca788dd98d4e3c9",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The role of demos"
+      ],
+      "sourceLineRange": [
+        95,
+        95
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/markdown-tests-and-ci-are-not-separate-concerns-heading-markdown-tests-and-ci-are-not-separate-concerns-cae71d01-1",
+      "sourceHash": "cae71d017d2c87c09707e7f30be9ffdad254f27676472a2e79deb8f57f0f5ef4",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-do-të-thotë-kjo-për-ekipet-që-përdorin-ai-heading-çfarë-do-të-thotë-kjo-për-ekipet-që-përdorin-ai-93bc1d19-1",
+      "translationHash": "93bc1d1983ba15fd2f1823bf4e014b12e79acfec0e007b693969323ad2762776",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Markdown, tests, and CI are not separate concerns"
+      ],
+      "sourceLineRange": [
+        97,
+        97
+      ],
+      "targetLineRange": [
+        90,
+        90
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/markdown-tests-and-ci-are-not-separate-concerns-paragraph-one-common-mistake-is-to-treat-written-specs-technical-valid-f05aeca2-1",
+      "sourceHash": "f05aeca2262dd5e2d35ec49e47ac4c10e0897270d0f8aa86b1c6c4c2d05094ce",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/çfarë-do-të-thotë-kjo-për-ekipet-që-përdorin-ai-paragraph-kjo-nuk-është-kundër-ai-kështu-ai-bëhet-i-besueshëm-2ef4ce7c-1",
+      "translationHash": "2ef4ce7cfd732509d51be6f4291a2137e4a7a32a186a484d6e41b33d7ea6ca6a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Markdown, tests, and CI are not separate concerns"
+      ],
+      "sourceLineRange": [
+        99,
+        99
+      ],
+      "targetLineRange": [
+        102,
+        102
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/markdown-tests-and-ci-are-not-separate-concerns-paragraph-in-a-spec-driven-workflow-they-are-one-chain-da0e28b3-1",
+      "sourceHash": "da0e28b3ee2012a4a92d47f7bda729b0fdfcf2cf5c710d34f69bc3165802a818",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Markdown, tests, and CI are not separate concerns"
+      ],
+      "sourceLineRange": [
+        101,
+        101
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/markdown-tests-and-ci-are-not-separate-concerns-list-markdown-stores-intent-in-reviewable-form-d3da3a84-1",
+      "sourceHash": "d3da3a84adaf1a117afd95f871cfe9a29f56c8a3566bf7d20c6773e7778c0b2c",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Markdown, tests, and CI are not separate concerns"
+      ],
+      "sourceLineRange": [
+        103,
+        107
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/markdown-tests-and-ci-are-not-separate-concerns-paragraph-each-layer-is-incomplete-on-its-own-together-they-create-pro-da866779-1",
+      "sourceHash": "da866779bbbc083527b545f30ab77f2f4faeaecb88d75237f6afdd903ec68a92",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Markdown, tests, and CI are not separate concerns"
+      ],
+      "sourceLineRange": [
+        109,
+        109
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-this-means-for-teams-using-ai-heading-what-this-means-for-teams-using-ai-2b66c5b0-1",
+      "sourceHash": "2b66c5b0d50c8fe6401e77cf5ea85ea5347848794e8506c4e3ef7b281410ee8c",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/gjuhë-të-tjera-heading-gjuhë-të-tjera-ca0db1f3-1",
+      "translationHash": "ca0db1f3a2c51ad391649b18ec7468552e10045ffe4ff149c5fdf94c979861d5",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What this means for teams using AI"
+      ],
+      "sourceLineRange": [
+        111,
+        111
+      ],
+      "targetLineRange": [
+        112,
+        112
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-this-means-for-teams-using-ai-paragraph-teams-that-use-ai-effectively-do-not-remove-process-they-mov-58081e6b-1",
+      "sourceHash": "58081e6b7166b2c11253799135866df31645fe5e5b5e91e46ae309b7efcb2d4c",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What this means for teams using AI"
+      ],
+      "sourceLineRange": [
+        113,
+        113
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-this-means-for-teams-using-ai-paragraph-that-usually-means-bd5c4f0a-1",
+      "sourceHash": "bd5c4f0a6daa4fb267f7187e4a096ad70a32defbd9f7084d208f8975eabfa6c7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What this means for teams using AI"
+      ],
+      "sourceLineRange": [
+        115,
+        115
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-this-means-for-teams-using-ai-list-writing-clearer-product-specs-before-asking-for-implementati-4238ad9f-1",
+      "sourceHash": "4238ad9fa0ced71b4319c6af03cfbb3ad3eed81fe45946e6ce419c3fbb7c118f",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/gjuhë-të-tjera-list-list-53ac94c2-1",
+      "translationHash": "53ac94c28e4f319839d9fda73e2af67ab3b59c396b1dafb29749f9f11a3e1169",
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What this means for teams using AI"
+      ],
+      "sourceLineRange": [
+        117,
+        121
+      ],
+      "targetLineRange": [
+        114,
+        124
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/what-this-means-for-teams-using-ai-paragraph-this-is-not-anti-ai-it-is-how-ai-becomes-dependable-0bc2558a-1",
+      "sourceHash": "0bc2558a89a7fbbb40c071e5c2f7cbc38dfe01197d8a5b2a2480ea910e5e30c3",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "What this means for teams using AI"
+      ],
+      "sourceLineRange": [
+        123,
+        123
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-durable-lesson-heading-the-durable-lesson-efa37549-1",
+      "sourceHash": "efa37549901c9fd11f26c47473b9ddbef2258a14e98efc6f7046bb1bf94bb164",
+      "targetBlockId": "zhvillim-i-udhëhequr-nga-specifikimi-për-projektet-me-ai/mësimi-i-qëndrueshëm-heading-mësimi-i-qëndrueshëm-c43e124e-1",
+      "translationHash": "c43e124e3ae619bf0370eeb5d621c61241448f09cd4fada7dab3c84cb6bb8d43",
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        125,
+        125
+      ],
+      "targetLineRange": [
+        104,
+        104
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-durable-lesson-paragraph-ai-can-generate-code-content-and-interfaces-quickly-it-canno-4ff90ea2-1",
+      "sourceHash": "4ff90ea2e3293882ec91e524ff039bc4a8768038b06566a1a503fd070c527609",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        127,
+        127
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-durable-lesson-paragraph-spec-driven-development-is-how-a-team-keeps-speed-from-turni-e9d2303d-1",
+      "sourceHash": "e9d2303d5786614d263efd01c53bf76672e39f2edcbdb1a4c2b173be194878d7",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        129,
+        129
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/the-durable-lesson-paragraph-in-ai-assisted-projects-the-spec-is-not-paperwork-after-the--8f7e0610-1",
+      "sourceHash": "8f7e0610ac2142bd0bc71eda884203bfc1f47ad67d23a80aff7b97e5b134a521",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "The durable lesson"
+      ],
+      "sourceLineRange": [
+        131,
+        131
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/other-languages-heading-other-languages-55e5fe0d-1",
+      "sourceHash": "55e5fe0d3fa1d4e9edcdd5986cd919f6a3eed9b339b20782d8f1b28f6f6a69e2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        133,
+        133
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "spec-driven-development-for-ai-projects/other-languages-list-list-90495121-1",
+      "sourceHash": "90495121f40ce2a94b0fb7c9f0cb86022c1f53d99aae60683931ce9290e33b5b",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "list",
+      "headingPath": [
+        "Spec-Driven Development for AI Projects",
+        "Other Languages"
+      ],
+      "sourceLineRange": [
+        135,
+        145
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    }
+  ]
+}

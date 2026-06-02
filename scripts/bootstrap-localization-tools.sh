@@ -36,6 +36,7 @@ Common commands:
   python tools/validate_translation_parity.py --help
   python tools/localization_mt_draft.py --help
   python tools/localization_patch_assist.py --help
+  python tools/generate_translation_sidecars.py --help
 
 Optional machine-translation helpers:
   - Set INSTALL_ARGOS_TRANSLATE=1 to install the optional Argos Translate Python backend.

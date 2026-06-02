@@ -1,0 +1,731 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/validation-layers.md",
+  "targetPath": "docs/wiki/sl/validation-layers.md",
+  "locale": "sl",
+  "blocks": [
+    {
+      "blockId": "validation-layers-heading-validation-layers-8fc7d42a-1",
+      "sourceHash": "8fc7d42a448384d07de04eeb8358dbc395893dd434da5d1a0e420c1461a0cfcb",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/zakaj-so-plasti-pomembne-heading-zakaj-so-plasti-pomembne-707af017-1",
+      "translationHash": "707af017d2a6a4c9a83521b9631b5c23b1e87cb446c622a89a18b9709da41e67",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/povzetek-heading-povzetek-08850f25-1",
+      "translationHash": "08850f257d79e932092c786638a375dea8449fce5744b6a5c05c4807268fa170",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-paragraph-validation-layers-are-the-different-ways-a-project-checks-wh-9ca8a81c-1",
+      "sourceHash": "9ca8a81c9d587176b4acf8aa617b67e2c3d3b22275c55ad561fb236c994a5195",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/povzetek-paragraph-validacijski-sloji-so-različni-načini-na-katere-projekt-prev-8230b7e5-1",
+      "translationHash": "8230b7e5d4b077f4da37379df5cf5f7c52834dfd613e38923d2e42aa52457795",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-heading-why-layers-matter-de7c66ed-1",
+      "sourceHash": "de7c66ed13662850485f1ea31985a3336efba9529f86857fd2c716dcb57e3663",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti-heading-skupne-plasti-preverjanja-veljavnosti-757519af-1",
+      "translationHash": "757519af8c1f541507a471efadfa72e22bc26cdb144de66e1c6e88bf1066d246",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-no-single-validation-method-is-enough-fe0d1f2a-1",
+      "sourceHash": "fe0d1f2a1f5f6f1b221a3497bc1aae69d96733177d982a7854fba57dda83f128",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/zakaj-so-plasti-pomembne-paragraph-nobena-ena-metoda-potrjevanja-ni-dovolj-2e353867-1",
+      "translationHash": "2e3538671583baa79b585d67942a3d1918c4b0135543cc97fc6276b5c2e55683",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-list-documentation-alone-does-not-enforce-behavior-9350d201-1",
+      "sourceHash": "9350d20175c42d4972f4868a0f88d65d587ee9cb9bf9d62c7c548280601eb9d9",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/zakaj-so-plasti-pomembne-list-samo-dokumentacija-ne-uveljavlja-vedenja-97a13bb6-1",
+      "translationHash": "97a13bb697c0eb75ddba7ba1daf98c33d18ed47d5e52e4823f845b5984a69e1d",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        20,
+        22
+      ],
+      "targetLineRange": [
+        20,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-a-layered-approach-is-stronger-because-each-layer-catches-a--f830c6e2-1",
+      "sourceHash": "f830c6e22d9fb717df4169f2f2721881c55b2c0de79660ca5cd5165bfbfd1a25",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/1-specifikacija-in-navodila-paragraph-brez-tega-sloja-so-kasnejša-preverjanja-lahko-stroga-a-polju-e8a2102e-1",
+      "translationHash": "e8a2102e820456524d95bee404122badeaccbffc2f98417f30faf8352c9c6841",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers-heading-common-validation-layers-d36d2283-1",
+      "sourceHash": "d36d228311ad2bcedc282493f24a4ae7db2dfbd0beae22b8c48cdd55a24abce8",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/dobri-zgodnji-cilji-validacije-heading-dobri-zgodnji-cilji-validacije-407ac421-1",
+      "translationHash": "407ac4212cf2a8e44c564719d6ad80687839b3147017c364e8b7e64967f591dc",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-heading-1-specification-and-guidance-9bca2316-1",
+      "sourceHash": "9bca2316f9094450bae48d2cb4e781baf7f9e4661c60bd4c9466631191289539",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/1-specifikacija-in-navodila-heading-1-specifikacija-in-navodila-d9c8731c-1",
+      "translationHash": "d9c8731c62a2bf5e72d77c5c2adf8f2191ccde3f4f5eb94c9d4e6bc2410681c4",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-the-first-layer-defines-the-rule-29e62350-1",
+      "sourceHash": "29e6235038cafbe269f8a8f6fada7c569d13256440a5654b08637cea674f4efd",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/1-specifikacija-in-navodila-paragraph-prva-plast-določa-pravilo-cc34d3a9-1",
+      "translationHash": "cc34d3a90ae1ec99cea710d01bd9733fa56370ac18f0a262a2b35d004c37fcde",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-without-this-layer-later-checks-may-be-strict-but-arbitrary-f8dfa57d-1",
+      "sourceHash": "f8dfa57db065721bcf4868d8ac1e8e25699e8372faf8795bf8447443f37f04f2",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/2-ročni-pregled-paragraph-človeški-pregled-preveri-namero-robne-primere-in-pomen-izdel-3eb8edb7-1",
+      "translationHash": "3eb8edb743eeb91643bc8185bf08d09c0f6998834dea26396ef6e946b5a27d1c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        36,
+        36
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-heading-2-manual-review-ee208978-1",
+      "sourceHash": "ee208978c302d56366e8efa260c58d736c7a7ee45900f4819fbada21048a3316",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/2-ročni-pregled-heading-2-ročni-pregled-c73dfa50-1",
+      "translationHash": "c73dfa50b2cb4ebadceb2a90b9904dd5e4cd6b1112ab418770b7d0e8987c1139",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": [
+        34,
+        34
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-paragraph-human-review-checks-intent-edge-cases-and-product-meaning-th-0e169630-1",
+      "sourceHash": "0e1696304b449a3f4d598606de98407843596b705c926b7922a65c14da5e0569",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/3-lokalno-preverjanje-paragraph-skripti-in-strukturirana-preverjanja-hitro-odkrijejo-ponovlj-18d5d917-1",
+      "translationHash": "18d5d91705bb10acf89d03125a9c0ad7647f23963fec468f27cd9ee0c7deeb3f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        40,
+        40
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-heading-3-local-validation-ac6f1462-1",
+      "sourceHash": "ac6f1462a6d8a68c0247e4a4908a8ae4327d22258e35ca044757c5221ce4cd9b",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/3-lokalno-preverjanje-heading-3-lokalno-preverjanje-896db613-1",
+      "translationHash": "896db61390276533d25351fdc00ab4a15d27b91a3257fc3d9deb6e5d0f755a04",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-paragraph-scripts-and-structured-checks-catch-fast-repeatable-issues-b-717e3951-1",
+      "sourceHash": "717e39518bd098103a3aca92706ffbe3da9321f1af5bbf6bf1123685dbb159bf",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/4-testi-paragraph-izvedljivi-testi-preverijo-pričakovano-vedenje-vendar-le-če--aefde535-1",
+      "translationHash": "aefde53569bfcddd3444e3cb7b0b6967df6e285ec6c5140b3af4c60bded27601",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        40,
+        40
+      ],
+      "targetLineRange": [
+        44,
+        44
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-heading-4-tests-a4d52503-1",
+      "sourceHash": "a4d52503e1757f1f98eb5342448e9a426444153393e2c4b16a194303d701c118",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/4-testi-heading-4-testi-b1c20f70-1",
+      "translationHash": "b1c20f70085cb7003ef3a0f54c2e970396a2c440e6f665c639f8aec8f84cd19b",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        42,
+        42
+      ],
+      "targetLineRange": [
+        42,
+        42
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-paragraph-executable-tests-verify-expected-behavior-but-only-when-they-efb4830f-1",
+      "sourceHash": "efb4830fefcaedc6450ff243e40eb900d29dd0f19403993ad27aeb7c4ad82144",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/6-preverjanja-uvajanja-paragraph-delovni-tokovi-uvajanja-potrjujejo-da-je-zgrajene-artefakte--967a19df-1",
+      "translationHash": "967a19dffa82b58e38176e568bd5a46c6c88e5b6e742767327dec196db834c83",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        44,
+        44
+      ],
+      "targetLineRange": [
+        52,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-heading-5-ci-gates-47fd54b5-1",
+      "sourceHash": "47fd54b5bdef619cb4631d58c5c1c10a9c584141306a037a4fc21653bdc0be37",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/5-ci-vrata-heading-5-ci-vrata-ee7bdf05-1",
+      "translationHash": "ee7bdf052fb5a7ae4baf0e83ad09de0f56e2d89c507f2a71d88654e6f49ee3d9",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        46,
+        46
+      ],
+      "targetLineRange": [
+        46,
+        46
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-paragraph-ci-makes-checks-repeatable-and-visible-across-contributors-a-c165489d-1",
+      "sourceHash": "c165489d71acba9c6c3ff303ac4b0f2e334219bcf4a4ec39116511d8a31bbe50",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/5-ci-vrata-paragraph-ci-naredi-preverjanja-ponovljiva-in-vidna-med-sodelavci-in-o-006df1ab-1",
+      "translationHash": "006df1aba275f8748218cbdb9f753be3d9aa3e4b312cb7643d02db09c9c60c82",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        48,
+        48
+      ],
+      "targetLineRange": [
+        48,
+        48
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-heading-6-deployment-checks-7ded19a6-1",
+      "sourceHash": "7ded19a62e691a0f7dcd180a47dcb512ae038bb1259f6c379bb5d582a39b42f8",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/skupne-plasti-preverjanja-veljavnosti/6-preverjanja-uvajanja-heading-6-preverjanja-uvajanja-936a407b-1",
+      "translationHash": "936a407bbc554d0ecdb1ea7a28e8b215d956589f7376e58c2a0b3ea67c3183db",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        50,
+        50
+      ],
+      "targetLineRange": [
+        50,
+        50
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-paragraph-deployment-workflows-confirm-that-the-built-artifacts-are-st-57ae91f8-1",
+      "sourceHash": "57ae91f876cb621a35b2b203719e61b95b434b76746f4b860dc32574c239825b",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/let-books-kontekst-paragraph-zaradi-tega-veljavnost-postane-dokumentiran-sistem-in-ne-le--e8b7ed08-1",
+      "translationHash": "e8b7ed0802e074a79cf001d199fcf6abea20f3ad2a83453e7b189706768c67b5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        52,
+        52
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-heading-how-the-layers-should-relate-5abbf685-1",
+      "sourceHash": "5abbf685c82003af4f76f7b17b239c68a5e10886e635fb5d96286135c068391b",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/kako-naj-se-plasti-povezujejo-heading-kako-naj-se-plasti-povezujejo-3503b517-1",
+      "translationHash": "3503b517b0f494fd0aa63d5a2620c0c7bc19f18d72420a12ba27aa13316a5c5a",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-paragraph-the-layers-should-reinforce-each-other-in-order-ed7696fb-1",
+      "sourceHash": "ed7696fb89dad21de6d0ab78389cef04dd99c26c6029d89ea911f619fb5c8821",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/dobri-zgodnji-cilji-validacije-paragraph-ti-pregledi-so-ponavadi-objektivni-in-poceni-bdeb4005-1",
+      "translationHash": "bdeb4005b2ab139e3ade4d9eadf5861db56e0b0f68465e739b4ebac107b2e370",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-list-docs-and-specs-define-expectations-3287c347-1",
+      "sourceHash": "3287c3474c62f9cc18f90bd9b0a629668002cef1f6810d711dd7f46c14c876f7",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/kako-naj-se-plasti-povezujejo-list-dokumenti-in-specifikacije-določajo-pričakovanja-93a8969c-1",
+      "translationHash": "93a8969ce3f2347c922810a8de5815cbb2792c1eb2c98dbc3f5171b9a08cfea7",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        58,
+        62
+      ],
+      "targetLineRange": [
+        58,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-heading-good-early-validation-targets-9a1bb190-1",
+      "sourceHash": "9a1bb1905706c8f82d135df33b9cb8a22b468f9395fd81c03bd85008e81dd318",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/let-books-kontekst-heading-let-books-kontekst-36b98086-1",
+      "translationHash": "36b98086e92148f1c1f372ed211c62fe8d9e8e21fc4ea2ab4bf0728eb156b3b6",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-examples-of-strong-early-candidates-include-c9763375-1",
+      "sourceHash": "c9763375fa7dedea8405c0ef457b34c593845252cf4081d6ac064481a1961395",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/dobri-zgodnji-cilji-validacije-paragraph-primeri-močnih-zgodnjih-kandidatov-vključujejo-4ae749ff-1",
+      "translationHash": "4ae749ff7d622cbf9a63d2c35a7212353492d95098b435ae77c1e0b9eaba9247",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-list-required-file-presence-760814ff-1",
+      "sourceHash": "760814ff407618e41f5aada2fa51cf01046d532216829f9dca95d69315edca08",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/dobri-zgodnji-cilji-validacije-list-zahtevana-prisotnost-datoteke-864f1c01-1",
+      "translationHash": "864f1c0108d10c4d5eb992768207b761b75ad124d66c91fec2f9cd44855a8fca",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        68,
+        73
+      ],
+      "targetLineRange": [
+        68,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-these-checks-tend-to-be-objective-and-inexpensive-8696c3a5-1",
+      "sourceHash": "8696c3a5e12c535ad11726ae0b5fe9fd1fa27cdffc2cfd62e342ab080213a33e",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/let-books-kontekst-paragraph-repozitorij-let-books-že-dokumentira-več-plasti-vključno-z-f87a3779-1",
+      "translationHash": "f87a3779c41b3c2d393e1ad6a1b919321df13fce614533a5c33e91b7e18d0d86",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/sorodne-strani-heading-sorodne-strani-de8beb6b-1",
+      "translationHash": "de8beb6b72cdb9b27acbd0303cd746b8f93d461deb67dd17bd428af0b0d4240a",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-the-let-books-repository-already-documents-several-layers-in-8b6094e1-1",
+      "sourceHash": "8b6094e12930a5e462f2caa7062e957c2c691a02333dd81dd13aac5badb95a9f",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/kako-naj-se-plasti-povezujejo-paragraph-plasti-naj-se-medsebojno-krepijo-v-naslednjem-vrstnem-redu-4781517c-1",
+      "translationHash": "4781517ca382033ab82385e1e7b92489057b093b956581b110a96bd12b11a572",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-list-product-and-implementation-rules-in-and-0ca7f6c8-1",
+      "sourceHash": "0ca7f6c87a125de3c62bcacc00a61e7480fcdc65307f455f134f5c4daf5caf62",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/let-books-kontekst-list-pravila-o-izdelkih-in-izvajanju-v-in-2e7ffa8a-1",
+      "translationHash": "2e7ffa8ae6c9bdffd4c646cb8f03911b7100569a7958c94c0442124ebfdb52c3",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        81,
+        84
+      ],
+      "targetLineRange": [
+        81,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-that-makes-validation-a-documented-system-rather-than-only-a-8bc5c1b0-1",
+      "sourceHash": "8bc5c1b0862f767317ebf7025a19ad05bc66e88134cafe7325fa308bf27cf580",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti-heading-plasti-za-preverjanje-veljavnosti-7803b32a-1",
+      "translationHash": "7803b32aa7c17e3247ba151dedb69c82f6b54f25757ff338e6a0f583d72fadbd",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        88,
+        88
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-list-list-e4c5a672-1",
+      "sourceHash": "e4c5a672a57bb6464ea2fede5d68552893820dc484ebd4c279acd30d76a07100",
+      "targetBlockId": "plasti-za-preverjanje-veljavnosti/sorodne-strani-list-list-42f5e3fb-1",
+      "translationHash": "42f5e3fba98924bacd6a6599d2cc24b256d7218047ca5bbe57f418bc3a0fe6fc",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        90,
+        93
+      ],
+      "targetLineRange": [
+        90,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

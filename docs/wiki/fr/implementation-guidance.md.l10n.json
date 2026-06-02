@@ -1,0 +1,637 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/implementation-guidance.md",
+  "targetPath": "docs/wiki/fr/implementation-guidance.md",
+  "locale": "fr",
+  "blocks": [
+    {
+      "blockId": "implementation-guidance-heading-implementation-guidance-17406aeb-1",
+      "sourceHash": "17406aeb41ac1286e4f5ec43f74b6fb7cff0b88e51a01c71e8f7394f016fd79f",
+      "targetBlockId": "conseils-de-mise-en-œuvre-heading-conseils-de-mise-en-œuvre-866845fe-1",
+      "translationHash": "866845fec0602733a9c895e863687fadf85f9bb11dc7e134037c9b8491d1c13d",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "conseils-de-mise-en-œuvre/résumé-heading-résumé-e11bf8b8-1",
+      "translationHash": "e11bf8b82863a5b358b5aab5a60aa85b1801725df6f4ece12c0b6094ba4f626b",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-paragraph-implementation-guidance-defines-how-a-team-should-deliver-wo-b885753c-1",
+      "sourceHash": "b885753ca6cc4c238f202f3c8b5253b44ced449a17ebd9e17d30099e154a43f5",
+      "targetBlockId": "conseils-de-mise-en-œuvre/résumé-paragraph-les-conseils-de-mise-en-œuvre-définissent-la-manière-dont-un-ba7b581d-1",
+      "translationHash": "ba7b581dd39a8cdc021ceafb1e78fa2c4d4db58cde7217fd5dc02a8ccb220ba3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-heading-role-ae2d08dc-1",
+      "sourceHash": "ae2d08dcf5603d2b87a9d892befdf02dcb90aeb4464cd78cc4344528268828f2",
+      "targetBlockId": "conseils-de-mise-en-œuvre/rôle-heading-rôle-730760c4-1",
+      "translationHash": "730760c4c548556db63927882308068ba65506d0ce32e25ab561451385624b7c",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-implementation-guidance-sits-below-the-product-specification-a770f1b1-1",
+      "sourceHash": "a770f1b19f1c4ccc2dbdcad371b790de0dd7129121c4b6d621f0e3ec0f2be950",
+      "targetBlockId": "conseils-de-mise-en-œuvre/rôle-paragraph-les-instructions-de-mise-en-œuvre-se-trouvent-sous-les-spéci-ce18b46a-1",
+      "translationHash": "ce18b46ac0435ffba630866c2ef99ef30f2d28e74d99da6907219fc143d8264b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-it-helps-answer-questions-such-as-9fdbda09-1",
+      "sourceHash": "9fdbda0903b09135aa722d09c16c36a00f7bd86f686a4eca2da6fba9679771e7",
+      "targetBlockId": "conseils-de-mise-en-œuvre/rôle-paragraph-il-permet-de-répondre-à-des-questions-telles-que-6bca57d5-1",
+      "translationHash": "6bca57d5a8129ccb824fc40a58faebaea99171d18c2e490e1548c53bd9f6b1f7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-list-how-public-naming-should-work-1d4672ce-1",
+      "sourceHash": "1d4672ce6edb9252fb49c1d64973699d8a33a1b72567e1b7e8f821e2bbf31ea4",
+      "targetBlockId": "conseils-de-mise-en-œuvre/rôle-list-comment-la-dénomination-publique-devrait-fonctionner-8624e205-1",
+      "translationHash": "8624e205c5e43c1efffe44e11015f75e1e60ec716b5c3b06e57f4a8a389aee9a",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        22,
+        26
+      ],
+      "targetLineRange": [
+        22,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-heading-difference-from-product-specification-19aa4de1-1",
+      "sourceHash": "19aa4de108d0c68d0f9399db9a2597530858c1587b202022f3ce4a5068586c9b",
+      "targetBlockId": "conseils-de-mise-en-œuvre/différence-par-rapport-aux-spécifications-du-produit-heading-différence-par-rapport-aux-spécifications-du-produit-2b4d0073-1",
+      "translationHash": "2b4d0073ec19c497c87edac056ddd5e6d14cff027dc80ee9a2e5e58304175916",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-the-product-specification-defines-what-the-product-is-and-wh-5f6771d0-1",
+      "sourceHash": "5f6771d0e9d46c39a875b4ea05be3fef8c8745d2c4f264e5ace62430c3a1d92f",
+      "targetBlockId": "conseils-de-mise-en-œuvre/différence-par-rapport-aux-spécifications-du-produit-paragraph-le-cahier-des-charges-définit-ce-qu-est-le-produit-et-ce-qu--edf3200a-1",
+      "translationHash": "edf3200a9c66a1a1c0169efab5f2d18172a7af9be8e225a284d282e58e5e5841",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-implementation-guidance-defines-how-contributors-should-carr-ca601bd7-1",
+      "sourceHash": "ca601bd77521b48fbfaa56cd1af17f4129e198bd8dd019fc77373535e5d06daa",
+      "targetBlockId": "conseils-de-mise-en-œuvre/différence-par-rapport-aux-spécifications-du-produit-paragraph-les-directives-de-mise-en-œuvre-définissent-la-manière-dont--79e5f387-1",
+      "translationHash": "79e5f38788c89df73f3c59b9e3607aa0109a3694ee5691b4e56b54e7f59bc977",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-this-distinction-is-useful-because-not-every-repository-rule-87ff1db0-1",
+      "sourceHash": "87ff1db07149d1658e5affe437c66dfcb010b9220d65b3307f6f4fb02ea19a3d",
+      "targetBlockId": "conseils-de-mise-en-œuvre/différence-par-rapport-aux-spécifications-du-produit-paragraph-cette-distinction-est-utile-car-toutes-les-règles-du-référen-72b39795-1",
+      "translationHash": "72b39795618b48f2bab8e596a0da266798c6459085aa17f224e4b764bddc90dd",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": [
+        34,
+        34
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-heading-common-examples-5752ba62-1",
+      "sourceHash": "5752ba6250773f396d4e2eeec55bdd9497ee2aae886fa62b999250ff6cb5cf12",
+      "targetBlockId": "conseils-de-mise-en-œuvre/exemples-courants-heading-exemples-courants-42ea80a2-1",
+      "translationHash": "42ea80a23b8d2dfe7c5e6d41cf3f9babc69afe3a6d4a6a96ed37092f1ca34bd3",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        36,
+        36
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-implementation-guidance-often-includes-83ad37c7-1",
+      "sourceHash": "83ad37c7ed27c3debb85f041e6439186e383bda0e8ea0fe5c8d9185b0420c5e6",
+      "targetBlockId": "conseils-de-mise-en-œuvre/exemples-courants-paragraph-les-conseils-de-mise-en-œuvre-comprennent-souvent-4de9e1ff-1",
+      "translationHash": "4de9e1ff0811a4619e516a6e81cb1803c3ce639da68dfcbc7ae28293269c6b29",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-list-naming-and-branding-rules-b7cce9dd-1",
+      "sourceHash": "b7cce9ddc123debdb53a24aad3da82351d90a38dbeff1f34b07a497e09618eff",
+      "targetBlockId": "conseils-de-mise-en-œuvre/exemples-courants-list-règles-de-dénomination-et-de-marque-a504b509-1",
+      "translationHash": "a504b5095982074acb081f1e2a7ab770df06e283400306d0ab11cb41268dc93d",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        40,
+        45
+      ],
+      "targetLineRange": [
+        40,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-these-rules-often-live-well-in-markdown-because-they-need-to-dc1bded5-1",
+      "sourceHash": "dc1bded5fdc33f2576ccd4e926678a729031ec00cce03af41746fe9c157f0f70",
+      "targetBlockId": "conseils-de-mise-en-œuvre/exemples-courants-paragraph-ces-règles-s-intègrent-souvent-bien-dans-les-markdown-car-el-d1c62f7d-1",
+      "translationHash": "d1c62f7d8beeda67e64879cf0bb760fc524d511d779447f2c5ee4ac2d7dcfbb3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-heading-why-it-matters-in-ai-assisted-work-388d76e1-1",
+      "sourceHash": "388d76e10796665a57d3c660e503a64f1c5f36b9bedafab89894aebb6c9d8618",
+      "targetBlockId": "conseils-de-mise-en-œuvre/pourquoi-c-est-important-dans-le-travail-assisté-par-l-ia-heading-pourquoi-c-est-important-dans-le-travail-assisté-par-l-ia-d52e8749-1",
+      "translationHash": "d52e874930b2f7f67706f8f39c1fcbdece2745fe1613c78de1b7d5c5d7e51c33",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": [
+        49,
+        49
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-ai-assistants-often-follow-the-nearest-concrete-instruction--0f14731c-1",
+      "sourceHash": "0f14731c60850e0f3123e2f42275a9baf8a784cc7186a5e3a3c1d0d4353492cc",
+      "targetBlockId": "conseils-de-mise-en-œuvre/pourquoi-c-est-important-dans-le-travail-assisté-par-l-ia-paragraph-les-assistants-ia-suivent-souvent-les-instructions-concrètes-9267159b-1",
+      "translationHash": "9267159bffc35e96455ff1e910c54a4c39564778b83c6f3f81b6e90cbd3d4b76",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        51,
+        51
+      ],
+      "targetLineRange": [
+        51,
+        51
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-implementation-guidance-makes-those-rules-visible-without-po-08db9b33-1",
+      "sourceHash": "08db9b338bdcbed418f4b508d0c9a6cc08b693213b1996ad434a50b74d18a24a",
+      "targetBlockId": "conseils-de-mise-en-œuvre/pourquoi-c-est-important-dans-le-travail-assisté-par-l-ia-paragraph-les-conseils-de-mise-en-œuvre-rendent-ces-règles-visibles-sa-73034383-1",
+      "translationHash": "730343835d8aefe4f85d3a63f8580883ff27247f690a5b6ced7259ca9b01e04f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        53,
+        53
+      ],
+      "targetLineRange": [
+        53,
+        53
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-in-practice-that-means-a-markdown-guidance-file-can-do-two-j-0549c21c-1",
+      "sourceHash": "0549c21c7ded1476d866126afa42c4974a70085fce5b61e4464e4a96ae443d04",
+      "targetBlockId": "conseils-de-mise-en-œuvre/pourquoi-c-est-important-dans-le-travail-assisté-par-l-ia-paragraph-en-pratique-cela-signifie-qu-un-fichier-d-orientation-markdo-3e50c5ae-1",
+      "translationHash": "3e50c5ae9c370a34269621c0bb34a93ee432121545bdb6f7548b20ebcd5492ef",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        55,
+        55
+      ],
+      "targetLineRange": [
+        55,
+        55
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-list-explain-the-workflow-to-a-human-contributor-f74c8828-1",
+      "sourceHash": "f74c8828754abe76af0b01bc03008207a992c0d2f483702f15d600a6a41c3de9",
+      "targetBlockId": "conseils-de-mise-en-œuvre/pourquoi-c-est-important-dans-le-travail-assisté-par-l-ia-list-expliquer-le-workflow-à-un-contributeur-humain-711da3c9-1",
+      "translationHash": "711da3c91327c1f31309cefcb512b46f84bf3018905c14cf338fb5c161712ffd",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        57,
+        58
+      ],
+      "targetLineRange": [
+        57,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-heading-let-books-contexte-59bc2c3f-1",
+      "translationHash": "59bc2c3f2f19ea903e448523e9037fd81ae0f98e602b879103ffda24204962bd",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-in-let-books-is-the-tactical-guidance-layer-ea4f5a74-1",
+      "sourceHash": "ea4f5a74e1505a4d39fce8680b0dc5e760562377dc8453e5cf41237d9144d8f9",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-paragraph-au-let-books-est-la-couche-de-guidage-tactique-8e3380a4-1",
+      "translationHash": "8e3380a426d967e07ed7ae0a691edcf5c9b427b213ba553221bca22801ab51e9",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        62,
+        62
+      ],
+      "targetLineRange": [
+        62,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-it-covers-areas-such-as-8c247200-1",
+      "sourceHash": "8c24720082c0b5176a9472d442bda2f9600cc45b70a23a0c14662053bbd93fc4",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-paragraph-il-couvre-des-domaines-tels-que-bce5ce53-1",
+      "translationHash": "bce5ce5321464884a1fd9d2a0383f0c9450167084c40e4a74831c58758a809fd",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-public-naming-b5784969-1",
+      "sourceHash": "b5784969c6461e590d4102db31e17728b329563b62099522e59c7b7decc7f6d6",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-list-dénomination-publique-6e6d13c2-1",
+      "translationHash": "6e6d13c2c4c0db61756247dd2d85c49f38c8eecee8110df65c2d5b991a04efcb",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        66,
+        73
+      ],
+      "targetLineRange": [
+        66,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-that-makes-it-the-operational-companion-to-not-a-replacement-c99166b6-1",
+      "sourceHash": "c99166b631f2ba172bcb42e39af5c9837314d5c1426afb8e2a0c3da013cb3200",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-paragraph-cela-en-fait-le-compagnon-opérationnel-des-et-non-un-substit-b1c7b681-1",
+      "translationHash": "b1c7b68114fc04b9bc91b5aee593732bd575d3858910166423d5356f13de28f1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-other-markdown-guidance-in-the-repo-reinforces-the-same-patt-498165ac-1",
+      "sourceHash": "498165acde9e9411467ddedd51c8d039febd7352d7c380352275f046e943eca2",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-paragraph-d-autres-directives-markdown-dans-le-dépôt-renforcent-le-mêm-1ca35f98-1",
+      "translationHash": "1ca35f98d48111c3ab15c76e1b335216cb6b3f05a2dfb85d62dc5714c8e4c0e7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-directs-debugging-workflow-choices-such-as-cdp-attach-versus-a6021b0d-1",
+      "sourceHash": "a6021b0dc1a7627da7ce3185f6a7a48b1ecba38f5d0cbe61bdc8f38b860e3392",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-list-dirige-les-choix-de-flux-de-travail-de-débogage-tels-que-cdp-f447228c-1",
+      "translationHash": "f447228c39e0fd1f27109a5c7da20cbf3d3ce53131e2c60ac64729bdc1f20df7",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        80
+      ],
+      "targetLineRange": [
+        79,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-these-documents-are-readable-as-human-guidance-but-they-also-630297df-1",
+      "sourceHash": "630297df4f338ad47a526d14fbdf13c761429fc4e9ab5778185a551b2c462d89",
+      "targetBlockId": "conseils-de-mise-en-œuvre/let-books-contexte-paragraph-ces-documents-sont-lisibles-comme-des-conseils-humains-mais--f9d5a5fd-1",
+      "translationHash": "f9d5a5fde89f3c01464aef87a7e8198360f237c8a9b9f7b566b80a28aba9a6cc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "conseils-de-mise-en-œuvre/pages-connexes-heading-pages-connexes-5d88cd93-1",
+      "translationHash": "5d88cd9354b0e167d40532f85faac2e410782dc107730bd0507ed027498ae17d",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": [
+        84,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-list-list-67281e84-1",
+      "sourceHash": "67281e846189b0a6088c4a1d84c0ca587e7968ec43f54ce1b74b8953a9b68055",
+      "targetBlockId": "conseils-de-mise-en-œuvre/pages-connexes-list-list-513e2d82-1",
+      "translationHash": "513e2d828c24fa71b172ca7740b85227e1d46665d8642594ff6268eeb269cfd1",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        86,
+        89
+      ],
+      "targetLineRange": [
+        86,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

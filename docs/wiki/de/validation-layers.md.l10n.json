@@ -1,0 +1,734 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/validation-layers.md",
+  "targetPath": "docs/wiki/de/validation-layers.md",
+  "locale": "de",
+  "blocks": [
+    {
+      "blockId": "validation-layers-heading-validation-layers-8fc7d42a-1",
+      "sourceHash": "8fc7d42a448384d07de04eeb8358dbc395893dd434da5d1a0e420c1461a0cfcb",
+      "targetBlockId": "validierungsebenen-heading-validierungsebenen-b2cc84e0-1",
+      "translationHash": "b2cc84e024bfd293e9ad5e374f652c213c697dd1c8cedf59ac65f50f551b0445",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "validierungsebenen/zusammenfassung-heading-zusammenfassung-f5ef31e5-1",
+      "translationHash": "f5ef31e5b79da9edb1b31a85e7d20f086b05b33f89113ece7a3402971735f792",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-paragraph-validation-layers-are-the-different-ways-a-project-checks-wh-9ca8a81c-1",
+      "sourceHash": "9ca8a81c9d587176b4acf8aa617b67e2c3d3b22275c55ad561fb236c994a5195",
+      "targetBlockId": "validierungsebenen/zusammenfassung-paragraph-validierungsebenen-sind-die-verschiedenen-methoden-mit-denen-e249500f-1",
+      "translationHash": "e249500f0b1e481286d180707ad88636728240235398167f8bf099662e69178b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-heading-why-layers-matter-de7c66ed-1",
+      "sourceHash": "de7c66ed13662850485f1ea31985a3336efba9529f86857fd2c716dcb57e3663",
+      "targetBlockId": "validierungsebenen/warum-schichten-wichtig-sind-heading-warum-schichten-wichtig-sind-2e2bc3ca-1",
+      "translationHash": "2e2bc3ca9734236f1bdf4dd0d2308eb28042273e4b18e4ef8cd47c6b5774cb89",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-no-single-validation-method-is-enough-fe0d1f2a-1",
+      "sourceHash": "fe0d1f2a1f5f6f1b221a3497bc1aae69d96733177d982a7854fba57dda83f128",
+      "targetBlockId": "validierungsebenen/warum-schichten-wichtig-sind-paragraph-keine-einzelne-validierungsmethode-reicht-aus-68ac541d-1",
+      "translationHash": "68ac541d734f78ce6538d184d9976755b517191d649aa42b0b0eb29cd12473dd",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-list-documentation-alone-does-not-enforce-behavior-9350d201-1",
+      "sourceHash": "9350d20175c42d4972f4868a0f88d65d587ee9cb9bf9d62c7c548280601eb9d9",
+      "targetBlockId": "validierungsebenen/warum-schichten-wichtig-sind-list-dokumentation-allein-erzwingt-kein-verhalten-a4da029e-1",
+      "translationHash": "a4da029e599e85c1152ba1924f8a11ac46d83ed5df33f6c1a5defb24448a3d81",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        20,
+        22
+      ],
+      "targetLineRange": [
+        20,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-a-layered-approach-is-stronger-because-each-layer-catches-a--f830c6e2-1",
+      "sourceHash": "f830c6e22d9fb717df4169f2f2721881c55b2c0de79660ca5cd5165bfbfd1a25",
+      "targetBlockId": "validierungsebenen/warum-schichten-wichtig-sind-paragraph-ein-mehrschichtiger-ansatz-ist-stärker-da-jede-schicht-eine--c8743fea-1",
+      "translationHash": "c8743fea721b778a9d686e71eb4dbace7bebde0edc85b91facfd746598364846",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers-heading-common-validation-layers-d36d2283-1",
+      "sourceHash": "d36d228311ad2bcedc282493f24a4ae7db2dfbd0beae22b8c48cdd55a24abce8",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen-heading-gemeinsame-validierungsebenen-0bdfd285-1",
+      "translationHash": "0bdfd285b69ddc27630b324ba98a42ebe80ae53af8373a0f57c3119a00bba3e8",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-heading-1-specification-and-guidance-9bca2316-1",
+      "sourceHash": "9bca2316f9094450bae48d2cb4e781baf7f9e4661c60bd4c9466631191289539",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/1-spezifikation-und-anleitung-heading-1-spezifikation-und-anleitung-03cad9ac-1",
+      "translationHash": "03cad9acfd6d2cff2e55f478d7aba94c30a7988482863d0f76b8987ae85b41c2",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-the-first-layer-defines-the-rule-29e62350-1",
+      "sourceHash": "29e6235038cafbe269f8a8f6fada7c569d13256440a5654b08637cea674f4efd",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/1-spezifikation-und-anleitung-paragraph-die-erste-ebene-definiert-die-regel-8e785ea2-1",
+      "translationHash": "8e785ea291a7d64f9dc2f5c21f8caedb05cf3bf97e6f11e1ab63890f4c24b335",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-without-this-layer-later-checks-may-be-strict-but-arbitrary-f8dfa57d-1",
+      "sourceHash": "f8dfa57db065721bcf4868d8ac1e8e25699e8372faf8795bf8447443f37f04f2",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/1-spezifikation-und-anleitung-paragraph-ohne-diese-schicht-können-spätere-prüfungen-streng-aber-will-9ee2abe9-1",
+      "translationHash": "9ee2abe987083f54bca90e0f5262c1bf9ce665a9e043acc181651aae86d77bca",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-heading-2-manual-review-ee208978-1",
+      "sourceHash": "ee208978c302d56366e8efa260c58d736c7a7ee45900f4819fbada21048a3316",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/2-manuelle-überprüfung-heading-2-manuelle-überprüfung-071b161b-1",
+      "translationHash": "071b161bdcb9a402ff30b3b784d78b9c23593f5ba85421da4fd1b1c0a953f994",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": [
+        34,
+        34
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-paragraph-human-review-checks-intent-edge-cases-and-product-meaning-th-0e169630-1",
+      "sourceHash": "0e1696304b449a3f4d598606de98407843596b705c926b7922a65c14da5e0569",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/2-manuelle-überprüfung-paragraph-die-menschliche-überprüfung-prüft-absicht-randfälle-und-prod-0d5b7386-1",
+      "translationHash": "0d5b7386bb58abb3d5dccff7c170fe9da590e0d46ce6132fca43b4f277e415da",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        36,
+        36
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-heading-3-local-validation-ac6f1462-1",
+      "sourceHash": "ac6f1462a6d8a68c0247e4a4908a8ae4327d22258e35ca044757c5221ce4cd9b",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/3-lokale-validierung-heading-3-lokale-validierung-30ad2c92-1",
+      "translationHash": "30ad2c922a06ce6c08d9353e4e9a48470f838e6d6f255080ebdb21e8f70c6d72",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-paragraph-scripts-and-structured-checks-catch-fast-repeatable-issues-b-717e3951-1",
+      "sourceHash": "717e39518bd098103a3aca92706ffbe3da9321f1af5bbf6bf1123685dbb159bf",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/3-lokale-validierung-paragraph-skripte-und-strukturierte-prüfungen-erkennen-schnell-wiederk-f24f83e3-1",
+      "translationHash": "f24f83e34f403f816e60d0e235f2905e3ec582c04e50bf8ffdf245e4bd88a7d1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        40,
+        40
+      ],
+      "targetLineRange": [
+        40,
+        40
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-heading-4-tests-a4d52503-1",
+      "sourceHash": "a4d52503e1757f1f98eb5342448e9a426444153393e2c4b16a194303d701c118",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/4-automatisierte-tests-heading-4-automatisierte-tests-b340e63c-1",
+      "translationHash": "b340e63c42b65933c30c4042c9344cc3fa193135f5fff57a0378c3747323bb67",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        42,
+        42
+      ],
+      "targetLineRange": [
+        42,
+        42
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-paragraph-executable-tests-verify-expected-behavior-but-only-when-they-efb4830f-1",
+      "sourceHash": "efb4830fefcaedc6450ff243e40eb900d29dd0f19403993ad27aeb7c4ad82144",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/4-automatisierte-tests-paragraph-ausführbare-tests-überprüfen-das-erwartete-verhalten-jedoch--bcfc7aae-1",
+      "translationHash": "bcfc7aaeca8879f0837c0f4d0e5c9288571f7af749d3f1e44fedf175beda300d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        44,
+        44
+      ],
+      "targetLineRange": [
+        44,
+        44
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-heading-5-ci-gates-47fd54b5-1",
+      "sourceHash": "47fd54b5bdef619cb4631d58c5c1c10a9c584141306a037a4fc21653bdc0be37",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/5-ci-tore-heading-5-ci-tore-b41c99f2-1",
+      "translationHash": "b41c99f2672d67426c866cdb245ceebd6995a536dd98c88f68d28ca84d362105",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        46,
+        46
+      ],
+      "targetLineRange": [
+        46,
+        46
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-paragraph-ci-makes-checks-repeatable-and-visible-across-contributors-a-c165489d-1",
+      "sourceHash": "c165489d71acba9c6c3ff303ac4b0f2e334219bcf4a4ec39116511d8a31bbe50",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/5-ci-tore-paragraph-ci-macht-prüfungen-wiederholbar-und-für-alle-mitwirkenden-un-4845383b-1",
+      "translationHash": "4845383bfcce32a4f61cf7b811aa9225152c22c523c6e13b35ace108da693787",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        48,
+        48
+      ],
+      "targetLineRange": [
+        48,
+        48
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-heading-6-deployment-checks-7ded19a6-1",
+      "sourceHash": "7ded19a62e691a0f7dcd180a47dcb512ae038bb1259f6c379bb5d582a39b42f8",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/6-bereitstellungsprüfungen-heading-6-bereitstellungsprüfungen-d64e9674-1",
+      "translationHash": "d64e9674068c787c06db38d22664ed46da9fd0910d3e20bb26c42ac4666b89ff",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        50,
+        50
+      ],
+      "targetLineRange": [
+        50,
+        50
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-paragraph-deployment-workflows-confirm-that-the-built-artifacts-are-st-57ae91f8-1",
+      "sourceHash": "57ae91f876cb621a35b2b203719e61b95b434b76746f4b860dc32574c239825b",
+      "targetBlockId": "validierungsebenen/gemeinsame-validierungsebenen/6-bereitstellungsprüfungen-paragraph-bereitstellungsworkflows-bestätigen-dass-die-erstellten-arte-61690771-1",
+      "translationHash": "616907713548e4a37595f5f693ad650d181e3f57d93f6cae6cab6e820d6511ca",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        52,
+        52
+      ],
+      "targetLineRange": [
+        52,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-heading-how-the-layers-should-relate-5abbf685-1",
+      "sourceHash": "5abbf685c82003af4f76f7b17b239c68a5e10886e635fb5d96286135c068391b",
+      "targetBlockId": "validierungsebenen/wie-sich-die-ebenen-verhalten-sollten-heading-wie-sich-die-ebenen-verhalten-sollten-a6247015-1",
+      "translationHash": "a62470156ec09fd34f7ddd783cb409e9b80589b89dbe7b44cc1cc1e796e9cb67",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-paragraph-the-layers-should-reinforce-each-other-in-order-ed7696fb-1",
+      "sourceHash": "ed7696fb89dad21de6d0ab78389cef04dd99c26c6029d89ea911f619fb5c8821",
+      "targetBlockId": "validierungsebenen/wie-sich-die-ebenen-verhalten-sollten-paragraph-die-schichten-sollten-sich-gegenseitig-verstärken-um-8f6657dd-1",
+      "translationHash": "8f6657dd99e4f70ace7bb3bae826875aabd6cdc06aa25f661bef6856de4dca01",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-list-docs-and-specs-define-expectations-3287c347-1",
+      "sourceHash": "3287c3474c62f9cc18f90bd9b0a629668002cef1f6810d711dd7f46c14c876f7",
+      "targetBlockId": "validierungsebenen/wie-sich-die-ebenen-verhalten-sollten-list-dokumente-und-spezifikationen-definieren-erwartungen-11264645-1",
+      "translationHash": "11264645903b252164374eb1e5b5ae2512b93c73c174d2464d1c35ac5c96a7d0",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        58,
+        62
+      ],
+      "targetLineRange": [
+        58,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-heading-good-early-validation-targets-9a1bb190-1",
+      "sourceHash": "9a1bb1905706c8f82d135df33b9cb8a22b468f9395fd81c03bd85008e81dd318",
+      "targetBlockId": "validierungsebenen/gute-frühe-validierungsziele-heading-gute-frühe-validierungsziele-f82a7983-1",
+      "translationHash": "f82a798324fc6d8478382d7e255888de81f59309ed526475c79e94e29ae944f8",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-examples-of-strong-early-candidates-include-c9763375-1",
+      "sourceHash": "c9763375fa7dedea8405c0ef457b34c593845252cf4081d6ac064481a1961395",
+      "targetBlockId": "validierungsebenen/gute-frühe-validierungsziele-paragraph-beispiele-für-starke-frühkandidaten-sind-30667556-1",
+      "translationHash": "306675567447b04d6bad27dc1302e8f56ef3dff57622d31e0cb27673dfde0fa3",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-list-required-file-presence-760814ff-1",
+      "sourceHash": "760814ff407618e41f5aada2fa51cf01046d532216829f9dca95d69315edca08",
+      "targetBlockId": "validierungsebenen/gute-frühe-validierungsziele-list-vorhandensein-der-erforderlichen-datei-f942537f-1",
+      "translationHash": "f942537f8f04c2c48ab7ce34fe88491f530fd1336017ee8f9a504cfe236d5946",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        68,
+        73
+      ],
+      "targetLineRange": [
+        68,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-these-checks-tend-to-be-objective-and-inexpensive-8696c3a5-1",
+      "sourceHash": "8696c3a5e12c535ad11726ae0b5fe9fd1fa27cdffc2cfd62e342ab080213a33e",
+      "targetBlockId": "validierungsebenen/gute-frühe-validierungsziele-paragraph-diese-kontrollen-sind-in-der-regel-objektiv-und-kostengünsti-0253e041-1",
+      "translationHash": "0253e041a015a9da4fbebb9c65706d02fc62143a551dfb606f4b878d70216a1d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "validierungsebenen/let-books-kontext-heading-let-books-kontext-cc88d5ee-1",
+      "translationHash": "cc88d5ee376940f48b7e0485b0b17a6906b716645778e50545e74d24319a13ea",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-the-let-books-repository-already-documents-several-layers-in-8b6094e1-1",
+      "sourceHash": "8b6094e12930a5e462f2caa7062e957c2c691a02333dd81dd13aac5badb95a9f",
+      "targetBlockId": "validierungsebenen/let-books-kontext-paragraph-das-let-books-repository-dokumentiert-bereits-mehrere-schich-21996a3a-1",
+      "translationHash": "21996a3a97c6ba46a9cb0d049f0e530c7ba09ccc2eedb60bc584edc1b44d9e94",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-list-product-and-implementation-rules-in-and-0ca7f6c8-1",
+      "sourceHash": "0ca7f6c87a125de3c62bcacc00a61e7480fcdc65307f455f134f5c4daf5caf62",
+      "targetBlockId": "validierungsebenen/let-books-kontext-list-produkt-und-umsetzungsregeln-in-und-777f25db-1",
+      "translationHash": "777f25db30143443c304a6a8d6b43730c5a55b68f90a93ad5555c283b6ad1882",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        81,
+        84
+      ],
+      "targetLineRange": [
+        81,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-that-makes-validation-a-documented-system-rather-than-only-a-8bc5c1b0-1",
+      "sourceHash": "8bc5c1b0862f767317ebf7025a19ad05bc66e88134cafe7325fa308bf27cf580",
+      "targetBlockId": "validierungsebenen/let-books-kontext-paragraph-das-macht-die-validierung-zu-einem-dokumentierten-system-und-923eca3e-1",
+      "translationHash": "923eca3e4e42fed150d4d54cbd6c5a5aee63d1555977318b4868f43ae343e941",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "validierungsebenen/verwandte-seiten-heading-verwandte-seiten-9be17d5d-1",
+      "translationHash": "9be17d5d84fe95760e26eadffee5eb054df8f712b25be7f3d56294f40d49c7bd",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        88,
+        88
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-list-list-e4c5a672-1",
+      "sourceHash": "e4c5a672a57bb6464ea2fede5d68552893820dc484ebd4c279acd30d76a07100",
+      "targetBlockId": "validierungsebenen/verwandte-seiten-list-list-ad5eee4c-1",
+      "translationHash": "ad5eee4c1a89c8fb5c4ec30aadf39493cbe6ad413547428368ef8336b8c4df68",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        90,
+        93
+      ],
+      "targetLineRange": [
+        90,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

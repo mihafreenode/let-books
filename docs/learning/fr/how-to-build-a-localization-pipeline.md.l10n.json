@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-build-a-localization-pipeline.md",
+  "targetPath": "docs/learning/fr/how-to-build-a-localization-pipeline.md",
+  "locale": "fr",
+  "blocks": [
+    {
+      "blockId": "how-to-build-a-localization-pipeline-heading-how-to-build-a-localization-pipeline-f25265f7-1",
+      "sourceHash": "f25265f70664d149787a1aa6571876420be244c8a40269cc84ff32727bd52c0c",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation-heading-comment-construire-un-pipeline-de-localisation-c116d41b-1",
+      "translationHash": "c116d41b3872316ac36aac0c07db557eb5b75e3c39c5b7ad06fe0ea2359bfe56",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Build a Localization Pipeline"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/résumé-heading-résumé-e11bf8b8-1",
+      "translationHash": "e11bf8b82863a5b358b5aab5a60aa85b1801725df6f4ece12c0b6094ba4f626b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/summary-paragraph-this-guide-shows-how-to-build-a-practical-localization-pipel-f126981c-1",
+      "sourceHash": "f126981cfeaa8c03a0a8bbbffa885f3229f8e3ed8f6847e60edeee8576050848",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/résumé-paragraph-ce-guide-montre-comment-construire-un-pipeline-de-localisati-63f59529-1",
+      "translationHash": "63f595298c5374da1aff507a7d7ee955f6c2e6920f823d3a494b2ebc29ac8e5c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/workflow-heading-workflow-7136000e-1",
+      "sourceHash": "7136000e494604c07769c55da3f0ec4ea85eef9508d8840bc71ec8a6e745b742",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/flux-de-travail-heading-flux-de-travail-0e429eed-1",
+      "translationHash": "0e429eed22f7f441245dfcbaa8db4397e426cb535532ea474a15c474309e9d23",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Workflow"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/workflow-list-1-write-a-clean-canonical-source-4f43f9e0-1",
+      "sourceHash": "4f43f9e0cb1b7337630603a18db3987233a587eb43e2138dc6286c82f5767dc5",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/flux-de-travail-list-1-écrire-une-source-canonique-propre-7b040c53-1",
+      "translationHash": "7b040c53c613e0344c38b11f5b15dc77b67c0a1e45d27d53616ce06360f1f358",
+      "blockType": "list",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Workflow"
+      ],
+      "sourceLineRange": [
+        18,
+        23
+      ],
+      "targetLineRange": [
+        18,
+        23
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/common-mistakes-heading-common-mistakes-70713d18-1",
+      "sourceHash": "70713d18529bbfb161249a2e90619b651beb3f9a0521995c7a86b93081022eb4",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/erreurs-courantes-heading-erreurs-courantes-c33cd783-1",
+      "translationHash": "c33cd78322bc87c636f98fe247f1bbdb1ba48c0cbe3b4a701c44e17c2fcdf031",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Common mistakes"
+      ],
+      "sourceLineRange": [
+        25,
+        25
+      ],
+      "targetLineRange": [
+        25,
+        25
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/common-mistakes-list-translating-before-terminology-is-stable-853cea48-1",
+      "sourceHash": "853cea482b81c43f763b6c91f877f6d472383446c515b272089d7b952e4b1e79",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/erreurs-courantes-list-traduire-avant-que-la-terminologie-soit-stable-23b131e3-1",
+      "translationHash": "23b131e3f9cf7a263d8ce302d6b29f8d2b0d96f5d8f8ca9f6918738a19236d29",
+      "blockType": "list",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Common mistakes"
+      ],
+      "sourceLineRange": [
+        27,
+        29
+      ],
+      "targetLineRange": [
+        27,
+        29
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/pages-associées-heading-pages-associées-6f5334cf-1",
+      "translationHash": "6f5334cfe28df3b0d8623c1fa35a895fe9e0b65413d5558363bff8f73aa787ef",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        31,
+        31
+      ],
+      "targetLineRange": [
+        31,
+        31
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-build-a-localization-pipeline/related-pages-list-list-c979cef6-1",
+      "sourceHash": "c979cef6ee000f7cd444a93892036dbbe0c5d6ff0e3e395da4f11c08050e18cf",
+      "targetBlockId": "comment-construire-un-pipeline-de-localisation/pages-associées-list-list-c979cef6-1",
+      "translationHash": "c979cef6ee000f7cd444a93892036dbbe0c5d6ff0e3e395da4f11c08050e18cf",
+      "blockType": "list",
+      "headingPath": [
+        "How to Build a Localization Pipeline",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        33,
+        35
+      ],
+      "targetLineRange": [
+        33,
+        35
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

@@ -1,0 +1,1277 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/markdown-in-product-development.md",
+  "targetPath": "docs/wiki/es/markdown-in-product-development.md",
+  "locale": "es",
+  "blocks": [
+    {
+      "blockId": "markdown-in-product-development-heading-markdown-in-product-development-db88c260-1",
+      "sourceHash": "db88c260c588213c2914fa77e88949e0e12c2378a879a6332690dad4d9488ba4",
+      "targetBlockId": "markdown-en-desarrollo-de-productos-heading-markdown-en-desarrollo-de-productos-47f55252-1",
+      "translationHash": "47f5525205b2282af50a3074520e6b5646e9e07457b8a9b7467c74f72cdbd648",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/resumen-heading-resumen-1b924cc3-1",
+      "translationHash": "1b924cc323054cf3f917fd5c4cde93508d8551224046da2e7d1d7016489c6fa9",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/summary-paragraph-markdown-is-a-practical-format-for-storing-product-intent-do-8109e018-1",
+      "sourceHash": "8109e01814a8fe54625f61beb30fc066ca7020c9c6f9b1313230652eca5b16d5",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/resumen-paragraph-markdown-es-un-formato-práctico-para-almacenar-la-intención--4cf03cf5-1",
+      "translationHash": "4cf03cf5e13530b68f5798f1e0e785aa7e6892d0d4aa4cb8e9249fa68c7553c1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-markdown-matters-heading-why-markdown-matters-eabdbdba-1",
+      "sourceHash": "eabdbdbadbe2f1c9ad0ca24ba48a82401bc3858829452964ae2722982a44adcb",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/en-qué-es-bueno-markdown-heading-en-qué-es-bueno-markdown-c54b11f5-1",
+      "translationHash": "c54b11f5db3dd13bf533ad703d78c9228db7a3f933fb035fea3045668fb3bc0f",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why Markdown matters"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-markdown-matters-paragraph-markdown-is-often-treated-as-a-writing-convenience-in-spec-d-22984b42-1",
+      "sourceHash": "22984b42a719c2d339cdce8925a48abc19de3e42b02846298e920c79e45cc815",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-es-importante-el-artículo-markdown-paragraph-markdown-a-menudo-se-trata-como-una-conveniencia-de-escritur-8ae45363-1",
+      "translationHash": "8ae453632fe8c68fa308787d1a53703923e8d40bc6dc5b84e0197852e683d978",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why Markdown matters"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-markdown-matters-paragraph-it-gives-teams-a-lightweight-way-to-keep-product-knowledge-c-fd5b6be6-1",
+      "sourceHash": "fd5b6be69dce9eab86fc3a2dab22efc7470605b9b95e99c2083d1180ca81df39",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-es-importante-el-artículo-markdown-paragraph-brinda-a-los-equipos-una-forma-liviana-de-mantener-el-conoci-d3a16a40-1",
+      "translationHash": "d3a16a40e2d450c54463a2a1329c3924c53dbb9aacad0a561c453b338f47782b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why Markdown matters"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-markdown-matters-paragraph-that-matters-for-168fe5d5-1",
+      "sourceHash": "168fe5d5d239322045d402411f62750cf4920119efe1cde2c334f54206ff4731",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-es-importante-el-artículo-markdown-paragraph-eso-es-importante-para-ccca4cea-1",
+      "translationHash": "ccca4cea6ea3c1ac8ad7fb566ff85725180222d29d8e3b4886c0b8114bf13432",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why Markdown matters"
+      ],
+      "sourceLineRange": [
+        22,
+        22
+      ],
+      "targetLineRange": [
+        22,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-markdown-matters-list-specifications-bbdb0263-1",
+      "sourceHash": "bbdb0263368a5562ac6b321cc97bffe032b46f926799aa43e4f86a389688400f",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-es-importante-el-artículo-markdown-list-especificaciones-697c11ef-1",
+      "translationHash": "697c11eff7e30b124b0ee113f8d14349b021a93f6c08a9f1a3d74c14cc4ef8d9",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why Markdown matters"
+      ],
+      "sourceLineRange": [
+        24,
+        28
+      ],
+      "targetLineRange": [
+        24,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-is-good-at-heading-what-markdown-is-good-at-babbe1ca-1",
+      "sourceHash": "babbe1ca0fbc18c3865e91f725794d4ec2b6ceead477fcd2737c61d1c388d1cc",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/lo-que-el-markdown-no-hace-por-sí-solo-heading-lo-que-el-markdown-no-hace-por-sí-solo-e8ba471d-1",
+      "translationHash": "e8ba471d64cbcbfe9b63757397b1aa79d782f7f7dfd01f6c3c2b6df2c462c5e3",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown is good at"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-is-good-at-paragraph-markdown-works-well-when-content-needs-to-be-9eb0f9b0-1",
+      "sourceHash": "9eb0f9b0813121e54e34d9de89b0dca73ed8d3a43b2adfb915542cf03f00abee",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/en-qué-es-bueno-markdown-paragraph-markdown-funciona-bien-cuando-el-contenido-debe-ser-2f73e100-1",
+      "translationHash": "2f73e100074635e051dd94e488721b199216d9175fbd5a2b95c52eb2be9bac04",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown is good at"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-is-good-at-list-readable-in-raw-form-da4e8ccd-1",
+      "sourceHash": "da4e8ccdc2123004a31c83fd89393723a754b091250d9931e8ae1218263b55e0",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/en-qué-es-bueno-markdown-list-legible-en-forma-cruda-7f20b62a-1",
+      "translationHash": "7f20b62a72322a526d35ce38567708608a4ae83fd6a96466937351ab3c4e13dc",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown is good at"
+      ],
+      "sourceLineRange": [
+        34,
+        39
+      ],
+      "targetLineRange": [
+        34,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-is-good-at-paragraph-this-makes-it-especially-useful-for-product-and-documentatio-ec850f6d-1",
+      "sourceHash": "ec850f6db8d060e30cbd0ec6c5ca0a701a3e9cbc3ad52e0f89f6a23c542592f7",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/en-qué-es-bueno-markdown-paragraph-esto-lo-hace-especialmente-útil-para-sistemas-de-documentaci-c79d47e4-1",
+      "translationHash": "c79d47e48e8f287b3f341b24b2ac315151be5a4f1ba8efc00c6462ebe0154df6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown is good at"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-does-not-do-by-itself-heading-what-markdown-does-not-do-by-itself-a215fbd6-1",
+      "sourceHash": "a215fbd6cf899f57a1f780cf1d19b9167bc8006623b644166c0d02f3429a5eac",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-es-importante-el-artículo-markdown-heading-por-qué-es-importante-el-artículo-markdown-ba28cf2d-1",
+      "translationHash": "ba28cf2d87655d24a9a02397687750c16b5b57f90e9204fa8efdad5575265eec",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown does not do by itself"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-does-not-do-by-itself-paragraph-markdown-is-useful-but-it-does-not-enforce-correctness-on-it-1cecd986-1",
+      "sourceHash": "1cecd98688f5f255a608c842499fc21bb2f28a2ec22f1e7b811ad36e880552c9",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/lo-que-el-markdown-no-hace-por-sí-solo-paragraph-markdown-es-útil-pero-no-impone-la-corrección-por-sí-solo-8b8a6d49-1",
+      "translationHash": "8b8a6d499a8483e2b73b08a3b647a0a15ed02c62a858c01b3c49290329c49a96",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown does not do by itself"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-does-not-do-by-itself-paragraph-it-cannot-by-itself-guarantee-ec5dc6e4-1",
+      "sourceHash": "ec5dc6e495a8b0f2a3ccba7f13d071c756754a842901c012c1b44e0dc6a9e0f8",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/lo-que-el-markdown-no-hace-por-sí-solo-paragraph-por-sí-solo-no-puede-garantizar-c47bf681-1",
+      "translationHash": "c47bf681edcbc869b2019530130ea93f98f1a8f3cc2ebef8d1ce9375f9a13843",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown does not do by itself"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-does-not-do-by-itself-list-that-the-content-is-current-c6e27cd1-1",
+      "sourceHash": "c6e27cd19bd53aec198e2a26ea8e42beb114b5138eceb66efefe938ed93ff5c1",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/lo-que-el-markdown-no-hace-por-sí-solo-list-que-el-contenido-sea-actual-bdfa4005-1",
+      "translationHash": "bdfa4005edddef0077a5f0e04a7096144e69f57631de9fa9b19c1853705b0c07",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown does not do by itself"
+      ],
+      "sourceLineRange": [
+        49,
+        53
+      ],
+      "targetLineRange": [
+        49,
+        53
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/what-markdown-does-not-do-by-itself-paragraph-that-is-why-markdown-should-be-part-of-a-wider-system-not-co-641135d2-1",
+      "sourceHash": "641135d22d8cb974fedf024daad47e9dda73c4406c03934c87ba1a0c47e3d593",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/lo-que-el-markdown-no-hace-por-sí-solo-paragraph-por-eso-el-artículo-markdown-debería-formar-parte-de-un-sist-4d4b3537-1",
+      "translationHash": "4d4b3537c26d67bb6db9c7a9af281092aacbc2c39467f120e1b2795fdde267d5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "What Markdown does not do by itself"
+      ],
+      "sourceLineRange": [
+        55,
+        55
+      ],
+      "targetLineRange": [
+        55,
+        55
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-in-a-spec-driven-workflow-heading-markdown-in-a-spec-driven-workflow-5383b763-1",
+      "sourceHash": "5383b763b35257e13c82e826051ff399c64aa77c4b973becabe98a95c6e67534",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-en-un-flujo-de-trabajo-basado-en-especificaciones-heading-markdown-en-un-flujo-de-trabajo-basado-en-especificaciones-caf5f027-1",
+      "translationHash": "caf5f02729ac67a86a9cef6e738fed77dc53d79fd7093caf8047e30aca36ba20",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown in a spec-driven workflow"
+      ],
+      "sourceLineRange": [
+        57,
+        57
+      ],
+      "targetLineRange": [
+        57,
+        57
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-in-a-spec-driven-workflow-paragraph-in-a-spec-driven-workflow-markdown-is-most-valuable-when-it--8fbee760-1",
+      "sourceHash": "8fbee76006ae6789a520c15a4d338be443e23e373a38d7e0be7b936b40272a83",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-en-un-flujo-de-trabajo-basado-en-especificaciones-paragraph-en-un-flujo-de-trabajo-basado-en-especificaciones-markdown-e-3b165ea5-1",
+      "translationHash": "3b165ea57012dde6d6b6fbadb2e7e2b3a3b10ebe898e5dccd766c37f9ddf39fe",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown in a spec-driven workflow"
+      ],
+      "sourceLineRange": [
+        59,
+        59
+      ],
+      "targetLineRange": [
+        59,
+        59
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-in-a-spec-driven-workflow-paragraph-for-example-652744a2-1",
+      "sourceHash": "652744a2ab28954bbafd780fd76c15c2bd557594532f907f10ead1989727af95",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-en-un-flujo-de-trabajo-basado-en-especificaciones-paragraph-por-ejemplo-3fd1a73f-1",
+      "translationHash": "3fd1a73fdcefd7def35515c3823f81a3190b77a9679a19cc2e15a4045a4c6522",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown in a spec-driven workflow"
+      ],
+      "sourceLineRange": [
+        61,
+        61
+      ],
+      "targetLineRange": [
+        61,
+        61
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-in-a-spec-driven-workflow-list-1-specifications-define-product-rules-61c10abf-1",
+      "sourceHash": "61c10abfdb2fbdc2cc15d223ece3a8c0366bec4f5c7234f1e801fbb7f9af3fcd",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-en-un-flujo-de-trabajo-basado-en-especificaciones-list-1-las-especificaciones-definen-las-reglas-del-producto-ebe456de-1",
+      "translationHash": "ebe456deb521b756739aff11a164e1c0eec527c251b0a3f518e55b57e99f24a5",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown in a spec-driven workflow"
+      ],
+      "sourceLineRange": [
+        63,
+        67
+      ],
+      "targetLineRange": [
+        63,
+        67
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-in-a-spec-driven-workflow-paragraph-markdown-is-the-medium-that-helps-those-layers-stay-visible--7d1c8472-1",
+      "sourceHash": "7d1c8472b1eb3058eb86f8b6b134007791e8f7388e10adf0094fdacb074d1d6a",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-en-un-flujo-de-trabajo-basado-en-especificaciones-paragraph-markdown-es-el-medio-que-ayuda-a-que-esas-capas-permanezcan--36c42716-1",
+      "translationHash": "36c4271662ef1c6ca8468acf3da0adadf9c787154d184b7bfa14fb58c37afcc6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown in a spec-driven workflow"
+      ],
+      "sourceLineRange": [
+        69,
+        69
+      ],
+      "targetLineRange": [
+        69,
+        69
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-this-matters-in-ai-assisted-work-heading-why-this-matters-in-ai-assisted-work-db4af95d-1",
+      "sourceHash": "db4af95de012516cec18a7d2bfd3864ce753af1ede38d25a3d3f3aaa9b063d7a",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-esto-es-importante-en-el-trabajo-asistido-por-ia-heading-por-qué-esto-es-importante-en-el-trabajo-asistido-por-ia-35bcd2cd-1",
+      "translationHash": "35bcd2cd8d04b3e17100204577779e1b9d5da2dbd7f2eee643bde2e2dbc85ca9",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why this matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        71,
+        71
+      ],
+      "targetLineRange": [
+        71,
+        71
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-this-matters-in-ai-assisted-work-paragraph-ai-systems-benefit-from-clear-accessible-context-74c46c3c-1",
+      "sourceHash": "74c46c3cd21f93ed5f9dd9481ef842aef8f0e4b93040f0a4d42b05c4d9c55f39",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-esto-es-importante-en-el-trabajo-asistido-por-ia-paragraph-los-sistemas-de-ia-se-benefician-de-un-contexto-claro-y-acce-e6a40b81-1",
+      "translationHash": "e6a40b81151b1b7482a4e0815623d41315e793b523fbbbdbd91141cd087c4db6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why this matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        73,
+        73
+      ],
+      "targetLineRange": [
+        73,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-this-matters-in-ai-assisted-work-paragraph-markdown-helps-because-it-is-bd20b035-1",
+      "sourceHash": "bd20b03539546ad35cfcab1bd055343e6132ff28b7eca44bb4daf6b5ff9ffa73",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-esto-es-importante-en-el-trabajo-asistido-por-ia-paragraph-markdown-ayuda-porque-es-73daeb60-1",
+      "translationHash": "73daeb606049444edb0cd74189d0c512779f8928e8b3fd74ef19327bc60ee0e4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why this matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-this-matters-in-ai-assisted-work-list-easy-to-inspect-689a142d-1",
+      "sourceHash": "689a142d03ae186135d76e3444015b218ebcbb9972210eed73bf209e7b937faf",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-esto-es-importante-en-el-trabajo-asistido-por-ia-list-fácil-de-inspeccionar-682570a2-1",
+      "translationHash": "682570a2b745037a8ce1c5782b746a5a80786fd2a2678e85d53ec67fb29b1898",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why this matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        77,
+        80
+      ],
+      "targetLineRange": [
+        77,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-this-matters-in-ai-assisted-work-paragraph-that-makes-it-a-strong-format-for-product-memory-af62215a-1",
+      "sourceHash": "af62215ae21c7afee7df24ca66a767dfdea3b5a9196072fed0ef0b0826469547",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-esto-es-importante-en-el-trabajo-asistido-por-ia-paragraph-eso-lo-convierte-en-un-formato-sólido-para-la-memoria-del-pr-5d09a60f-1",
+      "translationHash": "5d09a60fc85813541754317372690df28ab43cbb9b8dc1ce5325d6efb4f07248",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why this matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/why-this-matters-in-ai-assisted-work-paragraph-but-ai-also-makes-one-limitation-more-obvious-if-the-markdow-061d099e-1",
+      "sourceHash": "061d099ec209f98d8326700ccb20eff259825eb6ec4272810cb7ef65c2e89786",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/por-qué-esto-es-importante-en-el-trabajo-asistido-por-ia-paragraph-pero-la-ia-también-hace-que-una-limitación-sea-más-obvia-si--6981d995-1",
+      "translationHash": "6981d995cebc64e5e43cea088c570bbb49439627e670533d4e7a6813c92c97ab",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Why this matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": [
+        84,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-as-agent-guidance-heading-markdown-as-agent-guidance-2a1efda9-1",
+      "sourceHash": "2a1efda92ffdd754124a2da9f3e7b35c56d44df3d268f19ddaa4d93a201cec14",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-como-guía-para-el-agente-heading-markdown-como-guía-para-el-agente-1d30be8d-1",
+      "translationHash": "1d30be8d7a46d49fb501d2e79c6a26acf910b8fa91182fffb1ed8073f0078165",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown as agent guidance"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-as-agent-guidance-paragraph-some-markdown-documents-may-look-like-human-facing-tutorials-f26b13cf-1",
+      "sourceHash": "f26b13cfb3222fc06adbcd362fb34fcc858b9c065b821ee3b89c1cf3fef9d054",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-como-guía-para-el-agente-paragraph-algunos-documentos-markdown-pueden-parecer-tutoriales-para-h-675896d5-1",
+      "translationHash": "675896d5a77a62f4475a9e82ba63f59e5068df40f26b5c9f49e9923e485c22f6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown as agent guidance"
+      ],
+      "sourceLineRange": [
+        88,
+        88
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-as-agent-guidance-paragraph-this-is-especially-useful-when-the-document-does-more-than-e-22e8624d-1",
+      "sourceHash": "22e8624d995897d48564c249020aac915c1e35d0c13bd395f8b25e4af3e21504",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-como-guía-para-el-agente-paragraph-esto-es-especialmente-útil-cuando-el-documento-hace-más-que--a2c2bffc-1",
+      "translationHash": "a2c2bffc5da0a36bccfd2642ed8f476e5b8dc445e868b1c901414b6b3532d594",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown as agent guidance"
+      ],
+      "sourceLineRange": [
+        90,
+        90
+      ],
+      "targetLineRange": [
+        90,
+        90
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-as-agent-guidance-list-preferred-workflow-order-2cb29451-1",
+      "sourceHash": "2cb29451998831a0e64673626c089f1e935286d963b7b5d5a0e8458391230e94",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-como-guía-para-el-agente-list-orden-de-flujo-de-trabajo-preferido-510f4b8d-1",
+      "translationHash": "510f4b8ddcab4412b7dac8f50a6485d52872e13e9222d7d0689553ed5ca524f3",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown as agent guidance"
+      ],
+      "sourceLineRange": [
+        92,
+        96
+      ],
+      "targetLineRange": [
+        92,
+        96
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/markdown-as-agent-guidance-paragraph-in-those-cases-markdown-becomes-more-than-explanation-it-bec-132c0560-1",
+      "sourceHash": "132c0560098e61c35e04a0a9df6c171ae64cd0ac293037593d21a766448b11d0",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/markdown-como-guía-para-el-agente-paragraph-en-esos-casos-el-artículo-markdown-se-convierte-en-algo-más--36655f95-1",
+      "translationHash": "36655f95db7c1f4cfe2f9579f83bf89f66c57b834f405d5d8fc2aa25864ce42f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Markdown as agent guidance"
+      ],
+      "sourceLineRange": [
+        98,
+        98
+      ],
+      "targetLineRange": [
+        98,
+        98
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance-heading-let-books-examples-for-agent-guidance-06a9b61d-1",
+      "sourceHash": "06a9b61dbe7d7d404c5d690ec36563e18cb4b7bc677f579bd2fd69d0927f1294",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente-heading-let-books-ejemplos-para-orientación-del-agente-c61f7831-1",
+      "translationHash": "c61f783157d2b484e598bbd0e62d2003f0c0803b2f526c0ce053cdd8443578cd",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance"
+      ],
+      "sourceLineRange": [
+        100,
+        100
+      ],
+      "targetLineRange": [
+        100,
+        100
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/android-debugging-workflow-heading-android-debugging-workflow-36cbc4dc-1",
+      "sourceHash": "36cbc4dcdb051847f6f9fafe93ab037d173c8a6bed1d59bbd6e1c778b5cec6d6",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/flujo-de-trabajo-de-depuración-de-android-heading-flujo-de-trabajo-de-depuración-de-android-54f08b56-1",
+      "translationHash": "54f08b56097c37b4ea180d932cb79208c7105c6670fc3162c86d3eee6d1f017c",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Android debugging workflow"
+      ],
+      "sourceLineRange": [
+        102,
+        102
+      ],
+      "targetLineRange": [
+        102,
+        102
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/android-debugging-workflow-paragraph-is-a-strong-example-5b50b126-1",
+      "sourceHash": "5b50b1266e06fb668c01c3594858648c0c83dc6ee1095e6b60dcf04d2ce9b4e6",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/flujo-de-trabajo-de-depuración-de-android-paragraph-es-un-buen-ejemplo-b55304d6-1",
+      "translationHash": "b55304d657b8b029de66f1d8633ff36daf25d02106df01947deed14eab7dbc92",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Android debugging workflow"
+      ],
+      "sourceLineRange": [
+        104,
+        104
+      ],
+      "targetLineRange": [
+        104,
+        104
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/android-debugging-workflow-paragraph-it-is-readable-as-a-human-guide-but-it-also-gives-an-agent-c-ef7cbb77-1",
+      "sourceHash": "ef7cbb77dcdfde561fcc8ed46a38ea3318abffb9dca70fbfe5029f70d77080dd",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/flujo-de-trabajo-de-depuración-de-android-paragraph-es-legible-como-una-guía-humana-pero-también-le-brinda-al-ag-ae1ce124-1",
+      "translationHash": "ae1ce1247453fbbda7faa2776ca662129ebc7a778ab5d60f32718a28975ba8a7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Android debugging workflow"
+      ],
+      "sourceLineRange": [
+        106,
+        106
+      ],
+      "targetLineRange": [
+        106,
+        106
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/android-debugging-workflow-list-prefer-physical-android-devices-over-desktop-emulation-for-c-1676b379-1",
+      "sourceHash": "1676b3795322a161dfc4e1f1919daa8233eb9f6909929508966c1b322d7f78ce",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/flujo-de-trabajo-de-depuración-de-android-list-prefiera-dispositivos-android-físicos-a-la-emulación-de-escr-ddde5670-1",
+      "translationHash": "ddde5670397cc06e3e30b7f0f7d2720f23317fa4c7d9163fbe50aa5b4e4036d6",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Android debugging workflow"
+      ],
+      "sourceLineRange": [
+        108,
+        111
+      ],
+      "targetLineRange": [
+        108,
+        111
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/android-debugging-workflow-paragraph-that-kind-of-markdown-does-not-just-describe-a-domain-it-act-0e1a237c-1",
+      "sourceHash": "0e1a237ce0e058beac9c147f304e6ccd1ef5968e6c0177761e4659bf644fc0dc",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/flujo-de-trabajo-de-depuración-de-android-paragraph-ese-tipo-de-artículo-markdown-no-se-limita-a-describir-un-do-1a75011f-1",
+      "translationHash": "1a75011fb0699eb073c52ee8c62c5f22186c0c2b9476db41e1009c4b0efaceb1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Android debugging workflow"
+      ],
+      "sourceLineRange": [
+        113,
+        113
+      ],
+      "targetLineRange": [
+        113,
+        113
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/tooling-and-environment-preparation-heading-tooling-and-environment-preparation-a52fae37-1",
+      "sourceHash": "a52fae37f17f2a17cd45e9b8bc68840df25a88a90ca0eba02e2d679bd9bb7029",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/preparación-de-herramientas-y-entorno-heading-preparación-de-herramientas-y-entorno-8174f832-1",
+      "translationHash": "8174f832946624f9e5672b678df29fda0ee886b83ff823f2ea09ede4eff1bf8a",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Tooling and environment preparation"
+      ],
+      "sourceLineRange": [
+        115,
+        115
+      ],
+      "targetLineRange": [
+        115,
+        115
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/tooling-and-environment-preparation-paragraph-is-another-good-example-e5d16de1-1",
+      "sourceHash": "e5d16de113ed03bb1cfad760b42d77da26fd25747169dff6104a84dc0a2f9da6",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/preparación-de-herramientas-y-entorno-paragraph-es-otro-buen-ejemplo-63a1d2a1-1",
+      "translationHash": "63a1d2a181e7d27e275f522bcc7dbdfcfca9b53665c0a1451342ae5f1e56dc1e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Tooling and environment preparation"
+      ],
+      "sourceLineRange": [
+        117,
+        117
+      ],
+      "targetLineRange": [
+        117,
+        117
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/tooling-and-environment-preparation-paragraph-it-reads-like-contributor-setup-documentation-but-it-also-te-17d53ec3-1",
+      "sourceHash": "17d53ec3e2902beb7509dc14401b40b8e6699a9fe290a32684c74b0039dbf4cf",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/preparación-de-herramientas-y-entorno-paragraph-se-lee-como-documentación-de-configuración-del-colaborador-p-299073b7-1",
+      "translationHash": "299073b7bf7e5c1163067125e18044ed8a619e43395c23ec1a25ae4c633ce51e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Tooling and environment preparation"
+      ],
+      "sourceLineRange": [
+        119,
+        119
+      ],
+      "targetLineRange": [
+        119,
+        119
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/tooling-and-environment-preparation-list-playwright-for-ui-verification-and-screenshots-70b27a3e-1",
+      "sourceHash": "70b27a3e701540e90044d27e1ee38145faa78933c124cfb4dc6152836e3232ff",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/preparación-de-herramientas-y-entorno-list-playwright-para-verificación-de-ui-y-capturas-de-pantalla-1085558b-1",
+      "translationHash": "1085558bcdde92868daf827e97ad1f9b47bd8631af667120250801d0eafd7ad2",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Tooling and environment preparation"
+      ],
+      "sourceLineRange": [
+        121,
+        124
+      ],
+      "targetLineRange": [
+        121,
+        124
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-examples-for-agent-guidance/tooling-and-environment-preparation-paragraph-this-kind-of-markdown-helps-an-agent-reason-about-the-expect-583327d4-1",
+      "sourceHash": "583327d4a8aa3fdfd15887b3eaf08bb6239128d96c151b3199ade865229a4d30",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-ejemplos-para-orientación-del-agente/preparación-de-herramientas-y-entorno-paragraph-este-tipo-de-markdown-ayuda-al-agente-a-razonar-sobre-la-cad-32b23db1-1",
+      "translationHash": "32b23db1febea13184bb00b91f334f99870182388e374709ce2e094efdf77a0c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books examples for agent guidance",
+        "Tooling and environment preparation"
+      ],
+      "sourceLineRange": [
+        126,
+        126
+      ],
+      "targetLineRange": [
+        126,
+        126
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-implication-heading-practical-implication-7923dfb5-1",
+      "sourceHash": "7923dfb500498d15a0d1359ac28dc5454c5c3a45056fa4632f31730527dae8f3",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/implicaciones-prácticas-heading-implicaciones-prácticas-a5337343-1",
+      "translationHash": "a5337343abcca2d6af55fae820cd3ebeab360349a069828525d8d11f978f8fa4",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical implication"
+      ],
+      "sourceLineRange": [
+        128,
+        128
+      ],
+      "targetLineRange": [
+        128,
+        128
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-implication-paragraph-when-writing-markdown-for-a-repository-that-may-be-used-by-a-d4dff375-1",
+      "sourceHash": "d4dff3756c16dccac515e65ada33aad14687b1ac6d23c8afb6c9fdd850f75cc0",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/implicaciones-prácticas-paragraph-al-redactar-el-artículo-markdown-para-un-repositorio-que-pue-c97a4b08-1",
+      "translationHash": "c97a4b0893ed384254702d98135b53ccab80ebddc8c476b8257c3ea33b95e2d8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical implication"
+      ],
+      "sourceLineRange": [
+        130,
+        130
+      ],
+      "targetLineRange": [
+        130,
+        130
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-implication-list-the-human-contributor-who-needs-explanation-189abdea-1",
+      "sourceHash": "189abdea9d51a91e337c4f2df578f72eaac54eea76341b84f719cccd4000b633",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/implicaciones-prácticas-list-el-colaborador-humano-que-necesita-explicación-686ea48c-1",
+      "translationHash": "686ea48c56a1d81d0a4ecef25c7643eacd70fe894f867afdba05cb6b9bd39ca1",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical implication"
+      ],
+      "sourceLineRange": [
+        132,
+        133
+      ],
+      "targetLineRange": [
+        132,
+        133
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-implication-paragraph-the-best-documents-do-both-7d428cf8-1",
+      "sourceHash": "7d428cf8f22f34b61d410fd48796453a3a329ebe0ba13c60223439bad792b63e",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/implicaciones-prácticas-paragraph-los-mejores-documentos-hacen-ambas-cosas-7f1b56e4-1",
+      "translationHash": "7f1b56e4e35e88649a4667d614eddced17d66ea1185c64a68f254ee2c52ed69c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical implication"
+      ],
+      "sourceLineRange": [
+        135,
+        135
+      ],
+      "targetLineRange": [
+        135,
+        135
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-implication-paragraph-they-remain-readable-tutorials-or-guides-for-people-while-al-15248d3f-1",
+      "sourceHash": "15248d3f66e24a5126404d1848c2617466948aeddfeb4409f4e508d892b06f26",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/implicaciones-prácticas-paragraph-siguen-siendo-tutoriales-o-guías-legibles-para-las-personas--47b5d658-1",
+      "translationHash": "47b5d658d8beb1b2194f78d0c9b39de12cc759cffcbcae5b53842d5692bf52a5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical implication"
+      ],
+      "sourceLineRange": [
+        137,
+        137
+      ],
+      "targetLineRange": [
+        137,
+        137
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-contexto-heading-let-books-contexto-b4f00b4e-1",
+      "translationHash": "b4f00b4e259c58499c21a25c23eafe9d1e60aeff9eeb484ba4fe59822eaed760",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        139,
+        139
+      ],
+      "targetLineRange": [
+        139,
+        139
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-context-paragraph-the-let-books-repository-already-uses-markdown-for-several-p-c817efca-1",
+      "sourceHash": "c817efca7cd6bafdd62030a5904766931d40f77118962b7f65dafca7f686af26",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-contexto-paragraph-el-repositorio-let-books-ya-utiliza-markdown-para-varias-cap-c8d851ff-1",
+      "translationHash": "c8d851ff9ed4b93a4580a1a002cc2dd17660afae8f7c9a45317c2940e098a412",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        141,
+        141
+      ],
+      "targetLineRange": [
+        141,
+        141
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-context-list-list-651437cb-1",
+      "sourceHash": "651437cbaf1839c6b34c92f65160886383eb065176a3161d8f2c9cff4458a0ff",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-contexto-list-list-b1462525-1",
+      "translationHash": "b1462525df584e85cf9958c263df11aeafb61899bfa0bbec779c881704f76702",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        143,
+        147
+      ],
+      "targetLineRange": [
+        143,
+        147
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/let-books-context-paragraph-this-is-a-good-example-of-markdown-being-used-not-only-for-p-12b2f00d-1",
+      "sourceHash": "12b2f00dd1c11820e66b4bee31ba820d199c7288d442e5d3e6b49197960e2045",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/let-books-contexto-paragraph-este-es-un-buen-ejemplo-del-uso-del-artículo-markdown-no-sol-27bf48d5-1",
+      "translationHash": "27bf48d52c5d34e02cf836c85af29eebcd891b5fdd1acf415cc7c45f89edaf46",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        149,
+        149
+      ],
+      "targetLineRange": [
+        149,
+        149
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-rule-heading-practical-rule-50b270a1-1",
+      "sourceHash": "50b270a15bbafdecbbf5f93b8110979b7aa55f9e3d6d5611329a98b38e9e2ea0",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/regla-práctica-heading-regla-práctica-39c5308e-1",
+      "translationHash": "39c5308ee0883c8a3b3c6b99cfd39c889e172ca8e31b3e61404ca4d8264b44ca",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical rule"
+      ],
+      "sourceLineRange": [
+        151,
+        151
+      ],
+      "targetLineRange": [
+        151,
+        151
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-rule-paragraph-a-useful-rule-is-simple-1a1e9801-1",
+      "sourceHash": "1a1e9801f8092743ffdca05ffedc3c2bdee7c4a146dcaa9955060320c6467771",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/regla-práctica-paragraph-una-regla-útil-es-simple-1ce498cc-1",
+      "translationHash": "1ce498ccf3d03883afabf5bb6547935f0107b3fee5f19a5c52f2ce20361d8370",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical rule"
+      ],
+      "sourceLineRange": [
+        153,
+        153
+      ],
+      "targetLineRange": [
+        153,
+        153
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-rule-paragraph-use-markdown-to-make-product-intent-visible-reviewable-and-l-2b2370e9-1",
+      "sourceHash": "2b2370e97b1298187f21ae226e8ce039ac52c922f6caf61ca4e1f0594b8c2fb0",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/regla-práctica-paragraph-utilice-markdown-para-hacer-que-la-intención-del-producto-se-52cbde7f-1",
+      "translationHash": "52cbde7fef47b8289e6acf678cb1b0997f53cc5a959af41fb73729664b7d6e68",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical rule"
+      ],
+      "sourceLineRange": [
+        155,
+        155
+      ],
+      "targetLineRange": [
+        155,
+        155
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-rule-paragraph-truth-still-depends-on-f330c599-1",
+      "sourceHash": "f330c5995fb4896c1779d676caf0da7fed384059a30b57d2903255d9b7de0a49",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/regla-práctica-paragraph-la-verdad-todavía-depende-de-03c3f569-1",
+      "translationHash": "03c3f569fe63ecedd6171e3daf0665619325993a03e09f03d192a908ee334b66",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical rule"
+      ],
+      "sourceLineRange": [
+        157,
+        157
+      ],
+      "targetLineRange": [
+        157,
+        157
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/practical-rule-list-clear-authority-63f33d3c-1",
+      "sourceHash": "63f33d3cdf5f28c42c0cf6346cf2e14e8ce6a6a204dbe7c5ed856378d6a8acd3",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/regla-práctica-list-autoridad-clara-bddf03f0-1",
+      "translationHash": "bddf03f0cc024303def6546dc31dd4d29b803615f57b942832c7ea71da502b7f",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Practical rule"
+      ],
+      "sourceLineRange": [
+        159,
+        162
+      ],
+      "targetLineRange": [
+        159,
+        162
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/páginas-relacionadas-heading-páginas-relacionadas-53fedaf6-1",
+      "translationHash": "53fedaf649bb4901a1b3e2675a2210b6a5a1ee9a167a89feb4e8888299a2c9b0",
+      "blockType": "heading",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        164,
+        164
+      ],
+      "targetLineRange": [
+        164,
+        164
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "markdown-in-product-development/related-pages-list-list-58fbb601-1",
+      "sourceHash": "58fbb601dcf905a8550225cee63a399bf3363f18d975d6964f367309492c7614",
+      "targetBlockId": "markdown-en-desarrollo-de-productos/páginas-relacionadas-list-list-9096e91f-1",
+      "translationHash": "9096e91f5606e0438d2c3744a3db7895743435db04ff4e50583d228fff8547c7",
+      "blockType": "list",
+      "headingPath": [
+        "Markdown in Product Development",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        166,
+        169
+      ],
+      "targetLineRange": [
+        166,
+        169
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

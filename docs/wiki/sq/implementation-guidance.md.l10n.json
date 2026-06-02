@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/implementation-guidance.md",
+  "targetPath": "docs/wiki/sq/implementation-guidance.md",
+  "locale": "sq",
+  "blocks": [
+    {
+      "blockId": "implementation-guidance-heading-implementation-guidance-17406aeb-1",
+      "sourceHash": "17406aeb41ac1286e4f5ec43f74b6fb7cff0b88e51a01c71e8f7394f016fd79f",
+      "targetBlockId": "udhëzues-zbatimi-heading-udhëzues-zbatimi-5a2484f0-1",
+      "translationHash": "5a2484f05b3a71820b285738e14cba1db8b31ce51f96be0e396b1efb712a24cc",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "udhëzues-zbatimi/përmbledhje-heading-përmbledhje-b2a9a257-1",
+      "translationHash": "b2a9a2571fe6b336285bffcb1a9ec375f50a4c8f2b93797d7e499f92b96d2e46",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/summary-paragraph-implementation-guidance-defines-how-a-team-should-deliver-wo-b885753c-1",
+      "sourceHash": "b885753ca6cc4c238f202f3c8b5253b44ced449a17ebd9e17d30099e154a43f5",
+      "targetBlockId": "udhëzues-zbatimi/përmbledhje-paragraph-udhëzimi-i-zbatimit-përcakton-se-si-një-ekip-duhet-të-dorëzo-376922dc-1",
+      "translationHash": "376922dcc21bdb933896863fda627283278e58514fceab59d4ccc2a0c4d82cba",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-heading-role-ae2d08dc-1",
+      "sourceHash": "ae2d08dcf5603d2b87a9d892befdf02dcb90aeb4464cd78cc4344528268828f2",
+      "targetBlockId": "udhëzues-zbatimi/roli-heading-roli-6f4268aa-1",
+      "translationHash": "6f4268aa4f28dadf66be9308588654144e4dc0c456599bff1f3c329c65623852",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-implementation-guidance-sits-below-the-product-specification-a770f1b1-1",
+      "sourceHash": "a770f1b19f1c4ccc2dbdcad371b790de0dd7129121c4b6d621f0e3ec0f2be950",
+      "targetBlockId": "udhëzues-zbatimi/roli-paragraph-udhëzimet-e-zbatimit-janë-nën-specifikimet-e-produktit-e051952b-1",
+      "translationHash": "e051952bb2abf65e2783848f82fbd3776e558a3de1e162f4a02df254509ab9d6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-paragraph-it-helps-answer-questions-such-as-9fdbda09-1",
+      "sourceHash": "9fdbda0903b09135aa722d09c16c36a00f7bd86f686a4eca2da6fba9679771e7",
+      "targetBlockId": "udhëzues-zbatimi/shembuj-të-zakonshëm-paragraph-udhëzimet-e-zbatimit-shpesh-përfshijnë-7090809d-1",
+      "translationHash": "7090809d4f98587ad2cc5a588c095c0e22eadfaaebb6fdcf7933f69a1dca1244",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/role-list-how-public-naming-should-work-1d4672ce-1",
+      "sourceHash": "1d4672ce6edb9252fb49c1d64973699d8a33a1b72567e1b7e8f821e2bbf31ea4",
+      "targetBlockId": "udhëzues-zbatimi/roli-list-si-duhet-të-funksionojë-emërtimi-publik-d4d3448e-1",
+      "translationHash": "d4d3448e4778cc7b4ede8cd24adb6dc7d5e7482f63469fe055c9343daab9342a",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Role"
+      ],
+      "sourceLineRange": [
+        22,
+        26
+      ],
+      "targetLineRange": [
+        22,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-heading-difference-from-product-specification-19aa4de1-1",
+      "sourceHash": "19aa4de108d0c68d0f9399db9a2597530858c1587b202022f3ce4a5068586c9b",
+      "targetBlockId": "udhëzues-zbatimi/ndryshimi-nga-specifikimi-i-produktit-heading-ndryshimi-nga-specifikimi-i-produktit-4ea74832-1",
+      "translationHash": "4ea74832c92127e3eb3ab928b636bf663d69328f1e28218809a24e35d55e382f",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-the-product-specification-defines-what-the-product-is-and-wh-5f6771d0-1",
+      "sourceHash": "5f6771d0e9d46c39a875b4ea05be3fef8c8745d2c4f264e5ace62430c3a1d92f",
+      "targetBlockId": "udhëzues-zbatimi/ndryshimi-nga-specifikimi-i-produktit-paragraph-specifikimi-i-produktit-përcakton-se-çfarë-është-produkti-dh-c8671b6d-1",
+      "translationHash": "c8671b6d55a280bc9e114f05444c57fc1f1334e34618a268abe928401a3ea835",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-implementation-guidance-defines-how-contributors-should-carr-ca601bd7-1",
+      "sourceHash": "ca601bd77521b48fbfaa56cd1af17f4129e198bd8dd019fc77373535e5d06daa",
+      "targetBlockId": "udhëzues-zbatimi/ndryshimi-nga-specifikimi-i-produktit-paragraph-udhëzimi-i-zbatimit-përcakton-se-si-kontribuuesit-duhet-të-k-6a712f5f-1",
+      "translationHash": "6a712f5f378c7812d42738296b60fb2e4cb6f43cdb667fc68d6687ae09a00748",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/difference-from-product-specification-paragraph-this-distinction-is-useful-because-not-every-repository-rule-87ff1db0-1",
+      "sourceHash": "87ff1db07149d1658e5affe437c66dfcb010b9220d65b3307f6f4fb02ea19a3d",
+      "targetBlockId": "udhëzues-zbatimi/ndryshimi-nga-specifikimi-i-produktit-paragraph-ky-dallim-është-i-dobishëm-sepse-jo-çdo-rregull-i-depove-ësh-45a5ed58-1",
+      "translationHash": "45a5ed58288ac4fce5830dd1a3a1f7df310522ec6f06f0282ddc3fb845cc51d1",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Difference from product specification"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": [
+        34,
+        34
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-heading-common-examples-5752ba62-1",
+      "sourceHash": "5752ba6250773f396d4e2eeec55bdd9497ee2aae886fa62b999250ff6cb5cf12",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-heading-let-books-kontekst-36b98086-1",
+      "translationHash": "36b98086e92148f1c1f372ed211c62fe8d9e8e21fc4ea2ab4bf0728eb156b3b6",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        60,
+        60
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-implementation-guidance-often-includes-83ad37c7-1",
+      "sourceHash": "83ad37c7ed27c3debb85f041e6439186e383bda0e8ea0fe5c8d9185b0420c5e6",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-paragraph-në-let-books-është-shtresa-e-udhëzimit-taktik-13406e54-1",
+      "translationHash": "13406e5496b188848d5994b4fc224d41f945cc08da2c325be1b35013f4fae9aa",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        62,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-list-naming-and-branding-rules-b7cce9dd-1",
+      "sourceHash": "b7cce9ddc123debdb53a24aad3da82351d90a38dbeff1f34b07a497e09618eff",
+      "targetBlockId": "udhëzues-zbatimi/shembuj-të-zakonshëm-list-rregullat-e-emërtimit-dhe-markës-ad34d051-1",
+      "translationHash": "ad34d051d21ed3f55f07b02aad53ea3f5a8ad3005a2da593b6b239483b8d7c88",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        40,
+        45
+      ],
+      "targetLineRange": [
+        40,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/common-examples-paragraph-these-rules-often-live-well-in-markdown-because-they-need-to-dc1bded5-1",
+      "sourceHash": "dc1bded5fdc33f2576ccd4e926678a729031ec00cce03af41746fe9c157f0f70",
+      "targetBlockId": "udhëzues-zbatimi/shembuj-të-zakonshëm-paragraph-këto-rregulla-shpesh-jetojnë-mirë-në-markdown-sepse-ato-duhe-2163605c-1",
+      "translationHash": "2163605ce5e8b1e76bb07e2318a6ba05d9f4ae7c4d2916807764c07237e71084",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Common examples"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-heading-why-it-matters-in-ai-assisted-work-388d76e1-1",
+      "sourceHash": "388d76e10796665a57d3c660e503a64f1c5f36b9bedafab89894aebb6c9d8618",
+      "targetBlockId": "udhëzues-zbatimi/pse-ka-rëndësi-në-punën-e-asistuar-nga-ai-heading-pse-ka-rëndësi-në-punën-e-asistuar-nga-ai-529f733d-1",
+      "translationHash": "529f733d2b4c529d0aba6452344c0d10c0adb33f3a4b370356556fe7a2450f13",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        49,
+        49
+      ],
+      "targetLineRange": [
+        49,
+        49
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-ai-assistants-often-follow-the-nearest-concrete-instruction--0f14731c-1",
+      "sourceHash": "0f14731c60850e0f3123e2f42275a9baf8a784cc7186a5e3a3c1d0d4353492cc",
+      "targetBlockId": "udhëzues-zbatimi/pse-ka-rëndësi-në-punën-e-asistuar-nga-ai-paragraph-asistentët-e-ai-shpesh-ndjekin-udhëzimet-konkrete-më-të-afër-392df396-1",
+      "translationHash": "392df39615a31896d51dbdd235d471a6dec096b29e6b97b9a89bf61c7e41c70a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        51,
+        51
+      ],
+      "targetLineRange": [
+        51,
+        51
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-implementation-guidance-makes-those-rules-visible-without-po-08db9b33-1",
+      "sourceHash": "08db9b338bdcbed418f4b508d0c9a6cc08b693213b1996ad434a50b74d18a24a",
+      "targetBlockId": "udhëzues-zbatimi/pse-ka-rëndësi-në-punën-e-asistuar-nga-ai-paragraph-udhëzimi-i-zbatimit-i-bën-ato-rregulla-të-dukshme-pa-e-ndotu-23910b1a-1",
+      "translationHash": "23910b1aea0f8cfb9476df15dc088cbe6402fd79a8dacd300bc61fa663b5519a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        53,
+        53
+      ],
+      "targetLineRange": [
+        53,
+        53
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-paragraph-in-practice-that-means-a-markdown-guidance-file-can-do-two-j-0549c21c-1",
+      "sourceHash": "0549c21c7ded1476d866126afa42c4974a70085fce5b61e4464e4a96ae443d04",
+      "targetBlockId": "udhëzues-zbatimi/pse-ka-rëndësi-në-punën-e-asistuar-nga-ai-paragraph-në-praktikë-kjo-do-të-thotë-se-një-skedar-udhëzues-markdown--e0796b11-1",
+      "translationHash": "e0796b112edb3a0ee1dd3925fc1d8e1da82dac706b391645139fa277b505f0cf",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        55,
+        55
+      ],
+      "targetLineRange": [
+        55,
+        55
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/why-it-matters-in-ai-assisted-work-list-explain-the-workflow-to-a-human-contributor-f74c8828-1",
+      "sourceHash": "f74c8828754abe76af0b01bc03008207a992c0d2f483702f15d600a6a41c3de9",
+      "targetBlockId": "udhëzues-zbatimi/pse-ka-rëndësi-në-punën-e-asistuar-nga-ai-list-shpjegoni-rrjedhën-e-punës-një-kontribuesi-njerëzor-ab9841ab-1",
+      "translationHash": "ab9841abe3024df807b04c9cf28373eb236cf85b875dd46db708c60dbefae4f1",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Why it matters in AI-assisted work"
+      ],
+      "sourceLineRange": [
+        57,
+        58
+      ],
+      "targetLineRange": [
+        57,
+        58
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "udhëzues-zbatimi/faqe-të-ngjashme-heading-faqe-të-ngjashme-329e1d64-1",
+      "translationHash": "329e1d642ec382e0d95cb8c2bd02be409aaba3b96f1f9c0ef614a422aec4cad2",
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        60,
+        60
+      ],
+      "targetLineRange": [
+        84,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-in-let-books-is-the-tactical-guidance-layer-ea4f5a74-1",
+      "sourceHash": "ea4f5a74e1505a4d39fce8680b0dc5e760562377dc8453e5cf41237d9144d8f9",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-paragraph-kjo-e-bën-atë-shoqërues-operacional-të-jo-një-zëvendësim-për-eb5c15da-1",
+      "translationHash": "eb5c15da11523dff7e867c8ade9641841ca6490e012762030eee2807b8217662",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        62,
+        62
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-it-covers-areas-such-as-8c247200-1",
+      "sourceHash": "8c24720082c0b5176a9472d442bda2f9600cc45b70a23a0c14662053bbd93fc4",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-paragraph-ai-mbulon-fusha-të-tilla-si-968c5c0b-1",
+      "translationHash": "968c5c0bf03ba5bfb1be8d7e2d56298f4253ae73a4b58835ef8bbcc645e76ddb",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-public-naming-b5784969-1",
+      "sourceHash": "b5784969c6461e590d4102db31e17728b329563b62099522e59c7b7decc7f6d6",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-list-emërtimi-publik-f03dd847-1",
+      "translationHash": "f03dd8471068a49ee83dc59fe240663902a6f2a24806a12ff6b2228df65b8152",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        66,
+        73
+      ],
+      "targetLineRange": [
+        66,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-that-makes-it-the-operational-companion-to-not-a-replacement-c99166b6-1",
+      "sourceHash": "c99166b631f2ba172bcb42e39af5c9837314d5c1426afb8e2a0c3da013cb3200",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-paragraph-udhëzime-të-tjera-markdown-në-repo-përforcojnë-të-njëjtin-mo-25dcb6f4-1",
+      "translationHash": "25dcb6f47261c7abe9a95dd30670d9782372fee7699e3dca732f95d6f0611f1c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-other-markdown-guidance-in-the-repo-reinforces-the-same-patt-498165ac-1",
+      "sourceHash": "498165acde9e9411467ddedd51c8d039febd7352d7c380352275f046e943eca2",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-paragraph-këto-dokumente-janë-të-lexueshme-si-udhëzime-njerëzore-por-a-8bbdbde4-1",
+      "translationHash": "8bbdbde4f37e5c0875c0b3cc08998cf11d918e4ad543167e064839452a6fa587",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        82,
+        82
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-list-directs-debugging-workflow-choices-such-as-cdp-attach-versus-a6021b0d-1",
+      "sourceHash": "a6021b0dc1a7627da7ce3185f6a7a48b1ecba38f5d0cbe61bdc8f38b860e3392",
+      "targetBlockId": "udhëzues-zbatimi/let-books-kontekst-list-drejton-zgjedhjet-e-rrjedhës-së-punës-për-korrigjimin-e-gabi-16cdd0f1-1",
+      "translationHash": "16cdd0f1ea1c6896e3d492f974f4d3bca373ce7df651046c95f8e96f7e188bdb",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        80
+      ],
+      "targetLineRange": [
+        79,
+        80
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "implementation-guidance/let-books-context-paragraph-these-documents-are-readable-as-human-guidance-but-they-also-630297df-1",
+      "sourceHash": "630297df4f338ad47a526d14fbdf13c761429fc4e9ab5778185a551b2c462d89",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "Implementation Guidance",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        82,
+        82
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        84,
+        84
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "implementation-guidance/related-pages-list-list-67281e84-1",
+      "sourceHash": "67281e846189b0a6088c4a1d84c0ca587e7968ec43f54ce1b74b8953a9b68055",
+      "targetBlockId": "udhëzues-zbatimi/faqe-të-ngjashme-list-list-d1e0b4df-1",
+      "translationHash": "d1e0b4df7ec75db70c3fb4c4dae3bd6e879d9bdc77c2c6c678cc8dcae8d44fe1",
+      "blockType": "list",
+      "headingPath": [
+        "Implementation Guidance",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        86,
+        89
+      ],
+      "targetLineRange": [
+        86,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

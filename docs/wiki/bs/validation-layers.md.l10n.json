@@ -1,0 +1,731 @@
+{
+  "version": 1,
+  "sourcePath": "docs/wiki/validation-layers.md",
+  "targetPath": "docs/wiki/bs/validation-layers.md",
+  "locale": "bs",
+  "blocks": [
+    {
+      "blockId": "validation-layers-heading-validation-layers-8fc7d42a-1",
+      "sourceHash": "8fc7d42a448384d07de04eeb8358dbc395893dd434da5d1a0e420c1461a0cfcb",
+      "targetBlockId": "validacijski-slojevi-heading-validacijski-slojevi-03c9f6e4-1",
+      "translationHash": "03c9f6e4a16f7d9f9ee8a64763a1ac11df371c5e4b4d83e23c97eba168e80484",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "validacijski-slojevi/sažetak-heading-sažetak-0387b161-1",
+      "translationHash": "0387b1618a7d7a13d0724d2df6de75eddfa6c84323159d89bcc4b9a87f9bfdc5",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/summary-paragraph-validation-layers-are-the-different-ways-a-project-checks-wh-9ca8a81c-1",
+      "sourceHash": "9ca8a81c9d587176b4acf8aa617b67e2c3d3b22275c55ad561fb236c994a5195",
+      "targetBlockId": "validacijski-slojevi/sažetak-paragraph-validacijski-slojevi-su-različiti-načini-na-koje-projekat-pr-347261de-1",
+      "translationHash": "347261de8f1335e1910ea0edd5c995c96d31a48e75dd2e99fce8937102a456d5",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-heading-why-layers-matter-de7c66ed-1",
+      "sourceHash": "de7c66ed13662850485f1ea31985a3336efba9529f86857fd2c716dcb57e3663",
+      "targetBlockId": "validacijski-slojevi/zašto-su-slojevi-važni-heading-zašto-su-slojevi-važni-2c0b3604-1",
+      "translationHash": "2c0b360456ed69da9ef34cd98237914bde90d03a506f7462b5e142f6a617d205",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-no-single-validation-method-is-enough-fe0d1f2a-1",
+      "sourceHash": "fe0d1f2a1f5f6f1b221a3497bc1aae69d96733177d982a7854fba57dda83f128",
+      "targetBlockId": "validacijski-slojevi/zašto-su-slojevi-važni-paragraph-nijedan-metod-validacije-nije-dovoljan-6f5fd11e-1",
+      "translationHash": "6f5fd11e84a52c880def425b98730083351de5b0e894239dfb75e3549a9aab30",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-list-documentation-alone-does-not-enforce-behavior-9350d201-1",
+      "sourceHash": "9350d20175c42d4972f4868a0f88d65d587ee9cb9bf9d62c7c548280601eb9d9",
+      "targetBlockId": "validacijski-slojevi/zašto-su-slojevi-važni-list-dokumentacija-sama-po-sebi-ne-sprovodi-ponašanje-d7e57600-1",
+      "translationHash": "d7e57600af73c1a5a34bb36db264d17b4085dfd3214ebcbf57a56c65b7396450",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        20,
+        22
+      ],
+      "targetLineRange": [
+        20,
+        22
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/why-layers-matter-paragraph-a-layered-approach-is-stronger-because-each-layer-catches-a--f830c6e2-1",
+      "sourceHash": "f830c6e22d9fb717df4169f2f2721881c55b2c0de79660ca5cd5165bfbfd1a25",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/1-specifikacija-i-smjernice-paragraph-bez-ovog-sloja-kasnije-provjere-mogu-biti-stroge-ali-proizvo-6361750d-1",
+      "translationHash": "6361750d58cbbefe6fc72f1e249b9c99be65ec1ac54b75ae3552f39351196246",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Why layers matter"
+      ],
+      "sourceLineRange": [
+        24,
+        24
+      ],
+      "targetLineRange": [
+        32,
+        32
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers-heading-common-validation-layers-d36d2283-1",
+      "sourceHash": "d36d228311ad2bcedc282493f24a4ae7db2dfbd0beae22b8c48cdd55a24abce8",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije-heading-uobičajeni-slojevi-validacije-18b5c8f7-1",
+      "translationHash": "18b5c8f75b02620c2f4e5364cb1de1bf637f75c05939b0a5bc3db3124aa5e6c9",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers"
+      ],
+      "sourceLineRange": [
+        26,
+        26
+      ],
+      "targetLineRange": [
+        26,
+        26
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-heading-1-specification-and-guidance-9bca2316-1",
+      "sourceHash": "9bca2316f9094450bae48d2cb4e781baf7f9e4661c60bd4c9466631191289539",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/1-specifikacija-i-smjernice-heading-1-specifikacija-i-smjernice-b6c07b61-1",
+      "translationHash": "b6c07b61a95b5162ac744c4f6fcd0cf0b2ad657153a33c5b2c96743078fa5bdf",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        28,
+        28
+      ],
+      "targetLineRange": [
+        28,
+        28
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-the-first-layer-defines-the-rule-29e62350-1",
+      "sourceHash": "29e6235038cafbe269f8a8f6fada7c569d13256440a5654b08637cea674f4efd",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/1-specifikacija-i-smjernice-paragraph-prvi-sloj-definira-pravilo-3f42033b-1",
+      "translationHash": "3f42033b61e86a1b406c3028912fbe58b8aedb57e04c9d92291fe3dec70bfce7",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        30,
+        30
+      ],
+      "targetLineRange": [
+        30,
+        30
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/1-specification-and-guidance-paragraph-without-this-layer-later-checks-may-be-strict-but-arbitrary-f8dfa57d-1",
+      "sourceHash": "f8dfa57db065721bcf4868d8ac1e8e25699e8372faf8795bf8447443f37f04f2",
+      "targetBlockId": "validacijski-slojevi/zašto-su-slojevi-važni-paragraph-slojeviti-pristup-je-jači-jer-svaki-sloj-hvata-različitu-kla-d93b8faf-1",
+      "translationHash": "d93b8fafd929681e5e7ac5746eb22ba216702a9a2018e63aae5a5822e00d32a4",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "1. Specification and guidance"
+      ],
+      "sourceLineRange": [
+        32,
+        32
+      ],
+      "targetLineRange": [
+        24,
+        24
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-heading-2-manual-review-ee208978-1",
+      "sourceHash": "ee208978c302d56366e8efa260c58d736c7a7ee45900f4819fbada21048a3316",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/2-ručni-pregled-heading-2-ručni-pregled-db6c6f0e-1",
+      "translationHash": "db6c6f0e6e049cc91c7800b2bab12fdcc0fdebd13abaf33fea47feec049cfda6",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        34,
+        34
+      ],
+      "targetLineRange": [
+        34,
+        34
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/2-manual-review-paragraph-human-review-checks-intent-edge-cases-and-product-meaning-th-0e169630-1",
+      "sourceHash": "0e1696304b449a3f4d598606de98407843596b705c926b7922a65c14da5e0569",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/2-ručni-pregled-paragraph-ljudski-pregled-provjerava-namjeru-rubne-slučajeve-i-značenj-768a02c5-1",
+      "translationHash": "768a02c5a93a757b2d478603e0abce900d94ae03f114aeb1f3ffa0431e66b618",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "2. Manual review"
+      ],
+      "sourceLineRange": [
+        36,
+        36
+      ],
+      "targetLineRange": [
+        36,
+        36
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-heading-3-local-validation-ac6f1462-1",
+      "sourceHash": "ac6f1462a6d8a68c0247e4a4908a8ae4327d22258e35ca044757c5221ce4cd9b",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/3-lokalna-validacija-heading-3-lokalna-validacija-1c9f26dd-1",
+      "translationHash": "1c9f26ddd80d391138e48d8378f4f8494614538d5d548ffe787fd1f2d9cf25a1",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        38,
+        38
+      ],
+      "targetLineRange": [
+        38,
+        38
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/3-local-validation-paragraph-scripts-and-structured-checks-catch-fast-repeatable-issues-b-717e3951-1",
+      "sourceHash": "717e39518bd098103a3aca92706ffbe3da9321f1af5bbf6bf1123685dbb159bf",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/3-lokalna-validacija-paragraph-skripte-i-strukturirane-provjere-hvataju-brze-ponovljive-pro-7acf2852-1",
+      "translationHash": "7acf2852ca43b1d478adeddba6c5318cb2a1291ffff1783a709c816eb627fe18",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "3. Local validation"
+      ],
+      "sourceLineRange": [
+        40,
+        40
+      ],
+      "targetLineRange": [
+        40,
+        40
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-heading-4-tests-a4d52503-1",
+      "sourceHash": "a4d52503e1757f1f98eb5342448e9a426444153393e2c4b16a194303d701c118",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/4-testovi-heading-4-testovi-bd148e6b-1",
+      "translationHash": "bd148e6bf9116e8565270cdf4fd52f35c5f591f347b066089e34b329bc00a3e6",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        42,
+        42
+      ],
+      "targetLineRange": [
+        42,
+        42
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/4-tests-paragraph-executable-tests-verify-expected-behavior-but-only-when-they-efb4830f-1",
+      "sourceHash": "efb4830fefcaedc6450ff243e40eb900d29dd0f19403993ad27aeb7c4ad82144",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/4-testovi-paragraph-izvršni-testovi-potvrđuju-očekivano-ponašanje-ali-samo-kada--d50ae609-1",
+      "translationHash": "d50ae60938c32b8b159b463d72daa6b080c4fab7bfd313de7927c4ee3510dc84",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "4. Tests"
+      ],
+      "sourceLineRange": [
+        44,
+        44
+      ],
+      "targetLineRange": [
+        44,
+        44
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-heading-5-ci-gates-47fd54b5-1",
+      "sourceHash": "47fd54b5bdef619cb4631d58c5c1c10a9c584141306a037a4fc21653bdc0be37",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/5-ci-kapije-heading-5-ci-kapije-3b91d3b4-1",
+      "translationHash": "3b91d3b413ffc9280b008b3303743a2400e607407514ed3547ddee3af614a818",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        46,
+        46
+      ],
+      "targetLineRange": [
+        46,
+        46
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/5-ci-gates-paragraph-ci-makes-checks-repeatable-and-visible-across-contributors-a-c165489d-1",
+      "sourceHash": "c165489d71acba9c6c3ff303ac4b0f2e334219bcf4a4ec39116511d8a31bbe50",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/5-ci-kapije-paragraph-ci-čini-provjere-ponovljivim-i-vidljivim-među-suradnicima-i--e6c73b15-1",
+      "translationHash": "e6c73b15251490c113e6e7f8830605616dca05811d7ebfd7a3864d63c1682606",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "5. CI gates"
+      ],
+      "sourceLineRange": [
+        48,
+        48
+      ],
+      "targetLineRange": [
+        48,
+        48
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-heading-6-deployment-checks-7ded19a6-1",
+      "sourceHash": "7ded19a62e691a0f7dcd180a47dcb512ae038bb1259f6c379bb5d582a39b42f8",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/6-provjere-implementacije-heading-6-provjere-implementacije-f53519b9-1",
+      "translationHash": "f53519b97d55648f6444e1048dad56d04b6f12d05c67e6b9a7bb8da4974ac53e",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        50,
+        50
+      ],
+      "targetLineRange": [
+        50,
+        50
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/common-validation-layers/6-deployment-checks-paragraph-deployment-workflows-confirm-that-the-built-artifacts-are-st-57ae91f8-1",
+      "sourceHash": "57ae91f876cb621a35b2b203719e61b95b434b76746f4b860dc32574c239825b",
+      "targetBlockId": "validacijski-slojevi/uobičajeni-slojevi-validacije/6-provjere-implementacije-paragraph-tokovi-rada-implementacije-potvrđuju-da-su-izgrađeni-artefak-35a7cc30-1",
+      "translationHash": "35a7cc3049a295846271b6acf15bf80c6de0c21b485b4b4c3d19e5fc7269a26e",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Common validation layers",
+        "6. Deployment checks"
+      ],
+      "sourceLineRange": [
+        52,
+        52
+      ],
+      "targetLineRange": [
+        52,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-heading-how-the-layers-should-relate-5abbf685-1",
+      "sourceHash": "5abbf685c82003af4f76f7b17b239c68a5e10886e635fb5d96286135c068391b",
+      "targetBlockId": "validacijski-slojevi/dobri-ciljevi-rane-validacije-heading-dobri-ciljevi-rane-validacije-7c751516-1",
+      "translationHash": "7c751516379a799b05e2a171975757437490d8bedbf81eac5237d5671a94a94e",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        64,
+        64
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-paragraph-the-layers-should-reinforce-each-other-in-order-ed7696fb-1",
+      "sourceHash": "ed7696fb89dad21de6d0ab78389cef04dd99c26c6029d89ea911f619fb5c8821",
+      "targetBlockId": "validacijski-slojevi/dobri-ciljevi-rane-validacije-paragraph-ove-provjere-su-obično-objektivne-i-jeftine-3bd49206-1",
+      "translationHash": "3bd49206060c70cb7fc70e245c24539c10f876c33df451f70eafa35ab8648999",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        75,
+        75
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/how-the-layers-should-relate-list-docs-and-specs-define-expectations-3287c347-1",
+      "sourceHash": "3287c3474c62f9cc18f90bd9b0a629668002cef1f6810d711dd7f46c14c876f7",
+      "targetBlockId": "validacijski-slojevi/kako-bi-slojevi-trebali-biti-povezani-list-dokumenti-i-specifikacije-definiraju-očekivanja-04c8dbc3-1",
+      "translationHash": "04c8dbc3b837c5064afc2f55947666f9927045643859be6a3af92cca4f86efc0",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "How the layers should relate"
+      ],
+      "sourceLineRange": [
+        58,
+        62
+      ],
+      "targetLineRange": [
+        58,
+        62
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-heading-good-early-validation-targets-9a1bb190-1",
+      "sourceHash": "9a1bb1905706c8f82d135df33b9cb8a22b468f9395fd81c03bd85008e81dd318",
+      "targetBlockId": "validacijski-slojevi/let-books-kontekst-heading-let-books-kontekst-36b98086-1",
+      "translationHash": "36b98086e92148f1c1f372ed211c62fe8d9e8e21fc4ea2ab4bf0728eb156b3b6",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        64,
+        64
+      ],
+      "targetLineRange": [
+        77,
+        77
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-examples-of-strong-early-candidates-include-c9763375-1",
+      "sourceHash": "c9763375fa7dedea8405c0ef457b34c593845252cf4081d6ac064481a1961395",
+      "targetBlockId": "validacijski-slojevi/dobri-ciljevi-rane-validacije-paragraph-primjeri-jakih-ranih-kandidata-uključuju-255a01aa-1",
+      "translationHash": "255a01aa90a2dfe1e40585f4d942a6df7502cc9e0cba83bf2e95cd796799fa48",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        66,
+        66
+      ],
+      "targetLineRange": [
+        66,
+        66
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-list-required-file-presence-760814ff-1",
+      "sourceHash": "760814ff407618e41f5aada2fa51cf01046d532216829f9dca95d69315edca08",
+      "targetBlockId": "validacijski-slojevi/dobri-ciljevi-rane-validacije-list-prisustvo-obavezne-datoteke-bb238075-1",
+      "translationHash": "bb238075fe90cd57d8e618de54c313c02f26efcd7c30df91802b793a246d7cc3",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        68,
+        73
+      ],
+      "targetLineRange": [
+        68,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/good-early-validation-targets-paragraph-these-checks-tend-to-be-objective-and-inexpensive-8696c3a5-1",
+      "sourceHash": "8696c3a5e12c535ad11726ae0b5fe9fd1fa27cdffc2cfd62e342ab080213a33e",
+      "targetBlockId": "validacijski-slojevi/let-books-kontekst-paragraph-to-čini-validaciju-dokumentiranim-sistemom-a-ne-samo-budućom-087f2686-1",
+      "translationHash": "087f2686800eef9ee30b5128e844282372582e83280c5df032107b060e3e090a",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Good early validation targets"
+      ],
+      "sourceLineRange": [
+        75,
+        75
+      ],
+      "targetLineRange": [
+        86,
+        86
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-heading-let-books-context-d3de6b63-1",
+      "sourceHash": "d3de6b6397b9b1ad5cc316e0f3bd3904487648ba2b3503308bddbab2413df95d",
+      "targetBlockId": "validacijski-slojevi/povezane-stranice-heading-povezane-stranice-0fe9a6ed-1",
+      "translationHash": "0fe9a6ed81c6e36327377add2c955ecc7c3d8c573e04f3a848806a12c4bb5a37",
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        77,
+        77
+      ],
+      "targetLineRange": [
+        88,
+        88
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-the-let-books-repository-already-documents-several-layers-in-8b6094e1-1",
+      "sourceHash": "8b6094e12930a5e462f2caa7062e957c2c691a02333dd81dd13aac5badb95a9f",
+      "targetBlockId": "validacijski-slojevi/let-books-kontekst-paragraph-repozitorijum-let-books-već-dokumentuje-nekoliko-slojeva-ukl-f14b5a2b-1",
+      "translationHash": "f14b5a2b5d2e3afa7081459fd3623df3991cf816afae7c07dc54ac172b26355b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        79,
+        79
+      ],
+      "targetLineRange": [
+        79,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-list-product-and-implementation-rules-in-and-0ca7f6c8-1",
+      "sourceHash": "0ca7f6c87a125de3c62bcacc00a61e7480fcdc65307f455f134f5c4daf5caf62",
+      "targetBlockId": "validacijski-slojevi/let-books-kontekst-list-pravila-o-proizvodima-i-implementaciji-u-i-0dbd92fc-1",
+      "translationHash": "0dbd92fc80bf6f18b4bb0a678f8d0b31ef61226986377d645414d9db5a28fff3",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        81,
+        84
+      ],
+      "targetLineRange": [
+        81,
+        84
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/let-books-context-paragraph-that-makes-validation-a-documented-system-rather-than-only-a-8bc5c1b0-1",
+      "sourceHash": "8bc5c1b0862f767317ebf7025a19ad05bc66e88134cafe7325fa308bf27cf580",
+      "targetBlockId": "validacijski-slojevi/kako-bi-slojevi-trebali-biti-povezani-paragraph-slojevi-bi-trebali-ojačati-jedan-drugog-kako-bi-0273325e-1",
+      "translationHash": "0273325e3a738e792e5cd03e1e4176402c0449770cef8467812c0acff08a352c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "Validation Layers",
+        "Let Books context"
+      ],
+      "sourceLineRange": [
+        86,
+        86
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-heading-related-pages-6fb705c8-1",
+      "sourceHash": "6fb705c8c1af46db70217c59933bad92c2397c6e9e6c5ebbe4e10dd30e9b95c2",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "heading",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        88,
+        88
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "validation-layers/related-pages-list-list-e4c5a672-1",
+      "sourceHash": "e4c5a672a57bb6464ea2fede5d68552893820dc484ebd4c279acd30d76a07100",
+      "targetBlockId": "validacijski-slojevi/povezane-stranice-list-list-544d02e8-1",
+      "translationHash": "544d02e8f5611fac2bce1516f0d19ba2a81903dec0941b2e955ef59c8f515224",
+      "blockType": "list",
+      "headingPath": [
+        "Validation Layers",
+        "Related Pages"
+      ],
+      "sourceLineRange": [
+        90,
+        93
+      ],
+      "targetLineRange": [
+        90,
+        93
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}

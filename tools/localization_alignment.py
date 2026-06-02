@@ -380,11 +380,20 @@ def build_sidecar_entries(
 
     return {
         "version": 1,
-        "sourcePath": str(Path(source_path).as_posix()),
-        "targetPath": str(Path(target_path).as_posix()),
+        "sourcePath": repo_relative_path(source_path),
+        "targetPath": repo_relative_path(target_path),
         "locale": locale,
         "blocks": blocks,
     }
+
+
+def repo_relative_path(file_path: str | Path) -> str:
+    path = Path(file_path)
+    resolved = path.resolve() if not path.is_absolute() else path
+    try:
+        return str(resolved.relative_to(ROOT_DIR).as_posix())
+    except ValueError:
+        return str(path.as_posix())
 
 
 def align_blocks(

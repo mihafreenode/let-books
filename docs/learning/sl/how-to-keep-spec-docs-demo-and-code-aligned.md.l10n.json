@@ -1,0 +1,1117 @@
+{
+  "version": 1,
+  "sourcePath": "docs/learning/how-to-keep-spec-docs-demo-and-code-aligned.md",
+  "targetPath": "docs/learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.md",
+  "locale": "sl",
+  "blocks": [
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned-heading-how-to-keep-spec-docs-demo-and-code-aligned-8fe6e740-1",
+      "sourceHash": "8fe6e740a5fd18ea38b42a3b6402438797a2bda4d37a26260002e7f91c9f228c",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds-heading-kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds-b565c60f-1",
+      "translationHash": "b565c60f8b8a48b670f3d110dbad531bea480191a571d214dd8c0f917ded1916",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned"
+      ],
+      "sourceLineRange": [
+        10,
+        10
+      ],
+      "targetLineRange": [
+        10,
+        10
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/summary-heading-summary-30ac03ff-1",
+      "sourceHash": "30ac03ff33731529441be8fbe52a3bd0d4c5ec830e806d54692168ebb7f98ada",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/povzetek-heading-povzetek-08850f25-1",
+      "translationHash": "08850f257d79e932092c786638a375dea8449fce5744b6a5c05c4807268fa170",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        12,
+        12
+      ],
+      "targetLineRange": [
+        12,
+        12
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/summary-paragraph-this-guide-describes-a-practical-workflow-for-keeping-produc-7929427a-1",
+      "sourceHash": "7929427a7159b9719d42bd6ae7b3fc1c14f4f7cdd3f1ffeae4d519897fa02cbf",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/povzetek-paragraph-ta-vodič-opisuje-praktičen-potek-dela-za-dolgoročno-usklajev-1ce0892e-1",
+      "translationHash": "1ce0892e94e3bcfd2d099f6111d8c4e7d8696741612ede58fe0575c9ae5592cc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Summary"
+      ],
+      "sourceLineRange": [
+        14,
+        14
+      ],
+      "targetLineRange": [
+        14,
+        14
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-core-problem-heading-the-core-problem-c78710da-1",
+      "sourceHash": "c78710da9654ec05a0959dcfcfb47ffe4398de02031d50fe99a5415dce794002",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/osrednji-problem-heading-osrednji-problem-30861b54-1",
+      "translationHash": "30861b54b6b0d1ccb95ab8095a11cd90b3257a52dfb3fdf5336d9ff013caead5",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The core problem"
+      ],
+      "sourceLineRange": [
+        16,
+        16
+      ],
+      "targetLineRange": [
+        16,
+        16
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-core-problem-paragraph-product-drift-rarely-begins-with-a-dramatic-mistake-it-usual-31c7064b-1",
+      "sourceHash": "31c7064be1fc5524660af809e59a3bf5cabc80bcea2d43ca81d62554f67a4189",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/osrednji-problem-paragraph-odmik-produkta-se-redko-začne-z-dramatično-napako-običajno-s-5b594f17-1",
+      "translationHash": "5b594f1781d41ce52f4955162c6bfcf499950155b6dce8c4c16fc61085ad9a5d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The core problem"
+      ],
+      "sourceLineRange": [
+        18,
+        18
+      ],
+      "targetLineRange": [
+        18,
+        18
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-core-problem-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/osrednji-problem-paragraph-primeri-e50360fb-1",
+      "translationHash": "e50360fbfb2c1d5bfdf61939a42755121890620ae835c5b479915743ca656880",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The core problem"
+      ],
+      "sourceLineRange": [
+        20,
+        20
+      ],
+      "targetLineRange": [
+        20,
+        20
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-core-problem-list-the-demo-adds-a-new-workflow-but-the-spec-is-never-updated-2bfc3958-1",
+      "sourceHash": "2bfc39588c172550f91b10d251f26be059ead67d30f74b351e6228e609c6a933",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/osrednji-problem-list-predstavitev-doda-nov-potek-dela-vendar-se-specifikacija-nik-86477713-1",
+      "translationHash": "864777136d5c310c9379d9b5cddd85a64f84df5c9086d05c50839489b1e08f09",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The core problem"
+      ],
+      "sourceLineRange": [
+        22,
+        25
+      ],
+      "targetLineRange": [
+        22,
+        25
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-core-problem-paragraph-ai-can-accelerate-all-of-these-if-the-alignment-workflow-is--f459df19-1",
+      "sourceHash": "f459df1997b1ae693a23415543cea182209d8368f20f1ad3cb4221bcb4f69747",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/osrednji-problem-paragraph-ai-lahko-vse-to-pospeši-če-je-potek-usklajevanja-šibek-10c56f45-1",
+      "translationHash": "10c56f45c9550b87d325ddc02e0626f31f07dcd7005353f148edebe7d6784380",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The core problem"
+      ],
+      "sourceLineRange": [
+        27,
+        27
+      ],
+      "targetLineRange": [
+        27,
+        27
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-alignment-model-heading-the-alignment-model-7ee23683-1",
+      "sourceHash": "7ee236838ee5beaafe2dd188e7f3af8582ba6bd72b2cc14d1ce37a0e1e2bc021",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela-heading-priporočen-potek-dela-c0d0eb58-1",
+      "translationHash": "c0d0eb580b2476545a4c25a6cad5cb9b3a294a41813399ecab05641b9d6c54a7",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The alignment model"
+      ],
+      "sourceLineRange": [
+        29,
+        29
+      ],
+      "targetLineRange": [
+        41,
+        41
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-alignment-model-paragraph-use-this-order-of-authority-2196fa12-1",
+      "sourceHash": "2196fa12830a900751045e4e2e5f4a02319f43aed849d1e7cbddbd3b7447ccdb",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/model-usklajevanja-paragraph-uporabite-ta-vrstni-red-avtoritete-a03ca06d-1",
+      "translationHash": "a03ca06d3d6bc220366e17d167e5eac960e10eccb7e9cc1094534055c0b35c33",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The alignment model"
+      ],
+      "sourceLineRange": [
+        31,
+        31
+      ],
+      "targetLineRange": [
+        31,
+        31
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-alignment-model-list-1-product-specification-17c81845-1",
+      "sourceHash": "17c81845d8f9e99694b44d048f05b7dfb29a486e0fdd15b0eb9ddd7b03214d7a",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/model-usklajevanja-list-1-produktna-specifikacija-f72efe14-1",
+      "translationHash": "f72efe14d9aac288c939fc8a8f54d671316accf760a04fe2caa8aff2b63df9b1",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The alignment model"
+      ],
+      "sourceLineRange": [
+        33,
+        37
+      ],
+      "targetLineRange": [
+        33,
+        37
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/the-alignment-model-paragraph-the-lower-layers-should-support-the-higher-layers-if-they-co-727821f7-1",
+      "sourceHash": "727821f7f54411c008fe65c7fdc0f9a63e9088e35ef92575f06f27a48b67b690",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/model-usklajevanja-paragraph-nižje-ravni-naj-podpirajo-višje-ravni-če-si-nasprotujejo-ver-1df3fc9f-1",
+      "translationHash": "1df3fc9f9ed83500570aae64b5d8202cd19a5bdbf57d70d5b36f4491af4405ed",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "The alignment model"
+      ],
+      "sourceLineRange": [
+        39,
+        39
+      ],
+      "targetLineRange": [
+        39,
+        39
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow-heading-recommended-workflow-3f33a51b-1",
+      "sourceHash": "3f33a51b14b7626227d6bd5b1212ad00391b8f65d72ab3bed332b3a1c301bba6",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/model-usklajevanja-heading-model-usklajevanja-65114873-1",
+      "translationHash": "65114873f01572b2014552e7d1591ffe2e724e4ae9d5faecf829cecf266f7bb3",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow"
+      ],
+      "sourceLineRange": [
+        41,
+        41
+      ],
+      "targetLineRange": [
+        29,
+        29
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/1-start-with-the-change-in-the-spec-heading-1-start-with-the-change-in-the-spec-1a85fd9e-1",
+      "sourceHash": "1a85fd9ead8d2d36680725ea8abc5033d0dfe7827a2e9d5310bb22503d5d1f66",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/1-začnite-s-spremembo-v-specifikaciji-heading-1-začnite-s-spremembo-v-specifikaciji-fa55cee9-1",
+      "translationHash": "fa55cee9595b8347c8e459466979419512912051b61ed187803bbaa9cea37274",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "1. Start with the change in the spec"
+      ],
+      "sourceLineRange": [
+        43,
+        43
+      ],
+      "targetLineRange": [
+        43,
+        43
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/1-start-with-the-change-in-the-spec-paragraph-if-a-user-visible-workflow-or-product-rule-changes-update-th-bb25450e-1",
+      "sourceHash": "bb25450ec3650b46240a27560e8d5240d6d85fce336b2c081152af1e03441365",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/1-začnite-s-spremembo-v-specifikaciji-paragraph-če-se-spremeni-uporabniku-viden-potek-dela-ali-produktno-pra-5a551f0f-1",
+      "translationHash": "5a551f0f43d6ff05b70ed0fda6bbb2561d0cfb87d0b4e60e8c956c8c85c61af6",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "1. Start with the change in the spec"
+      ],
+      "sourceLineRange": [
+        45,
+        45
+      ],
+      "targetLineRange": [
+        45,
+        45
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/1-start-with-the-change-in-the-spec-paragraph-use-a33bd90e-1",
+      "sourceHash": "a33bd90ed15cb855517c7acc1f77750680dbbbf01276c0eef303b0a59b09fb58",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/1-začnite-s-spremembo-v-specifikaciji-paragraph-uporabite-2e10423e-1",
+      "translationHash": "2e10423eb248489d434354739eb55db18bad6fc89e112f663f1c2c6602fe92fc",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "1. Start with the change in the spec"
+      ],
+      "sourceLineRange": [
+        47,
+        47
+      ],
+      "targetLineRange": [
+        47,
+        47
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/1-start-with-the-change-in-the-spec-list-for-product-level-rules-and-workflows-af5d8ba9-1",
+      "sourceHash": "af5d8ba949f562dce3b7b6e5cdb618e06024c52c0d2cbbc52fbba5227d46540c",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/1-začnite-s-spremembo-v-specifikaciji-list-za-pravila-in-poteke-dela-na-ravni-produkta-cd34cc8b-1",
+      "translationHash": "cd34cc8b15605ca93ff8cc001908201792390922cdb7d23cd364c439b0637ad6",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "1. Start with the change in the spec"
+      ],
+      "sourceLineRange": [
+        49,
+        50
+      ],
+      "targetLineRange": [
+        49,
+        50
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/2-update-current-state-documentation-heading-2-update-current-state-documentation-24f1ef9b-1",
+      "sourceHash": "24f1ef9bf86f57a21d86990eaf11638b579e3a7e6b0bcf9afd4608e214452b75",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/2-posodobite-dokumentacijo-trenutnega-stanja-heading-2-posodobite-dokumentacijo-trenutnega-stanja-e4c4f770-1",
+      "translationHash": "e4c4f770b493580c6ab347383b362b9714c4bdc9f67ecc087731a426f9b2d6a1",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "2. Update current-state documentation"
+      ],
+      "sourceLineRange": [
+        52,
+        52
+      ],
+      "targetLineRange": [
+        52,
+        52
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/2-update-current-state-documentation-paragraph-if-the-change-affects-what-exists-now-update-the-docs-that-d-e92b4c64-1",
+      "sourceHash": "e92b4c64ec62aafd08a5d72958bcd45ba82dccc40575c403697b157ff9fc5162",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/2-posodobite-dokumentacijo-trenutnega-stanja-paragraph-če-sprememba-vpliva-na-to-kar-zdaj-obstaja-posodobite-dokume-951a144e-1",
+      "translationHash": "951a144e102eec921e7cb418081e97755bed8ab81a89e7830c18ccc189e90e2f",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "2. Update current-state documentation"
+      ],
+      "sourceLineRange": [
+        54,
+        54
+      ],
+      "targetLineRange": [
+        54,
+        54
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/2-update-current-state-documentation-paragraph-typical-examples-ed5fc1bf-1",
+      "sourceHash": "ed5fc1bf86d671e395b476d7fcee6df42ad6ba120846fce4a84e383fae599964",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/2-posodobite-dokumentacijo-trenutnega-stanja-paragraph-tipični-primeri-6415aabe-1",
+      "translationHash": "6415aabe213a139af4afd8285df9e371d11a375850040554a18f6c242e8f5565",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "2. Update current-state documentation"
+      ],
+      "sourceLineRange": [
+        56,
+        56
+      ],
+      "targetLineRange": [
+        56,
+        56
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/2-update-current-state-documentation-list-list-9da25ed4-1",
+      "sourceHash": "9da25ed417b2f5cdf59f0a800eba9fefb88e3bfe5450ed37455b659ccf863425",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/2-posodobite-dokumentacijo-trenutnega-stanja-list-list-62ba0f6e-1",
+      "translationHash": "62ba0f6ece7798aad19992b5625dc1e1337269bb18a7be5d07c169894fa48611",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "2. Update current-state documentation"
+      ],
+      "sourceLineRange": [
+        58,
+        61
+      ],
+      "targetLineRange": [
+        58,
+        61
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/3-update-the-demo-or-implementation-heading-3-update-the-demo-or-implementation-e13a4d18-1",
+      "sourceHash": "e13a4d187e950f7e1e4130c044b8bb850180340e1f84812a428a6f7ff90d1a84",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/3-posodobite-predstavitev-ali-izvedbo-heading-3-posodobite-predstavitev-ali-izvedbo-08d68e8d-1",
+      "translationHash": "08d68e8d842795bdcb48887106e8cd6fcd44a37fa9bf0baed64319b17bbd4164",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "3. Update the demo or implementation"
+      ],
+      "sourceLineRange": [
+        63,
+        63
+      ],
+      "targetLineRange": [
+        63,
+        63
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/3-update-the-demo-or-implementation-paragraph-only-after-the-intent-is-clear-should-the-demo-or-app-be-cha-9afa72da-1",
+      "sourceHash": "9afa72da1307c1344ecfbb606113c82b8d5706b5296f1b3cf83b60dc91a3f3b4",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/3-posodobite-predstavitev-ali-izvedbo-paragraph-to-pomaga-preprečiti-pogost-vzorec-pri-katerem-prototip-tiho-feeb9eb3-1",
+      "translationHash": "feeb9eb3e77b1325322dc40906d8b223f41a96868944e0303a39d6b6e30479f8",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "3. Update the demo or implementation"
+      ],
+      "sourceLineRange": [
+        65,
+        65
+      ],
+      "targetLineRange": [
+        67,
+        67
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/3-update-the-demo-or-implementation-paragraph-this-helps-prevent-the-common-pattern-where-a-prototype-sile-4d4357fb-1",
+      "sourceHash": "4d4357fb9a21c193674c997003b9b7556663ed2495c9703129d539f4963e7e52",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/3-posodobite-predstavitev-ali-izvedbo-paragraph-šele-ko-je-namen-jasen-naj-se-spremeni-predstavitev-ali-apli-4a36478b-1",
+      "translationHash": "4a36478bb844d7c05e67c75d0d8402a22f1f156b21d88dd08b79a3394d3ec87b",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "3. Update the demo or implementation"
+      ],
+      "sourceLineRange": [
+        67,
+        67
+      ],
+      "targetLineRange": [
+        65,
+        65
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/4-add-or-update-validation-heading-4-add-or-update-validation-74ece049-1",
+      "sourceHash": "74ece049d4b0e7130d0bca68061e09ae14697da0cdc5d4dcc78ff73cbfc1c8b2",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/4-dodajte-ali-posodobite-validacijo-heading-4-dodajte-ali-posodobite-validacijo-82af2f25-1",
+      "translationHash": "82af2f2545541225ece33f747e22e2276bcb2a48b7e9b310f6ba690e26843ee6",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "4. Add or update validation"
+      ],
+      "sourceLineRange": [
+        69,
+        69
+      ],
+      "targetLineRange": [
+        69,
+        69
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/4-add-or-update-validation-paragraph-then-ask-what-can-be-checked-automatically-ff6871de-1",
+      "sourceHash": "ff6871de8a5be369313a80f1b49bbace7833ef2afd86897f5f25d9ae9d9036b5",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/4-dodajte-ali-posodobite-validacijo-paragraph-nato-se-vprašajte-kaj-je-mogoče-preveriti-samodejno-b2a64f02-1",
+      "translationHash": "b2a64f02176a9d51a25341543f2371db20f285ca513bedaea2f057795561a264",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "4. Add or update validation"
+      ],
+      "sourceLineRange": [
+        71,
+        71
+      ],
+      "targetLineRange": [
+        71,
+        71
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/4-add-or-update-validation-paragraph-examples-1889f033-1",
+      "sourceHash": "1889f03338b79bbad8bdcdc925ef5e83069569c17e433174ef9a49f62e7d5ee7",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/4-dodajte-ali-posodobite-validacijo-paragraph-primeri-e50360fb-1",
+      "translationHash": "e50360fbfb2c1d5bfdf61939a42755121890620ae835c5b479915743ca656880",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "4. Add or update validation"
+      ],
+      "sourceLineRange": [
+        73,
+        73
+      ],
+      "targetLineRange": [
+        73,
+        73
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/4-add-or-update-validation-list-localization-key-completeness-672c88b2-1",
+      "sourceHash": "672c88b2c876849e9ac8e7d4ae13d8bdb816f688641830f90ff6c0dbef8f0808",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/4-dodajte-ali-posodobite-validacijo-list-popolnost-lokalizacijskih-ključev-c78803f2-1",
+      "translationHash": "c78803f24cf8a546d41f7f95c98a980dace18eb5723347b21b143b05ce5e1792",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "4. Add or update validation"
+      ],
+      "sourceLineRange": [
+        75,
+        79
+      ],
+      "targetLineRange": [
+        75,
+        79
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/4-add-or-update-validation-paragraph-not-every-rule-can-be-automated-immediately-but-important-ru-aca3b3ee-1",
+      "sourceHash": "aca3b3eea0f8355a08531e85bdaf202084f234560b9fa373ebdd53d2c9a9ef54",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/4-dodajte-ali-posodobite-validacijo-paragraph-vsakega-pravila-ni-mogoče-avtomatizirati-takoj-vendar-pomemb-bd1f3ffb-1",
+      "translationHash": "bd1f3ffbca1720ced5fd55ee769eec6db3da0b724294ade5a9451c2163695b6d",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "4. Add or update validation"
+      ],
+      "sourceLineRange": [
+        81,
+        81
+      ],
+      "targetLineRange": [
+        81,
+        81
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/5-review-against-the-spec-not-only-the-output-heading-5-review-against-the-spec-not-only-the-output-ffa9e036-1",
+      "sourceHash": "ffa9e036ad8bbc01c7386a4d192b59723e78ff09fc8487570da3556ffd1155b3",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/5-pregledujte-glede-na-specifikacijo-ne-le-na-izhod-heading-5-pregledujte-glede-na-specifikacijo-ne-le-na-izhod-7c6283aa-1",
+      "translationHash": "7c6283aafc85fd4263d234714cf8efdb298acb20ef13351a1a3d5c263e7f0d6d",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "5. Review against the spec, not only the output"
+      ],
+      "sourceLineRange": [
+        83,
+        83
+      ],
+      "targetLineRange": [
+        83,
+        83
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/5-review-against-the-spec-not-only-the-output-paragraph-when-reviewing-changes-do-not-stop-at-e4b7ce12-1",
+      "sourceHash": "e4b7ce12351c8c84e9d2df28b49ed4046594fbe6c574ba26c8e5d9b39ea66505",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/5-pregledujte-glede-na-specifikacijo-ne-le-na-izhod-paragraph-pri-pregledovanju-sprememb-se-ne-ustavite-pri-vprašanjih-03619e5e-1",
+      "translationHash": "03619e5eee4f4fb3887c476e02c0f800ad0c6d7a361634efb599a737ef3e594c",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "5. Review against the spec, not only the output"
+      ],
+      "sourceLineRange": [
+        85,
+        85
+      ],
+      "targetLineRange": [
+        85,
+        85
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/5-review-against-the-spec-not-only-the-output-list-does-it-run-55e4a00b-1",
+      "sourceHash": "55e4a00b048ed1968aa47d5e5ae3992f23b76353f736c385f2bc19cb069609bb",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/5-pregledujte-glede-na-specifikacijo-ne-le-na-izhod-list-ali-se-zažene-8520c0db-1",
+      "translationHash": "8520c0dbf54191b40bcdf0cb5ad4ea0c438db53d51412bf1f322837d59b41423",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "5. Review against the spec, not only the output"
+      ],
+      "sourceLineRange": [
+        87,
+        89
+      ],
+      "targetLineRange": [
+        87,
+        89
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/5-review-against-the-spec-not-only-the-output-paragraph-also-ask-77a9fe8a-1",
+      "sourceHash": "77a9fe8a5449833b5db5364d062b3d94172e9be454909b71a46f067962842197",
+      "targetBlockId": null,
+      "translationHash": null,
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "5. Review against the spec, not only the output"
+      ],
+      "sourceLineRange": [
+        91,
+        91
+      ],
+      "targetLineRange": null,
+      "alignmentStrategy": "unmatched",
+      "alignmentScore": 0.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/recommended-workflow/5-review-against-the-spec-not-only-the-output-list-does-it-match-the-documented-workflow-2bd720cf-1",
+      "sourceHash": "2bd720cff320d5a7ea29f1bacbc553f20f7e2ed0ecd9b0619149a79d659330ee",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/priporočen-potek-dela/5-pregledujte-glede-na-specifikacijo-ne-le-na-izhod-list-ali-se-ujema-z-dokumentiranim-potekom-dela-d5ed93a8-1",
+      "translationHash": "d5ed93a8e9ff091b7443c73d792b81813ddbf79b1564d08f5e076ac9efa955b0",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Recommended workflow",
+        "5. Review against the spec, not only the output"
+      ],
+      "sourceLineRange": [
+        93,
+        95
+      ],
+      "targetLineRange": [
+        93,
+        95
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-demo-discoveries-heading-handling-demo-discoveries-51d5d3d0-1",
+      "sourceHash": "51d5d3d0fae244e1bf311dc29be933cb35d0ac81f462d201e5820e4455bf75ce",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-odkritij-iz-predstavitve-heading-obravnava-odkritij-iz-predstavitve-aaf2995a-1",
+      "translationHash": "aaf2995a12f11e63470241d8356ce06e7f6b65b519b810438ea5f399073bfd15",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling demo discoveries"
+      ],
+      "sourceLineRange": [
+        97,
+        97
+      ],
+      "targetLineRange": [
+        97,
+        97
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-demo-discoveries-paragraph-sometimes-the-demo-teaches-the-team-something-better-than-th-d2d95e67-1",
+      "sourceHash": "d2d95e670d3d4c8598b29e1a1239849bdd23a22d43da1ae4b44400338254da1a",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-odkritij-iz-predstavitve-paragraph-včasih-predstavitev-ekipo-nauči-nekaj-boljšega-od-prvotne-sp-8687ea8b-1",
+      "translationHash": "8687ea8b47d96c5990fdb78df2835350eacf4f27ced327fe704c80a4fd703700",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling demo discoveries"
+      ],
+      "sourceLineRange": [
+        99,
+        99
+      ],
+      "targetLineRange": [
+        99,
+        99
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-demo-discoveries-paragraph-that-is-useful-the-correct-response-is-8f0f0d56-1",
+      "sourceHash": "8f0f0d560fafd2e28b83fb5ba891b2c14111ab05c39067bb1f696102ea736f2f",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-odkritij-iz-predstavitve-paragraph-to-je-koristno-pravilen-odziv-je-8163f5fb-1",
+      "translationHash": "8163f5fb19fc899e992b25287a5a89251aacd90b6fb44057124e37567df30591",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling demo discoveries"
+      ],
+      "sourceLineRange": [
+        101,
+        101
+      ],
+      "targetLineRange": [
+        101,
+        101
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-demo-discoveries-list-1-document-the-discovery-af872d8e-1",
+      "sourceHash": "af872d8e7f45e33af37c00e4f12857a77e7f7274e1295186589e86ef8efa185d",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-odkritij-iz-predstavitve-list-1-dokumentirajte-odkritje-e41bbe7e-1",
+      "translationHash": "e41bbe7e8b32f78a5dd3528a4db0298b4848a9dbcc1748da372ec32746b84317",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling demo discoveries"
+      ],
+      "sourceLineRange": [
+        103,
+        106
+      ],
+      "targetLineRange": [
+        103,
+        106
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-demo-discoveries-paragraph-the-wrong-response-is-to-let-the-demo-win-silently-because-i-c45658c9-1",
+      "sourceHash": "c45658c9fe7e5ce8714c56be5b9ae6afdebfaeb511cea933abf112320ae7ad55",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-odkritij-iz-predstavitve-paragraph-napačen-odziv-je-da-predstavitev-tiho-zmaga-samo-zato-ker-že-174ae196-1",
+      "translationHash": "174ae196e87a544dd00dd84c576340874149b05d0baf8f5fc0d4845e69b621eb",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling demo discoveries"
+      ],
+      "sourceLineRange": [
+        108,
+        108
+      ],
+      "targetLineRange": [
+        108,
+        108
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-ai-assisted-implementation-heading-handling-ai-assisted-implementation-933ae1f8-1",
+      "sourceHash": "933ae1f8893bad89fc58fea3a24dd266db8761ddb47a8f13eb3d5980d1256a79",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-izvedbe-s-pomočjo-ai-heading-obravnava-izvedbe-s-pomočjo-ai-9789e6b2-1",
+      "translationHash": "9789e6b26eb4850d4302305a1e9b1623b3d6be9d9b2afd3afc91cc86a2bb9d2b",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling AI-assisted implementation"
+      ],
+      "sourceLineRange": [
+        110,
+        110
+      ],
+      "targetLineRange": [
+        110,
+        110
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-ai-assisted-implementation-paragraph-with-ai-this-workflow-becomes-even-more-important-because-as-1a40b0ba-1",
+      "sourceHash": "1a40b0baa208e9a114ef603fa6e8f63dde43f253f425167cefc49848f7e9fc25",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-izvedbe-s-pomočjo-ai-paragraph-pri-ai-postane-ta-potek-dela-še-pomembnejši-ker-pomočniki-po-a07fcf03-1",
+      "translationHash": "a07fcf03eedb22205b3434f0c1b15e9e51cc29a550262857a7a9275e783e6634",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling AI-assisted implementation"
+      ],
+      "sourceLineRange": [
+        112,
+        112
+      ],
+      "targetLineRange": [
+        112,
+        112
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-ai-assisted-implementation-paragraph-a-good-alignment-loop-is-a4a00818-1",
+      "sourceHash": "a4a00818ab4835f7728e28c78458be52742ba37212358cd0be239530f67b15fa",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/primer-let-books-paragraph-repozitorij-že-vsebuje-uporabno-verigo-usklajevanja-88292782-1",
+      "translationHash": "882927828c607758e30d151cee59ce43f78f683aa7813fca006547aaf81c5698",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling AI-assisted implementation"
+      ],
+      "sourceLineRange": [
+        114,
+        114
+      ],
+      "targetLineRange": [
+        124,
+        124
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/handling-ai-assisted-implementation-list-1-write-or-update-the-spec-aa32eb39-1",
+      "sourceHash": "aa32eb399c3718accf4489f6f2cb8a95ec0c9cbbdf42ef34b75aace0575cd7ec",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-izvedbe-s-pomočjo-ai-list-1-napišite-ali-posodobite-specifikacijo-890614a6-1",
+      "translationHash": "890614a636327d1805c2c0c0625901e7b74a466436162e52b3734f1ea414648a",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Handling AI-assisted implementation"
+      ],
+      "sourceLineRange": [
+        116,
+        120
+      ],
+      "targetLineRange": [
+        116,
+        120
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/let-books-example-heading-let-books-example-7487aad8-1",
+      "sourceHash": "7487aad8dda22bbfc7f6615d8fb0c272c0c68d9e1cc97319c4eb56ca9f2d9e58",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/primer-let-books-heading-primer-let-books-40f9abc5-1",
+      "translationHash": "40f9abc5e93311df3f27491df3348230a670665be39ea8375ed2420ce712cbb0",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        122,
+        122
+      ],
+      "targetLineRange": [
+        122,
+        122
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/let-books-example-paragraph-the-repository-already-contains-a-useful-alignment-chain-7fcbe697-1",
+      "sourceHash": "7fcbe697014a7e1ed447ba75a034579e5dc855dd6fd880570b1cfbc26751b298",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/primer-let-books-paragraph-to-strukturo-je-treba-uporabljati-namenoma-vsakič-ko-se-doda-d2ba01b0-1",
+      "translationHash": "d2ba01b05ab303ca38855a037e9e64102deab6e54f5623edbec12ced76e10f85",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        124,
+        124
+      ],
+      "targetLineRange": [
+        132,
+        132
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/let-books-example-list-for-product-direction-2a4be75b-1",
+      "sourceHash": "2a4be75b0c8871867dcf250c6f6f5f7a3633a8ff4d76fd7ce87466a74c332b22",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/primer-let-books-list-za-smer-produkta-80a4795e-1",
+      "translationHash": "80a4795e48f9f5102d138a73f232a69bb53ce4bace47041211df708e694a118e",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        126,
+        130
+      ],
+      "targetLineRange": [
+        126,
+        130
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/let-books-example-paragraph-that-structure-should-be-used-intentionally-whenever-new-fea-f898c72c-1",
+      "sourceHash": "f898c72c1b84065a3edfb2f6cf9ccde77a5c8bc764d70ae80e0b3b1f4f460ba1",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/kontrolni-seznam-paragraph-pred-združitvijo-pomembne-spremembe-preverite-003240fc-1",
+      "translationHash": "003240fc0b59ace81dd5ed5fb228e7a5d21838603e062217f04c46cdae2f5d05",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Let Books example"
+      ],
+      "sourceLineRange": [
+        132,
+        132
+      ],
+      "targetLineRange": [
+        136,
+        136
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/checklist-heading-checklist-106278a3-1",
+      "sourceHash": "106278a3bebdd27c18f5a28464440ea8fc2502d7c3d516531a7adc04f09e64e6",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/kontrolni-seznam-heading-kontrolni-seznam-f2f02f83-1",
+      "translationHash": "f2f02f83eb708d5a7b1a960411efae8649a9edf51d1483fd0ebf767c9d86ced9",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Checklist"
+      ],
+      "sourceLineRange": [
+        134,
+        134
+      ],
+      "targetLineRange": [
+        134,
+        134
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/checklist-paragraph-before-merging-a-meaningful-change-check-18300d37-1",
+      "sourceHash": "18300d37a54784ca05cc584b0e25423acab965c4bb10992bd39dc3b39425380c",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/obravnava-izvedbe-s-pomočjo-ai-paragraph-dobra-zanka-usklajevanja-je-7d96e4c9-1",
+      "translationHash": "7d96e4c947679851cb17b96fdc40672aa35806336c11da2e03cb3119278d9dbe",
+      "blockType": "paragraph",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Checklist"
+      ],
+      "sourceLineRange": [
+        136,
+        136
+      ],
+      "targetLineRange": [
+        114,
+        114
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/checklist-list-1-was-the-product-rule-or-workflow-documented-clearly-ec90a87c-1",
+      "sourceHash": "ec90a87ca07f6afe15c30a9d2a5040006ad391512e45ca7e5f57c3856b1d5f07",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/kontrolni-seznam-list-1-ali-je-bilo-produktno-pravilo-ali-potek-dela-jasno-dokumen-2f2f816b-1",
+      "translationHash": "2f2f816bb3364477eda79bbb6c47d2ca3cc7643ace542fa867b00bf099fcb3b0",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Checklist"
+      ],
+      "sourceLineRange": [
+        138,
+        142
+      ],
+      "targetLineRange": [
+        138,
+        142
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/further-reading-heading-further-reading-dfd43c88-1",
+      "sourceHash": "dfd43c88c1cb9723f2a690b08119f3b312da0ad2e460f768fe2e7b2cad613f05",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/dodatno-branje-heading-dodatno-branje-2e7edb34-1",
+      "translationHash": "2e7edb349b3a34d2956ca20429f7f0f9082018bf8f077be361ff1416e595021c",
+      "blockType": "heading",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        144,
+        144
+      ],
+      "targetLineRange": [
+        144,
+        144
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    },
+    {
+      "blockId": "how-to-keep-spec-docs-demo-and-code-aligned/further-reading-list-list-0074896b-1",
+      "sourceHash": "0074896b2133b0d61b7ec84ea6a0f5729ed8b8e1e04a0a8645689c0f586719d2",
+      "targetBlockId": "kako-ohranjati-usklajenost-specifikacije-dokumentacije-preds/dodatno-branje-list-list-4171d425-1",
+      "translationHash": "4171d42585f8b1584656f7e343b3e26d6ad5052b2f55b68a45efcc8fb62777cc",
+      "blockType": "list",
+      "headingPath": [
+        "How to Keep Spec, Docs, Demo, and Code Aligned",
+        "Further Reading"
+      ],
+      "sourceLineRange": [
+        146,
+        149
+      ],
+      "targetLineRange": [
+        146,
+        149
+      ],
+      "alignmentStrategy": "metadata",
+      "alignmentScore": 1.0
+    }
+  ]
+}
