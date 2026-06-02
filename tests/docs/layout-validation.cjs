@@ -1,3 +1,28 @@
+/**
+ * Purpose:
+ * Verify that representative generated docs pages preserve the expected
+ * browser-facing shell and article structure across multiple viewports.
+ *
+ * Why:
+ * Generator regressions can leave pages technically valid while still
+ * duplicating chrome, leaking landing-page branding into article pages,
+ * or breaking layout only at specific viewport widths.
+ *
+ * Protects:
+ * - single visible page shell
+ * - expected header/article/footer ordering
+ * - absence of duplicate article chrome
+ * - absence of oversized stray branding outside the header
+ *
+ * Limitations:
+ * Uses representative pages rather than every generated page.
+ * It is a high-signal browser regression check, not full visual diffing.
+ *
+ * Related:
+ * - tests/docs/README.md
+ * - tools/validate-generated-site-structure.mjs
+ * - .github/workflows/ci.yml
+ */
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -21,6 +46,10 @@ const viewports = [
 ];
 
 const ARTICLE_FORBIDDEN_SELECTORS = [
+  // These selectors represent landing-page or hero-era structures that
+  // should never survive inside final article pages after generation.
+  // Keeping the list explicit makes generator regressions easier to
+  // diagnose than a generic "unexpected block" failure would.
   '.hero',
   '.brand-hero',
   '.site-intro',
@@ -43,6 +72,9 @@ async function failWithDump(page, pageConfig, viewport, message, details) {
   const screenshotPath = path.join(artifactDir, `${fileSafe(pageConfig.label)}-${viewport.label}-failure.png`);
   await page.screenshot({ path: screenshotPath, fullPage: true });
 
+  // Browser/layout failures are expensive to reproduce from CI logs.
+  // Persist a screenshot and structured dump so maintainers can see the
+  // broken shell geometry and duplicated blocks immediately.
   const payload = {
     message,
     url: `${baseUrl}${pageConfig.url}`,
@@ -186,6 +218,11 @@ function elementInfo(node, label) {
           ? forbiddenSelectors.flatMap((selector) => visibleNodes(selector).map((node) => toInfo(node, selector)))
           : [];
 
+        // Regression context:
+        // some generator changes left source-era hero markup in article
+        // pages even when it was no longer visible in normal review.
+        // Tracking both visible forbidden blocks and any surviving source
+        // nodes helps distinguish layout bugs from cleanup bugs.
         const forbiddenSourceNodes = kind === 'article'
           ? forbiddenSelectors.flatMap((selector) => Array.from(document.querySelectorAll(selector)).map((node) => toInfo(node, `${selector} (source)`)))
           : [];

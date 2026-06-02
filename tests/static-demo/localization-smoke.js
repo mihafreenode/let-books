@@ -1,6 +1,33 @@
 #!/usr/bin/env node
 "use strict";
 
+/**
+ * Purpose:
+ * Verify the static demo's localization resource completeness and the
+ * runtime localization contract expected by `static-demo/app.js`.
+ *
+ * Why:
+ * Locale files can stay present while runtime assumptions drift. This
+ * test protects against missing locale coverage, mismatched keys, and
+ * reintroduction of transliteration shortcuts the repository no longer
+ * permits.
+ *
+ * Protects:
+ * - locale file presence
+ * - key parity with English
+ * - JSON-string locale values
+ * - expected locale-loading implementation markers in `app.js`
+ *
+ * Limitations:
+ * Does not evaluate translation quality, layout, or full interactive
+ * demo behavior.
+ *
+ * Related:
+ * - tests/static-demo/README.md
+ * - static-demo/README.md
+ * - .github/workflows/ci.yml
+ */
+
 const fs = require("fs");
 const path = require("path");
 
@@ -24,6 +51,9 @@ function readLocale(locale) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
+// These source markers intentionally protect the runtime contract, not
+// just file presence. The locale set is only trustworthy if `app.js`
+// still uses the expected JSON loading and validation flow.
 assert(source.includes("const LOCALE_FILES = Object.fromEntries"), "Expected JSON locale loader in app.js.");
 assert(source.includes("validateLocaleResources()"), "Expected locale validation in app.js.");
 assert(!source.includes("transliterateSerbianUi"), "Runtime Serbian transliteration helper should not remain.");

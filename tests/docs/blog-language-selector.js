@@ -1,6 +1,30 @@
 #!/usr/bin/env node
 "use strict";
 
+/**
+ * Purpose:
+ * Protect language selector behavior on a localized blog article page.
+ *
+ * Why:
+ * Article pages are a high-risk routing surface because their language
+ * links are derived from article ids plus locale-specific output paths.
+ * This narrower regression test protects a known article route directly.
+ *
+ * Protects:
+ * - article-to-article language switching
+ * - current-language selection state
+ * - footer equivalent-language routing
+ *
+ * Limitations:
+ * Focused article regression only; broader selector coverage lives in
+ * `language-selector-smoke.js`.
+ *
+ * Related:
+ * - tests/docs/README.md
+ * - tests/docs/language-selector-smoke.js
+ * - tools/validate-blog.mjs
+ */
+
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
@@ -102,6 +126,9 @@ async function main() {
       if (!sl || !sl.selected) throw new Error('Slovenian not selected');
     });
 
+    // Historical failure:
+    // article pages could expose placeholder fallback paths for
+    // available languages after navigation refactors.
     await check('no fallback ../index.html paths for available languages', async () => {
       for (const opt of options) {
         if (opt.value === '../index.html') {

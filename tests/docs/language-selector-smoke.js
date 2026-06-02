@@ -1,6 +1,31 @@
 #!/usr/bin/env node
 "use strict";
 
+/**
+ * Purpose:
+ * Verify that representative generated page types expose a complete and
+ * usable language selector at runtime.
+ *
+ * Why:
+ * Language navigation can regress even when localized files exist. Past
+ * failures included bad fallback links, source-markdown targets, and
+ * incomplete option lists after generation changes.
+ *
+ * Protects:
+ * - complete supported-language coverage
+ * - HTML-target language switching
+ * - populated footer equivalent-language navigation
+ * - generated page metadata needed by runtime language UI
+ *
+ * Limitations:
+ * Does not evaluate translation quality or every generated page.
+ *
+ * Related:
+ * - tests/docs/README.md
+ * - tools/validate-blog.mjs
+ * - tools/validate-localization-completeness.mjs
+ */
+
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
@@ -41,6 +66,10 @@ function createServer() {
   });
 }
 
+// Use representative page types rather than many near-duplicates.
+// The failure surface is the generator/runtime contract for language
+// switching, so one good example per major page family catches more
+// useful regressions than brute-forcing every page.
 const TEST_PAGES = [
   { url: '/docs/en/index.html',         label: 'overview',        expectedType: 'overview' },
   { url: '/docs/blog/en/index.html',    label: 'blog-index',     expectedType: 'blog-index' },
@@ -115,6 +144,10 @@ async function testLanguageSelector(page, pageUrl, pageLabel) {
     }
   });
 
+  // Regression:
+  // when generated language targets are missing or miscomputed, the UI
+  // can silently fall back to placeholder index paths that look valid
+  // enough to survive review.
   await check('no fallback ../index.html paths for available languages', async () => {
     for (const opt of options) {
       if (opt.value === '../index.html') {

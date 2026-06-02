@@ -1,3 +1,28 @@
+/**
+ * Purpose:
+ * Verify that representative generated docs pages produce a curated
+ * print document rather than a raw webpage snapshot.
+ *
+ * Why:
+ * Print regressions are easy to miss in normal browser review. The
+ * project relies on print-specific headers, running footers, and hidden
+ * navigation so exported/printed docs remain useful and professional.
+ *
+ * Protects:
+ * - print stylesheet presence
+ * - print-only chrome visibility
+ * - hidden website navigation and search UI in print
+ * - absence of duplicate branding or disclaimer blocks
+ *
+ * Limitations:
+ * Checks representative pages only and does not evaluate print copy
+ * quality or full PDF visual diffs.
+ *
+ * Related:
+ * - tests/docs/README.md
+ * - tools/validate-generated-site-structure.mjs
+ * - .github/workflows/ci.yml
+ */
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
@@ -53,6 +78,9 @@ function assert(condition, message) {
           return style.display !== 'none' && style.visibility !== 'hidden' && node.getClientRects().length > 0;
         }).length;
 
+      // Print should expand disclosure content because hidden details
+      // sections create incomplete printed guides even when the screen
+      // version looks correct.
       const accordionContentVisible = Array.from(document.querySelectorAll('details')).every((details) => details.open);
       const majorOverflow = Array.from(document.querySelectorAll('pre, table, img, svg, article, main')).some((node) => node.scrollWidth - node.clientWidth > 4);
 
@@ -89,6 +117,10 @@ function assert(condition, message) {
     assert(checks.searchUiHidden, `${pageConfig.label}: search UI still visible in print`);
     assert(checks.accordionContentVisible, `${pageConfig.label}: hidden accordion content in print`);
     assert(!checks.majorOverflow, `${pageConfig.label}: major clipping or overflow detected in print`);
+    // Regression:
+    // print styles have previously shown both webpage branding and
+    // print-specific branding at once. The exact counts keep that class
+    // of duplication from returning silently.
     assert(checks.visibleBrandingBlocks === 1, `${pageConfig.label}: duplicate branding blocks visible in print (${checks.visibleBrandingBlocks})`);
     assert(checks.visibleBrandMarks === 1, `${pageConfig.label}: duplicate logo/brand marks visible in print (${checks.visibleBrandMarks})`);
     assert(checks.visibleDisclaimerBlocks === 1, `${pageConfig.label}: duplicate disclaimer/footer blocks visible in print (${checks.visibleDisclaimerBlocks})`);
