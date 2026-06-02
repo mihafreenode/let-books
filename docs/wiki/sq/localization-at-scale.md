@@ -21,7 +21,7 @@ Ai përfshin:
 
 - shkrim burimor
 - terminologjinë
-- metadata
+- metatëdhëna
 - navigacion
 - tekst aksesueshmërie
 - diagrame dhe pamje ekrani

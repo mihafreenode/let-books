@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lokalizimi në shkallë | LetBooks</title>
-    <meta name="description" content="Lokalizimi në shkallë është praktikë e trajtimit të përmbajtjes shumëgjuhëshe si një sistem i projektuar që mbulon shkrimin, qeverisjen, asetet, aksesueshmërinë, vlefshmërinë dhe rishikimin.">
+    <title>Lokalizimi në shkallë të gjerë | LetBooks</title>
+    <meta name="description" content="Lokalizimi në shkallë të gjerë është praktika e trajtimit të publikimit shumëgjuhësh si një sistem reagimi dhe një sistem afatgjatë njohurie, jo si një detyrë e vetme përkthimi.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/localization-at-scale.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Lokalizimi në shkallë | LetBooks">
-    <meta property="og:description" content="Lokalizimi në shkallë është praktikë e trajtimit të përmbajtjes shumëgjuhëshe si një sistem i projektuar që mbulon shkrimin, qeverisjen, asetet, aksesueshmërinë, vlefshmërinë dhe rishikimin.">
+    <meta property="og:title" content="Lokalizimi në shkallë të gjerë | LetBooks">
+    <meta property="og:description" content="Lokalizimi në shkallë të gjerë është praktika e trajtimit të publikimit shumëgjuhësh si një sistem reagimi dhe një sistem afatgjatë njohurie, jo si një detyrë e vetme përkthimi.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/localization-at-scale.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lokalizimi në shkallë | LetBooks">
-    <meta name="twitter:description" content="Lokalizimi në shkallë është praktikë e trajtimit të përmbajtjes shumëgjuhëshe si një sistem i projektuar që mbulon shkrimin, qeverisjen, asetet, aksesueshmërinë, vlefshmërinë dhe rishikimin.">
+    <meta name="twitter:title" content="Lokalizimi në shkallë të gjerë | LetBooks">
+    <meta name="twitter:description" content="Lokalizimi në shkallë të gjerë është praktika e trajtimit të publikimit shumëgjuhësh si një sistem reagimi dhe një sistem afatgjatë njohurie, jo si një detyrë e vetme përkthimi.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sq/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Lokalizimi në shkallë</span>
+              <span aria-current="page">Lokalizimi në shkallë të gjerë</span>
             </nav>
-            <h1>Lokalizimi në shkallë</h1>
+            <h1>Lokalizimi në shkallë të gjerë</h1>
           <div class="content-page-meta">
             <span>Wiki</span>
             <span>Shqip</span>
           </div>
-          <p class="content-page-summary">Lokalizimi në shkallë është praktikë e trajtimit të përmbajtjes shumëgjuhëshe si një sistem i projektuar që mbulon shkrimin, qeverisjen, asetet, aksesueshmërinë, vlefshmërinë dhe rishikimin.</p>
+          <p class="content-page-summary">Lokalizimi në shkallë të gjerë është praktika e trajtimit të publikimit shumëgjuhësh si një sistem reagimi dhe një sistem afatgjatë njohurie, jo si një detyrë e vetme përkthimi.</p>
             <hr class="content-header-divider">
           </header>
 <h2 id="ideja-kryesore">Ideja kryesore</h2>
@@ -105,27 +105,32 @@
 <p>Ai përfshin:</p>
 <ul>
 <li>shkrim burimor</li>
-<li>terminologjia</li>
+<li>terminologjinë</li>
+<li>metatëdhëna</li>
 <li>navigacion</li>
-<li>teksti i aksesueshmërisë</li>
-<li>diagramet dhe pamjet e ekranit</li>
-<li>meta të dhënat</li>
-<li>rishikoni rrjedhën e punës</li>
+<li>tekst aksesueshmërie</li>
+<li>diagrame dhe pamje ekrani</li>
+<li>rrjedhën e rishikimit</li>
 <li>CI dhe QA</li>
 </ul>
-<h2 id="pse-ka-rëndësi">Pse ka rëndësi</h2>
-<p>Projektet që vonojnë lokalizimin zakonisht zbulojnë se arkitektura e tyre e informacionit, pamjet e ekranit dhe supozimet e testimit janë tashmë në formë angleze.</p>
-<h2 id="let-books-kontekst">Let Books kontekst</h2>
-<p>Let Books është në mënyrë eksplicite shumëgjuhëshe në drejtimin e produktit, dokumentacionin dhe pritshmëritë e ndërfaqes së përdoruesit. Kjo e bën arkitekturën e lokalizimit një shqetësim thelbësor të produktit.</p>
-<h2 id="section">[[20]]]</h2>
-<p>Faqe të ngjashme</p>
-<p>[[21]]]
-- <code>language-support-matrix.md</code>
-[[22]]]
-- <code>localization-maturity-model.md</code>
-- <code>../learning/how-to-build-a-localization-pipeline.md</code>
-[[24]]]
-- <code>../blog/en/localization-at-scale.md</code></p>
+<h2 id="manuali-autoritativ">Manuali autoritativ</h2>
+<p>Modeli qendror operativ për këtë nismë tani gjendet në:</p>
+<ul>
+<li><code>../localization-at-scale-program.md</code></li>
+</ul>
+<p>Ky manual përcakton:</p>
+<ul>
+<li>pse ka rëndësi publikimi shumëgjuhësh</li>
+<li>pse lokalizimi është sistem, jo projekt</li>
+<li>si përshtatet AI brenda cikleve të reagimit</li>
+<li>modelin e cilësisë së mbulimit, plotësisë, cilësisë dhe freskisë</li>
+<li>borxhin e lokalizimit dhe klasat e hapura të defekteve</li>
+<li>sanimin source-first dhe rrjedhën e punës për agjentët AI</li>
+<li>devijimin e lokalizimit dhe pjekurinë e depos</li>
+<li>korpusin e detajuar të gjetjeve nga rishikimet e folësve vendas</li>
+</ul>
+<h2 id="rregull-praktik">Rregull praktik</h2>
+<p>Një faqe e lokalizuar nuk është e plotë derisa të lokalizohet i gjithë përmbajtja që e sheh lexuesi, përfshirë përmbledhjet, etiketat, tekstin kryesor, titrat, diagramet, tekstin alternativ dhe sipërfaqet e përmbajtjes së lidhur.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

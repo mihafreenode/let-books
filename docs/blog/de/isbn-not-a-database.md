@@ -30,7 +30,7 @@ Die ISBN identifiziert die Ausgabe, nicht das Werk. Die zweite und dritte Auflag
 
 Das ist eine nützliche Präzision — aber sie bringt wichtige Einschränkungen mit sich.
 
-![Diagramm ISBN vs. physisches Buchexemplar](../../diagrams/isbn-vs-physical-book.svg)
+![Diagramm ISBN vs. physisches Buchexemplar](../../diagrams/blog/isbn-not-a-database/de/isbn-vs-physical-book.svg)
 
 Eine ISBN identifiziert die Metadaten der Ausgabe auf der linken Seite. Das physische Exemplar auf der rechten Seite — Zustand, Herkunft, Lagerort, Spendenstatus, Fotos — wird im Domänenmodell von Let Books separat erfasst. Beides ist miteinander verbunden, aber nicht dasselbe.
 
@@ -60,7 +60,7 @@ Es gibt falsch gedruckte ISBNs. Dieselbe ISBN kann versehentlich von verschieden
 
 `docs/book-metadata.md` definiert eine praktische Fallback-Strategie fuer die ISBN-basierte Suche. Das Dokument weist auch darauf hin, dass dieser Ablauf in der aktuellen Alpha-Demo funktioniert und zugleich als Muster fuer die kuenftige vollstaendige Anwendung dient:
 
-![Diagramm der ISBN-Suchkette](../../diagrams/isbn-lookup-chain.svg)
+![Diagramm der ISBN-Suchkette](../../diagrams/blog/isbn-not-a-database/de/isbn-lookup-chain.svg)
 
 1. Normalisieren und validieren Sie die ISBN. Entfernen Sie Leerzeichen und Bindestriche, wandeln Sie X in Großbuchstaben um, validieren Sie die Prüfziffer.
 2. Fragen Sie zuerst Open Library über deren öffentliche API ab.

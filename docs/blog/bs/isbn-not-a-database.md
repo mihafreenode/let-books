@@ -30,7 +30,7 @@ ISBN identificira izdanje, a ne djelo. Na primjer, drugo i treće izdanje istog 
 
 To je korisna preciznost — ali donosi važna ograničenja.
 
-![Dijagram ISBN u odnosu na fizički primjerak knjige](../../diagrams/isbn-vs-physical-book.svg)
+![Dijagram ISBN u odnosu na fizički primjerak knjige](../../diagrams/blog/isbn-not-a-database/bs/isbn-vs-physical-book.svg)
 
 ISBN identificira metapodatke izdanja na lijevoj strani. Fizički primjerak na desnoj — stanje, provinijencija, lokacija pohrane, status donacije, fotografije — vodi se odvojeno u domennom modelu Let Books. To dvoje je povezano, ali nije isto.
 
@@ -60,7 +60,7 @@ Postoje pogrešno odštampani ISBNovi. Isti ISBN mogu slučajno koristiti razli�
 
 `docs/book-metadata.md` definira praktičnu strategiju rezervnog pada za pretraživanje po ISBN-u. Dokument također navodi da ovaj tok radi u trenutnom alfa demo okruženju, a istovremeno služi kao obrazac za buduću punu aplikaciju:
 
-![Dijagram lanca pretraživanja ISBN-a](../../diagrams/isbn-lookup-chain.svg)
+![Dijagram lanca pretraživanja ISBN-a](../../diagrams/blog/isbn-not-a-database/bs/isbn-lookup-chain.svg)
 
 1. Normaliziraj i potvrdi ISBN. Ukloni razmake i crtice, X pretvori u veliko slovo, provjeri kontrolnu cifru.
 2. Prvo upitaj Open Library putem njihovog javnog sučelja.

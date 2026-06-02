@@ -22,7 +22,7 @@ Elle comprend :
 - rédaction des sources
 - terminologie
 - métadonnées
-- navigation
+- navigation localisée
 - texte d'accessibilité
 - diagrammes et captures d'écran
 - flux de revue
