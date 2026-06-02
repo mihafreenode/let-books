@@ -35,7 +35,21 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc hunspell jq imagemagick curl wget
+          sudo apt-get install -y \
+            pandoc \
+            hunspell \
+            jq \
+            imagemagick \
+            curl \
+            wget \
+            shellcheck \
+            yamllint
+
+      - name: Validate GitHub Actions workflows
+        uses: rhysd/actionlint@v1
+
+      - name: Validate workflow YAML
+        run: yamllint .github/workflows
 
       - name: Install Playwright and Chromium
         run: |
@@ -103,15 +117,61 @@ jobs:
       - name: Generate sitemap
         run: node tools/generate-sitemap.mjs
 
-      - name: Print validation
+      - name: Docs browser validation
         run: |
-          python3 -m http.server 4173 >/tmp/letbooks-print.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill $SERVER_PID' EXIT
-          node tests/docs/print-validation.cjs
+          set -euo pipefail
 
-      - name: Layout validation
-        run: python3 tools/validate_layout_structure.py
+          EXPECTED_PAGE="docs/blog/en/documentation-is-part-of-the-product.html"
+          EXPECTED_URL="http://127.0.0.1:4173/$EXPECTED_PAGE"
+
+          test -f "$EXPECTED_PAGE" || {
+            echo "Missing expected generated page:"
+            echo "  $EXPECTED_PAGE"
+            exit 1
+          }
+
+          cleanup() {
+            if [ -n "${SERVER_PID:-}" ] \
+              && kill -0 "$SERVER_PID" 2>/dev/null; then
+              kill "$SERVER_PID"
+              wait "$SERVER_PID" 2>/dev/null || true
+            fi
+          }
+
+          show_server_log() {
+            if [ -f /tmp/letbooks-print.log ]; then
+              echo "---- /tmp/letbooks-print.log ----"
+              cat /tmp/letbooks-print.log
+              echo "---- end server log ----"
+            fi
+          }
+
+          trap 'show_server_log; cleanup' ERR
+          trap cleanup EXIT
+
+          python3 -m http.server 4173 \
+            --bind 127.0.0.1 \
+            --directory . \
+            >/tmp/letbooks-print.log 2>&1 &
+          SERVER_PID=$!
+
+          for i in {1..30}; do
+            if curl -fsS \
+              "$EXPECTED_URL" \
+              >/dev/null; then
+              break
+            fi
+            sleep 1
+            if [ "$i" -eq 30 ]; then
+              echo "Timed out waiting for local docs server"
+              show_server_log
+              exit 1
+            fi
+          done
+
+          node tests/docs/print-validation.cjs
+          DOCS_BASE_URL=http://127.0.0.1:4173 \
+            python3 tools/validate_layout_structure.py
 
       - name: Validate static-demo localization
         run: node tests/static-demo/localization-smoke.js

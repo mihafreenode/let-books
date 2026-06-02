@@ -32,7 +32,21 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc hunspell jq imagemagick curl wget
+          sudo apt-get install -y \
+            pandoc \
+            hunspell \
+            jq \
+            imagemagick \
+            curl \
+            wget \
+            shellcheck \
+            yamllint
+
+      - name: Validate GitHub Actions workflows
+        uses: rhysd/actionlint@v1
+
+      - name: Validate workflow YAML
+        run: yamllint .github/workflows
 
       - name: Install Playwright and Chromium
         run: |
@@ -138,7 +152,9 @@ jobs:
       - name: Check docs section index pages exist per locale
         run: |
           node -e "
-            const config = JSON.parse(require('fs').readFileSync('tools/docs-config.json','utf8'));
+            const config = JSON.parse(
+              require('fs').readFileSync('tools/docs-config.json', 'utf8')
+            );
             const LOCALES = config.locales;
             const SECTIONS = config.contentTypes;
             const {existsSync} = require('fs');
@@ -159,7 +175,9 @@ jobs:
       - name: Validate docs section index localization
         run: |
           node -e "
-            const config = JSON.parse(require('fs').readFileSync('tools/docs-config.json','utf8'));
+            const config = JSON.parse(
+              require('fs').readFileSync('tools/docs-config.json', 'utf8')
+            );
             const LOCALES = config.locales;
             const SECTIONS = config.contentTypes;
             const {readFileSync,existsSync} = require('fs');
@@ -227,7 +245,8 @@ jobs:
                  const navLabels = {
                    docs: 'href=\"../../' + locale + '/index.html\"',
                    blog: 'href=\"../../blog/' + locale + '/index.html\"',
-                   learning: 'href=\"../../learning/' + locale + '/index.html\"',
+                   learning:
+                     'href=\"../../learning/' + locale + '/index.html\"',
                    wiki: 'href=\"../../wiki/' + locale + '/index.html\"',
                    topics: 'href=\"../../topics/' + locale + '/index.html\"'
                  };
@@ -280,19 +299,27 @@ jobs:
                 }
               }
             }
-            if (ok) console.log('Related topic navigation present in all applicable articles');
+            if (ok) {
+              console.log(
+                'Related topic navigation present in all applicable articles'
+              );
+            }
             else process.exit(1);
           "
 
       - name: Validate search index includes topics
         run: |
           node -e "
-            const index = JSON.parse(require('fs').readFileSync('docs/search-index.json','utf8'));
+            const index = JSON.parse(
+              require('fs').readFileSync('docs/search-index.json', 'utf8')
+            );
             if (!Array.isArray(index.entries) || index.entries.length === 0) {
               console.log('Search index missing entries');
               process.exit(1);
             }
-            const hasTopics = index.entries.some((entry) => entry.contentType === 'topics');
+            const hasTopics = index.entries.some(
+              (entry) => entry.contentType === 'topics'
+            );
             if (!hasTopics) {
               console.log('Search index missing topics entries');
               process.exit(1);
@@ -300,15 +327,61 @@ jobs:
             console.log('Search index includes topics entries');
           "
 
-      - name: Print validation
+      - name: Docs browser validation
         run: |
-          python3 -m http.server 4173 >/tmp/letbooks-print.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill $SERVER_PID' EXIT
-          node tests/docs/print-validation.cjs
+          set -euo pipefail
 
-      - name: Layout validation
-        run: python3 tools/validate_layout_structure.py
+          EXPECTED_PAGE="docs/blog/en/documentation-is-part-of-the-product.html"
+          EXPECTED_URL="http://127.0.0.1:4173/$EXPECTED_PAGE"
+
+          test -f "$EXPECTED_PAGE" || {
+            echo "Missing expected generated page:"
+            echo "  $EXPECTED_PAGE"
+            exit 1
+          }
+
+          cleanup() {
+            if [ -n "${SERVER_PID:-}" ] \
+              && kill -0 "$SERVER_PID" 2>/dev/null; then
+              kill "$SERVER_PID"
+              wait "$SERVER_PID" 2>/dev/null || true
+            fi
+          }
+
+          show_server_log() {
+            if [ -f /tmp/letbooks-print.log ]; then
+              echo "---- /tmp/letbooks-print.log ----"
+              cat /tmp/letbooks-print.log
+              echo "---- end server log ----"
+            fi
+          }
+
+          trap 'show_server_log; cleanup' ERR
+          trap cleanup EXIT
+
+          python3 -m http.server 4173 \
+            --bind 127.0.0.1 \
+            --directory . \
+            >/tmp/letbooks-print.log 2>&1 &
+          SERVER_PID=$!
+
+          for i in {1..30}; do
+            if curl -fsS \
+              "$EXPECTED_URL" \
+              >/dev/null; then
+              break
+            fi
+            sleep 1
+            if [ "$i" -eq 30 ]; then
+              echo "Timed out waiting for local docs server"
+              show_server_log
+              exit 1
+            fi
+          done
+
+          node tests/docs/print-validation.cjs
+          DOCS_BASE_URL=http://127.0.0.1:4173 \
+            python3 tools/validate_layout_structure.py
 
       - name: Check favicon manifest
         run: |
@@ -329,13 +402,6 @@ jobs:
               " \
               && echo "  ok: $f"
           done
-
-      - name: Lint YAML workflow files
-        continue-on-error: true
-        run: |
-          command -v yamllint 2>/dev/null \
-            && yamllint .github/workflows/*.yml \
-            || echo "  skipped: yamllint not available"
 
       - name: Hunspell check (optional)
         continue-on-error: true
