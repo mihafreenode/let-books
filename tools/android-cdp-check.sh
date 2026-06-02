@@ -50,6 +50,8 @@ resolve_adb() {
     return
   fi
 
+  # Prefer the repo-specific WSL resolver when available because it understands the Windows/
+  # WSL discovery edge cases this project hits during real-device debugging.
   if [ -x "tools/wsl-find-adb.sh" ] && [ -n "${WSL_DISTRO_NAME:-}" ]; then
     tools/wsl-find-adb.sh
     return
@@ -74,6 +76,8 @@ curl_json() {
     return 0
   fi
 
+  # PowerShell fallback exists for WSL/Windows environments where localhost HTTP requests may be
+  # easier to verify from the Windows side than from the Linux userspace toolchain.
   if [ -n "${WSL_DISTRO_NAME:-}" ] && command -v powershell.exe >/dev/null 2>&1; then
     powershell.exe -NoProfile -Command "try { Invoke-WebRequest -UseBasicParsing '$url' | Select-Object -ExpandProperty Content } catch { exit 1 }" 2>/dev/null | tr -d '\r'
     return $?
@@ -99,6 +103,8 @@ else
   next_action "Reconnect USB, unlock phone, revoke USB debugging authorizations, and accept the prompt again"
 fi
 
+# Probe /proc/net/unix because the presence of the Chrome DevTools abstract socket is the most
+# direct proof that Android Chrome is actually exposing a debuggable endpoint.
 UNIX_SOCKETS="$($ADB_EXE shell cat /proc/net/unix 2>/dev/null || true)"
 if printf '%s\n' "$UNIX_SOCKETS" | grep -q '@chrome_devtools_remote'; then
   SOCKET_NAME='chrome_devtools_remote'
@@ -148,6 +154,8 @@ if [ "$FAIL_COUNT" -eq 0 ]; then
 fi
 
 if [ -z "$SOCKET_NAME" ]; then
+  # Failure staging is explicit so an agent or human can stop guessing which layer broke:
+  # Chrome socket exposure, ADB forwarding, localhost endpoint, or debuggable-tab discovery.
   next_action "Failure is at DevTools socket exposure inside Android Chrome."
 elif [ -z "$JSON_VERSION" ]; then
   next_action "Failure is at ADB forwarding or localhost CDP endpoint access."

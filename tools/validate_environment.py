@@ -45,6 +45,8 @@ class ToolCheck:
 
 
 TOOL_CHECKS = [
+    # Version floors are policy decisions tied to the current docs/localization toolchain rather
+    # than arbitrary preferences. Keeping them in one table makes CI/local drift easier to review.
     ToolCheck("Python", ["python3", "--version"], (3, 11), r"Python\s+(\d+(?:\.\d+)+)", True, "Install Python 3.11+ and ensure `python3` is on PATH."),
     ToolCheck("Node", ["node", "--version"], (22, 0), r"v?(\d+(?:\.\d+)+)", True, "Install Node.js 22+ and ensure `node` is on PATH."),
     ToolCheck("npm", ["npm", "--version"], (10, 0), r"(\d+(?:\.\d+)+)", True, "Install npm 10+ and ensure `npm` is on PATH."),
@@ -59,6 +61,8 @@ TOOL_CHECKS = [
 
 
 def parse_version(raw: str, pattern: str) -> tuple[int, ...] | None:
+    # Regex-based parsing lets each tool declare the output format it actually emits instead of
+    # pretending all CLIs follow one version-string convention.
     match = re.search(pattern, raw, re.MULTILINE)
     if not match:
         return None
@@ -79,6 +83,8 @@ def check_tool(spec: ToolCheck) -> list[str]:
 
     if executable is None:
       if spec.label == "ImageMagick":
+        # Some systems expose ImageMagick as `convert` instead of `magick`. Treat that as a
+        # supported compatibility path rather than a missing dependency.
         executable = shutil.which("convert")
         if executable is not None:
             result = run_command(["convert", "--version"])
@@ -138,6 +144,8 @@ def check_playwright() -> list[str]:
     else:
         print(f"✓ Playwright {version_text(version)}")
 
+    # CLI presence alone is not enough; browser-based docs tests fail later if Chromium is not
+    # actually installed and launchable in the current environment.
     launch_script = "const { chromium } = require('playwright'); (async () => { const browser = await chromium.launch({ headless: true }); await browser.close(); })().catch((error) => { console.error(error.message || error); process.exit(1); });"
     launch_result = run_command(["node", "-e", launch_script])
     launch_output = (launch_result.stdout or launch_result.stderr or "").strip()

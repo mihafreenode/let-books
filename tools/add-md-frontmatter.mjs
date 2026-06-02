@@ -64,12 +64,16 @@ function extractTitle(content) {
 
 function extractSummary(content) {
   const body = content.replace(/^---[\s\S]*?---\n*/, '');
+  // Summary extraction intentionally looks for a `## Summary` section only. This keeps automated
+  // frontmatter addition conservative instead of guessing from arbitrary introductory prose.
   const summaryMatch = body.match(/## Summary\s*\n+\s*(.+?)\s*(?:\n|$)/);
   if (summaryMatch) return summaryMatch[1].trim();
   return '';
 }
 
 function buildFrontmatter(title, summary, topics) {
+  // Preserve wrapped summary text using YAML block-scalar syntax so generated metadata stays
+  // readable and avoids one-line escaping noise.
   const summaryLine = summary ? `\nsummary: >-\n  ${summary.replace(/\n/g, '\n  ')}` : '';
   const topicsLines = topics.map((t) => `  - ${t}`).join('\n');
   return `---
@@ -87,6 +91,9 @@ function processDirectory(baseDir, topicMap, dirLabel) {
   for (const locale of LOCALES) {
     const localeDir = path.join(baseDir, locale);
     const dir = locale === 'en' ? baseDir : (isDirectory(localeDir) ? localeDir : baseDir);
+
+    // Fallback to the base directory only for English or older content layouts. This script is a
+    // migration helper, so it tolerates mixed directory conventions that newer generators avoid.
 
     if (!isDirectory(dir)) {
       console.warn(`  WARN: ${dirLabel} dir not found: ${dir}`);

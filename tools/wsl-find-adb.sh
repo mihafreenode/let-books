@@ -45,6 +45,8 @@ normalize_adb_path() {
 
   case "$candidate" in
     C:\\*)
+      # PowerShell and cmd may return Windows-native paths. Normalize them immediately so every
+      # later check can treat the result as a regular executable path inside WSL.
       candidate="$(wslpath -u "$candidate")"
       ;;
   esac
@@ -61,6 +63,8 @@ emit_adb_path() {
   fi
 
   ADB_EXE="$candidate"
+  # Cache the successful path because Windows-side discovery can be expensive under WSL and is
+  # not something contributors should pay on every debug loop.
   mkdir -p "$(dirname "$CACHE_FILE")"
   printf '%s\n' "$ADB_EXE" > "$CACHE_FILE"
   echo "$ADB_EXE"
@@ -108,8 +112,8 @@ do
   emit_adb_path "$p" || true
 done
 
-# Recursive filesystem search is expensive on WSL-mounted Windows filesystems.
-# Use only as a final fallback.
+# Recursive filesystem search is expensive on WSL-mounted Windows filesystems and can dominate
+# the edit/test loop. Use only as a final fallback after all curated locations fail.
 while IFS= read -r candidate; do
   emit_adb_path "$candidate" || true
 done < <(find /mnt/c/Users -path '*/platform-tools/adb.exe' -type f -print -quit 2>/dev/null)

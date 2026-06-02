@@ -173,18 +173,28 @@ function inspect(filePath) {
   }
 
   const content = fs.readFileSync(filePath, 'utf8');
+  // Summary heuristic intentionally matches common English summary openers rather than any ASCII
+  // text. This keeps the audit focused on likely untranslated metadata without flagging product
+  // names or technical tokens.
   if (/^summary:\s*(What|Why|How|English-only)\b/m.test(content)) {
     findings.metadataLocalization.push({ file: filePath, reason: 'English frontmatter summary in localized source' });
   }
 
+  // These helper headings are generator-/workflow-facing cues that should have been localized in
+  // source files. Leaving them in English usually means the localized Markdown was never fully
+  // finished even if the page can still be generated.
   if (/^## Related Pages$/m.test(content) || /^## Other Languages$/m.test(content)) {
     findings.navigationLocalization.push({ file: filePath, reason: 'English helper heading remains in localized markdown' });
   }
 
+  // Placeholder detection relies on phrases known to appear in coverage-first draft notices.
+  // This is intentionally phrase-based because the workflow debt class is historical and specific.
   if (/(coverage linguistique complète|cobertura lingüística completa|popolno jezikovno pokritost|potpunu jezičnu pokrivenost|potpunu jezičku pokrivenost|Sprachabdeckung|copertura linguistica completa|mbulim gjuhësor|јазична покриеност)/i.test(content)) {
     findings.mixedLanguagePublishing.push({ file: filePath, reason: 'Localized draft placeholder indicates knowingly incomplete publication source' });
   }
 
+  // Body-leak detection uses known English sentence stems from article families that previously
+  // shipped as mixed-language stubs. The audit is intentionally conservative and source-specific.
   if (/\n(English-only software can feel cheaper|Localization is becoming more continuous|Accessibility and localization are often split|People often learn best|Multilingual software is often described|Languages stay alive not only)/.test(content)) {
     findings.localizationCompleteness.push({ file: filePath, reason: 'Localized source still contains English article body text' });
   }

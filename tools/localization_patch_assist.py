@@ -46,6 +46,8 @@ from localization_alignment import (
 from localization_mt_draft import choose_backend, infer_source_locale, translate_block_text, translate_frontmatter
 
 
+# Parse unified-diff hunk headers and capture the added/changed line range on the current source
+# side only. Example match: `@@ -10,2 +14,3 @@` -> start=14, length=3.
 HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 
@@ -91,6 +93,9 @@ def changed_line_ranges(base_ref: str, source_path: Path) -> list[tuple[int, int
 def blocks_in_ranges(blocks, ranges: list[tuple[int, int]]):
     changed = []
     for block in blocks:
+        # Overlap-based matching is deliberate: even a one-line source edit can change the meaning
+        # of the whole block, so patch assist updates the full aligned block rather than partial
+        # line slices.
         if any(not (block.end_line < start or block.start_line > end) for start, end in ranges):
             changed.append(block)
     return changed
@@ -100,6 +105,8 @@ def replace_target_blocks(target_doc, replacements: dict[str, str]) -> str:
     rendered = []
     for block in target_doc.blocks:
         rendered.append(replacements.get(block.block_id, block.text))
+    # Rebuild the body with blank-line separation between structural blocks. This mirrors the
+    # parser's block model and avoids accidental block concatenation after selective replacement.
     body = "\n\n".join(rendered).strip() + "\n"
     if target_doc.frontmatter:
         return target_doc.frontmatter.rstrip() + "\n\n" + body
@@ -161,6 +168,8 @@ def main() -> int:
     for block in changed_blocks:
         match = match_map.get(block.block_id)
         if match is None or match.target_block_id is None or match.score < 0.45:
+            # Low-confidence cases intentionally fall back to human/AI review instead of guessing.
+            # A wrong patch is more damaging than an explicit "needs merge" signal.
             low_confidence.append(
                 {
                     "blockId": block.block_id,

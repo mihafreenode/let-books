@@ -34,6 +34,8 @@ DEFAULT_PORT = 4173
 
 
 def wait_for_port(host: str, port: int, timeout_seconds: float = 15.0) -> None:
+    # Poll for server readiness instead of sleeping a fixed amount. This keeps the wrapper fast
+    # on healthy machines and more reliable on slower CI or contributor laptops.
     deadline = time.time() + timeout_seconds
     while time.time() < deadline:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
@@ -53,6 +55,8 @@ def run_layout_validation(base_url: str) -> int:
 def main() -> int:
     external_base_url = os.environ.get("DOCS_BASE_URL")
     if external_base_url:
+        # Respect an explicit base URL so contributors and CI can validate against an already
+        # running docs server without spawning a competing local one.
         return run_layout_validation(external_base_url)
 
     server = subprocess.Popen(

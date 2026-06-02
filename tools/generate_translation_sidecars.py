@@ -37,6 +37,9 @@ def iter_pairs(content_type_filter: str | None = None):
     for content_type in CONFIG["contentTypes"]:
         if content_type_filter and content_type != content_type_filter:
             continue
+        # Blog stores English inside `docs/blog/en/`, while other content families use
+        # `docs/<type>/` as the English source root. Sidecar generation must preserve that mixed
+        # layout or it will silently skip valid source/target pairs.
         english_dir = DOCS_DIR / content_type / "en" if content_type == "blog" else DOCS_DIR / content_type
         if not english_dir.exists():
             continue
@@ -65,6 +68,8 @@ def main() -> int:
 
         source_doc = load_document(source_path)
         target_doc = load_document(target_path)
+        # Rebuild mode intentionally ignores previous sidecar hints so maintainers can recover
+        # from poisoned or stale alignment metadata after heuristic changes.
         sidecar = {} if args.rebuild else load_sidecar(target_path)
         matches = align_blocks(source_doc.blocks, target_doc.blocks, sidecar)
         payload = build_sidecar_entries(source_path, target_path, locale, source_doc.blocks, target_doc.blocks, matches)

@@ -62,6 +62,8 @@ LANGUAGE_CODE_MAP = {
 
 INLINE_CODE_RE = re.compile(r"`[^`]+`")
 RAW_URL_RE = re.compile(r"https?://\S+")
+# Match Markdown links and images as five groups so translation can localize only the human label
+# while preserving the delimiter syntax and target path exactly.
 LINK_RE = re.compile(r"(!?\[)([^\]]*)(\]\()([^)]*)(\))")
 
 
@@ -168,6 +170,8 @@ def choose_backend(name: str, source_locale: str, target_locale: str) -> Transla
             raise RuntimeError(f"Backend '{name}' unavailable: {reason}")
         return backend
 
+    # Auto mode prefers the first available backend in a fixed order. The goal is predictable,
+    # reviewable behavior rather than dynamic scoring that could change between environments.
     for backend in BACKENDS:
         ok, _ = backend.available(source_locale, target_locale)
         if ok:
@@ -198,6 +202,8 @@ def protect_segments(text: str) -> tuple[str, dict[str, str]]:
         counter += 1
         return token
 
+    # Protect code spans and raw URLs before translation so MT backends do not rewrite syntax or
+    # introduce escaping noise that reviewers would have to repair by hand.
     protected = INLINE_CODE_RE.sub(reserve, text)
     protected = RAW_URL_RE.sub(reserve, protected)
     return protected, placeholders
@@ -216,6 +222,8 @@ def translate_inline(text: str, backend: TranslationBackend, source_locale: str,
 
     pieces: list[str] = []
     last_end = 0
+    # Translate only the visible label of Markdown links/images, never the URL target. Changing
+    # the target would create broken cross-links and invalidate parity assumptions downstream.
     for match in LINK_RE.finditer(text):
         if match.start() > last_end:
             pieces.append(translate_plain_text(text[last_end:match.start()], backend, source_locale, target_locale))
@@ -237,6 +245,8 @@ def translate_plain_text(text: str, backend: TranslationBackend, source_locale: 
 
 def translate_block_text(block_type: str, text: str, backend: TranslationBackend, source_locale: str, target_locale: str) -> str:
     if block_type in {"code", "diagram", "html_comment"}:
+        # These block types are treated as immutable because translation would damage executable
+        # snippets, mermaid syntax, or editorial comments used by tooling.
         return text
 
     translated_lines: list[str] = []
@@ -252,6 +262,8 @@ def translate_block_text(block_type: str, text: str, backend: TranslationBackend
             continue
 
         if block_type == "list":
+            # Preserve list markers and indentation so generated drafts stay structurally aligned
+            # with the source document and can still be matched by later tooling.
             match = re.match(r"^(\s*(?:[-*+] |\d+\. ))(.*)$", line)
             if match:
                 translated_lines.append(match.group(1) + translate_inline(match.group(2), backend, source_locale, target_locale))

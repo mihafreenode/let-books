@@ -22,6 +22,8 @@ const runSeconds = Number(process.argv[3] || 8);
 const clearOriginData = process.argv.includes("--clear-data");
 
 const targets = await fetchJson("http://127.0.0.1:9222/json/list");
+// Pick a page target by URL substring rather than title because mobile Chrome titles can be
+// transient or generic during boot, while the URL is a more stable routing signal.
 const page = targets.find((target) => target.type === "page" && target.url.toLowerCase().includes(targetFilter.toLowerCase()));
 
 if (!page) {
@@ -36,6 +38,8 @@ let nextId = 1;
 function send(method, params = {}) {
   const id = nextId++;
   ws.send(JSON.stringify({ id, method, params }));
+  // CDP commands are correlated by id. Keeping the pending map explicit makes it easier to debug
+  // transport-level problems than hiding the protocol behind a heavier client abstraction.
   return new Promise((resolve, reject) => {
     pending.set(id, { resolve, reject });
   });
@@ -62,6 +66,8 @@ function print(label, payload) {
 }
 
 async function evaluate(expression) {
+  // Runtime.evaluate is used instead of injecting a custom helper script so the probe can inspect
+  // the current page state without permanently mutating the running mobile session.
   const result = await send("Runtime.evaluate", {
     expression,
     awaitPromise: true,
@@ -127,6 +133,8 @@ print("target", { title: page.title, url: page.url });
 
 if (clearOriginData) {
   const origin = new URL(page.url).origin;
+  // Clear origin data only on explicit request because service-worker/cache state is often the
+  // bug being investigated. Default behavior should preserve the real session for diagnosis.
   await send("Storage.clearDataForOrigin", {
     origin,
     storageTypes: "all"
@@ -154,6 +162,8 @@ const initialState = await evaluate(`(async () => ({
 }))()`);
 print("initial-state", initialState);
 
+// Force one reload through CDP so network, console, lifecycle, and service-worker observations
+// all describe the same fresh boot sequence.
 await send("Page.reload", { ignoreCache: true });
 await new Promise((resolve) => setTimeout(resolve, Math.max(1000, runSeconds * 1000)));
 

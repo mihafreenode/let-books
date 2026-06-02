@@ -29,11 +29,16 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT_DIR / "docs"
 LOCALES = ["sl", "hr", "bs", "sr-Latn", "sr-Cyrl", "mk", "sq", "de", "it", "fr", "es"]
 
+# Match two recurring English-link leak patterns in localized Markdown:
+# - absolute generated-doc links like `(/docs/wiki/en/page.html)`
+# - relative source links like `(../en/page.md)`
 ABSOLUTE_EN_LINK_RE = re.compile(r"\(/docs/(?P<section>learning|wiki|topics|blog)/en/(?P<slug>[^)]+?)\.html\)")
 RELATIVE_EN_LINK_RE = re.compile(r"\(\.\./en/(?P<slug>[^)]+?)\.md\)")
 
 
 def localized_target_exists(section: str, locale: str, slug: str) -> bool:
+    # `blog` keeps the same path shape as the other content families today, but the explicit
+    # branch preserves the repository's historical distinction and makes future divergence safer.
     if section == "blog":
         return (DOCS_DIR / section / locale / f"{slug}.md").exists()
     return (DOCS_DIR / section / locale / f"{slug}.md").exists()
@@ -54,6 +59,8 @@ def repair_content(content: str, file_path: Path, locale: str) -> tuple[str, int
     def replace_relative(match: re.Match[str]) -> str:
         nonlocal replacements
         slug = match.group("slug")
+        # Resolve relative links from the localized file location itself. This avoids rewriting a
+        # link into a locale path that looks valid globally but is wrong for the current file.
         relative_target = file_path.parent / ".." / locale / f"{slug}.md"
         if relative_target.resolve().exists():
             replacements += 1

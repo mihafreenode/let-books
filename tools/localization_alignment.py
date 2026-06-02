@@ -49,8 +49,15 @@ except ImportError:  # pragma: no cover - optional fallback
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 MARKDOWN_EXTENSIONS = {".md", ".markdown"}
+# Markdown block detectors for the subset of syntax that most affects localization structure.
+# These regexes are intentionally structural rather than exhaustive: the aligner needs stable
+# block boundaries more than it needs full CommonMark coverage.
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.*)$")
 LIST_RE = re.compile(r"^(\s*)([-*+] |\d+\. )")
+# Match GitHub-style table separator rows such as:
+# - | --- | --- |
+# - | :--- | ---: |
+# Representative non-match: a prose line with dashes that is not a table header separator.
 TABLE_SEPARATOR_RE = re.compile(r"^\s*\|?(\s*:?-{3,}:?\s*\|)+\s*:?-{3,}:?\s*\|?\s*$")
 BLOCKQUOTE_RE = re.compile(r"^\s*>\s?")
 IMAGE_RE = re.compile(r"^!\[[^\]]*\]\([^)]*\)\s*$")
@@ -106,6 +113,8 @@ POSITIONAL_MAX_DISTANCE = 3
 
 
 def split_frontmatter(content: str) -> tuple[str, str]:
+    # Frontmatter must be stripped before block parsing so heading/list heuristics operate on the
+    # reader-facing Markdown body rather than metadata keys.
     match = FRONTMATTER_RE.match(content)
     if not match:
         return "", content
@@ -138,6 +147,8 @@ def parse_frontmatter(frontmatter_text: str) -> dict[str, str]:
         value = raw_value.strip()
 
         if value in {">", ">-", "|", "|-"}:
+            # Support YAML block scalars because summaries and long descriptions are often wrapped
+            # that way in docs metadata. Losing them would degrade sidecars and parity checks.
             collected: list[str] = []
             index += 1
             while index < len(lines) and (lines[index].startswith("  ") or not lines[index].strip()):
@@ -213,6 +224,8 @@ def parse_blocks(body: str, line_offset: int = 0) -> list[MarkdownBlock]:
         else:
             current_heading_path = heading_path
 
+        # Block ids are content-derived and occurrence-indexed so repeated headings or repeated
+        # list items still remain distinguishable in sidecars and regression reports.
         base_id = make_block_id(block_type, current_heading_path, text)
         occurrence = block_ids_seen.get(base_id, 0) + 1
         block_ids_seen[base_id] = occurrence
