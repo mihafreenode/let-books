@@ -10,4 +10,5 @@ Ce dossier contient la version française de la documentation principale de Let 
 
 - [Blog](../blog/fr/)
 - [Learning](../learning/fr/)
+- [Topics](../topics/fr/)
 - [Wiki](../wiki/fr/)

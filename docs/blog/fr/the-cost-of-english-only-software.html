@@ -42,6 +42,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="blog" data-locale="fr">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
             <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/fr/index.html">Sujets</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../blog/en/the-cost-of-english-only-software.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,6 +103,10 @@
               <span aria-current="page">Le coût d’un logiciel uniquement en anglais</span>
             </nav>
             <h1>Le coût d’un logiciel uniquement en anglais</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Français</span>
+          </div>
           <p class="content-page-summary">Des reglages par defaut uniquement en anglais peuvent sembler economiques aux personnes qui construisent le logiciel, mais ils reportent sur tous les autres le cout de la comprehension, de la participation et de la maintenance.</p>
             <hr class="content-header-divider">
           </header>
@@ -134,19 +150,28 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Alignement de la démo</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Don de livres</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="related-let-books-menu">Let Books</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Livraison assistée par IA</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../wiki/fr/demo-spec-alignment.html"><span>Alignement entre démo et spécification</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/fr/demo-and-specification-alignment.html"><span>Alignement entre démo et spécification</span><span class="topic-menu__meta">Sujets</span></a>
+                </div>
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Comment ajouter des règles de validation et des garde-fous CI par étapes</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                </div>
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../topics/fr/edition-vs-physical-copy.html"><span>Édition vs exemplaire physique</span><span class="topic-menu__meta">Sujets</span></a>
+                  <a href="../../topics/fr/cataloging.html"><span>Catalogage</span><span class="topic-menu__meta">Sujets</span></a>
                 </div>
                 <div class="topic-menu" id="related-let-books-menu" data-topic-menu="related-let-books" hidden>
                   <a href="../../wiki/fr/let-books-localization-lessons-learned.html"><span>Let Books Leçons apprises en matière de localisation</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment revoir un travail assisté par l&#x27;IA par rapport à la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../learning/fr/how-to-write-a-spec-that-ai-can-follow.html"><span>Comment écrire une spécification que l&#x27;IA peut suivre</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment relire un travail assisté par IA à l’aune de la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
                 </div>
               </div>
             </div>
@@ -160,11 +185,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</p>
+            <p class="footer-note">Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</p>
             <p class="footer-microcopy">Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../fr/index.html">Aperçu</a>
+              <a href="../../topics/fr/index.html">Sujets</a>
               <a href="../../index.html">Page d&#x27;accueil</a>
               <a href="../../../static-demo/">Démo</a>
             </div>
@@ -175,6 +202,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</span>
+            <span>Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

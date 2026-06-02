@@ -23,13 +23,18 @@ Localization Debt = 0
 Open Defect Classes = 0
 ```
 
-This status means the currently tracked localization defect classes are closed in the audited set and are backed by validation and CI coverage. New findings should still be treated as new defect classes, documented in the audit, and added to the Native-Speaker Review Findings corpus when relevant.
+This status means the currently tracked localization defect classes are closed in the audited set and are backed by validation and CI coverage.
+
+The metric should be read as a generated snapshot, not as a permanent claim. If new content types or locale families are introduced before their localized Markdown sources are completed, the tracked status must be updated to reflect the new debt until parity and semantic validation are restored.
+
+New findings should still be treated as new defect classes, documented in the audit, and added to the Native-Speaker Review Findings corpus when relevant.
 
 ## Structure
 
 - `knowledge-platform-bootstrap.md` records the first platform analysis pass
 - `blog/` will hold future articles
 - `learning/` will hold study guides and teaching material
+- `topics/` will hold conceptual orientation pages between blog, wiki, and learning material
 - `wiki/` will hold evergreen reference pages
 - `diagrams/` will hold diagram sources and conventions
 - `assets/` will hold reusable knowledge-platform assets

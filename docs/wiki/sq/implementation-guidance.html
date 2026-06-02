@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Udhëzime për implementim | LetBooks</title>
-    <meta name="description" content="Udhëzimet e implementimit përcaktojnë se si ekipi duhet ta dorëzojë punën brenda depos ose mjedisit aktual të dorëzimit, pa e zëvendësuar vetë specifikimin e produktit.">
+    <title>Udhëzues Zbatimi | LetBooks</title>
+    <meta name="description" content="Udhëzimi i zbatimit përcakton se si një ekip duhet të dorëzojë punën brenda depove aktuale ose mjedisit të shpërndarjes pa zëvendësuar vetë specifikimin e produktit.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/implementation-guidance.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Udhëzime për implementim | LetBooks">
-    <meta property="og:description" content="Udhëzimet e implementimit përcaktojnë se si ekipi duhet ta dorëzojë punën brenda depos ose mjedisit aktual të dorëzimit, pa e zëvendësuar vetë specifikimin e produktit.">
+    <meta property="og:title" content="Udhëzues Zbatimi | LetBooks">
+    <meta property="og:description" content="Udhëzimi i zbatimit përcakton se si një ekip duhet të dorëzojë punën brenda depove aktuale ose mjedisit të shpërndarjes pa zëvendësuar vetë specifikimin e produktit.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/implementation-guidance.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Udhëzime për implementim | LetBooks">
-    <meta name="twitter:description" content="Udhëzimet e implementimit përcaktojnë se si ekipi duhet ta dorëzojë punën brenda depos ose mjedisit aktual të dorëzimit, pa e zëvendësuar vetë specifikimin e produktit.">
+    <meta name="twitter:title" content="Udhëzues Zbatimi | LetBooks">
+    <meta name="twitter:description" content="Udhëzimi i zbatimit përcakton se si një ekip duhet të dorëzojë punën brenda depove aktuale ose mjedisit të shpërndarjes pa zëvendësuar vetë specifikimin e produktit.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sq">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
             <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/implementation-guidance.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sq/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Udhëzime për implementim</span>
+              <span aria-current="page">Udhëzues Zbatimi</span>
             </nav>
-            <h1>Udhëzime për implementim</h1>
-          <p class="content-page-summary">Udhëzimet e implementimit përcaktojnë se si ekipi duhet ta dorëzojë punën brenda depos ose mjedisit aktual të dorëzimit, pa e zëvendësuar vetë specifikimin e produktit.</p>
+            <h1>Udhëzues Zbatimi</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Udhëzimi i zbatimit përcakton se si një ekip duhet të dorëzojë punën brenda depove aktuale ose mjedisit të shpërndarjes pa zëvendësuar vetë specifikimin e produktit.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">Planifikim i zbatimit</span>
@@ -101,52 +117,65 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="roli">Roli</h2>
-<p class="lead">Udhëzimet e implementimit qëndrojnë poshtë specifikimit të produktit.</p>
-<p>Ato ndihmojnë për t’iu përgjigjur pyetjeve si:</p>
+<p class="lead">Udhëzimet e zbatimit janë nën specifikimet e produktit.</p>
+<p>Ndihmon për t’iu përgjigjur pyetjeve të tilla si:</p>
 <ul>
 <li>si duhet të funksionojë emërtimi publik</li>
 <li>si duhet të strukturohen dokumentet</li>
-<li>cilat pritje verifikimi vlejnë tani</li>
-<li>cilat rregulla specifike të depos duhet të ndjekin kontribuesit</li>
-<li>ku duhet të jetojnë rregullat taktike ndërsa projekti evoluon</li>
+<li>cilat pritshmëri verifikimi zbatohen tani</li>
+<li>cilat rregulla specifike të depove duhet të ndjekin kontribuuesit</li>
+<li>ku rregullat taktike duhet të jetojnë ndërsa projekti evoluon</li>
 </ul>
-<h2 id="dallimi-nga-specifikimi-i-produktit">Dallimi nga specifikimi i produktit</h2>
-<p>Specifikimi i produktit përcakton çfarë është produkti dhe çfarë duhet të arrijë.</p>
-<p>Udhëzimet e implementimit përcaktojnë si duhet ta kryejnë kontribuesit punën brenda kontekstit aktual të dorëzimit.</p>
-<p>Ky dallim është i dobishëm sepse jo çdo rregull i depos është e vërtetë e produktit dhe jo çdo e vërtetë e produktit duhet të fshihet në shënime taktike.</p>
+<h2 id="ndryshimi-nga-specifikimi-i-produktit">Ndryshimi nga specifikimi i produktit</h2>
+<p>Specifikimi i produktit përcakton se çfarë është produkti dhe çfarë duhet të arrijë.</p>
+<p>Udhëzimi i zbatimit përcakton se si kontribuuesit duhet të kryejnë punën brenda kontekstit aktual të ofrimit.</p>
+<p>Ky dallim është i dobishëm sepse jo çdo rregull i depove është një e vërtetë produkti dhe jo çdo e vërtetë e produktit duhet të varroset në shënime taktike.</p>
 <h2 id="shembuj-të-zakonshëm">Shembuj të zakonshëm</h2>
-<p>Udhëzimet e implementimit shpesh përfshijnë:</p>
+<p>Udhëzimet e zbatimit shpesh përfshijnë:</p>
 <ul>
-<li>rregulla emërtimi dhe markimi</li>
-<li>rregulla për implementimin e dokumentacionit</li>
-<li>kufizime të sajtit statik ose demos</li>
-<li>pritje verifikimi</li>
-<li>rregulla redaktimi ose gjenerimi kodi</li>
-<li>politika provash për shkrimin publik</li>
+<li>rregullat e emërtimit dhe markës</li>
+<li>rregullat e zbatimit të dokumentacionit</li>
+<li>kufizimet e faqes statike ose demo</li>
+<li>pritjet e verifikimit</li>
+<li>Rregullat e redaktimit ose të gjenerimit të kodeve</li>
+<li>politikat e evidentimit për shkrimin publik</li>
 </ul>
-<p>Këto rregulla shpesh funksionojnë mirë në Markdown sepse duhet të mbeten të rishikueshme, të lehta për t’u përditësuar dhe pranë pjesës tjetër të kontekstit të depos.</p>
-<h2 id="pse-ka-rëndësi-në-punën-e-asistuar-nga-ia">Pse ka rëndësi në punën e asistuar nga IA</h2>
-<p>Asistentët IA shpesh ndjekin udhëzimin më të afërt dhe më konkret. Nëse rregullat specifike të depos janë të nënkuptuara, rezultatet bëhen shpejt të paqëndrueshme.</p>
-<p>Udhëzimet e implementimit i bëjnë këto rregulla të dukshme pa e ndotur specifikimin e produktit me hollësi taktike.</p>
-<p>Në praktikë kjo do të thotë se një skedar udhëzues Markdown mund të bëjë dy punë njëkohësisht:</p>
+<p>Këto rregulla shpesh jetojnë mirë në Markdown sepse ato duhet të qëndrojnë të rishikueshme, të lehta për t’u përditësuar dhe afër pjesës tjetër të kontekstit të depove.</p>
+<h2 id="pse-ka-rëndësi-në-punën-e-asistuar-nga-ai">Pse ka rëndësi në punën e asistuar nga AI</h2>
+<p>Asistentët e AI shpesh ndjekin udhëzimet konkrete më të afërta. Nëse rregullat specifike të depove janë të nënkuptuara, prodhimi bëhet shpejt i paqëndrueshëm.</p>
+<p>Udhëzimi i zbatimit i bën ato rregulla të dukshme pa e ndotur specifikimin e produktit me detaje taktike.</p>
+<p>Në praktikë, kjo do të thotë se një skedar udhëzues Markdown mund të bëjë dy punë njëherësh:</p>
 <ul>
-<li>të shpjegojë rrjedhën e punës për një kontribues njerëzor</li>
-<li>të drejtojë një agjent IA drejt mjeteve, rendit dhe kufizimeve të preferuara</li>
+<li>shpjegoni rrjedhën e punës një kontribuesi njerëzor</li>
+<li>drejtoni një agjent AI drejt mjeteve, sekuencës dhe kufizimeve të preferuara</li>
 </ul>
-<h2 id="konteksti-let-books">Konteksti Let Books</h2>
+<h2 id="let-books-kontekst">Let Books kontekst</h2>
 <p>Në Let Books, <code>AGENTS-Implementation.md</code> është shtresa e udhëzimit taktik.</p>
-<p>Ai mbulon fusha si:</p>
+<p>Ai mbulon fusha të tilla si:</p>
 <ul>
 <li>emërtimi publik</li>
 <li>rregullat e dokumentacionit</li>
-<li>ndarja mes sajtit publik dhe dokumenteve</li>
-<li>rregullat e metadatave dhe SEO-së për faqe statike</li>
-<li>kufizimet e demos statike</li>
-<li>rregullat e lokalizimit dhe aksesueshmërisë</li>
+<li>ndarja e faqes publike dhe dokumenteve</li>
+<li>rregullat e meta të dhënave dhe SEO për faqet statike</li>
+<li>kufizimet statike demonstruese</li>
+<li>Rregullat e lokalizimit dhe aksesueshmërisë</li>
 <li>rregullat e verifikimit</li>
-<li>politika e provave për blogun</li>
+<li>Politika e dëshmive të blogut</li>
 </ul>
-<p>Kjo e bën atë shoqëruesin operacional të <code>AGENTS.md</code>, jo zëvendësim të tij.</p>
+<p>Kjo e bën atë shoqërues operacional të <code>AGENTS.md</code>, jo një zëvendësim për të.</p>
+<p>Udhëzime të tjera Markdown në repo përforcojnë të njëjtin model. Për shembull:</p>
+<ul>
+<li><code>docs/android-debugging.md</code> drejton zgjedhjet e rrjedhës së punës për korrigjimin e gabimeve, si p.sh.</li>
+<li><code>docs/style-guide/publishing/ubuntu-tooling.md</code> dokumenton mjetet e pritshme për publikimin, verifikimin, pamjet e ekranit, kontrollin drejtshkrimor dhe korrigjimin e pajisjes</li>
+</ul>
+<p>Këto dokumente janë të lexueshme si udhëzime njerëzore, por ato gjithashtu ndihmojnë agjentët të zgjedhin veprime më të mira në vend që të hamendësojnë nga parazgjedhjet e përgjithshme.</p>
+<h2 id="faqe-të-ngjashme">Faqe të ngjashme</h2>
+<ul>
+<li><code>product-specification.md</code></li>
+<li><code>documentation-traceability.md</code></li>
+<li><code>validation-layers.md</code></li>
+<li><code>../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -175,22 +204,26 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../wiki/sq/validation-layers.html"><span>Shtresat e validimit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/validation-layers.html"><span>Shtresat e Validimit</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Si ta kthesh një specifikim produkti në plan implementimi</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Si ta ktheni një specifikim produkti në një plan implementimi</span><span class="topic-menu__meta">Materiale mësimore</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../blog/sq/spec-driven-development-in-let-books.html"><span>Zhvillim i udhëhequr nga specifikimi në Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kur demoja është provë dhe kur nuk është</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sq/spec-driven-development-in-let-books.html"><span>Zhvillim i udhëhequr nga specifikimi në Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sq/spec-driven-development-for-ai-projects.html"><span>Zhvillim i udhëhequr nga specifikimi për projektet me AI</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbash të përputhura specifikimin, dokumentimin, demon dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Si të shtosh me faza rregulla validimi dhe porta CI</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbani të përafruara specifikimin, dokumentacionin, demonstrimin dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Si të shtoni rregulla validimi dhe porta CI me faza</span><span class="topic-menu__meta">Materiale mësimore</span></a>
                   <a href="../../wiki/sq/product-specification.html"><span>Specifikimi i produktit</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/sq/documentation-traceability.html"><span>Gjurmueshmëria e dokumentacionit</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/sq/demo-spec-alignment.html"><span>Përputhja e demos me specifikimin</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/demo-and-specification-alignment.html"><span>Përputhja e Demos dhe Specifikimit</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/ai-assisted-implementation.html"><span>Implementimi i Ndihmuar nga AI</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/spec-driven-development.html"><span>Zhvillimi i Udhëhequr nga Specifikimi</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/documentation-traceability.html"><span>Gjurmueshmëria e Dokumentacionit</span><span class="topic-menu__meta">Tema</span></a>
                 </div>
               </div>
             </div>
@@ -204,11 +237,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
             <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
               <a href="../../index.html">Faqja kryesore</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -219,6 +254,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</span>
+            <span>Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

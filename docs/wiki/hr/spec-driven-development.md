@@ -1,41 +1,70 @@
 ---
-title: "Razvoj vođen specifikacijom"
+title: "Razvoj vođen specifikacijama"
+summary: >-
+  Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i tijeka rada vode implementaciju, dokumentaciju, pregled i provjeru.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Razvoj vođen specifikacijom
+# Razvoj vođen specifikacijama
 
 ## Sažetak
 
-Razvoj vođen specifikacijom pristup je u kojem eksplicitne proizvodne i procesne definicije vode implementaciju, dokumentaciju, pregled i provjeru.
+Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i tijeka rada vode implementaciju, dokumentaciju, pregled i provjeru.
 
-## Zašto je važan
+## Definicija
 
-AI povećava brzinu isporuke, ali može povećati i proizvodni odmak kada namjera nije dovoljno jasna.
+U ovom pristupu, specifikacija nije samo početni artefakt planiranja. Djeluje kao stalna referenca za:
 
-Specifikacija timu daje stabilan izvor istine za:
+- namjena proizvoda
+- granice djelokruga
+- potrebno ponašanje
+- kriteriji prihvatljivosti
+- pregled standarda
 
-- svrhu proizvoda
-- granice opsega
-- traženo ponašanje
-- kriterije prihvaćanja
-- standard pregleda
+## Zašto je to važno u radu uz pomoć umjetne inteligencije
+
+AI povećava brzinu isporuke, ali također može povećati odstupanje proizvoda kada je namjera nejasna.
+
+Razvoj vođen specifikacijama pomaže dajući timovima stabilan izvor istine koji se može pregledati, ažurirati i koristiti za procjenu generiranog rezultata.
 
 ## Tipični slojevi
 
-- proizvodna specifikacija
-- implementacijske smjernice
-- dokumentacija trenutačnog stanja
+Uobičajeni slojevi u sustavu vođenom specifikacijama uključuju:
+
+- specifikacija proizvoda
+- smjernice za provedbu
+- dokumentaciju o trenutnom stanju
 - demo ili ponašanje aplikacije
-- testovi i validacija
-- CI/CD provedba
+- pravila i testovi validacije
+- Provedba CI/CD
 
-## Česta pogreška
+## Način uobičajenog kvara
 
-Česta pogreška je da najvidljiviji artefakt postane zadani izvor istine, primjerice posljednji upit, trenutačni prototip ili zastarjela stranica dokumentacije.
+Uobičajen način neuspjeha je dopuštanje da najvidljiviji artefakt postane zadani izvor istine.
 
-## Kontekst Let Books
+Primjeri:
 
-U Let Books ovaj pristup podupiru `AGENTS.md`, `AGENTS-Implementation.md`, `README.md`, `docs/Development.md` i `docs/Deployment.md`.
+- najnoviji upit
+- trenutni prototip
+- trenutni prečac implementacije
+- ustajala stranica dokumentacije
+
+Razvoj vođen specifikacijama smanjuje taj rizik tako što namjeravani lanac ovlaštenja čini eksplicitnim.
+
+## Let Books kontekst
+
+U Let Books, razvoj vođen specifikacijama podržavaju:
+
+- `AGENTS.md`
+- `AGENTS-Implementation.md`
+- `README.md`
+- `docs/Development.md`
+- `docs/Deployment.md`
+
+## Povezane stranice
+
+- `demo-spec-alignment.md`
+- `../../learning/hr/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../blog/hr/spec-driven-development-for-ai-projects.md`

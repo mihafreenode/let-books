@@ -1,80 +1,89 @@
 ---
-title: "Directrices de implementación"
+title: "Guía de implementación"
+summary: >-
+  La guía de implementación define cómo un equipo debe entregar el trabajo dentro del repositorio o entorno de entrega actual sin reemplazar la especificación del producto en sí.
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Directrices de implementación
+# Guía de implementación
 
 ## Resumen
 
-Las directrices de implementación definen cómo un equipo debe entregar trabajo dentro del repositorio o del entorno de entrega actual sin sustituir la propia especificación del producto.
+La guía de implementación define cómo un equipo debe entregar el trabajo dentro del repositorio o entorno de entrega actual sin reemplazar la especificación del producto en sí.
 
 ## Rol
 
-Las directrices de implementación se sitúan por debajo de la especificación del producto.
+La guía de implementación se encuentra debajo de la especificación del producto.
 
-Ayudan a responder preguntas como:
+Ayuda a responder preguntas como:
 
-- cómo debe funcionar la denominación pública
-- cómo debe estructurarse la documentación
-- qué expectativas de verificación aplican ahora
-- qué reglas específicas del repositorio deben seguir los colaboradores
-- dónde deben vivir las reglas tácticas a medida que evoluciona el proyecto
+- cómo debería funcionar la denominación pública
+- cómo deben estructurarse los documentos
+- qué expectativas de verificación se aplican ahora
+- qué reglas específicas del repositorio deben seguir los contribuyentes
+- dónde deberían residir las reglas tácticas a medida que evoluciona el proyecto
 
-## Diferencia frente a la especificación del producto
+## Diferencia con respecto a la especificación del producto
 
 La especificación del producto define qué es el producto y qué debe lograr.
 
-Las directrices de implementación definen cómo deben realizar el trabajo los colaboradores dentro del contexto actual de entrega.
+La guía de implementación define cómo los contribuyentes deben realizar el trabajo dentro del contexto de entrega actual.
 
-Esta distinción es útil porque no toda regla del repositorio es una verdad del producto, y no toda verdad del producto debe quedar enterrada en notas tácticas.
+Esta distinción es útil porque no todas las reglas del repositorio son una verdad del producto, y no todas las verdades del producto deben quedar ocultas en notas tácticas.
 
 ## Ejemplos comunes
 
-Las directrices de implementación suelen incluir:
+La guía de implementación a menudo incluye:
 
-- reglas de nombres y marca
+- reglas de denominación y marca
 - reglas de implementación de la documentación
-- restricciones del sitio estático o de la demo
+- restricciones de sitio estático o demostración
 - expectativas de verificación
 - reglas de edición o generación de código
 - políticas de evidencia para la escritura pública
 
-Estas reglas suelen funcionar bien en Markdown porque necesitan seguir siendo revisables, fáciles de actualizar y cercanas al resto del contexto del repositorio.
+Estas reglas a menudo se encuentran bien en Markdown porque deben seguir siendo revisables, fáciles de actualizar y cercanas al resto del contexto del repositorio.
 
-## Por qué importa en el trabajo asistido por IA
+## Por qué es importante el trabajo asistido por IA
 
-Los asistentes de IA suelen seguir la instrucción concreta más cercana. Si las reglas específicas del repositorio son implícitas, la salida se vuelve inconsistente con rapidez.
+Los asistentes de IA suelen seguir las instrucciones concretas más cercanas. Si las reglas específicas del repositorio están implícitas, la salida se vuelve inconsistente rápidamente.
 
-Las directrices de implementación hacen visibles esas reglas sin contaminar la especificación del producto con detalle táctico.
+La guía de implementación hace que esas reglas sean visibles sin contaminar las especificaciones del producto con detalles tácticos.
 
-En la práctica, eso significa que un archivo guía en Markdown puede hacer dos trabajos a la vez:
+En la práctica, esto significa que un expediente de orientación del artículo Markdown puede realizar dos tareas a la vez:
 
 - explicar el flujo de trabajo a un colaborador humano
-- orientar a un agente de IA hacia las herramientas, la secuencia y las restricciones preferidas
+- Dirigir a un agente de IA hacia las herramientas, secuencias y limitaciones preferidas.
 
-## Contexto de Let Books
+## Let Books contexto
 
 En Let Books, `AGENTS-Implementation.md` es la capa de guía táctica.
 
-Cubre áreas como:
+Abarca áreas como:
 
 - denominación pública
 - reglas de documentación
-- separación entre sitio público y documentación
-- reglas de metadatos y SEO para páginas estáticas
-- restricciones de la demo estática
+- sitio público y documentos divididos
+- metadatos y reglas SEO para páginas estáticas
+- restricciones de demostración estática
 - reglas de localización y accesibilidad
 - reglas de verificación
-- política de evidencia del blog
+- política de evidencia de blogs
 
-Eso lo convierte en el acompañante operativo de `AGENTS.md`, no en su sustituto.
+Eso lo convierte en el complemento operativo del `AGENTS.md`, no en su reemplazo.
 
-## Páginas Relacionadas
+Otras orientaciones del artículo Markdown del repositorio refuerzan el mismo patrón. Por ejemplo:
+
+- `docs/android-debugging.md` dirige las opciones de flujo de trabajo de depuración, como CDP adjuntar versus flujos de trabajo de parche de origen
+- `docs/style-guide/publishing/ubuntu-tooling.md` documenta las herramientas esperadas para publicación, verificación, capturas de pantalla, corrección ortográfica y depuración de dispositivos.
+
+Estos documentos se pueden leer como guía humana, pero también ayudan a los agentes a elegir mejores acciones en lugar de adivinar valores predeterminados genéricos.
+
+## Páginas relacionadas
 
 - `product-specification.md`
 - `documentation-traceability.md`
 - `validation-layers.md`
-- `../learning/how-to-turn-a-product-spec-into-an-implementation-plan.md`
+- `../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.md`

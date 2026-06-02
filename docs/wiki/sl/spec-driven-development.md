@@ -1,43 +1,70 @@
 ---
-title: "Razvoj na podlagi specifikacij"
+title: "Razvoj, ki temelji na specifikacijah"
+summary: >-
+  Razvoj, ki temelji na specifikacijah, je pristop, pri katerem eksplicitne definicije izdelkov in delovnih tokov vodijo implementacijo, dokumentacijo, pregled in preverjanje.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Razvoj na podlagi specifikacij
+# Razvoj, ki temelji na specifikacijah
 
 ## Povzetek
 
-Razvoj na podlagi specifikacij je pristop, pri katerem eksplicitne produktne in procesne definicije vodijo implementacijo, dokumentacijo, pregled in preverjanje.
+Razvoj, ki temelji na specifikacijah, je pristop, pri katerem eksplicitne definicije izdelkov in delovnih tokov vodijo implementacijo, dokumentacijo, pregled in preverjanje.
 
-## Zakaj je pomemben
+## Definicija
 
-AI poveča hitrost dostave, lahko pa poveča tudi produktni odmik, kadar namen ni dovolj jasen.
-
-Specifikacija ekipi daje stabilen vir resnice za:
+Pri tem pristopu specifikacija ni samo artefakt začetnega načrtovanja. Deluje kot stalna referenca za:
 
 - namen izdelka
 - meje obsega
 - zahtevano vedenje
-- merila sprejema
-- standard pregleda
+- merila sprejemljivosti
+- pregled standardov
+
+## Zakaj je to pomembno pri delu s pomočjo umetne inteligence
+
+Umetna inteligenca poveča hitrost dostave, vendar lahko poveča tudi premikanje izdelka, kadar je namen nejasen.
+
+Razvoj, ki temelji na specifikacijah, pomaga tako, da daje ekipam stabilen vir resnice, ki ga je mogoče pregledati, posodobiti in uporabiti za ovrednotenje ustvarjenega rezultata.
 
 ## Tipične plasti
 
-Običajne plasti v takem sistemu so:
+Pogosti sloji v sistemu, ki temelji na specifikacijah, vključujejo:
 
-- produktna specifikacija
-- implementacijska navodila
-- dokumentacija trenutnega stanja
-- demo ali aplikacijsko vedenje
-- testi in validacija
-- CI/CD uveljavljanje
+- specifikacija izdelka
+- navodila za izvedbo
+- dokumentacijo o trenutnem stanju
+- obnašanje demo ali aplikacije
+- pravila validacije in testi
+- Uveljavljanje CI/CD
 
-## Pogosta napaka
+## Način običajne napake
 
-Pogosta napaka je, da najvidnejši artefakt postane privzeti vir resnice, na primer zadnji poziv, trenutni prototip ali zastarela stran dokumentacije.
+Pogost način neuspeha je, da najvidnejši artefakt postane privzeti vir resnice.
 
-## Kontekst Let Books
+Primeri:
 
-V Let Books ta pristop podpirajo `AGENTS.md`, `AGENTS-Implementation.md`, `README.md`, `docs/Development.md` in `docs/Deployment.md`.
+- zadnji poziv
+- trenutni prototip
+- trenutna bližnjica izvedbe
+- zastarela dokumentacijska stran
+
+Razvoj, ki temelji na specifikacijah, zmanjša to tveganje, tako da je namenska veriga avtoritet eksplicitna.
+
+## Let Books kontekst
+
+V Let Books razvoj, ki temelji na specifikacijah, podpirajo:
+
+- `AGENTS.md`
+- `AGENTS-Implementation.md`
+- `README.md`
+- `docs/Development.md`
+- `docs/Deployment.md`
+
+## Sorodne strani
+
+- `demo-spec-alignment.md`
+- `../../learning/sl/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../blog/sl/spec-driven-development-for-ai-projects.md`

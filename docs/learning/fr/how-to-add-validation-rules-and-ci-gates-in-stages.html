@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Comment ajouter progressivement des règles de validation et des garde-fous CI | LetBooks</title>
-    <meta name="description" content="Ce guide explique comment renforcer la validation et la CI par étapes au lieu d&#x27;introduire immédiatement un système trop rigide.">
+    <title>Comment ajouter des règles de validation et des garde-fous CI par étapes | LetBooks</title>
+    <meta name="description" content="Ce guide explique comment ajouter progressivement des règles de validation et des vérifications CI afin qu’un projet puisse améliorer sa cohérence et réduire la dérive sans chercher à tout automatiser d’un seul coup.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Comment ajouter progressivement des règles de validation et des garde-fous CI | LetBooks">
-    <meta property="og:description" content="Ce guide explique comment renforcer la validation et la CI par étapes au lieu d&#x27;introduire immédiatement un système trop rigide.">
+    <meta property="og:title" content="Comment ajouter des règles de validation et des garde-fous CI par étapes | LetBooks">
+    <meta property="og:description" content="Ce guide explique comment ajouter progressivement des règles de validation et des vérifications CI afin qu’un projet puisse améliorer sa cohérence et réduire la dérive sans chercher à tout automatiser d’un seul coup.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Comment ajouter progressivement des règles de validation et des garde-fous CI | LetBooks">
-    <meta name="twitter:description" content="Ce guide explique comment renforcer la validation et la CI par étapes au lieu d&#x27;introduire immédiatement un système trop rigide.">
+    <meta name="twitter:title" content="Comment ajouter des règles de validation et des garde-fous CI par étapes | LetBooks">
+    <meta name="twitter:description" content="Ce guide explique comment ajouter progressivement des règles de validation et des vérifications CI afin qu’un projet puisse améliorer sa cohérence et réduire la dérive sans chercher à tout automatiser d’un seul coup.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="fr">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
             <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/fr/index.html">Sujets</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Comment ajouter progressivement des règles de validation et des garde-fous CI</span>
+              <span aria-current="page">Comment ajouter des règles de validation et des garde-fous CI par étapes</span>
             </nav>
-            <h1>Comment ajouter progressivement des règles de validation et des garde-fous CI</h1>
-          <p class="content-page-summary">Ce guide explique comment renforcer la validation et la CI par étapes au lieu d&#x27;introduire immédiatement un système trop rigide.</p>
+            <h1>Comment ajouter des règles de validation et des garde-fous CI par étapes</h1>
+          <div class="content-page-meta">
+            <span>Ressources d&#x27;apprentissage</span>
+            <span>Français</span>
+          </div>
+          <p class="content-page-summary">Ce guide explique comment ajouter progressivement des règles de validation et des vérifications CI afin qu’un projet puisse améliorer sa cohérence et réduire la dérive sans chercher à tout automatiser d’un seul coup.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Sujets :</span>
               <span class="content-tag">CI/CD</span>
@@ -100,15 +116,135 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="niveaux-de-maturité">Niveaux de maturité</h2>
+<h2 id="pourquoi-lapplication-progressive-est-importante">Pourquoi l’application progressive est importante</h2>
+<p class="lead">Les équipes savent souvent qu’elles ont besoin d’une validation plus solide, mais elles commettent généralement l’une de deux erreurs.</p>
+<p>Soit elles laissent les contrôles qualité informels trop longtemps, soit elles essaient d’introduire d’un seul coup un grand système CI rigide et créent de la frustration.</p>
+<p>Une approche progressive fonctionne mieux.</p>
+<p>Elle permet au projet de transformer au fil du temps des attentes de revue répétées en contrôles répétables.</p>
+<h2 id="partir-des-erreurs-récurrentes">Partir des erreurs récurrentes</h2>
+<p>Les meilleures règles de validation commencent généralement comme des constats répétés lors de revues humaines.</p>
+<p>Demandez-vous :</p>
+<ul>
+<li>quelles erreurs reviennent sans cesse</li>
+<li>quelles règles sont faciles à oublier</li>
+<li>quelle structure doit rester cohérente dans l’ensemble du dépôt</li>
+<li>quels contrôles qualité feraient gagner du temps aux personnes qui relisent</li>
+</ul>
+<p>Si le même problème apparaît plusieurs fois, c’est un bon candidat à l’automatisation.</p>
+<h2 id="la-validation-doit-suivre-la-chaîne-dautorité">La validation doit suivre la chaîne d’autorité</h2>
+<p>Les règles de validation doivent renforcer des attentes documentées, pas les remplacer.</p>
+<p>Cela signifie :</p>
+<ul>
+<li>la spécification définit la règle</li>
+<li>la documentation explique la règle</li>
+<li>la validation vérifie la règle lorsque c’est pratique</li>
+<li>la CI exécute la validation de manière cohérente</li>
+</ul>
+<p>Cela évite au projet de faire respecter des règles qui n’ont jamais été réellement décidées.</p>
+<h2 id="un-modèle-de-maturité-utile">Un modèle de maturité utile</h2>
+<h3 id="étape-1-liste-de-contrôle-de-revue-manuelle">Étape 1 : liste de contrôle de revue manuelle</h3>
+<p>Commencez par nommer explicitement la règle.</p>
+<p>Exemples :</p>
+<ul>
+<li>tout nouveau texte visible par l’utilisateur doit pouvoir être localisé</li>
+<li>la documentation doit séparer l’état actuel des plans futurs</li>
+<li>les nouveaux articles publics doivent citer les spécifications et la documentation, pas les fichiers source</li>
+</ul>
+<p>À ce stade, la règle est réelle, mais elle est encore appliquée par des humains.</p>
+<h3 id="étape-2-validation-locale-légère">Étape 2 : validation locale légère</h3>
+<p>Ajoutez un petit script ou un contrôle structuré que les personnes contributrices peuvent exécuter localement.</p>
+<p>Exemples :</p>
+<ul>
+<li>détection des clés de langue manquantes</li>
+<li>vérification de la présence des fichiers requis</li>
+<li>validation de la génération des métadonnées</li>
+<li>vérification de la résolution des liens</li>
+</ul>
+<p>Cette étape réduit les erreurs évitables avant même que la CI ne s’exécute.</p>
+<h3 id="étape-3-visibilité-dans-la-ci">Étape 3 : visibilité dans la CI</h3>
+<p>Exécutez le contrôle dans la CI, même s’il n’est pas encore bloquant au départ.</p>
+<p>Cela donne à l’équipe de la visibilité sur la fréquence des échecs de la règle et sur le besoin éventuel d’affiner le contrôle lui-même.</p>
+<h3 id="étape-4-garde-fou-ci-bloquant">Étape 4 : garde-fou CI bloquant</h3>
+<p>Une fois que la règle est stable et comprise, rendez-la obligatoire.</p>
+<p>À ce stade, le projet est passé d’une attente informelle à une norme applicable.</p>
+<h2 id="quoi-automatiser-en-premier">Quoi automatiser en premier</h2>
+<p>Les bons premiers candidats sont généralement :</p>
+<ul>
+<li>la cohérence structurelle</li>
+<li>les fichiers requis</li>
+<li>l’exhaustivité de la localisation</li>
+<li>la validité du formatage ou de la syntaxe</li>
+<li>les liens internes cassés</li>
+<li>les citations éditoriales interdites</li>
+</ul>
+<p>Pour la publication multilingue, traitez le contenu visible par le lecteur dans des langues mélangées comme l’un des premiers garde-fous CI à forte valeur. Une page avec un titre localisé mais un résumé en anglais ou des étiquettes en anglais n’est pas partiellement réussie. Elle est incomplète.</p>
+<p>Ces contrôles sont généralement peu coûteux, objectifs et utiles.</p>
+<h2 id="ce-quil-ne-faut-pas-imposer-trop-tôt">Ce qu’il ne faut pas imposer trop tôt</h2>
+<p>Certains contrôles sont utiles, mais peuvent nécessiter du temps avant de devenir des garde-fous stricts.</p>
+<p>Exemples :</p>
+<ul>
+<li>vérification orthographique dans de nombreuses langues</li>
+<li>vérifications de captures d’écran ou de régression visuelle</li>
+<li>vérifications d’accessibilité encore en cours d’ajustement</li>
+<li>règles de style ou de formulation qui ne sont pas encore stables</li>
+</ul>
+<p>Ils peuvent commencer comme des signaux informatifs avant de devenir obligatoires.</p>
+<h2 id="exemples-let-books">Exemples Let Books</h2>
+<p>Le dépôt documente déjà plusieurs schémas de validation, notamment :</p>
+<ul>
+<li>tests de fumée de localisation</li>
+<li>validation de la syntaxe JSON</li>
+<li>vérification des fichiers requis</li>
+<li>génération des métadonnées SEO</li>
+<li>vérification orthographique et linting optionnels</li>
+<li>automatisation du déploiement</li>
+</ul>
+<p>La documentation et les guides de style définissent aussi des règles éditoriales qui peuvent devenir des cibles de validation avec le temps, par exemple l’utilisation des spécifications et de la documentation comme preuve canonique pour les articles publics.</p>
+<p>Cela fait de Let Books un bon exemple d’application incrémentale plutôt que de processus tout-en-un.</p>
+<h2 id="un-flux-pratique-de-conversion-des-règles">Un flux pratique de conversion des règles</h2>
+<p>Utilisez ce modèle lorsque vous ajoutez une nouvelle règle de validation :</p>
 <ol type="1">
-<li>règles manuelles</li>
-<li>contrôles locaux</li>
-<li>visibilité dans la CI</li>
-<li>règles CI obligatoires</li>
+<li>identifier le problème de revue récurrent</li>
+<li>écrire clairement la règle dans la documentation ou les consignes</li>
+<li>ajouter un script local ou un contrôle si c’est pratique</li>
+<li>l’exécuter dans la CI comme retour visible</li>
+<li>ne le rendre bloquant que lorsqu’il est stable</li>
 </ol>
-<h2 id="règle">Règle</h2>
-<p class="lead">Écrivez d’abord la règle, vérifiez-la localement, rendez-la visible dans la CI, puis seulement ensuite obligatoire.</p>
+<p>Cela crée moins de friction que d’introduire un garde-fou strict avant que l’équipe comprenne la règle.</p>
+<h2 id="questions-à-poser-avant-dajouter-un-garde-fou">Questions à poser avant d’ajouter un garde-fou</h2>
+<ol type="1">
+<li>La règle est-elle clairement documentée ?</li>
+<li>Le contrôle est-il assez fiable pour qu’on lui fasse confiance ?</li>
+<li>Les personnes contributrices comprendront-elles comment corriger les échecs ?</li>
+<li>La valeur du contrôle justifie-t-elle la friction ?</li>
+<li>Doit-il commencer comme simple avertissement avant de devenir obligatoire ?</li>
+</ol>
+<h2 id="les-projets-assistés-par-ia-en-ont-encore-plus-besoin">Les projets assistés par IA en ont encore plus besoin</h2>
+<p>L’IA augmente le volume de changements et la vitesse du changement. Cela signifie davantage d’occasions d’incohérence.</p>
+<p>Elle rend aussi les retours rapides plus précieux. La question pratique n’est souvent pas de savoir si l’IA peut produire une première tentative parfaite. La question plus utile est de savoir si l’environnement peut identifier de manière fiable le problème suivant à résoudre.</p>
+<p>La validation et la CI ne sont pas là pour ralentir les équipes. Elles sont là pour éviter que la vitesse n’efface des frontières importantes.</p>
+<p>Dans un travail guidé par les spécifications, l’objectif n’est pas l’automatisation maximale. L’objectif est de renforcer de manière fiable les règles qui comptent le plus.</p>
+<h2 id="la-leçon-durable">La leçon durable</h2>
+<p>Les systèmes de validation les plus solides n’apparaissent généralement pas entièrement formés. Ils se développent en transformant des jugements humains répétés en contrôles documentés, révisables et applicables.</p>
+<p>Cette progression par étapes est souvent la manière la plus réaliste de rendre un projet plus strict sans le rendre fragile.</p>
+<h2 id="liste-de-contrôle-de-remédiation-en-partant-de-la-source">Liste de contrôle de remédiation en partant de la source</h2>
+<p>Lorsqu’une règle de validation échoue :</p>
+<ol type="1">
+<li>inspecter d’abord le Markdown source</li>
+<li>inspecter ensuite les métadonnées localisées</li>
+<li>inspecter les entrées de génération et les registres</li>
+<li>régénérer les artefacts</li>
+<li>inspecter le HTML généré seulement après les vérifications au niveau de la source</li>
+</ol>
+<p>Ne corrigez pas la sortie générée si la localisation source est incomplète.</p>
+<h2 id="lectures-complémentaires">Lectures complémentaires</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>how-to-review-ai-assisted-work-against-the-spec.md</code></li>
+<li><code>../wiki/fr/spec-driven-development.md</code></li>
+<li><code>../blog/fr/documentation-is-part-of-the-product.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -133,22 +269,29 @@
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Développement piloté par les spécifications</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Validation</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/fr/how-to-run-localization-qa-in-ci.html"><span>Comment exécuter le QA de localisation dans le CI</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
                   <a href="../../wiki/fr/validation-layers.html"><span>Couches de validation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/fr/validation-layers.html"><span>Couches de validation</span><span class="topic-menu__meta">Sujets</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../blog/fr/spec-driven-development-for-ai-projects.html"><span>Développement guidé par les spécifications pour les projets d&#x27;IA</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/fr/spec-driven-development-in-let-books.html"><span>Développement guidé par les spécifications dans Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quand la démo est une preuve et quand elle ne l&#x27;est pas</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/fr/documentation-is-part-of-the-product.html"><span>La documentation fait partie du produit</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Comment garder alignés spécification, documentation, démo et code</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment revoir un travail assisté par l&#x27;IA par rapport à la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../wiki/fr/implementation-guidance.html"><span>Directives d&#x27;implémentation</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/fr/markdown-in-product-development.html"><span>Markdown dans le développement produit</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/fr/spec-driven-development.html"><span>Développement guidé par les spécifications</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment relire un travail assisté par IA à l’aune de la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Comment garder la spécification, la documentation, la démo et le code alignés</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../wiki/fr/implementation-guidance.html"><span>Conseils de mise en œuvre</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/fr/documentation-is-more-than-a-website.html"><span>La documentation est plus qu&#x27;un site web</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/fr/demo-and-specification-alignment.html"><span>Alignement entre démo et spécification</span><span class="topic-menu__meta">Sujets</span></a>
+                  <a href="../../topics/fr/documentation-traceability.html"><span>Traçabilité de la documentation</span><span class="topic-menu__meta">Sujets</span></a>
+                  <a href="../../topics/fr/ai-assisted-implementation.html"><span>Implémentation assistée par l&#x27;IA</span><span class="topic-menu__meta">Sujets</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../wiki/fr/documentation-validation-beyond-linting.html"><span>Validation de la documentation au-delà du linting</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>
@@ -162,11 +305,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</p>
+            <p class="footer-note">Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</p>
             <p class="footer-microcopy">Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../fr/index.html">Aperçu</a>
+              <a href="../../topics/fr/index.html">Sujets</a>
               <a href="../../index.html">Page d&#x27;accueil</a>
               <a href="../../../static-demo/">Démo</a>
             </div>
@@ -177,6 +322,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</span>
+            <span>Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

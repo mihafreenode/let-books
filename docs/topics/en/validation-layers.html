@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Validation Layers | LetBooks</title>
+    <meta name="description" content="How multiple validation stages reduce different classes of error across content, generated output, implementation, and release workflows.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/topics/en/validation-layers.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/topics/en/validation-layers.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/topics/en/validation-layers.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/topics/sl/validation-layers.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/topics/hr/validation-layers.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/topics/bs/validation-layers.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/topics/sr-Latn/validation-layers.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/topics/sr-Cyrl/validation-layers.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/topics/mk/validation-layers.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/topics/sq/validation-layers.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/topics/de/validation-layers.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/topics/it/validation-layers.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/topics/fr/validation-layers.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/topics/es/validation-layers.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Validation Layers | LetBooks">
+    <meta property="og:description" content="How multiple validation stages reduce different classes of error across content, generated output, implementation, and release workflows.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/topics/en/validation-layers.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Validation Layers | LetBooks">
+    <meta name="twitter:description" content="How multiple validation stages reduce different classes of error across content, generated output, implementation, and release workflows.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="topics" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../topics/en/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Topics</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../en/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/en/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/en/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/en/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/en/index.html">Topics</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="../../topics/en/validation-layers.html" lang="en">EN</a>
+              <a class="lang-link" href="../../topics/sl/validation-layers.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../topics/hr/validation-layers.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../topics/bs/validation-layers.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../topics/sr-Latn/validation-layers.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../topics/sr-Cyrl/validation-layers.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../topics/mk/validation-layers.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../topics/sq/validation-layers.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../topics/de/validation-layers.html" lang="de">DE</a>
+              <a class="lang-link" href="../../topics/it/validation-layers.html" lang="it">IT</a>
+              <a class="lang-link" href="../../topics/fr/validation-layers.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../topics/es/validation-layers.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>A practical platform for cataloging, offering, and retrieving educational books.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../en/index.html">Docs</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../topics/en/index.html">Topics</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Validation Layers</span>
+            </nav>
+            <h1>Validation Layers</h1>
+          <div class="content-page-meta">
+            <span>Topics</span>
+            <span>English</span>
+          </div>
+          <p class="content-page-summary">How multiple validation stages reduce different classes of error across content, generated output, implementation, and release workflows.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Topics:</span>
+              <span class="content-tag">CI/CD</span>
+              <span class="content-tag">Product Quality</span>
+              <span class="content-tag">Validation</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Validation layers are separate checks that examine a system from different angles. One layer may verify syntax, another may verify structure, another may verify localization quality, and another may verify rendered output. No single validator can reliably catch every meaningful problem.</p>
+<p>The layered approach matters because failures appear at different stages. A source document can be well formed but semantically weak. A generated HTML page can be structurally valid but still expose untranslated UI text. A demo can look correct on screen while printing badly. Each of those problems requires a different kind of check.</p>
+<p>This is why mature documentation and software pipelines rarely rely on one linting step. They combine format validation, link checks, parity checks, accessibility checks, build verification, and output-specific review. The learning guide on <a href="/docs/learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">adding validation rules and CI gates in stages</a> describes how teams can adopt this gradually instead of trying to automate everything at once.</p>
+<p>In LetBooks, validation layers already exist across localization review, generated HTML checks, cross-language comparisons, and site structure verification. Treating print output as a supported feature extends that same logic. If documentation is meant to work as PDF or paper, print behavior needs its own validation stage rather than being treated as an optional cosmetic concern.</p>
+<p>The wiki page on <a href="/docs/wiki/en/validation-layers.html">Validation Layers</a> covers the reference view. This topic page emphasizes the general principle: each new delivery path or documentation type should inherit the existing layers that already protect quality elsewhere.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Other languages</h2>
+            <ul>
+              <li><a href="../../topics/sl/validation-layers.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../topics/hr/validation-layers.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../topics/bs/validation-layers.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../topics/sr-Latn/validation-layers.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../topics/sr-Cyrl/validation-layers.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../topics/mk/validation-layers.html" lang="mk">Македонски</a></li>
+              <li><a href="../../topics/sq/validation-layers.html" lang="sq">Shqip</a></li>
+              <li><a href="../../topics/de/validation-layers.html" lang="de">Deutsch</a></li>
+              <li><a href="../../topics/it/validation-layers.html" lang="it">Italiano</a></li>
+              <li><a href="../../topics/fr/validation-layers.html" lang="fr">Français</a></li>
+              <li><a href="../../topics/es/validation-layers.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Related content</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI Delivery</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Demo Alignment</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-product-quality-menu">Product Quality</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Validation</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
+                  <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html"><span>How to Review AI-Assisted Work Against the Spec</span><span class="topic-menu__meta">Learning</span></a>
+                </div>
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>How to Add Validation Rules and CI Gates in Stages</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../learning/en/how-to-run-localization-qa-in-ci.html"><span>How to Run Localization QA in CI</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../wiki/en/validation-layers.html"><span>Validation Layers</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/en/localization-ci-cd.html"><span>Localization CI and CD</span><span class="topic-menu__meta">Wiki</span></a>
+                </div>
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../blog/en/spec-driven-development-in-let-books.html"><span>Spec-Driven Development in Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/en/when-the-demo-is-evidence-and-when-it-is-not.html"><span>When the Demo Is Evidence and When It Is Not</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>How to Keep Spec, Docs, Demo, and Code Aligned</span><span class="topic-menu__meta">Learning</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
+                  <a href="../../blog/en/documentation-is-part-of-the-product.html"><span>Documentation Is Part of the Product</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../wiki/en/markdown-in-product-development.html"><span>Markdown in Product Development</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/en/ai-assisted-implementation.html"><span>AI-Assisted Implementation</span><span class="topic-menu__meta">Topics</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../blog/en/spec-driven-development-for-ai-projects.html"><span>Spec-Driven Development for AI Projects</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../wiki/en/documentation-validation-beyond-linting.html"><span>Documentation Validation Beyond Linting</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/en/donation-workflows.html"><span>Donation Workflows</span><span class="topic-menu__meta">Topics</span></a>
+                  <a href="../../topics/en/demo-and-specification-alignment.html"><span>Demo and Specification Alignment</span><span class="topic-menu__meta">Topics</span></a>
+                  <a href="../../topics/en/documentation-traceability.html"><span>Documentation Traceability</span><span class="topic-menu__meta">Topics</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-note">Copyright © Let Books contributors. Reuse follows repository licensing unless a page states otherwise.</p>
+            <p class="footer-microcopy">Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../topics/en/index.html">Topics</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © Let Books contributors. Reuse follows repository licensing unless a page states otherwise.</span>
+            <span>Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

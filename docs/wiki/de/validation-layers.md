@@ -1,5 +1,7 @@
 ---
 title: "Validierungsebenen"
+summary: >-
+  Validierungsebenen sind die verschiedenen Methoden, mit denen ein Projekt überprüft, ob Implementierungs-, Dokumentations- und Bereitstellungsartefakte noch den beabsichtigten Regeln und Qualitätserwartungen entsprechen.
 topics:
   - validation
   - ci-cd
@@ -9,82 +11,83 @@ topics:
 
 ## Zusammenfassung
 
-Validierungsebenen sind die verschiedenen Wege, auf denen ein Projekt prüft, ob Implementierung, Dokumentation und Lieferartefakte noch den beabsichtigten Regeln und Qualitätserwartungen entsprechen.
+Validierungsebenen sind die verschiedenen Methoden, mit denen ein Projekt überprüft, ob Implementierungs-, Dokumentations- und Bereitstellungsartefakte noch den beabsichtigten Regeln und Qualitätserwartungen entsprechen.
 
-## Warum Ebenen wichtig sind
+## Warum Schichten wichtig sind
 
 Keine einzelne Validierungsmethode reicht aus.
 
 - Dokumentation allein erzwingt kein Verhalten
-- Tests allein können die falschen Annahmen validieren
-- CI allein kann die Regeln, die es durchsetzen soll, nicht definieren
+- Tests allein können die falschen Annahmen bestätigen
+- CI allein kann nicht die Regeln definieren, die es durchsetzen soll
 
-Ein geschichteter Ansatz ist stärker, weil jede Ebene eine andere Art von Drift auffängt.
+Ein mehrschichtiger Ansatz ist stärker, da jede Schicht eine andere Driftklasse erfasst.
 
-## Häufige Validierungsebenen
+## Gemeinsame Validierungsebenen
 
-### 1. Spezifikation und Leitlinien
+### 1. Spezifikation und Anleitung
 
 Die erste Ebene definiert die Regel.
 
-Ohne diese Ebene können spätere Prüfungen streng, aber willkürlich sein.
+Ohne diese Schicht können spätere Prüfungen streng, aber willkürlich sein.
 
-### 2. Manuelles Review
+### 2. Manuelle Überprüfung
 
-Menschliches Review prüft Absicht, Randfälle und Produktbedeutung, die noch nicht automatisiert sind.
+Die menschliche Überprüfung prüft Absicht, Randfälle und Produktbedeutung, die möglicherweise noch nicht automatisiert werden kann.
 
 ### 3. Lokale Validierung
 
-Skripte und strukturierte Prüfungen erkennen schnelle, wiederholbare Probleme, bevor Änderungen CI erreichen.
+Skripte und strukturierte Prüfungen erkennen schnell wiederkehrende Probleme, bevor Änderungen CI erreichen.
 
-### 4. Ausfuehrbare Tests
+### 4. Automatisierte Tests
 
-Ausführbare Tests verifizieren erwartetes Verhalten, aber nur dann, wenn sie mit der Spezifikation ausgerichtet sind.
+Ausführbare Tests überprüfen das erwartete Verhalten, jedoch nur, wenn sie mit der Spezifikation übereinstimmen.
 
-### 5. CI-Gates
+### 5. CI-Tore
 
-CI macht Prüfungen über Beitragende und Umgebungen hinweg wiederholbar und sichtbar.
+CI macht Prüfungen wiederholbar und für alle Mitwirkenden und Umgebungen sichtbar.
 
-### 6. Deployment-Prüfungen
+### 6. Bereitstellungsprüfungen
 
-Deployment-Workflows bestätigen, dass die gebauten Artefakte weiterhin veröffentlichbar und strukturell tragfähig sind.
+Bereitstellungsworkflows bestätigen, dass die erstellten Artefakte weiterhin veröffentlichbar und strukturell einwandfrei sind.
 
-## Wie die Ebenen zusammenhängen sollten
+## Wie sich die Ebenen verhalten sollten
 
-Die Ebenen sollten sich in dieser Reihenfolge gegenseitig verstärken:
+Die Schichten sollten sich gegenseitig verstärken, um:
 
 - Dokumente und Spezifikationen definieren Erwartungen
-- Review interpretiert diese Erwartungen im Kontext
-- Validierungsskripte und Tests automatisieren stabile Teile des Reviews
-- CI führt diese Prüfungen konsistent aus
-- Deployment stellt sicher, dass das Ergebnis tatsächlich ausgeliefert werden kann
+- Die Überprüfung interpretiert diese Erwartungen im Kontext
+- Validierungsskripte und Tests automatisieren stabile Teile der Überprüfung
+- CI führt diese Prüfungen konsequent durch
+- Durch die Bereitstellung wird sichergestellt, dass die Ausgabe tatsächlich versendet werden kann
 
 ## Gute frühe Validierungsziele
 
-Beispiele für starke frühe Kandidaten sind:
+Beispiele für starke Frühkandidaten sind:
 
-- Vorhandensein erforderlicher Dateien
+- Vorhandensein der erforderlichen Datei
 - Vollständigkeit der Lokalisierung
 - Syntaxgültigkeit
-- defekte interne Links
-- verbotene redaktionelle Zitate
-- erfolgreiche Metadatengenerierung
+- Defekte interne Links
+- Verbotene redaktionelle Zitate
+- Erfolg bei der Generierung von Metadaten
 
-Diese Prüfungen sind meist objektiv und kostengünstig.
+Diese Kontrollen sind in der Regel objektiv und kostengünstig.
 
-## Let-Books-Kontext
+## Let Books Kontext
 
-Das Let-Books-Repository dokumentiert bereits mehrere Ebenen, darunter:
+Das Let Books-Repository dokumentiert bereits mehrere Schichten, darunter:
 
-- Produkt- und Implementierungsregeln in `AGENTS.md` und `AGENTS-Implementation.md`
-- Entwicklungs- und Deployment-Validierung in `docs/Development.md` und `docs/Deployment.md`
-- redaktionelle Evidenzregeln in `docs/blog/README.md` und `docs/sources/README.md`
+- Produkt- und Umsetzungsregeln in `AGENTS.md` und `AGENTS-Implementation.md`
+- Entwicklungs- und Bereitstellungsvalidierung in `docs/Development.md` und `docs/Deployment.md`
+- Redaktionelle Beweisregeln in `docs/blog/README.md` und `docs/sources/README.md`
+- Lernanleitung für die schrittweise Einführung von CI und Validierung
 
-Damit wird Validierung zu einem dokumentierten System und nicht nur zu einem zukünftigen Wunsch.
+Das macht die Validierung zu einem dokumentierten System und nicht nur zu einem zukünftigen Ziel.
 
 ## Verwandte Seiten
 
 - `documentation-traceability.md`
 - `implementation-guidance.md`
-- `../learning/how-to-add-validation-rules-and-ci-gates-in-stages.md`
-- `../blog/en/documentation-is-part-of-the-product.md`
+- `../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.md`
+- `../../blog/de/documentation-is-part-of-the-product.md`

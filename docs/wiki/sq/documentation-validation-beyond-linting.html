@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Validimi i dokumentacionit përtej linting-ut | LetBooks</title>
+    <meta name="description" content="Pse cilësia e dokumentacionit kërkon disa shtresa validimi, duke përfshirë lokalizimin, aksesueshmërinë, daljen e gjeneruar dhe kontrollet e printimit, jo vetëm një kalim të vetëm linting-u.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/documentation-validation-beyond-linting.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Validimi i dokumentacionit përtej linting-ut | LetBooks">
+    <meta property="og:description" content="Pse cilësia e dokumentacionit kërkon disa shtresa validimi, duke përfshirë lokalizimin, aksesueshmërinë, daljen e gjeneruar dhe kontrollet e printimit, jo vetëm një kalim të vetëm linting-u.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/documentation-validation-beyond-linting.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Validimi i dokumentacionit përtej linting-ut | LetBooks">
+    <meta name="twitter:description" content="Pse cilësia e dokumentacionit kërkon disa shtresa validimi, duke përfshirë lokalizimin, aksesueshmërinë, daljen e gjeneruar dhe kontrollet e printimit, jo vetëm një kalim të vetëm linting-u.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="sq">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/sq/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Wiki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sq/index.html">Dokumentim</a>
+            <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
+            <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../wiki/en/documentation-validation-beyond-linting.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/documentation-validation-beyond-linting.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/documentation-validation-beyond-linting.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/documentation-validation-beyond-linting.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/documentation-validation-beyond-linting.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/documentation-validation-beyond-linting.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/documentation-validation-beyond-linting.html" lang="mk">МК</a>
+              <a class="lang-link is-current" href="../../wiki/sq/documentation-validation-beyond-linting.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/documentation-validation-beyond-linting.html" lang="de">DE</a>
+              <a class="lang-link" href="../../wiki/it/documentation-validation-beyond-linting.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/documentation-validation-beyond-linting.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../wiki/es/documentation-validation-beyond-linting.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sq/index.html">Dokumentim</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/sq/index.html">Wiki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Validimi i dokumentacionit përtej linting-ut</span>
+            </nav>
+            <h1>Validimi i dokumentacionit përtej linting-ut</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Pse cilësia e dokumentacionit kërkon disa shtresa validimi, duke përfshirë lokalizimin, aksesueshmërinë, daljen e gjeneruar dhe kontrollet e printimit, jo vetëm një kalim të vetëm linting-u.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Tema:</span>
+              <span class="content-tag">Dokumentim</span>
+              <span class="content-tag">Validim</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Linting-u është i dobishëm, por mbulon vetëm një pjesë të cilësisë së dokumentacionit. Ai mund të kapë gabime formatimi, probleme sintaksore ose disa klasa të strukturës së prishur. Vetëm ai nuk mund të garantojë që faqet e gjeneruara janë të sakta, që variantet e lokalizuara mbeten të përputhura, që navigimi është i qëndrueshëm ose që dalja për printim është e lexueshme.</p>
+<p>Prandaj cilësia e dokumentacionit duhet trajtuar si një disiplinë inxhinierike me disa shtresa validimi. Validatorë të ndryshëm u përgjigjen pyetjeve të ndryshme.</p>
+<ul>
+<li>Validimi i lidhjeve kontrollon nëse referencat ende zgjidhen saktë.</li>
+<li>Validimi i lokalizimit kontrollon nëse teksti i dukshëm për lexuesin mbetet i përkthyer dhe i qëndrueshëm.</li>
+<li>Validimi i paritetit kontrollon nëse seksionet e rëndësishme ekzistojnë ende në variantet gjuhësore.</li>
+<li>Kontrollet e aksesueshmërisë shqyrtojnë titujt, etiketat dhe përdorshmërinë strukturore.</li>
+<li>Validimi i HTML-së së gjeneruar kontrollon nëse përmbajtja burimore është bërë dalje e saktë.</li>
+<li>Validimi i printimit kontrollon nëse daljet e mbështetura PDF dhe në letër mbeten të përdorshme.</li>
+</ul>
+<p>Ky model me shumë shtresa është edhe më i rëndësishëm në workflow-t e asistuara nga AI. Përmbajtja mund të hartohet shpejt, të rigjenerohet shpejt dhe të lokalizohet shpejt. Kjo përshpejton ciklet e feedback-ut, por gjithashtu rrit rrezikun e publikimit të gabimeve që duken të lëmuara nëse pipeline teston vetëm formatimin sipërfaqësor.</p>
+<p>Temat janë një shembull i mirë. Pasi Topics u bënë një lloj dokumentacioni i klasit të parë në LetBooks, atyre iu desh të trashëgonin navigimin, indeksimin e kërkimit, gjenerimin e sitemap-it, trajtimin e lokalizimit, validimin e faqes së gjeneruar dhe kontrollet e printimit. Një rrugë me cilësi më të ulët do të krijonte një sipërfaqe të re përmbajtjeje me garanci më të dobëta se pjesa tjetër e platformës.</p>
+<p>Parimi është i drejtpërdrejtë: çdo lloj i ri dokumentacioni duhet të trashëgojë validimin ekzistues. Kjo e mban modelin e cilësisë të shkallëzueshëm. Në vend që të shpiken përjashtime për çdo seksion të ri, platforma i zgjeron të njëjtat pritshmëri në çdo sipërfaqe të dukshme për lexuesin.</p>
+<p>Cilësia e dokumentacionit shkon përtej linting-ut, sepse lexuesit e përjetojnë të gjithë sistemin, jo vetëm skedarët burimorë.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Gjuhë të tjera</h2>
+            <ul>
+              <li><a href="../../wiki/en/documentation-validation-beyond-linting.html" lang="en">English</a></li>
+              <li><a href="../../wiki/sl/documentation-validation-beyond-linting.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/documentation-validation-beyond-linting.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/documentation-validation-beyond-linting.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/documentation-validation-beyond-linting.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/documentation-validation-beyond-linting.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/mk/documentation-validation-beyond-linting.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/de/documentation-validation-beyond-linting.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/it/documentation-validation-beyond-linting.html" lang="it">Italiano</a></li>
+              <li><a href="../../wiki/fr/documentation-validation-beyond-linting.html" lang="fr">Français</a></li>
+              <li><a href="../../wiki/es/documentation-validation-beyond-linting.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Përmbajtje të ngjashme</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentim</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Validim</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../wiki/sq/localization-ci-cd.html"><span>Lokalizimi CI dhe CD</span><span class="topic-menu__meta">Wiki</span></a>
+                </div>
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sq/spec-driven-development-for-ai-projects.html"><span>Zhvillim i udhëhequr nga specifikimi për projektet me AI</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../wiki/sq/documentation-is-more-than-a-website.html"><span>Dokumentacioni është më shumë se një faqe interneti</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/documentation-traceability.html"><span>Gjurmueshmëria e Dokumentacionit</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Si të shtoni rregulla validimi dhe porta CI me faza</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../wiki/sq/validation-layers.html"><span>Shtresat e Validimit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/validation-layers.html"><span>Shtresat e Validimit</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
+            <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
+              <a href="../../index.html">Faqja kryesore</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</span>
+            <span>Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

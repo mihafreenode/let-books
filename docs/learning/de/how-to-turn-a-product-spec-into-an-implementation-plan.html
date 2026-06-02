@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht | LetBooks</title>
-    <meta name="description" content="Dieser Leitfaden zeigt, wie eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt wird, ohne Zweck, Grenzen und Kernregeln zu verlieren.">
+    <title>Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt | LetBooks</title>
+    <meta name="description" content="Dieser Leitfaden erklärt, wie man eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt, ohne die Absicht, Grenzen oder Arbeitsablaufregeln zu verlieren, die die Spezifikation überhaupt erst nützlich gemacht haben.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht | LetBooks">
-    <meta property="og:description" content="Dieser Leitfaden zeigt, wie eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt wird, ohne Zweck, Grenzen und Kernregeln zu verlieren.">
+    <meta property="og:title" content="Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt | LetBooks">
+    <meta property="og:description" content="Dieser Leitfaden erklärt, wie man eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt, ohne die Absicht, Grenzen oder Arbeitsablaufregeln zu verlieren, die die Spezifikation überhaupt erst nützlich gemacht haben.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht | LetBooks">
-    <meta name="twitter:description" content="Dieser Leitfaden zeigt, wie eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt wird, ohne Zweck, Grenzen und Kernregeln zu verlieren.">
+    <meta name="twitter:title" content="Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt | LetBooks">
+    <meta name="twitter:description" content="Dieser Leitfaden erklärt, wie man eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt, ohne die Absicht, Grenzen oder Arbeitsablaufregeln zu verlieren, die die Spezifikation überhaupt erst nützlich gemacht haben.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="de">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/de/index.html">Lernmaterial</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</span>
+              <span aria-current="page">Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt</span>
             </nav>
-            <h1>Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</h1>
-          <p class="content-page-summary">Dieser Leitfaden zeigt, wie eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt wird, ohne Zweck, Grenzen und Kernregeln zu verlieren.</p>
+            <h1>Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt</h1>
+          <div class="content-page-meta">
+            <span>Lernmaterial</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Dieser Leitfaden erklärt, wie man eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt, ohne die Absicht, Grenzen oder Arbeitsablaufregeln zu verlieren, die die Spezifikation überhaupt erst nützlich gemacht haben.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">Implementierungsplanung</span>
@@ -100,26 +116,139 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="kernpunkte">Kernpunkte</h2>
+<h2 id="warum-dieser-schritt-wichtig-ist">Warum dieser Schritt wichtig ist</h2>
+<p class="lead">Eine Spezifikation beschreibt, was das Produkt tun soll und warum es das tun soll.</p>
+<p>Ein Implementierungsplan beschreibt, wie das Team dieses Verhalten in einer Reihenfolge liefern wird, die überprüfbar, testbar und realistisch ist.</p>
+<p>Viele Projekte scheitern in der Lücke zwischen diesen beiden Dokumenten.</p>
+<p>Die Spezifikation kann gut sein, aber der Plan wird zu vage, zu technisch oder zu losgelöst von Nutzerarbeitsabläufen. Bei KI-gestützter Arbeit ist das noch häufiger, weil generierter Code so wirken kann, als hätte die Planung bereits stattgefunden, obwohl das nicht der Fall war.</p>
+<h2 id="beginnen-sie-damit-die-produktentscheidungen-zu-extrahieren">Beginnen Sie damit, die Produktentscheidungen zu extrahieren</h2>
+<p>Bevor Sie eine Spezifikation in Aufgaben überführen, identifizieren Sie die Entscheidungen, die die Implementierung tatsächlich einschränken.</p>
+<p>Suchen Sie nach:</p>
 <ul>
 <li>Produktzweck</li>
-<li>Nutzerablauf</li>
+<li>Nutzerarbeitsablauf</li>
 <li>Umfangsgrenzen</li>
-<li>nicht verhandelbare Regeln</li>
+<li>nicht verhandelbaren Regeln</li>
 <li>Fallback-Verhalten</li>
-<li>Abnahmekriterien</li>
+<li>Akzeptanzkriterien</li>
 </ul>
-<h2 id="drei-ebenen">Drei Ebenen</h2>
+<p>Das sind die Teile, die den Übergang von der Spezifikation zum Plan überleben sollten.</p>
+<p>Wenn der Plan sie verliert, wird er meist zu einer technischen To-do-Liste statt zu einem Delivery-Plan.</p>
+<h2 id="den-plan-in-ebenen-gliedern">Den Plan in Ebenen gliedern</h2>
+<p>Ein guter Implementierungsplan hat in der Regel mindestens drei Ebenen.</p>
+<h3 id="arbeitsablaufebene">1. Arbeitsablaufebene</h3>
+<p>Beschreiben Sie den nutzerseitigen Ablauf in kurzen, konkreten Schritten.</p>
+<p>Beispiel:</p>
 <ol type="1">
-<li>Ablaufebene</li>
-<li>Systemebene</li>
-<li>Lieferungsebene</li>
+<li>Nutzer wählt eine Lagerbox aus</li>
+<li>Nutzer scannt oder gibt eine ISBN ein</li>
+<li>Nutzer kann auch dann fortfahren, wenn die Suche fehlschlägt</li>
+<li>Nutzer speichert das physische Exemplar am ausgewählten Ort</li>
 </ol>
-<h2 id="prüffragen">Prüffragen</h2>
+<p>Diese Ebene schützt die Nutzerreise davor, unter technischen Aufgaben begraben zu werden.</p>
+<h3 id="systemebene">2. Systemebene</h3>
+<p>Beschreiben Sie die Teile des Systems, die diesen Arbeitsablauf unterstützen müssen.</p>
+<p>Beispiele:</p>
 <ul>
-<li>bleibt der Nutzerablauf erhalten</li>
-<li>sind Dokumentation und Validierung enthalten</li>
-<li>kann eine andere Person den Plan ohne Rätsel umsetzen</li>
+<li>Änderungen am Datenmodell</li>
+<li>UI-Bildschirme oder Formulare</li>
+<li>Validierungsregeln</li>
+<li>Import-/Export-Verhalten</li>
+<li>Lokalisierungsaktualisierungen</li>
+<li>Verifikationsbedarf</li>
+</ul>
+<p>Diese Ebene verbindet Produktverhalten mit technischer Arbeit.</p>
+<h3 id="delivery-ebene">3. Delivery-Ebene</h3>
+<p>Zerlegen Sie die Systemarbeit in eine Reihenfolge, die tatsächlich implementiert und geprüft werden kann.</p>
+<p>Beispiele:</p>
+<ol type="1">
+<li>Domänenmodell definieren oder aktualisieren</li>
+<li>zentralen UI-Ablauf implementieren</li>
+<li>Fallback-Verhalten hinzufügen</li>
+<li>Validierung und Tests hinzufügen</li>
+<li>Dokumentation und Beispiele aktualisieren</li>
+</ol>
+<p>Auf dieser Ebene wird der Plan planbar.</p>
+<h2 id="den-plan-durch-einschränkungen-formen-lassen">Den Plan durch Einschränkungen formen lassen</h2>
+<p>Implementierungspläne driften oft ab, wenn sie als generische Engineering-Schritte umgeschrieben werden.</p>
+<p>Um das zu vermeiden, halten Sie zentrale Produkteinschränkungen im Plan sichtbar.</p>
+<p>Für Arbeit im Stil von Let Books kann das Einschränkungen enthalten wie:</p>
+<ul>
+<li>manuelle Arbeitsabläufe müssen weiterhin ohne KI funktionieren</li>
+<li>unvollständige Daten müssen erlaubt sein</li>
+<li>physische Exemplare müssen von bibliografischen Datensätzen getrennt bleiben</li>
+<li>Lokalisierung darf nicht als optionale Politur behandelt werden</li>
+<li>Dokumentation des aktuellen Zustands muss ehrlich bleiben, was jetzt existiert</li>
+</ul>
+<p>Diese Punkte sollten nicht nur in der ursprünglichen Spezifikation stehen. Sie sollten auch in Planungsnotizen und Review-Kriterien auftauchen.</p>
+<h2 id="akzeptanzkriterien-zur-gestaltung-des-task-zuschnitts-nutzen">Akzeptanzkriterien zur Gestaltung des Task-Zuschnitts nutzen</h2>
+<p>Eine der einfachsten Methoden, eine Spezifikation in einen Plan umzusetzen, ist, bei den Akzeptanzkriterien zu beginnen.</p>
+<p>Fragen Sie für jedes Kriterium:</p>
+<ul>
+<li>welche UI oder welcher Arbeitsablauf das unterstützt</li>
+<li>welche Daten oder welches Systemverhalten das unterstützt</li>
+<li>welcher Fehlerfall trotzdem erfolgreich sein muss</li>
+<li>wie wir es verifizieren werden</li>
+</ul>
+<p>Diese Methode hält den Plan an beobachtbare Ergebnisse gebunden statt an abstrakte Architekturdiskussionen.</p>
+<h2 id="ki-gestützte-planung-worauf-zu-achten-ist">KI-gestützte Planung: worauf zu achten ist</h2>
+<p>KI kann helfen, schnell einen Implementierungsplan zu erzeugen, führt aber oft wiederkehrende Probleme ein:</p>
+<ul>
+<li>zusätzliche Abstraktionen ohne Produktbedarf</li>
+<li>nach Technologie statt nach Arbeitsablauf gruppierte Aufgaben</li>
+<li>optimistische Auslassung von Fallback-Verhalten</li>
+<li>versteckte Annahmen über Backend-Verfügbarkeit oder Datenqualität</li>
+<li>Pläne, die vollständig wirken, aber Dokumentation und Verifikation ignorieren</li>
+</ul>
+<p>Fragen Sie bei der Prüfung eines KI-generierten Implementierungsplans, ob er noch das tatsächliche Regelwerk des Produkts widerspiegelt.</p>
+<h2 id="eine-praktische-planungsvorlage">Eine praktische Planungsvorlage</h2>
+<p>Verwenden Sie eine Struktur wie diese:</p>
+<ol type="1">
+<li>Funktionsziel</li>
+<li>Zusammenfassung des Nutzerarbeitsablaufs</li>
+<li>Einschränkungen und nicht verhandelbare Regeln</li>
+<li>Delivery-Slices</li>
+<li>Verifikationsstrategie</li>
+<li>erforderliche Dokumentationsaktualisierungen</li>
+</ol>
+<p>Ein Delivery-Slice könnte zum Beispiel sein:</p>
+<ul>
+<li>Speicherort-Auswahl zum Intake-Ablauf hinzufügen</li>
+<li>Speichern auch ohne erfolgreiche Metadatensuche erlauben</li>
+<li>physisches Exemplar getrennt von bibliografischen Metadaten persistieren</li>
+<li>Hilfetext und Verifikationshinweise aktualisieren</li>
+</ul>
+<p>Das ist deutlich stärker als eine flache Liste wie:</p>
+<ul>
+<li>Formular erstellen</li>
+<li>API-Aufruf hinzufügen</li>
+<li>Tests hinzufügen</li>
+</ul>
+<h2 id="let-books-beispiel">Let-Books-Beispiel</h2>
+<p>Das Repository enthält bereits die Roh-Eingaben für diesen Planungsstil:</p>
+<ul>
+<li><code>AGENTS.md</code> für Produktzweck, Arbeitsabläufe und Akzeptanzkriterien</li>
+<li><code>AGENTS-Implementation.md</code> für Delivery-Einschränkungen und Repository-Regeln</li>
+<li><code>README.md</code> für Erwartungen an den aktuellen Zustand</li>
+<li><code>docs/Development.md</code> und <code>docs/Deployment.md</code> für Validierungs- und Delivery-Kontext</li>
+</ul>
+<p>Das bedeutet, der Implementierungsplan muss seine eigene Logik nicht erfinden. Er sollte diese Ebenen in eine abgegrenzte Delivery-Sequenz übersetzen.</p>
+<h2 id="review-checkliste">Review-Checkliste</h2>
+<p>Bevor Sie einen Implementierungsplan akzeptieren, prüfen Sie:</p>
+<ol type="1">
+<li>Bewahrt er den Nutzerarbeitsablauf aus der Spezifikation?</li>
+<li>Hält er die nicht verhandelbaren Produkteinschränkungen sichtbar?</li>
+<li>Enthält er Fallback- und Fehlerverhalten?</li>
+<li>Enthält er Dokumentations- und Verifikationsarbeit, nicht nur Code-Aufgaben?</li>
+<li>Könnte ein anderer Mitwirkender auf dieser Grundlage implementieren, ohne die Produktabsicht erraten zu müssen?</li>
+</ol>
+<h2 id="weiterführende-lektüre">Weiterführende Lektüre</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-write-a-spec-that-ai-can-follow.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>../wiki/de/spec-driven-development.md</code></li>
+<li><code>../blog/de/spec-driven-development-in-let-books.md</code></li>
 </ul>
 
         <div class="post-article-nav">
@@ -154,27 +283,31 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
                   <a href="../../blog/de/isbn-not-a-database.html"><span>ISBN ist keine Datenbank</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../topics/de/isbn.html"><span>ISBN</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../topics/de/validation-layers.html"><span>Validierungsebenen</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../wiki/de/demo-spec-alignment.html"><span>Abgleich Von Demo Und Spezifikation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/demo-and-specification-alignment.html"><span>Abgleich von Demo und Spezifikation</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../wiki/de/implementation-guidance.html"><span>Implementierungsleitlinien</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/implementation-guidance.html"><span>Implementierungsleitfaden</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../topics/de/ai-assisted-implementation.html"><span>KI-gestützte Implementierung</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-project-management-menu" data-topic-menu="related-project-management" hidden>
                   <a href="../../wiki/de/localization-roadmap.html"><span>Lokalisierungs-Roadmap</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-writing-menu" data-topic-menu="related-spec-writing" hidden>
-                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie man eine Spezifikation schreibt, der KI folgen kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../learning/de/how-to-design-english-source-content-for-translation.html"><span>Wie man englische Quellinhalte für Übersetzung gestaltet</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../wiki/de/product-specification.html"><span>Produktspezifikation</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
@@ -190,11 +323,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
             <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -205,6 +340,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</span>
+            <span>Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

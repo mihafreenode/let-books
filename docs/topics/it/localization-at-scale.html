@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Localizzazione su larga scala | LetBooks</title>
+    <meta name="description" content="Perché la localizzazione su larga scala è una questione di ingegneria, accessibilità, governance e pubblicazione piuttosto che un passaggio finale di traduzione.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/topics/it/localization-at-scale.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/topics/en/localization-at-scale.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/topics/en/localization-at-scale.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/topics/sl/localization-at-scale.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/topics/hr/localization-at-scale.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/topics/bs/localization-at-scale.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/topics/sr-Latn/localization-at-scale.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/topics/sr-Cyrl/localization-at-scale.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/topics/mk/localization-at-scale.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/topics/sq/localization-at-scale.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/topics/de/localization-at-scale.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/topics/it/localization-at-scale.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/topics/fr/localization-at-scale.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/topics/es/localization-at-scale.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Localizzazione su larga scala | LetBooks">
+    <meta property="og:description" content="Perché la localizzazione su larga scala è una questione di ingegneria, accessibilità, governance e pubblicazione piuttosto che un passaggio finale di traduzione.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/topics/it/localization-at-scale.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Localizzazione su larga scala | LetBooks">
+    <meta name="twitter:description" content="Perché la localizzazione su larga scala è una questione di ingegneria, accessibilità, governance e pubblicazione piuttosto che un passaggio finale di traduzione.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="topics" data-locale="it">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../topics/it/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Temi</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../it/index.html">Documentazione</a>
+            <a class="nav-link" href="../../blog/it/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/it/index.html">Materiale didattico</a>
+            <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/it/index.html">Temi</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../topics/en/localization-at-scale.html" lang="en">EN</a>
+              <a class="lang-link" href="../../topics/sl/localization-at-scale.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../topics/hr/localization-at-scale.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../topics/bs/localization-at-scale.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../topics/sr-Latn/localization-at-scale.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../topics/sr-Cyrl/localization-at-scale.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../topics/mk/localization-at-scale.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../topics/sq/localization-at-scale.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../topics/de/localization-at-scale.html" lang="de">DE</a>
+              <a class="lang-link is-current" href="../../topics/it/localization-at-scale.html" lang="it">IT</a>
+              <a class="lang-link" href="../../topics/fr/localization-at-scale.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../topics/es/localization-at-scale.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Tutte le lingue</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../it/index.html">Documentazione</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../topics/it/index.html">Temi</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Localizzazione su larga scala</span>
+            </nav>
+            <h1>Localizzazione su larga scala</h1>
+          <div class="content-page-meta">
+            <span>Temi</span>
+            <span>Italiano</span>
+          </div>
+          <p class="content-page-summary">Perché la localizzazione su larga scala è una questione di ingegneria, accessibilità, governance e pubblicazione piuttosto che un passaggio finale di traduzione.</p>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">La localizzazione su larga scala è la disciplina di rendere sostenibili i contenuti multilingui quando il numero di pagine, lingue, collaboratori e cicli di rilascio cresce oltre un coordinamento manuale ad hoc. Non riguarda solo la traduzione di stringhe. Riguarda il controllo della deriva tra contenuti sorgente, output generato, decisioni di design, terminologia, validazione e workflow di pubblicazione.</p>
+<p>I piccoli progetti a volte possono localizzare in modo informale. Una persona scrive il contenuto, un’altra lo traduce e l’output viene revisionato manualmente. Su scala maggiore, quel modello diventa fragile. I cambiamenti avvengono troppo spesso e la qualità varia troppo, a meno che il processo stesso non sia strutturato.</p>
+<p>Per questo la localizzazione su larga scala viene di solito trattata come un problema di sistemi. I team hanno bisogno di convenzioni sorgente, controllo terminologico, workflow di traduzione, controlli di parità, regole di pubblicazione e validazione in CI. Devono anche decidere quali tipi di contenuto richiedono copertura completa e quali possono tollerare un rilascio graduale. La guida di learning sulla <a href="/docs/learning/it/how-to-build-a-localization-pipeline.html">costruzione di una pipeline di localizzazione</a> spiega il livello pratico del workflow.</p>
+<p>In Let Books, la localizzazione su larga scala fa parte dell’identità del progetto perché il prodotto è esplicitamente multilingue sia nelle sue ambizioni di UI sia in quelle della base di conoscenza. Questo influisce non solo sulle future stringhe dell’applicazione, ma anche su documentazione, diagrammi, output di stampa e navigazione tra lingue. La pagina wiki di riferimento <a href="/docs/wiki/it/localization-at-scale.html">Localizzazione su larga scala</a> descrive i principi durevoli, mentre l’articolo del blog con lo stesso nome fornisce un inquadramento narrativo.</p>
+<p>La lezione generale è che il lavoro multilingue diventa più affidabile quando viene trattato come infrastruttura: progettato intenzionalmente, validato in modo continuo e mantenuto come parte del prodotto anziché dopo di esso.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Altre lingue</h2>
+            <ul>
+              <li><a href="../../topics/en/localization-at-scale.html" lang="en">English</a></li>
+              <li><a href="../../topics/sl/localization-at-scale.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../topics/hr/localization-at-scale.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../topics/bs/localization-at-scale.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../topics/sr-Latn/localization-at-scale.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../topics/sr-Cyrl/localization-at-scale.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../topics/mk/localization-at-scale.html" lang="mk">Македонски</a></li>
+              <li><a href="../../topics/sq/localization-at-scale.html" lang="sq">Shqip</a></li>
+              <li><a href="../../topics/de/localization-at-scale.html" lang="de">Deutsch</a></li>
+              <li><a href="../../topics/fr/localization-at-scale.html" lang="fr">Français</a></li>
+              <li><a href="../../topics/es/localization-at-scale.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</p>
+            <p class="footer-note">Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</p>
+            <p class="footer-microcopy">Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../it/index.html">Panoramica</a>
+              <a href="../../topics/it/index.html">Temi</a>
+              <a href="../../index.html">Home page</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Tutte le lingue</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</span>
+            <span>Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

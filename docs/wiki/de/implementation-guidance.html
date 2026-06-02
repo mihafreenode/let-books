@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Implementierungsleitlinien | LetBooks</title>
-    <meta name="description" content="Implementierungsleitlinien definieren, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder Lieferumfelds umsetzen soll, ohne die Produktspezifikation selbst zu ersetzen.">
+    <title>Implementierungsleitfaden | LetBooks</title>
+    <meta name="description" content="Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/de/implementation-guidance.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Implementierungsleitlinien | LetBooks">
-    <meta property="og:description" content="Implementierungsleitlinien definieren, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder Lieferumfelds umsetzen soll, ohne die Produktspezifikation selbst zu ersetzen.">
+    <meta property="og:title" content="Implementierungsleitfaden | LetBooks">
+    <meta property="og:description" content="Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/de/implementation-guidance.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Implementierungsleitlinien | LetBooks">
-    <meta name="twitter:description" content="Implementierungsleitlinien definieren, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder Lieferumfelds umsetzen soll, ohne die Produktspezifikation selbst zu ersetzen.">
+    <meta name="twitter:title" content="Implementierungsleitfaden | LetBooks">
+    <meta name="twitter:description" content="Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="de">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/implementation-guidance.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/de/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Implementierungsleitlinien</span>
+              <span aria-current="page">Implementierungsleitfaden</span>
             </nav>
-            <h1>Implementierungsleitlinien</h1>
-          <p class="content-page-summary">Implementierungsleitlinien definieren, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder Lieferumfelds umsetzen soll, ohne die Produktspezifikation selbst zu ersetzen.</p>
+            <h1>Implementierungsleitfaden</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">Implementierungsplanung</span>
@@ -101,52 +117,58 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="rolle">Rolle</h2>
-<p class="lead">Implementierungsleitlinien stehen unterhalb der Produktspezifikation.</p>
-<p>Sie helfen bei Fragen wie:</p>
+<p class="lead">Die Implementierungsanleitung befindet sich unterhalb der Produktspezifikation.</p>
+<p>Es hilft bei der Beantwortung von Fragen wie:</p>
 <ul>
-<li>wie öffentliche Benennung funktionieren soll</li>
-<li>wie Dokumentation strukturiert sein soll</li>
-<li>welche Verifikationserwartungen jetzt gelten</li>
-<li>welche repository-spezifischen Regeln Beitragende befolgen sollen</li>
-<li>wo taktische Regeln im Verlauf des Projekts leben sollen</li>
+<li>wie öffentliche Namensgebung funktionieren sollte</li>
+<li>wie Dokumente strukturiert sein sollten</li>
+<li>welche Überprüfungserwartungen jetzt gelten</li>
+<li>welche Repository-spezifischen Regeln Mitwirkende befolgen sollten</li>
+<li>Wo taktische Regeln gelten sollten, während sich das Projekt weiterentwickelt</li>
 </ul>
-<h2 id="unterschied-zur-produktspezifikation">Unterschied zur Produktspezifikation</h2>
-<p>Die Produktspezifikation definiert, was das Produkt ist und was es erreichen muss.</p>
-<p>Implementierungsleitlinien definieren, wie Beitragende Arbeit im aktuellen Lieferkontext ausführen sollen.</p>
-<p>Diese Unterscheidung ist nützlich, weil nicht jede Repository-Regel eine Produktwahrheit ist und nicht jede Produktwahrheit in taktischen Notizen versteckt werden sollte.</p>
+<h2 id="abweichung-von-der-produktspezifikation">Abweichung von der Produktspezifikation</h2>
+<p>Die Produktspezifikation definiert, was das Produkt ist und was es leisten muss.</p>
+<p>Die Implementierungsanleitung definiert, wie Mitwirkende ihre Arbeit im aktuellen Bereitstellungskontext ausführen sollen.</p>
+<p>Diese Unterscheidung ist nützlich, da nicht jede Repository-Regel eine Produktwahrheit ist und nicht jede Produktwahrheit in taktischen Notizen vergraben werden sollte.</p>
 <h2 id="häufige-beispiele">Häufige Beispiele</h2>
-<p>Implementierungsleitlinien enthalten oft:</p>
+<p>Zu den Implementierungsleitfäden gehören häufig:</p>
 <ul>
-<li>Benennungs- und Branding-Regeln</li>
-<li>Regeln für die Dokumentationsumsetzung</li>
+<li>Benennungs- und Markenregeln</li>
+<li>Regeln zur Implementierung der Dokumentation</li>
 <li>Einschränkungen für statische Sites oder Demos</li>
-<li>Verifikationserwartungen</li>
-<li>Regeln für Bearbeitung oder Codegenerierung</li>
-<li>Evidenzrichtlinien für öffentliche Texte</li>
+<li>Verifizierungserwartungen</li>
+<li>Bearbeitungs- oder Codegenerierungsregeln</li>
+<li>Evidenzrichtlinien für öffentliches Schreiben</li>
 </ul>
-<p>Solche Regeln funktionieren oft gut in Markdown, weil sie überprüfbar, leicht aktualisierbar und nah am übrigen Repository-Kontext bleiben sollen.</p>
-<h2 id="warum-das-in-ki-gestützter-arbeit-wichtig-ist">Warum das in KI-gestützter Arbeit wichtig ist</h2>
-<p>KI-Assistenten folgen oft der nächstgelegenen konkreten Anweisung. Wenn repository-spezifische Regeln nur implizit sind, wird die Ausgabe schnell inkonsistent.</p>
-<p>Implementierungsleitlinien machen diese Regeln sichtbar, ohne die Produktspezifikation mit taktischen Details zu überladen.</p>
-<p>In der Praxis kann eine Markdown-Leitdatei damit zwei Aufgaben zugleich erfüllen:</p>
+<p>Diese Regeln funktionieren oft gut in Markdown, da sie überprüfbar, leicht zu aktualisieren und nah am Rest des Repository-Kontexts bleiben müssen.</p>
+<h2 id="warum-es-bei-ki-gestützter-arbeit-wichtig-ist">Warum es bei KI-gestützter Arbeit wichtig ist</h2>
+<p>KI-Assistenten folgen oft der nächstgelegenen konkreten Anweisung. Wenn Repository-spezifische Regeln implizit sind, wird die Ausgabe schnell inkonsistent.</p>
+<p>Implementierungsleitfäden machen diese Regeln sichtbar, ohne die Produktspezifikation mit taktischen Details zu verunreinigen.</p>
+<p>In der Praxis bedeutet das, dass eine Markdown-Leitfadendatei zwei Aufgaben gleichzeitig erledigen kann:</p>
 <ul>
-<li>den Ablauf für menschliche Beitragende erklären</li>
-<li>einen KI-Agenten zu bevorzugten Werkzeugen, Reihenfolgen und Einschränkungen lenken</li>
+<li>Erklären Sie einem menschlichen Mitarbeiter den Arbeitsablauf</li>
+<li>Lenken Sie einen KI-Agenten zu den bevorzugten Werkzeugen, Abläufen und Einschränkungen</li>
 </ul>
-<h2 id="let-books-kontext">Let-Books-Kontext</h2>
-<p>In Let Books ist <code>AGENTS-Implementation.md</code> die taktische Leitlinie.</p>
-<p>Sie deckt Bereiche ab wie:</p>
+<h2 id="let-books-kontext">Let Books Kontext</h2>
+<p>In Let Books ist <code>AGENTS-Implementation.md</code> die taktische Führungsebene.</p>
+<p>Es umfasst Bereiche wie:</p>
 <ul>
-<li>öffentliche Benennung</li>
+<li>öffentliche Namensnennung</li>
 <li>Dokumentationsregeln</li>
-<li>Trennung zwischen öffentlicher Site und Docs</li>
+<li>Aufteilung der öffentlichen Website und der Dokumente</li>
 <li>Metadaten- und SEO-Regeln für statische Seiten</li>
-<li>Einschränkungen für statische Demos</li>
-<li>Regeln für Lokalisierung und Barrierefreiheit</li>
-<li>Verifikationsregeln</li>
-<li>Blog-Evidenzrichtlinie</li>
+<li>Statische Demo-Einschränkungen</li>
+<li>Lokalisierungs- und Zugänglichkeitsregeln</li>
+<li>Verifizierungsregeln</li>
+<li>Blog-Beweisrichtlinie</li>
 </ul>
-<p>Damit ist sie das operative Gegenstück zu <code>AGENTS.md</code>, nicht dessen Ersatz.</p>
+<p>Damit ist es der operative Begleiter von <code>AGENTS.md</code> und kein Ersatz dafür.</p>
+<p>Andere Markdown-Anleitungen im Repo verstärken das gleiche Muster. Zum Beispiel:</p>
+<ul>
+<li><code>docs/android-debugging.md</code> steuert die Auswahl des Debugging-Workflows, z. B. CDP Anfügen- oder Quell-Patch-Workflows</li>
+<li><code>docs/style-guide/publishing/ubuntu-tooling.md</code> dokumentiert erwartete Tools für Veröffentlichung, Überprüfung, Screenshots, Rechtschreibprüfung und Geräte-Debugging</li>
+</ul>
+<p>Diese Dokumente können als menschliche Anleitung gelesen werden, aber sie helfen Agenten auch dabei, bessere Aktionen auszuwählen, anstatt anhand allgemeiner Standardvorgaben zu raten.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -178,19 +200,23 @@
                   <a href="../../wiki/de/validation-layers.html"><span>Validierungsebenen</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-for-ai-projects.html"><span>Spezifikationsgetriebene Entwicklung für KI-Projekte</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie man Validierungsregeln und CI-Gates schrittweise hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../wiki/de/product-specification.html"><span>Produktspezifikation</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/de/documentation-traceability.html"><span>Rückverfolgbarkeit Der Dokumentation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/de/demo-spec-alignment.html"><span>Abgleich Von Demo Und Spezifikation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/demo-and-specification-alignment.html"><span>Abgleich von Demo und Spezifikation</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/ai-assisted-implementation.html"><span>KI-gestützte Implementierung</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
               </div>
             </div>
@@ -204,11 +230,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
             <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -219,6 +247,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</span>
+            <span>Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

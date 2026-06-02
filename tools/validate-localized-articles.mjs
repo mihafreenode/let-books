@@ -3,8 +3,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const BLOG_DIR = path.join(ROOT, 'docs', 'blog');
-const LOCALES = ['en', 'sl', 'hr', 'bs', 'sr-Latn', 'sr-Cyrl', 'mk', 'sq', 'de', 'it', 'fr', 'es'];
+const DOCS_DIR = path.join(ROOT, 'docs');
+const DOCS_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'docs-config.json'), 'utf8'));
+const LOCALES = DOCS_CONFIG.locales;
+const CONTENT_TYPES = DOCS_CONFIG.contentTypes;
 
 const args = process.argv.slice(2);
 const reportFile = readArg('--report-file');
@@ -90,81 +92,89 @@ const STRONG_RULES = {
 main();
 
 function main() {
-  const englishFiles = fs.readdirSync(path.join(BLOG_DIR, 'en'))
-    .filter((name) => name.endsWith('.md') && name !== 'README.md')
-    .sort();
+  for (const contentType of CONTENT_TYPES) {
+    const englishDir = getEnglishDir(contentType);
+    if (!fs.existsSync(englishDir)) {
+      warnings.push(`${rel(englishDir)}: content type '${contentType}' is configured but has no semantic-validation source directory yet`);
+      continue;
+    }
 
-  for (const fileName of englishFiles) {
-    const articleId = fileName.replace(/\.md$/, '');
-    const englishPath = path.join(BLOG_DIR, 'en', fileName);
-    const englishContent = fs.readFileSync(englishPath, 'utf8');
-    const englishBody = stripFrontmatter(englishContent);
-    const englishStats = collectStats(englishBody);
+    const englishFiles = fs.readdirSync(englishDir)
+      .filter((name) => name.endsWith('.md') && name !== 'README.md')
+      .sort();
 
-    for (const locale of LOCALES) {
-      if (locale === 'en') continue;
+    for (const fileName of englishFiles) {
+      const articleId = fileName.replace(/\.md$/, '');
+      const englishPath = path.join(englishDir, fileName);
+      const englishContent = fs.readFileSync(englishPath, 'utf8');
+      const englishBody = stripFrontmatter(englishContent);
+      const englishStats = collectStats(englishBody);
 
-      const localizedPath = path.join(BLOG_DIR, locale, fileName);
-      if (!fs.existsSync(localizedPath)) {
-        missingCoverage.push({ articleId, locale, path: rel(localizedPath) });
-        if (requireFullCoverage) {
-          errors.push(`${rel(localizedPath)}: missing localized article`);
-          reports.push({ articleId, locale, path: rel(localizedPath), severity: 'error', reasons: ['missing localized article'] });
+      for (const locale of LOCALES) {
+        if (locale === 'en') continue;
+
+        const localizedPath = getLocalizedPath(contentType, locale, fileName);
+        if (!fs.existsSync(localizedPath)) {
+          missingCoverage.push({ contentType, articleId, locale, path: rel(localizedPath) });
+          if (requireFullCoverage) {
+            errors.push(`${rel(localizedPath)}: missing localized content`);
+            reports.push({ contentType, articleId, locale, path: rel(localizedPath), severity: 'error', reasons: ['missing localized content'] });
+          }
+          continue;
         }
-        continue;
-      }
 
-      const localizedContent = fs.readFileSync(localizedPath, 'utf8');
-      const localizedBody = stripFrontmatter(localizedContent);
-      const localizedStats = collectStats(localizedBody);
-      const reasons = [];
-      let severity = 'ok';
+        const localizedContent = fs.readFileSync(localizedPath, 'utf8');
+        const localizedBody = stripFrontmatter(localizedContent);
+        const localizedStats = collectStats(localizedBody);
+        const reasons = [];
+        let severity = 'ok';
 
-      const wordRatio = ratio(localizedStats.wordCount, englishStats.wordCount);
-      const headingRatio = ratio(localizedStats.headingCount, englishStats.headingCount);
-      const blockquoteGap = englishStats.blockquoteCount > localizedStats.blockquoteCount;
-      const orderedListGap = englishStats.orderedListCount > localizedStats.orderedListCount;
-      const shortBodyWithOtherGap = wordRatio < 0.70 && (headingRatio < 0.80 || blockquoteGap || orderedListGap);
+        const wordRatio = ratio(localizedStats.wordCount, englishStats.wordCount);
+        const headingRatio = ratio(localizedStats.headingCount, englishStats.headingCount);
+        const blockquoteGap = englishStats.blockquoteCount > localizedStats.blockquoteCount;
+        const orderedListGap = englishStats.orderedListCount > localizedStats.orderedListCount;
+        const shortBodyWithOtherGap = wordRatio < 0.70 && (headingRatio < 0.80 || blockquoteGap || orderedListGap);
 
-      if (wordRatio < 0.60 || shortBodyWithOtherGap) {
-        reasons.push(`suspiciously short body (${localizedStats.wordCount}/${englishStats.wordCount} words, ratio ${wordRatio.toFixed(2)})`);
-        severity = 'warning';
-      }
-
-      if (headingRatio < 0.72) {
-        reasons.push(`fewer major sections than English (${localizedStats.headingCount}/${englishStats.headingCount}, ratio ${headingRatio.toFixed(2)})`);
-        severity = 'warning';
-      }
-
-      if (blockquoteGap) {
-        reasons.push('missing one or more blockquotes present in English');
-        severity = 'warning';
-      }
-
-      if (orderedListGap) {
-        reasons.push('missing one or more numbered sections present in English');
-        severity = 'warning';
-      }
-
-      const strongRule = STRONG_RULES[articleId]?.locales?.[locale];
-      if (strongRule) {
-        const missing = strongRule.filter((pattern) => !pattern.test(localizedBody));
-        if (missing.length > 0) {
-          reasons.push(`missing strong semantic signals (${missing.length})`);
-          severity = 'error';
+        if (wordRatio < 0.60 || shortBodyWithOtherGap) {
+          reasons.push(`suspiciously short body (${localizedStats.wordCount}/${englishStats.wordCount} words, ratio ${wordRatio.toFixed(2)})`);
+          severity = 'warning';
         }
-      }
 
-      if (severity === 'warning') {
-        warnings.push(`${rel(localizedPath)}: ${reasons.join('; ')}`);
-      }
+        if (headingRatio < 0.72) {
+          reasons.push(`fewer major sections than English (${localizedStats.headingCount}/${englishStats.headingCount}, ratio ${headingRatio.toFixed(2)})`);
+          severity = 'warning';
+        }
 
-      if (severity === 'error') {
-        errors.push(`${rel(localizedPath)}: ${reasons.join('; ')}`);
-      }
+        if (blockquoteGap) {
+          reasons.push('missing one or more blockquotes present in English');
+          severity = 'warning';
+        }
 
-      if (severity !== 'ok') {
-        reports.push({ articleId, locale, path: rel(localizedPath), severity, reasons });
+        if (orderedListGap) {
+          reasons.push('missing one or more numbered sections present in English');
+          severity = 'warning';
+        }
+
+        const strongRule = contentType === 'blog' ? STRONG_RULES[articleId]?.locales?.[locale] : null;
+        if (strongRule) {
+          const missing = strongRule.filter((pattern) => !pattern.test(localizedBody));
+          if (missing.length > 0) {
+            reasons.push(`missing strong semantic signals (${missing.length})`);
+            severity = 'error';
+          }
+        }
+
+        if (severity === 'warning') {
+          warnings.push(`${rel(localizedPath)}: ${reasons.join('; ')}`);
+        }
+
+        if (severity === 'error') {
+          errors.push(`${rel(localizedPath)}: ${reasons.join('; ')}`);
+        }
+
+        if (severity !== 'ok') {
+          reports.push({ contentType, articleId, locale, path: rel(localizedPath), severity, reasons });
+        }
       }
     }
   }
@@ -191,6 +201,16 @@ function readArg(name) {
   const index = args.indexOf(name);
   if (index === -1) return null;
   return args[index + 1] ?? null;
+}
+
+function getEnglishDir(contentType) {
+  return contentType === 'blog'
+    ? path.join(DOCS_DIR, contentType, 'en')
+    : path.join(DOCS_DIR, contentType);
+}
+
+function getLocalizedPath(contentType, locale, fileName) {
+  return path.join(DOCS_DIR, contentType, locale, fileName);
 }
 
 function stripFrontmatter(content) {

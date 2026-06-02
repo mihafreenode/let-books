@@ -58,8 +58,17 @@ jobs:
       - name: Sitemap generation (dry-run validation)
         run: node tools/generate-sitemap.mjs
 
+      - name: Search index generation (dry-run validation)
+        run: node tools/generate-search-index.mjs
+
       - name: Articles.json generation (dry-run validation)
         run: node tools/generate-articles-json.mjs
+
+      - name: Documentation parity audit
+        run: |
+          node tools/validate-content-parity.mjs \
+            --report-file docs/.content-parity-report.md \
+            --json-report-file docs/.content-parity-report.json
 
       - name: Semantic localization review
         run: |
@@ -102,16 +111,16 @@ jobs:
             console.log('All ' + m.files.length + ' required pages present');
           "
 
-      - name: Check blog/learning/wiki index pages exist per locale
+      - name: Check docs section index pages exist per locale
         run: |
           node -e "
-            const LOCALES = ['en','sl','hr','bs',
-              'sr-Latn','sr-Cyrl','mk','sq',
-              'de','it','fr','es'];
+            const config = JSON.parse(require('fs').readFileSync('tools/docs-config.json','utf8'));
+            const LOCALES = config.locales;
+            const SECTIONS = config.contentTypes;
             const {existsSync} = require('fs');
             let ok = true;
             for (const l of LOCALES) {
-              for (const section of ['blog','learning','wiki']) {
+              for (const section of SECTIONS) {
                 const p = 'docs/' + section + '/' + l + '/index.html';
                 if (!existsSync(p)) {
                   console.log('Missing: ' + p);
@@ -119,17 +128,16 @@ jobs:
                 }
               }
             }
-            if (ok) console.log('All 36 index pages present');
+            if (ok) console.log('All docs section index pages present');
             else process.exit(1);
           "
 
-      - name: Validate blog/learning/wiki index localization
+      - name: Validate docs section index localization
         run: |
           node -e "
-            const LOCALES = ['en','sl','hr','bs',
-              'sr-Latn','sr-Cyrl','mk','sq',
-              'de','it','fr','es'];
-            const SECTIONS = ['blog','learning','wiki'];
+            const config = JSON.parse(require('fs').readFileSync('tools/docs-config.json','utf8'));
+            const LOCALES = config.locales;
+            const SECTIONS = config.contentTypes;
             const {readFileSync,existsSync} = require('fs');
             let ok = true;
 
@@ -192,13 +200,13 @@ jobs:
                 }
 
                 // 4. Check nav links point to same-locale blog/learning/wiki
-                const sections = ['blog','learning','wiki'];
-                const navLabels = {
-                  docs: 'href=\"../../' + locale + '/index.html\"',
-                  blog: 'href=\"../../blog/' + locale + '/index.html\"',
-                  learning: 'href=\"../../learning/' + locale + '/index.html\"',
-                  wiki: 'href=\"../../wiki/' + locale + '/index.html\"'
-                };
+                 const navLabels = {
+                   docs: 'href=\"../../' + locale + '/index.html\"',
+                   blog: 'href=\"../../blog/' + locale + '/index.html\"',
+                   learning: 'href=\"../../learning/' + locale + '/index.html\"',
+                   wiki: 'href=\"../../wiki/' + locale + '/index.html\"',
+                   topics: 'href=\"../../topics/' + locale + '/index.html\"'
+                 };
                 for (const key of Object.keys(navLabels)) {
                   if (!c.includes(navLabels[key])) {
                     console.log('MISSING nav link for ' + key
@@ -251,6 +259,31 @@ jobs:
             if (ok) console.log('Related topic navigation present in all applicable articles');
             else process.exit(1);
           "
+
+      - name: Validate search index includes topics
+        run: |
+          node -e "
+            const index = JSON.parse(require('fs').readFileSync('docs/search-index.json','utf8'));
+            if (!Array.isArray(index.entries) || index.entries.length === 0) {
+              console.log('Search index missing entries');
+              process.exit(1);
+            }
+            const hasTopics = index.entries.some((entry) => entry.contentType === 'topics');
+            if (!hasTopics) {
+              console.log('Search index missing topics entries');
+              process.exit(1);
+            }
+            console.log('Search index includes topics entries');
+          "
+
+      - name: Print validation
+        run: |
+          python3 -m http.server 4173 >/tmp/letbooks-print.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          npm install --no-save playwright
+          npx playwright install chromium
+          node tests/docs/print-validation.cjs
 
       - name: Check favicon manifest
         run: |

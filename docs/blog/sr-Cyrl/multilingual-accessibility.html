@@ -42,6 +42,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="blog" data-locale="sr-Cyrl">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Cyrl/index.html">Блог</a>
             <a class="nav-link" href="../../learning/sr-Cyrl/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/sr-Cyrl/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/sr-Cyrl/index.html">Теме</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../blog/en/multilingual-accessibility.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,6 +103,10 @@
               <span aria-current="page">Вишејезична приступачност</span>
             </nav>
             <h1>Вишејезична приступачност</h1>
+          <div class="content-page-meta">
+            <span>Блог</span>
+            <span>Српски (ћирилица)</span>
+          </div>
           <p class="content-page-summary">Зашто приступачност и локализацију треба пројектовати заједно кроз језичке метаподатке, читаче екрана, једноставан језик, титлове и alt текст.</p>
             <hr class="content-header-divider">
           </header>
@@ -152,11 +168,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</p>
+            <p class="footer-note">Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</p>
             <p class="footer-microcopy">Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Cyrl/index.html">Преглед</a>
+              <a href="../../topics/sr-Cyrl/index.html">Теме</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -167,6 +185,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</span>
+            <span>Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

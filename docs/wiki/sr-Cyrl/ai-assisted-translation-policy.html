@@ -42,6 +42,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sr-Cyrl">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Cyrl/index.html">Блог</a>
             <a class="nav-link" href="../../learning/sr-Cyrl/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/sr-Cyrl/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/sr-Cyrl/index.html">Теме</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/ai-assisted-translation-policy.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,6 +103,10 @@
               <span aria-current="page">AI – Политика потпомогнутог превођења</span>
             </nav>
             <h1>AI – Политика потпомогнутог превођења</h1>
+          <div class="content-page-meta">
+            <span>Вики</span>
+            <span>Српски (ћирилица)</span>
+          </div>
           <p class="content-page-summary">Превод генерисан AI може се користити као фаза нацрта, али преглед, контрола терминологије и транспарентност остају неопходни.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теме:</span>
@@ -141,6 +157,7 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI испорука</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Донација књига</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="related-translation-quality-menu">Квалитет превођења</button>
               </div>
               <div class="topic-menu-layer">
@@ -148,10 +165,14 @@
                   <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html"><span>Документација је део производа</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html"><span>Како написати спецификацију коју AI може да прати</span><span class="topic-menu__meta">Материјали за учење</span></a>
                 </div>
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../topics/sr-Cyrl/edition-vs-physical-copy.html"><span>Издање наспрам физичког примерка</span><span class="topic-menu__meta">Теме</span></a>
+                </div>
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../learning/sr-Cyrl/how-to-measure-translation-maturity.html"><span>Како мерити зрелост превода</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../wiki/sr-Cyrl/translation-quality-assurance.html"><span>Осигурање квалитета превода</span><span class="topic-menu__meta">Вики</span></a>
                   <a href="../../wiki/sr-Cyrl/localization-maturity-model.html"><span>Локализациони модел зрелости</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/sr-Cyrl/translation-memory.html"><span>Преводилачка меморија</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
               </div>
             </div>
@@ -165,11 +186,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</p>
+            <p class="footer-note">Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</p>
             <p class="footer-microcopy">Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Cyrl/index.html">Преглед</a>
+              <a href="../../topics/sr-Cyrl/index.html">Теме</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -180,6 +203,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</span>
+            <span>Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

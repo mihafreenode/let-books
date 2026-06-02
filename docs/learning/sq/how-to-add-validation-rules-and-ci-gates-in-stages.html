@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Si të shtosh me faza rregulla validimi dhe porta CI | LetBooks</title>
-    <meta name="description" content="Ky udhëzues shpjegon si të forcohen validimi dhe CI me hapa, jo me një sistem të tepërt menjëherë.">
+    <title>Si të shtoni rregulla validimi dhe porta CI me faza | LetBooks</title>
+    <meta name="description" content="Ky udhëzues shpjegon si të shtoni rregulla validimi dhe kontrolle CI në mënyrë graduale që një projekt të mund të përmirësojë qëndrueshmërinë dhe të zvogëlojë devijimin pa u përpjekur të automatizojë gjithçka menjëherë.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Si të shtosh me faza rregulla validimi dhe porta CI | LetBooks">
-    <meta property="og:description" content="Ky udhëzues shpjegon si të forcohen validimi dhe CI me hapa, jo me një sistem të tepërt menjëherë.">
+    <meta property="og:title" content="Si të shtoni rregulla validimi dhe porta CI me faza | LetBooks">
+    <meta property="og:description" content="Ky udhëzues shpjegon si të shtoni rregulla validimi dhe kontrolle CI në mënyrë graduale që një projekt të mund të përmirësojë qëndrueshmërinë dhe të zvogëlojë devijimin pa u përpjekur të automatizojë gjithçka menjëherë.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Si të shtosh me faza rregulla validimi dhe porta CI | LetBooks">
-    <meta name="twitter:description" content="Ky udhëzues shpjegon si të forcohen validimi dhe CI me hapa, jo me një sistem të tepërt menjëherë.">
+    <meta name="twitter:title" content="Si të shtoni rregulla validimi dhe porta CI me faza | LetBooks">
+    <meta name="twitter:description" content="Ky udhëzues shpjegon si të shtoni rregulla validimi dhe kontrolle CI në mënyrë graduale që një projekt të mund të përmirësojë qëndrueshmërinë dhe të zvogëlojë devijimin pa u përpjekur të automatizojë gjithçka menjëherë.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="sq">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
             <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/sq/index.html">Materiale mësimore</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Si të shtosh me faza rregulla validimi dhe porta CI</span>
+              <span aria-current="page">Si të shtoni rregulla validimi dhe porta CI me faza</span>
             </nav>
-            <h1>Si të shtosh me faza rregulla validimi dhe porta CI</h1>
-          <p class="content-page-summary">Ky udhëzues shpjegon si të forcohen validimi dhe CI me hapa, jo me një sistem të tepërt menjëherë.</p>
+            <h1>Si të shtoni rregulla validimi dhe porta CI me faza</h1>
+          <div class="content-page-meta">
+            <span>Materiale mësimore</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Ky udhëzues shpjegon si të shtoni rregulla validimi dhe kontrolle CI në mënyrë graduale që një projekt të mund të përmirësojë qëndrueshmërinë dhe të zvogëlojë devijimin pa u përpjekur të automatizojë gjithçka menjëherë.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">CI/CD</span>
@@ -100,15 +116,135 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="modeli-i-pjekurisë">Modeli i pjekurisë</h2>
+<h2 id="pse-ka-rëndësi-zbatimi-me-faza">Pse ka rëndësi zbatimi me faza</h2>
+<p class="lead">Ekipet shpesh e dinë se kanë nevojë për validim më të fortë, por bëjnë një nga dy gabimet.</p>
+<p>Ose i lënë kontrollet e cilësisë joformale për shumë gjatë, ose përpiqen të sjellin menjëherë një sistem të madh e të ngurtë CI dhe krijojnë frustrim.</p>
+<p>Një qasje me faza funksionon më mirë.</p>
+<p>Ajo i lejon projektit t’i kthejë pritjet e përsëritura të rishikimit në kontrolle të përsëritshme me kalimin e kohës.</p>
+<h2 id="filloni-nga-gabimet-që-përsëriten">Filloni nga gabimet që përsëriten</h2>
+<p>Rregullat më të mira të validimit zakonisht nisin si gjetje të përsëritura në rishikimet njerëzore.</p>
+<p>Pyesni:</p>
+<ul>
+<li>cilat gabime vazhdojnë të ndodhin</li>
+<li>cilat rregulla harrohen lehtë</li>
+<li>cila strukturë duhet të mbetet e qëndrueshme në të gjithë depozitën</li>
+<li>cilat kontrolle cilësie do t’u kursenin kohë rishikuesve</li>
+</ul>
+<p>Nëse i njëjti problem shfaqet disa herë, është kandidat i mirë për automatizim.</p>
+<h2 id="validimi-duhet-të-ndjekë-zinxhirin-e-autoritetit">Validimi duhet të ndjekë zinxhirin e autoritetit</h2>
+<p>Rregullat e validimit duhet të përforcojnë pritjet e dokumentuara, jo t’i zëvendësojnë ato.</p>
+<p>Kjo do të thotë:</p>
+<ul>
+<li>specifikimi e përcakton rregullin</li>
+<li>dokumentacioni e shpjegon rregullin</li>
+<li>validimi e kontrollon rregullin kur kjo është praktike</li>
+<li>CI e ekzekuton validimin në mënyrë të qëndrueshme</li>
+</ul>
+<p>Kjo e mban projektin larg zbatimit të rregullave që në fakt nuk janë vendosur kurrë.</p>
+<h2 id="një-model-i-dobishëm-pjekurie">Një model i dobishëm pjekurie</h2>
+<h3 id="faza-1-listë-kontrolli-për-rishikim-manual">Faza 1: listë kontrolli për rishikim manual</h3>
+<p>Filloni duke e emërtuar qartë rregullin.</p>
+<p>Shembuj:</p>
+<ul>
+<li>i gjithë teksti i ri i dukshëm për përdoruesin duhet të jetë i lokalizueshëm</li>
+<li>dokumentacioni duhet të ndajë gjendjen aktuale nga planet e ardhshme</li>
+<li>artikujt e rinj publikë duhet të citojnë specifikime dhe dokumentacion, jo skedarë burimorë</li>
+</ul>
+<p>Në këtë fazë, rregulli është real, por ende zbatohet nga njerëzit.</p>
+<h3 id="faza-2-validim-i-lehtë-lokal">Faza 2: validim i lehtë lokal</h3>
+<p>Shtoni një skript të vogël ose një kontroll të strukturuar që kontribuuesit mund ta ekzekutojnë lokalisht.</p>
+<p>Shembuj:</p>
+<ul>
+<li>zbulimi i çelësave të munguar të lokalizimit</li>
+<li>kontrollet për praninë e skedarëve të kërkuar</li>
+<li>validimi i gjenerimit të metadatave</li>
+<li>kontrollet për zgjidhjen e lidhjeve</li>
+</ul>
+<p>Kjo fazë ul gabimet e shmangshme para se të ekzekutohet edhe vetë CI-ja.</p>
+<h3 id="faza-3-dukshmëri-në-ci">Faza 3: dukshmëri në CI</h3>
+<p>Ekzekutoni kontrollin në CI, edhe nëse në fillim nuk bllokon.</p>
+<p>Kjo i jep ekipit dukshmëri mbi sa shpesh dështon rregulli dhe nëse vetë kontrolli ka nevojë për përmirësim.</p>
+<h3 id="faza-4-portë-bllokuese-në-ci">Faza 4: portë bllokuese në CI</h3>
+<p>Pasi rregulli të jetë i qëndrueshëm dhe i kuptuar, bëjeni të detyrueshëm.</p>
+<p>Në këtë pikë, projekti ka kaluar nga një pritje joformale në një standard të zbatueshëm.</p>
+<h2 id="çfarë-të-automatizoni-së-pari">Çfarë të automatizoni së pari</h2>
+<p>Kandidatët e mirë të hershëm zakonisht janë:</p>
+<ul>
+<li>qëndrueshmëria strukturore</li>
+<li>skedarët e kërkuar</li>
+<li>plotësia e lokalizimit</li>
+<li>vlefshmëria e formatimit ose sintaksës</li>
+<li>lidhjet e brendshme të prishura</li>
+<li>citimet editoriale të ndaluara</li>
+</ul>
+<p>Për publikime shumëgjuhëshe, trajtojeni përmbajtjen e dukshme për lexuesin në gjuhë të përziera si një nga portat e para CI me vlerë të lartë. Një faqe me titull të lokalizuar, por me përmbledhje në anglisht ose etiketa në anglisht, nuk është pjesërisht e suksesshme. Ajo është e paplotë.</p>
+<p>Këto kontrolle zakonisht janë të lira, objektive dhe me vlerë të lartë.</p>
+<h2 id="çfarë-të-mos-detyroni-shumë-herët">Çfarë të mos detyroni shumë herët</h2>
+<p>Disa kontrolle janë të vlefshme, por mund të kërkojnë kohë para se të bëhen porta të forta.</p>
+<p>Shembuj:</p>
+<ul>
+<li>kontroll drejtshkrimi në shumë gjuhë</li>
+<li>kontrolle pamjesh ekrani ose regresioni vizual</li>
+<li>kontrolle aksesueshmërie që janë ende duke u rregulluar</li>
+<li>rregulla stili ose formulimi që ende nuk janë të qëndrueshme</li>
+</ul>
+<p>Ato mund të fillojnë si sinjale këshilluese para se të bëhen të detyrueshme.</p>
+<h2 id="shembuj-nga-let-books">Shembuj nga Let Books</h2>
+<p>Depoja tashmë dokumenton disa modele validimi, duke përfshirë:</p>
+<ul>
+<li>testim të thjeshtë të lokalizimit</li>
+<li>validim të sintaksës JSON</li>
+<li>kontrolle të skedarëve të kërkuar</li>
+<li>gjenerim të metadatave SEO</li>
+<li>kontroll drejtshkrimi dhe linting opsional</li>
+<li>automatizim të vendosjes</li>
+</ul>
+<p>Dokumentacioni dhe udhëzuesit e stilit përcaktojnë gjithashtu rregulla editoriale që me kohën mund të bëhen objektiva validimi, si përdorimi i specifikimeve dhe dokumentacionit si prova kanonike për artikuj publikë.</p>
+<p>Kjo e bën Let Books një shembull të mirë të zbatimit gradual në vend të një procesi gjithçka menjëherë.</p>
+<h2 id="një-rrjedhë-praktike-për-kthimin-e-rregullave">Një rrjedhë praktike për kthimin e rregullave</h2>
+<p>Përdoreni këtë model kur shtoni një rregull të ri validimi:</p>
 <ol type="1">
-<li>rregulla manuale</li>
-<li>kontrolle lokale</li>
-<li>dukshmëri në CI</li>
-<li>rregulla të detyrueshme në CI</li>
+<li>identifikoni problemin e përsëritur të rishikimit</li>
+<li>shkruajeni rregullin qartë në dokumentacion ose udhëzim</li>
+<li>shtoni një skript lokal ose kontroll nëse është praktike</li>
+<li>ekzekutojeni në CI si reagim të dukshëm</li>
+<li>bëjeni bllokues vetëm kur të jetë i qëndrueshëm</li>
 </ol>
-<h2 id="rregulli">Rregulli</h2>
-<p class="lead">Së pari shkruaj rregullin, pastaj kontrolloje lokalisht, pastaj bëje të dukshëm në CI, dhe vetëm më pas të detyrueshëm.</p>
+<p>Kjo krijon më pak fërkim sesa vendosja e një porte të fortë para se ekipi ta kuptojë rregullin.</p>
+<h2 id="pyetje-që-duhen-bërë-para-se-të-shtoni-një-portë">Pyetje që duhen bërë para se të shtoni një portë</h2>
+<ol type="1">
+<li>A është rregulli i dokumentuar qartë?</li>
+<li>A është kontrolli mjaftueshëm i besueshëm për t’iu besuar?</li>
+<li>A do ta kuptojnë kontribuuesit si t’i rregullojnë dështimet?</li>
+<li>A e justifikon vlera e kontrollit fërkimin?</li>
+<li>A duhet të fillojë vetëm si paralajmërim para se të bëhet i detyrueshëm?</li>
+</ol>
+<h2 id="projektet-me-ndihmë-nga-ai-kanë-edhe-më-shumë-nevojë-për-këtë">Projektet me ndihmë nga AI kanë edhe më shumë nevojë për këtë</h2>
+<p>AI rrit vëllimin e ndryshimeve dhe shpejtësinë e ndryshimit. Kjo do të thotë më shumë mundësi për mospërputhje.</p>
+<p>Po ashtu e bën reagimin e shpejtë më të vlefshëm. Pyetja praktike shpesh nuk është nëse AI mund të prodhojë një përpjekje të parë të përsosur. Pyetja më e dobishme është nëse mjedisi mund ta identifikojë me besueshmëri problemin tjetër që duhet zgjidhur.</p>
+<p>Validimi dhe CI-ja nuk janë aty për të ngadalësuar ekipet. Ato janë aty për të mos lejuar që shpejtësia të fshijë kufijtë e rëndësishëm.</p>
+<p>Në punën e drejtuar nga specifikimet, qëllimi nuk është automatizimi maksimal. Qëllimi është përforcimi i besueshëm i rregullave që kanë më shumë rëndësi.</p>
+<h2 id="mësimi-afatgjatë">Mësimi afatgjatë</h2>
+<p>Sistemet më të forta të validimit zakonisht nuk shfaqen të gatshme që në fillim. Ato rriten duke kthyer gjykimin njerëzor të përsëritur në kontrolle të dokumentuara, të rishikueshme dhe të zbatueshme.</p>
+<p>Kjo rrugë graduale është shpesh mënyra më realiste për ta bërë një projekt më të rreptë pa e bërë të brishtë.</p>
+<h2 id="listë-kontrolli-për-korrigjim-duke-nisur-nga-burimi">Listë kontrolli për korrigjim duke nisur nga burimi</h2>
+<p>Kur një rregull validimi dështon:</p>
+<ol type="1">
+<li>kontrolloni fillimisht Markdown-un burimor</li>
+<li>kontrolloni më pas metadatat e lokalizuara</li>
+<li>kontrolloni hyrjet e gjenerimit dhe regjistrat</li>
+<li>rigjeneroni artefaktet</li>
+<li>kontrolloni HTML-në e gjeneruar vetëm pas kontrolleve në nivel burimi</li>
+</ol>
+<p>Mos e korrigjoni daljen e gjeneruar nëse lokalizimi burimor është i paplotë.</p>
+<h2 id="lexim-i-mëtejshëm">Lexim i mëtejshëm</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>how-to-review-ai-assisted-work-against-the-spec.md</code></li>
+<li><code>../wiki/sq/spec-driven-development.md</code></li>
+<li><code>../blog/sq/documentation-is-part-of-the-product.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -132,23 +268,30 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Validim</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Zhvillim i drejtuar nga specifikimet</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/sq/how-to-run-localization-qa-in-ci.html"><span>Si të ekzekutoni QA të lokalizimit në CI</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../wiki/sq/validation-layers.html"><span>Shtresat e validimit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/validation-layers.html"><span>Shtresat e Validimit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/validation-layers.html"><span>Shtresat e Validimit</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../wiki/sq/documentation-validation-beyond-linting.html"><span>Validimi i dokumentacionit përtej linting-ut</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../blog/sq/spec-driven-development-for-ai-projects.html"><span>Zhvillim i udhëhequr nga specifikimi për projektet me AI</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sq/spec-driven-development-in-let-books.html"><span>Zhvillim i udhëhequr nga specifikimi në Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kur demoja është provë dhe kur nuk është</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbash të përputhura specifikimin, dokumentimin, demon dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../wiki/sq/implementation-guidance.html"><span>Udhëzime për implementim</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sq/markdown-in-product-development.html"><span>Markdown në zhvillimin e produktit</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillim i udhëhequr nga specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbani të përafruara specifikimin, dokumentacionin, demonstrimin dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../wiki/sq/implementation-guidance.html"><span>Udhëzues Zbatimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/documentation-is-more-than-a-website.html"><span>Dokumentacioni është më shumë se një faqe interneti</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/demo-and-specification-alignment.html"><span>Përputhja e Demos dhe Specifikimit</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/documentation-traceability.html"><span>Gjurmueshmëria e Dokumentacionit</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/ai-assisted-implementation.html"><span>Implementimi i Ndihmuar nga AI</span><span class="topic-menu__meta">Tema</span></a>
                 </div>
               </div>
             </div>
@@ -162,11 +305,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
             <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
               <a href="../../index.html">Faqja kryesore</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -177,6 +322,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</span>
+            <span>Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

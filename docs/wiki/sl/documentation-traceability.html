@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sledljivost dokumentacije | LetBooks</title>
-    <meta name="description" content="Sledljivost dokumentacije je praksa, pri kateri je pomembne trditve, opise potekov dela in pričakovanja glede kakovosti mogoče slediti nazaj do stabilnih dokazov v repozitoriju in eksplicitnih odločitev.">
+    <meta name="description" content="Sledljivost dokumentacije je praksa, s katero so pomembne trditve, opisi delovnih tokov in pričakovanja glede kakovosti sledljivi nazaj do stabilnih repozitorijskih dokazov in izrecnih odločitev.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sl/documentation-traceability.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Sledljivost dokumentacije | LetBooks">
-    <meta property="og:description" content="Sledljivost dokumentacije je praksa, pri kateri je pomembne trditve, opise potekov dela in pričakovanja glede kakovosti mogoče slediti nazaj do stabilnih dokazov v repozitoriju in eksplicitnih odločitev.">
+    <meta property="og:description" content="Sledljivost dokumentacije je praksa, s katero so pomembne trditve, opisi delovnih tokov in pričakovanja glede kakovosti sledljivi nazaj do stabilnih repozitorijskih dokazov in izrecnih odločitev.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sl/documentation-traceability.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sledljivost dokumentacije | LetBooks">
-    <meta name="twitter:description" content="Sledljivost dokumentacije je praksa, pri kateri je pomembne trditve, opise potekov dela in pričakovanja glede kakovosti mogoče slediti nazaj do stabilnih dokazov v repozitoriju in eksplicitnih odločitev.">
+    <meta name="twitter:description" content="Sledljivost dokumentacije je praksa, s katero so pomembne trditve, opisi delovnih tokov in pričakovanja glede kakovosti sledljivi nazaj do stabilnih repozitorijskih dokazov in izrecnih odločitev.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sl">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sl/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sl/index.html">Učni vodniki</a>
             <a class="nav-link" href="../../wiki/sl/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sl/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/documentation-traceability.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Sledljivost dokumentacije</span>
             </nav>
             <h1>Sledljivost dokumentacije</h1>
-          <p class="content-page-summary">Sledljivost dokumentacije je praksa, pri kateri je pomembne trditve, opise potekov dela in pričakovanja glede kakovosti mogoče slediti nazaj do stabilnih dokazov v repozitoriju in eksplicitnih odločitev.</p>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Slovenščina</span>
+          </div>
+          <p class="content-page-summary">Sledljivost dokumentacije je praksa, s katero so pomembne trditve, opisi delovnih tokov in pričakovanja glede kakovosti sledljivi nazaj do stabilnih repozitorijskih dokazov in izrecnih odločitev.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Dokumentacija</span>
@@ -100,34 +116,45 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="zakaj-je-pomembna">Zakaj je pomembna</h2>
-<p class="lead">Brez sledljivosti dokumentaciji težko zaupamo.</p>
-<p>Bralci ne morejo zanesljivo vedeti:</p>
+<h2 id="zakaj-je-pomembno">Zakaj je pomembno</h2>
+<p class="lead">Brez sledljivosti je dokumentaciji težko zaupati.</p>
+<p>Bralci ne morejo povedati:</p>
 <ul>
-<li>ali je trditev aktualna</li>
+<li>ali je izjava aktualna</li>
 <li>ali je vedenje namerno</li>
-<li>ali trditev izhaja iz produktne specifikacije ali implementacijskega naključja</li>
-<li>ali javni članek odraža odobreno produktno smer</li>
+<li>ali zahtevek izhaja iz specifikacije izdelka ali nesreče pri izvedbi</li>
+<li>ali javni članek odraža odobreno smer izdelka</li>
 </ul>
-<h2 id="kako-je-sledljivost-videti">Kako je sledljivost videti</h2>
-<p>Dobra sledljivost običajno vključuje:</p>
+<p>Sledljivost je še posebej pomembna pri delu s pomočjo umetne inteligence, saj lahko ustvarjena vsebina zveni zanesljivo, tudi če ni utemeljena na pravem viru.</p>
+<h2 id="kako-izgleda-sledljivost">Kako izgleda sledljivost</h2>
+<p>Dobra sledljivost dokumentacije običajno vključuje:</p>
 <ul>
-<li>znano verigo avtoritete</li>
+<li>znana veriga organov</li>
 <li>stabilne reference na ustrezne dokumente ali specifikacije</li>
-<li>jasno ločitev med trenutnim stanjem in prihodnjimi načrti</li>
-<li>eksplicitno razlikovanje med kanonično dokumentacijo in statusom implementacije</li>
-<li>opombe o virih ali zemljevidih dokazov za pomembnejše javne članke</li>
+<li>jasno ločevanje med trenutnim stanjem in prihodnjimi načrti</li>
+<li>izrecno razlikovanje med kanonično dokumentacijo in statusom izvedbe</li>
+<li>zemljevide virov ali dokazne opombe za pomembne javne članke</li>
 </ul>
+<p>Prav tako je vse bolj uporabno, če je dokumentacija dovolj specifična za usmerjanje dela s pomočjo umetne inteligence, ne le človeške interpretacije.</p>
 <h2 id="preprost-model-avtoritete">Preprost model avtoritete</h2>
 <p>Uporaben model je:</p>
 <ol type="1">
-<li>produktna specifikacija</li>
-<li>implementacijska navodila</li>
-<li>dokumentacija trenutnega stanja</li>
-<li>demo ali vedenje implementacije</li>
-<li>testi in rezultati validacije</li>
+<li>specifikacija izdelka</li>
+<li>navodila za izvajanje</li>
+<li>dokumentacijo o trenutnem stanju</li>
+<li>predstavitveno ali implementacijsko vedenje</li>
+<li>rezultate testov in validacije</li>
 </ol>
-<h2 id="kontekst-let-books">Kontekst Let Books</h2>
+<p>To ekipam pomaga pri odločitvi, kateri artefakt naj odgovori na katero vprašanje.</p>
+<h2 id="javno-pisanje-in-sledljivost">Javno pisanje in sledljivost</h2>
+<p>Javni članki, eseji in izobraževalno gradivo se ne smejo zanašati na katero koli izvorno datoteko, ki je v bližini.</p>
+<p>Namesto tega bi morali dati prednost stabilni dokumentaciji in referencam na specifikacije ter uporabiti izvorne zemljevide, kadar so trditve bistvene.</p>
+<p>Zaradi tega je javno pisanje bolj vzdržljivo in sčasoma manj krhko.</p>
+<h2 id="sledljivost-za-agente-in-ljudi">Sledljivost za agente in ljudi</h2>
+<p>Pri sledljivosti ne gre le za pomoč osebi pri razumevanju, od kod izvira zahtevek. Prav tako pomaga agentu AI določiti, kateri artefakti skladišča morajo voditi ukrepanje.</p>
+<p>Ko dokumentacija jasno navaja vrstni red delovnega toka, nastavitve orodij, omejitve okolja in meje pooblastil, postane uporabna kot operativni kontekst za agente in kot razlagalni kontekst za ljudi.</p>
+<p>To je pomembno, ker agenti pogosto delujejo po najbolj konkretnih bližnjih navodilih. Sledljiv Markdown pomaga narediti prava navodila vidna.</p>
+<h2 id="let-books-kontekst">Let Books kontekst</h2>
 <p>Repozitorij Let Books že podpira sledljivost prek:</p>
 <ul>
 <li><code>AGENTS.md</code></li>
@@ -136,8 +163,14 @@
 <li><code>docs/README.md</code></li>
 <li><code>docs/blog/README.md</code></li>
 <li><code>docs/sources/README.md</code></li>
-<li>zemljevidov virov v <code>docs/sources/</code></li>
+<li>izvorne karte pod <code>docs/sources/</code></li>
 </ul>
+<p>Vsebuje tudi navodila Markdown, ki delujejo kot sledljiv operativni kontekst za delo posrednika, kot so:</p>
+<ul>
+<li><code>docs/android-debugging.md</code> za izbiro delovnega toka mobilnega odpravljanja napak in uporabo orodja</li>
+<li><code>docs/style-guide/publishing/ubuntu-tooling.md</code> za pričakovana orodja in zmogljivosti preverjanja</li>
+</ul>
+<p>Ta struktura pomaga projektu obravnavati dokumentacijo kot sistem, podprt z dokazi, in ne kot ohlapen niz zapiskov.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -167,21 +200,25 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
                   <a href="../../blog/sl/documentation-is-part-of-the-product.html"><span>Dokumentacija je del izdelka</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kdaj je demo dokaz in kdaj ni</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sl/spec-driven-development-for-ai-projects.html"><span>Razvoj na podlagi specifikacij za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kdaj je demo dokaz in kdaj ni</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sl/spec-driven-development-in-let-books.html"><span>Razvoj na podlagi specifikacij v Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohraniti usklajenost med specifikacijo, dokumentacijo, demom in kodo</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../learning/sl/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikacijo, ki ji AI lahko sledi</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../wiki/sl/markdown-in-product-development.html"><span>Markdown v razvoju izdelka</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohranjati usklajenost specifikacije, dokumentacije, predstavitve in kode</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikacijo, ki ji lahko AI sledi</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj, ki temelji na specifikacijah</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/spec-driven-development.html"><span>Razvoj, voden s specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/book-metadata.html"><span>Metapodatki o knjigi</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
-                  <a href="../../wiki/sl/validation-layers.html"><span>Plasti validacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/validation-layers.html"><span>Plasti za preverjanje veljavnosti</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sl/ai-assisted-implementation.html"><span>Implementacija z AI-podporo</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati AI-podprto delo glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postopno dodajati validacijska pravila in CI vrata</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../wiki/sl/product-specification.html"><span>Produktna specifikacija</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sl/implementation-guidance.html"><span>Implementacijska navodila</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati delo s pomočjo AI glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postopno dodajati validacijska pravila in vrata v CI</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../wiki/sl/product-specification.html"><span>Specifikacija izdelka</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/implementation-guidance.html"><span>Navodila za izvajanje</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>
@@ -195,11 +232,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.</p>
+            <p class="footer-note">Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.</p>
             <p class="footer-microcopy">Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sl/index.html">Pregled</a>
+              <a href="../../topics/sl/index.html">Teme</a>
               <a href="../../index.html">Domača stran</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -210,6 +249,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.</span>
+            <span>Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

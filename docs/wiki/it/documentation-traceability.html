@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tracciabilità della documentazione | LetBooks</title>
-    <meta name="description" content="La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni dei flussi di lavoro e aspettative di qualità riconducibili a prove stabili nel repository e a decisioni esplicite.">
+    <meta name="description" content="La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità riconducibili a prove stabili del repository e decisioni esplicite.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/it/documentation-traceability.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Tracciabilità della documentazione | LetBooks">
-    <meta property="og:description" content="La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni dei flussi di lavoro e aspettative di qualità riconducibili a prove stabili nel repository e a decisioni esplicite.">
+    <meta property="og:description" content="La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità riconducibili a prove stabili del repository e decisioni esplicite.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/it/documentation-traceability.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tracciabilità della documentazione | LetBooks">
-    <meta name="twitter:description" content="La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni dei flussi di lavoro e aspettative di qualità riconducibili a prove stabili nel repository e a decisioni esplicite.">
+    <meta name="twitter:description" content="La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità riconducibili a prove stabili del repository e decisioni esplicite.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="it">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/it/index.html">Blog</a>
             <a class="nav-link" href="../../learning/it/index.html">Materiale didattico</a>
             <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/it/index.html">Temi</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/documentation-traceability.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Tracciabilità della documentazione</span>
             </nav>
             <h1>Tracciabilità della documentazione</h1>
-          <p class="content-page-summary">La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni dei flussi di lavoro e aspettative di qualità riconducibili a prove stabili nel repository e a decisioni esplicite.</p>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Italiano</span>
+          </div>
+          <p class="content-page-summary">La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità riconducibili a prove stabili del repository e decisioni esplicite.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temi:</span>
               <span class="content-tag">Documentazione</span>
@@ -102,38 +118,44 @@
           </header>
 <h2 id="perché-è-importante">Perché è importante</h2>
 <p class="lead">Senza tracciabilità, diventa difficile fidarsi della documentazione.</p>
-<p>I lettori non riescono a capire:</p>
+<p>I lettori non possono dire:</p>
 <ul>
-<li>se un’affermazione è attuale</li>
+<li>se una dichiarazione è attuale</li>
 <li>se un comportamento è intenzionale</li>
-<li>se una pretesa deriva dalla specifica di prodotto o da un incidente di implementazione</li>
-<li>se un articolo pubblico riflette una direzione di prodotto approvata</li>
+<li>se un reclamo deriva dalle specifiche del prodotto o da un incidente di implementazione</li>
+<li>se un articolo pubblico riflette la direzione del prodotto approvata</li>
 </ul>
-<p>La tracciabilità è particolarmente importante nel lavoro assistito dall’IA perché il contenuto generato può sembrare sicuro anche quando non è fondato sulla fonte giusta.</p>
-<h2 id="come-si-presenta-la-tracciabilità">Come si presenta la tracciabilità</h2>
-<p>Una buona tracciabilità di solito include:</p>
+<p>La tracciabilità è particolarmente importante nel lavoro assistito dall’intelligenza artificiale perché il contenuto generato può sembrare sicuro anche quando non è radicato nella fonte giusta.</p>
+<h2 id="che-aspetto-ha-la-tracciabilità">Che aspetto ha la tracciabilità</h2>
+<p>Una buona tracciabilità della documentazione solitamente include:</p>
 <ul>
-<li>una catena di autorità nota</li>
-<li>riferimenti stabili ai documenti o alle specifiche rilevanti</li>
-<li>una chiara separazione tra stato attuale e piani futuri</li>
-<li>una distinzione esplicita tra documentazione canonica e stato dell’implementazione</li>
+<li>una catena di autorità conosciuta</li>
+<li>riferimenti stabili a documenti o specifiche pertinenti</li>
+<li>chiara separazione tra stato attuale e piani futuri</li>
+<li>distinzione esplicita tra documentazione canonica e stato di attuazione</li>
 <li>mappe delle fonti o note di evidenza per articoli pubblici sostanziali</li>
 </ul>
-<h2 id="un-modello-semplice-di-autorità">Un modello semplice di autorità</h2>
+<p>È inoltre sempre più utile quando la documentazione è sufficientemente specifica da guidare il lavoro assistito dall’intelligenza artificiale, non solo dall’interpretazione umana.</p>
+<h2 id="un-semplice-modello-di-autorità">Un semplice modello di autorità</h2>
 <p>Un modello utile è:</p>
 <ol type="1">
-<li>specifica di prodotto</li>
-<li>linee guida di implementazione</li>
-<li>documentazione dello stato attuale</li>
-<li>demo o comportamento dell’implementazione</li>
+<li>specifica del prodotto</li>
+<li>guida all’implementazione</li>
+<li>documentazione sullo stato attuale</li>
+<li>comportamento dimostrativo o di implementazione</li>
 <li>test e risultati di validazione</li>
 </ol>
-<p>Questo aiuta i team a decidere quale artefatto dovrebbe rispondere a quale domanda.</p>
+<p>Ciò aiuta i team a decidere quale artefatto dovrebbe rispondere a quale domanda.</p>
 <h2 id="scrittura-pubblica-e-tracciabilità">Scrittura pubblica e tracciabilità</h2>
-<p>Articoli pubblici, saggi e materiali educativi non dovrebbero dipendere da qualunque file si trovi lì vicino.</p>
-<p>Dovrebbero invece preferire riferimenti stabili a documentazione e specifiche e usare mappe delle fonti quando le affermazioni sono sostanziali.</p>
-<h2 id="contesto-let-books">Contesto Let Books</h2>
-<p>Il repository Let Books supporta già la tracciabilità tramite:</p>
+<p>Articoli pubblici, saggi e materiale didattico non dovrebbero fare affidamento su qualunque file sorgente si trovi nelle vicinanze.</p>
+<p>Dovrebbero invece preferire documentazione stabile e riferimenti alle specifiche e utilizzare mappe sorgente quando le affermazioni sono sostanziali.</p>
+<p>Ciò rende la scrittura pubblica più gestibile e meno fragile nel tempo.</p>
+<h2 id="tracciabilità-sia-per-gli-agenti-che-per-gli-esseri-umani">Tracciabilità sia per gli agenti che per gli esseri umani</h2>
+<p>La tracciabilità non significa solo aiutare una persona a capire da dove proviene un reclamo. Aiuta inoltre un agente AI a determinare quali artefatti del repository dovrebbero guidare l’azione.</p>
+<p>Quando la documentazione indica chiaramente l’ordine del flusso di lavoro, le preferenze degli strumenti, i vincoli ambientali e i confini dell’autorità, diventa utilizzabile come contesto operativo per gli agenti e come contesto esplicativo per le persone.</p>
+<p>Ciò è importante perché gli agenti spesso agiscono in base alle istruzioni più concrete nelle vicinanze. Il Markdown tracciabile aiuta a rendere visibili le istruzioni corrette.</p>
+<h2 id="let-books-contesto">Let Books contesto</h2>
+<p>Il repository Let Books supporta già la tracciabilità attraverso:</p>
 <ul>
 <li><code>AGENTS.md</code></li>
 <li><code>AGENTS-Implementation.md</code></li>
@@ -141,9 +163,14 @@
 <li><code>docs/README.md</code></li>
 <li><code>docs/blog/README.md</code></li>
 <li><code>docs/sources/README.md</code></li>
-<li>mappe delle fonti sotto <code>docs/sources/</code></li>
+<li>mappe sorgente ai <code>docs/sources/</code></li>
 </ul>
-<p>Questa struttura aiuta il progetto a trattare la documentazione come un sistema supportato da evidenze invece che come un insieme di note sparse.</p>
+<p>Contiene inoltre guide Markdown che fungono da contesto operativo tracciabile per il lavoro degli agenti, come ad esempio:</p>
+<ul>
+<li><code>docs/android-debugging.md</code> per la scelta del flusso di lavoro di debug mobile e l’utilizzo dello strumento</li>
+<li><code>docs/style-guide/publishing/ubuntu-tooling.md</code> per gli strumenti previsti e le capacità di verifica</li>
+</ul>
+<p>Questa struttura aiuta il progetto a trattare la documentazione come un sistema supportato da prove piuttosto che come un insieme sciolto di note.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -173,21 +200,25 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
                   <a href="../../blog/it/documentation-is-part-of-the-product.html"><span>La documentazione è parte del prodotto</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/it/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quando la demo è prova e quando non lo è</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/it/spec-driven-development-for-ai-projects.html"><span>Sviluppo guidato dalle specifiche per progetti di IA</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/it/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quando la demo è prova e quando non lo è</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/it/spec-driven-development-in-let-books.html"><span>Sviluppo guidato dalle specifiche in Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Come mantenere allineati specifica, documentazione, demo e codice</span><span class="topic-menu__meta">Materiale didattico</span></a>
                   <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html"><span>Come scrivere una specifica che l&#x27;IA può seguire</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../wiki/it/markdown-in-product-development.html"><span>Markdown nello sviluppo di prodotto</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/spec-driven-development.html"><span>Sviluppo basato sulle specifiche</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/documentation-traceability.html"><span>Tracciabilità della documentazione</span><span class="topic-menu__meta">Temi</span></a>
+                  <a href="../../topics/it/spec-driven-development.html"><span>Sviluppo guidato dalle specifiche</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
-                  <a href="../../wiki/it/validation-layers.html"><span>Livelli di validazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/validation-layers.html"><span>Livelli di convalida</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/ai-assisted-implementation.html"><span>Implementazione assistita dall&#x27;IA</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html"><span>Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Come aggiungere a fasi regole di validazione e gate CI</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../wiki/it/product-specification.html"><span>Specifica di prodotto</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/it/implementation-guidance.html"><span>Linee guida di implementazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Come aggiungere in fasi regole di validazione e gate CI</span><span class="topic-menu__meta">Materiale didattico</span></a>
+                  <a href="../../wiki/it/product-specification.html"><span>Specifiche del prodotto</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/implementation-guidance.html"><span>Guida all&#x27;implementazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/demo-and-specification-alignment.html"><span>Allineamento tra demo e specifica</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
               </div>
             </div>
@@ -201,11 +232,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</p>
+            <p class="footer-note">Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</p>
             <p class="footer-microcopy">Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../it/index.html">Panoramica</a>
+              <a href="../../topics/it/index.html">Temi</a>
               <a href="../../index.html">Home page</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -216,6 +249,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</span>
+            <span>Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

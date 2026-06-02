@@ -1,62 +1,79 @@
 ---
-title: "Proizvodna specifikacija"
+title: "Specifikacija proizvoda"
+summary: >-
+  Specifikacija proizvoda definiše čemu služi proizvod, šta mora da radi, koje granice mora da poštuje i koji se rezultati računaju kao uspeh.
 topics:
   - product-specification
   - spec-writing
   - spec-driven-development
 ---
-# Proizvodna specifikacija
+# Specifikacija proizvoda
 
-## Sažetak
+## Rezime
 
-Proizvodna specifikacija definiše čemu proizvod služi, šta mora da radi, koje granice mora da poštuje i koji se ishodi smatraju uspehom.
+Specifikacija proizvoda definiše čemu služi proizvod, šta mora da radi, koje granice mora da poštuje i koji se rezultati računaju kao uspeh.
 
 ## Uloga
 
-Proizvodna specifikacija je najviši praktični opis željenog ponašanja proizvoda.
+Specifikacija proizvoda je najviši praktičan opis planiranog ponašanja proizvoda.
 
-Treba da odgovori na pitanja kao što su:
+Trebalo bi da odgovori na pitanja kao što su:
 
 - zašto proizvod postoji
-- kome je namenjen
+- za koga je
 - koji su tokovi rada prvoklasni
-- šta mora da radi i u uslovima kvara
-- šta je izričito van obima
+- šta mora da radi čak i pod uslovima kvara
+- ono što je izričito van okvira
 - koji kriterijumi prihvatanja definišu smislen demo ili izdanje
 
-## Šta pripada proizvodnoj specifikaciji
+## Šta spada u specifikaciju proizvoda
 
-Tipičan sadržaj uključuje:
+Tipičan sadržaj specifikacije uključuje:
 
-- svrhu proizvoda
-- osnovnu filozofiju
-- domenski model
-- definicije tokova rada
-- očekivanja privatnosti i bezbednosti
-- neciljeve
-- smernice redosleda implementacije kada utiču na obim ili redosled isporuke
-- kriterijume prihvatanja
+- namena proizvoda
+- osnovna filozofija
+- model domena
+- definicije toka posla
+- privatnost i bezbednosna očekivanja
+- ne-ciljevi
+- uputstvo za redosled implementacije gde utiče na obim ili redosled isporuke
+- kriterijumi prihvatanja
 
-Specifikacija treba da se fokusira na proizvodnu istinu, a ne na svaki lokalni detalj implementacije.
+Specifikacija treba da se fokusira na istinu o proizvodu, a ne na svaki detalj lokalne implementacije.
 
-## Šta tamo obično ne pripada
+## Ono što obično ne pripada tamo
 
-To obično pripada drugde, osim ako direktno ne utiče na obaveze proizvoda:
+Ove stavke često pripadaju drugom mestu osim ako direktno ne utiču na obaveze prema proizvodu:
 
-- privremene konvencije repozitorijuma
+- konvencije o privremenom spremištu
 - lokalno podešavanje alata
-- uske odluke o vizuelnom poliranju
-- jednokratna uputstva za otklanjanje grešaka
-- uredničke ili objavne mehanike koje ne menjaju model proizvoda
+- uske odluke za poliranje korisničkog interfejsa
+- jednokratno uputstvo za otklanjanje grešaka
+- uređivačke ili izdavačke mehanike koje ne menjaju model proizvoda
 
-## Kontekst Let Books
+## Zašto je to važno u radu uz pomoć veštačke inteligencije
 
-U Let Books `AGENTS.md` je glavna proizvodna specifikacija.
+AI može veoma brzo da generiše verodostojnu implementaciju. Bez jasne specifikacije proizvoda, ta primena može da optimizuje pogodnost umesto namere.
 
-Definiše:
+Specifikacija daje recenzentima i saradnicima stabilan standard za odlučivanje da li generisani rezultat i dalje pripada predviđenom proizvodu.
 
-- svrhu projekta
-- domenski i tokovni model
-- smer višezakupničkog dizajna i lokalizacije
-- načela ručnog toka rada i opcionosti AI-ja
-- kriterijume prihvatanja za prvi demo
+## Let Books kontekst
+
+U Let Books, `AGENTS.md` je osnovna specifikacija proizvoda.
+
+On definiše:
+
+- svrha projekta
+- model domena i toka posla
+- višezakupni i lokalizacioni pravac
+- ručni tok rada i AI-opcioni principi
+- kriterijumi prihvatanja za prvi demo
+
+To ga čini više od pregleda. To je glavni autoritet proizvoda u spremištu.
+
+## Povezane stranice
+
+- `implementation-guidance.md`
+- `documentation-traceability.md`
+- `spec-driven-development.md`
+- `../../learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.md`

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Слоеви на валидација | LetBooks</title>
+    <meta name="description" content="Како повеќе фази на валидација намалуваат различни класи грешки во содржината, генерираниот излез, имплементацијата и тековите на работа при испорака.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/topics/mk/validation-layers.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/topics/en/validation-layers.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/topics/en/validation-layers.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/topics/sl/validation-layers.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/topics/hr/validation-layers.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/topics/bs/validation-layers.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/topics/sr-Latn/validation-layers.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/topics/sr-Cyrl/validation-layers.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/topics/mk/validation-layers.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/topics/sq/validation-layers.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/topics/de/validation-layers.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/topics/it/validation-layers.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/topics/fr/validation-layers.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/topics/es/validation-layers.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Слоеви на валидација | LetBooks">
+    <meta property="og:description" content="Како повеќе фази на валидација намалуваат различни класи грешки во содржината, генерираниот излез, имплементацијата и тековите на работа при испорака.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/topics/mk/validation-layers.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Слоеви на валидација | LetBooks">
+    <meta name="twitter:description" content="Како повеќе фази на валидација намалуваат различни класи грешки во содржината, генерираниот излез, имплементацијата и тековите на работа при испорака.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="topics" data-locale="mk">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../topics/mk/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Теми</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../mk/index.html">Документација</a>
+            <a class="nav-link" href="../../blog/mk/index.html">Блог</a>
+            <a class="nav-link" href="../../learning/mk/index.html">Материјали за учење</a>
+            <a class="nav-link" href="../../wiki/mk/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/mk/index.html">Теми</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../topics/en/validation-layers.html" lang="en">EN</a>
+              <a class="lang-link" href="../../topics/sl/validation-layers.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../topics/hr/validation-layers.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../topics/bs/validation-layers.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../topics/sr-Latn/validation-layers.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../topics/sr-Cyrl/validation-layers.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link is-current" href="../../topics/mk/validation-layers.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../topics/sq/validation-layers.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../topics/de/validation-layers.html" lang="de">DE</a>
+              <a class="lang-link" href="../../topics/it/validation-layers.html" lang="it">IT</a>
+              <a class="lang-link" href="../../topics/fr/validation-layers.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../topics/es/validation-layers.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Сите јазици</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../mk/index.html">Документација</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../topics/mk/index.html">Теми</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Слоеви на валидација</span>
+            </nav>
+            <h1>Слоеви на валидација</h1>
+          <div class="content-page-meta">
+            <span>Теми</span>
+            <span>Македонски</span>
+          </div>
+          <p class="content-page-summary">Како повеќе фази на валидација намалуваат различни класи грешки во содржината, генерираниот излез, имплементацијата и тековите на работа при испорака.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Теми:</span>
+              <span class="content-tag">CI/CD</span>
+              <span class="content-tag">Квалитет на производот</span>
+              <span class="content-tag">Валидација</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Слоевите на валидација се одделни проверки што го испитуваат системот од различни агли. Еден слој може да проверува синтакса, друг структура, трет квалитет на локализација, а четврт прикажан излез. Ниту еден поединечен валидатор не може сигурно да го фати секој значаен проблем.</p>
+<p>Слоевитиот пристап е важен затоа што дефектите се појавуваат во различни фази. Изворен документ може да биде добро обликуван, но семантички слаб. Генерирана HTML страница може да биде структурно валидна, а сепак да прикажува непреведен текст на интерфејсот. Демо-приказот може да изгледа правилно на екран, а лошо да се печати. Секој од тие проблеми бара различен вид проверка.</p>
+<p>Затоа зрелите документациски и софтверски цевководи ретко се потпираат на еден чекор на linting. Тие комбинираат валидација на формат, проверки на врски, проверки на паритет, проверки на пристапност, проверка на build и преглед специфичен за излезот. Водичот за учење за <a href="/docs/learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">додавање правила за валидација и CI gate-ови по фази</a> опишува како тимовите можат постепено да го усвојат тоа, наместо да се обидат одеднаш да автоматизираат сè.</p>
+<p>Во Let Books слоевите на валидација веќе постојат преку преглед на локализација, проверки на генериран HTML, меѓујазични споредби и проверка на структурата на страницата. Третирањето на печатениот излез како поддржана функционалност ја проширува истата логика. Ако документацијата е наменета да работи како PDF или на хартија, однесувањето при печатење треба да има сопствена фаза на валидација, наместо да се третира како изборна козметичка грижа.</p>
+<p>Wiki страницата за <a href="/docs/wiki/mk/validation-layers.html">слоеви на валидација</a> го покрива референтниот поглед. Оваа тематска страница го нагласува општото начело: секој нов пат на испорака или вид документација треба да ги наследи постојните слоеви што веќе го штитат квалитетот на друго место.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Други јазици</h2>
+            <ul>
+              <li><a href="../../topics/en/validation-layers.html" lang="en">English</a></li>
+              <li><a href="../../topics/sl/validation-layers.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../topics/hr/validation-layers.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../topics/bs/validation-layers.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../topics/sr-Latn/validation-layers.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../topics/sr-Cyrl/validation-layers.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../topics/sq/validation-layers.html" lang="sq">Shqip</a></li>
+              <li><a href="../../topics/de/validation-layers.html" lang="de">Deutsch</a></li>
+              <li><a href="../../topics/it/validation-layers.html" lang="it">Italiano</a></li>
+              <li><a href="../../topics/fr/validation-layers.html" lang="fr">Français</a></li>
+              <li><a href="../../topics/es/validation-layers.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Поврзани содржини</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI испорака</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Валидација</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-product-quality-menu">Квалитет на производот</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Усогласеност на демото</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
+                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува работа со помош на AI според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                </div>
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено да се додаваат правила за валидација и CI ограничувања</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-run-localization-qa-in-ci.html"><span>Како да спроведувате локализациски QA во CI</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../wiki/mk/validation-layers.html"><span>Слоеви за валидација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/localization-ci-cd.html"><span>Локализација CI и CD</span><span class="topic-menu__meta">Вики</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../blog/mk/spec-driven-development-for-ai-projects.html"><span>Развој воден од спецификации за AI проекти</span><span class="topic-menu__meta">Блог</span></a>
+                  <a href="../../wiki/mk/documentation-validation-beyond-linting.html"><span>Валидација на документација надвор од linting</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/donation-workflows.html"><span>Текови на работа за донации</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/demo-and-specification-alignment.html"><span>Усогласеност меѓу демо и спецификација</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Теми</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
+                  <a href="../../blog/mk/documentation-is-part-of-the-product.html"><span>Документацијата е дел од производот</span><span class="topic-menu__meta">Блог</span></a>
+                  <a href="../../wiki/mk/markdown-in-product-development.html"><span>Markdown во развој на производ</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/ai-assisted-implementation.html"><span>Имплементација со AI-поддршка</span><span class="topic-menu__meta">Теми</span></a>
+                </div>
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../blog/mk/spec-driven-development-in-let-books.html"><span>Развој воден од спецификации во Let Books</span><span class="topic-menu__meta">Блог</span></a>
+                  <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Кога демото е доказ, а кога не е</span><span class="topic-menu__meta">Блог</span></a>
+                  <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</p>
+            <p class="footer-note">Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</p>
+            <p class="footer-microcopy">Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../mk/index.html">Преглед</a>
+              <a href="../../topics/mk/index.html">Теми</a>
+              <a href="../../index.html">Почетна страница</a>
+              <a href="../../../static-demo/">Демо</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Сите јазици</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</span>
+            <span>Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

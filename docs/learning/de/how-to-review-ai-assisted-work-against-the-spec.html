@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft | LetBooks</title>
-    <meta name="description" content="KI-gestützte Änderungen sollten gegen Spezifikation, Dokumentation und Fallback-Verhalten geprüft werden und nicht nur gegen den Eindruck technischer Plausibilität.">
+    <title>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft | LetBooks</title>
+    <meta name="description" content="Dieser Leitfaden erklärt, wie man KI-gestützte Implementierung prüft, indem man sie mit Produktspezifikation, Arbeitsablaufregeln, Dokumentation und Validierungserwartungen abgleicht, statt nur zu beurteilen, ob die Ausgabe poliert oder technisch plausibel wirkt.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/de/how-to-review-ai-assisted-work-against-the-spec.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft | LetBooks">
-    <meta property="og:description" content="KI-gestützte Änderungen sollten gegen Spezifikation, Dokumentation und Fallback-Verhalten geprüft werden und nicht nur gegen den Eindruck technischer Plausibilität.">
+    <meta property="og:title" content="Wie man KI-gestützte Arbeit gegen die Spezifikation prüft | LetBooks">
+    <meta property="og:description" content="Dieser Leitfaden erklärt, wie man KI-gestützte Implementierung prüft, indem man sie mit Produktspezifikation, Arbeitsablaufregeln, Dokumentation und Validierungserwartungen abgleicht, statt nur zu beurteilen, ob die Ausgabe poliert oder technisch plausibel wirkt.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/de/how-to-review-ai-assisted-work-against-the-spec.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft | LetBooks">
-    <meta name="twitter:description" content="KI-gestützte Änderungen sollten gegen Spezifikation, Dokumentation und Fallback-Verhalten geprüft werden und nicht nur gegen den Eindruck technischer Plausibilität.">
+    <meta name="twitter:title" content="Wie man KI-gestützte Arbeit gegen die Spezifikation prüft | LetBooks">
+    <meta name="twitter:description" content="Dieser Leitfaden erklärt, wie man KI-gestützte Implementierung prüft, indem man sie mit Produktspezifikation, Arbeitsablaufregeln, Dokumentation und Validierungserwartungen abgleicht, statt nur zu beurteilen, ob die Ausgabe poliert oder technisch plausibel wirkt.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="de">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/de/index.html">Lernmaterial</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</span>
+              <span aria-current="page">Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span>
             </nav>
-            <h1>Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</h1>
-          <p class="content-page-summary">KI-gestützte Änderungen sollten gegen Spezifikation, Dokumentation und Fallback-Verhalten geprüft werden und nicht nur gegen den Eindruck technischer Plausibilität.</p>
+            <h1>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</h1>
+          <div class="content-page-meta">
+            <span>Lernmaterial</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Dieser Leitfaden erklärt, wie man KI-gestützte Implementierung prüft, indem man sie mit Produktspezifikation, Arbeitsablaufregeln, Dokumentation und Validierungserwartungen abgleicht, statt nur zu beurteilen, ob die Ausgabe poliert oder technisch plausibel wirkt.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">KI-gestützte Lieferung</span>
@@ -100,15 +116,114 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="prüf-reihenfolge">Prüf-Reihenfolge</h2>
+<h2 id="warum-das-wichtig-ist">Warum das wichtig ist</h2>
+<p>KI kann Code, Text, Tests und Interface-Änderungen sehr schnell erzeugen, die vollständig wirken.</p>
+<p>Diese Geschwindigkeit erzeugt ein Review-Risiko: Reviewer wechseln möglicherweise unbewusst von der Frage „Ist das das richtige Produktverhalten?“ zu der Frage „Wirkt das plausibel?“.</p>
+<p>Das ist nicht dieselbe Frage.</p>
+<p>Bei spezifikationsgetriebener Arbeit sollte Review mit Abstimmung beginnen und erst dann zu Codequalität, Stil und Implementierungsdetails übergehen.</p>
+<h2 id="mit-der-quelle-der-wahrheit-beginnen">Mit der Quelle der Wahrheit beginnen</h2>
+<p>Bevor Sie die Ausgabe prüfen, identifizieren Sie die Dokumente, die das beabsichtigte Verhalten definieren.</p>
+<p>Im Let-Books-Repository bedeutet das in der Regel:</p>
+<ul>
+<li><code>AGENTS.md</code> für Produktregeln, Arbeitsabläufe und Umfang</li>
+<li><code>AGENTS-Implementation.md</code> für taktische Delivery-Einschränkungen</li>
+<li><code>README.md</code> für die Darstellung des aktuellen Zustands</li>
+<li>relevante Dokumentation unter <code>docs/</code> für Veröffentlichung, Verifikation oder Arbeitsablaufleitlinien</li>
+</ul>
+<p>Ohne diesen Schritt wird Review leicht subjektiv und lokal.</p>
+<h2 id="in-der-richtigen-reihenfolge-prüfen">In der richtigen Reihenfolge prüfen</h2>
+<p>Verwenden Sie diese Reihenfolge beim Prüfen von KI-gestützter Arbeit.</p>
+<h3 id="produktabstimmung">1. Produktabstimmung</h3>
+<p>Fragen Sie, ob die Ausgabe zum beabsichtigten Nutzerarbeitsablauf und zur Produktgrenze passt.</p>
+<p>Beispiele:</p>
+<ul>
+<li>funktioniert manuelle Eingabe noch dort, wo die Spezifikation sie verlangt</li>
+<li>bewahrt die Änderung die Trennung zwischen physischen Exemplaren und bibliografischen Datensätzen</li>
+<li>fügt sie Verhalten hinzu, das nie genehmigt wurde</li>
+<li>stellt sie optionale KI-Funktionen fälschlich als verpflichtend dar</li>
+</ul>
+<p>Wenn die Produktabstimmung falsch ist, hat es wenig Wert, zuerst viel Zeit auf Politur zu verwenden.</p>
+<h3 id="dokumentationsabstimmung">2. Dokumentationsabstimmung</h3>
+<p>Fragen Sie, ob die umgebende Dokumentation die Realität noch ehrlich beschreibt.</p>
+<p>Beispiele:</p>
+<ul>
+<li>wurde ein für Nutzer sichtbarer Arbeitsablauf geändert, ohne die Dokumentation zu aktualisieren</li>
+<li>beschreibt das README noch den aktuellen Zustand korrekt</li>
+<li>passen neue öffentliche Aussagen zur tatsächlich dokumentierten Produktposition</li>
+</ul>
+<p>KI-generierte Änderungen verändern oft Verhalten, ohne die begleitende Erzählung darüber zu aktualisieren.</p>
+<h3 id="validierung-und-fallback-verhalten">3. Validierung und Fallback-Verhalten</h3>
+<p>Fragen Sie, ob die Änderung die Fehler- und Fallback-Erwartungen der Spezifikation bewahrt.</p>
+<p>Beispiele:</p>
+<ul>
+<li>kann der Arbeitsablauf noch erfolgreich sein, wenn ein optionaler Anbieter ausfällt</li>
+<li>werden ungültige Eingaben explizit behandelt</li>
+<li>werden unsichere oder niedrig-konfidente Ausgaben als Vorschläge statt als Fakten behandelt</li>
+</ul>
+<p>Hier scheitern viele plausible Implementierungen am echten Produkttest.</p>
+<h3 id="technische-qualität">4. Technische Qualität</h3>
+<p>Erst nach den obigen Prüfungen sollten Sie den Großteil Ihrer Zeit verwenden auf:</p>
+<ul>
+<li>Klarheit</li>
+<li>Wartbarkeit</li>
+<li>Benennung</li>
+<li>Duplikation</li>
+<li>Tests</li>
+<li>Struktur</li>
+</ul>
+<p>Technische Qualität ist weiterhin wichtig. Sie sollte nur Produktkorrektheit nicht überrangieren.</p>
+<h2 id="häufige-review-fallen">Häufige Review-Fallen</h2>
+<p>KI-gestützte Arbeit erzeugt häufig mehrere wiederholbare Review-Fallen.</p>
+<h3 id="die-falle-der-polierten-ausgabe">Die Falle der polierten Ausgabe</h3>
+<p>Die Ausgabe sieht sauber aus, also nehmen Reviewer an, dass sie korrekt ist.</p>
+<h3 id="die-falle-des-nahen-kontexts">Die Falle des nahen Kontexts</h3>
+<p>Die Änderung passt zur nächstgelegenen bestehenden Implementierung, aber diese nächstgelegene Implementierung könnte bereits abgedriftet sein.</p>
+<h3 id="die-falle-des-impliziten-umfangs">Die Falle des impliziten Umfangs</h3>
+<p>Der Assistent fügt Funktionen, Abstraktionen oder Annahmen hinzu, die nie angefordert wurden, und der Reviewer akzeptiert sie, weil sie nicht offensichtlich defekt wirken.</p>
+<h3 id="die-falle-bestandener-tests">Die Falle bestandener Tests</h3>
+<p>Tests können bestehen, weil sie das erzeugte Verhalten validieren, nicht weil sie das beabsichtigte Produktverhalten validieren.</p>
+<h2 id="eine-praktische-review-checkliste">Eine praktische Review-Checkliste</h2>
+<p>Fragen Sie bei jeder substanziellen KI-gestützten Änderung:</p>
 <ol type="1">
-<li>Produktausrichtung</li>
-<li>Dokumentationsausrichtung</li>
-<li>Fallback und Validierung</li>
-<li>technische Qualität</li>
+<li>Welche Produktregel oder welcher Arbeitsablauf soll durch diese Änderung umgesetzt werden?</li>
+<li>Welche Spezifikation oder Dokumentation definiert diese Regel?</li>
+<li>Bewahrt die Ausgabe die erforderlichen Einschränkungen?</li>
+<li>Bleibt das Fallback-Verhalten intakt?</li>
+<li>Passt die Dokumentation noch zum resultierenden Verhalten?</li>
+<li>Welche Validierung oder Tests stützen die Änderung?</li>
+<li>Hat der Assistent etwas hinzugefügt, das als außerhalb des Umfangs entfernt werden sollte?</li>
 </ol>
-<h2 id="hauptfrage">Hauptfrage</h2>
-<p>Nicht nur „funktioniert es“, sondern auch „ist es noch das richtige Produkt“.</p>
+<h2 id="wie-man-erzeugte-tests-prüft">Wie man erzeugte Tests prüft</h2>
+<p>Erzeugte Tests sind nützlich, sollten aber ebenfalls gegen die Spezifikation geprüft werden.</p>
+<p>Fragen Sie:</p>
+<ul>
+<li>prüfen die Tests den beabsichtigten Arbeitsablauf</li>
+<li>decken sie Fallback-Verhalten ab</li>
+<li>spiegeln sie die dokumentierten Randbedingungen wider</li>
+<li>behaupten sie ein Komfortverhalten, das nie spezifiziert wurde</li>
+</ul>
+<p>Das ist besonders wichtig bei spezifikationsgetriebener Arbeit, weil eine schwache Testsuite Drift festschreiben kann.</p>
+<h2 id="let-books-beispiele">Let-Books-Beispiele</h2>
+<p>Beispiele für Fragen auf Spezifikationsebene in diesem Repository sind:</p>
+<ul>
+<li>bleibt der Arbeitsablauf auch ohne kostenpflichtige KI-Dienste nützlich</li>
+<li>trennt die Dokumentation des aktuellen Zustands klar zwischen Demo-Status und zukünftigen Backend-Plänen</li>
+<li>vermeiden öffentliche Dokumente, Quellcode als kanonischen redaktionellen Beleg zu behandeln</li>
+<li>bleiben Validierungsschritte Teil des Delivery-Ablaufs statt optionaler Erinnerung</li>
+</ul>
+<p>Diese Fragen sind spezifisch genug, um Review zu leiten, und genau das sollte eine Spezifikation ermöglichen.</p>
+<h2 id="die-dauerhafte-lektion">Die dauerhafte Lektion</h2>
+<p>KI-gestütztes Review bedeutet nicht zu prüfen, ob der Assistent etwas Eindrucksvolles erzeugt hat. Es bedeutet zu prüfen, ob die Ausgabe noch zum beabsichtigten Produkt gehört.</p>
+<p>Die beste Review-Frage ist meist nicht „Funktioniert das?“. Sie lautet: „Entspricht das der Spezifikation, einschließlich der Teile, die leicht vergessen werden?“</p>
+<h2 id="weiterführende-lektüre">Weiterführende Lektüre</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-write-a-spec-that-ai-can-follow.md</code></li>
+<li><code>how-to-turn-a-product-spec-into-an-implementation-plan.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>../wiki/de/spec-driven-development.md</code></li>
+<li><code>../blog/de/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -131,27 +246,35 @@
             <h2 class="related-content__title">Verwandte Inhalte</h2>
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Implementierungsplanung</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">KI-gestützte Lieferung</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Produktprüfung</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Spezifikationsgetriebene Entwicklung</button>
               </div>
               <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
+                  <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-for-ai-projects.html"><span>Spezifikationsgetriebene Entwicklung für KI-Projekte</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie man eine Spezifikation schreibt, der KI folgen kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../topics/de/ai-assisted-implementation.html"><span>KI-gestützte Implementierung</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
                   <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/de/demo-spec-alignment.html"><span>Abgleich Von Demo Und Spezifikation</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/de/let-books-localization-lessons-learned.html"><span>Let Books Erkenntnisse aus der Lokalisierung</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../wiki/de/implementation-guidance.html"><span>Implementierungsleitlinien</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgetriebene Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie man Validierungsregeln und CI-Gates schrittweise hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../wiki/de/implementation-guidance.html"><span>Implementierungsleitfaden</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/markdown-in-product-development.html"><span>Markdown in der Produktentwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/demo-and-specification-alignment.html"><span>Abgleich von Demo und Spezifikation</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
               </div>
             </div>
@@ -165,11 +288,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
             <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -180,6 +305,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</span>
+            <span>Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

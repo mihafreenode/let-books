@@ -1,7 +1,7 @@
 ---
 title: "Zagotavljanje kakovosti prevodov"
 summary: >-
-  Prevod QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, terminološki pregled, preverjanje dostopnosti in človeško presojo.
+  Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.
 topics:
   - translation-quality
   - qa
@@ -11,21 +11,59 @@ topics:
 
 ## Povzetek
 
-Prevod QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, terminološki pregled, preverjanje dostopnosti in človeško presojo.
+Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.
 
-## Skupni pregledi
+## Pogosta preverjanja
 
 - manjkajoči prevodi
 - angleško uhajanje
+- popolnost lokalizacije, usmerjena k bralcu
 - neujemanja nadomestnih znakov
 - prekinjene povezave
 - premik po glosarju
 - pokritost besedila dostopnosti
 - pariteta posnetka zaslona in diagrama
 
+## Obrnjeni k bralcu lokalizacijski validator
+
+En razred validatorja bi moral izrecno zavrniti CI, ko je stran videti lokalizirana, vendar še vedno izpostavlja vsebino v izvornem jeziku, namenjeno bralcu.
+
+Primeri, ki bi morali spodleteti:
+
+- lokaliziran naslov z angleškim povzetkom
+- lokaliziran članek z angleškimi oznakami
+- lokaliziran članek z angleškimi naslovi ali seznami
+- lokaliziran članek z angleškimi oblački ali napisi
+- lokaliziran članek z angleškimi oznakami diagramov ali nadomestnim besedilom
+- kartice s sorodno vsebino v mešanih jezikih
+
+To je pogoj za napako, ne le opozorilo, saj bralci doživljajo takšne strani kot vidno nedokončane.
+
+## Revizija razreda napak
+
+QA prevajanja mora vzdrževati eksplicitne razrede napak z:
+
+- opis
+- število pojavov
+- glavni vzrok
+- kritje validatorja
+- tveganje ponovitve
+- načrt zapiranja
+
+Zahtevane kategorije vključujejo:
+
+- neprevedeni povzetki
+- neprevedena telesa
+- nadomestna objava osnutka
+- neprevedeni metapodatki
+- mešano jezikovno založništvo
+- bodoči odkriti razredi
+
+Razred se zapre šele, ko njegovo število doseže nič in CI prepreči, da bi se vrnil brez napake.
+
 ## Dokazi človeškega pregleda
 
-Prevod QA bi moral prav tako ohraniti kratke zapise človeškega pregleda za reprezentativne popravke s pomočjo AI.
+Zagotavljanje kakovosti prevodov bi moralo ohraniti tudi kratke zapise človeških pregledov za reprezentativne popravke s pomočjo umetne inteligence.
 
 Najmanjša polja:
 
@@ -35,9 +73,11 @@ Najmanjša polja:
 - hipoteza o vzroku
 - utemeljitev recenzenta
 
-To je pomembno, ker tudi če je splošen pomen ohranjen, lahko prevodi, ustvarjeni z AI, zahtevajo pregled maternega govorca za odpravo subtilnih težav v slovnici, modalnosti, terminologiji in registru, specifičnem za domeno. Te težave je pogosto težko zaznati samo z avtomatiziranimi meritvami kakovosti.
+Ugotovitve pregledov naravnih govorcev je treba ohraniti kot rastoči korpus, ne kot osamljene enkratne opombe. Ponavljajoče se ugotovitve bi se morale vrniti v zasnovo validatorja, smernice sodelujočih in prihodnja navodila agenta AI.
 
-## Pogosta taksonomija napak pri prevodu AI
+To je pomembno, ker lahko prevodi, ustvarjeni z umetno inteligenco, tudi če je ohranjen splošni pomen, zahtevajo pregled maternega govorca, da se odpravijo subtilne težave v slovnici, modalnosti, terminologiji in registru, specifičnem za domeno. Te težave je pogosto težko zaznati samo z avtomatiziranimi meritvami kakovosti.
+
+## Taksonomija pogostih napak prevoda AI
 
 - slovnica
 - modalnost
@@ -53,10 +93,31 @@ To je pomembno, ker tudi če je splošen pomen ohranjen, lahko prevodi, ustvarje
 - ubeseditev pravilnika domene
 - besedilo dostopnosti
 
+## Lahka primerjalna ocena
+
+Za ponovljivo vrednotenje prevoda z umetno inteligenco uporabite lahkotno rubriko 0–3, namesto da se zanašate le na presojo uspešno/neuspešno.
+
+Priporočene dimenzije:
+
+- kar pomeni natančnost
+- slovnica in tekočnost
+- terminologija in domensko prileganje
+- register in slog
+- prizadevanje za pregled
+
+Priporočene oznake za izdajo:
+
+- blokator
+- večja revizija
+- manjša revizija
+- pripravljeno s prijavo pregleda
+
+To ustvarja podatke, ki so prijazni do kartice kazalnikov, ne da bi potrebovali težko ogrodje za lokalizacijo in merjenje.
+
 ## Sorodne strani
 
 - `localization-ci-cd.md`
 - `translation-memory-and-glossaries.md`
-- `../style-guide/localization/ai-translation-review-records.md`
-- `../style-guide/localization/llm-translation-benchmark-fixtures.md`
-- `../learning/how-to-run-localization-qa-in-ci.md`
+- `../../style-guide/localization/ai-translation-review-records.md`
+- `../../style-guide/localization/llm-translation-benchmark-fixtures.md`
+- `../../learning/sl/how-to-run-localization-qa-in-ci.md`

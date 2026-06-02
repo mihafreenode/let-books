@@ -4,7 +4,8 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'docs');
-const LOCALES = ['sl', 'hr', 'bs', 'sr-Latn', 'sr-Cyrl', 'mk', 'sq', 'de', 'it', 'fr', 'es'];
+const DOCS_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'docs-config.json'), 'utf8'));
+const LOCALES = DOCS_CONFIG.locales.filter((locale) => locale !== 'en');
 
 const findings = {
   localizationCompleteness: [],
@@ -61,7 +62,12 @@ const defectClasses = {
   },
 };
 
-walk(path.join(DOCS_DIR, 'blog'));
+for (const contentType of DOCS_CONFIG.contentTypes) {
+  const dir = path.join(DOCS_DIR, contentType);
+  if (fs.existsSync(dir)) {
+    walk(dir);
+  }
+}
 
 defectClasses.untranslatedSummaries.count = findings.metadataLocalization.length;
 defectClasses.untranslatedBodies.count = findings.localizationCompleteness.length;

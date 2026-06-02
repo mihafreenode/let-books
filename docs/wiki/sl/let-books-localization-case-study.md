@@ -1,71 +1,71 @@
 ---
-title: "Študija primera lokalizacije Let Books"
+title: "Let Books Študija primera lokalizacije"
 summary: >-
-  Let Books je živa študija primera gradnje večjezične platforme znanja in vizije izdelka, še preden obstaja polna zaledna aplikacija.
+  Let Books je živa študija primera pri izgradnji večjezične platforme znanja in vizije izdelka, preden obstaja popolna zaledna aplikacija.
 topics:
   - let-books
   - localization
   - public-interest-technology
 ---
-# Študija primera lokalizacije Let Books
+# Let Books Študija primera lokalizacije
 
 ## Povzetek
 
-Let Books je živa študija primera gradnje večjezične platforme znanja in vizije izdelka, še preden obstaja polna zaledna aplikacija.
+Let Books je živa študija primera pri izgradnji večjezične platforme znanja in vizije izdelka, preden obstaja popolna zaledna aplikacija.
 
-Osrednji programski model je zdaj opisan v `../localization-at-scale-program.md`. Ta stran se osredotoča na dokaze iz repozitorija, ki podpirajo ta priročnik.
+Osrednji programski model zdaj živi v `../localization-at-scale-program.md`. Ta stran se osredotoča na dokaze, specifične za skladišča, ki podpirajo ta priročnik.
 
-## Zakaj je to koristno
+## Zakaj je koristno
 
 Prikazuje, kako lahko projekt:
 
-- zgodaj določi obseg jezikovnih različic
-- ohranja dostopnost tesno povezano z lokalizacijo
-- uporablja pisanje najprej v angleščini, ne da bi zdrsnil v objavljanje samo v angleščini
-- dokumentira upravljanje, še preden pride obseg
+- zgodaj določite obseg lokalne nastavitve
+- naj bo dostopnost povezana z lokalizacijo
+- uporabite prvotno avtorstvo v angleščini, ne da bi padli v objavljanje samo v angleščini
+- dokumentirajte vodenje pred prihodom tehtnice
 
-## Slovenski primer AI-pregleda
+## Slovenski AI-review primer
 
-Repozitorij vsebuje konkreten slovenski pregledni primer, v katerem je osnutek AI ohranil splošni pomen, vendar je še vedno zahteval popravek naravnega govorca zaradi modalnosti, tekočnosti in jezika pravilniškega registra.
+Repozitorij vključuje konkreten primer slovenskega pregleda, kjer je osnutek AI ohranil širok pomen, vendar je še vedno zahteval popravke maternega govorca glede modalnosti, tekočnosti in besedila v registru pravilnika.
 
-Podroben zapis je zdaj v razdelku z ugotovitvami pregledov naravnih govorcev v `../localization-at-scale-program.md` in v `../style-guide/localization/ai-translation-review-records.md`.
+Podroben zapis je zdaj v razdelku Ugotovitve pregleda naravnih govorcev v `../localization-at-scale-program.md` in v `../../style-guide/localization/ai-translation-review-records.md`.
 
 Ključne lekcije:
 
-- slovnične napake lahko preživijo, tudi kadar se stavek zdi razumljiv
-- modalnost je še posebej ranljiva za dobesedni prevod
-- jezik pravilnikov in specifikacij izdelka pogosto potrebuje domensko ustrezen register, ne le slovarsko enakovrednost
-- avtomatizirana preverjanja redko sama ujamejo subtilne težave s tekočnostjo in modalnostjo
+- slovnične napake lahko preživijo tudi, ko se stavek zdi razumljiv
+- modalnost je še posebej občutljiva na dobesedni prevod
+- jezik pravilnika in specifikacije izdelka pogosto potrebuje register, specifičen za domeno, namesto enakovrednosti na ravni slovarja
+- avtomatizirana preverjanja redko sama odkrijejo subtilne težave s tekočnostjo in modalnostjo
 
-## Primer mešanojezičnega objavljanja
+## Primer objavljanja v mešanih jezikih
 
 Izvorni članek: `docs/blog/sl/the-cost-of-english-only-software.md`
 
-Ta družina člankov je ponudila konkreten primer, kjer sta lokaliziran naslov in delno lokalizirana lupina sobivala z angleškimi objavnimi površinami, vidnimi bralcem.
+Ta družina člankov je zagotovila konkreten primer lokaliziranega naslova in delno lokalizirane lupine, ki sobivata z angleškimi površinami publikacij, obrnjenimi k bralcu.
 
-Podrobna razlaga na ravni programa je zdaj v razdelku z ugotovitvami pregledov naravnih govorcev v `../localization-at-scale-program.md` in v `../localization-audit-report.md`.
+Podrobna razlaga na ravni programa je zdaj v razdelku Ugotovitve pregleda naravnih govorcev v `../localization-at-scale-program.md` in v `../localization-audit-report.md`.
 
-Lekcije, značilne za repozitorij:
+Lekcije, specifične za skladišče:
 
 - pokritost ni isto kot popolnost
-- izvorni metapodatki so pomembni, ker lahko povzetki uidejo na objavne površine
-- lokalizacija taksonomije je pomembna, ker so angleške tematske oznake bralcem vidne napake
-- ustvarjeni HTML je treba validirati in mu ne smemo slepo zaupati
+- izvorni metapodatki so pomembni, ker lahko povzetki uhajajo na površine objave
+- lokalizacija taksonomije je pomembna, ker so oznake tem v angleškem jeziku vidne napake, s katerimi se sooča bralec
+- ustvarjene HTML je treba potrditi, ne pa jim slepo zaupati
 
-## Ponovno uporabni referenčni primeri za primerjalno vrednotenje
+## Primeri meril uspešnosti za večkratno uporabo
 
-Strukturirane primere pregledov je treba hraniti tudi kot ponovno uporabne referenčne primere za primerjalno vrednotenje, da lahko prihodnje vrednotenje LLM meri:
+Primere strukturiranih pregledov je treba shraniti tudi kot primere primerjalnih vrednosti za večkratno uporabo, tako da lahko prihodnje vrednotenje LLM meri:
 
-- slovnično zanesljivost
-- obravnavo modalnosti
-- terminološko natančnost
-- natančnost pravilniškega registra
-- kakovost zajema utemeljitev pregledovalca
+- slovnična zanesljivost
+- ravnanje z načini
+- terminološka natančnost
+- natančnost registra politik
+- kakovost zajema utemeljitve recenzentov
 
 ## Sorodne strani
 
-- `../style-guide/localization/ai-translation-review-records.md`
-- `../style-guide/localization/llm-translation-benchmark-fixtures.md`
+- `../../style-guide/localization/ai-translation-review-records.md`
+- `../../style-guide/localization/llm-translation-benchmark-fixtures.md`
 - `let-books-localization-architecture.md`
 - `let-books-localization-lessons-learned.md`
-- `../blog/en/why-every-language-matters.md`
+- `../../blog/sl/why-every-language-matters.md`

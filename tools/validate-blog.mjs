@@ -6,6 +6,7 @@ const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'docs');
 const BLOG_DIR = path.join(DOCS_DIR, 'blog');
 const ARTICLES_JSON = path.join(BLOG_DIR, 'articles.json');
+const DOCS_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'docs-config.json'), 'utf8'));
 const SITE_URL = 'https://letbooks.org';
 
 const errors = [];
@@ -354,7 +355,7 @@ function validateFrontmatterRef(filePath, href, field) {
     }
   } else {
     const rootRelativePrefixes = ['docs/', 'static-demo/', 'AGENTS', '.github/', 'tools/', 'tests/', 'favicon/', 'public/'];
-    const docsRelativePrefixes = ['assets/', 'blog/', 'diagrams/', 'learning/', 'sources/', 'style-guide/', 'wiki/'];
+    const docsRelativePrefixes = ['assets/', 'blog/', 'diagrams/', 'learning/', 'sources/', 'style-guide/', 'topics/', 'wiki/'];
 
     if (rootRelativePrefixes.some((prefix) => cleanHref.startsWith(prefix))) {
       candidates.push(path.join(ROOT, cleanHref));
@@ -451,7 +452,7 @@ function resolveFrontmatterEvidencePath(filePath, href) {
   }
 
   const rootRelativePrefixes = ['docs/', 'static-demo/', 'AGENTS', '.github/', 'tools/', 'tests/', 'favicon/', 'public/'];
-  const docsRelativePrefixes = ['assets/', 'blog/', 'diagrams/', 'learning/', 'sources/', 'style-guide/', 'wiki/'];
+  const docsRelativePrefixes = ['assets/', 'blog/', 'diagrams/', 'learning/', 'sources/', 'style-guide/', 'topics/', 'wiki/'];
 
   if (rootRelativePrefixes.some((prefix) => cleanHref.startsWith(prefix))) {
     return path.join(ROOT, cleanHref);
@@ -657,6 +658,7 @@ function checkRequiredReadmes() {
     'docs/blog/README.md',
     'docs/learning/README.md',
     'docs/wiki/README.md',
+    'docs/topics/README.md',
     'docs/style-guide/README.md',
   ];
 

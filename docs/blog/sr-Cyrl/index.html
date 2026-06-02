@@ -29,6 +29,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/index.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/index.html">
@@ -59,6 +60,7 @@
             <a class="nav-link" href="../../blog/sr-Cyrl/index.html">Блог</a>
             <a class="nav-link" href="../../learning/sr-Cyrl/index.html">Водичи за учење</a>
             <a class="nav-link" href="../../wiki/sr-Cyrl/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/sr-Cyrl/index.html">Теме</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../blog/en/index.html" lang="en">EN</a>
@@ -77,29 +79,112 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Блог</h1>
             <p>Блог чланци о развоју вођеном спецификацијом, метаподацима, документацији и изградњи пројеката уз AI.</p>
           </div>
-          <ul>
-              <li><a href="ai-will-not-replace-translators.html">AI неће заменити преводиоце</a></li>
-              <li><a href="documentation-is-part-of-the-product.html">Документација је део производа</a></li>
-              <li><a href="economics-of-localization.html">Економика локализације</a></li>
-              <li><a href="future-of-continuous-localization.html">Будућност континуиране локализације</a></li>
-              <li><a href="isbn-not-a-database.html">ISBN није база података</a></li>
-              <li><a href="localization-at-scale.html">Локализација у великом обиму</a></li>
-              <li><a href="multilingual-accessibility.html">Вишејезична приступачност</a></li>
-              <li><a href="preserving-smaller-languages-in-the-digital-age.html">Очување мањих језика у дигиталном добу</a></li>
-              <li><a href="spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a></li>
-              <li><a href="spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a></li>
-              <li><a href="the-cost-of-english-only-software.html">Цена софтвера само на енглеском</a></li>
-              <li><a href="translation-and-learning.html">Превођење и учење</a></li>
-              <li><a href="united-in-diversity-and-open-source.html">Уједињени у разноликости и отвореном коду</a></li>
-              <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a></li>
-              <li><a href="why-every-language-matters.html">Зашто је сваки језик важан</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Врста садржаја">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link is-active" href="../../blog/sr-Cyrl/index.html" data-content-switcher-link data-content-type="blog" aria-current="page">Блог</a>
+              <a class="content-type-switcher__link" href="../../learning/sr-Cyrl/index.html" data-content-switcher-link data-content-type="learning">Материјали за учење</a>
+              <a class="content-type-switcher__link" href="../../wiki/sr-Cyrl/index.html" data-content-switcher-link data-content-type="wiki">Вики</a>
+              <a class="content-type-switcher__link" href="../../topics/sr-Cyrl/index.html" data-content-switcher-link data-content-type="topics">Теме</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Недавни чланци</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../blog/sr-Cyrl/why-every-language-matters.html">
+                <span class="recent-content-card__type">Блог</span>
+                <h3>Зашто је сваки језик важан</h3>
+              <p>Зашто третирање мањих или регионалних језика као језика прве класе мења ко може да учи, учествује и доприноси.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/sr-Cyrl/united-in-diversity-and-open-source.html">
+                <span class="recent-content-card__type">Блог</span>
+                <h3>Уједињени у разноликости и отвореном коду</h3>
+              <p>Шта вишејезичне јавне установе и пројекти отвореног кода могу научити од друштава која функционишу кроз више језика и писама.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/sr-Cyrl/preserving-smaller-languages-in-the-digital-age.html">
+                <span class="recent-content-card__type">Блог</span>
+                <h3>Очување мањих језика у дигиталном добу</h3>
+              <p>Зашто би дигитални алати требало да помогну мањим језицима да остану употребљиви, видљиви и погодни за учење, уместо да се њихово одсуство прихвата као нормално.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/sr-Cyrl/multilingual-accessibility.html">
+                <span class="recent-content-card__type">Блог</span>
+                <h3>Вишејезична приступачност</h3>
+              <p>Зашто приступачност и локализацију треба пројектовати заједно кроз језичке метаподатке, читаче екрана, једноставан језик, титлове и alt текст.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Прегледај по темама</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-ai-assisted-delivery-menu">AI испорука</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-isbn-metadata-menu">ISBN и метаподаци</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-library-systems-menu">Библиотечки системи</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-validation-menu">Валидација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-documentation-menu">Документација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-book-donation-menu">Донација књига</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-translation-quality-menu">Квалитет превођења</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-product-quality-menu">Квалитет производа</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-product-review-menu">Преглед производа</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-spec-driven-development-menu">Развој вођен спецификацијама</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-sr-Cyrl-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-blog-sr-Cyrl-demo-alignment-menu">Усклађеност демоа</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-ai-assisted-delivery-menu" data-topic-menu="index-blog-sr-Cyrl-ai-assisted-delivery" hidden>
+                      <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html">Документација је део производа</a>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-isbn-metadata-menu" data-topic-menu="index-blog-sr-Cyrl-isbn-metadata" hidden>
+                      <a href="../../blog/sr-Cyrl/isbn-not-a-database.html">ISBN није база података</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-let-books-menu" data-topic-menu="index-blog-sr-Cyrl-let-books" hidden>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-library-systems-menu" data-topic-menu="index-blog-sr-Cyrl-library-systems" hidden>
+                      <a href="../../blog/sr-Cyrl/isbn-not-a-database.html">ISBN није база података</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-validation-menu" data-topic-menu="index-blog-sr-Cyrl-validation" hidden>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-documentation-menu" data-topic-menu="index-blog-sr-Cyrl-documentation" hidden>
+                      <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html">Документација је део производа</a>
+                      <a href="../../blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-book-donation-menu" data-topic-menu="index-blog-sr-Cyrl-book-donation" hidden>
+                      <a href="../../blog/sr-Cyrl/isbn-not-a-database.html">ISBN није база података</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-translation-quality-menu" data-topic-menu="index-blog-sr-Cyrl-translation-quality" hidden>
+                      <a href="../../blog/sr-Cyrl/ai-will-not-replace-translators.html">AI неће заменити преводиоце</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-product-quality-menu" data-topic-menu="index-blog-sr-Cyrl-product-quality" hidden>
+                      <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html">Документација је део производа</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-product-review-menu" data-topic-menu="index-blog-sr-Cyrl-product-review" hidden>
+                      <a href="../../blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-spec-driven-development-menu" data-topic-menu="index-blog-sr-Cyrl-spec-driven-development" hidden>
+                      <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html">Документација је део производа</a>
+                      <a href="../../blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html">Развој вођен спецификацијом за AI пројекте</a>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-sr-Cyrl-demo-alignment-menu" data-topic-menu="index-blog-sr-Cyrl-demo-alignment" hidden>
+                      <a href="../../blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html">Када је демо доказ, а када није</a>
+                      <a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html">Развој вођен спецификацијом у Let Books</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">
@@ -112,6 +197,7 @@
           <div>
             <div class="footer-links">
               <a href="../../sr-Cyrl/index.html">Преглед</a>
+              <a href="../../topics/sr-Cyrl/index.html">Теме</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>

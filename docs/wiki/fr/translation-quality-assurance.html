@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assurance qualité des traductions | LetBooks</title>
-    <meta name="description" content="La traduction QA combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
+    <meta name="description" content="Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/fr/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Assurance qualité des traductions | LetBooks">
-    <meta property="og:description" content="La traduction QA combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
+    <meta property="og:description" content="Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/fr/translation-quality-assurance.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Assurance qualité des traductions | LetBooks">
-    <meta name="twitter:description" content="La traduction QA combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
+    <meta name="twitter:description" content="Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="fr">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
             <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/fr/index.html">Sujets</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/translation-quality-assurance.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,26 +103,63 @@
               <span aria-current="page">Assurance qualité des traductions</span>
             </nav>
             <h1>Assurance qualité des traductions</h1>
-          <p class="content-page-summary">La traduction QA combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.</p>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Français</span>
+          </div>
+          <p class="content-page-summary">Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Sujets :</span>
               <span class="content-tag">Qualité de la traduction</span>
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="contrôles-communs">Contrôles communs</h2>
+<h2 id="vérifications-courantes">Vérifications courantes</h2>
 <ul>
 <li>traductions manquantes</li>
 <li>Fuite en anglais</li>
+<li>exhaustivité de la localisation destinée au lecteur</li>
 <li>incompatibilités d’espace réservé</li>
 <li>liens brisés</li>
 <li>dérive du glossaire</li>
 <li>couverture du texte d’accessibilité</li>
 <li>capture d’écran et parité du diagramme</li>
 </ul>
+<h2 id="validateur-de-localisation-destiné-au-lecteur">Validateur de localisation destiné au lecteur</h2>
+<p class="lead">Une classe de validateur doit explicitement échouer à CI lorsqu’une page apparaît localisée mais expose toujours le contenu destiné au lecteur en langue source.</p>
+<p>Exemples qui devraient échouer :</p>
+<ul>
+<li>titre localisé avec résumé en anglais</li>
+<li>article localisé avec des balises anglaises</li>
+<li>article localisé avec des titres ou des listes en anglais</li>
+<li>article localisé avec légendes ou légendes en anglais</li>
+<li>article localisé avec des étiquettes de diagramme en anglais ou un texte alternatif</li>
+<li>des cartes de contenu connexe en langues mixtes</li>
+</ul>
+<p>Il s’agit d’une condition d’échec, et pas seulement d’un avertissement, car les lecteurs considèrent ces pages comme visiblement inachevées.</p>
+<h2 id="audit-de-classe-de-défauts">Audit de classe de défauts</h2>
+<p>Le contrôle qualité de la traduction doit conserver des classes de défauts explicites avec :</p>
+<ul>
+<li>descriptif</li>
+<li>nombre d’occurrences</li>
+<li>la cause première</li>
+<li>couverture du validateur</li>
+<li>risque de récidive</li>
+<li>plan de fermeture</li>
+</ul>
+<p>Les catégories obligatoires incluent :</p>
+<ul>
+<li>résumés non traduits</li>
+<li>corps non traduits</li>
+<li>publication de brouillon d’espace réservé</li>
+<li>métadonnées non traduites</li>
+<li>édition en langues mixtes</li>
+<li>futures classes découvertes</li>
+</ul>
+<p>Une classe n’est fermée que lorsque son décompte atteint zéro et que CI l’empêche de revenir sans échec.</p>
 <h2 id="preuve-dexamen-humain">Preuve d’examen humain</h2>
-<p class="lead">La traduction QA devrait également conserver de courts enregistrements de révision humaine pour les corrections représentatives assistées par AI.</p>
-<p>Champs minimaux :</p>
+<p>L’assurance qualité des traductions doit également conserver de courts enregistrements de révision humaine pour les corrections représentatives assistées par l’IA.</p>
+<p>Champs minimaux :</p>
 <ul>
 <li>texte original</li>
 <li>texte corrigé</li>
@@ -118,8 +167,9 @@
 <li>hypothèse de cause profonde</li>
 <li>justification de l’examinateur</li>
 </ul>
-<p>Cela est important car même lorsque le sens global est préservé, les traductions générées par AI peuvent nécessiter une révision par un locuteur natif pour corriger des problèmes subtils de grammaire, de modalité, de terminologie et de registre spécifique au domaine. Ces problèmes sont souvent difficiles à détecter uniquement grâce aux mesures de qualité automatisées.</p>
-<h2 id="taxonomie-courante-des-erreurs-de-traduction-ai">Taxonomie courante des erreurs de traduction AI</h2>
+<p>Les résultats des analyses réalisées auprès de locuteurs natifs doivent être conservés sous la forme d’un corpus croissant, et non sous la forme de notes isolées et ponctuelles. Les résultats répétés devraient être répercutés sur la conception du validateur, les conseils des contributeurs et les futures instructions des agents IA.</p>
+<p>Cela est important car même lorsque le sens global est préservé, les traductions générées par l’IA peuvent nécessiter une révision par un locuteur natif pour corriger des problèmes subtils de grammaire, de modalité, de terminologie et de registre spécifique au domaine. Ces problèmes sont souvent difficiles à détecter uniquement grâce aux mesures de qualité automatisées.</p>
+<h2 id="taxonomie-courante-des-erreurs-de-traduction-de-lia">Taxonomie courante des erreurs de traduction de l’IA</h2>
 <ul>
 <li>grammaire</li>
 <li>modalité</li>
@@ -135,13 +185,31 @@
 <li>formulation de la politique de domaine</li>
 <li>formulation d’accessibilité</li>
 </ul>
+<h2 id="notation-de-référence-légère">Notation de référence légère</h2>
+<p>Pour une évaluation reproductible de la traduction IA, utilisez une rubrique légère de 0 à 3 au lieu de vous fier uniquement au jugement de réussite/échec.</p>
+<p>Dimensions recommandées :</p>
+<ul>
+<li>c’est-à-dire l’exactitude</li>
+<li>grammaire et maîtrise</li>
+<li>terminologie et adéquation au domaine</li>
+<li>s’inscrire et styler</li>
+<li>efforts de révision</li>
+</ul>
+<p>Étiquettes de version recommandées :</p>
+<ul>
+<li>bloqueur</li>
+<li>révision majeure</li>
+<li>révision mineure</li>
+<li>prêt avec l’approbation de l’examen</li>
+</ul>
+<p>Cela crée des données adaptées aux tableaux de bord sans nécessiter un cadre de mesure de localisation lourd.</p>
 <h2 id="pages-connexes">Pages connexes</h2>
 <ul>
 <li><code>localization-ci-cd.md</code></li>
 <li><code>translation-memory-and-glossaries.md</code></li>
-<li><code>../style-guide/localization/ai-translation-review-records.md</code></li>
-<li><code>../style-guide/localization/llm-translation-benchmark-fixtures.md</code></li>
-<li><code>../learning/how-to-run-localization-qa-in-ci.md</code></li>
+<li><code>../../style-guide/localization/ai-translation-review-records.md</code></li>
+<li><code>../../style-guide/localization/llm-translation-benchmark-fixtures.md</code></li>
+<li><code>../../learning/fr/how-to-run-localization-qa-in-ci.md</code></li>
 </ul>
 
         <div class="post-article-nav">
@@ -185,11 +253,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</p>
+            <p class="footer-note">Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</p>
             <p class="footer-microcopy">Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../fr/index.html">Aperçu</a>
+              <a href="../../topics/fr/index.html">Sujets</a>
               <a href="../../index.html">Page d&#x27;accueil</a>
               <a href="../../../static-demo/">Démo</a>
             </div>
@@ -200,6 +270,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</span>
+            <span>Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

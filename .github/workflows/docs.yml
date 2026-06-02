@@ -48,8 +48,17 @@ jobs:
       - name: Generate blog topic navigation
         run: node tools/generate-topic-nav.mjs
 
+      - name: Generate search index
+        run: node tools/generate-search-index.mjs
+
       - name: Generate articles registry
         run: node tools/generate-articles-json.mjs
+
+      - name: Documentation parity audit
+        run: |
+          node tools/validate-content-parity.mjs \
+            --report-file docs/.content-parity-report.md \
+            --json-report-file docs/.content-parity-report.json
 
       - name: Semantic localization review
         run: |
@@ -69,6 +78,15 @@ jobs:
 
       - name: Generate sitemap
         run: node tools/generate-sitemap.mjs
+
+      - name: Print validation
+        run: |
+          python3 -m http.server 4173 >/tmp/letbooks-print.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          npm install --no-save playwright
+          npx playwright install chromium
+          node tests/docs/print-validation.cjs
 
       - name: Validate static-demo localization
         run: node tests/static-demo/localization-smoke.js

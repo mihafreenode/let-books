@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kako napisati specifikacijo, ki ji AI lahko sledi | LetBooks</title>
-    <meta name="description" content="Ta vodič pojasni, kako napisati produktno ali funkcionalno specifikacijo, ki AI-podprti implementaciji pomaga ostati usklajena z resničnimi cilji izdelka.">
+    <title>Kako napisati specifikacijo, ki ji lahko AI sledi | LetBooks</title>
+    <meta name="description" content="Ta vodič pojasnjuje, kako napisati produktno ali funkcionalno specifikacijo, ki pomaga, da izvedba s pomočjo AI ostane usklajena z resničnimi cilji produkta, namesto da odtava proti generičnim izhodom.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/sl/how-to-write-a-spec-that-ai-can-follow.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Kako napisati specifikacijo, ki ji AI lahko sledi | LetBooks">
-    <meta property="og:description" content="Ta vodič pojasni, kako napisati produktno ali funkcionalno specifikacijo, ki AI-podprti implementaciji pomaga ostati usklajena z resničnimi cilji izdelka.">
+    <meta property="og:title" content="Kako napisati specifikacijo, ki ji lahko AI sledi | LetBooks">
+    <meta property="og:description" content="Ta vodič pojasnjuje, kako napisati produktno ali funkcionalno specifikacijo, ki pomaga, da izvedba s pomočjo AI ostane usklajena z resničnimi cilji produkta, namesto da odtava proti generičnim izhodom.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/sl/how-to-write-a-spec-that-ai-can-follow.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kako napisati specifikacijo, ki ji AI lahko sledi | LetBooks">
-    <meta name="twitter:description" content="Ta vodič pojasni, kako napisati produktno ali funkcionalno specifikacijo, ki AI-podprti implementaciji pomaga ostati usklajena z resničnimi cilji izdelka.">
+    <meta name="twitter:title" content="Kako napisati specifikacijo, ki ji lahko AI sledi | LetBooks">
+    <meta name="twitter:description" content="Ta vodič pojasnjuje, kako napisati produktno ali funkcionalno specifikacijo, ki pomaga, da izvedba s pomočjo AI ostane usklajena z resničnimi cilji produkta, namesto da odtava proti generičnim izhodom.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="sl">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sl/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sl/index.html">Učni vodniki</a>
             <a class="nav-link" href="../../wiki/sl/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sl/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/sl/index.html">Učni vodniki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Kako napisati specifikacijo, ki ji AI lahko sledi</span>
+              <span aria-current="page">Kako napisati specifikacijo, ki ji lahko AI sledi</span>
             </nav>
-            <h1>Kako napisati specifikacijo, ki ji AI lahko sledi</h1>
-          <p class="content-page-summary">Ta vodič pojasni, kako napisati produktno ali funkcionalno specifikacijo, ki AI-podprti implementaciji pomaga ostati usklajena z resničnimi cilji izdelka.</p>
+            <h1>Kako napisati specifikacijo, ki ji lahko AI sledi</h1>
+          <div class="content-page-meta">
+            <span>Učni vodniki</span>
+            <span>Slovenščina</span>
+          </div>
+          <p class="content-page-summary">Ta vodič pojasnjuje, kako napisati produktno ali funkcionalno specifikacijo, ki pomaga, da izvedba s pomočjo AI ostane usklajena z resničnimi cilji produkta, namesto da odtava proti generičnim izhodom.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">AI podprta dostava</span>
@@ -101,36 +117,102 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="zakaj-je-to-pomembno">Zakaj je to pomembno</h2>
-<p>AI lahko hitro generira kodo, najbolje pa deluje, ko ima jasne meje. Če je specifikacija nejasna, bo pogosto zapolnil vrzeli z generičnimi predpostavkami.</p>
-<h2 id="kaj-mora-vsebovati-dobra-specifikacija">Kaj mora vsebovati dobra specifikacija</h2>
+<p class="lead">AI lahko hitro ustvari kodo, vendar najbolje deluje, kadar ima naloga jasne meje.</p>
+<p>Če je specifikacija nejasna, bo AI praznine pogosto zapolnil z verjetnimi privzetimi možnostmi:</p>
 <ul>
-<li>namen funkcije</li>
-<li>meje obsega</li>
-<li>nezamenljiva pravila</li>
-<li>vedenje ob napaki in rezervni tok</li>
-<li>merila sprejema</li>
+<li>pogostimi arhitekturnimi vzorci</li>
+<li>generičnimi poteki uporabniškega vmesnika</li>
+<li>nepotrebnimi abstrakcijami</li>
+<li>izmišljenimi predpostavkami o tem, kaj naj bi produkt počel</li>
 </ul>
+<p>Tak izhod je lahko videti dodelan in je kljub temu napačen.</p>
+<h2 id="kaj-mora-vsebovati-uporabna-specifikacija-za-ai">Kaj mora vsebovati uporabna specifikacija za AI</h2>
+<h3 id="namen-produkta">1. Namen produkta</h3>
+<p>Povejte, zakaj funkcionalnost obstaja.</p>
+<p>Slabo:</p>
+<blockquote>
+<p>Dodaj obrazec za knjigo.</p>
+</blockquote>
+<p>Boljše:</p>
+<blockquote>
+<p>Dodaj hiter zajemni obrazec, ki donatorju omogoča, da v nekaj sekundah katalogizira en fizični izvod knjige, medtem ko stoji ob polici ali škatli.</p>
+</blockquote>
+<p>Namen izvajalcu pove, kaj naj optimizira.</p>
+<h3 id="meje-obsega">2. Meje obsega</h3>
+<p>Povejte, kaj je znotraj obsega in kaj je zunaj njega.</p>
+<p>Primer:</p>
+<ul>
+<li>znotraj obsega: fotografija naslovnice, vnos ISBN, lokacija shranjevanja, shrani in nadaljuj</li>
+<li>zunaj obsega: OCR, sinhronizacija v oblaku, potek institucionalnega pregleda</li>
+</ul>
+<p>To pomočniku prepreči, da bi majhno nalogo napihnil v mini platformo.</p>
+<h3 id="zahtevano-vedenje">3. Zahtevano vedenje</h3>
+<p>Navedite pravila, o katerih ni pogajanja.</p>
+<p>Primeri iz pristopa Let Books:</p>
+<ul>
+<li>ročni potek dela mora delovati brez AI</li>
+<li>nepopolni podatki morajo biti dovoljeni</li>
+<li>fizični izvodi morajo ostati ločeni od bibliografskih zapisov</li>
+<li>uporabniku vidno vedenje mora ostati lokalizabilno</li>
+</ul>
+<p>Ta pravila so pomembnejša od sloga izvedbe.</p>
+<h3 id="vedenje-ob-napakah-in-rezervno-vedenje">4. Vedenje ob napakah in rezervno vedenje</h3>
+<p>Rešitve, ki jih ustvari AI, pogosto optimizirajo srečno pot. Dobra specifikacija pojasni, kaj se zgodi, ko neobvezni sistemi odpovejo.</p>
+<p>Primer:</p>
+<ul>
+<li>če iskanje metapodatkov odpove, ročni vnos ostane na voljo</li>
+<li>če je OCR onemogočen, zajem še vedno deluje</li>
+<li>če validacija izvoza odpove, uporabnik prejme jasno poročilo namesto tihega delnega uvoza</li>
+</ul>
+<h3 id="kriteriji-sprejema">5. Kriteriji sprejema</h3>
+<p>Pogoj uspeha zapišite v opaznih izrazih.</p>
+<p>Primer:</p>
+<ol type="1">
+<li>uporabnik izbere škatlo</li>
+<li>uporabnik vnese ali skenira ISBN</li>
+<li>uporabnik lahko shrani, tudi če se noben ponudnik metapodatkov ne odzove</li>
+<li>knjiga se prikaže na izbrani lokaciji</li>
+</ol>
+<p>Kriteriji sprejema dajejo pregledovalcem in sistemom AI stabilen cilj.</p>
 <h2 id="čemu-se-izogniti">Čemu se izogniti</h2>
 <ul>
-<li>nejasnim ciljem, kot je “izboljšaj UX”</li>
-<li>podrobnostim implementacije brez produktnega namena</li>
-<li>mešanju prihodnjih idej s trenutnimi zahtevami</li>
-<li>skritim predpostavkam o uporabniku ali podatkih</li>
+<li>nejasnim ciljem, kot je »izboljšaj UX«</li>
+<li>izvedbenim podrobnostim brez produktnega namena</li>
+<li>mešanju prihodnjih idej, predstavljenih kot trenutne zahteve</li>
+<li>skritim predpostavkam o uporabniških vlogah ali kakovosti podatkov</li>
+<li>specifikacijam, ki vsebujejo le poimenovanje in ne opisujejo poteka dela</li>
 </ul>
-<h2 id="praktičen-vzorec">Praktičen vzorec</h2>
-<p>Uporabi ta vrstni red:</p>
+<h2 id="praktičen-vzorec-pisanja">Praktičen vzorec pisanja</h2>
+<p>Pri pripravi specifikacije funkcionalnosti uporabite to zgoščeno strukturo.</p>
 <ol type="1">
-<li>problem</li>
+<li>težava, ki jo rešuješ</li>
 <li>uporabnik in kontekst</li>
-<li>tok v obsegu</li>
-<li>stvari zunaj obsega</li>
+<li>potek dela znotraj obsega</li>
+<li>elementi zunaj obsega</li>
 <li>zahtevana pravila</li>
 <li>rezervno vedenje</li>
-<li>merila sprejema</li>
+<li>kriteriji sprejema</li>
 <li>opombe za preverjanje</li>
 </ol>
-<h2 id="kontekst-let-books">Kontekst Let Books</h2>
-<p><code>AGENTS.md</code>, <code>AGENTS-Implementation.md</code> in <code>README.md</code> že kažejo, kako takšna plastena specifikacija pomaga tudi AI pomočnikom.</p>
+<h2 id="kako-se-to-preslika-na-let-books">Kako se to preslika na Let Books</h2>
+<p>Repozitorij ta vzorec že prikazuje na več ravneh:</p>
+<ul>
+<li><code>AGENTS.md</code> določa namen produkta, poteke dela in kriterije sprejema</li>
+<li><code>AGENTS-Implementation.md</code> določa taktične omejitve dostave</li>
+<li><code>README.md</code> ločuje trenutno stanje od prihodnje smeri</li>
+</ul>
+<p>Tak plasten pristop je uporaben, ker AI deluje bolje, kadar je produktni spomin izrecen in ga je mogoče pregledati.</p>
+<h2 id="vaja">Vaja</h2>
+<p>Vzemite eno funkcionalnost Let Books, kot je skeniranje QR-kod škatel ali uvoz odločitev iz Excela, in napišite enostransko specifikacijo po zgornji strukturi.</p>
+<p>Nato prosite kodirnega pomočnika, da jo izvede.</p>
+<p>Zatem pregledajte izhod glede na specifikacijo, preden pregledate slog kode. Ta vrstni red je pomemben.</p>
+<h2 id="dodatno-branje">Dodatno branje</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>../wiki/sl/spec-driven-development.md</code></li>
+<li><code>../wiki/sl/demo-spec-alignment.md</code></li>
+<li><code>../blog/sl/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -161,20 +243,24 @@
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../blog/sl/documentation-is-part-of-the-product.html"><span>Dokumentacija je del izdelka</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sl/spec-driven-development-for-ai-projects.html"><span>Razvoj na podlagi specifikacij za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati AI-podprto delo glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati delo s pomočjo AI glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../topics/sl/ai-assisted-implementation.html"><span>Implementacija z AI-podporo</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
                   <a href="../../blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kdaj je demo dokaz in kdaj ni</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sl/spec-driven-development-in-let-books.html"><span>Razvoj na podlagi specifikacij v Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohraniti usklajenost med specifikacijo, dokumentacijo, demom in kodo</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../wiki/sl/markdown-in-product-development.html"><span>Markdown v razvoju izdelka</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj na podlagi specifikacij</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohranjati usklajenost specifikacije, dokumentacije, predstavitve in kode</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../wiki/sl/markdown-in-product-development.html"><span>Markdown v razvoju izdelkov</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/documentation-is-more-than-a-website.html"><span>Dokumentacija je več kot spletno mesto</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj, ki temelji na specifikacijah</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sl/spec-driven-development.html"><span>Razvoj, voden s specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/cataloging.html"><span>Katalogizacija</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-writing-menu" data-topic-menu="related-spec-writing" hidden>
-                  <a href="../../learning/sl/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako iz produktne specifikacije narediti implementacijski načrt</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako produktno specifikacijo pretvoriti v izvedbeni načrt</span><span class="topic-menu__meta">Učni vodniki</span></a>
                   <a href="../../learning/sl/how-to-design-english-source-content-for-translation.html"><span>Kako zasnovati angleško izvorno vsebino za prevajanje</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../wiki/sl/product-specification.html"><span>Produktna specifikacija</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/product-specification.html"><span>Specifikacija izdelka</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>
@@ -188,11 +274,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.</p>
+            <p class="footer-note">Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.</p>
             <p class="footer-microcopy">Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sl/index.html">Pregled</a>
+              <a href="../../topics/sl/index.html">Teme</a>
               <a href="../../index.html">Domača stran</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -203,6 +291,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.</span>
+            <span>Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

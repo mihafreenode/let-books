@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Продуктна спецификација | LetBooks</title>
-    <meta name="description" content="Продуктната спецификација дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои исходи се сметаат за успех.">
+    <title>Спецификација на производот | LetBooks</title>
+    <meta name="description" content="Спецификацијата на производот дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои резултати се сметаат за успех.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/mk/product-specification.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Продуктна спецификација | LetBooks">
-    <meta property="og:description" content="Продуктната спецификација дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои исходи се сметаат за успех.">
+    <meta property="og:title" content="Спецификација на производот | LetBooks">
+    <meta property="og:description" content="Спецификацијата на производот дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои резултати се сметаат за успех.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/mk/product-specification.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Продуктна спецификација | LetBooks">
-    <meta name="twitter:description" content="Продуктната спецификација дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои исходи се сметаат за успех.">
+    <meta name="twitter:title" content="Спецификација на производот | LetBooks">
+    <meta name="twitter:description" content="Спецификацијата на производот дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои резултати се сметаат за успех.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="mk">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/mk/index.html">Блог</a>
             <a class="nav-link" href="../../learning/mk/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/mk/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/mk/index.html">Теми</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/product-specification.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/mk/index.html">Вики</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Продуктна спецификација</span>
+              <span aria-current="page">Спецификација на производот</span>
             </nav>
-            <h1>Продуктна спецификација</h1>
-          <p class="content-page-summary">Продуктната спецификација дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои исходи се сметаат за успех.</p>
+            <h1>Спецификација на производот</h1>
+          <div class="content-page-meta">
+            <span>Вики</span>
+            <span>Македонски</span>
+          </div>
+          <p class="content-page-summary">Спецификацијата на производот дефинира за што служи производот, што мора да прави, кои граници мора да ги почитува и кои резултати се сметаат за успех.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теми:</span>
               <span class="content-tag">Спецификација на производот</span>
@@ -101,48 +117,52 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="улога">Улога</h2>
-<p class="lead">Продуктната спецификација е највисокиот практичен опис на посакуваното однесување на производот.</p>
-<p>Треба да одговори на прашања како:</p>
+<p class="lead">Спецификацијата на производот е практичен опис на највисоко ниво на планираното однесување на производот.</p>
+<p>Треба да одговори на прашања како што се:</p>
 <ul>
 <li>зошто производот постои</li>
-<li>за кого е наменет</li>
-<li>кои текови на работа се првокласни</li>
-<li>што мора да работи и во услови на дефект</li>
-<li>што е изрично надвор од опсегот</li>
-<li>кои критериуми за прифаќање дефинираат смислено демо или издание</li>
+<li>за кого е</li>
+<li>кои работни текови се првокласни</li>
+<li>што мора да работи дури и во услови на неуспех</li>
+<li>она што е експлицитно надвор од опсегот</li>
+<li>кои критериуми за прифаќање дефинираат значајно демо или издание</li>
 </ul>
-<h2 id="што-припаѓа-во-продуктната-спецификација">Што припаѓа во продуктната спецификација</h2>
-<p>Типична содржина вклучува:</p>
+<h2 id="што-припаѓа-во-спецификацијата-на-производот">Што припаѓа во спецификацијата на производот</h2>
+<p>Вообичаената содржина на спецификација вклучува:</p>
 <ul>
 <li>цел на производот</li>
 <li>основна филозофија</li>
-<li>доменски модел</li>
-<li>дефиниции на текови на работа</li>
+<li>модел на домен</li>
+<li>дефиниции на работниот тек</li>
 <li>очекувања за приватност и безбедност</li>
-<li>нецели</li>
-<li>насоки за редоследот на имплементација кога влијаат на опсегот или редоследот на испорака</li>
+<li>неголови</li>
+<li>Упатство за низа на имплементација каде што тоа влијае на обемот или нарачката за испорака</li>
 <li>критериуми за прифаќање</li>
 </ul>
-<p>Спецификацијата треба да се фокусира на продуктната вистина, а не на секој локален детал на имплементацијата.</p>
-<h2 id="што-таму-обично-не-припаѓа">Што таму обично не припаѓа</h2>
-<p>Ова обично припаѓа на друго место, освен ако директно не влијае на обврските на производот:</p>
+<p>Спецификациите треба да се фокусираат на вистината на производот, а не на секој детал од локалната имплементација.</p>
+<h2 id="она-што-обично-не-припаѓа-таму">Она што обично не припаѓа таму</h2>
+<p>Овие ставки често припаѓаат на друго место, освен ако тие директно не влијаат на обврските на производот:</p>
 <ul>
-<li>привремени конвенции на репозиториумот</li>
+<li>конвенции за привремено складиште</li>
 <li>локално поставување алатки</li>
-<li>тесни одлуки за визуелно полирање</li>
-<li>еднократни насоки за отстранување грешки</li>
-<li>уреднички или објавувачки механики што не го менуваат моделот на производот</li>
+<li>тесни одлуки за полирање на корисничкиот интерфејс</li>
+<li>еднократно упатство за дебагирање</li>
+<li>уредувачка или издавачка механика која не го менува моделот на производот</li>
 </ul>
-<h2 id="контекст-let-books">Контекст Let Books</h2>
-<p>Во Let Books <code>AGENTS.md</code> е главната продуктна спецификација.</p>
+<h2 id="зошто-е-важно-во-работата-со-помош-на-вештачка-интелигенција">Зошто е важно во работата со помош на вештачка интелигенција</h2>
+<p>ВИ може многу брзо да генерира веродостојна имплементација. Без јасна спецификација на производот, таа имплементација може да се оптимизира за практичност наместо за намера.</p>
+<p>Спецификацијата им дава на рецензентите и на соработниците стабилен стандард за одлучување дали генерираниот излез сè уште припаѓа на наменетиот производ.</p>
+<h2 id="let-books-контекст">Let Books контекст</h2>
+<p>Во Let Books, <code>AGENTS.md</code> е основната спецификација на производот.</p>
 <p>Таа дефинира:</p>
 <ul>
 <li>цел на проектот</li>
-<li>доменски и тековен модел</li>
-<li>насока за повеќезакупнички дизајн и локализација</li>
-<li>начела на рачен тек на работа и опционалност на AI</li>
-<li>критериуми за прифаќање за првото демо</li>
+<li>модел на домен и работен тек</li>
+<li>насока мулти-закупец и локализација</li>
+<li>рачен тек на работа и AI-опционални принципи</li>
+<li>критериуми за прифаќање на првото демо</li>
 </ul>
+<p>Тоа го прави повеќе од преглед. Тој е главниот авторитет на производот во складиштето.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -167,23 +187,30 @@
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="related-spec-writing-menu">Пишување спецификации</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Развој воден од спецификации</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="related-product-specification-menu">Спецификација на производот</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-spec-writing-menu" data-topic-menu="related-spec-writing" hidden>
                   <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html"><span>Како да се напише спецификација што AI може да ја следи</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Како од продуктна спецификација да се направи имплементациски план</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Како спецификацијата на производот да се претвори во план за имплементација</span><span class="topic-menu__meta">Материјали за учење</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Кога демото е доказ, а кога не е</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/documentation-is-part-of-the-product.html"><span>Документацијата е дел од производот</span><span class="topic-menu__meta">Блог</span></a>
+                  <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Кога демото е доказ, а кога не е</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/spec-driven-development-in-let-books.html"><span>Развој воден од спецификации во Let Books</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/spec-driven-development-for-ai-projects.html"><span>Развој воден од спецификации за AI проекти</span><span class="topic-menu__meta">Блог</span></a>
-                  <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржи усогласеност меѓу спецификација, документација, демо и код</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува AI-поддржана работа според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/mk/implementation-guidance.html"><span>Имплементациски насоки</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој воден од спецификации</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/markdown-in-product-development.html"><span>Markdown во развој на производ</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува работа со помош на AI според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../wiki/mk/implementation-guidance.html"><span>Упатство за имплементација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/documentation-traceability.html"><span>Следливост на документација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој заснован на спецификации</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/demo-spec-alignment.html"><span>Усогласеност меѓу демото и спецификацијата</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/demo-and-specification-alignment.html"><span>Усогласеност меѓу демо и спецификација</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/ai-assisted-implementation.html"><span>Имплементација со AI-поддршка</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Теми</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-specification-menu" data-topic-menu="related-product-specification" hidden>
+                  <a href="../../topics/mk/spec-driven-development.html"><span>Развој воден од спецификација</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
               </div>
             </div>
@@ -197,11 +224,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</p>
+            <p class="footer-note">Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</p>
             <p class="footer-microcopy">Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../mk/index.html">Преглед</a>
+              <a href="../../topics/mk/index.html">Теми</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -212,6 +241,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</span>
+            <span>Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

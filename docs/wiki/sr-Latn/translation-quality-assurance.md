@@ -1,7 +1,7 @@
 ---
 title: "Osiguranje kvaliteta prevoda"
 summary: >-
-  Prevod QA kombinuje automatizovanu validaciju, proveru pravopisa, pregled terminologije, proveru pristupačnosti i ljudsko rasuđivanje.
+  Prevod KA kombinuje automatizovanu validaciju, proveru pravopisa, pregled terminologije, proveru pristupačnosti i ljudsko rasuđivanje.
 topics:
   - translation-quality
   - qa
@@ -11,21 +11,59 @@ topics:
 
 ## Rezime
 
-Prevod QA kombinuje automatizovanu validaciju, proveru pravopisa, pregled terminologije, proveru pristupačnosti i ljudsko rasuđivanje.
+Prevod KA kombinuje automatizovanu validaciju, proveru pravopisa, pregled terminologije, proveru pristupačnosti i ljudsko rasuđivanje.
 
 ## Uobičajene provere
 
 - nedostaju prevodi
 - Englesko curenje
+- potpunost lokalizacije okrenute čitaocu
 - nepodudaranja čuvara mesta
 - pokvarene veze
 - glosar drift
 - pokrivenost teksta pristupačnosti
 - paritet snimaka ekrana i dijagrama
 
-## Ljudski pregled dokaza
+## Validator lokalizacije okrenut čitaocu
 
-Prevod QA takođe treba da sačuva kratke zapise o ljudskim pregledima za reprezentativne ispravke uz pomoć AI.
+Jedna klasa validatora bi trebalo eksplicitno da pokvari CI kada se stranica čini lokalizovanom, ali i dalje izlaže sadržaj na izvornom jeziku okrenut čitaocu.
+
+Primeri koji bi trebalo da propadnu:
+
+- lokalizovani naslov sa rezimeom na engleskom
+- lokalizovani članak sa engleskim oznakama
+- lokalizovani članak sa naslovima ili listama na engleskom
+- lokalizovani članak sa engleskim oblačićima ili natpisima
+- lokalizovani članak sa engleskim oznakama dijagrama ili alternativnim tekstom
+- kartice povezanog sa mešovitim jezicima
+
+Ovo je uslov neispravnosti, a ne samo upozorenje, jer čitaoci doživljavaju takve stranice kao vidljivo nedovršene.
+
+## Revizija klase defekata
+
+KA prevoda treba da održava eksplicitne klase defekata sa:
+
+- opis
+- broj pojavljivanja
+- osnovni uzrok
+- pokrivenost validatorom
+- rizik od recidiva
+- plan zatvaranja
+
+Obavezne kategorije uključuju:
+
+- neprevedeni rezimei
+- neprevedena tela
+- objavljivanje nacrta za čuvare mesta
+- neprevedeni metapodaci
+- izdavaštvo na mešovitom jeziku
+- buduće otkrivene klase
+
+Klasa se zatvara samo kada njen broj dostigne nulu i CI je spreči da se vrati bez greške.
+
+## Dokazi o ljudskim pregledima
+
+KA prevoda takođe treba da sačuva kratke zapise o ljudskim pregledima za reprezentativne ispravke uz pomoć veštačke inteligencije.
 
 Minimalni broj polja:
 
@@ -35,9 +73,11 @@ Minimalni broj polja:
 - hipoteza o osnovnom uzroku
 - obrazloženje recenzenta
 
-Ovo je važno jer čak i kada je opšte značenje sačuvano, prevodi generisani AI mogu zahtevati pregled izvornog govornika da bi se ispravili suptilni problemi u gramatici, modalitetu, terminologiji i registru specifičnom za domen. Ove probleme je često teško otkriti samo pomoću automatizovanih metrika kvaliteta.
+Nalazi pregleda izvornih govornika treba da budu sačuvani kao rastući korpus, a ne kao izolovane jednokratne beleške. Ponovljeni nalazi bi trebalo da se vrate u dizajn validatora, uputstva za saradnike i buduća uputstva za AI agente.
 
-## Taksonomija uobičajenih grešaka u prevodu AI
+Ovo je važno jer čak i kada je opšte značenje sačuvano, prevodi generisani od veštačke inteligencije mogu zahtevati pregled izvornog govornika da bi se ispravili suptilni problemi u gramatici, modalitetu, terminologiji i registru specifičnom za domen. Ove probleme je često teško otkriti samo pomoću automatizovanih metrika kvaliteta.
+
+## Uobičajena taksonomija grešaka u prevodu AI
 
 - gramatika
 - modalitet
@@ -53,10 +93,31 @@ Ovo je važno jer čak i kada je opšte značenje sačuvano, prevodi generisani 
 - fraziranje politike domena
 - formulacije pristupačnosti
 
+## Lagano benchmark bodovanje
+
+Za ponovljivu evaluaciju AI-prevoda, koristite laganu rubriku 0-3 umesto da se oslanjate samo na procenu „prošao/neuspeo“.
+
+Preporučene dimenzije:
+
+- tačnost značenja
+- gramatika i tečnost
+- terminologija i uklapanje domena
+- registar i stil
+- pregled napora
+
+Preporučene oznake izdanja:
+
+- bloker
+- velika revizija
+- manja revizija
+- spreman sa potpisom pregleda
+
+Ovo stvara podatke pogodne za kartice bez potrebe za teškim okvirom za merenje lokalizacije.
+
 ## Povezane stranice
 
 - `localization-ci-cd.md`
 - `translation-memory-and-glossaries.md`
-- `../style-guide/localization/ai-translation-review-records.md`
-- `../style-guide/localization/llm-translation-benchmark-fixtures.md`
-- `../learning/how-to-run-localization-qa-in-ci.md`
+- `../../style-guide/localization/ai-translation-review-records.md`
+- `../../style-guide/localization/llm-translation-benchmark-fixtures.md`
+- `../../learning/sr-Latn/how-to-run-localization-qa-in-ci.md`

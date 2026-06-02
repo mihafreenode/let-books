@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Како одржати усклађеност између спецификације, документације, дема и кода | LetBooks</title>
-    <meta name="description" content="Овај водич описује практичан поступак за одржавање усклађености између спецификације, документације, дема и имплементације.">
+    <title>Како одржавати усклађеност спецификације, документације, демонстрације и кода | LetBooks</title>
+    <meta name="description" content="Овај водич описује практичан ток рада за дугорочно одржавање усклађености спецификације производа, документације, понашања демонстрације и имплементационог рада.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Како одржати усклађеност између спецификације, документације, дема и кода | LetBooks">
-    <meta property="og:description" content="Овај водич описује практичан поступак за одржавање усклађености између спецификације, документације, дема и имплементације.">
+    <meta property="og:title" content="Како одржавати усклађеност спецификације, документације, демонстрације и кода | LetBooks">
+    <meta property="og:description" content="Овај водич описује практичан ток рада за дугорочно одржавање усклађености спецификације производа, документације, понашања демонстрације и имплементационог рада.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Како одржати усклађеност између спецификације, документације, дема и кода | LetBooks">
-    <meta name="twitter:description" content="Овај водич описује практичан поступак за одржавање усклађености између спецификације, документације, дема и имплементације.">
+    <meta name="twitter:title" content="Како одржавати усклађеност спецификације, документације, демонстрације и кода | LetBooks">
+    <meta name="twitter:description" content="Овај водич описује практичан ток рада за дугорочно одржавање усклађености спецификације производа, документације, понашања демонстрације и имплементационог рада.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="sr-Cyrl">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Cyrl/index.html">Блог</a>
             <a class="nav-link" href="../../learning/sr-Cyrl/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/sr-Cyrl/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/sr-Cyrl/index.html">Теме</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/sr-Cyrl/index.html">Материјали за учење</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Како одржати усклађеност између спецификације, документације, дема и кода</span>
+              <span aria-current="page">Како одржавати усклађеност спецификације, документације, демонстрације и кода</span>
             </nav>
-            <h1>Како одржати усклађеност између спецификације, документације, дема и кода</h1>
-          <p class="content-page-summary">Овај водич описује практичан поступак за одржавање усклађености између спецификације, документације, дема и имплементације.</p>
+            <h1>Како одржавати усклађеност спецификације, документације, демонстрације и кода</h1>
+          <div class="content-page-meta">
+            <span>Материјали за учење</span>
+            <span>Српски (ћирилица)</span>
+          </div>
+          <p class="content-page-summary">Овај водич описује практичан ток рада за дугорочно одржавање усклађености спецификације производа, документације, понашања демонстрације и имплементационог рада.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теме:</span>
               <span class="content-tag">Усклађеност демоа</span>
@@ -100,16 +116,116 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="ред-ауторитета">Ред ауторитета</h2>
+<h2 id="основни-проблем">Основни проблем</h2>
+<p class="lead">Одступање производа ретко почиње драматичном грешком. Обично почиње малим неусклађеностима.</p>
+<p>Примери:</p>
+<ul>
+<li>демонстрација дода нови ток рада, али се спецификација никада не ажурира</li>
+<li>документација описује функционалност која се више не понаша тако</li>
+<li>код имплементира згодну пречицу која крши правило производа</li>
+<li>валидационе провере спроводе само синтаксу, а не намеру производа</li>
+</ul>
+<p>AI може убрзати све ово ако је ток усклађивања слаб.</p>
+<h2 id="модел-усклађивања">Модел усклађивања</h2>
+<p>Користите овај редослед ауторитета:</p>
 <ol type="1">
-<li>производна спецификација</li>
-<li>имплементациона упутства</li>
+<li>спецификација производа</li>
+<li>имплементационе смернице</li>
 <li>документација тренутног стања</li>
-<li>демо или понашање апликације</li>
-<li>тестови и валидација</li>
+<li>понашање демонстрације или апликације</li>
+<li>тестови и валидациона правила</li>
 </ol>
-<h2 id="практично-правило">Практично правило</h2>
-<p class="lead">Најпре ажурирај спецификацију, затим документацију, па тек онда демо или код. Ако демо покаже бољи ток, одлука мора бити записана, а не само виђена.</p>
+<p>Нижи слојеви треба да подржавају више слојеве. Ако су у сукобу, ажурирајте ланац намерно уместо да подразумевано победи највидљивији артефакт.</p>
+<h2 id="препоручени-ток-рада">Препоручени ток рада</h2>
+<h3 id="почните-од-промене-у-спецификацији">1. Почните од промене у спецификацији</h3>
+<p>Ако се мења кориснику видљив ток рада или правило производа, прво ажурирајте одговарајућу спецификацију или смернице.</p>
+<p>Користите:</p>
+<ul>
+<li><code>AGENTS.md</code> за правила и токове рада на нивоу производа</li>
+<li><code>AGENTS-Implementation.md</code> за тактичка правила репозиторијума и испоруке</li>
+</ul>
+<h3 id="ажурирајте-документацију-тренутног-стања">2. Ажурирајте документацију тренутног стања</h3>
+<p>Ако промена утиче на оно што тренутно постоји, ажурирајте документацију која описује тренутно стање.</p>
+<p>Типични примери:</p>
+<ul>
+<li><code>README.md</code></li>
+<li><code>docs/Development.md</code></li>
+<li><code>docs/Deployment.md</code></li>
+<li>нови или ревидирани садржај у learning/wiki/blog секцијама где је релевантно</li>
+</ul>
+<h3 id="ажурирајте-демонстрацију-или-имплементацију">3. Ажурирајте демонстрацију или имплементацију</h3>
+<p>Тек када је намера јасна, треба мењати демонстрацију или апликацију.</p>
+<p>То помаже да се спречи чест образац у коме прототип тихо постаје извор истине.</p>
+<h3 id="додајте-или-ажурирајте-валидацију">4. Додајте или ажурирајте валидацију</h3>
+<p>Затим питајте шта може аутоматски да се провери.</p>
+<p>Примери:</p>
+<ul>
+<li>потпуност локализационих кључева</li>
+<li>присуство обавезних фајлова</li>
+<li>генерисање метаподатака</li>
+<li>валидација линкова</li>
+<li>тестови специфични за ток рада</li>
+</ul>
+<p>Не може свако правило одмах да се аутоматизује, али важна правила не би требало да остану зависна само од памћења.</p>
+<h3 id="прегледајте-у-односу-на-спецификацију-не-само-на-излаз">5. Прегледајте у односу на спецификацију, не само на излаз</h3>
+<p>Када прегледате промене, немојте стати на питањима:</p>
+<ul>
+<li>да ли се покреће</li>
+<li>да ли изгледа добро</li>
+<li>да ли тестови пролазе</li>
+</ul>
+<p>Питајте и:</p>
+<ul>
+<li>да ли се поклапа са документованим током рада</li>
+<li>да ли чува тражену границу производа</li>
+<li>да ли су документација и опис тренутног стања остали поштени</li>
+</ul>
+<h2 id="како-поступати-са-открићима-из-демонстрације">Како поступати са открићима из демонстрације</h2>
+<p>Понекад демонстрација научи тим нечему бољем од оригиналне спецификације.</p>
+<p>То је корисно. Исправан одговор је:</p>
+<ol type="1">
+<li>документовати откриће</li>
+<li>одлучити да ли је промена тока рада намерна</li>
+<li>ажурирати спецификацију и документацију</li>
+<li>одржати имплементацију усклађеном са ажурираном одлуком</li>
+</ol>
+<p>Погрешан одговор је пустити да демонстрација тихо победи само зато што већ постоји.</p>
+<h2 id="како-поступати-са-имплементацијом-уз-помоћ-ai">Како поступати са имплементацијом уз помоћ AI</h2>
+<p>Са AI-јем овај ток рада постаје још важнији, јер асистенти често оптимизују локалну вероватноћу.</p>
+<p>Добра петља усклађивања је:</p>
+<ol type="1">
+<li>напишите или ажурирајте спецификацију</li>
+<li>генеришите имплементацију</li>
+<li>упоредите излаз са спецификацијом</li>
+<li>ажурирајте документацију ако се тренутно понашање променило</li>
+<li>додајте валидацију где је то практично</li>
+</ol>
+<h2 id="пример-let-books">Пример Let Books</h2>
+<p>Репозиторијум већ садржи користан ланац усклађивања:</p>
+<ul>
+<li><code>AGENTS.md</code> за правац производа</li>
+<li><code>AGENTS-Implementation.md</code> за тактичка правила</li>
+<li><code>README.md</code> за приказ тренутног стања</li>
+<li><code>docs/</code> за правила знања и објављивања</li>
+<li>документацију о развоју и објављивању за смернице валидације</li>
+</ul>
+<p>Ту структуру треба намерно користити кад год се додају нове функционалности, документација или јавна објашњења.</p>
+<h2 id="контролна-листа">Контролна листа</h2>
+<p>Пре спајања значајне промене проверите:</p>
+<ol type="1">
+<li>Да ли је правило производа или ток рада јасно документован?</li>
+<li>Да ли се документација тренутног стања и даље поклапа са стварношћу?</li>
+<li>Да ли демонстрација или имплементација одражава намеравано правило?</li>
+<li>Да ли постоји бар један валидациони или прегледни механизам који штити промену?</li>
+<li>Да ли би нови сарадник касније могао да разуме ту одлуку?</li>
+</ol>
+<h2 id="даље-читање">Даље читање</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>../wiki/sr-Cyrl/demo-spec-alignment.md</code></li>
+<li><code>../wiki/sr-Cyrl/spec-driven-development.md</code></li>
+<li><code>../blog/sr-Cyrl/spec-driven-development-in-let-books.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -143,20 +259,24 @@
                   <a href="../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.html"><span>Развој вођен спецификацијом за AI пројекте</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html"><span>Како написати спецификацију коју AI може да прати</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../wiki/sr-Cyrl/markdown-in-product-development.html"><span>Markdown у развоју производа</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/sr-Cyrl/spec-driven-development.html"><span>Развој вођен спецификацијом</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/sr-Cyrl/documentation-traceability.html"><span>Следљивост документације</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/sr-Cyrl/spec-driven-development.html"><span>Развој заснован на спецификацијама</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/sr-Cyrl/documentation-traceability.html"><span>Сљедивост документације</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/sr-Cyrl/spec-driven-development.html"><span>Развој вођен спецификацијом</span><span class="topic-menu__meta">Теме</span></a>
+                  <a href="../../topics/sr-Cyrl/documentation-traceability.html"><span>Следљивост документације</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/sr-Cyrl/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Како од производне спецификације направити имплементациони план</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/sr-Cyrl/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Како претворити спецификацију производа у имплементациони план</span><span class="topic-menu__meta">Материјали за учење</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/sr-Cyrl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како прегледавати AI-подржани рад према спецификацији</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено додавати валидациона правила и CI правила</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/sr-Cyrl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како прегледати рад уз помоћ AI у односу на спецификацију</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено додавати валидациона правила и CI капије</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../topics/sr-Cyrl/ai-assisted-implementation.html"><span>Имплементација уз AI подршку</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html"><span>Развој вођен спецификацијом у Let Books</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Када је демо доказ, а када није</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../wiki/sr-Cyrl/demo-spec-alignment.html"><span>Усклађеност између дема и спецификације</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/sr-Cyrl/demo-and-specification-alignment.html"><span>Усклађеност демоа и спецификације</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
               </div>
             </div>
@@ -170,11 +290,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</p>
+            <p class="footer-note">Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</p>
             <p class="footer-microcopy">Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Cyrl/index.html">Преглед</a>
+              <a href="../../topics/sr-Cyrl/index.html">Теме</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -185,6 +307,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</span>
+            <span>Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

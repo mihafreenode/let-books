@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Markdown у развоју производа | LetBooks</title>
-    <meta name="description" content="Markdown је практичан формат за чување намере производа, документације, водича и доказа у облику који је прегледан, преносив, упоредив кроз diff-ове и лако повезан са валидационим токовима рада.">
+    <meta name="description" content="Маркдовн је практичан формат за чување намере производа, документације, водича и доказа у форми која се може прегледати, преносива, диффабле и која се лако повезује са токовима рада валидације.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Cyrl/markdown-in-product-development.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Markdown у развоју производа | LetBooks">
-    <meta property="og:description" content="Markdown је практичан формат за чување намере производа, документације, водича и доказа у облику који је прегледан, преносив, упоредив кроз diff-ове и лако повезан са валидационим токовима рада.">
+    <meta property="og:description" content="Маркдовн је практичан формат за чување намере производа, документације, водича и доказа у форми која се може прегледати, преносива, диффабле и која се лако повезује са токовима рада валидације.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Cyrl/markdown-in-product-development.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Markdown у развоју производа | LetBooks">
-    <meta name="twitter:description" content="Markdown је практичан формат за чување намере производа, документације, водича и доказа у облику који је прегледан, преносив, упоредив кроз diff-ове и лако повезан са валидационим токовима рада.">
+    <meta name="twitter:description" content="Маркдовн је практичан формат за чување намере производа, документације, водича и доказа у форми која се може прегледати, преносива, диффабле и која се лако повезује са токовима рада валидације.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sr-Cyrl">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Cyrl/index.html">Блог</a>
             <a class="nav-link" href="../../learning/sr-Cyrl/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/sr-Cyrl/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/sr-Cyrl/index.html">Теме</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/markdown-in-product-development.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Markdown у развоју производа</span>
             </nav>
             <h1>Markdown у развоју производа</h1>
-          <p class="content-page-summary">Markdown је практичан формат за чување намере производа, документације, водича и доказа у облику који је прегледан, преносив, упоредив кроз diff-ове и лако повезан са валидационим токовима рада.</p>
+          <div class="content-page-meta">
+            <span>Вики</span>
+            <span>Српски (ћирилица)</span>
+          </div>
+          <p class="content-page-summary">Маркдовн је практичан формат за чување намере производа, документације, водича и доказа у форми која се може прегледати, преносива, диффабле и која се лако повезује са токовима рада валидације.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теме:</span>
               <span class="content-tag">Документација</span>
@@ -100,43 +116,122 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="зашто-је-markdown-важан">Зашто је Markdown важан</h2>
-<p class="lead">Markdown се често третира као практичан формат за писање. У раду вођеном спецификацијом кориснији је од тога.</p>
-<p>Тимовима даје лак начин да знање о производу остане близу репозиторијума без скривања у власничким алатима или тешко прегледним документима.</p>
+<h2 id="резиме">Резиме</h2>
+<p class="lead">Markdown је практичан формат за чување намере производа, документације, водича и доказа у облику који се може прегледати, преносити, диффабле и лако повезати са токовима рада валидације.</p>
+<h2 id="зашто-је-markdown-битан">Зашто је Markdown битан</h2>
+<p>Markdown се често третира као погодност писања. У раду вођеном спецификацијама, то је корисније од тога.</p>
+<p>Даје тимовима лак начин да задрже знање о производу близу спремишта без скривања унутар власничких алата или докумената које је тешко прегледати.</p>
 <p>То је важно за:</p>
 <ul>
 <li>спецификације</li>
-<li>имплементациона упутства</li>
-<li>документацију тренутног стања</li>
-<li>водиче и wiki странице</li>
-<li>мапе извора и белешке о доказима</li>
+<li>упутство за имплементацију</li>
+<li>документација о тренутном стању</li>
+<li>туторијали и вики странице</li>
+<li>изворне мапе и белешке о доказима</li>
 </ul>
 <h2 id="у-чему-је-markdown-добар">У чему је Markdown добар</h2>
 <p>Markdown добро функционише када садржај треба да буде:</p>
 <ul>
-<li>читљив у сировом облику</li>
-<li>под контролом верзија</li>
-<li>лак за преглед у diff-овима</li>
-<li>повезив међу документима</li>
-<li>преносив између окружења</li>
+<li>читљиво у сировом облику</li>
+<li>контролисано верзијом</li>
+<li>лако прегледати у разликама</li>
+<li>може се повезати преко докумената</li>
+<li>преносив у различитим окружењима</li>
+<li>касније се може конвертовати у друге издавачке формате</li>
 </ul>
-<h2 id="шта-markdown-не-ради-сам-од-себе">Шта Markdown не ради сам од себе</h2>
-<p>Markdown је користан, али сам по себи не обезбеђује исправност.</p>
-<p>Не може сам да гарантује:</p>
+<p>Ово га чини посебно корисним за системе производа и документације којима је потребна следљивост.</p>
+<h2 id="оно-што-markdown-не-ради-сам-по-себи">Оно што Markdown не ради сам по себи</h2>
+<p>Markdown је користан, али сам по себи не спроводи исправност.</p>
+<p>Не може само по себи да гарантује:</p>
 <ul>
 <li>да је садржај актуелан</li>
-<li>да су тврдње добро поткрепљене изворима</li>
-<li>да се имплементација подудара са документацијом</li>
-<li>да правила валидације или CI-ја заиста раде</li>
+<li>да су потраживања добро добијена</li>
+<li>да имплементација одговара документацији</li>
+<li>да терминологија остаје доследна</li>
+<li>да су валидација или ЦИ правила заправо покренута</li>
 </ul>
-<h2 id="контекст-let-books">Контекст Let Books</h2>
-<p>Репозиторијум Let Books већ користи Markdown за више слојева меморије производа, укључујући:</p>
+<p>Зато Markdown треба да буде део ширег система, а не да се меша са целим системом.</p>
+<h2 id="markdown-у-току-рада-вођеном-спецификацијама">Markdown у току рада вођеном спецификацијама</h2>
+<p>У току рада вођеном спецификацијама, Markdown је највреднији када се налази унутар ланца ауторитета.</p>
+<p>на пример:</p>
+<ol type="1">
+<li>спецификације дефинишу правила производа</li>
+<li>упутство за имплементацију дефинише тактичка правила</li>
+<li>Документи о тренутном стању објашњавају шта сада постоји</li>
+<li>изворне мапе прате значајне јавне тврдње</li>
+<li>валидација и ЦИ појачавају стабилна очекивања</li>
+</ol>
+<p>Markdown је медиј који помаже да ти слојеви остану видљиви и прегледани.</p>
+<h2 id="зашто-је-ово-важно-у-раду-уз-помоћ-вештачке-интелигенције">Зашто је ово важно у раду уз помоћ вештачке интелигенције</h2>
+<p>Системи вештачке интелигенције имају користи од јасног, приступачног контекста.</p>
+<p>Markdown помаже јер је:</p>
+<ul>
+<li>лако прегледати</li>
+<li>лако цитирати</li>
+<li>лако се разликује</li>
+<li>лако држати у близини спремишта имплементације</li>
+</ul>
+<p>То га чини јаким форматом за меморију производа.</p>
+<p>Али АИ такође чини једно ограничење очигледнијим: ако је Markdown нејасан, застарео или контрадикторан, помоћник може да генерише брзо одступање од њега. Дакле, вредност не долази само из формата, већ и из одржавања садржаја.</p>
+<h2 id="markdown-као-упутство-за-агента">Markdown као упутство за агента</h2>
+<p>Неки Markdown документи могу изгледати као туторијали окренути људима, али такође функционишу као оперативне смернице за АИ агенте.</p>
+<p>Ово је посебно корисно када документ чини више од објашњења теме и уместо тога обухвата:</p>
+<ul>
+<li>жељени редослед тока посла</li>
+<li>избор алата</li>
+<li>ограничења животне средине</li>
+<li>путеви ескалације</li>
+<li>анти-обрасци које треба избегавати</li>
+</ul>
+<p>У тим случајевима, Markdown постаје више од објашњења. Постаје издржљив интерфејс између знања о спремишту и понашања агента.</p>
+<h2 id="let-books-примери-за-вођење-агента">Let Books примери за вођење агента</h2>
+<h3 id="ток-посла-за-отклањање-грешака-за-андроид">Ток посла за отклањање грешака за Андроид</h3>
+<p><code>docs/android-debugging.md</code> је снажан пример.</p>
+<p>Читљив је као људски водич, али такође даје агенту конкретна оперативна упутства као што су:</p>
+<ul>
+<li>дајте предност физичким Андроид уређајима у односу на емулацију радне површине за рад са камером и бар кодом</li>
+<li>дајте предност Playwright CDP прилогу над поновљеним покретањем претраживача</li>
+<li>разликовати убризгавање CDP у току извршавања од токова посла закрпе у стварном извору</li>
+<li>прво успоставите инфраструктуру за поновно учитавање када корисник затражи тестирање уживо путем телефона</li>
+</ul>
+<p>Таква врста Markdown не описује само домен. Активно води ток посла и избор алата.</p>
+<h3 id="опрема-и-припрема-околине">Опрема и припрема околине</h3>
+<p><code>docs/style-guide/publishing/ubuntu-tooling.md</code> је још један добар пример.</p>
+<p>Чита се као документација за подешавање сарадника, али такође говори агенту који алати се очекују да постоје или би требало да буду преферирани за класе посла као што су:</p>
+<ul>
+<li>Playwright за верификацију корисничког интерфејса и снимке екрана</li>
+<li>Hunspell за проверу правописа</li>
+<li>ImageMagick и OCR алати за визуелне и лажне токове рада</li>
+<li>Алати у вези са ADB за отклањање грешака на Андроид-у</li>
+</ul>
+<p>Ова врста Markdown помаже агенту да размишља о очекиваном ланцу алата уместо да нагађа на основу генеричких подразумеваних вредности.</p>
+<h2 id="практична-импликација">Практична импликација</h2>
+<p>Када пишете Markdown за спремиште које могу користити АИ агенти, помаже да се пише имајући на уму два читаоца:</p>
+<ul>
+<li>људски сарадник коме је потребно објашњење</li>
+<li>агент коме су потребна експлицитна ограничења тока посла и алата</li>
+</ul>
+<p>Најбољи документи раде и једно и друго.</p>
+<p>Они остају читљиви туторијали или водичи за људе, а истовремено су довољно специфични да усмеравају понашање агента на поновљиве начине.</p>
+<h2 id="let-books-контекст">Let Books контекст</h2>
+<p>Репозиторијум Let Books већ користи Markdown за неколико слојева меморије производа, укључујући:</p>
 <ul>
 <li><code>AGENTS.md</code></li>
 <li><code>AGENTS-Implementation.md</code></li>
 <li><code>README.md</code></li>
-<li>подручне README датотеке и водиче</li>
-<li>мапе извора у <code>docs/sources/</code></li>
+<li>РЕАДМЕ-ови и водичи у области докумената</li>
+<li>изворне мапе према <code>docs/sources/</code></li>
+</ul>
+<p>Ово је добар пример да се Markdown користи не само за прозу, већ и за координацију на нивоу спремишта, структуру јавног писања и праћење доказа.</p>
+<h2 id="практично-правило">Практично правило</h2>
+<p>Корисно правило је једноставно:</p>
+<p>Користите Markdown да бисте намјеру производа учинили видљивом, прегледном и повезивом. Немојте претпостављати да сам Markdown одржава ту намеру истинитом.</p>
+<p>Истина и даље зависи од:</p>
+<ul>
+<li>јасан ауторитет</li>
+<li>активно одржавање</li>
+<li>дисциплина прегледа</li>
+<li>валидација тамо где је то практично</li>
 </ul>
 
         <div class="post-article-nav">
@@ -170,18 +265,22 @@
                   <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html"><span>Документација је део производа</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Када је демо доказ, а када није</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/sr-Cyrl/spec-driven-development-in-let-books.html"><span>Развој вођен спецификацијом у Let Books</span><span class="topic-menu__meta">Блог</span></a>
-                  <a href="../../learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како одржати усклађеност између спецификације, документације, дема и кода</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/sr-Cyrl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како одржавати усклађеност спецификације, документације, демонстрације и кода</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html"><span>Како написати спецификацију коју AI може да прати</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/sr-Cyrl/documentation-traceability.html"><span>Следљивост документације</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/sr-Cyrl/spec-driven-development.html"><span>Развој вођен спецификацијом</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/sr-Cyrl/documentation-traceability.html"><span>Сљедивост документације</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/sr-Cyrl/spec-driven-development.html"><span>Развој заснован на спецификацијама</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/sr-Cyrl/documentation-traceability.html"><span>Следљивост документације</span><span class="topic-menu__meta">Теме</span></a>
+                  <a href="../../topics/sr-Cyrl/spec-driven-development.html"><span>Развој вођен спецификацијом</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
-                  <a href="../../wiki/sr-Cyrl/validation-layers.html"><span>Слојеви валидације</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/sr-Cyrl/validation-layers.html"><span>Слојеви за валидацију</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/sr-Cyrl/ai-assisted-implementation.html"><span>Имплементација уз AI подршку</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/sr-Cyrl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како прегледавати AI-подржани рад према спецификацији</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено додавати валидациона правила и CI правила</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/sr-Cyrl/product-specification.html"><span>Производна спецификација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../learning/sr-Cyrl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како прегледати рад уз помоћ AI у односу на спецификацију</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено додавати валидациона правила и CI капије</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../wiki/sr-Cyrl/product-specification.html"><span>Спецификација производа</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/sr-Cyrl/demo-and-specification-alignment.html"><span>Усклађеност демоа и спецификације</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
               </div>
             </div>
@@ -195,11 +294,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</p>
+            <p class="footer-note">Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</p>
             <p class="footer-microcopy">Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Cyrl/index.html">Преглед</a>
+              <a href="../../topics/sr-Cyrl/index.html">Теме</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -210,6 +311,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</span>
+            <span>Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

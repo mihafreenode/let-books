@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Osiguranje kvalitete prijevoda | LetBooks</title>
-    <meta name="description" content="Prijevod QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.">
+    <meta name="description" content="Translation QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/hr/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Osiguranje kvalitete prijevoda | LetBooks">
-    <meta property="og:description" content="Prijevod QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.">
+    <meta property="og:description" content="Translation QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/hr/translation-quality-assurance.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Osiguranje kvalitete prijevoda | LetBooks">
-    <meta name="twitter:description" content="Prijevod QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.">
+    <meta name="twitter:description" content="Translation QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="hr">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/hr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/hr/index.html">Materijali za učenje</a>
             <a class="nav-link" href="../../wiki/hr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/hr/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/translation-quality-assurance.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Osiguranje kvalitete prijevoda</span>
             </nav>
             <h1>Osiguranje kvalitete prijevoda</h1>
-          <p class="content-page-summary">Prijevod QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.</p>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Hrvatski</span>
+          </div>
+          <p class="content-page-summary">Translation QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Kvaliteta prevođenja</span>
@@ -102,14 +118,47 @@
 <ul>
 <li>nedostaju prijevodi</li>
 <li>engleski leakage</li>
+<li>potpunost lokalizacije okrenuta čitatelju</li>
 <li>neslaganja rezerviranog mjesta</li>
 <li>neispravne veze</li>
 <li>glosary drift</li>
 <li>pokrivenost teksta dostupnosti</li>
 <li>paritet snimke zaslona i dijagrama</li>
 </ul>
+<h2 id="validator-lokalizacije-okrenut-čitatelju">Validator lokalizacije okrenut čitatelju</h2>
+<p class="lead">Jedna klasa validatora trebala bi izričito baciti CI kada se stranica čini lokaliziranom, ali još uvijek izlaže sadržaj na izvornom jeziku koji je okrenut čitatelju.</p>
+<p>Primjeri koji bi trebali propasti:</p>
+<ul>
+<li>lokalizirani naslov s engleskim sažetkom</li>
+<li>lokalizirani članak s engleskim oznakama</li>
+<li>lokalizirani članak s engleskim naslovima ili popisima</li>
+<li>lokalizirani članak s engleskim oblačićima ili opisima</li>
+<li>lokalizirani članak s engleskim dijagramima ili alternativnim tekstom</li>
+<li>kartice povezanog sadržaja na različitim jezicima</li>
+</ul>
+<p>Ovo je stanje greške, a ne samo upozorenje, jer čitatelji takve stranice doživljavaju kao vidljivo nedovršene.</p>
+<h2 id="revizija-klase-grešaka">Revizija klase grešaka</h2>
+<p>QA prijevoda treba održavati eksplicitne klase nedostataka sa:</p>
+<ul>
+<li>opis</li>
+<li>broj pojavljivanja</li>
+<li>temeljni uzrok</li>
+<li>pokrivenost validatora</li>
+<li>rizik od ponavljanja</li>
+<li>plan zatvaranja</li>
+</ul>
+<p>Obavezne kategorije uključuju:</p>
+<ul>
+<li>neprevedeni sažeci</li>
+<li>neprevedena tijela</li>
+<li>mjesto za objavljivanje nacrta</li>
+<li>neprevedeni metapodaci</li>
+<li>mješovito jezično izdavaštvo</li>
+<li>buduće otkrivene klase</li>
+</ul>
+<p>Klasa je zatvorena samo kada njezin broj dosegne nulu i CI je spriječi da se vrati bez greške.</p>
 <h2 id="dokazi-ljudskog-pregleda">Dokazi ljudskog pregleda</h2>
-<p class="lead">Prijevod QA također bi trebao sačuvati kratke zapise ljudskog pregleda za reprezentativne ispravke potpomognute AI.</p>
+<p>QA prijevoda također bi trebao sačuvati kratke zapise pregleda od strane ljudi za reprezentativne ispravke potpomognute umjetnom inteligencijom.</p>
 <p>Minimum polja:</p>
 <ul>
 <li>izvorni tekst</li>
@@ -118,8 +167,9 @@
 <li>hipoteza temeljnog uzroka</li>
 <li>obrazloženje recenzenta</li>
 </ul>
-<p>Ovo je važno jer čak i kada je cjelokupno značenje sačuvano, prijevodi generirani AI mogu zahtijevati pregled izvornog govornika kako bi se ispravili suptilni problemi u gramatici, modalitetu, terminologiji i registru specifičnom za domenu. Te probleme često je teško otkriti samo pomoću automatiziranih metrika kvalitete.</p>
-<h2 id="uobičajena-taksonomija-pogreške-prijevoda-ai">Uobičajena taksonomija pogreške prijevoda AI</h2>
+<p>Nalazi pregleda izvornih govornika trebali bi se sačuvati kao rastući korpus, a ne kao izolirane jednokratne bilješke. Ponovljeni nalazi trebali bi se vratiti u dizajn validatora, smjernice suradnika i buduće upute AI-agenta.</p>
+<p>To je važno jer čak i kada je cjelokupno značenje sačuvano, prijevodi generirani umjetnom inteligencijom mogu zahtijevati pregled izvornog govornika kako bi se ispravili suptilni problemi u gramatici, modalitetu, terminologiji i registru specifičnom za domenu. Te probleme često je teško otkriti samo pomoću automatiziranih metrika kvalitete.</p>
+<h2 id="uobičajena-taksonomija-pogrešaka-prijevoda-umjetne-inteligencije">Uobičajena taksonomija pogrešaka prijevoda umjetne inteligencije</h2>
 <ul>
 <li>gramatika</li>
 <li>modalitet</li>
@@ -135,6 +185,24 @@
 <li>formuliranje pravila domene</li>
 <li>formulacija pristupačnosti</li>
 </ul>
+<h2 id="lagano-referentno-bodovanje">Lagano referentno bodovanje</h2>
+<p>Za ponovljivu procjenu prijevoda umjetne inteligencije upotrijebite laganu rubriku 0-3 umjesto da se oslanjate samo na procjenu prošao/nije prošao.</p>
+<p>Preporučene dimenzije:</p>
+<ul>
+<li>što znači točnost</li>
+<li>gramatika i tečnost</li>
+<li>usklađenost terminologije i domene</li>
+<li>registar i stil</li>
+<li>pregled truda</li>
+</ul>
+<p>Preporučene oznake izdanja:</p>
+<ul>
+<li>blokator</li>
+<li>velika revizija</li>
+<li>manja revizija</li>
+<li>spremno s potpisom pregleda</li>
+</ul>
+<p>To stvara podatke prilagođene tablici rezultata bez potrebe za teškim okvirom za lokalizaciju i mjerenje.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -177,11 +245,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © suradnici na Let Books. Ponovna uporaba slijedi licencu repozitorija osim ako stranica ne navodi drukčije.</p>
             <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog sučelja potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../hr/index.html">Pregled</a>
+              <a href="../../topics/hr/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -192,6 +262,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Autorska prava © suradnici na Let Books. Ponovna uporaba slijedi licencu repozitorija osim ako stranica ne navodi drukčije.</span>
+            <span>Rani alfa prototip. Dokumentacija i tekst korisničkog sučelja potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,58 +1,89 @@
 ---
-title: "Implementacijska navodila"
+title: "Navodila za izvajanje"
+summary: >-
+  Navodila za implementacijo opredeljujejo, kako naj ekipa izvaja delo znotraj trenutnega repozitorija ali okolja dostave, ne da bi zamenjala samo specifikacijo izdelka.
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Implementacijska navodila
+# Navodila za izvajanje
 
 ## Povzetek
 
-Implementacijska navodila določajo, kako naj ekipa izvaja delo v trenutnem repozitoriju ali dostavnem okolju, ne da bi pri tem nadomestila samo produktno specifikacijo.
+Navodila za implementacijo opredeljujejo, kako naj ekipa izvaja delo znotraj trenutnega repozitorija ali okolja dostave, ne da bi zamenjala samo specifikacijo izdelka.
 
 ## Vloga
 
-Implementacijska navodila stojijo pod produktno specifikacijo.
+Navodila za izvedbo so pod specifikacijo izdelka.
 
-Pomagajo odgovoriti na vprašanja, kot so:
+Pomaga odgovoriti na vprašanja, kot so:
 
 - kako naj deluje javno poimenovanje
-- kako naj bo strukturirana dokumentacija
-- katera pričakovanja preverjanja veljajo zdaj
-- katera repozitorijsko specifična pravila naj prispevajoči upoštevajo
-- kje naj živijo taktična pravila, ko se projekt razvija
+- kako naj bodo dokumenti strukturirani
+- katera pričakovanja glede preverjanja veljajo zdaj
+- katera pravila, specifična za repozitorij, morajo upoštevati avtorji prispevkov
+- kje bi morala živeti taktična pravila, ko se projekt razvija
 
-## Razlika glede na produktno specifikacijo
+## Razlika od specifikacije izdelka
 
-Produktna specifikacija določa, kaj izdelek je in kaj mora doseči.
+Specifikacija izdelka določa, kaj je izdelek in kaj mora doseči.
 
-Implementacijska navodila določajo, kako naj prispevajoči izvajajo delo v trenutnem kontekstu dostave.
+Smernice za implementacijo določajo, kako naj sodelujoči izvajajo delo v trenutnem kontekstu dostave.
 
-Ta razlika je uporabna, ker ni vsako repozitorijsko pravilo produktna resnica in ni vsaka produktna resnica primerna za skrivanje v taktičnih opombah.
+To razlikovanje je uporabno, ker ni vsako pravilo repozitorija resnica o izdelku in ne sme biti vsaka resnica o izdelku zakopana v taktične opombe.
 
 ## Pogosti primeri
 
-Implementacijska navodila pogosto vključujejo:
+Navodila za izvajanje pogosto vključujejo:
 
 - pravila poimenovanja in blagovne znamke
-- pravila implementacije dokumentacije
-- omejitve statične strani ali dema
+- pravila za izvajanje dokumentacije
+- omejitve statičnega spletnega mesta ali demo
 - pričakovanja preverjanja
 - pravila urejanja ali generiranja kode
-- politike dokazov za javno pisanje
+- dokazne politike za javno pisanje
 
-## Kontekst Let Books
+Ta pravila pogosto dobro živijo v Markdown, ker morajo ostati pregledna, enostavna za posodabljanje in blizu preostalega konteksta repozitorija.
 
-V Let Books je `AGENTS-Implementation.md` taktična plast navodil.
+## Zakaj je to pomembno pri delu s pomočjo umetne inteligence
 
-Pokriva področja, kot so:
+Pomočniki AI pogosto sledijo najbližjim konkretnim navodilom. Če so pravila, specifična za repozitorij, implicitna, izhod hitro postane nedosleden.
+
+Navodila za izvajanje naredijo ta pravila vidna, ne da bi specifikacijo izdelka onesnažili s taktičnimi podrobnostmi.
+
+V praksi to pomeni, da lahko datoteka z navodili Markdown opravlja dve nalogi hkrati:
+
+- pojasnite potek dela človeškemu sodelavcu
+- usmerjati agenta AI k želenim orodjem, zaporedju in omejitvam
+
+## Let Books kontekst
+
+V Let Books je `AGENTS-Implementation.md` sloj taktičnega vodenja.
+
+Zajema področja, kot so:
 
 - javno poimenovanje
-- dokumentacijska pravila
-- ločitev javne strani in dokumentacije
-- pravila metapodatkov in SEO za statične strani
-- omejitve statičnega dema
+- pravila dokumentiranja
+- javna stran in dokumenti so razdeljeni
+- metapodatki in SEO pravila za statične strani
+- statične demo omejitve
 - pravila lokalizacije in dostopnosti
 - pravila preverjanja
-- politika dokazov za blog
+- politika dokazov o blogih
+
+Zaradi tega je operativni spremljevalec `AGENTS.md`, ne pa njegova zamenjava.
+
+Druge smernice Markdown v repo-ju krepijo isti vzorec. Na primer:
+
+- `docs/android-debugging.md` usmerja izbire delovnega toka odpravljanja napak, kot je CDP pripenjanje v primerjavi z delovnimi tokovi izvornega popravka
+- `docs/style-guide/publishing/ubuntu-tooling.md` dokumentira pričakovana orodja za objavljanje, preverjanje, posnetke zaslona, preverjanje črkovanja in odpravljanje napak v napravi
+
+Ti dokumenti so berljivi kot človeški napotki, pomagajo pa tudi agentom pri izbiri boljših dejanj namesto ugibanja iz splošnih privzetih vrednosti.
+
+## Sorodne strani
+
+- `product-specification.md`
+- `documentation-traceability.md`
+- `validation-layers.md`
+- `../../learning/sl/how-to-turn-a-product-spec-into-an-implementation-plan.md`

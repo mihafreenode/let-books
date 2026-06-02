@@ -10,4 +10,5 @@ Questa cartella contiene la versione italiana della documentazione principale di
 
 - [Blog](../blog/it/)
 - [Learning](../learning/it/)
+- [Topics](../topics/it/)
 - [Wiki](../wiki/it/)

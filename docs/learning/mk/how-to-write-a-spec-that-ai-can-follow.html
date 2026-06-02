@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Како да се напише спецификација што AI може да ја следи | LetBooks</title>
-    <meta name="description" content="Овој водич објаснува како да се напише продуктна или функционална спецификација што ѝ помага на AI-поддржаната имплементација да остане усогласена со вистинските цели на производот.">
+    <meta name="description" content="Овој водич објаснува како да се напише спецификација за производ или функционалност што ѝ помага на имплементацијата со помош на AI да остане усогласена со вистинските цели на производот наместо да отстапи кон генерички резултат.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/mk/how-to-write-a-spec-that-ai-can-follow.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Како да се напише спецификација што AI може да ја следи | LetBooks">
-    <meta property="og:description" content="Овој водич објаснува како да се напише продуктна или функционална спецификација што ѝ помага на AI-поддржаната имплементација да остане усогласена со вистинските цели на производот.">
+    <meta property="og:description" content="Овој водич објаснува како да се напише спецификација за производ или функционалност што ѝ помага на имплементацијата со помош на AI да остане усогласена со вистинските цели на производот наместо да отстапи кон генерички резултат.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/mk/how-to-write-a-spec-that-ai-can-follow.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Како да се напише спецификација што AI може да ја следи | LetBooks">
-    <meta name="twitter:description" content="Овој водич објаснува како да се напише продуктна или функционална спецификација што ѝ помага на AI-поддржаната имплементација да остане усогласена со вистинските цели на производот.">
+    <meta name="twitter:description" content="Овој водич објаснува како да се напише спецификација за производ или функционалност што ѝ помага на имплементацијата со помош на AI да остане усогласена со вистинските цели на производот наместо да отстапи кон генерички резултат.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="mk">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/mk/index.html">Блог</a>
             <a class="nav-link" href="../../learning/mk/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/mk/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/mk/index.html">Теми</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Како да се напише спецификација што AI може да ја следи</span>
             </nav>
             <h1>Како да се напише спецификација што AI може да ја следи</h1>
-          <p class="content-page-summary">Овој водич објаснува како да се напише продуктна или функционална спецификација што ѝ помага на AI-поддржаната имплементација да остане усогласена со вистинските цели на производот.</p>
+          <div class="content-page-meta">
+            <span>Материјали за учење</span>
+            <span>Македонски</span>
+          </div>
+          <p class="content-page-summary">Овој водич објаснува како да се напише спецификација за производ или функционалност што ѝ помага на имплементацијата со помош на AI да остане усогласена со вистинските цели на производот наместо да отстапи кон генерички резултат.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теми:</span>
               <span class="content-tag">AI испорака</span>
@@ -101,36 +117,102 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="зошто-е-ова-важно">Зошто е ова важно</h2>
-<p>AI може брзо да генерира код, но најдобро работи кога има јасни граници. Ако спецификацијата е нејасна, често ќе ги пополни празнините со генерички претпоставки.</p>
-<h2 id="што-треба-да-содржи-добра-спецификација">Што треба да содржи добра спецификација</h2>
+<p class="lead">AI може брзо да генерира код, но најдобро работи кога задачата има јасни граници.</p>
+<p>Ако спецификацијата е нејасна, AI често ќе ги пополни празнините со уверливи стандардни решенија:</p>
 <ul>
-<li>целта на функцијата</li>
-<li>границите на обемот</li>
-<li>неоспорливи правила</li>
-<li>однесување при грешка и резервен тек</li>
-<li>критериуми за прифаќање</li>
+<li>вообичаени архитектонски обрасци</li>
+<li>генерички UI текови</li>
+<li>непотребни апстракции</li>
+<li>измислени претпоставки за тоа што треба да прави производот</li>
 </ul>
+<p>Таквиот резултат може да изгледа средено, а сепак да биде погрешен.</p>
+<h2 id="што-треба-да-содржи-корисна-спецификација-за-ai">Што треба да содржи корисна спецификација за AI</h2>
+<h3 id="цел-на-производот">1. Цел на производот</h3>
+<p>Кажете зошто постои функционалноста.</p>
+<p>Лошо:</p>
+<blockquote>
+<p>Додај форма за книга.</p>
+</blockquote>
+<p>Подобро:</p>
+<blockquote>
+<p>Додај брза форма за внес што му овозможува на донаторот да каталогизира еден физички примерок на книга за неколку секунди додека стои покрај полица или кутија.</p>
+</blockquote>
+<p>Целта му кажува на имплементаторот за што треба да оптимизира.</p>
+<h3 id="граници-на-опсегот">2. Граници на опсегот</h3>
+<p>Наведете што е во опсег, а што е надвор од опсегот.</p>
+<p>Пример:</p>
+<ul>
+<li>во опсег: фотографија од корица, внес на ISBN, локација за складирање, зачувај и продолжи</li>
+<li>надвор од опсег: OCR, cloud синхронизација, институционален тек за преглед</li>
+</ul>
+<p>Ова го спречува асистентот да ја надуе малата задача во мини-платформа.</p>
+<h3 id="задолжително-однесување">3. Задолжително однесување</h3>
+<p>Наведете ги правилата за кои нема преговарање.</p>
+<p>Примери од пристапот на Let Books:</p>
+<ul>
+<li>рачниот тек на работа мора да функционира без AI</li>
+<li>нецелосни податоци мора да бидат дозволени</li>
+<li>физичките примероци мора да останат одвоени од библиографските записи</li>
+<li>однесувањето видливо за корисникот мора да остане локализирачко</li>
+</ul>
+<p>Овие правила се поважни од стилот на имплементација.</p>
+<h3 id="однесување-при-неуспех-и-резервен-тек">4. Однесување при неуспех и резервен тек</h3>
+<p>Решенијата генерирани од AI често го оптимизираат среќниот пат. Добрата спецификација објаснува што се случува кога опционалните системи ќе откажат.</p>
+<p>Пример:</p>
+<ul>
+<li>ако пребарувањето на метаподатоци не успее, рачниот внес останува достапен</li>
+<li>ако OCR е исклучен, внесувањето и понатаму работи</li>
+<li>ако валидацијата на извозот не успее, корисникот добива јасен извештај наместо тивок делумен увоз</li>
+</ul>
+<h3 id="критериуми-за-прифаќање">5. Критериуми за прифаќање</h3>
+<p>Напишете го условот за успех со набљудливи термини.</p>
+<p>Пример:</p>
+<ol type="1">
+<li>корисникот избира кутија</li>
+<li>корисникот внесува или скенира ISBN</li>
+<li>корисникот може да зачува дури и ако ниеден провајдер за метаподатоци не одговори</li>
+<li>книгата се појавува на избраната локација</li>
+</ol>
+<p>Критериумите за прифаќање им даваат на рецензентите и AI системите стабилна цел.</p>
 <h2 id="што-треба-да-се-избегнува">Што треба да се избегнува</h2>
 <ul>
 <li>нејасни цели како „подобри UX“</li>
-<li>имплементациски детали без продуктна цел</li>
-<li>мешање идни идеи со тековни барања</li>
-<li>скриени претпоставки за корисникот или податоците</li>
+<li>детали за имплементација без цел на производот</li>
+<li>измешани идни идеи претставени како тековни барања</li>
+<li>скриени претпоставки за кориснички улоги или квалитет на податоците</li>
+<li>спецификации што се сведуваат само на именување и не опишуваат тек на работа</li>
 </ul>
-<h2 id="практичен-образец">Практичен образец</h2>
-<p>Користи го овој редослед:</p>
+<h2 id="практичен-образец-за-пишување">Практичен образец за пишување</h2>
+<p>Користете ја оваа компактна структура кога подготвувате спецификација за функционалност.</p>
 <ol type="1">
 <li>проблем</li>
 <li>корисник и контекст</li>
-<li>тек во обем</li>
-<li>работи надвор од обем</li>
-<li>барани правила</li>
+<li>тек на работа во опсег</li>
+<li>ставки надвор од опсегот</li>
+<li>задолжителни правила</li>
 <li>резервно однесување</li>
 <li>критериуми за прифаќање</li>
 <li>белешки за проверка</li>
 </ol>
-<h2 id="контекст-let-books">Контекст Let Books</h2>
-<p><code>AGENTS.md</code>, <code>AGENTS-Implementation.md</code> и <code>README.md</code> веќе покажуваат како таквата слоевита спецификација им помага и на AI-помошниците.</p>
+<h2 id="како-ова-се-пресликува-на-let-books">Како ова се пресликува на Let Books</h2>
+<p>Репозиториумот веќе го демонстрира овој образец на повеќе нивоа:</p>
+<ul>
+<li><code>AGENTS.md</code> ја дефинира целта на производот, тековите на работа и критериумите за прифаќање</li>
+<li><code>AGENTS-Implementation.md</code> ги дефинира тактичките ограничувања на испораката</li>
+<li><code>README.md</code> ја раздвојува тековната состојба од идната насока</li>
+</ul>
+<p>Овој слоевит пристап е корисен затоа што AI работи подобро кога меморијата на производот е експлицитна и прегледлива.</p>
+<h2 id="вежба">Вежба</h2>
+<p>Земете една функционалност на Let Books, како скенирање QR-код на кутија или увоз на Excel одлуки, и напишете едностранична спецификација користејќи ја горната структура.</p>
+<p>Потоа замолете асистент за кодирање да ја имплементира.</p>
+<p>Потоа прегледајте го резултатот според спецификацијата пред да го прегледувате стилот на кодот. Тој редослед е важен.</p>
+<h2 id="дополнително-читање">Дополнително читање</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>../wiki/mk/spec-driven-development.md</code></li>
+<li><code>../wiki/mk/demo-spec-alignment.md</code></li>
+<li><code>../blog/mk/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -161,20 +243,24 @@
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../blog/mk/documentation-is-part-of-the-product.html"><span>Документацијата е дел од производот</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/spec-driven-development-for-ai-projects.html"><span>Развој воден од спецификации за AI проекти</span><span class="topic-menu__meta">Блог</span></a>
-                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува AI-поддржана работа според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува работа со помош на AI според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../topics/mk/ai-assisted-implementation.html"><span>Имплементација со AI-поддршка</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
                   <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Кога демото е доказ, а кога не е</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/spec-driven-development-in-let-books.html"><span>Развој воден од спецификации во Let Books</span><span class="topic-menu__meta">Блог</span></a>
-                  <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржи усогласеност меѓу спецификација, документација, демо и код</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../wiki/mk/markdown-in-product-development.html"><span>Markdown во развој на производ</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој воден од спецификации</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/documentation-is-more-than-a-website.html"><span>Документацијата е повеќе од веб-страница</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој заснован на спецификации</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/spec-driven-development.html"><span>Развој воден од спецификација</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/cataloging.html"><span>Каталогизација</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-writing-menu" data-topic-menu="related-spec-writing" hidden>
-                  <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Како од продуктна спецификација да се направи имплементациски план</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Како спецификацијата на производот да се претвори во план за имплементација</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../learning/mk/how-to-design-english-source-content-for-translation.html"><span>Како да обликувате англиска изворна содржина за превод</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/mk/product-specification.html"><span>Продуктна спецификација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/product-specification.html"><span>Спецификација на производот</span><span class="topic-menu__meta">Вики</span></a>
                 </div>
               </div>
             </div>
@@ -188,11 +274,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</p>
+            <p class="footer-note">Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</p>
             <p class="footer-microcopy">Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../mk/index.html">Преглед</a>
+              <a href="../../topics/mk/index.html">Теми</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -203,6 +291,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</span>
+            <span>Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

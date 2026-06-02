@@ -1,62 +1,79 @@
 ---
-title: "Produktna specifikacija"
+title: "Specifikacija izdelka"
+summary: >-
+  Specifikacija izdelka določa, čemu je izdelek namenjen, kaj mora delati, katere meje mora spoštovati in kateri rezultati se štejejo za uspeh.
 topics:
   - product-specification
   - spec-writing
   - spec-driven-development
 ---
-# Produktna specifikacija
+# Specifikacija izdelka
 
 ## Povzetek
 
-Produktna specifikacija določa, čemu je izdelek namenjen, kaj mora narediti, katere meje mora spoštovati in kateri izidi štejejo kot uspeh.
+Specifikacija izdelka določa, čemu je izdelek namenjen, kaj mora delati, katere meje mora spoštovati in kateri rezultati se štejejo za uspeh.
 
 ## Vloga
 
-Produktna specifikacija je najvišji praktični opis želenega vedenja izdelka.
+Specifikacija izdelka je praktični opis predvidenega obnašanja izdelka na najvišji ravni.
 
-Odgovarjati mora na vprašanja, kot so:
+Odgovoriti mora na vprašanja, kot so:
 
 - zakaj izdelek obstaja
-- komu je namenjen
+- za koga je
 - kateri poteki dela so prvovrstni
-- kaj mora delovati tudi ob odpovedih
+- kaj mora delovati tudi v okvari
 - kaj je izrecno izven obsega
-- katera merila sprejema določajo smiseln demo ali izdajo
+- kateri kriteriji sprejemljivosti opredeljujejo smiselno predstavitev ali izdajo
 
-## Kaj sodi v produktno specifikacijo
+## Kaj sodi v specifikacijo izdelka
 
-Tipična vsebina vključuje:
+Tipična vsebina specifikacije vključuje:
 
 - namen izdelka
-- temeljno filozofijo
-- domenski model
-- definicije potekov dela
+- temeljna filozofija
+- model domene
+- definicije poteka dela
 - pričakovanja glede zasebnosti in varnosti
-- necilje
-- smernice zaporedja implementacije, kadar vplivajo na obseg ali vrstni red dostave
-- merila sprejema
+- necilj
+- navodila za zaporedje izvajanja, kjer to vpliva na obseg ali vrstni red dostave
+- merila sprejemljivosti
 
-Specifikacija naj se osredotoča na produktno resnico, ne na vsako lokalno implementacijsko podrobnost.
+Specifikacija se mora osredotočiti na resničnost izdelka, ne pa na vsako podrobnost lokalne izvedbe.
 
-## Kaj tja običajno ne sodi
+## Kar običajno ne sodi tja
 
-To običajno spada drugam, razen če neposredno vpliva na produktne zaveze:
+Ti elementi pogosto sodijo drugam, razen če neposredno vplivajo na zaveze glede izdelkov:
 
-- začasne repozitorijske konvencije
-- lokalna nastavitev orodij
-- ozke odločitve vizualnega poliranja
+- konvencije o začasnih skladiščih
+- nastavitev lokalnega orodja
+- odločitve o ozkem poliranju uporabniškega vmesnika
 - enkratna navodila za odpravljanje napak
-- uredniški ali objavni mehanizmi, ki ne spreminjajo produktnega modela
+- uredniška ali založniška mehanika, ki ne spreminja modela izdelka
 
-## Kontekst Let Books
+## Zakaj je to pomembno pri delu s pomočjo umetne inteligence
 
-V Let Books je `AGENTS.md` osrednja produktna specifikacija.
+AI lahko zelo hitro ustvari verodostojno izvedbo. Brez jasne specifikacije izdelka lahko ta izvedba optimizira za udobje namesto za namen.
 
-Opredeljuje:
+Specifikacija daje recenzentom in sodelujočim stabilen standard za odločanje, ali ustvarjeni izhod še vedno pripada predvidenemu izdelku.
+
+## Let Books kontekst
+
+V Let Books je `AGENTS.md` osnovna specifikacija izdelka.
+
+Določa:
 
 - namen projekta
-- domenski in potekovni model
-- smer večnajemniške zasnove in lokalizacije
-- načela ročnega poteka dela in neobveznosti AI
-- merila sprejema za prvi demo
+- model domene in poteka dela
+- več najemnikov in smer lokalizacije
+- ročni potek dela in izbirna načela AI
+- merila sprejemljivosti za prvi demo
+
+Zaradi tega je več kot samo pregled. Je glavna avtoriteta izdelka v skladišču.
+
+## Sorodne strani
+
+- `implementation-guidance.md`
+- `documentation-traceability.md`
+- `spec-driven-development.md`
+- `../../learning/sl/how-to-write-a-spec-that-ai-can-follow.md`

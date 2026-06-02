@@ -29,6 +29,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/index.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/index.html">
@@ -59,6 +60,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernleitfäden</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../blog/en/index.html" lang="en">EN</a>
@@ -77,29 +79,112 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Blog</h1>
             <p>Blog-Artikel über spezifikationsgesteuerte Entwicklung, Metadaten, Dokumentation und KI-gestützte Projekte.</p>
           </div>
-          <ul>
-              <li><a href="ai-will-not-replace-translators.html">KI wird Übersetzer nicht ersetzen</a></li>
-              <li><a href="documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a></li>
-              <li><a href="economics-of-localization.html">Ökonomie der Lokalisierung</a></li>
-              <li><a href="future-of-continuous-localization.html">Zukunft der kontinuierlichen Lokalisierung</a></li>
-              <li><a href="isbn-not-a-database.html">ISBN ist keine Datenbank</a></li>
-              <li><a href="localization-at-scale.html">Lokalisierung im großen Maßstab</a></li>
-              <li><a href="multilingual-accessibility.html">Mehrsprachige Barrierefreiheit</a></li>
-              <li><a href="preserving-smaller-languages-in-the-digital-age.html">Kleinere Sprachen im digitalen Zeitalter bewahren</a></li>
-              <li><a href="spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a></li>
-              <li><a href="spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a></li>
-              <li><a href="the-cost-of-english-only-software.html">Die Kosten rein englischer Software</a></li>
-              <li><a href="translation-and-learning.html">Übersetzung und Lernen</a></li>
-              <li><a href="united-in-diversity-and-open-source.html">Vereint in Vielfalt und Open Source</a></li>
-              <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a></li>
-              <li><a href="why-every-language-matters.html">Warum jede Sprache wichtig ist</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Inhaltstyp">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link is-active" href="../../blog/de/index.html" data-content-switcher-link data-content-type="blog" aria-current="page">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/de/index.html" data-content-switcher-link data-content-type="learning">Lernmaterial</a>
+              <a class="content-type-switcher__link" href="../../wiki/de/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/de/index.html" data-content-switcher-link data-content-type="topics">Themen</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Neueste Artikel</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../blog/de/why-every-language-matters.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Warum jede Sprache wichtig ist</h3>
+              <p>Warum es verändert, wer lernen, teilnehmen und beitragen kann, wenn kleinere oder regionale Sprachen als vollwertige Sprachen behandelt werden.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/de/united-in-diversity-and-open-source.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Vereint in Vielfalt und Open Source</h3>
+              <p>Was mehrsprachige öffentliche Institutionen und Open-Source-Projekte von Gesellschaften lernen können, die über mehrere Sprachen und Schriftsysteme hinweg funktionieren.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/de/preserving-smaller-languages-in-the-digital-age.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Kleinere Sprachen im digitalen Zeitalter bewahren</h3>
+              <p>Warum digitale Werkzeuge kleineren Sprachen helfen sollten, nutzbar, sichtbar und vermittelbar zu bleiben, statt ihre Abwesenheit als normal hinzunehmen.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/de/multilingual-accessibility.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Mehrsprachige Barrierefreiheit</h3>
+              <p>Warum Barrierefreiheit und Lokalisierung gemeinsam über Sprachmetadaten, Screenreader, einfache Sprache, Bildunterschriften und Alt-Text gestaltet werden sollten.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Nach Themen durchsuchen</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-blog-de-library-systems-menu">Bibliothekssysteme</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-blog-de-book-donation-menu">Buchspende</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-blog-de-demo-alignment-menu">Demo-Abgleich</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-blog-de-documentation-menu">Dokumentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-blog-de-isbn-metadata-menu">ISBN und Metadaten</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-blog-de-ai-assisted-delivery-menu">KI-gestützte Lieferung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-blog-de-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-blog-de-product-review-menu">Produktprüfung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-blog-de-product-quality-menu">Produktqualität</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-blog-de-spec-driven-development-menu">Spezifikationsgetriebene Entwicklung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-blog-de-validation-menu">Validierung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-blog-de-translation-quality-menu">Übersetzungsqualität</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-blog-de-library-systems-menu" data-topic-menu="index-blog-de-library-systems" hidden>
+                      <a href="../../blog/de/isbn-not-a-database.html">ISBN ist keine Datenbank</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-book-donation-menu" data-topic-menu="index-blog-de-book-donation" hidden>
+                      <a href="../../blog/de/isbn-not-a-database.html">ISBN ist keine Datenbank</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-demo-alignment-menu" data-topic-menu="index-blog-de-demo-alignment" hidden>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-documentation-menu" data-topic-menu="index-blog-de-documentation" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-isbn-metadata-menu" data-topic-menu="index-blog-de-isbn-metadata" hidden>
+                      <a href="../../blog/de/isbn-not-a-database.html">ISBN ist keine Datenbank</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-ai-assisted-delivery-menu" data-topic-menu="index-blog-de-ai-assisted-delivery" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-let-books-menu" data-topic-menu="index-blog-de-let-books" hidden>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-product-review-menu" data-topic-menu="index-blog-de-product-review" hidden>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-product-quality-menu" data-topic-menu="index-blog-de-product-quality" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-spec-driven-development-menu" data-topic-menu="index-blog-de-spec-driven-development" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-validation-menu" data-topic-menu="index-blog-de-validation" hidden>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-translation-quality-menu" data-topic-menu="index-blog-de-translation-quality" hidden>
+                      <a href="../../blog/de/ai-will-not-replace-translators.html">KI wird Übersetzer nicht ersetzen</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">
@@ -112,6 +197,7 @@
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>

@@ -1,80 +1,89 @@
 ---
-title: "Udhëzime për implementim"
+title: "Udhëzues Zbatimi"
+summary: >-
+  Udhëzimi i zbatimit përcakton se si një ekip duhet të dorëzojë punën brenda depove aktuale ose mjedisit të shpërndarjes pa zëvendësuar vetë specifikimin e produktit.
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Udhëzime për implementim
+# Udhëzues Zbatimi
 
 ## Përmbledhje
 
-Udhëzimet e implementimit përcaktojnë se si ekipi duhet ta dorëzojë punën brenda depos ose mjedisit aktual të dorëzimit, pa e zëvendësuar vetë specifikimin e produktit.
+Udhëzimi i zbatimit përcakton se si një ekip duhet të dorëzojë punën brenda depove aktuale ose mjedisit të shpërndarjes pa zëvendësuar vetë specifikimin e produktit.
 
 ## Roli
 
-Udhëzimet e implementimit qëndrojnë poshtë specifikimit të produktit.
+Udhëzimet e zbatimit janë nën specifikimet e produktit.
 
-Ato ndihmojnë për t'iu përgjigjur pyetjeve si:
+Ndihmon për t'iu përgjigjur pyetjeve të tilla si:
 
 - si duhet të funksionojë emërtimi publik
 - si duhet të strukturohen dokumentet
-- cilat pritje verifikimi vlejnë tani
-- cilat rregulla specifike të depos duhet të ndjekin kontribuesit
-- ku duhet të jetojnë rregullat taktike ndërsa projekti evoluon
+- cilat pritshmëri verifikimi zbatohen tani
+- cilat rregulla specifike të depove duhet të ndjekin kontribuuesit
+- ku rregullat taktike duhet të jetojnë ndërsa projekti evoluon
 
-## Dallimi nga specifikimi i produktit
+## Ndryshimi nga specifikimi i produktit
 
-Specifikimi i produktit përcakton çfarë është produkti dhe çfarë duhet të arrijë.
+Specifikimi i produktit përcakton se çfarë është produkti dhe çfarë duhet të arrijë.
 
-Udhëzimet e implementimit përcaktojnë si duhet ta kryejnë kontribuesit punën brenda kontekstit aktual të dorëzimit.
+Udhëzimi i zbatimit përcakton se si kontribuuesit duhet të kryejnë punën brenda kontekstit aktual të ofrimit.
 
-Ky dallim është i dobishëm sepse jo çdo rregull i depos është e vërtetë e produktit dhe jo çdo e vërtetë e produktit duhet të fshihet në shënime taktike.
+Ky dallim është i dobishëm sepse jo çdo rregull i depove është një e vërtetë produkti dhe jo çdo e vërtetë e produktit duhet të varroset në shënime taktike.
 
 ## Shembuj të zakonshëm
 
-Udhëzimet e implementimit shpesh përfshijnë:
+Udhëzimet e zbatimit shpesh përfshijnë:
 
-- rregulla emërtimi dhe markimi
-- rregulla për implementimin e dokumentacionit
-- kufizime të sajtit statik ose demos
-- pritje verifikimi
-- rregulla redaktimi ose gjenerimi kodi
-- politika provash për shkrimin publik
+- rregullat e emërtimit dhe markës
+- rregullat e zbatimit të dokumentacionit
+- kufizimet e faqes statike ose demo
+- pritjet e verifikimit
+- Rregullat e redaktimit ose të gjenerimit të kodeve
+- politikat e evidentimit për shkrimin publik
 
-Këto rregulla shpesh funksionojnë mirë në Markdown sepse duhet të mbeten të rishikueshme, të lehta për t'u përditësuar dhe pranë pjesës tjetër të kontekstit të depos.
+Këto rregulla shpesh jetojnë mirë në Markdown sepse ato duhet të qëndrojnë të rishikueshme, të lehta për t'u përditësuar dhe afër pjesës tjetër të kontekstit të depove.
 
-## Pse ka rëndësi në punën e asistuar nga IA
+## Pse ka rëndësi në punën e asistuar nga AI
 
-Asistentët IA shpesh ndjekin udhëzimin më të afërt dhe më konkret. Nëse rregullat specifike të depos janë të nënkuptuara, rezultatet bëhen shpejt të paqëndrueshme.
+Asistentët e AI shpesh ndjekin udhëzimet konkrete më të afërta. Nëse rregullat specifike të depove janë të nënkuptuara, prodhimi bëhet shpejt i paqëndrueshëm.
 
-Udhëzimet e implementimit i bëjnë këto rregulla të dukshme pa e ndotur specifikimin e produktit me hollësi taktike.
+Udhëzimi i zbatimit i bën ato rregulla të dukshme pa e ndotur specifikimin e produktit me detaje taktike.
 
-Në praktikë kjo do të thotë se një skedar udhëzues Markdown mund të bëjë dy punë njëkohësisht:
+Në praktikë, kjo do të thotë se një skedar udhëzues Markdown mund të bëjë dy punë njëherësh:
 
-- të shpjegojë rrjedhën e punës për një kontribues njerëzor
-- të drejtojë një agjent IA drejt mjeteve, rendit dhe kufizimeve të preferuara
+- shpjegoni rrjedhën e punës një kontribuesi njerëzor
+- drejtoni një agjent AI drejt mjeteve, sekuencës dhe kufizimeve të preferuara
 
-## Konteksti Let Books
+## Let Books kontekst
 
 Në Let Books, `AGENTS-Implementation.md` është shtresa e udhëzimit taktik.
 
-Ai mbulon fusha si:
+Ai mbulon fusha të tilla si:
 
 - emërtimi publik
 - rregullat e dokumentacionit
-- ndarja mes sajtit publik dhe dokumenteve
-- rregullat e metadatave dhe SEO-së për faqe statike
-- kufizimet e demos statike
-- rregullat e lokalizimit dhe aksesueshmërisë
+- ndarja e faqes publike dhe dokumenteve
+- rregullat e meta të dhënave dhe SEO për faqet statike
+- kufizimet statike demonstruese
+- Rregullat e lokalizimit dhe aksesueshmërisë
 - rregullat e verifikimit
-- politika e provave për blogun
+- Politika e dëshmive të blogut
 
-Kjo e bën atë shoqëruesin operacional të `AGENTS.md`, jo zëvendësim të tij.
+Kjo e bën atë shoqërues operacional të `AGENTS.md`, jo një zëvendësim për të.
 
-## Faqe Të Lidhura
+Udhëzime të tjera Markdown në repo përforcojnë të njëjtin model. Për shembull:
+
+- `docs/android-debugging.md` drejton zgjedhjet e rrjedhës së punës për korrigjimin e gabimeve, si p.sh.
+- `docs/style-guide/publishing/ubuntu-tooling.md` dokumenton mjetet e pritshme për publikimin, verifikimin, pamjet e ekranit, kontrollin drejtshkrimor dhe korrigjimin e pajisjes
+
+Këto dokumente janë të lexueshme si udhëzime njerëzore, por ato gjithashtu ndihmojnë agjentët të zgjedhin veprime më të mira në vend që të hamendësojnë nga parazgjedhjet e përgjithshme.
+
+## Faqe të ngjashme
 
 - `product-specification.md`
 - `documentation-traceability.md`
 - `validation-layers.md`
-- `../learning/how-to-turn-a-product-spec-into-an-implementation-plan.md`
+- `../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.md`

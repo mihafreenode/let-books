@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kako iz proizvodne specifikacije napraviti implementacijski plan | LetBooks</title>
-    <meta name="description" content="Ovaj vodič objašnjava kako proizvodnu specifikaciju pretvoriti u konkretan implementacijski plan bez gubitka svrhe, granica i ključnih pravila toka rada.">
+    <title>Kako pretvoriti specifikaciju proizvoda u plan implementacije | LetBooks</title>
+    <meta name="description" content="Ovaj vodič objašnjava kako prevesti specifikaciju proizvoda u konkretan plan implementacije bez gubitka namjere, granica ili pravila toka rada koji su specifikaciju uopće učinili korisnom.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Kako iz proizvodne specifikacije napraviti implementacijski plan | LetBooks">
-    <meta property="og:description" content="Ovaj vodič objašnjava kako proizvodnu specifikaciju pretvoriti u konkretan implementacijski plan bez gubitka svrhe, granica i ključnih pravila toka rada.">
+    <meta property="og:title" content="Kako pretvoriti specifikaciju proizvoda u plan implementacije | LetBooks">
+    <meta property="og:description" content="Ovaj vodič objašnjava kako prevesti specifikaciju proizvoda u konkretan plan implementacije bez gubitka namjere, granica ili pravila toka rada koji su specifikaciju uopće učinili korisnom.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kako iz proizvodne specifikacije napraviti implementacijski plan | LetBooks">
-    <meta name="twitter:description" content="Ovaj vodič objašnjava kako proizvodnu specifikaciju pretvoriti u konkretan implementacijski plan bez gubitka svrhe, granica i ključnih pravila toka rada.">
+    <meta name="twitter:title" content="Kako pretvoriti specifikaciju proizvoda u plan implementacije | LetBooks">
+    <meta name="twitter:description" content="Ovaj vodič objašnjava kako prevesti specifikaciju proizvoda u konkretan plan implementacije bez gubitka namjere, granica ili pravila toka rada koji su specifikaciju uopće učinili korisnom.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="bs">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/bs/index.html">Blog</a>
             <a class="nav-link" href="../../learning/bs/index.html">Materijali za učenje</a>
             <a class="nav-link" href="../../wiki/bs/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/bs/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/bs/index.html">Materijali za učenje</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Kako iz proizvodne specifikacije napraviti implementacijski plan</span>
+              <span aria-current="page">Kako pretvoriti specifikaciju proizvoda u plan implementacije</span>
             </nav>
-            <h1>Kako iz proizvodne specifikacije napraviti implementacijski plan</h1>
-          <p class="content-page-summary">Ovaj vodič objašnjava kako proizvodnu specifikaciju pretvoriti u konkretan implementacijski plan bez gubitka svrhe, granica i ključnih pravila toka rada.</p>
+            <h1>Kako pretvoriti specifikaciju proizvoda u plan implementacije</h1>
+          <div class="content-page-meta">
+            <span>Materijali za učenje</span>
+            <span>Bosanski</span>
+          </div>
+          <p class="content-page-summary">Ovaj vodič objašnjava kako prevesti specifikaciju proizvoda u konkretan plan implementacije bez gubitka namjere, granica ili pravila toka rada koji su specifikaciju uopće učinili korisnom.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Planiranje implementacije</span>
@@ -100,36 +116,139 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="jezgra-pristupa">Jezgra pristupa</h2>
-<p class="lead">Prije razbijanja specifikacije u zadatke izdvoji:</p>
+<h2 id="zašto-je-ovaj-korak-važan">Zašto je ovaj korak važan</h2>
+<p class="lead">Specifikacija opisuje šta proizvod treba raditi i zašto to treba raditi.</p>
+<p>Plan implementacije opisuje kako će tim isporučiti to ponašanje u slijedu koji je pregledljiv, testabilan i realističan.</p>
+<p>Mnogi projekti propadnu upravo u razmaku između ta dva dokumenta.</p>
+<p>Specifikacija može biti dobra, ali plan postane previše neodređen, previše tehnički ili previše odvojen od korisničkih tokova rada. U radu uz podršku AI-ja to je još češće jer generisani kod može stvoriti utisak da se planiranje već dogodilo, iako zapravo nije.</p>
+<h2 id="počnite-izdvajanjem-odluka-o-proizvodu">Počnite izdvajanjem odluka o proizvodu</h2>
+<p>Prije nego što specifikaciju pretvorite u zadatke, prepoznajte odluke koje zaista ograničavaju implementaciju.</p>
+<p>Tražite:</p>
 <ul>
-<li>proizvodnu svrhu</li>
-<li>korisnički tok</li>
+<li>svrhu proizvoda</li>
+<li>korisnički tok rada</li>
 <li>granice opsega</li>
-<li>neupitna pravila</li>
+<li>pravila o kojima nema pregovora</li>
 <li>rezervno ponašanje</li>
 <li>kriterije prihvatanja</li>
 </ul>
-<h2 id="tri-sloja-plana">Tri sloja plana</h2>
+<p>To su dijelovi koji trebaju preživjeti prelaz iz specifikacije u plan.</p>
+<p>Ako ih plan izgubi, obično postaje tehnički popis obaveza umjesto plana isporuke.</p>
+<h2 id="podijelite-plan-na-slojeve">Podijelite plan na slojeve</h2>
+<p>Dobar plan implementacije obično ima barem tri sloja.</p>
+<h3 id="sloj-toka-rada">1. Sloj toka rada</h3>
+<p>Opišite korisniku vidljiv tok u kratkim konkretnim koracima.</p>
+<p>Primjer:</p>
 <ol type="1">
-<li>Sloj toka: šta korisnik mora uraditi i kojim redom.</li>
-<li>Sistemski sloj: koji dijelovi sistema to moraju podržati.</li>
-<li>Sloj isporuke: kojim redom tim treba promjene izvesti i provjeriti.</li>
+<li>korisnik bira kutiju za pohranu</li>
+<li>korisnik skenira ili unosi ISBN</li>
+<li>korisnik i dalje može nastaviti ako pretraga ne uspije</li>
+<li>korisnik sprema fizički primjerak na odabranu lokaciju</li>
 </ol>
-<h2 id="česte-greške">Česte greške</h2>
+<p>Ovaj sloj štiti korisničko putovanje od toga da bude zatrpano tehničkim zadacima.</p>
+<h3 id="sistemski-sloj">2. Sistemski sloj</h3>
+<p>Opišite dijelove sistema koji moraju podržati taj tok rada.</p>
+<p>Primjeri:</p>
 <ul>
-<li>plan postane samo tehnički spisak zadataka</li>
-<li>tok se izgubi iza arhitekture</li>
-<li>rezervni slučajevi nestanu</li>
-<li>dokumentacija i provjera nisu uključene</li>
+<li>promjene modela podataka</li>
+<li>UI ekrani ili forme</li>
+<li>validacijska pravila</li>
+<li>ponašanje importa/eksporta</li>
+<li>ažuriranja lokalizacije</li>
+<li>potrebe provjere</li>
 </ul>
-<h2 id="kontrolni-spisak">Kontrolni spisak</h2>
-<p>Prije prihvatanja plana provjeri:</p>
+<p>Ovaj sloj povezuje ponašanje proizvoda s tehničkim radom.</p>
+<h3 id="sloj-isporuke">3. Sloj isporuke</h3>
+<p>Razlomite sistemski rad u slijed koji se zaista može implementirati i pregledati.</p>
+<p>Primjeri:</p>
+<ol type="1">
+<li>definisati ili ažurirati model domene</li>
+<li>implementirati osnovni UI tok</li>
+<li>dodati rezervno ponašanje</li>
+<li>dodati validaciju i testove</li>
+<li>ažurirati dokumentaciju i primjere</li>
+</ol>
+<p>To je sloj u kojem plan postaje rasporediv.</p>
+<h2 id="neka-plan-oblikuju-ograničenja">Neka plan oblikuju ograničenja</h2>
+<p>Planovi implementacije često odstupaju kada se prepišu kao generički inženjerski koraci.</p>
+<p>Da biste to izbjegli, ključna ograničenja proizvoda držite vidljivima unutar plana.</p>
+<p>Za rad u stilu Let Books to može uključivati ograničenja kao što su:</p>
 <ul>
-<li>čuva li korisnički tok</li>
-<li>čuva li ključna ograničenja</li>
-<li>uključuje li dokumentaciju i validaciju</li>
-<li>može li ga drugi saradnik provesti bez nagađanja</li>
+<li>ručni tokovi rada i dalje moraju funkcionisati bez AI-ja</li>
+<li>nepotpuni podaci moraju biti dozvoljeni</li>
+<li>fizički primjerci moraju ostati odvojeni od bibliografskih zapisa</li>
+<li>lokalizacija se ne smije tretirati kao opcionalni završni sloj</li>
+<li>dokumentacija trenutnog stanja mora ostati poštena o onome što sada postoji</li>
+</ul>
+<p>Ta ograničenja ne bi trebala živjeti samo u izvornoj specifikaciji. Trebaju se pojavljivati i u bilješkama planiranja i kriterijima pregleda.</p>
+<h2 id="koristite-kriterije-prihvatanja-za-oblikovanje-razrade-zadataka">Koristite kriterije prihvatanja za oblikovanje razrade zadataka</h2>
+<p>Jedan od najlakših načina da specifikaciju pretvorite u plan jeste da krenete od kriterija prihvatanja.</p>
+<p>Za svaki kriterij pitajte:</p>
+<ul>
+<li>koji UI ili tok rada to podržava</li>
+<li>koje podatkovno ili sistemsko ponašanje to podržava</li>
+<li>koji slučaj neuspjeha i dalje mora uspjeti</li>
+<li>kako ćemo to provjeriti</li>
+</ul>
+<p>Ta metoda drži plan vezanim za opažljive ishode umjesto za apstraktne rasprave o arhitekturi.</p>
+<h2 id="planiranje-uz-podršku-ai-ja-na-šta-paziti">Planiranje uz podršku AI-ja: na šta paziti</h2>
+<p>AI može pomoći da se plan implementacije proizvede brzo, ali često uvodi ponavljajuće probleme:</p>
+<ul>
+<li>dodatne apstrakcije bez potrebe proizvoda</li>
+<li>zadatke grupisane po tehnologiji umjesto po toku rada</li>
+<li>optimistično izostavljanje rezervnog ponašanja</li>
+<li>skrivene pretpostavke o dostupnosti backenda ili kvalitetu podataka</li>
+<li>planove koji izgledaju potpuno, ali zanemaruju dokumentaciju i provjeru</li>
+</ul>
+<p>Kada pregledate plan implementacije koji je generisao AI, pitajte odražava li on i dalje stvarni skup pravila proizvoda.</p>
+<h2 id="praktičan-predložak-planiranja">Praktičan predložak planiranja</h2>
+<p>Koristite strukturu poput ove:</p>
+<ol type="1">
+<li>cilj funkcionalnosti</li>
+<li>sažetak korisničkog toka rada</li>
+<li>ograničenja i pravila o kojima nema pregovora</li>
+<li>isporučivi segmenti</li>
+<li>strategija provjere</li>
+<li>potrebna ažuriranja dokumentacije</li>
+</ol>
+<p>Na primjer, isporučivi segment mogao bi biti:</p>
+<ul>
+<li>dodati izbor lokacije pohrane u tok unosa</li>
+<li>dozvoliti spremanje bez uspješnog pretraživanja metapodataka</li>
+<li>pohraniti fizički primjerak odvojeno od bibliografskih metapodataka</li>
+<li>ažurirati tekst vodiča i bilješke za provjeru</li>
+</ul>
+<p>To je mnogo jače od ravne liste poput:</p>
+<ul>
+<li>napraviti formu</li>
+<li>dodati API poziv</li>
+<li>dodati testove</li>
+</ul>
+<h2 id="primjer-iz-let-books">Primjer iz Let Books</h2>
+<p>Repozitorij već sadrži sirove ulaze za ovakav stil planiranja:</p>
+<ul>
+<li><code>AGENTS.md</code> za svrhu proizvoda, tokove rada i kriterije prihvatanja</li>
+<li><code>AGENTS-Implementation.md</code> za ograničenja isporuke i pravila repozitorija</li>
+<li><code>README.md</code> za očekivanja trenutnog stanja</li>
+<li><code>docs/Development.md</code> i <code>docs/Deployment.md</code> za kontekst validacije i isporuke</li>
+</ul>
+<p>To znači da plan implementacije ne mora izmišljati vlastitu logiku. On treba te slojeve prevesti u ograničen slijed isporuke.</p>
+<h2 id="kontrolna-lista-za-pregled">Kontrolna lista za pregled</h2>
+<p>Prije prihvatanja plana implementacije provjerite:</p>
+<ol type="1">
+<li>Čuva li korisnički tok rada iz specifikacije?</li>
+<li>Drži li vidljivima pravila proizvoda o kojima nema pregovora?</li>
+<li>Uključuje li rezervno i neuspješno ponašanje?</li>
+<li>Uključuje li dokumentaciju i provjeru, a ne samo zadatke koda?</li>
+<li>Može li drugi saradnik implementirati prema ovom planu bez nagađanja o namjeri proizvoda?</li>
+</ol>
+<h2 id="dodatno-čitanje">Dodatno čitanje</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-write-a-spec-that-ai-can-follow.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>../wiki/bs/spec-driven-development.md</code></li>
+<li><code>../blog/bs/spec-driven-development-in-let-books.md</code></li>
 </ul>
 
         <div class="post-article-nav">
@@ -164,20 +283,23 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../blog/bs/documentation-is-part-of-the-product.html"><span>Dokumentacija je dio proizvoda</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/bs/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledati rad uz podršku AI-ja prema specifikaciji</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../topics/bs/ai-assisted-implementation.html"><span>Implementacija uz AI podršku</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postupno dodavati validacijska pravila i CI vrata</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../topics/bs/validation-layers.html"><span>Validacijski slojevi</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
                   <a href="../../blog/bs/isbn-not-a-database.html"><span>ISBN nije baza podataka</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../topics/bs/isbn.html"><span>ISBN</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-writing-menu" data-topic-menu="related-spec-writing" hidden>
                   <a href="../../learning/bs/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikaciju koju AI može slijediti</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../learning/bs/how-to-design-english-source-content-for-translation.html"><span>Kako oblikovati engleski izvorni sadržaj za prevođenje</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../wiki/bs/product-specification.html"><span>Proizvodna specifikacija</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/bs/product-specification.html"><span>Specifikacija proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../wiki/bs/implementation-guidance.html"><span>Implementacijske smjernice</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/bs/implementation-guidance.html"><span>Smjernice za implementaciju</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-project-management-menu" data-topic-menu="related-project-management" hidden>
                   <a href="../../wiki/bs/localization-roadmap.html"><span>Mapa puta za lokalizaciju</span><span class="topic-menu__meta">Wiki</span></a>
@@ -185,8 +307,9 @@
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kada je demo dokaz, a kada nije</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/bs/spec-driven-development-in-let-books.html"><span>Razvoj vođen specifikacijom u Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održati usklađenost specifikacije, dokumentacije, demoa i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../wiki/bs/demo-spec-alignment.html"><span>Usklađenost između dema i specifikacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/bs/demo-and-specification-alignment.html"><span>Usklađenost demoa i specifikacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>
             </div>
@@ -200,11 +323,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © saradnici na Let Books. Ponovna upotreba slijedi licencu repozitorija osim ako stranica ne navodi drugačije.</p>
             <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../bs/index.html">Pregled</a>
+              <a href="../../topics/bs/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -215,6 +340,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Autorska prava © saradnici na Let Books. Ponovna upotreba slijedi licencu repozitorija osim ako stranica ne navodi drugačije.</span>
+            <span>Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

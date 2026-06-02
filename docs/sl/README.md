@@ -10,4 +10,5 @@ Ta mapa vsebuje slovensko različico ključne dokumentacije Let Books.
 
 - [Blog](../blog/sl/)
 - [Learning](../learning/sl/)
+- [Topics](../topics/sl/)
 - [Wiki](../wiki/sl/)

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Implementacijske smjernice | LetBooks</title>
-    <meta name="description" content="Implementacijske smjernice definiraju kako tim treba isporučivati rad unutar trenutačnog repozitorija ili okruženja isporuke, a da pritom ne zamjenjuju samu proizvodnu specifikaciju.">
+    <title>Smjernice za provedbu | LetBooks</title>
+    <meta name="description" content="Smjernice za implementaciju definiraju kako tim treba isporučiti posao unutar trenutnog repozitorija ili okruženja isporuke bez zamjene same specifikacije proizvoda.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/hr/implementation-guidance.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Implementacijske smjernice | LetBooks">
-    <meta property="og:description" content="Implementacijske smjernice definiraju kako tim treba isporučivati rad unutar trenutačnog repozitorija ili okruženja isporuke, a da pritom ne zamjenjuju samu proizvodnu specifikaciju.">
+    <meta property="og:title" content="Smjernice za provedbu | LetBooks">
+    <meta property="og:description" content="Smjernice za implementaciju definiraju kako tim treba isporučiti posao unutar trenutnog repozitorija ili okruženja isporuke bez zamjene same specifikacije proizvoda.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/hr/implementation-guidance.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Implementacijske smjernice | LetBooks">
-    <meta name="twitter:description" content="Implementacijske smjernice definiraju kako tim treba isporučivati rad unutar trenutačnog repozitorija ili okruženja isporuke, a da pritom ne zamjenjuju samu proizvodnu specifikaciju.">
+    <meta name="twitter:title" content="Smjernice za provedbu | LetBooks">
+    <meta name="twitter:description" content="Smjernice za implementaciju definiraju kako tim treba isporučiti posao unutar trenutnog repozitorija ili okruženja isporuke bez zamjene same specifikacije proizvoda.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="hr">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/hr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/hr/index.html">Materijali za učenje</a>
             <a class="nav-link" href="../../wiki/hr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/hr/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/implementation-guidance.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/hr/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Implementacijske smjernice</span>
+              <span aria-current="page">Smjernice za provedbu</span>
             </nav>
-            <h1>Implementacijske smjernice</h1>
-          <p class="content-page-summary">Implementacijske smjernice definiraju kako tim treba isporučivati rad unutar trenutačnog repozitorija ili okruženja isporuke, a da pritom ne zamjenjuju samu proizvodnu specifikaciju.</p>
+            <h1>Smjernice za provedbu</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Hrvatski</span>
+          </div>
+          <p class="content-page-summary">Smjernice za implementaciju definiraju kako tim treba isporučiti posao unutar trenutnog repozitorija ili okruženja isporuke bez zamjene same specifikacije proizvoda.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Planiranje implementacije</span>
@@ -101,42 +117,58 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="uloga">Uloga</h2>
-<p class="lead">Implementacijske smjernice nalaze se ispod proizvodne specifikacije.</p>
-<p>Pomažu odgovoriti na pitanja kao što su:</p>
+<p class="lead">Smjernice za implementaciju nalaze se ispod specifikacije proizvoda.</p>
+<p>Pomaže odgovoriti na pitanja kao što su:</p>
 <ul>
-<li>kako treba funkcionirati javno imenovanje</li>
-<li>kako dokumentacija treba biti strukturirana</li>
-<li>koja očekivanja provjere vrijede sada</li>
-<li>koja pravila specifična za repozitorij suradnici trebaju slijediti</li>
-<li>gdje trebaju živjeti taktička pravila kako se projekt razvija</li>
+<li>kako bi javno imenovanje trebalo funkcionirati</li>
+<li>kako bi dokumenti trebali biti strukturirani</li>
+<li>koja se očekivanja od verifikacije sada primjenjuju</li>
+<li>koja bi pravila specifična za repozitorij suradnici trebali slijediti</li>
+<li>gdje bi taktička pravila trebala živjeti kako se projekt razvija</li>
 </ul>
-<h2 id="razlika-u-odnosu-na-proizvodnu-specifikaciju">Razlika u odnosu na proizvodnu specifikaciju</h2>
-<p>Proizvodna specifikacija definira što proizvod jest i što mora postići.</p>
-<p>Implementacijske smjernice definiraju kako suradnici trebaju provoditi rad u trenutačnom kontekstu isporuke.</p>
-<p>Ta je razlika korisna jer nije svako pravilo repozitorija proizvodna istina i ne treba svaka proizvodna istina biti skrivena u taktičkim bilješkama.</p>
+<h2 id="razlika-od-specifikacije-proizvoda">Razlika od specifikacije proizvoda</h2>
+<p>Specifikacija proizvoda definira što je proizvod i što mora postići.</p>
+<p>Smjernice za implementaciju definiraju kako bi suradnici trebali obavljati posao unutar trenutnog konteksta isporuke.</p>
+<p>Ova je razlika korisna jer nije svako pravilo repozitorija istina o proizvodu i ne treba svaka istina o proizvodu biti zakopana u taktičke bilješke.</p>
 <h2 id="uobičajeni-primjeri">Uobičajeni primjeri</h2>
-<p>Implementacijske smjernice često uključuju:</p>
+<p>Smjernice za implementaciju često uključuju:</p>
 <ul>
 <li>pravila imenovanja i brendiranja</li>
-<li>pravila implementacije dokumentacije</li>
-<li>ograničenja statične stranice ili dema</li>
-<li>očekivanja provjere</li>
-<li>pravila uređivanja ili generiranja koda</li>
+<li>pravila provedbe dokumentacije</li>
+<li>statička web-mjesta ili demo ograničenja</li>
+<li>očekivanja verifikacije</li>
+<li>pravila za uređivanje ili generiranje koda</li>
 <li>politike dokaza za javno pisanje</li>
 </ul>
-<h2 id="kontekst-let-books">Kontekst Let Books</h2>
-<p>U Let Books <code>AGENTS-Implementation.md</code> je taktički sloj smjernica.</p>
+<p>Ova pravila često dobro žive u Markdown jer moraju ostati pregledna, laka za ažuriranje i bliska ostatku konteksta repozitorija.</p>
+<h2 id="zašto-je-to-važno-u-radu-uz-pomoć-umjetne-inteligencije">Zašto je to važno u radu uz pomoć umjetne inteligencije</h2>
+<p>AI pomoćnici često slijede najbliže konkretne upute. Ako su pravila specifična za repozitorij implicitna, izlaz brzo postaje nedosljedan.</p>
+<p>Smjernice za implementaciju čine ta pravila vidljivima bez zagađivanja specifikacije proizvoda taktičkim detaljima.</p>
+<p>U praksi to znači da datoteka s uputama Markdown može obavljati dva posla odjednom:</p>
+<ul>
+<li>objasni tijek rada ljudskom suradniku</li>
+<li>usmjerite AI agenta prema željenim alatima, redoslijedu i ograničenjima</li>
+</ul>
+<h2 id="let-books-kontekst">Let Books kontekst</h2>
+<p>U Let Books, <code>AGENTS-Implementation.md</code> je sloj taktičkog navođenja.</p>
 <p>Pokriva područja kao što su:</p>
 <ul>
 <li>javno imenovanje</li>
 <li>pravila dokumentacije</li>
-<li>razdvajanje javne stranice i dokumentacije</li>
-<li>pravila metapodataka i SEO-a za statične stranice</li>
-<li>ograničenja statičnog dema</li>
-<li>pravila lokalizacije i pristupačnosti</li>
+<li>javna stranica i dokumenti podijeljeni</li>
+<li>metapodaci i SEO pravila za statične stranice</li>
+<li>statička demo ograničenja</li>
+<li>pravila lokalizacije i dostupnosti</li>
 <li>pravila provjere</li>
-<li>politika dokaza za blog</li>
+<li>politika dokaza bloga</li>
 </ul>
+<p>To ga čini operativnim pratiocem <code>AGENTS.md</code>, a ne njegovom zamjenom.</p>
+<p>Druge smjernice Markdown u repo-u pojačavaju isti obrazac. Na primjer:</p>
+<ul>
+<li><code>docs/android-debugging.md</code> usmjerava izbore tijeka rada za otklanjanje pogrešaka kao što je CDP prilaganje u odnosu na tijekove rada zakrpa izvora</li>
+<li><code>docs/style-guide/publishing/ubuntu-tooling.md</code> dokumentira očekivane alate za objavljivanje, provjeru, snimke zaslona, provjeru pravopisa i otklanjanje pogrešaka uređaja</li>
+</ul>
+<p>Ti su dokumenti čitljivi kao ljudske smjernice, ali također pomažu agentima da odaberu bolje akcije umjesto nagađanja iz generičkih zadanih vrijednosti.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -165,22 +197,26 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../wiki/hr/validation-layers.html"><span>Slojevi validacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/hr/validation-layers.html"><span>Slojevi provjere valjanosti</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/hr/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako iz proizvodne specifikacije napraviti implementacijski plan</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/hr/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako pretvoriti specifikaciju proizvoda u plan implementacije</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../blog/hr/spec-driven-development-in-let-books.html"><span>Razvoj vođen specifikacijom u Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/hr/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kada je demo dokaz, a kada nije</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/hr/documentation-is-part-of-the-product.html"><span>Dokumentacija je dio proizvoda</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/hr/spec-driven-development-in-let-books.html"><span>Razvoj vođen specifikacijom u Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/hr/spec-driven-development-for-ai-projects.html"><span>Razvoj vođen specifikacijom za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/hr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledavati AI-podržani rad prema specifikaciji</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/hr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledavati rad uz podršku AI-ja prema specifikaciji</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/hr/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održati usklađenost specifikacije, dokumentacije, demoa i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../learning/hr/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postupno dodavati validacijska pravila i CI vrata</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../wiki/hr/product-specification.html"><span>Proizvodna specifikacija</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/hr/product-specification.html"><span>Specifikacija proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/hr/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/hr/demo-spec-alignment.html"><span>Usklađenost između dema i specifikacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/hr/demo-and-specification-alignment.html"><span>Usklađenost demoa i specifikacije</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/hr/ai-assisted-implementation.html"><span>Implementacija uz AI podršku</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/hr/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/hr/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>
             </div>
@@ -194,11 +230,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © suradnici na Let Books. Ponovna uporaba slijedi licencu repozitorija osim ako stranica ne navodi drukčije.</p>
             <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog sučelja potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../hr/index.html">Pregled</a>
+              <a href="../../topics/hr/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -209,6 +247,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Autorska prava © suradnici na Let Books. Ponovna uporaba slijedi licencu repozitorija osim ako stranica ne navodi drukčije.</span>
+            <span>Rani alfa prototip. Dokumentacija i tekst korisničkog sučelja potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

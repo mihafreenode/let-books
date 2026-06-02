@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Како постепено да се додаваат правила за валидација и CI ограничувања | LetBooks</title>
-    <meta name="description" content="Овој водич објаснува како валидацијата и CI да се зајакнуваат постепено наместо одеднаш.">
+    <meta name="description" content="Овој водич објаснува како постепено да се додаваат правила за валидација и CI проверки за проектот да може да ја подобрува доследноста и да го намалува отстапувањето без обид сè да се автоматизира одеднаш.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Како постепено да се додаваат правила за валидација и CI ограничувања | LetBooks">
-    <meta property="og:description" content="Овој водич објаснува како валидацијата и CI да се зајакнуваат постепено наместо одеднаш.">
+    <meta property="og:description" content="Овој водич објаснува како постепено да се додаваат правила за валидација и CI проверки за проектот да може да ја подобрува доследноста и да го намалува отстапувањето без обид сè да се автоматизира одеднаш.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Како постепено да се додаваат правила за валидација и CI ограничувања | LetBooks">
-    <meta name="twitter:description" content="Овој водич објаснува како валидацијата и CI да се зајакнуваат постепено наместо одеднаш.">
+    <meta name="twitter:description" content="Овој водич објаснува како постепено да се додаваат правила за валидација и CI проверки за проектот да може да ја подобрува доследноста и да го намалува отстапувањето без обид сè да се автоматизира одеднаш.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="mk">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/mk/index.html">Блог</a>
             <a class="nav-link" href="../../learning/mk/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/mk/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/mk/index.html">Теми</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Како постепено да се додаваат правила за валидација и CI ограничувања</span>
             </nav>
             <h1>Како постепено да се додаваат правила за валидација и CI ограничувања</h1>
-          <p class="content-page-summary">Овој водич објаснува како валидацијата и CI да се зајакнуваат постепено наместо одеднаш.</p>
+          <div class="content-page-meta">
+            <span>Материјали за учење</span>
+            <span>Македонски</span>
+          </div>
+          <p class="content-page-summary">Овој водич објаснува како постепено да се додаваат правила за валидација и CI проверки за проектот да може да ја подобрува доследноста и да го намалува отстапувањето без обид сè да се автоматизира одеднаш.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теми:</span>
               <span class="content-tag">CI/CD</span>
@@ -100,15 +116,135 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="модел-на-зрелост">Модел на зрелост</h2>
+<h2 id="зошто-е-важно-постепеното-воведување">Зошто е важно постепеното воведување</h2>
+<p class="lead">Тимовите често знаат дека им треба посилна валидација, но прават една од две грешки.</p>
+<p>Или предолго ги оставаат проверките на квалитетот неформални, или се обидуваат одеднаш да воведат голем и крут CI систем и со тоа создаваат фрустрација.</p>
+<p>Постепениот пристап функционира подобро.</p>
+<p>Тој му овозможува на проектот со текот на времето да ги претвора повторливите очекувања од прегледите во повторливи проверки.</p>
+<h2 id="почнете-од-повторливите-грешки">Почнете од повторливите грешки</h2>
+<p>Најдобрите правила за валидација обично почнуваат како повторливи наоди во човечките прегледи.</p>
+<p>Прашајте:</p>
+<ul>
+<li>кои грешки постојано се случуваат</li>
+<li>кои правила лесно се забораваат</li>
+<li>која структура мора да остане доследна низ целиот репозиториум</li>
+<li>кои проверки на квалитетот би им заштедиле време на рецензентите</li>
+</ul>
+<p>Ако истиот проблем се појавува повеќепати, тоа е добар кандидат за автоматизација.</p>
+<h2 id="валидацијата-треба-да-го-следи-синџирот-на-авторитет">Валидацијата треба да го следи синџирот на авторитет</h2>
+<p>Правилата за валидација треба да ги зацврстуваат документираните очекувања, а не да ги заменуваат.</p>
+<p>Тоа значи:</p>
+<ul>
+<li>спецификацијата го дефинира правилото</li>
+<li>документацијата го објаснува правилото</li>
+<li>валидацијата го проверува правилото каде што е практично</li>
+<li>CI доследно ја извршува валидацијата</li>
+</ul>
+<p>Така проектот не почнува да спроведува правила за кои всушност никогаш не било одлучено.</p>
+<h2 id="корисен-модел-на-зрелост">Корисен модел на зрелост</h2>
+<h3 id="фаза-1-рачна-контролна-листа">Фаза 1: рачна контролна листа</h3>
+<p>Почнете така што експлицитно ќе го именувате правилото.</p>
+<p>Примери:</p>
+<ul>
+<li>секој нов текст што го гледа корисникот мора да може да се локализира</li>
+<li>документацијата мора да ја раздвојува тековната состојба од идните планови</li>
+<li>новите јавни статии мора да се повикуваат на спецификации и документација, а не на изворни датотеки</li>
+</ul>
+<p>Во оваа фаза правилото е реално, но сè уште го спроведуваат луѓе.</p>
+<h3 id="фаза-2-лесна-локална-валидација">Фаза 2: лесна локална валидација</h3>
+<p>Додајте мала скрипта или структурирана проверка што соработниците можат да ја извршат локално.</p>
+<p>Примери:</p>
+<ul>
+<li>откривање на недостасувачки клучеви за локализација</li>
+<li>проверки за присуство на задолжителни датотеки</li>
+<li>валидација на генерирање метаподатоци</li>
+<li>проверки за разрешување врски</li>
+</ul>
+<p>Оваа фаза ги намалува избегливите грешки уште пред CI воопшто да се изврши.</p>
+<h3 id="фаза-3-видливост-во-ci">Фаза 3: видливост во CI</h3>
+<p>Извршете ја проверката во CI, дури и ако на почетокот не е блокирачка.</p>
+<p>Ова му дава на тимот видливост колку често правилото паѓа и дали самата проверка треба да се доработи.</p>
+<h3 id="фаза-4-блокирачко-ci-ограничување">Фаза 4: блокирачко CI ограничување</h3>
+<p>Откако правилото ќе стане стабилно и разбрано, направете го задолжително.</p>
+<p>Во тој момент проектот преминува од неформално очекување во спроведлив стандард.</p>
+<h2 id="што-прво-да-се-автоматизира">Што прво да се автоматизира</h2>
+<p>Добри рани кандидати обично се:</p>
+<ul>
+<li>структурна доследност</li>
+<li>задолжителни датотеки</li>
+<li>целосност на локализацијата</li>
+<li>исправност на форматирањето или синтаксата</li>
+<li>скршени внатрешни врски</li>
+<li>забранети уреднички повикувања</li>
+</ul>
+<p>Кај повеќејазичното објавување третирајте ја кориснички видливата содржина со измешани јазици како едно од првите CI ограничувања со висока вредност. Страница со локализиран наслов, но англиско резиме или англиски ознаки, не е делумно успешна. Таа е нецелосна.</p>
+<p>Овие проверки обично се евтини, објективни и вредни.</p>
+<h2 id="што-не-треба-прерано-да-се-наметнува">Што не треба прерано да се наметнува</h2>
+<p>Некои проверки се вредни, но можеби им треба време пред да станат строги ограничувања.</p>
+<p>Примери:</p>
+<ul>
+<li>проверка на правопис на многу јазици</li>
+<li>проверки на снимки од екран или визуелни регресии</li>
+<li>проверки на пристапност кога подесувањето сè уште трае</li>
+<li>стилски или јазични правила што сè уште не се стабилни</li>
+</ul>
+<p>Овие можат да почнат како советодавни сигнали пред да станат задолжителни.</p>
+<h2 id="примери-од-let-books">Примери од Let Books</h2>
+<p>Репозиториумот веќе документира неколку модели на валидација, вклучувајќи:</p>
+<ul>
+<li>основно тестирање на локализацијата</li>
+<li>валидација на JSON синтакса</li>
+<li>проверки за задолжителни датотеки</li>
+<li>генерирање SEO метаподатоци</li>
+<li>опционален spellcheck и linting</li>
+<li>автоматизација на објавување</li>
+</ul>
+<p>Документацијата и стилските водичи исто така дефинираат уреднички правила што со текот на времето можат да станат цели за валидација, како што е користењето спецификации и документација како канонски докази за јавни статии.</p>
+<p>Тоа го прави Let Books добар пример за постепено воведување наместо за процес сè-одеднаш.</p>
+<h2 id="практичен-тек-за-претворање-правило-во-проверка">Практичен тек за претворање правило во проверка</h2>
+<p>Користете го овој образец кога додавате ново правило за валидација:</p>
 <ol type="1">
-<li>рачни правила</li>
-<li>локални проверки</li>
-<li>видливост во CI</li>
-<li>задолжителни CI правила</li>
+<li>идентификувајте го повторливиот проблем во прегледите</li>
+<li>јасно запишете го правилото во документација или насоки</li>
+<li>додајте локална скрипта или проверка ако е практично</li>
+<li>извршете ја во CI како видлива повратна информација</li>
+<li>направете ја блокирачка дури кога ќе стане стабилна</li>
 </ol>
-<h2 id="правило">Правило</h2>
-<p class="lead">Прво запиши правило, потоа проверувај локално, потоа направи го видливо во CI, и дури потоа задолжително.</p>
+<p>Ова создава помалку триење отколку воведување строга капија пред тимот да го разбере правилото.</p>
+<h2 id="прашања-што-треба-да-се-постават-пред-додавање-ограничување">Прашања што треба да се постават пред додавање ограничување</h2>
+<ol type="1">
+<li>Дали правилото е јасно документирано?</li>
+<li>Дали проверката е доволно сигурна за да ѝ се верува?</li>
+<li>Дали соработниците ќе разберат како да ги поправат неуспесите?</li>
+<li>Дали вредноста на проверката го оправдува триењето што го воведува?</li>
+<li>Дали прво треба да биде само предупредување пред да стане задолжителна?</li>
+</ol>
+<h2 id="на-проектите-со-помош-од-ai-ова-им-треба-уште-повеќе">На проектите со помош од AI ова им треба уште повеќе</h2>
+<p>AI го зголемува обемот на промени и брзината на промена. Тоа значи повеќе можности за недоследност.</p>
+<p>Затоа брзата повратна информација е уште повредна. Практичното прашање често не е дали AI може да произведе совршен прв обид. Покорисно прашање е дали околината може сигурно да го препознае следниот проблем што треба да се реши.</p>
+<p>Валидацијата и CI не се тука за да ги забават тимовите. Тие се тука за брзината да не ги избрише важните граници.</p>
+<p>Во работа водена од спецификација, целта не е максимална автоматизација. Целта е сигурно зацврстување на правилата што се најважни.</p>
+<h2 id="трајната-поука">Трајната поука</h2>
+<p>Најсилните системи за валидација обично не се појавуваат целосно оформени. Тие растат така што повторливата човечка проценка ја претвораат во документирани, прегледливи и спроведливи проверки.</p>
+<p>Овој постепен пат често е најреалниот начин проектот да стане построг без да стане кршлив.</p>
+<h2 id="контролна-листа-за-поправки-од-изворот-нагоре">Контролна листа за поправки од изворот нагоре</h2>
+<p>Кога правило за валидација ќе падне:</p>
+<ol type="1">
+<li>прво прегледајте го изворниот Markdown</li>
+<li>потоа прегледајте ги локализираните метаподатоци</li>
+<li>прегледајте ги влезовите за генерирање и регистрите</li>
+<li>повторно генерирајте ги артефактите</li>
+<li>прегледајте го генерираниот HTML дури по проверките на ниво на извор</li>
+</ol>
+<p>Не крпете генериран излез ако изворната локализација е нецелосна.</p>
+<h2 id="дополнително-читање">Дополнително читање</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>how-to-review-ai-assisted-work-against-the-spec.md</code></li>
+<li><code>../wiki/mk/spec-driven-development.md</code></li>
+<li><code>../blog/mk/documentation-is-part-of-the-product.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -132,23 +268,30 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Валидација</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Развој воден од спецификации</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/mk/how-to-run-localization-qa-in-ci.html"><span>Како да спроведувате локализациски QA во CI</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/mk/validation-layers.html"><span>Слоеви на валидација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/validation-layers.html"><span>Слоеви за валидација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/validation-layers.html"><span>Слоеви на валидација</span><span class="topic-menu__meta">Теми</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../wiki/mk/documentation-validation-beyond-linting.html"><span>Валидација на документација надвор од linting</span><span class="topic-menu__meta">Вики</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../blog/mk/spec-driven-development-for-ai-projects.html"><span>Развој воден од спецификации за AI проекти</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/spec-driven-development-in-let-books.html"><span>Развој воден од спецификации во Let Books</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Кога демото е доказ, а кога не е</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/documentation-is-part-of-the-product.html"><span>Документацијата е дел од производот</span><span class="topic-menu__meta">Блог</span></a>
-                  <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржи усогласеност меѓу спецификација, документација, демо и код</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува AI-поддржана работа според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/mk/implementation-guidance.html"><span>Имплементациски насоки</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува работа со помош на AI според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../wiki/mk/implementation-guidance.html"><span>Упатство за имплементација</span><span class="topic-menu__meta">Вики</span></a>
                   <a href="../../wiki/mk/markdown-in-product-development.html"><span>Markdown во развој на производ</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој воден од спецификации</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/demo-and-specification-alignment.html"><span>Усогласеност меѓу демо и спецификација</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/ai-assisted-implementation.html"><span>Имплементација со AI-поддршка</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
               </div>
             </div>
@@ -162,11 +305,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</p>
+            <p class="footer-note">Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</p>
             <p class="footer-microcopy">Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../mk/index.html">Преглед</a>
+              <a href="../../topics/mk/index.html">Теми</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -177,6 +322,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</span>
+            <span>Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

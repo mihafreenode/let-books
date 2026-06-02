@@ -10,4 +10,5 @@ Esta carpeta contiene la versión en español de la documentación principal de 
 
 - [Blog](../blog/es/)
 - [Learning](../learning/es/)
+- [Topics](../topics/es/)
 - [Wiki](../wiki/es/)

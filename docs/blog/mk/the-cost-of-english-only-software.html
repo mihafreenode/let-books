@@ -42,6 +42,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="blog" data-locale="mk">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/mk/index.html">Блог</a>
             <a class="nav-link" href="../../learning/mk/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/mk/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/mk/index.html">Теми</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../blog/en/the-cost-of-english-only-software.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,6 +103,10 @@
               <span aria-current="page">Цената на софтвер само на англиски</span>
             </nav>
             <h1>Цената на софтвер само на англиски</h1>
+          <div class="content-page-meta">
+            <span>Блог</span>
+            <span>Македонски</span>
+          </div>
           <p class="content-page-summary">Подразбираните поставки само на англиски можат на градителите да им изгледаат евтино, но трошокот за разбирање, учество и одржување го префрлаат на сите други.</p>
             <hr class="content-header-divider">
           </header>
@@ -134,19 +150,28 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI испорака</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="related-let-books-menu">Let Books</button>
-                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Документација</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Донација на книги</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Усогласеност на демото</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува AI-поддржана работа според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html"><span>Како да се напише спецификација што AI може да ја следи</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува работа со помош на AI според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                </div>
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено да се додаваат правила за валидација и CI ограничувања</span><span class="topic-menu__meta">Материјали за учење</span></a>
                 </div>
                 <div class="topic-menu" id="related-let-books-menu" data-topic-menu="related-let-books" hidden>
                   <a href="../../wiki/mk/let-books-localization-lessons-learned.html"><span>Let Books Научени лекции за локализација</span><span class="topic-menu__meta">Вики</span></a>
                 </div>
-                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
-                  <a href="../../wiki/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Вики</span></a>
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../topics/mk/edition-vs-physical-copy.html"><span>Издание наспроти физички примерок</span><span class="topic-menu__meta">Теми</span></a>
+                  <a href="../../topics/mk/cataloging.html"><span>Каталогизација</span><span class="topic-menu__meta">Теми</span></a>
+                </div>
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../wiki/mk/demo-spec-alignment.html"><span>Усогласеност меѓу демото и спецификацијата</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/demo-and-specification-alignment.html"><span>Усогласеност меѓу демо и спецификација</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
               </div>
             </div>
@@ -160,11 +185,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</p>
+            <p class="footer-note">Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</p>
             <p class="footer-microcopy">Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../mk/index.html">Преглед</a>
+              <a href="../../topics/mk/index.html">Теми</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -175,6 +202,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</span>
+            <span>Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

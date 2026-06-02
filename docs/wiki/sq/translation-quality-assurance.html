@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sigurimi i cilësisë së përkthimit | LetBooks</title>
-    <meta name="description" content="Përkthimi QA kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
+    <meta name="description" content="QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Sigurimi i cilësisë së përkthimit | LetBooks">
-    <meta property="og:description" content="Përkthimi QA kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
+    <meta property="og:description" content="QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/translation-quality-assurance.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sigurimi i cilësisë së përkthimit | LetBooks">
-    <meta name="twitter:description" content="Përkthimi QA kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
+    <meta name="twitter:description" content="QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sq">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
             <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/translation-quality-assurance.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,76 +103,114 @@
               <span aria-current="page">Sigurimi i cilësisë së përkthimit</span>
             </nav>
             <h1>Sigurimi i cilësisë së përkthimit</h1>
-          <p class="content-page-summary">Përkthimi QA kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.</p>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">Cilësia e përkthimit</span>
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="kontrollet-e-zakonshme">Kontrollet e zakonshme</h2>
+<h2 id="kontrolle-të-zakonshme">Kontrolle të zakonshme</h2>
 <ul>
 <li>Mungojnë përkthimet</li>
 <li>Rrjedhje angleze</li>
+<li>Plotësia e lokalizimit me pamje nga lexuesi</li>
 <li>mospërputhjet e mbajtësve të vendeve</li>
 <li>lidhje të prishura</li>
 <li>rrëshqitje e fjalorit</li>
 <li>Mbulimi i tekstit të aksesueshmërisë</li>
 <li>pamje e ekranit dhe barazia e diagramit</li>
 </ul>
-<h2 id="provat-e-rishikimit-njerëzor">Provat e rishikimit njerëzor</h2>
-<p class="lead">Përkthimi QA duhet gjithashtu të ruajë të dhëna të shkurtra të rishikimit njerëzor për korrigjimet përfaqësuese të ndihmuara nga AI.</p>
+<h2 id="vlerësuesi-i-lokalizimit-me-pamje-nga-lexuesi">Vlerësuesi i lokalizimit me pamje nga lexuesi</h2>
+<p class="lead">Një klasë e verifikuesit duhet të dështojë në mënyrë eksplicite CI kur një faqe shfaqet e lokalizuar, por ende ekspozon përmbajtjen e gjuhës burimore që përballet me lexuesin.</p>
+<p>Shembuj që duhet të dështojnë:</p>
+<ul>
+<li>titull i lokalizuar me përmbledhje në anglisht</li>
+<li>artikull i lokalizuar me etiketa në anglisht</li>
+<li>artikull i lokalizuar me tituj ose lista në anglisht</li>
+<li>artikull i lokalizuar me thirrje ose titra në anglisht</li>
+<li>artikull i lokalizuar me etiketa diagrame në anglisht ose tekst alt</li>
+<li>karta me përmbajtje të lidhur me gjuhë të përzier</li>
+</ul>
+<p>Ky është një kusht dështimi, jo thjesht një paralajmërim, sepse lexuesit i përjetojnë faqe të tilla si dukshëm të papërfunduara.</p>
+<h2 id="auditimi-i-klasës-së-defektit">Auditimi i klasës së defektit</h2>
+<p>QA e përkthimit duhet të mbajë klasa të qarta defektesh me:</p>
+<ul>
+<li>përshkrim</li>
+<li>numërimi i dukurive</li>
+<li>shkaku rrënjësor</li>
+<li>Mbulimi i verifikuesit</li>
+<li>rreziku i përsëritjes</li>
+<li>plani i mbylljes</li>
+</ul>
+<p>Kategoritë e kërkuara përfshijnë:</p>
+<ul>
+<li>përmbledhje të papërkthyera</li>
+<li>trupa të papërkthyer</li>
+<li>botimi i draftit të vendmbajtësit</li>
+<li>meta të dhëna të papërkthyera</li>
+<li>botim në gjuhë të përzier</li>
+<li>klasat e zbuluara në të ardhmen</li>
+</ul>
+<p>Një klasë mbyllet vetëm kur numërimi i saj arrin zero dhe CI e pengon atë të kthehet pa dështim.</p>
+<h2 id="prova-e-rishikimit-njerëzor">Prova e rishikimit njerëzor</h2>
+<p>Cilësia e Përkthimit duhet gjithashtu të ruajë të dhëna të shkurtra të rishikimit njerëzor për korrigjimet përfaqësuese të asistuara nga AI.</p>
 <p>Fushat minimale:</p>
 <ul>
 <li>teksti origjinal</li>
 <li>teksti i korrigjuar</li>
 <li>kategori gabimi</li>
-<li>hipoteza e shkakut rrënjësor
-[[20]]]</li>
+<li>hipoteza e shkakut rrënjësor</li>
 <li>arsyetimi recensues</li>
 </ul>
-<p>[[21]]]
-Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e krijuara nga AI mund të kërkojnë rishikim nga folësi amtare për të korrigjuar çështjet delikate në gramatikë, modalitet, terminologji dhe regjistër specifik të domenit. Këto çështje shpesh janë të vështira për t’u zbuluar vetëm nëpërmjet matjeve të automatizuara të cilësisë.</p>
-<h2 id="section">[[22]]]</h2>
-<p>Taksonomia e zakonshme e gabimeve të përkthimit AI</p>
+<p>Gjetjet e rishikimit nga folësit vendas duhet të ruhen si një korpus në rritje, jo si shënime të izoluara të njëhershme. Gjetjet e përsëritura duhet të ushqehen me dizajnin e verifikuesit, udhëzimet e kontribuesve dhe udhëzimet e ardhshme të agjentëve të AI.</p>
+<p>Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e krijuara nga AI mund të kërkojnë rishikim nga folësi amtare për të korrigjuar çështjet delikate në gramatikë, modalitet, terminologji dhe regjistër specifik të domenit. Këto çështje shpesh janë të vështira për t’u zbuluar vetëm nëpërmjet matjeve të automatizuara të cilësisë.</p>
+<h2 id="taksonomia-e-gabimeve-të-zakonshme-të-përkthimit-të-ai">Taksonomia e gabimeve të zakonshme të përkthimit të AI</h2>
 <ul>
-<li>gramatikë
-[[24]]]</li>
-<li>modaliteti
-[[25]]]</li>
-<li>terminologjia
-[[26]]]</li>
-<li>regjistrohuni
-[[27]]]</li>
-<li>rrjedhshmëri
-[[28]]]</li>
-<li>përkthim fjalë për fjalë
-[[29]]]</li>
-<li>paqartësi
-[[30]]]</li>
-<li>humbje e kontekstit
-[[31]]]</li>
-<li>renditja e fjalëve
-[[32]]]</li>
-<li>bashkëvendosje
-[[33]]]</li>
-<li>shkrimi ose drejtshkrimi
-[[34]]]</li>
-<li>formulimi i politikave të domenit
-[[35]]]</li>
+<li>gramatikë</li>
+<li>modaliteti</li>
+<li>terminologjia</li>
+<li>regjistrohuni</li>
+<li>rrjedhshmëri</li>
+<li>përkthim fjalë për fjalë</li>
+<li>paqartësi</li>
+<li>humbje e kontekstit</li>
+<li>renditja e fjalëve</li>
+<li>bashkëvendosje</li>
+<li>shkrimi ose drejtshkrimi</li>
+<li>formulimi i politikave të domenit</li>
 <li>formulimi i aksesueshmërisë</li>
 </ul>
-<h2 id="section-1">[[36]]]</h2>
-<p>Faqe të ngjashme</p>
-<p>[[37]]]
-- <code>localization-ci-cd.md</code>
-[[38]]]
-- <code>translation-memory-and-glossaries.md</code>
-[[39]]]
-- <code>../style-guide/localization/ai-translation-review-records.md</code>
-[[40]]]
-- <code>../style-guide/localization/llm-translation-benchmark-fixtures.md</code>
-- <code>../learning/how-to-run-localization-qa-in-ci.md</code></p>
+<h2 id="rezultati-i-lehtë-i-pikës">Rezultati i lehtë i pikës</h2>
+<p>Për vlerësimin e përsëritshëm të përkthimit të AI, përdorni një rubrikë të lehtë 0-3 në vend që të mbështeteni vetëm në gjykimin kalim/dështim.</p>
+<p>Dimensionet e rekomanduara:</p>
+<ul>
+<li>do të thotë saktësi</li>
+<li>gramatika dhe rrjedhshmëria</li>
+<li>terminologjia dhe përshtatja e domenit</li>
+<li>regjistrimi dhe stili</li>
+<li>rishikoni përpjekjet</li>
+</ul>
+<p>Etiketat e rekomanduara të lëshimit:</p>
+<ul>
+<li>bllokues</li>
+<li>rishikim i madh</li>
+<li>rishikim i vogël</li>
+<li>gati me shenjë rishikimi</li>
+</ul>
+<p>Kjo krijon të dhëna miqësore me kartën e rezultateve pa kërkuar një kornizë të matjes së lokalizimit të peshave të rënda.</p>
+<h2 id="faqe-të-ngjashme">Faqe të ngjashme</h2>
+<ul>
+<li><code>localization-ci-cd.md</code></li>
+<li><code>translation-memory-and-glossaries.md</code></li>
+<li><code>../../style-guide/localization/ai-translation-review-records.md</code></li>
+<li><code>../../style-guide/localization/llm-translation-benchmark-fixtures.md</code></li>
+<li><code>../../learning/sq/how-to-run-localization-qa-in-ci.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -203,11 +253,13 @@ Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e kr
           <div>
             <h3>Let Books</h3>
             <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
             <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
               <a href="../../index.html">Faqja kryesore</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -218,6 +270,17 @@ Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e kr
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</span>
+            <span>Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

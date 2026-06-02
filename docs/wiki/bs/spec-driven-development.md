@@ -1,41 +1,70 @@
 ---
-title: "Razvoj vođen specifikacijom"
+title: "Razvoj vođen specifikacijama"
+summary: >-
+  Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Razvoj vođen specifikacijom
+# Razvoj vođen specifikacijama
 
 ## Sažetak
 
-Razvoj vođen specifikacijom pristup je u kojem eksplicitne proizvodne i procesne definicije vode implementaciju, dokumentaciju, pregled i provjeru.
+Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.
 
-## Zašto je važan
+## Definicija
 
-AI povećava brzinu isporuke, ali može povećati i proizvodni odmak kada namjera nije dovoljno jasna.
+U ovom pristupu, specifikacija nije samo početni artefakt planiranja. Služi kao stalna referenca za:
 
-Specifikacija timu daje stabilan izvor istine za:
-
-- svrhu proizvoda
+- svrha proizvoda
 - granice opsega
-- traženo ponašanje
-- kriterije prihvatanja
-- standard pregleda
+- potrebno ponašanje
+- kriterijumi prihvatanja
+- revizija standarda
+
+## Zašto je to važno u radu uz pomoć umjetne inteligencije
+
+AI povećava brzinu isporuke, ali također može povećati pomak proizvoda kada je namjera nejasna.
+
+Razvoj vođen specifikacijama pomaže dajući timovima stabilan izvor istine koji se može pregledati, ažurirati i koristiti za procjenu generisanog rezultata.
 
 ## Tipični slojevi
 
-- proizvodna specifikacija
-- implementacijske smjernice
-- dokumentacija trenutnog stanja
+Uobičajeni slojevi u sistemu vođenom specifikacijama uključuju:
+
+- specifikacija proizvoda
+- uputstvo za implementaciju
+- dokumentacija o trenutnom stanju
 - demo ili ponašanje aplikacije
-- testovi i validacija
-- CI/CD provedba
+- pravila i testove validacije
+- Provedba CI/CD
 
-## Česta greška
+## Uobičajeni način kvara
 
-Česta greška je da najvidljiviji artefakt postane zadani izvor istine, na primjer posljednji upit, trenutni prototip ili zastarjela stranica dokumentacije.
+Uobičajeni način kvara je dopuštanje da najvidljiviji artefakt postane zadani izvor istine.
 
-## Kontekst Let Books
+primjeri:
 
-U Let Books ovaj pristup podržavaju `AGENTS.md`, `AGENTS-Implementation.md`, `README.md`, `docs/Development.md` i `docs/Deployment.md`.
+- najnoviji upit
+- trenutni prototip
+- trenutna prečica za implementaciju
+- zastarjela stranica sa dokumentacijom
+
+Specifično vođen razvoj smanjuje taj rizik tako što eksplicitno čini predviđeni lanac ovlaštenja.
+
+## Let Books kontekst
+
+U Let Books, razvoj vođen specifikacijama je podržan od:
+
+- `AGENTS.md`
+- `AGENTS-Implementation.md`
+- `README.md`
+- `docs/Development.md`
+- `docs/Deployment.md`
+
+## Povezane stranice
+
+- `demo-spec-alignment.md`
+- `../../learning/bs/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../blog/bs/spec-driven-development-for-ai-projects.md`

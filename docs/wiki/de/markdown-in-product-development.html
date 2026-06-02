@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Markdown In Der Produktentwicklung | LetBooks</title>
-    <meta name="description" content="Markdown ist ein praktisches Format, um Produktabsicht, Dokumentation, Leitfäden und Evidenz in einer Form zu speichern, die überprüfbar, portabel, diffbar und leicht mit Validierungsabläufen verknüpfbar ist.">
+    <title>Markdown in der Produktentwicklung | LetBooks</title>
+    <meta name="description" content="Markdown ist ein praktisches Format zum Speichern von Produktabsichten, Dokumentationen, Leitfäden und Beweisen in einer Form, die überprüfbar, portierbar, differenzierbar und einfach mit Validierungsworkflows zu verbinden ist.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/de/markdown-in-product-development.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Markdown In Der Produktentwicklung | LetBooks">
-    <meta property="og:description" content="Markdown ist ein praktisches Format, um Produktabsicht, Dokumentation, Leitfäden und Evidenz in einer Form zu speichern, die überprüfbar, portabel, diffbar und leicht mit Validierungsabläufen verknüpfbar ist.">
+    <meta property="og:title" content="Markdown in der Produktentwicklung | LetBooks">
+    <meta property="og:description" content="Markdown ist ein praktisches Format zum Speichern von Produktabsichten, Dokumentationen, Leitfäden und Beweisen in einer Form, die überprüfbar, portierbar, differenzierbar und einfach mit Validierungsworkflows zu verbinden ist.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/de/markdown-in-product-development.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Markdown In Der Produktentwicklung | LetBooks">
-    <meta name="twitter:description" content="Markdown ist ein praktisches Format, um Produktabsicht, Dokumentation, Leitfäden und Evidenz in einer Form zu speichern, die überprüfbar, portabel, diffbar und leicht mit Validierungsabläufen verknüpfbar ist.">
+    <meta name="twitter:title" content="Markdown in der Produktentwicklung | LetBooks">
+    <meta name="twitter:description" content="Markdown ist ein praktisches Format zum Speichern von Produktabsichten, Dokumentationen, Leitfäden und Beweisen in einer Form, die überprüfbar, portierbar, differenzierbar und einfach mit Validierungsworkflows zu verbinden ist.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="de">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/markdown-in-product-development.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/de/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Markdown In Der Produktentwicklung</span>
+              <span aria-current="page">Markdown in der Produktentwicklung</span>
             </nav>
-            <h1>Markdown In Der Produktentwicklung</h1>
-          <p class="content-page-summary">Markdown ist ein praktisches Format, um Produktabsicht, Dokumentation, Leitfäden und Evidenz in einer Form zu speichern, die überprüfbar, portabel, diffbar und leicht mit Validierungsabläufen verknüpfbar ist.</p>
+            <h1>Markdown in der Produktentwicklung</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Markdown ist ein praktisches Format zum Speichern von Produktabsichten, Dokumentationen, Leitfäden und Beweisen in einer Form, die überprüfbar, portierbar, differenzierbar und einfach mit Validierungsworkflows zu verbinden ist.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">Dokumentation</span>
@@ -101,62 +117,120 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="warum-markdown-wichtig-ist">Warum Markdown wichtig ist</h2>
-<p class="lead">Markdown wird oft nur als Schreibbequemlichkeit betrachtet. In spezifikationsgetriebener Arbeit ist es nützlicher als das.</p>
-<p>Es gibt Teams einen leichten Weg, Produktwissen nah am Repository zu halten, ohne es in proprietären Werkzeugen oder schwer prüfbaren Dokumenten zu verstecken.</p>
+<p class="lead">Markdown wird oft als Schreiberleichterung behandelt. Bei spezifikationsgesteuerter Arbeit ist es noch nützlicher.</p>
+<p>Es bietet Teams eine einfache Möglichkeit, Produktwissen in der Nähe des Repositorys aufzubewahren, ohne es in proprietären Tools oder schwer zu überprüfenden Dokumenten zu verstecken.</p>
 <p>Das ist wichtig für:</p>
 <ul>
 <li>Spezifikationen</li>
-<li>Implementierungsleitlinien</li>
-<li>Dokumentation des aktuellen Zustands</li>
+<li>Umsetzungsanleitung</li>
+<li>Dokumentation des aktuellen Standes</li>
 <li>Tutorials und Wiki-Seiten</li>
-<li>Quellenkarten und Evidenznotizen</li>
+<li>Quellenkarten und Beweisnotizen</li>
 </ul>
-<h2 id="wofür-markdown-gut-geeignet-ist">Wofür Markdown gut geeignet ist</h2>
-<p>Markdown funktioniert gut, wenn Inhalte:</p>
+<h2 id="was-markdown-gut-kann">Was Markdown gut kann</h2>
+<p>Markdown funktioniert gut, wenn der Inhalt sein muss:</p>
 <ul>
-<li>im Rohzustand lesbar sein sollen</li>
-<li>versioniert werden sollen</li>
-<li>in Diffs leicht zu prüfen sein sollen</li>
-<li>dokumentübergreifend verlinkbar sein sollen</li>
-<li>zwischen Umgebungen portabel sein sollen</li>
-<li>später in andere Publishing-Formate umwandelbar sein sollen</li>
+<li>in Rohform lesbar</li>
+<li>versioniert</li>
+<li>Einfache Überprüfung in Diffs</li>
+<li>Dokumentübergreifend verlinkbar</li>
+<li>umgebungsübergreifend tragbar</li>
+<li>Später in andere Veröffentlichungsformate konvertierbar</li>
 </ul>
-<p>Das macht es besonders nützlich für Produkt- und Dokumentationssysteme, die Rückverfolgbarkeit brauchen.</p>
-<h2 id="was-markdown-allein-nicht-leistet">Was Markdown allein nicht leistet</h2>
-<p>Markdown ist nützlich, erzwingt aber keine Korrektheit von selbst.</p>
+<p>Dies macht es besonders nützlich für Produkt- und Dokumentationssysteme, die eine Rückverfolgbarkeit erfordern.</p>
+<h2 id="was-markdown-nicht-alleine-macht">Was Markdown nicht alleine macht</h2>
+<p>Markdown ist nützlich, erzwingt jedoch nicht allein die Korrektheit.</p>
 <p>Es kann nicht allein garantieren:</p>
 <ul>
-<li>dass Inhalte aktuell sind</li>
-<li>dass Aussagen gut belegt sind</li>
-<li>dass die Implementierung zur Dokumentation passt</li>
-<li>dass Terminologie konsistent bleibt</li>
-<li>dass Validierungs- oder CI-Regeln tatsächlich laufen</li>
+<li>dass der Inhalt aktuell ist</li>
+<li>dass die Behauptungen gut begründet sind</li>
+<li>dass die Implementierung mit der Dokumentation übereinstimmt</li>
+<li>Diese Terminologie bleibt konsistent</li>
+<li>dass Validierungs- oder CI-Regeln tatsächlich ausgeführt werden</li>
 </ul>
-<p>Darum sollte Markdown Teil eines größeren Systems sein und nicht mit dem ganzen System verwechselt werden.</p>
-<h2 id="markdown-in-einem-spezifikationsgetriebenen-workflow">Markdown in einem spezifikationsgetriebenen Workflow</h2>
-<p>In einem solchen Workflow ist Markdown am wertvollsten, wenn es innerhalb einer Autoritätskette steht.</p>
+<p>Deshalb sollten Markdown Teil eines umfassenderen Systems sein und nicht mit dem Gesamtsystem verwechselt werden.</p>
+<h2 id="markdown-in-einem-spezifikationsgesteuerten-workflow">Markdown in einem spezifikationsgesteuerten Workflow</h2>
+<p>In einem spezifikationsgesteuerten Workflow ist Markdown am wertvollsten, wenn es innerhalb einer Autoritätskette liegt.</p>
 <p>Zum Beispiel:</p>
 <ol type="1">
 <li>Spezifikationen definieren Produktregeln</li>
-<li>Implementierungsleitlinien definieren taktische Regeln</li>
-<li>Dokumente des aktuellen Zustands erklären, was jetzt existiert</li>
-<li>Quellenkarten verfolgen substanzielle öffentliche Aussagen</li>
+<li>Umsetzungsleitfaden definiert taktische Regeln</li>
+<li>Dokumente zum aktuellen Stand erklären, was jetzt existiert</li>
+<li>Quellkarten zeichnen wesentliche öffentliche Ansprüche nach</li>
 <li>Validierung und CI verstärken stabile Erwartungen</li>
 </ol>
-<p>Markdown ist das Medium, das diese Ebenen sichtbar und überprüfbar hält.</p>
-<h2 id="let-books-kontext">Let-Books-Kontext</h2>
-<p>Das Let-Books-Repository verwendet Markdown bereits für mehrere Ebenen des Produktgedächtnisses, darunter:</p>
+<p>Markdown ist das Medium, das dazu beiträgt, dass diese Ebenen sichtbar und überprüfbar bleiben.</p>
+<h2 id="warum-dies-bei-ki-gestützter-arbeit-wichtig-ist">Warum dies bei KI-gestützter Arbeit wichtig ist</h2>
+<p>KI-Systeme profitieren von einem klaren, zugänglichen Kontext.</p>
+<p>Markdown hilft, weil es:</p>
+<ul>
+<li>leicht zu überprüfen</li>
+<li>einfach zu zitieren</li>
+<li>leicht zu unterscheiden</li>
+<li>Einfach in der Nähe des Implementierungs-Repositorys aufzubewahren</li>
+</ul>
+<p>Das macht es zu einem starken Format für die Produkterinnerung.</p>
+<p>KI macht aber auch eine Einschränkung deutlicher: Wenn die Markdown vage, veraltet oder widersprüchlich sind, kann der Assistent daraus einen schnellen Drift erzeugen. Der Wert liegt also nicht nur im Format, sondern auch in der Beibehaltung des Inhalts.</p>
+<h2 id="markdown-als-agentenführung">Markdown als Agentenführung</h2>
+<p>Einige Markdown-Dokumente mögen wie Tutorials für Menschen aussehen, sie dienen aber auch als operative Anleitung für KI-Agenten.</p>
+<p>Dies ist besonders nützlich, wenn das Dokument über die Erläuterung eines Themas hinausgeht und stattdessen Folgendes erfasst:</p>
+<ul>
+<li>bevorzugte Workflow-Reihenfolge</li>
+<li>Werkzeugauswahl</li>
+<li>Umgebungseinschränkungen</li>
+<li>Eskalationspfade</li>
+<li>Anti-Muster, die es zu vermeiden gilt</li>
+</ul>
+<p>In diesen Fällen ist Markdown mehr als nur eine Erklärung. Es wird zu einer dauerhaften Schnittstelle zwischen Repository-Wissen und Agentenverhalten.</p>
+<h2 id="let-books-beispiele-für-agentenführung">Let Books Beispiele für Agentenführung</h2>
+<h3 id="android-debugging-workflow">Android-Debugging-Workflow</h3>
+<p><code>docs/android-debugging.md</code> ist ein starkes Beispiel.</p>
+<p>Es kann als menschlicher Leitfaden gelesen werden, gibt einem Agenten aber auch konkrete Handlungsanweisungen vor, wie zum Beispiel:</p>
+<ul>
+<li>Bevorzugen Sie physische Android-Geräte gegenüber der Desktop-Emulation für Kamera- und Barcode-Arbeiten</li>
+<li>Bevorzugen Sie das Anhängen von Playwright CDP gegenüber wiederholten Browserstarts</li>
+<li>Unterscheidung der Laufzeit-CDP-Injektion von echten Quell-Patch-Workflows</li>
+<li>Richten Sie zunächst eine Hot-Reload-Infrastruktur ein, wenn der Benutzer telefonische Live-Tests anfordert</li>
+</ul>
+<p>Diese Art von Markdown beschreibt nicht nur eine Domain. Es steuert aktiv den Arbeitsablauf und die Werkzeugauswahl.</p>
+<h3 id="werkzeug--und-umgebungsvorbereitung">Werkzeug- und Umgebungsvorbereitung</h3>
+<p><code>docs/style-guide/publishing/ubuntu-tooling.md</code> ist ein weiteres gutes Beispiel.</p>
+<p>Es liest sich wie eine Dokumentation zur Einrichtung von Mitwirkenden, teilt einem Agenten aber auch mit, welche Tools voraussichtlich vorhanden sind oder für Arbeitsklassen wie die folgenden bevorzugt werden sollten:</p>
+<ul>
+<li>Playwright für UI-Überprüfung und Screenshots</li>
+<li>Hunspell zur Rechtschreibprüfung</li>
+<li>ImageMagick und OCR Tools für visuelle und Schein-Asset-Workflows</li>
+<li>ADB-bezogene Tools für das Android-Debugging</li>
+</ul>
+<p>Diese Art von Markdown hilft einem Agenten, über die erwartete Toolchain nachzudenken, anstatt anhand allgemeiner Standardwerte zu raten.</p>
+<h2 id="praktische-implikation">Praktische Implikation</h2>
+<p>Beim Schreiben von Markdown für ein Repository, das von KI-Agenten verwendet werden kann, ist es hilfreich, beim Schreiben zwei Leser im Hinterkopf zu haben:</p>
+<ul>
+<li>der menschliche Mitwirkende, der einer Erklärung bedarf
+– der Agent, der explizite Workflow- und Tool-Einschränkungen benötigt</li>
+</ul>
+<p>Die besten Dokumente leisten beides.</p>
+<p>Sie bleiben für Menschen lesbare Tutorials oder Leitfäden und sind gleichzeitig spezifisch genug, um das Verhalten von Agenten auf wiederholbare Weise zu steuern.</p>
+<h2 id="let-books-kontext">Let Books Kontext</h2>
+<p>Das Let Books-Repository verwendet Markdown bereits für mehrere Produktspeicherschichten, darunter:</p>
 <ul>
 <li><code>AGENTS.md</code></li>
 <li><code>AGENTS-Implementation.md</code></li>
 <li><code>README.md</code></li>
-<li>READMEs und Leitfäden im <code>docs</code>-Bereich</li>
-<li>Quellenkarten unter <code>docs/sources/</code></li>
+<li>READMEs und Anleitungen für den Dokumentationsbereich</li>
+<li>Quellkarten gemäß <code>docs/sources/</code></li>
 </ul>
-<p>Das ist ein gutes Beispiel dafür, dass Markdown nicht nur für Prosa, sondern auch für repository-weite Koordination, die Struktur öffentlicher Texte und Evidenzverfolgung genutzt wird.</p>
+<p>Dies ist ein gutes Beispiel dafür, dass Markdown nicht nur für Prosa, sondern auch für die Koordination auf Repository-Ebene, die öffentliche Schreibstruktur und die Beweisverfolgung verwendet werden.</p>
 <h2 id="praktische-regel">Praktische Regel</h2>
 <p>Eine nützliche Regel ist einfach:</p>
-<p>Verwenden Sie Markdown, um Produktabsicht sichtbar, überprüfbar und verlinkbar zu machen. Gehen Sie nicht davon aus, dass Markdown allein diese Absicht wahr hält.</p>
+<p>Nutzen Sie Markdown, um die Produktabsicht sichtbar, überprüfbar und verlinkbar zu machen. Gehen Sie nicht davon aus, dass Markdown allein diese Absicht wahr hält.</p>
+<p>Die Wahrheit hängt immer noch davon ab:</p>
+<ul>
+<li>klare Autorität</li>
+<li>aktive Wartung</li>
+<li>Disziplin überprüfen</li>
+<li>Validierung, wo praktisch</li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -189,18 +263,22 @@
                   <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../wiki/de/documentation-traceability.html"><span>Rückverfolgbarkeit Der Dokumentation</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgetriebene Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie man eine Spezifikation schreibt, der KI folgen kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../wiki/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
                   <a href="../../wiki/de/validation-layers.html"><span>Validierungsebenen</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/ai-assisted-implementation.html"><span>KI-gestützte Implementierung</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie man Validierungsregeln und CI-Gates schrittweise hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../wiki/de/product-specification.html"><span>Produktspezifikation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/demo-and-specification-alignment.html"><span>Abgleich von Demo und Spezifikation</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
               </div>
             </div>
@@ -214,11 +292,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
             <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -229,6 +309,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</span>
+            <span>Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

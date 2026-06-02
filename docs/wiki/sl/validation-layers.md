@@ -1,56 +1,93 @@
 ---
-title: "Plasti validacije"
+title: "Plasti za preverjanje veljavnosti"
+summary: >-
+  Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Plasti validacije
+# Plasti za preverjanje veljavnosti
 
 ## Povzetek
 
-Plasti validacije so različni načini, s katerimi projekt preverja, ali se implementacija, dokumentacija in dostavni artefakti še vedno ujemajo z nameravanimi pravili in pričakovanji glede kakovosti.
+Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.
 
 ## Zakaj so plasti pomembne
 
-Nobena posamezna metoda validacije ni dovolj.
+Nobena ena metoda potrjevanja ni dovolj.
 
-- sama dokumentacija ne uveljavlja vedenja
-- sami testi lahko validirajo napačne predpostavke
-- sam CI ne more določiti pravil, ki naj bi jih uveljavljal
+- samo dokumentacija ne uveljavlja vedenja
+- sami testi lahko potrdijo napačne predpostavke
+- CI sama ne more določiti pravil, ki naj bi jih uveljavljala
 
-Večplastni pristop je močnejši, ker vsaka plast zazna drugačen razred odstopanj.
+Večplastni pristop je močnejši, ker vsak sloj ujame drugačen razred zanašanja.
 
-## Pogoste plasti validacije
+## Skupne plasti preverjanja veljavnosti
 
 ### 1. Specifikacija in navodila
 
-Prva plast določi pravilo.
+Prva plast določa pravilo.
+
+Brez tega sloja so kasnejša preverjanja lahko stroga, a poljubna.
 
 ### 2. Ročni pregled
 
-Človeški pregled preveri namen, robne primere in produktni pomen, ki še niso avtomatizirani.
+Človeški pregled preveri namero, robne primere in pomen izdelka, ki morda še ni avtomatiziran.
 
-### 3. Lokalna validacija
+### 3. Lokalno preverjanje
 
-Skripte in strukturirana preverjanja hitro ujamejo ponovljive težave, preden spremembe dosežejo CI.
+Skripti in strukturirana preverjanja hitro odkrijejo ponovljive težave, preden spremembe dosežejo CI.
 
 ### 4. Testi
 
-Izvedljivi testi preverjajo pričakovano vedenje, vendar le, če so usklajeni s specifikacijo.
+Izvedljivi testi preverijo pričakovano vedenje, vendar le, če so usklajeni s specifikacijo.
 
-### 5. CI zapore
+### 5. CI vrata
 
-CI naredi preverjanja ponovljiva in vidna med prispevajočimi ter okolji.
+CI naredi preverjanja ponovljiva in vidna med sodelavci in okolji.
 
-### 6. Preverjanja ob dostavi
+### 6. Preverjanja uvajanja
 
-Poteki dostave potrjujejo, da so zgrajeni artefakti še vedno objavljivi in strukturno smiselni.
+Delovni tokovi uvajanja potrjujejo, da je zgrajene artefakte še vedno mogoče objaviti in so strukturno trdni.
 
-## Kontekst Let Books
+## Kako naj se plasti povezujejo
+
+Plasti naj se medsebojno krepijo v naslednjem vrstnem redu:
+
+- dokumenti in specifikacije določajo pričakovanja
+- pregled razlaga ta pričakovanja v kontekstu
+- validacijski skripti in testi avtomatizirajo stabilne dele pregleda
+- CI te preglede izvaja dosledno
+- uvedba zagotavlja, da se izhod lahko dejansko pošlje
+
+## Dobri zgodnji cilji validacije
+
+Primeri močnih zgodnjih kandidatov vključujejo:
+
+- zahtevana prisotnost datoteke
+- popolnost lokalizacije
+- veljavnost sintakse
+- nedelujoče notranje povezave
+- prepovedano uredniško citiranje
+- uspešnost ustvarjanja metapodatkov
+
+Ti pregledi so ponavadi objektivni in poceni.
+
+## Let Books kontekst
 
 Repozitorij Let Books že dokumentira več plasti, vključno z:
 
-- produktnimi in implementacijskimi pravili v `AGENTS.md` in `AGENTS-Implementation.md`
-- razvojnimi in dostavnimi preverjanji v `docs/Development.md` in `docs/Deployment.md`
-- uredniškimi pravili dokazov v `docs/blog/README.md` in `docs/sources/README.md`
+- pravila o izdelkih in izvajanju v `AGENTS.md` in `AGENTS-Implementation.md`
+- validacija razvoja in uvajanja v `docs/Development.md` in `docs/Deployment.md`
+- pravila o uredniških dokazih v `docs/blog/README.md` in `docs/sources/README.md`
+- učne smernice za postopno uvedbo CI in validacije
+
+Zaradi tega veljavnost postane dokumentiran sistem in ne le prihodnost.
+
+## Sorodne strani
+
+- `documentation-traceability.md`
+- `implementation-guidance.md`
+- `../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.md`
+- `../../blog/sl/documentation-is-part-of-the-product.md`

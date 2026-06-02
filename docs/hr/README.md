@@ -10,4 +10,5 @@ Ova mapa sadrži hrvatsku verziju ključne dokumentacije Let Books.
 
 - [Blog](../blog/hr/)
 - [Learning](../learning/hr/)
+- [Topics](../topics/hr/)
 - [Wiki](../wiki/hr/)

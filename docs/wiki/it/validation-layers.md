@@ -1,90 +1,93 @@
 ---
-title: "Livelli di validazione"
+title: "Livelli di convalida"
+summary: >-
+  I livelli di convalida sono i diversi modi in cui un progetto verifica se l'implementazione, la documentazione e gli artefatti di consegna corrispondono ancora alle regole previste e alle aspettative di qualità.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Livelli di validazione
+# Livelli di convalida
 
 ## Riepilogo
 
-I livelli di validazione sono i diversi modi con cui un progetto controlla se implementazione, documentazione e artefatti di consegna corrispondono ancora alle regole previste e alle aspettative di qualità.
+I livelli di convalida sono i diversi modi in cui un progetto verifica se l'implementazione, la documentazione e gli artefatti di consegna corrispondono ancora alle regole previste e alle aspettative di qualità.
 
-## Perché i livelli contano
+## Perché i livelli sono importanti
 
 Nessun singolo metodo di validazione è sufficiente.
 
-- la sola documentazione non impone il comportamento
-- i soli test possono validare ipotesi sbagliate
-- la sola CI non può definire le regole che dovrebbe applicare
+- La documentazione da sola non impone il comportamento
+- I test da soli possono convalidare le ipotesi errate
+- La CI da sola non può definire le regole che dovrebbe applicare
 
-Un approccio a livelli è più forte perché ogni livello intercetta una classe diversa di deriva.
+Un approccio a strati è più forte perché ogni strato rileva una diversa classe di deriva.
 
-## Livelli di validazione comuni
+## Livelli di convalida comuni
 
-### 1. Specifica e linee guida
+### 1. Specifiche e linee guida
 
 Il primo livello definisce la regola.
 
-Senza questo livello, i controlli successivi possono essere severi ma arbitrari.
+Senza questo livello, i controlli successivi potrebbero essere rigorosi ma arbitrari.
 
 ### 2. Revisione manuale
 
-La revisione umana controlla intenzione, casi limite e significato del prodotto che potrebbero non essere ancora automatizzati.
+La revisione umana verifica l'intento, i casi limite e il significato del prodotto che potrebbe non essere ancora automatizzato.
 
-### 3. Validazione locale
+### 3. Convalida locale
 
-Script e controlli strutturati intercettano problemi rapidi e ripetibili prima che le modifiche arrivino alla CI.
+Gli script e i controlli strutturati rilevano problemi rapidi e ripetibili prima che le modifiche raggiungano il CI.
 
 ### 4. Test
 
-I test eseguibili verificano il comportamento atteso, ma solo quando sono allineati con la specifica.
+I test eseguibili verificano il comportamento previsto, ma solo quando sono allineati con le specifiche.
 
-### 5. Gate CI
+### 5. Porte CI
 
-La CI rende i controlli ripetibili e visibili tra collaboratori e ambienti diversi.
+La CI rende i controlli ripetibili e visibili tra contributori e ambienti.
 
-### 6. Controlli di distribuzione
+### 6. Controlli sull'implementazione
 
-I flussi di distribuzione confermano che gli artefatti generati restano pubblicabili e strutturalmente solidi.
+I flussi di lavoro di distribuzione confermano che gli artefatti creati sono ancora pubblicabili e strutturalmente validi.
 
-## Come dovrebbero relazionarsi i livelli
+## Come dovrebbero relazionarsi gli strati
 
-I livelli dovrebbero rafforzarsi a vicenda in questo ordine:
+Gli strati dovrebbero rinforzarsi a vicenda in ordine:
 
 - documenti e specifiche definiscono le aspettative
-- la revisione interpreta queste aspettative nel contesto
-- script di validazione e test automatizzano le parti stabili della revisione
-- la CI esegue questi controlli in modo coerente
-- la distribuzione assicura che l'output possa davvero essere rilasciato
+- la revisione interpreta tali aspettative nel contesto
+- script e test di validazione automatizzano le parti stabili della revisione
+- CI esegue tali controlli in modo coerente
+- la distribuzione garantisce che l'output possa effettivamente essere spedito
 
-## Buoni obiettivi iniziali di validazione
+## Buoni obiettivi di convalida anticipata
 
-Esempi di candidati forti nelle fasi iniziali includono:
+Esempi di forti candidati iniziali includono:
 
-- presenza dei file richiesti
+- presenza del file richiesto
 - completezza della localizzazione
-- validità sintattica
-- collegamenti interni rotti
+- validità della sintassi
+- Collegamenti interni interrotti
 - citazioni editoriali vietate
-- generazione riuscita dei metadati
+- Successo nella generazione dei metadati
 
-Questi controlli tendono a essere oggettivi e poco costosi.
+Questi controlli tendono ad essere oggettivi e poco costosi.
 
-## Contesto Let Books
+## Let Books contesto
 
-Il repository Let Books documenta già diversi livelli, inclusi:
+Il repository Let Books documenta già diversi livelli, tra cui:
 
-- regole di prodotto e implementazione in `AGENTS.md` e `AGENTS-Implementation.md`
-- validazione di sviluppo e distribuzione in `docs/Development.md` e `docs/Deployment.md`
-- regole editoriali sulle evidenze in `docs/blog/README.md` e `docs/sources/README.md`
+- norme di prodotto e di attuazione ai `AGENTS.md` e `AGENTS-Implementation.md`
+- convalida dello sviluppo e dell'implementazione nei `docs/Development.md` e `docs/Deployment.md`
+- norme sulla prova editoriale nei `docs/blog/README.md` e `docs/sources/README.md`
+- guida all'apprendimento per l'IC graduale e l'implementazione della convalida
 
-Questo rende la validazione un sistema documentato invece che una semplice aspirazione futura.
+Ciò rende la convalida un sistema documentato e non solo un’aspirazione futura.
 
-## Pagine Correlate
+## Pagine correlate
 
 - `documentation-traceability.md`
 - `implementation-guidance.md`
-- `../learning/how-to-add-validation-rules-and-ci-gates-in-stages.md`
-- `../blog/en/documentation-is-part-of-the-product.md`
+- `../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.md`
+- `../../blog/it/documentation-is-part-of-the-product.md`

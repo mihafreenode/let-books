@@ -1,80 +1,89 @@
 ---
-title: "Linee guida di implementazione"
+title: "Guida all'implementazione"
+summary: >-
+  La guida all'implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all'interno dell'attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Linee guida di implementazione
+# Guida all'implementazione
 
 ## Riepilogo
 
-Le linee guida di implementazione definiscono come un team dovrebbe consegnare il lavoro all'interno del repository o dell'ambiente di consegna corrente senza sostituire la specifica di prodotto stessa.
+La guida all'implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all'interno dell'attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.
 
 ## Ruolo
 
-Le linee guida di implementazione si collocano sotto la specifica di prodotto.
+La guida all'implementazione si trova sotto la specifica del prodotto.
 
-Aiutano a rispondere a domande come:
+Aiuta a rispondere a domande come:
 
 - come dovrebbe funzionare la denominazione pubblica
-- come dovrebbe essere strutturata la documentazione
+- come dovrebbero essere strutturati i documenti
 - quali aspettative di verifica si applicano ora
-- quali regole specifiche del repository i collaboratori dovrebbero seguire
-- dove dovrebbero vivere le regole tattiche mentre il progetto evolve
+- quali regole specifiche del repository dovrebbero seguire i contributori
+- dove le regole tattiche dovrebbero vivere man mano che il progetto evolve
 
-## Differenza rispetto alla specifica di prodotto
+## Differenza rispetto alle specifiche del prodotto
 
-La specifica di prodotto definisce che cos'è il prodotto e che cosa deve ottenere.
+Il disciplinare di produzione definisce cosa è il prodotto e cosa deve raggiungere.
 
-Le linee guida di implementazione definiscono come i collaboratori dovrebbero svolgere il lavoro nel contesto di consegna corrente.
+La guida all’implementazione definisce il modo in cui i contributori dovrebbero svolgere il lavoro nell’attuale contesto di fornitura.
 
-Questa distinzione è utile perché non ogni regola del repository è una verità di prodotto e non ogni verità di prodotto dovrebbe essere nascosta in note tattiche.
+Questa distinzione è utile perché non tutte le regole del repository sono una verità sul prodotto, e non tutte le verità sul prodotto dovrebbero essere sepolte in note tattiche.
 
 ## Esempi comuni
 
-Le linee guida di implementazione spesso includono:
+Le linee guida per l'implementazione spesso includono:
 
-- regole di naming e branding
-- regole di implementazione della documentazione
-- vincoli del sito statico o della demo
-- aspettative di verifica
-- regole di modifica o generazione del codice
-- politiche sulle evidenze per la scrittura pubblica
+- regole di denominazione e branding
+- norme di attuazione della documentazione
+- vincoli di sito statico o demo
+- verifica delle aspettative
+- regole di modifica o di generazione del codice
+- politiche dell'evidenza per la scrittura pubblica
 
-Queste regole spesso funzionano bene in Markdown perché devono restare revisionabili, facili da aggiornare e vicine al resto del contesto del repository.
+Queste regole spesso convivono bene nei Markdown perché devono rimanere rivedibili, facili da aggiornare e vicine al resto del contesto del repository.
 
-## Perché conta nel lavoro assistito dall'IA
+## Perché è importante nel lavoro assistito dall'intelligenza artificiale
 
-Gli assistenti IA spesso seguono l'istruzione concreta più vicina. Se le regole specifiche del repository restano implicite, l'output diventa rapidamente incoerente.
+Gli assistenti AI spesso seguono le istruzioni concrete più vicine. Se le regole specifiche del repository sono implicite, l'output diventa rapidamente incoerente.
 
-Le linee guida di implementazione rendono visibili queste regole senza inquinare la specifica di prodotto con dettagli tattici.
+Le linee guida per l’implementazione rendono tali regole visibili senza inquinare le specifiche del prodotto con dettagli tattici.
 
-In pratica, questo significa che un file guida in Markdown può svolgere due lavori insieme:
+In pratica, ciò significa che un file di orientamento Markdown può svolgere due compiti contemporaneamente:
 
 - spiegare il flusso di lavoro a un collaboratore umano
-- orientare un agente IA verso strumenti, sequenze e vincoli preferiti
+- indirizzare un agente AI verso gli strumenti, la sequenza e i vincoli preferiti
 
-## Contesto Let Books
+## Let Books contesto
 
-In Let Books, `AGENTS-Implementation.md` è il livello di guida tattica.
+Nei Let Books, `AGENTS-Implementation.md` è il livello di guida tattica.
 
 Copre aree come:
 
 - denominazione pubblica
-- regole della documentazione
-- separazione tra sito pubblico e documenti
-- regole di metadati e SEO per pagine statiche
-- vincoli della demo statica
+- norme sulla documentazione
+- sito pubblico e suddivisione dei documenti
+- metadati e regole SEO per pagine statiche
+- vincoli demo statici
 - regole di localizzazione e accessibilità
 - regole di verifica
-- politica delle evidenze del blog
+- Politica sulle prove del blog
 
-Questo lo rende il compagno operativo di `AGENTS.md`, non un suo sostituto.
+Ciò lo rende il complemento operativo del `AGENTS.md` e non il suo sostituto.
 
-## Pagine Correlate
+Altre indicazioni Markdown contenute nel pronti contro termine rafforzano lo stesso schema. Ad esempio:
+
+- `docs/android-debugging.md` indirizza le scelte del flusso di lavoro di debug come i flussi di lavoro di collegamento CDP rispetto a quelli di patch sorgente
+- `docs/style-guide/publishing/ubuntu-tooling.md` documenta gli strumenti previsti per la pubblicazione, la verifica, gli screenshot, il controllo ortografico e il debug del dispositivo
+
+Questi documenti sono leggibili come guida umana, ma aiutano anche gli agenti a scegliere le azioni migliori invece di fare supposizioni in base a valori predefiniti generici.
+
+## Pagine correlate
 
 - `product-specification.md`
 - `documentation-traceability.md`
 - `validation-layers.md`
-- `../learning/how-to-turn-a-product-spec-into-an-implementation-plan.md`
+- `../../learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.md`

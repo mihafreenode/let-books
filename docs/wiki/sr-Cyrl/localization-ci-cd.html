@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Локализација ЦИ и ЦД | LetBooks</title>
-    <meta name="description" content="Локализација CI/CD континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано откривају.">
+    <meta name="description" content="Локализација ЦИ/ЦД континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано уочавају.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Cyrl/localization-ci-cd.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Локализација ЦИ и ЦД | LetBooks">
-    <meta property="og:description" content="Локализација CI/CD континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано откривају.">
+    <meta property="og:description" content="Локализација ЦИ/ЦД континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано уочавају.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Cyrl/localization-ci-cd.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Локализација ЦИ и ЦД | LetBooks">
-    <meta name="twitter:description" content="Локализација CI/CD континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано откривају.">
+    <meta name="twitter:description" content="Локализација ЦИ/ЦД континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано уочавају.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sr-Cyrl">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Cyrl/index.html">Блог</a>
             <a class="nav-link" href="../../learning/sr-Cyrl/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/sr-Cyrl/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/sr-Cyrl/index.html">Теме</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/localization-ci-cd.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,14 +103,18 @@
               <span aria-current="page">Локализација ЦИ и ЦД</span>
             </nav>
             <h1>Локализација ЦИ и ЦД</h1>
-          <p class="content-page-summary">Локализација CI/CD континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано откривају.</p>
+          <div class="content-page-meta">
+            <span>Вики</span>
+            <span>Српски (ћирилица)</span>
+          </div>
+          <p class="content-page-summary">Локализација ЦИ/ЦД континуирано потврђује вишејезични садржај тако да се недостајућа средства, покварене везе и регресије приступачности рано уочавају.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теме:</span>
               <span class="content-tag">CI/CD</span>
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="жељене-провере">Жељене провере</h2>
+<h2 id="жељени-чекови">Жељени чекови</h2>
 <ul>
 <li>доследност инвентара локалитета</li>
 <li>валидација везе</li>
@@ -108,6 +124,39 @@
 <li>испитивање дима приступачности</li>
 <li>провере снимака екрана и дијаграма</li>
 </ul>
+<h2 id="прогресија-класе-дефеката">Прогресија класе дефеката</h2>
+<p class="lead">ЦИ локализације треба да прати оба:</p>
+<ul>
+<li><code>Localization Debt</code></li>
+<li><code>Open Defect Classes</code></li>
+</ul>
+<p>Мјери дуга преостали рад са изворним садржајем.</p>
+<p>Отворене класе дефеката мере да ли систем још увек може да дозволи да се категорија проблема поново појави.</p>
+<p>Чим класа дефекта достигне нула појављивања, њен валидатор би требало да пређе са саветодавног на блокирање где је то практично.</p>
+<p>Примери:</p>
+<ul>
+<li>објављивање нацрта за чуваре места</li>
+<li>непреведени резимеи</li>
+<li>непреведени метаподаци</li>
+<li>непреведена тела</li>
+<li>издаваштво на мешовитом језику</li>
+</ul>
+<p>ЦИ није само чувар капије. То је механизам који спречава да се затворене класе дефеката поново тихо отварају.</p>
+<h2 id="редослед-генерисања-за-навигацију-по-чланку">Редослед генерисања за навигацију по чланку</h2>
+<p>Тренутни уговор о јавној навигацији чланака је:</p>
+<ul>
+<li><code>post-article-nav</code></li>
+<li><code>related-content</code></li>
+<li><code>related-topic-nav</code></li>
+</ul>
+<p>Генерисање и валидација треба да се одвијају овим редоследом:</p>
+<ol type="1">
+<li>генерисати чланак HTML</li>
+<li>генерисати индексне странице</li>
+<li>покрените преосталу накнадну обраду навигације само ако је и даље потребно</li>
+<li>валидирати излаз</li>
+</ol>
+<p>Ако валидатор и даље очекује застарели блок <code>topic-nav</code>, ажурирајте валидатор на тренутни уговор уместо закрпања генерисаног HTML.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -135,8 +184,9 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/sr-Cyrl/how-to-run-localization-qa-in-ci.html"><span>Како спроводити локализациони QA у CI-ју</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено додавати валидациона правила и CI правила</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/sr-Cyrl/validation-layers.html"><span>Слојеви валидације</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено додавати валидациона правила и CI капије</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../wiki/sr-Cyrl/validation-layers.html"><span>Слојеви за валидацију</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/sr-Cyrl/validation-layers.html"><span>Валидациони слојеви</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
               </div>
             </div>
@@ -150,11 +200,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизацију, нуђење и проналажење образовних књига.</p>
+            <p class="footer-note">Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</p>
             <p class="footer-microcopy">Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Cyrl/index.html">Преглед</a>
+              <a href="../../topics/sr-Cyrl/index.html">Теме</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -165,6 +217,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.</span>
+            <span>Рани алфа прототип. Документација и текст корисничког интерфејса потпомогнути су вештачком интелигенцијом. Установе и интеграције поменуте у примерима концептуалне су и не значе партнерство или подршку.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

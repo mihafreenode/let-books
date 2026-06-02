@@ -1,41 +1,70 @@
 ---
-title: "Desarrollo guiado por especificaciones"
+title: "Desarrollo basado en especificaciones"
+summary: >-
+  El desarrollo basado en especificaciones es un enfoque en el que definiciones explícitas de productos y flujos de trabajo guían la implementación, documentación, revisión y verificación.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Desarrollo guiado por especificaciones
+# Desarrollo basado en especificaciones
 
 ## Resumen
 
-El desarrollo guiado por especificaciones es un enfoque en el que definiciones explícitas de producto y proceso guían la implementación, la documentación, la revisión y la verificación.
+El desarrollo basado en especificaciones es un enfoque en el que definiciones explícitas de productos y flujos de trabajo guían la implementación, documentación, revisión y verificación.
 
-## Por qué es importante
+## Definición
 
-La IA aumenta la velocidad de entrega, pero también puede aumentar la deriva del producto cuando la intención no es lo bastante clara.
+En este enfoque, una especificación no es sólo un artefacto de planificación inicial. Actúa como referencia permanente para:
 
-La especificación da al equipo una fuente estable de verdad para:
+- propósito del producto
+- límites del alcance
+- comportamiento requerido
+- criterios de aceptación
+- revisar los estándares
 
-- el propósito del producto
-- los límites del alcance
-- el comportamiento requerido
-- los criterios de aceptación
-- el estándar de revisión
+## Por qué es importante el trabajo asistido por IA
+
+La IA aumenta la velocidad de entrega, pero también puede aumentar la desviación del producto cuando la intención es vaga.
+
+El desarrollo basado en especificaciones ayuda a brindar a los equipos una fuente estable de verdad que se puede revisar, actualizar y utilizar para evaluar los resultados generados.
 
 ## Capas típicas
 
+Las capas comunes en un sistema basado en especificaciones incluyen:
+
 - especificación del producto
-- directrices de implementación
+- guía de implementación
 - documentación del estado actual
-- demo o comportamiento de la aplicación
-- pruebas y validación
-- aplicación CI/CD
+- comportamiento de demostración o aplicación
+- reglas y pruebas de validación
+- Aplicación de CI/CD
 
-## Error frecuente
+## Modo de falla común
 
-Un error frecuente es dejar que el artefacto más visible se convierta en la fuente predeterminada de verdad, por ejemplo el último prompt, el prototipo actual o una página de documentación desactualizada.
+Un modo de falla común es permitir que el artefacto más visible se convierta en la fuente predeterminada de verdad.
 
-## Contexto de Let Books
+Ejemplos:
 
-En Let Books este enfoque está respaldado por `AGENTS.md`, `AGENTS-Implementation.md`, `README.md`, `docs/Development.md` y `docs/Deployment.md`.
+- el último mensaje
+- el prototipo actual
+- el atajo de implementación actual
+- una página de documentación obsoleta
+
+El desarrollo basado en especificaciones reduce ese riesgo al hacer explícita la cadena de autoridad prevista.
+
+## Let Books contexto
+
+En Let Books, el desarrollo basado en especificaciones está respaldado por:
+
+- `AGENTS.md`
+- `AGENTS-Implementation.md`
+- `README.md`
+- `docs/Development.md`
+- `docs/Deployment.md`
+
+## Páginas relacionadas
+
+- `demo-spec-alignment.md`
+- `../../learning/es/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../blog/es/spec-driven-development-for-ai-projects.md`

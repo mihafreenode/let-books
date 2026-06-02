@@ -10,4 +10,5 @@ Dieser Ordner enthält die deutsche Version der wichtigsten Let-Books-Dokumentat
 
 - [Blog](../blog/de/)
 - [Learning](../learning/de/)
+- [Topics](../topics/de/)
 - [Wiki](../wiki/de/)

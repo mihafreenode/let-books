@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Let Books Étude de cas sur la localisation | LetBooks</title>
+    <title>Let Books Étude de cas de localisation | LetBooks</title>
     <meta name="description" content="Let Books est une étude de cas vivante sur la création d&#x27;une plate-forme de connaissances multilingue et d&#x27;une vision produit avant qu&#x27;une application backend complète n&#x27;existe.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Let Books Étude de cas sur la localisation | LetBooks">
+    <meta property="og:title" content="Let Books Étude de cas de localisation | LetBooks">
     <meta property="og:description" content="Let Books est une étude de cas vivante sur la création d&#x27;une plate-forme de connaissances multilingue et d&#x27;une vision produit avant qu&#x27;une application backend complète n&#x27;existe.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
@@ -37,11 +37,12 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Let Books Étude de cas sur la localisation | LetBooks">
+    <meta name="twitter:title" content="Let Books Étude de cas de localisation | LetBooks">
     <meta name="twitter:description" content="Let Books est une étude de cas vivante sur la création d&#x27;une plate-forme de connaissances multilingue et d&#x27;une vision produit avant qu&#x27;une application backend complète n&#x27;existe.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="fr">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
             <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/fr/index.html">Sujets</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/let-books-localization-case-study.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,9 +100,13 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/fr/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Let Books Étude de cas sur la localisation</span>
+              <span aria-current="page">Let Books Étude de cas de localisation</span>
             </nav>
-            <h1>Let Books Étude de cas sur la localisation</h1>
+            <h1>Let Books Étude de cas de localisation</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Français</span>
+          </div>
           <p class="content-page-summary">Let Books est une étude de cas vivante sur la création d&#x27;une plate-forme de connaissances multilingue et d&#x27;une vision produit avant qu&#x27;une application backend complète n&#x27;existe.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Sujets :</span>
@@ -100,30 +116,52 @@
           </header>
 <h2 id="résumé">Résumé</h2>
 <p class="lead">Let Books est une étude de cas vivante sur la création d’une plate-forme de connaissances multilingue et d’une vision produit avant qu’une application backend complète n’existe.</p>
+<p>Le modèle de programme central se trouve désormais aux <code>../localization-at-scale-program.md</code>. Cette page se concentre sur les preuves spécifiques au référentiel qui soutiennent ce manuel.</p>
 <h2 id="pourquoi-cest-utile">Pourquoi c’est utile</h2>
 <p>Il montre comment un projet peut :</p>
 <ul>
-<li>définir tôt le périmètre des locales</li>
-<li>maintenir l’accessibilité liée à la localisation</li>
-<li>utiliser une rédaction d’abord en anglais sans retomber dans une publication uniquement en anglais</li>
-<li>documenter la gouvernance avant que l’échelle n’arrive</li>
+<li>définir tôt la portée des paramètres régionaux</li>
+<li>garder l’accessibilité liée à la localisation</li>
+<li>utiliser la rédaction en anglais d’abord sans se replier sur la publication en anglais uniquement</li>
+<li>documenter la gouvernance avant l’arrivée de l’échelle</li>
 </ul>
-<h2 id="orientation-des-fixtures-de-benchmark">Orientation Des Fixtures De Benchmark</h2>
-<p>Les exemples de relecture structurée devraient aussi être conservés comme fixtures de benchmark réutilisables, c’est-à-dire comme exemples de référence réemployables pour les tests et l’évaluation, afin que les futures évaluations d’LLM puissent mesurer :</p>
+<h2 id="exemple-dexamen-de-lia-slovène">Exemple d’examen de l’IA slovène</h2>
+<p>Le référentiel comprend un exemple concret de révision en slovène dans lequel le projet d’IA préservait le sens large mais nécessitait toujours une correction par le locuteur natif pour la modalité, la fluidité et la formulation du registre politique.</p>
+<p>Le dossier détaillé se trouve désormais dans la section Résultats de l’examen des locuteurs natifs du <code>../localization-at-scale-program.md</code> et du <code>../../style-guide/localization/ai-translation-review-records.md</code>.</p>
+<p>Leçons clés :</p>
 <ul>
-<li>la fiabilité grammaticale</li>
-<li>la gestion des modalités</li>
-<li>la précision terminologique</li>
-<li>la justesse du registre de politique publique</li>
-<li>la qualité de la capture des justifications du relecteur</li>
+<li>les erreurs de grammaire peuvent survivre même lorsque la phrase semble compréhensible</li>
+<li>la modalité est particulièrement vulnérable à la traduction littérale</li>
+<li>le langage des politiques et des spécifications de produits nécessite souvent un registre spécifique au domaine plutôt qu’une équivalence au niveau du dictionnaire</li>
+<li>les contrôles automatisés détectent rarement à eux seuls les problèmes subtils de fluidité et de modalité</li>
+</ul>
+<h2 id="exemple-de-publication-en-langues-mixtes">Exemple de publication en langues mixtes</h2>
+<p>Article source : <code>docs/blog/fr/the-cost-of-english-only-software.md</code></p>
+<p>Cette famille d’articles a fourni un exemple concret d’un titre localisé et d’une coque partiellement localisée coexistant avec des surfaces de publication en anglais destinées aux lecteurs.</p>
+<p>L’interprétation détaillée au niveau du programme se trouve désormais dans la section Résultats de l’examen des locuteurs natifs du <code>../localization-at-scale-program.md</code> et du <code>../localization-audit-report.md</code>.</p>
+<p>Leçons spécifiques au référentiel :</p>
+<ul>
+<li>la couverture n’est pas la même chose que l’exhaustivité</li>
+<li>les métadonnées sources sont importantes car les résumés peuvent s’infiltrer dans les surfaces de publication</li>
+<li>la localisation de la taxonomie est importante car les étiquettes de sujets en anglais sont des défauts visibles pour le lecteur</li>
+<li>les HTML générés doivent être validés et ne pas faire confiance aveuglément</li>
+</ul>
+<h2 id="exemples-de-référence-réutilisables">Exemples de référence réutilisables</h2>
+<p>Les exemples d’examen structuré doivent également être stockés en tant qu’exemples de référence réutilisables afin que les futures évaluations LLM puissent mesurer :</p>
+<ul>
+<li>fiabilité grammaticale</li>
+<li>gestion des modalités</li>
+<li>précision terminologique</li>
+<li>précision du registre des politiques</li>
+<li>qualité de la capture des justifications des évaluateurs</li>
 </ul>
 <h2 id="pages-connexes">Pages connexes</h2>
 <ul>
-<li><code>../style-guide/localization/ai-translation-review-records.md</code></li>
-<li><code>../style-guide/localization/llm-translation-benchmark-fixtures.md</code></li>
+<li><code>../../style-guide/localization/ai-translation-review-records.md</code></li>
+<li><code>../../style-guide/localization/llm-translation-benchmark-fixtures.md</code></li>
 <li><code>let-books-localization-architecture.md</code></li>
 <li><code>let-books-localization-lessons-learned.md</code></li>
-<li><code>../blog/en/why-every-language-matters.md</code></li>
+<li><code>../../blog/fr/why-every-language-matters.md</code></li>
 </ul>
 
         <div class="post-article-nav">
@@ -167,11 +205,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</p>
+            <p class="footer-note">Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</p>
             <p class="footer-microcopy">Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../fr/index.html">Aperçu</a>
+              <a href="../../topics/fr/index.html">Sujets</a>
               <a href="../../index.html">Page d&#x27;accueil</a>
               <a href="../../../static-demo/">Démo</a>
             </div>
@@ -182,6 +222,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</span>
+            <span>Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

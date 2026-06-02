@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Slojevi validacije | LetBooks</title>
-    <meta name="description" content="Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa nameravanim pravilima i očekivanjima kvaliteta.">
+    <title>Slojevi za validaciju | LetBooks</title>
+    <meta name="description" content="Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa predviđenim pravilima i očekivanjima kvaliteta.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Latn/validation-layers.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Slojevi validacije | LetBooks">
-    <meta property="og:description" content="Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa nameravanim pravilima i očekivanjima kvaliteta.">
+    <meta property="og:title" content="Slojevi za validaciju | LetBooks">
+    <meta property="og:description" content="Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa predviđenim pravilima i očekivanjima kvaliteta.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Latn/validation-layers.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Slojevi validacije | LetBooks">
-    <meta name="twitter:description" content="Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa nameravanim pravilima i očekivanjima kvaliteta.">
+    <meta name="twitter:title" content="Slojevi za validaciju | LetBooks">
+    <meta name="twitter:description" content="Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa predviđenim pravilima i očekivanjima kvaliteta.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sr-Latn">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Latn/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sr-Latn/index.html">Materijali za učenje</a>
             <a class="nav-link" href="../../wiki/sr-Latn/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sr-Latn/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/validation-layers.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sr-Latn/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Slojevi validacije</span>
+              <span aria-current="page">Slojevi za validaciju</span>
             </nav>
-            <h1>Slojevi validacije</h1>
-          <p class="content-page-summary">Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa nameravanim pravilima i očekivanjima kvaliteta.</p>
+            <h1>Slojevi za validaciju</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Srpski (latinica)</span>
+          </div>
+          <p class="content-page-summary">Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa predviđenim pravilima i očekivanjima kvaliteta.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">CI/CD</span>
@@ -101,33 +117,56 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="zašto-su-slojevi-važni">Zašto su slojevi važni</h2>
-<p class="lead">Nijedan pojedinačni metod validacije nije dovoljan.</p>
+<p class="lead">Nijedan metod validacije nije dovoljan.</p>
 <ul>
-<li>sama dokumentacija ne sprovodi ponašanje</li>
-<li>sami testovi mogu da validiraju pogrešne pretpostavke</li>
-<li>sam CI ne može da definiše pravila koja bi trebalo da sprovodi</li>
+<li>dokumentacija sama po sebi ne sprovodi ponašanje</li>
+<li>sami testovi mogu potvrditi pogrešne pretpostavke</li>
+<li>CI sama ne može da definiše pravila koja bi trebalo da sprovodi</li>
 </ul>
-<p>Slojeviti pristup je jači jer svaki sloj hvata drugačiju vrstu odstupanja.</p>
+<p>Slojeviti pristup je jači jer svaki sloj hvata različitu klasu odstupanja.</p>
 <h2 id="uobičajeni-slojevi-validacije">Uobičajeni slojevi validacije</h2>
 <h3 id="specifikacija-i-uputstva">1. Specifikacija i uputstva</h3>
 <p>Prvi sloj definiše pravilo.</p>
+<p>Bez ovog sloja, kasnije provere mogu biti stroge, ali proizvoljne.</p>
 <h3 id="ručni-pregled">2. Ručni pregled</h3>
-<p>Ljudski pregled proverava nameru, rubne slučajeve i značenje proizvoda koje još nije automatizovano.</p>
+<p>Ljudski pregled proverava nameru, ivice slučajeva i značenje proizvoda koji možda još nisu automatizovani.</p>
 <h3 id="lokalna-validacija">3. Lokalna validacija</h3>
-<p>Skripte i strukturirane provere brzo hvataju ponovljive probleme pre nego što promene stignu do CI-ja.</p>
+<p>Skripte i strukturirane provere otkrivaju brze, ponovljive probleme pre nego što promene stignu do CI.</p>
 <h3 id="testovi">4. Testovi</h3>
-<p>Izvršni testovi proveravaju očekivano ponašanje, ali samo kada su usklađeni sa specifikacijom.</p>
+<p>Izvršni testovi potvrđuju očekivano ponašanje, ali samo kada su usklađeni sa specifikacijom.</p>
 <h3 id="ci-kapije">5. CI kapije</h3>
 <p>CI čini provere ponovljivim i vidljivim među saradnicima i okruženjima.</p>
-<h3 id="provere-isporuke">6. Provere isporuke</h3>
-<p>Tokovi isporuke potvrđuju da su izgrađeni artefakti i dalje spremni za objavu i strukturno ispravni.</p>
-<h2 id="kontekst-let-books">Kontekst Let Books</h2>
-<p>Repozitorijum Let Books već dokumentuje više slojeva, uključujući:</p>
+<h3 id="provere-primene">6. Provere primene</h3>
+<p>Radni tokovi primene potvrđuju da su izgrađeni artefakti i dalje objavljeni i da su strukturalno zdravi.</p>
+<h2 id="kako-slojevi-treba-da-se-odnose">Kako slojevi treba da se odnose</h2>
+<p>Slojevi bi trebalo da ojačavaju jedan drugog po redosledu:</p>
 <ul>
-<li>proizvodna i implementaciona pravila u <code>AGENTS.md</code> i <code>AGENTS-Implementation.md</code></li>
-<li>razvojne i isporučne provere u <code>docs/Development.md</code> i <code>docs/Deployment.md</code></li>
-<li>urednička pravila dokaza u <code>docs/blog/README.md</code> i <code>docs/sources/README.md</code></li>
+<li>dokumenti i specifikacije definišu očekivanja</li>
+<li>pregled tumači ta očekivanja u kontekstu</li>
+<li>validacijske skripte i testovi automatizuju stabilne delove pregleda</li>
+<li>CI dosledno sprovodi te provere</li>
+<li>implementacija osigurava da se izlaz zaista može isporučiti</li>
 </ul>
+<h2 id="dobri-ciljevi-rane-validacije">Dobri ciljevi rane validacije</h2>
+<p>Primeri jakih ranih kandidata uključuju:</p>
+<ul>
+<li>prisustvo obavezne datoteke</li>
+<li>potpunost lokalizacije</li>
+<li>validnost sintakse</li>
+<li>prekinute interne veze</li>
+<li>zabranjeno uredničko citiranje</li>
+<li>uspeh generisanja metapodataka</li>
+</ul>
+<p>Ove provere su obično objektivne i jeftine.</p>
+<h2 id="let-books-kontekst">Let Books kontekst</h2>
+<p>Repozitorijum Let Books već dokumentuje nekoliko slojeva, uključujući:</p>
+<ul>
+<li>pravila proizvoda i implementacije u <code>AGENTS.md</code> i <code>AGENTS-Implementation.md</code></li>
+<li>validacija razvoja i primene u <code>docs/Development.md</code> i <code>docs/Deployment.md</code></li>
+<li>pravila uredničkog dokaza u <code>docs/blog/README.md</code> i <code>docs/sources/README.md</code></li>
+<li>uputstvo za učenje za postepeni CI i uvođenje validacije</li>
+</ul>
+<p>To čini validaciju dokumentovanim sistemom, a ne samo budućom težnjom.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -152,6 +191,7 @@
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI isporuka</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Donacija knjiga</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-product-quality-menu">Kvalitet proizvoda</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Planiranje implementacije</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Usklađenost demoa</button>
@@ -159,28 +199,34 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledavati AI-podržani rad prema specifikaciji</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledati rad uz pomoć AI u odnosu na specifikaciju</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                 </div>
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validaciona pravila i CI pravila</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validaciona pravila i CI kapije</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../learning/sr-Latn/how-to-run-localization-qa-in-ci.html"><span>Kako sprovoditi lokalizacioni QA u CI-ju</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../topics/sr-Latn/validation-layers.html"><span>Validacioni slojevi</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../blog/sr-Latn/isbn-not-a-database.html"><span>ISBN nije baza podataka</span><span class="topic-menu__meta">Blog</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
                   <a href="../../blog/sr-Latn/documentation-is-part-of-the-product.html"><span>Dokumentacija je deo proizvoda</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../wiki/sr-Latn/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/sr-Latn/markdown-in-product-development.html"><span>Markdown u razvoju proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sr-Latn/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sr-Latn/ai-assisted-implementation.html"><span>Implementacija uz AI podršku</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/sr-Latn/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako od proizvodne specifikacije napraviti implementacioni plan</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../wiki/sr-Latn/implementation-guidance.html"><span>Implementaciona uputstva</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sr-Latn/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako pretvoriti specifikaciju proizvoda u implementacioni plan</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../wiki/sr-Latn/implementation-guidance.html"><span>Uputstvo za implementaciju</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../blog/sr-Latn/spec-driven-development-in-let-books.html"><span>Razvoj vođen specifikacijom u Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kada je demo dokaz, a kada nije</span><span class="topic-menu__meta">Blog</span></a>
                 </div>
                 <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
                   <a href="../../blog/sr-Latn/spec-driven-development-for-ai-projects.html"><span>Razvoj vođen specifikacijom za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../wiki/sr-Latn/documentation-validation-beyond-linting.html"><span>Validacija dokumentacije izvan lintovanja</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sr-Latn/demo-and-specification-alignment.html"><span>Usklađenost demoa i specifikacije</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sr-Latn/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>
             </div>
@@ -194,11 +240,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.</p>
             <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Latn/index.html">Pregled</a>
+              <a href="../../topics/sr-Latn/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -209,6 +257,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.</span>
+            <span>Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

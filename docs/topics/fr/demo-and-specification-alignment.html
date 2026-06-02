@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alignement entre démo et spécification | LetBooks</title>
+    <meta name="description" content="Pourquoi les démos sont des preuves utiles de l&#x27;état d&#x27;implémentation mais ne devraient pas remplacer silencieusement les spécifications comme source principale de vérité du produit.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/topics/fr/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/topics/en/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/topics/en/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/topics/sl/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/topics/hr/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/topics/bs/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/topics/sr-Latn/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/topics/sr-Cyrl/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/topics/mk/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/topics/sq/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/topics/de/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/topics/it/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/topics/fr/demo-and-specification-alignment.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/topics/es/demo-and-specification-alignment.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Alignement entre démo et spécification | LetBooks">
+    <meta property="og:description" content="Pourquoi les démos sont des preuves utiles de l&#x27;état d&#x27;implémentation mais ne devraient pas remplacer silencieusement les spécifications comme source principale de vérité du produit.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/topics/fr/demo-and-specification-alignment.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alignement entre démo et spécification | LetBooks">
+    <meta name="twitter:description" content="Pourquoi les démos sont des preuves utiles de l&#x27;état d&#x27;implémentation mais ne devraient pas remplacer silencieusement les spécifications comme source principale de vérité du produit.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="topics" data-locale="fr">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../topics/fr/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Sujets</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../fr/index.html">Documentation</a>
+            <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
+            <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/fr/index.html">Sujets</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../topics/en/demo-and-specification-alignment.html" lang="en">EN</a>
+              <a class="lang-link" href="../../topics/sl/demo-and-specification-alignment.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../topics/hr/demo-and-specification-alignment.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../topics/bs/demo-and-specification-alignment.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../topics/sr-Latn/demo-and-specification-alignment.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../topics/sr-Cyrl/demo-and-specification-alignment.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../topics/mk/demo-and-specification-alignment.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../topics/sq/demo-and-specification-alignment.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../topics/de/demo-and-specification-alignment.html" lang="de">DE</a>
+              <a class="lang-link" href="../../topics/it/demo-and-specification-alignment.html" lang="it">IT</a>
+              <a class="lang-link is-current" href="../../topics/fr/demo-and-specification-alignment.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../topics/es/demo-and-specification-alignment.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Toutes les langues</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../fr/index.html">Documentation</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../topics/fr/index.html">Sujets</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Alignement entre démo et spécification</span>
+            </nav>
+            <h1>Alignement entre démo et spécification</h1>
+          <div class="content-page-meta">
+            <span>Sujets</span>
+            <span>Français</span>
+          </div>
+          <p class="content-page-summary">Pourquoi les démos sont des preuves utiles de l&#x27;état d&#x27;implémentation mais ne devraient pas remplacer silencieusement les spécifications comme source principale de vérité du produit.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Sujets :</span>
+              <span class="content-tag">Alignement de la démo</span>
+              <span class="content-tag">Développement piloté par les spécifications</span>
+              <span class="content-tag">Validation</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Une démo montre ce qui existe actuellement. Une spécification décrit ce que le produit est censé être. Les deux sont liées, mais elles ne sont pas interchangeables.</p>
+<p>Les équipes traitent souvent une démo fonctionnelle comme l’artefact le plus convaincant d’un projet, et pour de bonnes raisons. Une démo rend le comportement concret. Elle expose des lacunes de workflow, des problèmes d’utilisabilité et des choix d’implémentation qui resteraient abstraits dans un document. Mais une démo est aussi une preuve incomplète. Elle est façonnée par tout ce qui a été construit jusqu’à présent, y compris les raccourcis, les expérimentations et les omissions temporaires.</p>
+<p>L’alignement sur la spécification consiste à maintenir ces deux couches en dialogue. Si la démo diverge de la spécification, soit l’implémentation doit être corrigée, soit la spécification doit être relue. Ce qui ne doit pas arriver, c’est une dérive silencieuse où la démo devient la nouvelle vérité simplement parce qu’elle existe sous une forme plus visible.</p>
+<p>Cela compte particulièrement dans les projets qui avancent vite. Un workflow assisté par l’IA peut générer des interfaces et des comportements plus vite que la documentation environnante n’est mise à jour. Sans habitude explicite d’alignement, les contributeurs peuvent commencer à suivre simplement ce que montre la démo du moment.</p>
+<p>Let Books utilise cette distinction avec soin. Le dépôt contient déjà une démo statique publique, des spécifications produit de haut niveau, des consignes d’implémentation et une documentation localisée. La démo est précieuse parce qu’elle rend tangibles les workflows de stockage, de QR et de métadonnées. Elle ne suffit pas à elle seule à redéfinir des règles de workflow encore spécifiées ailleurs. L’article de blog <a href="/docs/blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">Quand la démo est une preuve et quand elle ne l’est pas</a> explore directement cette tension.</p>
+<p>La règle pratique est simple : une démo est une preuve d’implémentation, pas une autorité produit automatique. L’alignement exige de comparer ensemble démos, spécifications, documentation et résultats de validation au lieu de laisser l’un d’entre eux dominer par accident.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Autres langues</h2>
+            <ul>
+              <li><a href="../../topics/en/demo-and-specification-alignment.html" lang="en">English</a></li>
+              <li><a href="../../topics/sl/demo-and-specification-alignment.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../topics/hr/demo-and-specification-alignment.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../topics/bs/demo-and-specification-alignment.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../topics/sr-Latn/demo-and-specification-alignment.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../topics/sr-Cyrl/demo-and-specification-alignment.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../topics/mk/demo-and-specification-alignment.html" lang="mk">Македонски</a></li>
+              <li><a href="../../topics/sq/demo-and-specification-alignment.html" lang="sq">Shqip</a></li>
+              <li><a href="../../topics/de/demo-and-specification-alignment.html" lang="de">Deutsch</a></li>
+              <li><a href="../../topics/it/demo-and-specification-alignment.html" lang="it">Italiano</a></li>
+              <li><a href="../../topics/es/demo-and-specification-alignment.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Contenus liés</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Alignement de la démo</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Développement piloté par les spécifications</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Livraison assistée par IA</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Validation</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quand la démo est une preuve et quand elle ne l&#x27;est pas</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/fr/spec-driven-development-in-let-books.html"><span>Développement guidé par les spécifications dans Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Comment garder la spécification, la documentation, la démo et le code alignés</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../wiki/fr/demo-spec-alignment.html"><span>Alignement entre démo et spécification</span><span class="topic-menu__meta">Wiki</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../blog/fr/spec-driven-development-for-ai-projects.html"><span>Développement guidé par les spécifications pour les projets d&#x27;IA</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/fr/documentation-is-part-of-the-product.html"><span>La documentation fait partie du produit</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Comment ajouter des règles de validation et des garde-fous CI par étapes</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment relire un travail assisté par IA à l’aune de la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../wiki/fr/implementation-guidance.html"><span>Conseils de mise en œuvre</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/fr/documentation-is-more-than-a-website.html"><span>La documentation est plus qu&#x27;un site web</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/fr/product-specification.html"><span>Spécification du produit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/fr/documentation-traceability.html"><span>Traçabilité de la documentation</span><span class="topic-menu__meta">Sujets</span></a>
+                  <a href="../../topics/fr/spec-driven-development.html"><span>Développement piloté par les spécifications</span><span class="topic-menu__meta">Sujets</span></a>
+                  <a href="../../topics/fr/ai-assisted-implementation.html"><span>Implémentation assistée par l&#x27;IA</span><span class="topic-menu__meta">Sujets</span></a>
+                </div>
+                <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
+                  <a href="../../learning/fr/how-to-write-a-spec-that-ai-can-follow.html"><span>Comment écrire une spécification que l’IA peut suivre</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../topics/fr/validation-layers.html"><span>Couches de validation</span><span class="topic-menu__meta">Sujets</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</p>
+            <p class="footer-note">Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</p>
+            <p class="footer-microcopy">Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../fr/index.html">Aperçu</a>
+              <a href="../../topics/fr/index.html">Sujets</a>
+              <a href="../../index.html">Page d&#x27;accueil</a>
+              <a href="../../../static-demo/">Démo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Toutes les langues</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</span>
+            <span>Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

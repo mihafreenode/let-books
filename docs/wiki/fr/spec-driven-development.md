@@ -1,41 +1,70 @@
 ---
-title: "Développement guidé par les spécifications"
+title: "Développement basé sur les spécifications"
+summary: >-
+  Le développement basé sur les spécifications est une approche dans laquelle des définitions explicites de produits et de flux de travail guident la mise en œuvre, la documentation, la révision et la vérification.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Développement guidé par les spécifications
+# Développement basé sur les spécifications
 
 ## Résumé
 
-Le développement guidé par les spécifications est une approche dans laquelle des définitions explicites du produit et du processus guident l'implémentation, la documentation, la revue et la vérification.
+Le développement basé sur les spécifications est une approche dans laquelle des définitions explicites de produits et de flux de travail guident la mise en œuvre, la documentation, la révision et la vérification.
 
-## Pourquoi c'est important
+## Définition
 
-L'IA augmente la vitesse de livraison, mais peut aussi augmenter la dérive du produit lorsque l'intention n'est pas assez claire.
+Dans cette approche, une spécification n’est pas seulement un artefact de planification initial. Il sert de référence permanente pour :
 
-La spécification donne à l'équipe une source stable de vérité pour :
+- objectif du produit
+- limites du champ d'application
+- comportement requis
+- critères d'acceptation
+- revoir les normes
 
-- le but du produit
-- les limites du périmètre
-- le comportement attendu
-- les critères d'acceptation
-- le standard de revue
+## Pourquoi c'est important dans le travail assisté par l'IA
+
+L’IA augmente la vitesse de livraison, mais elle peut également augmenter la dérive des produits lorsque l’intention est vague.
+
+Le développement basé sur les spécifications aide en offrant aux équipes une source stable de vérité qui peut être examinée, mise à jour et utilisée pour évaluer les résultats générés.
 
 ## Couches typiques
 
-- spécification produit
-- directives d'implémentation
-- documentation de l'état actuel
-- démo ou comportement de l'application
-- tests et validation
-- application CI/CD
+Les couches courantes dans un système basé sur les spécifications comprennent :
 
-## Erreur fréquente
+- spécification du produit
+- conseils de mise en œuvre
+- documentation actuelle
+- comportement de la démo ou de l'application
+- règles et tests de validation
+- Application CI/CD
 
-Une erreur fréquente consiste à laisser l'artefact le plus visible devenir la source par défaut de vérité, par exemple le dernier prompt, le prototype actuel ou une page de documentation dépassée.
+## Mode d'échec commun
 
-## Contexte Let Books
+Un mode d’échec courant consiste à laisser l’artefact le plus visible devenir la source de vérité par défaut.
 
-Dans Let Books, cette approche est soutenue par `AGENTS.md`, `AGENTS-Implementation.md`, `README.md`, `docs/Development.md` et `docs/Deployment.md`.
+Exemples :
+
+- la dernière invite
+- le prototype actuel
+- le raccourci d'implémentation actuel
+- une page de documentation obsolète
+
+Le développement basé sur les spécifications réduit ce risque en rendant explicite la chaîne d'autorité prévue.
+
+## Let Books contexte
+
+Aux Let Books, le développement basé sur les spécifications est pris en charge par :
+
+- `AGENTS.md`
+- `AGENTS-Implementation.md`
+- `README.md`
+- `docs/Development.md`
+- `docs/Deployment.md`
+
+## Pages connexes
+
+- `demo-spec-alignment.md`
+- `../../learning/fr/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../blog/fr/spec-driven-development-for-ai-projects.md`

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit | LetBooks</title>
-    <meta name="description" content="Ndryshimet e mbështetura nga AI duhen rishikuar kundrejt specifikimit, dokumentimit dhe sjelljes rezervë, jo vetëm sipas përshtypjes se duken bindëse.">
+    <title>Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit | LetBooks</title>
+    <meta name="description" content="Ky udhëzues shpjegon si të rishikoni një implementim të ndihmuar nga AI duke e kontrolluar kundrejt specifikimit të produktit, rregullave të rrjedhës së punës, dokumentacionit dhe pritjeve të validimit, në vend që të gjykoni vetëm nëse rezultati duket i lëmuar ose teknikisht i besueshëm.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/sq/how-to-review-ai-assisted-work-against-the-spec.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit | LetBooks">
-    <meta property="og:description" content="Ndryshimet e mbështetura nga AI duhen rishikuar kundrejt specifikimit, dokumentimit dhe sjelljes rezervë, jo vetëm sipas përshtypjes se duken bindëse.">
+    <meta property="og:title" content="Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit | LetBooks">
+    <meta property="og:description" content="Ky udhëzues shpjegon si të rishikoni një implementim të ndihmuar nga AI duke e kontrolluar kundrejt specifikimit të produktit, rregullave të rrjedhës së punës, dokumentacionit dhe pritjeve të validimit, në vend që të gjykoni vetëm nëse rezultati duket i lëmuar ose teknikisht i besueshëm.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/sq/how-to-review-ai-assisted-work-against-the-spec.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit | LetBooks">
-    <meta name="twitter:description" content="Ndryshimet e mbështetura nga AI duhen rishikuar kundrejt specifikimit, dokumentimit dhe sjelljes rezervë, jo vetëm sipas përshtypjes se duken bindëse.">
+    <meta name="twitter:title" content="Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit | LetBooks">
+    <meta name="twitter:description" content="Ky udhëzues shpjegon si të rishikoni një implementim të ndihmuar nga AI duke e kontrolluar kundrejt specifikimit të produktit, rregullave të rrjedhës së punës, dokumentacionit dhe pritjeve të validimit, në vend që të gjykoni vetëm nëse rezultati duket i lëmuar ose teknikisht i besueshëm.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="sq">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
             <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/sq/index.html">Materiale mësimore</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit</span>
+              <span aria-current="page">Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit</span>
             </nav>
-            <h1>Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit</h1>
-          <p class="content-page-summary">Ndryshimet e mbështetura nga AI duhen rishikuar kundrejt specifikimit, dokumentimit dhe sjelljes rezervë, jo vetëm sipas përshtypjes se duken bindëse.</p>
+            <h1>Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit</h1>
+          <div class="content-page-meta">
+            <span>Materiale mësimore</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Ky udhëzues shpjegon si të rishikoni një implementim të ndihmuar nga AI duke e kontrolluar kundrejt specifikimit të produktit, rregullave të rrjedhës së punës, dokumentacionit dhe pritjeve të validimit, në vend që të gjykoni vetëm nëse rezultati duket i lëmuar ose teknikisht i besueshëm.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">Dorëzim me AI</span>
@@ -100,15 +116,114 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="rendi-i-rishikimit">Rendi i rishikimit</h2>
+<h2 id="pse-kjo-ka-rëndësi">Pse kjo ka rëndësi</h2>
+<p class="lead">AI mund të prodhojë shumë shpejt kod, tekst, teste dhe ndryshime të ndërfaqes që duken të plota.</p>
+<p>Kjo shpejtësi krijon një rrezik rishikimi: rishikuesit mund të kalojnë pa e kuptuar nga pyetja “A është kjo sjellja e duhur e produktit?” te pyetja “A duket kjo e arsyeshme?”.</p>
+<p>Këto nuk janë e njëjta pyetje.</p>
+<p>Në punën e drejtuar nga specifikimet, rishikimi duhet të fillojë me përafrimin dhe vetëm pastaj të kalojë te cilësia e kodit, stili dhe hollësitë e implementimit.</p>
+<h2 id="filloni-me-burimin-e-së-vërtetës">Filloni me burimin e së vërtetës</h2>
+<p>Përpara se të rishikoni rezultatin, identifikoni dokumentet që përcaktojnë sjelljen e synuar.</p>
+<p>Në depon Let Books, kjo zakonisht do të thotë:</p>
+<ul>
+<li><code>AGENTS.md</code> për rregullat e produktit, rrjedhat e punës dhe shtrirjen</li>
+<li><code>AGENTS-Implementation.md</code> për kufizimet taktike të dorëzimit</li>
+<li><code>README.md</code> për paraqitjen e gjendjes aktuale</li>
+<li>dokumentacionin përkatës nën <code>docs/</code> për publikim, verifikim ose udhëzime rrjedhe pune</li>
+</ul>
+<p>Pa këtë hap, rishikimi bëhet lehtësisht subjektiv dhe lokal.</p>
+<h2 id="rishikoni-në-rendin-e-duhur">Rishikoni në rendin e duhur</h2>
+<p>Përdoreni këtë rend kur rishikoni punë të ndihmuar nga AI.</p>
+<h3 id="përafrimi-me-produktin">1. Përafrimi me produktin</h3>
+<p>Pyesni nëse rezultati përputhet me rrjedhën e synuar të përdoruesit dhe kufirin e produktit.</p>
+<p>Shembuj:</p>
+<ul>
+<li>a vazhdon të funksionojë hyrja manuale atje ku e kërkon specifikimi</li>
+<li>a e ruan ndryshimi ndarjen midis kopjeve fizike dhe regjistrave bibliografikë</li>
+<li>a shton sjellje që nuk u miratuan kurrë</li>
+<li>a i paraqet gabimisht veçoritë opsionale të AI si të detyrueshme</li>
+</ul>
+<p>Nëse përafrimi me produktin është i gabuar, nuk ka shumë vlerë të shpenzohet kohë për lustrim fillimisht.</p>
+<h3 id="përafrimi-me-dokumentacionin">2. Përafrimi me dokumentacionin</h3>
+<p>Pyesni nëse dokumentacioni rreth ndryshimit vazhdon ta përshkruajë realitetin me ndershmëri.</p>
+<p>Shembuj:</p>
+<ul>
+<li>a u ndryshua një rrjedhë pune e dukshme për përdoruesin pa u përditësuar dokumentacioni</li>
+<li>a e përshkruan ende README-ja saktë gjendjen aktuale</li>
+<li>a përputhen pretendimet e reja publike me pozicionin e dokumentuar real të produktit</li>
+</ul>
+<p>Ndryshimet e gjeneruara nga AI shpesh ndryshojnë sjelljen pa e përditësuar rrëfimin rreth asaj sjelljeje.</p>
+<h3 id="validimi-dhe-sjellja-rezervë">3. Validimi dhe sjellja rezervë</h3>
+<p>Pyesni nëse ndryshimi i ruan pritjet për dështim dhe sjellje rezervë nga specifikimi.</p>
+<p>Shembuj:</p>
+<ul>
+<li>a mund të ketë ende sukses rrjedha e punës kur dështon një ofrues opsional</li>
+<li>a trajtohen në mënyrë eksplicite hyrjet e pavlefshme</li>
+<li>a trajtohen si sugjerime dhe jo si fakte rezultatet me besueshmëri të ulët ose të pasigurta</li>
+</ul>
+<p>Këtu dështojnë shumë implementime të besueshme në testin real të produktit.</p>
+<h3 id="cilësia-teknike">4. Cilësia teknike</h3>
+<p>Vetëm pas kontrolleve të mësipërme duhet të shpenzoni pjesën më të madhe të kohës te:</p>
+<ul>
+<li>qartësia</li>
+<li>mirëmbajtshmëria</li>
+<li>emërtimi</li>
+<li>dublimi</li>
+<li>testet</li>
+<li>struktura</li>
+</ul>
+<p>Cilësia teknike ka ende rëndësi. Thjesht nuk duhet të jetë më e rëndësishme se korrektësia e produktit.</p>
+<h2 id="kurthe-të-zakonshme-rishikimi">Kurthe të zakonshme rishikimi</h2>
+<p>Puna e ndihmuar nga AI priret të krijojë disa kurthe rishikimi të përsëritshme.</p>
+<h3 id="kurthi-i-rezultatit-të-lëmuar">Kurthi i rezultatit të lëmuar</h3>
+<p>Rezultati duket i pastër, prandaj rishikuesit supozojnë se është i saktë.</p>
+<h3 id="kurthi-i-kontekstit-të-afërt">Kurthi i kontekstit të afërt</h3>
+<p>Ndryshimi përputhet me implementimin ekzistues më të afërt, por ai implementim i afërt mund të ketë devijuar tashmë.</p>
+<h3 id="kurthi-i-shtrirjes-së-nënkuptuar">Kurthi i shtrirjes së nënkuptuar</h3>
+<p>Ndihmësi shton veçori, abstraksione ose supozime që nuk u kërkuan kurrë, dhe rishikuesi i pranon sepse nuk duken qartazi të prishura.</p>
+<h3 id="kurthi-i-testeve-që-kalojnë">Kurthi i testeve që kalojnë</h3>
+<p>Testet mund të kalojnë sepse validon sjelljen e gjeneruar, jo sepse validon sjelljen e synuar të produktit.</p>
+<h2 id="një-listë-praktike-rishikimi">Një listë praktike rishikimi</h2>
+<p>Për çdo ndryshim të rëndësishëm të ndihmuar nga AI, pyesni:</p>
 <ol type="1">
-<li>përputhja me produktin</li>
-<li>përputhja me dokumentimin</li>
-<li>rrjedha rezervë dhe validimi</li>
-<li>cilësia teknike</li>
+<li>Cilin rregull produkti ose cilën rrjedhë pune supozohet të implementojë ky ndryshim?</li>
+<li>Cili specifikim ose dokumentacion e përcakton atë rregull?</li>
+<li>A i ruan rezultati kufizimet e kërkuara?</li>
+<li>A e mban të paprekur sjelljen rezervë?</li>
+<li>A përputhet ende dokumentacioni me sjelljen që rezulton?</li>
+<li>Cili validim ose cilat teste e mbështesin ndryshimin?</li>
+<li>A shtoi ndihmësi diçka që duhet hequr si jashtë shtrirjes?</li>
 </ol>
-<h2 id="pyetja-kryesore">Pyetja kryesore</h2>
-<p class="lead">Mos pyet vetëm “a funksionon”, por edhe “a është ende produkti i duhur”.</p>
+<h2 id="si-të-rishikoni-testet-e-gjeneruara">Si të rishikoni testet e gjeneruara</h2>
+<p>Testet e gjeneruara janë të dobishme, por edhe ato duhen rishikuar kundrejt specifikimit.</p>
+<p>Pyesni:</p>
+<ul>
+<li>a kontrollojnë testet rrjedhën e synuar të punës</li>
+<li>a mbulojnë sjelljen rezervë</li>
+<li>a pasqyrojnë kushtet kufitare të dokumentuara</li>
+<li>a po pohojnë një sjellje komoditeti që nuk u specifikua kurrë</li>
+</ul>
+<p>Kjo është veçanërisht e rëndësishme në punën e drejtuar nga specifikimet sepse një paketë testesh e dobët mund ta ngurtësojë devijimin.</p>
+<h2 id="shembuj-nga-let-books">Shembuj nga Let Books</h2>
+<p>Shembuj të pyetjeve në nivel specifikimi në këtë depo përfshijnë:</p>
+<ul>
+<li>a mbetet rrjedha e punës e dobishme pa shërbime AI me pagesë</li>
+<li>a e ndan qartë dokumentacioni i gjendjes aktuale statusin e demonstrimit nga planet e ardhshme për backend-in</li>
+<li>a shmang dokumentacioni publik trajtimin e kodit burimor si provë editoriale kanonike</li>
+<li>a mbeten hapat e validimit pjesë e rrjedhës së dorëzimit në vend që të varen nga kujtesa opsionale</li>
+</ul>
+<p>Këto pyetje janë mjaftueshëm specifike për të drejtuar rishikimin, dhe kjo është pikërisht ajo që duhet të mundësojë një specifikim.</p>
+<h2 id="mësimi-afatgjatë">Mësimi afatgjatë</h2>
+<p>Rishikimi i ndihmuar nga AI nuk ka të bëjë me kontrollimin nëse ndihmësi prodhoi diçka mbresëlënëse. Ka të bëjë me kontrollimin nëse rezultati ende i përket produktit të synuar.</p>
+<p>Pyetja më e mirë e rishikimit zakonisht nuk është “A funksionon kjo?”. Është “A përputhet kjo me specifikimin, përfshirë pjesët që harrohen lehtë?”.</p>
+<h2 id="lexim-i-mëtejshëm">Lexim i mëtejshëm</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-write-a-spec-that-ai-can-follow.md</code></li>
+<li><code>how-to-turn-a-product-spec-into-an-implementation-plan.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>../wiki/sq/spec-driven-development.md</code></li>
+<li><code>../blog/sq/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -132,26 +247,34 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Dorëzim me AI</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Planifikim i zbatimit</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Rishikimi i produktit</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Zhvillim i drejtuar nga specifikimet</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sq/spec-driven-development-for-ai-projects.html"><span>Zhvillim i udhëhequr nga specifikimi për projektet me AI</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sq/how-to-write-a-spec-that-ai-can-follow.html"><span>Si të shkruhet një specifikim që AI mund ta ndjekë</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sq/how-to-write-a-spec-that-ai-can-follow.html"><span>Si të shkruani një specifikim që AI mund ta ndjekë</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../topics/sq/ai-assisted-implementation.html"><span>Implementimi i Ndihmuar nga AI</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+                <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
+                  <a href="../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Si ta ktheni një specifikim produkti në një plan implementimi</span><span class="topic-menu__meta">Materiale mësimore</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
                   <a href="../../blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kur demoja është provë dhe kur nuk është</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/sq/demo-spec-alignment.html"><span>Përputhja e demos me specifikimin</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sq/let-books-localization-lessons-learned.html"><span>Let Books Mësimet e nxjerra nga lokalizimi</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../blog/sq/spec-driven-development-in-let-books.html"><span>Zhvillim i udhëhequr nga specifikimi në Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbash të përputhura specifikimin, dokumentimin, demon dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Si të shtosh me faza rregulla validimi dhe porta CI</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../wiki/sq/implementation-guidance.html"><span>Udhëzime për implementim</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillim i udhëhequr nga specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbani të përafruara specifikimin, dokumentacionin, demonstrimin dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Si të shtoni rregulla validimi dhe porta CI me faza</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../wiki/sq/implementation-guidance.html"><span>Udhëzues Zbatimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/markdown-in-product-development.html"><span>Markdown në Zhvillimin e produktit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillimi i drejtuar nga Specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/spec-driven-development.html"><span>Zhvillimi i Udhëhequr nga Specifikimi</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/demo-and-specification-alignment.html"><span>Përputhja e Demos dhe Specifikimit</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/documentation-traceability.html"><span>Gjurmueshmëria e Dokumentacionit</span><span class="topic-menu__meta">Tema</span></a>
                 </div>
               </div>
             </div>
@@ -165,11 +288,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
             <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
               <a href="../../index.html">Faqja kryesore</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -180,6 +305,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</span>
+            <span>Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

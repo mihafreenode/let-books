@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lokalizimi në Shkallë | LetBooks</title>
+    <meta name="description" content="Pse lokalizimi në shkallë të gjerë është çështje inxhinierie, qasshmërie, qeverisjeje dhe botimi, e jo një hap përfundimtar përkthimi.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/topics/sq/localization-at-scale.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/topics/en/localization-at-scale.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/topics/en/localization-at-scale.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/topics/sl/localization-at-scale.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/topics/hr/localization-at-scale.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/topics/bs/localization-at-scale.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/topics/sr-Latn/localization-at-scale.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/topics/sr-Cyrl/localization-at-scale.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/topics/mk/localization-at-scale.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/topics/sq/localization-at-scale.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/topics/de/localization-at-scale.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/topics/it/localization-at-scale.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/topics/fr/localization-at-scale.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/topics/es/localization-at-scale.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Lokalizimi në Shkallë | LetBooks">
+    <meta property="og:description" content="Pse lokalizimi në shkallë të gjerë është çështje inxhinierie, qasshmërie, qeverisjeje dhe botimi, e jo një hap përfundimtar përkthimi.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/topics/sq/localization-at-scale.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lokalizimi në Shkallë | LetBooks">
+    <meta name="twitter:description" content="Pse lokalizimi në shkallë të gjerë është çështje inxhinierie, qasshmërie, qeverisjeje dhe botimi, e jo një hap përfundimtar përkthimi.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="topics" data-locale="sq">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../topics/sq/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Tema</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sq/index.html">Dokumentim</a>
+            <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
+            <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../topics/en/localization-at-scale.html" lang="en">EN</a>
+              <a class="lang-link" href="../../topics/sl/localization-at-scale.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../topics/hr/localization-at-scale.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../topics/bs/localization-at-scale.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../topics/sr-Latn/localization-at-scale.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../topics/sr-Cyrl/localization-at-scale.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../topics/mk/localization-at-scale.html" lang="mk">МК</a>
+              <a class="lang-link is-current" href="../../topics/sq/localization-at-scale.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../topics/de/localization-at-scale.html" lang="de">DE</a>
+              <a class="lang-link" href="../../topics/it/localization-at-scale.html" lang="it">IT</a>
+              <a class="lang-link" href="../../topics/fr/localization-at-scale.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../topics/es/localization-at-scale.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sq/index.html">Dokumentim</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../topics/sq/index.html">Tema</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Lokalizimi në Shkallë</span>
+            </nav>
+            <h1>Lokalizimi në Shkallë</h1>
+          <div class="content-page-meta">
+            <span>Tema</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Pse lokalizimi në shkallë të gjerë është çështje inxhinierie, qasshmërie, qeverisjeje dhe botimi, e jo një hap përfundimtar përkthimi.</p>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Lokalizimi në shkallë është disiplina e bërjes së përmbajtjes shumëgjuhëshe të qëndrueshme kur numri i faqeve, gjuhëve, kontribuesve dhe cikleve të publikimit rritet përtej koordinimit manual ad hoc. Ai nuk ka të bëjë vetëm me përkthimin e vargjeve të tekstit. Ka të bëjë me kontrollin e devijimit nëpër përmbajtjen burimore, rezultatin e gjeneruar, vendimet e dizajnit, terminologjinë, validimin dhe rrjedhat e punës së botimit.</p>
+<p>Projektet e vogla ndonjëherë mund të lokalizojnë në mënyrë joformale. Një person shkruan përmbajtjen, një tjetër e përkthen, dhe rezultati rishikohet manualisht. Në shkallë më të madhe, ky model bëhet i brishtë. Ndryshimet ndodhin shumë shpesh dhe cilësia luhatet shumë, përveç rastit kur vetë procesi është i strukturuar.</p>
+<p>Prandaj lokalizimi në shkallë zakonisht trajtohet si problem sistemesh. Ekipet kanë nevojë për konventa burimore, kontroll terminologjie, rrjedha përkthimi, kontrolle barazie, rregulla botimi dhe validim në CI. Ato gjithashtu duhet të vendosin cilat lloje përmbajtjeje kërkojnë mbulim të plotë dhe cilat mund të tolerojnë një publikim me faza. Udhëzuesi mësimor për <a href="/docs/learning/sq/how-to-build-a-localization-pipeline.html">ndërtimin e një pipeline lokalizimi</a> e shpjegon shtresën praktike të rrjedhës së punës.</p>
+<p>Në Let Books, lokalizimi në shkallë është pjesë e identitetit të projektit sepse produkti është shprehimisht shumëgjuhësh si në ndërfaqe ashtu edhe në ambiciet për bazën e dijes. Kjo prek jo vetëm vargjet e ardhshme të aplikacionit, por edhe dokumentacionin, diagramet, daljen për shtypje dhe navigimin ndërgjuhësor. Faqja përkatëse wiki <a href="/docs/wiki/sq/localization-at-scale.html">Lokalizimi në Shkallë</a> përshkruan parimet afatgjata, ndërsa artikulli i blogut me të njëjtin emër ofron një kornizim narrativ.</p>
+<p>Mësimi i përgjithshëm është se puna shumëgjuhëshe bëhet më e besueshme kur trajtohet si infrastrukturë: e projektuar me qëllim, e validuar vazhdimisht dhe e mirëmbajtur si pjesë e produktit e jo pas tij.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Gjuhë të tjera</h2>
+            <ul>
+              <li><a href="../../topics/en/localization-at-scale.html" lang="en">English</a></li>
+              <li><a href="../../topics/sl/localization-at-scale.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../topics/hr/localization-at-scale.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../topics/bs/localization-at-scale.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../topics/sr-Latn/localization-at-scale.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../topics/sr-Cyrl/localization-at-scale.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../topics/mk/localization-at-scale.html" lang="mk">Македонски</a></li>
+              <li><a href="../../topics/de/localization-at-scale.html" lang="de">Deutsch</a></li>
+              <li><a href="../../topics/it/localization-at-scale.html" lang="it">Italiano</a></li>
+              <li><a href="../../topics/fr/localization-at-scale.html" lang="fr">Français</a></li>
+              <li><a href="../../topics/es/localization-at-scale.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
+            <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
+              <a href="../../index.html">Faqja kryesore</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</span>
+            <span>Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

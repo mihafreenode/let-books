@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Specifica di prodotto | LetBooks</title>
-    <meta name="description" content="Una specifica di prodotto definisce a cosa serve un prodotto, che cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.">
+    <title>Specifiche del prodotto | LetBooks</title>
+    <meta name="description" content="Una specifica di prodotto definisce a cosa serve un prodotto, cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/it/product-specification.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Specifica di prodotto | LetBooks">
-    <meta property="og:description" content="Una specifica di prodotto definisce a cosa serve un prodotto, che cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.">
+    <meta property="og:title" content="Specifiche del prodotto | LetBooks">
+    <meta property="og:description" content="Una specifica di prodotto definisce a cosa serve un prodotto, cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/it/product-specification.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Specifica di prodotto | LetBooks">
-    <meta name="twitter:description" content="Una specifica di prodotto definisce a cosa serve un prodotto, che cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.">
+    <meta name="twitter:title" content="Specifiche del prodotto | LetBooks">
+    <meta name="twitter:description" content="Una specifica di prodotto definisce a cosa serve un prodotto, cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="it">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/it/index.html">Blog</a>
             <a class="nav-link" href="../../learning/it/index.html">Materiale didattico</a>
             <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/it/index.html">Temi</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/product-specification.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/it/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Specifica di prodotto</span>
+              <span aria-current="page">Specifiche del prodotto</span>
             </nav>
-            <h1>Specifica di prodotto</h1>
-          <p class="content-page-summary">Una specifica di prodotto definisce a cosa serve un prodotto, che cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.</p>
+            <h1>Specifiche del prodotto</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Italiano</span>
+          </div>
+          <p class="content-page-summary">Una specifica di prodotto definisce a cosa serve un prodotto, cosa deve fare, quali limiti deve rispettare e quali risultati contano come successo.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temi:</span>
               <span class="content-tag">Specifica di prodotto</span>
@@ -101,52 +117,52 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="ruolo">Ruolo</h2>
-<p class="lead">La specifica di prodotto è la descrizione pratica di livello più alto del comportamento di prodotto previsto.</p>
+<p class="lead">La specifica del prodotto è la descrizione pratica di livello più elevato del comportamento previsto del prodotto.</p>
 <p>Dovrebbe rispondere a domande come:</p>
 <ul>
 <li>perché il prodotto esiste</li>
-<li>per chi è pensato</li>
+<li>a chi è rivolto</li>
 <li>quali flussi di lavoro sono di prima classe</li>
-<li>che cosa deve funzionare anche in condizioni di guasto</li>
-<li>che cosa è esplicitamente fuori ambito</li>
-<li>quali criteri di accettazione definiscono una demo o una release significativa</li>
+<li>cosa deve funzionare anche in condizioni di guasto</li>
+<li>cosa è esplicitamente fuori ambito</li>
+<li>quali criteri di accettazione definiscono una demo o un rilascio significativo</li>
 </ul>
-<h2 id="cosa-appartiene-a-una-specifica-di-prodotto">Cosa appartiene a una specifica di prodotto</h2>
-<p>Il contenuto tipico include:</p>
+<h2 id="ciò-che-appartiene-a-una-specifica-di-prodotto">Ciò che appartiene a una specifica di prodotto</h2>
+<p>Il contenuto tipico delle specifiche include:</p>
 <ul>
 <li>scopo del prodotto</li>
 <li>filosofia di base</li>
 <li>modello di dominio</li>
-<li>definizioni dei flussi di lavoro</li>
-<li>aspettative di privacy e sicurezza</li>
-<li>non-obiettivi</li>
-<li>indicazioni sulla sequenza di implementazione quando incidono sull’ambito o sull’ordine di consegna</li>
+<li>definizioni del flusso di lavoro</li>
+<li>aspettative in materia di privacy e sicurezza
+-non gol</li>
+<li>indicazioni sulla sequenza di implementazione laddove influiscono sull’ambito o sull’ordine di consegna</li>
 <li>criteri di accettazione</li>
 </ul>
-<p>La specifica dovrebbe concentrarsi sulla verità del prodotto, non su ogni dettaglio locale di implementazione.</p>
-<h2 id="cosa-di-solito-non-appartiene-qui">Cosa di solito non appartiene qui</h2>
-<p>Questi elementi spesso appartengono altrove, a meno che non incidano direttamente sugli impegni di prodotto:</p>
+<p>Le specifiche dovrebbero concentrarsi sulla verità del prodotto, non su tutti i dettagli dell’implementazione locale.</p>
+<h2 id="ciò-che-di-solito-non-appartiene-a-questo-posto">Ciò che di solito non appartiene a questo posto</h2>
+<p>Questi elementi spesso appartengono ad altri a meno che non influiscano direttamente sugli impegni relativi al prodotto:</p>
 <ul>
-<li>convenzioni temporanee del repository</li>
-<li>configurazione locale degli strumenti</li>
-<li>decisioni ristrette di rifinitura UI</li>
-<li>indicazioni di debugging una tantum</li>
-<li>meccaniche editoriali o di pubblicazione che non cambiano il modello di prodotto</li>
+<li>convenzioni sui repository temporanei</li>
+<li>Impostazione degli strumenti locali</li>
+<li>Decisioni restrittive sulla lucidatura dell’interfaccia utente</li>
+<li>Guida al debug una tantum</li>
+<li>meccaniche editoriali o editoriali che non modifichino il modello del prodotto</li>
 </ul>
-<h2 id="perché-conta-nel-lavoro-assistito-dallia">Perché conta nel lavoro assistito dall’IA</h2>
-<p>L’IA può generare implementazioni plausibili molto rapidamente. Senza una specifica di prodotto chiara, quell’implementazione può ottimizzare la comodità invece dell’intento.</p>
-<p>La specifica offre a revisori e collaboratori uno standard stabile per decidere se l’output generato appartiene ancora al prodotto previsto.</p>
-<h2 id="contesto-let-books">Contesto Let Books</h2>
-<p>In Let Books, <code>AGENTS.md</code> è la specifica di prodotto principale.</p>
+<h2 id="perché-è-importante-nel-lavoro-assistito-dallintelligenza-artificiale">Perché è importante nel lavoro assistito dall’intelligenza artificiale</h2>
+<p>L’intelligenza artificiale può generare un’implementazione plausibile molto rapidamente. Senza una chiara specifica del prodotto, tale implementazione potrebbe essere ottimizzata per comodità anziché per intento.</p>
+<p>La specifica fornisce ai revisori e ai contributori uno standard stabile per decidere se l’output generato appartiene ancora al prodotto previsto.</p>
+<h2 id="let-books-contesto">Let Books contesto</h2>
+<p>Nei Let Books, <code>AGENTS.md</code> è la specifica principale del prodotto.</p>
 <p>Definisce:</p>
 <ul>
-<li>lo scopo del progetto</li>
-<li>il modello di dominio e dei flussi di lavoro</li>
-<li>la direzione per multi-tenancy e localizzazione</li>
-<li>i principi del flusso manuale e dell’IA opzionale</li>
-<li>i criteri di accettazione per la prima demo</li>
+<li>scopo del progetto</li>
+<li>modello di dominio e flusso di lavoro</li>
+<li>direzione multi-tenant e localizzazione</li>
+<li>flusso di lavoro manuale e principi AI-opzionali</li>
+<li>criteri di accettazione per la prima demo</li>
 </ul>
-<p>Questo lo rende più di una panoramica. È l’autorità di prodotto principale nel repository.</p>
+<p>Ciò lo rende più di una panoramica. È la principale autorità di prodotto nel repository.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -170,6 +186,7 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="related-spec-writing-menu">Scrittura di specifiche</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="related-product-specification-menu">Specifica di prodotto</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Sviluppo guidato dalle specifiche</button>
               </div>
               <div class="topic-menu-layer">
@@ -177,17 +194,23 @@
                   <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html"><span>Come scrivere una specifica che l&#x27;IA può seguire</span><span class="topic-menu__meta">Materiale didattico</span></a>
                   <a href="../../learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Come trasformare una specifica di prodotto in un piano di implementazione</span><span class="topic-menu__meta">Materiale didattico</span></a>
                 </div>
+                <div class="topic-menu" id="related-product-specification-menu" data-topic-menu="related-product-specification" hidden>
+                  <a href="../../topics/it/spec-driven-development.html"><span>Sviluppo guidato dalle specifiche</span><span class="topic-menu__meta">Temi</span></a>
+                </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../blog/it/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quando la demo è prova e quando non lo è</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/it/documentation-is-part-of-the-product.html"><span>La documentazione è parte del prodotto</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/it/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quando la demo è prova e quando non lo è</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/it/spec-driven-development-in-let-books.html"><span>Sviluppo guidato dalle specifiche in Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/it/spec-driven-development-for-ai-projects.html"><span>Sviluppo guidato dalle specifiche per progetti di IA</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Come mantenere allineati specifica, documentazione, demo e codice</span><span class="topic-menu__meta">Materiale didattico</span></a>
                   <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html"><span>Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../wiki/it/implementation-guidance.html"><span>Linee guida di implementazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Come mantenere allineati specifica, documentazione, demo e codice</span><span class="topic-menu__meta">Materiale didattico</span></a>
+                  <a href="../../wiki/it/implementation-guidance.html"><span>Guida all&#x27;implementazione</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/it/documentation-traceability.html"><span>Tracciabilità della documentazione</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/it/spec-driven-development.html"><span>Sviluppo guidato dalle specifiche</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/spec-driven-development.html"><span>Sviluppo basato sulle specifiche</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/it/demo-spec-alignment.html"><span>Allineamento tra demo e specifica</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/demo-and-specification-alignment.html"><span>Allineamento tra demo e specifica</span><span class="topic-menu__meta">Temi</span></a>
+                  <a href="../../topics/it/ai-assisted-implementation.html"><span>Implementazione assistita dall&#x27;IA</span><span class="topic-menu__meta">Temi</span></a>
+                  <a href="../../topics/it/documentation-traceability.html"><span>Tracciabilità della documentazione</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
               </div>
             </div>
@@ -201,11 +224,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</p>
+            <p class="footer-note">Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</p>
             <p class="footer-microcopy">Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../it/index.html">Panoramica</a>
+              <a href="../../topics/it/index.html">Temi</a>
               <a href="../../index.html">Home page</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -216,6 +241,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</span>
+            <span>Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

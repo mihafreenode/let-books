@@ -29,6 +29,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/index.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/index.html">
@@ -59,6 +60,7 @@
             <a class="nav-link" href="../../blog/it/index.html">Blog</a>
             <a class="nav-link" href="../../learning/it/index.html">Guide didattiche</a>
             <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/it/index.html">Temi</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/index.html" lang="en">EN</a>
@@ -77,27 +79,108 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Guide didattiche</h1>
             <p>Guide strutturate per scrivere specifiche, pianificare l'implementazione e allineare documentazione, demo e codice.</p>
           </div>
-          <ul>
-              <li><a href="how-to-add-validation-rules-and-ci-gates-in-stages.html">Come aggiungere a fasi regole di validazione e gate CI</a></li>
-              <li><a href="how-to-build-a-localization-pipeline.html">Come costruire una pipeline di localizzazione</a></li>
-              <li><a href="how-to-design-english-source-content-for-translation.html">Come progettare contenuto sorgente inglese per la traduzione</a></li>
-              <li><a href="how-to-keep-spec-docs-demo-and-code-aligned.html">Come mantenere allineati specifica, documentazione, demo e codice</a></li>
-              <li><a href="how-to-localize-accessibility-content.html">Come localizzare il contenuto di accessibilità</a></li>
-              <li><a href="how-to-localize-diagrams-and-screenshots.html">Come localizzare diagrammi e screenshot</a></li>
-              <li><a href="how-to-manage-terminology-across-languages.html">Come gestire la terminologia tra lingue</a></li>
-              <li><a href="how-to-measure-translation-maturity.html">Come misurare la maturità della traduzione</a></li>
-              <li><a href="how-to-review-ai-assisted-translations.html">Come revisionare le traduzioni assistite dall'IA</a></li>
-              <li><a href="how-to-review-ai-assisted-work-against-the-spec.html">Come rivedere il lavoro assistito dall'IA rispetto alla specifica</a></li>
-              <li><a href="how-to-run-localization-qa-in-ci.html">Come eseguire QA di localizzazione in CI</a></li>
-              <li><a href="how-to-turn-a-product-spec-into-an-implementation-plan.html">Come trasformare una specifica di prodotto in un piano di implementazione</a></li>
-              <li><a href="how-to-write-a-spec-that-ai-can-follow.html">Come scrivere una specifica che l'IA può seguire</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Tipo di contenuto">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/it/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link is-active" href="../../learning/it/index.html" data-content-switcher-link data-content-type="learning" aria-current="page">Materiale didattico</a>
+              <a class="content-type-switcher__link" href="../../wiki/it/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/it/index.html" data-content-switcher-link data-content-type="topics">Temi</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Materiali didattici recenti</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html">
+                <span class="recent-content-card__type">Materiale didattico</span>
+                <h3>Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</h3>
+              <p>Questa guida spiega come rivedere un&#x27;implementazione assistita dall&#x27;IA verificandola rispetto alla specifica di prodotto, alle regole del flusso di lavoro, alla documentazione e alle aspettative di validazione, invece di giudicare solo se l&#x27;output appare curato o tecnicamente plausibile.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">
+                <span class="recent-content-card__type">Materiale didattico</span>
+                <h3>Come mantenere allineati specifica, documentazione, demo e codice</h3>
+              <p>Questa guida descrive un flusso di lavoro pratico per mantenere allineati nel tempo la specifica di prodotto, la documentazione, il comportamento della demo e il lavoro di implementazione.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html">
+                <span class="recent-content-card__type">Materiale didattico</span>
+                <h3>Come scrivere una specifica che l&#x27;IA può seguire</h3>
+              <p>Questa guida spiega come scrivere una specifica di prodotto o di funzionalità che aiuti l&#x27;implementazione assistita dall&#x27;IA a restare allineata agli obiettivi reali del prodotto invece di andare alla deriva verso un output generico.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.html">
+                <span class="recent-content-card__type">Materiale didattico</span>
+                <h3>Come trasformare una specifica di prodotto in un piano di implementazione</h3>
+              <p>Questa guida spiega come tradurre una specifica di prodotto in un piano di implementazione concreto senza perdere l&#x27;intento, i confini o le regole del flusso di lavoro che rendevano utile la specifica in primo luogo.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Sfoglia per argomento</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-learning-it-demo-alignment-menu">Allineamento del demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-learning-it-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-learning-it-ai-assisted-delivery-menu">Consegna con AI</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-learning-it-documentation-menu">Documentazione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-learning-it-project-management-menu">Gestione del progetto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-learning-it-implementation-planning-menu">Pianificazione dell&#x27;implementazione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-learning-it-translation-quality-menu">Qualità della traduzione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-learning-it-product-review-menu">Revisione del prodotto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-learning-it-spec-writing-menu">Scrittura di specifiche</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-learning-it-spec-driven-development-menu">Sviluppo guidato dalle specifiche</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-it-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-learning-it-validation-menu">Validazione</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-learning-it-demo-alignment-menu" data-topic-menu="index-learning-it-demo-alignment" hidden>
+                      <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">Come mantenere allineati specifica, documentazione, demo e codice</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-ci-cd-menu" data-topic-menu="index-learning-it-ci-cd" hidden>
+                      <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html">Come aggiungere in fasi regole di validazione e gate CI</a>
+                      <a href="../../learning/it/how-to-run-localization-qa-in-ci.html">Come eseguire QA di localizzazione in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-ai-assisted-delivery-menu" data-topic-menu="index-learning-it-ai-assisted-delivery" hidden>
+                      <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html">Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</a>
+                      <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html">Come scrivere una specifica che l&#x27;IA può seguire</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-documentation-menu" data-topic-menu="index-learning-it-documentation" hidden>
+                      <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">Come mantenere allineati specifica, documentazione, demo e codice</a>
+                      <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html">Come scrivere una specifica che l&#x27;IA può seguire</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-project-management-menu" data-topic-menu="index-learning-it-project-management" hidden>
+                      <a href="../../learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.html">Come trasformare una specifica di prodotto in un piano di implementazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-implementation-planning-menu" data-topic-menu="index-learning-it-implementation-planning" hidden>
+                      <a href="../../learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.html">Come trasformare una specifica di prodotto in un piano di implementazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-translation-quality-menu" data-topic-menu="index-learning-it-translation-quality" hidden>
+                      <a href="../../learning/it/how-to-measure-translation-maturity.html">Come misurare la maturità della traduzione</a>
+                      <a href="../../learning/it/how-to-review-ai-assisted-translations.html">Come revisionare le traduzioni assistite dall&#x27;IA</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-product-review-menu" data-topic-menu="index-learning-it-product-review" hidden>
+                      <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html">Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-spec-writing-menu" data-topic-menu="index-learning-it-spec-writing" hidden>
+                      <a href="../../learning/it/how-to-design-english-source-content-for-translation.html">Come progettare contenuto sorgente inglese per la traduzione</a>
+                      <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html">Come scrivere una specifica che l&#x27;IA può seguire</a>
+                      <a href="../../learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.html">Come trasformare una specifica di prodotto in un piano di implementazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-spec-driven-development-menu" data-topic-menu="index-learning-it-spec-driven-development" hidden>
+                      <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html">Come aggiungere in fasi regole di validazione e gate CI</a>
+                      <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html">Come mantenere allineati specifica, documentazione, demo e codice</a>
+                      <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html">Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-it-validation-menu" data-topic-menu="index-learning-it-validation" hidden>
+                      <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html">Come aggiungere in fasi regole di validazione e gate CI</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">
@@ -110,6 +193,7 @@
           <div>
             <div class="footer-links">
               <a href="../../it/index.html">Panoramica</a>
+              <a href="../../topics/it/index.html">Temi</a>
               <a href="../../index.html">Home page</a>
               <a href="../../../static-demo/">Demo</a>
             </div>

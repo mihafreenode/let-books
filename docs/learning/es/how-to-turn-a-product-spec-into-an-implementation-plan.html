@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cómo convertir una especificación de producto en un plan de implementación | LetBooks</title>
-    <meta name="description" content="Esta guía muestra cómo convertir una especificación de producto en un plan de implementación concreto sin perder propósito, límites y reglas esenciales.">
+    <meta name="description" content="Esta guía explica cómo traducir una especificación de producto a un plan de implementación concreto sin perder la intención, los límites ni las reglas de flujo de trabajo que hicieron útil la especificación desde el principio.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Cómo convertir una especificación de producto en un plan de implementación | LetBooks">
-    <meta property="og:description" content="Esta guía muestra cómo convertir una especificación de producto en un plan de implementación concreto sin perder propósito, límites y reglas esenciales.">
+    <meta property="og:description" content="Esta guía explica cómo traducir una especificación de producto a un plan de implementación concreto sin perder la intención, los límites ni las reglas de flujo de trabajo que hicieron útil la especificación desde el principio.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cómo convertir una especificación de producto en un plan de implementación | LetBooks">
-    <meta name="twitter:description" content="Esta guía muestra cómo convertir una especificación de producto en un plan de implementación concreto sin perder propósito, límites y reglas esenciales.">
+    <meta name="twitter:description" content="Esta guía explica cómo traducir una especificación de producto a un plan de implementación concreto sin perder la intención, los límites ni las reglas de flujo de trabajo que hicieron útil la especificación desde el principio.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="es">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/es/index.html">Blog</a>
             <a class="nav-link" href="../../learning/es/index.html">Material de aprendizaje</a>
             <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/es/index.html">Temas</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Cómo convertir una especificación de producto en un plan de implementación</span>
             </nav>
             <h1>Cómo convertir una especificación de producto en un plan de implementación</h1>
-          <p class="content-page-summary">Esta guía muestra cómo convertir una especificación de producto en un plan de implementación concreto sin perder propósito, límites y reglas esenciales.</p>
+          <div class="content-page-meta">
+            <span>Material de aprendizaje</span>
+            <span>Español</span>
+          </div>
+          <p class="content-page-summary">Esta guía explica cómo traducir una especificación de producto a un plan de implementación concreto sin perder la intención, los límites ni las reglas de flujo de trabajo que hicieron útil la especificación desde el principio.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temas:</span>
               <span class="content-tag">Planificación de la implementación</span>
@@ -100,26 +116,139 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="puntos-clave">Puntos clave</h2>
+<h2 id="por-qué-importa-este-paso">Por qué importa este paso</h2>
+<p class="lead">Una especificación describe qué debe hacer el producto y por qué debe hacerlo.</p>
+<p>Un plan de implementación describe cómo va a entregar el equipo ese comportamiento en una secuencia que pueda revisarse, probarse y ejecutarse de forma realista.</p>
+<p>Muchos proyectos fracasan en el hueco entre esos dos documentos.</p>
+<p>La especificación puede ser buena, pero el plan se vuelve demasiado vago, demasiado técnico o demasiado desligado de los flujos de trabajo de las personas usuarias. En el trabajo asistido por IA, esto es aún más común porque el código generado puede hacer parecer que la planificación ya ocurrió cuando en realidad no fue así.</p>
+<h2 id="empieza-por-extraer-las-decisiones-de-producto">Empieza por extraer las decisiones de producto</h2>
+<p>Antes de convertir una especificación en tareas, identifica las decisiones que realmente limitan la implementación.</p>
+<p>Busca:</p>
 <ul>
 <li>propósito del producto</li>
-<li>flujo de usuario</li>
-<li>límites del alcance</li>
+<li>flujo de trabajo de la persona usuaria</li>
+<li>límites de alcance</li>
 <li>reglas no negociables</li>
 <li>comportamiento de respaldo</li>
 <li>criterios de aceptación</li>
 </ul>
-<h2 id="tres-niveles">Tres niveles</h2>
+<p>Estas son las partes que deberían sobrevivir a la transición de especificación a plan.</p>
+<p>Si el plan las pierde, normalmente se convierte en una lista técnica de tareas en lugar de un plan de entrega.</p>
+<h2 id="separa-el-plan-en-capas">Separa el plan en capas</h2>
+<p>Un buen plan de implementación suele tener al menos tres capas.</p>
+<h3 id="capa-de-flujo-de-trabajo">1. Capa de flujo de trabajo</h3>
+<p>Describe el flujo orientado a la persona usuaria con pasos breves y concretos.</p>
+<p>Ejemplo:</p>
 <ol type="1">
-<li>nivel de flujo</li>
-<li>nivel de sistema</li>
-<li>nivel de entrega</li>
+<li>la persona usuaria selecciona una caja de almacenamiento</li>
+<li>la persona usuaria escanea o introduce un ISBN</li>
+<li>la persona usuaria puede continuar aunque falle la búsqueda</li>
+<li>la persona usuaria guarda la copia física en la ubicación seleccionada</li>
 </ol>
-<h2 id="preguntas-de-control">Preguntas de control</h2>
+<p>Esta capa protege el recorrido de la persona usuaria para que no quede enterrado bajo tareas técnicas.</p>
+<h3 id="capa-de-sistema">2. Capa de sistema</h3>
+<p>Describe las partes del sistema que deben respaldar ese flujo de trabajo.</p>
+<p>Ejemplos:</p>
 <ul>
-<li>se conserva el flujo de usuario</li>
-<li>se incluyen documentación y validación</li>
-<li>otra persona puede seguir el plan sin adivinar</li>
+<li>cambios en el modelo de datos</li>
+<li>pantallas o formularios de interfaz</li>
+<li>reglas de validación</li>
+<li>comportamiento de importación/exportación</li>
+<li>actualizaciones de localización</li>
+<li>necesidades de verificación</li>
+</ul>
+<p>Esta capa conecta el comportamiento del producto con el trabajo técnico.</p>
+<h3 id="capa-de-entrega">3. Capa de entrega</h3>
+<p>Divide el trabajo del sistema en una secuencia que realmente pueda implementarse y revisarse.</p>
+<p>Ejemplos:</p>
+<ol type="1">
+<li>definir o actualizar el modelo de dominio</li>
+<li>implementar el flujo principal de interfaz</li>
+<li>añadir comportamiento de respaldo</li>
+<li>añadir validación y pruebas</li>
+<li>actualizar la documentación y los ejemplos</li>
+</ol>
+<p>Esta capa es donde el plan pasa a ser programable en el tiempo.</p>
+<h2 id="mantén-el-plan-moldeado-por-las-restricciones">Mantén el plan moldeado por las restricciones</h2>
+<p>Los planes de implementación suelen desviarse cuando se reescriben como pasos genéricos de ingeniería.</p>
+<p>Para evitarlo, mantén visibles dentro del plan las restricciones clave del producto.</p>
+<p>Para un trabajo al estilo Let Books, eso puede incluir restricciones como:</p>
+<ul>
+<li>los flujos de trabajo manuales deben seguir funcionando sin IA</li>
+<li>se deben permitir datos incompletos</li>
+<li>las copias físicas deben seguir siendo distintas de los registros bibliográficos</li>
+<li>la localización no puede tratarse como un pulido opcional</li>
+<li>la documentación del estado actual debe seguir siendo honesta sobre lo que existe ahora</li>
+</ul>
+<p>Estas restricciones no deberían vivir solo en la especificación original. También deberían aparecer en las notas de planificación y en los criterios de revisión.</p>
+<h2 id="usa-los-criterios-de-aceptación-para-dar-forma-al-desglose-de-tareas">Usa los criterios de aceptación para dar forma al desglose de tareas</h2>
+<p>Una de las formas más fáciles de convertir una especificación en un plan es empezar por los criterios de aceptación.</p>
+<p>Para cada criterio, pregunta:</p>
+<ul>
+<li>qué interfaz o flujo de trabajo respalda esto</li>
+<li>qué datos o comportamiento del sistema respaldan esto</li>
+<li>qué caso de fallo debe seguir teniendo éxito</li>
+<li>cómo lo vamos a verificar</li>
+</ul>
+<p>Ese método mantiene el plan ligado a resultados observables en lugar de a discusiones abstractas de arquitectura.</p>
+<h2 id="planificación-asistida-por-ia-en-qué-fijarse">Planificación asistida por IA: en qué fijarse</h2>
+<p>La IA puede ayudar a producir un plan de implementación rápidamente, pero a menudo introduce problemas recurrentes:</p>
+<ul>
+<li>abstracciones adicionales sin necesidad de producto</li>
+<li>tareas agrupadas por tecnología en lugar de por flujo de trabajo</li>
+<li>omisión optimista del comportamiento de respaldo</li>
+<li>suposiciones ocultas sobre disponibilidad de backend o calidad de datos</li>
+<li>planes que parecen completos pero ignoran la documentación y la verificación</li>
+</ul>
+<p>Al revisar un plan de implementación generado por IA, pregunta si sigue reflejando el conjunto real de reglas del producto.</p>
+<h2 id="una-plantilla-práctica-de-planificación">Una plantilla práctica de planificación</h2>
+<p>Usa una estructura como esta:</p>
+<ol type="1">
+<li>objetivo de la funcionalidad</li>
+<li>resumen del flujo de trabajo de la persona usuaria</li>
+<li>restricciones y reglas no negociables</li>
+<li>bloques de entrega</li>
+<li>estrategia de verificación</li>
+<li>actualizaciones de documentación necesarias</li>
+</ol>
+<p>Por ejemplo, un bloque de entrega podría ser:</p>
+<ul>
+<li>añadir selector de ubicación de almacenamiento al flujo de entrada</li>
+<li>permitir guardar aunque la búsqueda de metadatos no tenga éxito</li>
+<li>persistir la copia física por separado de los metadatos bibliográficos</li>
+<li>actualizar el texto de guía y las notas de verificación</li>
+</ul>
+<p>Eso es mucho más sólido que una lista plana como:</p>
+<ul>
+<li>crear formulario</li>
+<li>añadir llamada API</li>
+<li>añadir pruebas</li>
+</ul>
+<h2 id="ejemplo-de-let-books">Ejemplo de Let Books</h2>
+<p>El repositorio ya contiene las entradas básicas para este estilo de planificación:</p>
+<ul>
+<li><code>AGENTS.md</code> para propósito del producto, flujos de trabajo y criterios de aceptación</li>
+<li><code>AGENTS-Implementation.md</code> para restricciones de entrega y reglas del repositorio</li>
+<li><code>README.md</code> para expectativas sobre el estado actual</li>
+<li><code>docs/Development.md</code> y <code>docs/Deployment.md</code> para contexto de validación y entrega</li>
+</ul>
+<p>Eso significa que el plan de implementación no necesita inventar su propia lógica. Debe traducir esas capas en una secuencia de entrega acotada.</p>
+<h2 id="lista-de-comprobación-para-revisión">Lista de comprobación para revisión</h2>
+<p>Antes de aceptar un plan de implementación, comprueba:</p>
+<ol type="1">
+<li>¿Preserva el flujo de trabajo de la persona usuaria definido en la especificación?</li>
+<li>¿Mantiene visibles las restricciones no negociables del producto?</li>
+<li>¿Incluye comportamiento de respaldo y de fallo?</li>
+<li>¿Incluye trabajo de documentación y verificación, y no solo tareas de código?</li>
+<li>¿Otra persona colaboradora podría implementar a partir de este plan sin adivinar la intención del producto?</li>
+</ol>
+<h2 id="lecturas-adicionales">Lecturas adicionales</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-write-a-spec-that-ai-can-follow.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>../wiki/es/spec-driven-development.md</code></li>
+<li><code>../blog/es/spec-driven-development-in-let-books.md</code></li>
 </ul>
 
         <div class="post-article-nav">
@@ -145,6 +274,7 @@
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Alineación de la demo</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Donación de libros</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Entrega asistida por IA</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="related-project-management-menu">Gestión del proyecto</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Planificación de la implementación</button>
@@ -156,24 +286,30 @@
                   <a href="../../blog/es/spec-driven-development-in-let-books.html"><span>Desarrollo guiado por especificaciones en Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Cómo mantener alineados la especificación, la documentación, la demo y el código</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
                   <a href="../../wiki/es/demo-spec-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/es/demo-and-specification-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Temas</span></a>
                 </div>
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Cómo añadir por etapas reglas de validación y controles CI</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../topics/es/validation-layers.html"><span>Capas de validación</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../blog/es/isbn-not-a-database.html"><span>El ISBN no es una base de datos</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../topics/es/isbn.html"><span>ISBN</span><span class="topic-menu__meta">Temas</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../blog/es/documentation-is-part-of-the-product.html"><span>La documentación es parte del producto</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/es/spec-driven-development-for-ai-projects.html"><span>Desarrollo guiado por especificaciones para proyectos de IA</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html"><span>Cómo revisar trabajo asistido por IA frente a la especificación</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../topics/es/ai-assisted-implementation.html"><span>Implementación asistida por IA</span><span class="topic-menu__meta">Temas</span></a>
                 </div>
                 <div class="topic-menu" id="related-project-management-menu" data-topic-menu="related-project-management" hidden>
                   <a href="../../wiki/es/localization-roadmap.html"><span>Hoja de ruta de localización</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../wiki/es/implementation-guidance.html"><span>Directrices de implementación</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/implementation-guidance.html"><span>Guía de implementación</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-writing-menu" data-topic-menu="related-spec-writing" hidden>
                   <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html"><span>Cómo escribir una especificación que la IA pueda seguir</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
                   <a href="../../learning/es/how-to-design-english-source-content-for-translation.html"><span>Cómo diseñar contenido fuente en inglés para traducción</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
-                  <a href="../../wiki/es/product-specification.html"><span>Especificación del producto</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/product-specification.html"><span>Especificación de producto</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>
@@ -187,11 +323,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</p>
+            <p class="footer-note">Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</p>
             <p class="footer-microcopy">Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../es/index.html">Vista general</a>
+              <a href="../../topics/es/index.html">Temas</a>
               <a href="../../index.html">Página de inicio</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -202,6 +340,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</span>
+            <span>Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -29,6 +29,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/index.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/index.html">
@@ -59,6 +60,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernleitfäden</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/index.html" lang="en">EN</a>
@@ -77,38 +79,130 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Wiki</h1>
             <p>Dauerhafte Referenzseiten zu spezifikationsgesteuerter Entwicklung, Dokumentationsrückverfolgbarkeit, Validierungsebenen und verwandten Themen.</p>
           </div>
-          <ul>
-              <li><a href="ai-assisted-translation-policy.html">AI-Richtlinie zur unterstützten Übersetzung</a></li>
-              <li><a href="demo-spec-alignment.html">Abgleich Von Demo Und Spezifikation</a></li>
-              <li><a href="documentation-traceability.html">Rückverfolgbarkeit Der Dokumentation</a></li>
-              <li><a href="implementation-guidance.html">Implementierungsleitlinien</a></li>
-              <li><a href="language-support-matrix.html">Sprachunterstützungsmatrix</a></li>
-              <li><a href="let-books-accessibility-and-localization.html">Let Books Zugänglichkeit und Lokalisierung</a></li>
-              <li><a href="let-books-localization-architecture.html">Let Books Lokalisierungsarchitektur</a></li>
-              <li><a href="let-books-localization-case-study.html">Let Books Fallstudie zur Lokalisierung</a></li>
-              <li><a href="let-books-localization-lessons-learned.html">Let Books Erkenntnisse aus der Lokalisierung</a></li>
-              <li><a href="localization-at-scale.html">Lokalisierung im Maßstab</a></li>
-              <li><a href="localization-ci-cd.html">Lokalisierung CI und CD</a></li>
-              <li><a href="localization-governance.html">Lokalisierungs-Governance</a></li>
-              <li><a href="localization-maturity-model.html">Lokalisierungsreifemodell</a></li>
-              <li><a href="localization-roadmap.html">Lokalisierungs-Roadmap</a></li>
-              <li><a href="markdown-in-product-development.html">Markdown In Der Produktentwicklung</a></li>
-              <li><a href="multilingual-accessibility.html">Mehrsprachige Barrierefreiheit</a></li>
-              <li><a href="multilingual-public-interest-software.html">Mehrsprachige Software von öffentlichem Interesse</a></li>
-              <li><a href="non-text-asset-localization.html">Lokalisierung von Nicht-Text-Assets</a></li>
-              <li><a href="product-specification.html">Produktspezifikation</a></li>
-              <li><a href="spec-driven-development.html">Spezifikationsgetriebene Entwicklung</a></li>
-              <li><a href="translation-memory-and-glossaries.html">Translation Memory und Glossare</a></li>
-              <li><a href="translation-quality-assurance.html">Qualitätssicherung von Übersetzungen</a></li>
-              <li><a href="unicode-and-script-correctness.html">Unicode und Skriptkorrektheit</a></li>
-              <li><a href="validation-layers.html">Validierungsebenen</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Inhaltstyp">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/de/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/de/index.html" data-content-switcher-link data-content-type="learning">Lernmaterial</a>
+              <a class="content-type-switcher__link is-active" href="../../wiki/de/index.html" data-content-switcher-link data-content-type="wiki" aria-current="page">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/de/index.html" data-content-switcher-link data-content-type="topics">Themen</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Neueste Wiki-Einträge</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../wiki/de/validation-layers.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Validierungsebenen</h3>
+              <p>Validierungsebenen sind die verschiedenen Methoden, mit denen ein Projekt überprüft, ob Implementierungs-, Dokumentations- und Bereitstellungsartefakte noch den beabsichtigten Regeln und Qualitätserwartungen entsprechen.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/de/spec-driven-development.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Spezifikationsgesteuerte Entwicklung</h3>
+              <p>Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem explizite Produkt- und Workflowdefinitionen die Implementierung, Dokumentation, Überprüfung und Verifizierung leiten.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/de/product-specification.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Produktspezifikation</h3>
+              <p>Eine Produktspezifikation definiert, wofür ein Produkt gedacht ist, was es tun muss, welche Grenzen es einhalten muss und welche Ergebnisse als Erfolg gelten.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/de/let-books-localization-case-study.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Let Books Lokalisierungs-Fallstudie</h3>
+              <p>Let Books ist eine lebendige Fallstudie zum Aufbau einer mehrsprachigen Wissensplattform und Produktvision, bevor eine vollständige Backend-Anwendung existiert.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Nach Themen durchsuchen</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-wiki-de-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-wiki-de-demo-alignment-menu">Demo-Abgleich</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-wiki-de-documentation-menu">Dokumentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-wiki-de-implementation-planning-menu">Implementierungsplanung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-wiki-de-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-wiki-de-product-review-menu">Produktprüfung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-wiki-de-product-quality-menu">Produktqualität</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-wiki-de-product-specification-menu">Produktspezifikation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-wiki-de-project-management-menu">Projektmanagement</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-wiki-de-spec-writing-menu">Spezifikationen schreiben</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-wiki-de-spec-driven-development-menu">Spezifikationsgetriebene Entwicklung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-wiki-de-validation-menu">Validierung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-de-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-wiki-de-translation-quality-menu">Übersetzungsqualität</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-wiki-de-ci-cd-menu" data-topic-menu="index-wiki-de-ci-cd" hidden>
+                      <a href="../../wiki/de/localization-ci-cd.html">Lokalisierung CI und CD</a>
+                      <a href="../../wiki/de/validation-layers.html">Validierungsebenen</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-demo-alignment-menu" data-topic-menu="index-wiki-de-demo-alignment" hidden>
+                      <a href="../../wiki/de/demo-spec-alignment.html">Abgleich Von Demo Und Spezifikation</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-documentation-menu" data-topic-menu="index-wiki-de-documentation" hidden>
+                      <a href="../../wiki/de/documentation-is-more-than-a-website.html">Dokumentation ist mehr als eine Website</a>
+                      <a href="../../wiki/de/documentation-validation-beyond-linting.html">Dokumentationsvalidierung jenseits von Linting</a>
+                      <a href="../../wiki/de/markdown-in-product-development.html">Markdown in der Produktentwicklung</a>
+                      <a href="../../wiki/de/documentation-traceability.html">Rückverfolgbarkeit der Dokumentation</a>
+                      <a href="../../wiki/de/spec-driven-development.html">Spezifikationsgesteuerte Entwicklung</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-implementation-planning-menu" data-topic-menu="index-wiki-de-implementation-planning" hidden>
+                      <a href="../../wiki/de/implementation-guidance.html">Implementierungsleitfaden</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-let-books-menu" data-topic-menu="index-wiki-de-let-books" hidden>
+                      <a href="../../wiki/de/let-books-localization-lessons-learned.html">Let Books Erkenntnisse aus der Lokalisierung</a>
+                      <a href="../../wiki/de/let-books-localization-case-study.html">Let Books Lokalisierungs-Fallstudie</a>
+                      <a href="../../wiki/de/let-books-localization-architecture.html">Let Books Lokalisierungsarchitektur</a>
+                      <a href="../../wiki/de/let-books-accessibility-and-localization.html">Let Books Zugänglichkeit und Lokalisierung</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-product-review-menu" data-topic-menu="index-wiki-de-product-review" hidden>
+                      <a href="../../wiki/de/demo-spec-alignment.html">Abgleich Von Demo Und Spezifikation</a>
+                      <a href="../../wiki/de/let-books-localization-lessons-learned.html">Let Books Erkenntnisse aus der Lokalisierung</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-product-quality-menu" data-topic-menu="index-wiki-de-product-quality" hidden>
+                      <a href="../../wiki/de/markdown-in-product-development.html">Markdown in der Produktentwicklung</a>
+                      <a href="../../wiki/de/documentation-traceability.html">Rückverfolgbarkeit der Dokumentation</a>
+                      <a href="../../wiki/de/spec-driven-development.html">Spezifikationsgesteuerte Entwicklung</a>
+                      <a href="../../wiki/de/validation-layers.html">Validierungsebenen</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-product-specification-menu" data-topic-menu="index-wiki-de-product-specification" hidden>
+                      <a href="../../wiki/de/product-specification.html">Produktspezifikation</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-project-management-menu" data-topic-menu="index-wiki-de-project-management" hidden>
+                      <a href="../../wiki/de/implementation-guidance.html">Implementierungsleitfaden</a>
+                      <a href="../../wiki/de/localization-roadmap.html">Lokalisierungs-Roadmap</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-spec-writing-menu" data-topic-menu="index-wiki-de-spec-writing" hidden>
+                      <a href="../../wiki/de/product-specification.html">Produktspezifikation</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-spec-driven-development-menu" data-topic-menu="index-wiki-de-spec-driven-development" hidden>
+                      <a href="../../wiki/de/demo-spec-alignment.html">Abgleich Von Demo Und Spezifikation</a>
+                      <a href="../../wiki/de/documentation-is-more-than-a-website.html">Dokumentation ist mehr als eine Website</a>
+                      <a href="../../wiki/de/implementation-guidance.html">Implementierungsleitfaden</a>
+                      <a href="../../wiki/de/markdown-in-product-development.html">Markdown in der Produktentwicklung</a>
+                      <a href="../../wiki/de/product-specification.html">Produktspezifikation</a>
+                      <a href="../../wiki/de/documentation-traceability.html">Rückverfolgbarkeit der Dokumentation</a>
+                      <a href="../../wiki/de/spec-driven-development.html">Spezifikationsgesteuerte Entwicklung</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-validation-menu" data-topic-menu="index-wiki-de-validation" hidden>
+                      <a href="../../wiki/de/documentation-validation-beyond-linting.html">Dokumentationsvalidierung jenseits von Linting</a>
+                      <a href="../../wiki/de/validation-layers.html">Validierungsebenen</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-de-translation-quality-menu" data-topic-menu="index-wiki-de-translation-quality" hidden>
+                      <a href="../../wiki/de/ai-assisted-translation-policy.html">AI-Richtlinie zur unterstützten Übersetzung</a>
+                      <a href="../../wiki/de/localization-maturity-model.html">Lokalisierungsreifemodell</a>
+                      <a href="../../wiki/de/translation-quality-assurance.html">Qualitätssicherung der Übersetzung</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">
@@ -121,6 +215,7 @@
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>

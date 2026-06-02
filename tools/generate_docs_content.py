@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import json
 import re
 import shutil
 import subprocess
@@ -15,8 +16,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-LOCALES = ["en", "sl", "hr", "bs", "sr-Latn", "sr-Cyrl", "mk", "sq", "de", "it", "fr", "es"]
-CONTENT_TYPES = ["blog", "learning", "wiki"]
+DOCS_CONFIG = json.loads((ROOT / "tools" / "docs-config.json").read_text(encoding="utf-8"))
+LOCALES = DOCS_CONFIG["locales"]
+CONTENT_TYPES = DOCS_CONFIG["contentTypes"]
 SITE_BASE = "https://letbooks.org/docs"
 
 LANGUAGE_NAMES = {
@@ -50,18 +52,18 @@ LANGUAGE_SWITCH_LABELS = {
 }
 
 CONTENT_LABELS = {
-    "en": {"blog": "Blog", "learning": "Learning", "wiki": "Wiki", "docs": "Docs"},
-    "sl": {"blog": "Blog", "learning": "Učni vodniki", "wiki": "Wiki", "docs": "Dokumentacija"},
-    "hr": {"blog": "Blog", "learning": "Materijali za učenje", "wiki": "Wiki", "docs": "Dokumentacija"},
-    "bs": {"blog": "Blog", "learning": "Materijali za učenje", "wiki": "Wiki", "docs": "Dokumentacija"},
-    "sr-Latn": {"blog": "Blog", "learning": "Materijali za učenje", "wiki": "Wiki", "docs": "Dokumentacija"},
-    "sr-Cyrl": {"blog": "Блог", "learning": "Материјали за учење", "wiki": "Вики", "docs": "Документација"},
-    "mk": {"blog": "Блог", "learning": "Материјали за учење", "wiki": "Вики", "docs": "Документација"},
-    "sq": {"blog": "Blog", "learning": "Materiale mësimore", "wiki": "Wiki", "docs": "Dokumentim"},
-    "de": {"blog": "Blog", "learning": "Lernmaterial", "wiki": "Wiki", "docs": "Doku"},
-    "it": {"blog": "Blog", "learning": "Materiale didattico", "wiki": "Wiki", "docs": "Documentazione"},
-    "fr": {"blog": "Blog", "learning": "Ressources d'apprentissage", "wiki": "Wiki", "docs": "Documentation"},
-    "es": {"blog": "Blog", "learning": "Material de aprendizaje", "wiki": "Wiki", "docs": "Documentación"},
+    "en": {"blog": "Blog", "learning": "Learning", "wiki": "Wiki", "topics": "Topics", "docs": "Docs"},
+    "sl": {"blog": "Blog", "learning": "Učni vodniki", "wiki": "Wiki", "topics": "Teme", "docs": "Dokumentacija"},
+    "hr": {"blog": "Blog", "learning": "Materijali za učenje", "wiki": "Wiki", "topics": "Teme", "docs": "Dokumentacija"},
+    "bs": {"blog": "Blog", "learning": "Materijali za učenje", "wiki": "Wiki", "topics": "Teme", "docs": "Dokumentacija"},
+    "sr-Latn": {"blog": "Blog", "learning": "Materijali za učenje", "wiki": "Wiki", "topics": "Teme", "docs": "Dokumentacija"},
+    "sr-Cyrl": {"blog": "Блог", "learning": "Материјали за учење", "wiki": "Вики", "topics": "Теме", "docs": "Документација"},
+    "mk": {"blog": "Блог", "learning": "Материјали за учење", "wiki": "Вики", "topics": "Теми", "docs": "Документација"},
+    "sq": {"blog": "Blog", "learning": "Materiale mësimore", "wiki": "Wiki", "topics": "Tema", "docs": "Dokumentim"},
+    "de": {"blog": "Blog", "learning": "Lernmaterial", "wiki": "Wiki", "topics": "Themen", "docs": "Doku"},
+    "it": {"blog": "Blog", "learning": "Materiale didattico", "wiki": "Wiki", "topics": "Temi", "docs": "Documentazione"},
+    "fr": {"blog": "Blog", "learning": "Ressources d'apprentissage", "wiki": "Wiki", "topics": "Sujets", "docs": "Documentation"},
+    "es": {"blog": "Blog", "learning": "Material de aprendizaje", "wiki": "Wiki", "topics": "Temas", "docs": "Documentación"},
 }
 
 OTHER_LANGUAGE_HEADINGS = {
@@ -95,18 +97,18 @@ RELATED_PAGES_SECTION_HEADINGS = {
 }
 
 RELATED_HEADINGS = {
-    "en": {"blog": "Related Articles", "learning": "Related Learning Material", "wiki": "Related Wiki Entries"},
-    "sl": {"blog": "Sorodni članki", "learning": "Sorodno učno gradivo", "wiki": "Sorodni wiki vnosi"},
-    "hr": {"blog": "Povezani članci", "learning": "Povezani materijali za učenje", "wiki": "Povezani wiki unosi"},
-    "bs": {"blog": "Povezani članci", "learning": "Povezani materijali za učenje", "wiki": "Povezani wiki unosi"},
-    "sr-Latn": {"blog": "Povezani članci", "learning": "Povezani materijali za učenje", "wiki": "Povezani wiki unosi"},
-    "sr-Cyrl": {"blog": "Повезани чланци", "learning": "Повезани материјали за учење", "wiki": "Повезани вики уноси"},
-    "mk": {"blog": "Поврзани статии", "learning": "Поврзани материјали за учење", "wiki": "Поврзани вики записи"},
-    "sq": {"blog": "Artikuj të ngjashëm", "learning": "Materiale të ngjashme mësimore", "wiki": "Hyrje të ngjashme wiki"},
-    "de": {"blog": "Verwandte Artikel", "learning": "Verwandte Lernmaterialien", "wiki": "Verwandte Wiki-Einträge"},
-    "it": {"blog": "Articoli correlati", "learning": "Materiali didattici correlati", "wiki": "Voci wiki correlate"},
-    "fr": {"blog": "Articles apparentés", "learning": "Ressources d'apprentissage liées", "wiki": "Entrées wiki liées"},
-    "es": {"blog": "Artículos relacionados", "learning": "Material didáctico relacionado", "wiki": "Entradas wiki relacionadas"},
+    "en": {"blog": "Related Articles", "learning": "Related Learning Material", "wiki": "Related Wiki Entries", "topics": "Related Topics"},
+    "sl": {"blog": "Sorodni članki", "learning": "Sorodno učno gradivo", "wiki": "Sorodni wiki vnosi", "topics": "Sorodne teme"},
+    "hr": {"blog": "Povezani članci", "learning": "Povezani materijali za učenje", "wiki": "Povezani wiki unosi", "topics": "Povezane teme"},
+    "bs": {"blog": "Povezani članci", "learning": "Povezani materijali za učenje", "wiki": "Povezani wiki unosi", "topics": "Povezane teme"},
+    "sr-Latn": {"blog": "Povezani članci", "learning": "Povezani materijali za učenje", "wiki": "Povezani wiki unosi", "topics": "Povezane teme"},
+    "sr-Cyrl": {"blog": "Повезани чланци", "learning": "Повезани материјали за учење", "wiki": "Повезани вики уноси", "topics": "Повезане теме"},
+    "mk": {"blog": "Поврзани статии", "learning": "Поврзани материјали за учење", "wiki": "Поврзани вики записи", "topics": "Поврзани теми"},
+    "sq": {"blog": "Artikuj të ngjashëm", "learning": "Materiale të ngjashme mësimore", "wiki": "Hyrje të ngjashme wiki", "topics": "Tema të lidhura"},
+    "de": {"blog": "Verwandte Artikel", "learning": "Verwandte Lernmaterialien", "wiki": "Verwandte Wiki-Einträge", "topics": "Verwandte Themen"},
+    "it": {"blog": "Articoli correlati", "learning": "Materiali didattici correlati", "wiki": "Voci wiki correlate", "topics": "Temi correlati"},
+    "fr": {"blog": "Articles apparentés", "learning": "Ressources d'apprentissage liées", "wiki": "Entrées wiki liées", "topics": "Sujets liés"},
+    "es": {"blog": "Artículos relacionados", "learning": "Material didáctico relacionado", "wiki": "Entradas wiki relacionadas", "topics": "Temas relacionados"},
 }
 
 RELATED_CONTENT_HEADINGS = {
@@ -140,18 +142,18 @@ BROWSE_BY_TOPIC_HEADINGS = {
 }
 
 RECENT_HEADINGS = {
-    "en": {"blog": "Recent Articles", "learning": "Recent Learning Material", "wiki": "Recent Wiki Entries", "overview": "Latest from Let Books"},
-    "sl": {"blog": "Najnovejši članki", "learning": "Najnovejše učno gradivo", "wiki": "Najnovejši wiki vnosi", "overview": "Najnovejše vsebine"},
-    "hr": {"blog": "Nedavni članci", "learning": "Nedavni materijali za učenje", "wiki": "Nedavni wiki unosi", "overview": "Najnoviji sadržaj"},
-    "bs": {"blog": "Nedavni članci", "learning": "Nedavni materijali za učenje", "wiki": "Nedavni wiki unosi", "overview": "Najnoviji sadržaji"},
-    "sr-Latn": {"blog": "Nedavni članci", "learning": "Nedavni materijali za učenje", "wiki": "Nedavni viki unosi", "overview": "Najnoviji sadržaji"},
-    "sr-Cyrl": {"blog": "Недавни чланци", "learning": "Недавни материјали за учење", "wiki": "Недавни вики уноси", "overview": "Најновији садржаји"},
-    "mk": {"blog": "Неодамнешни статии", "learning": "Неодамнешни материјали за учење", "wiki": "Неодамнешни вики записи", "overview": "Најнови содржини"},
-    "sq": {"blog": "Artikujt e fundit", "learning": "Materialet e fundit mësimore", "wiki": "Hyrjet e fundit wiki", "overview": "Përmbajtja më e re"},
-    "de": {"blog": "Neueste Artikel", "learning": "Neueste Lernmaterialien", "wiki": "Neueste Wiki-Einträge", "overview": "Neues von Let Books"},
-    "it": {"blog": "Articoli recenti", "learning": "Materiali didattici recenti", "wiki": "Voci wiki recenti", "overview": "Novità da Let Books"},
-    "fr": {"blog": "Articles récents", "learning": "Ressources d'apprentissage récentes", "wiki": "Entrées wiki récentes", "overview": "Nouveautés Let Books"},
-    "es": {"blog": "Artículos recientes", "learning": "Material de aprendizaje reciente", "wiki": "Entradas wiki recientes", "overview": "Último de Let Books"},
+    "en": {"blog": "Recent Articles", "learning": "Recent Learning Material", "wiki": "Recent Wiki Entries", "topics": "Recent Topics", "overview": "Latest from Let Books"},
+    "sl": {"blog": "Najnovejši članki", "learning": "Najnovejše učno gradivo", "wiki": "Najnovejši wiki vnosi", "topics": "Najnovejše teme", "overview": "Najnovejše vsebine"},
+    "hr": {"blog": "Nedavni članci", "learning": "Nedavni materijali za učenje", "wiki": "Nedavni wiki unosi", "topics": "Nedavne teme", "overview": "Najnoviji sadržaj"},
+    "bs": {"blog": "Nedavni članci", "learning": "Nedavni materijali za učenje", "wiki": "Nedavni wiki unosi", "topics": "Nedavne teme", "overview": "Najnoviji sadržaji"},
+    "sr-Latn": {"blog": "Nedavni članci", "learning": "Nedavni materijali za učenje", "wiki": "Nedavni viki unosi", "topics": "Nedavne teme", "overview": "Najnoviji sadržaji"},
+    "sr-Cyrl": {"blog": "Недавни чланци", "learning": "Недавни материјали за учење", "wiki": "Недавни вики уноси", "topics": "Недавне теме", "overview": "Најновији садржаји"},
+    "mk": {"blog": "Неодамнешни статии", "learning": "Неодамнешни материјали за учење", "wiki": "Неодамнешни вики записи", "topics": "Неодамнешни теми", "overview": "Најнови содржини"},
+    "sq": {"blog": "Artikujt e fundit", "learning": "Materialet e fundit mësimore", "wiki": "Hyrjet e fundit wiki", "topics": "Temat e fundit", "overview": "Përmbajtja më e re"},
+    "de": {"blog": "Neueste Artikel", "learning": "Neueste Lernmaterialien", "wiki": "Neueste Wiki-Einträge", "topics": "Neueste Themen", "overview": "Neues von Let Books"},
+    "it": {"blog": "Articoli recenti", "learning": "Materiali didattici recenti", "wiki": "Voci wiki recenti", "topics": "Temi recenti", "overview": "Novità da Let Books"},
+    "fr": {"blog": "Articles récents", "learning": "Ressources d'apprentissage récentes", "wiki": "Entrées wiki récentes", "topics": "Sujets récents", "overview": "Nouveautés Let Books"},
+    "es": {"blog": "Artículos recientes", "learning": "Material de aprendizaje reciente", "wiki": "Entradas wiki recientes", "topics": "Temas recientes", "overview": "Último de Let Books"},
 }
 
 RECENT_DESCRIPTIONS = {
@@ -620,6 +622,7 @@ FOOTER_LINK_LABELS = {
 SECTION_STOP_HEADINGS = {
     "blog": {value.lower() for value in OTHER_LANGUAGE_HEADINGS.values()} | {value.lower() for value in RELATED_PAGES_SECTION_HEADINGS.values()} | {"other languages", "related pages"},
     "learning": set(),
+    "topics": set(),
     "wiki": {
         "related pages",
         "povezane stranice",
@@ -634,6 +637,21 @@ SECTION_STOP_HEADINGS = {
         "páginas relacionadas",
         "sorodne strani",
     },
+}
+
+PRINT_COPYRIGHT = {
+    "en": "Copyright © Let Books contributors. Reuse follows repository licensing unless a page states otherwise.",
+    "sl": "Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.",
+    "hr": "Autorska prava © suradnici na Let Books. Ponovna uporaba slijedi licencu repozitorija osim ako stranica ne navodi drukčije.",
+    "bs": "Autorska prava © saradnici na Let Books. Ponovna upotreba slijedi licencu repozitorija osim ako stranica ne navodi drugačije.",
+    "sr-Latn": "Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.",
+    "sr-Cyrl": "Ауторска права © сарадници на Let Books. Поновна употреба прати лиценцу репозиторијума осим ако страница не наводи другачије.",
+    "mk": "Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.",
+    "sq": "Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.",
+    "de": "Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.",
+    "it": "Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.",
+    "fr": "Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.",
+    "es": "Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.",
 }
 
 TOPIC_FIELDS = ["topics", "tags", "categories", "keywords"]
@@ -1070,6 +1088,12 @@ def render_content_page_header(entry: ContentEntry, variant: ContentVariant) -> 
     docs_label = CONTENT_LABELS[locale]["docs"]
     summary = display_summary(entry, variant)
     summary_html = f'          <p class="content-page-summary">{html.escape(summary)}</p>\n' if summary else ""
+    meta_html = (
+        '          <div class="content-page-meta">\n'
+        f'            <span>{html.escape(content_label)}</span>\n'
+        f'            <span>{html.escape(LANGUAGE_NAMES[locale])}</span>\n'
+        '          </div>\n'
+    )
     topics_html = render_content_tags(variant.topics, locale)
     return (
         '          <header class="content-page-header">\n'
@@ -1081,6 +1105,7 @@ def render_content_page_header(entry: ContentEntry, variant: ContentVariant) -> 
         f'              <span aria-current="page">{html.escape(variant.title)}</span>\n'
         '            </nav>\n'
         f'            <h1>{html.escape(variant.title)}</h1>\n'
+        f'{meta_html}'
         f'{summary_html}'
         f'{topics_html}'
         '            <hr class="content-header-divider">\n'
@@ -1346,6 +1371,7 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
     footer_desc = FOOTER_DESC.get(locale, FOOTER_DESC["en"])
     footer_microcopy = FOOTER_MICROCOPY.get(locale, FOOTER_MICROCOPY["en"])
     footer_labels = FOOTER_LINK_LABELS.get(locale, FOOTER_LINK_LABELS["en"])
+    copyright_notice = PRINT_COPYRIGHT.get(locale, PRINT_COPYRIGHT["en"])
 
     return f'''<!DOCTYPE html>
 <html lang="{variant.locale}">
@@ -1380,6 +1406,7 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="{entry.content_type}" data-locale="{variant.locale}">
@@ -1398,6 +1425,7 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
             <a class="nav-link" href="../../blog/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["blog"])}</a>
             <a class="nav-link" href="../../learning/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["learning"])}</a>
             <a class="nav-link" href="../../wiki/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["wiki"])}</a>
+            <a class="nav-link" href="../../topics/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["topics"])}</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
 {lang_switch}
@@ -1406,6 +1434,16 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
           </div>
         </div>
       </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>{html.escape(footer_desc)}</span>
+          </div>
+        </div>
+      </div>
 
       <main>
         <article class="section blog-article docs-article">
@@ -1420,11 +1458,13 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
           <div>
             <h3>Let Books</h3>
             <p>{html.escape(footer_desc)}</p>
+            <p class="footer-note">{html.escape(copyright_notice)}</p>
             <p class="footer-microcopy">{html.escape(footer_microcopy)}</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../{variant.locale}/index.html">{html.escape(footer_labels["overview"])}</a>
+              <a href="../../topics/{variant.locale}/index.html">{html.escape(CONTENT_LABELS[variant.locale]["topics"])}</a>
               <a href="../../index.html">{html.escape(footer_labels["projectHome"])}</a>
               <a href="../../../static-demo/">{html.escape(footer_labels["demo"])}</a>
             </div>
@@ -1435,6 +1475,17 @@ def build_page_html(entry: ContentEntry, variant: ContentVariant, header_block: 
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>{html.escape(copyright_notice)}</span>
+            <span>{html.escape(footer_microcopy)}</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

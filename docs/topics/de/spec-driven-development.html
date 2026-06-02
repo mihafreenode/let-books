@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spezifikationsgesteuerte Entwicklung | LetBooks</title>
+    <meta name="description" content="Warum Spezifikationen als praktisches Betriebsmodell für Implementierung, Review und Kommunikation dienen statt als nachträgliche separate Dokumentation.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/topics/de/spec-driven-development.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/topics/en/spec-driven-development.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/topics/en/spec-driven-development.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/topics/sl/spec-driven-development.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/topics/hr/spec-driven-development.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/topics/bs/spec-driven-development.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/topics/sr-Latn/spec-driven-development.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/topics/sr-Cyrl/spec-driven-development.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/topics/mk/spec-driven-development.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/topics/sq/spec-driven-development.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/topics/de/spec-driven-development.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/topics/it/spec-driven-development.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/topics/fr/spec-driven-development.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/topics/es/spec-driven-development.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Spezifikationsgesteuerte Entwicklung | LetBooks">
+    <meta property="og:description" content="Warum Spezifikationen als praktisches Betriebsmodell für Implementierung, Review und Kommunikation dienen statt als nachträgliche separate Dokumentation.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/topics/de/spec-driven-development.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spezifikationsgesteuerte Entwicklung | LetBooks">
+    <meta name="twitter:description" content="Warum Spezifikationen als praktisches Betriebsmodell für Implementierung, Review und Kommunikation dienen statt als nachträgliche separate Dokumentation.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="topics" data-locale="de">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../topics/de/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Themen</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../de/index.html">Doku</a>
+            <a class="nav-link" href="../../blog/de/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
+            <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../topics/en/spec-driven-development.html" lang="en">EN</a>
+              <a class="lang-link" href="../../topics/sl/spec-driven-development.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../topics/hr/spec-driven-development.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../topics/bs/spec-driven-development.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../topics/sr-Latn/spec-driven-development.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../topics/sr-Cyrl/spec-driven-development.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../topics/mk/spec-driven-development.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../topics/sq/spec-driven-development.html" lang="sq">SQ</a>
+              <a class="lang-link is-current" href="../../topics/de/spec-driven-development.html" lang="de">DE</a>
+              <a class="lang-link" href="../../topics/it/spec-driven-development.html" lang="it">IT</a>
+              <a class="lang-link" href="../../topics/fr/spec-driven-development.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../topics/es/spec-driven-development.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Alle Sprachen</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../de/index.html">Doku</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../topics/de/index.html">Themen</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Spezifikationsgesteuerte Entwicklung</span>
+            </nav>
+            <h1>Spezifikationsgesteuerte Entwicklung</h1>
+          <div class="content-page-meta">
+            <span>Themen</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Warum Spezifikationen als praktisches Betriebsmodell für Implementierung, Review und Kommunikation dienen statt als nachträgliche separate Dokumentation.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Themen:</span>
+              <span class="content-tag">Dokumentation</span>
+              <span class="content-tag">Produktspezifikation</span>
+              <span class="content-tag">Spezifikationsgetriebene Entwicklung</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem die Implementierung einer expliziten Beschreibung von Produktverhalten, Einschränkungen und Intention folgt. Die Spezifikation ist nicht nur ein Anforderungsdokument. Sie wird zu einem gemeinsamen Bezugspunkt für Entwickler, Reviewer, Maintainer und Stakeholder.</p>
+<p>In der Praxis erklärt eine gute Spezifikation, was ein System tun soll, was es nicht tun soll, welche Qualitätsregeln gelten und wie Erfolg beurteilt wird. Das unterscheidet sie von einem Backlog-Eintrag, einer Demo oder einer Architekturskizze. Diese Artefakte können nützlich sein, tragen aber selten dasselbe Maß an dauerhafter Intention.</p>
+<p>Der Wert spezifikationsgesteuerter Arbeit ist nicht theoretisch. Sie reduziert Mehrdeutigkeit. Wenn mehrere Menschen im Lauf der Zeit dieselbe Funktion anfassen oder wenn ein KI-Assistent einen Teil der Implementierung erzeugt, begrenzt die Spezifikation den Drift, indem sie das erwartete Ergebnis sichtbar macht, bevor sich Coding-Entscheidungen ansammeln.</p>
+<p>Dieser Ansatz erfordert keinen starren Wasserfallprozess. Spezifikationen können sich weiterentwickeln. Sie können klein oder groß sein. Entscheidend ist, dass die Implementierung gegen etwas Stabileres geprüft werden kann als Erinnerung oder Gewohnheit. Deshalb ist spezifikationsgesteuerte Arbeit eng mit <a href="/docs/topics/de/validation-layers.html">Validierungsebenen</a>, <a href="/docs/topics/de/documentation-traceability.html">Rückverfolgbarkeit der Dokumentation</a> und dem im Learning-Guide beschriebenen Workflow zur <a href="/docs/learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html">Umwandlung einer Produktspezifikation in einen Implementierungsplan</a> verbunden.</p>
+<p>In Let Books ist spezifikationsgesteuerte Entwicklung besonders nützlich, weil das Projekt Produktdesign, mehrsprachige Dokumentation, Lagerlogistik, Metadatenverarbeitung und zukünftige KI-gestützte Workflows umfasst. Eine Änderung in einem Bereich kann leicht Annahmen in einem anderen erzeugen. Die Projektspezifikation in <code>AGENTS.md</code>, das Referenzmaterial im Wiki und das angeleitete Implementierungsmaterial in den Learning-Seiten wirken gemeinsam, um dieses Risiko zu verringern.</p>
+<p>Das Ziel ist nicht Dokumentation um ihrer selbst willen. Das Ziel ist, Implementierung verlässlicher, Review konkreter und langfristige Wartung weniger abhängig von unausgesprochenem Kontext zu machen. Der zugehörige Blogartikel <a href="/docs/blog/de/spec-driven-development-in-let-books.html">Spezifikationsgesteuerte Entwicklung in Let Books</a> zeigt, wie dieses Prinzip das Repository bereits prägt.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Andere Sprachen</h2>
+            <ul>
+              <li><a href="../../topics/en/spec-driven-development.html" lang="en">English</a></li>
+              <li><a href="../../topics/sl/spec-driven-development.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../topics/hr/spec-driven-development.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../topics/bs/spec-driven-development.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../topics/sr-Latn/spec-driven-development.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../topics/sr-Cyrl/spec-driven-development.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../topics/mk/spec-driven-development.html" lang="mk">Македонски</a></li>
+              <li><a href="../../topics/sq/spec-driven-development.html" lang="sq">Shqip</a></li>
+              <li><a href="../../topics/it/spec-driven-development.html" lang="it">Italiano</a></li>
+              <li><a href="../../topics/fr/spec-driven-development.html" lang="fr">Français</a></li>
+              <li><a href="../../topics/es/spec-driven-development.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Verwandte Inhalte</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentation</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="related-product-specification-menu">Produktspezifikation</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Spezifikationsgetriebene Entwicklung</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/de/spec-driven-development-for-ai-projects.html"><span>Spezifikationsgetriebene Entwicklung für KI-Projekte</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie man eine Spezifikation schreibt, der KI folgen kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/documentation-is-more-than-a-website.html"><span>Dokumentation ist mehr als eine Website</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/markdown-in-product-development.html"><span>Markdown in der Produktentwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/book-metadata.html"><span>Buchmetadaten</span><span class="topic-menu__meta">Themen</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-specification-menu" data-topic-menu="related-product-specification" hidden>
+                  <a href="../../wiki/de/product-specification.html"><span>Produktspezifikation</span><span class="topic-menu__meta">Wiki</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie man Validierungsregeln und CI-Gates schrittweise hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../topics/de/demo-and-specification-alignment.html"><span>Abgleich von Demo und Spezifikation</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/ai-assisted-implementation.html"><span>KI-gestützte Implementierung</span><span class="topic-menu__meta">Themen</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
+            <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
+              <a href="../../index.html">Startseite</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Alle Sprachen</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</span>
+            <span>Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

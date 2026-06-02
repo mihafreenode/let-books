@@ -42,6 +42,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="it">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/it/index.html">Blog</a>
             <a class="nav-link" href="../../learning/it/index.html">Materiale didattico</a>
             <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/it/index.html">Temi</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/localization-ci-cd.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,6 +103,10 @@
               <span aria-current="page">Localizzazione CI e CD</span>
             </nav>
             <h1>Localizzazione CI e CD</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Italiano</span>
+          </div>
           <p class="content-page-summary">La localizzazione CI/CD convalida continuamente i contenuti multilingue in modo da individuare tempestivamente le risorse mancanti, i collegamenti interrotti e le regressioni sull&#x27;accessibilità.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temi:</span>
@@ -108,6 +124,39 @@
 <li>prove di fumo di accessibilità</li>
 <li>controlli di copertura di screenshot e diagrammi</li>
 </ul>
+<h2 id="progressione-della-classe-difettosa">Progressione della classe difettosa</h2>
+<p class="lead">L’IC di localizzazione dovrebbe tenere traccia di entrambi:</p>
+<ul>
+<li><code>Localization Debt</code></li>
+<li><code>Open Defect Classes</code></li>
+</ul>
+<p>Il debito misura il lavoro rimanente sul contenuto della fonte.</p>
+<p>Le classi di difetti aperte misurano se il sistema può ancora consentire la ricomparsa di una categoria di problema.</p>
+<p>Non appena una classe di difetti raggiunge zero occorrenze, il suo validatore dovrebbe passare dall’avviso al blocco, ove possibile.</p>
+<p>Esempi:</p>
+<ul>
+<li>pubblicazione bozza segnaposto</li>
+<li>riassunti non tradotti</li>
+<li>metadati non tradotti</li>
+<li>corpi non tradotti</li>
+<li>editoria in lingue miste</li>
+</ul>
+<p>CI non è solo un gatekeeper. È il meccanismo che impedisce alle classi di difetti chiuse di riaprirsi silenziosamente.</p>
+<h2 id="ordine-di-generazione-per-la-navigazione-degli-articoli">Ordine di generazione per la navigazione degli articoli</h2>
+<p>L’attuale contratto di navigazione di articoli pubblici è:</p>
+<ul>
+<li><code>post-article-nav</code></li>
+<li><code>related-content</code></li>
+<li><code>related-topic-nav</code></li>
+</ul>
+<p>La generazione e la convalida dovrebbero avvenire in questo ordine:</p>
+<ol type="1">
+<li>generare l’articolo HTML</li>
+<li>generare pagine indice</li>
+<li>eseguire l’eventuale post-elaborazione della navigazione rimanente solo se ancora necessario</li>
+<li>convalidare l’output</li>
+</ol>
+<p>Se un validatore si aspetta ancora il blocco legacy <code>topic-nav</code>, aggiorna il validatore al contratto corrente invece di applicare la patch generata HTML.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -135,8 +184,9 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/it/how-to-run-localization-qa-in-ci.html"><span>Come eseguire QA di localizzazione in CI</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Come aggiungere a fasi regole di validazione e gate CI</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../wiki/it/validation-layers.html"><span>Livelli di validazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Come aggiungere in fasi regole di validazione e gate CI</span><span class="topic-menu__meta">Materiale didattico</span></a>
+                  <a href="../../wiki/it/validation-layers.html"><span>Livelli di convalida</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/validation-layers.html"><span>Livelli di validazione</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
               </div>
             </div>
@@ -150,11 +200,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</p>
+            <p class="footer-note">Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</p>
             <p class="footer-microcopy">Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../it/index.html">Panoramica</a>
+              <a href="../../topics/it/index.html">Temi</a>
               <a href="../../index.html">Home page</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -165,6 +217,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</span>
+            <span>Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

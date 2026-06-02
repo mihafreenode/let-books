@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda | LetBooks</title>
-    <meta name="description" content="Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.">
+    <title>Kako održati usklađenost specifikacije, dokumentacije, demoa i koda | LetBooks</title>
+    <meta name="description" content="Ovaj vodič opisuje praktičan tok rada za održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demoa i implementacije kroz vrijeme.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda | LetBooks">
-    <meta property="og:description" content="Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.">
+    <meta property="og:title" content="Kako održati usklađenost specifikacije, dokumentacije, demoa i koda | LetBooks">
+    <meta property="og:description" content="Ovaj vodič opisuje praktičan tok rada za održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demoa i implementacije kroz vrijeme.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/bs/how-to-keep-spec-docs-demo-and-code-aligned.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda | LetBooks">
-    <meta name="twitter:description" content="Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.">
+    <meta name="twitter:title" content="Kako održati usklađenost specifikacije, dokumentacije, demoa i koda | LetBooks">
+    <meta name="twitter:description" content="Ovaj vodič opisuje praktičan tok rada za održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demoa i implementacije kroz vrijeme.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="bs">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/bs/index.html">Blog</a>
             <a class="nav-link" href="../../learning/bs/index.html">Materijali za učenje</a>
             <a class="nav-link" href="../../wiki/bs/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/bs/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/bs/index.html">Materijali za učenje</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda</span>
+              <span aria-current="page">Kako održati usklađenost specifikacije, dokumentacije, demoa i koda</span>
             </nav>
-            <h1>Kako održati usklađenost između specifikacije, dokumentacije, demoa i koda</h1>
-          <p class="content-page-summary">Ovaj vodič opisuje praktičan postupak za održavanje usklađenosti između proizvodne specifikacije, dokumentacije, demoa i implementacije tokom vremena.</p>
+            <h1>Kako održati usklađenost specifikacije, dokumentacije, demoa i koda</h1>
+          <div class="content-page-meta">
+            <span>Materijali za učenje</span>
+            <span>Bosanski</span>
+          </div>
+          <p class="content-page-summary">Ovaj vodič opisuje praktičan tok rada za održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demoa i implementacije kroz vrijeme.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Usklađenost demoa</span>
@@ -100,25 +116,116 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="preporučeni-red-autoriteta">Preporučeni red autoriteta</h2>
-<ol type="1">
-<li>proizvodna specifikacija</li>
-<li>implementacijske smjernice</li>
-<li>dokumentacija trenutnog stanja</li>
-<li>demo ili ponašanje aplikacije</li>
-<li>testovi i validacija</li>
-</ol>
-<h2 id="preporučeni-radni-tok">Preporučeni radni tok</h2>
+<h2 id="suština-problema">Suština problema</h2>
+<p class="lead">Odstupanje proizvoda rijetko počinje dramatičnom greškom. Obično počinje malim neusklađenostima.</p>
+<p>Primjeri:</p>
 <ul>
-<li>najprije ažuriraj specifikaciju ili smjernice</li>
-<li>zatim ažuriraj dokumentaciju trenutnog stanja</li>
-<li>tek nakon toga mijenjaj demo ili kod</li>
-<li>dodaj provjeru ili test gdje je moguće</li>
+<li>demo doda novi tok rada, ali se specifikacija nikada ne ažurira</li>
+<li>dokumentacija opisuje funkcionalnost koja se više tako ne ponaša</li>
+<li>kod implementira zgodan prečac koji krši pravilo proizvoda</li>
+<li>validacijske provjere sprovode samo sintaksu, a ne namjeru proizvoda</li>
 </ul>
-<h2 id="šta-uraditi-kada-demo-pokaže-bolje-rješenje">Šta uraditi kada demo pokaže bolje rješenje</h2>
-<p class="lead">Ako demo pokaže bolji tok, to nije razlog da sam postane novi izvor istine. Najprije donesi odluku, zatim ažuriraj specifikaciju i dokumentaciju, a potom učvrsti promjenu u implementaciji.</p>
-<h2 id="ključno-pravilo">Ključno pravilo</h2>
-<p>Ne provjeravaj samo radi li promjena. Provjeravaj i ostaje li usklađena s dokumentiranom namjerom proizvoda.</p>
+<p>AI može ubrzati sve to ako je tok usklađivanja slab.</p>
+<h2 id="model-usklađivanja">Model usklađivanja</h2>
+<p>Koristite ovaj redoslijed autoriteta:</p>
+<ol type="1">
+<li>specifikacija proizvoda</li>
+<li>smjernice za implementaciju</li>
+<li>dokumentacija trenutnog stanja</li>
+<li>ponašanje demoa ili aplikacije</li>
+<li>testovi i validacijska pravila</li>
+</ol>
+<p>Niži slojevi trebaju podržavati više slojeve. Ako su u sukobu, namjerno ažurirajte lanac umjesto da podrazumijevano pobijedi artefakt koji je samo najvidljiviji.</p>
+<h2 id="preporučeni-tok-rada">Preporučeni tok rada</h2>
+<h3 id="počnite-promjenom-u-specifikaciji">1. Počnite promjenom u specifikaciji</h3>
+<p>Ako se promijeni korisniku vidljiv tok rada ili pravilo proizvoda, prvo ažurirajte relevantnu specifikaciju ili smjernice.</p>
+<p>Koristite:</p>
+<ul>
+<li><code>AGENTS.md</code> za pravila i tokove rada na nivou proizvoda</li>
+<li><code>AGENTS-Implementation.md</code> za taktička pravila repozitorija i isporuke</li>
+</ul>
+<h3 id="ažurirajte-dokumentaciju-trenutnog-stanja">2. Ažurirajte dokumentaciju trenutnog stanja</h3>
+<p>Ako promjena utiče na ono što sada postoji, ažurirajte dokumente koji opisuju trenutno stanje.</p>
+<p>Tipični primjeri:</p>
+<ul>
+<li><code>README.md</code></li>
+<li><code>docs/Development.md</code></li>
+<li><code>docs/Deployment.md</code></li>
+<li>novi ili revidirani learning/wiki/blog sadržaj gdje je relevantno</li>
+</ul>
+<h3 id="ažurirajte-demo-ili-implementaciju">3. Ažurirajte demo ili implementaciju</h3>
+<p>Tek nakon što je namjera jasna, treba mijenjati demo ili aplikaciju.</p>
+<p>To pomaže spriječiti čest obrazac u kojem prototip tiho postane izvor istine.</p>
+<h3 id="dodajte-ili-ažurirajte-validaciju">4. Dodajte ili ažurirajte validaciju</h3>
+<p>Zatim pitajte šta se može automatski provjeriti.</p>
+<p>Primjeri:</p>
+<ul>
+<li>potpunost ključeva lokalizacije</li>
+<li>prisustvo obaveznih datoteka</li>
+<li>generisanje metapodataka</li>
+<li>validacija linkova</li>
+<li>testovi specifični za tok rada</li>
+</ul>
+<p>Ne može se svako pravilo odmah automatizirati, ali važna pravila ne bi trebala ostati zavisna samo od pamćenja.</p>
+<h3 id="pregledajte-u-odnosu-na-specifikaciju-a-ne-samo-na-rezultat">5. Pregledajte u odnosu na specifikaciju, a ne samo na rezultat</h3>
+<p>Pri pregledu promjena nemojte stati na pitanju:</p>
+<ul>
+<li>pokreće li se</li>
+<li>izgleda li dobro</li>
+<li>prolaze li testovi</li>
+</ul>
+<p>Također pitajte:</p>
+<ul>
+<li>odgovara li dokumentovanom toku rada</li>
+<li>čuva li potrebnu granicu proizvoda</li>
+<li>jesu li dokumentacija i prikaz trenutnog stanja ostali pošteni</li>
+</ul>
+<h2 id="postupanje-s-otkrićima-iz-demoa">Postupanje s otkrićima iz demoa</h2>
+<p>Ponekad demo nauči tim nečemu boljem od izvorne specifikacije.</p>
+<p>To je korisno. Ispravan odgovor je:</p>
+<ol type="1">
+<li>dokumentovati otkriće</li>
+<li>odlučiti je li promjena toka rada namjerna</li>
+<li>ažurirati specifikaciju i dokumentaciju</li>
+<li>održati implementaciju usklađenom s ažuriranom odlukom</li>
+</ol>
+<p>Pogrešan odgovor je dopustiti da demo tiho pobijedi samo zato što već postoji.</p>
+<h2 id="postupanje-s-implementacijom-uz-podršku-ai-ja">Postupanje s implementacijom uz podršku AI-ja</h2>
+<p>S AI-jem ovaj tok rada postaje još važniji jer asistenti često optimizuju lokalnu uvjerljivost.</p>
+<p>Dobra petlja usklađivanja izgleda ovako:</p>
+<ol type="1">
+<li>napišite ili ažurirajte specifikaciju</li>
+<li>generišite implementaciju</li>
+<li>uporedite rezultat sa specifikacijom</li>
+<li>ažurirajte dokumentaciju ako se promijenilo trenutno ponašanje</li>
+<li>dodajte validaciju gdje je to praktično</li>
+</ol>
+<h2 id="primjer-iz-let-books">Primjer iz Let Books</h2>
+<p>Repozitorij već sadrži koristan lanac usklađivanja:</p>
+<ul>
+<li><code>AGENTS.md</code> za smjer proizvoda</li>
+<li><code>AGENTS-Implementation.md</code> za taktička pravila</li>
+<li><code>README.md</code> za prikaz trenutnog stanja</li>
+<li><code>docs/</code> za pravila znanja i objavljivanja</li>
+<li>dokumentacija za razvoj i objavu za smjernice validacije</li>
+</ul>
+<p>Tu strukturu treba koristiti namjerno kad god se dodaju nove funkcionalnosti, dokumenti ili javna objašnjenja.</p>
+<h2 id="kontrolna-lista">Kontrolna lista</h2>
+<p>Prije spajanja značajne promjene provjerite:</p>
+<ol type="1">
+<li>Je li pravilo proizvoda ili tok rada jasno dokumentovan?</li>
+<li>Odgovara li dokumentacija trenutnog stanja još uvijek stvarnosti?</li>
+<li>Odražava li demo ili implementacija namjeravano pravilo?</li>
+<li>Postoji li barem jedan mehanizam validacije ili pregleda koji štiti promjenu?</li>
+<li>Može li novi saradnik kasnije razumjeti odluku?</li>
+</ol>
+<h2 id="dodatno-čitanje">Dodatno čitanje</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>../wiki/bs/demo-spec-alignment.md</code></li>
+<li><code>../wiki/bs/spec-driven-development.md</code></li>
+<li><code>../blog/bs/spec-driven-development-in-let-books.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -152,20 +259,24 @@
                   <a href="../../blog/bs/spec-driven-development-for-ai-projects.html"><span>Razvoj vođen specifikacijom za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/bs/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikaciju koju AI može slijediti</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../wiki/bs/markdown-in-product-development.html"><span>Markdown u razvoju proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/bs/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/bs/spec-driven-development.html"><span>Razvoj vođen specifikacijama</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/bs/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/bs/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/bs/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako iz proizvodne specifikacije napraviti implementacijski plan</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako pretvoriti specifikaciju proizvoda u plan implementacije</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/bs/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledavati AI-podržani rad prema specifikaciji</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postupno dodavati validacijska pravila i CI vrata</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/bs/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledati rad uz podršku AI-ja prema specifikaciji</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validacijska pravila i CI kapije</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../topics/bs/ai-assisted-implementation.html"><span>Implementacija uz AI podršku</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../blog/bs/spec-driven-development-in-let-books.html"><span>Razvoj vođen specifikacijom u Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kada je demo dokaz, a kada nije</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/bs/demo-spec-alignment.html"><span>Usklađenost između dema i specifikacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/bs/demo-and-specification-alignment.html"><span>Usklađenost demoa i specifikacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>
             </div>
@@ -179,11 +290,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © saradnici na Let Books. Ponovna upotreba slijedi licencu repozitorija osim ako stranica ne navodi drugačije.</p>
             <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../bs/index.html">Pregled</a>
+              <a href="../../topics/bs/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -194,6 +307,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Autorska prava © saradnici na Let Books. Ponovna upotreba slijedi licencu repozitorija osim ako stranica ne navodi drugačije.</span>
+            <span>Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su umjetnom inteligencijom. Ustanove i integracije spomenute u primjerima konceptualne su i ne znače partnerstvo ili podršku.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

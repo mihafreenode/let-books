@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann | LetBooks</title>
-    <meta name="description" content="Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die einer KI-gestützten Implementierung hilft, an den tatsächlichen Produktzielen ausgerichtet zu bleiben.">
+    <title>Wie man eine Spezifikation schreibt, der KI folgen kann | LetBooks</title>
+    <meta name="description" content="Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die dabei hilft, dass KI-gestützte Implementierung an echten Produktzielen ausgerichtet bleibt, statt in generische Ausgaben abzudriften.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/de/how-to-write-a-spec-that-ai-can-follow.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann | LetBooks">
-    <meta property="og:description" content="Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die einer KI-gestützten Implementierung hilft, an den tatsächlichen Produktzielen ausgerichtet zu bleiben.">
+    <meta property="og:title" content="Wie man eine Spezifikation schreibt, der KI folgen kann | LetBooks">
+    <meta property="og:description" content="Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die dabei hilft, dass KI-gestützte Implementierung an echten Produktzielen ausgerichtet bleibt, statt in generische Ausgaben abzudriften.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/de/how-to-write-a-spec-that-ai-can-follow.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann | LetBooks">
-    <meta name="twitter:description" content="Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die einer KI-gestützten Implementierung hilft, an den tatsächlichen Produktzielen ausgerichtet zu bleiben.">
+    <meta name="twitter:title" content="Wie man eine Spezifikation schreibt, der KI folgen kann | LetBooks">
+    <meta name="twitter:description" content="Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die dabei hilft, dass KI-gestützte Implementierung an echten Produktzielen ausgerichtet bleibt, statt in generische Ausgaben abzudriften.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="de">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/de/index.html">Lernmaterial</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</span>
+              <span aria-current="page">Wie man eine Spezifikation schreibt, der KI folgen kann</span>
             </nav>
-            <h1>Wie Man Eine Spezifikation Schreibt, Der KI Folgen Kann</h1>
-          <p class="content-page-summary">Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die einer KI-gestützten Implementierung hilft, an den tatsächlichen Produktzielen ausgerichtet zu bleiben.</p>
+            <h1>Wie man eine Spezifikation schreibt, der KI folgen kann</h1>
+          <div class="content-page-meta">
+            <span>Lernmaterial</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die dabei hilft, dass KI-gestützte Implementierung an echten Produktzielen ausgerichtet bleibt, statt in generische Ausgaben abzudriften.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">KI-gestützte Lieferung</span>
@@ -101,36 +117,102 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="warum-das-wichtig-ist">Warum das wichtig ist</h2>
-<p>KI kann schnell Code erzeugen, arbeitet aber am besten mit klaren Grenzen. Wenn die Spezifikation vage ist, füllt sie Lücken oft mit generischen Annahmen.</p>
-<h2 id="was-eine-gute-spezifikation-enthalten-sollte">Was eine gute Spezifikation enthalten sollte</h2>
+<p>KI kann schnell Code generieren, arbeitet aber am besten, wenn die Aufgabe klare Grenzen hat.</p>
+<p>Wenn eine Spezifikation vage ist, füllt KI Lücken oft mit plausiblen Standards:</p>
 <ul>
-<li>den Zweck der Funktion</li>
-<li>die Grenzen des Umfangs</li>
-<li>nicht verhandelbare Regeln</li>
-<li>Fehlerverhalten und Fallback-Pfad</li>
-<li>Abnahmekriterien</li>
+<li>gängigen Architekturmustern</li>
+<li>generischen UI-Abläufen</li>
+<li>unnötigen Abstraktionen</li>
+<li>erfundenen Annahmen darüber, was das Produkt tun soll</li>
 </ul>
-<h2 id="was-vermieden-werden-sollte">Was vermieden werden sollte</h2>
+<p>Diese Ausgabe kann poliert aussehen und trotzdem falsch sein.</p>
+<h2 id="was-eine-nützliche-ki-orientierte-spezifikation-enthalten-sollte">Was eine nützliche KI-orientierte Spezifikation enthalten sollte</h2>
+<h3 id="produktzweck">1. Produktzweck</h3>
+<p>Beschreiben Sie, warum die Funktion existiert.</p>
+<p>Schlecht:</p>
+<blockquote>
+<p>Ein Buchformular hinzufügen.</p>
+</blockquote>
+<p>Besser:</p>
+<blockquote>
+<p>Ein schnelles Intake-Formular hinzufügen, mit dem ein Spender ein physisches Buchexemplar in Sekunden katalogisieren kann, während er an einem Regal oder einer Box steht.</p>
+</blockquote>
+<p>Der Zweck sagt dem Implementierer, worauf optimiert werden soll.</p>
+<h3 id="umfangsgrenzen">2. Umfangsgrenzen</h3>
+<p>Beschreiben Sie, was im Umfang liegt und was außerhalb des Umfangs liegt.</p>
+<p>Beispiel:</p>
+<ul>
+<li>im Umfang: Cover-Foto, ISBN-Eingabe, Speicherort, speichern und fortfahren</li>
+<li>außerhalb des Umfangs: OCR, Cloud-Synchronisierung, institutioneller Review-Arbeitsablauf</li>
+</ul>
+<p>Das verhindert, dass der Assistent eine kleine Aufgabe zu einer Mini-Plattform aufbläht.</p>
+<h3 id="erforderliches-verhalten">3. Erforderliches Verhalten</h3>
+<p>Listen Sie nicht verhandelbare Regeln auf.</p>
+<p>Beispiele aus dem Let-Books-Ansatz:</p>
+<ul>
+<li>manueller Arbeitsablauf muss ohne KI funktionieren</li>
+<li>unvollständige Daten müssen erlaubt sein</li>
+<li>physische Exemplare müssen von bibliografischen Datensätzen getrennt bleiben</li>
+<li>nutzerseitiges Verhalten muss lokalisierbar bleiben</li>
+</ul>
+<p>Diese Regeln sind wichtiger als Implementierungsstil.</p>
+<h3 id="fehler--und-fallback-verhalten">4. Fehler- und Fallback-Verhalten</h3>
+<p>KI-generierte Lösungen optimieren oft den Happy Path. Eine gute Spezifikation erklärt, was passiert, wenn optionale Systeme ausfallen.</p>
+<p>Beispiel:</p>
+<ul>
+<li>wenn die Metadatensuche fehlschlägt, bleibt manuelle Eingabe verfügbar</li>
+<li>wenn OCR deaktiviert ist, funktioniert der Intake weiterhin</li>
+<li>wenn Export-Validierung fehlschlägt, erhält der Nutzer einen klaren Bericht statt eines stillen Teilimports</li>
+</ul>
+<h3 id="akzeptanzkriterien">5. Akzeptanzkriterien</h3>
+<p>Formulieren Sie die Erfolgsbedingung in beobachtbaren Begriffen.</p>
+<p>Beispiel:</p>
+<ol type="1">
+<li>Nutzer wählt eine Box aus</li>
+<li>Nutzer gibt ISBN ein oder scannt sie</li>
+<li>Nutzer kann speichern, auch wenn kein Metadatenanbieter antwortet</li>
+<li>Buch erscheint am gewählten Ort</li>
+</ol>
+<p>Akzeptanzkriterien geben Reviewern und KI-Systemen ein stabiles Ziel.</p>
+<h2 id="was-man-vermeiden-sollte">Was man vermeiden sollte</h2>
 <ul>
 <li>vage Ziele wie „UX verbessern“</li>
 <li>Implementierungsdetails ohne Produktzweck</li>
-<li>Vermischung künftiger Ideen mit aktuellen Anforderungen</li>
-<li>versteckte Annahmen über Nutzer oder Daten</li>
+<li>vermischte Zukunftsideen, die als aktuelle Anforderungen präsentiert werden</li>
+<li>versteckte Annahmen über Nutzerrollen oder Datenqualität</li>
+<li>reine Benennungs-Spezifikationen, die keinen Arbeitsablauf beschreiben</li>
 </ul>
-<h2 id="praktisches-muster">Praktisches Muster</h2>
-<p>Verwende diese Reihenfolge:</p>
+<h2 id="ein-praktisches-schreibmuster">Ein praktisches Schreibmuster</h2>
+<p>Verwenden Sie beim Entwurf einer Funktionsspezifikation diese kompakte Struktur.</p>
 <ol type="1">
 <li>Problem</li>
 <li>Nutzer und Kontext</li>
-<li>Ablauf im Umfang</li>
-<li>Dinge außerhalb des Umfangs</li>
+<li>Arbeitsablauf im Umfang</li>
+<li>Elemente außerhalb des Umfangs</li>
 <li>erforderliche Regeln</li>
 <li>Fallback-Verhalten</li>
-<li>Abnahmekriterien</li>
-<li>Prüfnotizen</li>
+<li>Akzeptanzkriterien</li>
+<li>Verifikationshinweise</li>
 </ol>
-<h2 id="let-books-kontext">Let-Books-Kontext</h2>
-<p><code>AGENTS.md</code>, <code>AGENTS-Implementation.md</code> und <code>README.md</code> zeigen bereits, wie eine solche geschichtete Spezifikation auch KI-Assistenten hilft.</p>
+<h2 id="wie-das-auf-let-books-abgebildet-wird">Wie das auf Let Books abgebildet wird</h2>
+<p>Das Repository demonstriert dieses Muster bereits auf mehreren Ebenen:</p>
+<ul>
+<li><code>AGENTS.md</code> definiert Produktzweck, Arbeitsabläufe und Akzeptanzkriterien</li>
+<li><code>AGENTS-Implementation.md</code> definiert taktische Delivery-Einschränkungen</li>
+<li><code>README.md</code> trennt aktuellen Zustand von zukünftiger Richtung</li>
+</ul>
+<p>Dieser mehrschichtige Ansatz ist nützlich, weil KI besser arbeitet, wenn Produktgedächtnis explizit und überprüfbar ist.</p>
+<h2 id="übung">Übung</h2>
+<p>Nehmen Sie eine Let-Books-Funktion wie Box-QR-Scannen oder Excel-Entscheidungsimport und schreiben Sie eine einseitige Spezifikation mit der obigen Struktur.</p>
+<p>Bitten Sie danach einen Coding-Assistenten, sie zu implementieren.</p>
+<p>Prüfen Sie anschließend die Ausgabe gegen die Spezifikation, bevor Sie den Codestil prüfen. Diese Reihenfolge ist wichtig.</p>
+<h2 id="weiterführende-lektüre">Weiterführende Lektüre</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>../wiki/de/spec-driven-development.md</code></li>
+<li><code>../wiki/de/demo-spec-alignment.md</code></li>
+<li><code>../blog/de/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -159,20 +241,24 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
-                  <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie Man Spezifikation, Dokumentation, Demo Und Code Im Einklang Hält</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../wiki/de/markdown-in-product-development.html"><span>Markdown In Der Produktentwicklung</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgetriebene Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/de/documentation-traceability.html"><span>Rückverfolgbarkeit Der Dokumentation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../wiki/de/markdown-in-product-development.html"><span>Markdown in der Produktentwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/documentation-is-more-than-a-website.html"><span>Dokumentation ist mehr als eine Website</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/book-metadata.html"><span>Buchmetadaten</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-for-ai-projects.html"><span>Spezifikationsgetriebene Entwicklung für KI-Projekte</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie Man KI-Gestützte Arbeit Gegen Die Spezifikation Prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../topics/de/ai-assisted-implementation.html"><span>KI-gestützte Implementierung</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-writing-menu" data-topic-menu="related-spec-writing" hidden>
-                  <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Wie Man Aus Einer Produktspezifikation Einen Implementierungsplan Macht</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Wie man eine Produktspezifikation in einen Implementierungsplan umsetzt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../learning/de/how-to-design-english-source-content-for-translation.html"><span>Wie man englische Quellinhalte für Übersetzung gestaltet</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../wiki/de/product-specification.html"><span>Produktspezifikation</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
@@ -188,11 +274,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
             <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -203,6 +291,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</span>
+            <span>Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

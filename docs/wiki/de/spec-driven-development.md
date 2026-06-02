@@ -1,41 +1,70 @@
 ---
-title: "Spezifikationsgetriebene Entwicklung"
+title: "Spezifikationsgesteuerte Entwicklung"
+summary: >-
+  Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem explizite Produkt- und Workflowdefinitionen die Implementierung, Dokumentation, Überprüfung und Verifizierung leiten.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Spezifikationsgetriebene Entwicklung
+# Spezifikationsgesteuerte Entwicklung
 
 ## Zusammenfassung
 
-Spezifikationsgetriebene Entwicklung ist ein Ansatz, bei dem explizite Produkt- und Prozessdefinitionen Implementierung, Dokumentation, Review und Verifikation steuern.
+Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem explizite Produkt- und Workflowdefinitionen die Implementierung, Dokumentation, Überprüfung und Verifizierung leiten.
 
-## Warum das wichtig ist
+## Begriffsbestimmung
 
-KI erhöht die Liefergeschwindigkeit, kann aber auch die Produktdrift erhöhen, wenn die Absicht nicht klar genug ist.
+Bei diesem Ansatz ist eine Spezifikation nicht nur ein anfängliches Planungsartefakt. Es dient als fortlaufende Referenz für:
 
-Die Spezifikation gibt dem Team eine stabile Quelle der Wahrheit für:
+- Produktzweck
+- Geltungsbereichsgrenzen
+- erforderliches Verhalten
+- Akzeptanzkriterien
+- Überprüfungsstandards
 
-- den Zweck des Produkts
-- die Grenzen des Umfangs
-- das erforderliche Verhalten
-- die Abnahmekriterien
-- den Prüfstandard
+## Warum es bei KI-gestützter Arbeit wichtig ist
 
-## Typische Ebenen
+KI erhöht die Liefergeschwindigkeit, kann aber auch die Produktdrift verstärken, wenn die Absicht unklar ist.
+
+Die spezifikationsgesteuerte Entwicklung hilft, indem sie Teams eine stabile Quelle der Wahrheit bietet, die überprüft, aktualisiert und zur Bewertung der generierten Ergebnisse verwendet werden kann.
+
+## Typische Schichten
+
+Zu den üblichen Schichten in einem spezifikationsgesteuerten System gehören:
 
 - Produktspezifikation
-- Implementierungsleitlinien
-- Dokumentation des aktuellen Zustands
-- Demo oder Verhalten der Anwendung
-- Tests und Validierung
+- Umsetzungsanleitung
+- Dokumentation des aktuellen Standes
+- Demo- oder Anwendungsverhalten
+- Validierungsregeln und Tests
 - CI/CD-Durchsetzung
 
-## Häufiger Fehler
+## Häufiger Fehlermodus
 
-Ein häufiger Fehler ist, dass der sichtbarste Artefakt zur Standardquelle der Wahrheit wird, zum Beispiel der letzte Prompt, der aktuelle Prototyp oder eine veraltete Dokumentationsseite.
+Ein häufiger Fehlermodus besteht darin, dass das sichtbarste Artefakt zur Standardquelle der Wahrheit wird.
 
-## Let-Books-Kontext
+Beispiele:
 
-In Let Books wird dieser Ansatz durch `AGENTS.md`, `AGENTS-Implementation.md`, `README.md`, `docs/Development.md` und `docs/Deployment.md` gestützt.
+- die neueste Eingabeaufforderung
+- der aktuelle Prototyp
+- die aktuelle Implementierungsabkürzung
+- eine veraltete Dokumentationsseite
+
+Die spezifikationsgesteuerte Entwicklung verringert dieses Risiko, indem sie die beabsichtigte Autoritätskette explizit macht.
+
+## Let Books Kontext
+
+In Let Books wird die spezifikationsgesteuerte Entwicklung unterstützt durch:
+
+- `AGENTS.md`
+- `AGENTS-Implementation.md`
+- `README.md`
+- `docs/Development.md`
+- `docs/Deployment.md`
+
+## Verwandte Seiten
+
+- `demo-spec-alignment.md`
+- `../../learning/de/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../blog/de/spec-driven-development-for-ai-projects.md`

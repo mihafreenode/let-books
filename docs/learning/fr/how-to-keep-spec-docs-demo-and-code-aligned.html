@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Comment garder alignés spécification, documentation, démo et code | LetBooks</title>
-    <meta name="description" content="Ce guide décrit une manière pratique de garder alignés la spécification, la documentation, la démo et l&#x27;implémentation.">
+    <title>Comment garder la spécification, la documentation, la démo et le code alignés | LetBooks</title>
+    <meta name="description" content="Ce guide décrit un flux de travail pratique pour garder alignés dans le temps la spécification produit, la documentation, le comportement de la démo et le travail d’implémentation.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Comment garder alignés spécification, documentation, démo et code | LetBooks">
-    <meta property="og:description" content="Ce guide décrit une manière pratique de garder alignés la spécification, la documentation, la démo et l&#x27;implémentation.">
+    <meta property="og:title" content="Comment garder la spécification, la documentation, la démo et le code alignés | LetBooks">
+    <meta property="og:description" content="Ce guide décrit un flux de travail pratique pour garder alignés dans le temps la spécification produit, la documentation, le comportement de la démo et le travail d’implémentation.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Comment garder alignés spécification, documentation, démo et code | LetBooks">
-    <meta name="twitter:description" content="Ce guide décrit une manière pratique de garder alignés la spécification, la documentation, la démo et l&#x27;implémentation.">
+    <meta name="twitter:title" content="Comment garder la spécification, la documentation, la démo et le code alignés | LetBooks">
+    <meta name="twitter:description" content="Ce guide décrit un flux de travail pratique pour garder alignés dans le temps la spécification produit, la documentation, le comportement de la démo et le travail d’implémentation.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="fr">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/fr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
             <a class="nav-link" href="../../wiki/fr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/fr/index.html">Sujets</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/fr/index.html">Ressources d&#x27;apprentissage</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Comment garder alignés spécification, documentation, démo et code</span>
+              <span aria-current="page">Comment garder la spécification, la documentation, la démo et le code alignés</span>
             </nav>
-            <h1>Comment garder alignés spécification, documentation, démo et code</h1>
-          <p class="content-page-summary">Ce guide décrit une manière pratique de garder alignés la spécification, la documentation, la démo et l&#x27;implémentation.</p>
+            <h1>Comment garder la spécification, la documentation, la démo et le code alignés</h1>
+          <div class="content-page-meta">
+            <span>Ressources d&#x27;apprentissage</span>
+            <span>Français</span>
+          </div>
+          <p class="content-page-summary">Ce guide décrit un flux de travail pratique pour garder alignés dans le temps la spécification produit, la documentation, le comportement de la démo et le travail d’implémentation.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Sujets :</span>
               <span class="content-tag">Alignement de la démo</span>
@@ -100,16 +116,116 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="ordre-dautorité">Ordre d’autorité</h2>
+<h2 id="le-problème-central">Le problème central</h2>
+<p class="lead">La dérive produit commence rarement par une erreur spectaculaire. Elle commence généralement par de petits désalignements.</p>
+<p>Exemples :</p>
+<ul>
+<li>la démo ajoute un nouveau flux de travail mais la spécification n’est jamais mise à jour</li>
+<li>la documentation décrit une fonctionnalité qui ne se comporte plus ainsi</li>
+<li>le code implémente un raccourci pratique qui viole une règle produit</li>
+<li>les contrôles de validation n’appliquent que la syntaxe, pas l’intention produit</li>
+</ul>
+<p>L’IA peut accélérer tout cela si le flux d’alignement est faible.</p>
+<h2 id="le-modèle-dalignement">Le modèle d’alignement</h2>
+<p>Utilisez cet ordre d’autorité :</p>
 <ol type="1">
 <li>spécification produit</li>
-<li>directives d’implémentation</li>
+<li>consignes d’implémentation</li>
 <li>documentation de l’état actuel</li>
-<li>démo ou comportement de l’application</li>
-<li>tests et validation</li>
+<li>comportement de la démo ou de l’application</li>
+<li>tests et règles de validation</li>
 </ol>
-<h2 id="règle">Règle</h2>
-<p class="lead">Mettez d’abord à jour la spécification, puis la documentation, puis seulement la démo ou le code. Si la démo montre un meilleur flux, la décision doit être enregistrée.</p>
+<p>Les couches inférieures doivent soutenir les couches supérieures. Si elles entrent en conflit, mettez la chaîne à jour intentionnellement au lieu de laisser l’artefact le plus visible l’emporter par défaut.</p>
+<h2 id="flux-de-travail-recommandé">Flux de travail recommandé</h2>
+<h3 id="commencer-par-le-changement-dans-la-spécification">1. Commencer par le changement dans la spécification</h3>
+<p>Si un flux de travail visible par l’utilisateur ou une règle produit change, mettez d’abord à jour la spécification ou les consignes concernées.</p>
+<p>Utilisez :</p>
+<ul>
+<li><code>AGENTS.md</code> pour les règles et flux de travail au niveau produit</li>
+<li><code>AGENTS-Implementation.md</code> pour les règles tactiques du dépôt et de la livraison</li>
+</ul>
+<h3 id="mettre-à-jour-la-documentation-de-létat-actuel">2. Mettre à jour la documentation de l’état actuel</h3>
+<p>Si le changement affecte ce qui existe maintenant, mettez à jour la documentation qui décrit l’état actuel.</p>
+<p>Exemples typiques :</p>
+<ul>
+<li><code>README.md</code></li>
+<li><code>docs/Development.md</code></li>
+<li><code>docs/Deployment.md</code></li>
+<li>nouveau contenu ou contenu révisé dans learning/wiki/blog lorsque c’est pertinent</li>
+</ul>
+<h3 id="mettre-à-jour-la-démo-ou-limplémentation">3. Mettre à jour la démo ou l’implémentation</h3>
+<p>Ce n’est qu’une fois l’intention claire que la démo ou l’application doit être modifiée.</p>
+<p>Cela aide à éviter le schéma courant dans lequel un prototype devient silencieusement la source de vérité.</p>
+<h3 id="ajouter-ou-mettre-à-jour-la-validation">4. Ajouter ou mettre à jour la validation</h3>
+<p>Demandez ensuite ce qui peut être vérifié automatiquement.</p>
+<p>Exemples :</p>
+<ul>
+<li>exhaustivité des clés de localisation</li>
+<li>présence des fichiers requis</li>
+<li>génération de métadonnées</li>
+<li>validation des liens</li>
+<li>tests spécifiques à un flux de travail</li>
+</ul>
+<p>Toutes les règles ne peuvent pas être automatisées immédiatement, mais les règles importantes ne devraient pas dépendre uniquement de la mémoire.</p>
+<h3 id="relire-par-rapport-à-la-spécification-pas-seulement-au-résultat">5. Relire par rapport à la spécification, pas seulement au résultat</h3>
+<p>Lors de la revue des changements, ne vous arrêtez pas à :</p>
+<ul>
+<li>est-ce que cela s’exécute</li>
+<li>est-ce que cela a belle allure</li>
+<li>est-ce que les tests passent</li>
+</ul>
+<p>Demandez aussi :</p>
+<ul>
+<li>est-ce que cela correspond au flux de travail documenté</li>
+<li>est-ce que cela préserve la frontière produit requise</li>
+<li>est-ce que la documentation et la présentation de l’état actuel sont restées honnêtes</li>
+</ul>
+<h2 id="gérer-les-découvertes-issues-de-la-démo">Gérer les découvertes issues de la démo</h2>
+<p>Parfois, la démo apprend à l’équipe quelque chose de meilleur que la spécification d’origine.</p>
+<p>C’est utile. La bonne réponse est :</p>
+<ol type="1">
+<li>documenter la découverte</li>
+<li>décider si le changement de flux de travail est intentionnel</li>
+<li>mettre à jour la spécification et la documentation</li>
+<li>garder l’implémentation alignée sur la décision mise à jour</li>
+</ol>
+<p>La mauvaise réponse est de laisser la démo gagner en silence parce qu’elle existe déjà.</p>
+<h2 id="gérer-limplémentation-assistée-par-ia">Gérer l’implémentation assistée par IA</h2>
+<p>Avec l’IA, ce flux de travail devient encore plus important, car les assistants optimisent souvent la plausibilité locale.</p>
+<p>Une bonne boucle d’alignement est :</p>
+<ol type="1">
+<li>écrire ou mettre à jour la spécification</li>
+<li>générer l’implémentation</li>
+<li>comparer le résultat à la spécification</li>
+<li>mettre à jour la documentation si le comportement actuel a changé</li>
+<li>ajouter de la validation lorsque c’est pratique</li>
+</ol>
+<h2 id="exemple-let-books">Exemple Let Books</h2>
+<p>Le dépôt contient déjà une chaîne d’alignement utile :</p>
+<ul>
+<li><code>AGENTS.md</code> pour l’orientation produit</li>
+<li><code>AGENTS-Implementation.md</code> pour les règles tactiques</li>
+<li><code>README.md</code> pour la présentation de l’état actuel</li>
+<li><code>docs/</code> pour les règles de connaissance et de publication</li>
+<li>documentation de développement et de déploiement pour les consignes de validation</li>
+</ul>
+<p>Cette structure doit être utilisée intentionnellement chaque fois que de nouvelles fonctionnalités, de la documentation ou des explications publiques sont ajoutées.</p>
+<h2 id="liste-de-contrôle">Liste de contrôle</h2>
+<p>Avant de fusionner un changement important, vérifiez :</p>
+<ol type="1">
+<li>La règle produit ou le flux de travail a-t-il été clairement documenté ?</li>
+<li>La documentation de l’état actuel correspond-elle toujours à la réalité ?</li>
+<li>La démo ou l’implémentation reflète-t-elle la règle prévue ?</li>
+<li>Y a-t-il au moins un mécanisme de validation ou de revue qui protège le changement ?</li>
+<li>Une nouvelle personne contributrice pourrait-elle comprendre la décision plus tard ?</li>
+</ol>
+<h2 id="lectures-complémentaires">Lectures complémentaires</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>../wiki/fr/demo-spec-alignment.md</code></li>
+<li><code>../wiki/fr/spec-driven-development.md</code></li>
+<li><code>../blog/fr/spec-driven-development-in-let-books.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -142,21 +258,25 @@
                   <a href="../../blog/fr/spec-driven-development-in-let-books.html"><span>Développement guidé par les spécifications dans Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quand la démo est une preuve et quand elle ne l&#x27;est pas</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/fr/demo-spec-alignment.html"><span>Alignement entre démo et spécification</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/fr/demo-and-specification-alignment.html"><span>Alignement entre démo et spécification</span><span class="topic-menu__meta">Sujets</span></a>
                 </div>
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
                   <a href="../../blog/fr/documentation-is-part-of-the-product.html"><span>La documentation fait partie du produit</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/fr/spec-driven-development-for-ai-projects.html"><span>Développement guidé par les spécifications pour les projets d&#x27;IA</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/fr/how-to-write-a-spec-that-ai-can-follow.html"><span>Comment écrire une spécification que l&#x27;IA peut suivre</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../wiki/fr/markdown-in-product-development.html"><span>Markdown dans le développement produit</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/fr/spec-driven-development.html"><span>Développement guidé par les spécifications</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/fr/documentation-traceability.html"><span>Traçabilité de la documentation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/fr/how-to-write-a-spec-that-ai-can-follow.html"><span>Comment écrire une spécification que l’IA peut suivre</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../wiki/fr/markdown-in-product-development.html"><span>Markdown dans le développement de produits</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/fr/spec-driven-development.html"><span>Développement basé sur les spécifications</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/fr/documentation-traceability.html"><span>Traçabilité documentaire</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/fr/spec-driven-development.html"><span>Développement piloté par les spécifications</span><span class="topic-menu__meta">Sujets</span></a>
+                  <a href="../../topics/fr/documentation-traceability.html"><span>Traçabilité de la documentation</span><span class="topic-menu__meta">Sujets</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment revoir un travail assisté par l&#x27;IA par rapport à la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Comment ajouter progressivement des règles de validation et des garde-fous CI</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../learning/fr/how-to-review-ai-assisted-work-against-the-spec.html"><span>Comment relire un travail assisté par IA à l’aune de la spécification</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Comment ajouter des règles de validation et des garde-fous CI par étapes</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../topics/fr/ai-assisted-implementation.html"><span>Implémentation assistée par l&#x27;IA</span><span class="topic-menu__meta">Sujets</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/fr/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Comment transformer une spécification produit en plan d&#x27;implémentation</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
+                  <a href="../../learning/fr/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Comment transformer une spécification produit en plan d’implémentation</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
                 </div>
               </div>
             </div>
@@ -170,11 +290,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Une plateforme pratique pour cataloguer, offrir et retrouver des livres éducatifs.</p>
+            <p class="footer-note">Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</p>
             <p class="footer-microcopy">Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../fr/index.html">Aperçu</a>
+              <a href="../../topics/fr/index.html">Sujets</a>
               <a href="../../index.html">Page d&#x27;accueil</a>
               <a href="../../../static-demo/">Démo</a>
             </div>
@@ -185,6 +307,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributeurs Let Books. La réutilisation suit la licence du dépôt sauf mention contraire sur la page.</span>
+            <span>Prototype alpha précoce. La documentation et les textes d&#x27;interface sont assistés par IA. Les institutions et intégrations mentionnées dans les exemples sont conceptuelles et n&#x27;impliquent ni partenariat ni soutien.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

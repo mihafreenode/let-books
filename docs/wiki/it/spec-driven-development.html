@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sviluppo guidato dalle specifiche | LetBooks</title>
-    <meta name="description" content="Lo sviluppo guidato dalle specifiche è un approccio in cui definizioni esplicite di prodotto e processo guidano implementazione, documentazione, revisione e verifica.">
+    <title>Sviluppo basato sulle specifiche | LetBooks</title>
+    <meta name="description" content="Lo sviluppo basato sulle specifiche è un approccio in cui definizioni esplicite di prodotto e flusso di lavoro guidano l&#x27;implementazione, la documentazione, la revisione e la verifica.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/it/spec-driven-development.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Sviluppo guidato dalle specifiche | LetBooks">
-    <meta property="og:description" content="Lo sviluppo guidato dalle specifiche è un approccio in cui definizioni esplicite di prodotto e processo guidano implementazione, documentazione, revisione e verifica.">
+    <meta property="og:title" content="Sviluppo basato sulle specifiche | LetBooks">
+    <meta property="og:description" content="Lo sviluppo basato sulle specifiche è un approccio in cui definizioni esplicite di prodotto e flusso di lavoro guidano l&#x27;implementazione, la documentazione, la revisione e la verifica.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/it/spec-driven-development.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sviluppo guidato dalle specifiche | LetBooks">
-    <meta name="twitter:description" content="Lo sviluppo guidato dalle specifiche è un approccio in cui definizioni esplicite di prodotto e processo guidano implementazione, documentazione, revisione e verifica.">
+    <meta name="twitter:title" content="Sviluppo basato sulle specifiche | LetBooks">
+    <meta name="twitter:description" content="Lo sviluppo basato sulle specifiche è un approccio in cui definizioni esplicite di prodotto e flusso di lavoro guidano l&#x27;implementazione, la documentazione, la revisione e la verifica.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="it">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/it/index.html">Blog</a>
             <a class="nav-link" href="../../learning/it/index.html">Materiale didattico</a>
             <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/it/index.html">Temi</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/spec-driven-development.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/it/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Sviluppo guidato dalle specifiche</span>
+              <span aria-current="page">Sviluppo basato sulle specifiche</span>
             </nav>
-            <h1>Sviluppo guidato dalle specifiche</h1>
-          <p class="content-page-summary">Lo sviluppo guidato dalle specifiche è un approccio in cui definizioni esplicite di prodotto e processo guidano implementazione, documentazione, revisione e verifica.</p>
+            <h1>Sviluppo basato sulle specifiche</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Italiano</span>
+          </div>
+          <p class="content-page-summary">Lo sviluppo basato sulle specifiche è un approccio in cui definizioni esplicite di prodotto e flusso di lavoro guidano l&#x27;implementazione, la documentazione, la revisione e la verifica.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temi:</span>
               <span class="content-tag">Documentazione</span>
@@ -100,29 +116,47 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="perché-è-importante">Perché è importante</h2>
-<p class="lead">L’IA aumenta la velocità di consegna, ma può aumentare anche la deriva del prodotto quando l’intento non è abbastanza chiaro.</p>
-<p>La specifica dà al team una fonte stabile di verità per:</p>
+<h2 id="definizione">Definizione</h2>
+<p class="lead">In questo approccio, una specifica non è solo un artefatto di pianificazione iniziale. Costituisce un riferimento costante per:</p>
 <ul>
-<li>lo scopo del prodotto</li>
-<li>i confini dell’ambito</li>
-<li>il comportamento richiesto</li>
-<li>i criteri di accettazione</li>
-<li>lo standard di revisione</li>
+<li>scopo del prodotto</li>
+<li>confini dell’ambito</li>
+<li>comportamento richiesto</li>
+<li>criteri di accettazione</li>
+<li>rivedere gli standard</li>
 </ul>
-<h2 id="livelli-tipici">Livelli tipici</h2>
+<h2 id="perché-è-importante-nel-lavoro-assistito-dallintelligenza-artificiale">Perché è importante nel lavoro assistito dall’intelligenza artificiale</h2>
+<p>L’intelligenza artificiale aumenta la velocità di consegna, ma può anche aumentare la deriva del prodotto quando l’intento è vago.</p>
+<p>Lo sviluppo basato sulle specifiche aiuta fornendo ai team una fonte stabile di verità che può essere rivista, aggiornata e utilizzata per valutare l’output generato.</p>
+<h2 id="strati-tipici">Strati tipici</h2>
+<p>I livelli comuni in un sistema basato sulle specifiche includono:</p>
 <ul>
-<li>specifica di prodotto</li>
-<li>linee guida di implementazione</li>
-<li>documentazione dello stato attuale</li>
-<li>demo o comportamento dell’applicazione</li>
-<li>test e validazione</li>
-<li>applicazione CI/CD</li>
+<li>specifica del prodotto</li>
+<li>guida all’attuazione</li>
+<li>documentazione allo stato attuale</li>
+<li>comportamento demo o dell’applicazione</li>
+<li>regole e test di validazione</li>
+<li>Applicazione CI/CD</li>
 </ul>
-<h2 id="errore-comune">Errore comune</h2>
-<p>Un errore comune è lasciare che l’artefatto più visibile diventi la fonte predefinita di verità, per esempio l’ultimo prompt, il prototipo corrente o una pagina di documentazione superata.</p>
-<h2 id="contesto-let-books">Contesto Let Books</h2>
-<p>In Let Books questo approccio è supportato da <code>AGENTS.md</code>, <code>AGENTS-Implementation.md</code>, <code>README.md</code>, <code>docs/Development.md</code> e <code>docs/Deployment.md</code>.</p>
+<h2 id="modalità-di-errore-comune">Modalità di errore comune</h2>
+<p>Una modalità di fallimento comune è lasciare che l’artefatto più visibile diventi la fonte di verità predefinita.</p>
+<p>Esempi:</p>
+<ul>
+<li>l’ultima richiesta</li>
+<li>il prototipo attuale</li>
+<li>la scorciatoia di implementazione corrente</li>
+<li>una pagina di documentazione obsoleta</li>
+</ul>
+<p>Lo sviluppo basato sulle specifiche riduce tale rischio rendendo esplicita la catena di autorità prevista.</p>
+<h2 id="let-books-contesto">Let Books contesto</h2>
+<p>Nel Let Books lo sviluppo basato sulle specifiche è supportato da:</p>
+<ul>
+<li><code>AGENTS.md</code></li>
+<li><code>AGENTS-Implementation.md</code></li>
+<li><code>README.md</code></li>
+<li><code>docs/Development.md</code></li>
+<li><code>docs/Deployment.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -157,16 +191,20 @@
                   <a href="../../blog/it/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Quando la demo è prova e quando non lo è</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html"><span>Come scrivere una specifica che l&#x27;IA può seguire</span><span class="topic-menu__meta">Materiale didattico</span></a>
                   <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Come mantenere allineati specifica, documentazione, demo e codice</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../wiki/it/markdown-in-product-development.html"><span>Markdown nello sviluppo di prodotto</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/markdown-in-product-development.html"><span>Markdown nello sviluppo del prodotto</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/it/documentation-traceability.html"><span>Tracciabilità della documentazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/documentation-is-more-than-a-website.html"><span>La documentazione è più di un sito web</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/spec-driven-development.html"><span>Sviluppo guidato dalle specifiche</span><span class="topic-menu__meta">Temi</span></a>
+                  <a href="../../topics/it/documentation-traceability.html"><span>Tracciabilità della documentazione</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
-                  <a href="../../wiki/it/validation-layers.html"><span>Livelli di validazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/ai-assisted-implementation.html"><span>Implementazione assistita dall&#x27;IA</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../learning/it/how-to-review-ai-assisted-work-against-the-spec.html"><span>Come rivedere il lavoro assistito dall&#x27;IA rispetto alla specifica</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Come aggiungere a fasi regole di validazione e gate CI</span><span class="topic-menu__meta">Materiale didattico</span></a>
+                  <a href="../../learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Come aggiungere in fasi regole di validazione e gate CI</span><span class="topic-menu__meta">Materiale didattico</span></a>
                   <a href="../../wiki/it/demo-spec-alignment.html"><span>Allineamento tra demo e specifica</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/demo-and-specification-alignment.html"><span>Allineamento tra demo e specifica</span><span class="topic-menu__meta">Temi</span></a>
                 </div>
               </div>
             </div>
@@ -180,11 +218,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</p>
+            <p class="footer-note">Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</p>
             <p class="footer-microcopy">Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../it/index.html">Panoramica</a>
+              <a href="../../topics/it/index.html">Temi</a>
               <a href="../../index.html">Home page</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -195,6 +235,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</span>
+            <span>Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,5 +1,7 @@
 ---
 title: "Produktspezifikation"
+summary: >-
+  Eine Produktspezifikation definiert, wofür ein Produkt gedacht ist, was es tun muss, welche Grenzen es einhalten muss und welche Ergebnisse als Erfolg gelten.
 topics:
   - product-specification
   - spec-writing
@@ -9,69 +11,69 @@ topics:
 
 ## Zusammenfassung
 
-Eine Produktspezifikation definiert, wofür ein Produkt da ist, was es leisten muss, welche Grenzen es einhalten muss und welche Ergebnisse als Erfolg gelten.
+Eine Produktspezifikation definiert, wofür ein Produkt gedacht ist, was es tun muss, welche Grenzen es einhalten muss und welche Ergebnisse als Erfolg gelten.
 
 ## Rolle
 
-Die Produktspezifikation ist die praktische Beschreibung auf höchster Ebene des beabsichtigten Produktverhaltens.
+Die Produktspezifikation ist die höchste praktische Beschreibung des beabsichtigten Produktverhaltens.
 
-Sie sollte Fragen beantworten wie:
+Es sollte Fragen beantworten wie:
 
 - warum das Produkt existiert
-- für wen es gedacht ist
+- für wen es ist
 - welche Arbeitsabläufe erstklassig sind
-- was auch unter Ausfallbedingungen funktionieren muss
-- was ausdrücklich außerhalb des Umfangs liegt
-- welche Abnahmekriterien eine sinnvolle Demo oder ein sinnvolles Release definieren
+- was auch unter Fehlerbedingungen funktionieren muss
+- was explizit außerhalb des Geltungsbereichs liegt
+- Welche Akzeptanzkriterien definieren eine sinnvolle Demo oder Veröffentlichung?
 
 ## Was in eine Produktspezifikation gehört
 
-Typischer Inhalt umfasst:
+Typische Spezifikationsinhalte umfassen:
 
 - Produktzweck
 - Kernphilosophie
 - Domänenmodell
 - Workflow-Definitionen
-- Erwartungen an Datenschutz und Sicherheit
+- Erwartungen an Privatsphäre und Sicherheit
 - Nicht-Ziele
-- Leitlinien zur Implementierungsreihenfolge, wenn sie Umfang oder Lieferreihenfolge beeinflussen
-- Abnahmekriterien
+- Anleitung zur Implementierungssequenz, sofern diese Auswirkungen auf den Umfang oder die Lieferreihenfolge hat
+- Akzeptanzkriterien
 
 Die Spezifikation sollte sich auf die Produktwahrheit konzentrieren, nicht auf jedes lokale Implementierungsdetail.
 
-## Was dort meist nicht hingehört
+## Was dort normalerweise nicht hingehört
 
-Diese Punkte gehören oft woanders hin, sofern sie keine direkten Produktzusagen beeinflussen:
+Diese Elemente gehören oft woanders hin, es sei denn, sie wirken sich direkt auf Produktverpflichtungen aus:
 
-- temporäre Repository-Konventionen
-- lokale Tooling-Einrichtung
-- enge Entscheidungen zur UI-Politur
-- einmalige Debugging-Hinweise
-- redaktionelle oder Publishing-Mechaniken, die das Produktmodell nicht verändern
+- Konventionen für temporäre Repositorys
+- Einrichtung lokaler Werkzeuge
+- Enge Entscheidungen zur Politur der Benutzeroberfläche
+- einmalige Debugging-Anleitung
+- Redaktions- oder Veröffentlichungsmechanismen, die das Produktmodell nicht verändern
 
-## Warum das in KI-gestützter Arbeit wichtig ist
+## Warum es bei KI-gestützter Arbeit wichtig ist
 
-KI kann sehr schnell plausibel wirkende Implementierungen erzeugen. Ohne klare Produktspezifikation kann diese Implementierung Bequemlichkeit statt Absicht optimieren.
+KI kann sehr schnell eine plausible Umsetzung generieren. Ohne eine klare Produktspezifikation kann diese Implementierung eher auf Bequemlichkeit als auf Absicht ausgerichtet sein.
 
-Die Spezifikation gibt Reviewern und Beitragenden einen stabilen Maßstab, um zu entscheiden, ob generierte Ergebnisse noch zum beabsichtigten Produkt gehören.
+Die Spezifikation gibt Prüfern und Mitwirkenden einen stabilen Standard für die Entscheidung, ob die generierte Ausgabe noch zum beabsichtigten Produkt gehört.
 
-## Let-Books-Kontext
+## Let Books Kontext
 
-In Let Books ist `AGENTS.md` die zentrale Produktspezifikation.
+In Let Books ist `AGENTS.md` die Kernproduktspezifikation.
 
-Sie definiert:
+Es definiert:
 
-- den Projektzweck
-- das Domänen- und Workflow-Modell
-- die Richtung für Multi-Tenancy und Lokalisierung
-- Prinzipien für manuelle Abläufe und optionale KI
-- Abnahmekriterien für die erste Demo
+- Projektzweck
+- Domänen- und Workflow-Modell
+- Mandantenfähigkeit und Lokalisierungsrichtung
+- Manueller Workflow und AI-optionale Prinzipien
+- Akzeptanzkriterien für die erste Demo
 
-Damit ist sie mehr als ein Überblick. Sie ist die wichtigste Produktautorität im Repository.
+Das macht es zu mehr als nur einem Überblick. Es ist die wichtigste Produktautorität im Repository.
 
 ## Verwandte Seiten
 
 - `implementation-guidance.md`
 - `documentation-traceability.md`
 - `spec-driven-development.md`
-- `../learning/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../learning/de/how-to-write-a-spec-that-ai-can-follow.md`

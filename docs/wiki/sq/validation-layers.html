@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shtresat e validimit | LetBooks</title>
-    <meta name="description" content="Shtresat e validimit janë mënyrat e ndryshme me të cilat një projekt kontrollon nëse implementimi, dokumentacioni dhe artefaktet e dorëzimit përputhen ende me rregullat e synuara dhe pritjet e cilësisë.">
+    <title>Shtresat e Validimit | LetBooks</title>
+    <meta name="description" content="Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/validation-layers.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Shtresat e validimit | LetBooks">
-    <meta property="og:description" content="Shtresat e validimit janë mënyrat e ndryshme me të cilat një projekt kontrollon nëse implementimi, dokumentacioni dhe artefaktet e dorëzimit përputhen ende me rregullat e synuara dhe pritjet e cilësisë.">
+    <meta property="og:title" content="Shtresat e Validimit | LetBooks">
+    <meta property="og:description" content="Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/validation-layers.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shtresat e validimit | LetBooks">
-    <meta name="twitter:description" content="Shtresat e validimit janë mënyrat e ndryshme me të cilat një projekt kontrollon nëse implementimi, dokumentacioni dhe artefaktet e dorëzimit përputhen ende me rregullat e synuara dhe pritjet e cilësisë.">
+    <meta name="twitter:title" content="Shtresat e Validimit | LetBooks">
+    <meta name="twitter:description" content="Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sq">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
             <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/validation-layers.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sq/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Shtresat e validimit</span>
+              <span aria-current="page">Shtresat e Validimit</span>
             </nav>
-            <h1>Shtresat e validimit</h1>
-          <p class="content-page-summary">Shtresat e validimit janë mënyrat e ndryshme me të cilat një projekt kontrollon nëse implementimi, dokumentacioni dhe artefaktet e dorëzimit përputhen ende me rregullat e synuara dhe pritjet e cilësisë.</p>
+            <h1>Shtresat e Validimit</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">CI/CD</span>
@@ -101,55 +117,63 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="pse-shtresat-kanë-rëndësi">Pse shtresat kanë rëndësi</h2>
-<p class="lead">Asnjë metodë e vetme validimi nuk mjafton.</p>
+<p class="lead">Asnjë metodë e vetme e vërtetimit nuk është e mjaftueshme.</p>
 <ul>
-<li>vetëm dokumentacioni nuk e zbaton sjelljen</li>
-<li>vetëm testet mund të vërtetojnë supozime të gabuara</li>
-<li>vetëm CI nuk mund të përcaktojë rregullat që duhet të zbatojë</li>
+<li>vetëm dokumentacioni nuk e detyron sjelljen</li>
+<li>vetëm testet mund të vërtetojnë supozimet e gabuara</li>
+<li>CI i vetëm nuk mund të përcaktojë rregullat që supozohet të zbatojë</li>
 </ul>
-<p>Një qasje me shtresa është më e fortë sepse secila shtresë kap një klasë tjetër devijimi.</p>
-<h2 id="shtresa-të-zakonshme-validimi">Shtresa të zakonshme validimi</h2>
-<h3 id="specifikimi-dhe-udhëzimet">1. Specifikimi dhe udhëzimet</h3>
+<p>Një qasje e shtresuar është më e fortë sepse çdo shtresë kap një klasë të ndryshme zhvendosjeje.</p>
+<h2 id="shtresat-e-zakonshme-të-vërtetimit">Shtresat e zakonshme të vërtetimit</h2>
+<h3 id="specifikimi-dhe-udhëzimi">1. Specifikimi dhe udhëzimi</h3>
 <p>Shtresa e parë përcakton rregullin.</p>
-<p>Pa këtë shtresë, kontrollimet e mëvonshme mund të jenë të rrepta por arbitrare.</p>
-<h3 id="rishikimi-manual">2. Rishikimi manual</h3>
-<p>Rishikimi njerëzor kontrollon qëllimin, rastet skajore dhe kuptimin e produktit që mund të mos jenë ende të automatizuara.</p>
-<h3 id="validimi-lokal">3. Validimi lokal</h3>
-<p>Skriptet dhe kontrollimet e strukturuara kapin shpejt çështje të përsëritshme para se ndryshimet të arrijnë te CI.</p>
+<p>Pa këtë shtresë, kontrollet e mëvonshme mund të jenë strikte, por arbitrare.</p>
+<h3 id="rishikim-manual">2. Rishikim manual</h3>
+<p>Rishikimi njerëzor kontrollon qëllimin, rastet anësore dhe kuptimin e produktit që mund të mos jenë ende të automatizuara.</p>
+<h3 id="vleresimi-lokal">3. Vleresimi lokal</h3>
+<p>Skriptet dhe kontrollet e strukturuara kapin probleme të shpejta dhe të përsëritshme përpara se ndryshimet të arrijnë CI.</p>
 <h3 id="testet">4. Testet</h3>
-<p>Testet e ekzekutueshme verifikojnë sjelljen e pritur, por vetëm kur janë në përputhje me specifikimin.</p>
-<h3 id="portat-e-ci-së">5. Portat e CI-së</h3>
-<p>CI i bën kontrollimet të përsëritshme dhe të dukshme përtej kontribuesve dhe mjediseve.</p>
-<h3 id="kontrollimet-e-vendosjes">6. Kontrollimet e vendosjes</h3>
-<p>Rrjedhat e vendosjes konfirmojnë se artefaktet e ndërtuara mbeten të botueshme dhe strukturalisht të shëndosha.</p>
+<p>Testet e ekzekutueshme verifikojnë sjelljen e pritshme, por vetëm kur ato janë në përputhje me specifikimet.</p>
+<h3 id="portat-ci">5. Portat CI</h3>
+<p>CI i bën kontrollet të përsëritshme dhe të dukshme në të gjithë kontribuesit dhe mjediset.</p>
+<h3 id="kontrollet-e-vendosjes">6. Kontrollet e vendosjes</h3>
+<p>Rrjedhat e punës së vendosjes konfirmojnë se artefaktet e ndërtuara janë ende të botueshme dhe strukturore të shëndosha.</p>
 <h2 id="si-duhet-të-lidhen-shtresat">Si duhet të lidhen shtresat</h2>
-<p>Shtresat duhet ta përforcojnë njëra-tjetrën me radhë:</p>
+<p>Shtresat duhet të përforcojnë njëra-tjetrën sipas rendit:</p>
 <ul>
-<li>dokumentet dhe specifikimet përcaktojnë pritjet</li>
-<li>rishikimi i interpreton këto pritje në kontekst</li>
-<li>skriptet e validimit dhe testet automatizojnë pjesët e qëndrueshme të rishikimit</li>
-<li>CI i ekzekuton këto kontrollime në mënyrë të qëndrueshme</li>
-<li>vendosja siguron që rezultati mund të dorëzohet realisht</li>
+<li>Dokumentet dhe specifikat përcaktojnë pritshmëritë</li>
+<li>rishikimi i interpreton ato pritshmëri në kontekst</li>
+<li>Skriptet dhe testet e vlefshmërisë automatizojnë pjesë të qëndrueshme të rishikimit</li>
+<li>CI i kryen ato kontrolle në mënyrë të vazhdueshme</li>
+<li>vendosja siguron që produkti të mund të dërgohet</li>
 </ul>
-<h2 id="objektiva-të-mira-për-validim-të-hershëm">Objektiva të mira për validim të hershëm</h2>
-<p>Shembuj të kandidatëve të fortë për fillim përfshijnë:</p>
+<h2 id="objektiva-të-mira-të-vërtetimit-të-hershëm">Objektiva të mira të vërtetimit të hershëm</h2>
+<p>Shembuj të kandidatëve të hershëm të fortë përfshijnë:</p>
 <ul>
-<li>praninë e skedarëve të detyrueshëm</li>
-<li>plotësinë e lokalizimit</li>
-<li>vlefshmërinë sintaksore</li>
-<li>lidhje të brendshme të prishura</li>
-<li>citime editoriale të ndaluara</li>
-<li>gjenerim të suksesshëm të metadatave</li>
+<li>prania e skedarit të kërkuar</li>
+<li>plotësia e lokalizimit</li>
+<li>vlefshmëria sintaksore</li>
+<li>lidhjet e brendshme të prishura</li>
+<li>citate editoriale të ndaluara</li>
+<li>suksesi i gjenerimit të meta të dhënave</li>
 </ul>
-<p>Këto kontrollime priren të jenë objektive dhe jo të kushtueshme.</p>
-<h2 id="konteksti-let-books">Konteksti Let Books</h2>
+<p>Këto kontrolle priren të jenë objektive dhe të lira.</p>
+<h2 id="let-books-kontekst">Let Books kontekst</h2>
 <p>Depoja e Let Books tashmë dokumenton disa shtresa, duke përfshirë:</p>
 <ul>
-<li>rregullat e produktit dhe implementimit në <code>AGENTS.md</code> dhe <code>AGENTS-Implementation.md</code></li>
-<li>validimin e zhvillimit dhe vendosjes në <code>docs/Development.md</code> dhe <code>docs/Deployment.md</code></li>
-<li>rregullat editoriale të provave në <code>docs/blog/README.md</code> dhe <code>docs/sources/README.md</code></li>
+<li>rregullat e produktit dhe zbatimit në <code>AGENTS.md</code> dhe <code>AGENTS-Implementation.md</code></li>
+<li>vlefshmëria e zhvillimit dhe vendosjes në <code>docs/Development.md</code> dhe <code>docs/Deployment.md</code></li>
+<li>rregullat e provave editoriale në <code>docs/blog/README.md</code> dhe <code>docs/sources/README.md</code></li>
+<li>Udhëzimet e të mësuarit për CI të shkallëzuar dhe prezantimin e vlefshmërisë</li>
 </ul>
-<p>Kjo e bën validimin një sistem të dokumentuar dhe jo vetëm një aspiratë të ardhshme.</p>
+<p>Kjo e bën vërtetimin një sistem të dokumentuar dhe jo vetëm një aspiratë të së ardhmes.</p>
+<h2 id="faqe-të-ngjashme">Faqe të ngjashme</h2>
+<ul>
+<li><code>documentation-traceability.md</code></li>
+<li><code>implementation-guidance.md</code></li>
+<li><code>../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.md</code></li>
+<li><code>../../blog/sq/documentation-is-part-of-the-product.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -174,6 +198,7 @@
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-product-quality-menu">Cilësia e produktit</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Dhurim librash</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Dorëzim me AI</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Planifikim i zbatimit</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Përputhja e demove</button>
@@ -181,28 +206,34 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Si të shtosh me faza rregulla validimi dhe porta CI</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Si të shtoni rregulla validimi dhe porta CI me faza</span><span class="topic-menu__meta">Materiale mësimore</span></a>
                   <a href="../../learning/sq/how-to-run-localization-qa-in-ci.html"><span>Si të ekzekutoni QA të lokalizimit në CI</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../topics/sq/validation-layers.html"><span>Shtresat e Validimit</span><span class="topic-menu__meta">Tema</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
                   <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/sq/documentation-traceability.html"><span>Gjurmueshmëria e dokumentacionit</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sq/markdown-in-product-development.html"><span>Markdown në zhvillimin e produktit</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillim i udhëhequr nga specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/markdown-in-product-development.html"><span>Markdown në Zhvillimin e produktit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/ai-assisted-implementation.html"><span>Implementimi i Ndihmuar nga AI</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../blog/sq/isbn-not-a-database.html"><span>ISBN nuk është bazë të dhënash</span><span class="topic-menu__meta">Blog</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikosh punën e mbështetur nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
-                  <a href="../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Si ta kthesh një specifikim produkti në plan implementimi</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../wiki/sq/implementation-guidance.html"><span>Udhëzime për implementim</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Si ta ktheni një specifikim produkti në një plan implementimi</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../wiki/sq/implementation-guidance.html"><span>Udhëzues Zbatimi</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../blog/sq/spec-driven-development-in-let-books.html"><span>Zhvillim i udhëhequr nga specifikimi në Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kur demoja është provë dhe kur nuk është</span><span class="topic-menu__meta">Blog</span></a>
                 </div>
                 <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
                   <a href="../../blog/sq/spec-driven-development-for-ai-projects.html"><span>Zhvillim i udhëhequr nga specifikimi për projektet me AI</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../wiki/sq/documentation-validation-beyond-linting.html"><span>Validimi i dokumentacionit përtej linting-ut</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/demo-and-specification-alignment.html"><span>Përputhja e Demos dhe Specifikimit</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/documentation-traceability.html"><span>Gjurmueshmëria e Dokumentacionit</span><span class="topic-menu__meta">Tema</span></a>
                 </div>
               </div>
             </div>
@@ -216,11 +247,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
             <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
               <a href="../../index.html">Faqja kryesore</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -231,6 +264,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</span>
+            <span>Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

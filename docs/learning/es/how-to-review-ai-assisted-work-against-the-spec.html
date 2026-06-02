@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cómo revisar trabajo asistido por IA frente a la especificación | LetBooks</title>
-    <meta name="description" content="Los cambios asistidos por IA deben revisarse frente a la especificación, la documentación y el comportamiento de respaldo, no solo por una impresión de plausibilidad técnica.">
+    <meta name="description" content="Esta guía explica cómo revisar una implementación asistida por IA comprobándola frente a la especificación del producto, las reglas del flujo de trabajo, la documentación y las expectativas de validación, en lugar de juzgar solo si el resultado parece pulido o técnicamente plausible.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/es/how-to-review-ai-assisted-work-against-the-spec.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Cómo revisar trabajo asistido por IA frente a la especificación | LetBooks">
-    <meta property="og:description" content="Los cambios asistidos por IA deben revisarse frente a la especificación, la documentación y el comportamiento de respaldo, no solo por una impresión de plausibilidad técnica.">
+    <meta property="og:description" content="Esta guía explica cómo revisar una implementación asistida por IA comprobándola frente a la especificación del producto, las reglas del flujo de trabajo, la documentación y las expectativas de validación, en lugar de juzgar solo si el resultado parece pulido o técnicamente plausible.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/es/how-to-review-ai-assisted-work-against-the-spec.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cómo revisar trabajo asistido por IA frente a la especificación | LetBooks">
-    <meta name="twitter:description" content="Los cambios asistidos por IA deben revisarse frente a la especificación, la documentación y el comportamiento de respaldo, no solo por una impresión de plausibilidad técnica.">
+    <meta name="twitter:description" content="Esta guía explica cómo revisar una implementación asistida por IA comprobándola frente a la especificación del producto, las reglas del flujo de trabajo, la documentación y las expectativas de validación, en lugar de juzgar solo si el resultado parece pulido o técnicamente plausible.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="es">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/es/index.html">Blog</a>
             <a class="nav-link" href="../../learning/es/index.html">Material de aprendizaje</a>
             <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/es/index.html">Temas</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Cómo revisar trabajo asistido por IA frente a la especificación</span>
             </nav>
             <h1>Cómo revisar trabajo asistido por IA frente a la especificación</h1>
-          <p class="content-page-summary">Los cambios asistidos por IA deben revisarse frente a la especificación, la documentación y el comportamiento de respaldo, no solo por una impresión de plausibilidad técnica.</p>
+          <div class="content-page-meta">
+            <span>Material de aprendizaje</span>
+            <span>Español</span>
+          </div>
+          <p class="content-page-summary">Esta guía explica cómo revisar una implementación asistida por IA comprobándola frente a la especificación del producto, las reglas del flujo de trabajo, la documentación y las expectativas de validación, en lugar de juzgar solo si el resultado parece pulido o técnicamente plausible.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temas:</span>
               <span class="content-tag">Entrega asistida por IA</span>
@@ -100,15 +116,114 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="orden-de-revisión">Orden de revisión</h2>
+<h2 id="por-qué-importa-esto">Por qué importa esto</h2>
+<p class="lead">La IA puede producir código, texto, pruebas y cambios de interfaz que parecen completos con mucha rapidez.</p>
+<p>Esa velocidad crea un riesgo de revisión: quienes revisan pueden pasar sin darse cuenta de preguntar “¿Es este el comportamiento correcto del producto?” a preguntar “¿Esto parece razonable?”.</p>
+<p>No son la misma pregunta.</p>
+<p>En el trabajo guiado por especificaciones, la revisión debería empezar por la alineación y solo después pasar a la calidad del código, el estilo y los detalles de implementación.</p>
+<h2 id="empieza-por-la-fuente-de-verdad">Empieza por la fuente de verdad</h2>
+<p>Antes de revisar el resultado, identifica los documentos que definen el comportamiento previsto.</p>
+<p>En el repositorio de Let Books, eso suele significar:</p>
+<ul>
+<li><code>AGENTS.md</code> para reglas del producto, flujos de trabajo y alcance</li>
+<li><code>AGENTS-Implementation.md</code> para restricciones tácticas de entrega</li>
+<li><code>README.md</code> para la presentación del estado actual</li>
+<li>documentación relevante en <code>docs/</code> para publicación, verificación o guía de flujo de trabajo</li>
+</ul>
+<p>Sin este paso, la revisión se vuelve fácilmente subjetiva y local.</p>
+<h2 id="revisa-en-el-orden-correcto">Revisa en el orden correcto</h2>
+<p>Usa este orden al revisar trabajo asistido por IA.</p>
+<h3 id="alineación-con-el-producto">1. Alineación con el producto</h3>
+<p>Pregunta si el resultado coincide con el flujo de trabajo previsto para la persona usuaria y con el límite del producto.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>si la entrada manual sigue funcionando donde la especificación lo exige</li>
+<li>si el cambio preserva la separación entre copias físicas y registros bibliográficos</li>
+<li>si añade un comportamiento que nunca fue aprobado</li>
+<li>si presenta incorrectamente funciones opcionales de IA como obligatorias</li>
+</ul>
+<p>Si la alineación con el producto es incorrecta, no tiene mucho valor dedicar primero mucho tiempo al pulido.</p>
+<h3 id="alineación-con-la-documentación">2. Alineación con la documentación</h3>
+<p>Pregunta si la documentación que rodea el cambio sigue describiendo la realidad de forma honesta.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>si se cambió un flujo de trabajo visible para el usuario sin actualizar la documentación</li>
+<li>si el README sigue describiendo correctamente el estado actual</li>
+<li>si las nuevas afirmaciones públicas coinciden con la posición del producto realmente documentada</li>
+</ul>
+<p>Los cambios generados por IA a menudo modifican el comportamiento sin recordar actualizar la narrativa que lo rodea.</p>
+<h3 id="validación-y-comportamiento-de-respaldo">3. Validación y comportamiento de respaldo</h3>
+<p>Pregunta si el cambio preserva las expectativas de fallo y respaldo de la especificación.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>si el flujo de trabajo todavía puede completarse cuando falla un proveedor opcional</li>
+<li>si las entradas no válidas se manejan de forma explícita</li>
+<li>si los resultados de baja confianza o inciertos se tratan como sugerencias y no como hechos</li>
+</ul>
+<p>Aquí es donde muchas implementaciones plausibles fallan la prueba real del producto.</p>
+<h3 id="calidad-técnica">4. Calidad técnica</h3>
+<p>Solo después de las comprobaciones anteriores deberías dedicar la mayor parte del tiempo a:</p>
+<ul>
+<li>claridad</li>
+<li>mantenibilidad</li>
+<li>nombres</li>
+<li>duplicación</li>
+<li>pruebas</li>
+<li>estructura</li>
+</ul>
+<p>La calidad técnica sigue importando. Simplemente no debería estar por encima de la corrección del producto.</p>
+<h2 id="trampas-habituales-en-la-revisión">Trampas habituales en la revisión</h2>
+<p>El trabajo asistido por IA tiende a crear varias trampas de revisión repetibles.</p>
+<h3 id="la-trampa-del-resultado-pulido">La trampa del resultado pulido</h3>
+<p>El resultado se ve limpio, así que quienes revisan asumen que es correcto.</p>
+<h3 id="la-trampa-del-contexto-cercano">La trampa del contexto cercano</h3>
+<p>El cambio coincide con la implementación existente más cercana, pero esa implementación cercana quizá ya se haya desviado.</p>
+<h3 id="la-trampa-del-alcance-implícito">La trampa del alcance implícito</h3>
+<p>El asistente añade funciones, abstracciones o suposiciones que nunca se pidieron, y la persona revisora las acepta porque no parecen obviamente rotas.</p>
+<h3 id="la-trampa-de-las-pruebas-que-pasan">La trampa de las pruebas que pasan</h3>
+<p>Las pruebas pueden pasar porque validan el comportamiento generado, no porque validen el comportamiento del producto previsto.</p>
+<h2 id="una-lista-práctica-de-revisión">Una lista práctica de revisión</h2>
+<p>Para cada cambio sustancial asistido por IA, pregunta:</p>
 <ol type="1">
-<li>alineación de producto</li>
-<li>alineación de documentación</li>
-<li>respaldo y validación</li>
-<li>calidad técnica</li>
+<li>¿Qué regla del producto o flujo de trabajo se supone que implementa este cambio?</li>
+<li>¿Qué especificación o documentación define esa regla?</li>
+<li>¿El resultado preserva las restricciones requeridas?</li>
+<li>¿Mantiene intacto el comportamiento de respaldo?</li>
+<li>¿La documentación sigue coincidiendo con el comportamiento resultante?</li>
+<li>¿Qué validación o pruebas respaldan el cambio?</li>
+<li>¿El asistente añadió algo que deba eliminarse por quedar fuera de alcance?</li>
 </ol>
-<h2 id="pregunta-principal">Pregunta principal</h2>
-<p class="lead">No solo “funciona”, sino también “sigue siendo el producto correcto”.</p>
+<h2 id="cómo-revisar-pruebas-generadas">Cómo revisar pruebas generadas</h2>
+<p>Las pruebas generadas son útiles, pero también deben revisarse frente a la especificación.</p>
+<p>Pregunta:</p>
+<ul>
+<li>si las pruebas comprueban el flujo de trabajo previsto</li>
+<li>si cubren el comportamiento de respaldo</li>
+<li>si reflejan las condiciones límite documentadas</li>
+<li>si están afirmando un comportamiento de conveniencia que nunca se especificó</li>
+</ul>
+<p>Esto es especialmente importante en el trabajo guiado por especificaciones porque una suite de pruebas débil puede fijar la deriva.</p>
+<h2 id="ejemplos-de-let-books">Ejemplos de Let Books</h2>
+<p>Ejemplos de preguntas a nivel de especificación en este repositorio incluyen:</p>
+<ul>
+<li>si el flujo de trabajo sigue siendo útil sin servicios de IA de pago</li>
+<li>si la documentación del estado actual separa claramente el estado de la demo de los planes futuros de backend</li>
+<li>si la documentación pública evita tratar el código fuente como evidencia editorial canónica</li>
+<li>si los pasos de validación siguen formando parte del flujo de entrega en lugar de depender de memoria opcional</li>
+</ul>
+<p>Esas preguntas son lo bastante específicas como para guiar la revisión, y eso es exactamente lo que una especificación debe permitir.</p>
+<h2 id="la-lección-duradera">La lección duradera</h2>
+<p>La revisión asistida por IA no consiste en comprobar si el asistente produjo algo impresionante. Consiste en comprobar si el resultado sigue perteneciendo al producto previsto.</p>
+<p>La mejor pregunta de revisión normalmente no es “¿Esto funciona?”. Es “¿Esto coincide con la especificación, incluidas las partes que es fácil olvidar?”.</p>
+<h2 id="lecturas-adicionales">Lecturas adicionales</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-write-a-spec-that-ai-can-follow.md</code></li>
+<li><code>how-to-turn-a-product-spec-into-an-implementation-plan.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>../wiki/es/spec-driven-development.md</code></li>
+<li><code>../blog/es/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -133,25 +248,33 @@
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Entrega asistida por IA</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Planificación de la implementación</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Revisión del producto</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../blog/es/spec-driven-development-in-let-books.html"><span>Desarrollo guiado por especificaciones en Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Cómo mantener alineados la especificación, la documentación, la demo y el código</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
-                  <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Cómo añadir por etapas reglas de validación y controles CI</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
-                  <a href="../../wiki/es/implementation-guidance.html"><span>Directrices de implementación</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/es/spec-driven-development.html"><span>Desarrollo guiado por especificaciones</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Cómo añadir reglas de validación y controles de CI por etapas</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../wiki/es/implementation-guidance.html"><span>Guía de implementación</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/spec-driven-development.html"><span>Desarrollo basado en especificaciones</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/markdown-in-product-development.html"><span>Markdown en Desarrollo de productos</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/es/spec-driven-development.html"><span>Desarrollo guiado por especificaciones</span><span class="topic-menu__meta">Temas</span></a>
+                  <a href="../../topics/es/demo-and-specification-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Temas</span></a>
+                  <a href="../../topics/es/documentation-traceability.html"><span>Trazabilidad de la documentación</span><span class="topic-menu__meta">Temas</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../blog/es/documentation-is-part-of-the-product.html"><span>La documentación es parte del producto</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/es/spec-driven-development-for-ai-projects.html"><span>Desarrollo guiado por especificaciones para proyectos de IA</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/es/documentation-is-part-of-the-product.html"><span>La documentación es parte del producto</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html"><span>Cómo escribir una especificación que la IA pueda seguir</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../topics/es/ai-assisted-implementation.html"><span>Implementación asistida por IA</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+                <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
+                  <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Cómo convertir una especificación de producto en un plan de implementación</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
                   <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Cuándo la demo es evidencia y cuándo no lo es</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/es/demo-spec-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/es/let-books-localization-lessons-learned.html"><span>Let Books Lecciones aprendidas de localización</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>
@@ -165,11 +288,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</p>
+            <p class="footer-note">Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</p>
             <p class="footer-microcopy">Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../es/index.html">Vista general</a>
+              <a href="../../topics/es/index.html">Temas</a>
               <a href="../../index.html">Página de inicio</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -180,6 +305,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</span>
+            <span>Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

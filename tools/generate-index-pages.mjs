@@ -11,13 +11,15 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'docs');
+const DOCS_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'docs-config.json'), 'utf8'));
 const BLOG_DIR = path.join(DOCS_DIR, 'blog');
 const LEARNING_DIR = path.join(DOCS_DIR, 'learning');
 const WIKI_DIR = path.join(DOCS_DIR, 'wiki');
+const TOPICS_DIR = path.join(DOCS_DIR, 'topics');
 const SITE_URL = 'https://letbooks.org';
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
-const LOCALES = ['en', 'sl', 'hr', 'bs', 'sr-Latn', 'sr-Cyrl', 'mk', 'sq', 'de', 'it', 'fr', 'es'];
+const LOCALES = DOCS_CONFIG.locales;
 
 const LOCALE_SHORT_LABELS = {
   en: 'EN', sl: 'SL', hr: 'HR', bs: 'BS',
@@ -33,18 +35,18 @@ const LOCALE_LABELS = {
 };
 
 const NAV_LABELS = {
-  en: { docs: 'Docs', blog: 'Blog', learning: 'Learning', wiki: 'Wiki' },
-  sl: { docs: 'Dokumentacija', blog: 'Blog', learning: 'Učni vodniki', wiki: 'Wiki' },
-  hr: { docs: 'Dokumentacija', blog: 'Blog', learning: 'Vodiči za učenje', wiki: 'Wiki' },
-  bs: { docs: 'Dokumentacija', blog: 'Blog', learning: 'Vodiči za učenje', wiki: 'Wiki' },
-  'sr-Latn': { docs: 'Dokumentacija', blog: 'Blog', learning: 'Vodiči za učenje', wiki: 'Wiki' },
-  'sr-Cyrl': { docs: 'Документација', blog: 'Блог', learning: 'Водичи за учење', wiki: 'Вики' },
-  mk: { docs: 'Документација', blog: 'Блог', learning: 'Водичи за учење', wiki: 'Вики' },
-  sq: { docs: 'Dokumentim', blog: 'Blogu', learning: 'Udhëzues mësimor', wiki: 'Wiki' },
-  de: { docs: 'Doku', blog: 'Blog', learning: 'Lernleitfäden', wiki: 'Wiki' },
-  it: { docs: 'Documentazione', blog: 'Blog', learning: 'Guide didattiche', wiki: 'Wiki' },
-  fr: { docs: 'Documentation', blog: 'Blog', learning: "Guides d'apprentissage", wiki: 'Wiki' },
-  es: { docs: 'Documentación', blog: 'Blog', learning: 'Guías de aprendizaje', wiki: 'Wiki' },
+  en: { docs: 'Docs', blog: 'Blog', learning: 'Learning', wiki: 'Wiki', topics: 'Topics' },
+  sl: { docs: 'Dokumentacija', blog: 'Blog', learning: 'Učni vodniki', wiki: 'Wiki', topics: 'Teme' },
+  hr: { docs: 'Dokumentacija', blog: 'Blog', learning: 'Vodiči za učenje', wiki: 'Wiki', topics: 'Teme' },
+  bs: { docs: 'Dokumentacija', blog: 'Blog', learning: 'Vodiči za učenje', wiki: 'Wiki', topics: 'Teme' },
+  'sr-Latn': { docs: 'Dokumentacija', blog: 'Blog', learning: 'Vodiči za učenje', wiki: 'Wiki', topics: 'Teme' },
+  'sr-Cyrl': { docs: 'Документација', blog: 'Блог', learning: 'Водичи за учење', wiki: 'Вики', topics: 'Теме' },
+  mk: { docs: 'Документација', blog: 'Блог', learning: 'Водичи за учење', wiki: 'Вики', topics: 'Теми' },
+  sq: { docs: 'Dokumentim', blog: 'Blogu', learning: 'Udhëzues mësimor', wiki: 'Wiki', topics: 'Tema' },
+  de: { docs: 'Doku', blog: 'Blog', learning: 'Lernleitfäden', wiki: 'Wiki', topics: 'Themen' },
+  it: { docs: 'Documentazione', blog: 'Blog', learning: 'Guide didattiche', wiki: 'Wiki', topics: 'Temi' },
+  fr: { docs: 'Documentation', blog: 'Blog', learning: "Guides d'apprentissage", wiki: 'Wiki', topics: 'Sujets' },
+  es: { docs: 'Documentación', blog: 'Blog', learning: 'Guías de aprendizaje', wiki: 'Wiki', topics: 'Temas' },
 };
 
 const FOOTER_DESC = {
@@ -137,6 +139,7 @@ function buildHead({ title, description, canonical, stylesheetHref, scriptSrc, h
     `    <meta name="twitter:image" content="${OG_IMAGE}">`,
     '    <meta name="twitter:image:alt" content="LetBooks social preview image">',
     `    <link rel="stylesheet" href="${stylesheetHref}">`,
+    `    <link rel="stylesheet" href="${stylesheetHref.replace('style.css', 'print.css')}" media="print">`,
     `    <script src="${resolvedScriptSrc}" defer></script>`,
   ];
   if (hreflangTags) {
@@ -182,6 +185,14 @@ function extractTitleFromMd(filePath) {
   const h1 = body.match(/^#\s+(.+)/m);
   if (h1) return h1[1].trim();
   return path.basename(filePath, '.md');
+}
+
+function readFrontmatterValue(filePath, field) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  const match = content.match(/^---\s*\n([\s\S]*?)\n---/);
+  if (!match) return null;
+  const fieldMatch = match[1].match(new RegExp(`^${field}:\s+"?(.+?)"?\s*$`, 'm'));
+  return fieldMatch ? fieldMatch[1] : null;
 }
 
 // ─── Blog labels per locale ───────────────────────────────
@@ -231,6 +242,63 @@ const WIKI_INFO = {
   es: { title: 'Wiki', desc: 'Páginas de referencia permanentes sobre desarrollo guiado por especificaciones, trazabilidad de documentación, capas de validación y temas relacionados.' },
 };
 
+const TOPICS_INFO = {
+  en: { title: 'Topics', desc: 'Concept overviews that connect blog writing, wiki reference pages, and guided learning material into a shared orientation layer.' },
+  sl: { title: 'Teme', desc: 'Konceptualni pregledi, ki povezujejo blog, wiki referenčne strani in učno gradivo v skupno orientacijsko plast.' },
+  hr: { title: 'Teme', desc: 'Konceptualni pregledi koji povezuju blog, wiki referentne stranice i vodiče za učenje u zajednički orijentacijski sloj.' },
+  bs: { title: 'Teme', desc: 'Konceptualni pregledi koji povezuju blog, wiki referentne stranice i vodiče za učenje u zajednički orijentacijski sloj.' },
+  'sr-Latn': { title: 'Teme', desc: 'Konceptualni pregledi koji povezuju blog, viki referentne stranice i vodiče za učenje u zajednički orijentacioni sloj.' },
+  'sr-Cyrl': { title: 'Теме', desc: 'Концептуални прегледи који повезују блог, вики референтне странице и водиче за учење у заједнички оријентациони слој.' },
+  mk: { title: 'Теми', desc: 'Концептуални прегледи што ги поврзуваат блогот, вики-референците и материјалите за учење во заеднички слој за ориентација.' },
+  sq: { title: 'Tema', desc: 'Përmbledhje konceptuale që lidhin blogun, faqet e wiki-t dhe materialin mësimor në një shtresë të përbashkët orientimi.' },
+  de: { title: 'Themen', desc: 'Konzeptionelle Übersichtsseiten, die Blog, Wiki-Referenz und Lernmaterial in einer gemeinsamen Orientierungsebene verbinden.' },
+  it: { title: 'Temi', desc: 'Panoramiche concettuali che collegano blog, pagine wiki di riferimento e materiale didattico in un livello comune di orientamento.' },
+  fr: { title: 'Sujets', desc: 'Des aperçus conceptuels qui relient le blog, les pages wiki de référence et les ressources d’apprentissage dans une même couche d’orientation.' },
+  es: { title: 'Temas', desc: 'Panoramas conceptuales que conectan el blog, las páginas wiki de referencia y el material de aprendizaje en una capa compartida de orientación.' },
+};
+
+const TOPIC_CATEGORY_LABELS = {
+  'spec-driven-development': {
+    en: 'Spec-Driven Development', sl: 'Razvoj na podlagi specifikacij', hr: 'Razvoj vođen specifikacijom', bs: 'Razvoj vođen specifikacijom', 'sr-Latn': 'Razvoj vođen specifikacijom', 'sr-Cyrl': 'Развој вођен спецификацијом', mk: 'Развој воден од спецификации', sq: 'Zhvillim i drejtuar nga specifikimet', de: 'Spezifikationsgesteuerte Entwicklung', it: 'Sviluppo guidato da specifiche', fr: 'Développement piloté par les spécifications', es: 'Desarrollo guiado por especificaciones',
+  },
+  'localization-at-scale': {
+    en: 'Localization at Scale', sl: 'Lokalizacija v obsegu', hr: 'Lokalizacija u mjerilu', bs: 'Lokalizacija u obimu', 'sr-Latn': 'Lokalizacija u razmeri', 'sr-Cyrl': 'Локализација у размери', mk: 'Локализација во размер', sq: 'Lokalizimi në shkallë', de: 'Lokalisierung im Maßstab', it: 'Localizzazione su scala', fr: 'Localisation à grande échelle', es: 'Localización a escala',
+  },
+  'book-and-library-metadata': {
+    en: 'Book and Library Metadata', sl: 'Knjižni in knjižnični metapodatki', hr: 'Metapodaci o knjigama i knjižnicama', bs: 'Metapodaci o knjigama i bibliotekama', 'sr-Latn': 'Metapodaci o knjigama i bibliotekama', 'sr-Cyrl': 'Метаподаци о књигама и библиотекама', mk: 'Метаподатоци за книги и библиотеки', sq: 'Metadata për libra dhe biblioteka', de: 'Buch- und Bibliotheksmetadaten', it: 'Metadati librari e bibliotecari', fr: 'Métadonnées du livre et des bibliothèques', es: 'Metadatos del libro y de bibliotecas',
+  },
+};
+
+const TOPIC_CATEGORY_FALLBACK = {
+  en: 'No topic pages are published in this language yet.',
+  sl: 'V tem jeziku še ni objavljenih tematskih strani.',
+  hr: 'Tematske stranice još nisu objavljene na ovom jeziku.',
+  bs: 'Tematske stranice još nisu objavljene na ovom jeziku.',
+  'sr-Latn': 'Tematske stranice još nisu objavljene na ovom jeziku.',
+  'sr-Cyrl': 'Тематске странице још нису објављене на овом језику.',
+  mk: 'Сè уште нема објавени тематски страници на овој јазик.',
+  sq: 'Nuk ka ende faqe tematike të publikuara në këtë gjuhë.',
+  de: 'In dieser Sprache sind noch keine Themenseiten veröffentlicht.',
+  it: 'In questa lingua non sono ancora pubblicate pagine tematiche.',
+  fr: 'Aucune page thématique n’est encore publiée dans cette langue.',
+  es: 'Todavía no hay páginas temáticas publicadas en este idioma.',
+};
+
+const TOPIC_CATEGORIES = [
+  {
+    id: 'spec-driven-development',
+    topicIds: ['spec-driven-development', 'ai-assisted-implementation', 'demo-and-specification-alignment', 'validation-layers', 'documentation-traceability'],
+  },
+  {
+    id: 'localization-at-scale',
+    topicIds: ['localization-at-scale', 'ai-assisted-translation', 'translation-memory', 'regional-languages', 'eu-multilingualism', 'mother-tongue-user-experience'],
+  },
+  {
+    id: 'book-and-library-metadata',
+    topicIds: ['isbn', 'book-metadata', 'edition-vs-physical-copy', 'cataloging', 'donation-workflows'],
+  },
+];
+
 // ─── Collect article titles ───────────────────────────────
 
 function collectBlogArticleTitles() {
@@ -269,6 +337,27 @@ function collectContentTitles(baseDir) {
   return titles;
 }
 
+function collectTopicEntries() {
+  const entries = {};
+  for (const locale of LOCALES) {
+    entries[locale] = [];
+    const localeDir = path.join(TOPICS_DIR, locale);
+    const dir = locale === 'en' ? TOPICS_DIR : localeDir;
+    if (!isDirectory(dir)) continue;
+    const files = fs.readdirSync(dir).sort();
+    for (const file of files) {
+      if (!file.endsWith('.md') || file === 'README.md') continue;
+      const filePath = path.join(dir, file);
+      entries[locale].push({
+        id: file.replace(/\.md$/, ''),
+        title: extractTitleFromMd(filePath),
+        category: readFrontmatterValue(filePath, 'topic_category') || 'spec-driven-development',
+      });
+    }
+  }
+  return entries;
+}
+
 // ─── Build index pages ────────────────────────────────────
 
 function buildNavHtml(locale, section) {
@@ -285,6 +374,7 @@ function buildNavHtml(locale, section) {
     `            <a class="nav-link" href="../../blog/${locale}/index.html">${nav.blog}</a>`,
     `            <a class="nav-link" href="../../learning/${locale}/index.html">${nav.learning}</a>`,
     `            <a class="nav-link" href="../../wiki/${locale}/index.html">${nav.wiki}</a>`,
+    `            <a class="nav-link" href="../../topics/${locale}/index.html">${nav.topics}</a>`,
     '            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>',
     '            <div class="lang-switch" aria-label="Language options">',
     langLinks,
@@ -313,6 +403,7 @@ function buildFooterHtml(locale, section) {
     '          <div>',
     '            <div class="footer-links">',
     `              <a href="../../${locale}/index.html">${labels.overview}</a>`,
+    `              <a href="../../topics/${locale}/index.html">${(NAV_LABELS[locale] || NAV_LABELS.en).topics}</a>`,
     `              <a href="../../index.html">${labels.projectHome}</a>`,
     `              <a href="../../../static-demo/">${labels.demo}</a>`,
     '            </div>',
@@ -362,6 +453,64 @@ function buildIndexPage({ locale, pageType, info, items, itemExt, head, linkPref
     '        </section>',
     '      </main>',
     buildFooterHtml(locale, section),
+    '    </div>',
+    '  </body>',
+    '</html>',
+  ].join('\n');
+}
+
+function buildTopicsAccordion(locale, entries) {
+  const fallback = TOPIC_CATEGORY_FALLBACK[locale] || TOPIC_CATEGORY_FALLBACK.en;
+  return TOPIC_CATEGORIES.map((category, index) => {
+    const label = TOPIC_CATEGORY_LABELS[category.id]?.[locale] || TOPIC_CATEGORY_LABELS[category.id]?.en || category.id;
+    const categoryEntries = category.topicIds
+      .map((topicId) => entries.find((entry) => entry.id === topicId))
+      .filter(Boolean);
+
+    const content = categoryEntries.length > 0
+      ? `            <ul class="topic-index-list">\n${categoryEntries.map((entry) => `              <li><a href="${entry.id}.html">${entry.title}</a></li>`).join('\n')}\n            </ul>`
+      : `            <p class="topic-index-empty">${fallback}</p>`;
+
+    return [
+      `          <details class="topic-category"${index === 0 ? ' open' : ''}>`,
+      `            <summary>${label}</summary>`,
+      content,
+      '          </details>',
+    ].join('\n');
+  }).join('\n');
+}
+
+function buildTopicsIndexPage({ locale, info, entries, head }) {
+  return [
+    '<!DOCTYPE html>',
+    `<html lang="${locale}">`,
+    head,
+    `  <body data-page-type="topics-index" data-locale="${locale}">`,
+    '    <div class="page-shell">',
+    '      <header class="site-header">',
+    '        <div class="header-inner">',
+    `          <a class="brand-link" href="../../${locale}/index.html">`,
+    '            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">',
+    '            <span class="brand-copy">',
+    '              <strong>Let Books</strong>',
+    `              <span>${info.title}</span>`,
+    '            </span>',
+    '          </a>',
+    buildNavHtml(locale, 'topics'),
+    '        </div>',
+    '      </header>',
+    '      <main>',
+    '        <section class="section">',
+    '          <div class="section-header">',
+    `            <h1>${info.title}</h1>`,
+    `            <p>${info.desc}</p>`,
+    '          </div>',
+    '          <div class="topic-index-grid">',
+    buildTopicsAccordion(locale, entries),
+    '          </div>',
+    '        </section>',
+    '      </main>',
+    buildFooterHtml(locale, 'topics'),
     '    </div>',
     '  </body>',
     '</html>',
@@ -463,6 +612,23 @@ function generateWikiIndexes(wikiTitles) {
   return count;
 }
 
+function generateTopicIndexes(topicEntries) {
+  let count = 0;
+  const section = 'topics';
+  for (const locale of LOCALES) {
+    const items = topicEntries[locale] || [];
+    const info = TOPICS_INFO[locale] || TOPICS_INFO.en;
+    const outDir = path.join(TOPICS_DIR, locale);
+    if (!isDirectory(outDir)) fs.mkdirSync(outDir, { recursive: true });
+    const canonical = `${SITE_URL}/docs/topics/${locale}/index.html`;
+    const head = buildHeadWithCanonical(`${info.title} | LetBooks`, info.desc, canonical, section);
+    const html = buildTopicsIndexPage({ locale, info, entries: items, head });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    count++;
+  }
+  return count;
+}
+
 // ─── Update doc index nav links ───────────────────────────
 
 function updateDocIndexNavLinks() {
@@ -535,6 +701,15 @@ function main() {
   console.log('');
   const wikiCount = generateWikiIndexes(wikiTitles);
   console.log(`  → ${wikiCount}/${LOCALES.length} wiki index pages created\n`);
+
+  const topicEntries = collectTopicEntries();
+  for (const locale of LOCALES) {
+    const a = topicEntries[locale];
+    if (a) console.log(`  Topics ${locale}: ${a.length} pages`);
+  }
+  console.log('');
+  const topicsCount = generateTopicIndexes(topicEntries);
+  console.log(`  → ${topicsCount}/${LOCALES.length} topics index pages created\n`);
 
   console.log('=== Updating doc index nav links ===\n');
   const { updated, skipped } = updateDocIndexNavLinks();

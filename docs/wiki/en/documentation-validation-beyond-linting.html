@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentation Validation Beyond Linting | LetBooks</title>
+    <meta name="description" content="Why documentation quality requires multiple validation layers, including localization, accessibility, generated output, and print checks, rather than a single linting pass.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/wiki/en/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/wiki/en/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/wiki/hr/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/wiki/bs/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/wiki/sr-Latn/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/wiki/sr-Cyrl/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/wiki/mk/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/wiki/sq/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/wiki/de/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/wiki/it/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/wiki/fr/documentation-validation-beyond-linting.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/wiki/es/documentation-validation-beyond-linting.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Documentation Validation Beyond Linting | LetBooks">
+    <meta property="og:description" content="Why documentation quality requires multiple validation layers, including localization, accessibility, generated output, and print checks, rather than a single linting pass.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/wiki/en/documentation-validation-beyond-linting.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Documentation Validation Beyond Linting | LetBooks">
+    <meta name="twitter:description" content="Why documentation quality requires multiple validation layers, including localization, accessibility, generated output, and print checks, rather than a single linting pass.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="wiki" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../wiki/en/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Wiki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../en/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/en/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/en/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/en/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/en/index.html">Topics</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="../../wiki/en/documentation-validation-beyond-linting.html" lang="en">EN</a>
+              <a class="lang-link" href="../../wiki/sl/documentation-validation-beyond-linting.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../wiki/hr/documentation-validation-beyond-linting.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../wiki/bs/documentation-validation-beyond-linting.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../wiki/sr-Latn/documentation-validation-beyond-linting.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../wiki/sr-Cyrl/documentation-validation-beyond-linting.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../wiki/mk/documentation-validation-beyond-linting.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../wiki/sq/documentation-validation-beyond-linting.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../wiki/de/documentation-validation-beyond-linting.html" lang="de">DE</a>
+              <a class="lang-link" href="../../wiki/it/documentation-validation-beyond-linting.html" lang="it">IT</a>
+              <a class="lang-link" href="../../wiki/fr/documentation-validation-beyond-linting.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../wiki/es/documentation-validation-beyond-linting.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>A practical platform for cataloging, offering, and retrieving educational books.</span>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../en/index.html">Docs</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../wiki/en/index.html">Wiki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Documentation Validation Beyond Linting</span>
+            </nav>
+            <h1>Documentation Validation Beyond Linting</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>English</span>
+          </div>
+          <p class="content-page-summary">Why documentation quality requires multiple validation layers, including localization, accessibility, generated output, and print checks, rather than a single linting pass.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Topics:</span>
+              <span class="content-tag">Documentation</span>
+              <span class="content-tag">Localization</span>
+              <span class="content-tag">Validation</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Linting is useful, but it only covers part of documentation quality. It can catch formatting mistakes, syntax problems, or some classes of broken structure. It cannot on its own guarantee that generated pages are correct, that localized variants remain aligned, that navigation is consistent, or that printed output is readable.</p>
+<p>That is why documentation quality should be treated as an engineering discipline with several validation layers. Different validators answer different questions.</p>
+<ul>
+<li>Link validation checks whether references still resolve.</li>
+<li>Localization validation checks whether reader-facing text remains translated and consistent.</li>
+<li>Parity validation checks whether important sections still exist across language variants.</li>
+<li>Accessibility checks examine headings, labels, and structural usability.</li>
+<li>Generated HTML validation checks whether source content became correct output.</li>
+<li>Print validation checks whether supported PDF and paper output remains usable.</li>
+</ul>
+<p>This layered model matters even more in AI-assisted workflows. Content can be drafted quickly, regenerated quickly, and localized quickly. That makes feedback loops faster, but it also increases the risk of shipping polished-looking errors unless the pipeline tests more than surface formatting.</p>
+<p>Topics are a good example. Once Topics became a first-class documentation type in LetBooks, they needed to inherit navigation, search indexing, sitemap generation, localization handling, generated-site validation, and print checks. A reduced-quality path would have created a new content surface with weaker guarantees than the rest of the platform.</p>
+<p>The principle is straightforward: every new documentation type should inherit existing validation. That keeps the quality model scalable. Instead of inventing exceptions for each new section, the platform extends the same expectations to every reader-facing surface.</p>
+<p>Documentation quality goes beyond linting because readers experience the entire system, not only the source files.</p>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Other languages</h2>
+            <ul>
+              <li><a href="../../wiki/sl/documentation-validation-beyond-linting.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../wiki/hr/documentation-validation-beyond-linting.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../wiki/bs/documentation-validation-beyond-linting.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../wiki/sr-Latn/documentation-validation-beyond-linting.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../wiki/sr-Cyrl/documentation-validation-beyond-linting.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../wiki/mk/documentation-validation-beyond-linting.html" lang="mk">Македонски</a></li>
+              <li><a href="../../wiki/sq/documentation-validation-beyond-linting.html" lang="sq">Shqip</a></li>
+              <li><a href="../../wiki/de/documentation-validation-beyond-linting.html" lang="de">Deutsch</a></li>
+              <li><a href="../../wiki/it/documentation-validation-beyond-linting.html" lang="it">Italiano</a></li>
+              <li><a href="../../wiki/fr/documentation-validation-beyond-linting.html" lang="fr">Français</a></li>
+              <li><a href="../../wiki/es/documentation-validation-beyond-linting.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Related content</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Documentation</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="related-localization-menu">Localization</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Validation</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
+                  <a href="../../wiki/en/localization-ci-cd.html"><span>Localization CI and CD</span><span class="topic-menu__meta">Wiki</span></a>
+                </div>
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/en/documentation-is-part-of-the-product.html"><span>Documentation Is Part of the Product</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/en/spec-driven-development-for-ai-projects.html"><span>Spec-Driven Development for AI Projects</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../wiki/en/documentation-is-more-than-a-website.html"><span>Documentation Is More Than a Website</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/en/documentation-traceability.html"><span>Documentation Traceability</span><span class="topic-menu__meta">Topics</span></a>
+                </div>
+                <div class="topic-menu" id="related-localization-menu" data-topic-menu="related-localization" hidden>
+                  <a href="../../blog/en/multilingual-accessibility.html"><span>Multilingual Accessibility</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/en/localization-at-scale.html"><span>Localization at Scale</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/en/how-to-localize-accessibility-content.html"><span>How to Localize Accessibility Content</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html"><span>How to Localize Diagrams and Screenshots</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../learning/en/how-to-measure-translation-maturity.html"><span>How to Measure Translation Maturity</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../wiki/en/translation-quality-assurance.html"><span>Translation Quality Assurance</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/en/eu-multilingualism.html"><span>EU Multilingualism</span><span class="topic-menu__meta">Topics</span></a>
+                  <a href="../../topics/en/localization-at-scale.html"><span>Localization at Scale</span><span class="topic-menu__meta">Topics</span></a>
+                </div>
+                <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
+                  <a href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>How to Add Validation Rules and CI Gates in Stages</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../wiki/en/validation-layers.html"><span>Validation Layers</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/en/validation-layers.html"><span>Validation Layers</span><span class="topic-menu__meta">Topics</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-note">Copyright © Let Books contributors. Reuse follows repository licensing unless a page states otherwise.</p>
+            <p class="footer-microcopy">Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../topics/en/index.html">Topics</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © Let Books contributors. Reuse follows repository licensing unless a page states otherwise.</span>
+            <span>Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

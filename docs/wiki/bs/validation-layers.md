@@ -1,56 +1,93 @@
 ---
-title: "Slojevi validacije"
+title: "Validacijski slojevi"
+summary: >-
+  Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Slojevi validacije
+# Validacijski slojevi
 
 ## Sažetak
 
-Slojevi validacije su različiti načini na koje projekt provjerava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju s namjeravanim pravilima i očekivanjima kvaliteta.
+Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.
 
 ## Zašto su slojevi važni
 
-Nijedna pojedinačna metoda validacije nije dovoljna.
+Nijedan metod validacije nije dovoljan.
 
-- sama dokumentacija ne provodi ponašanje
-- sami testovi mogu validirati pogrešne pretpostavke
-- sam CI ne može definisati pravila koja bi trebao provoditi
+- dokumentacija sama po sebi ne sprovodi ponašanje
+- sami testovi mogu potvrditi pogrešne pretpostavke
+- CI sama ne može definisati pravila koja bi trebalo da sprovodi
 
-Slojeviti pristup je jači jer svaki sloj hvata drukčiju vrstu odstupanja.
+Slojeviti pristup je jači jer svaki sloj hvata različitu klasu odstupanja.
 
 ## Uobičajeni slojevi validacije
 
 ### 1. Specifikacija i smjernice
 
-Prvi sloj definiše pravilo.
+Prvi sloj definira pravilo.
+
+Bez ovog sloja, kasnije provjere mogu biti stroge, ali proizvoljne.
 
 ### 2. Ručni pregled
 
-Ljudski pregled provjerava namjeru, rubne slučajeve i značenje proizvoda koje još nije automatizirano.
+Ljudski pregled provjerava namjeru, rubne slučajeve i značenje proizvoda koji možda još nisu automatizirani.
 
 ### 3. Lokalna validacija
 
-Skripte i strukturirane provjere brzo hvataju ponovljive probleme prije nego što promjene dođu do CI-ja.
+Skripte i strukturirane provjere hvataju brze, ponovljive probleme prije nego promjene dođu do CI.
 
 ### 4. Testovi
 
-Izvršni testovi provjeravaju očekivano ponašanje, ali samo kada su usklađeni sa specifikacijom.
+Izvršni testovi potvrđuju očekivano ponašanje, ali samo kada su usklađeni sa specifikacijom.
 
-### 5. CI zapreke
+### 5. CI kapije
 
-CI čini provjere ponovljivim i vidljivim među saradnicima i okruženjima.
+CI čini provjere ponovljivim i vidljivim među suradnicima i okruženjima.
 
-### 6. Provjere isporuke
+### 6. Provjere implementacije
 
-Tokovi isporuke potvrđuju da su izgrađeni artefakti i dalje spremni za objavu i strukturno ispravni.
+Tokovi rada implementacije potvrđuju da su izgrađeni artefakti još uvijek objavljeni i da su strukturalno zdravi.
 
-## Kontekst Let Books
+## Kako bi slojevi trebali biti povezani
 
-Repozitorij Let Books već dokumentira više slojeva, uključujući:
+Slojevi bi trebali ojačati jedan drugog kako bi:
 
-- proizvodna i implementacijska pravila u `AGENTS.md` i `AGENTS-Implementation.md`
-- razvojne i isporučne provjere u `docs/Development.md` i `docs/Deployment.md`
-- urednička pravila dokaza u `docs/blog/README.md` i `docs/sources/README.md`
+- dokumenti i specifikacije definiraju očekivanja
+- pregled tumači ta očekivanja u kontekstu
+- validacijske skripte i testovi automatiziraju stabilne dijelove pregleda
+- CI dosljedno izvodi te provjere
+- implementacija osigurava da se izlaz zaista može isporučiti
+
+## Dobri ciljevi rane validacije
+
+Primjeri jakih ranih kandidata uključuju:
+
+- prisustvo obavezne datoteke
+- potpunost lokalizacije
+- validnost sintakse
+- prekinute interne veze
+- zabranjeno uredničko citiranje
+- uspjeh generiranja metapodataka
+
+Ove provjere su obično objektivne i jeftine.
+
+## Let Books kontekst
+
+Repozitorijum Let Books već dokumentuje nekoliko slojeva, uključujući:
+
+- pravila o proizvodima i implementaciji u `AGENTS.md` i `AGENTS-Implementation.md`
+- validacija razvoja i implementacije u `docs/Development.md` i `docs/Deployment.md`
+- pravila uredničkog dokaza u `docs/blog/README.md` i `docs/sources/README.md`
+- smjernice za učenje za fazni CI i uvođenje validacije
+
+To čini validaciju dokumentiranim sistemom, a ne samo budućom težnjom.
+
+## Povezane stranice
+
+- `documentation-traceability.md`
+- `implementation-guidance.md`
+- `../../learning/bs/how-to-add-validation-rules-and-ci-gates-in-stages.md`
+- `../../blog/bs/documentation-is-part-of-the-product.md`

@@ -1,7 +1,7 @@
 ---
 title: "Sigurimi i cilësisë së përkthimit"
 summary: >-
-  Përkthimi QA kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
+  QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
 topics:
   - translation-quality
   - qa
@@ -11,21 +11,59 @@ topics:
 
 ## Përmbledhje
 
-Përkthimi QA kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
+QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
 
-## Kontrollet e zakonshme
+## Kontrolle të zakonshme
 
 - Mungojnë përkthimet
 - Rrjedhje angleze
+- Plotësia e lokalizimit me pamje nga lexuesi
 - mospërputhjet e mbajtësve të vendeve
 - lidhje të prishura
 - rrëshqitje e fjalorit
 - Mbulimi i tekstit të aksesueshmërisë
 - pamje e ekranit dhe barazia e diagramit
 
-## Provat e rishikimit njerëzor
+## Vlerësuesi i lokalizimit me pamje nga lexuesi
 
-Përkthimi QA duhet gjithashtu të ruajë të dhëna të shkurtra të rishikimit njerëzor për korrigjimet përfaqësuese të ndihmuara nga AI.
+Një klasë e verifikuesit duhet të dështojë në mënyrë eksplicite CI kur një faqe shfaqet e lokalizuar, por ende ekspozon përmbajtjen e gjuhës burimore që përballet me lexuesin.
+
+Shembuj që duhet të dështojnë:
+
+- titull i lokalizuar me përmbledhje në anglisht
+- artikull i lokalizuar me etiketa në anglisht
+- artikull i lokalizuar me tituj ose lista në anglisht
+- artikull i lokalizuar me thirrje ose titra në anglisht
+- artikull i lokalizuar me etiketa diagrame në anglisht ose tekst alt
+- karta me përmbajtje të lidhur me gjuhë të përzier
+
+Ky është një kusht dështimi, jo thjesht një paralajmërim, sepse lexuesit i përjetojnë faqe të tilla si dukshëm të papërfunduara.
+
+## Auditimi i klasës së defektit
+
+QA e përkthimit duhet të mbajë klasa të qarta defektesh me:
+
+- përshkrim
+- numërimi i dukurive
+- shkaku rrënjësor
+- Mbulimi i verifikuesit
+- rreziku i përsëritjes
+- plani i mbylljes
+
+Kategoritë e kërkuara përfshijnë:
+
+- përmbledhje të papërkthyera
+- trupa të papërkthyer
+- botimi i draftit të vendmbajtësit
+- meta të dhëna të papërkthyera
+- botim në gjuhë të përzier
+- klasat e zbuluara në të ardhmen
+
+Një klasë mbyllet vetëm kur numërimi i saj arrin zero dhe CI e pengon atë të kthehet pa dështim.
+
+## Prova e rishikimit njerëzor
+
+Cilësia e Përkthimit duhet gjithashtu të ruajë të dhëna të shkurtra të rishikimit njerëzor për korrigjimet përfaqësuese të asistuara nga AI.
 
 Fushat minimale:
 
@@ -33,50 +71,53 @@ Fushat minimale:
 - teksti i korrigjuar
 - kategori gabimi
 - hipoteza e shkakut rrënjësor
-[[20]]]
 - arsyetimi recensues
 
-[[21]]]
+Gjetjet e rishikimit nga folësit vendas duhet të ruhen si një korpus në rritje, jo si shënime të izoluara të njëhershme. Gjetjet e përsëritura duhet të ushqehen me dizajnin e verifikuesit, udhëzimet e kontribuesve dhe udhëzimet e ardhshme të agjentëve të AI.
+
 Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e krijuara nga AI mund të kërkojnë rishikim nga folësi amtare për të korrigjuar çështjet delikate në gramatikë, modalitet, terminologji dhe regjistër specifik të domenit. Këto çështje shpesh janë të vështira për t'u zbuluar vetëm nëpërmjet matjeve të automatizuara të cilësisë.
 
-## [[22]]]
-Taksonomia e zakonshme e gabimeve të përkthimit AI
+## Taksonomia e gabimeve të zakonshme të përkthimit të AI
 
 - gramatikë
-[[24]]]
 - modaliteti
-[[25]]]
 - terminologjia
-[[26]]]
 - regjistrohuni
-[[27]]]
 - rrjedhshmëri
-[[28]]]
 - përkthim fjalë për fjalë
-[[29]]]
 - paqartësi
-[[30]]]
 - humbje e kontekstit
-[[31]]]
 - renditja e fjalëve
-[[32]]]
 - bashkëvendosje
-[[33]]]
 - shkrimi ose drejtshkrimi
-[[34]]]
 - formulimi i politikave të domenit
-[[35]]]
 - formulimi i aksesueshmërisë
 
-## [[36]]]
-Faqe të ngjashme
+## Rezultati i lehtë i pikës
 
-[[37]]]
+Për vlerësimin e përsëritshëm të përkthimit të AI, përdorni një rubrikë të lehtë 0-3 në vend që të mbështeteni vetëm në gjykimin kalim/dështim.
+
+Dimensionet e rekomanduara:
+
+- do të thotë saktësi
+- gramatika dhe rrjedhshmëria
+- terminologjia dhe përshtatja e domenit
+- regjistrimi dhe stili
+- rishikoni përpjekjet
+
+Etiketat e rekomanduara të lëshimit:
+
+- bllokues
+- rishikim i madh
+- rishikim i vogël
+- gati me shenjë rishikimi
+
+Kjo krijon të dhëna miqësore me kartën e rezultateve pa kërkuar një kornizë të matjes së lokalizimit të peshave të rënda.
+
+## Faqe të ngjashme
+
 - `localization-ci-cd.md`
-[[38]]]
 - `translation-memory-and-glossaries.md`
-[[39]]]
-- `../style-guide/localization/ai-translation-review-records.md`
-[[40]]]
-- `../style-guide/localization/llm-translation-benchmark-fixtures.md`
-- `../learning/how-to-run-localization-qa-in-ci.md`
+- `../../style-guide/localization/ai-translation-review-records.md`
+- `../../style-guide/localization/llm-translation-benchmark-fixtures.md`
+- `../../learning/sq/how-to-run-localization-qa-in-ci.md`

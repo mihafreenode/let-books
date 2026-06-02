@@ -1,80 +1,89 @@
 ---
-title: "Directives d'implémentation"
+title: "Conseils de mise en œuvre"
+summary: >-
+  Les conseils de mise en œuvre définissent la manière dont une équipe doit effectuer le travail dans le référentiel ou l'environnement de livraison actuel sans remplacer la spécification du produit elle-même.
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Directives d'implémentation
+# Conseils de mise en œuvre
 
 ## Résumé
 
-Les directives d'implémentation définissent comment une équipe doit livrer le travail dans le dépôt ou l'environnement de livraison actuel sans remplacer la spécification produit elle-même.
+Les conseils de mise en œuvre définissent la manière dont une équipe doit effectuer le travail dans le référentiel ou l'environnement de livraison actuel sans remplacer la spécification du produit elle-même.
 
 ## Rôle
 
-Les directives d'implémentation se situent sous la spécification produit.
+Les instructions de mise en œuvre se trouvent sous les spécifications du produit.
 
-Elles aident à répondre à des questions telles que :
+Il permet de répondre à des questions telles que :
 
-- comment la dénomination publique doit fonctionner
-- comment la documentation doit être structurée
-- quelles attentes de vérification s'appliquent maintenant
-- quelles règles propres au dépôt les contributeurs doivent suivre
-- où les règles tactiques doivent vivre à mesure que le projet évolue
+- comment la dénomination publique devrait fonctionner
+- comment les documents doivent être structurés
+- quelles attentes en matière de vérification s'appliquent actuellement
+- quelles règles spécifiques au référentiel les contributeurs doivent suivre
+- où les règles tactiques devraient vivre à mesure que le projet évolue
 
-## Différence avec la spécification produit
+## Différence par rapport aux spécifications du produit
 
-La spécification produit définit ce qu'est le produit et ce qu'il doit accomplir.
+Le cahier des charges définit ce qu'est le produit et ce qu'il doit réaliser.
 
-Les directives d'implémentation définissent comment les contributeurs doivent réaliser le travail dans le contexte de livraison actuel.
+Les directives de mise en œuvre définissent la manière dont les contributeurs doivent effectuer leur travail dans le contexte de livraison actuel.
 
-Cette distinction est utile, car chaque règle de dépôt n'est pas une vérité produit, et chaque vérité produit ne doit pas être enfouie dans des notes tactiques.
+Cette distinction est utile car toutes les règles du référentiel ne constituent pas une vérité sur le produit, et toutes les vérités sur le produit ne doivent pas être enfouies dans des notes tactiques.
 
 ## Exemples courants
 
-Les directives d'implémentation incluent souvent :
+Les conseils de mise en œuvre comprennent souvent :
 
-- des règles de nommage et de marque
-- des règles d'implémentation de la documentation
-- des contraintes de site statique ou de démo
-- des attentes de vérification
-- des règles d'édition ou de génération de code
-- des politiques de preuve pour les écrits publics
+- règles de dénomination et de marque
+- règles de mise en œuvre de la documentation
+- contraintes de site statique ou de démo
+- attentes en matière de vérification
+- règles d'édition ou de génération de code
+- politiques de preuve pour l'écriture publique
 
-Ces règles fonctionnent souvent bien en Markdown parce qu'elles doivent rester révisables, faciles à mettre à jour et proches du reste du contexte du dépôt.
+Ces règles s'intègrent souvent bien dans les Markdown car elles doivent rester révisables, faciles à mettre à jour et proches du reste du contexte du référentiel.
 
 ## Pourquoi c'est important dans le travail assisté par l'IA
 
-Les assistants IA suivent souvent l'instruction concrète la plus proche. Si les règles propres au dépôt restent implicites, la sortie devient vite incohérente.
+Les assistants IA suivent souvent les instructions concrètes les plus proches. Si les règles spécifiques au référentiel sont implicites, la sortie devient rapidement incohérente.
 
-Les directives d'implémentation rendent ces règles visibles sans encombrer la spécification produit de détails tactiques.
+Les conseils de mise en œuvre rendent ces règles visibles sans polluer les spécifications du produit avec des détails tactiques.
 
-En pratique, cela signifie qu'un fichier de guidance en Markdown peut faire deux choses à la fois :
+En pratique, cela signifie qu'un fichier d'orientation Markdown peut effectuer deux tâches à la fois :
 
-- expliquer le flux de travail à un contributeur humain
-- orienter un agent IA vers les outils, la séquence et les contraintes préférés
+- expliquer le workflow à un contributeur humain
+- orienter un agent IA vers les outils, séquences et contraintes préférés
 
-## Contexte Let Books
+## Let Books contexte
 
-Dans Let Books, `AGENTS-Implementation.md` est la couche de guidance tactique.
+Au Let Books, `AGENTS-Implementation.md` est la couche de guidage tactique.
 
 Il couvre des domaines tels que :
 
-- la dénomination publique
-- les règles de documentation
-- la séparation entre site public et documentation
-- les règles de métadonnées et de SEO pour les pages statiques
-- les contraintes des démos statiques
-- les règles de localisation et d'accessibilité
-- les règles de vérification
-- la politique de preuve du blog
+- dénomination publique
+- règles de documentation
+- site public et partage de documents
+- métadonnées et règles SEO pour les pages statiques
+- contraintes de démonstration statique
+- règles de localisation et d'accessibilité
+- règles de vérification
+- politique de preuve du blog
 
-Cela en fait le compagnon opérationnel de `AGENTS.md`, et non son remplaçant.
+Cela en fait le compagnon opérationnel des `AGENTS.md`, et non un substitut.
 
-## Pages Associées
+D'autres directives Markdown dans le dépôt renforcent le même schéma. Par exemple :
+
+- `docs/android-debugging.md` dirige les choix de flux de travail de débogage tels que CDP les flux de travail d'attachement par rapport aux flux de travail de correctif source
+- `docs/style-guide/publishing/ubuntu-tooling.md` documente les outils attendus pour la publication, la vérification, les captures d'écran, la vérification orthographique et le débogage de l'appareil
+
+Ces documents sont lisibles comme des conseils humains, mais ils aident également les agents à choisir de meilleures actions au lieu de deviner à partir de valeurs par défaut génériques.
+
+## Pages connexes
 
 - `product-specification.md`
 - `documentation-traceability.md`
 - `validation-layers.md`
-- `../learning/how-to-turn-a-product-spec-into-an-implementation-plan.md`
+- `../../learning/fr/how-to-turn-a-product-spec-into-an-implementation-plan.md`

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lokalisierung CI und CD | LetBooks</title>
-    <meta name="description" content="Die Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
+    <meta name="description" content="Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/de/localization-ci-cd.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Lokalisierung CI und CD | LetBooks">
-    <meta property="og:description" content="Die Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
+    <meta property="og:description" content="Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/de/localization-ci-cd.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lokalisierung CI und CD | LetBooks">
-    <meta name="twitter:description" content="Die Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
+    <meta name="twitter:description" content="Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="de">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/de/index.html">Blog</a>
             <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
             <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/localization-ci-cd.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Lokalisierung CI und CD</span>
             </nav>
             <h1>Lokalisierung CI und CD</h1>
-          <p class="content-page-summary">Die Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.</p>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">CI/CD</span>
@@ -108,6 +124,39 @@
 <li>Rauchtests zur Zugänglichkeit</li>
 <li>Überprüfung der Screenshot- und Diagrammabdeckung</li>
 </ul>
+<h2 id="fortschritt-der-fehlerklasse">Fortschritt der Fehlerklasse</h2>
+<p class="lead">Lokalisierungs-CI sollte beides verfolgen:</p>
+<ul>
+<li><code>Localization Debt</code></li>
+<li><code>Open Defect Classes</code></li>
+</ul>
+<p>Die Verschuldung misst die verbleibende Quelleninhaltsarbeit.</p>
+<p>Offene Fehlerklassen messen, ob das System das erneute Auftreten einer Problemkategorie noch zulassen kann.</p>
+<p>Sobald eine Fehlerklasse null Vorkommnisse erreicht, sollte ihr Validator, soweit möglich, von der Empfehlung zur Blockierung übergehen.</p>
+<p>Beispiele:</p>
+<ul>
+<li>Platzhalter-Entwurfsveröffentlichung</li>
+<li>unübersetzte Zusammenfassungen</li>
+<li>unübersetzte Metadaten</li>
+<li>unübersetzte Körper</li>
+<li>Veröffentlichung in gemischten Sprachen</li>
+</ul>
+<p>CI ist nicht nur ein Gatekeeper. Es handelt sich um den Mechanismus, der verhindert, dass geschlossene Fehlerklassen stillschweigend erneut geöffnet werden.</p>
+<h2 id="generierungsreihenfolge-für-die-artikelnavigation">Generierungsreihenfolge für die Artikelnavigation</h2>
+<p>Der aktuelle Vertrag zur Navigation öffentlicher Artikel lautet:</p>
+<ul>
+<li><code>post-article-nav</code></li>
+<li><code>related-content</code></li>
+<li><code>related-topic-nav</code></li>
+</ul>
+<p>Generierung und Validierung sollten in dieser Reihenfolge erfolgen:</p>
+<ol type="1">
+<li>Artikel HTML generieren</li>
+<li>Indexseiten generieren</li>
+<li>Führen Sie die verbleibende Navigationsnachbearbeitung nur aus, wenn dies noch erforderlich ist</li>
+<li>Validieren Sie die Ausgabe</li>
+</ol>
+<p>Wenn ein Validator immer noch den alten <code>topic-nav</code>-Block erwartet, aktualisieren Sie den Validator auf den aktuellen Vertrag, anstatt die generierten HTML zu patchen.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -135,8 +184,9 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/de/how-to-run-localization-qa-in-ci.html"><span>Wie man Lokalisierungs-QA in CI ausführt</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie Man Validierungsregeln Und CI-Gates Schrittweise Hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie man Validierungsregeln und CI-Gates schrittweise hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../wiki/de/validation-layers.html"><span>Validierungsebenen</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/validation-layers.html"><span>Validierungsebenen</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
               </div>
             </div>
@@ -150,11 +200,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
             <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
               <a href="../../index.html">Startseite</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -165,6 +217,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</span>
+            <span>Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,80 +1,89 @@
 ---
-title: "Implementierungsleitlinien"
+title: "Implementierungsleitfaden"
+summary: >-
+  Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.
 topics:
   - implementation-planning
   - spec-driven-development
   - project-management
 ---
-# Implementierungsleitlinien
+# Implementierungsleitfaden
 
 ## Zusammenfassung
 
-Implementierungsleitlinien definieren, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder Lieferumfelds umsetzen soll, ohne die Produktspezifikation selbst zu ersetzen.
+Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.
 
 ## Rolle
 
-Implementierungsleitlinien stehen unterhalb der Produktspezifikation.
+Die Implementierungsanleitung befindet sich unterhalb der Produktspezifikation.
 
-Sie helfen bei Fragen wie:
+Es hilft bei der Beantwortung von Fragen wie:
 
-- wie öffentliche Benennung funktionieren soll
-- wie Dokumentation strukturiert sein soll
-- welche Verifikationserwartungen jetzt gelten
-- welche repository-spezifischen Regeln Beitragende befolgen sollen
-- wo taktische Regeln im Verlauf des Projekts leben sollen
+- wie öffentliche Namensgebung funktionieren sollte
+- wie Dokumente strukturiert sein sollten
+- welche Überprüfungserwartungen jetzt gelten
+- welche Repository-spezifischen Regeln Mitwirkende befolgen sollten
+- Wo taktische Regeln gelten sollten, während sich das Projekt weiterentwickelt
 
-## Unterschied zur Produktspezifikation
+## Abweichung von der Produktspezifikation
 
-Die Produktspezifikation definiert, was das Produkt ist und was es erreichen muss.
+Die Produktspezifikation definiert, was das Produkt ist und was es leisten muss.
 
-Implementierungsleitlinien definieren, wie Beitragende Arbeit im aktuellen Lieferkontext ausführen sollen.
+Die Implementierungsanleitung definiert, wie Mitwirkende ihre Arbeit im aktuellen Bereitstellungskontext ausführen sollen.
 
-Diese Unterscheidung ist nützlich, weil nicht jede Repository-Regel eine Produktwahrheit ist und nicht jede Produktwahrheit in taktischen Notizen versteckt werden sollte.
+Diese Unterscheidung ist nützlich, da nicht jede Repository-Regel eine Produktwahrheit ist und nicht jede Produktwahrheit in taktischen Notizen vergraben werden sollte.
 
 ## Häufige Beispiele
 
-Implementierungsleitlinien enthalten oft:
+Zu den Implementierungsleitfäden gehören häufig:
 
-- Benennungs- und Branding-Regeln
-- Regeln für die Dokumentationsumsetzung
+- Benennungs- und Markenregeln
+- Regeln zur Implementierung der Dokumentation
 - Einschränkungen für statische Sites oder Demos
-- Verifikationserwartungen
-- Regeln für Bearbeitung oder Codegenerierung
-- Evidenzrichtlinien für öffentliche Texte
+- Verifizierungserwartungen
+- Bearbeitungs- oder Codegenerierungsregeln
+- Evidenzrichtlinien für öffentliches Schreiben
 
-Solche Regeln funktionieren oft gut in Markdown, weil sie überprüfbar, leicht aktualisierbar und nah am übrigen Repository-Kontext bleiben sollen.
+Diese Regeln funktionieren oft gut in Markdown, da sie überprüfbar, leicht zu aktualisieren und nah am Rest des Repository-Kontexts bleiben müssen.
 
-## Warum das in KI-gestützter Arbeit wichtig ist
+## Warum es bei KI-gestützter Arbeit wichtig ist
 
-KI-Assistenten folgen oft der nächstgelegenen konkreten Anweisung. Wenn repository-spezifische Regeln nur implizit sind, wird die Ausgabe schnell inkonsistent.
+KI-Assistenten folgen oft der nächstgelegenen konkreten Anweisung. Wenn Repository-spezifische Regeln implizit sind, wird die Ausgabe schnell inkonsistent.
 
-Implementierungsleitlinien machen diese Regeln sichtbar, ohne die Produktspezifikation mit taktischen Details zu überladen.
+Implementierungsleitfäden machen diese Regeln sichtbar, ohne die Produktspezifikation mit taktischen Details zu verunreinigen.
 
-In der Praxis kann eine Markdown-Leitdatei damit zwei Aufgaben zugleich erfüllen:
+In der Praxis bedeutet das, dass eine Markdown-Leitfadendatei zwei Aufgaben gleichzeitig erledigen kann:
 
-- den Ablauf für menschliche Beitragende erklären
-- einen KI-Agenten zu bevorzugten Werkzeugen, Reihenfolgen und Einschränkungen lenken
+- Erklären Sie einem menschlichen Mitarbeiter den Arbeitsablauf
+- Lenken Sie einen KI-Agenten zu den bevorzugten Werkzeugen, Abläufen und Einschränkungen
 
-## Let-Books-Kontext
+## Let Books Kontext
 
-In Let Books ist `AGENTS-Implementation.md` die taktische Leitlinie.
+In Let Books ist `AGENTS-Implementation.md` die taktische Führungsebene.
 
-Sie deckt Bereiche ab wie:
+Es umfasst Bereiche wie:
 
-- öffentliche Benennung
+- öffentliche Namensnennung
 - Dokumentationsregeln
-- Trennung zwischen öffentlicher Site und Docs
+- Aufteilung der öffentlichen Website und der Dokumente
 - Metadaten- und SEO-Regeln für statische Seiten
-- Einschränkungen für statische Demos
-- Regeln für Lokalisierung und Barrierefreiheit
-- Verifikationsregeln
-- Blog-Evidenzrichtlinie
+- Statische Demo-Einschränkungen
+- Lokalisierungs- und Zugänglichkeitsregeln
+- Verifizierungsregeln
+- Blog-Beweisrichtlinie
 
-Damit ist sie das operative Gegenstück zu `AGENTS.md`, nicht dessen Ersatz.
+Damit ist es der operative Begleiter von `AGENTS.md` und kein Ersatz dafür.
+
+Andere Markdown-Anleitungen im Repo verstärken das gleiche Muster. Zum Beispiel:
+
+- `docs/android-debugging.md` steuert die Auswahl des Debugging-Workflows, z. B. CDP Anfügen- oder Quell-Patch-Workflows
+- `docs/style-guide/publishing/ubuntu-tooling.md` dokumentiert erwartete Tools für Veröffentlichung, Überprüfung, Screenshots, Rechtschreibprüfung und Geräte-Debugging
+
+Diese Dokumente können als menschliche Anleitung gelesen werden, aber sie helfen Agenten auch dabei, bessere Aktionen auszuwählen, anstatt anhand allgemeiner Standardvorgaben zu raten.
 
 ## Verwandte Seiten
 
 - `product-specification.md`
 - `documentation-traceability.md`
 - `validation-layers.md`
-- `../learning/how-to-turn-a-product-spec-into-an-implementation-plan.md`
+- `../../learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.md`

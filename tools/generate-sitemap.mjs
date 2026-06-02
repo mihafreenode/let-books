@@ -10,6 +10,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'docs');
+const DOCS_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'docs-config.json'), 'utf8'));
 const SITE_URL = 'https://letbooks.org';
 const TODAY = new Date().toISOString().split('T')[0];
 
@@ -21,11 +22,16 @@ const PRIORITIES = {
   'blog-index': { priority: '0.7', changefreq: 'weekly' },
   'blog-article': { priority: '0.6', changefreq: 'monthly' },
   'learning-index': { priority: '0.6', changefreq: 'monthly' },
+  'learning-article': { priority: '0.6', changefreq: 'monthly' },
   'wiki-index': { priority: '0.5', changefreq: 'monthly' },
+  'wiki-article': { priority: '0.5', changefreq: 'monthly' },
+  'topics-index': { priority: '0.6', changefreq: 'monthly' },
+  'topics-article': { priority: '0.6', changefreq: 'monthly' },
   'static-demo': { priority: '0.7', changefreq: 'monthly' },
 };
 
-const LOCALES = ['en', 'sl', 'hr', 'bs', 'sr-Latn', 'sr-Cyrl', 'mk', 'sq', 'de', 'it', 'fr', 'es'];
+const LOCALES = DOCS_CONFIG.locales;
+const CONTENT_TYPES = DOCS_CONFIG.contentTypes;
 
 function isFile(p) {
   try { return fs.statSync(p).isFile(); } catch { return false; }
@@ -60,40 +66,27 @@ function collectPages() {
     }
   }
 
-  // Blog index pages
-  for (const locale of LOCALES) {
-    const filePath = path.join(DOCS_DIR, 'blog', locale, 'index.html');
-    if (isFile(filePath)) {
-      pages.push({ path: `/docs/blog/${locale}/index.html`, group: 'blog-index' });
-    }
-  }
+  for (const contentType of CONTENT_TYPES) {
+    const indexGroup = `${contentType}-index`;
+    const articleGroup = `${contentType}-article`;
 
-  // Blog article HTML files
-  for (const locale of LOCALES) {
-    const dir = path.join(DOCS_DIR, 'blog', locale);
-    if (!isDirectory(dir)) continue;
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      if (!file.endsWith('.html') || file === 'index.html') continue;
-      if (isFile(path.join(dir, file))) {
-        pages.push({ path: `/docs/blog/${locale}/${file}`, group: 'blog-article' });
+    for (const locale of LOCALES) {
+      const filePath = path.join(DOCS_DIR, contentType, locale, 'index.html');
+      if (isFile(filePath)) {
+        pages.push({ path: `/docs/${contentType}/${locale}/index.html`, group: indexGroup });
       }
     }
-  }
 
-  // Learning index pages
-  for (const locale of LOCALES) {
-    const filePath = path.join(DOCS_DIR, 'learning', locale, 'index.html');
-    if (isFile(filePath)) {
-      pages.push({ path: `/docs/learning/${locale}/index.html`, group: 'learning-index' });
-    }
-  }
-
-  // Wiki index pages
-  for (const locale of LOCALES) {
-    const filePath = path.join(DOCS_DIR, 'wiki', locale, 'index.html');
-    if (isFile(filePath)) {
-      pages.push({ path: `/docs/wiki/${locale}/index.html`, group: 'wiki-index' });
+    for (const locale of LOCALES) {
+      const dir = path.join(DOCS_DIR, contentType, locale);
+      if (!isDirectory(dir)) continue;
+      const files = fs.readdirSync(dir);
+      for (const file of files) {
+        if (!file.endsWith('.html') || file === 'index.html') continue;
+        if (isFile(path.join(dir, file))) {
+          pages.push({ path: `/docs/${contentType}/${locale}/${file}`, group: articleGroup in PRIORITIES ? articleGroup : 'blog-article' });
+        }
+      }
     }
   }
 

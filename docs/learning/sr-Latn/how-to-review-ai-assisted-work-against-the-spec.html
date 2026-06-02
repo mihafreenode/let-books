@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kako pregledavati AI-podržani rad prema specifikaciji | LetBooks</title>
-    <meta name="description" content="AI-podržane izmene treba pregledavati prema specifikaciji, dokumentaciji i rezervnom ponašanju, a ne samo prema utisku da deluju ubedljivo.">
+    <title>Kako pregledati rad uz pomoć AI u odnosu na specifikaciju | LetBooks</title>
+    <meta name="description" content="Ovaj vodič objašnjava kako pregledati implementaciju uz pomoć AI tako što se proverava u odnosu na specifikaciju proizvoda, pravila toka rada, dokumentaciju i očekivanja validacije, umesto da se procenjuje samo da li izlaz deluje uglađeno ili tehnički uverljivo.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Kako pregledavati AI-podržani rad prema specifikaciji | LetBooks">
-    <meta property="og:description" content="AI-podržane izmene treba pregledavati prema specifikaciji, dokumentaciji i rezervnom ponašanju, a ne samo prema utisku da deluju ubedljivo.">
+    <meta property="og:title" content="Kako pregledati rad uz pomoć AI u odnosu na specifikaciju | LetBooks">
+    <meta property="og:description" content="Ovaj vodič objašnjava kako pregledati implementaciju uz pomoć AI tako što se proverava u odnosu na specifikaciju proizvoda, pravila toka rada, dokumentaciju i očekivanja validacije, umesto da se procenjuje samo da li izlaz deluje uglađeno ili tehnički uverljivo.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kako pregledavati AI-podržani rad prema specifikaciji | LetBooks">
-    <meta name="twitter:description" content="AI-podržane izmene treba pregledavati prema specifikaciji, dokumentaciji i rezervnom ponašanju, a ne samo prema utisku da deluju ubedljivo.">
+    <meta name="twitter:title" content="Kako pregledati rad uz pomoć AI u odnosu na specifikaciju | LetBooks">
+    <meta name="twitter:description" content="Ovaj vodič objašnjava kako pregledati implementaciju uz pomoć AI tako što se proverava u odnosu na specifikaciju proizvoda, pravila toka rada, dokumentaciju i očekivanja validacije, umesto da se procenjuje samo da li izlaz deluje uglađeno ili tehnički uverljivo.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="learning" data-locale="sr-Latn">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Latn/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sr-Latn/index.html">Materijali za učenje</a>
             <a class="nav-link" href="../../wiki/sr-Latn/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sr-Latn/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../learning/sr-Latn/index.html">Materijali za učenje</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Kako pregledavati AI-podržani rad prema specifikaciji</span>
+              <span aria-current="page">Kako pregledati rad uz pomoć AI u odnosu na specifikaciju</span>
             </nav>
-            <h1>Kako pregledavati AI-podržani rad prema specifikaciji</h1>
-          <p class="content-page-summary">AI-podržane izmene treba pregledavati prema specifikaciji, dokumentaciji i rezervnom ponašanju, a ne samo prema utisku da deluju ubedljivo.</p>
+            <h1>Kako pregledati rad uz pomoć AI u odnosu na specifikaciju</h1>
+          <div class="content-page-meta">
+            <span>Materijali za učenje</span>
+            <span>Srpski (latinica)</span>
+          </div>
+          <p class="content-page-summary">Ovaj vodič objašnjava kako pregledati implementaciju uz pomoć AI tako što se proverava u odnosu na specifikaciju proizvoda, pravila toka rada, dokumentaciju i očekivanja validacije, umesto da se procenjuje samo da li izlaz deluje uglađeno ili tehnički uverljivo.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">AI isporuka</span>
@@ -100,15 +116,114 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="redosled-pregleda">Redosled pregleda</h2>
+<h2 id="zašto-je-to-važno">Zašto je to važno</h2>
+<p class="lead">AI može veoma brzo da proizvede kod, tekst, testove i izmene interfejsa koje deluju potpuno.</p>
+<p>Ta brzina stvara rizik pri pregledu: osobe koje pregledaju mogu nesvesno preći sa pitanja „Da li je ovo ispravno ponašanje proizvoda?“ na pitanje „Da li ovo deluje razumno?“.</p>
+<p>To nisu ista pitanja.</p>
+<p>U radu vođenom specifikacijama pregled bi trebalo da počne od usklađenosti, a tek zatim da pređe na kvalitet koda, stil i detalje implementacije.</p>
+<h2 id="počnite-od-izvora-istine">Počnite od izvora istine</h2>
+<p>Pre nego što pregledate izlaz, identifikujte dokumente koji definišu željeno ponašanje.</p>
+<p>U Let Books repozitorijumu to obično znači:</p>
+<ul>
+<li><code>AGENTS.md</code> za pravila proizvoda, tokove rada i obim</li>
+<li><code>AGENTS-Implementation.md</code> za taktička ograničenja isporuke</li>
+<li><code>README.md</code> za prikaz trenutnog stanja</li>
+<li>relevantnu dokumentaciju pod <code>docs/</code> za objavljivanje, verifikaciju ili smernice toka rada</li>
+</ul>
+<p>Bez ovog koraka pregled lako postaje subjektivan i lokalan.</p>
+<h2 id="pregledajte-pravim-redosledom">Pregledajte pravim redosledom</h2>
+<p>Koristite ovaj redosled kada pregledate rad uz pomoć AI.</p>
+<h3 id="usklađenost-sa-proizvodom">1. Usklađenost sa proizvodom</h3>
+<p>Pitajte da li izlaz odgovara nameravanom korisničkom toku rada i granici proizvoda.</p>
+<p>Primeri:</p>
+<ul>
+<li>da li ručni unos i dalje radi tamo gde ga specifikacija zahteva</li>
+<li>da li promena čuva razdvajanje između fizičkih primeraka i bibliografskih zapisa</li>
+<li>da li dodaje ponašanje koje nikada nije odobreno</li>
+<li>da li pogrešno predstavlja opcione AI funkcije kao obavezne</li>
+</ul>
+<p>Ako je usklađenost sa proizvodom pogrešna, nema mnogo vrednosti u tome da se prvo troši mnogo vremena na doterivanje.</p>
+<h3 id="usklađenost-sa-dokumentacijom">2. Usklađenost sa dokumentacijom</h3>
+<p>Pitajte da li okolna dokumentacija i dalje pošteno opisuje stvarnost.</p>
+<p>Primeri:</p>
+<ul>
+<li>da li je korisniku vidljiv tok rada promenjen bez ažuriranja dokumentacije</li>
+<li>da li README i dalje ispravno opisuje trenutno stanje</li>
+<li>da li se nove javne tvrdnje poklapaju sa stvarno dokumentovanom pozicijom proizvoda</li>
+</ul>
+<p>Promene koje generiše AI često promene ponašanje, a da se ne ažurira narativ oko tog ponašanja.</p>
+<h3 id="validacija-i-rezervno-ponašanje">3. Validacija i rezervno ponašanje</h3>
+<p>Pitajte da li promena čuva očekivanja o greškama i rezervnom ponašanju iz specifikacije.</p>
+<p>Primeri:</p>
+<ul>
+<li>da li tok rada i dalje može da uspe kada opcioni provajder zakaže</li>
+<li>da li se neispravni ulazi obrađuju eksplicitno</li>
+<li>da li se rezultati sa niskim poverenjem ili neizvesni rezultati tretiraju kao predlozi umesto kao činjenice</li>
+</ul>
+<p>Ovde mnoge uverljive implementacije padaju na stvarnom testu proizvoda.</p>
+<h3 id="tehnički-kvalitet">4. Tehnički kvalitet</h3>
+<p>Tek nakon prethodnih provera treba posvetiti najveći deo vremena:</p>
+<ul>
+<li>jasnoći</li>
+<li>održivosti</li>
+<li>imenovanju</li>
+<li>dupliranju</li>
+<li>testovima</li>
+<li>strukturi</li>
+</ul>
+<p>Tehnički kvalitet je i dalje važan. Samo ne bi trebalo da bude važniji od ispravnosti proizvoda.</p>
+<h2 id="česte-zamke-pri-pregledu">Česte zamke pri pregledu</h2>
+<p>Rad uz pomoć AI ima tendenciju da stvara nekoliko ponovljivih zamki pri pregledu.</p>
+<h3 id="zamka-uglađenog-izlaza">Zamka uglađenog izlaza</h3>
+<p>Izlaz izgleda čisto, pa osobe koje pregledaju pretpostave da je ispravan.</p>
+<h3 id="zamka-obližnjeg-konteksta">Zamka obližnjeg konteksta</h3>
+<p>Promena se poklapa sa najbližom postojećom implementacijom, ali je moguće da je ta najbliža implementacija već odstupila.</p>
+<h3 id="zamka-implicitnog-obima">Zamka implicitnog obima</h3>
+<p>Asistent doda funkcije, apstrakcije ili pretpostavke koje nikada nisu tražene, a pregledalac ih prihvati jer ne deluju očigledno pokvareno.</p>
+<h3 id="zamka-prolaznih-testova">Zamka prolaznih testova</h3>
+<p>Testovi mogu prolaziti zato što validiraju generisano ponašanje, a ne zato što validiraju nameravano ponašanje proizvoda.</p>
+<h2 id="praktična-kontrolna-lista-za-pregled">Praktična kontrolna lista za pregled</h2>
+<p>Za svaku značajniju promenu uz pomoć AI pitajte:</p>
 <ol type="1">
-<li>proizvodna usklađenost</li>
-<li>usklađenost dokumentacije</li>
-<li>rezervni tok i validacija</li>
-<li>tehnički kvalitet</li>
+<li>Koje pravilo proizvoda ili koji tok rada ova promena treba da implementira?</li>
+<li>Koja specifikacija ili dokumentacija definiše to pravilo?</li>
+<li>Da li izlaz čuva tražena ograničenja?</li>
+<li>Da li zadržava rezervno ponašanje netaknutim?</li>
+<li>Da li se dokumentacija i dalje poklapa sa rezultujućim ponašanjem?</li>
+<li>Koja validacija ili testovi podržavaju promenu?</li>
+<li>Da li je asistent dodao nešto što bi trebalo ukloniti kao van obima?</li>
 </ol>
-<h2 id="glavno-pitanje">Glavno pitanje</h2>
-<p>Ne pitaj samo „da li radi“, nego i „da li je to još uvek pravi proizvod“.</p>
+<h2 id="kako-pregledati-generisane-testove">Kako pregledati generisane testove</h2>
+<p>Generisani testovi su korisni, ali i njih treba pregledati u odnosu na specifikaciju.</p>
+<p>Pitajte:</p>
+<ul>
+<li>da li testovi proveravaju nameravani tok rada</li>
+<li>da li pokrivaju rezervno ponašanje</li>
+<li>da li odražavaju dokumentovane granične uslove</li>
+<li>da li tvrde neko zgodno ponašanje koje nikada nije bilo specificirano</li>
+</ul>
+<p>To je posebno važno u radu vođenom specifikacijama, jer slab testni skup može da učvrsti odstupanje.</p>
+<h2 id="primeri-iz-let-books">Primeri iz Let Books</h2>
+<p>Primeri pitanja na nivou specifikacije u ovom repozitorijumu uključuju:</p>
+<ul>
+<li>da li tok rada ostaje koristan bez plaćenih AI servisa</li>
+<li>da li dokumentacija trenutnog stanja jasno odvaja status demonstracije od budućih planova za backend</li>
+<li>da li javna dokumentacija izbegava da izvorni kod tretira kao kanonski urednički dokaz</li>
+<li>da li validacioni koraci ostaju deo toka isporuke umesto opcionalnog pamćenja</li>
+</ul>
+<p>Ta pitanja su dovoljno konkretna da usmeravaju pregled, što je upravo ono što specifikacija treba da omogući.</p>
+<h2 id="trajna-lekcija">Trajna lekcija</h2>
+<p>Pregled uz pomoć AI nije u tome da proverite da li je asistent proizveo nešto impresivno. Radi se o tome da proverite da li izlaz i dalje pripada nameravanom proizvodu.</p>
+<p>Najbolje pitanje pri pregledu obično nije „Da li ovo radi?“. Ono je „Da li se ovo poklapa sa specifikacijom, uključujući delove koje je lako zaboraviti?“.</p>
+<h2 id="dalje-čitanje">Dalje čitanje</h2>
+<ul>
+<li><code>../spec-driven-content-program.md</code></li>
+<li><code>how-to-write-a-spec-that-ai-can-follow.md</code></li>
+<li><code>how-to-turn-a-product-spec-into-an-implementation-plan.md</code></li>
+<li><code>how-to-keep-spec-docs-demo-and-code-aligned.md</code></li>
+<li><code>../wiki/sr-Latn/spec-driven-development.md</code></li>
+<li><code>../blog/sr-Latn/spec-driven-development-for-ai-projects.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -132,26 +247,34 @@
             <div class="related-topic-nav" data-topic-menu-group>
               <div class="topic-pill-row">
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">AI isporuka</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Planiranje implementacije</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Pregled proizvoda</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Razvoj vođen specifikacijama</button>
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
-                  <a href="../../blog/sr-Latn/documentation-is-part-of-the-product.html"><span>Dokumentacija je deo proizvoda</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sr-Latn/spec-driven-development-for-ai-projects.html"><span>Razvoj vođen specifikacijom za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sr-Latn/documentation-is-part-of-the-product.html"><span>Dokumentacija je deo proizvoda</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikaciju koju AI može da prati</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../topics/sr-Latn/ai-assisted-implementation.html"><span>Implementacija uz AI podršku</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+                <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
+                  <a href="../../learning/sr-Latn/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Kako pretvoriti specifikaciju proizvoda u implementacioni plan</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
                   <a href="../../blog/sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kada je demo dokaz, a kada nije</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/sr-Latn/demo-spec-alignment.html"><span>Usklađenost između dema i specifikacije</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sr-Latn/let-books-localization-lessons-learned.html"><span>Let Books Naučene lekcije o lokalizaciji</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
                   <a href="../../blog/sr-Latn/spec-driven-development-in-let-books.html"><span>Razvoj vođen specifikacijom u Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održati usklađenost između specifikacije, dokumentacije, dema i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validaciona pravila i CI pravila</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../wiki/sr-Latn/implementation-guidance.html"><span>Implementaciona uputstva</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sr-Latn/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održavati usklađenost specifikacije, dokumentacije, demonstracije i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validaciona pravila i CI kapije</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../wiki/sr-Latn/implementation-guidance.html"><span>Uputstvo za implementaciju</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/markdown-in-product-development.html"><span>Markdown u razvoju proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/spec-driven-development.html"><span>Razvoj zasnovan na specifikacijama</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sr-Latn/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sr-Latn/demo-and-specification-alignment.html"><span>Usklađenost demoa i specifikacije</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sr-Latn/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>
             </div>
@@ -165,11 +288,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.</p>
             <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Latn/index.html">Pregled</a>
+              <a href="../../topics/sr-Latn/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -180,6 +305,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.</span>
+            <span>Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

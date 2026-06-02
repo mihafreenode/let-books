@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Локализација CI и CD | LetBooks</title>
-    <meta name="description" content="Локализацијата CI/CD континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.">
+    <meta name="description" content="CI/CD за локализација континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/mk/localization-ci-cd.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Локализација CI и CD | LetBooks">
-    <meta property="og:description" content="Локализацијата CI/CD континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.">
+    <meta property="og:description" content="CI/CD за локализација континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/mk/localization-ci-cd.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Локализација CI и CD | LetBooks">
-    <meta name="twitter:description" content="Локализацијата CI/CD континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.">
+    <meta name="twitter:description" content="CI/CD за локализација континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="mk">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/mk/index.html">Блог</a>
             <a class="nav-link" href="../../learning/mk/index.html">Материјали за учење</a>
             <a class="nav-link" href="../../wiki/mk/index.html">Вики</a>
+            <a class="nav-link" href="../../topics/mk/index.html">Теми</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/localization-ci-cd.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Локализација CI и CD</span>
             </nav>
             <h1>Локализација CI и CD</h1>
-          <p class="content-page-summary">Локализацијата CI/CD континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.</p>
+          <div class="content-page-meta">
+            <span>Вики</span>
+            <span>Македонски</span>
+          </div>
+          <p class="content-page-summary">CI/CD за локализација континуирано ја потврдува повеќејазичната содржина, така што средствата што недостасуваат, скршените врски и регресиите на пристапноста ќе се фатат рано.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теми:</span>
               <span class="content-tag">CI/CD</span>
@@ -108,6 +124,39 @@
 <li>тестови за чад за пристапност</li>
 <li>проверки на покриеност на слики од екранот и дијаграми</li>
 </ul>
+<h2 id="прогресија-на-класа-на-дефекти">Прогресија на класа на дефекти</h2>
+<p class="lead">Локализацијата CI треба да ги следи и двете:</p>
+<ul>
+<li><code>Localization Debt</code></li>
+<li><code>Open Defect Classes</code></li>
+</ul>
+<p>Мерките за долг остануваат извор-содржина работа.</p>
+<p>Класите на отворени дефекти мерат дали системот сепак може да дозволи повторно да се појави категорија на проблем.</p>
+<p>Штом класата на дефект достигне нула појави, нејзиниот валидатор треба да премине од советодавен кон блокирање каде што е практично.</p>
+<p>Примери:</p>
+<ul>
+<li>Објавување нацрт на место за место</li>
+<li>непреведени резимеа</li>
+<li>непреведени метаподатоци</li>
+<li>непреведени тела</li>
+<li>издаваштво на мешан јазик</li>
+</ul>
+<p>ЦИ не е само чувар на врата. Тоа е механизмот што спречува затворените класи на дефекти да не се отвораат тивко.</p>
+<h2 id="нарачка-на-генерации-за-навигација-на-статии">Нарачка на генерации за навигација на статии</h2>
+<p>Тековниот договор за навигација за јавни написи е:</p>
+<ul>
+<li><code>post-article-nav</code></li>
+<li><code>related-content</code></li>
+<li><code>related-topic-nav</code></li>
+</ul>
+<p>Генерирањето и валидацијата треба да се случат по овој редослед:</p>
+<ol type="1">
+<li>генерира статија HTML</li>
+<li>генерира индексни страници</li>
+<li>извршете ја преостанатата навигациска пост-обработка само ако сè уште е потребно</li>
+<li>валидирајте го излезот</li>
+</ol>
+<p>Ако валидаторот сè уште го очекува наследниот блок §<code>topic-nav</code>, ажурирајте го валидаторот со тековниот договор наместо да го закрпите генерираниот §HTML.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -136,7 +185,8 @@
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/mk/how-to-run-localization-qa-in-ci.html"><span>Како да спроведувате локализациски QA во CI</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено да се додаваат правила за валидација и CI ограничувања</span><span class="topic-menu__meta">Материјали за учење</span></a>
-                  <a href="../../wiki/mk/validation-layers.html"><span>Слоеви на валидација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/validation-layers.html"><span>Слоеви за валидација</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../topics/mk/validation-layers.html"><span>Слоеви на валидација</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
               </div>
             </div>
@@ -150,11 +200,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Практична платформа за каталогизација, нудење и пронаоѓање образовни книги.</p>
+            <p class="footer-note">Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</p>
             <p class="footer-microcopy">Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../mk/index.html">Преглед</a>
+              <a href="../../topics/mk/index.html">Теми</a>
               <a href="../../index.html">Почетна страница</a>
               <a href="../../../static-demo/">Демо</a>
             </div>
@@ -165,6 +217,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Авторски права © соработниците на Let Books. Повторната употреба ја следи лиценцата на репозиториумот освен ако страницата не наведува поинаку.</span>
+            <span>Ран алфа прототип. Документацијата и текстот на корисничкиот интерфејс се AI-потпомогнати. Установите и интеграциите спомнати во примерите се концептуални и не значат партнерство или поддршка.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Capas de validación | LetBooks</title>
-    <meta name="description" content="Las capas de validación son las distintas formas en que un proyecto comprueba si la implementación, la documentación y los artefactos de entrega siguen coincidiendo con las reglas previstas y las expectativas de calidad.">
+    <meta name="description" content="Las capas de validación son las diferentes formas en que un proyecto verifica si los artefactos de implementación, documentación y entrega aún coinciden con las reglas previstas y las expectativas de calidad.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/es/validation-layers.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Capas de validación | LetBooks">
-    <meta property="og:description" content="Las capas de validación son las distintas formas en que un proyecto comprueba si la implementación, la documentación y los artefactos de entrega siguen coincidiendo con las reglas previstas y las expectativas de calidad.">
+    <meta property="og:description" content="Las capas de validación son las diferentes formas en que un proyecto verifica si los artefactos de implementación, documentación y entrega aún coinciden con las reglas previstas y las expectativas de calidad.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/es/validation-layers.html">
@@ -38,10 +38,11 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Capas de validación | LetBooks">
-    <meta name="twitter:description" content="Las capas de validación son las distintas formas en que un proyecto comprueba si la implementación, la documentación y los artefactos de entrega siguen coincidiendo con las reglas previstas y las expectativas de calidad.">
+    <meta name="twitter:description" content="Las capas de validación son las diferentes formas en que un proyecto verifica si los artefactos de implementación, documentación y entrega aún coinciden con las reglas previstas y las expectativas de calidad.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="es">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/es/index.html">Blog</a>
             <a class="nav-link" href="../../learning/es/index.html">Material de aprendizaje</a>
             <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/es/index.html">Temas</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/validation-layers.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -91,7 +103,11 @@
               <span aria-current="page">Capas de validación</span>
             </nav>
             <h1>Capas de validación</h1>
-          <p class="content-page-summary">Las capas de validación son las distintas formas en que un proyecto comprueba si la implementación, la documentación y los artefactos de entrega siguen coincidiendo con las reglas previstas y las expectativas de calidad.</p>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Español</span>
+          </div>
+          <p class="content-page-summary">Las capas de validación son las diferentes formas en que un proyecto verifica si los artefactos de implementación, documentación y entrega aún coinciden con las reglas previstas y las expectativas de calidad.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temas:</span>
               <span class="content-tag">CI/CD</span>
@@ -100,56 +116,57 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="por-qué-importan-las-capas">Por qué importan las capas</h2>
-<p class="lead">Ningún método único de validación es suficiente.</p>
+<h2 id="por-qué-son-importantes-las-capas">Por qué son importantes las capas</h2>
+<p class="lead">Ningún método de validación es suficiente.</p>
 <ul>
-<li>la documentación por sí sola no impone comportamiento</li>
-<li>las pruebas por sí solas pueden validar supuestos equivocados</li>
-<li>la CI por sí sola no puede definir las reglas que debe hacer cumplir</li>
+<li>la documentación por sí sola no impone el comportamiento</li>
+<li>Las pruebas por sí solas pueden validar las suposiciones erróneas.</li>
+<li>CI por sí sola no puede definir las reglas que se supone debe hacer cumplir</li>
 </ul>
-<p>Un enfoque por capas es más sólido porque cada capa detecta una clase distinta de deriva.</p>
+<p>Un enfoque por capas es más eficaz porque cada capa capta una clase diferente de deriva.</p>
 <h2 id="capas-de-validación-comunes">Capas de validación comunes</h2>
-<h3 id="especificación-y-directrices">1. Especificación y directrices</h3>
+<h3 id="especificaciones-y-orientación">1. Especificaciones y orientación</h3>
 <p>La primera capa define la regla.</p>
-<p>Sin esta capa, las comprobaciones posteriores pueden ser estrictas pero arbitrarias.</p>
+<p>Sin esta capa, los controles posteriores pueden ser estrictos pero arbitrarios.</p>
 <h3 id="revisión-manual">2. Revisión manual</h3>
-<p>La revisión humana comprueba la intención, los casos límite y el significado del producto que quizá todavía no estén automatizados.</p>
+<p>La revisión humana verifica la intención, los casos extremos y el significado del producto que aún no se pueden automatizar.</p>
 <h3 id="validación-local">3. Validación local</h3>
-<p>Los scripts y las comprobaciones estructuradas detectan problemas rápidos y repetibles antes de que los cambios lleguen a la CI.</p>
+<p>Los scripts y las comprobaciones estructuradas detectan problemas rápidamente y repetibles antes de que los cambios lleguen a CI.</p>
 <h3 id="pruebas">4. Pruebas</h3>
-<p>Las pruebas ejecutables verifican el comportamiento esperado, pero solo cuando están alineadas con la especificación.</p>
-<h3 id="puertas-de-ci">5. Puertas de CI</h3>
-<p>La CI hace que las comprobaciones sean repetibles y visibles entre colaboradores y entornos.</p>
-<h3 id="comprobaciones-de-despliegue">6. Comprobaciones de despliegue</h3>
-<p>Los flujos de despliegue confirman que los artefactos construidos siguen siendo publicables y estructuralmente sólidos.</p>
+<p>Las pruebas ejecutables verifican el comportamiento esperado, pero solo cuando están alineados con la especificación.</p>
+<h3 id="puertas-ci">5. Puertas CI</h3>
+<p>CI hace que las comprobaciones sean repetibles y visibles entre contribuyentes y entornos.</p>
+<h3 id="comprobaciones-de-implementación">6. Comprobaciones de implementación</h3>
+<p>Los flujos de trabajo de implementación confirman que los artefactos creados aún son publicables y estructuralmente sólidos.</p>
 <h2 id="cómo-deben-relacionarse-las-capas">Cómo deben relacionarse las capas</h2>
-<p>Las capas deben reforzarse entre sí en este orden:</p>
+<p>Las capas deben reforzarse entre sí en orden:</p>
 <ul>
-<li>los documentos y las especificaciones definen expectativas</li>
-<li>la revisión interpreta esas expectativas en contexto</li>
-<li>los scripts de validación y las pruebas automatizan las partes estables de la revisión</li>
-<li>la CI ejecuta esas comprobaciones de forma coherente</li>
-<li>el despliegue garantiza que la salida realmente pueda entregarse</li>
+<li>Los documentos y las especificaciones definen las expectativas.</li>
+<li>La revisión interpreta esas expectativas en contexto.</li>
+<li>Los scripts de validación y las pruebas automatizan partes estables de la revisión.</li>
+<li>CI ejecuta esas comprobaciones de forma consistente</li>
+<li>la implementación garantiza que la producción realmente pueda enviarse</li>
 </ul>
-<h2 id="buenos-objetivos-tempranos-de-validación">Buenos objetivos tempranos de validación</h2>
-<p>Ejemplos de candidatos sólidos tempranos incluyen:</p>
+<h2 id="buenos-objetivos-de-validación-temprana">Buenos objetivos de validación temprana</h2>
+<p>Ejemplos de candidatos iniciales sólidos incluyen:</p>
 <ul>
-<li>presencia de archivos requeridos</li>
-<li>completitud de la localización</li>
-<li>validez sintáctica</li>
+<li>presencia de archivo requerido</li>
+<li>integridad de la localización</li>
+<li>validez de sintaxis</li>
 <li>enlaces internos rotos</li>
 <li>citas editoriales prohibidas</li>
-<li>generación correcta de metadatos</li>
+<li>éxito en la generación de metadatos</li>
 </ul>
-<p>Estas comprobaciones tienden a ser objetivas y baratas.</p>
-<h2 id="contexto-de-let-books">Contexto de Let Books</h2>
-<p>El repositorio Let Books ya documenta varias capas, incluidas:</p>
+<p>Estos controles tienden a ser objetivos y económicos.</p>
+<h2 id="let-books-contexto">Let Books contexto</h2>
+<p>El repositorio Let Books ya documenta varias capas, entre ellas:</p>
 <ul>
-<li>reglas de producto e implementación en <code>AGENTS.md</code> y <code>AGENTS-Implementation.md</code></li>
-<li>validación de desarrollo y despliegue en <code>docs/Development.md</code> y <code>docs/Deployment.md</code></li>
-<li>reglas editoriales de evidencia en <code>docs/blog/README.md</code> y <code>docs/sources/README.md</code></li>
+<li>normas de producto y de implementación en <code>AGENTS.md</code> y <code>AGENTS-Implementation.md</code></li>
+<li>validación de desarrollo e implementación en <code>docs/Development.md</code> y <code>docs/Deployment.md</code></li>
+<li>normas de evidencia editorial en <code>docs/blog/README.md</code> y <code>docs/sources/README.md</code></li>
+<li>guía de aprendizaje para la implementación de validación y CI por etapas</li>
 </ul>
-<p>Eso convierte la validación en un sistema documentado y no solo en una aspiración futura.</p>
+<p>Eso hace que la validación sea un sistema documentado y no sólo una aspiración futura.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -175,6 +192,7 @@
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Alineación de la demo</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="related-product-quality-menu">Calidad del producto</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="related-ci-cd-menu">CI/CD</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="related-book-donation-menu">Donación de libros</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="related-ai-assisted-delivery-menu">Entrega asistida por IA</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="related-implementation-planning-menu">Planificación de la implementación</button>
                 <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="related-validation-menu">Validación</button>
@@ -182,27 +200,33 @@
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
                   <a href="../../blog/es/spec-driven-development-in-let-books.html"><span>Desarrollo guiado por especificaciones en Let Books</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Cuándo la demo es evidencia y cuándo no lo es</span><span class="topic-menu__meta">Blog</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
                   <a href="../../blog/es/documentation-is-part-of-the-product.html"><span>La documentación es parte del producto</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/es/documentation-traceability.html"><span>Trazabilidad de la documentación</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/es/spec-driven-development.html"><span>Desarrollo guiado por especificaciones</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/es/markdown-in-product-development.html"><span>Markdown en el desarrollo de producto</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/markdown-in-product-development.html"><span>Markdown en Desarrollo de productos</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/es/ai-assisted-implementation.html"><span>Implementación asistida por IA</span><span class="topic-menu__meta">Temas</span></a>
                 </div>
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
-                  <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Cómo añadir por etapas reglas de validación y controles CI</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Cómo añadir reglas de validación y controles de CI por etapas</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
                   <a href="../../learning/es/how-to-run-localization-qa-in-ci.html"><span>Cómo ejecutar QA de localización en CI</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../topics/es/validation-layers.html"><span>Capas de validación</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+                <div class="topic-menu" id="related-book-donation-menu" data-topic-menu="related-book-donation" hidden>
+                  <a href="../../blog/es/isbn-not-a-database.html"><span>El ISBN no es una base de datos</span><span class="topic-menu__meta">Blog</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>
                   <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html"><span>Cómo revisar trabajo asistido por IA frente a la especificación</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
                   <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html"><span>Cómo convertir una especificación de producto en un plan de implementación</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
-                  <a href="../../wiki/es/implementation-guidance.html"><span>Directrices de implementación</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/implementation-guidance.html"><span>Guía de implementación</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
                 <div class="topic-menu" id="related-validation-menu" data-topic-menu="related-validation" hidden>
                   <a href="../../blog/es/spec-driven-development-for-ai-projects.html"><span>Desarrollo guiado por especificaciones para proyectos de IA</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../wiki/es/documentation-validation-beyond-linting.html"><span>Validación de documentación más allá del linting</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/es/demo-and-specification-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Temas</span></a>
+                  <a href="../../topics/es/documentation-traceability.html"><span>Trazabilidad de la documentación</span><span class="topic-menu__meta">Temas</span></a>
                 </div>
               </div>
             </div>
@@ -216,11 +240,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</p>
+            <p class="footer-note">Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</p>
             <p class="footer-microcopy">Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../es/index.html">Vista general</a>
+              <a href="../../topics/es/index.html">Temas</a>
               <a href="../../index.html">Página de inicio</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -231,6 +257,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</span>
+            <span>Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

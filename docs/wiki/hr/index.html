@@ -29,6 +29,7 @@
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
     <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/wiki/en/index.html">
     <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/wiki/sl/index.html">
@@ -59,6 +60,7 @@
             <a class="nav-link" href="../../blog/hr/index.html">Blog</a>
             <a class="nav-link" href="../../learning/hr/index.html">Vodiči za učenje</a>
             <a class="nav-link" href="../../wiki/hr/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/hr/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/index.html" lang="en">EN</a>
@@ -77,38 +79,130 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Wiki</h1>
             <p>Trajne referentne stranice o razvoju vođenom specifikacijom, sljedivosti dokumentacije, slojevima validacije i srodnim temama.</p>
           </div>
-          <ul>
-              <li><a href="ai-assisted-translation-policy.html">AI-Politika potpomognutog prevođenja</a></li>
-              <li><a href="demo-spec-alignment.html">Usklađenost između dema i specifikacije</a></li>
-              <li><a href="documentation-traceability.html">Sljedivost dokumentacije</a></li>
-              <li><a href="implementation-guidance.html">Implementacijske smjernice</a></li>
-              <li><a href="language-support-matrix.html">Matrica jezične podrške</a></li>
-              <li><a href="let-books-accessibility-and-localization.html">Let Books Pristupačnost i lokalizacija</a></li>
-              <li><a href="let-books-localization-architecture.html">Let Books Arhitektura lokalizacije</a></li>
-              <li><a href="let-books-localization-case-study.html">Studija slučaja lokalizacije Let Books</a></li>
-              <li><a href="let-books-localization-lessons-learned.html">Let Books Naučene lekcije o lokalizaciji</a></li>
-              <li><a href="localization-at-scale.html">Lokalizacija u mjerilu</a></li>
-              <li><a href="localization-ci-cd.html">Lokalizacija CI i CD</a></li>
-              <li><a href="localization-governance.html">Upravljanje lokalizacijom</a></li>
-              <li><a href="localization-maturity-model.html">Model zrelosti lokalizacije</a></li>
-              <li><a href="localization-roadmap.html">Plan lokalizacije</a></li>
-              <li><a href="markdown-in-product-development.html">Markdown u razvoju proizvoda</a></li>
-              <li><a href="multilingual-accessibility.html">Višejezična pristupačnost</a></li>
-              <li><a href="multilingual-public-interest-software.html">Višejezični softver od javnog interesa</a></li>
-              <li><a href="non-text-asset-localization.html">Lokalizacija netekstualnih materijala</a></li>
-              <li><a href="product-specification.html">Proizvodna specifikacija</a></li>
-              <li><a href="spec-driven-development.html">Razvoj vođen specifikacijom</a></li>
-              <li><a href="translation-memory-and-glossaries.html">Prijevodna memorija i glosari</a></li>
-              <li><a href="translation-quality-assurance.html">Osiguranje kvalitete prijevoda</a></li>
-              <li><a href="unicode-and-script-correctness.html">Unicode i ispravnost skripte</a></li>
-              <li><a href="validation-layers.html">Slojevi validacije</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Vrsta sadržaja">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/hr/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/hr/index.html" data-content-switcher-link data-content-type="learning">Materijali za učenje</a>
+              <a class="content-type-switcher__link is-active" href="../../wiki/hr/index.html" data-content-switcher-link data-content-type="wiki" aria-current="page">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/hr/index.html" data-content-switcher-link data-content-type="topics">Teme</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Nedavni wiki unosi</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../wiki/hr/product-specification.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Specifikacija proizvoda</h3>
+              <p>Specifikacija proizvoda definira čemu proizvod služi, što mora činiti, koje granice mora poštovati i koji se rezultati smatraju uspjehom.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/hr/let-books-localization-case-study.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Let Books Studija slučaja lokalizacije</h3>
+              <p>Let Books živuća je studija slučaja u izgradnji višejezične platforme znanja i vizije proizvoda prije nego što postoji puna pozadinska aplikacija.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/hr/implementation-guidance.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Smjernice za provedbu</h3>
+              <p>Smjernice za implementaciju definiraju kako tim treba isporučiti posao unutar trenutnog repozitorija ili okruženja isporuke bez zamjene same specifikacije proizvoda.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/hr/translation-quality-assurance.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Osiguranje kvalitete prijevoda</h3>
+              <p>Translation QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Pregledaj po temama</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-wiki-hr-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-wiki-hr-documentation-menu">Dokumentacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-wiki-hr-translation-quality-menu">Kvaliteta prevođenja</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-wiki-hr-product-quality-menu">Kvaliteta proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-wiki-hr-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-wiki-hr-spec-writing-menu">Pisanje specifikacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-wiki-hr-implementation-planning-menu">Planiranje implementacije</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-wiki-hr-product-review-menu">Pregled proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-wiki-hr-spec-driven-development-menu">Razvoj vođen specifikacijom</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-wiki-hr-product-specification-menu">Specifikacija proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-wiki-hr-project-management-menu">Upravljanje projektom</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-wiki-hr-demo-alignment-menu">Usklađenost demoa</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-hr-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-wiki-hr-validation-menu">Validacija</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-wiki-hr-ci-cd-menu" data-topic-menu="index-wiki-hr-ci-cd" hidden>
+                      <a href="../../wiki/hr/localization-ci-cd.html">Lokalizacija CI i CD</a>
+                      <a href="../../wiki/hr/validation-layers.html">Slojevi provjere valjanosti</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-documentation-menu" data-topic-menu="index-wiki-hr-documentation" hidden>
+                      <a href="../../wiki/hr/documentation-is-more-than-a-website.html">Dokumentacija je više od web-mjesta</a>
+                      <a href="../../wiki/hr/markdown-in-product-development.html">Markdown u razvoju proizvoda</a>
+                      <a href="../../wiki/hr/spec-driven-development.html">Razvoj vođen specifikacijama</a>
+                      <a href="../../wiki/hr/documentation-traceability.html">Sljedivost dokumentacije</a>
+                      <a href="../../wiki/hr/documentation-validation-beyond-linting.html">Validacija dokumentacije izvan lintanja</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-translation-quality-menu" data-topic-menu="index-wiki-hr-translation-quality" hidden>
+                      <a href="../../wiki/hr/ai-assisted-translation-policy.html">AI-Politika potpomognutog prevođenja</a>
+                      <a href="../../wiki/hr/localization-maturity-model.html">Model zrelosti lokalizacije</a>
+                      <a href="../../wiki/hr/translation-quality-assurance.html">Osiguranje kvalitete prijevoda</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-product-quality-menu" data-topic-menu="index-wiki-hr-product-quality" hidden>
+                      <a href="../../wiki/hr/markdown-in-product-development.html">Markdown u razvoju proizvoda</a>
+                      <a href="../../wiki/hr/spec-driven-development.html">Razvoj vođen specifikacijama</a>
+                      <a href="../../wiki/hr/documentation-traceability.html">Sljedivost dokumentacije</a>
+                      <a href="../../wiki/hr/validation-layers.html">Slojevi provjere valjanosti</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-let-books-menu" data-topic-menu="index-wiki-hr-let-books" hidden>
+                      <a href="../../wiki/hr/let-books-localization-architecture.html">Let Books Arhitektura lokalizacije</a>
+                      <a href="../../wiki/hr/let-books-localization-lessons-learned.html">Let Books Naučene lekcije o lokalizaciji</a>
+                      <a href="../../wiki/hr/let-books-accessibility-and-localization.html">Let Books Pristupačnost i lokalizacija</a>
+                      <a href="../../wiki/hr/let-books-localization-case-study.html">Let Books Studija slučaja lokalizacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-spec-writing-menu" data-topic-menu="index-wiki-hr-spec-writing" hidden>
+                      <a href="../../wiki/hr/product-specification.html">Specifikacija proizvoda</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-implementation-planning-menu" data-topic-menu="index-wiki-hr-implementation-planning" hidden>
+                      <a href="../../wiki/hr/implementation-guidance.html">Smjernice za provedbu</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-product-review-menu" data-topic-menu="index-wiki-hr-product-review" hidden>
+                      <a href="../../wiki/hr/let-books-localization-lessons-learned.html">Let Books Naučene lekcije o lokalizaciji</a>
+                      <a href="../../wiki/hr/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-spec-driven-development-menu" data-topic-menu="index-wiki-hr-spec-driven-development" hidden>
+                      <a href="../../wiki/hr/documentation-is-more-than-a-website.html">Dokumentacija je više od web-mjesta</a>
+                      <a href="../../wiki/hr/markdown-in-product-development.html">Markdown u razvoju proizvoda</a>
+                      <a href="../../wiki/hr/spec-driven-development.html">Razvoj vođen specifikacijama</a>
+                      <a href="../../wiki/hr/documentation-traceability.html">Sljedivost dokumentacije</a>
+                      <a href="../../wiki/hr/implementation-guidance.html">Smjernice za provedbu</a>
+                      <a href="../../wiki/hr/product-specification.html">Specifikacija proizvoda</a>
+                      <a href="../../wiki/hr/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-product-specification-menu" data-topic-menu="index-wiki-hr-product-specification" hidden>
+                      <a href="../../wiki/hr/product-specification.html">Specifikacija proizvoda</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-project-management-menu" data-topic-menu="index-wiki-hr-project-management" hidden>
+                      <a href="../../wiki/hr/localization-roadmap.html">Plan lokalizacije</a>
+                      <a href="../../wiki/hr/implementation-guidance.html">Smjernice za provedbu</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-demo-alignment-menu" data-topic-menu="index-wiki-hr-demo-alignment" hidden>
+                      <a href="../../wiki/hr/demo-spec-alignment.html">Usklađenost između dema i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-hr-validation-menu" data-topic-menu="index-wiki-hr-validation" hidden>
+                      <a href="../../wiki/hr/validation-layers.html">Slojevi provjere valjanosti</a>
+                      <a href="../../wiki/hr/documentation-validation-beyond-linting.html">Validacija dokumentacije izvan lintanja</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">
@@ -121,6 +215,7 @@
           <div>
             <div class="footer-links">
               <a href="../../hr/index.html">Pregled</a>
+              <a href="../../topics/hr/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>

@@ -10,4 +10,5 @@ Kjo dosje përmban versionin në shqip të dokumentacionit kryesor të Let Books
 
 - [Blog](../blog/sq/)
 - [Learning](../learning/sq/)
+- [Topics](../topics/sq/)
 - [Wiki](../wiki/sq/)

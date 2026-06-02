@@ -1,5 +1,7 @@
 ---
 title: "Capas de validación"
+summary: >-
+  Las capas de validación son las diferentes formas en que un proyecto verifica si los artefactos de implementación, documentación y entrega aún coinciden con las reglas previstas y las expectativas de calidad.
 topics:
   - validation
   - ci-cd
@@ -9,82 +11,83 @@ topics:
 
 ## Resumen
 
-Las capas de validación son las distintas formas en que un proyecto comprueba si la implementación, la documentación y los artefactos de entrega siguen coincidiendo con las reglas previstas y las expectativas de calidad.
+Las capas de validación son las diferentes formas en que un proyecto verifica si los artefactos de implementación, documentación y entrega aún coinciden con las reglas previstas y las expectativas de calidad.
 
-## Por qué importan las capas
+## Por qué son importantes las capas
 
-Ningún método único de validación es suficiente.
+Ningún método de validación es suficiente.
 
-- la documentación por sí sola no impone comportamiento
-- las pruebas por sí solas pueden validar supuestos equivocados
-- la CI por sí sola no puede definir las reglas que debe hacer cumplir
+- la documentación por sí sola no impone el comportamiento
+- Las pruebas por sí solas pueden validar las suposiciones erróneas.
+- CI por sí sola no puede definir las reglas que se supone debe hacer cumplir
 
-Un enfoque por capas es más sólido porque cada capa detecta una clase distinta de deriva.
+Un enfoque por capas es más eficaz porque cada capa capta una clase diferente de deriva.
 
 ## Capas de validación comunes
 
-### 1. Especificación y directrices
+### 1. Especificaciones y orientación
 
 La primera capa define la regla.
 
-Sin esta capa, las comprobaciones posteriores pueden ser estrictas pero arbitrarias.
+Sin esta capa, los controles posteriores pueden ser estrictos pero arbitrarios.
 
 ### 2. Revisión manual
 
-La revisión humana comprueba la intención, los casos límite y el significado del producto que quizá todavía no estén automatizados.
+La revisión humana verifica la intención, los casos extremos y el significado del producto que aún no se pueden automatizar.
 
 ### 3. Validación local
 
-Los scripts y las comprobaciones estructuradas detectan problemas rápidos y repetibles antes de que los cambios lleguen a la CI.
+Los scripts y las comprobaciones estructuradas detectan problemas rápidamente y repetibles antes de que los cambios lleguen a CI.
 
 ### 4. Pruebas
 
-Las pruebas ejecutables verifican el comportamiento esperado, pero solo cuando están alineadas con la especificación.
+Las pruebas ejecutables verifican el comportamiento esperado, pero solo cuando están alineados con la especificación.
 
-### 5. Puertas de CI
+### 5. Puertas CI
 
-La CI hace que las comprobaciones sean repetibles y visibles entre colaboradores y entornos.
+CI hace que las comprobaciones sean repetibles y visibles entre contribuyentes y entornos.
 
-### 6. Comprobaciones de despliegue
+### 6. Comprobaciones de implementación
 
-Los flujos de despliegue confirman que los artefactos construidos siguen siendo publicables y estructuralmente sólidos.
+Los flujos de trabajo de implementación confirman que los artefactos creados aún son publicables y estructuralmente sólidos.
 
 ## Cómo deben relacionarse las capas
 
-Las capas deben reforzarse entre sí en este orden:
+Las capas deben reforzarse entre sí en orden:
 
-- los documentos y las especificaciones definen expectativas
-- la revisión interpreta esas expectativas en contexto
-- los scripts de validación y las pruebas automatizan las partes estables de la revisión
-- la CI ejecuta esas comprobaciones de forma coherente
-- el despliegue garantiza que la salida realmente pueda entregarse
+- Los documentos y las especificaciones definen las expectativas.
+- La revisión interpreta esas expectativas en contexto.
+- Los scripts de validación y las pruebas automatizan partes estables de la revisión.
+- CI ejecuta esas comprobaciones de forma consistente
+- la implementación garantiza que la producción realmente pueda enviarse
 
-## Buenos objetivos tempranos de validación
+## Buenos objetivos de validación temprana
 
-Ejemplos de candidatos sólidos tempranos incluyen:
+Ejemplos de candidatos iniciales sólidos incluyen:
 
-- presencia de archivos requeridos
-- completitud de la localización
-- validez sintáctica
+- presencia de archivo requerido
+- integridad de la localización
+- validez de sintaxis
 - enlaces internos rotos
 - citas editoriales prohibidas
-- generación correcta de metadatos
+- éxito en la generación de metadatos
 
-Estas comprobaciones tienden a ser objetivas y baratas.
+Estos controles tienden a ser objetivos y económicos.
 
-## Contexto de Let Books
+## Let Books contexto
 
-El repositorio Let Books ya documenta varias capas, incluidas:
+El repositorio Let Books ya documenta varias capas, entre ellas:
 
-- reglas de producto e implementación en `AGENTS.md` y `AGENTS-Implementation.md`
-- validación de desarrollo y despliegue en `docs/Development.md` y `docs/Deployment.md`
-- reglas editoriales de evidencia en `docs/blog/README.md` y `docs/sources/README.md`
+- normas de producto y de implementación en `AGENTS.md` y `AGENTS-Implementation.md`
+- validación de desarrollo e implementación en `docs/Development.md` y `docs/Deployment.md`
+- normas de evidencia editorial en `docs/blog/README.md` y `docs/sources/README.md`
+- guía de aprendizaje para la implementación de validación y CI por etapas
 
-Eso convierte la validación en un sistema documentado y no solo en una aspiración futura.
+Eso hace que la validación sea un sistema documentado y no sólo una aspiración futura.
 
-## Páginas Relacionadas
+## Páginas relacionadas
 
 - `documentation-traceability.md`
 - `implementation-guidance.md`
-- `../learning/how-to-add-validation-rules-and-ci-gates-in-stages.md`
-- `../blog/en/documentation-is-part-of-the-product.md`
+- `../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.md`
+- `../../blog/es/documentation-is-part-of-the-product.md`

@@ -1,60 +1,74 @@
 ---
-title: "Traçabilité de la documentation"
+title: "Traçabilité documentaire"
+summary: >-
+  La traçabilité de la documentation consiste à faire en sorte que les déclarations importantes, les descriptions de flux de travail et les attentes en matière de qualité soient traçables jusqu'à des preuves stables du référentiel et des décisions explicites.
 topics:
   - documentation
   - product-quality
   - spec-driven-development
 ---
-# Traçabilité de la documentation
+# Traçabilité documentaire
 
 ## Résumé
 
-La traçabilité de la documentation est la pratique qui consiste à rendre les affirmations importantes, les descriptions de flux de travail et les attentes de qualité traçables jusqu'à des preuves stables du dépôt et à des décisions explicites.
+La traçabilité de la documentation consiste à faire en sorte que les déclarations importantes, les descriptions de flux de travail et les attentes en matière de qualité soient traçables jusqu'à des preuves stables du référentiel et des décisions explicites.
 
 ## Pourquoi c'est important
 
-Sans traçabilité, il devient difficile de faire confiance à la documentation.
+Sans traçabilité, la documentation devient difficilement fiable.
 
-Les lecteurs ne peuvent pas savoir :
+Les lecteurs ne peuvent pas dire :
 
-- si une affirmation est actuelle
+- si une déclaration est à jour
 - si un comportement est intentionnel
-- si une affirmation vient de la spécification produit ou d'un accident d'implémentation
-- si un article public reflète la direction produit approuvée
+- si une réclamation provient d'une spécification du produit ou d'un accident de mise en œuvre
+- si un article public reflète l'orientation du produit approuvée
 
-La traçabilité est particulièrement importante dans le travail assisté par l'IA, car un contenu généré peut paraître assuré même lorsqu'il n'est pas ancré dans la bonne source.
+La traçabilité est particulièrement importante dans le travail assisté par l’IA, car le contenu généré peut sembler fiable même s’il n’est pas fondé sur la bonne source.
 
 ## À quoi ressemble la traçabilité
 
-Une bonne traçabilité comprend généralement :
+Une bonne traçabilité de la documentation comprend généralement :
 
 - une chaîne d'autorité connue
-- des références stables vers les documents ou spécifications pertinents
-- une séparation claire entre l'état actuel et les plans futurs
-- une distinction explicite entre documentation canonique et statut d'implémentation
-- des cartes de sources ou des notes de preuve pour les articles publics substantiels
+- des références stables aux documents ou spécifications pertinents
+- séparation claire entre l'état actuel et les projets futurs
+- distinction explicite entre la documentation canonique et l'état d'implémentation
+- des cartes sources ou des notes de preuves pour des articles publics importants
+
+Cela s’avère également de plus en plus utile lorsque la documentation est suffisamment spécifique pour guider le travail assisté par l’IA, et pas seulement l’interprétation humaine.
 
 ## Un modèle d'autorité simple
 
 Un modèle utile est :
 
-1. spécification produit
-2. directives d'implémentation
-3. documentation de l'état actuel
-4. démo ou comportement de l'implémentation
+1. spécification du produit
+2. conseils de mise en œuvre
+3. documentation actuelle
+4. comportement de démonstration ou d'implémentation
 5. tests et résultats de validation
 
 Cela aide les équipes à décider quel artefact doit répondre à quelle question.
 
-## Écriture publique et traçabilité
+## Rédaction publique et traçabilité
 
-Les articles publics, essais et contenus pédagogiques ne devraient pas s'appuyer sur n'importe quel fichier voisin.
+Les articles publics, les essais et le matériel pédagogique ne doivent pas s'appuyer sur le fichier source qui se trouve à proximité.
 
-Ils devraient plutôt privilégier des références stables vers la documentation et la spécification, et utiliser des cartes de sources lorsque les affirmations sont substantielles.
+Au lieu de cela, ils devraient préférer une documentation stable et des références de spécifications, et utiliser des cartes sources lorsque les revendications sont substantielles.
 
-## Contexte Let Books
+Cela rend l’écriture publique plus facile à maintenir et moins fragile au fil du temps.
 
-Le dépôt Let Books prend déjà en charge la traçabilité grâce à :
+## Traçabilité des agents comme des humains
+
+La traçabilité ne consiste pas seulement à aider une personne à comprendre d’où provient une réclamation. Cela aide également un agent IA à déterminer quels artefacts de référentiel doivent guider l'action.
+
+Lorsque la documentation indique clairement l'ordre du flux de travail, les préférences des outils, les contraintes d'environnement et les limites d'autorité, elle devient utilisable comme contexte opérationnel pour les agents ainsi que comme contexte explicatif pour les personnes.
+
+Cela est important car les agents agissent souvent sur la base des instructions les plus concrètes à proximité. Traçable Markdown permet de rendre visible la bonne instruction.
+
+## Let Books contexte
+
+Le référentiel Let Books prend déjà en charge la traçabilité à travers :
 
 - `AGENTS.md`
 - `AGENTS-Implementation.md`
@@ -62,13 +76,18 @@ Le dépôt Let Books prend déjà en charge la traçabilité grâce à :
 - `docs/README.md`
 - `docs/blog/README.md`
 - `docs/sources/README.md`
-- des cartes de sources sous `docs/sources/`
+- cartes sources sous `docs/sources/`
 
-Cette structure aide le projet à traiter la documentation comme un système appuyé sur des preuves plutôt que comme un ensemble libre de notes.
+Il contient également des guides Markdown qui fonctionnent comme un contexte opérationnel traçable pour le travail des agents, tels que :
 
-## Pages Associées
+- `docs/android-debugging.md` pour le choix du workflow de débogage mobile et l'utilisation de l'outil
+- `docs/style-guide/publishing/ubuntu-tooling.md` pour les capacités d'outillage et de vérification attendues
+
+Cette structure aide le projet à traiter la documentation comme un système fondé sur des preuves plutôt que comme un ensemble de notes dispersées.
+
+## Pages connexes
 
 - `product-specification.md`
 - `implementation-guidance.md`
 - `validation-layers.md`
-- `../learning/how-to-keep-spec-docs-demo-and-code-aligned.md`
+- `../../learning/fr/how-to-keep-spec-docs-demo-and-code-aligned.md`

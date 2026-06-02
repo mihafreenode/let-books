@@ -1,5 +1,7 @@
 ---
 title: "Specifikimi i produktit"
+summary: >-
+  Një specifikim produkti përcakton se për çfarë shërben një produkt, çfarë duhet të bëjë, çfarë kufijsh duhet të respektojë dhe cilat rezultate llogariten si sukses.
 topics:
   - product-specification
   - spec-writing
@@ -9,69 +11,69 @@ topics:
 
 ## Përmbledhje
 
-Një specifikim produkti përcakton për çfarë shërben produkti, çfarë duhet të bëjë, cilat kufij duhet të respektojë dhe cilat rezultate llogariten si sukses.
+Një specifikim produkti përcakton se për çfarë shërben një produkt, çfarë duhet të bëjë, çfarë kufijsh duhet të respektojë dhe cilat rezultate llogariten si sukses.
 
 ## Roli
 
-Specifikimi i produktit është përshkrimi praktik i nivelit më të lartë të sjelljes së synuar të produktit.
+Specifikimi i produktit është përshkrimi praktik i nivelit më të lartë të sjelljes së produktit të synuar.
 
-Ai duhet t'u përgjigjet pyetjeve si:
+Ai duhet t'u përgjigjet pyetjeve të tilla si:
 
 - pse ekziston produkti
 - për kë është
-- cilat rrjedha pune janë të klasit të parë
+- cilat flukse pune janë të klasit të parë
 - çfarë duhet të funksionojë edhe në kushte dështimi
-- çfarë është shprehimisht jashtë fushës
-- cilat kritere pranimi përcaktojnë një demo ose version me kuptim
+- çfarë është shprehimisht jashtë fushëveprimit
+- cilat kritere pranimi përcaktojnë një demonstrim ose lëshim kuptimplotë
 
-## Çfarë përfshihet në një specifikim produkti
+## Çfarë i përket një specifikimi produkti
 
-Përmbajtja tipike përfshin:
+Përmbajtja tipike e specifikimeve përfshin:
 
-- qëllimin e produktit
-- filozofinë bazë
-- modelin e domenit
-- përkufizimet e rrjedhave të punës
-- pritjet për privatësi dhe siguri
-- jo-qëllimet
-- udhëzime për rendin e implementimit kur ndikojnë në fushë ose dorëzim
+- qëllimi i produktit
+- filozofia thelbësore
+- modeli i domenit
+- përkufizimet e rrjedhës së punës
+- Pritshmëritë e privatësisë dhe sigurisë
+- jo gola
+- Udhëzimet e sekuencës së zbatimit kur ajo ndikon në qëllimin ose porosinë e dorëzimit
 - kriteret e pranimit
 
-Specifikimi duhet të përqendrohet te e vërteta e produktit, jo te çdo hollësi lokale e implementimit.
+Specifikimet duhet të fokusohen në të vërtetën e produktit, jo në çdo detaj të zbatimit lokal.
 
-## Çfarë zakonisht nuk përfshihet
+## Ajo që zakonisht nuk i përket atje
 
-Këto elemente zakonisht përkasin diku tjetër, përveç nëse ndikojnë drejtpërdrejt në angazhimet e produktit:
+Këta artikuj shpesh i përkasin diku tjetër nëse nuk ndikojnë drejtpërdrejt në angazhimet e produktit:
 
-- konventa të përkohshme të depos
-- konfigurim lokal mjetesh
-- vendime të ngushta për lustrim UI-je
-- udhëzime njëherëshe për diagnostikim
-- mekanika redaktoriale ose botuese që nuk ndryshojnë modelin e produktit
+- konventat e depove të përkohshme
+- konfigurimi lokal i veglave
+- vendime të ngushta të ndrydhjes së përdoruesit
+- Udhëzime një herë për korrigjimin e gabimeve
+- mekanikë editoriale ose botuese që nuk ndryshojnë modelin e produktit
 
-## Pse ka rëndësi në punën e asistuar nga IA
+## Pse ka rëndësi në punën e asistuar nga AI
 
-IA mund të gjenerojë implementime bindëse shumë shpejt. Pa një specifikim të qartë produkti, ai implementim mund të optimizojë komoditetin në vend të qëllimit.
+AI mund të gjenerojë një zbatim të besueshëm shumë shpejt. Pa një specifikim të qartë produkti, ky zbatim mund të optimizohet për lehtësi në vend të qëllimit.
 
-Specifikimi u jep rishikuesve dhe kontribuesve një standard të qëndrueshëm për të vendosur nëse rezultati i gjeneruar i përket ende produktit të synuar.
+Specifikimi u jep rishikuesve dhe kontribuesve një standard të qëndrueshëm për të vendosur nëse produkti i gjeneruar i përket akoma produktit të synuar.
 
-## Konteksti Let Books
+## Let Books kontekst
 
-Në Let Books, `AGENTS.md` është specifikimi bazë i produktit.
+Në Let Books, `AGENTS.md` është specifikimi kryesor i produktit.
 
 Ai përcakton:
 
-- qëllimin e projektit
-- modelin e domenit dhe të rrjedhave të punës
-- drejtimin për shumë-qiramarrje dhe lokalizim
-- parimet e rrjedhës manuale dhe opsionalitetit të IA-së
-- kriteret e pranimit për demon e parë
+- qëllimi i projektit
+- modeli i domenit dhe rrjedhës së punës
+- drejtimi shumë qiramarrës dhe lokalizimi
+- Rrjedha e punës manuale dhe parimet opsionale të AI
+- kriteret e pranimit për demonstrimin e parë
 
-Kjo e bën atë më shumë se një përmbledhje. Ai është autoriteti kryesor i produktit në depo.
+Kjo e bën atë më shumë se një pasqyrë. Është autoriteti kryesor i produktit në depo.
 
-## Faqe Të Lidhura
+## Faqe të ngjashme
 
 - `implementation-guidance.md`
 - `documentation-traceability.md`
 - `spec-driven-development.md`
-- `../learning/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../learning/sq/how-to-write-a-spec-that-ai-can-follow.md`

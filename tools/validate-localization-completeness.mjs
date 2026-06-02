@@ -4,8 +4,9 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const DOCS_DIR = path.join(ROOT, 'docs');
-const LOCALES = ['en', 'sl', 'hr', 'bs', 'sr-Latn', 'sr-Cyrl', 'mk', 'sq', 'de', 'it', 'fr', 'es'];
-const CONTENT_ROOTS = new Set(['blog', 'learning', 'wiki']);
+const DOCS_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, 'tools', 'docs-config.json'), 'utf8'));
+const LOCALES = DOCS_CONFIG.locales;
+const CONTENT_ROOTS = new Set(DOCS_CONFIG.contentTypes);
 const args = process.argv.slice(2);
 const reportFile = readArg('--report-file');
 const jsonReportFile = readArg('--json-report-file');

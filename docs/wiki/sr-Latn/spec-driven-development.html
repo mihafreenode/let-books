@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Razvoj vođen specifikacijom | LetBooks</title>
-    <meta name="description" content="Razvoj vođen specifikacijom je pristup u kome eksplicitne proizvodne i procesne definicije vode implementaciju, dokumentaciju, pregled i proveru.">
+    <title>Razvoj zasnovan na specifikacijama | LetBooks</title>
+    <meta name="description" content="Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Latn/spec-driven-development.html">
@@ -29,19 +29,20 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Razvoj vođen specifikacijom | LetBooks">
-    <meta property="og:description" content="Razvoj vođen specifikacijom je pristup u kome eksplicitne proizvodne i procesne definicije vode implementaciju, dokumentaciju, pregled i proveru.">
+    <meta property="og:title" content="Razvoj zasnovan na specifikacijama | LetBooks">
+    <meta property="og:description" content="Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Latn/spec-driven-development.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Razvoj vođen specifikacijom | LetBooks">
-    <meta name="twitter:description" content="Razvoj vođen specifikacijom je pristup u kome eksplicitne proizvodne i procesne definicije vode implementaciju, dokumentaciju, pregled i proveru.">
+    <meta name="twitter:title" content="Razvoj zasnovan na specifikacijama | LetBooks">
+    <meta name="twitter:description" content="Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
     <script src="../../assets/js/docs-lang.js" defer></script>
   </head>
   <body data-page-type="article" data-content-type="wiki" data-locale="sr-Latn">
@@ -60,6 +61,7 @@
             <a class="nav-link" href="../../blog/sr-Latn/index.html">Blog</a>
             <a class="nav-link" href="../../learning/sr-Latn/index.html">Materijali za učenje</a>
             <a class="nav-link" href="../../wiki/sr-Latn/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sr-Latn/index.html">Teme</a>
             <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
             <div class="lang-switch" aria-label="Language options">
               <a class="lang-link" href="../../wiki/en/spec-driven-development.html" lang="en">EN</a>
@@ -80,6 +82,16 @@
         </div>
       </header>
 
+      <div class="site-print-header print-only" aria-hidden="true">
+        <div class="section site-print-header__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-header__copy">
+            <strong>Let Books</strong>
+            <span>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</span>
+          </div>
+        </div>
+      </div>
+
       <main>
         <article class="section blog-article docs-article">
           <header class="content-page-header">
@@ -88,10 +100,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sr-Latn/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Razvoj vođen specifikacijom</span>
+              <span aria-current="page">Razvoj zasnovan na specifikacijama</span>
             </nav>
-            <h1>Razvoj vođen specifikacijom</h1>
-          <p class="content-page-summary">Razvoj vođen specifikacijom je pristup u kome eksplicitne proizvodne i procesne definicije vode implementaciju, dokumentaciju, pregled i proveru.</p>
+            <h1>Razvoj zasnovan na specifikacijama</h1>
+          <div class="content-page-meta">
+            <span>Wiki</span>
+            <span>Srpski (latinica)</span>
+          </div>
+          <p class="content-page-summary">Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Dokumentacija</span>
@@ -100,29 +116,47 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="zašto-je-važan">Zašto je važan</h2>
-<p class="lead">AI povećava brzinu isporuke, ali može da poveća i proizvodni odmak kada namera nije dovoljno jasna.</p>
-<p>Specifikacija timu daje stabilan izvor istine za:</p>
+<h2 id="definicija">Definicija</h2>
+<p class="lead">U ovom pristupu, specifikacija nije samo početni artefakt planiranja. Deluje kao stalna referenca za:</p>
 <ul>
-<li>svrhu proizvoda</li>
+<li>namena proizvoda</li>
 <li>granice obima</li>
-<li>traženo ponašanje</li>
-<li>kriterijume prihvatanja</li>
-<li>standard pregleda</li>
+<li>potrebno ponašanje</li>
+<li>kriterijumi prihvatanja</li>
+<li>preispitivanje standarda</li>
 </ul>
+<h2 id="zašto-je-to-važno-u-radu-uz-pomoć-veštačke-inteligencije">Zašto je to važno u radu uz pomoć veštačke inteligencije</h2>
+<p>AI povećava brzinu isporuke, ali takođe može povećati pomeranje proizvoda kada je namera nejasna.</p>
+<p>Razvoj zasnovan na specifikacijama pomaže time što timovima daje stabilan izvor istine koji se može pregledati, ažurirati i koristiti za procenu generisanog rezultata.</p>
 <h2 id="tipični-slojevi">Tipični slojevi</h2>
+<p>Uobičajeni slojevi u sistemu vođenom specifikacijama uključuju:</p>
 <ul>
-<li>proizvodna specifikacija</li>
-<li>implementaciona uputstva</li>
-<li>dokumentacija trenutnog stanja</li>
-<li>demo ili ponašanje aplikacije</li>
-<li>testovi i validacija</li>
-<li>CI/CD sprovođenje</li>
+<li>specifikacija proizvoda</li>
+<li>uputstvo za implementaciju</li>
+<li>dokumentacija o trenutnom stanju</li>
+<li>ponašanje demonstracije ili aplikacije</li>
+<li>pravila i testove validacije</li>
+<li>Sprovođenje CI/CD</li>
 </ul>
-<h2 id="česta-greška">Česta greška</h2>
-<p>Česta greška je da najvidljiviji artefakt postane podrazumevani izvor istine, na primer poslednji upit, trenutni prototip ili zastarela stranica dokumentacije.</p>
-<h2 id="kontekst-let-books">Kontekst Let Books</h2>
-<p>U Let Books ovaj pristup podržavaju <code>AGENTS.md</code>, <code>AGENTS-Implementation.md</code>, <code>README.md</code>, <code>docs/Development.md</code> i <code>docs/Deployment.md</code>.</p>
+<h2 id="režim-uobičajenog-kvara">Režim uobičajenog kvara</h2>
+<p>Uobičajeni način neuspeha je dopuštanje da najvidljiviji artefakt postane podrazumevani izvor istine.</p>
+<p>Primeri:</p>
+<ul>
+<li>najnoviji upit</li>
+<li>trenutni prototip</li>
+<li>trenutna prečica za implementaciju</li>
+<li>zastarela stranica sa dokumentacijom</li>
+</ul>
+<p>Specifično vođen razvoj smanjuje taj rizik tako što eksplicitno stavlja nameravani lanac ovlašćenja.</p>
+<h2 id="let-books-kontekst">Let Books kontekst</h2>
+<p>U Let Books, razvoj vođen specifikacijama je podržan od:</p>
+<ul>
+<li><code>AGENTS.md</code></li>
+<li><code>AGENTS-Implementation.md</code></li>
+<li><code>README.md</code></li>
+<li><code>docs/Development.md</code></li>
+<li><code>docs/Deployment.md</code></li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -156,17 +190,21 @@
                   <a href="../../blog/sr-Latn/spec-driven-development-in-let-books.html"><span>Razvoj vođen specifikacijom u Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sr-Latn/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kada je demo dokaz, a kada nije</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikaciju koju AI može da prati</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održati usklađenost između specifikacije, dokumentacije, dema i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održavati usklađenost specifikacije, dokumentacije, demonstracije i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../wiki/sr-Latn/markdown-in-product-development.html"><span>Markdown u razvoju proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sr-Latn/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/documentation-is-more-than-a-website.html"><span>Dokumentacija je više od veb-sajta</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sr-Latn/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sr-Latn/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
-                  <a href="../../wiki/sr-Latn/validation-layers.html"><span>Slojevi validacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sr-Latn/ai-assisted-implementation.html"><span>Implementacija uz AI podršku</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledavati AI-podržani rad prema specifikaciji</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validaciona pravila i CI pravila</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledati rad uz pomoć AI u odnosu na specifikaciju</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validaciona pravila i CI kapije</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../wiki/sr-Latn/demo-spec-alignment.html"><span>Usklađenost između dema i specifikacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sr-Latn/demo-and-specification-alignment.html"><span>Usklađenost demoa i specifikacije</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>
             </div>
@@ -180,11 +218,13 @@
           <div>
             <h3>Let Books</h3>
             <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.</p>
             <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.</p>
           </div>
           <div>
             <div class="footer-links">
               <a href="../../sr-Latn/index.html">Pregled</a>
+              <a href="../../topics/sr-Latn/index.html">Teme</a>
               <a href="../../index.html">Početna stranica</a>
               <a href="../../../static-demo/">Demo</a>
             </div>
@@ -195,6 +235,17 @@
           </div>
         </div>
       </footer>
+
+      <div class="site-print-footer print-only" aria-hidden="true">
+        <div class="section site-print-footer__inner">
+          <img src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+          <div class="site-print-footer__copy">
+            <strong>Let Books</strong>
+            <span>Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.</span>
+            <span>Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

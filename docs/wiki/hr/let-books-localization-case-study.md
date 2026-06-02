@@ -1,71 +1,71 @@
 ---
-title: "Studija slučaja lokalizacije Let Books"
+title: "Let Books Studija slučaja lokalizacije"
 summary: >-
-  Let Books je živa studija slučaja izgradnje višejezične platforme znanja i vizije proizvoda prije nego što postoji puna pozadinska aplikacija.
+  Let Books živuća je studija slučaja u izgradnji višejezične platforme znanja i vizije proizvoda prije nego što postoji puna pozadinska aplikacija.
 topics:
   - let-books
   - localization
   - public-interest-technology
 ---
-# Studija slučaja lokalizacije Let Books
+# Let Books Studija slučaja lokalizacije
 
 ## Sažetak
 
-Let Books je živa studija slučaja izgradnje višejezične platforme znanja i vizije proizvoda prije nego što postoji puna pozadinska aplikacija.
+Let Books živuća je studija slučaja u izgradnji višejezične platforme znanja i vizije proizvoda prije nego što postoji puna pozadinska aplikacija.
 
-Središnji programski model sada se nalazi u `../localization-at-scale-program.md`. Ova se stranica usredotočuje na dokaze iz repozitorija koji podupiru taj priručnik.
+Središnji programski model sada živi u `../localization-at-scale-program.md`. Ova se stranica usredotočuje na dokaze specifične za repozitorije koji podupiru taj priručnik.
 
-## Zašto je korisna
+## Zašto je korisno
 
 Pokazuje kako projekt može:
 
-- rano definirati opseg lokaliteta
-- držati pristupačnost usko povezanom s lokalizacijom
-- koristiti pisanje najprije na engleskom bez urušavanja u objavljivanje samo na engleskom
-- dokumentirati upravljanje prije nego što stigne veći opseg
+- rano definirajte opseg lokalizacije
+- držati pristupačnost povezanom s lokalizacijom
+- koristiti prvo autorstvo na engleskom bez urušavanja u objavljivanje samo na engleskom
+- dokumentirati upravljanje prije nego što stigne vaga
 
-## Slovenski primjer AI pregleda
+## Primjer slovenske AI-recenzije
 
-Repozitorij uključuje konkretan slovenski primjer pregleda u kojem je AI nacrt sačuvao opće značenje, ali je i dalje zahtijevao ispravak izvornog govornika zbog modalnosti, tečnosti i jezika registra politike.
+Repozitorij uključuje konkretan primjer slovenske recenzije gdje je nacrt umjetne inteligencije sačuvao široko značenje, ali je i dalje zahtijevao ispravak izvornog govornika za modalitet, tečnost i formulaciju u registru politike.
 
-Detaljan zapis sada se nalazi u odjeljku Nalazi pregleda izvornih govornika u `../localization-at-scale-program.md` i u `../style-guide/localization/ai-translation-review-records.md`.
+Detaljan zapis sada se nalazi u odjeljku Nalazi pregleda izvornog govornika u `../localization-at-scale-program.md` iu `../../style-guide/localization/ai-translation-review-records.md`.
 
 Ključne lekcije:
 
 - gramatičke pogreške mogu preživjeti čak i kada se rečenica čini razumljivom
-- modalnost je posebno ranjiva na doslovan prijevod
-- jezik politika i specifikacija proizvoda često traži domenski prikladan registar, a ne samo rječničku ekvivalenciju
-- automatizirane provjere rijetko same uhvate suptilne probleme tečnosti i modalnosti
+- modalitet je posebno osjetljiv na doslovni prijevod
+- jezik politike i specifikacije proizvoda često treba registar specifičan za domenu umjesto ekvivalentnosti na razini rječnika
+- automatizirane provjere rijetko same otkrivaju suptilnu tečnost i probleme s modalitetom
 
-## Primjer miješanojezičnog objavljivanja
+## Primjer objavljivanja na mješovitom jeziku
 
-Izvorni članak: `docs/blog/sl/the-cost-of-english-only-software.md`
+Izvorni članak: `docs/blog/hr/the-cost-of-english-only-software.md`
 
-Ova obitelj članaka pružila je konkretan primjer lokaliziranog naslova i djelomično lokalizirane ljuske koje su koegzistirale s engleskim objavnim površinama vidljivima čitatelju.
+Ova obitelj članaka pružila je konkretan primjer lokaliziranog naslova i djelomične lokalizirane ljuske koji koegzistira s engleskim površinama publikacije okrenutim čitatelju.
 
-Detaljno tumačenje na razini programa sada se nalazi u odjeljku Nalazi pregleda izvornih govornika u `../localization-at-scale-program.md` i u `../localization-audit-report.md`.
+Detaljno tumačenje na razini programa sada se nalazi u odjeljku Nalazi pregleda izvornog govornika u `../localization-at-scale-program.md` iu `../localization-audit-report.md`.
 
-Lekcije specifične za repozitorij:
+Lekcije specifične za spremište:
 
 - pokrivenost nije isto što i potpunost
-- izvorni metapodaci važni su jer sažeci mogu procuriti na objavne površine
-- lokalizacija taksonomije važna je jer su engleske oznake tema čitatelju vidljivi nedostaci
-- generirani HTML treba validirati, a ne mu slijepo vjerovati
+- izvorni metapodaci su važni jer sažeci mogu procuriti na površine za objavljivanje
+- lokalizacija taksonomije je bitna jer su engleske oznake tema vidljivi nedostaci okrenuti čitatelju
+- generirani HTML treba potvrditi, a ne slijepo vjerovati
 
-## Ponovno upotrebljivi referentni primjeri za benchmarking
+## Primjeri referentnih vrijednosti za višekratnu upotrebu
 
-Strukturirane primjere pregleda treba pohranjivati i kao ponovno upotrebljive referentne primjere za benchmarking kako bi buduća LLM evaluacija mogla mjeriti:
+Strukturirani recenzentski primjeri također bi trebali biti pohranjeni kao višekratni referentni primjeri kako bi buduća LLM evaluacija mogla mjeriti:
 
-- gramatičku pouzdanost
-- rukovanje modalnošću
-- terminološku preciznost
+- gramatička pouzdanost
+- rukovanje modalitetima
+- terminološka preciznost
 - točnost registra politike
-- kvalitetu bilježenja obrazloženja pregledavatelja
+- kvaliteta hvatanja obrazloženja recenzenta
 
 ## Povezane stranice
 
-- `../style-guide/localization/ai-translation-review-records.md`
-- `../style-guide/localization/llm-translation-benchmark-fixtures.md`
+- `../../style-guide/localization/ai-translation-review-records.md`
+- `../../style-guide/localization/llm-translation-benchmark-fixtures.md`
 - `let-books-localization-architecture.md`
 - `let-books-localization-lessons-learned.md`
-- `../blog/en/why-every-language-matters.md`
+- `../../blog/hr/why-every-language-matters.md`

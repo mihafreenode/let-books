@@ -1,77 +1,79 @@
 ---
-title: "Especificación del producto"
+title: "Especificación de producto"
+summary: >-
+  Una especificación de producto define para qué sirve un producto, qué debe hacer, qué límites debe respetar y qué resultados se consideran éxito.
 topics:
   - product-specification
   - spec-writing
   - spec-driven-development
 ---
-# Especificación del producto
+# Especificación de producto
 
 ## Resumen
 
-Una especificación del producto define para qué existe un producto, qué debe hacer, qué límites debe respetar y qué resultados cuentan como éxito.
+Una especificación de producto define para qué sirve un producto, qué debe hacer, qué límites debe respetar y qué resultados se consideran éxito.
 
 ## Rol
 
 La especificación del producto es la descripción práctica de más alto nivel del comportamiento previsto del producto.
 
-Debe responder a preguntas como:
+Debe responder preguntas como:
 
 - por qué existe el producto
 - para quién es
 - qué flujos de trabajo son de primera clase
-- qué debe funcionar incluso en condiciones de fallo
-- qué está explícitamente fuera de alcance
-- qué criterios de aceptación definen una demo o una versión significativa
+- lo que debe funcionar incluso en condiciones de falla
+- lo que está explícitamente fuera de alcance
+- qué criterios de aceptación definen una demostración o lanzamiento significativo
 
-## Qué pertenece a una especificación del producto
+## Qué pertenece a la especificación de un producto
 
-El contenido típico incluye:
+El contenido de especificación típico incluye:
 
 - propósito del producto
 - filosofía central
 - modelo de dominio
-- definiciones de flujos de trabajo
+- definiciones de flujo de trabajo
 - expectativas de privacidad y seguridad
-- no objetivos
-- orientación sobre la secuencia de implementación cuando afecta al alcance o al orden de entrega
+- no goles
+- guía de secuencia de implementación cuando afecte el alcance o el orden de entrega
 - criterios de aceptación
 
-La especificación debe centrarse en la verdad del producto, no en cada detalle local de implementación.
+La especificación debe centrarse en la verdad del producto, no en todos los detalles de implementación local.
 
-## Qué normalmente no pertenece ahí
+## Lo que normalmente no pertenece allí
 
-Estos elementos suelen ir en otro lugar, salvo que afecten directamente a compromisos del producto:
+Estos elementos suelen pertenecer a otra parte, a menos que afecten directamente a los compromisos de productos:
 
-- convenciones temporales del repositorio
-- configuración local de herramientas
-- decisiones estrechas de pulido de interfaz
-- orientación puntual de depuración
-- mecánicas editoriales o de publicación que no cambian el modelo del producto
+- convenciones de repositorio temporal
+- configuración de herramientas locales
+- decisiones estrechas de pulido de la interfaz de usuario
+- guía de depuración única
+- Mecánica editorial o editorial que no cambia el modelo del producto.
 
-## Por qué importa en el trabajo asistido por IA
+## Por qué es importante el trabajo asistido por IA
 
-La IA puede generar implementaciones plausibles muy rápido. Sin una especificación clara del producto, esa implementación puede optimizar la conveniencia en lugar de la intención.
+La IA puede generar una implementación plausible muy rápidamente. Sin una especificación clara del producto, esa implementación puede optimizarse por conveniencia en lugar de por intención.
 
-La especificación ofrece a revisores y colaboradores un estándar estable para decidir si la salida generada sigue perteneciendo al producto previsto.
+La especificación brinda a los revisores y contribuyentes un estándar estable para decidir si la producción generada aún pertenece al producto previsto.
 
-## Contexto de Let Books
+## Let Books contexto
 
 En Let Books, `AGENTS.md` es la especificación principal del producto.
 
 Define:
 
-- el propósito del proyecto
-- el modelo de dominio y de flujos de trabajo
-- la dirección de multiinquilinato y localización
-- los principios de flujo manual y de IA opcional
-- los criterios de aceptación para la primera demo
+- propósito del proyecto
+- modelo de dominio y flujo de trabajo
+- dirección de localización y multiinquilino
+- flujo de trabajo manual y principios opcionales de IA
+- criterios de aceptación para la primera demostración
 
-Eso lo convierte en algo más que una visión general. Es la principal autoridad de producto del repositorio.
+Eso lo convierte en más que una descripción general. Es la principal autoridad del producto en el repositorio.
 
-## Páginas Relacionadas
+## Páginas relacionadas
 
 - `implementation-guidance.md`
 - `documentation-traceability.md`
 - `spec-driven-development.md`
-- `../learning/how-to-write-a-spec-that-ai-can-follow.md`
+- `../../learning/es/how-to-write-a-spec-that-ai-can-follow.md`
