@@ -42,8 +42,17 @@ jobs:
             shellcheck \
             yamllint
 
+      - name: Install actionlint
+        run: |
+          ACTIONLINT_SCRIPT_URL="https://raw.githubusercontent.com/\
+          rhysd/actionlint/main/scripts/download-actionlint.bash"
+          curl -sSfL "$ACTIONLINT_SCRIPT_URL" | bash
+          sudo mv actionlint /usr/local/bin/
+
       - name: Validate GitHub Actions workflows
-        uses: rhysd/actionlint@v1
+        run: |
+          actionlint --version
+          actionlint
 
       - name: Validate workflow YAML
         run: yamllint .github/workflows
@@ -379,9 +388,21 @@ jobs:
             fi
           done
 
-          node tests/docs/print-validation.cjs
           DOCS_BASE_URL=http://127.0.0.1:4173 \
             python3 tools/validate_layout_structure.py
+          node tests/docs/print-validation.cjs
+
+      - name: Publish validation summary
+        run: |
+          {
+            echo "## CI Validation Summary"
+            echo
+            echo "- ✓ actionlint passed"
+            echo "- ✓ yamllint passed"
+            echo "- ✓ docs generation passed"
+            echo "- ✓ layout validation passed"
+            echo "- ✓ print validation passed"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Check favicon manifest
         run: |
