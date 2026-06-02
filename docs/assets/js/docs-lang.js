@@ -581,6 +581,7 @@ function ensurePrintStylesheet() {
 }
 
 function setupPrintPreparation() {
+  ensurePrintDocumentChrome();
   const tracked = new WeakMap();
 
   function expandAllDetails() {
@@ -600,6 +601,136 @@ function setupPrintPreparation() {
 
   window.addEventListener('beforeprint', expandAllDetails);
   window.addEventListener('afterprint', restoreDetailsState);
+}
+
+function ensurePrintDocumentChrome() {
+  const shell = document.querySelector('.page-shell');
+  const main = document.querySelector('main');
+  if (!shell || !main) return;
+
+  const locale = getCurrentLocale();
+  const contentType = document.body.dataset.contentType || getContentTypeFromPath();
+  const sectionLabel = getPrintSectionLabel(locale, contentType);
+  const pageTitle = document.querySelector('h1')?.textContent?.trim() || document.title.replace(/\s*\|\s*LetBooks?$/i, '').trim();
+  const canonicalHref = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+
+  let printHeader = document.querySelector('.site-print-header');
+  if (!printHeader) {
+    printHeader = document.createElement('div');
+    printHeader.className = 'site-print-header print-only';
+    printHeader.setAttribute('aria-hidden', 'true');
+    printHeader.innerHTML = '<div class="section site-print-header__inner"><img src="" alt="Let Books"><div class="site-print-header__copy"></div></div>';
+    shell.insertBefore(printHeader, main);
+  }
+
+  const printHeaderImage = printHeader.querySelector('img');
+  if (printHeaderImage) {
+    const existingMark = document.querySelector('.brand-mark, .site-header img, .site-print-header img');
+    if (existingMark?.getAttribute('src')) {
+      printHeaderImage.src = existingMark.getAttribute('src');
+    }
+    printHeaderImage.alt = 'Let Books';
+  }
+
+  const copy = printHeader.querySelector('.site-print-header__copy');
+  if (copy) {
+    copy.innerHTML = '';
+
+    const brand = document.createElement('strong');
+    brand.textContent = 'Let Books';
+    copy.appendChild(brand);
+
+    if (sectionLabel) {
+      const section = document.createElement('span');
+      section.className = 'site-print-header__section';
+      section.textContent = sectionLabel;
+      copy.appendChild(section);
+    }
+
+    if (pageTitle) {
+      printHeader.setAttribute('data-print-title', pageTitle);
+    }
+  }
+
+  let runningFooter = shell.querySelector('.site-print-running-footer');
+  if (!runningFooter) {
+    runningFooter = document.createElement('div');
+    runningFooter.className = 'site-print-running-footer print-only';
+    runningFooter.setAttribute('aria-hidden', 'true');
+    shell.appendChild(runningFooter);
+  }
+  runningFooter.innerHTML = '<span>Let Books</span><span>https://letbooks.org</span><span class="site-print-running-footer__pages">Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>';
+
+  let endnote = shell.querySelector('.site-print-endnote');
+  if (!endnote) {
+    endnote = document.createElement('section');
+    endnote.className = 'site-print-endnote print-only';
+    endnote.setAttribute('aria-hidden', 'true');
+    main.insertAdjacentElement('afterend', endnote);
+  }
+
+  const note = document.querySelector('.footer-note')?.textContent?.trim();
+  const microcopy = document.querySelector('.footer-microcopy')?.textContent?.trim();
+  endnote.innerHTML = '';
+
+  const endnoteTitle = document.createElement('h2');
+  endnoteTitle.textContent = getPrintEndnoteLabel(locale);
+  endnote.appendChild(endnoteTitle);
+
+  if (note) {
+    const noteParagraph = document.createElement('p');
+    noteParagraph.textContent = note;
+    endnote.appendChild(noteParagraph);
+  }
+
+  if (microcopy) {
+    const microcopyParagraph = document.createElement('p');
+    microcopyParagraph.textContent = microcopy;
+    endnote.appendChild(microcopyParagraph);
+  }
+
+  let metaUrl = document.querySelector('.content-page-meta .print-url');
+  if (!metaUrl) {
+    const meta = document.querySelector('.content-page-meta');
+    if (meta) {
+      metaUrl = document.createElement('span');
+      metaUrl.className = 'print-url';
+      meta.appendChild(metaUrl);
+    }
+  }
+
+  if (metaUrl) {
+    metaUrl.textContent = canonicalHref;
+  }
+}
+
+function getContentTypeFromPath() {
+  const match = window.location.pathname.match(/\/docs\/(blog|learning|wiki|topics)\//);
+  return match ? match[1] : '';
+}
+
+function getPrintSectionLabel(locale, contentType) {
+  const labels = DOCS_LOCALE_CONFIG.docsNavLabels[locale] || DOCS_LOCALE_CONFIG.docsNavLabels.en;
+  return labels?.[contentType] || (contentType ? contentType[0].toUpperCase() + contentType.slice(1) : '');
+}
+
+function getPrintEndnoteLabel(locale) {
+  const labels = {
+    en: 'Notes',
+    sl: 'Opombe',
+    hr: 'Napomene',
+    bs: 'Napomene',
+    'sr-Latn': 'Napomene',
+    'sr-Cyrl': 'Напомене',
+    mk: 'Напомени',
+    sq: 'Shenime',
+    de: 'Hinweise',
+    it: 'Note',
+    fr: 'Notes',
+    es: 'Notas',
+  };
+
+  return labels[locale] || labels.en;
 }
 
 function setupMobileNav() {
