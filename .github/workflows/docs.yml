@@ -28,10 +28,34 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Install pandoc
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc
+          sudo apt-get install -y pandoc hunspell jq imagemagick curl wget
+
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Verify toolchain versions
+        run: |
+          python3 --version
+          node --version
+          npm --version
+          git --version
+          pandoc --version
+          hunspell -v
+          jq --version
+          magick --version || convert --version
+          npx playwright --version
+
+      - name: Validate build environment
+        run: python3 tools/validate_environment.py
 
       - name: Regenerate SEO metadata
         run: node tools/generate-static-seo.mjs
@@ -84,9 +108,10 @@ jobs:
           python3 -m http.server 4173 >/tmp/letbooks-print.log 2>&1 &
           SERVER_PID=$!
           trap 'kill $SERVER_PID' EXIT
-          npm install --no-save playwright
-          npx playwright install chromium
           node tests/docs/print-validation.cjs
+
+      - name: Layout validation
+        run: python3 tools/validate_layout_structure.py
 
       - name: Validate static-demo localization
         run: node tests/static-demo/localization-smoke.js

@@ -979,6 +979,14 @@ a:focus-visible > p {
   border: 0;
 }
 
+.print-only,
+.site-print-header,
+.site-print-footer,
+.site-print-running-footer,
+.site-print-endnote {
+  display: none !important;
+}
+
 @media (max-width: 1100px) {
   .hero,
   .footer-inner,
