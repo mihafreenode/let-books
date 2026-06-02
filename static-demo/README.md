@@ -2,6 +2,24 @@
 
 Let Books Local Demo is a real installable Progressive Web App (PWA) prototype for testing the future Let Books workflow without any backend.
 
+## Purpose
+
+`static-demo/` is the repository's main executable deliverable today.
+
+It exists to prove the mobile-first intake, QR, ISBN, export, and local-transfer workflows before the future hosted application exists.
+
+## Why It Exists
+
+This demo lets the project validate the practical workflow first:
+
+- add books quickly on a phone
+- scan boxes and ISBNs
+- browse covers and box contents
+- export data for review
+- test real mobile behavior without depending on backend infrastructure
+
+It prevents the project from treating the specification as the only evidence.
+
 ## What It Is
 
 This demo is designed to:
@@ -119,6 +137,29 @@ Then open:
 http://127.0.0.1:8000/static-demo/
 ```
 
+Useful local commands:
+
+```bash
+node tests/static-demo/localization-smoke.js
+```
+
+```bash
+python3 -m http.server 8000
+```
+
+## Service Worker Gotchas
+
+The demo is installable and offline-capable, so cached behavior can survive source edits.
+
+When a local verification result does not match the current source:
+
+- hard refresh the page
+- unregister the service worker in DevTools
+- clear site data if necessary
+- reload and re-test before assuming the source change failed
+
+This matters especially for route behavior, localization resources, and startup flows.
+
 ## Camera Verification Note
 
 Automated tests may mock camera access, but scanner-camera regressions must also be verified manually on real Android and iOS phones.
@@ -137,7 +178,30 @@ Android regression note:
 
 Android troubleshooting note:
 
-- `../docs/android-camera-debugging.md`
+- `../docs/android-debugging.md`
+
+## Mobile Verification Flow
+
+For a realistic manual pass on phone:
+
+1. open the demo on a real Android or iPhone browser
+2. verify box browsing and cover thumbnails
+3. open the scanner and confirm rear-camera preference
+4. test ISBN lookup with `9780434912902`
+5. test fallback lookup with `9789610167525`
+6. add a book with photos
+7. test QR workflow or ZIP export/import
+8. re-open the app offline and confirm local data still exists
+
+Related debugging guide:
+
+- `../docs/android-debugging.md`
+
+Related tests and workflows:
+
+- `../tests/static-demo/localization-smoke.js`
+- `../.github/workflows/ci.yml`
+- `../AGENTS-Implementation.md`
 
 ## Contributor Tooling
 
@@ -353,6 +417,15 @@ It defaults to browser language when supported and remembers the user's manual s
 ## Reset Demo Data
 
 The app includes a `Reset Demo Data` action that restores the seeded local demo dataset.
+
+## Reuse Potential
+
+`static-demo/` is also a reusable engineering pattern for product development:
+
+- build a local-first executable workflow prototype
+- validate phone behavior before backend complexity exists
+- use the prototype as runtime evidence alongside specs and docs
+- keep validators and smoke checks close to the prototype
 
 ## Visual Attribution
 

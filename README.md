@@ -172,6 +172,12 @@ Recommended curated skill:
 
 For AI-assisted development, strongly prefer a Playwright-oriented skill package when the environment supports reusable skills. See `static-demo/README.md` for the full contributor tooling stack, Playwright setup, localization validation expectations, and screenshot/documentation workflow guidance.
 
+Repository automation and validation are documented close to their implementation:
+
+- `tools/README.md` for generators, validators, and maintenance tooling
+- `.github/workflows/README.md` for CI/CD guarantees and deployment automation
+- `tests/README.md` for runtime/browser-facing regression coverage
+
 ## Mobile Debugging
 
 This project strongly prefers real-device Android debugging for camera, barcode, and QR workflows.
@@ -242,6 +248,9 @@ In short:
 
 - `AGENTS.md` holds the product specification
 - `AGENTS-Implementation.md` holds evolving implementation guidance
+
+Keep product principles, workflows, and acceptance direction in `AGENTS.md`.
+Keep tooling, validators, workflow guidance, and other tactical implementation rules in `AGENTS-Implementation.md`.
 
 ## Verification Notes
 

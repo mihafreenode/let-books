@@ -1,5 +1,39 @@
 # Android Mobile Debugging Guide
 
+## Why This Guide Exists
+
+Camera, barcode, and QR regressions are some of the easiest failures to misdiagnose from desktop emulation alone.
+
+This guide exists because the shortest path to a real fix is usually:
+
+- real device first
+- preserve the existing browser session
+- attach over CDP instead of relaunching repeatedly
+- instrument the running page before changing permanent source code
+
+It is a reusable debugging workflow, not just a one-off setup note.
+
+It is also intended for AI-assisted debugging sessions where the agent needs to use the phone as a real debug target instead of treating mobile behavior as something inferred from desktop emulation.
+
+## Core Principles
+
+- prefer real Android device validation over desktop emulation for camera and scanning work
+- optimize for the shortest edit/test loop
+- prefer CDP attachment and tab refresh over repeated browser relaunches
+- preserve permissions, cookies, session state, and the existing Chrome tab whenever possible
+- use runtime instrumentation first when the goal is diagnosis rather than a permanent fix
+
+## Agent Use
+
+When an agent is asked to debug mobile camera, barcode, QR, or touch behavior, this guide should be treated as the default workflow for using the phone as the active debug target.
+
+That means:
+
+- connect to the real device first
+- attach to the existing Android Chrome session when possible
+- verify behavior on the phone before drawing conclusions from desktop results
+- keep the phone in the loop during source edits, refreshes, and runtime instrumentation
+
 This workflow is intentionally optimized for:
 
 - physical Android devices
@@ -21,6 +55,35 @@ Document the preferred workflow for:
 - barcode/QR testing
 - real camera validation
 - runtime instrumentation
+
+## Shortest Edit/Test Loop
+
+When debugging mobile scanning or camera behavior, the preferred loop is:
+
+1. keep the phone connected
+2. keep the target Chrome tab open
+3. serve the local source once
+4. attach through CDP
+5. refresh the existing tab after edits
+6. relaunch Chrome only when the session is genuinely corrupted
+
+This is faster and more reliable than repeatedly reopening the browser, regranting permissions, and reconstructing app state.
+
+## CDP Attach vs Relaunch
+
+Prefer CDP attach when:
+
+- the page is already open on the phone
+- camera permissions are already granted
+- you need to inspect runtime state, logs, DOM, or overlays
+- you want the shortest diagnosis loop
+
+Prefer a full relaunch only when:
+
+- you need a clean-session reproduction
+- the current tab is in a bad state
+- service worker or browser state has become misleading
+- you are validating first-load behavior rather than an in-session fix
 
 ---
 

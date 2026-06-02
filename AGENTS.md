@@ -4,6 +4,11 @@ Implementation details beyond this product specification live in `AGENTS-Impleme
 From now on, new implementation-specific guidance should be added there.
 Use both `AGENTS.md` and `AGENTS-Implementation.md` as reference for documentation and code generation.
 
+Boundary rule:
+
+- keep product purpose, philosophy, workflows, scope, and acceptance criteria in `AGENTS.md`
+- keep tooling, validators, workflow orchestration, debugging practice, and other tactical implementation guidance in `AGENTS-Implementation.md`
+
 ## Mobile Debugging
 
 Android/mobile debugging workflows are documented separately in `docs/android-debugging.md`.
