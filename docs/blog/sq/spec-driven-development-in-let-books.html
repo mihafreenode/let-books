@@ -111,7 +111,7 @@
 <p>Projekti ende nuk është një aplikacion i plotë i hostuar. Aktualisht ai përfshin një specifikim produkti, udhëzime implementimi, dokumentim publik dhe një demo statike lokale. Kjo e bën një shembull të mirë të mënyrës se si një projekt mund të mbetet i qëndrueshëm përpara se të ekzistojë platforma përfundimtare e prodhimit.</p>
 <h2 id="shtresa-e-specifikimit">Shtresa e specifikimit</h2>
 <p><code>AGENTS.md</code> është specifikimi kryesor i produktit. Ai përcakton qëllimin e projektit, modelin e domenit, rrjedhat e punës, kufijtë e fushës, drejtimin e lokalizimit, privatësinë, opsionalitetin e AI dhe kriteret e pranimit.</p>
-<p>Ai u përgjigjet pyetjeve si:</p>
+<p>Kjo është e rëndësishme sepse u përgjigjet pyetjeve që vetëm kodi nuk mund t’i sqarojë qartë:</p>
 <ul>
 <li>pse ekziston projekti</li>
 <li>cilat rrjedha pune janë të klasit të parë</li>
@@ -122,24 +122,46 @@
 <p>Ky është dallimi midis një përshkrimi të përgjithshëm dhe një specifikimi të vërtetë. Një specifikim i vërtetë kufizon zgjedhjet e implementimit.</p>
 <h2 id="shtresa-e-udhëzimeve-taktike">Shtresa e udhëzimeve taktike</h2>
 <p><code>AGENTS-Implementation.md</code> shton shtresën e dytë. Ai nuk e zëvendëson specifikimin e produktit, por shpjegon se si duhet të kryhet puna aktualisht në këtë depo.</p>
-<p>Këtu përfshihen rregullat për emërtimin publik, dokumentimin, faqen statike, lokalizimin, verifikimin dhe politikën e evidencës për shkrimin publik. Kjo është e rëndësishme sepse jo çdo rregull është e vërtetë produkti. Disa janë taktike, editoriale ose specifike për depon.</p>
+<p>Shembuj përfshijnë:</p>
+<ul>
+<li>rregulla të emërtimit publik</li>
+<li>rregulla të implementimit të dokumentimit</li>
+<li>pritshmëri për metadata të sajtit statik</li>
+<li>kufizime të demove</li>
+<li>pritshmëri për lokalizimin dhe verifikimin</li>
+<li>politikë editoriale të evidencës për shkrimin publik</li>
+</ul>
+<p>Kjo është e rëndësishme në punën e asistuar nga AI, sepse jo çdo rregull i përket specifikimit afatgjatë të produktit. Disa rregulla janë taktike, editoriale ose specifike për depon. Mbajtja e kësaj dallese të qartë ul zhurmën dhe e pengon specifikimin e produktit të shndërrohet në depo të hollësive të implementimit.</p>
 <h2 id="shtresa-e-gjendjes-aktuale">Shtresa e gjendjes aktuale</h2>
-<p><code>README.md</code> përfaqëson shtresën e tretë: një përshkrim i ndershëm i gjendjes aktuale.</p>
-<p>Ai shpjegon çfarë ekziston sot, çfarë ende nuk ekziston, për çfarë shërben demoja statike dhe si publikohet faqja publike. Kjo i ndihmon bashkëpunëtorët, institucionet dhe rishikuesit të mos ngatërrojnë ambicien me implementimin.</p>
+<p><code>README.md</code> përfaqëson shtresën e tretë: një përshkrim të gjendjes aktuale.</p>
+<p>Ai shpjegon çfarë ekziston sot, çfarë ende nuk ekziston, për çfarë shërben demoja statike dhe si publikohet faqja publike. Kjo është pjesë kyçe e përafrimit, sepse projektet shpesh dështojnë kur lexuesit ngatërrojnë ambicien me implementimin.</p>
+<p>Në Let Books, README dallon shprehimisht dorëzimet aktuale nga planet e ardhshme. Kjo i ndihmon bashkëpunëtorët, institucionet dhe rishikuesit të kuptojnë pjekurinë e projektit pa supozime.</p>
 <h2 id="shtresa-e-dokumentimit">Shtresa e dokumentimit</h2>
-<p><code>docs/</code> shton shtresën e katërt. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> dhe udhëzuesit e stilit përcaktojnë se si duhet të organizohet, publikohet dhe verifikohet njohuria.</p>
+<p>Zona <code>docs/</code> shton shtresën e katërt. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code>, udhëzuesit e stilit dhe zona <code>sources</code> përcaktojnë se si duhet të organizohet, validohet dhe publikohet njohuria.</p>
 <p>Këtu depoja bëhet më shumë se një koleksion skedarësh. Ajo bëhet një platformë dijeje me:</p>
 <ul>
 <li>arkitekturë dokumentimi</li>
 <li>rregulla të evidencës editoriale</li>
 <li>strukturë botimi shumëgjuhëshe</li>
-<li>rregulla publikimi dhe verifikimi</li>
+<li>rregulla të publikimit të dokumentimit publik</li>
+<li>udhëzime zhvillimi dhe validimi</li>
 </ul>
+<p>Kjo është pikërisht lloji i skeletit që ndihmon dorëzimin e asistuar nga AI të mbetet i gjurmueshëm.</p>
 <h2 id="shtresa-e-demove">Shtresa e demove</h2>
 <p>Demoja statike është e rëndësishme, por me qëllim nuk është autoriteti i vetëm. Rregullat për blogun dhe burimet tashmë bëjnë dallimin mes dokumentimit kanonik dhe statusit të implementimit.</p>
 <p>Kjo do të thotë se demoja mund të verifikojë rrjedhat e punës, të zbulojë probleme përdorshmërie dhe të ndihmojë në shpjegim për aktorët e jashtëm, pa u bërë vetvetiu e vërteta përfundimtare e produktit.</p>
+<p>Ky është një rregull i pjekur. Pa të, prototipet shpesh bëhen mekanizma të rastësishëm qeverisjeje. Një ekip fillon ta kopjojë prototipin sepse ekziston, jo sepse ai pasqyron një vendim të miratuar produkti.</p>
 <h2 id="shtresa-e-verifikimit">Shtresa e verifikimit</h2>
-<p>Let Books tashmë dokumenton edhe një mënyrë të menduari për verifikimin. <code>docs/Development.md</code> dhe <code>docs/Deployment.md</code> përshkruajnë teste smoke për lokalizimin, validimin e skedarëve të strukturuar, gjenerimin e metadatave, skedarët e detyrueshëm, kontrollin drejtshkrimor dhe publikimin e automatizuar.</p>
+<p>Let Books tashmë dokumenton edhe një mënyrë të menduari për verifikimin.</p>
+<p><code>docs/Development.md</code> dhe <code>docs/Deployment.md</code> përshkruajnë shtresa validimi si:</p>
+<ul>
+<li>teste smoke të lokalizimit</li>
+<li>validim të skedarëve të strukturuar</li>
+<li>gjenerim metadatash</li>
+<li>kontrolle për skedarët e detyrueshëm</li>
+<li>kontroll drejtshkrimor opsional dhe linting</li>
+<li>automatizim të publikimit</li>
+</ul>
 <p>Këto nuk janë vetëm hollësi mjetesh. Ato janë provë se projekti e trajton cilësinë si sistem të përsëritshëm.</p>
 <h2 id="pse-kjo-ka-rëndësi-për-dorëzimin-e-mbështetur-nga-ai">Pse kjo ka rëndësi për dorëzimin e mbështetur nga AI</h2>
 <p>Nëse një asistent AI kontribuon te Let Books, nuk ka nevojë ta shpikë produktin nga fillimi. Depoja tashmë përmban një zinxhir synimi:</p>
@@ -153,8 +175,18 @@
 </ol>
 <p>Ky zinxhir nuk i eliminon gabimet. Por i bën më të lehta për t’u zbuluar dhe shqyrtuar.</p>
 <h2 id="mësimi-kryesor">Mësimi kryesor</h2>
-<p>Zhvillimi i udhëhequr nga specifikimi nuk do të thotë vetëm të shkruash një dokument të gjatë përpara kodimit. Në praktikë do të thotë të ndërtosh një zinxhir të besueshëm midis qëllimit të produktit, rregullave taktike, dokumentimit publik, demove, verifikimit dhe publikimit.</p>
-<p>Let Books tregon se një zinxhir i tillë mund të ekzistojë edhe përpara aplikacionit të plotë backend. Pikërisht kjo është një nga avantazhet më të forta të zhvillimit të udhëhequr nga specifikimi në punën e mbështetur nga AI.</p>
+<p>Zhvillimi i udhëhequr nga specifikimi nuk do të thotë vetëm të shkruash një dokument të gjatë me kërkesa para se të fillojë kodimi.</p>
+<p>Në praktikë, do të thotë të ndërtosh një zinxhir të besueshëm midis:</p>
+<ul>
+<li>qëllimit të produktit</li>
+<li>rregullave taktike</li>
+<li>dokumentimit publik</li>
+<li>demove</li>
+<li>validimit</li>
+<li>publikimit</li>
+</ul>
+<p>Let Books tashmë tregon se një zinxhir i tillë mund të ekzistojë edhe përpara se të ekzistojë produkti i plotë backend.</p>
+<p>Ky është një nga argumentet më të forta për zhvillimin e udhëhequr nga specifikimi në punën e mbështetur nga AI: sa më i qartë të jetë zinxhiri i qëllimit, aq më pak gjasa ka që dalja e shpejtë të shndërrohet në konfuzion të shpejtë.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

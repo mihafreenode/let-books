@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Локализација на скала | LetBooks</title>
-    <meta name="description" content="Локализацијата на размер е практика на третирање на повеќејазичните содржини како дизајниран систем кој опфаќа пишување, управување, средства, пристапност, валидација и преглед.">
+    <title>Локализација во голем обем | LetBooks</title>
+    <meta name="description" content="Локализацијата во голем обем е практика на третирање на повеќејазичното објавување како систем на повратна врска и долгорочен систем на знаење, а не како еднократна преведувачка задача.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/mk/localization-at-scale.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Локализација на скала | LetBooks">
-    <meta property="og:description" content="Локализацијата на размер е практика на третирање на повеќејазичните содржини како дизајниран систем кој опфаќа пишување, управување, средства, пристапност, валидација и преглед.">
+    <meta property="og:title" content="Локализација во голем обем | LetBooks">
+    <meta property="og:description" content="Локализацијата во голем обем е практика на третирање на повеќејазичното објавување како систем на повратна врска и долгорочен систем на знаење, а не како еднократна преведувачка задача.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/mk/localization-at-scale.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Локализација на скала | LetBooks">
-    <meta name="twitter:description" content="Локализацијата на размер е практика на третирање на повеќејазичните содржини како дизајниран систем кој опфаќа пишување, управување, средства, пристапност, валидација и преглед.">
+    <meta name="twitter:title" content="Локализација во голем обем | LetBooks">
+    <meta name="twitter:description" content="Локализацијата во голем обем е практика на третирање на повеќејазичното објавување како систем на повратна врска и долгорочен систем на знаење, а не како еднократна преведувачка задача.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/mk/index.html">Вики</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Локализација на скала</span>
+              <span aria-current="page">Локализација во голем обем</span>
             </nav>
-            <h1>Локализација на скала</h1>
+            <h1>Локализација во голем обем</h1>
           <div class="content-page-meta">
             <span>Вики</span>
             <span>Македонски</span>
           </div>
-          <p class="content-page-summary">Локализацијата на размер е практика на третирање на повеќејазичните содржини како дизајниран систем кој опфаќа пишување, управување, средства, пристапност, валидација и преглед.</p>
+          <p class="content-page-summary">Локализацијата во голем обем е практика на третирање на повеќејазичното објавување како систем на повратна врска и долгорочен систем на знаење, а не како еднократна преведувачка задача.</p>
             <hr class="content-header-divider">
           </header>
 <h2 id="основна-идеја">Основна идеја</h2>
@@ -106,17 +106,31 @@
 <ul>
 <li>изворно пишување</li>
 <li>терминологија</li>
+<li>метаподатоци</li>
 <li>навигација</li>
 <li>текст за пристапност</li>
-<li>дијаграми и слики од екранот</li>
-<li>метаподатоци</li>
+<li>дијаграми и снимки од екранот</li>
 <li>преглед на работниот тек</li>
 <li>CI и QA</li>
 </ul>
-<h2 id="зошто-е-важно">Зошто е важно</h2>
-<p>Проектите кои ја одложуваат локализацијата обично откриваат дека нивната информациска архитектура, слики од екранот и претпоставките за тестирање се веќе во англиска форма.</p>
-<h2 id="let-books-контекст">Let Books контекст</h2>
-<p>Let Books е експлицитно повеќејазичен во насока на производ, документација и очекувања за корисничкиот интерфејс. Тоа ја прави архитектурата на локализација основна грижа за производот.</p>
+<h2 id="меродавен-прирачник">Меродавен прирачник</h2>
+<p>Централниот оперативен модел за оваа иницијатива сега се наоѓа во:</p>
+<ul>
+<li><code>../localization-at-scale-program.md</code></li>
+</ul>
+<p>Тој прирачник дефинира:</p>
+<ul>
+<li>зошто повеќејазичното објавување е важно</li>
+<li>зошто локализацијата е систем, а не проект</li>
+<li>како AI се вклопува во повратните јамки</li>
+<li>модел на квалитет за покриеност, целосност, квалитет и свежина</li>
+<li>локализациски долг и отворени класи на грешки</li>
+<li>санација по принципот source-first и тек на работа за AI агенти</li>
+<li>локализациско отстапување и зрелост на репозиториумот</li>
+<li>детален корпус од наоди на прегледи од изворни говорители</li>
+</ul>
+<h2 id="практично-правило">Практично правило</h2>
+<p>Локализираната страница не е довршена сè додека не е локализирана целата содржина што читателот ја гледа, вклучувајќи резимеа, ознаки, главен текст, натписи, дијаграми, алтернативен текст и површини со поврзана содржина.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

@@ -111,7 +111,7 @@
 <p>Il progetto non e ancora un’applicazione ospitata completa. Al momento include una specifica di prodotto, linee guida di implementazione, documentazione pubblica e una demo statica locale. Per questo e un buon esempio di come un progetto possa restare coerente prima ancora che esista lo stack di produzione finale.</p>
 <h2 id="il-livello-della-specifica">Il livello della specifica</h2>
 <p><code>AGENTS.md</code> e la specifica centrale di prodotto. Definisce lo scopo del progetto, il modello di dominio, i flussi di lavoro, i limiti di ambito, la direzione della localizzazione, la privacy, l’opzionalita dell’IA e i criteri di accettazione.</p>
-<p>Risponde a domande come:</p>
+<p>Questo è importante perché risponde a domande a cui il solo codice non può dare una risposta chiara:</p>
 <ul>
 <li>perché esiste il progetto</li>
 <li>quali flussi di lavoro sono di prima classe</li>
@@ -122,24 +122,46 @@
 <p>Questa e la differenza tra una descrizione generale e una vera specifica. Una vera specifica limita le scelte di implementazione.</p>
 <h2 id="il-livello-delle-linee-guida-tattiche">Il livello delle linee guida tattiche</h2>
 <p><code>AGENTS-Implementation.md</code> aggiunge il secondo livello. Non sostituisce la specifica di prodotto, ma spiega come il lavoro debba essere svolto oggi in questo repository.</p>
-<p>Qui rientrano regole su naming pubblico, documentazione, sito statico, localizzazione, verifica e politica delle prove per la scrittura pubblica. Questo e importante perché non ogni regola e una verita di prodotto. Alcune sono tattiche, editoriali o specifiche del repository.</p>
+<p>Esempi includono:</p>
+<ul>
+<li>regole di denominazione pubblica</li>
+<li>regole di implementazione della documentazione</li>
+<li>aspettative sui metadati del sito statico</li>
+<li>limiti della demo</li>
+<li>aspettative su localizzazione e verifica</li>
+<li>politica editoriale delle prove per la scrittura pubblica</li>
+</ul>
+<p>Questo è importante nel lavoro assistito dall’IA perché non ogni regola appartiene alla specifica di prodotto a lungo termine. Alcune regole sono tattiche, editoriali o specifiche del repository. Mantenere chiara questa distinzione riduce il rumore e impedisce che la specifica di prodotto diventi un deposito di dettagli implementativi.</p>
 <h2 id="il-livello-dello-stato-attuale">Il livello dello stato attuale</h2>
-<p><code>README.md</code> rappresenta il terzo livello: una descrizione onesta dello stato attuale.</p>
-<p>Spiega cosa esiste oggi, cosa ancora manca, a cosa serve la demo statica e come viene pubblicato il sito pubblico. Questo aiuta collaboratori, istituzioni e revisori a non confondere l’ambizione con l’implementazione.</p>
+<p><code>README.md</code> rappresenta il terzo livello: una descrizione dello stato attuale.</p>
+<p>Spiega cosa esiste oggi, cosa ancora manca, a cosa serve la demo statica e come viene pubblicato il sito pubblico. Questa è una parte fondamentale dell’allineamento, perché i progetti spesso falliscono quando i lettori confondono l’ambizione con l’implementazione.</p>
+<p>In Let Books, il README distingue esplicitamente tra i risultati attuali e i piani futuri. Questo aiuta collaboratori, istituzioni e revisori a comprendere la maturità del progetto senza supposizioni.</p>
 <h2 id="il-livello-della-documentazione">Il livello della documentazione</h2>
-<p><code>docs/</code> aggiunge il quarto livello. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> e le guide di stile definiscono come la conoscenza debba essere organizzata, pubblicata e verificata.</p>
+<p>L’area <code>docs/</code> aggiunge il quarto livello. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code>, le guide di stile e l’area <code>sources</code> definiscono come la conoscenza debba essere organizzata, validata e pubblicata.</p>
 <p>Qui il repository diventa qualcosa di piu di una raccolta di file. Diventa una piattaforma di conoscenza con:</p>
 <ul>
 <li>architettura della documentazione</li>
 <li>regole di evidenza editoriale</li>
 <li>struttura di pubblicazione multilingue</li>
-<li>regole di pubblicazione e verifica</li>
+<li>regole di pubblicazione della documentazione pubblica</li>
+<li>linee guida di sviluppo e validazione</li>
 </ul>
+<p>Questo è esattamente il tipo di impalcatura che aiuta la consegna assistita dall’IA a rimanere tracciabile.</p>
 <h2 id="il-livello-della-demo">Il livello della demo</h2>
 <p>La demo statica e importante, ma volutamente non e l’unica autorita. Le regole del blog e delle fonti distinguono gia tra documentazione canonica e stato di implementazione.</p>
 <p>Questo significa che la demo puo verificare i flussi di lavoro, rivelare problemi di usabilita e aiutare a spiegare il progetto a soggetti esterni, senza diventare da sola la verita finale di prodotto.</p>
+<p>Questa è una regola matura. Senza di essa, i prototipi diventano spesso meccanismi di governance accidentale. Un team inizia a copiare il prototipo perché esiste, non perché rifletta una decisione di prodotto approvata.</p>
 <h2 id="il-livello-della-verifica">Il livello della verifica</h2>
-<p>Let Books documenta gia anche una mentalita di verifica. <code>docs/Development.md</code> e <code>docs/Deployment.md</code> descrivono smoke test di localizzazione, validazione di file strutturati, generazione di metadati, file obbligatori, controlli ortografici e pubblicazione automatizzata.</p>
+<p>Let Books documenta già anche una mentalità di verifica.</p>
+<p><code>docs/Development.md</code> e <code>docs/Deployment.md</code> descrivono livelli di validazione come:</p>
+<ul>
+<li>smoke test di localizzazione</li>
+<li>validazione di file strutturati</li>
+<li>generazione di metadati</li>
+<li>controlli sui file obbligatori</li>
+<li>controllo ortografico opzionale e linting</li>
+<li>automazione della pubblicazione</li>
+</ul>
 <p>Questi non sono solo dettagli di strumenti. Sono la prova che il progetto tratta la qualita come un sistema ripetibile.</p>
 <h2 id="perché-questo-conta-per-la-consegna-assistita-dallia">Perché questo conta per la consegna assistita dall’IA</h2>
 <p>Se un assistente IA contribuisce a Let Books, non deve inventare il prodotto da zero. Il repository contiene già una catena di intenzione:</p>
@@ -153,8 +175,18 @@
 </ol>
 <p>Questa catena non elimina gli errori. Ma li rende più facili da individuare e da rivedere.</p>
 <h2 id="la-lezione-principale">La lezione principale</h2>
-<p>Lo sviluppo guidato dalle specifiche non significa solo scrivere un lungo documento prima di programmare. In pratica significa costruire una catena affidabile tra intenzione di prodotto, regole tattiche, documentazione pubblica, demo, verifica e pubblicazione.</p>
-<p>Let Books mostra che una catena del genere puo esistere anche prima di un’applicazione backend completa. Questo e uno dei vantaggi piu forti dello sviluppo guidato dalle specifiche nel lavoro supportato dall’IA.</p>
+<p>Lo sviluppo guidato dalle specifiche non significa soltanto scrivere un lungo documento di requisiti prima di iniziare a programmare.</p>
+<p>In pratica, significa costruire una catena affidabile tra:</p>
+<ul>
+<li>intenzione di prodotto</li>
+<li>regole tattiche</li>
+<li>documentazione pubblica</li>
+<li>demo</li>
+<li>validazione</li>
+<li>pubblicazione</li>
+</ul>
+<p>Let Books mostra già che una catena del genere può esistere prima ancora che esista il prodotto backend completo.</p>
+<p>Questo è uno degli argomenti più forti a favore dello sviluppo guidato dalle specifiche nel lavoro assistito dall’IA: più chiara è la catena dell’intento, meno è probabile che un output rapido diventi una rapida confusione.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

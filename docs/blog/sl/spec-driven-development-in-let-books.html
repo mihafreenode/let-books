@@ -108,39 +108,61 @@
             <hr class="content-header-divider">
           </header>
 <p class="lead">Let Books je uporaben študijski primer razvoja na podlagi specifikacij, ker repozitorij že vsebuje več plasti produktnega namena, ne le implementacijskih artefaktov.</p>
-<p>Projekt še ni polna gostovana aplikacija. Trenutno vključuje produktno specifikacijo, implementacijska navodila, javno dokumentacijo in lokalni statični demo. Zaradi tega je dober primer, kako lahko projekt ostane usklajen, še preden obstaja končni produkcijski sklad.</p>
+<p>Projekt še ni polna gostovana aplikacija. Trenutno vključuje produktno specifikacijo, implementacijska navodila, javno dokumentacijo in statični lokalni demo. Zaradi tega je dober primer, kako lahko projekt ostane usklajen, še preden obstaja končni produkcijski sklad.</p>
 <h2 id="plast-specifikacije">Plast specifikacije</h2>
-<p><code>AGENTS.md</code> je jedrna produktna specifikacija. Določa namen projekta, domeno, delovne tokove, meje obsega, lokalizacijsko smer, zasebnost, neobveznost AI in merila sprejema.</p>
-<p>Odgovarja na vprašanja, kot so:</p>
+<p><code>AGENTS.md</code> je jedrna produktna specifikacija. Določa namen projekta, domeni model, delovne tokove, faze obsega, lokalizacijsko smer, pravila zasebnosti, neobveznost AI in merila sprejema.</p>
+<p>To je pomembno, ker odgovarja na vprašanja, na katera sama koda ne more jasno odgovoriti:</p>
 <ul>
-<li>zakaj projekt obstaja</li>
+<li>zakaj produkt obstaja</li>
 <li>kateri delovni tokovi so prvovrstni</li>
 <li>kaj mora delovati brez AI</li>
-<li>kaj so prihodnje ideje in ne sedanje zaveze</li>
+<li>katere funkcije so prihodnje ideje in ne sedanje zaveze</li>
 <li>kaj šteje kot uspešen prvi demo</li>
 </ul>
-<p>To je razlika med splošnim opisom in pravo specifikacijo. Prava specifikacija omejuje izbire implementacije.</p>
+<p>To je razlika med opisom projekta in pravo specifikacijo. Prava specifikacija omejuje izbire implementacije.</p>
 <h2 id="plast-taktičnih-navodil">Plast taktičnih navodil</h2>
-<p><code>AGENTS-Implementation.md</code> doda drugo plast. Ne nadomešča produktne specifikacije, ampak pojasnjuje, kako naj se delo v tem repozitoriju trenutno izvaja.</p>
-<p>Sem sodijo pravila o javnem poimenovanju, dokumentaciji, statičnem mestu, lokalizaciji, preverjanju in dokazni politiki za javno pisanje. To je pomembno, ker niso vsa pravila produktne resnice. Nekatera so taktična, uredniška ali repozitorijsko specifična.</p>
+<p><code>AGENTS-Implementation.md</code> doda drugo plast. Ne nadomešča produktne specifikacije. Pojasnjuje, kako naj se delo v tem repozitoriju trenutno izvaja.</p>
+<p>Primeri vključujejo:</p>
+<ul>
+<li>pravila javnega poimenovanja</li>
+<li>pravila implementacije dokumentacije</li>
+<li>pričakovanja glede metapodatkov statičnega mesta</li>
+<li>omejitve dema</li>
+<li>pričakovanja glede lokalizacije in preverjanja</li>
+<li>uredniško dokazno politiko za javno pisanje</li>
+</ul>
+<p>To je pomembno pri AI-podprtem delu, ker vsako pravilo ne spada v dolgoročno produktno specifikacijo. Nekatera pravila so taktična, uredniška ali specifična za repozitorij. Če to razliko ohranimo jasno, zmanjšamo šum in preprečimo, da bi se produktna specifikacija spremenila v odlagališče implementacijskih podrobnosti.</p>
 <h2 id="plast-trenutnega-stanja">Plast trenutnega stanja</h2>
-<p><code>README.md</code> predstavlja tretjo plast: pošten opis trenutnega stanja.</p>
-<p>Pojasni, kaj danes obstaja, česa še ni, čemu je namenjen statični demo in kako je javna stran objavljena. To pomaga, da sodelavci, institucije in pregledovalci ne zamenjujejo ambicije z implementacijo.</p>
+<p><code>README.md</code> predstavlja tretjo plast: opis trenutnega stanja.</p>
+<p>Pojasni, kaj danes obstaja, česa še ni, čemu je namenjen statični demo in kako je objavljena javna stran. To je ključen del usklajevanja, saj projekti pogosto propadejo, ko bralci zamenjajo ambicijo z implementacijo.</p>
+<p>V Let Books README izrecno ločuje med trenutnimi dostavljivimi rezultati in prihodnjimi načrti. To sodelavcem, institucijam in pregledovalcem pomaga razumeti zrelost projekta brez ugibanja.</p>
 <h2 id="plast-dokumentacije">Plast dokumentacije</h2>
-<p><code>docs/</code> doda četrto plast. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> in slogovni vodniki določajo, kako naj bo znanje organizirano, objavljeno in preverjeno.</p>
-<p>Tu repozitorij postane več kot le zbirka datotek. Postane platforma znanja s:</p>
+<p>Območje <code>docs/</code> doda četrto plast. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> ter slogovni vodniki in območje <code>sources</code> določajo, kako naj bo znanje organizirano, validirano in objavljeno.</p>
+<p>Tu repozitorij postane več kot le zbirka kode. Postane platforma znanja z:</p>
 <ul>
 <li>arhitekturo dokumentacije</li>
 <li>pravili uredniških dokazov</li>
 <li>večjezično založniško strukturo</li>
-<li>pravili objave in preverjanja</li>
+<li>pravili objavljanja javne dokumentacije</li>
+<li>razvojnimi in validacijskimi navodili</li>
 </ul>
+<p>To je natanko tista vrsta ogrodja, ki pomaga, da AI-podprta dostava ostane sledljiva.</p>
 <h2 id="plast-dema">Plast dema</h2>
-<p>Statični demo je pomemben, vendar namerno ni edina avtoriteta. Pravila za bloge in vire že ločujejo med kanonično dokumentacijo in stanjem implementacije.</p>
-<p>To pomeni, da lahko demo preverja delovne tokove, razkriva težave uporabnosti in pomaga pri razlagi zunanjim deležnikom, ne da bi sam od sebe postal dokončna produktna resnica.</p>
+<p>Statični demo je pomemben, vendar namerno ni edina avtoriteta v repozitoriju.</p>
+<p>Pravila javne dokumentacije in bloga že ločujejo med kanoničnim dokumentacijskim dokazom in stanjem implementacije. To pomeni, da lahko demo potrjuje delovne tokove, razkriva UX-težave in pomaga zunanjim občinstvom razumeti produkt, hkrati pa ostaja podrejen dokumentiranemu produktnemu namenu, dokler se dokumentacija ne posodobi.</p>
+<p>To je zrelo pravilo. Brez njega prototipi pogosto postanejo naključni mehanizmi upravljanja. Ekipa začne kopirati prototip zato, ker obstaja, ne pa zato, ker odraža odobreno produktno odločitev.</p>
 <h2 id="plast-preverjanja">Plast preverjanja</h2>
-<p>Let Books že dokumentira tudi miselnost preverjanja. <code>docs/Development.md</code> in <code>docs/Deployment.md</code> opisujeta dimne teste lokalizacije, validacijo strukturiranih datotek, generiranje metapodatkov, zahtevane datoteke, črkovalne preglede in avtomatizirano objavo.</p>
-<p>To niso le podrobnosti o orodjih. So dokaz, da projekt kakovost obravnava kot ponovljiv sistem.</p>
+<p>Let Books že dokumentira tudi miselnost preverjanja.</p>
+<p><code>docs/Development.md</code> in <code>docs/Deployment.md</code> opisujeta validacijske plasti, kot so:</p>
+<ul>
+<li>dimni testi lokalizacije</li>
+<li>validacija strukturiranih datotek</li>
+<li>generiranje metapodatkov</li>
+<li>preverjanje obveznih datotek</li>
+<li>neobvezni črkovalniki in linting</li>
+<li>avtomatizacija objave</li>
+</ul>
+<p>To niso le podrobnosti o orodjih. So dokaz, da projekt kakovost obravnava kot ponovljiv sistem namesto kot ročno navado po najboljših močeh.</p>
 <h2 id="zakaj-je-to-pomembno-za-ai-podprto-dostavo">Zakaj je to pomembno za AI-podprto dostavo</h2>
 <p>Če k Let Books prispeva AI pomočnik, mu izdelka ni treba izumiti od začetka. Repozitorij že vsebuje verigo namena:</p>
 <ol type="1">
@@ -153,8 +175,18 @@
 </ol>
 <p>Ta veriga napak ne odpravi. Jih pa naredi lažje zaznavne in lažje pregledljive.</p>
 <h2 id="glavna-lekcija">Glavna lekcija</h2>
-<p>Razvoj na podlagi specifikacij ne pomeni le tega, da pred kodiranjem napišemo dolg dokument. V praksi pomeni, da zgradimo zanesljivo verigo med produktnim namenom, taktičnimi pravili, javno dokumentacijo, demom, preverjanjem in objavo.</p>
-<p>Let Books pokaže, da takšna veriga lahko obstaja še preden obstaja celotna zaledna aplikacija. Prav to je ena najmočnejših prednosti razvoja na podlagi specifikacij v AI-podprtem delu.</p>
+<p>Razvoj na podlagi specifikacij ne pomeni le tega, da pred začetkom kodiranja napišemo dolg dokument z zahtevami.</p>
+<p>V praksi pomeni, da zgradimo zanesljivo verigo med:</p>
+<ul>
+<li>produktnim namenom</li>
+<li>taktičnimi pravili</li>
+<li>javno dokumentacijo</li>
+<li>demonstracijami</li>
+<li>validacijo</li>
+<li>objavo</li>
+</ul>
+<p>Let Books že kaže, da taka veriga lahko obstaja še preden obstaja celoten zaledni produkt.</p>
+<p>To je eden najmočnejših argumentov za razvoj na podlagi specifikacij pri AI-podprtem delu: bolj ko je veriga namena jasna, manj verjetno je, da se bo hiter izhod spremenil v hitro zmedo.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

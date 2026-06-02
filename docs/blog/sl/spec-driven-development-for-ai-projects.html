@@ -107,43 +107,56 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<p class="lead">AI zelo olajša hitro ustvarjanje kode. Prav tako pa zelo olajša hitro ustvarjanje napačne kode. Zato je razvoj na podlagi specifikacij v AI-podprtih projektih pomembnejši, ne manj pomemben.</p>
-<p>Ko ekipa razvija brez jasne specifikacije, se izdelek sčasoma oddalji od namena. Ko pri tem pomaga AI, se lahko ta odmik zgodi v enem samem popoldnevu. Koda se lahko prevede, vmesnik je lahko videti lepo, testi pa lahko celo uspejo. Izdelek je kljub temu lahko napačen.</p>
+<p class="lead">AI zelo olajša hitro ustvarjanje kode. Prav tako pa zelo olajša hitro ustvarjanje napačne kode. To je osrednji razlog, zakaj je razvoj na podlagi specifikacij v AI-podprtih projektih pomembnejši, ne manj pomemben.</p>
+<p>Ko človeška ekipa razvija programsko opremo brez jasne specifikacije, se rezultat običajno sčasoma oddalji od namena. Ko programsko opremo brez jasne specifikacije piše AI pomočnik, se lahko tak odmik zgodi v enem samem popoldnevu. Koda se lahko prevede. Uporabniški vmesnik je lahko videti dovršen. Testi lahko celo uspejo, če so napisani na podlagi napačnih predpostavk. Toda produkt se lahko še vedno oddalji od svojemu resničnemu namenu.</p>
 <h2 id="zakaj-ai-spremeni-profil-tveganja">Zakaj AI spremeni profil tveganja</h2>
-<p>AI pospeši tempo interpretacije. En sam poziv lahko ustvari arhitekturo, besedilo, validacijo, poimenovanja in uporabniški tok. To je koristno, vendar nevarno, kadar vir resnice ni dovolj jasen.</p>
+<p>Tradicionalni razvoj programske opreme je že prej imel vrzeli v interpretaciji med produktnim namenom, zasnovo, implementacijo in dokumentacijo. AI to časovnico stisne. En sam poziv lahko hkrati ustvari arhitekturo, besedilo, validacijska pravila, poimenovanja in vzorce vmesnika.</p>
+<p>Ta hitrost je koristna. Nevarna pa postane, ko je vir resnice nejasen.</p>
 <p>V praksi AI pogosto optimizira tisto, kar je v danem trenutku najbolj vidno:</p>
 <ul>
 <li>zadnji poziv</li>
 <li>najbližjo datoteko</li>
 <li>najlažjo implementacijsko pot</li>
-<li>najbolj generičen znan vzorec</li>
+<li>najpogostejši vzorec v svoji distribuciji učenja</li>
 </ul>
 <p>Nič od tega samo po sebi še ne pomeni pravilne produktne odločitve.</p>
-<h2 id="kaj-naredi-dobra-specifikacija">Kaj naredi dobra specifikacija</h2>
-<p>Dobra specifikacija opravi vsaj štiri naloge:</p>
+<h2 id="kaj-specifikacija-naredi-v-ai-podprtem-delovnem-toku">Kaj specifikacija naredi v AI-podprtem delovnem toku</h2>
+<p>Močna produktna specifikacija opravi vsaj štiri naloge.</p>
+<p>Prvič, določi namen. Ekipa lahko presodi, ali neka funkcija podpira dejanski produkt ali le dodaja izhod.</p>
+<p>Drugič, določi meje. Pojasni, kaj je v obsegu, kaj je zunaj obsega, kaj je neobvezno in kaj mora delovati tudi takrat, ko neobvezni sistemi odpovejo.</p>
+<p>Tretjič, določi merilo pregleda. Namesto da bi se spraševali le, ali sprememba tehnično deluje, se lahko pregledovalci vprašajo, ali se ujema z nameravanim delovnim tokom in produktnimi zavezami.</p>
+<p>Četrtič, deluje kot spomin. AI sistemi sami od sebe nimajo stabilnega institucionalnega spomina. Specifikacija v repozitoriju ga ima.</p>
+<p>To je v Let Books še posebej vidno. Projektna specifikacija v <code>AGENTS.md</code> večkrat jasno poudari dve stvari:</p>
 <ul>
-<li>določi namen</li>
-<li>postavi meje</li>
-<li>določi merilo pregleda</li>
-<li>deluje kot spomin ekipe</li>
+<li>ročni delovni tok mora ostati uporaben tudi brez plačljivih AI storitev</li>
+<li>fizični izvodi knjig in bibliografski zapisi morajo ostati ločena pojma</li>
 </ul>
-<p>To je v Let Books zelo jasno. <code>AGENTS.md</code> večkrat poudari, da mora ročni potek delovati tudi brez plačljivih AI storitev in da fizični izvodi knjig niso isto kot bibliografski zapisi. To nista tehnični podrobnosti, temveč produktni meji.</p>
+<p>To nista implementacijski podrobnosti. To sta produktni meji. Če AI pomočnik ustvari tok, ki blokira ročni vnos ali združi podatke o fizičnem izvodu z metapodatki o izdaji, težava ni v slogu. Težava je produktni odmik.</p>
 <h2 id="zakaj-dokumentacija-ne-sme-čakati">Zakaj dokumentacija ne sme čakati</h2>
-<p>Če je dokumentacija zastarela ali nejasna, bodo različni ljudje in različna orodja iz istega repozitorija razbrali različne izdelke. Eden bo sledil demu, drugi staremu README-ju, tretji najbližji datoteki.</p>
-<p>Zato dokumentacija ni le naknadna razlaga. Je del operacijskega sistema projekta. V tem repozitoriju <code>README.md</code> opisuje trenutno stanje, <code>AGENTS.md</code> produktni namen, <code>AGENTS-Implementation.md</code> taktična pravila, <code>docs/</code> pa založniške in dokazne konvencije.</p>
+<p>V mnogih projektih je dokumentacija obravnavana kot pozno čiščenje. Ko je AI del dostave, to postane veliko dražje.</p>
+<p>Brez ažurne dokumentacije:</p>
+<ul>
+<li>pozivi postanejo nekonsistentni</li>
+<li>pregled postane subjektiven</li>
+<li>demonstracije začnejo po naključju redefinirati produkt</li>
+<li>prihodnji sodelavci podedujejo vedenje, ne da bi vedeli, ali je bilo namerno</li>
+</ul>
+<p>Zato je treba dokumentacijo obravnavati kot operativno sredstvo. V tem repozitoriju <code>README.md</code> opisuje trenutno javno stanje, <code>AGENTS.md</code> določa produktni namen, <code>AGENTS-Implementation.md</code> določa taktična navodila, območje <code>docs/</code> pa določa pravila za objavljanje in dokazovanje. Ta večplastna struktura ni birokracija. Tako projekt ohranja pomen povezan z izhodom.</p>
 <h2 id="vloga-demov">Vloga demov</h2>
-<p>Demo je uporaben, ker pokaže, kaj obstaja, in razkrije težave uporabniškega toka. Ne bi pa smel tiho postati produktna specifikacija.</p>
-<p>Pravila repozitorija že ločijo med kanoničnimi specifikacijami in dokumentacijo na eni strani ter stanjem implementacije na drugi. Če demo pokaže boljši tok, je treba posodobiti specifikacijo in dokumentacijo, ne pa pustiti, da demo sam od sebe zmaga.</p>
-<h2 id="markdown-testi-in-ci-tvorijo-verigo">Markdown, testi in CI tvorijo verigo</h2>
-<p>V razvoju na podlagi specifikacij te plasti ne stojijo vsaka zase.</p>
+<p>Demonstracije so koristne. Pokažejo, kaj obstaja, razkrijejo težave uporabnosti in pomagajo institucijam ali sodelavcem reagirati na nekaj konkretnega. Demo pa ne bi smel tiho postati produktna specifikacija.</p>
+<p>Repozitorij to razliko že jasno vzpostavlja v svojih dokumentacijskih pravilih. Javno pisanje mora specifikacije in dokumentacijo obravnavati kot kanoničen dokaz, medtem ko se lahko implementirano vedenje dema omenja kot stanje implementacije. To je zdravo pravilo, ker preprečuje naključno upravljanje s prototipom.</p>
+<p>Če demo razkrije boljši delovni tok, odgovor ni, da mu tiho pustimo zmagati. Odgovor je, da posodobimo specifikacijo, dokumentacijo in merilo pregleda, da boljši tok postane nameren.</p>
+<h2 id="markdown-testi-in-ci-niso-ločene-skrbi">Markdown, testi in CI niso ločene skrbi</h2>
+<p>Pogosta napaka je, da pisne specifikacije, tehnično validacijo in CI/CD obravnavamo kot nepovezane plasti.</p>
+<p>V razvoju na podlagi specifikacij tvorijo eno samo verigo.</p>
 <ul>
 <li>Markdown shrani namen v pregledljivi obliki.</li>
 <li>Dokumentacija razloži, kako ga je treba razumeti.</li>
 <li>Testi preverijo izvedljiva pričakovanja.</li>
 <li>Validacijska pravila lovijo strukturni odmik.</li>
-<li>CI pravila redno uveljavlja.</li>
+<li>CI pravila uveljavlja vedno znova.</li>
 </ul>
-<p>Skupaj ustvarijo produktni spomin, ki preživi hitrost razvoja.</p>
+<p>Vsaka plast je sama po sebi nepopolna. Skupaj ustvarijo produktni spomin, ki preživi hitrost, iteracije in spremembe ekipe.</p>
 <h2 id="kaj-to-pomeni-za-ekipe-ki-uporabljajo-ai">Kaj to pomeni za ekipe, ki uporabljajo AI</h2>
 <p>Ekipe, ki AI uporabljajo dobro, ne odstranjujejo procesa. Proces premaknejo bliže viru generiranja.</p>
 <p>To običajno pomeni:</p>
@@ -151,7 +164,7 @@
 <li>da pred implementacijo napišejo jasnejše produktne specifikacije</li>
 <li>da ohranijo izrecna implementacijska navodila</li>
 <li>da posodobijo dokumentacijo, ko se vedenje izdelka spremeni</li>
-<li>da demoe preverjajo glede na specifikacije, namesto da predpostavljajo ujemanje</li>
+<li>da demoe preverjajo glede na specifikacije, namesto da samodejno predpostavljajo enakovrednost</li>
 <li>da postopno dodajajo validacijska pravila, tako da usklajenost ni odvisna le od človeškega spomina</li>
 </ul>
 <p>To ni proti AI. Tako AI postane zanesljiv.</p>

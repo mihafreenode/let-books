@@ -107,10 +107,13 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<p class="lead">Demo je močan zato, ker abstraktne ideje spremeni v nekaj, na kar se ljudje lahko odzovejo. Delovni tok, ki se v zapisku zdi smiseln, lahko na telefonu ali v skladišču takoj pokaže resnično trenje.</p>
-<p>To je dobra stran dema. Nevarna stran pa je, da ljudje, ko prototip enkrat obstaja, pogosto začnejo njegovo vedenje obravnavati kot produktno resnico.</p>
+<p class="lead">Demonstracije so močne zato, ker abstraktne ideje spremenijo v nekaj, na kar se ljudje lahko odzovejo. Delovni tok, ki se v načrtovalnem zapisku zdi smiseln, lahko pokaže resnično trenje že v trenutku, ko ga nekdo preizkusi na telefonu, v skladišču ali pod časovnim pritiskom.</p>
+<p>To je dobra stran demonstracij.</p>
+<p>Nevarna stran pa je, da ljudje, ko prototip enkrat obstaja, pogosto začnejo z njim ravnati kot s produktno resnico, ne glede na to, ali je kdo to odločitev sploh uradno sprejel.</p>
 <h2 id="zakaj-prototipi-postanejo-naključna-avtoriteta">Zakaj prototipi postanejo naključna avtoriteta</h2>
 <p>Vidne stvari so prepričljive. Delujoč zaslon pogosto dobi več neformalne avtoritete kot zapisano pravilo, tudi če je bil zgrajen samo kot eksperiment.</p>
+<p>To je razumljivo. Ljudje zaupajo temu, kar lahko vidijo.</p>
+<p>Toda pri produktnem delu, še posebej pri produktnem delu z AI-podporo, lahko tak instinkt hitro ustvari zmedo.</p>
 <p>Demo lahko prikazuje:</p>
 <ul>
 <li>hiter način preizkusa poteka</li>
@@ -120,34 +123,42 @@
 </ul>
 <p>Nič od tega še ne pomeni, da mora demo redefinirati izdelek.</p>
 <h2 id="kdaj-je-demo-dober-dokaz">Kdaj je demo dober dokaz</h2>
-<p>Demo je koristen, ko pomaga odgovoriti na vprašanja, kot so:</p>
+<p>Demo je koristen dokaz, kadar pomaga odgovoriti na vprašanja, kot so:</p>
 <ul>
 <li>ali je potek uporaben</li>
 <li>ali mobilni zaslon podpira resnično nalogo</li>
-<li>ali je tok skeniranja razumljiv</li>
-<li>kako se uporabniki odzovejo na zaporedje korakov</li>
+<li>ali je tok skeniranja ali vnosa razumljiv</li>
+<li>ali se uporabniki na zaporedje korakov odzivajo pozitivno ali negativno</li>
 </ul>
-<p>Takrat je demo dokaz o uporabnosti, izvedljivosti in komunikaciji.</p>
+<p>V takih primerih je demo dokaz o uporabnosti, izvedljivosti, zaporedju korakov in komunikaciji.</p>
+<p>Takšna vrsta dokaza je izjemno koristna.</p>
 <h2 id="kdaj-demo-ni-avtoriteta">Kdaj demo ni avtoriteta</h2>
-<p>Demo ne bi smel tiho preglasiti produktne specifikacije. Ni pravi glavni odgovor na vprašanja, kot so:</p>
+<p>Demo ne bi smel tiho preglasiti produktne specifikacije.</p>
+<p>Ni prava primarna avtoriteta za vprašanja, kot so:</p>
 <ul>
 <li>ali je ta tok uradno v obsegu</li>
-<li>ali je to začasen bližnjica ali produktna zaveza</li>
+<li>ali je to začasna bližnjica ali produktna zaveza</li>
 <li>ali to vedenje razveljavlja obstoječe pravilo</li>
-<li>ali naj javna dokumentacija to opiše kot ciljni sistem</li>
+<li>ali naj javna dokumentacija to opiše kot nameravani sistem</li>
 </ul>
 <p>Na taka vprašanja mora odgovoriti izrecna odločitev in posodobitev dokumentacije.</p>
 <h2 id="pravilo-let-books-je-dober-model">Pravilo Let Books je dober model</h2>
 <p>Repozitorij že določa zdravo pravilo: javno pisanje naj uporablja specifikacije in dokumentacijo kot kanoničen dokaz, demo ali aplikacijsko vedenje pa se lahko omenja kot stanje implementacije.</p>
 <p>To preprečuje, da bi prototip po naključju postal način upravljanja izdelka.</p>
+<p>Če statični demo razkrije boljši potek za škatle, boljši mobilni tok ali boljšo interakcijo pri vnosu, je to dragoceno. Toda tak boljši potek postane resnična avtoriteta šele po tem, ko se posodobijo specifikacija in povezana dokumentacija.</p>
 <h2 id="zakaj-je-to-še-pomembnejše-z-ai">Zakaj je to še pomembnejše z AI</h2>
-<p>AI okrepi tisto, kar je trenutno najbolj konkretno. Če je najbolj konkreten artefakt demo, bodo pomočniki in ljudje njegovo vedenje hitro kopirali, ne da bi vprašali, ali se ujema s produktnimi mejami.</p>
-<p>Zato ekipe potrebujejo viden red avtoritete:</p>
+<p>AI okrepi tisto, kar je v trenutnem kontekstu videti najbolj konkretno.</p>
+<p>Če je najbolj konkretna stvar v repozitoriju demo, lahko pomočniki in tudi človeški sodelavci začnejo kopirati njegovo vedenje, ne da bi vprašali, ali se to ujema z nameravano mejo produkta.</p>
+<p>To je lahko koristno, kadar je demo že usklajen.
+Lahko pa tudi hitro razširi začasne predpostavke, kadar ni.</p>
+<p>Zato ekipe potrebujejo viden red avtoritete.</p>
+<h2 id="praktična-veriga-avtoritete">Praktična veriga avtoritete</h2>
+<p>Za delo, kot je to, je uporaben naslednji vrstni red:</p>
 <ol type="1">
 <li>produktna specifikacija</li>
 <li>implementacijska navodila</li>
 <li>dokumentacija trenutnega stanja</li>
-<li>demo ali prototip</li>
+<li>vedenje dema ali prototipa</li>
 <li>testi in validacija</li>
 </ol>
 <p>Demo je še vedno pomemben. Pomemben je le znotraj dokumentiranega sistema, namesto da bi ga zamenjal.</p>
@@ -159,14 +170,15 @@
 <li>zabeležiti ugotovitev</li>
 <li>odločiti, ali naj novo vedenje postane namerno</li>
 <li>posodobiti specifikacijo in dokumentacijo</li>
-<li>nato usklajenost ohranjati tudi naprej</li>
+<li>nato usklajenost ohranjati tudi v prihodnje</li>
 </ol>
 <p>Napačen odziv je, da dokumentacija ostane nespremenjena in vsi upajo, da si bodo zapomnili, da je demo zdaj dejanski vir resnice.</p>
 <h2 id="zakaj-bi-to-moralo-zanimati-institucije-in-študente">Zakaj bi to moralo zanimati institucije in študente</h2>
 <p>Institucije morajo vedeti, ali ocenjujejo koncept, prototip ali odobren model delovnega toka.</p>
 <p>Študenti pa se morajo naučiti, da se prototipi ne utemeljijo sami od sebe. Dobra programska praksa vključuje razumevanje, kdaj implementacijo obravnavati kot dokaz in kdaj kot eksperiment, ki še čaka na odločitev.</p>
 <h2 id="trajna-lekcija">Trajna lekcija</h2>
-<p>Demo je dragocen, ker naredi produktne ideje preizkusljive. Nevaren pa postane, ko tiho postane politika. Zdrav model je preprost: naj demo informira izdelek, naj pa specifikacije in dokumentacija zapišejo končno odločitev.</p>
+<p>Demonstracije so dragocene, ker naredijo produktne ideje preizkusljive. Nevarne pa postanejo, ko tiho postanejo politika.</p>
+<p>Najbolj zdrav model je preprost: naj demonstracije informirajo produkt, specifikacije in dokumentacija pa naj zabeležijo končno odločitev.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

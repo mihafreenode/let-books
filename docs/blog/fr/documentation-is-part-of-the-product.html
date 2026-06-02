@@ -112,25 +112,27 @@
 <h2 id="pourquoi-cela-compte-encore-plus-aujourdhui">Pourquoi cela compte encore plus aujourd’hui</h2>
 <p>L’IA peut générer une implémentation à partir d’une intention incomplète. Cela est souvent présenté comme une commodité. En pratique, cela signifie que chaque ambiguïté du projet devient un endroit où le produit peut dériver.</p>
 <p>Si la documentation est faible ou dépassée, des personnes et des outils différents déduiront des produits différents à partir du même dépôt.</p>
+<p>Un contributeur peut suivre l’interface utilisateur actuelle.
+Un autre peut suivre un ancien README.
+Un assistant IA peut suivre le fichier le plus proche et inventer le reste.</p>
+<p>Le problème n’est pas seulement la justesse au niveau du code. Le problème est de savoir si le projet décrit encore un seul produit plutôt que plusieurs suppositions qui se chevauchent.</p>
 <h2 id="la-documentation-remplit-quatre-fonctions-produit">La documentation remplit quatre fonctions produit</h2>
-<p>La documentation :</p>
-<ul>
-<li>porte l’intention</li>
-<li>fixe des attentes</li>
-<li>réduit le coût de coordination</li>
-<li>soutient la confiance</li>
-</ul>
-<p>Elle indique aux contributeurs, aux institutions, aux relecteurs et aux assistants IA ce que le projet essaie d’accomplir et ce qu’il ne doit pas devenir.</p>
+<p>Une bonne documentation fait bien plus qu’expliquer l’interface après coup.</p>
+<p>Premièrement, elle porte l’intention. Elle dit aux futurs contributeurs ce que le produit essaie d’accomplir et ce qu’il n’essaie explicitement pas de devenir.</p>
+<p>Deuxièmement, elle fixe des attentes. Les lecteurs peuvent voir ce qui existe maintenant, ce qui est prévu et ce qui ne devrait pas être décrit comme déjà implémenté.</p>
+<p>Troisièmement, elle réduit le coût de coordination. Nouveaux contributeurs, relecteurs, institutions et assistants IA peuvent tous s’orienter sans reconstruire le projet à partir de fragments.</p>
+<p>Quatrièmement, elle soutient la confiance. Un projet qui sépare clairement l’état actuel, la direction prévue et le flux de travail expérimental est plus facile à évaluer et plus facile à maintenir.</p>
 <h2 id="let-books-est-déjà-structuré-ainsi">Let Books est déjà structuré ainsi</h2>
-<p>Dans le dépôt Let Books :</p>
+<p>Le dépôt Let Books démontre déjà cette approche à plusieurs couches.</p>
 <ul>
-<li><code>AGENTS.md</code> définit l’intention produit et les flux de travail</li>
-<li><code>AGENTS-Implementation.md</code> définit des règles tactiques d’exécution</li>
-<li><code>README.md</code> décrit honnêtement l’état actuel</li>
-<li><code>docs/</code> définit les règles de publication, d’écriture, de localisation et de preuve</li>
+<li><code>AGENTS.md</code> définit le but du produit, les flux de travail, les frontières du domaine et la direction à long terme.</li>
+<li><code>AGENTS-Implementation.md</code> définit les règles tactiques d’implémentation et de documentation.</li>
+<li><code>README.md</code> explique l’état actuel du dépôt et distingue les livrables présents des plans futurs.</li>
+<li><code>docs/</code> définit une plateforme de connaissance avec des conventions de publication, d’écriture, de localisation et de cartographie des sources.</li>
 </ul>
 <p>Cela signifie que la documentation ici n’est pas seulement une explication. Elle fait partie de la manière dont le projet fonctionne.</p>
 <h2 id="une-documentation-périmée-est-une-dette-produit">Une documentation périmée est une dette produit</h2>
+<p>Les équipes reconnaissent souvent la dette technique seulement quand elle apparaît dans le code. Mais une documentation périmée crée une forme similaire de friction.</p>
 <p>Une documentation périmée conduit à :</p>
 <ul>
 <li>de mauvaises hypothèses d’implémentation</li>
@@ -163,7 +165,8 @@
 <!-- semantic-parity: documentation-as-product-distinction -->
 <p>Cette différence est la différence entre une documentation comme commentaire et une documentation comme partie du produit.</p>
 <h2 id="la-leçon-durable">La leçon durable</h2>
-<p>La documentation n’est pas séparée de la qualité du produit. Elle façonne l’implémentation, la revue, la communication, la validation et la confiance à long terme. Dans les projets soutenus par l’IA, la documentation fait partie du produit parce qu’elle fait partie du système qui empêche la dérive du produit.</p>
+<p>La documentation n’est pas séparée de la qualité du produit.</p>
+<p>Elle façonne l’implémentation, la revue, la communication, la validation et la confiance à long terme. Dans les projets soutenus par l’IA, la documentation fait partie du produit parce qu’elle fait partie du système qui empêche la dérive du produit.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

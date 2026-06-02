@@ -119,6 +119,7 @@
 <li>el patrón genérico más conocido</li>
 </ul>
 <p>Nada de eso significa automáticamente la decisión correcta de producto.</p>
+<p>Son atajos útiles para la generación. Pero no sustituyen el juicio de producto.</p>
 <h2 id="qué-hace-una-buena-especificación">Qué hace una buena especificación</h2>
 <p>Una buena especificación cumple al menos cuatro funciones:</p>
 <ul>
@@ -127,13 +128,26 @@
 <li>establece el criterio de revisión</li>
 <li>sirve como memoria del equipo</li>
 </ul>
+<p>Primero, define el propósito. El equipo puede ver si una funcionalidad apoya el producto real o simplemente añade salida.</p>
+<p>Segundo, define límites. Aclara qué está dentro del alcance, qué está fuera del alcance, qué es opcional y qué debe seguir funcionando incluso cuando fallen sistemas opcionales.</p>
+<p>Tercero, define el criterio de revisión. En lugar de preguntar solo si un cambio funciona técnicamente, los revisores pueden preguntar si coincide con el flujo de trabajo previsto y con los compromisos del producto.</p>
+<p>Cuarto, actúa como memoria. Los sistemas de IA no mantienen por sí solos una memoria institucional estable. Una especificación en el repositorio sí.</p>
 <p>Esto es muy claro en Let Books. <code>AGENTS.md</code> insiste varias veces en que el flujo manual debe seguir siendo útil incluso sin servicios de IA de pago y en que las copias físicas de los libros no son lo mismo que los registros bibliográficos. No son detalles técnicos, sino límites de producto.</p>
+<p>No son detalles de implementación. Son límites de producto. Si un asistente de IA genera un flujo que bloquea la entrada manual o mezcla datos de la copia física con metadatos de la edición, el problema no es el estilo. El problema es la deriva del producto.</p>
 <h2 id="por-qué-la-documentación-no-debe-esperar">Por qué la documentación no debe esperar</h2>
 <p>Si la documentación está desactualizada o es confusa, personas y herramientas distintas deducirán productos distintos a partir del mismo repositorio. Una seguirá la demo, otra un README antiguo y otra el archivo más cercano.</p>
+<p>Sin documentación actual:</p>
+<ul>
+<li>los prompts se vuelven incoherentes</li>
+<li>la revisión se vuelve subjetiva</li>
+<li>las demos empiezan a redefinir el producto por accidente</li>
+<li>los futuros colaboradores heredan comportamientos sin saber si eran intencionales</li>
+</ul>
 <p>Por eso la documentación no es solo una explicación posterior. Es parte del sistema operativo del proyecto. En este repositorio, <code>README.md</code> describe el estado actual, <code>AGENTS.md</code> la intención del producto, <code>AGENTS-Implementation.md</code> las reglas tácticas y <code>docs/</code> las reglas de publicación y evidencia.</p>
 <h2 id="el-papel-de-las-demos">El papel de las demos</h2>
 <p>Una demo es útil porque muestra lo que existe y revela problemas del flujo de usuario. Pero no debería convertirse silenciosamente en la especificación del producto.</p>
 <p>Las reglas del repositorio ya distinguen entre especificaciones y documentación canónicas por un lado, y estado de implementación por otro. Si una demo revela un flujo mejor, hay que actualizar la especificación y la documentación, en lugar de dejar que la demo gane por sí sola.</p>
+<p>Si una demo revela un mejor flujo de trabajo, la respuesta no es dejar que gane en silencio. La respuesta es actualizar la especificación, la documentación y el criterio de revisión para que ese mejor flujo pase a ser intencional.</p>
 <h2 id="markdown-pruebas-y-ci-forman-una-cadena">Markdown, pruebas y CI forman una cadena</h2>
 <p>En un desarrollo guiado por especificaciones, estas capas no están separadas.</p>
 <ul>
@@ -144,6 +158,7 @@
 <li>CI aplica las reglas de forma regular.</li>
 </ul>
 <p>Juntas crean una memoria de producto que sobrevive a la velocidad del desarrollo.</p>
+<p>Cada capa es incompleta por sí sola. Juntas crean una memoria de producto que sobrevive a la velocidad, la iteración y los cambios de equipo.</p>
 <h2 id="lo-que-esto-significa-para-los-equipos-que-usan-ia">Lo que esto significa para los equipos que usan IA</h2>
 <p>Los equipos que usan bien la IA no eliminan el proceso. Acercan el proceso a la fuente de generación.</p>
 <p>Eso suele significar:</p>

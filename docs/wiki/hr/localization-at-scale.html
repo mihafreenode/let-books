@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lokalizacija u mjerilu | LetBooks</title>
-    <meta name="description" content="Lokalizacija na razini je praksa tretiranja višejezičnog sadržaja kao dizajniranog sustava koji pokriva pisanje, upravljanje, imovinu, pristupačnost, provjeru valjanosti i pregled.">
+    <title>Lokalizacija u velikom opsegu | LetBooks</title>
+    <meta name="description" content="Lokalizacija u velikom opsegu praksa je tretiranja višejezičnog objavljivanja kao sustava povratne sprege i dugoročnog sustava znanja, a ne kao jednokratnog prevoditeljskog zadatka.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/hr/localization-at-scale.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Lokalizacija u mjerilu | LetBooks">
-    <meta property="og:description" content="Lokalizacija na razini je praksa tretiranja višejezičnog sadržaja kao dizajniranog sustava koji pokriva pisanje, upravljanje, imovinu, pristupačnost, provjeru valjanosti i pregled.">
+    <meta property="og:title" content="Lokalizacija u velikom opsegu | LetBooks">
+    <meta property="og:description" content="Lokalizacija u velikom opsegu praksa je tretiranja višejezičnog objavljivanja kao sustava povratne sprege i dugoročnog sustava znanja, a ne kao jednokratnog prevoditeljskog zadatka.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/hr/localization-at-scale.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lokalizacija u mjerilu | LetBooks">
-    <meta name="twitter:description" content="Lokalizacija na razini je praksa tretiranja višejezičnog sadržaja kao dizajniranog sustava koji pokriva pisanje, upravljanje, imovinu, pristupačnost, provjeru valjanosti i pregled.">
+    <meta name="twitter:title" content="Lokalizacija u velikom opsegu | LetBooks">
+    <meta name="twitter:description" content="Lokalizacija u velikom opsegu praksa je tretiranja višejezičnog objavljivanja kao sustava povratne sprege i dugoročnog sustava znanja, a ne kao jednokratnog prevoditeljskog zadatka.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/hr/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Lokalizacija u mjerilu</span>
+              <span aria-current="page">Lokalizacija u velikom opsegu</span>
             </nav>
-            <h1>Lokalizacija u mjerilu</h1>
+            <h1>Lokalizacija u velikom opsegu</h1>
           <div class="content-page-meta">
             <span>Wiki</span>
             <span>Hrvatski</span>
           </div>
-          <p class="content-page-summary">Lokalizacija na razini je praksa tretiranja višejezičnog sadržaja kao dizajniranog sustava koji pokriva pisanje, upravljanje, imovinu, pristupačnost, provjeru valjanosti i pregled.</p>
+          <p class="content-page-summary">Lokalizacija u velikom opsegu praksa je tretiranja višejezičnog objavljivanja kao sustava povratne sprege i dugoročnog sustava znanja, a ne kao jednokratnog prevoditeljskog zadatka.</p>
             <hr class="content-header-divider">
           </header>
 <h2 id="osnovna-ideja">Osnovna ideja</h2>
@@ -105,18 +105,32 @@
 <p>Uključuje:</p>
 <ul>
 <li>pisanje izvora</li>
-<li>terminologija</li>
+<li>terminologiju</li>
+<li>metapodatke</li>
 <li>navigacija</li>
-<li>tekst o pristupačnosti</li>
-<li>dijagrami i snimke ekrana</li>
-<li>metapodaci</li>
+<li>tekst pristupačnosti</li>
+<li>dijagrame i snimke zaslona</li>
 <li>pregled tijeka rada</li>
 <li>CI i QA</li>
 </ul>
-<h2 id="zašto-je-to-važno">Zašto je to važno</h2>
-<p>Projekti koji odgađaju lokalizaciju obično otkrivaju da su njihova informacijska arhitektura, snimke zaslona i pretpostavke testiranja već u engleskom obliku.</p>
-<h2 id="let-books-kontekst">Let Books kontekst</h2>
-<p>Let Books je eksplicitno višejezičan u smjernicama proizvoda, dokumentaciji i očekivanjima korisničkog sučelja. Zbog toga je arhitektura lokalizacije glavna briga proizvoda.</p>
+<h2 id="mjerodavni-priručnik">Mjerodavni priručnik</h2>
+<p>Središnji operativni model za ovu inicijativu sada se nalazi u:</p>
+<ul>
+<li><code>../localization-at-scale-program.md</code></li>
+</ul>
+<p>Taj priručnik definira:</p>
+<ul>
+<li>zašto je višejezično objavljivanje važno</li>
+<li>zašto je lokalizacija sustav, a ne projekt</li>
+<li>kako se AI uklapa u povratne petlje</li>
+<li>model kvalitete pokrivenosti, cjelovitosti, kvalitete i svježine</li>
+<li>lokalizacijski dug i otvorene klase grešaka</li>
+<li>sanaciju po načelu source-first i tijek rada za AI agente</li>
+<li>lokalizacijsko odstupanje i zrelost repozitorija</li>
+<li>detaljni korpus nalaza pregleda izvornih govornika</li>
+</ul>
+<h2 id="praktično-pravilo">Praktično pravilo</h2>
+<p>Lokalizirana stranica nije dovršena dok nije lokaliziran sav sadržaj koji čitatelj vidi, uključujući sažetke, oznake, glavni tekst, natpise, dijagrame, alternativni tekst i povezane sadržaje.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

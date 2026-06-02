@@ -119,6 +119,7 @@
 <li>das generischste bekannte Muster</li>
 </ul>
 <p>Nichts davon bedeutet automatisch die richtige Produktentscheidung.</p>
+<p>Das sind nützliche Abkürzungen für die Generierung. Sie sind aber kein Ersatz für Produkturteil.</p>
 <h2 id="was-eine-gute-spezifikation-leistet">Was eine gute Spezifikation leistet</h2>
 <p>Eine gute Spezifikation erfüllt mindestens vier Aufgaben:</p>
 <ul>
@@ -127,13 +128,26 @@
 <li>sie bestimmt den Prüfmaßstab</li>
 <li>sie dient als Gedächtnis des Teams</li>
 </ul>
+<p>Erstens definiert sie den Zweck. Das Team kann erkennen, ob eine Funktion das eigentliche Produkt unterstützt oder nur zusätzlichen Output erzeugt.</p>
+<p>Zweitens definiert sie Grenzen. Sie klärt, was im Umfang liegt, was außerhalb des Umfangs liegt, was optional ist und was selbst dann funktionieren muss, wenn optionale Systeme ausfallen.</p>
+<p>Drittens definiert sie den Review-Maßstab. Statt nur zu fragen, ob eine Änderung technisch funktioniert, können Reviewer fragen, ob sie zum beabsichtigten Workflow und zu den Produktzusagen passt.</p>
+<p>Viertens wirkt sie als Gedächtnis. KI-Systeme halten keine stabile institutionelle Erinnerung von selbst. Eine Spezifikation im Repository tut es.</p>
 <p>Das ist bei Let Books sehr klar. <code>AGENTS.md</code> betont mehrfach, dass der manuelle Ablauf auch ohne kostenpflichtige KI-Dienste funktionieren muss und dass physische Buchexemplare nicht dasselbe sind wie bibliografische Datensätze. Das sind keine technischen Details, sondern Produktgrenzen.</p>
+<p>Das sind keine Implementierungsdetails. Das sind Produktgrenzen. Wenn ein KI-Assistent einen Ablauf erzeugt, der die manuelle Eingabe blockiert oder Daten physischer Exemplare in Editionsmetadaten zusammenfallen lässt, ist das Problem nicht Stil. Das Problem ist Produktdrift.</p>
 <h2 id="warum-dokumentation-nicht-warten-darf">Warum Dokumentation nicht warten darf</h2>
 <p>Wenn Dokumentation veraltet oder unklar ist, leiten verschiedene Menschen und verschiedene Werkzeuge aus demselben Repository verschiedene Produkte ab. Einer folgt dem Demo, ein anderer einer alten README-Datei, ein dritter der nächstgelegenen Datei.</p>
+<p>Ohne aktuelle Dokumentation:</p>
+<ul>
+<li>werden Prompts inkonsistent</li>
+<li>wird Review subjektiv</li>
+<li>beginnen Demos das Produkt versehentlich neu zu definieren</li>
+<li>übernehmen künftige Mitwirkende Verhalten, ohne zu wissen, ob es beabsichtigt war</li>
+</ul>
 <p>Deshalb ist Dokumentation nicht nur eine nachträgliche Erklärung. Sie ist Teil des Betriebssystems des Projekts. In diesem Repository beschreibt <code>README.md</code> den aktuellen Stand, <code>AGENTS.md</code> die Produktabsicht, <code>AGENTS-Implementation.md</code> die taktischen Regeln und <code>docs/</code> die Veröffentlichungs- und Nachweisregeln.</p>
 <h2 id="die-rolle-von-demos">Die Rolle von Demos</h2>
 <p>Ein Demo ist nützlich, weil es zeigt, was existiert, und Probleme im Benutzerfluss sichtbar macht. Es sollte jedoch nicht stillschweigend zur Produktspezifikation werden.</p>
 <p>Die Regeln des Repositories unterscheiden bereits zwischen kanonischen Spezifikationen und Dokumentation einerseits und Implementierungsstatus andererseits. Wenn ein Demo einen besseren Ablauf zeigt, müssen Spezifikation und Dokumentation aktualisiert werden, statt das Demo still gewinnen zu lassen.</p>
+<p>Wenn ein Demo einen besseren Ablauf zeigt, ist die Antwort nicht, das Demo stillschweigend gewinnen zu lassen. Die Antwort ist, Spezifikation, Dokumentation und den Review-Maßstab zu aktualisieren, damit der bessere Ablauf absichtlich wird.</p>
 <h2 id="markdown-tests-und-ci-bilden-eine-kette">Markdown, Tests und CI bilden eine Kette</h2>
 <p>In einer spezifikationsgetriebenen Entwicklung stehen diese Ebenen nicht für sich allein.</p>
 <ul>
@@ -144,6 +158,7 @@
 <li>CI setzt die Regeln regelmäßig durch.</li>
 </ul>
 <p>Zusammen schaffen sie ein Produktgedächtnis, das die Entwicklungsgeschwindigkeit überlebt.</p>
+<p>Jede Ebene ist für sich unvollständig. Zusammen schaffen sie ein Produktgedächtnis, das Geschwindigkeit, Iteration und Teamwechsel überlebt.</p>
 <h2 id="was-das-für-teams-bedeutet-die-ki-nutzen">Was das für Teams bedeutet, die KI nutzen</h2>
 <p>Teams, die KI gut einsetzen, entfernen den Prozess nicht. Sie verlagern den Prozess näher an die Quelle der Generierung.</p>
 <p>Das bedeutet in der Regel:</p>

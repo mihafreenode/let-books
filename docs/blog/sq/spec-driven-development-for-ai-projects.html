@@ -119,6 +119,7 @@
 <li>modelin më gjenerik të njohur</li>
 </ul>
 <p>Asgjë nga këto nuk do të thotë vetvetiu vendim i saktë produkti.</p>
+<p>Këto janë shkurtore të dobishme për gjenerim. Por nuk janë zëvendësim për gjykimin e produktit.</p>
 <h2 id="çfarë-bën-një-specifikim-i-mirë">Çfarë bën një specifikim i mirë</h2>
 <p>Një specifikim i mirë kryen të paktën katër role:</p>
 <ul>
@@ -127,13 +128,26 @@
 <li>përcakton standardin e shqyrtimit</li>
 <li>shërben si kujtesë e ekipit</li>
 </ul>
+<p>Së pari, ai përcakton qëllimin. Ekipi mund të shohë nëse një veçori mbështet produktin real apo thjesht shton dalje.</p>
+<p>Së dyti, ai përcakton kufijtë. Qartëson çfarë është në fushëveprim, çfarë është jashtë fushëveprimit, çfarë është opsionale dhe çfarë duhet të funksionojë edhe kur sistemet opsionale dështojnë.</p>
+<p>Së treti, ai përcakton standardin e shqyrtimit. Në vend që të pyetet vetëm nëse një ndryshim funksionon teknikisht, shqyrtuesit mund të pyesin nëse ai përputhet me rrjedhën e synuar të punës dhe angazhimet e produktit.</p>
+<p>Së katërti, ai vepron si kujtesë. Sistemet e AI nuk mbajnë vetë kujtesë institucionale të qëndrueshme. Një specifikim në depo po.</p>
 <p>Kjo është shumë e qartë te Let Books. <code>AGENTS.md</code> thekson disa herë se rrjedha manuale duhet të funksionojë edhe pa shërbime AI me pagesë dhe se kopjet fizike të librave nuk janë e njëjta gjë me regjistrat bibliografikë. Këto nuk janë hollësi teknike, por kufij produkti.</p>
+<p>Këto nuk janë hollësi implementimi. Janë kufij produkti. Nëse një ndihmës AI gjeneron një rrjedhë që bllokon futjen manuale ose shkrin të dhënat e kopjes fizike në metadata të botimit, problemi nuk është stili. Problemi është devijimi i produktit.</p>
 <h2 id="pse-dokumentimi-nuk-duhet-të-presë">Pse dokumentimi nuk duhet të presë</h2>
 <p>Nëse dokumentimi është i vjetruar ose i paqartë, njerëz dhe mjete të ndryshme do të nxjerrin përfundime të ndryshme nga i njëjti depo. Njëri do të ndjekë demon, tjetri një README të vjetër, një tjetër skedarin më të afërt.</p>
+<p>Pa dokumentim të përditësuar:</p>
+<ul>
+<li>kërkesat bëhen të paqëndrueshme</li>
+<li>shqyrtimi bëhet subjektiv</li>
+<li>demot fillojnë ta ripërcaktojnë produktin aksidentalisht</li>
+<li>kontribuesit e ardhshëm trashëgojnë sjellje pa e ditur nëse ajo ishte e qëllimshme</li>
+</ul>
 <p>Prandaj dokumentimi nuk është vetëm shpjegim i mëvonshëm. Ai është pjesë e sistemit operativ të projektit. Në këtë depo, <code>README.md</code> përshkruan gjendjen aktuale, <code>AGENTS.md</code> qëllimin e produktit, <code>AGENTS-Implementation.md</code> rregullat taktike, ndërsa <code>docs/</code> rregullat e publikimit dhe evidencës.</p>
 <h2 id="roli-i-demove">Roli i demove</h2>
 <p>Demoja është e dobishme sepse tregon çfarë ekziston dhe zbulon probleme në rrjedhën e përdoruesit. Por ajo nuk duhet të bëhet në heshtje specifikim produkti.</p>
 <p>Rregullat e depos tashmë bëjnë dallimin mes specifikimeve dhe dokumentimit kanonik nga njëra anë dhe statusit të implementimit nga ana tjetër. Nëse demoja zbulon një rrjedhë më të mirë, duhet të përditësohen specifikimi dhe dokumentimi, jo të lihet demoja të fitojë vetë.</p>
+<p>Nëse një demo zbulon një rrjedhë pune më të mirë, përgjigjja nuk është ta lëmë të fitojë në heshtje. Përgjigjja është të përditësohen specifikimi, dokumentimi dhe standardi i shqyrtimit që ajo rrjedhë më e mirë të bëhet e qëllimshme.</p>
 <h2 id="markdown-testet-dhe-ci-formojnë-një-zinxhir">Markdown, testet dhe CI formojnë një zinxhir</h2>
 <p>Në një zhvillim të udhëhequr nga specifikimi, këto shtresa nuk qëndrojnë të ndara.</p>
 <ul>
@@ -144,6 +158,7 @@
 <li>CI i zbaton rregullat rregullisht.</li>
 </ul>
 <p>Së bashku ato krijojnë kujtesë produkti që i mbijeton shpejtësisë së zhvillimit.</p>
+<p>Çdo shtresë është e paplotë më vete. Së bashku ato krijojnë kujtesë produkti që i mbijeton shpejtësisë, iterimit dhe ndryshimeve të ekipit.</p>
 <h2 id="çfarë-do-të-thotë-kjo-për-ekipet-që-përdorin-ai">Çfarë do të thotë kjo për ekipet që përdorin AI</h2>
 <p>Ekipet që e përdorin mirë AI nuk e heqin procesin. Ato e afrojnë procesin më pranë burimit të gjenerimit.</p>
 <p>Kjo zakonisht do të thotë:</p>

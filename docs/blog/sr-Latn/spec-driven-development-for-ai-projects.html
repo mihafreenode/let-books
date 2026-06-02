@@ -119,6 +119,7 @@
 <li>najgeneričniji poznati obrazac</li>
 </ul>
 <p>Ništa od toga samo po sebi ne znači ispravnu proizvodnu odluku.</p>
+<p>To su korisne prečice za generisanje. Ali nisu zamena za produktnu procenu.</p>
 <h2 id="šta-radi-dobra-specifikacija">Šta radi dobra specifikacija</h2>
 <p>Dobra specifikacija obavlja bar četiri zadatka:</p>
 <ul>
@@ -127,13 +128,26 @@
 <li>određuje standard pregleda</li>
 <li>služi kao memorija tima</li>
 </ul>
+<p>Prvo, definiše svrhu. Tim može proceniti podržava li neka funkcionalnost stvarni proizvod ili samo dodaje izlaz.</p>
+<p>Drugo, definiše granice. Pojašnjava šta je u obimu, šta je van obima, šta je opcionalno i šta mora da radi čak i kada opcioni sistemi zakažu.</p>
+<p>Treće, definiše standard pregleda. Umesto da se pita samo radi li promena tehnički, recenzenti mogu pitati odgovara li ona nameravanom toku rada i produktnim obavezama.</p>
+<p>Četvrto, deluje kao memorija. AI sistemi sami po sebi ne drže stabilnu institucionalnu memoriju. Specifikacija u repozitorijumu to čini.</p>
 <p>To je u projektu Let Books vrlo jasno. <code>AGENTS.md</code> više puta naglašava da ručni tok mora da radi i bez plaćenih AI usluga i da fizički primerci knjiga nisu isto što i bibliografski zapisi. To nisu tehničke sitnice nego proizvodne granice.</p>
+<p>To nisu implementacioni detalji. To su produktne granice. Ako AI pomoćnik generiše tok koji blokira ručni unos ili spaja podatke o fizičkom primerku sa metapodacima izdanja, problem nije stil. Problem je produktno odstupanje.</p>
 <h2 id="zašto-dokumentacija-ne-sme-da-čeka">Zašto dokumentacija ne sme da čeka</h2>
 <p>Ako je dokumentacija zastarela ili nejasna, različiti ljudi i različiti alati iz istog repozitorijuma zaključiće da postoje različiti proizvodi. Jedan će pratiti demo, drugi stari README, treći najbližu datoteku.</p>
+<p>Bez ažurne dokumentacije:</p>
+<ul>
+<li>upiti postaju nedosledni</li>
+<li>pregled postaje subjektivan</li>
+<li>demoi počinju slučajno da redefinišu proizvod</li>
+<li>budući saradnici nasleđuju ponašanje ne znajući da li je bilo namerno</li>
+</ul>
 <p>Zato dokumentacija nije samo naknadno objašnjenje. Ona je deo operativnog sistema projekta. U ovom repozitorijumu <code>README.md</code> opisuje trenutno stanje, <code>AGENTS.md</code> proizvodnu nameru, <code>AGENTS-Implementation.md</code> taktička pravila, a <code>docs/</code> pravila objave i evidencije.</p>
 <h2 id="uloga-demoa">Uloga demoa</h2>
 <p>Demo je koristan jer pokazuje šta postoji i otkriva probleme u korisničkom toku. Ali ne bi smeo tiho da postane proizvodna specifikacija.</p>
 <p>Pravila repozitorijuma već razlikuju kanonične specifikacije i dokumentaciju od statusa implementacije. Ako demo otkrije bolji tok, treba ažurirati specifikaciju i dokumentaciju, a ne pustiti da demo sam po sebi pobedi.</p>
+<p>Ako demo otkrije bolji tok rada, odgovor nije pustiti da demo tiho pobedi. Odgovor je ažurirati specifikaciju, dokumentaciju i standard pregleda kako bi taj bolji tok postao nameran.</p>
 <h2 id="markdown-testovi-i-ci-čine-lanac">Markdown, testovi i CI čine lanac</h2>
 <p>U razvoju vođenom specifikacijom ovi slojevi ne stoje svaki za sebe.</p>
 <ul>
@@ -144,6 +158,7 @@
 <li>CI redovno sprovodi pravila.</li>
 </ul>
 <p>Zajedno stvaraju proizvodnu memoriju koja preživljava brzinu razvoja.</p>
+<p>Svaki je sloj sam po sebi nepotpun. Zajedno stvaraju produktnu memoriju koja preživljava brzinu, iteraciju i promene tima.</p>
 <h2 id="šta-to-znači-za-timove-koji-koriste-ai">Šta to znači za timove koji koriste AI</h2>
 <p>Timovi koji dobro koriste AI ne uklanjaju proces. Oni proces pomeraju bliže izvoru generisanja.</p>
 <p>To obično znači:</p>

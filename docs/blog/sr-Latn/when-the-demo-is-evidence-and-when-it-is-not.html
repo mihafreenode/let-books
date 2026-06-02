@@ -108,9 +108,12 @@
             <hr class="content-header-divider">
           </header>
 <p class="lead">Demo je snažan zato što apstraktne ideje pretvara u nešto na šta ljudi mogu da reaguju. Tok rada koji se u belešci čini razumnim može na telefonu ili u skladištu odmah pokazati stvarno trenje.</p>
-<p>To je dobra strana dema. Opasna je ta što ljudi, kada prototip jednom postoji, njegovo ponašanje često počnu da tretiraju kao proizvodnu istinu.</p>
+<p>To je dobra strana dema.</p>
+<p>Opasna je ta što ljudi, kada prototip jednom postoji, njegovo ponašanje često počnu da tretiraju kao proizvodnu istinu, čak i ako niko tu odluku nije formalno potvrdio.</p>
 <h2 id="zašto-prototipi-postaju-slučajni-autoritet">Zašto prototipi postaju slučajni autoritet</h2>
-<p>Vidljive stvari su ubedljive. Ekran koji radi često dobije više neformalnog autoriteta od zapisanog pravila, čak i kada je nastao samo kao eksperiment.</p>
+<p>Vidljive stvari su ubedljive. Ekran koji radi često dobije više neformalnog autoriteta od zapisanog pravila, čak i kada je taj ekran nastao kao eksperiment.</p>
+<p>To je razumljivo. Ljudi veruju onome što mogu da vide.</p>
+<p>Ali u produktnom radu, naročito u radu uz podršku AI-ja, taj instinkt može da stvori zabunu.</p>
 <p>Demo može prikazivati:</p>
 <ul>
 <li>brz način testiranja toka</li>
@@ -120,16 +123,18 @@
 </ul>
 <p>Ništa od toga samo po sebi ne znači da demo treba da redefiniše proizvod.</p>
 <h2 id="kada-je-demo-dobar-dokaz">Kada je demo dobar dokaz</h2>
-<p>Demo je koristan kada pomaže da se odgovori na pitanja kao što su:</p>
+<p>Demo je vredan dokaz kada pomaže da se odgovori na pitanja kao što su:</p>
 <ul>
 <li>da li je tok upotrebljiv</li>
 <li>da li mobilni raspored podržava stvaran zadatak</li>
-<li>da li je tok skeniranja razumljiv</li>
-<li>kako korisnici reaguju na redosled koraka</li>
+<li>da li je tok skeniranja ili unosa razumljiv</li>
+<li>reaguju li korisnici pozitivno ili negativno na redosled koraka</li>
 </ul>
-<p>Tada je demo dokaz o upotrebljivosti, izvodljivosti i komunikaciji.</p>
+<p>U tim slučajevima demo je dokaz o upotrebljivosti, izvodljivosti, redosledu koraka i komunikaciji.</p>
+<p>Takva vrsta dokaza je izuzetno korisna.</p>
 <h2 id="kada-demo-nije-autoritet">Kada demo nije autoritet</h2>
-<p>Demo ne bi smeo tiho da nadjača proizvodnu specifikaciju. Nije glavni odgovor na pitanja poput:</p>
+<p>Demo ne bi smeo tiho da nadjača proizvodnu specifikaciju.</p>
+<p>Nije pravi primarni autoritet za pitanja poput:</p>
 <ul>
 <li>da li je ovaj tok zvanično u obimu</li>
 <li>da li je to privremena prečica ili proizvodna obaveza</li>
@@ -138,11 +143,17 @@
 </ul>
 <p>Na takva pitanja mora odgovoriti izričita odluka i ažuriranje dokumentacije.</p>
 <h2 id="pravilo-let-books-je-dobar-model">Pravilo Let Books je dobar model</h2>
-<p>Repozitorijum već definiše zdravo pravilo: javno pisanje treba da koristi specifikacije i dokumentaciju kao kanoničan dokaz, a demo ili ponašanje aplikacije može da se pominje kao status implementacije.</p>
-<p>To sprečava da prototip slučajno postane način upravljanja proizvodom.</p>
+<p>Repozitorijum već sadrži zdravo uredničko pravilo za to. Javno pisanje treba da tretira specifikacije i dokumentaciju kao kanoničan dokaz, dok se demo ili ponašanje aplikacije može pominjati kao status implementacije.</p>
+<p>To je pravilo važno zato što sprečava slučajno upravljanje prototipom.</p>
+<p>Ako statični demo otkrije bolji tok za kutije, bolji mobilni tok ili bolju interakciju pri unosu, to je vredno. Ali takav bolji tok postaje pravi autoritet tek nakon ažuriranja specifikacije i povezane dokumentacije.</p>
 <h2 id="zašto-je-to-još-važnije-sa-ai-jem">Zašto je to još važnije sa AI-jem</h2>
-<p>AI pojačava ono što je trenutno najkonkretnije. Ako je najkonkretniji artefakt demo, pomoćnici i ljudi brzo će kopirati njegovo ponašanje bez pitanja da li ono odgovara proizvodnim granicama.</p>
-<p>Zato timovi trebaju vidljiv red autoriteta:</p>
+<p>AI pojačava ono što se u trenutnom kontekstu čini najkonkretnijim.</p>
+<p>Ako je najkonkretnija stvar u repozitorijumu demo, pomoćnici pa čak i ljudski saradnici mogu početi da kopiraju njegovo ponašanje bez pitanja da li ono odgovara zamišljenoj granici proizvoda.</p>
+<p>To može biti korisno kada je demo već usklađen.
+Može takođe brzo da proširi privremene pretpostavke kada nije.</p>
+<p>Zato timovi trebaju vidljiv red autoriteta.</p>
+<h2 id="praktičan-lanac-autoriteta">Praktičan lanac autoriteta</h2>
+<p>Za ovakav rad koristan je sledeći redosled:</p>
 <ol type="1">
 <li>proizvodna specifikacija</li>
 <li>implementaciona uputstva</li>
@@ -166,7 +177,8 @@
 <p>Institucije moraju znati da li procenjuju koncept, prototip ili odobren model radnog toka.</p>
 <p>Studenti moraju naučiti da se prototipi ne opravdavaju sami od sebe. Dobra softverska praksa uključuje razumevanje kada implementaciju treba tretirati kao dokaz, a kada kao eksperiment koji još čeka odluku.</p>
 <h2 id="trajna-lekcija">Trajna lekcija</h2>
-<p>Demo je vredan jer čini proizvodne ideje proverljivim. Opasan postaje kada tiho postane politika. Zdrav model je jednostavan: neka demo informiše proizvod, ali neka specifikacije i dokumentacija zabeleže konačnu odluku.</p>
+<p>Demo je vredan jer čini proizvodne ideje proverljivim. Opasan postaje kada tiho postane politika.</p>
+<p>Najzdraviji model je jednostavan: neka demo informiše proizvod, a neka specifikacije i dokumentacija zabeleže konačnu odluku.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

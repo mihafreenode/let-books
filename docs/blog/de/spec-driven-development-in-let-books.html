@@ -111,7 +111,7 @@
 <p>Das Projekt ist noch keine vollständige gehostete Anwendung. Es umfasst derzeit eine Produktspezifikation, Implementierungsleitlinien, öffentliche Dokumentation und ein lokales statisches Demo. Dadurch ist es ein gutes Beispiel dafür, wie ein Projekt kohärent bleiben kann, bevor der endgültige Produktions-Stack existiert.</p>
 <h2 id="die-spezifikationsebene">Die Spezifikationsebene</h2>
 <p><code>AGENTS.md</code> ist die zentrale Produktspezifikation. Sie definiert den Zweck des Projekts, das Domänenmodell, Arbeitsabläufe, Umfangsgrenzen, Lokalisierungsrichtung, Datenschutz, KI-Optionalität und Abnahmekriterien.</p>
-<p>Sie beantwortet Fragen wie:</p>
+<p>Das ist wichtig, weil sie Fragen beantwortet, auf die Code allein keine klare Antwort geben kann:</p>
 <ul>
 <li>warum das Projekt existiert</li>
 <li>welche Arbeitsabläufe erstklassig sind</li>
@@ -122,24 +122,46 @@
 <p>Das ist der Unterschied zwischen einer allgemeinen Beschreibung und einer echten Spezifikation. Eine echte Spezifikation begrenzt Implementierungsentscheidungen.</p>
 <h2 id="die-ebene-der-taktischen-leitlinien">Die Ebene der taktischen Leitlinien</h2>
 <p><code>AGENTS-Implementation.md</code> ergänzt die zweite Ebene. Sie ersetzt die Produktspezifikation nicht, sondern erklärt, wie die Arbeit in diesem Repository derzeit ausgeführt werden soll.</p>
-<p>Dazu gehören Regeln für öffentliche Benennung, Dokumentation, statische Seiten, Lokalisierung, Prüfung und Nachweispolitik für öffentliches Schreiben. Das ist wichtig, weil nicht jede Regel Produktwahrheit ist. Manche sind taktisch, redaktionell oder repositoriespezifisch.</p>
+<p>Beispiele dafür sind:</p>
+<ul>
+<li>Regeln für öffentliche Benennung</li>
+<li>Regeln für die Dokumentationsimplementierung</li>
+<li>Erwartungen an Metadaten der statischen Website</li>
+<li>Grenzen des Demos</li>
+<li>Erwartungen an Lokalisierung und Prüfung</li>
+<li>redaktionelle Nachweispolitik für öffentliches Schreiben</li>
+</ul>
+<p>Das ist für KI-gestützte Arbeit wichtig, weil nicht jede Regel in die langfristige Produktspezifikation gehört. Manche Regeln sind taktisch, redaktionell oder repositoriespezifisch. Diese Unterscheidung klar zu halten, reduziert Rauschen und verhindert, dass die Produktspezifikation zu einer Ablage für Implementierungsdetails wird.</p>
 <h2 id="die-ebene-des-aktuellen-zustands">Die Ebene des aktuellen Zustands</h2>
-<p><code>README.md</code> bildet die dritte Ebene: eine ehrliche Beschreibung des aktuellen Zustands.</p>
-<p>Sie erklärt, was heute existiert, was noch fehlt, wozu das statische Demo dient und wie die öffentliche Seite veröffentlicht wird. Das hilft Mitwirkenden, Institutionen und Prüfern, Ambition nicht mit Implementierung zu verwechseln.</p>
+<p><code>README.md</code> bildet die dritte Ebene: eine Beschreibung des aktuellen Zustands.</p>
+<p>Sie erklärt, was heute existiert, was noch fehlt, wozu das statische Demo dient und wie die öffentliche Seite veröffentlicht wird. Das ist ein zentraler Teil der Ausrichtung, weil Projekte oft scheitern, wenn Lesende Ambition mit Implementierung verwechseln.</p>
+<p>In Let Books unterscheidet die README ausdrücklich zwischen aktuellen Ergebnissen und zukünftigen Plänen. Das hilft Mitwirkenden, Institutionen und Prüfern, die Reife des Projekts ohne Rätselraten zu verstehen.</p>
 <h2 id="die-ebene-der-dokumentation">Die Ebene der Dokumentation</h2>
-<p><code>docs/</code> fügt die vierte Ebene hinzu. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> und die Stilrichtlinien legen fest, wie Wissen organisiert, veröffentlicht und geprüft werden soll.</p>
+<p>Der Bereich <code>docs/</code> fügt die vierte Ebene hinzu. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code>, die Stilrichtlinien und der Bereich <code>sources</code> legen fest, wie Wissen organisiert, validiert und veröffentlicht werden soll.</p>
 <p>Hier wird das Repository mehr als eine Sammlung von Dateien. Es wird zu einer Wissensplattform mit:</p>
 <ul>
 <li>Dokumentationsarchitektur</li>
 <li>redaktionellen Nachweisregeln</li>
 <li>mehrsprachiger Veröffentlichungsstruktur</li>
-<li>Regeln für Veröffentlichung und Prüfung</li>
+<li>Veröffentlichungsregeln für öffentliche Dokumentation</li>
+<li>Entwicklungs- und Validierungsleitlinien</li>
 </ul>
+<p>Genau diese Art von Gerüst hilft dabei, KI-gestützte Lieferung nachvollziehbar zu halten.</p>
 <h2 id="die-demo-ebene">Die Demo-Ebene</h2>
 <p>Das statische Demo ist wichtig, aber bewusst nicht die einzige Autorität. Die Regeln für Blog und Quellen unterscheiden bereits zwischen kanonischer Dokumentation und Implementierungsstatus.</p>
 <p>Das bedeutet, dass das Demo Arbeitsabläufe prüfen, Nutzbarkeitsprobleme offenlegen und externen Beteiligten helfen kann, ohne von selbst zur endgültigen Produktwahrheit zu werden.</p>
+<p>Das ist eine reife Regel. Ohne sie werden Prototypen oft zu zufälligen Governance-Mechanismen. Ein Team beginnt, den Prototyp zu kopieren, weil er existiert, nicht weil er eine freigegebene Produktentscheidung widerspiegelt.</p>
 <h2 id="die-prüfungsebene">Die Prüfungsebene</h2>
-<p>Let Books dokumentiert bereits auch eine Prüfmentalität. <code>docs/Development.md</code> und <code>docs/Deployment.md</code> beschreiben Lokalisierungs-Smoketests, Validierung strukturierter Dateien, Metadatengenerierung, Pflichtdateien, Rechtschreibprüfungen und automatisierte Veröffentlichung.</p>
+<p>Let Books dokumentiert bereits auch eine Prüfmentalität.</p>
+<p><code>docs/Development.md</code> und <code>docs/Deployment.md</code> beschreiben Validierungsebenen wie:</p>
+<ul>
+<li>Lokalisierungs-Smoketests</li>
+<li>Validierung strukturierter Dateien</li>
+<li>Metadatengenerierung</li>
+<li>Prüfungen auf Pflichtdateien</li>
+<li>optionale Rechtschreibprüfung und Linting</li>
+<li>Veröffentlichungsautomatisierung</li>
+</ul>
 <p>Das sind nicht nur Werkzeugdetails. Es ist ein Beleg dafür, dass das Projekt Qualität als wiederholbares System behandelt.</p>
 <h2 id="warum-das-für-ki-gestützte-lieferung-wichtig-ist">Warum das für KI-gestützte Lieferung wichtig ist</h2>
 <p>Wenn ein KI-Assistent zu Let Books beiträgt, muss er das Produkt nicht von Grund auf erfinden. Das Repository enthält bereits eine Kette von Absicht:</p>
@@ -153,8 +175,18 @@
 </ol>
 <p>Diese Kette beseitigt Fehler nicht. Sie macht sie aber leichter erkennbar und leichter überprüfbar.</p>
 <h2 id="die-wichtigste-lehre">Die wichtigste Lehre</h2>
-<p>Spezifikationsgetriebene Entwicklung bedeutet nicht nur, vor dem Programmieren ein langes Dokument zu schreiben. In der Praxis bedeutet sie, eine verlässliche Kette zwischen Produktabsicht, taktischen Regeln, öffentlicher Dokumentation, Demo, Prüfung und Veröffentlichung aufzubauen.</p>
-<p>Let Books zeigt, dass eine solche Kette schon vor einer vollständigen Backend-Anwendung existieren kann. Genau das ist einer der stärksten Vorteile spezifikationsgetriebener Entwicklung in KI-gestützter Arbeit.</p>
+<p>Spezifikationsgetriebene Entwicklung bedeutet nicht nur, vor Beginn des Programmierens ein langes Anforderungsdokument zu schreiben.</p>
+<p>In der Praxis bedeutet sie, eine verlässliche Kette aufzubauen zwischen:</p>
+<ul>
+<li>Produktabsicht</li>
+<li>taktischen Regeln</li>
+<li>öffentlicher Dokumentation</li>
+<li>Demos</li>
+<li>Validierung</li>
+<li>Veröffentlichung</li>
+</ul>
+<p>Let Books zeigt bereits, dass eine solche Kette existieren kann, bevor das vollständige Backend-Produkt existiert.</p>
+<p>Das ist eines der stärksten Argumente für spezifikationsgetriebene Entwicklung in KI-gestützter Arbeit: Je klarer die Kette der Absicht ist, desto unwahrscheinlicher wird schneller Output zu schneller Verwirrung.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

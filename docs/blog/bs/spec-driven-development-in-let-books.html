@@ -122,24 +122,46 @@
 <p>To je razlika između općeg opisa i prave specifikacije. Prava specifikacija ograničava implementacijske izbore.</p>
 <h2 id="sloj-taktičkih-smjernica">Sloj taktičkih smjernica</h2>
 <p><code>AGENTS-Implementation.md</code> dodaje drugi sloj. Ne zamjenjuje proizvodnu specifikaciju, nego objašnjava kako se rad u ovom repozitoriju sada treba izvoditi.</p>
-<p>Tu spadaju pravila o javnom imenovanju, dokumentaciji, statičnom mjestu, lokalizaciji, provjeri i dokaznoj politici za javno pisanje. To je važno jer nisu sva pravila proizvodna istina. Neka su taktička, urednička ili specifična za repozitorij.</p>
+<p>Primjeri uključuju:</p>
+<ul>
+<li>pravila javnog imenovanja</li>
+<li>pravila implementacije dokumentacije</li>
+<li>očekivanja o metapodacima statičnog mjesta</li>
+<li>ograničenja demoa</li>
+<li>očekivanja o lokalizaciji i provjeri</li>
+<li>uredničku dokaznu politiku za javno pisanje</li>
+</ul>
+<p>To je važno u radu uz pomoć AI-ja zato što svako pravilo ne pripada dugoročnoj proizvodnoj specifikaciji. Neka su pravila taktička, urednička ili specifična za repozitorij. Održavanje te razlike jasnom smanjuje šum i sprječava da se proizvodna specifikacija pretvori u odlagalište implementacijskih detalja.</p>
 <h2 id="sloj-trenutnog-stanja">Sloj trenutnog stanja</h2>
-<p><code>README.md</code> predstavlja treći sloj: pošten opis trenutnog stanja.</p>
-<p>On objašnjava šta danas postoji, čega još nema, čemu služi statični demo i kako je javna stranica objavljena. To pomaže saradnicima, institucijama i recenzentima da ne miješaju ambiciju s implementacijom.</p>
+<p><code>README.md</code> predstavlja treći sloj: opis trenutnog stanja.</p>
+<p>Objašnjava šta danas postoji, čega još nema, čemu služi statični demo i kako je javna stranica objavljena. To je ključan dio usklađivanja, jer projekti često podbace kada čitaoci pobrkaju ambiciju s implementacijom.</p>
+<p>U Let Booksu README izričito razlikuje trenutne isporuke od budućih planova. To saradnicima, institucijama i recenzentima pomaže razumjeti zrelost projekta bez nagađanja.</p>
 <h2 id="sloj-dokumentacije">Sloj dokumentacije</h2>
-<p><code>docs/</code> dodaje četvrti sloj. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code> i vodiči za stil određuju kako znanje treba biti organizirano, objavljeno i provjereno.</p>
+<p>Područje <code>docs/</code> dodaje četvrti sloj. <code>docs/README.md</code>, <code>docs/Development.md</code>, <code>docs/Deployment.md</code>, vodiči za stil i područje <code>sources</code> određuju kako znanje treba biti organizirano, validirano i objavljeno.</p>
 <p>Tu repozitorij postaje više od zbirke datoteka. Postaje platforma znanja sa:</p>
 <ul>
 <li>arhitekturom dokumentacije</li>
 <li>pravilima uredničkih dokaza</li>
 <li>višejezičnom izdavačkom strukturom</li>
-<li>pravilima objave i provjere</li>
+<li>pravilima objave javne dokumentacije</li>
+<li>razvojnim i validacijskim smjernicama</li>
 </ul>
+<p>To je upravo vrsta okvira koja pomaže da isporuka uz pomoć AI-ja ostane sljediva.</p>
 <h2 id="sloj-demoa">Sloj demoa</h2>
 <p>Statični demo je važan, ali namjerno nije jedina autoriteta. Pravila za blog i izvore već razlikuju kanoničnu dokumentaciju od statusa implementacije.</p>
 <p>To znači da demo može provjeravati tokove rada, otkrivati probleme upotrebljivosti i pomagati u objašnjavanju vanjskim akterima, a da pritom sam od sebe ne postane konačna proizvodna istina.</p>
+<p>To je zrelo pravilo. Bez njega prototipi često postanu slučajni mehanizmi upravljanja. Tim počne kopirati prototip zato što postoji, a ne zato što odražava odobrenu proizvodnu odluku.</p>
 <h2 id="sloj-provjere">Sloj provjere</h2>
-<p>Let Books već dokumentira i način razmišljanja o provjeri. <code>docs/Development.md</code> i <code>docs/Deployment.md</code> opisuju dimne testove lokalizacije, validaciju strukturiranih datoteka, generiranje metapodataka, obavezne datoteke, pravopisne provjere i automatiziranu objavu.</p>
+<p>Let Books već dokumentira i način razmišljanja o provjeri.</p>
+<p><code>docs/Development.md</code> i <code>docs/Deployment.md</code> opisuju validacijske slojeve kao što su:</p>
+<ul>
+<li>dimni testovi lokalizacije</li>
+<li>validacija strukturiranih datoteka</li>
+<li>generiranje metapodataka</li>
+<li>provjera obaveznih datoteka</li>
+<li>opcionalne pravopisne provjere i linting</li>
+<li>automatizacija objave</li>
+</ul>
 <p>To nisu samo detalji o alatima. To je dokaz da projekt kvalitet tretira kao ponovljiv sistem.</p>
 <h2 id="zašto-je-to-važno-za-ai-podržanu-isporuku">Zašto je to važno za AI-podržanu isporuku</h2>
 <p>Ako AI pomoćnik doprinosi Let Booksu, ne mora izmišljati proizvod od početka. Repozitorij već sadrži lanac namjere:</p>
@@ -153,8 +175,18 @@
 </ol>
 <p>Taj lanac ne uklanja greške. Ali ih čini lakšim za otkrivanje i pregled.</p>
 <h2 id="glavna-lekcija">Glavna lekcija</h2>
-<p>Razvoj vođen specifikacijom ne znači samo napisati dugačak dokument prije kodiranja. U praksi znači izgraditi pouzdan lanac između proizvodne namjere, taktičkih pravila, javne dokumentacije, demoa, provjere i objave.</p>
-<p>Let Books pokazuje da takav lanac može postojati i prije pune backend aplikacije. Upravo je to jedna od najjačih prednosti razvoja vođenog specifikacijom u AI-podržanom radu.</p>
+<p>Razvoj vođen specifikacijom ne znači samo napisati dugačak dokument sa zahtjevima prije početka kodiranja.</p>
+<p>U praksi znači izgraditi pouzdan lanac između:</p>
+<ul>
+<li>proizvodne namjere</li>
+<li>taktičkih pravila</li>
+<li>javne dokumentacije</li>
+<li>demoa</li>
+<li>validacije</li>
+<li>objave</li>
+</ul>
+<p>Let Books već pokazuje da takav lanac može postojati i prije pune pozadinske aplikacije.</p>
+<p>To je jedan od najsnažnijih argumenata za razvoj vođen specifikacijom u AI-podržanom radu: što je lanac namjere jasniji, to je manja vjerovatnoća da će se brz izlaz pretvoriti u brzu zbrku.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

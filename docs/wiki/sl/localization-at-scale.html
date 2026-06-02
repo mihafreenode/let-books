@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lokalizacija v merilu | LetBooks</title>
-    <meta name="description" content="Lokalizacija v obsegu je praksa obravnave večjezične vsebine kot zasnovanega sistema, ki zajema pisanje, upravljanje, sredstva, dostopnost, potrjevanje in pregled.">
+    <meta name="description" content="Lokalizacija v merilu je praksa obravnavanja večjezičnega objavljanja kot povratnega sistema in dolgoročnega sistema znanja, ne pa kot enkratne prevajalske naloge.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sl/localization-at-scale.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Lokalizacija v merilu | LetBooks">
-    <meta property="og:description" content="Lokalizacija v obsegu je praksa obravnave večjezične vsebine kot zasnovanega sistema, ki zajema pisanje, upravljanje, sredstva, dostopnost, potrjevanje in pregled.">
+    <meta property="og:description" content="Lokalizacija v merilu je praksa obravnavanja večjezičnega objavljanja kot povratnega sistema in dolgoročnega sistema znanja, ne pa kot enkratne prevajalske naloge.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sl/localization-at-scale.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lokalizacija v merilu | LetBooks">
-    <meta name="twitter:description" content="Lokalizacija v obsegu je praksa obravnave večjezične vsebine kot zasnovanega sistema, ki zajema pisanje, upravljanje, sredstva, dostopnost, potrjevanje in pregled.">
+    <meta name="twitter:description" content="Lokalizacija v merilu je praksa obravnavanja večjezičnega objavljanja kot povratnega sistema in dolgoročnega sistema znanja, ne pa kot enkratne prevajalske naloge.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Slovenščina</span>
           </div>
-          <p class="content-page-summary">Lokalizacija v obsegu je praksa obravnave večjezične vsebine kot zasnovanega sistema, ki zajema pisanje, upravljanje, sredstva, dostopnost, potrjevanje in pregled.</p>
+          <p class="content-page-summary">Lokalizacija v merilu je praksa obravnavanja večjezičnega objavljanja kot povratnega sistema in dolgoročnega sistema znanja, ne pa kot enkratne prevajalske naloge.</p>
             <hr class="content-header-divider">
           </header>
 <h2 id="osnovna-ideja">Osnovna ideja</h2>
@@ -106,17 +106,33 @@
 <ul>
 <li>pisanje vira</li>
 <li>terminologija</li>
+<li>metapodatki</li>
 <li>navigacija</li>
 <li>besedilo o dostopnosti</li>
 <li>diagrami in posnetki zaslona</li>
-<li>metapodatki</li>
 <li>pregled poteka dela</li>
 <li>CI in QA</li>
+<li>upravljanje odmika</li>
+<li>pregled naravnega govorca</li>
 </ul>
-<h2 id="zakaj-je-pomembno">Zakaj je pomembno</h2>
-<p>Projekti, ki zamujajo z lokalizacijo, običajno odkrijejo, da so njihova informacijska arhitektura, posnetki zaslona in predpostavke testiranja že angleško oblikovani.</p>
-<h2 id="let-books-kontekst">Let Books kontekst</h2>
-<p>Let Books je izrecno večjezičen v navodilih za izdelek, dokumentaciji in pričakovanjih uporabniškega vmesnika. Zaradi tega je arhitektura lokalizacije glavna skrb izdelka.</p>
+<h2 id="avtoritativni-priročnik">Avtoritativni priročnik</h2>
+<p>Osrednji operativni model za to pobudo je zdaj zbran v:</p>
+<ul>
+<li><code>../localization-at-scale-program.md</code></li>
+</ul>
+<p>Ta priročnik določa:</p>
+<ul>
+<li>zakaj je večjezično objavljanje pomembno</li>
+<li>zakaj je lokalizacija sistem, ne projekt</li>
+<li>kako AI sodi v povratne zanke</li>
+<li>model kakovosti pokritosti, celovitosti, kakovosti in svežine</li>
+<li>lokalizacijski dolg in odprte razrede napak</li>
+<li>sanacijo po načelu source-first in delovni tok za AI agente</li>
+<li>lokalizacijski odmik in zrelost repozitorija</li>
+<li>podrobni korpus ugotovitev pregledov naravnih govorcev</li>
+</ul>
+<h2 id="praktično-pravilo">Praktično pravilo</h2>
+<p>Lokalizirana stran ni dokončana, dokler ni lokalizirana vsa vsebina, ki jo vidi bralec, vključno s povzetki, oznakami, glavnim besedilom, napisi, diagrami, nadomestnim besedilom in površinami povezanih vsebin.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

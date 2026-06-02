@@ -112,25 +112,27 @@
 <h2 id="perché-questo-conta-ancora-di-più-oggi">Perché questo conta ancora di più oggi</h2>
 <p>L’IA può generare implementazione a partire da intenzione incompleta. Questo viene spesso presentato come comodità. In pratica significa che ogni ambiguità del progetto diventa un punto in cui il prodotto può deviare.</p>
 <p>Se la documentazione è debole o datata, persone e strumenti diversi ricaveranno prodotti diversi dallo stesso repository.</p>
+<p>Un collaboratore può seguire l’interfaccia utente attuale.
+Un altro può seguire un vecchio README.
+Un assistente IA può seguire il file più vicino e inventare il resto.</p>
+<p>Il problema non è solo la correttezza a livello di codice. Il problema è se il progetto descrive ancora un solo prodotto invece di più supposizioni sovrapposte.</p>
 <h2 id="la-documentazione-svolge-quattro-funzioni-di-prodotto">La documentazione svolge quattro funzioni di prodotto</h2>
-<p>La documentazione:</p>
-<ul>
-<li>porta l’intento</li>
-<li>imposta aspettative</li>
-<li>riduce il costo di coordinamento</li>
-<li>sostiene la fiducia</li>
-</ul>
-<p>Dice a collaboratori, istituzioni, revisori e assistenti IA cosa il progetto sta cercando di fare e in cosa non dovrebbe trasformarsi.</p>
+<p>Una buona documentazione fa molto di più che spiegare l’interfaccia a posteriori.</p>
+<p>Primo, porta l’intento. Dice ai futuri collaboratori che cosa il prodotto sta cercando di ottenere e in che cosa esplicitamente non sta cercando di trasformarsi.</p>
+<p>Secondo, imposta aspettative. I lettori possono capire che cosa esiste ora, che cosa è pianificato e che cosa non dovrebbe essere descritto come già implementato.</p>
+<p>Terzo, riduce il costo di coordinamento. Nuovi collaboratori, revisori, istituzioni e assistenti IA possono tutti orientarsi senza ricostruire il progetto a partire da frammenti.</p>
+<p>Quarto, sostiene la fiducia. Un progetto che separa chiaramente stato attuale, direzione pianificata e flusso di lavoro sperimentale è più facile da valutare e più facile da mantenere.</p>
 <h2 id="let-books-è-già-strutturato-così">Let Books è già strutturato così</h2>
-<p>Nel repository Let Books:</p>
+<p>Il repository Let Books dimostra già questo approccio stratificato.</p>
 <ul>
-<li><code>AGENTS.md</code> definisce l’intento di prodotto e i flussi di lavoro</li>
-<li><code>AGENTS-Implementation.md</code> definisce le regole tattiche di esecuzione</li>
-<li><code>README.md</code> descrive onestamente lo stato attuale</li>
-<li><code>docs/</code> definisce regole di pubblicazione, scrittura, localizzazione e prove</li>
+<li><code>AGENTS.md</code> definisce lo scopo del prodotto, i flussi di lavoro, i confini del dominio e la direzione a lungo termine.</li>
+<li><code>AGENTS-Implementation.md</code> definisce le regole tattiche di implementazione e documentazione.</li>
+<li><code>README.md</code> spiega lo stato attuale del repository e distingue le consegne presenti dai piani futuri.</li>
+<li><code>docs/</code> definisce una piattaforma di conoscenza con convenzioni per pubblicazione, scrittura, localizzazione e mappatura delle fonti.</li>
 </ul>
 <p>Questo significa che qui la documentazione non è solo spiegazione. È parte del modo in cui il progetto opera.</p>
 <h2 id="la-documentazione-obsoleta-è-debito-di-prodotto">La documentazione obsoleta è debito di prodotto</h2>
+<p>I team spesso riconoscono il debito tecnico solo quando appare nel codice. Ma la documentazione obsoleta crea un tipo simile di attrito.</p>
 <p>La documentazione obsoleta porta a:</p>
 <ul>
 <li>assunzioni implementative errate</li>
@@ -163,7 +165,8 @@
 <!-- semantic-parity: documentation-as-product-distinction -->
 <p>Questa differenza è la differenza tra la documentazione come commento e la documentazione come parte del prodotto.</p>
 <h2 id="la-lezione-durevole">La lezione durevole</h2>
-<p>La documentazione non è separata dalla qualità del prodotto. Modella implementazione, review, comunicazione, validazione e fiducia a lungo termine. Nei progetti supportati dall’IA, la documentazione è parte del prodotto perché è parte del sistema che impedisce la deriva del prodotto.</p>
+<p>La documentazione non è separata dalla qualità del prodotto.</p>
+<p>Modella implementazione, review, comunicazione, validazione e fiducia a lungo termine. Nei progetti supportati dall’IA, la documentazione è parte del prodotto perché è parte del sistema che impedisce la deriva del prodotto.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

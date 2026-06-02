@@ -139,6 +139,37 @@
 </ul>
 <p>Upravo ovakvi primeri objašnjavaju zašto je ljudski pregled i dalje važan. Značenje je bilo blizu, ali su gramatika, modalnost, terminologija i registar ipak zahtevali korekciju izvornog govornika.</p>
 <p>Čak i kada je opšte značenje očuvano, AI-generisani prevodi mogu zahtevati pregled izvornog govornika kako bi se ispravile suptilne poteškoće u gramatici, modalnosti, terminologiji i registru specifičnom za domen. Takve je poteškoće često teško otkriti samo automatizovanim metrikama kvaliteta.</p>
+<h2 id="jedan-primer-za-svaku-kategoriju-pregleda">Jedan primer za svaku kategoriju pregleda</h2>
+<p>Različite kategorije nalaza u pregledu zahtevaju različite vrste ljudske procene.</p>
+<h3 id="modalnost-i-jezik-pravilnika">Modalnost i jezik pravilnika</h3>
+<p>Izvorni AI nacrt:</p>
+<p><code>Skrbniki morajo moči OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Plačljive obogatitve morajo biti izrecne, sledljive in stroškovno nadzorovane.</code></p>
+<p>Ispravka izvornog govornika:</p>
+<p><code>Skrbniki morajo imeti možnost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Plačljive obogatitve morajo biti izrecno omogočene, sledljive in stroškovno nadzorovane.</code></p>
+<p>Pouka:</p>
+<ul>
+<li>očuvano značenje nije dovoljno kada gramatika, modalnost i formulacija pravilnika izvornim govornicima i dalje zvuče pogrešno</li>
+</ul>
+<h3 id="optimizacija-izvornog-teksta-za-lokalizaciju">Optimizacija izvornog teksta za lokalizaciju</h3>
+<p>Izvorni engleski naslov:</p>
+<p><code>The hidden exclusion of English-only systems</code></p>
+<p>Poboljšani engleski naslov:</p>
+<p><code>Why English-only systems exclude people</code></p>
+<p>Pouka:</p>
+<ul>
+<li>neke lokalizacijske probleme bolje je rešiti poboljšanjem izvornog teksta nego primoravanjem svakog ciljnog jezika da kompenzuje sabijenu englesku formulaciju</li>
+</ul>
+<h3 id="lažni-prijatelj-u-tehničkoj-terminologiji">Lažni prijatelj u tehničkoj terminologiji</h3>
+<p>Izvorna engleska fraza:</p>
+<p><code>benchmark fixtures</code></p>
+<p>Netačna slovenačka lokalizacija:</p>
+<p><code>primerjalne napeljave</code></p>
+<p>Poboljšana slovenačka lokalizacija:</p>
+<p><code>referenčni primeri za primerjalno vrednotenje</code></p>
+<p>Pouka:</p>
+<ul>
+<li>tehničke termine treba prevoditi prema domenskom značenju; u kontekstima testiranja i vrednovanja <code>fixture</code> znači višekratno upotrebljiv referentni primer ili testni slučaj, a ne fizičku infrastrukturu</li>
+</ul>
 <h2 id="trajna-pouka">Trajna pouka</h2>
 <p>Budućnost nije prevodilac protiv AI-ja. Praktična budućnost je lokalizacija potpomognuta AI-jem sa jasnim fazama pregleda i transparentnim očekivanjima kvaliteta.</p>
 

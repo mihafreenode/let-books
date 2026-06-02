@@ -112,25 +112,27 @@
 <h2 id="warum-das-heute-noch-wichtiger-ist">Warum das heute noch wichtiger ist</h2>
 <p>KI kann Implementierung aus unvollständiger Absicht erzeugen. Das wird oft als Bequemlichkeit dargestellt. In der Praxis bedeutet es, dass jede Unklarheit im Projekt zu einem Ort wird, an dem das Produkt abdriften kann.</p>
 <p>Wenn die Dokumentation schwach oder veraltet ist, werden verschiedene Menschen und verschiedene Werkzeuge aus demselben Repository verschiedene Produkte ableiten.</p>
+<p>Ein Mitwirkender kann der aktuellen Benutzeroberfläche folgen.
+Ein anderer kann einer alten README-Datei folgen.
+Ein KI-Assistent kann der nächstgelegenen Datei folgen und den Rest erfinden.</p>
+<p>Das Problem ist nicht nur Korrektheit auf Code-Ebene. Das Problem ist, ob das Projekt noch immer ein Produkt beschreibt statt mehrerer sich überlagernder Vermutungen.</p>
 <h2 id="dokumentation-erfüllt-vier-produktaufgaben">Dokumentation erfüllt vier Produktaufgaben</h2>
-<p>Dokumentation:</p>
-<ul>
-<li>trägt die Absicht</li>
-<li>setzt Erwartungen</li>
-<li>senkt Koordinationskosten</li>
-<li>stützt Vertrauen</li>
-</ul>
-<p>Sie sagt Mitwirkenden, Institutionen, Prüfern und KI-Assistenten, was das Projekt erreichen will und was es ausdrücklich nicht werden soll.</p>
+<p>Gute Dokumentation tut weit mehr, als die Oberfläche nachträglich zu erklären.</p>
+<p>Erstens trägt sie Absicht. Sie sagt zukünftigen Mitwirkenden, was das Produkt erreichen will und was es ausdrücklich nicht werden will.</p>
+<p>Zweitens setzt sie Erwartungen. Lesende können erkennen, was jetzt existiert, was geplant ist und was nicht so beschrieben werden sollte, als wäre es bereits implementiert.</p>
+<p>Drittens senkt sie Koordinationskosten. Neue Mitwirkende, Reviewer, Institutionen und KI-Assistenten können sich alle orientieren, ohne das Projekt aus Fragmenten rekonstruieren zu müssen.</p>
+<p>Viertens stützt sie Vertrauen. Ein Projekt, das aktuellen Zustand, geplante Richtung und experimentellen Workflow klar trennt, ist leichter zu bewerten und leichter zu pflegen.</p>
 <h2 id="let-books-ist-bereits-so-aufgebaut">Let Books ist bereits so aufgebaut</h2>
-<p>Im Repository Let Books:</p>
+<p>Das Let-Books-Repository zeigt diesen mehrschichtigen Ansatz bereits.</p>
 <ul>
-<li>definiert <code>AGENTS.md</code> die Produktabsicht und Arbeitsabläufe</li>
-<li>definiert <code>AGENTS-Implementation.md</code> taktische Ausführungsregeln</li>
-<li>beschreibt <code>README.md</code> ehrlich den aktuellen Zustand</li>
-<li>definiert <code>docs/</code> Regeln für Veröffentlichung, Schreiben, Lokalisierung und Nachweise</li>
+<li><code>AGENTS.md</code> definiert Produktzweck, Workflows, Domänengrenzen und langfristige Richtung.</li>
+<li><code>AGENTS-Implementation.md</code> definiert taktische Regeln für Implementierung und Dokumentation.</li>
+<li><code>README.md</code> erklärt den aktuellen Zustand des Repositories und unterscheidet gegenwärtige Liefergegenstände von zukünftigen Plänen.</li>
+<li><code>docs/</code> definiert eine Wissensplattform mit Konventionen für Veröffentlichung, Schreiben, Lokalisierung und Quellenabbildung.</li>
 </ul>
 <p>Das bedeutet: Dokumentation ist hier nicht nur Erklärung. Sie ist Teil der Arbeitsweise des Projekts.</p>
 <h2 id="veraltete-dokumentation-ist-produktschuld">Veraltete Dokumentation ist Produktschuld</h2>
+<p>Teams erkennen technische Schulden oft erst, wenn sie im Code auftauchen. Veraltete Dokumentation erzeugt aber eine ähnliche Art von Reibung.</p>
 <p>Veraltete Dokumentation führt zu:</p>
 <ul>
 <li>falschen Implementierungsannahmen</li>
@@ -163,7 +165,8 @@
 <!-- semantic-parity: documentation-as-product-distinction -->
 <p>Dieser Unterschied ist der Unterschied zwischen Dokumentation als Kommentar und Dokumentation als Teil des Produkts.</p>
 <h2 id="die-dauerhafte-lehre">Die dauerhafte Lehre</h2>
-<p>Dokumentation ist nicht von Produktqualität getrennt. Sie prägt Implementierung, Review, Kommunikation, Validierung und langfristiges Vertrauen. In KI-gestützten Projekten ist Dokumentation Teil des Produkts, weil sie Teil des Systems ist, das Produktdrift verhindert.</p>
+<p>Dokumentation ist nicht von Produktqualität getrennt.</p>
+<p>Sie prägt Implementierung, Review, Kommunikation, Validierung und langfristiges Vertrauen. In KI-gestützten Projekten ist Dokumentation Teil des Produkts, weil sie Teil des Systems ist, das Produktdrift verhindert.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

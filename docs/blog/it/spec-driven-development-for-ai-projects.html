@@ -119,6 +119,7 @@
 <li>il modello generico piu noto</li>
 </ul>
 <p>Nulla di tutto questo equivale automaticamente alla giusta decisione di prodotto.</p>
+<p>Sono scorciatoie utili per la generazione. Ma non sostituiscono il giudizio di prodotto.</p>
 <h2 id="cosa-fa-una-buona-specifica">Cosa fa una buona specifica</h2>
 <p>Una buona specifica svolge almeno quattro funzioni:</p>
 <ul>
@@ -127,13 +128,26 @@
 <li>stabilisce lo standard di revisione</li>
 <li>funge da memoria del team</li>
 </ul>
+<p>Primo, definisce lo scopo. Il team può capire se una funzionalità sostiene il prodotto reale o aggiunge semplicemente output.</p>
+<p>Secondo, definisce i confini. Chiarisce che cosa è nell’ambito, che cosa è fuori ambito, che cosa è opzionale e che cosa deve funzionare anche quando i sistemi opzionali falliscono.</p>
+<p>Terzo, definisce lo standard di revisione. Invece di chiedersi solo se una modifica funziona tecnicamente, i revisori possono chiedersi se corrisponde al flusso di lavoro previsto e agli impegni di prodotto.</p>
+<p>Quarto, agisce come memoria. I sistemi di IA non mantengono da soli una memoria istituzionale stabile. Una specifica nel repository sì.</p>
 <p>Questo e molto chiaro in Let Books. <code>AGENTS.md</code> sottolinea piu volte che il flusso manuale deve restare utile anche senza servizi di IA a pagamento e che le copie fisiche dei libri non sono la stessa cosa dei record bibliografici. Questi non sono dettagli tecnici, ma confini di prodotto.</p>
+<p>Non sono dettagli di implementazione. Sono confini di prodotto. Se un assistente IA genera un flusso che blocca l’inserimento manuale o fonde i dati della copia fisica nei metadati dell’edizione, il problema non è lo stile. Il problema è la deriva di prodotto.</p>
 <h2 id="perché-la-documentazione-non-deve-aspettare">Perché la documentazione non deve aspettare</h2>
 <p>Se la documentazione e vecchia o poco chiara, persone e strumenti diversi ricaveranno prodotti diversi dallo stesso repository. Uno seguira la demo, un altro un vecchio README, un altro ancora il file piu vicino.</p>
+<p>Senza documentazione aggiornata:</p>
+<ul>
+<li>i prompt diventano incoerenti</li>
+<li>la revisione diventa soggettiva</li>
+<li>le demo iniziano per errore a ridefinire il prodotto</li>
+<li>i futuri collaboratori ereditano comportamenti senza sapere se fossero intenzionali</li>
+</ul>
 <p>Per questo la documentazione non e solo una spiegazione successiva. E parte del sistema operativo del progetto. In questo repository <code>README.md</code> descrive lo stato attuale, <code>AGENTS.md</code> l’intento di prodotto, <code>AGENTS-Implementation.md</code> le regole tattiche e <code>docs/</code> le regole di pubblicazione e tracciabilita.</p>
 <h2 id="il-ruolo-delle-demo">Il ruolo delle demo</h2>
 <p>Una demo e utile perché mostra cosa esiste e rivela problemi nel flusso utente. Non dovrebbe però diventare in silenzio la specifica di prodotto.</p>
 <p>Le regole del repository distinguono gia tra specifiche e documentazione canoniche da una parte e stato di implementazione dall’altra. Se una demo rivela un flusso migliore, vanno aggiornate specifica e documentazione, invece di lasciare che la demo vinca da sola.</p>
+<p>Se una demo rivela un flusso di lavoro migliore, la risposta non è lasciare che vinca in silenzio. La risposta è aggiornare la specifica, la documentazione e lo standard di revisione in modo che quel flusso migliore diventi intenzionale.</p>
 <h2 id="markdown-test-e-ci-formano-una-catena">Markdown, test e CI formano una catena</h2>
 <p>In uno sviluppo guidato dalle specifiche questi livelli non stanno separati.</p>
 <ul>
@@ -144,6 +158,7 @@
 <li>La CI applica le regole in modo regolare.</li>
 </ul>
 <p>Insieme creano una memoria di prodotto che sopravvive alla velocita di sviluppo.</p>
+<p>Ogni livello è incompleto da solo. Insieme creano una memoria di prodotto che sopravvive a velocità, iterazione e cambi di team.</p>
 <h2 id="cosa-significa-questo-per-i-team-che-usano-lia">Cosa significa questo per i team che usano l’IA</h2>
 <p>I team che usano bene l’IA non eliminano il processo. Spostano il processo piu vicino alla fonte della generazione.</p>
 <p>Di solito questo significa:</p>
