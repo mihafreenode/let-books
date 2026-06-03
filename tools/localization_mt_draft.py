@@ -348,6 +348,8 @@ def build_review_packet(source_doc, target_doc, source_locale: str, target_local
         ],
         "requiredPreflightChecks": [
             "Read relevant native-speaker findings for the target locale and content type.",
+            "Read relevant terminology guidance and localization review rules before changing localized content.",
+            "Explicitly consider whether known defect classes apply to the current content.",
             "Check whether previously rejected wording patterns appear in the current draft.",
             "Reevaluate terminology choices against earlier findings and term guidance.",
             "Apply corrections where a known defect pattern reappears.",
@@ -355,10 +357,18 @@ def build_review_packet(source_doc, target_doc, source_locale: str, target_local
         ],
         "reviewEvidenceTemplate": {
             "consideredFindingIds": [],
+            "consideredDefectClasses": [],
             "terminologyChecks": [],
             "rejectedPatternChecks": [],
+            "reviewRulesChecked": [],
+            "decisionInfluences": [],
             "notes": "",
         },
+        "reviewSummaryRequirements": [
+            "Explain which native-speaker findings influenced translation or review decisions.",
+            "State which known defect classes were considered.",
+            "State whether any unresolved finding remains and why.",
+        ],
         "sourceHash": sha256_text(source_doc.body),
         "targetHash": sha256_text(target_doc.body),
     }

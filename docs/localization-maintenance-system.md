@@ -150,9 +150,9 @@ python tools/localization_mt_draft.py \
   --report-file docs/.localization-review-packet.json
 ```
 
-The report file is an AI review checklist for semantic parity, heading parity, terminology, examples, diagrams, metadata, and links.
+The report file is an AI review checklist for semantic parity, heading parity, terminology, examples, diagrams, metadata, links, native-speaker findings review, and known defect-class checks.
 
-Translation completion should also reference the native-speaker findings corpus at `docs/style-guide/localization/native-speaker-findings-corpus.json` so repeated human-review defects can be checked before signoff.
+Before translating, updating, or reviewing localized content, agents should use the report file together with the native-speaker findings corpus at `docs/style-guide/localization/native-speaker-findings-corpus.json`, relevant terminology guidance, and localization review rules so repeated human-review defects can be checked before signoff.
 
 ### `tools/localization_patch_assist.py`
 

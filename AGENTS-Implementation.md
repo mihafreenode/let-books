@@ -217,6 +217,9 @@ These rules apply specifically to route changes inside the `static-demo/` app sh
 - Prefer closing defect classes over merely reducing file counts
 - Use source-first remediation in this order: source markdown, localization source, metadata, registries, generation scripts, generated artifacts, generated HTML
 - Process article families as units; do not leave partially localized families behind
+- Before translating, updating, or reviewing localized content, review relevant native-speaker findings, terminology guidance, and localization review rules
+- Explicitly consider whether known defect classes apply to the content being changed
+- In localization review summaries, state which findings influenced translation decisions when applicable
 - When the same localization correction appears more than three times, stop and determine whether the issue should become a generator rule, validator rule, workflow rule, or policy rule
 - When a defect class reaches zero occurrences, make detection blocking in CI where practical and treat the class as closed
 

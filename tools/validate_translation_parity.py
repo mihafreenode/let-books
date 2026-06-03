@@ -85,6 +85,19 @@ def load_native_speaker_findings() -> list[dict]:
 
 
 NATIVE_SPEAKER_FINDINGS = load_native_speaker_findings()
+REQUIRED_FINDING_FIELDS = {
+    "id",
+    "language",
+    "category",
+    "source_text",
+    "localized_text",
+    "preferred_localized_text",
+    "explanation",
+    "status",
+    "validator_possible",
+    "related_files",
+    "date_added",
+}
 
 
 def iter_pairs(single_source: str | None, single_target: str | None):
@@ -246,6 +259,82 @@ def native_speaker_regressions_for_block(locale: str, target_path: Path, source_
     return native_speaker_regressions(locale, target_path, target_block.text)
 
 
+def validate_native_speaker_findings_corpus() -> list[dict]:
+    findings: list[dict] = []
+    for finding in NATIVE_SPEAKER_FINDINGS:
+        finding_id = finding.get("id", "unknown")
+        missing_fields = sorted(REQUIRED_FINDING_FIELDS.difference(finding.keys()))
+        if missing_fields:
+            findings.append(
+                issue(
+                    "error",
+                    "invalid findings corpus",
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    None,
+                    None,
+                    f"finding {finding_id} is missing required fields: {', '.join(missing_fields)}",
+                )
+            )
+
+        if not isinstance(finding.get("validator_possible"), bool):
+            findings.append(
+                issue(
+                    "error",
+                    "invalid findings corpus",
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    None,
+                    None,
+                    f"finding {finding_id} must use a boolean for validator_possible",
+                )
+            )
+
+        if finding.get("status") == "intentionally_unresolved" and not str(finding.get("unresolved_justification", "")).strip():
+            findings.append(
+                issue(
+                    "error",
+                    "invalid findings corpus",
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    None,
+                    None,
+                    f"finding {finding_id} is intentionally unresolved but has no unresolved_justification",
+                )
+            )
+
+        if finding.get("validator_possible"):
+            validator_patterns = iter_validator_patterns(finding)
+            if not validator_patterns:
+                findings.append(
+                    issue(
+                        "error",
+                        "invalid findings corpus",
+                        NATIVE_SPEAKER_FINDINGS_PATH,
+                        NATIVE_SPEAKER_FINDINGS_PATH,
+                        None,
+                        None,
+                        f"finding {finding_id} is marked validator_possible but does not define validator_patterns or localized_text",
+                    )
+                )
+
+            system_actions = finding.get("system_actions") or []
+            if "validator" not in system_actions:
+                findings.append(
+                    issue(
+                        "error",
+                        "invalid findings corpus",
+                        NATIVE_SPEAKER_FINDINGS_PATH,
+                        NATIVE_SPEAKER_FINDINGS_PATH,
+                        None,
+                        None,
+                        f"finding {finding_id} is marked validator_possible but is not documented with a validator system action",
+                    )
+                )
+
+    return findings
+
+
 def validate_pair(source_path: Path, target_path: Path, locale: str) -> dict:
     source_doc = load_document(source_path)
     target_doc = load_document(target_path)
@@ -375,6 +464,16 @@ def main() -> int:
     args = parser.parse_args()
 
     results = [validate_pair(source_path, target_path, locale) for source_path, target_path, locale in iter_pairs(args.source, args.target)]
+    corpus_findings = validate_native_speaker_findings_corpus()
+    if corpus_findings:
+        results.append(
+            {
+                "source": str(NATIVE_SPEAKER_FINDINGS_PATH),
+                "target": str(NATIVE_SPEAKER_FINDINGS_PATH),
+                "locale": "meta",
+                "findings": corpus_findings,
+            }
+        )
     markdown = render_markdown(results)
     json_report = json.dumps(results, indent=2, ensure_ascii=False)
 

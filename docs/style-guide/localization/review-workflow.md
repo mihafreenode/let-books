@@ -4,15 +4,36 @@
 
 Localization review should move from draft generation to increasingly reliable human review.
 
-## Recommended stages
+Before translating, updating, or reviewing localized content, agents and human contributors must review relevant native-speaker findings, terminology guidance, and localization review rules.
+
+## Required stages
 
 1. draft translation
-2. review relevant native-speaker findings and terminology guidance
+2. review relevant native-speaker findings, terminology guidance, and localization review rules
 3. automated validation
 4. terminology review
 5. accessibility review
 6. native-speaker review
 7. optional professional review
+
+## Mandatory pre-review checks
+
+Before changing localized content, the reviewer must:
+
+- review relevant native-speaker findings from `native-speaker-findings-corpus.json`
+- review relevant terminology guidance
+- review localization review rules for the content type
+- explicitly consider whether known defect classes apply to the current content
+- check whether previously rejected wording patterns reappear in the current draft
+
+## Review summary requirements
+
+When producing a review summary, reviewers should state:
+
+- which findings influenced the translation or review decision
+- which known defect classes were checked
+- whether any previously rejected wording patterns were considered
+- whether any finding was intentionally left unresolved and why
 
 ## Continuous-improvement rule
 
@@ -26,6 +47,10 @@ When a native speaker reports a defect, do not stop at fixing the current senten
 - validator logic
 - regression coverage
 - a reusable corpus record
+
+Add targeted validators only for defects that have actually been observed and documented.
+
+When practical, CI should fail if a known fixed regression reappears.
 
 ## AI review record requirements
 
@@ -50,6 +75,8 @@ Recommended additional fields:
 - date added
 
 Store structured records in `native-speaker-findings-corpus.json` when the issue teaches a reusable lesson or should block recurrence.
+
+If a finding remains intentionally unresolved, record the justification explicitly in the corpus.
 
 This keeps review work reusable for governance, training, QA calibration, and model evaluation.
 

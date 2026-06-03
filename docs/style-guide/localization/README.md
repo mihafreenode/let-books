@@ -32,6 +32,8 @@ Keep translations traceable, script-correct, structurally aligned with canonical
 - Macedonian, Albanian, and Slovenian must preserve correct native orthography and Unicode characters.
 - AI-generated translation is allowed as a draft stage only. It does not replace review.
 - Every native-speaker correction should improve future translation, review, prompting, or validation work.
+- Before translating, updating, or reviewing localized content, contributors and agents must review relevant native-speaker findings, terminology guidance, and localization review rules.
+- Contributors and agents must explicitly consider whether known defect classes apply to the content being changed.
 - Reader-facing content must be fully localized before a page is considered complete.
 - Fix localization issues at the highest-level source first. Do not patch generated HTML when the markdown source or metadata is still incomplete.
 
@@ -159,6 +161,9 @@ Track maturity by locale and by content category where practical.
 - Keep validation and CI close to publishing workflows so localization regressions are treated as product-quality issues.
 - Preserve representative AI-review examples so subtle native-speaker corrections can inform training, governance, and evaluation.
 - Maintain the structured findings corpus at `native-speaker-findings-corpus.json` and treat it as reusable operational knowledge, not as a dead archive.
+- Add targeted validators only for defects that have actually been observed and documented in the findings corpus.
+- Fail CI when a known fixed regression reappears where practical.
+- Require explicit justification for intentionally unresolved findings.
 - Treat mixed-language publishing as a production bug, not as an editorial inconvenience.
 
 ## Source-First Remediation Workflow

@@ -839,14 +839,19 @@ Continue remediation
 
 The fourth occurrence of the same issue should usually trigger system improvement rather than another isolated manual fix.
 
-Before declaring a translation complete, the agent should:
+Before declaring a translation complete, the agent must:
 
 1. read relevant native-speaker findings from the corpus
-2. check whether known defect categories appear in the current translation
-3. re-evaluate terminology choices against previous findings
-4. re-evaluate wording patterns previously rejected by native speakers
-5. apply corrections where appropriate
-6. briefly document which findings were considered
+2. review relevant terminology guidance and localization review rules
+3. check whether known defect categories appear in the current translation
+4. explicitly consider whether known defect classes apply to the content being changed
+5. re-evaluate terminology choices against previous findings
+6. re-evaluate wording patterns previously rejected by native speakers
+7. apply corrections where appropriate
+8. briefly document which findings influenced the translation or review summary
+9. briefly document which defect classes were considered
+
+Review summaries should explain which findings influenced translation decisions whenever localized content is translated, updated, or reviewed.
 
 ## Part 15 - Localization Drift
 
