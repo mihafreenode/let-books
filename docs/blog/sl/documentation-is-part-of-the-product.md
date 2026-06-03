@@ -108,9 +108,9 @@ Pravi model ni toga shema »najprej dokumentacija, potem koda«. Pravi model je 
 
 To ni samo tehnično vprašanje.
 
-Institucije bi morale to zanimati, ker dokumentacija vpliva na upravljanje, zaupanje pri nabavi, uvajanje novih ljudi, kontinuiteto in sledljivost.
+Institucijam je to pomembno, ker dokumentacija vpliva na upravljanje, zaupanje pri nabavi, uvajanje novih ljudi, kontinuiteto in sledljivost.
 
-Študenti bi morali to zanimati, ker je sposobnost dokumentiranja namena del učenja gradnje zanesljivih sistemov, ne pa administrativni dodatek.
+Študentom bi to moralo biti pomembno, ker je dokumentiranje namena del učenja gradnje zanesljivih sistemov in ne le administrativni dodatek.
 
 Splošne bralce bi to moralo zanimati, ker je izdelek z jasno dokumentacijo navadno tudi izdelek z bolj jasnimi odločitvami v ozadju.
 
