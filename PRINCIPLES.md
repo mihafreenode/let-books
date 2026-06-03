@@ -19,7 +19,7 @@ Decisions, conventions, assumptions, and exceptions should be discoverable in th
 ## Documentation Is Part of the Product
 
 If users, contributors, or future maintainers need it to succeed, it is product work.
-Good docs are not garnish for finished software.
+Good docs are not garnish for finished software. They preserve understanding, not just instructions.
 
 ## Make Language Less Expensive
 
@@ -29,8 +29,12 @@ Write simply, localize carefully, and avoid turning fluency into a gatekeeping m
 ## Preserve Context
 
 Code explains what changed.
+History records when it changed and who changed it.
 Context explains why it was worth changing.
-Keep both.
+
+Repositories are usually good at preserving code and history, and much worse at preserving assumptions, tradeoffs, constraints, and reasoning. Future maintainers should not need to reverse-engineer important decisions from commit history, issue numbers, service requests, or folklore alone.
+
+Rationale is part of the artifact. Preserve enough reasoning that expensive understanding does not need to be rediscovered, because recreating why something exists is often harder than rewriting the code itself.
 
 ## Validate Early
 
