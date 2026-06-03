@@ -419,6 +419,30 @@ Related Tools:
 Reuse Potential:
 - High.
 
+#### `validate_language_quality.py`
+
+Purpose:
+- Warning-only language-quality validator for localized Markdown.
+
+Why It Exists:
+- The repository needs a low-risk measurement stage for spelling, punctuation, typography, whitespace, and script-consistency issues before deciding which checks deserve stricter enforcement.
+
+Detects / Enforces:
+- Advisory findings only.
+- Optional Hunspell-based spelling warnings when locale dictionaries exist.
+- Regex and Unicode-driven warnings for punctuation, typography, and script mixing.
+
+Limitations:
+- Intentionally non-blocking.
+- Signal quality still depends on allowlists, locale-specific punctuation rules, and repository review.
+
+Related Tools:
+- `validate_translation_parity.py`
+- `validate-localization-completeness.mjs`
+
+Reuse Potential:
+- High as an early-warning stage; medium as a future enforcement layer until false-positive rates are better understood.
+
 #### `audit_translation_parity.py`
 
 Purpose:
