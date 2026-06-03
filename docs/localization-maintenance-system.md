@@ -152,6 +152,8 @@ python tools/localization_mt_draft.py \
 
 The report file is an AI review checklist for semantic parity, heading parity, terminology, examples, diagrams, metadata, and links.
 
+Translation completion should also reference the native-speaker findings corpus at `docs/style-guide/localization/native-speaker-findings-corpus.json` so repeated human-review defects can be checked before signoff.
+
 ### `tools/localization_patch_assist.py`
 
 Uses `git diff` against a base revision to determine changed source blocks, translates only those blocks, and patches the matching localized region.

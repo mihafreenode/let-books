@@ -382,10 +382,30 @@ Cada registro debería capturar:
 - texto original en inglés
 - texto localizado original
 - texto localizado mejorado
+- id
 - explicación
 - categoría
+- estado
+- si es posible un validador
+- archivos relacionados
+- fecha de incorporación
 - si el QA automatizado detectaría probablemente el problema
 - lecciones aprendidas
+
+Ruta recomendada del corpus legible por máquina:
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+El corpus no es solo un archivo.
+
+Es una superficie de control reutilizable para:
+
+- guía de revisión
+- guía terminológica
+- mejoras de prompts de IA
+- reglas de validadores
+- cobertura de regresión
+- transferencia de conocimiento entre lenguas
 
 ### Índice De Categorías
 
@@ -543,6 +563,20 @@ Siempre que se descubra una nueva categoría:
 6. añadir cobertura de regresión si es práctico
 7. enlazar el nuevo hallazgo desde la documentación de workflow y QA
 
+### Regla Estricta Para Los Errores Reportados
+
+Los errores concretos reportados por hablantes nativos no son sugerencias opcionales.
+
+Todo defecto de localización reportado debe terminar siendo:
+
+- corregido
+- convertido en guía
+- convertido en un validador cuando sea práctico
+- documentado como intencionalmente no resuelto con justificación
+- o seguido explícitamente en el corpus de hallazgos hasta que ocurra una de las situaciones anteriores
+
+El repositorio nunca debería olvidar en silencio los defectos de localización reportados.
+
 Los hablantes nativos son más valiosos aquí no porque corrijan errores obvios.
 
 Son más valiosos porque transforman contenido correcto en comunicación natural, culturalmente apropiada y apta para publicación.
@@ -550,6 +584,12 @@ Son más valiosos porque transforman contenido correcto en comunicación natural
 ## Parte 7 - Aprendizaje Continuo
 
 Cada problema de localización debería mejorar el sistema.
+
+Principio preferido:
+
+> Todo defecto de localización debería mejorar el sistema.
+>
+> Un problema descubierto no debería limitarse a corregir el texto actual. También debería reducir la probabilidad de que aparezcan defectos similares en traducciones futuras.
 
 El bucle preferido es:
 

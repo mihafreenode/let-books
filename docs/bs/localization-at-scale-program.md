@@ -382,10 +382,30 @@ Svaki zapis treba obuhvatiti:
 - izvorni engleski tekst
 - izvorni lokalizovani tekst
 - poboljšani lokalizovani tekst
+- id
 - objašnjenje
 - kategoriju
+- status
+- da li je validator moguć
+- povezane datoteke
+- datum dodavanja
 - da li bi automatizovani QA vjerovatno otkrio problem
 - naučene lekcije
+
+Preporučena mašinski čitljiva putanja korpusa:
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+Korpus nije samo arhiva.
+
+To je ponovo upotrebljiva kontrolna površina za:
+
+- smjernice za pregled
+- terminološke smjernice
+- poboljšanja AI promptova
+- pravila validatora
+- regresijsku pokrivenost
+- međujezični prijenos znanja
 
 ### Indeks kategorija
 
@@ -543,6 +563,20 @@ Kad god se otkrije nova kategorija:
 6. dodaj regresijsku pokrivenost ako je praktično
 7. uputi na novi nalaz iz dokumenata o toku rada i QA-u
 
+### Strogo pravilo za prijavljene greške
+
+Konkretno prijavljene greške izvornih govornika nisu neobavezni prijedlozi.
+
+Svaki prijavljeni lokalizacijski kvar mora na kraju biti:
+
+- ispravljen
+- pretvoren u smjernice
+- pretvoren u validator kada je to praktično
+- dokumentiran kao namjerno neriješen uz obrazloženje
+- ili izričito praćen u korpusu nalaza dok se ne desi nešto od navedenog
+
+Repozitorij nikada ne bi smio tiho zaboraviti prijavljene lokalizacijske kvarove.
+
 Izvorni govornici su ovdje najvrjedniji ne zato što ispravljaju očite greške.
 
 Najvrjedniji su zato što tačan sadržaj pretvaraju u prirodnu, kulturno prikladnu komunikaciju objavne kvalitete.
@@ -550,6 +584,12 @@ Najvrjedniji su zato što tačan sadržaj pretvaraju u prirodnu, kulturno prikla
 ## 7. dio - Kontinuirano učenje
 
 Svaki lokalizacijski problem trebao bi poboljšati sistem.
+
+Poželjni princip:
+
+> Svaki lokalizacijski kvar trebao bi poboljšati sistem.
+>
+> Otkriveni problem ne bi trebao samo ispraviti trenutni tekst. Trebao bi i smanjiti vjerovatnoću da se slični kvarovi pojave u budućim prijevodima.
 
 Poželjna petlja je:
 

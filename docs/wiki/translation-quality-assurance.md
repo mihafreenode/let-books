@@ -75,7 +75,24 @@ Minimum fields:
 
 Native-speaker review findings should be preserved as a growing corpus, not as isolated one-off notes. Repeated findings should feed back into validator design, contributor guidance, and future AI-agent instructions.
 
+Before signing off on an AI-assisted translation, reviewers should:
+
+- read relevant entries from the structured findings corpus for that language or topic
+- check for recurring defect patterns from human review
+- confirm that the current draft does not reintroduce known issues before signoff
+
+Every reported native-speaker defect should also be evaluated for:
+
+- content correction
+- review-guidance update
+- terminology-guidance update
+- prompt improvement
+- validator opportunity
+- regression-test opportunity
+
 This matters because even when the overall meaning is preserved, AI-generated translations may require native-speaker review to correct subtle issues in grammar, modality, terminology, and domain-specific register. These issues are often difficult to detect through automated quality metrics alone.
+
+Concrete reported errors are not advisory-only. Each one should end up fixed, systematized, intentionally unresolved with justification, or still explicitly tracked in the findings corpus.
 
 ## Common AI translation error taxonomy
 

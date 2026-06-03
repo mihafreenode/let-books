@@ -382,10 +382,30 @@ Tregon çfarë mbetet pasi mjetet moderne të lokalizimit e kanë kryer tashmë 
 - tekstin origjinal në anglisht
 - tekstin origjinal të lokalizuar
 - tekstin e përmirësuar të lokalizuar
+- id
 - shpjegimin
 - kategorinë
+- statusin
+- nëse një validator është i mundur
+- skedarët përkatës
+- datën e shtimit
 - nëse QA e automatizuar ka gjasa ta zbulojë çështjen
 - mësimet e nxjerra
+
+Shtegu i rekomanduar i korpusit në format të lexueshëm nga makina:
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+Korpusi nuk është vetëm një arkivë.
+
+Është një sipërfaqe kontrolli e ripërdorshme për:
+
+- udhëzimet e rishikimit
+- udhëzimet terminologjike
+- përmirësimet e prompt-eve të AI
+- rregullat e validatorëve
+- mbulimin e regresionit
+- transferimin ndërgjuhësor të njohurive
 
 ### Indeksi i Kategorive
 
@@ -543,6 +563,20 @@ Sa herë që zbulohet një kategori e re:
 6. shto mbulim regresioni nëse është praktik
 7. referenco gjetjen e re nga dokumentet e rrjedhës së punës dhe të QA-së
 
+### Rregull i Fortë për Gabimet e Raportuara
+
+Gabimet konkrete të raportuara nga folësit amtarë nuk janë sugjerime opsionale.
+
+Çdo defekt i raportuar i lokalizimit duhet përfundimisht të jetë:
+
+- i rregulluar
+- i kthyer në udhëzim
+- i kthyer në validator kur është praktike
+- i dokumentuar si i pazgjidhur qëllimisht me arsyetim
+- ose i ndjekur shprehimisht në korpusin e gjetjeve derisa të ndodhë njëra nga sa më sipër
+
+Depoja nuk duhet të harrojë kurrë në heshtje defektet e raportuara të lokalizimit.
+
 Folësit amtarë janë më të vlefshëm këtu jo sepse rregullojnë gabime të dukshme.
 
 Ata janë më të vlefshëm sepse e shndërrojnë përmbajtjen e saktë në komunikim natyror, kulturorisht të përshtatshëm dhe me cilësi botimi.
@@ -550,6 +584,12 @@ Ata janë më të vlefshëm sepse e shndërrojnë përmbajtjen e saktë në komu
 ## Pjesa 7 - Mësimi i Vazhdueshëm
 
 Çdo çështje lokalizimi duhet ta përmirësojë sistemin.
+
+Parimi i preferuar:
+
+> Çdo defekt lokalizimi duhet ta përmirësojë sistemin.
+>
+> Një çështje e zbuluar nuk duhet vetëm të rregullojë tekstin aktual. Ajo duhet gjithashtu të ulë gjasat që defekte të ngjashme të shfaqen në përkthimet e ardhshme.
 
 Qarku i preferuar është:
 

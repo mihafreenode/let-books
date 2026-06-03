@@ -75,7 +75,24 @@ Champs minimaux :
 
 Les résultats des analyses réalisées auprès de locuteurs natifs doivent être conservés sous la forme d’un corpus croissant, et non sous la forme de notes isolées et ponctuelles. Les résultats répétés devraient être répercutés sur la conception du validateur, les conseils des contributeurs et les futures instructions des agents IA.
 
+Avant la validation finale d'une traduction assistée par l'IA, les relecteurs devraient :
+
+- consulter les entrées pertinentes du corpus structuré des constats pour cette langue ou ce sujet
+- vérifier les schémas de défauts récurrents issus des revues humaines
+- confirmer que le brouillon actuel ne réintroduit pas de problèmes connus avant la validation
+
+Chaque défaut signalé par un locuteur natif devrait aussi être évalué au regard de :
+
+- la correction du contenu
+- la mise à jour des consignes de revue
+- la mise à jour des consignes terminologiques
+- l'amélioration du prompt
+- l'opportunité d'un validateur
+- l'opportunité d'un test de régression
+
 Cela est important car même lorsque le sens global est préservé, les traductions générées par l’IA peuvent nécessiter une révision par un locuteur natif pour corriger des problèmes subtils de grammaire, de modalité, de terminologie et de registre spécifique au domaine. Ces problèmes sont souvent difficiles à détecter uniquement grâce aux mesures de qualité automatisées.
+
+Les erreurs concrètes signalées par des locuteurs natifs ne sont pas seulement consultatives. Chacune d'elles devrait être corrigée, systématisée, laissée intentionnellement non résolue avec justification, ou encore explicitement suivie dans le corpus des constats.
 
 ## Taxonomie courante des erreurs de traduction de l'IA
 

@@ -382,10 +382,30 @@ Chaque entrée doit capturer :
 - le texte anglais d'origine
 - le texte localisé d'origine
 - le texte localisé amélioré
+- l'id
 - l'explication
 - la catégorie
+- le statut
+- si un validateur est possible
+- les fichiers associés
+- la date d'ajout
 - si le QA automatisé détecterait probablement le problème
 - les leçons apprises
+
+Chemin recommandé du corpus lisible par machine :
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+Le corpus n'est pas seulement une archive.
+
+Il constitue une surface de pilotage réutilisable pour :
+
+- les consignes de revue
+- les consignes terminologiques
+- les améliorations des prompts d'IA
+- les règles des validateurs
+- la couverture de régression
+- le transfert de connaissances entre langues
 
 ### Index Des Catégories
 
@@ -543,6 +563,20 @@ Chaque fois qu'une nouvelle catégorie est découverte :
 6. ajouter une couverture de régression si c'est pratique
 7. faire référence au nouveau constat depuis les documents de workflow et de QA
 
+### Règle Stricte Pour Les Erreurs Signalées
+
+Les erreurs concrètes signalées par des locuteurs natifs ne sont pas des suggestions facultatives.
+
+Chaque défaut de localisation signalé doit à terme être :
+
+- corrigé
+- transformé en consigne
+- transformé en validateur lorsque c'est pratique
+- documenté comme intentionnellement non résolu avec justification
+- ou explicitement suivi dans le corpus des constats jusqu'à ce que l'un des résultats ci-dessus se produise
+
+Le dépôt ne devrait jamais oublier silencieusement les défauts de localisation signalés.
+
 Les locuteurs natifs sont les plus précieux ici non pas parce qu'ils corrigent des erreurs évidentes.
 
 Ils le sont parce qu'ils transforment un contenu correct en une communication naturelle, culturellement appropriée et publiable.
@@ -550,6 +584,12 @@ Ils le sont parce qu'ils transforment un contenu correct en une communication na
 ## Partie 7 - Apprentissage Continu
 
 Chaque problème de localisation doit améliorer le système.
+
+Principe privilégié :
+
+> Chaque défaut de localisation doit améliorer le système.
+>
+> Un problème découvert ne doit pas seulement corriger le texte actuel. Il doit aussi réduire la probabilité que des défauts similaires apparaissent dans de futures traductions.
 
 La boucle privilégiée est :
 

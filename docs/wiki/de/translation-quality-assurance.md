@@ -75,7 +75,24 @@ Mindestfelder:
 
 Die Ergebnisse der Überprüfung durch Muttersprachler sollten als wachsender Korpus und nicht als isolierte, einmalige Notizen aufbewahrt werden. Wiederholte Erkenntnisse sollten in das Design des Validators, die Anleitung der Mitwirkenden und zukünftige Anweisungen für KI-Agenten einfließen.
 
+Vor der Freigabe einer KI-gestützten Übersetzung sollten Reviewer:
+
+- relevante Einträge im strukturierten Erkenntniskorpus für diese Sprache oder dieses Thema prüfen
+- wiederkehrende Fehlermuster aus menschlichen Reviews prüfen
+- bestätigen, dass der aktuelle Entwurf vor der Freigabe keine bekannten Probleme erneut einführt
+
+Jeder gemeldete muttersprachliche Defekt sollte außerdem im Hinblick auf Folgendes bewertet werden:
+
+- Korrektur des Inhalts
+- Aktualisierung der Review-Leitlinien
+- Aktualisierung der Terminologie-Leitlinien
+- Verbesserung des Prompts
+- Möglichkeit für einen Validator
+- Möglichkeit für einen Regressionstest
+
 Dies ist wichtig, denn selbst wenn die Gesamtbedeutung erhalten bleibt, erfordern KI-generierte Übersetzungen möglicherweise eine Überprüfung durch einen Muttersprachler, um subtile Probleme in Grammatik, Modalität, Terminologie und domänenspezifischem Register zu korrigieren. Diese Probleme lassen sich allein durch automatisierte Qualitätsmetriken oft nur schwer erkennen.
+
+Konkrete gemeldete Fehler von Muttersprachlern sind nicht nur beratend. Jeder einzelne sollte behoben, systematisiert, mit Begründung absichtlich ungelöst gelassen oder weiterhin ausdrücklich im Erkenntniskorpus nachverfolgt werden.
 
 ## Häufige Taxonomie von KI-Übersetzungsfehlern
 

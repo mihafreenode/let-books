@@ -75,7 +75,24 @@ Campi minimi:
 
 I risultati delle revisioni dei madrelingua dovrebbero essere preservati come un corpus in crescita, non come note isolate e una tantum. I risultati ripetuti dovrebbero avere un impatto sulla progettazione del validatore, sulla guida dei contributori e sulle future istruzioni dell'agente AI.
 
+Prima del signoff di una traduzione assistita dall'AI, i revisori dovrebbero:
+
+- rivedere le voci pertinenti nel corpus strutturato dei rilievi per quella lingua o quel tema
+- controllare i modelli ricorrenti di difetti emersi dalle revisioni umane
+- confermare che la bozza attuale non reintroduca problemi noti prima del signoff
+
+Ogni difetto segnalato da un madrelingua dovrebbe inoltre essere valutato rispetto a:
+
+- correzione del contenuto
+- aggiornamento della guida alla revisione
+- aggiornamento della guida terminologica
+- miglioramento del prompt
+- opportunità per un validatore
+- opportunità per un test di regressione
+
 Ciò è importante perché anche quando il significato generale viene preservato, le traduzioni generate dall’intelligenza artificiale possono richiedere la revisione da parte di un madrelingua per correggere sottili problemi di grammatica, modalità, terminologia e registro specifico del dominio. Questi problemi sono spesso difficili da rilevare solo attraverso i parametri di qualità automatizzati.
+
+Gli errori concreti segnalati dai madrelingua non sono solo indicativi. Ognuno di essi dovrebbe finire corretto, sistematizzato, intenzionalmente irrisolto con giustificazione, oppure ancora esplicitamente tracciato nel corpus dei rilievi.
 
 ## Tassonomia comune degli errori di traduzione dell'IA
 

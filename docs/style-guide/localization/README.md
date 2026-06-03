@@ -31,6 +31,7 @@ Keep translations traceable, script-correct, structurally aligned with canonical
 - Serbian Latin and Serbian Cyrillic are separate locales.
 - Macedonian, Albanian, and Slovenian must preserve correct native orthography and Unicode characters.
 - AI-generated translation is allowed as a draft stage only. It does not replace review.
+- Every native-speaker correction should improve future translation, review, prompting, or validation work.
 - Reader-facing content must be fully localized before a page is considered complete.
 - Fix localization issues at the highest-level source first. Do not patch generated HTML when the markdown source or metadata is still incomplete.
 
@@ -157,6 +158,7 @@ Track maturity by locale and by content category where practical.
 - Translate technical terms by domain meaning, not by the first dictionary meaning. In testing, benchmarking, and evaluation contexts, terms such as `fixture` usually mean reusable reference examples or test cases, not physical infrastructure.
 - Keep validation and CI close to publishing workflows so localization regressions are treated as product-quality issues.
 - Preserve representative AI-review examples so subtle native-speaker corrections can inform training, governance, and evaluation.
+- Maintain the structured findings corpus at `native-speaker-findings-corpus.json` and treat it as reusable operational knowledge, not as a dead archive.
 - Treat mixed-language publishing as a production bug, not as an editorial inconvenience.
 
 ## Source-First Remediation Workflow

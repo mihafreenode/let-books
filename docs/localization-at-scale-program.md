@@ -377,6 +377,7 @@ It shows what remains after modern localization tooling has already done its wor
 
 Every record should capture:
 
+- id
 - source article
 - language
 - original English text
@@ -384,8 +385,27 @@ Every record should capture:
 - improved localized text
 - explanation
 - category
+- status
+- validator possible
+- related files
+- date added
 - whether automated QA would likely detect the issue
 - lessons learned
+
+Recommended machine-readable corpus path:
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+The corpus is not only an archive.
+
+It is a reusable control surface for:
+
+- review guidance
+- terminology guidance
+- AI prompt improvements
+- validator rules
+- regression coverage
+- cross-language knowledge transfer
 
 ### Category Index
 
@@ -543,6 +563,20 @@ Whenever a new category is discovered:
 6. add regression coverage if practical
 7. cross-reference the new finding from workflow and QA docs
 
+### Hard Rule For Reported Errors
+
+Concrete reported native-speaker errors are not optional suggestions.
+
+Every reported localization defect must eventually be:
+
+- fixed
+- converted into guidance
+- converted into a validator when practical
+- documented as intentionally unresolved with justification
+- or explicitly tracked in the findings corpus until one of the above happens
+
+The repository should never silently forget reported localization defects.
+
 Native speakers are most valuable here not because they fix obvious mistakes.
 
 They are most valuable because they transform correct content into natural, culturally appropriate, publication-quality communication.
@@ -550,6 +584,12 @@ They are most valuable because they transform correct content into natural, cult
 ## Part 7 - Continuous Learning
 
 Every localization issue should improve the system.
+
+Preferred principle:
+
+> Every localization defect should improve the system.
+>
+> A discovered issue should not only fix the current text. It should also reduce the probability of similar defects appearing in future translations.
 
 The preferred loop is:
 
@@ -573,6 +613,15 @@ The ideal outcome is that a localization problem gets fixed:
 
 - once in content
 - once in the system
+
+When practical, each finding should be converted into one or more of:
+
+- review guidance
+- terminology guidance
+- prompt improvements
+- validator rules
+- regression tests
+- native-speaker corpus entries
 
 ## Part 8 - Validator Evolution
 
@@ -789,6 +838,15 @@ Continue remediation
 ```
 
 The fourth occurrence of the same issue should usually trigger system improvement rather than another isolated manual fix.
+
+Before declaring a translation complete, the agent should:
+
+1. read relevant native-speaker findings from the corpus
+2. check whether known defect categories appear in the current translation
+3. re-evaluate terminology choices against previous findings
+4. re-evaluate wording patterns previously rejected by native speakers
+5. apply corrections where appropriate
+6. briefly document which findings were considered
 
 ## Part 15 - Localization Drift
 

@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-03",
+  "findings": [
+    {
+      "id": "sl-parallel-structure-001",
+      "language": "sl",
+      "category": "parallel structure",
+      "source_text": "what the project is trying to achieve and what it is explicitly not trying to become",
+      "localized_text": "kaj projekt sku\u0161a dose\u010di in \u010desa ne sme postati",
+      "preferred_localized_text": "kaj projekt sku\u0161a dose\u010di in kaj ne sme postati",
+      "explanation": "The original Slovenian preserves meaning but mirrors English contrast structure too closely. The preferred version restores cleaner native parallelism.",
+      "status": "tracked",
+      "validator_possible": false,
+      "related_files": [
+        "docs/blog/sl/documentation-is-part-of-the-product.md"
+      ],
+      "date_added": "2026-06-03",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "knowledge_corpus"
+      ],
+      "review_guidance": "Check whether contrast pairs preserve natural parallel structure instead of copying English asymmetry.",
+      "prompt_guidance": "Prefer native parallel structures over literal English contrast framing when the meaning remains the same."
+    },
+    {
+      "id": "sl-hidden-agent-001",
+      "language": "sl",
+      "category": "hidden-agent construction",
+      "source_text": "Why documentation cannot wait until later",
+      "localized_text": "Zakaj dokumentacija ne sme \u010dakati",
+      "preferred_localized_text": "Zakaj se z dokumentacijo ne sme \u010dakati",
+      "explanation": "The literal Slovenian transfers agency to the abstract noun instead of preserving the implied human agent.",
+      "status": "tracked",
+      "validator_possible": true,
+      "related_files": [
+        "docs/blog/sl/spec-driven-development-for-ai-projects.md"
+      ],
+      "date_added": "2026-06-03",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "validator",
+        "regression_test",
+        "knowledge_corpus"
+      ],
+      "validator_match_type": "substring",
+      "validator_patterns": [
+        "Zakaj dokumentacija ne sme \u010dakati"
+      ],
+      "review_guidance": "Watch for English headings that hide the human actor inside an abstract noun.",
+      "prompt_guidance": "If English uses compressed abstract-noun phrasing, restore the implied actor when the target language needs it."
+    },
+    {
+      "id": "sl-modality-policy-001",
+      "language": "sl",
+      "category": "semantic preservation with fluency loss",
+      "source_text": "Administrators must be able to disable OCR, translation, and condition assessment when needed. Paid enrichments must be explicitly enabled, traceable, and cost-controlled.",
+      "localized_text": "Skrbniki morajo mo\u010di OCR, prevajanje in ocenjevanje stanja po potrebi tudi izklopiti. Pla\u010dljive obogatitve morajo biti izrecne, sledljive in stro\u0161kovno nadzorovane.",
+      "preferred_localized_text": "Skrbniki morajo imeti mo\u017enost, da po potrebi izklopijo OCR, prevajanje in ocenjevanje stanja. Pla\u010dljive obogatitve morajo biti izrecno omogo\u010dene, sledljive in stro\u0161kovno nadzorovane.",
+      "explanation": "The draft preserves broad meaning but remains unpublishable because of ungrammatical modality, awkward word order, and domain-inappropriate policy phrasing.",
+      "status": "tracked",
+      "validator_possible": true,
+      "related_files": [
+        "docs/blog/sl/ai-will-not-replace-translators.md"
+      ],
+      "date_added": "2026-06-03",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "prompt",
+        "validator",
+        "regression_test",
+        "knowledge_corpus"
+      ],
+      "validator_match_type": "substring",
+      "validator_patterns": [
+        "morajo mo\u010di",
+        "morajo biti izrecne"
+      ],
+      "review_guidance": "Review modal constructions and policy phrasing even when the broad meaning seems correct.",
+      "prompt_guidance": "Recheck literal translations of 'must be able to' and policy phrases about explicit enablement before signoff.",
+      "terminology_guidance": "In policy text, explicit enablement is not the same as describing something as explicit."
+    },
+    {
+      "id": "sl-benchmark-fixture-001",
+      "language": "sl",
+      "category": "technical terminology false friend",
+      "source_text": "Benchmark fixture direction / Structured review examples should also be stored as reusable benchmark fixtures",
+      "localized_text": "Primerjalna smer napeljave / Strukturirane primere pregledov je treba shraniti tudi kot primerjalne napeljave za ve\u010dkratno uporabo",
+      "preferred_localized_text": "Referen\u010dni primeri za primerjalno vrednotenje / Strukturirane primere pregledov je treba shraniti tudi kot ponovno uporabne referen\u010dne primere za primerjalno vrednotenje",
+      "explanation": "The English technical term 'fixture' was resolved using the wrong physical-infrastructure sense instead of the testing and evaluation sense.",
+      "status": "tracked",
+      "validator_possible": true,
+      "related_files": [
+        "docs/wiki/sl/let-books-localization-case-study.md"
+      ],
+      "date_added": "2026-06-03",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "terminology",
+        "validator",
+        "regression_test",
+        "knowledge_corpus"
+      ],
+      "validator_match_type": "substring",
+      "validator_patterns": [
+        "primerjalne napeljave",
+        "Primerjalna smer napeljave"
+      ],
+      "review_guidance": "Resolve testing and evaluation vocabulary by software QA domain meaning first.",
+      "prompt_guidance": "When translating benchmarking or evaluation text, treat 'fixture' as a reusable reference example or test artifact unless the physical domain is explicit.",
+      "terminology_guidance": "Do not use infrastructure or wiring meanings for 'fixture' in QA, benchmarking, or LLM evaluation contexts."
+    }
+  ]
+}

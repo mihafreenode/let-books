@@ -382,10 +382,30 @@ Vsak zapis mora zajeti:
 - izvirno angleško besedilo
 - izvirno lokalizirano besedilo
 - izboljšano lokalizirano besedilo
+- id
 - razlago
 - kategorijo
+- status
+- ali je validator mogoč
+- povezane datoteke
+- datum dodajanja
 - ali bi avtomatizirani QA težavo verjetno zaznal
 - naučene lekcije
+
+Priporočena strojno berljiva pot korpusa:
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+Korpus ni le arhiv.
+
+Je ponovno uporabna nadzorna površina za:
+
+- navodila za pregledovanje
+- terminološka navodila
+- izboljšave pozivov AI
+- pravila validatorjev
+- regresijsko pokritost
+- medjezikovni prenos znanja
 
 ### Kazalo kategorij
 
@@ -543,6 +563,20 @@ Kadarkoli odkrijemo novo kategorijo:
 6. dodaj regresijsko pokritost, če je to praktično
 7. novo ugotovitev navzkrižno poveži iz dokumentov o potekih dela in QA
 
+### Strogo pravilo za prijavljene napake
+
+Konkretne prijavljene napake naravnih govorcev niso neobvezni predlogi.
+
+Vsaka prijavljena lokalizacijska napaka mora sčasoma biti:
+
+- odpravljena
+- pretvorjena v smernice
+- kadar je praktično, pretvorjena v validator
+- dokumentirana kot namerno nerešena z utemeljitvijo
+- ali izrecno spremljana v korpusu ugotovitev, dokler se ne zgodi nekaj od navedenega
+
+Repozitorij ne sme nikoli tiho pozabiti prijavljenih lokalizacijskih napak.
+
 Naravni govorci so tu najvrednejši ne zato, ker popravljajo očitne napake.
 
 Najvrednejši so zato, ker pravilno vsebino pretvorijo v naravno, kulturno ustrezno in objavno kakovostno komunikacijo.
@@ -550,6 +584,12 @@ Najvrednejši so zato, ker pravilno vsebino pretvorijo v naravno, kulturno ustre
 ## 7. del - Neprekinjeno učenje
 
 Vsaka lokalizacijska težava mora izboljšati sistem.
+
+Prednostno načelo:
+
+> Vsaka lokalizacijska napaka mora izboljšati sistem.
+>
+> Odkrita težava ne sme le popraviti trenutnega besedila. Prav tako mora zmanjšati verjetnost, da se podobne napake pojavijo v prihodnjih prevodih.
 
 Prednostna zanka je:
 

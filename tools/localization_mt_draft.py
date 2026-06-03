@@ -334,6 +334,7 @@ def build_review_packet(source_doc, target_doc, source_locale: str, target_local
         "sourceLocale": source_locale,
         "targetLocale": target_locale,
         "backend": backend_name,
+        "nativeSpeakerFindingsCorpus": "docs/style-guide/localization/native-speaker-findings-corpus.json",
         "checks": [
             "semantic parity",
             "heading hierarchy parity",
@@ -343,7 +344,21 @@ def build_review_packet(source_doc, target_doc, source_locale: str, target_local
             "diagram parity",
             "metadata parity",
             "link preservation",
+            "native-speaker findings review",
         ],
+        "requiredPreflightChecks": [
+            "Read relevant native-speaker findings for the target locale and content type.",
+            "Check whether previously rejected wording patterns appear in the current draft.",
+            "Reevaluate terminology choices against earlier findings and term guidance.",
+            "Apply corrections where a known defect pattern reappears.",
+            "Document which finding IDs were considered before declaring completion.",
+        ],
+        "reviewEvidenceTemplate": {
+            "consideredFindingIds": [],
+            "terminologyChecks": [],
+            "rejectedPatternChecks": [],
+            "notes": "",
+        },
         "sourceHash": sha256_text(source_doc.body),
         "targetHash": sha256_text(target_doc.body),
     }

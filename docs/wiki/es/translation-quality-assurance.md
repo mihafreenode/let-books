@@ -75,7 +75,24 @@ Campos mínimos:
 
 Los resultados de las revisiones de hablantes nativos deben conservarse como un corpus en crecimiento, no como notas aisladas y únicas. Los hallazgos repetidos deberían retroalimentar el diseño del validador, la orientación de los contribuyentes y las futuras instrucciones de los agentes de IA.
 
+Antes de la aprobación final de una traducción asistida por IA, los revisores deberían:
+
+- revisar las entradas pertinentes del corpus estructurado de hallazgos para ese idioma o tema
+- comprobar los patrones recurrentes de defectos procedentes de revisiones humanas
+- confirmar que el borrador actual no reintroduce problemas conocidos antes de la aprobación
+
+Todo defecto reportado por un hablante nativo también debería evaluarse respecto de:
+
+- corrección del contenido
+- actualización de la guía de revisión
+- actualización de la guía terminológica
+- mejora del prompt
+- oportunidad para un validador
+- oportunidad para una prueba de regresión
+
 Esto es importante porque incluso cuando se preserva el significado general, las traducciones generadas por IA pueden requerir la revisión de un hablante nativo para corregir problemas sutiles en gramática, modalidad, terminología y registro específico del dominio. Estos problemas suelen ser difíciles de detectar únicamente mediante métricas de calidad automatizadas.
+
+Los errores concretos reportados por hablantes nativos no son solo orientativos. Cada uno de ellos debería terminar corregido, sistematizado, intencionalmente no resuelto con justificación, o todavía seguido explícitamente en el corpus de hallazgos.
 
 ## Taxonomía de errores de traducción de IA comunes
 

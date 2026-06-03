@@ -75,7 +75,24 @@ Fushat minimale:
 
 Gjetjet e rishikimit nga folësit vendas duhet të ruhen si një korpus në rritje, jo si shënime të izoluara të njëhershme. Gjetjet e përsëritura duhet të ushqehen me dizajnin e verifikuesit, udhëzimet e kontribuesve dhe udhëzimet e ardhshme të agjentëve të AI.
 
+Përpara nënshkrimit përfundimtar të një përkthimi të asistuar nga AI, rishikuesit duhet të:
+
+- shqyrtojnë hyrjet përkatëse në korpusin e strukturuar të gjetjeve për atë gjuhë ose temë
+- kontrollojnë modelet e përsëritura të defekteve nga rishikimet njerëzore
+- konfirmojnë që drafti aktual nuk rifut çështje të njohura para nënshkrimit
+
+Çdo defekt i raportuar nga një folës amtar duhet gjithashtu të vlerësohet për:
+
+- korrigjimin e përmbajtjes
+- përditësimin e udhëzimeve të rishikimit
+- përditësimin e udhëzimeve terminologjike
+- përmirësimin e prompt-it
+- mundësinë për validator
+- mundësinë për test regresioni
+
 Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e krijuara nga AI mund të kërkojnë rishikim nga folësi amtare për të korrigjuar çështjet delikate në gramatikë, modalitet, terminologji dhe regjistër specifik të domenit. Këto çështje shpesh janë të vështira për t'u zbuluar vetëm nëpërmjet matjeve të automatizuara të cilësisë.
+
+Gabimet konkrete të raportuara nga folësit amtarë nuk janë vetëm këshilluese. Secila prej tyre duhet të përfundojë e korrigjuar, e sistematizuar, e lënë qëllimisht e pazgjidhur me arsyetim, ose ende e ndjekur shprehimisht në korpusin e gjetjeve.
 
 ## Taksonomia e gabimeve të zakonshme të përkthimit të AI
 

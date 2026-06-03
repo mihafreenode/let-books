@@ -382,10 +382,30 @@ Jeder Eintrag sollte Folgendes erfassen:
 - ursprünglichen englischen Text
 - ursprünglichen lokalisierten Text
 - verbesserten lokalisierten Text
+- ID
 - Erklärung
 - Kategorie
+- Status
+- ob ein Validator möglich ist
+- zugehörige Dateien
+- Datum der Aufnahme
 - ob automatisierte QA das Problem wahrscheinlich erkennen würde
 - gewonnene Erkenntnisse
+
+Empfohlener maschinenlesbarer Korpuspfad:
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+Der Korpus ist nicht nur ein Archiv.
+
+Er ist eine wiederverwendbare Steuerungsoberfläche für:
+
+- Review-Leitlinien
+- Terminologie-Leitlinien
+- Verbesserungen an AI-Prompts
+- Validatorregeln
+- Regressionsabdeckung
+- sprachübergreifenden Wissenstransfer
 
 ### Kategorieindex
 
@@ -543,6 +563,20 @@ Immer wenn eine neue Kategorie entdeckt wird:
 6. nach Möglichkeit Regressionsabdeckung hinzufügen
 7. die neue Erkenntnis aus Workflow- und QA-Dokumenten querverweisen
 
+### Strikte Regel für gemeldete Fehler
+
+Konkrete gemeldete Fehler von Muttersprachlern sind keine optionalen Vorschläge.
+
+Jeder gemeldete Lokalisierungsdefekt muss letztlich:
+
+- behoben werden
+- in Leitlinien überführt werden
+- wenn praktikabel in einen Validator überführt werden
+- mit Begründung als absichtlich ungelöst dokumentiert werden
+- oder ausdrücklich im Erkenntniskorpus nachverfolgt werden, bis eines der oben genannten Ergebnisse eintritt
+
+Das Repository sollte gemeldete Lokalisierungsdefekte niemals stillschweigend vergessen.
+
 Muttersprachler sind hier nicht deshalb am wertvollsten, weil sie offensichtliche Fehler beheben.
 
 Sie sind am wertvollsten, weil sie korrekten Inhalt in natürliche, kulturell angemessene Kommunikation mit Veröffentlichungsqualität verwandeln.
@@ -550,6 +584,12 @@ Sie sind am wertvollsten, weil sie korrekten Inhalt in natürliche, kulturell an
 ## Teil 7 - Kontinuierliches Lernen
 
 Jedes Lokalisierungsproblem sollte das System verbessern.
+
+Bevorzugtes Prinzip:
+
+> Jeder Lokalisierungsdefekt sollte das System verbessern.
+>
+> Ein entdecktes Problem sollte nicht nur den aktuellen Text korrigieren. Es sollte auch die Wahrscheinlichkeit verringern, dass ähnliche Defekte in künftigen Übersetzungen auftreten.
 
 Die bevorzugte Schleife ist:
 

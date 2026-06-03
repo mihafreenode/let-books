@@ -75,7 +75,24 @@ Minimalni broj polja:
 
 Nalazi pregleda izvornih govornika treba da budu sačuvani kao rastući korpus, a ne kao izolovane jednokratne beleške. Ponovljeni nalazi bi trebalo da se vrate u dizajn validatora, uputstva za saradnike i buduća uputstva za AI agente.
 
+Pre odobrenja pregleda AI-potpomognutog prevoda, recenzenti bi trebalo da:
+
+- pregledaju relevantne zapise u strukturiranom korpusu nalaza za taj jezik ili temu
+- provere ponavljajuće obrasce grešaka iz ljudskih pregleda
+- potvrde da trenutni nacrt pre odobrenja ponovo ne uvodi poznate probleme
+
+Svaku prijavljenu grešku koju je uočio izvorni govornik treba takođe proceniti s obzirom na:
+
+- ispravku sadržaja
+- ažuriranje smernica za pregled
+- ažuriranje terminoloških smernica
+- poboljšanje prompta
+- priliku za validator
+- priliku za regresioni test
+
 Ovo je važno jer čak i kada je opšte značenje sačuvano, prevodi generisani od veštačke inteligencije mogu zahtevati pregled izvornog govornika da bi se ispravili suptilni problemi u gramatici, modalitetu, terminologiji i registru specifičnom za domen. Ove probleme je često teško otkriti samo pomoću automatizovanih metrika kvaliteta.
+
+Konkretno prijavljene greške izvornih govornika nisu samo savetodavne. Svaka od njih treba da završi ispravljena, sistematizovana, namerno nerešena uz obrazloženje ili i dalje izričito praćena u korpusu nalaza.
 
 ## Uobičajena taksonomija grešaka u prevodu AI
 

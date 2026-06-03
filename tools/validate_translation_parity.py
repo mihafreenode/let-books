@@ -37,6 +37,7 @@ from localization_alignment import align_blocks, load_document, load_sidecar, si
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT_DIR / "docs"
+NATIVE_SPEAKER_FINDINGS_PATH = ROOT_DIR / "docs" / "style-guide" / "localization" / "native-speaker-findings-corpus.json"
 CONFIG = json.loads((ROOT_DIR / "tools" / "docs-config.json").read_text(encoding="utf-8"))
 # Match ASCII word-like fragments that are likely to indicate untranslated English prose.
 #
@@ -70,6 +71,20 @@ INTENTIONAL_SOURCE_SNIPPET_HEADINGS = {
     "slovenian review case study",
     "one example per review category",
 }
+
+
+def load_native_speaker_findings() -> list[dict]:
+    if not NATIVE_SPEAKER_FINDINGS_PATH.exists():
+        return []
+    payload = json.loads(NATIVE_SPEAKER_FINDINGS_PATH.read_text(encoding="utf-8"))
+    if isinstance(payload, dict):
+        findings = payload.get("findings", [])
+    else:
+        findings = payload
+    return [finding for finding in findings if isinstance(finding, dict)]
+
+
+NATIVE_SPEAKER_FINDINGS = load_native_speaker_findings()
 
 
 def iter_pairs(single_source: str | None, single_target: str | None):
@@ -159,6 +174,15 @@ def normalize_url_for_comparison(url: str, locale: str) -> str:
     # - ../en/page.md -> ../{locale}/page.md
     normalized = re.sub(r"/docs/(learning|wiki|topics|blog)/(en|sl|hr|bs|sr-Latn|sr-Cyrl|mk|sq|de|it|fr|es)/", r"/docs/\1/{locale}/", normalized)
     normalized = re.sub(r"\.\./(en|sl|hr|bs|sr-Latn|sr-Cyrl|mk|sq|de|it|fr|es)/", "../{locale}/", normalized)
+    # Localized articles may point at locale-specific diagram variants while the English source
+    # points at the shared canonical diagram path. Compare these by diagram filename so both link
+    # styles are treated as semantically equivalent.
+    localized_diagram_match = re.fullmatch(
+        r"\.\./\.\./diagrams/blog/[^/]+/(en|sl|hr|bs|sr-Latn|sr-Cyrl|mk|sq|de|it|fr|es)/([^/]+\.svg)",
+        normalized,
+    )
+    if localized_diagram_match:
+        return f"../../diagrams/{localized_diagram_match.group(2)}"
     return normalized
 
 
@@ -168,6 +192,58 @@ def root_relative(path: Path) -> str:
         return str(resolved.relative_to(ROOT_DIR))
     except ValueError:
         return path.as_posix()
+
+
+def finding_applies_to_target(finding: dict, locale: str, target_path: Path) -> bool:
+    if finding.get("language") != locale:
+        return False
+    related_files = finding.get("related_files") or []
+    if not related_files:
+        return True
+    target_relative = root_relative(target_path)
+    return target_relative in related_files
+
+
+def iter_validator_patterns(finding: dict) -> list[str]:
+    patterns = finding.get("validator_patterns")
+    if isinstance(patterns, list):
+        return [pattern for pattern in patterns if isinstance(pattern, str) and pattern.strip()]
+    localized_text = finding.get("localized_text")
+    if isinstance(localized_text, str) and localized_text.strip():
+        return [localized_text]
+    return []
+
+
+def native_speaker_regressions(locale: str, target_path: Path, target_text: str) -> list[dict]:
+    regressions = []
+    for finding in NATIVE_SPEAKER_FINDINGS:
+        if not finding_applies_to_target(finding, locale, target_path):
+            continue
+        if not finding.get("validator_possible"):
+            continue
+        if finding.get("status") == "intentionally_unresolved":
+            continue
+        for pattern in iter_validator_patterns(finding):
+            if pattern in target_text:
+                regressions.append(
+                    issue(
+                        "error",
+                        "known native-speaker regression",
+                        target_path,
+                        target_path,
+                        None,
+                        None,
+                        f"finding {finding.get('id', 'unknown')} reintroduced rejected wording '{pattern}'. Preferred wording: {finding.get('preferred_localized_text', 'see findings corpus')}",
+                    )
+                )
+                break
+    return regressions
+
+
+def native_speaker_regressions_for_block(locale: str, target_path: Path, source_block, target_block) -> list[dict]:
+    if is_intentional_source_snippet_block(source_block, target_block):
+        return []
+    return native_speaker_regressions(locale, target_path, target_block.text)
 
 
 def validate_pair(source_path: Path, target_path: Path, locale: str) -> dict:
@@ -199,6 +275,8 @@ def validate_pair(source_path: Path, target_path: Path, locale: str) -> dict:
         if target_block is None:
             findings.append(issue("error", "missing section", source_path, target_path, source_block.start_line, None, f"no target block aligned for source {source_block.block_id}"))
             continue
+
+        findings.extend(native_speaker_regressions_for_block(locale, target_path, source_block, target_block))
 
         if source_block.block_type == "heading" and target_block.block_type != "heading":
             findings.append(issue("error", "missing headings", source_path, target_path, source_block.start_line, target_block.start_line, "source heading aligned to non-heading target block"))

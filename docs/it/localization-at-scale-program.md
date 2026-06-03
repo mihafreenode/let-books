@@ -382,10 +382,30 @@ Ogni record dovrebbe catturare:
 - testo inglese originale
 - testo localizzato originale
 - testo localizzato migliorato
+- id
 - spiegazione
 - categoria
+- stato
+- se un validatore è possibile
+- file correlati
+- data di aggiunta
 - se il QA automatizzato rileverebbe probabilmente il problema
 - lezioni apprese
+
+Percorso consigliato del corpus leggibile dalla macchina:
+
+- `docs/style-guide/localization/native-speaker-findings-corpus.json`
+
+Il corpus non è solo un archivio.
+
+È una superficie di controllo riutilizzabile per:
+
+- guida alla revisione
+- guida terminologica
+- miglioramenti dei prompt AI
+- regole dei validatori
+- copertura di regressione
+- trasferimento di conoscenza tra lingue
 
 ### Indice Delle Categorie
 
@@ -543,6 +563,20 @@ Ogni volta che si scopre una nuova categoria:
 6. aggiungere copertura di regressione, se pratica
 7. collegare il nuovo rilievo dalla documentazione di workflow e QA
 
+### Regola Rigida Per Gli Errori Segnalati
+
+Gli errori concreti segnalati dai madrelingua non sono suggerimenti facoltativi.
+
+Ogni difetto di localizzazione segnalato deve alla fine essere:
+
+- corretto
+- trasformato in guida
+- trasformato in un validatore quando è pratico
+- documentato come intenzionalmente irrisolto con giustificazione
+- oppure tracciato esplicitamente nel corpus dei rilievi finché non avviene una delle condizioni sopra
+
+Il repository non dovrebbe mai dimenticare silenziosamente i difetti di localizzazione segnalati.
+
 I parlanti nativi qui sono più preziosi non perché correggono errori evidenti.
 
 Sono più preziosi perché trasformano contenuti corretti in comunicazione naturale, culturalmente appropriata e di qualità editoriale.
@@ -550,6 +584,12 @@ Sono più preziosi perché trasformano contenuti corretti in comunicazione natur
 ## Parte 7 - Apprendimento Continuo
 
 Ogni problema di localizzazione dovrebbe migliorare il sistema.
+
+Principio preferito:
+
+> Ogni difetto di localizzazione dovrebbe migliorare il sistema.
+>
+> Un problema scoperto non dovrebbe limitarsi a correggere il testo corrente. Dovrebbe anche ridurre la probabilità che difetti simili compaiano in traduzioni future.
 
 Il ciclo preferito è:
 

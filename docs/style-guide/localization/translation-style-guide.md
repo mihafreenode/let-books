@@ -15,8 +15,10 @@ This guide defines baseline translation expectations for Let Books knowledge con
 ## AI-assisted review notes
 
 - do not approve a draft only because the general meaning is understandable
+- review relevant native-speaker findings before signoff when the locale or topic already has known failure patterns
 - review modal constructions carefully because they are often translated too literally
 - review policy and product-spec language for domain-appropriate register
+- recheck previously rejected wording patterns before marking a translation complete
 - record representative before-and-after examples for future training and QA reference
 
 ## Example categories to watch

@@ -73,7 +73,7 @@ To je v Let Books še posebej vidno. Projektna specifikacija v `AGENTS.md` večk
 
 To nista implementacijski podrobnosti. To sta produktni meji. Če AI pomočnik ustvari tok, ki blokira ročni vnos ali združi podatke o fizičnem izvodu z metapodatki o izdaji, težava ni v slogu. Težava je produktni odmik.
 
-## Zakaj dokumentacija ne sme čakati
+## Zakaj se z dokumentacijo ne sme čakati
 
 V mnogih projektih je dokumentacija obravnavana kot pozno čiščenje. Ko je AI del dostave, to postane veliko dražje.
 

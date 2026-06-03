@@ -75,7 +75,24 @@ Najmanjša polja:
 
 Ugotovitve pregledov naravnih govorcev je treba ohraniti kot rastoči korpus, ne kot osamljene enkratne opombe. Ponavljajoče se ugotovitve bi se morale vrniti v zasnovo validatorja, smernice sodelujočih in prihodnja navodila agenta AI.
 
+Pred potrditvijo pregleda prevoda, podprtega z AI, bi morali pregledovalci:
+
+- pregledati ustrezne vnose v strukturiranem korpusu ugotovitev za ta jezik ali temo
+- preveriti ponavljajoče se vzorce napak iz človeških pregledov
+- potrditi, da trenutni osnutek pred potrditvijo ne uvaja znova znanih težav
+
+Vsako prijavljeno napako naravnega govorca je treba oceniti tudi glede:
+
+- popravka vsebine
+- posodobitve smernic za pregledovanje
+- posodobitve terminoloških smernic
+- izboljšave poziva
+- možnosti za validator
+- možnosti za regresijski test
+
 To je pomembno, ker lahko prevodi, ustvarjeni z umetno inteligenco, tudi če je ohranjen splošni pomen, zahtevajo pregled maternega govorca, da se odpravijo subtilne težave v slovnici, modalnosti, terminologiji in registru, specifičnem za domeno. Te težave je pogosto težko zaznati samo z avtomatiziranimi meritvami kakovosti.
+
+Konkretne prijavljene napake naravnih govorcev niso zgolj svetovalne. Vsaka mora biti odpravljena, sistematizirana, namerno nerešena z utemeljitvijo ali pa še vedno izrecno spremljana v korpusu ugotovitev.
 
 ## Taksonomija pogostih napak prevoda AI
 
