@@ -12,11 +12,13 @@ Detects / Enforces:
 - Warning-only findings for localized Markdown sources.
 - Optional Hunspell-based spelling warnings when locale dictionaries are available.
 - Regex and Unicode-driven checks for punctuation, typography, whitespace, and script mixing.
+- Counts acceptable whole-Latin terms in Cyrillic prose separately from mixed-script likely defects.
 
 Limitations:
 - This tool is intentionally advisory.
 - It avoids subjective grammar enforcement.
 - Some locales still need allowlists or external dictionaries for higher precision.
+- Script-consistency output is meant for review triage, not for automatic language cleanup.
 
 Related:
 - tools/README.md
@@ -52,6 +54,9 @@ HUNSPELL_DICTS = {
 LATIN_LOCALES = {"sl", "hr", "bs", "sr-Latn", "sq", "de", "it", "fr", "es"}
 CYRILLIC_LOCALES = {"sr-Cyrl", "mk"}
 
+# Serbian Cyrillic and Macedonian often preserve entire Latin technical terms in prose. Keep a
+# curated allowlist so mixed-script warnings stay focused on intra-word defects rather than on
+# acceptable product or engineering vocabulary.
 CYRILLIC_ACCEPTABLE_LATIN_TERMS = {
     "ai", "alt", "android", "backend", "blog", "book", "build", "canonical", "cloud",
     "croatian", "cyrillic", "docker", "documentation", "educational", "first", "frontend",
@@ -89,11 +94,16 @@ SCRIPT_ALLOWLIST = {
     "italiano", "français", "español", "booksa", "booksu", "open", "library",
 }
 
+# Ignore digits, underscores, and slash-separated fragments so script checks stay focused on
+# lexical words instead of URLs, versions, or obvious identifiers.
 TOKEN_RE = re.compile(r"[^\W\d_][^\W\d_'’/-]*", re.UNICODE)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
 HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 LINK_RE = re.compile(r"!?\[([^\]]*)\]\(([^)]+)\)")
 FENCED_CODE_LINE_RE = re.compile(r"^```")
+
+# Keep punctuation checks shallow and mechanical. They are intended to surface likely formatting
+# slips without drifting into grammar enforcement.
 SPACE_BEFORE_PUNCT_RE = re.compile(r"\s+[,:;!?]")
 MISSING_SPACE_AFTER_PUNCT_RE = re.compile(r'''[,:;!?](?=[^\s\]\)\}"'»”’\d])''')
 DUPLICATE_PUNCT_RE = re.compile(r"([!?;,])\1+|\.{4,}|[!?]{3,}|[?!]{3,}")
@@ -135,6 +145,7 @@ def strip_frontmatter(text: str) -> str:
     end = text.find("\n---\n", 4)
     if end == -1:
         return text
+    # Preserve newline count so reported line numbers continue to match the source file.
     prefix = text[: end + 5]
     return ("\n" * prefix.count("\n")) + text[end + 5 :]
 
@@ -151,6 +162,8 @@ def strip_markdown_markup(text: str) -> list[tuple[int, str]]:
             continue
         if in_fence:
             continue
+        # Standalone image lines are noisy for script checks because alt text often preserves
+        # product names, file names, or intentionally quoted labels.
         if raw_line.lstrip().startswith("!["):
             continue
         line = INLINE_CODE_RE.sub(" ", raw_line)
@@ -230,6 +243,9 @@ def collect_script_warnings(locale: str, path: Path, line_number: int, line: str
         has_latin = contains_latin(token)
         has_cyrillic = contains_cyrillic(token)
 
+        # Mixed scripts inside one lexical token are the highest-confidence signal in Cyrillic
+        # locales. They usually indicate keyboard-layout slips, OCR artifacts, or broken
+        # transliteration rather than legitimate technical vocabulary.
         if has_latin and has_cyrillic:
             script_stats["mixedScriptLikelyDefects"] += 1
             warning = make_warning("script-consistency", path, locale, line_number, f"mixed Latin/Cyrillic token '{token}'", line.strip())
@@ -240,6 +256,8 @@ def collect_script_warnings(locale: str, path: Path, line_number: int, line: str
         if locale in LATIN_LOCALES and has_cyrillic:
             warnings.append(make_warning("script-consistency", path, locale, line_number, f"Cyrillic token in Latin-script locale: '{token}'", line.strip()))
 
+        # Count acceptable Latin tokens separately so reviewers can distinguish benign technical
+        # vocabulary from actual mixed-script defects.
         if locale in CYRILLIC_LOCALES and has_latin and normalized in CYRILLIC_ACCEPTABLE_LATIN_TERMS:
             script_stats["acceptableWholeLatinTerms"] += 1
     return warnings
@@ -283,6 +301,8 @@ def collect_spelling_warnings(locale: str, path: Path, cleaned_lines: list[tuple
 
     if not misses:
         return []
+    # Emit one summary per file so the warning-only spelling stage stays reviewable while the
+    # repository is still building dictionary coverage for technical vocabulary.
     preview = ", ".join(misses[:12])
     return [make_warning("spelling", path, locale, None, f"hunspell unknown words: {preview}", path.as_posix())]
 
@@ -317,7 +337,13 @@ def analyze_files() -> dict:
 def render_markdown(report: dict) -> str:
     warnings = report["warnings"]
     counts = report["counts"]
-    lines = ["# Language Quality Warning Report", "", "Warning-only stage. This report never fails by itself.", ""]
+    lines = [
+        "# Language Quality Warning Report",
+        "",
+        "Warning-only stage. This report never fails by itself.",
+        "Interpret warnings as review prompts, not as proof that a localized sentence is wrong.",
+        "",
+    ]
     lines.append("## Summary")
     lines.append("")
     for category in ["spelling", "punctuation", "typography", "casing", "whitespace", "script-consistency"]:

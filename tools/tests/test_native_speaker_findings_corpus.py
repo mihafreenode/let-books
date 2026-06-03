@@ -30,6 +30,8 @@ REQUIRED_FIELDS = {
 
 class NativeSpeakerFindingsCorpusTests(unittest.TestCase):
     def test_corpus_has_required_fields(self) -> None:
+        # The findings corpus feeds both documentation workflow and validator behavior, so shape
+        # drift here would silently weaken multiple layers at once.
         payload = json.loads(CORPUS_PATH.read_text(encoding="utf-8"))
         self.assertIn("findings", payload)
         self.assertIsInstance(payload["findings"], list)
@@ -54,6 +56,7 @@ class NativeSpeakerFindingsCorpusTests(unittest.TestCase):
                     self.assertGreater(len(source_review_recommendation["source_files"]), 0)
 
     def test_corpus_passes_validator_checks(self) -> None:
+        # Keep the dedicated policy validator aligned with the lighter schema assertions above.
         self.assertEqual(validate_native_speaker_findings_corpus(), [])
 
 

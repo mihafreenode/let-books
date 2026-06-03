@@ -431,10 +431,17 @@ Detects / Enforces:
 - Advisory findings only.
 - Optional Hunspell-based spelling warnings when locale dictionaries exist.
 - Regex and Unicode-driven warnings for punctuation, typography, and script mixing.
+- Separate script reporting for acceptable whole-Latin terms in Cyrillic prose versus mixed-script likely defects.
 
 Limitations:
 - Intentionally non-blocking.
 - Signal quality still depends on allowlists, locale-specific punctuation rules, and repository review.
+- Warnings should be interpreted as triage input for human review rather than proof that the text is wrong.
+
+Workflow Notes:
+- Use mixed-script likely defects as the highest-confidence script warnings.
+- Treat acceptable whole-Latin technical or product terms in Cyrillic locales as measured context, not as defects.
+- Keep this stage warning-only until repeated repository use shows that a narrower subset is precise enough for stricter enforcement.
 
 Related Tools:
 - `validate_translation_parity.py`

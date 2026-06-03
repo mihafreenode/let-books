@@ -331,6 +331,9 @@ def validate_native_speaker_findings_corpus() -> list[dict]:
                 )
             )
 
+        # A finding marked validator_possible has crossed from passive documentation into active
+        # recurrence prevention. Require both machine-checkable patterns and an explicit record
+        # that the finding was turned into validator-backed system behavior.
         if finding.get("validator_possible"):
             validator_patterns = iter_validator_patterns(finding)
             if not validator_patterns:

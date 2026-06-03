@@ -1,4 +1,27 @@
 #!/usr/bin/env python3
+"""
+Purpose:
+- Summarize the structured native-speaker findings corpus into lightweight metrics.
+
+Why:
+- The localization system needs cheap, repeatable reporting that shows whether native-speaker
+  findings are being fixed, documented, linked to content changes, and converted into reusable
+  protections such as guidance or validators.
+
+Detects / Enforces:
+- Reporting only.
+- No validation or CI blocking behavior.
+- Counts findings states, guidance conversion, recurrence coverage, and source-review signals.
+
+Limitations:
+- This script only reflects what is documented in the corpus.
+- It does not inspect git history, diff content, or real review quality on its own.
+
+Related:
+- docs/style-guide/localization/native-speaker-findings-corpus.json
+- tools/validate_translation_parity.py
+- docs/style-guide/localization/findings-system-roadmap.md
+"""
 
 from __future__ import annotations
 
@@ -25,6 +48,8 @@ def has_tag(finding: dict, tag: str) -> bool:
 
 
 def compute_summary(findings: list[dict]) -> dict:
+    # Keep "open" intentionally simple: not fixed and not explicitly accepted as intentionally
+    # unresolved. The summary is meant for trend reporting, not for workflow-state modeling.
     total = len(findings)
     fixed = sum(1 for finding in findings if has_action(finding, "fixed") or finding.get("status") == "fixed")
     intentionally_unresolved = sum(1 for finding in findings if finding.get("status") == "intentionally_unresolved")
@@ -68,7 +93,12 @@ def render_markdown(summary: dict) -> str:
     metrics = summary["metrics"]
     recurrence = summary["recurrenceCoverage"]
 
-    lines = ["# Native-Speaker Findings Summary", ""]
+    lines = [
+        "# Native-Speaker Findings Summary",
+        "",
+        "This summary is descriptive. It helps measure whether native-speaker findings are being turned into durable system knowledge.",
+        "",
+    ]
     lines.append("## Metrics")
     lines.append("")
     lines.append(f"- total findings: {metrics['totalFindings']}")
