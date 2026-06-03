@@ -52,6 +52,18 @@ HUNSPELL_DICTS = {
 LATIN_LOCALES = {"sl", "hr", "bs", "sr-Latn", "sq", "de", "it", "fr", "es"}
 CYRILLIC_LOCALES = {"sr-Cyrl", "mk"}
 
+CYRILLIC_ACCEPTABLE_LATIN_TERMS = {
+    "ai", "alt", "android", "backend", "blog", "book", "build", "canonical", "cloud",
+    "croatian", "cyrillic", "docker", "documentation", "educational", "first", "frontend",
+    "french", "gate", "german", "github", "git", "hoc", "hunspell", "imagemagick",
+    "institutional", "international", "italian", "language", "latin", "learning", "letbooks",
+    "lint", "linting", "localization", "locale", "macedonian", "notes", "onboarding",
+    "only", "openai", "openlibrary", "orthography", "pipeline", "placeholder", "policy",
+    "preserve", "product", "prompt", "proper", "reach", "regional", "relevance", "research",
+    "scale", "script", "smoke", "source", "special", "spanish", "spellcheck", "standard",
+    "startup", "topics", "waterfall", "wiki", "workflow",
+}
+
 COMMON_ALLOWED_WORDS = {
     "agenti", "ai", "api", "aspell", "azure", "blazor", "books", "ci", "cobiss",
     "codespell", "crossref", "csv", "dexie", "docs", "docker", "ebook", "ef", "excel",
@@ -89,6 +101,13 @@ ASCII_DOUBLE_QUOTE_RE = re.compile(r'"[^"\n]{2,}"')
 ELLIPSIS_RE = re.compile(r"\.\.\.")
 TRAILING_SPACE_RE = re.compile(r"[ \t]+$")
 DOUBLE_SPACE_RE = re.compile(r"\S  +\S")
+
+
+def make_script_stats() -> dict:
+    return {
+        "acceptableWholeLatinTerms": 0,
+        "mixedScriptLikelyDefects": 0,
+    }
 
 
 def iter_localized_markdown_files() -> list[tuple[str, Path]]:
@@ -201,7 +220,7 @@ def collect_line_warnings(locale: str, path: Path, line_number: int, line: str) 
     return warnings
 
 
-def collect_script_warnings(locale: str, path: Path, line_number: int, line: str) -> list[dict]:
+def collect_script_warnings(locale: str, path: Path, line_number: int, line: str, script_stats: dict) -> list[dict]:
     warnings: list[dict] = []
     for match in TOKEN_RE.finditer(line):
         token = match.group(0)
@@ -211,18 +230,18 @@ def collect_script_warnings(locale: str, path: Path, line_number: int, line: str
         has_latin = contains_latin(token)
         has_cyrillic = contains_cyrillic(token)
 
-        if re.fullmatch(r"[A-Z]{2,8}[А-Яа-яЉЊЂЈЋЏљњђјћџ]+", token):
-            continue
-
         if has_latin and has_cyrillic:
-            warnings.append(make_warning("script-consistency", path, locale, line_number, f"mixed Latin/Cyrillic token '{token}'", line.strip()))
+            script_stats["mixedScriptLikelyDefects"] += 1
+            warning = make_warning("script-consistency", path, locale, line_number, f"mixed Latin/Cyrillic token '{token}'", line.strip())
+            warning["scriptClassification"] = "likely_defect"
+            warnings.append(warning)
             continue
 
         if locale in LATIN_LOCALES and has_cyrillic:
             warnings.append(make_warning("script-consistency", path, locale, line_number, f"Cyrillic token in Latin-script locale: '{token}'", line.strip()))
 
-        if locale in CYRILLIC_LOCALES and has_latin and not token.isupper():
-            warnings.append(make_warning("script-consistency", path, locale, line_number, f"Latin token in Cyrillic-script locale: '{token}'", line.strip()))
+        if locale in CYRILLIC_LOCALES and has_latin and normalized in CYRILLIC_ACCEPTABLE_LATIN_TERMS:
+            script_stats["acceptableWholeLatinTerms"] += 1
     return warnings
 
 
@@ -281,17 +300,18 @@ def make_warning(category: str, path: Path, locale: str, line_number: int | None
 
 def analyze_files() -> dict:
     warnings: list[dict] = []
+    script_stats = make_script_stats()
     for locale, path in iter_localized_markdown_files():
         cleaned_lines = strip_markdown_markup(path.read_text(encoding="utf-8"))
         for line_number, line in cleaned_lines:
             warnings.extend(collect_line_warnings(locale, path, line_number, line))
-            warnings.extend(collect_script_warnings(locale, path, line_number, line))
+            warnings.extend(collect_script_warnings(locale, path, line_number, line, script_stats))
         warnings.extend(collect_spelling_warnings(locale, path, cleaned_lines))
 
     counts = {category: 0 for category in ["spelling", "punctuation", "typography", "casing", "whitespace", "script-consistency"]}
     for warning in warnings:
         counts[warning["category"]] = counts.get(warning["category"], 0) + 1
-    return {"warnings": warnings, "counts": counts}
+    return {"warnings": warnings, "counts": counts, "scriptStats": script_stats}
 
 
 def render_markdown(report: dict) -> str:
@@ -303,6 +323,13 @@ def render_markdown(report: dict) -> str:
     for category in ["spelling", "punctuation", "typography", "casing", "whitespace", "script-consistency"]:
         lines.append(f"- {category} warnings: {counts.get(category, 0)}")
     lines.append("")
+    script_stats = report.get("scriptStats", {})
+    if script_stats:
+        lines.append("## Script Summary")
+        lines.append("")
+        lines.append(f"- acceptable whole-Latin terms in Cyrillic locales: {script_stats.get('acceptableWholeLatinTerms', 0)}")
+        lines.append(f"- mixed-script likely defects: {script_stats.get('mixedScriptLikelyDefects', 0)}")
+        lines.append("")
 
     for category in ["spelling", "punctuation", "typography", "casing", "whitespace", "script-consistency"]:
         lines.append(f"## {category.title()} Warnings")
