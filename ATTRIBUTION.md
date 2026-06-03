@@ -5,7 +5,7 @@
 
 This repository is a synthesis of ideas drawn from software engineering, documentation practices, localization, knowledge management, open source communities, AI-assisted development, and many conversations over time.
 
-No claim of novelty is made for most individual ideas contained here. The contribution, if any, lies in their synthesis, practical application, validation, refinement, and integration into a coherent working system.
+No claim of novelty is made for most individual ideas contained here. The value, if any, lies in their synthesis, practical application, validation, refinement, and integration into a coherent working system.
 
 The maintainer's role includes project direction, product framing, specification writing, acceptance criteria, review, governance, quality assurance, prioritization, and publication decisions. The maintainer is responsible for deciding what enters the repository, what is revised, what is rejected, and what is considered ready for release.
 
