@@ -319,5 +319,6 @@ Change-record summary for PRs or governance review:
 
 - `../terminology/README.md`
 - `ai-translation-review-records.md`
+- `findings-system-roadmap.md`
 - `llm-translation-benchmark-fixtures.md`
 - `../../knowledge-platform-bootstrap.md`

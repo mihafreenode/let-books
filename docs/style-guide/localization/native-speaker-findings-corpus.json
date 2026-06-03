@@ -15,6 +15,13 @@
       "related_files": [
         "docs/blog/sl/documentation-is-part-of-the-product.md"
       ],
+      "content_change_refs": [
+        "docs/blog/sl/documentation-is-part-of-the-product.md"
+      ],
+      "recurrence_tags": [
+        "translationese_pattern",
+        "previously_reported_defect"
+      ],
       "date_added": "2026-06-03",
       "system_actions": [
         "fixed",
@@ -36,6 +43,14 @@
       "validator_possible": true,
       "related_files": [
         "docs/blog/sl/spec-driven-development-for-ai-projects.md"
+      ],
+      "content_change_refs": [
+        "docs/blog/sl/spec-driven-development-for-ai-projects.md"
+      ],
+      "recurrence_tags": [
+        "literal_translation",
+        "translationese_pattern",
+        "previously_reported_defect"
       ],
       "date_added": "2026-06-03",
       "system_actions": [
@@ -64,6 +79,13 @@
       "validator_possible": true,
       "related_files": [
         "docs/blog/sl/ai-will-not-replace-translators.md"
+      ],
+      "content_change_refs": [
+        "docs/blog/sl/ai-will-not-replace-translators.md"
+      ],
+      "recurrence_tags": [
+        "literal_translation",
+        "previously_reported_defect"
       ],
       "date_added": "2026-06-03",
       "system_actions": [
@@ -96,6 +118,14 @@
       "related_files": [
         "docs/wiki/sl/let-books-localization-case-study.md"
       ],
+      "content_change_refs": [
+        "docs/wiki/sl/let-books-localization-case-study.md"
+      ],
+      "recurrence_tags": [
+        "false_friend",
+        "rejected_terminology",
+        "previously_reported_defect"
+      ],
       "date_added": "2026-06-03",
       "system_actions": [
         "fixed",
@@ -113,6 +143,46 @@
       "review_guidance": "Resolve testing and evaluation vocabulary by software QA domain meaning first.",
       "prompt_guidance": "When translating benchmarking or evaluation text, treat 'fixture' as a reusable reference example or test artifact unless the physical domain is explicit.",
       "terminology_guidance": "Do not use infrastructure or wiring meanings for 'fixture' in QA, benchmarking, or LLM evaluation contexts."
+    },
+    {
+      "id": "cross-locale-source-english-001",
+      "language": "en",
+      "category": "source text optimization for localization",
+      "source_text": "The hidden exclusion of English-only systems",
+      "localized_text": "Skrita izključitev angleško-izključnih sistemov",
+      "preferred_localized_text": "Why English-only systems exclude people / Zakaj sistemi, ki so na voljo samo v angleščini, izključujejo ljudi",
+      "explanation": "The original English heading compressed too much meaning into an English-specific nominal pattern. Native-speaker review showed that the better fix was to improve the English source wording rather than repeatedly compensating in each target language.",
+      "status": "tracked",
+      "validator_possible": false,
+      "related_files": [
+        "docs/blog/en/why-every-language-matters.md",
+        "docs/blog/sl/why-every-language-matters.md"
+      ],
+      "content_change_refs": [
+        "docs/blog/en/why-every-language-matters.md",
+        "docs/blog/sl/why-every-language-matters.md"
+      ],
+      "recurrence_tags": [
+        "translationese_pattern",
+        "source_english_review",
+        "previously_reported_defect"
+      ],
+      "date_added": "2026-06-03",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "knowledge_corpus",
+        "source_review"
+      ],
+      "review_guidance": "If multiple locales struggle with the same compressed English source phrase, review the English source instead of forcing each locale to compensate independently.",
+      "prompt_guidance": "When the source relies on compressed nominal phrasing that becomes awkward across locales, recommend a clearer English rewrite before finalizing target-language fixes.",
+      "source_review_recommendation": {
+        "recommended": true,
+        "reason": "The defect originates in English source compression and becomes easier to prevent by rewriting the source once.",
+        "source_files": [
+          "docs/blog/en/why-every-language-matters.md"
+        ]
+      }
     }
   ]
 }

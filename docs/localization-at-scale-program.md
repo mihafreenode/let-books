@@ -577,6 +577,24 @@ Every reported localization defect must eventually be:
 
 The repository should never silently forget reported localization defects.
 
+### Findings Metrics
+
+Track native-speaker findings with cheap, corpus-driven metrics.
+
+Recommended baseline metrics:
+
+- total findings
+- fixed findings
+- open findings
+- intentionally unresolved findings
+- validator-backed findings
+- findings converted into terminology guidance
+- findings converted into review guidance
+- findings linked to content changes
+- source-English review recommendations
+
+These metrics should be derived from the structured findings corpus rather than from expensive repository-wide re-review.
+
 Native speakers are most valuable here not because they fix obvious mistakes.
 
 They are most valuable because they transform correct content into natural, culturally appropriate, publication-quality communication.

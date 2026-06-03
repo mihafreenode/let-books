@@ -96,6 +96,8 @@ REQUIRED_FINDING_FIELDS = {
     "status",
     "validator_possible",
     "related_files",
+    "content_change_refs",
+    "recurrence_tags",
     "date_added",
 }
 
@@ -290,6 +292,32 @@ def validate_native_speaker_findings_corpus() -> list[dict]:
                 )
             )
 
+        if not isinstance(finding.get("content_change_refs"), list):
+            findings.append(
+                issue(
+                    "error",
+                    "invalid findings corpus",
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    None,
+                    None,
+                    f"finding {finding_id} must use a list for content_change_refs",
+                )
+            )
+
+        if not isinstance(finding.get("recurrence_tags"), list):
+            findings.append(
+                issue(
+                    "error",
+                    "invalid findings corpus",
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    NATIVE_SPEAKER_FINDINGS_PATH,
+                    None,
+                    None,
+                    f"finding {finding_id} must use a list for recurrence_tags",
+                )
+            )
+
         if finding.get("status") == "intentionally_unresolved" and not str(finding.get("unresolved_justification", "")).strip():
             findings.append(
                 issue(
@@ -331,6 +359,46 @@ def validate_native_speaker_findings_corpus() -> list[dict]:
                         f"finding {finding_id} is marked validator_possible but is not documented with a validator system action",
                     )
                 )
+
+        source_review_recommendation = finding.get("source_review_recommendation")
+        if source_review_recommendation is not None:
+            if not isinstance(source_review_recommendation, dict):
+                findings.append(
+                    issue(
+                        "error",
+                        "invalid findings corpus",
+                        NATIVE_SPEAKER_FINDINGS_PATH,
+                        NATIVE_SPEAKER_FINDINGS_PATH,
+                        None,
+                        None,
+                        f"finding {finding_id} must use an object for source_review_recommendation",
+                    )
+                )
+            elif source_review_recommendation.get("recommended"):
+                if not str(source_review_recommendation.get("reason", "")).strip():
+                    findings.append(
+                        issue(
+                            "error",
+                            "invalid findings corpus",
+                            NATIVE_SPEAKER_FINDINGS_PATH,
+                            NATIVE_SPEAKER_FINDINGS_PATH,
+                            None,
+                            None,
+                            f"finding {finding_id} recommends source review but does not include a reason",
+                        )
+                    )
+                if not isinstance(source_review_recommendation.get("source_files"), list) or not source_review_recommendation.get("source_files"):
+                    findings.append(
+                        issue(
+                            "error",
+                            "invalid findings corpus",
+                            NATIVE_SPEAKER_FINDINGS_PATH,
+                            NATIVE_SPEAKER_FINDINGS_PATH,
+                            None,
+                            None,
+                            f"finding {finding_id} recommends source review but does not include source_files",
+                        )
+                    )
 
     return findings
 

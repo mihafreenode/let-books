@@ -22,6 +22,8 @@ REQUIRED_FIELDS = {
     "status",
     "validator_possible",
     "related_files",
+    "content_change_refs",
+    "recurrence_tags",
     "date_added",
 }
 
@@ -36,11 +38,20 @@ class NativeSpeakerFindingsCorpusTests(unittest.TestCase):
         for finding in payload["findings"]:
             self.assertTrue(REQUIRED_FIELDS.issubset(finding.keys()), finding.get("id", "missing-id"))
             self.assertIsInstance(finding["related_files"], list)
+            self.assertIsInstance(finding["content_change_refs"], list)
+            self.assertIsInstance(finding["recurrence_tags"], list)
             self.assertIsInstance(finding["validator_possible"], bool)
             if finding["status"] == "intentionally_unresolved":
                 self.assertTrue(str(finding.get("unresolved_justification", "")).strip(), finding["id"])
             if finding["validator_possible"]:
                 self.assertIn("validator", finding.get("system_actions", []), finding["id"])
+            source_review_recommendation = finding.get("source_review_recommendation")
+            if source_review_recommendation is not None:
+                self.assertIsInstance(source_review_recommendation, dict)
+                if source_review_recommendation.get("recommended"):
+                    self.assertTrue(str(source_review_recommendation.get("reason", "")).strip(), finding["id"])
+                    self.assertIsInstance(source_review_recommendation.get("source_files"), list)
+                    self.assertGreater(len(source_review_recommendation["source_files"]), 0)
 
     def test_corpus_passes_validator_checks(self) -> None:
         self.assertEqual(validate_native_speaker_findings_corpus(), [])
