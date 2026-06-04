@@ -13,7 +13,7 @@ topics:
 
 Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.
 
-## Gewünschte Schecks
+## Gewünschte Prüfungen
 
 - Konsistenz des lokalen Inventars
 - frische Site-Generierung vor der Paritätsprüfung

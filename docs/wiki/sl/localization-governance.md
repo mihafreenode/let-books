@@ -20,7 +20,7 @@ Upravljanje lokalizacije določa, kdo lahko predlaga, pregleda, odobri in izpodb
 - terminološke odobritve
 - reševanje sporov
 - spremljanje stanja pregleda
-- ponovno uporabno sledenje pregledov-primerov
+- spremljanje primerov iz pregledov, ki jih je mogoče znova uporabiti
 - svežina revizijskih artefaktov
 - obveznosti dokumentiranja orodij
 

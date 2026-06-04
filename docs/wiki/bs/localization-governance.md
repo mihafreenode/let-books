@@ -20,7 +20,7 @@ Upravljanje lokalizacijom definira ko može predložiti, pregledati, odobriti i 
 - terminološka odobrenja
 - rješavanje sporova
 - praćenje stanja pregleda
-- za višekratnu upotrebu recenzija-primjer praćenja
+- praćenje primjera iz recenzija koji se mogu ponovo koristiti
 - svježina artefakata pregleda
 - obaveze dokumentovanja alata
 

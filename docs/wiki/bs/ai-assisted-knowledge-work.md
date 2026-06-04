@@ -1,7 +1,7 @@
 ---
 title: "AI-potpomognut rad sa znanjem"
 summary: >-
-  Radni tokovi vođeni specifikacijama važe i izvan softvera: pomažu strukturirati AI-potpomognuto pisanje, istraživanje, dokumentaciju, rad na politikama i druge oblike intelektualno zahtjevnog rada kroz eksplicitnu namjeru, validaciju i upravljani pregled.
+  Radni tokovi vođeni specifikacijama važe i izvan softvera: pomažu strukturirati AI-potpomognuto pisanje, istraživanje, dokumentaciju, rad na politikama i druge oblike intelektualno zahtjevnog rada uz jasno određenu namjeru, provjeru i uređen postupak pregleda.
 topics:
   - ai-assisted-workflows
   - spec-driven-development
@@ -29,7 +29,7 @@ Ova stranica fokusira se na ta stabilna načela, a ne na bilo koji pojedinačni 
 
 Mnogi ljudi se s AI-potpomognutim radom prvi put susreću kroz interaktivne web sisteme. To je razuman početak.
 
-Radni tokovi vođeni specifikacijama ne zahtijevaju agente za kodiranje, terminalske alate ni automatizaciju repozitorija. Interaktivni AI već može pomoći u korisnom ranom radu, poput izrade specifikacija, pregleda dokumenata, izoštravanja zahtjeva, stvaranja kandidatskih sadržaja, prepoznavanja praznina, predlaganja strategija validacije i istraživanja alternativa.
+Radni tokovi vođeni specifikacijama ne zahtijevaju agente za kodiranje, terminalske alate ni automatizaciju repozitorija. Interaktivni AI već može pomoći u korisnom ranom radu, poput izrade specifikacija, pregleda dokumenata, izoštravanja zahtjeva, pripreme prvih nacrta i prijedloga teksta, prepoznavanja praznina te predlaganja načina provjere i alternativa.
 
 Zato je interaktivni AI prirodna ulazna tačka za ljude koji rade na jednokratnim dokumentima, ranim nacrtima ili manjim projektima. Istraživač ga može koristiti da poboljša strukturu rada. Nastavnik ga može koristiti da izoštri ishode učenja i nivo težine. Tim za politike može ga koristiti da uporedi moguće strukture dokumenta prije nego što formalno pisanje uopće počne. Pravna ili regulatorna ekipa može ga koristiti da otkrije nedostajuće definicije, neriješene pretpostavke ili zavisnosti u pregledu.
 
@@ -181,14 +181,14 @@ Prateći transkript za ovu temu koristan je primjer kako se specifikacije razvij
 
 Skraćeni oblik te rasprave izgledao je otprilike ovako:
 
-- početna ideja: "extend the doc ... practical insight ... academic, educational and possibly legal writing"
-- kritika: "I would not make it so direct ... validators have long term uses"
-- proširenje opsega: "first I'd focus on interactive web AI"
-- praktična ograničenja: "there's limit how much context AI can hold at once ..."
-- arhitektura radnog toka: "role of skills ... interface to specialised programs"
-- zabrinutosti oko upravljanja: "serious security implications of using third party skills"
-- zabrinutosti oko lokalizacije: "quotes should also be localized to each language"
-- konsolidacija: "one big topic ... prefer few larger articles"
+- početna ideja: "proširi tekst ... dodaj praktičan uvid ... uključi akademsko, obrazovno i možda pravno pisanje"
+- kritika: "Ne bih to rekao tako direktno ... validatori imaju dugoročnu vrijednost"
+- proširenje opsega: "prvo bih se fokusirao na interaktivni web AI"
+- praktična ograničenja: "postoji granica količine konteksta koju AI može držati aktivnom u istom trenutku ..."
+- arhitektura radnog toka: "uloga vještina ... kao interfejsa prema specijaliziranim programima"
+- zabrinutosti oko upravljanja: "korištenje vještina trećih strana nosi ozbiljne sigurnosne posljedice"
+- zabrinutosti oko lokalizacije: "i citati bi trebali biti lokalizirani na svaki jezik"
+- konsolidacija: "riječ je o jednoj većoj temi ... bolje je imati nekoliko obimnijih članaka"
 
 Taj slijed reprezentativniji je za stvarni AI-potpomognuti rad nego uglačana priča o uspjehu. Važna lekcija nije da je na kraju napisan savršen prompt. Važno je da su se zahtjevi, prigovori, uredničke odluke i zabrinutosti oko upravljanja postepeno pretvarali u jasniju specifikaciju.
 

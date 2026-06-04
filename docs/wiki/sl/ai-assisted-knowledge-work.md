@@ -1,7 +1,7 @@
 ---
 title: "AI-podprto delo z znanjem"
 summary: >-
-  Delovni tokovi na podlagi specifikacij veljajo tudi zunaj programske opreme: pomagajo strukturirati AI-podprto pisanje, raziskovanje, dokumentacijo, delo na politikah in druge oblike intelektualno zahtevnega dela z eksplicitnim namenom, validacijo in upravljanim pregledom.
+  Delovni tokovi na podlagi specifikacij veljajo tudi zunaj programske opreme: pomagajo strukturirati AI-podprto pisanje, raziskovanje, dokumentacijo, delo na politikah in druge oblike intelektualno zahtevnega dela z jasno določenim namenom, preverjanjem in urejenim postopkom pregleda.
 topics:
   - ai-assisted-workflows
   - spec-driven-development
@@ -17,10 +17,10 @@ Delovni tokovi na podlagi specifikacij niso omejeni na programsko inženirstvo. 
 Osnovni vzorec ostaja uporaben tudi takrat, ko se posamezni AI-izdelki spreminjajo:
 
 - določite cilj in omejitve
-- ohranite relevanten kontekst v trajnih artefaktih
+- pomemben kontekst ohranite v trajnih zapisih in gradivih
 - osnutke ustvarjajte in izboljšujte iterativno
 - rezultat preverjajte glede na eksplicitne standarde
-- človeku ohranite odgovornost za presojo in odobritev
+- odgovornost za presojo in odobritev naj ostane pri ljudeh
 - avtomatizacijo upravljajte prek pregleda, nadzora dostopa in sledljivosti
 
 Ta stran se osredotoča na ta stabilna načela, ne na katerokoli posamezno AI-orodje.
@@ -29,7 +29,7 @@ Ta stran se osredotoča na ta stabilna načela, ne na katerokoli posamezno AI-or
 
 Veliko ljudi se z AI-podprtim delom prvič sreča prek interaktivnih spletnih sistemov. To je razumen začetek.
 
-Specifikacijsko vodeni delovni tokovi ne zahtevajo kodirnih agentov, terminalskih orodij ali avtomatizacije repozitorija. Interaktivni AI lahko že pomaga pri uporabnem zgodnjem delu, kot so priprava specifikacij, pregled dokumentov, izostritev zahtev, ustvarjanje kandidatnih vsebin, prepoznavanje vrzeli, predlaganje validacijskih strategij in raziskovanje alternativ.
+Specifikacijsko vodeni delovni tokovi ne zahtevajo kodirnih agentov, terminalskih orodij ali avtomatizacije repozitorija. Interaktivni AI lahko že pomaga pri zgodnjih opravilih, kot so priprava specifikacij, pregled dokumentov, izostritev zahtev, priprava prvih osnutkov in predlogov besedila, prepoznavanje vrzeli ter predlaganje načinov preverjanja in alternativ.
 
 Zato je interaktivni AI naravna vstopna točka za ljudi, ki delajo na enkratnih dokumentih, zgodnjih osnutkih ali manjših projektih. Raziskovalec ga lahko uporabi za izboljšanje zasnove članka. Učitelj ga lahko uporabi za izostritev učnih ciljev in zahtevnosti. Skupina za politike ga lahko uporabi za primerjavo možnih struktur dokumenta, preden se formalno pisanje sploh začne. Pravna ali regulativna ekipa ga lahko uporabi za odkrivanje manjkajočih definicij, nerešenih predpostavk ali odvisnosti v pregledu.
 
@@ -57,7 +57,7 @@ V praksi mnogo ekip specifikacije, opombe, preglede, ugotovitve, pozive in artef
 - dovolj strojno berljiv za avtomatizacijo
 - prijazen do verzioniranja in pregleda razlik
 - prenosljiv med orodji in platformami
-- vzdržljiv skozi daljše časovno obdobje
+- primeren za dolgoročno uporabo
 
 Te lastnosti so pri AI-podprtem delu pomembne, ker je kontekst dragocen le, če ga lahko ohranimo, znova pregledamo in ponovno uporabimo. Markdown olajša hranjenje več kot le končnega izdelka. Ohrani lahko cilje, predpostavke, omejitve, ugotovitve pregledov, pravila objave, rezultate validacije in odločitve skupaj z njihovo utemeljitvijo.
 
@@ -179,16 +179,16 @@ Cilj ni jezikovna čistost. Cilj je zmanjšati trenje za bralca in artefakte del
 
 Podporni prepis za to temo je uporaben primer tega, kako se specifikacije razvijajo skozi razpravo. Poglavje se ni začelo s popolnoma izdelano strukturo. Zahteve so se pojavile iterativno.
 
-Skrajšana oblika te razprave je izgledala nekako takole:
+V poenostavljeni obliki je razprava potekala približno takole:
 
-- začetna ideja: "extend the doc ... practical insight ... academic, educational and possibly legal writing"
-- kritika: "I would not make it so direct ... validators have long term uses"
-- razširitev obsega: "first I'd focus on interactive web AI"
-- praktične omejitve: "there's limit how much context AI can hold at once ..."
-- arhitektura delovnega toka: "role of skills ... interface to specialised programs"
-- pomisleki glede upravljanja: "serious security implications of using third party skills"
-- pomisleki glede lokalizacije: "quotes should also be localized to each language"
-- konsolidacija: "one big topic ... prefer few larger articles"
+- začetna ideja: "razširi besedilo ... dodaj praktičen uvid ... vključi akademsko, izobraževalno in morda pravno pisanje"
+- kritika: "Tega ne bi povedal tako neposredno ... validatorji imajo dolgoročno vrednost"
+- razširitev obsega: "najprej bi se osredotočil na interaktivni spletni AI"
+- praktične omejitve: "omejevala bo količina konteksta, ki ga lahko AI hkrati drži v obdelavi ..."
+- arhitektura delovnega toka: "vloga veščin ... kot vmesnikov do specializiranih programov"
+- pomisleki glede upravljanja: "uporaba zunanjih veščin prinaša resne varnostne posledice"
+- pomisleki glede lokalizacije: "tudi navedki bi morali biti prevedeni v vsak jezik"
+- konsolidacija: "gre za eno večjo temo ... bolje je imeti nekaj obsežnejših člankov"
 
 To zaporedje je bolj reprezentativno za resnično AI-podprto delo kot pa polirana zgodba o uspehu. Pomembna lekcija ni, da je bil na koncu napisan popoln poziv. Pomembno je, da so se zahteve, ugovori, uredniške odločitve in pomisleki glede upravljanja postopoma pretvorili v jasnejšo specifikacijo.
 

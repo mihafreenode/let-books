@@ -15,13 +15,13 @@ Lokalizacijski CI/CD neprekinjeno preverja večjezično vsebino, tako da se manj
 
 ## Želeni pregledi
 
-- doslednost inventarja lokalne nastavitve
+- doslednost seznama jezikovnih različic
 - sveže generiranje spletnega mesta pred pregledom paritete
 - preverjanje povezave
 - generiranje člankov in strani
 - preverjanje črkovanja, kjer je na voljo
 - pariteta nadomestnih znakov
-- preizkusi dima dostopnosti
+- osnovni preizkusi dostopnosti
 - preverjanje pokritosti posnetkov zaslona in diagramov
 
 ## Pravilo svežega generiranja
