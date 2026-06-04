@@ -556,6 +556,43 @@ Related Tools:
 Reuse Potential:
 - High.
 
+#### `validate-structural-localization-parity.mjs`
+
+Purpose:
+- Detects structural degradation in localized long-form Markdown even when file presence and broad semantic intent still appear acceptable.
+
+Why It Exists:
+- Some localized articles keep partial meaning while collapsing section hierarchy, dropping examples, compressing case studies, or flattening practical guidance into short summaries.
+
+Detects / Enforces:
+- Warns on heading-count loss, heading-depth collapse, suspicious body compression, major-section coverage loss, and likely missing educational sections.
+
+Limitations:
+- Heuristic and review-oriented. It identifies likely degraded structure rather than proving exact translation defects.
+
+Interpretation:
+- Warnings mean the localized article should be reviewed for structural compression or missing reader value.
+- The validator does not fail by default; use `--warning-fail-threshold` when a workflow wants warnings to become blocking after a chosen count.
+
+Expected False Positives:
+- Legitimate editorial restructuring that preserves educational value with fewer headings.
+- Language-driven section shortening that does not remove meaning or navigability.
+
+Expected False Negatives:
+- Articles that preserve heading shape while still weakening examples, prose quality, or conceptual clarity.
+- Semantically subtle omissions inside sections that remain structurally similar.
+
+Related Tools:
+- `validate-content-parity.mjs`
+- `validate-localized-articles.mjs`
+- `validate_translation_parity.py`
+
+Operational Rule:
+- Use this validator on freshly generated artifacts during review workflows. Source Markdown, generated HTML, and browser-rendered output can temporarily diverge during development.
+
+Reuse Potential:
+- High.
+
 #### `validate-localization-completeness.mjs`
 
 Purpose:

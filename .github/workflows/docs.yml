@@ -111,12 +111,18 @@ jobs:
       - name: Validate build environment
         run: python3 tools/validate_environment.py
 
+      # Fresh-artifact rule:
+      # Publishing review must regenerate docs from current source state
+      # before parity checks or manual inspection. Generated HTML is the
+      # review baseline, not stale committed output.
       - name: Regenerate SEO metadata
         run: node tools/generate-static-seo.mjs
 
       - name: Generate docs content HTML
         run: python3 tools/generate_docs_content.py
 
+      # Structural validation runs immediately after generation so later
+      # localization checks inspect a current generated site.
       - name: Generated site structural validation
         run: node tools/validate-generated-site-structure.mjs
 
@@ -133,8 +139,10 @@ jobs:
         run: node tools/generate-articles-json.mjs
 
       # Keep the same layered localization pipeline as CI so
-      # publishing is blocked by the same source, semantic, parity,
-      # and rendered-output guarantees.
+      # publishing is blocked by the same fresh-generation, source,
+      # semantic, structural, parity, and rendered-output guarantees.
+      # Manual review should follow this same sequence: current source
+      # -> generated HTML -> browser-rendered output.
       - name: Documentation parity audit
         run: |
           node tools/validate-content-parity.mjs \
@@ -147,6 +155,12 @@ jobs:
             --require-full-coverage \
             --report-file docs/.localization-semantic-review.md \
             --json-report-file docs/.localization-semantic-review.json
+
+      - name: Structural localization parity review
+        run: |
+          node tools/validate-structural-localization-parity.mjs \
+            --report-file docs/.structural-localization-parity-report.md \
+            --json-report-file docs/.structural-localization-parity-report.json
 
       - name: Translation parity validation
         run: |
@@ -175,8 +189,8 @@ jobs:
         run: node tools/generate-sitemap.mjs
 
       # Browser-facing docs checks stay in the deployment workflow
-      # because a page can pass file-level validation and still fail
-      # print or runtime rendering expectations.
+      # because a page can pass source and generated-HTML validation and
+      # still fail print, responsive, or runtime rendering expectations.
       - name: Docs browser validation
         run: |
           set -euo pipefail

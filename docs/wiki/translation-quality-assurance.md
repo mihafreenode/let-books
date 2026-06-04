@@ -18,11 +18,38 @@ Translation QA combines automated validation, spellcheck, terminology review, ac
 - missing translations
 - English leakage
 - reader-facing localization completeness
+- structural parity against fresh generated output
 - placeholder mismatches
 - broken links
 - glossary drift
 - accessibility text coverage
 - screenshot and diagram parity
+
+## Freshly generated output requirement
+
+Before structural parity review, semantic review, or manual article comparison:
+
+1. regenerate the site from the current repository state
+2. run validators against the current generated output
+3. inspect generated HTML artifacts
+4. only then perform manual parity assessment
+
+This rule exists because source Markdown and generated output can temporarily diverge during development, and QA findings should be based on current artifacts rather than stale generated files.
+
+## Structural parity review
+
+Structural parity review should look for loss of reader value even when the localized article still broadly preserves meaning.
+
+Typical signals include:
+
+- missing major sections
+- collapsed heading hierarchy
+- missing examples
+- compressed practical guidance
+- reduced governance discussion
+- shortened review or validation guidance
+
+Warnings from structural parity validators are review prompts, not automatic proof of a bad translation. They should be interpreted together with the generated HTML and, where needed, browser-rendered output.
 
 ## Reader-facing localization validator
 

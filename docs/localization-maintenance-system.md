@@ -18,6 +18,69 @@ Source change
 
 The implementation is source-first, block-aware, and sidecar-metadata-driven so that reviewed translations can be preserved wherever alignment confidence stays high.
 
+## Fresh Artifact Rule For Reviews
+
+Localization parity review must distinguish between:
+
+- source Markdown
+- generated HTML
+- deployed site
+- browser-rendered output
+
+Because those layers can temporarily diverge during development, parity findings must be based on freshly generated artifacts rather than stale generated files.
+
+Before performing localization parity review, structural parity review, semantic review, or manual content comparison:
+
+1. regenerate the site from the current repository state
+2. run validators against the freshly generated output
+3. review generated HTML artifacts
+4. only then perform manual parity assessment
+
+Recommended review sequence:
+
+```text
+Source changes
+→ Generate site
+→ Run validators
+→ Review generated HTML
+→ Review rendered output (desktop/mobile/print where applicable)
+```
+
+## Validation Levels
+
+Localization quality in this repository now operates at three distinct levels:
+
+### Level 1 — Localization Coverage
+
+Checks whether:
+
+- the localized file exists
+- localized metadata exists
+
+This level prevents obvious coverage gaps, but it does not prove that the localized article is useful.
+
+### Level 2 — Semantic Parity
+
+Checks whether:
+
+- the major meaning of the source article is preserved
+- important warnings, examples, and conclusions survive translation
+- localized content is not silently replaced with English leakage or placeholder draft text
+
+This level protects meaning, but it still does not guarantee that the localized article preserves the reader-facing structure of the source.
+
+### Level 3 — Structural Parity
+
+Checks whether:
+
+- major sections are still present
+- heading hierarchy is still meaningful
+- educational progression is still intact
+- examples, practical guidance, review guidance, validation guidance, governance discussion, and case-study-like material remain present when the source includes them
+- the localized version has not been reduced to a compressed summary of a full source article
+
+Structural parity matters because a translation that technically exists and partially preserves meaning can still lose substantial reader value if it collapses navigability, conceptual separation, or instructional flow.
+
 ## Files
 
 ```text
@@ -34,7 +97,8 @@ project root
     ├── audit_translation_warnings.py
     ├── repair_localized_internal_links.py
     ├── generate_translation_sidecars.py
-    └── validate_translation_parity.py
+    ├── validate_translation_parity.py
+    └── validate-structural-localization-parity.mjs
 ```
 
 ## Supported Environments
@@ -200,6 +264,61 @@ python tools/validate_translation_parity.py \
   --report-file docs/.translation-parity-report.md \
   --json-report-file docs/.translation-parity-report.json
 ```
+
+### `tools/validate-structural-localization-parity.mjs`
+
+Runs a structural review focused on long-form educational Markdown where excessive compression, heading collapse, or missing major sections can materially reduce reader value even when the localized article still appears semantically related to the source.
+
+Checks include:
+
+- heading count coverage
+- heading depth distribution
+- major section coverage
+- suspicious section-level compression
+- likely missing educational structure
+- recommended review areas such as examples, governance discussion, practical takeaways, review guidance, and validation guidance
+
+Interpretation:
+
+- warnings indicate likely structural review targets
+- warnings do not prove a bad translation by themselves
+- failures occur only when workflows deliberately set a warning threshold
+
+Review policy:
+
+- run this validator after regenerating the site from current source state
+- inspect the matching generated HTML before concluding that a parity issue is present or absent
+
+Example:
+
+```bash
+node tools/validate-structural-localization-parity.mjs \
+  --report-file docs/.structural-localization-parity-report.md \
+  --json-report-file docs/.structural-localization-parity-report.json
+```
+
+## New Tooling Documentation Requirement
+
+Any newly introduced generator, renderer, transformer, validator, audit tool, or content-processing tool is not considered complete until both implementation and supporting documentation are updated.
+
+Minimum requirements:
+
+- add a file header that explains purpose, scope, assumptions, limitations, and why the tool exists
+- document non-obvious algorithms, heuristics, regular expressions, thresholds, scoring logic, parity rules, and validation criteria
+- explain what important claims the tool validates
+- add intermediate-programmer-friendly comments where they improve maintainability
+- update `tools/README.md`
+- update relevant workflow documentation
+- update relevant validation documentation
+- update relevant governance documentation
+
+New validators should also document:
+
+- what they detect
+- what they intentionally do not detect
+- expected false positives
+- expected false negatives
+- how to interpret warnings versus failures
 
 ### `tools/audit_translation_parity.py`
 

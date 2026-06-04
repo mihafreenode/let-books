@@ -120,15 +120,18 @@ jobs:
             echo "  ok: $f"
           done
 
-      # Regenerate derived metadata before docs HTML so later checks
-      # validate current output, not stale committed artifacts from a
-      # previous run.
+      # Fresh-artifact rule:
+      # Regenerate derived metadata and docs HTML before parity review.
+      # Localization findings must be based on current generated output,
+      # not on stale committed artifacts from a previous run.
       - name: SEO metadata generation (dry-run validation)
         run: node tools/generate-static-seo.mjs
 
       - name: Generate docs content HTML
         run: python3 tools/generate_docs_content.py
 
+      # Validate generated structure immediately after generation so
+      # later parity checks run against a structurally current site.
       - name: Generated site structural validation
         run: node tools/validate-generated-site-structure.mjs
 
@@ -147,10 +150,14 @@ jobs:
       - name: Articles.json generation (dry-run validation)
         run: node tools/generate-articles-json.mjs
 
+      # Review order contract:
+      # generate site -> validate generated output -> inspect parity.
       # Localization coverage is only the first layer. The following
       # sequence intentionally moves from file presence to semantic
-      # review to source/target parity to rendered-output leakage so
-      # each validator catches a different class of failure.
+      # review to structural/source-target parity to rendered-output
+      # leakage so each validator catches a different class of failure.
+      # Human review should inspect generated HTML and then browser-
+      # rendered output after this validation stack passes.
       - name: Documentation parity audit
         run: |
           node tools/validate-content-parity.mjs \
@@ -163,6 +170,12 @@ jobs:
             --require-full-coverage \
             --report-file docs/.localization-semantic-review.md \
             --json-report-file docs/.localization-semantic-review.json
+
+      - name: Structural localization parity review
+        run: |
+          node tools/validate-structural-localization-parity.mjs \
+            --report-file docs/.structural-localization-parity-report.md \
+            --json-report-file docs/.structural-localization-parity-report.json
 
       - name: Translation parity validation
         run: |

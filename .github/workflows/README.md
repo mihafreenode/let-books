@@ -2,9 +2,11 @@
 
 ## Purpose
 
-`.github/workflows/` is the repository's executable policy layer for CI and deployment.
+`.github/workflows/` is the repository's executable policy layer for CI
+and deployment.
 
-These workflows do more than run automation. They preserve repository guarantees around:
+These workflows do more than run automation. They preserve repository
+guarantees around:
 
 - workflow correctness
 - docs generation reproducibility
@@ -15,7 +17,8 @@ These workflows do more than run automation. They preserve repository guarantees
 - deployment readiness
 - GitHub Pages publishing safety
 
-The long-term standard is to keep workflow knowledge close to the workflow itself:
+The long-term standard is to keep workflow knowledge close to the
+workflow itself:
 
 1. `.github/workflows/README.md`
 2. workflow file headers
@@ -27,7 +30,8 @@ The long-term standard is to keep workflow knowledge close to the workflow itsel
 
 Treat workflows as repository memory.
 
-Each non-trivial workflow should make it easy for a future contributor or AI agent to answer:
+Each non-trivial workflow should make it easy for a future contributor
+or AI agent to answer:
 
 - what workflow exists
 - why it exists
@@ -41,7 +45,8 @@ Tests demonstrate behavior.
 Documentation explains guarantees.
 Comments explain implementation choices.
 
-When a guarantee can be checked automatically, prefer a validator or workflow gate over prose-only guidance.
+When a guarantee can be checked automatically, prefer a validator or
+workflow gate over prose-only guidance.
 
 ## Workflow System Overview
 
@@ -59,7 +64,32 @@ They share a deliberate pattern:
 5. verify special generated outputs and browser-facing behavior
 6. deploy only after the build job proves the site is publishable
 
-This duplication is intentional. Deployment does not assume CI artifacts are still fresh or trustworthy. The deployment workflow rebuilds and revalidates the site from the checked-out repository state before publishing.
+This duplication is intentional. Deployment does not assume CI artifacts
+are still fresh or trustworthy. The deployment workflow rebuilds and
+revalidates the site from the checked-out repository state before
+publishing.
+
+## Fresh Artifact Review Rule
+
+Localization and documentation review must distinguish between:
+
+- source Markdown
+- generated HTML
+- deployed site output
+- browser-rendered output
+
+Parity findings should be based on freshly generated artifacts, not on
+stale generated files committed from an earlier state.
+
+Required review order:
+
+1. regenerate the site from the current repository state
+2. run validators against the current generated output
+3. review generated HTML artifacts
+4. review rendered output where the workflow requires it
+
+This rule applies to structural parity review, semantic review, manual
+localization comparison, and publication readiness assessment.
 
 ## Workflow Catalog
 
@@ -69,16 +99,21 @@ Purpose:
 - Run the main repository validation pipeline on pushes and pull requests.
 
 Why It Exists:
-- Documentation, localization, and static-site changes can regress without changing application code.
-- The repo needs one blocking workflow that proves the documentation toolchain, validators, generated outputs, and workflow files themselves are still coherent.
+- Documentation, localization, and static-site changes can regress
+  without changing application code.
+- The repo needs one blocking workflow that proves the documentation
+  toolchain, validators, generated outputs, and workflow files
+  themselves are still coherent.
 
 Repository Guarantees:
 - GitHub Actions workflow syntax stays valid.
 - Required local tooling assumptions remain reproducible in CI.
 - Docs generation still succeeds from source.
 - Generated artifacts remain structurally valid.
-- Localization coverage, semantic review, parity, and rendered-output completeness remain enforced.
-- Critical generated pages, section indexes, topic nav, search index, and JSON artifacts exist and are well-formed.
+- Localization coverage, semantic review, parity, and rendered-output
+  completeness remain enforced.
+- Critical generated pages, section indexes, topic nav, search index,
+  and JSON artifacts exist and are well-formed.
 - Browser-print and layout validation still pass for generated docs.
 
 Failure Impact:
@@ -101,24 +136,32 @@ Related Tools:
 - `tests/static-demo/localization-smoke.js`
 
 Reuse Potential:
-- High. This is a reusable pattern for documentation-heavy repositories where generated content is part of the product surface.
+- High. This is a reusable pattern for documentation-heavy
+  repositories where generated content is part of the product surface.
 
 ### `docs.yml`
 
 Purpose:
-- Rebuild, validate, and deploy the documentation site to GitHub Pages from `main`.
+- Rebuild, validate, and deploy the documentation site to GitHub Pages
+  from `main`.
 
 Why It Exists:
-- Publishing should not depend on assumptions from earlier CI runs. Deployment needs its own trusted build and validation pass before it uploads a Pages artifact.
+- Publishing should not depend on assumptions from earlier CI runs.
+  Deployment needs its own trusted build and validation pass before it
+  uploads a Pages artifact.
 
 Repository Guarantees:
 - The published docs site is regenerated from current `main`.
-- Pages deployment only happens after workflow validation, docs generation, localization checks, browser validation, and docs-tree validation all pass.
-- GitHub Pages publishing remains tied to a reproducible build, not a hand-prepared artifact.
+- Pages deployment only happens after workflow validation, docs
+  generation, localization checks, browser validation, and docs-tree
+  validation all pass.
+- GitHub Pages publishing remains tied to a reproducible build, not a
+  hand-prepared artifact.
 
 Failure Impact:
 - A broken or partially generated site could be published.
-- Localization or layout regressions could reach production even if source files look correct.
+- Localization or layout regressions could reach production even if
+  source files look correct.
 - Deployment knowledge could drift away from actual repository requirements.
 
 Related Tools:
@@ -127,20 +170,24 @@ Related Tools:
 - `actions/deploy-pages`
 
 Reuse Potential:
-- High. Rebuild-and-revalidate before publish is a strong deployment-safety pattern.
+- High. Rebuild-and-revalidate before publish is a strong
+  deployment-safety pattern.
 
 ## Reusable Engineering Patterns
 
 ### Rebuild before deploy
 
 Problem solved:
-- Deployment pipelines can publish stale or locally generated artifacts that no longer match repository state.
+- Deployment pipelines can publish stale or locally generated artifacts
+  that no longer match repository state.
 
 Solution adopted:
-- Re-run generation and validators inside the deployment workflow before uploading the Pages artifact.
+- Re-run generation and validators inside the deployment workflow
+  before uploading the Pages artifact.
 
 Lessons learned:
-- Deployment safety is stronger when publication depends on a fresh, validated build from source.
+- Deployment safety is stronger when publication depends on a fresh,
+  validated build from source.
 
 Reuse potential:
 - High.
@@ -162,10 +209,12 @@ Reuse potential:
 ### Generated-artifact freshness gates
 
 Problem solved:
-- Source and generated docs can drift apart while still looking plausible in review.
+- Source and generated docs can drift apart while still looking
+  plausible in review.
 
 Solution adopted:
-- Regenerate SEO, docs HTML, indexes, sitemap, search index, and article registry in CI and validate the outputs.
+- Regenerate SEO, docs HTML, indexes, sitemap, search index, and
+  article registry in CI and validate the outputs.
 
 Lessons learned:
 - Freshness is a repository guarantee, not just a build side effect.
@@ -176,13 +225,16 @@ Reuse potential:
 ### Layered localization validation pipeline
 
 Problem solved:
-- File presence alone does not protect against semantic drift or rendered English leakage.
+- File presence alone does not protect against semantic drift or
+  rendered English leakage.
 
 Solution adopted:
-- Run coverage, semantic, parity, source-audit, and rendered-output checks as a coordinated workflow chain.
+- Run coverage, semantic, parity, source-audit, and rendered-output
+  checks as a coordinated workflow chain.
 
 Lessons learned:
-- Localization quality needs multiple validators aimed at different failure surfaces.
+- Localization quality needs multiple validators aimed at different
+  failure surfaces.
 
 Reuse potential:
 - High.
@@ -190,10 +242,12 @@ Reuse potential:
 ### Browser-facing docs validation in CI
 
 Problem solved:
-- Generated docs can pass file-level checks while failing print, layout, or browser rendering expectations.
+- Generated docs can pass file-level checks while failing print,
+  layout, or browser rendering expectations.
 
 Solution adopted:
-- Serve the generated site locally in CI and run layout and print validation against the served output.
+- Serve the generated site locally in CI and run layout and print
+  validation against the served output.
 
 Lessons learned:
 - Static-site repositories still need browser-oriented validation.
