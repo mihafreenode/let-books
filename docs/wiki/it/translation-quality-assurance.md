@@ -24,6 +24,32 @@ Il QA della traduzione combina convalida automatizzata, controllo ortografico, r
 - copertura testuale sull'accessibilità
 - parità di screenshot e diagrammi
 
+## Requisito di output generato di recente
+
+Prima della revisione della parità strutturale, della revisione semantica o del confronto manuale degli articoli:
+
+1. rigenerare il sito dallo stato attuale del repository
+2. eseguire i validatori sull'output generato corrente
+3. ispezionare gli artefatti HTML generati
+4. solo allora eseguire la valutazione manuale della parità
+
+Questa regola esiste perché il Markdown sorgente e l'output generato possono divergere temporaneamente durante lo sviluppo e i rilievi del QA devono basarsi sugli artefatti correnti, non su file generati obsoleti.
+
+## Revisione della parità strutturale
+
+La revisione della parità strutturale dovrebbe cercare perdite di valore per il lettore anche quando l'articolo localizzato conserva ancora in generale il significato.
+
+I segnali tipici includono:
+
+- mancanza di sezioni principali
+- gerarchia delle intestazioni collassata
+- esempi mancanti
+- guida pratica compressa
+- discussione sulla governance ridotta
+- guida alla revisione o alla validazione abbreviata
+
+Gli avvisi dei validatori di parità strutturale sono spunti per la revisione, non una prova automatica di una cattiva traduzione. Devono essere interpretati insieme all'HTML generato e, dove necessario, all'output renderizzato nel browser.
+
 ## Convalidatore della localizzazione rivolto al lettore
 
 Una classe di validazione dovrebbe fallire esplicitamente l'IC quando una pagina appare localizzata ma espone comunque contenuto rivolto al lettore nella lingua di origine.

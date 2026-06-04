@@ -24,6 +24,32 @@ QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit
 - Mbulimi i tekstit të aksesueshmërisë
 - pamje e ekranit dhe barazia e diagramit
 
+## Kërkesa për dalje të gjeneruar rishtazi
+
+Përpara rishikimit të paritetit strukturor, rishikimit semantik ose krahasimit manual të artikujve:
+
+1. rigjeneroni sajtin nga gjendja aktuale e depozitës
+2. ekzekutoni validatorët mbi daljen aktuale të gjeneruar
+3. inspektoni artefaktet HTML të gjeneruara
+4. vetëm pastaj kryeni vlerësimin manual të paritetit
+
+Ky rregull ekziston sepse Markdown-i burimor dhe dalja e gjeneruar mund të ndryshojnë përkohësisht gjatë zhvillimit, dhe gjetjet e QA-së duhet të bazohen në artefaktet aktuale, jo në skedarë të vjetëruar të gjeneruar.
+
+## Rishikimi i paritetit strukturor
+
+Rishikimi i paritetit strukturor duhet të kërkojë humbje të vlerës për lexuesin edhe kur artikulli i lokalizuar ende e ruan përgjithësisht kuptimin.
+
+Sinjalet tipike përfshijnë:
+
+- mungesë të seksioneve kryesore
+- hierarki të ngjeshur të titujve
+- mungesë të shembujve
+- udhëzim praktik të kompresuar
+- diskutim të reduktuar për qeverisjen
+- udhëzim të shkurtuar për rishikim ose validim
+
+Paralajmërimet nga validatorët e paritetit strukturor janë nxitje për rishikim, jo provë automatike e një përkthimi të dobët. Ato duhen interpretuar së bashku me HTML-në e gjeneruar dhe, kur nevojitet, me daljen e paraqitur në shfletues.
+
 ## Vlerësuesi i lokalizimit me pamje nga lexuesi
 
 Një klasë e verifikuesit duhet të dështojë në mënyrë eksplicite CI kur një faqe shfaqet e lokalizuar, por ende ekspozon përmbajtjen e gjuhës burimore që përballet me lexuesin.

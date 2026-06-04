@@ -24,6 +24,32 @@ Le contrôle qualité des traductions combine la validation automatisée, la vé
 - couverture du texte d'accessibilité
 - capture d'écran et parité du diagramme
 
+## Exigence de sortie fraîchement générée
+
+Avant la revue de parité structurelle, la revue sémantique ou la comparaison manuelle d'articles :
+
+1. régénérez le site à partir de l'état actuel du dépôt
+2. exécutez les validateurs sur la sortie générée actuelle
+3. inspectez les artefacts HTML générés
+4. ce n'est qu'ensuite que vous effectuez l'évaluation manuelle de parité
+
+Cette règle existe parce que le Markdown source et la sortie générée peuvent diverger temporairement pendant le développement, et les constats QA doivent s'appuyer sur les artefacts actuels plutôt que sur des fichiers générés obsolètes.
+
+## Revue de parité structurelle
+
+La revue de parité structurelle doit rechercher les pertes de valeur pour le lecteur, même lorsque l'article localisé préserve encore globalement le sens.
+
+Les signaux typiques incluent :
+
+- l'absence de sections majeures
+- une hiérarchie de titres aplatie
+- des exemples manquants
+- des conseils pratiques trop compressés
+- une discussion sur la gouvernance réduite
+- des consignes de revue ou de validation raccourcies
+
+Les avertissements des validateurs de parité structurelle sont des invites à la revue, pas une preuve automatique d'une mauvaise traduction. Ils doivent être interprétés avec le HTML généré et, si nécessaire, avec le rendu dans le navigateur.
+
 ## Validateur de localisation destiné au lecteur
 
 Une classe de validateur doit explicitement échouer à CI lorsqu'une page apparaît localisée mais expose toujours le contenu destiné au lecteur en langue source.

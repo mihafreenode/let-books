@@ -24,6 +24,32 @@ El control de calidad de la traducción combina validación automatizada, correc
 - cobertura de texto de accesibilidad
 - paridad de captura de pantalla y diagrama
 
+## Requisito de salida generada recientemente
+
+Antes de la revisión de paridad estructural, la revisión semántica o la comparación manual de artículos:
+
+1. regenere el sitio a partir del estado actual del repositorio
+2. ejecute los validadores sobre la salida generada actual
+3. inspeccione los artefactos HTML generados
+4. solo entonces realice la evaluación manual de paridad
+
+Esta regla existe porque el Markdown fuente y la salida generada pueden divergir temporalmente durante el desarrollo, y los hallazgos de QA deben basarse en los artefactos actuales en lugar de en archivos generados obsoletos.
+
+## Revisión de paridad estructural
+
+La revisión de paridad estructural debe buscar pérdidas de valor para el lector incluso cuando el artículo localizado todavía conserva en términos generales el significado.
+
+Las señales típicas incluyen:
+
+- ausencia de secciones principales
+- jerarquía de encabezados colapsada
+- ejemplos faltantes
+- orientación práctica comprimida
+- discusión reducida sobre gobernanza
+- guía de revisión o validación abreviada
+
+Las advertencias de los validadores de paridad estructural son avisos de revisión, no una prueba automática de una mala traducción. Deben interpretarse junto con el HTML generado y, cuando sea necesario, con la salida renderizada en el navegador.
+
 ## Validador de localización orientado al lector
 
 Una clase de validador debería fallar explícitamente en CI cuando una página aparece localizada pero aún expone contenido de cara al lector en el idioma de origen.

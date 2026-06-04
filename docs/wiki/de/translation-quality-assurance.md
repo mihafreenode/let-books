@@ -24,6 +24,32 @@ Die Übersetzungsqualitätssicherung kombiniert automatisierte Validierung, Rech
 - Barrierefreie Textabdeckung
 - Screenshot- und Diagrammparität
 
+## Anforderung an frisch generierte Ausgaben
+
+Vor der strukturellen Paritätsprüfung, der semantischen Prüfung oder dem manuellen Artikelvergleich:
+
+1. generieren Sie die Website aus dem aktuellen Stand des Repositorys neu
+2. führen Sie Validatoren gegen die aktuell generierte Ausgabe aus
+3. prüfen Sie die generierten HTML-Artefakte
+4. führen Sie erst danach die manuelle Paritätsbewertung durch
+
+Diese Regel gibt es, weil Quelldateien in Markdown und generierte Ausgaben während der Entwicklung vorübergehend auseinanderlaufen können und QA-Befunde sich auf aktuelle Artefakte statt auf veraltete generierte Dateien stützen sollten.
+
+## Strukturelle Paritätsprüfung
+
+Die strukturelle Paritätsprüfung sollte nach Verlusten an Leserwert suchen, auch wenn der lokalisierte Artikel die Bedeutung im Großen und Ganzen noch bewahrt.
+
+Typische Signale sind:
+
+- fehlende Hauptabschnitte
+- zusammengefallene Überschriftenhierarchie
+- fehlende Beispiele
+- komprimierte praktische Anleitung
+- reduzierte Governance-Diskussion
+- verkürzte Review- oder Validierungsanleitung
+
+Warnungen von Validatoren für strukturelle Parität sind Prüfhinweise, kein automatischer Beweis für eine schlechte Übersetzung. Sie sollten zusammen mit dem generierten HTML und, falls nötig, mit der im Browser gerenderten Ausgabe interpretiert werden.
+
 ## Lesergerichteter Lokalisierungsvalidator
 
 Eine Validatorklasse sollte CI explizit ausfallen lassen, wenn eine Seite lokalisiert erscheint, aber dennoch für den Leser sichtbare Inhalte in der Quellsprache bereitstellt.

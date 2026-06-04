@@ -24,6 +24,32 @@ Prevod KA kombinuje automatizovanu validaciju, proveru pravopisa, pregled termin
 - pokrivenost teksta pristupačnosti
 - paritet snimaka ekrana i dijagrama
 
+## Zahtev za sveže generisani izlaz
+
+Pre pregleda strukturnog pariteta, semantičkog pregleda ili ručnog poređenja članaka:
+
+1. ponovo generišite sajt iz trenutnog stanja repozitorijuma
+2. pokrenite validatore nad trenutno generisanim izlazom
+3. pregledajte generisane HTML artefakte
+4. tek tada uradite ručnu procenu pariteta
+
+Ovo pravilo postoji zato što izvorni Markdown i generisani izlaz mogu privremeno da se raziđu tokom razvoja, a nalazi KA treba da se zasnivaju na aktuelnim artefaktima, a ne na zastarelim generisanim datotekama.
+
+## Pregled strukturnog pariteta
+
+Pregled strukturnog pariteta treba da traži gubitak vrednosti za čitaoca čak i kada lokalizovani članak i dalje uopšteno zadržava značenje.
+
+Tipični signali uključuju:
+
+- nedostajuće glavne odeljke
+- urušenu hijerarhiju naslova
+- nedostajuće primere
+- sažete praktične smernice
+- smanjenu raspravu o upravljanju
+- skraćene smernice za pregled ili validaciju
+
+Upozorenja validatora strukturnog pariteta su podsticaji za pregled, a ne automatski dokaz lošeg prevoda. Treba ih tumačiti zajedno sa generisanim HTML-om i, gde je potrebno, izlazom prikazanim u pregledaču.
+
 ## Validator lokalizacije okrenut čitaocu
 
 Jedna klasa validatora bi trebalo eksplicitno da pokvari CI kada se stranica čini lokalizovanom, ali i dalje izlaže sadržaj na izvornom jeziku okrenut čitaocu.

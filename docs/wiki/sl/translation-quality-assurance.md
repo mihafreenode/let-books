@@ -24,6 +24,32 @@ Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovan
 - pokritost besedila dostopnosti
 - pariteta posnetka zaslona in diagrama
 
+## Zahteva po sveže ustvarjenem izhodu
+
+Pred pregledom strukturne paritete, semantičnim pregledom ali ročno primerjavo člankov:
+
+1. znova ustvarite spletno mesto iz trenutnega stanja repozitorija
+2. zaženite validatorje nad trenutno ustvarjenim izhodom
+3. preglejte ustvarjene artefakte HTML
+4. šele nato izvedite ročno oceno paritete
+
+To pravilo obstaja zato, ker se lahko izvorni Markdown in ustvarjeni izhod med razvojem začasno razhajata, ugotovitve QA pa morajo temeljiti na trenutnih artefaktih in ne na zastarelih ustvarjenih datotekah.
+
+## Pregled strukturne paritete
+
+Pregled strukturne paritete mora iskati izgubo vrednosti za bralca tudi takrat, ko lokalizirani članek še vedno na splošno ohranja pomen.
+
+Tipični znaki vključujejo:
+
+- manjkajoče glavne razdelke
+- sploščeno hierarhijo naslovov
+- manjkajoče primere
+- preveč strnjena praktična navodila
+- zmanjšano obravnavo upravljanja
+- skrajšana navodila za pregled ali validacijo
+
+Opozorila validatorjev strukturne paritete so pozivi k pregledu, ne samodejen dokaz slabega prevoda. Razlagati jih je treba skupaj z ustvarjenim HTML-jem in po potrebi z izhodom, izrisanim v brskalniku.
+
 ## Obrnjeni k bralcu lokalizacijski validator
 
 En razred validatorja bi moral izrecno zavrniti CI, ko je stran videti lokalizirana, vendar še vedno izpostavlja vsebino v izvornem jeziku, namenjeno bralcu.
