@@ -115,8 +115,29 @@
 <li>cobertura de texto de accesibilidad</li>
 <li>paridad de captura de pantalla y diagrama</li>
 </ul>
+<h2 id="requisito-de-salida-generada-recientemente">Requisito de salida generada recientemente</h2>
+<p class="lead">Antes de la revisión de paridad estructural, la revisión semántica o la comparación manual de artículos:</p>
+<ol type="1">
+<li>regenere el sitio a partir del estado actual del repositorio</li>
+<li>ejecute los validadores sobre la salida generada actual</li>
+<li>inspeccione los artefactos HTML generados</li>
+<li>solo entonces realice la evaluación manual de paridad</li>
+</ol>
+<p>Esta regla existe porque el Markdown fuente y la salida generada pueden divergir temporalmente durante el desarrollo, y los hallazgos de QA deben basarse en los artefactos actuales en lugar de en archivos generados obsoletos.</p>
+<h2 id="revisión-de-paridad-estructural">Revisión de paridad estructural</h2>
+<p>La revisión de paridad estructural debe buscar pérdidas de valor para el lector incluso cuando el artículo localizado todavía conserva en términos generales el significado.</p>
+<p>Las señales típicas incluyen:</p>
+<ul>
+<li>ausencia de secciones principales</li>
+<li>jerarquía de encabezados colapsada</li>
+<li>ejemplos faltantes</li>
+<li>orientación práctica comprimida</li>
+<li>discusión reducida sobre gobernanza</li>
+<li>guía de revisión o validación abreviada</li>
+</ul>
+<p>Las advertencias de los validadores de paridad estructural son avisos de revisión, no una prueba automática de una mala traducción. Deben interpretarse junto con el HTML generado y, cuando sea necesario, con la salida renderizada en el navegador.</p>
 <h2 id="validador-de-localización-orientado-al-lector">Validador de localización orientado al lector</h2>
-<p class="lead">Una clase de validador debería fallar explícitamente en CI cuando una página aparece localizada pero aún expone contenido de cara al lector en el idioma de origen.</p>
+<p>Una clase de validador debería fallar explícitamente en CI cuando una página aparece localizada pero aún expone contenido de cara al lector en el idioma de origen.</p>
 <p>Ejemplos que deberían fallar:</p>
 <ul>
 <li>título localizado con resumen en inglés</li>

@@ -107,6 +107,7 @@
 <h2 id="controlli-desiderati">Controlli desiderati</h2>
 <ul>
 <li>Coerenza dell’inventario locale</li>
+<li>generazione fresca del sito prima della revisione di parità</li>
 <li>convalida del collegamento</li>
 <li>generazione di articoli e pagine</li>
 <li>controllo ortografico ove disponibile</li>
@@ -114,8 +115,18 @@
 <li>prove di fumo di accessibilità</li>
 <li>controlli di copertura di screenshot e diagrammi</li>
 </ul>
+<h2 id="regola-della-generazione-fresca">Regola della generazione fresca</h2>
+<p class="lead">I flussi di CI e revisione della localizzazione non devono basare i risultati di parità su artefatti generati obsoleti.</p>
+<p>Sequenza richiesta:</p>
+<ol type="1">
+<li>generare il sito dallo stato corrente del repository</li>
+<li>eseguire i validatori sull’output appena generato</li>
+<li>quando necessario, esaminare l’HTML generato</li>
+<li>quando necessario, esaminare l’output renderizzato</li>
+</ol>
+<p>Questo è importante perché Markdown sorgente, HTML generato, output distribuito e comportamento renderizzato nel browser possono divergere temporaneamente durante lo sviluppo.</p>
 <h2 id="progressione-della-classe-difettosa">Progressione della classe difettosa</h2>
-<p class="lead">L’IC di localizzazione dovrebbe tenere traccia di entrambi:</p>
+<p>L’IC di localizzazione dovrebbe tenere traccia di entrambi:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>La generazione e la convalida dovrebbero avvenire in questo ordine:</p>
 <ol type="1">
-<li>generare l’articolo HTML</li>
-<li>generare pagine indice</li>
-<li>eseguire l’eventuale post-elaborazione della navigazione rimanente solo se ancora necessario</li>
-<li>convalidare l’output</li>
+<li>generare l’HTML dell’articolo</li>
+<li>generare le pagine indice</li>
+<li>eseguire l’eventuale post-elaborazione residua della navigazione solo se ancora necessaria</li>
+<li>convalidare l’output appena generato</li>
+<li>esaminare l’HTML generato o l’output renderizzato se il flusso di lavoro richiede una valutazione umana della parità</li>
 </ol>
 <p>Se un validatore si aspetta ancora il blocco legacy <code>topic-nav</code>, aggiorna il validatore al contratto corrente invece di applicare la patch generata HTML.</p>
 

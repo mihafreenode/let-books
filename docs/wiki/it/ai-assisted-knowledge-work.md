@@ -182,13 +182,13 @@ La trascrizione di supporto per questo tema e un esempio utile di come le specif
 Una forma abbreviata di quella discussione appariva cosi:
 
 - idea iniziale: "extend the doc ... practical insight ... academic, educational and possibly legal writing"
-- critica: "I would not make it so direct ... validators have long term uses"
+- critica: "Non lo formulerei in modo cosi diretto ... i validatori hanno un'utilita duratura"
 - ampliamento dell'ambito: "first I'd focus on interactive web AI"
 - limiti pratici: "there's limit how much context AI can hold at once ..."
 - architettura del workflow: "role of skills ... interface to specialised programs"
 - preoccupazioni di governance: "serious security implications of using third party skills"
 - preoccupazioni di localizzazione: "quotes should also be localized to each language"
-- consolidamento: "one big topic ... prefer few larger articles"
+- consolidamento: "un unico grande tema ... meglio pochi articoli piu ampi"
 
 Questa sequenza e piu rappresentativa del vero lavoro assistito dall'AI di quanto lo sarebbe una storia di successo levigata. La lezione importante non e che alla fine sia stato prodotto un prompt perfetto. La lezione importante e che requisiti, obiezioni, decisioni editoriali e preoccupazioni di governance sono stati gradualmente trasformati in una specifica piu chiara.
 
@@ -238,7 +238,7 @@ Alcune istituzioni possono scegliere di introdurre l'AI attraverso gateway contr
 
 Un AI gateway puo supportare:
 
-- auditing
+- verifica
 - applicazione delle policy
 - autenticazione
 - autorizzazione

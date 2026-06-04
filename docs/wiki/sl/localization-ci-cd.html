@@ -107,6 +107,7 @@
 <h2 id="želeni-pregledi">Želeni pregledi</h2>
 <ul>
 <li>doslednost inventarja lokalne nastavitve</li>
+<li>sveže generiranje spletnega mesta pred pregledom paritete</li>
 <li>preverjanje povezave</li>
 <li>generiranje člankov in strani</li>
 <li>preverjanje črkovanja, kjer je na voljo</li>
@@ -114,8 +115,18 @@
 <li>preizkusi dima dostopnosti</li>
 <li>preverjanje pokritosti posnetkov zaslona in diagramov</li>
 </ul>
+<h2 id="pravilo-svežega-generiranja">Pravilo svežega generiranja</h2>
+<p class="lead">Poteki lokalizacijskega CI in pregledov ne smejo utemeljevati ugotovitev o pariteti na zastarelih generiranih artefaktih.</p>
+<p>Zahtevano zaporedje:</p>
+<ol type="1">
+<li>generirajte spletno mesto iz trenutnega stanja repozitorija</li>
+<li>zaženite validatorje nad sveže generiranim izhodom</li>
+<li>po potrebi preglejte generirani HTML</li>
+<li>po potrebi preglejte izrisan izhod</li>
+</ol>
+<p>To je pomembno, ker se lahko izvorni Markdown, generirani HTML, objavljen izhod in v brskalniku izrisano vedenje med razvojem začasno razlikujejo.</p>
 <h2 id="napredovanje-razreda-napak">Napredovanje razreda napak</h2>
-<p class="lead">Lokalizacijski CI bi moral slediti obema:</p>
+<p>Lokalizacijski CI bi moral slediti obema:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>Generiranje in preverjanje morata potekati v tem vrstnem redu:</p>
 <ol type="1">
-<li>ustvari člen HTML</li>
-<li>ustvarjanje indeksnih strani</li>
-<li>zaženite morebitno preostalo naknadno obdelavo navigacije samo, če je še potrebna</li>
-<li>potrdi izhod</li>
+<li>generirajte HTML člankov</li>
+<li>generirajte indeksne strani</li>
+<li>zaženite morebitno preostalo naknadno obdelavo navigacije samo, če je še vedno potrebna</li>
+<li>preverite sveže generiran izhod</li>
+<li>preglejte generirani HTML ali izrisan izhod, če potek dela zahteva človeško oceno paritete</li>
 </ol>
 <p>Če validator še vedno pričakuje podedovan blok <code>topic-nav</code>, ga posodobite na trenutno pogodbo, namesto da popravljate ustvarjene HTML.</p>
 

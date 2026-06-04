@@ -89,7 +89,7 @@ Un AI gateway puo centralizzare:
 
 - autenticazione
 - autorizzazione
-- auditing
+- verifica
 - applicazione delle policy
 - monitoraggio
 - accesso approvato agli strumenti

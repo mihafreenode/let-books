@@ -109,6 +109,7 @@
 <h2 id="desired-checks">Desired checks</h2>
 <ul>
 <li>locale inventory consistency</li>
+<li>fresh site generation before parity review</li>
 <li>link validation</li>
 <li>article and page generation</li>
 <li>spellcheck where available</li>
@@ -116,8 +117,18 @@
 <li>accessibility smoke tests</li>
 <li>screenshot and diagram coverage checks</li>
 </ul>
+<h2 id="fresh-generation-rule">Fresh generation rule</h2>
+<p class="lead">Localization CI and review workflows must not base parity findings on stale generated artifacts.</p>
+<p>Required sequence:</p>
+<ol type="1">
+<li>generate the site from the current repository state</li>
+<li>run validators against the freshly generated output</li>
+<li>inspect generated HTML where needed</li>
+<li>inspect rendered output where needed</li>
+</ol>
+<p>This matters because source Markdown, generated HTML, deployed output, and browser-rendered behavior can temporarily diverge during development.</p>
 <h2 id="defect-class-progression">Defect-class progression</h2>
-<p class="lead">Localization CI should track both:</p>
+<p>Localization CI should track both:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -146,7 +157,8 @@
 <li>generate article HTML</li>
 <li>generate index pages</li>
 <li>run any remaining navigation post-processing only if still required</li>
-<li>validate output</li>
+<li>validate freshly generated output</li>
+<li>review generated HTML or rendered output if the workflow calls for human parity assessment</li>
 </ol>
 <p>If a validator still expects the legacy <code>topic-nav</code> block, update the validator to the current contract instead of patching generated HTML.</p>
 

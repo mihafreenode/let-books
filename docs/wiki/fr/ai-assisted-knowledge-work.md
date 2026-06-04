@@ -102,7 +102,7 @@ C'est pourquoi beaucoup de workflows agentiques reposent sur la récupération. 
 L'accès aux outils est la deuxième limite. Les plateformes web interactives proposent généralement des outils curés conçus pour fonctionner de manière fiable pour un large public. Cette sélection présente de vrais avantages:
 
 - fiabilité
-- maintenance
+- entretien
 - sécurité
 - cohérence
 
@@ -182,13 +182,13 @@ La transcription d'appui pour ce sujet est un bon exemple de la manière dont le
 Une forme abrégée de cette discussion ressemblait à ceci:
 
 - idée initiale: "extend the doc ... practical insight ... academic, educational and possibly legal writing"
-- critique: "I would not make it so direct ... validators have long term uses"
+- critique: "Je ne le formulerais pas aussi directement ... les validateurs ont une utilite durable"
 - élargissement du périmètre: "first I'd focus on interactive web AI"
 - limites pratiques: "there's limit how much context AI can hold at once ..."
 - architecture du workflow: "role of skills ... interface to specialised programs"
 - préoccupations de gouvernance: "serious security implications of using third party skills"
 - préoccupations de localisation: "quotes should also be localized to each language"
-- consolidation: "one big topic ... prefer few larger articles"
+- consolidation: "un seul grand sujet ... mieux vaut quelques articles plus substantiels"
 
 Cette séquence est plus représentative du travail réel assisté par l'IA qu'un récit de réussite parfaitement poli. La leçon importante n'est pas qu'un prompt parfait a fini par être produit. La leçon importante est que les exigences, objections, décisions éditoriales et préoccupations de gouvernance ont été progressivement transformées en une spécification plus claire.
 

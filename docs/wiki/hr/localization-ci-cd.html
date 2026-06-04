@@ -107,6 +107,7 @@
 <h2 id="željene-provjere">Željene provjere</h2>
 <ul>
 <li>dosljednost inventara lokalizacije</li>
+<li>svježe generiranje stranice prije pregleda pariteta</li>
 <li>provjera valjanosti veze</li>
 <li>generiranje članaka i stranica</li>
 <li>provjera pravopisa gdje je dostupna</li>
@@ -114,8 +115,18 @@
 <li>testovi pristupačnosti dima</li>
 <li>provjere pokrivenosti snimke zaslona i dijagrama</li>
 </ul>
+<h2 id="pravilo-svježeg-generiranja">Pravilo svježeg generiranja</h2>
+<p class="lead">CI i radni tokovi pregleda lokalizacije ne smiju temeljiti nalaze o paritetu na zastarjelim generiranim artefaktima.</p>
+<p>Obvezni redoslijed:</p>
+<ol type="1">
+<li>generirajte stranicu iz trenutačnog stanja repozitorija</li>
+<li>pokrenite validatore nad svježe generiranim izlazom</li>
+<li>po potrebi pregledajte generirani HTML</li>
+<li>po potrebi pregledajte prikazani izlaz</li>
+</ol>
+<p>To je važno zato što se izvorni Markdown, generirani HTML, objavljeni izlaz i ponašanje prikazano u pregledniku mogu privremeno razilaziti tijekom razvoja.</p>
 <h2 id="progresija-klase-nedostataka">Progresija klase nedostataka</h2>
-<p class="lead">CI lokalizacije trebao bi pratiti oboje:</p>
+<p>CI lokalizacije trebao bi pratiti oboje:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>Generiranje i provjera valjanosti trebaju se odvijati ovim redoslijedom:</p>
 <ol type="1">
-<li>generiraj članak HTML</li>
-<li>generirati indeksne stranice</li>
+<li>generirajte HTML članka</li>
+<li>generirajte indeksne stranice</li>
 <li>pokrenite preostalu naknadnu obradu navigacije samo ako je još potrebna</li>
-<li>potvrditi izlaz</li>
+<li>validirajte svježe generirani izlaz</li>
+<li>pregledajte generirani HTML ili prikazani izlaz ako radni tok zahtijeva ljudsku procjenu pariteta</li>
 </ol>
 <p>Ako validator i dalje očekuje naslijeđeni blok <code>topic-nav</code>, ažurirajte validator na trenutni ugovor umjesto krpanja generiranog HTML.</p>
 

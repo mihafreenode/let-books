@@ -111,14 +111,36 @@
 <li>missing translations</li>
 <li>English leakage</li>
 <li>reader-facing localization completeness</li>
+<li>structural parity against fresh generated output</li>
 <li>placeholder mismatches</li>
 <li>broken links</li>
 <li>glossary drift</li>
 <li>accessibility text coverage</li>
 <li>screenshot and diagram parity</li>
 </ul>
+<h2 id="freshly-generated-output-requirement">Freshly generated output requirement</h2>
+<p class="lead">Before structural parity review, semantic review, or manual article comparison:</p>
+<ol type="1">
+<li>regenerate the site from the current repository state</li>
+<li>run validators against the current generated output</li>
+<li>inspect generated HTML artifacts</li>
+<li>only then perform manual parity assessment</li>
+</ol>
+<p>This rule exists because source Markdown and generated output can temporarily diverge during development, and QA findings should be based on current artifacts rather than stale generated files.</p>
+<h2 id="structural-parity-review">Structural parity review</h2>
+<p>Structural parity review should look for loss of reader value even when the localized article still broadly preserves meaning.</p>
+<p>Typical signals include:</p>
+<ul>
+<li>missing major sections</li>
+<li>collapsed heading hierarchy</li>
+<li>missing examples</li>
+<li>compressed practical guidance</li>
+<li>reduced governance discussion</li>
+<li>shortened review or validation guidance</li>
+</ul>
+<p>Warnings from structural parity validators are review prompts, not automatic proof of a bad translation. They should be interpreted together with the generated HTML and, where needed, browser-rendered output.</p>
 <h2 id="reader-facing-localization-validator">Reader-facing localization validator</h2>
-<p class="lead">One validator class should explicitly fail CI when a page appears localized but still exposes source-language reader-facing content.</p>
+<p>One validator class should explicitly fail CI when a page appears localized but still exposes source-language reader-facing content.</p>
 <p>Examples that should fail:</p>
 <ul>
 <li>localized title with English summary</li>

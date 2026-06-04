@@ -108,10 +108,30 @@
 <li>Streitbeilegung</li>
 <li>Nachverfolgung des Überprüfungsstatus</li>
 <li>wiederverwendbares Bewertungsbeispiel-Tracking</li>
+<li>Aktualität von Review-Artefakten</li>
+<li>Dokumentationspflichten für Werkzeuge</li>
 </ul>
 <h2 id="warum-es-wichtig-ist">Warum es wichtig ist</h2>
 <p class="lead">Ohne Governance weichen Ton, Terminologie und Qualitätserwartungen bei mehrsprachigen Inhalten ab.</p>
 <p>Die Review-Governance sollte auch definieren, wie AI-unterstützte Korrekturbeispiele gespeichert und für Schulungen, Scorecards und Bewertungsarbeiten wiederverwendet werden.</p>
+<h2 id="aktualität-von-review-artefakten">Aktualität von Review-Artefakten</h2>
+<p>Die Governance sollte verlangen, dass Reviewer zwischen Folgendem unterscheiden:</p>
+<ul>
+<li>Quell-Markdown</li>
+<li>generiertem HTML</li>
+<li>bereitgestellter Site-Ausgabe</li>
+<li>im Browser gerenderter Ausgabe</li>
+</ul>
+<p>Vor der Paritätsfreigabe sollten Reviewer bestätigen, dass die geprüften generierten Artefakte aus dem aktuellen Repository-Stand neu erzeugt wurden.</p>
+<h2 id="tooling-governance">Tooling-Governance</h2>
+<p>Neue Generatoren, Renderer, Transformer, Validatoren, Audit-Werkzeuge und andere Werkzeuge zur Inhaltsverarbeitung sollten als Governance-Artefakte behandelt werden, nicht nur als Implementierungsdetails.</p>
+<p>Sie sind nicht vollständig, bis:</p>
+<ul>
+<li>ihr Zweck und ihre Grenzen dokumentiert sind</li>
+<li>ihre nicht offensichtlichen Regeln und Heuristiken erklärt sind</li>
+<li>relevante Workflow- und Validierungsdokumentation aktualisiert ist</li>
+<li>Maintainer Warnungen, Fehler und blinde Flecken interpretieren können, ohne die Absicht allein aus dem Code rekonstruieren zu müssen</li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

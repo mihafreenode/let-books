@@ -115,8 +115,29 @@
 <li>couverture du texte d’accessibilité</li>
 <li>capture d’écran et parité du diagramme</li>
 </ul>
+<h2 id="exigence-de-sortie-fraîchement-générée">Exigence de sortie fraîchement générée</h2>
+<p class="lead">Avant la revue de parité structurelle, la revue sémantique ou la comparaison manuelle d’articles :</p>
+<ol type="1">
+<li>régénérez le site à partir de l’état actuel du dépôt</li>
+<li>exécutez les validateurs sur la sortie générée actuelle</li>
+<li>inspectez les artefacts HTML générés</li>
+<li>ce n’est qu’ensuite que vous effectuez l’évaluation manuelle de parité</li>
+</ol>
+<p>Cette règle existe parce que le Markdown source et la sortie générée peuvent diverger temporairement pendant le développement, et les constats QA doivent s’appuyer sur les artefacts actuels plutôt que sur des fichiers générés obsolètes.</p>
+<h2 id="revue-de-parité-structurelle">Revue de parité structurelle</h2>
+<p>La revue de parité structurelle doit rechercher les pertes de valeur pour le lecteur, même lorsque l’article localisé préserve encore globalement le sens.</p>
+<p>Les signaux typiques incluent :</p>
+<ul>
+<li>l’absence de sections majeures</li>
+<li>une hiérarchie de titres aplatie</li>
+<li>des exemples manquants</li>
+<li>des conseils pratiques trop compressés</li>
+<li>une discussion sur la gouvernance réduite</li>
+<li>des consignes de revue ou de validation raccourcies</li>
+</ul>
+<p>Les avertissements des validateurs de parité structurelle sont des invites à la revue, pas une preuve automatique d’une mauvaise traduction. Ils doivent être interprétés avec le HTML généré et, si nécessaire, avec le rendu dans le navigateur.</p>
 <h2 id="validateur-de-localisation-destiné-au-lecteur">Validateur de localisation destiné au lecteur</h2>
-<p class="lead">Une classe de validateur doit explicitement échouer à CI lorsqu’une page apparaît localisée mais expose toujours le contenu destiné au lecteur en langue source.</p>
+<p>Une classe de validateur doit explicitement échouer à CI lorsqu’une page apparaît localisée mais expose toujours le contenu destiné au lecteur en langue source.</p>
 <p>Exemples qui devraient échouer :</p>
 <ul>
 <li>titre localisé avec résumé en anglais</li>

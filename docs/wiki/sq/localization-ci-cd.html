@@ -107,6 +107,7 @@
 <h2 id="kontrolle-të-dëshiruara">Kontrolle të dëshiruara</h2>
 <ul>
 <li>Konsistenca e inventarit lokal</li>
+<li>gjenerim i freskët i sajtit përpara rishikimit të barazisë</li>
 <li>vërtetimi i lidhjes</li>
 <li>gjenerimi i artikujve dhe faqeve</li>
 <li>kontrolloni drejtshkrimin ku është e mundur</li>
@@ -114,8 +115,18 @@
 <li>testet e tymit të aksesueshmërisë</li>
 <li>kontrollet e mbulimit të pamjes së ekranit dhe diagramit</li>
 </ul>
+<h2 id="rregulli-i-gjenerimit-të-freskët">Rregulli i gjenerimit të freskët</h2>
+<p class="lead">Rrjedhat e CI-së dhe të rishikimit të lokalizimit nuk duhet t’i bazojnë gjetjet e barazisë në artefakte të gjeneruara të vjetruara.</p>
+<p>Rendi i kërkuar:</p>
+<ol type="1">
+<li>gjeneroni sajtin nga gjendja aktuale e depozitës</li>
+<li>ekzekutoni vërtetuesit kundrejt daljes së sapogjeneruar</li>
+<li>kur duhet, shqyrtoni HTML-në e gjeneruar</li>
+<li>kur duhet, shqyrtoni daljen e paraqitur</li>
+</ol>
+<p>Kjo ka rëndësi sepse Markdown-i burimor, HTML-ja e gjeneruar, dalja e publikuar dhe sjellja e paraqitur në shfletues mund të ndryshojnë përkohësisht gjatë zhvillimit.</p>
 <h2 id="përparim-i-klasës-së-defektit">Përparim i klasës së defektit</h2>
-<p class="lead">CI i lokalizimit duhet të gjurmojë të dyja:</p>
+<p>CI i lokalizimit duhet të gjurmojë të dyja:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>Gjenerimi dhe vërtetimi duhet të ndodhin në këtë rend:</p>
 <ol type="1">
-<li>gjeneroni artikullin HTML</li>
-<li>gjenerojnë faqet e indeksit</li>
-<li>ekzekutoni çdo navigim të mbetur pas përpunimit vetëm nëse kërkohet ende</li>
-<li>vërtetoni daljen</li>
+<li>gjeneroni HTML-në e artikullit</li>
+<li>gjeneroni faqet e indeksit</li>
+<li>ekzekutoni çdo paspërpunim të mbetur të navigimit vetëm nëse kërkohet ende</li>
+<li>vërtetoni daljen e sapogjeneruar</li>
+<li>shqyrtoni HTML-në e gjeneruar ose daljen e paraqitur nëse rrjedha e punës kërkon vlerësim njerëzor të barazisë</li>
 </ol>
 <p>Nëse një vërtetues ende pret bllokun e trashëguar <code>topic-nav</code>, përditësoni verifikuesin me kontratën aktuale në vend që të korrigjoni HTML të krijuara.</p>
 <h2 id="faqe-të-ngjashme">Faqe të ngjashme</h2>

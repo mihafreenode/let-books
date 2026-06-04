@@ -114,10 +114,30 @@
 <li>dispute resolution</li>
 <li>review-state tracking</li>
 <li>reusable review-example tracking</li>
+<li>review artifact freshness</li>
+<li>tooling documentation obligations</li>
 </ul>
 <h2 id="why-it-matters">Why it matters</h2>
 <p class="lead">Without governance, multilingual content drifts in tone, terminology, and quality expectations.</p>
 <p>Review governance should also define how AI-assisted correction examples are stored and reused across training, scorecards, and evaluation work.</p>
+<h2 id="review-artifact-freshness">Review artifact freshness</h2>
+<p>Governance should require reviewers to distinguish between:</p>
+<ul>
+<li>source Markdown</li>
+<li>generated HTML</li>
+<li>deployed site output</li>
+<li>browser-rendered output</li>
+</ul>
+<p>Before parity signoff, reviewers should confirm that the generated artifacts being inspected were regenerated from the current repository state.</p>
+<h2 id="tooling-governance">Tooling governance</h2>
+<p>New generators, renderers, transformers, validators, audit tools, and other content-processing tools should be treated as governance artifacts, not just implementation details.</p>
+<p>They are not complete until:</p>
+<ul>
+<li>their purpose and limits are documented</li>
+<li>their non-obvious rules and heuristics are explained</li>
+<li>relevant workflow and validation documentation are updated</li>
+<li>maintainers can interpret warnings, failures, and blind spots without reconstructing intent from code alone</li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

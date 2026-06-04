@@ -115,8 +115,29 @@
 <li>pokrivenost teksta pristupačnosti</li>
 <li>paritet snimka ekrana i dijagrama</li>
 </ul>
+<h2 id="zahtjev-za-svježe-generisani-izlaz">Zahtjev za svježe generisani izlaz</h2>
+<p class="lead">Prije pregleda strukturnog pariteta, semantičkog pregleda ili ručnog poređenja članaka:</p>
+<ol type="1">
+<li>ponovo generišite sajt iz trenutnog stanja repozitorija</li>
+<li>pokrenite validatore nad trenutno generisanim izlazom</li>
+<li>pregledajte generisane HTML artefakte</li>
+<li>tek tada uradite ručnu procjenu pariteta</li>
+</ol>
+<p>Ovo pravilo postoji zato što izvorni Markdown i generisani izlaz mogu privremeno odstupati tokom razvoja, a nalazi QA-a treba da se zasnivaju na aktuelnim artefaktima, a ne na zastarjelim generisanim datotekama.</p>
+<h2 id="pregled-strukturnog-pariteta">Pregled strukturnog pariteta</h2>
+<p>Pregled strukturnog pariteta treba da traži gubitak vrijednosti za čitaoca čak i kada lokalizovani članak i dalje uopšteno zadržava značenje.</p>
+<p>Tipični signali uključuju:</p>
+<ul>
+<li>nedostajuće glavne odjeljke</li>
+<li>urušenu hijerarhiju naslova</li>
+<li>nedostajuće primjere</li>
+<li>sažete praktične smjernice</li>
+<li>smanjenu raspravu o upravljanju</li>
+<li>skraćene smjernice za pregled ili validaciju</li>
+</ul>
+<p>Upozorenja validatora strukturnog pariteta su podsticaji za pregled, a ne automatski dokaz lošeg prijevoda. Treba ih tumačiti zajedno sa generisanim HTML-om i, gdje je potrebno, izlazom prikazanim u pregledniku.</p>
 <h2 id="validator-lokalizacije-okrenut-čitaču">Validator lokalizacije okrenut čitaču</h2>
-<p class="lead">Jedna klasa validatora bi trebala eksplicitno otkazati CI kada se stranica čini lokaliziranom, ali još uvijek izlaže sadržaj na izvornom jeziku okrenut čitaču.</p>
+<p>Jedna klasa validatora bi trebala eksplicitno otkazati CI kada se stranica čini lokaliziranom, ali još uvijek izlaže sadržaj na izvornom jeziku okrenut čitaču.</p>
 <p>Primjeri koji bi trebali propasti:</p>
 <ul>
 <li>lokalizirani naslov sa sažetkom na engleskom</li>

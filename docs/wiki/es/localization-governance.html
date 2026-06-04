@@ -108,10 +108,30 @@
 <li>resolución de disputas</li>
 <li>seguimiento del estado de revisión</li>
 <li>seguimiento reutilizable de ejemplos de reseñas</li>
+<li>vigencia de los artefactos de revisión</li>
+<li>obligaciones de documentación de herramientas</li>
 </ul>
 <h2 id="por-qué-es-importante">Por qué es importante</h2>
 <p class="lead">Sin gobernanza, el contenido multilingüe pierde tono, terminología y expectativas de calidad.</p>
 <p>La gobernanza de la revisión también debe definir cómo se almacenan y reutilizan los ejemplos de corrección asistida por AI en el trabajo de capacitación, cuadros de mando y evaluación.</p>
+<h2 id="vigencia-de-los-artefactos-de-revisión">Vigencia de los artefactos de revisión</h2>
+<p>La gobernanza debe exigir que quienes revisan distingan entre:</p>
+<ul>
+<li>Markdown fuente</li>
+<li>HTML generado</li>
+<li>salida del sitio desplegado</li>
+<li>salida renderizada en el navegador</li>
+</ul>
+<p>Antes de aprobar la paridad, quienes revisan deben confirmar que los artefactos generados que están inspeccionando se regeneraron a partir del estado actual del repositorio.</p>
+<h2 id="gobernanza-de-herramientas">Gobernanza de herramientas</h2>
+<p>Los nuevos generadores, renderizadores, transformadores, validadores, herramientas de auditoría y otras herramientas de procesamiento de contenido deben tratarse como artefactos de gobernanza, no solo como detalles de implementación.</p>
+<p>No están completos hasta que:</p>
+<ul>
+<li>su propósito y sus límites estén documentados</li>
+<li>sus reglas y heurísticas no evidentes estén explicadas</li>
+<li>la documentación relevante de flujos de trabajo y validación esté actualizada</li>
+<li>las personas mantenedoras puedan interpretar advertencias, fallos y puntos ciegos sin reconstruir la intención únicamente a partir del código</li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

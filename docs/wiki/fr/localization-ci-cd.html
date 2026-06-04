@@ -107,6 +107,7 @@
 <h2 id="chèques-souhaités">Chèques souhaités</h2>
 <ul>
 <li>cohérence de l’inventaire local</li>
+<li>génération fraîche du site avant la revue de parité</li>
 <li>validation du lien</li>
 <li>génération d’articles et de pages</li>
 <li>vérification orthographique si disponible</li>
@@ -114,8 +115,18 @@
 <li>tests de fumée d’accessibilité</li>
 <li>vérifications de la couverture des captures d’écran et des diagrammes</li>
 </ul>
+<h2 id="règle-de-génération-fraîche">Règle de génération fraîche</h2>
+<p class="lead">Les workflows de CI et de revue de localisation ne doivent pas fonder les constats de parité sur des artefacts générés obsolètes.</p>
+<p>Séquence requise :</p>
+<ol type="1">
+<li>générer le site à partir de l’état actuel du dépôt</li>
+<li>exécuter les validateurs sur la sortie fraîchement générée</li>
+<li>si nécessaire, examiner le HTML généré</li>
+<li>si nécessaire, examiner la sortie rendue</li>
+</ol>
+<p>Cela importe parce que le Markdown source, le HTML généré, la sortie déployée et le comportement rendu dans le navigateur peuvent temporairement diverger pendant le développement.</p>
 <h2 id="progression-des-classes-de-défauts">Progression des classes de défauts</h2>
-<p class="lead">L’IC de localisation doit suivre à la fois :</p>
+<p>L’IC de localisation doit suivre à la fois :</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>La génération et la validation doivent avoir lieu dans cet ordre :</p>
 <ol type="1">
-<li>générer l’article HTML</li>
-<li>générer des pages d’index</li>
-<li>exécutez tout post-traitement de navigation restant uniquement s’il est toujours nécessaire</li>
-<li>valider la sortie</li>
+<li>générer le HTML de l’article</li>
+<li>générer les pages d’index</li>
+<li>exécuter tout post-traitement de navigation restant uniquement s’il est encore nécessaire</li>
+<li>valider la sortie fraîchement générée</li>
+<li>examiner le HTML généré ou la sortie rendue si le workflow exige une évaluation humaine de la parité</li>
 </ol>
 <p>Si un validateur attend toujours le bloc <code>topic-nav</code> hérité, mettez à jour le validateur avec le contrat actuel au lieu d’appliquer les correctifs générés HTML.</p>
 <h2 id="pages-connexes">Pages connexes</h2>

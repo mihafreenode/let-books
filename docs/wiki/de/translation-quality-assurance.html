@@ -115,8 +115,29 @@
 <li>Barrierefreie Textabdeckung</li>
 <li>Screenshot- und Diagrammparität</li>
 </ul>
+<h2 id="anforderung-an-frisch-generierte-ausgaben">Anforderung an frisch generierte Ausgaben</h2>
+<p class="lead">Vor der strukturellen Paritätsprüfung, der semantischen Prüfung oder dem manuellen Artikelvergleich:</p>
+<ol type="1">
+<li>generieren Sie die Website aus dem aktuellen Stand des Repositorys neu</li>
+<li>führen Sie Validatoren gegen die aktuell generierte Ausgabe aus</li>
+<li>prüfen Sie die generierten HTML-Artefakte</li>
+<li>führen Sie erst danach die manuelle Paritätsbewertung durch</li>
+</ol>
+<p>Diese Regel gibt es, weil Quelldateien in Markdown und generierte Ausgaben während der Entwicklung vorübergehend auseinanderlaufen können und QA-Befunde sich auf aktuelle Artefakte statt auf veraltete generierte Dateien stützen sollten.</p>
+<h2 id="strukturelle-paritätsprüfung">Strukturelle Paritätsprüfung</h2>
+<p>Die strukturelle Paritätsprüfung sollte nach Verlusten an Leserwert suchen, auch wenn der lokalisierte Artikel die Bedeutung im Großen und Ganzen noch bewahrt.</p>
+<p>Typische Signale sind:</p>
+<ul>
+<li>fehlende Hauptabschnitte</li>
+<li>zusammengefallene Überschriftenhierarchie</li>
+<li>fehlende Beispiele</li>
+<li>komprimierte praktische Anleitung</li>
+<li>reduzierte Governance-Diskussion</li>
+<li>verkürzte Review- oder Validierungsanleitung</li>
+</ul>
+<p>Warnungen von Validatoren für strukturelle Parität sind Prüfhinweise, kein automatischer Beweis für eine schlechte Übersetzung. Sie sollten zusammen mit dem generierten HTML und, falls nötig, mit der im Browser gerenderten Ausgabe interpretiert werden.</p>
 <h2 id="lesergerichteter-lokalisierungsvalidator">Lesergerichteter Lokalisierungsvalidator</h2>
-<p class="lead">Eine Validatorklasse sollte CI explizit ausfallen lassen, wenn eine Seite lokalisiert erscheint, aber dennoch für den Leser sichtbare Inhalte in der Quellsprache bereitstellt.</p>
+<p>Eine Validatorklasse sollte CI explizit ausfallen lassen, wenn eine Seite lokalisiert erscheint, aber dennoch für den Leser sichtbare Inhalte in der Quellsprache bereitstellt.</p>
 <p>Beispiele, die scheitern sollten:</p>
 <ul>
 <li>Lokalisierter Titel mit englischer Zusammenfassung</li>

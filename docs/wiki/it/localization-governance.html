@@ -108,10 +108,30 @@
 <li>risoluzione delle controversie</li>
 <li>monitoraggio dello stato di revisione</li>
 <li>tracciamento riutilizzabile degli esempi di revisione</li>
+<li>freschezza degli artefatti di revisione</li>
+<li>obblighi di documentazione degli strumenti</li>
 </ul>
 <h2 id="perché-è-importante">Perché è importante</h2>
 <p class="lead">Senza governance, i contenuti multilingue variano nel tono, nella terminologia e nelle aspettative di qualità.</p>
 <p>La governance delle revisioni dovrebbe anche definire il modo in cui gli esempi di correzione assistita da AI vengono archiviati e riutilizzati nella formazione, nelle scorecard e nel lavoro di valutazione.</p>
+<h2 id="freschezza-degli-artefatti-di-revisione">Freschezza degli artefatti di revisione</h2>
+<p>La governance dovrebbe richiedere ai revisori di distinguere tra:</p>
+<ul>
+<li>Markdown sorgente</li>
+<li>HTML generato</li>
+<li>output del sito distribuito</li>
+<li>output renderizzato nel browser</li>
+</ul>
+<p>Prima dell’approvazione della parità, i revisori dovrebbero confermare che gli artefatti generati che stanno esaminando siano stati rigenerati dallo stato corrente del repository.</p>
+<h2 id="governance-degli-strumenti">Governance degli strumenti</h2>
+<p>Nuovi generatori, renderer, trasformatori, validatori, strumenti di audit e altri strumenti di elaborazione dei contenuti dovrebbero essere trattati come artefatti di governance, non soltanto come dettagli di implementazione.</p>
+<p>Non sono completi finché:</p>
+<ul>
+<li>il loro scopo e i loro limiti non sono documentati</li>
+<li>le loro regole ed euristiche non ovvie non sono spiegate</li>
+<li>la documentazione pertinente su flussi di lavoro e validazione non è aggiornata</li>
+<li>i manutentori non possono interpretare avvisi, errori e punti ciechi senza ricostruire l’intento dal solo codice</li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

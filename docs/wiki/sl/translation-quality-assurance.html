@@ -115,8 +115,29 @@
 <li>pokritost besedila dostopnosti</li>
 <li>pariteta posnetka zaslona in diagrama</li>
 </ul>
+<h2 id="zahteva-po-sveže-ustvarjenem-izhodu">Zahteva po sveže ustvarjenem izhodu</h2>
+<p class="lead">Pred pregledom strukturne paritete, semantičnim pregledom ali ročno primerjavo člankov:</p>
+<ol type="1">
+<li>znova ustvarite spletno mesto iz trenutnega stanja repozitorija</li>
+<li>zaženite validatorje nad trenutno ustvarjenim izhodom</li>
+<li>preglejte ustvarjene artefakte HTML</li>
+<li>šele nato izvedite ročno oceno paritete</li>
+</ol>
+<p>To pravilo obstaja zato, ker se lahko izvorni Markdown in ustvarjeni izhod med razvojem začasno razhajata, ugotovitve QA pa morajo temeljiti na trenutnih artefaktih in ne na zastarelih ustvarjenih datotekah.</p>
+<h2 id="pregled-strukturne-paritete">Pregled strukturne paritete</h2>
+<p>Pregled strukturne paritete mora iskati izgubo vrednosti za bralca tudi takrat, ko lokalizirani članek še vedno na splošno ohranja pomen.</p>
+<p>Tipični znaki vključujejo:</p>
+<ul>
+<li>manjkajoče glavne razdelke</li>
+<li>sploščeno hierarhijo naslovov</li>
+<li>manjkajoče primere</li>
+<li>preveč strnjena praktična navodila</li>
+<li>zmanjšano obravnavo upravljanja</li>
+<li>skrajšana navodila za pregled ali validacijo</li>
+</ul>
+<p>Opozorila validatorjev strukturne paritete so pozivi k pregledu, ne samodejen dokaz slabega prevoda. Razlagati jih je treba skupaj z ustvarjenim HTML-jem in po potrebi z izhodom, izrisanim v brskalniku.</p>
 <h2 id="obrnjeni-k-bralcu-lokalizacijski-validator">Obrnjeni k bralcu lokalizacijski validator</h2>
-<p class="lead">En razred validatorja bi moral izrecno zavrniti CI, ko je stran videti lokalizirana, vendar še vedno izpostavlja vsebino v izvornem jeziku, namenjeno bralcu.</p>
+<p>En razred validatorja bi moral izrecno zavrniti CI, ko je stran videti lokalizirana, vendar še vedno izpostavlja vsebino v izvornem jeziku, namenjeno bralcu.</p>
 <p>Primeri, ki bi morali spodleteti:</p>
 <ul>
 <li>lokaliziran naslov z angleškim povzetkom</li>

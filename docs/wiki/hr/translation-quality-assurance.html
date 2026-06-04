@@ -115,8 +115,29 @@
 <li>pokrivenost teksta dostupnosti</li>
 <li>paritet snimke zaslona i dijagrama</li>
 </ul>
+<h2 id="zahtjev-za-svježe-generirani-izlaz">Zahtjev za svježe generirani izlaz</h2>
+<p class="lead">Prije pregleda strukturnog pariteta, semantičkog pregleda ili ručne usporedbe članaka:</p>
+<ol type="1">
+<li>ponovno generirajte web-mjesto iz trenutačnog stanja repozitorija</li>
+<li>pokrenite validatore nad trenutačno generiranim izlazom</li>
+<li>pregledajte generirane HTML artefakte</li>
+<li>tek tada provedite ručnu procjenu pariteta</li>
+</ol>
+<p>Ovo pravilo postoji zato što se izvorni Markdown i generirani izlaz tijekom razvoja mogu privremeno razići, a nalazi QA-a trebaju se temeljiti na trenutačnim artefaktima, a ne na zastarjelim generiranim datotekama.</p>
+<h2 id="pregled-strukturnog-pariteta">Pregled strukturnog pariteta</h2>
+<p>Pregled strukturnog pariteta treba tražiti gubitak vrijednosti za čitatelja čak i kada lokalizirani članak još uvijek općenito zadržava značenje.</p>
+<p>Tipični signali uključuju:</p>
+<ul>
+<li>nedostajuće glavne odjeljke</li>
+<li>urušenu hijerarhiju naslova</li>
+<li>nedostajuće primjere</li>
+<li>sažete praktične upute</li>
+<li>smanjenu raspravu o upravljanju</li>
+<li>skraćene smjernice za pregled ili validaciju</li>
+</ul>
+<p>Upozorenja validatora strukturnog pariteta poticaji su za pregled, a ne automatski dokaz lošeg prijevoda. Treba ih tumačiti zajedno s generiranim HTML-om i, prema potrebi, izlazom prikazanim u pregledniku.</p>
 <h2 id="validator-lokalizacije-okrenut-čitatelju">Validator lokalizacije okrenut čitatelju</h2>
-<p class="lead">Jedna klasa validatora trebala bi izričito baciti CI kada se stranica čini lokaliziranom, ali još uvijek izlaže sadržaj na izvornom jeziku koji je okrenut čitatelju.</p>
+<p>Jedna klasa validatora trebala bi izričito baciti CI kada se stranica čini lokaliziranom, ali još uvijek izlaže sadržaj na izvornom jeziku koji je okrenut čitatelju.</p>
 <p>Primjeri koji bi trebali propasti:</p>
 <ul>
 <li>lokalizirani naslov s engleskim sažetkom</li>

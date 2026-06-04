@@ -108,10 +108,30 @@
 <li>résolution des litiges</li>
 <li>suivi de l’état de révision</li>
 <li>suivi des exemples de révision réutilisables</li>
+<li>fraîcheur des artefacts de revue</li>
+<li>obligations de documentation des outils</li>
 </ul>
 <h2 id="pourquoi-cest-important">Pourquoi c’est important</h2>
 <p class="lead">Sans gouvernance, le contenu multilingue dérive en termes de ton, de terminologie et d’attentes en matière de qualité.</p>
 <p>La gouvernance des examens doit également définir la manière dont les exemples de correction assistée par AI sont stockés et réutilisés dans les formations, les cartes de pointage et les travaux d’évaluation.</p>
+<h2 id="fraîcheur-des-artefacts-de-revue">Fraîcheur des artefacts de revue</h2>
+<p>La gouvernance doit exiger que les relecteurs distinguent :</p>
+<ul>
+<li>le Markdown source</li>
+<li>le HTML généré</li>
+<li>la sortie du site déployé</li>
+<li>la sortie rendue dans le navigateur</li>
+</ul>
+<p>Avant la validation de parité, les relecteurs doivent confirmer que les artefacts générés qu’ils examinent ont été régénérés à partir de l’état actuel du dépôt.</p>
+<h2 id="gouvernance-des-outils">Gouvernance des outils</h2>
+<p>Les nouveaux générateurs, moteurs de rendu, transformateurs, validateurs, outils d’audit et autres outils de traitement de contenu doivent être traités comme des artefacts de gouvernance, et non comme de simples détails d’implémentation.</p>
+<p>Ils ne sont pas complets tant que :</p>
+<ul>
+<li>leur finalité et leurs limites ne sont pas documentées</li>
+<li>leurs règles et heuristiques non évidentes ne sont pas expliquées</li>
+<li>la documentation pertinente des workflows et de la validation n’est pas mise à jour</li>
+<li>les mainteneurs ne peuvent pas interpréter les avertissements, les échecs et les angles morts sans reconstruire l’intention à partir du seul code</li>
+</ul>
 <h2 id="pages-connexes">Pages connexes</h2>
 <ul>
 <li><code>translation-memory-and-glossaries.md</code></li>

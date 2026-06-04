@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Лоцализатион Говернанце | LetBooks</title>
+    <title>Управљање локализацијом | LetBooks</title>
     <meta name="description" content="Управљање локализацијом дефинише ко може да предложи, прегледа, одобри и оспори промене вишејезичног садржаја.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Лоцализатион Говернанце | LetBooks">
+    <meta property="og:title" content="Управљање локализацијом | LetBooks">
     <meta property="og:description" content="Управљање локализацијом дефинише ко може да предложи, прегледа, одобри и оспори промене вишејезичног садржаја.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
@@ -37,7 +37,7 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Лоцализатион Говернанце | LetBooks">
+    <meta name="twitter:title" content="Управљање локализацијом | LetBooks">
     <meta name="twitter:description" content="Управљање локализацијом дефинише ко може да предложи, прегледа, одобри и оспори промене вишејезичног садржаја.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
@@ -90,9 +90,9 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sr-Cyrl/index.html">Вики</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Лоцализатион Говернанце</span>
+              <span aria-current="page">Управљање локализацијом</span>
             </nav>
-            <h1>Лоцализатион Говернанце</h1>
+            <h1>Управљање локализацијом</h1>
           <div class="content-page-meta">
             <span>Вики</span>
             <span>Српски (ћирилица)</span>
@@ -108,10 +108,30 @@
 <li>решавање спорова</li>
 <li>праћење стања прегледа</li>
 <li>за вишекратну употребу прегледа-пример праћења</li>
+<li>свежина артефаката прегледа</li>
+<li>обавезе документовања алата</li>
 </ul>
 <h2 id="зашто-је-важно">Зашто је важно</h2>
 <p class="lead">Без управљања, вишејезични садржај варира у тону, терминологији и очекивањима квалитета.</p>
 <p>Управљање прегледом такође треба да дефинише како се примери корекције уз помоћ AI чувају и поново користе у обуци, таблицама резултата и евалуацији.</p>
+<h2 id="свежина-артефаката-прегледа">Свежина артефаката прегледа</h2>
+<p>Управљање треба да захтева да рецензенти разликују:</p>
+<ul>
+<li>изворни Markdown</li>
+<li>генерисани HTML</li>
+<li>објављени излаз сајта</li>
+<li>излаз приказан у прегледачу</li>
+</ul>
+<p>Пре потврде паритета, рецензенти треба да потврде да су генерисани артефакти које прегледају поново генерисани из тренутног стања репозиторијума.</p>
+<h2 id="управљање-алатима">Управљање алатима</h2>
+<p>Нове генераторе, рендерере, трансформере, валидаторе, алате за ревизију и друге алате за обраду садржаја треба третирати као артефакте управљања, а не само као детаље имплементације.</p>
+<p>Нису потпуни док:</p>
+<ul>
+<li>њихова сврха и ограничења нису документовани</li>
+<li>њихова неочигледна правила и хеуристике нису објашњени</li>
+<li>релевантна документација тока рада и валидације није ажурирана</li>
+<li>одржаваоци не могу да тумаче упозорења, неуспехе и слепе тачке без реконструисања намере само из кода</li>
+</ul>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

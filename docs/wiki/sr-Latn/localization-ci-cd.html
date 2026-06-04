@@ -107,6 +107,7 @@
 <h2 id="željeni-čekovi">Željeni čekovi</h2>
 <ul>
 <li>doslednost inventara lokaliteta</li>
+<li>sveže generisanje sajta pre pregleda pariteta</li>
 <li>validacija veze</li>
 <li>generisanje članaka i stranica</li>
 <li>provera pravopisa tamo gde je dostupno</li>
@@ -114,8 +115,18 @@
 <li>ispitivanje dima pristupačnosti</li>
 <li>provere snimaka ekrana i dijagrama</li>
 </ul>
+<h2 id="pravilo-svežeg-generisanja">Pravilo svežeg generisanja</h2>
+<p class="lead">CI i tokovi pregleda lokalizacije ne smeju da zasnivaju nalaze o paritetu na zastarelim generisanim artefaktima.</p>
+<p>Obavezni redosled:</p>
+<ol type="1">
+<li>generišite sajt iz trenutnog stanja repozitorijuma</li>
+<li>pokrenite validatore nad sveže generisanim izlazom</li>
+<li>po potrebi pregledajte generisani HTML</li>
+<li>po potrebi pregledajte prikazani izlaz</li>
+</ol>
+<p>Ovo je važno zato što izvorni Markdown, generisani HTML, objavljeni izlaz i ponašanje prikazano u pregledaču mogu privremeno da se raziđu tokom razvoja.</p>
 <h2 id="progresija-klase-defekata">Progresija klase defekata</h2>
-<p class="lead">CI lokalizacije treba da prati oba:</p>
+<p>CI lokalizacije treba da prati oba:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>Generisanje i validacija treba da se odvijaju ovim redosledom:</p>
 <ol type="1">
-<li>generisati članak HTML</li>
-<li>generisati indeksne stranice</li>
-<li>pokrenite preostalu naknadnu obradu navigacije samo ako je i dalje potrebno</li>
-<li>validirati izlaz</li>
+<li>generišite HTML članka</li>
+<li>generišite indeksne stranice</li>
+<li>pokrenite preostalu naknadnu obradu navigacije samo ako je i dalje potrebna</li>
+<li>validirajte sveže generisani izlaz</li>
+<li>pregledajte generisani HTML ili prikazani izlaz ako tok rada zahteva ljudsku procenu pariteta</li>
 </ol>
 <p>Ako validator i dalje očekuje zastareli blok <code>topic-nav</code>, ažurirajte validator na trenutni ugovor umesto zakrpanja generisanog HTML.</p>
 

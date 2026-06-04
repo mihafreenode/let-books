@@ -115,8 +115,29 @@
 <li>Mbulimi i tekstit të aksesueshmërisë</li>
 <li>pamje e ekranit dhe barazia e diagramit</li>
 </ul>
+<h2 id="kërkesa-për-dalje-të-gjeneruar-rishtazi">Kërkesa për dalje të gjeneruar rishtazi</h2>
+<p class="lead">Përpara rishikimit të paritetit strukturor, rishikimit semantik ose krahasimit manual të artikujve:</p>
+<ol type="1">
+<li>rigjeneroni sajtin nga gjendja aktuale e depozitës</li>
+<li>ekzekutoni validatorët mbi daljen aktuale të gjeneruar</li>
+<li>inspektoni artefaktet HTML të gjeneruara</li>
+<li>vetëm pastaj kryeni vlerësimin manual të paritetit</li>
+</ol>
+<p>Ky rregull ekziston sepse Markdown-i burimor dhe dalja e gjeneruar mund të ndryshojnë përkohësisht gjatë zhvillimit, dhe gjetjet e QA-së duhet të bazohen në artefaktet aktuale, jo në skedarë të vjetëruar të gjeneruar.</p>
+<h2 id="rishikimi-i-paritetit-strukturor">Rishikimi i paritetit strukturor</h2>
+<p>Rishikimi i paritetit strukturor duhet të kërkojë humbje të vlerës për lexuesin edhe kur artikulli i lokalizuar ende e ruan përgjithësisht kuptimin.</p>
+<p>Sinjalet tipike përfshijnë:</p>
+<ul>
+<li>mungesë të seksioneve kryesore</li>
+<li>hierarki të ngjeshur të titujve</li>
+<li>mungesë të shembujve</li>
+<li>udhëzim praktik të kompresuar</li>
+<li>diskutim të reduktuar për qeverisjen</li>
+<li>udhëzim të shkurtuar për rishikim ose validim</li>
+</ul>
+<p>Paralajmërimet nga validatorët e paritetit strukturor janë nxitje për rishikim, jo provë automatike e një përkthimi të dobët. Ato duhen interpretuar së bashku me HTML-në e gjeneruar dhe, kur nevojitet, me daljen e paraqitur në shfletues.</p>
 <h2 id="vlerësuesi-i-lokalizimit-me-pamje-nga-lexuesi">Vlerësuesi i lokalizimit me pamje nga lexuesi</h2>
-<p class="lead">Një klasë e verifikuesit duhet të dështojë në mënyrë eksplicite CI kur një faqe shfaqet e lokalizuar, por ende ekspozon përmbajtjen e gjuhës burimore që përballet me lexuesin.</p>
+<p>Një klasë e verifikuesit duhet të dështojë në mënyrë eksplicite CI kur një faqe shfaqet e lokalizuar, por ende ekspozon përmbajtjen e gjuhës burimore që përballet me lexuesin.</p>
 <p>Shembuj që duhet të dështojnë:</p>
 <ul>
 <li>titull i lokalizuar me përmbledhje në anglisht</li>

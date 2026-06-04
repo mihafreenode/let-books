@@ -107,6 +107,7 @@
 <h2 id="gewünschte-schecks">Gewünschte Schecks</h2>
 <ul>
 <li>Konsistenz des lokalen Inventars</li>
+<li>frische Site-Generierung vor der Paritätsprüfung</li>
 <li>Linkvalidierung</li>
 <li>Artikel- und Seitenerstellung</li>
 <li>Rechtschreibprüfung, sofern verfügbar</li>
@@ -114,8 +115,18 @@
 <li>Rauchtests zur Zugänglichkeit</li>
 <li>Überprüfung der Screenshot- und Diagrammabdeckung</li>
 </ul>
+<h2 id="regel-für-frische-generierung">Regel für frische Generierung</h2>
+<p class="lead">Lokalisierungs-CI- und Review-Workflows dürfen Paritätsbefunde nicht auf veraltete generierte Artefakte stützen.</p>
+<p>Erforderliche Reihenfolge:</p>
+<ol type="1">
+<li>die Site aus dem aktuellen Repository-Stand generieren</li>
+<li>Validatoren gegen die frisch generierte Ausgabe ausführen</li>
+<li>bei Bedarf generiertes HTML prüfen</li>
+<li>bei Bedarf gerenderte Ausgabe prüfen</li>
+</ol>
+<p>Das ist wichtig, weil Quell-Markdown, generiertes HTML, bereitgestellte Ausgabe und im Browser gerendertes Verhalten während der Entwicklung vorübergehend auseinanderlaufen können.</p>
 <h2 id="fortschritt-der-fehlerklasse">Fortschritt der Fehlerklasse</h2>
-<p class="lead">Lokalisierungs-CI sollte beides verfolgen:</p>
+<p>Lokalisierungs-CI sollte beides verfolgen:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>Generierung und Validierung sollten in dieser Reihenfolge erfolgen:</p>
 <ol type="1">
-<li>Artikel HTML generieren</li>
+<li>Artikel-HTML generieren</li>
 <li>Indexseiten generieren</li>
-<li>Führen Sie die verbleibende Navigationsnachbearbeitung nur aus, wenn dies noch erforderlich ist</li>
-<li>Validieren Sie die Ausgabe</li>
+<li>verbleibende Navigationsnachbearbeitung nur ausführen, wenn sie noch erforderlich ist</li>
+<li>frisch generierte Ausgabe validieren</li>
+<li>generiertes HTML oder gerenderte Ausgabe prüfen, wenn der Workflow eine menschliche Paritätsbewertung verlangt</li>
 </ol>
 <p>Wenn ein Validator immer noch den alten <code>topic-nav</code>-Block erwartet, aktualisieren Sie den Validator auf den aktuellen Vertrag, anstatt die generierten HTML zu patchen.</p>
 

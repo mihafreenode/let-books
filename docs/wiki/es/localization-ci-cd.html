@@ -107,6 +107,7 @@
 <h2 id="cheques-deseados">Cheques deseados</h2>
 <ul>
 <li>coherencia del inventario local</li>
+<li>generación reciente del sitio antes de la revisión de paridad</li>
 <li>validación de enlace</li>
 <li>generación de artículos y páginas</li>
 <li>corrector ortográfico donde esté disponible</li>
@@ -114,8 +115,18 @@
 <li>pruebas de humo de accesibilidad</li>
 <li>comprobaciones de cobertura de diagramas y capturas de pantalla</li>
 </ul>
+<h2 id="regla-de-generación-reciente">Regla de generación reciente</h2>
+<p class="lead">Los flujos de CI y revisión de localización no deben basar los hallazgos de paridad en artefactos generados desactualizados.</p>
+<p>Secuencia requerida:</p>
+<ol type="1">
+<li>generar el sitio a partir del estado actual del repositorio</li>
+<li>ejecutar los validadores sobre la salida recién generada</li>
+<li>cuando sea necesario, inspeccionar el HTML generado</li>
+<li>cuando sea necesario, inspeccionar la salida renderizada</li>
+</ol>
+<p>Esto importa porque el Markdown fuente, el HTML generado, la salida desplegada y el comportamiento renderizado en el navegador pueden divergir temporalmente durante el desarrollo.</p>
 <h2 id="progresión-de-clase-de-defecto">Progresión de clase de defecto</h2>
-<p class="lead">La CI de localización debe realizar un seguimiento de ambos:</p>
+<p>La CI de localización debe realizar un seguimiento de ambos:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
@@ -141,10 +152,11 @@
 </ul>
 <p>La generación y validación deben realizarse en este orden:</p>
 <ol type="1">
-<li>generar artículo HTML</li>
-<li>generar páginas de índice</li>
-<li>Ejecute el posprocesamiento de navegación restante solo si aún es necesario</li>
-<li>validar la salida</li>
+<li>generar el HTML del artículo</li>
+<li>generar las páginas de índice</li>
+<li>ejecutar cualquier posprocesamiento de navegación restante solo si sigue siendo necesario</li>
+<li>validar la salida recién generada</li>
+<li>revisar el HTML generado o la salida renderizada si el flujo de trabajo requiere una evaluación humana de la paridad</li>
 </ol>
 <p>Si un validador aún espera el bloque heredado <code>topic-nav</code>, actualice el validador al contrato actual en lugar de parchear el HTML generado.</p>
 

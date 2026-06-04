@@ -115,8 +115,29 @@
 <li>copertura testuale sull’accessibilità</li>
 <li>parità di screenshot e diagrammi</li>
 </ul>
+<h2 id="requisito-di-output-generato-di-recente">Requisito di output generato di recente</h2>
+<p class="lead">Prima della revisione della parità strutturale, della revisione semantica o del confronto manuale degli articoli:</p>
+<ol type="1">
+<li>rigenerare il sito dallo stato attuale del repository</li>
+<li>eseguire i validatori sull’output generato corrente</li>
+<li>ispezionare gli artefatti HTML generati</li>
+<li>solo allora eseguire la valutazione manuale della parità</li>
+</ol>
+<p>Questa regola esiste perché il Markdown sorgente e l’output generato possono divergere temporaneamente durante lo sviluppo e i rilievi del QA devono basarsi sugli artefatti correnti, non su file generati obsoleti.</p>
+<h2 id="revisione-della-parità-strutturale">Revisione della parità strutturale</h2>
+<p>La revisione della parità strutturale dovrebbe cercare perdite di valore per il lettore anche quando l’articolo localizzato conserva ancora in generale il significato.</p>
+<p>I segnali tipici includono:</p>
+<ul>
+<li>mancanza di sezioni principali</li>
+<li>gerarchia delle intestazioni collassata</li>
+<li>esempi mancanti</li>
+<li>guida pratica compressa</li>
+<li>discussione sulla governance ridotta</li>
+<li>guida alla revisione o alla validazione abbreviata</li>
+</ul>
+<p>Gli avvisi dei validatori di parità strutturale sono spunti per la revisione, non una prova automatica di una cattiva traduzione. Devono essere interpretati insieme all’HTML generato e, dove necessario, all’output renderizzato nel browser.</p>
 <h2 id="convalidatore-della-localizzazione-rivolto-al-lettore">Convalidatore della localizzazione rivolto al lettore</h2>
-<p class="lead">Una classe di validazione dovrebbe fallire esplicitamente l’IC quando una pagina appare localizzata ma espone comunque contenuto rivolto al lettore nella lingua di origine.</p>
+<p>Una classe di validazione dovrebbe fallire esplicitamente l’IC quando una pagina appare localizzata ma espone comunque contenuto rivolto al lettore nella lingua di origine.</p>
 <p>Esempi che dovrebbero fallire:</p>
 <ul>
 <li>Titolo localizzato con riassunto in inglese</li>
