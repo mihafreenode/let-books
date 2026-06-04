@@ -14,3 +14,4 @@ Udhëzues të shkurtër për shkrimin e specifikimeve, planifikimin e zbatimit d
 - [Si të menaxhoni terminologjinë nëpër gjuhë](./how-to-manage-terminology-across-languages.md)
 - [Si të matni pjekurinë e përkthimit](./how-to-measure-translation-maturity.md)
 - [Si të ekzekutoni QA të lokalizimit në CI](./how-to-run-localization-qa-in-ci.md)
+- [Si të përdoren rrjedhat e punës me AI për punë të dijes jashtë softuerit](./how-to-use-ai-workflows-for-non-software-knowledge-work.md)

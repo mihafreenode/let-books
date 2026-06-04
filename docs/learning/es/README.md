@@ -14,3 +14,4 @@ Guías breves para redactar especificaciones, planificar la implementación y co
 - [Cómo gestionar la terminología entre idiomas](./how-to-manage-terminology-across-languages.md)
 - [Cómo medir la madurez de traducción](./how-to-measure-translation-maturity.md)
 - [Cómo ejecutar QA de localización en CI](./how-to-run-localization-qa-in-ci.md)
+- [Cómo usar flujos de trabajo de IA para trabajo de conocimiento fuera del desarrollo de software](./how-to-use-ai-workflows-for-non-software-knowledge-work.md)

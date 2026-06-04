@@ -65,6 +65,7 @@ U Let Books, razvoj vođen specifikacijama je podržan od:
 
 ## Povezane stranice
 
+- `ai-assisted-knowledge-work.md`
 - `demo-spec-alignment.md`
 - `../../learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.md`
 - `../../blog/sr-Latn/spec-driven-development-for-ai-projects.md`

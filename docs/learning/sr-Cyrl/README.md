@@ -14,3 +14,4 @@
 - [Како управљати терминологијом кроз језике](./how-to-manage-terminology-across-languages.md)
 - [Како мерити зрелост превода](./how-to-measure-translation-maturity.md)
 - [Како спроводити локализациони QA у CI-ју](./how-to-run-localization-qa-in-ci.md)
+- [Како користити АИ радне токове за не-софтверски рад са знањем](./how-to-use-ai-workflows-for-non-software-knowledge-work.md)

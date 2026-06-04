@@ -43,3 +43,4 @@ Përdoreni këtë zonë për faqe të qëndrueshme konceptesh, shpjegues me lidh
 - `validation-layers.md`
 [[29]]]
 - `markdown-in-product-development.md`
+- `ai-assisted-knowledge-work.md`

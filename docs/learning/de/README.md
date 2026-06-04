@@ -14,3 +14,4 @@ Kurze Leitfäden zum Schreiben von Spezifikationen, zur Implementierungsplanung 
 - [Wie man Terminologie über Sprachen hinweg verwaltet](./how-to-manage-terminology-across-languages.md)
 - [Wie man Übersetzungsreife misst](./how-to-measure-translation-maturity.md)
 - [Wie man Lokalisierungs-QA in CI ausführt](./how-to-run-localization-qa-in-ci.md)
+- [Wie man KI-Workflows für wissensintensive Wissensarbeit außerhalb der Softwareentwicklung nutzt](./how-to-use-ai-workflows-for-non-software-knowledge-work.md)

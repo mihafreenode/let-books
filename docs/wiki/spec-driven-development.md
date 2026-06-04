@@ -65,6 +65,7 @@ In Let Books, spec-driven development is supported by:
 
 ## Related Pages
 
+- `ai-assisted-knowledge-work.md`
 - `demo-spec-alignment.md`
 - `../learning/how-to-write-a-spec-that-ai-can-follow.md`
 - `../blog/en/spec-driven-development-for-ai-projects.md`

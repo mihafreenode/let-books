@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spec-Driven Workflow Thread</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.55; max-width: 980px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { line-height: 1.2; }
+    .meta { color: #666; margin-bottom: 2rem; }
+    .message { border: 1px solid #ccc; border-radius: 12px; padding: 1rem 1.2rem; margin: 1rem 0; }
+    .user { background: rgba(64,128,255,0.08); }
+    .assistant { background: rgba(128,128,128,0.08); }
+    .role { font-weight: 700; margin-bottom: .5rem; }
+    blockquote { border-left: 4px solid #999; padding-left: 1rem; margin-left: 0; color: #555; }
+    pre { white-space: pre-wrap; background: rgba(0,0,0,0.06); padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .writing { border-left: 4px solid #6b8afd; padding: .8rem 1rem; background: rgba(107,138,253,0.08); margin: 1rem 0; }
+    .writing-label { font-size: .9rem; color: #666; margin-bottom: .5rem; }
+  </style>
+</head>
+<body>
+<h1>Spec-Driven Workflow Thread</h1>
+<p class="meta">Readable HTML transcript of the visible discussion about extending the document with practical AI-assisted specification-driven workflows.</p>
+
+<div class="message user"><div class="role">User</div>
+<p>I want to extend doc to provide some practical insight how to use spec driven developmwnt.. So let's start drafting prompt. Final prompt may include ideas from this Workflow, but hopefully written a bit better than I am writing now. So let's start. Want doc to realistic practical ideas for academic, educational and possibly legal writing. Like spec for whole document language quality, tone, publishing standards. Explain role of validators, both for language and for citations using paid services. Note that development of validators even with AI might be unrealistic for non technical writer, institutions could reasonably provide them that</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>I would not jump directly to a final prompt yet. First I'd add a new section to the document that broadens SDD beyond software engineering.</p>
+<p>The key idea is:</p>
+<blockquote>A specification is not necessarily a software feature specification. It is a description of the desired outcome, constraints, validation criteria, and quality standards. The same pattern can be applied to software, academic papers, educational materials, technical documentation, legal drafts, regulatory submissions, and many other forms of knowledge work.</blockquote>
+<div class="writing"><div class="writing-label">Writing block: Spec-Driven Development Beyond Software</div>
+<h2>Spec-Driven Development Beyond Software</h2>
+<p>Although Spec-Driven Development is often discussed in the context of software engineering, the underlying idea applies to many forms of knowledge work.</p>
+<p>A specification is simply a structured description of the desired result, its constraints, and the criteria used to determine whether the result is acceptable.</p>
+<h3>Academic and Research Writing</h3>
+<p>A research paper can be guided by specifications such as required citation style, publication formatting requirements, target audience, expected level of evidence, terminology consistency, language quality standards, and ethical and disclosure requirements.</p>
+<h3>Educational Content</h3>
+<p>Educational materials can be developed from specifications that define target age group, prerequisite knowledge, learning objectives, reading difficulty, accessibility requirements, and assessment criteria.</p>
+<h3>Legal and Regulatory Documents</h3>
+<p>Legal writing already relies heavily on formal specifications. A specification may define jurisdiction, required clauses, approved terminology, regulatory references, and review and approval workflows.</p>
+<h3>The Role of Validators</h3>
+<p>Specifications become significantly more useful when accompanied by validators. Validators provide objective checks that determine whether a document satisfies some part of its specification.</p>
+<h3>Not Every Author Must Build Validators</h3>
+<p>Creating reliable validators may require software engineering expertise, domain knowledge, infrastructure, and ongoing maintenance. Individual writers, researchers, educators, and legal professionals should not necessarily be expected to build these tools themselves.</p>
+<h3>AI and Specifications</h3>
+<p>AI systems can assist both content creation and validation. However, specifications remain valuable because they make expectations explicit, allow work to be reviewed objectively, and provide a durable standard that survives changes in authors, tools, and AI models.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>I would not make it so direct, but validators have long term uses</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>I agree. Saying "the validator suite may be the most valuable artifact" is catchy, but it overstates the case and invites arguments.</p>
+<p>A more durable position is that validators become organizational assets with value beyond the original project.</p>
+<div class="writing"><div class="writing-label">Writing block: Validators as Long-Term Assets</div>
+<h3>Validators as Long-Term Assets</h3>
+<p>Specifications describe expectations. Validators make those expectations executable.</p>
+<p>The immediate purpose of a validator is to help determine whether a piece of work satisfies some aspect of its specification. Over time, however, validators often become useful beyond the original project that motivated their creation.</p>
+<p>A language-quality validator developed for one publication may later be reused across many publications. A citation validator may help multiple research groups follow the same publishing standards. Accessibility, compliance, and style validators can provide consistent feedback to authors, reviewers, and editors across an entire organization.</p>
+<p>This is similar to how automated tests in software often outlive the feature that originally justified them. Once established, validators can help preserve institutional knowledge, reduce review effort, and promote consistency even as authors, tools, and workflows change.</p>
+<p>Not every validator needs to be developed by individual authors. In many cases, institutions, publishers, universities, professional organizations, or regulatory bodies are better positioned to provide shared validation tools that reflect their standards and requirements.</p>
+<p>As AI-assisted content creation becomes more common, reusable validators may play an increasingly important role by providing objective checks that remain stable even as underlying authoring tools evolve.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>I want to briefly explain current state of Claude Code, codex and opencode. Not that as it rapidly evolves, this doc might be at least partially outdated by the time reader reads this</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>Yes, and I'd make it even broader. The problem is not just that Claude Code, Codex, OpenCode, Cursor, Aider, Copilot, and others evolve rapidly. The deeper point is that the tooling layer is changing faster than the underlying ideas.</p>
+<div class="writing"><div class="writing-label">Writing block: A Note on Current Tools</div>
+<h3>A Note on Current Tools</h3>
+<p>Examples in this document may reference tools such as Claude Code, Codex, OpenCode, Cursor, Copilot, and similar AI-assisted development environments.</p>
+<p>The capabilities, limitations, pricing models, user interfaces, and workflows of these tools evolve rapidly. By the time you read this document, some examples may already be partially outdated.</p>
+<p>The intent of this document is not to recommend specific products or provide a definitive comparison of current tools. Instead, these examples illustrate broader concepts that are likely to remain useful even as individual tools change.</p>
+<p>The underlying ideas—specifications, validation, traceability, governance, review workflows, and knowledge preservation—are older than current AI systems and are likely to outlive them as well.</p>
+<p>Readers should therefore focus less on the specific tools mentioned and more on the principles demonstrated through those examples.</p>
+</div>
+<div class="writing"><div class="writing-label">Writing block: Agentic Development Is a Moving Target</div>
+<h3>Agentic Development Is a Moving Target</h3>
+<p>At the time of writing, AI coding agents are rapidly converging toward a similar model: they can read repositories, modify files, execute commands, run tests, and iterate on their own work with varying degrees of autonomy.</p>
+<p>As a result, workflow descriptions in this document should be understood as examples rather than prescriptions. The specific commands, capabilities, and user experiences will likely change. The broader questions remain remarkably stable: How are requirements communicated? How is quality evaluated? How are decisions documented? How is work reviewed? How is institutional knowledge preserved? How much autonomy should an agent receive?</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Yes yes! So first I'd focus on interactive Web ai. Note that it an always be saved as markdown attach markdown back. Note why markdown, how it preserves context that is readable by both humans and ai</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>I think this is actually a very important bridge section because many readers will never install Claude Code, Codex CLI, or OpenCode. They already use ChatGPT, Claude, Gemini, or similar web interfaces.</p>
+<div class="writing"><div class="writing-label">Writing block: Starting with Interactive AI</div>
+<h3>Starting with Interactive AI</h3>
+<p>Specification-Driven Development does not require coding agents, terminal tools, or software projects.</p>
+<p>Many people will first encounter the ideas through interactive AI systems such as ChatGPT, Claude, Gemini, or similar web-based assistants. These tools are often sufficient for drafting specifications, reviewing work, refining requirements, and iterating on complex documents.</p>
+<p>A practical workflow is surprisingly simple: define the objective and constraints; ask the AI to produce a draft; review and refine the specification; generate revised content; save both the specification and resulting work; continue future iterations from the saved context.</p>
+<h3>Why Save Specifications as Markdown?</h3>
+<p>A practical approach is to save specifications, notes, reviews, and supporting material as Markdown files.</p>
+<p>Markdown is human-readable without specialized software, easy to version, supported by many platforms, easily processed by AI systems, and durable. Most importantly, Markdown preserves context in a form that remains useful to both humans and machines.</p>
+<h3>Preserving More Than the Final Result</h3>
+<p>Traditional workflows often preserve only the final document. A specification-driven workflow can additionally preserve goals, assumptions, constraints, quality standards, review findings, publication requirements, validation results, and important decisions and their rationale.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Note limits of interactive work, while it is useful for drafts, and one time documents, it shows limits for real work. Note two things, first there's limit how much context ai can hold at once and that agents can re read parts of markdown or other data as needed. Other is limit of tools. Web has pre curated tools that work reasonably for wide audience and can be maintained by provider, but user might install custom tools that support their Workflow. Note this is evolving, as providers add more and more plugins but limitation might persist for the time being</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>This is a good transition point. I would avoid presenting it as a weakness of interactive AI and instead as a reason why agentic workflows emerged.</p>
+<div class="writing"><div class="writing-label">Writing block: When Interactive AI Reaches Its Limits</div>
+<h3>When Interactive AI Reaches Its Limits</h3>
+<p>Interactive AI systems are often sufficient for drafting documents, exploring ideas, reviewing content, and completing one-time tasks. For many individuals, these capabilities may be all that is needed.</p>
+<p>However, larger projects frequently expose practical limitations that become more noticeable as the amount of information, supporting material, and validation requirements grows.</p>
+<h4>Context Is Finite</h4>
+<p>Modern AI systems can process far more information than earlier generations, but context remains a finite resource. As projects grow, specifications, source materials, review findings, validation reports, references, and supporting documents may exceed what is practical to keep continuously available within a single conversation.</p>
+<p>One response is to store information in durable artifacts such as Markdown documents and allow AI systems to retrieve relevant portions when needed. The goal is not necessarily to provide an AI system with more information at once, but to provide the right information when it is needed.</p>
+<h4>Tools Are Purposefully Limited</h4>
+<p>Interactive AI platforms typically provide a curated set of tools that are designed to work safely and reliably for a broad audience. Specialized workflows often require capabilities specific to a profession, organization, or project.</p>
+<h4>An Evolving Boundary</h4>
+<p>The distinction between interactive AI systems and agentic environments continues to evolve. What remains relatively constant is the underlying requirement: larger and more complex projects benefit from the ability to retrieve relevant context, use specialized tools, execute validation workflows, and preserve knowledge across many iterations of work.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Note role of skills, tools as interface to specialised programs. Examples are what this repository uses for spellchecks, ocr, browser automatation, diagrams, also mention that academic might want to use tex/latex. Note role of svg as export format.</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>This is an important point because many people hear "tools" and think only of AI-native tools. In practice, the real value is often that AI can orchestrate existing specialized software.</p>
+<div class="writing"><div class="writing-label">Writing block: Tools as Interfaces to Specialized Systems</div>
+<h3>Tools as Interfaces to Specialized Systems</h3>
+<p>AI tools are often most effective when they act as interfaces to existing specialized software rather than attempting to replace it.</p>
+<p>Examples include spell checking and language-quality tools, OCR systems, browser automation, diagram generation tools, publication and document-processing systems, statistical and scientific software, and citation and reference-management systems.</p>
+<p>In this repository, AI-assisted workflows frequently interact with external tools for language validation, browser automation, document generation, OCR processing, and diagram creation. The AI system provides coordination and reasoning, while specialized tools perform the domain-specific work.</p>
+<p>An academic workflow may integrate with LaTeX toolchains, bibliography managers, statistical software, and journal submission systems. A legal workflow may interact with document-management platforms and legal research databases. An educational workflow may use accessibility validators and curriculum-review tools.</p>
+<h3>Skills and Reusable Workflows</h3>
+<p>As workflows mature, recurring instructions often become formalized as reusable skills, procedures, templates, or automation scripts.</p>
+<h3>Choosing Durable Formats</h3>
+<p>For textual content, Markdown is often practical. For diagrams and illustrations, SVG is frequently useful because it is text-based, version-control friendly, scalable without loss of quality, and can often be generated or modified programmatically.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Note serious security implications of using third party skills. Note that within ai system, not only executable in traditional sense are executable, textual instructions might be treated as executable as well. Strongly prefer curated skills by individual institutions and trusted vendors. Give openai, Microsoft (azure, sql. ) and Oracle as examples of created skills. Note that authorization should be outside ai, at least in tools with safe credential handling. Institutions might prefer ai gateways as part of their workflows</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>This is an excellent point, and I think it deserves its own section because many current AI discussions still treat "tools" as if they were ordinary plugins. They are not.</p>
+<div class="writing"><div class="writing-label">Writing block: Trust, Security, and Tool Governance</div>
+<h3>Trust, Security, and Tool Governance</h3>
+<p>As AI systems gain the ability to use tools, workflows, skills, and external services, security considerations become increasingly important.</p>
+<p>Traditional software security focuses primarily on executable code. In AI-assisted systems, the boundary is less clear. Not only programs, scripts, and binaries may influence behavior. Textual instructions, workflow definitions, specifications, prompts, and skill descriptions can also affect how an AI system operates.</p>
+<p>In practice, this means that some forms of text may be treated as instructions rather than merely as information.</p>
+<h3>Prefer Trusted and Curated Skills</h3>
+<p>Organizations may reasonably prefer internally developed skills, institutionally reviewed workflows, tools provided by trusted vendors, and audited integrations with known maintenance processes.</p>
+<p>Examples of organizations that provide extensive ecosystems of tools and integrations include OpenAI, Microsoft, Oracle, and many other enterprise software vendors.</p>
+<h3>Keep Authorization Outside the AI</h3>
+<p>A useful design principle is to separate authorization decisions from AI reasoning. AI systems may decide which action appears appropriate, but the actual authorization to perform that action should ideally be enforced by external systems designed specifically for authentication, authorization, auditing, and credential management.</p>
+<h3>AI Gateways and Institutional Control</h3>
+<p>Many organizations may choose to introduce AI through controlled gateways rather than granting direct access to every system. An AI gateway can provide centralized authentication, authorization enforcement, auditing and logging, approved tool access, data-loss prevention controls, usage monitoring, and policy enforcement.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Note that real Workflow are iterative, explain role of user in this process, initial draft, feedback to ai generated draft. Generation, feedback.. Note that user might want to ask web based ai for next prompt when pasting relevant current agent feedback</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>This is actually one of the most important practical sections because many newcomers imagine either the human writes everything or the AI writes everything. In reality, most successful workflows are iterative collaborations.</p>
+<div class="writing"><div class="writing-label">Writing block: Iterative Workflows and Human Feedback</div>
+<h3>Iterative Workflows and Human Feedback</h3>
+<p>Real-world AI-assisted workflows are rarely linear. Specifications are seldom perfect on the first attempt. Requirements evolve, assumptions are challenged, validation uncovers problems, and new information becomes available as work progresses.</p>
+<p>A common pattern looks like this: define an initial objective; create a draft specification; generate a draft result; review the result; refine the specification; regenerate or revise the result; validate the outcome; repeat as necessary.</p>
+<h3>The Role of the Human Participant</h3>
+<p>AI systems can assist with drafting, analysis, validation, and automation, but human participants remain responsible for defining goals, evaluating trade-offs, and determining whether results are acceptable.</p>
+<h3>Using Interactive AI as a Thinking Partner</h3>
+<p>Even when agentic workflows are available, interactive AI systems can remain useful. Users frequently employ web-based AI assistants to review specifications, critique plans, identify missing requirements, propose validation strategies, generate improved prompts, explain agent feedback, and suggest next steps.</p>
+<h3>Feedback Is Part of the Specification</h3>
+<p>Each review comment, validation result, correction, or rejected draft provides additional information about the desired outcome. Over time, recurring feedback often becomes formalized as updated specifications, validation rules, reusable skills, workflow templates, and organizational standards.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Do not overly quote let books, rather provide limited and very targeted quotes when it might improve user understanding and give them practical insight and perhaps starting point they can reuse remember its apache licensed. Don't over do it</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>I strongly agree. Many AI-written methodology documents make two mistakes: they remain completely abstract and never show anything concrete, or they become a disguised project retrospective and keep referring to the author's repository. You want a middle ground.</p>
+<div class="writing"><div class="writing-label">Writing block: Learning from Existing Projects</div>
+<h3>Learning from Existing Projects</h3>
+<p>Examples can make abstract concepts easier to understand. However, examples should illustrate principles rather than dominate the discussion.</p>
+<p>When referencing existing projects, repositories, specifications, validators, or workflows, prefer small excerpts over large reproductions, explain why the example matters, focus on the pattern rather than the project, and provide enough context for readers to adapt the idea.</p>
+<p>The objective is not to encourage readers to copy a particular repository structure or workflow verbatim. The objective is to provide practical examples that can serve as starting points for their own specifications, validators, and governance processes.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Yes keep letbooks very limited in this topic</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>I think that's the right editorial decision. For this topic, Let Books should appear as a source of a few reusable examples, an occasional proof that a concept can be implemented, and a place where interested readers can inspect a working repository, but not as the primary narrative.</p>
+<div class="writing"><div class="writing-label">Writing block: Using Examples Sparingly</div>
+<h3>Using Examples Sparingly</h3>
+<p>Examples help translate abstract concepts into practical workflows. However, examples should support the discussion rather than become the discussion.</p>
+<p>Throughout this document, examples from real projects may occasionally be used to illustrate specifications, validators, review processes, documentation practices, or governance concepts.</p>
+<p>These examples are intended to demonstrate patterns that readers can adapt to their own environments. They should not be interpreted as recommended repository structures, mandatory workflows, or reference implementations.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>I want to also include reasonable summary of this thread as example Workflow. You may clean my text and provide it as bullet points. Your responses should not be overly transformed, rather select short quotes and use ellipsis to indicate it is shortened. User should get realistic idea how this Workflow worked. I will probaly end it with "make one big prompt" and paste it to agent </p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>Yes. In fact, this conversation itself is a good example of an iterative specification-driven workflow. I would not rewrite it into a polished success story. I'd preserve the messy reality of how requirements emerged.</p>
+<div class="writing"><div class="writing-label">Writing block: Example: Iterative Specification Refinement</div>
+<h3>Example: Iterative Specification Refinement</h3>
+<p>The following abbreviated exchange illustrates a common AI-assisted workflow. The goal was not to produce a perfect specification immediately. Instead, the specification evolved through repeated review, critique, and refinement.</p>
+<ul>
+<li>Initial direction: "I want to extend doc to provide some practical insight..."</li>
+<li>First refinement: "I would not make it so direct..."</li>
+<li>Scope expansion: "I want to briefly explain current state of Claude Code, Codex and OpenCode..."</li>
+<li>Workflow clarification: "First I'd focus on interactive Web AI."</li>
+<li>Identification of limitations: "Note limits of interactive work..."</li>
+<li>Tooling and ecosystem discussion: "Note role of skills..."</li>
+<li>Security and governance concerns: "Note serious security implications..."</li>
+<li>Human-in-the-loop refinement: "Real workflows are iterative..."</li>
+<li>Example usage guidance: "Do not overly quote Let Books..."</li>
+<li>Final editorial direction: "Keep Let Books very limited in this topic."</li>
+</ul>
+<p>Observations: requirements were not known up front; the specification emerged through discussion; multiple drafts were proposed and refined; feedback changed both content and structure; and the user remained responsible for goals, priorities, and final decisions.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Good. Quotes should also be localized to each language. Intentionally avoid English, except for brand names and such</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>That's a surprisingly important point, especially since part of the document discusses localization and educational use. I'd make it a general principle rather than a Let Books-specific rule.</p>
+<div class="writing"><div class="writing-label">Writing block: Localize Examples for the Reader</div>
+<h3>Localize Examples for the Reader</h3>
+<p>Examples are often more effective when presented in the reader's primary language.</p>
+<p>When translating or localizing documentation, specifications, educational materials, or workflow examples, consider localizing example text as well rather than preserving the original language unnecessarily.</p>
+<p>Exceptions may include product names, company names, standards and specifications, programming languages, protocol names, commands, code samples, and other terms commonly used in their original form.</p>
+<p>The goal is not linguistic purity. The goal is reducing unnecessary cognitive load for readers.</p>
+<h3>Localizing Workflow Examples</h3>
+<p>This principle also applies to conversational examples. If a workflow example contains exchanges such as "I want to extend doc to provide some practical insight...", a localized version may instead present an equivalent example in the target language.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>This should be one big topic, with perhaps security also seperate summary. Prefer few larger articles, don't make lots of small ones</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>I agree. Looking at everything we've discussed, I think the current material naturally collapses into two substantial sections, not fifteen small ones.</p>
+<div class="writing"><div class="writing-label">Writing block: Proposed larger sections</div>
+<h2>From Interactive AI to Agentic Workflows</h2>
+<p>This section explains interactive web AI as a starting point, specifications as durable artifacts, Markdown as a shared human/AI format, iterative refinement and human feedback, limits of interactive AI, context management, agentic workflows, skills and tools, validators and quality assurance, reusable workflows and organizational knowledge, practical examples, and localization.</p>
+<h2>Governance, Trust, and Security</h2>
+<p>This section explains trust boundaries, risks of third-party skills and integrations, textual instructions as potentially executable artifacts, curated institutional skills, trusted vendor ecosystems, authorization outside AI reasoning, credential management, auditing and compliance, AI gateways, and organizational governance.</p>
+</div>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>I think this is it</p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<p>I think so too.</p>
+<p>What emerged is no longer just "add a section about AI tools." It became a fairly coherent extension of the document:</p>
+<h3>1. From Interactive AI to Agentic Workflows</h3>
+<p>A single substantial chapter covering why specifications are useful outside software, academic and legal workflows, web AI, Markdown, iterative refinement, context limitations, skills, integration with existing software, validators, localization, and a realistic conversation-based example.</p>
+<h3>2. Governance, Trust, and Security</h3>
+<p>A second substantial chapter covering trust boundaries, third-party skills, textual instructions as potentially executable artifacts, curated institutional skills, trusted vendor ecosystems, authorization outside AI reasoning, credential management, auditability, AI gateways, governance, and compliance.</p>
+<p>The conversation itself becomes an example: initial idea, draft proposal, critique, refinement, scope expansion, governance concerns, localization concerns, editorial concerns, and consolidation into a coherent structure.</p>
+</div>
+
+<div class="message user"><div class="role">User</div>
+<p>Make on big prompt </p>
+</div>
+
+<div class="message assistant"><div class="role">Assistant</div>
+<div class="writing"><div class="writing-label">Writing block: Final big prompt</div>
+<h2>Update the existing document</h2>
+<p>Update the existing document by adding a substantial new section that expands the discussion from software-focused Specification-Driven Development into broader AI-assisted knowledge work. Integrate the material into the existing narrative rather than creating many small disconnected articles. Prefer a few larger, coherent chapters.</p>
+<h3>Goals</h3>
+<p>The new content should help readers understand how specification-driven workflows apply not only to software development, but also to academic writing, research, educational content, technical documentation, legal and regulatory writing, policy and governance work, and other knowledge-intensive activities.</p>
+<p>The emphasis should be on durable principles rather than current AI products.</p>
+<p>Do not turn the document into a guide for a particular AI tool. Claude Code, Codex, OpenCode, ChatGPT, Gemini, Copilot, Cursor, and similar tools may be mentioned only as examples of a rapidly evolving ecosystem.</p>
+<h3>Preferred Structure</h3>
+<p>Create two substantial sections rather than many small ones:</p>
+<ol>
+<li>From Interactive AI to Agentic Workflows</li>
+<li>Governance, Trust, and Security</li>
+</ol>
+<h3>From Interactive AI to Agentic Workflows</h3>
+<p>Cover interactive AI as a starting point, specifications beyond software, Markdown as durable knowledge format, iterative refinement, the human participant, limits of context and tools, skills, validators, durable formats, localization, and an example workflow.</p>
+<h3>Governance, Trust, and Security</h3>
+<p>Cover trust boundaries, skills and integrations, authorization outside AI, AI gateways, and governance.</p>
+<h3>Editorial Guidance</h3>
+<p>Prefer explanation over marketing, durable principles over current product discussion, practical but brief examples, limited repository-specific content, localized examples, and small excerpts rather than large reproductions.</p>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upravljanje, poverenje i bezbednost u AI radnim tokovima | LetBooks</title>
+    <meta name="description" content="Zašto AI-potpomognuti radni tokovi zahtevaju eksplicitne granice poverenja, autorizaciju izvan AI-zaključivanja, upravljane integracije i trajan pregled.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Upravljanje, poverenje i bezbednost u AI radnim tokovima | LetBooks">
+    <meta property="og:description" content="Zašto AI-potpomognuti radni tokovi zahtevaju eksplicitne granice poverenja, autorizaciju izvan AI-zaključivanja, upravljane integracije i trajan pregled.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Upravljanje, poverenje i bezbednost u AI radnim tokovima | LetBooks">
+    <meta name="twitter:description" content="Zašto AI-potpomognuti radni tokovi zahtevaju eksplicitne granice poverenja, autorizaciju izvan AI-zaključivanja, upravljane integracije i trajan pregled.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="sr-Latn">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/sr-Latn/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sr-Latn/index.html">Dokumentacija</a>
+            <a class="nav-link" href="../../blog/sr-Latn/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sr-Latn/index.html">Materijali za učenje</a>
+            <a class="nav-link" href="../../wiki/sr-Latn/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sr-Latn/index.html">Teme</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/governance-trust-and-security-in-ai-workflows.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/governance-trust-and-security-in-ai-workflows.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/governance-trust-and-security-in-ai-workflows.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/governance-trust-and-security-in-ai-workflows.html" lang="bs">BS</a>
+              <a class="lang-link is-current" href="../../blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/governance-trust-and-security-in-ai-workflows.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/governance-trust-and-security-in-ai-workflows.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/governance-trust-and-security-in-ai-workflows.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/governance-trust-and-security-in-ai-workflows.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/governance-trust-and-security-in-ai-workflows.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/governance-trust-and-security-in-ai-workflows.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Svi jezici</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sr-Latn/index.html">Dokumentacija</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/sr-Latn/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Upravljanje, poverenje i bezbednost u AI radnim tokovima</span>
+            </nav>
+            <h1>Upravljanje, poverenje i bezbednost u AI radnim tokovima</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Srpski (latinica)</span>
+          </div>
+          <p class="content-page-summary">Zašto AI-potpomognuti radni tokovi zahtevaju eksplicitne granice poverenja, autorizaciju izvan AI-zaključivanja, upravljane integracije i trajan pregled.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Teme:</span>
+              <span class="content-tag">Dokumentacija</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Kako AI-sistemi prelaze od pasivnih razgovornih interfejsa ka korišćenju alata, dohvaćanju materijala, automatizaciji i izvršavanju radnih tokova, upravljanje postaje važnije.</p>
+<p>To je lako potceniti kada rasprava ostane na nivou generisanja teksta. Pomoćnik za nacrte može delovati kao još jedan alat za produktivnost. Ali kada AI-sistem može da čita interne materijale, poziva alate, pokreće radne tokove ili priprema artefakte za objavljivanje, organizacija više ne upravlja samo kvalitetom izlaza. Upravlja operativnim ponašanjem.</p>
+<h2 id="granice-poverenja-šire-su-nego-ranije">Granice poverenja šire su nego ranije</h2>
+<p>Tradicionalna bezbednost softvera obično se fokusirala na izvršni kod i privilegovane sisteme.</p>
+<p>U AI-potpomognutim okruženjima granica je šira.</p>
+<p>Na ponašanje sistema mogu uticati specifikacije, promptovi, definicije radnih tokova, opisi veština i izvori za dohvat. To ne znači da je svaki dokument opasan, ali znači da tekst može postati operativan na načine koje stariji modeli upravljanja nisu uvek morali razmatrati.</p>
+<p>To je jedan od razloga zašto institucije sve više zanima odakle dolaze upute za radni tok, ko ih je pregledao i kojim je sistemima dozvoljeno da deluju na njihovoj osnovi.</p>
+<h2 id="spoljne-veštine-i-integracije-traže-procenu">Spoljne veštine i integracije traže procenu</h2>
+<p>AI-ekosistemi brzo rastu. Dobavljači i zajednice nude veštine, integracije, pakete radnih tokova i prilagodbene slojeve za mnoge vrste rada.</p>
+<p>To može biti korisno. Ali može i stvarati rizik.</p>
+<p>Organizacije mogu sasvim razumno davati prednost:</p>
+<ul>
+<li>interno razvijenim veštinama</li>
+<li>institucionalno pregledanim definicijama radnih tokova</li>
+<li>pouzdanim dobavljačima</li>
+<li>integracijama pod upravljanjem</li>
+</ul>
+<p>Važno pitanje nije pripada li trenutni ekosistem OpenAI-ju, Microsoftu, Oracleu ili nekom budućem dobavljaču. Trajno pitanje je razume li organizacija čemu integracija može pristupiti, na šta može uticati i kako je pregledana.</p>
+<h2 id="autorizacija-treba-da-ostane-izvan-ai-zaključivanja">Autorizacija treba da ostane izvan AI-zaključivanja</h2>
+<p>Jedno od najsnažnijih načela u AI-potpomognutim radnim tokovima jeste da autorizacija, kad god je to praktično moguće, ostane izvan AI-sistema.</p>
+<p>AI može preporučiti radnju, pripremiti nacrt ili odlučiti koji je sledeći smisleni korak radnog toka. Ali stvarnu dozvolu za pristup podacima, pozivanje sistema, objavljivanje sadržaja ili odobravanje promena idealno bi trebalo sprovoditi negde drugde.</p>
+<p>To u praksi obično znači oslanjanje na:</p>
+<ul>
+<li>provajdere identiteta</li>
+<li>kontrolu pristupa zasnovanu na ulogama</li>
+<li>dozvole u bazi podataka</li>
+<li>API prolaze</li>
+<li>odobrenja radnih tokova</li>
+<li>bezbedno rukovanje akreditivima</li>
+</ul>
+<p>To razdvajanje je važno jer sprečava da se generisana namera zameni za legitimni autoritet.</p>
+<p>Akreditivima posebno treba upravljati u sistemima izgrađenim za upravljanje akreditivima, a ne ih kopirati u promptove ili usputno ugrađivati u dokumente radnog toka.</p>
+<h2 id="ai-prolazi-su-razuman-institucionalni-obrazac">AI prolazi su razuman institucionalni obrazac</h2>
+<p>Neki timovi će sa AI-alatima raditi direktno. Drugi će radije izabrati model prolaza.</p>
+<p>AI prolaz može centralizovati:</p>
+<ul>
+<li>autentikaciju</li>
+<li>autorizaciju</li>
+<li>reviziju</li>
+<li>sprovođenje politika</li>
+<li>nadzor</li>
+<li>odobren pristup alatima</li>
+</ul>
+<p>To nije obavezno za svako okruženje. Manji timovi mogu sasvim razumno izabrati lakše kontrole.</p>
+<p>Ali za univerzitete, javne ustanove, preduzeća, izdavače i regulisana okruženja prolazi su često praktičan način za uvođenje AI-ja bez odricanja od nadzora.</p>
+<h2 id="upravljanje-postaje-vrednije-kako-automatizacija-raste">Upravljanje postaje vrednije kako automatizacija raste</h2>
+<p>Primamljiva je, ali pogrešna ideja da bi bolja automatizacija trebalo da smanji potrebu za upravljanjem.</p>
+<p>U praksi se često dešava suprotno.</p>
+<p>Kako izlazi postaju brži, a radni tokovi agentskiji, organizacije obično zahtevaju snažniju podršku za:</p>
+<ul>
+<li>odgovornost</li>
+<li>sledljivost</li>
+<li>validaciju</li>
+<li>pregled</li>
+<li>poverenje</li>
+<li>očuvanje institucionalnog znanja</li>
+</ul>
+<p>Tu ponovo pomaže razmišljanje vođeno specifikacijama. Ono povezuje ciljeve, standarde, validatore, odobrenja i artefakte u pregledljiv lanac.</p>
+<p>Taj lanac olakšava poverenje u automatizaciju jer olakšava lociranje odgovornosti.</p>
+<h2 id="trajna-lekcija">Trajna lekcija</h2>
+<p>AI-potpomognutim radnim tokovima ne treba upravljati samo na nivou izbora modela ili kvaliteta promptova.</p>
+<p>Njima treba upravljati na nivou granica poverenja, kontrole pristupa, integracije alata, pregleda i institucionalne odgovornosti.</p>
+<p>Kako se automatizacija povećava, upravljanje postaje vrednije upravo zato što omogućava da snažni radni tokovi budu dovoljno bezbedni za višekratnu upotrebu.</p>
+<h2 id="povezano-čitanje">Povezano čitanje</h2>
+<ul>
+<li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
+<li><code>../../wiki/validation-layers.md</code></li>
+<li><code>../../wiki/localization-governance.md</code></li>
+<li><code>../../learning/how-to-use-ai-workflows-for-non-software-knowledge-work.md</code></li>
+<li><code>ai-workflows-beyond-software.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Drugi jezici</h2>
+            <ul>
+              <li><a href="../../blog/en/governance-trust-and-security-in-ai-workflows.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/governance-trust-and-security-in-ai-workflows.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/governance-trust-and-security-in-ai-workflows.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/governance-trust-and-security-in-ai-workflows.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/governance-trust-and-security-in-ai-workflows.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/governance-trust-and-security-in-ai-workflows.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/governance-trust-and-security-in-ai-workflows.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/governance-trust-and-security-in-ai-workflows.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/governance-trust-and-security-in-ai-workflows.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/governance-trust-and-security-in-ai-workflows.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Povezani sadržaji</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentacija</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/sr-Latn/documentation-is-part-of-the-product.html"><span>Dokumentacija je deo proizvoda</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sr-Latn/spec-driven-development-for-ai-projects.html"><span>Razvoj vođen specifikacijom za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikaciju koju AI može da prati</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../learning/sr-Latn/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako održavati usklađenost specifikacije, dokumentacije, demonstracije i koda</span><span class="topic-menu__meta">Materijali za učenje</span></a>
+                  <a href="../../wiki/sr-Latn/spec-driven-development.html"><span>Razvoj zasnovan na specifikacijama</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/markdown-in-product-development.html"><span>Markdown u razvoju proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sr-Latn/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sr-Latn/book-metadata.html"><span>Metapodaci o knjizi</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sr-Latn/cataloging.html"><span>Katalogizacija</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Praktična platforma za katalogizaciju, nuđenje i pronalaženje obrazovnih knjiga.</p>
+            <p class="footer-note">Autorska prava © saradnici na Let Books. Ponovna upotreba prati licencu repozitorijuma osim ako stranica ne navodi drugačije.</p>
+            <p class="footer-microcopy">Rani alfa prototip. Dokumentacija i tekst korisničkog interfejsa potpomognuti su veštačkom inteligencijom. Ustanove i integracije pomenute u primerima konceptualne su i ne znače partnerstvo ili podršku.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sr-Latn/index.html">Pregled</a>
+              <a href="../../topics/sr-Latn/index.html">Teme</a>
+              <a href="../../index.html">Početna stranica</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Svi jezici</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

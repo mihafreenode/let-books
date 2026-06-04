@@ -14,3 +14,4 @@ Kratki vodiči za pisanje specifikacija, planiranje implementacije i provjeru da
 - [Kako upravljati terminologijom kroz jezike](./how-to-manage-terminology-across-languages.md)
 - [Kako mjeriti zrelost prijevoda](./how-to-measure-translation-maturity.md)
 - [Kako provoditi lokalizacijski QA u CI-ju](./how-to-run-localization-qa-in-ci.md)
+- [Kako koristiti AI radne tokove za ne-softverski rad sa znanjem](./how-to-use-ai-workflows-for-non-software-knowledge-work.md)

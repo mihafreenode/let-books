@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kako uporabljati AI-delovne tokove za neprogramsko delo z znanjem | LetBooks</title>
+    <meta name="description" content="Ta vodič pojasnjuje, kako specifikacijsko vodene, AI-podprte delovne tokove uporabiti pri pisanju, raziskovanju, poučevanju, politikah in drugem neprogramskem delu, ne da bi bili odvisni od enega samega orodja.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/learning/sl/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/learning/sl/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/learning/hr/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/learning/bs/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/learning/sr-Latn/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/learning/sr-Cyrl/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/learning/sq/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/learning/de/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/learning/it/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/learning/fr/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Kako uporabljati AI-delovne tokove za neprogramsko delo z znanjem | LetBooks">
+    <meta property="og:description" content="Ta vodič pojasnjuje, kako specifikacijsko vodene, AI-podprte delovne tokove uporabiti pri pisanju, raziskovanju, poučevanju, politikah in drugem neprogramskem delu, ne da bi bili odvisni od enega samega orodja.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/learning/sl/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kako uporabljati AI-delovne tokove za neprogramsko delo z znanjem | LetBooks">
+    <meta name="twitter:description" content="Ta vodič pojasnjuje, kako specifikacijsko vodene, AI-podprte delovne tokove uporabiti pri pisanju, raziskovanju, poučevanju, politikah in drugem neprogramskem delu, ne da bi bili odvisni od enega samega orodja.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="learning" data-locale="sl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../learning/sl/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Učni vodniki</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sl/index.html">Dokumentacija</a>
+            <a class="nav-link" href="../../blog/sl/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sl/index.html">Učni vodniki</a>
+            <a class="nav-link" href="../../wiki/sl/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sl/index.html">Teme</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="en">EN</a>
+              <a class="lang-link is-current" href="../../learning/sl/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../learning/hr/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../learning/bs/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../learning/sr-Latn/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../learning/sr-Cyrl/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../learning/sq/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../learning/de/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="de">DE</a>
+              <a class="lang-link" href="../../learning/it/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="it">IT</a>
+              <a class="lang-link" href="../../learning/fr/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Vsi jeziki</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sl/index.html">Dokumentacija</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../learning/sl/index.html">Učni vodniki</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Kako uporabljati AI-delovne tokove za neprogramsko delo z znanjem</span>
+            </nav>
+            <h1>Kako uporabljati AI-delovne tokove za neprogramsko delo z znanjem</h1>
+          <div class="content-page-meta">
+            <span>Učni vodniki</span>
+            <span>Slovenščina</span>
+          </div>
+          <p class="content-page-summary">Ta vodič pojasnjuje, kako specifikacijsko vodene, AI-podprte delovne tokove uporabiti pri pisanju, raziskovanju, poučevanju, politikah in drugem neprogramskem delu, ne da bi bili odvisni od enega samega orodja.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Teme:</span>
+              <span class="content-tag">Dokumentacija</span>
+              <span class="content-tag">Razvoj na podlagi specifikacij</span>
+              <span class="content-tag">Validacija</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<h2 id="zakaj-je-to-pomembno">Zakaj je to pomembno</h2>
+<p>Veliko ljudi danes uporablja AI za pripravo osnutkov, povzemanje, preoblikovanje, izdelavo struktur in pregledovanje dokumentov. To je lahko koristno, vendar se pogosto začne kot neformalna navada pozivov in odgovorov.</p>
+<p>Za preprosta opravila je to lahko dovolj.</p>
+<p>Za resno delo pa običajno ni.</p>
+<p>Akademsko pisanje, izobraževalna gradiva, tehnična dokumentacija, pravno pisanje, pisanje politik in druge oblike dela z znanjem imajo korist od jasnejše strukture. Specifikacijsko vodeni delovni tok pomaga zato, ker pričakovanja naredi eksplicitna, še preden nastane preveč vsebine.</p>
+<h2 id="začnite-s-specifikacijo-ne-z-osnutkom">Začnite s specifikacijo, ne z osnutkom</h2>
+<p>Uporabna specifikacija za neprogramsko delo pogosto vključuje:</p>
+<ul>
+<li>cilj</li>
+<li>občinstvo</li>
+<li>meje obsega</li>
+<li>terminološka pravila</li>
+<li>pričakovanja kakovosti</li>
+<li>zahteve glede dokazov</li>
+<li>zahteve glede skladnosti ali odobritve</li>
+<li>omejitve objave</li>
+</ul>
+<p>Primeri:</p>
+<ul>
+<li>raziskovalni članek lahko zahteva slog citiranja, pragove dokazov in pravila oblikovanja za revijo</li>
+<li>učni vodič lahko zahteva starostni razpon, predznanje, pričakovanja glede dostopnosti in učne izide</li>
+<li>memorandum o politiki lahko zahteva odobreno terminologijo, predpostavke o občinstvu in strukturo, usmerjeno v odločanje</li>
+<li>regulativni ali pravni dokument lahko zahteva jurisdikcijo, obvezne klavzule in pregledne kontrolne točke</li>
+</ul>
+<p>Bistvo ni napisati najdaljše mogoče specifikacije. Bistvo je odstraniti dvoumnost, ki bi jo sicer zapolnile generične predpostavke.</p>
+<h2 id="praktičen-delovni-tok">Praktičen delovni tok</h2>
+<p>Večina resničnih delovnih tokov je iterativnih, ne linearnih.</p>
+<p>Uporabite cikel, kot je ta:</p>
+<ol type="1">
+<li>določite cilj</li>
+<li>pripravite lahek osnutek specifikacije</li>
+<li>ustvarite osnutek</li>
+<li>osnutek kritično pregledate</li>
+<li>izboljšate specifikacijo</li>
+<li>kjer je mogoče, izvedete validacijo ali preverjanja</li>
+<li>ponavljate, dokler rezultat ni sprejemljiv</li>
+</ol>
+<p>Specifikacija skozi samo delo pogosto postane jasnejša. To je normalno.</p>
+<h2 id="najprej-uporabite-interaktivni-ai-kadar-zadošča">Najprej uporabite interaktivni AI, kadar zadošča</h2>
+<p>Za začetek ne potrebujete naprednega agentskega okolja.</p>
+<p>Interaktivni spletni AI lahko že pomaga pri:</p>
+<ul>
+<li>pripravi specifikacij</li>
+<li>pregledu struktur</li>
+<li>odkrivanju manjkajočih delov</li>
+<li>primerjavi alternativnih struktur</li>
+<li>predlaganju validacijskih strategij</li>
+<li>prepisovanju za drug ton ali drugo občinstvo</li>
+<li>razkrivanju protislovij ali nejasnih predpostavk</li>
+</ul>
+<p>To je naravna izhodiščna točka, ne manjvredna izbira.</p>
+<p>Za mnoge avtorje, urednike, učitelje in analitike interaktivni AI ostaja uporaben tudi takrat, ko so drugje na voljo bolj napredni delovni tokovi.</p>
+<h2 id="ohranite-kontekst-v-trajnih-artefaktih">Ohranite kontekst v trajnih artefaktih</h2>
+<p>Če je delo pomembno, ne hranite le končnega dokumenta.</p>
+<p>Ohranite tudi:</p>
+<ul>
+<li>specifikacijo</li>
+<li>pomembne komentarje pregleda</li>
+<li>rezultate validacije</li>
+<li>opombe o dokazih</li>
+<li>nerešena vprašanja</li>
+<li>odločitve o odobritvi</li>
+</ul>
+<p>Markdown je za to pogosto praktičen, ker je berljiv, prenosljiv, prijazen do razlik in preprost za ponovno uporabo v različnih orodjih. Ni edini veljaven format, je pa pogosto trajen.</p>
+<p>Cilj je kontekst ohraniti v obliki, ki jo lahko ljudje pregledajo, AI-sistemi pa ponovno uporabijo.</p>
+<h2 id="ko-interaktivni-ai-začne-postajati-pretesen">Ko interaktivni AI začne postajati pretesen</h2>
+<p>Večji projekti pogosto razkrijejo dve omejitvi.</p>
+<p>Prva je kontekst. Težko je v enem samem pogovoru ohranjati vsak vir, opombo, ugotovitev pregleda in omejitev.</p>
+<p>Druga so orodja. Širše interaktivne platforme morda ne ponujajo točno tistih validatorjev ali domenske programske opreme, ki jih nek delovni tok potrebuje.</p>
+<p>Tu postanejo uporabni bolj agentski delovni tokovi. Po potrebi lahko ponovno pridobijo relevantne dokumente, kličejo specializirana orodja in nadaljujejo delo čez večjo količino gradiva.</p>
+<p>Pomembno načelo je preprosto:</p>
+<p>Cilj ni nujno zagotoviti več informacij naenkrat, temveč zagotoviti prave informacije takrat, ko so potrebne.</p>
+<h2 id="orodja-razumite-kot-vmesnike-do-specializiranih-sistemov">Orodja razumite kot vmesnike do specializiranih sistemov</h2>
+<p>AI pogosto deluje najbolje takrat, ko koordinira specializirana orodja, namesto da bi jih poskušal nadomestiti.</p>
+<p>Glede na področje lahko ta orodja vključujejo:</p>
+<ul>
+<li>preverjanje pravopisa in orodja za jezikovno kakovost</li>
+<li>OCR-sisteme</li>
+<li>validatorje citatov</li>
+<li>validatorje dostopnosti</li>
+<li>avtomatizacijo brskalnika</li>
+<li>orodja za diagrame</li>
+<li>verige TeX ali LaTeX</li>
+<li>statistično programsko opremo</li>
+<li>sisteme za objavo dokumentov</li>
+</ul>
+<p>AI-sistem zagotavlja koordinacijo in sklepanje, specializirana orodja pa opravijo domensko specifično delo.</p>
+<h2 id="validatorji-pomagajo-ohranjati-standarde">Validatorji pomagajo ohranjati standarde</h2>
+<p>Validatorji so preverjanja, ki ocenjujejo, ali dokument izpolnjuje določen del svoje specifikacije.</p>
+<p>Primeri vključujejo:</p>
+<ul>
+<li>preverjanje jezikovne kakovosti</li>
+<li>preverjanje citatov</li>
+<li>preverjanje dostopnosti</li>
+<li>preverjanje objave</li>
+<li>preverjanje skladnosti</li>
+<li>preverjanje terminologije</li>
+</ul>
+<p>Validatorji ne nadomeščajo človekovega pregleda. Ponavljajoče standarde naredijo bolj ponovljive.</p>
+<p>To je posebej pomembno v organizacijah. Validatorji pogosto preživijo posamezne projekte in postanejo ponovno uporabna sredstva, ki skozi čas ohranjajo institucionalna pričakovanja.</p>
+<p>Hkrati je povsem razumno, da si mnogi avtorji ne bodo gradili lastnih validatorjev. Univerze, založniki, raziskovalne ekipe in platformne ekipe jih lahko zagotovijo kot skupno infrastrukturo.</p>
+<h2 id="človeška-vloga-ne-izgine">Človeška vloga ne izgine</h2>
+<p>AI lahko pomaga ustvarjati, preurejati, preoblikovati, primerjati in kritično presojati besedilo.</p>
+<p>Ljudje pa ostajajo odgovorni za:</p>
+<ul>
+<li>določanje ciljev</li>
+<li>postavljanje prioritet</li>
+<li>sprejemanje kompromisov</li>
+<li>odobritev izhodov</li>
+<li>presojo, ali je rezultat res dovolj dober</li>
+</ul>
+<p>V praksi človek navadno deluje kot pregledovalec, urednik, domenski strokovnjak in odločevalec.</p>
+<h2 id="vaja">Vaja</h2>
+<p>Izberite eno neprogramsko nalogo in zanjo napišite enostransko specifikacijo.</p>
+<p>Dobri kandidati so na primer:</p>
+<ul>
+<li>list z navodili za predavanje</li>
+<li>raziskovalni povzetek</li>
+<li>memorandum o politiki</li>
+<li>tehnični vodič</li>
+<li>kontrolni seznam za skladnost</li>
+</ul>
+<p>Vključite:</p>
+<ol type="1">
+<li>cilj</li>
+<li>občinstvo</li>
+<li>obseg</li>
+<li>terminološka pravila</li>
+<li>pričakovanja kakovosti</li>
+<li>pričakovanja glede dokazov ali citatov</li>
+<li>zahteve glede pregleda ali odobritve</li>
+</ol>
+<p>Nato naj AI-pomočnik na podlagi te specifikacije pripravi osnutek.</p>
+<p>Izhod najprej preglejte glede na specifikacijo in šele nato glede na slogovne preference. To zaporedje je pomembno.</p>
+<h2 id="dodatno-branje">Dodatno branje</h2>
+<ul>
+<li><code>../../wiki/sl/ai-assisted-knowledge-work.md</code></li>
+<li><code>../../wiki/sl/spec-driven-development.md</code></li>
+<li><code>../../wiki/sl/markdown-in-product-development.md</code></li>
+<li><code>../../wiki/sl/validation-layers.md</code></li>
+<li><code>../../blog/sl/ai-workflows-beyond-software.md</code></li>
+<li><code>../../blog/sl/governance-trust-and-security-in-ai-workflows.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Drugi jeziki</h2>
+            <ul>
+              <li><a href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="en">English</a></li>
+              <li><a href="../../learning/hr/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../learning/bs/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../learning/sr-Latn/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../learning/sr-Cyrl/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="mk">Македонски</a></li>
+              <li><a href="../../learning/sq/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="sq">Shqip</a></li>
+              <li><a href="../../learning/de/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="de">Deutsch</a></li>
+              <li><a href="../../learning/it/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="it">Italiano</a></li>
+              <li><a href="../../learning/fr/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="fr">Français</a></li>
+              <li><a href="../../learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Sorodne vsebine</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentacija</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Razvoj na podlagi specifikacij</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/sl/spec-driven-development-for-ai-projects.html"><span>Razvoj na podlagi specifikacij za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kdaj je demo dokaz in kdaj ni</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohranjati usklajenost specifikacije, dokumentacije, predstavitve in kode</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikacijo, ki ji lahko AI sledi</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj, ki temelji na specifikacijah</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/markdown-in-product-development.html"><span>Markdown v razvoju izdelkov</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/spec-driven-development.html"><span>Razvoj, voden s specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postopno dodajati validacijska pravila in vrata v CI</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati delo s pomočjo AI glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../topics/sl/demo-and-specification-alignment.html"><span>Usklajenost med demo prikazom in specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/ai-assisted-implementation.html"><span>Implementacija z AI-podporo</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.</p>
+            <p class="footer-note">Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.</p>
+            <p class="footer-microcopy">Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sl/index.html">Pregled</a>
+              <a href="../../topics/sl/index.html">Teme</a>
+              <a href="../../index.html">Domača stran</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Vsi jeziki</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

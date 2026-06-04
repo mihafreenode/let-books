@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Governance, fiducia e sicurezza nei workflow di AI | LetBooks</title>
+    <meta name="description" content="Perche i workflow assistiti dall&#x27;AI richiedono confini di fiducia espliciti, autorizzazione esterna al ragionamento dell&#x27;AI, integrazioni governate e revisione durevole con l&#x27;aumentare dell&#x27;automazione.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/it/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/governance-trust-and-security-in-ai-workflows.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Governance, fiducia e sicurezza nei workflow di AI | LetBooks">
+    <meta property="og:description" content="Perche i workflow assistiti dall&#x27;AI richiedono confini di fiducia espliciti, autorizzazione esterna al ragionamento dell&#x27;AI, integrazioni governate e revisione durevole con l&#x27;aumentare dell&#x27;automazione.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/it/governance-trust-and-security-in-ai-workflows.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Governance, fiducia e sicurezza nei workflow di AI | LetBooks">
+    <meta name="twitter:description" content="Perche i workflow assistiti dall&#x27;AI richiedono confini di fiducia espliciti, autorizzazione esterna al ragionamento dell&#x27;AI, integrazioni governate e revisione durevole con l&#x27;aumentare dell&#x27;automazione.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="it">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/it/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../it/index.html">Documentazione</a>
+            <a class="nav-link" href="../../blog/it/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/it/index.html">Materiale didattico</a>
+            <a class="nav-link" href="../../wiki/it/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/it/index.html">Temi</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/governance-trust-and-security-in-ai-workflows.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/governance-trust-and-security-in-ai-workflows.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/governance-trust-and-security-in-ai-workflows.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/governance-trust-and-security-in-ai-workflows.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/governance-trust-and-security-in-ai-workflows.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/governance-trust-and-security-in-ai-workflows.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/governance-trust-and-security-in-ai-workflows.html" lang="de">DE</a>
+              <a class="lang-link is-current" href="../../blog/it/governance-trust-and-security-in-ai-workflows.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/governance-trust-and-security-in-ai-workflows.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/governance-trust-and-security-in-ai-workflows.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Tutte le lingue</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../it/index.html">Documentazione</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/it/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Governance, fiducia e sicurezza nei workflow di AI</span>
+            </nav>
+            <h1>Governance, fiducia e sicurezza nei workflow di AI</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Italiano</span>
+          </div>
+          <p class="content-page-summary">Perche i workflow assistiti dall&#x27;AI richiedono confini di fiducia espliciti, autorizzazione esterna al ragionamento dell&#x27;AI, integrazioni governate e revisione durevole con l&#x27;aumentare dell&#x27;automazione.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temi:</span>
+              <span class="content-tag">Documentazione</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Quando i sistemi di AI passano da interfacce di chat passive a uso di strumenti, retrieval, automazione ed esecuzione di workflow, la governance diventa piu importante.</p>
+<p>E’ facile sottovalutarlo quando la discussione resta al livello della generazione di testo. Un assistente di scrittura puo sembrare soltanto un altro strumento di produttivita. Ma una volta che un sistema di AI puo leggere materiale interno, invocare strumenti, attivare workflow o preparare artefatti per la pubblicazione, l’organizzazione non governa piu soltanto la qualita dell’output. Governa il comportamento operativo.</p>
+<h2 id="i-confini-di-fiducia-sono-piu-ampi-di-quanto-fossero-un-tempo">I confini di fiducia sono piu ampi di quanto fossero un tempo</h2>
+<p>La sicurezza software tradizionale si e di solito concentrata sul codice eseguibile e sui sistemi privilegiati.</p>
+<p>Negli ambienti assistiti dall’AI, il confine e piu ampio.</p>
+<p>Specifiche, prompt, definizioni di workflow, descrizioni di skill e fonti di retrieval possono tutti influenzare il comportamento del sistema. Questo non rende pericoloso ogni documento, ma significa che il testo puo diventare operativo in modi che i modelli di governance piu vecchi non dovevano sempre considerare.</p>
+<p>Questo e uno dei motivi per cui le istituzioni si interessano sempre di piu all’origine delle istruzioni di workflow, a chi le abbia revisionate e a quali sistemi sia consentito agire in base a esse.</p>
+<h2 id="le-skill-di-terze-parti-e-le-integrazioni-meritano-scrutinio">Le skill di terze parti e le integrazioni meritano scrutinio</h2>
+<p>Gli ecosistemi AI stanno crescendo rapidamente. Vendor e comunita offrono skill, integrazioni, pacchetti di workflow e adattatori di strumenti per molti tipi di lavoro.</p>
+<p>Questo puo essere utile. Puo anche creare rischio.</p>
+<p>Le organizzazioni possono ragionevolmente preferire:</p>
+<ul>
+<li>skill sviluppate internamente</li>
+<li>definizioni di workflow revisionate istituzionalmente</li>
+<li>vendor affidabili</li>
+<li>integrazioni governate</li>
+</ul>
+<p>La questione importante non e se l’ecosistema corrente appartenga a OpenAI, Microsoft, Oracle o a un vendor futuro. La questione durevole e se l’organizzazione comprenda a cosa l’integrazione puo accedere, su cosa puo influire e come viene revisionata.</p>
+<h2 id="lautorizzazione-dovrebbe-restare-fuori-dal-ragionamento-dellai">L’autorizzazione dovrebbe restare fuori dal ragionamento dell’AI</h2>
+<p>Uno dei principi di progettazione piu forti nei workflow assistiti dall’AI e mantenere l’autorizzazione fuori dal sistema di AI ogni volta che e pratico.</p>
+<p>L’AI puo raccomandare un’azione, preparare una bozza o decidere quale passaggio del workflow sia successivamente rilevante. Ma il permesso effettivo di accedere ai dati, invocare sistemi, pubblicare contenuti o approvare modifiche dovrebbe idealmente essere imposto altrove.</p>
+<p>Questo significa di solito fare affidamento su:</p>
+<ul>
+<li>provider di identita</li>
+<li>controllo degli accessi basato sui ruoli</li>
+<li>permessi di database</li>
+<li>API gateway</li>
+<li>approvazioni di workflow</li>
+<li>gestione sicura delle credenziali</li>
+</ul>
+<p>Questa separazione conta perche impedisce che un intento generato venga confuso con un’autorita legittima.</p>
+<p>In particolare, le credenziali dovrebbero essere gestite da sistemi progettati per la gestione delle credenziali, non copiate nei prompt o incorporate con leggerezza nei documenti di workflow.</p>
+<h2 id="gli-ai-gateway-sono-un-modello-istituzionale-ragionevole">Gli AI gateway sono un modello istituzionale ragionevole</h2>
+<p>Alcuni team interagiranno direttamente con gli strumenti di AI. Altri preferiranno un modello a gateway.</p>
+<p>Un AI gateway puo centralizzare:</p>
+<ul>
+<li>autenticazione</li>
+<li>autorizzazione</li>
+<li>auditing</li>
+<li>applicazione delle policy</li>
+<li>monitoraggio</li>
+<li>accesso approvato agli strumenti</li>
+</ul>
+<p>Questo non e obbligatorio in ogni ambiente. I team piu piccoli possono ragionevolmente scegliere controlli piu leggeri.</p>
+<p>Ma per universita, istituzioni pubbliche, imprese, editori e ambienti regolati, i gateway sono spesso un modo pratico per introdurre l’AI senza rinunciare alla supervisione.</p>
+<h2 id="la-governance-cresce-di-valore-con-la-crescita-dellautomazione">La governance cresce di valore con la crescita dell’automazione</h2>
+<p>Esiste un’idea allettante ma sbagliata secondo cui una migliore automazione dovrebbe ridurre la necessita di governance.</p>
+<p>In pratica, spesso accade il contrario.</p>
+<p>Man mano che gli output diventano piu rapidi e i workflow piu agentici, le organizzazioni di solito hanno bisogno di un supporto piu forte per:</p>
+<ul>
+<li>responsabilita</li>
+<li>tracciabilita</li>
+<li>validazione</li>
+<li>revisione</li>
+<li>fiducia</li>
+<li>conservazione della conoscenza istituzionale</li>
+</ul>
+<p>Qui il pensiero guidato da specifiche torna utile. Collega obiettivi, standard, validatori, approvazioni e artefatti in una catena revisionabile.</p>
+<p>Quella catena rende piu facile fidarsi dell’automazione perche rende piu facile individuare la responsabilita.</p>
+<h2 id="la-lezione-durevole">La lezione durevole</h2>
+<p>I workflow assistiti dall’AI non dovrebbero essere governati solo al livello della scelta del modello o della qualita dei prompt.</p>
+<p>Dovrebbero essere governati al livello dei confini di fiducia, del controllo degli accessi, dell’integrazione degli strumenti, della revisione e della responsabilita istituzionale.</p>
+<p>Con l’aumentare dell’automazione, la governance diventa piu preziosa perche e cio che mantiene workflow potenti abbastanza sicuri da poter essere usati ripetutamente.</p>
+<h2 id="letture-correlate">Letture correlate</h2>
+<ul>
+<li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
+<li><code>../../wiki/validation-layers.md</code></li>
+<li><code>../../wiki/localization-governance.md</code></li>
+<li><code>../../learning/how-to-use-ai-workflows-for-non-software-knowledge-work.md</code></li>
+<li><code>ai-workflows-beyond-software.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Altre lingue</h2>
+            <ul>
+              <li><a href="../../blog/en/governance-trust-and-security-in-ai-workflows.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/governance-trust-and-security-in-ai-workflows.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/governance-trust-and-security-in-ai-workflows.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/governance-trust-and-security-in-ai-workflows.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/governance-trust-and-security-in-ai-workflows.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/governance-trust-and-security-in-ai-workflows.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/governance-trust-and-security-in-ai-workflows.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/fr/governance-trust-and-security-in-ai-workflows.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/governance-trust-and-security-in-ai-workflows.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Contenuti correlati</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Documentazione</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/it/documentation-is-part-of-the-product.html"><span>La documentazione è parte del prodotto</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/it/spec-driven-development-for-ai-projects.html"><span>Sviluppo guidato dalle specifiche per progetti di IA</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/it/how-to-write-a-spec-that-ai-can-follow.html"><span>Come scrivere una specifica che l&#x27;IA può seguire</span><span class="topic-menu__meta">Materiale didattico</span></a>
+                  <a href="../../learning/it/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Come mantenere allineati specifica, documentazione, demo e codice</span><span class="topic-menu__meta">Materiale didattico</span></a>
+                  <a href="../../wiki/it/spec-driven-development.html"><span>Sviluppo basato sulle specifiche</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/markdown-in-product-development.html"><span>Markdown nello sviluppo del prodotto</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/it/documentation-traceability.html"><span>Tracciabilità della documentazione</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/it/spec-driven-development.html"><span>Sviluppo guidato dalle specifiche</span><span class="topic-menu__meta">Temi</span></a>
+                  <a href="../../topics/it/book-metadata.html"><span>Metadati del libro</span><span class="topic-menu__meta">Temi</span></a>
+                  <a href="../../topics/it/cataloging.html"><span>Catalogazione</span><span class="topic-menu__meta">Temi</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Una piattaforma pratica per catalogare, offrire e recuperare libri educativi.</p>
+            <p class="footer-note">Copyright © contributori di Let Books. Il riuso segue la licenza del repository salvo diversa indicazione nella pagina.</p>
+            <p class="footer-microcopy">Prototipo alpha iniziale. Documentazione e testi dell&#x27;interfaccia sono assistiti dall&#x27;IA. Istituzioni e integrazioni citate negli esempi sono concettuali e non implicano partnership o sostegno.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../it/index.html">Panoramica</a>
+              <a href="../../topics/it/index.html">Temi</a>
+              <a href="../../index.html">Home page</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Tutte le lingue</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

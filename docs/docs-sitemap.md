@@ -1,13 +1,15 @@
 # LetBooks Sitemap
 
-Generated: 2026-06-02
+Generated: 2026-06-04
 
 | Path | Type | Priority |
 |------|------|----------|
 | [/docs/blog/bs/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/bs/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/bs/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/bs/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/bs/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/bs/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/bs/economics-of-localization.html](https://letbooks.org/docs/blog/bs/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/bs/future-of-continuous-localization.html](https://letbooks.org/docs/blog/bs/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/bs/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/bs/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/bs/index.html](https://letbooks.org/docs/blog/bs/index.html) | Blog Index | 0.7 |
 | [/docs/blog/bs/isbn-not-a-database.html](https://letbooks.org/docs/blog/bs/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/bs/localization-at-scale.html](https://letbooks.org/docs/blog/bs/localization-at-scale.html) | Blog Article | 0.6 |
@@ -21,9 +23,11 @@ Generated: 2026-06-02
 | [/docs/blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/bs/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/bs/why-every-language-matters.html](https://letbooks.org/docs/blog/bs/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/de/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/de/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/de/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/de/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/de/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/de/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/de/economics-of-localization.html](https://letbooks.org/docs/blog/de/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/de/future-of-continuous-localization.html](https://letbooks.org/docs/blog/de/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/de/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/de/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/de/index.html](https://letbooks.org/docs/blog/de/index.html) | Blog Index | 0.7 |
 | [/docs/blog/de/isbn-not-a-database.html](https://letbooks.org/docs/blog/de/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/de/localization-at-scale.html](https://letbooks.org/docs/blog/de/localization-at-scale.html) | Blog Article | 0.6 |
@@ -37,9 +41,11 @@ Generated: 2026-06-02
 | [/docs/blog/de/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/de/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/de/why-every-language-matters.html](https://letbooks.org/docs/blog/de/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/en/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/en/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/en/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/en/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/en/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/en/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/en/economics-of-localization.html](https://letbooks.org/docs/blog/en/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/en/future-of-continuous-localization.html](https://letbooks.org/docs/blog/en/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/en/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/en/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/en/index.html](https://letbooks.org/docs/blog/en/index.html) | Blog Index | 0.7 |
 | [/docs/blog/en/isbn-not-a-database.html](https://letbooks.org/docs/blog/en/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/en/localization-at-scale.html](https://letbooks.org/docs/blog/en/localization-at-scale.html) | Blog Article | 0.6 |
@@ -53,9 +59,11 @@ Generated: 2026-06-02
 | [/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/en/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/en/why-every-language-matters.html](https://letbooks.org/docs/blog/en/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/es/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/es/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/es/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/es/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/es/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/es/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/es/economics-of-localization.html](https://letbooks.org/docs/blog/es/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/es/future-of-continuous-localization.html](https://letbooks.org/docs/blog/es/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/es/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/es/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/es/index.html](https://letbooks.org/docs/blog/es/index.html) | Blog Index | 0.7 |
 | [/docs/blog/es/isbn-not-a-database.html](https://letbooks.org/docs/blog/es/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/es/localization-at-scale.html](https://letbooks.org/docs/blog/es/localization-at-scale.html) | Blog Article | 0.6 |
@@ -69,9 +77,11 @@ Generated: 2026-06-02
 | [/docs/blog/es/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/es/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/es/why-every-language-matters.html](https://letbooks.org/docs/blog/es/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/fr/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/fr/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/fr/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/fr/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/fr/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/fr/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/fr/economics-of-localization.html](https://letbooks.org/docs/blog/fr/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/fr/future-of-continuous-localization.html](https://letbooks.org/docs/blog/fr/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/fr/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/fr/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/fr/index.html](https://letbooks.org/docs/blog/fr/index.html) | Blog Index | 0.7 |
 | [/docs/blog/fr/isbn-not-a-database.html](https://letbooks.org/docs/blog/fr/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/fr/localization-at-scale.html](https://letbooks.org/docs/blog/fr/localization-at-scale.html) | Blog Article | 0.6 |
@@ -85,9 +95,11 @@ Generated: 2026-06-02
 | [/docs/blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/fr/why-every-language-matters.html](https://letbooks.org/docs/blog/fr/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/hr/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/hr/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/hr/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/hr/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/hr/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/hr/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/hr/economics-of-localization.html](https://letbooks.org/docs/blog/hr/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/hr/future-of-continuous-localization.html](https://letbooks.org/docs/blog/hr/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/hr/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/hr/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/hr/index.html](https://letbooks.org/docs/blog/hr/index.html) | Blog Index | 0.7 |
 | [/docs/blog/hr/isbn-not-a-database.html](https://letbooks.org/docs/blog/hr/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/hr/localization-at-scale.html](https://letbooks.org/docs/blog/hr/localization-at-scale.html) | Blog Article | 0.6 |
@@ -101,9 +113,11 @@ Generated: 2026-06-02
 | [/docs/blog/hr/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/hr/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/hr/why-every-language-matters.html](https://letbooks.org/docs/blog/hr/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/it/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/it/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/it/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/it/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/it/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/it/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/it/economics-of-localization.html](https://letbooks.org/docs/blog/it/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/it/future-of-continuous-localization.html](https://letbooks.org/docs/blog/it/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/it/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/it/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/it/index.html](https://letbooks.org/docs/blog/it/index.html) | Blog Index | 0.7 |
 | [/docs/blog/it/isbn-not-a-database.html](https://letbooks.org/docs/blog/it/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/it/localization-at-scale.html](https://letbooks.org/docs/blog/it/localization-at-scale.html) | Blog Article | 0.6 |
@@ -117,9 +131,11 @@ Generated: 2026-06-02
 | [/docs/blog/it/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/it/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/it/why-every-language-matters.html](https://letbooks.org/docs/blog/it/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/mk/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/mk/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/mk/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/mk/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/mk/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/mk/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/mk/economics-of-localization.html](https://letbooks.org/docs/blog/mk/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/mk/future-of-continuous-localization.html](https://letbooks.org/docs/blog/mk/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/mk/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/mk/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/mk/index.html](https://letbooks.org/docs/blog/mk/index.html) | Blog Index | 0.7 |
 | [/docs/blog/mk/isbn-not-a-database.html](https://letbooks.org/docs/blog/mk/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/mk/localization-at-scale.html](https://letbooks.org/docs/blog/mk/localization-at-scale.html) | Blog Article | 0.6 |
@@ -133,9 +149,11 @@ Generated: 2026-06-02
 | [/docs/blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/mk/why-every-language-matters.html](https://letbooks.org/docs/blog/mk/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/sl/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/sl/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/sl/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/sl/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/sl/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/sl/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/sl/economics-of-localization.html](https://letbooks.org/docs/blog/sl/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/sl/future-of-continuous-localization.html](https://letbooks.org/docs/blog/sl/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/sl/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/sl/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/sl/index.html](https://letbooks.org/docs/blog/sl/index.html) | Blog Index | 0.7 |
 | [/docs/blog/sl/isbn-not-a-database.html](https://letbooks.org/docs/blog/sl/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/sl/localization-at-scale.html](https://letbooks.org/docs/blog/sl/localization-at-scale.html) | Blog Article | 0.6 |
@@ -149,9 +167,11 @@ Generated: 2026-06-02
 | [/docs/blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/sl/why-every-language-matters.html](https://letbooks.org/docs/blog/sl/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/sq/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/sq/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/sq/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/sq/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/sq/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/sq/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/sq/economics-of-localization.html](https://letbooks.org/docs/blog/sq/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/sq/future-of-continuous-localization.html](https://letbooks.org/docs/blog/sq/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/sq/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/sq/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/sq/index.html](https://letbooks.org/docs/blog/sq/index.html) | Blog Index | 0.7 |
 | [/docs/blog/sq/isbn-not-a-database.html](https://letbooks.org/docs/blog/sq/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/sq/localization-at-scale.html](https://letbooks.org/docs/blog/sq/localization-at-scale.html) | Blog Article | 0.6 |
@@ -165,9 +185,11 @@ Generated: 2026-06-02
 | [/docs/blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/sq/why-every-language-matters.html](https://letbooks.org/docs/blog/sq/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Cyrl/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/sr-Cyrl/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/sr-Cyrl/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/sr-Cyrl/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Cyrl/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/sr-Cyrl/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Cyrl/economics-of-localization.html](https://letbooks.org/docs/blog/sr-Cyrl/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Cyrl/future-of-continuous-localization.html](https://letbooks.org/docs/blog/sr-Cyrl/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/sr-Cyrl/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Cyrl/index.html](https://letbooks.org/docs/blog/sr-Cyrl/index.html) | Blog Index | 0.7 |
 | [/docs/blog/sr-Cyrl/isbn-not-a-database.html](https://letbooks.org/docs/blog/sr-Cyrl/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Cyrl/localization-at-scale.html](https://letbooks.org/docs/blog/sr-Cyrl/localization-at-scale.html) | Blog Article | 0.6 |
@@ -181,9 +203,11 @@ Generated: 2026-06-02
 | [/docs/blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html](https://letbooks.org/docs/blog/sr-Cyrl/when-the-demo-is-evidence-and-when-it-is-not.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Cyrl/why-every-language-matters.html](https://letbooks.org/docs/blog/sr-Cyrl/why-every-language-matters.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Latn/ai-will-not-replace-translators.html](https://letbooks.org/docs/blog/sr-Latn/ai-will-not-replace-translators.html) | Blog Article | 0.6 |
+| [/docs/blog/sr-Latn/ai-workflows-beyond-software.html](https://letbooks.org/docs/blog/sr-Latn/ai-workflows-beyond-software.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Latn/documentation-is-part-of-the-product.html](https://letbooks.org/docs/blog/sr-Latn/documentation-is-part-of-the-product.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Latn/economics-of-localization.html](https://letbooks.org/docs/blog/sr-Latn/economics-of-localization.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Latn/future-of-continuous-localization.html](https://letbooks.org/docs/blog/sr-Latn/future-of-continuous-localization.html) | Blog Article | 0.6 |
+| [/docs/blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html](https://letbooks.org/docs/blog/sr-Latn/governance-trust-and-security-in-ai-workflows.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Latn/index.html](https://letbooks.org/docs/blog/sr-Latn/index.html) | Blog Index | 0.7 |
 | [/docs/blog/sr-Latn/isbn-not-a-database.html](https://letbooks.org/docs/blog/sr-Latn/isbn-not-a-database.html) | Blog Article | 0.6 |
 | [/docs/blog/sr-Latn/localization-at-scale.html](https://letbooks.org/docs/blog/sr-Latn/localization-at-scale.html) | Blog Article | 0.6 |
@@ -237,6 +261,7 @@ Generated: 2026-06-02
 | [/docs/learning/bs/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/bs/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/bs/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/bs/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/bs/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/bs/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/bs/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/bs/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/bs/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/bs/index.html](https://letbooks.org/docs/learning/bs/index.html) | Learning Index | 0.6 |
 | [/docs/learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -251,6 +276,7 @@ Generated: 2026-06-02
 | [/docs/learning/de/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/de/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/de/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/de/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/de/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/de/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/de/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/de/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/de/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/de/index.html](https://letbooks.org/docs/learning/de/index.html) | Learning Index | 0.6 |
 | [/docs/learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -265,6 +291,7 @@ Generated: 2026-06-02
 | [/docs/learning/en/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/en/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/en/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/en/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/en/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/en/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/en/index.html](https://letbooks.org/docs/learning/en/index.html) | Learning Index | 0.6 |
 | [/docs/learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -279,6 +306,7 @@ Generated: 2026-06-02
 | [/docs/learning/es/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/es/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/es/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/es/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/es/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/es/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/es/index.html](https://letbooks.org/docs/learning/es/index.html) | Learning Index | 0.6 |
 | [/docs/learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/fr/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -293,6 +321,7 @@ Generated: 2026-06-02
 | [/docs/learning/fr/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/fr/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/fr/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/fr/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/fr/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/fr/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/fr/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/fr/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/fr/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/fr/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/fr/index.html](https://letbooks.org/docs/learning/fr/index.html) | Learning Index | 0.6 |
 | [/docs/learning/hr/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/hr/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -307,6 +336,7 @@ Generated: 2026-06-02
 | [/docs/learning/hr/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/hr/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/hr/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/hr/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/hr/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/hr/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/hr/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/hr/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/hr/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/hr/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/hr/index.html](https://letbooks.org/docs/learning/hr/index.html) | Learning Index | 0.6 |
 | [/docs/learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/it/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -321,6 +351,7 @@ Generated: 2026-06-02
 | [/docs/learning/it/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/it/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/it/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/it/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/it/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/it/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/it/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/it/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/it/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/it/index.html](https://letbooks.org/docs/learning/it/index.html) | Learning Index | 0.6 |
 | [/docs/learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -335,6 +366,7 @@ Generated: 2026-06-02
 | [/docs/learning/mk/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/mk/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/mk/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/mk/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/mk/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/mk/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/mk/index.html](https://letbooks.org/docs/learning/mk/index.html) | Learning Index | 0.6 |
 | [/docs/learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -349,6 +381,7 @@ Generated: 2026-06-02
 | [/docs/learning/sl/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/sl/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/sl/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/sl/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/sl/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/sl/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/sl/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/sl/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/sl/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/sl/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/sl/index.html](https://letbooks.org/docs/learning/sl/index.html) | Learning Index | 0.6 |
 | [/docs/learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/sq/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -363,6 +396,7 @@ Generated: 2026-06-02
 | [/docs/learning/sq/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/sq/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/sq/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/sq/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/sq/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/sq/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/sq/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/sq/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/sq/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/sq/index.html](https://letbooks.org/docs/learning/sq/index.html) | Learning Index | 0.6 |
 | [/docs/learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/sr-Cyrl/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -377,6 +411,7 @@ Generated: 2026-06-02
 | [/docs/learning/sr-Cyrl/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/sr-Cyrl/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Cyrl/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/sr-Cyrl/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Cyrl/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/sr-Cyrl/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/sr-Cyrl/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/sr-Cyrl/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Cyrl/index.html](https://letbooks.org/docs/learning/sr-Cyrl/index.html) | Learning Index | 0.6 |
 | [/docs/learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html](https://letbooks.org/docs/learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html) | Learning Article | 0.6 |
@@ -391,6 +426,7 @@ Generated: 2026-06-02
 | [/docs/learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html](https://letbooks.org/docs/learning/sr-Latn/how-to-review-ai-assisted-work-against-the-spec.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Latn/how-to-run-localization-qa-in-ci.html](https://letbooks.org/docs/learning/sr-Latn/how-to-run-localization-qa-in-ci.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Latn/how-to-turn-a-product-spec-into-an-implementation-plan.html](https://letbooks.org/docs/learning/sr-Latn/how-to-turn-a-product-spec-into-an-implementation-plan.html) | Learning Article | 0.6 |
+| [/docs/learning/sr-Latn/how-to-use-ai-workflows-for-non-software-knowledge-work.html](https://letbooks.org/docs/learning/sr-Latn/how-to-use-ai-workflows-for-non-software-knowledge-work.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html](https://letbooks.org/docs/learning/sr-Latn/how-to-write-a-spec-that-ai-can-follow.html) | Learning Article | 0.6 |
 | [/docs/learning/sr-Latn/index.html](https://letbooks.org/docs/learning/sr-Latn/index.html) | Learning Index | 0.6 |
 | [/docs/mk/administrators.html](https://letbooks.org/docs/mk/administrators.html) | Doc Page | 0.8 |
@@ -614,6 +650,7 @@ Generated: 2026-06-02
 | [/docs/topics/sr-Latn/spec-driven-development.html](https://letbooks.org/docs/topics/sr-Latn/spec-driven-development.html) | Topics Article | 0.6 |
 | [/docs/topics/sr-Latn/translation-memory.html](https://letbooks.org/docs/topics/sr-Latn/translation-memory.html) | Topics Article | 0.6 |
 | [/docs/topics/sr-Latn/validation-layers.html](https://letbooks.org/docs/topics/sr-Latn/validation-layers.html) | Topics Article | 0.6 |
+| [/docs/wiki/bs/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/bs/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/bs/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/bs/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/bs/demo-spec-alignment.html](https://letbooks.org/docs/wiki/bs/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/bs/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/bs/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -641,6 +678,7 @@ Generated: 2026-06-02
 | [/docs/wiki/bs/translation-quality-assurance.html](https://letbooks.org/docs/wiki/bs/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/bs/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/bs/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/bs/validation-layers.html](https://letbooks.org/docs/wiki/bs/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/de/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/de/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/de/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/de/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/de/demo-spec-alignment.html](https://letbooks.org/docs/wiki/de/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/de/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/de/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -668,6 +706,7 @@ Generated: 2026-06-02
 | [/docs/wiki/de/translation-quality-assurance.html](https://letbooks.org/docs/wiki/de/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/de/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/de/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/de/validation-layers.html](https://letbooks.org/docs/wiki/de/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/en/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/en/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/en/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/en/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/en/demo-spec-alignment.html](https://letbooks.org/docs/wiki/en/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/en/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/en/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -695,6 +734,7 @@ Generated: 2026-06-02
 | [/docs/wiki/en/translation-quality-assurance.html](https://letbooks.org/docs/wiki/en/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/en/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/en/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/en/validation-layers.html](https://letbooks.org/docs/wiki/en/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/es/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/es/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/es/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/es/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/es/demo-spec-alignment.html](https://letbooks.org/docs/wiki/es/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/es/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/es/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -722,6 +762,7 @@ Generated: 2026-06-02
 | [/docs/wiki/es/translation-quality-assurance.html](https://letbooks.org/docs/wiki/es/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/es/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/es/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/es/validation-layers.html](https://letbooks.org/docs/wiki/es/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/fr/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/fr/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/fr/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/fr/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/fr/demo-spec-alignment.html](https://letbooks.org/docs/wiki/fr/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/fr/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/fr/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -749,6 +790,7 @@ Generated: 2026-06-02
 | [/docs/wiki/fr/translation-quality-assurance.html](https://letbooks.org/docs/wiki/fr/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/fr/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/fr/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/fr/validation-layers.html](https://letbooks.org/docs/wiki/fr/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/hr/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/hr/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/hr/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/hr/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/hr/demo-spec-alignment.html](https://letbooks.org/docs/wiki/hr/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/hr/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/hr/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -776,6 +818,7 @@ Generated: 2026-06-02
 | [/docs/wiki/hr/translation-quality-assurance.html](https://letbooks.org/docs/wiki/hr/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/hr/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/hr/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/hr/validation-layers.html](https://letbooks.org/docs/wiki/hr/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/it/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/it/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/it/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/it/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/it/demo-spec-alignment.html](https://letbooks.org/docs/wiki/it/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/it/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/it/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -803,6 +846,7 @@ Generated: 2026-06-02
 | [/docs/wiki/it/translation-quality-assurance.html](https://letbooks.org/docs/wiki/it/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/it/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/it/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/it/validation-layers.html](https://letbooks.org/docs/wiki/it/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/mk/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/mk/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/mk/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/mk/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/mk/demo-spec-alignment.html](https://letbooks.org/docs/wiki/mk/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/mk/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/mk/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -830,6 +874,7 @@ Generated: 2026-06-02
 | [/docs/wiki/mk/translation-quality-assurance.html](https://letbooks.org/docs/wiki/mk/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/mk/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/mk/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/mk/validation-layers.html](https://letbooks.org/docs/wiki/mk/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/sl/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/sl/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sl/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/sl/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sl/demo-spec-alignment.html](https://letbooks.org/docs/wiki/sl/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sl/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/sl/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -857,6 +902,7 @@ Generated: 2026-06-02
 | [/docs/wiki/sl/translation-quality-assurance.html](https://letbooks.org/docs/wiki/sl/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sl/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/sl/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sl/validation-layers.html](https://letbooks.org/docs/wiki/sl/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/sq/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/sq/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sq/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/sq/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sq/demo-spec-alignment.html](https://letbooks.org/docs/wiki/sq/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sq/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/sq/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -884,6 +930,7 @@ Generated: 2026-06-02
 | [/docs/wiki/sq/translation-quality-assurance.html](https://letbooks.org/docs/wiki/sq/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sq/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/sq/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sq/validation-layers.html](https://letbooks.org/docs/wiki/sq/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/sr-Cyrl/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/sr-Cyrl/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Cyrl/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/sr-Cyrl/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Cyrl/demo-spec-alignment.html](https://letbooks.org/docs/wiki/sr-Cyrl/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Cyrl/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/sr-Cyrl/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |
@@ -911,6 +958,7 @@ Generated: 2026-06-02
 | [/docs/wiki/sr-Cyrl/translation-quality-assurance.html](https://letbooks.org/docs/wiki/sr-Cyrl/translation-quality-assurance.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Cyrl/unicode-and-script-correctness.html](https://letbooks.org/docs/wiki/sr-Cyrl/unicode-and-script-correctness.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Cyrl/validation-layers.html](https://letbooks.org/docs/wiki/sr-Cyrl/validation-layers.html) | Wiki Article | 0.5 |
+| [/docs/wiki/sr-Latn/ai-assisted-knowledge-work.html](https://letbooks.org/docs/wiki/sr-Latn/ai-assisted-knowledge-work.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Latn/ai-assisted-translation-policy.html](https://letbooks.org/docs/wiki/sr-Latn/ai-assisted-translation-policy.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Latn/demo-spec-alignment.html](https://letbooks.org/docs/wiki/sr-Latn/demo-spec-alignment.html) | Wiki Article | 0.5 |
 | [/docs/wiki/sr-Latn/documentation-is-more-than-a-website.html](https://letbooks.org/docs/wiki/sr-Latn/documentation-is-more-than-a-website.html) | Wiki Article | 0.5 |

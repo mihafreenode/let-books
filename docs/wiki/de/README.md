@@ -34,3 +34,4 @@ Verwenden Sie diesen Bereich für stabile Konzeptseiten, kurze verlinkte Erklär
 - `documentation-traceability.md`
 - `validation-layers.md`
 - `markdown-in-product-development.md`
+- `ai-assisted-knowledge-work.md`

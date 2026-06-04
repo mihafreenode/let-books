@@ -42,6 +42,7 @@ Frontmatter is added by `tools/add-md-frontmatter.mjs`.
 
 ## Related Learning Guides
 
+- `how-to-use-ai-workflows-for-non-software-knowledge-work.md`
 - `how-to-build-a-localization-pipeline.md`
 - `how-to-review-ai-assisted-translations.md`
 - `how-to-run-localization-qa-in-ci.md`

@@ -14,3 +14,4 @@ Guides courts pour rédiger des spécifications, planifier l'implémentation et 
 - [Comment gérer la terminologie entre les langues](./how-to-manage-terminology-across-languages.md)
 - [Comment mesurer la maturité de traduction](./how-to-measure-translation-maturity.md)
 - [Comment exécuter le QA de localisation dans le CI](./how-to-run-localization-qa-in-ci.md)
+- [Comment utiliser des workflows d'IA pour le travail de connaissance hors logiciel](./how-to-use-ai-workflows-for-non-software-knowledge-work.md)

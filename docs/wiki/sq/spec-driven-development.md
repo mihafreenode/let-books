@@ -65,6 +65,7 @@ Në Let Books, zhvillimi i drejtuar nga specifikat mbështetet nga:
 
 ## Faqe të ngjashme
 
+- `ai-assisted-knowledge-work.md`
 - `demo-spec-alignment.md`
 - `../../learning/sq/how-to-write-a-spec-that-ai-can-follow.md`
 - `../../blog/sq/spec-driven-development-for-ai-projects.md`

@@ -34,3 +34,4 @@ Koristite ovo područje za stabilne konceptualne stranice, objašnjenja s kratki
 - `documentation-traceability.md`
 - `validation-layers.md`
 - `markdown-in-product-development.md`
+- `ai-assisted-knowledge-work.md`

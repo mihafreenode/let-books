@@ -34,3 +34,4 @@ Utilice esta área para páginas de conceptos estables, explicaciones con enlace
 - `documentation-traceability.md`
 - `validation-layers.md`
 - `markdown-in-product-development.md`
+- `ai-assisted-knowledge-work.md`

@@ -65,6 +65,7 @@ topics:
 
 ## Повезане странице
 
+- `ai-assisted-knowledge-work.md`
 - `demo-spec-alignment.md`
 - `../../learning/sr-Cyrl/how-to-write-a-spec-that-ai-can-follow.md`
 - `../../blog/sr-Cyrl/spec-driven-development-for-ai-projects.md`

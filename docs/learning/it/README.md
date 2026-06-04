@@ -14,3 +14,4 @@ Guide brevi per scrivere specifiche, pianificare l'implementazione e verificare 
 - [Come gestire la terminologia tra lingue](./how-to-manage-terminology-across-languages.md)
 - [Come misurare la maturità della traduzione](./how-to-measure-translation-maturity.md)
 - [Come eseguire QA di localizzazione in CI](./how-to-run-localization-qa-in-ci.md)
+- [Come usare i workflow di AI per il lavoro della conoscenza al di fuori dello sviluppo software](./how-to-use-ai-workflows-for-non-software-knowledge-work.md)

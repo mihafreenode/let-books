@@ -46,6 +46,7 @@ Frontmatter is added by `tools/add-md-frontmatter.mjs`.
 
 ## Related Wiki Pages
 
+- `ai-assisted-knowledge-work.md`
 - `localization-at-scale.md`
 - `language-support-matrix.md`
 - `localization-maturity-model.md`
