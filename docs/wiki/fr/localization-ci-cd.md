@@ -16,12 +16,26 @@ La localisation CI/CD valide en permanence le contenu multilingue afin que les r
 ## Chèques souhaités
 
 - cohérence de l'inventaire local
+- génération fraîche du site avant la revue de parité
 - validation du lien
 - génération d'articles et de pages
 - vérification orthographique si disponible
 - parité d'espace réservé
 - tests de fumée d'accessibilité
 - vérifications de la couverture des captures d'écran et des diagrammes
+
+## Règle de génération fraîche
+
+Les workflows de CI et de revue de localisation ne doivent pas fonder les constats de parité sur des artefacts générés obsolètes.
+
+Séquence requise :
+
+1. générer le site à partir de l'état actuel du dépôt
+2. exécuter les validateurs sur la sortie fraîchement générée
+3. si nécessaire, examiner le HTML généré
+4. si nécessaire, examiner la sortie rendue
+
+Cela importe parce que le Markdown source, le HTML généré, la sortie déployée et le comportement rendu dans le navigateur peuvent temporairement diverger pendant le développement.
 
 ## Progression des classes de défauts
 
@@ -56,10 +70,11 @@ Le contrat actuel de navigation dans les articles publics est :
 
 La génération et la validation doivent avoir lieu dans cet ordre :
 
-1. générer l'article HTML
-2. générer des pages d'index
-3. exécutez tout post-traitement de navigation restant uniquement s'il est toujours nécessaire
-4. valider la sortie
+1. générer le HTML de l'article
+2. générer les pages d'index
+3. exécuter tout post-traitement de navigation restant uniquement s'il est encore nécessaire
+4. valider la sortie fraîchement générée
+5. examiner le HTML généré ou la sortie rendue si le workflow exige une évaluation humaine de la parité
 
 Si un validateur attend toujours le bloc `topic-nav` hérité, mettez à jour le validateur avec le contrat actuel au lieu d'appliquer les correctifs générés HTML.
 

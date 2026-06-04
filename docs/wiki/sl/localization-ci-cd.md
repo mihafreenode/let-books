@@ -16,12 +16,26 @@ Lokalizacijski CI/CD neprekinjeno preverja večjezično vsebino, tako da se manj
 ## Želeni pregledi
 
 - doslednost inventarja lokalne nastavitve
+- sveže generiranje spletnega mesta pred pregledom paritete
 - preverjanje povezave
 - generiranje člankov in strani
 - preverjanje črkovanja, kjer je na voljo
 - pariteta nadomestnih znakov
 - preizkusi dima dostopnosti
 - preverjanje pokritosti posnetkov zaslona in diagramov
+
+## Pravilo svežega generiranja
+
+Poteki lokalizacijskega CI in pregledov ne smejo utemeljevati ugotovitev o pariteti na zastarelih generiranih artefaktih.
+
+Zahtevano zaporedje:
+
+1. generirajte spletno mesto iz trenutnega stanja repozitorija
+2. zaženite validatorje nad sveže generiranim izhodom
+3. po potrebi preglejte generirani HTML
+4. po potrebi preglejte izrisan izhod
+
+To je pomembno, ker se lahko izvorni Markdown, generirani HTML, objavljen izhod in v brskalniku izrisano vedenje med razvojem začasno razlikujejo.
 
 ## Napredovanje razreda napak
 
@@ -56,10 +70,11 @@ Trenutna pogodba o krmarjenju po javnih člankih je:
 
 Generiranje in preverjanje morata potekati v tem vrstnem redu:
 
-1. ustvari člen HTML
-2. ustvarjanje indeksnih strani
-3. zaženite morebitno preostalo naknadno obdelavo navigacije samo, če je še potrebna
-4. potrdi izhod
+1. generirajte HTML člankov
+2. generirajte indeksne strani
+3. zaženite morebitno preostalo naknadno obdelavo navigacije samo, če je še vedno potrebna
+4. preverite sveže generiran izhod
+5. preglejte generirani HTML ali izrisan izhod, če potek dela zahteva človeško oceno paritete
 
 Če validator še vedno pričakuje podedovan blok `topic-nav`, ga posodobite na trenutno pogodbo, namesto da popravljate ustvarjene HTML.
 

@@ -16,12 +16,26 @@ Lokalizimi CI/CD vërteton vazhdimisht përmbajtjen shumëgjuhëshe, kështu që
 ## Kontrolle të dëshiruara
 
 - Konsistenca e inventarit lokal
+- gjenerim i freskët i sajtit përpara rishikimit të barazisë
 - vërtetimi i lidhjes
 - gjenerimi i artikujve dhe faqeve
 - kontrolloni drejtshkrimin ku është e mundur
 - barazia e mbajtësve të vendit
 - testet e tymit të aksesueshmërisë
 - kontrollet e mbulimit të pamjes së ekranit dhe diagramit
+
+## Rregulli i gjenerimit të freskët
+
+Rrjedhat e CI-së dhe të rishikimit të lokalizimit nuk duhet t'i bazojnë gjetjet e barazisë në artefakte të gjeneruara të vjetruara.
+
+Rendi i kërkuar:
+
+1. gjeneroni sajtin nga gjendja aktuale e depozitës
+2. ekzekutoni vërtetuesit kundrejt daljes së sapogjeneruar
+3. kur duhet, shqyrtoni HTML-në e gjeneruar
+4. kur duhet, shqyrtoni daljen e paraqitur
+
+Kjo ka rëndësi sepse Markdown-i burimor, HTML-ja e gjeneruar, dalja e publikuar dhe sjellja e paraqitur në shfletues mund të ndryshojnë përkohësisht gjatë zhvillimit.
 
 ## Përparim i klasës së defektit
 
@@ -56,10 +70,11 @@ Kontrata aktuale e lundrimit të artikujve publik është:
 
 Gjenerimi dhe vërtetimi duhet të ndodhin në këtë rend:
 
-1. gjeneroni artikullin HTML
-2. gjenerojnë faqet e indeksit
-3. ekzekutoni çdo navigim të mbetur pas përpunimit vetëm nëse kërkohet ende
-4. vërtetoni daljen
+1. gjeneroni HTML-në e artikullit
+2. gjeneroni faqet e indeksit
+3. ekzekutoni çdo paspërpunim të mbetur të navigimit vetëm nëse kërkohet ende
+4. vërtetoni daljen e sapogjeneruar
+5. shqyrtoni HTML-në e gjeneruar ose daljen e paraqitur nëse rrjedha e punës kërkon vlerësim njerëzor të barazisë
 
 Nëse një vërtetues ende pret bllokun e trashëguar `topic-nav`, përditësoni verifikuesin me kontratën aktuale në vend që të korrigjoni HTML të krijuara.
 

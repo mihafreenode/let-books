@@ -16,12 +16,26 @@ La localizzazione CI/CD convalida continuamente i contenuti multilingue in modo 
 ## Controlli desiderati
 
 - Coerenza dell'inventario locale
+- generazione fresca del sito prima della revisione di parità
 - convalida del collegamento
 - generazione di articoli e pagine
 - controllo ortografico ove disponibile
 - Parità segnaposto
 - prove di fumo di accessibilità
 - controlli di copertura di screenshot e diagrammi
+
+## Regola della generazione fresca
+
+I flussi di CI e revisione della localizzazione non devono basare i risultati di parità su artefatti generati obsoleti.
+
+Sequenza richiesta:
+
+1. generare il sito dallo stato corrente del repository
+2. eseguire i validatori sull'output appena generato
+3. quando necessario, esaminare l'HTML generato
+4. quando necessario, esaminare l'output renderizzato
+
+Questo è importante perché Markdown sorgente, HTML generato, output distribuito e comportamento renderizzato nel browser possono divergere temporaneamente durante lo sviluppo.
 
 ## Progressione della classe difettosa
 
@@ -56,10 +70,11 @@ L'attuale contratto di navigazione di articoli pubblici è:
 
 La generazione e la convalida dovrebbero avvenire in questo ordine:
 
-1. generare l'articolo HTML
-2. generare pagine indice
-3. eseguire l'eventuale post-elaborazione della navigazione rimanente solo se ancora necessario
-4. convalidare l'output
+1. generare l'HTML dell'articolo
+2. generare le pagine indice
+3. eseguire l'eventuale post-elaborazione residua della navigazione solo se ancora necessaria
+4. convalidare l'output appena generato
+5. esaminare l'HTML generato o l'output renderizzato se il flusso di lavoro richiede una valutazione umana della parità
 
 Se un validatore si aspetta ancora il blocco legacy `topic-nav`, aggiorna il validatore al contratto corrente invece di applicare la patch generata HTML.
 

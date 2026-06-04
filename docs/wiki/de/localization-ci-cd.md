@@ -16,12 +16,26 @@ Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehle
 ## Gewünschte Schecks
 
 - Konsistenz des lokalen Inventars
+- frische Site-Generierung vor der Paritätsprüfung
 - Linkvalidierung
 - Artikel- und Seitenerstellung
 - Rechtschreibprüfung, sofern verfügbar
 - Platzhalterparität
 - Rauchtests zur Zugänglichkeit
 - Überprüfung der Screenshot- und Diagrammabdeckung
+
+## Regel für frische Generierung
+
+Lokalisierungs-CI- und Review-Workflows dürfen Paritätsbefunde nicht auf veraltete generierte Artefakte stützen.
+
+Erforderliche Reihenfolge:
+
+1. die Site aus dem aktuellen Repository-Stand generieren
+2. Validatoren gegen die frisch generierte Ausgabe ausführen
+3. bei Bedarf generiertes HTML prüfen
+4. bei Bedarf gerenderte Ausgabe prüfen
+
+Das ist wichtig, weil Quell-Markdown, generiertes HTML, bereitgestellte Ausgabe und im Browser gerendertes Verhalten während der Entwicklung vorübergehend auseinanderlaufen können.
 
 ## Fortschritt der Fehlerklasse
 
@@ -56,10 +70,11 @@ Der aktuelle Vertrag zur Navigation öffentlicher Artikel lautet:
 
 Generierung und Validierung sollten in dieser Reihenfolge erfolgen:
 
-1. Artikel HTML generieren
+1. Artikel-HTML generieren
 2. Indexseiten generieren
-3. Führen Sie die verbleibende Navigationsnachbearbeitung nur aus, wenn dies noch erforderlich ist
-4. Validieren Sie die Ausgabe
+3. verbleibende Navigationsnachbearbeitung nur ausführen, wenn sie noch erforderlich ist
+4. frisch generierte Ausgabe validieren
+5. generiertes HTML oder gerenderte Ausgabe prüfen, wenn der Workflow eine menschliche Paritätsbewertung verlangt
 
 Wenn ein Validator immer noch den alten `topic-nav`-Block erwartet, aktualisieren Sie den Validator auf den aktuellen Vertrag, anstatt die generierten HTML zu patchen.
 

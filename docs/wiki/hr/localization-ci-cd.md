@@ -16,12 +16,26 @@ Lokalizacijski CI/CD kontinuirano provjerava višejezični sadržaj tako da se n
 ## Željene provjere
 
 - dosljednost inventara lokalizacije
+- svježe generiranje stranice prije pregleda pariteta
 - provjera valjanosti veze
 - generiranje članaka i stranica
 - provjera pravopisa gdje je dostupna
 - paritet rezerviranog mjesta
 - testovi pristupačnosti dima
 - provjere pokrivenosti snimke zaslona i dijagrama
+
+## Pravilo svježeg generiranja
+
+CI i radni tokovi pregleda lokalizacije ne smiju temeljiti nalaze o paritetu na zastarjelim generiranim artefaktima.
+
+Obvezni redoslijed:
+
+1. generirajte stranicu iz trenutačnog stanja repozitorija
+2. pokrenite validatore nad svježe generiranim izlazom
+3. po potrebi pregledajte generirani HTML
+4. po potrebi pregledajte prikazani izlaz
+
+To je važno zato što se izvorni Markdown, generirani HTML, objavljeni izlaz i ponašanje prikazano u pregledniku mogu privremeno razilaziti tijekom razvoja.
 
 ## Progresija klase nedostataka
 
@@ -56,10 +70,11 @@ Trenutačni javni ugovor o kretanju člankom je:
 
 Generiranje i provjera valjanosti trebaju se odvijati ovim redoslijedom:
 
-1. generiraj članak HTML
-2. generirati indeksne stranice
+1. generirajte HTML članka
+2. generirajte indeksne stranice
 3. pokrenite preostalu naknadnu obradu navigacije samo ako je još potrebna
-4. potvrditi izlaz
+4. validirajte svježe generirani izlaz
+5. pregledajte generirani HTML ili prikazani izlaz ako radni tok zahtijeva ljudsku procjenu pariteta
 
 Ako validator i dalje očekuje naslijeđeni blok `topic-nav`, ažurirajte validator na trenutni ugovor umjesto krpanja generiranog HTML.
 
