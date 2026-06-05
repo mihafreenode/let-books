@@ -1,7 +1,7 @@
 ---
 title: "Memorie di traduzione e glossari"
 summary: >-
-  I sistemi di memoria di traduzione e glossario migliorano la coerenza, riducono i costi di revisione e preservano le decisioni linguistiche istituzionali.
+  Le memorie di traduzione e i glossari migliorano la coerenza, riducono il lavoro di revisione e conservano le decisioni linguistiche istituzionali.
 topics:
   - terminology
   - localization
@@ -11,14 +11,14 @@ topics:
 
 ## Riepilogo
 
-I sistemi di memoria di traduzione e glossario migliorano la coerenza, riducono i costi di revisione e preservano le decisioni linguistiche istituzionali.
+Le memorie di traduzione e i glossari migliorano la coerenza, riducono il lavoro di revisione e conservano le decisioni linguistiche istituzionali.
 
 ## Perché contano
 
 - le frasi ripetute rimangono stabili
-- i team più piccoli sprecano meno sforzi
-- il vocabolario tecnico diventa insegnabile
-- I disaccordi tra i revisori si riducono nel tempo
+- i team più piccoli devono sostenere meno lavoro aggiuntivo
+- il lessico tecnico diventa più facile da usare in modo coerente
+- i disaccordi tra i revisori si riducono nel tempo
 
 ## Pagine correlate
 

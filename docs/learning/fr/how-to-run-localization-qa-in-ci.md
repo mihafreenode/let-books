@@ -21,9 +21,9 @@ Ce guide décrit comment transformer des attentes récurrentes de relecture de l
 - incohérences de placeholders
 - métadonnées mal formées
 
-## Ajouter plus tard des contrôles plus difficiles
+## Ajouter ensuite des contrôles plus exigeants
 
-- vérification orthographique dans de nombreuses langues
+- vérification orthographique dans plusieurs langues
 - tests de base d'accessibilité
 - cohérence des captures d'écran
 - parité des diagrammes

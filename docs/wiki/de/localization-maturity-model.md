@@ -1,7 +1,7 @@
 ---
 title: "Lokalisierungsreifemodell"
 summary: >-
-  Das Lokalisierungsreifemodell definiert abgestufte Qualitätsstufen, sodass sich die Übersetzungsabdeckung im Laufe der Zeit ehrlich verbessern kann.
+  Das Lokalisierungsreifemodell beschreibt abgestufte Qualitätsstufen, damit sich die Übersetzungsabdeckung im Lauf der Zeit nachvollziehbar verbessern lässt.
 topics:
   - localization
   - translation-quality
@@ -11,21 +11,21 @@ topics:
 
 ## Zusammenfassung
 
-Das Lokalisierungsreifemodell definiert abgestufte Qualitätsstufen, sodass sich die Übersetzungsabdeckung im Laufe der Zeit ehrlich verbessern kann.
+Das Lokalisierungsreifemodell beschreibt abgestufte Qualitätsstufen, damit sich die Übersetzungsabdeckung im Lauf der Zeit nachvollziehbar verbessern lässt.
 
 ## Ebenen
 
 - Stufe 0: nur Ausgangssprache
 - Stufe 1: maschinell übersetzter Entwurf
 - Stufe 2: Rechtschreibprüfung
-- Stufe 3: automatisiert QA validiert
-- Stufe 4: Community überprüft
-- Stufe 5: Von Muttersprachlern überprüft
-- Stufe 6: professionell überprüft
+- Stufe 3: automatisiert per QA geprüft
+- Stufe 4: von der Community geprüft
+- Stufe 5: von Muttersprachlern geprüft
+- Stufe 6: professionell geprüft
 
 ## Warum das wichtig ist
 
-Das Modell hilft Projekten, die falsche Wahl zwischen perfekter Parität und überhaupt keiner Lokalisierung zu vermeiden.
+Das Modell hilft Projekten, die falsche Wahl zwischen vollständiger Parität und ganz fehlender Lokalisierung zu vermeiden.
 
 ## Verwandte Seiten
 

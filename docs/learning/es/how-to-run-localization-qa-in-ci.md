@@ -21,9 +21,9 @@ Esta guía describe cómo convertir expectativas recurrentes de revisión de loc
 - desajustes de placeholders
 - metadatos mal formados
 
-## Añadir después comprobaciones más difíciles
+## Añadir después comprobaciones más exigentes
 
-- corrección ortográfica en muchos idiomas
+- corrección ortográfica en varios idiomas
 - pruebas básicas de accesibilidad
 - coherencia de capturas de pantalla
 - paridad de diagramas

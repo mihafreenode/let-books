@@ -1,7 +1,7 @@
 ---
 title: "Kujtesa dhe fjalorët e përkthimit"
 summary: >-
-  Memoria e përkthimit dhe sistemet e fjalorit përmirësojnë qëndrueshmërinë, ulin koston e rishikimit dhe ruajnë vendimet gjuhësore institucionale.
+  Kujtesa e përkthimit dhe fjalorët përmirësojnë qëndrueshmërinë, ulin punën e rishikimit dhe ruajnë vendimet gjuhësore institucionale.
 topics:
   - terminology
   - localization
@@ -11,13 +11,13 @@ topics:
 
 ## Përmbledhje
 
-Memoria e përkthimit dhe sistemet e fjalorit përmirësojnë qëndrueshmërinë, ulin koston e rishikimit dhe ruajnë vendimet gjuhësore institucionale.
+Kujtesa e përkthimit dhe fjalorët përmirësojnë qëndrueshmërinë, ulin punën e rishikimit dhe ruajnë vendimet gjuhësore institucionale.
 
 ## Pse kanë rëndësi
 
-- Frazat e përsëritura qëndrojnë të qëndrueshme
-- Ekipet më të vogla harxhojnë më pak përpjekje
-- fjalori teknik bëhet i mësueshëm
+- frazat e përsëritura mbeten të qëndrueshme
+- ekipet më të vogla kanë më pak punë shtesë
+- terminologjia teknike bëhet më e lehtë për t'u përdorur në mënyrë të njëtrajtshme
 - mosmarrëveshjet e recensentëve zvogëlohen me kalimin e kohës
 
 ## Faqe të ngjashme
