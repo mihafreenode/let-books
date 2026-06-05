@@ -106,14 +106,16 @@
           </div>
             <hr class="content-header-divider">
           </header>
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<p class="lead">Validierungsebenen sind die verschiedenen Wege, auf denen ein Projekt prüft, ob Implementierung, Dokumentation und Bereitstellungsartefakte noch den vorgesehenen Regeln und Qualitätserwartungen entsprechen.</p>
 <h2 id="warum-schichten-wichtig-sind">Warum Schichten wichtig sind</h2>
-<p>Keine einzelne Validierungsmethode reicht aus.</p>
+<p>Keine einzelne Form der Validierung reicht aus.</p>
 <ul>
 <li>Dokumentation allein erzwingt kein Verhalten</li>
 <li>Tests allein können die falschen Annahmen bestätigen</li>
 <li>CI allein kann nicht die Regeln definieren, die es durchsetzen soll</li>
 </ul>
-<p>Ein mehrschichtiger Ansatz ist stärker, da jede Schicht eine andere Driftklasse erfasst.</p>
+<p>Ein mehrschichtiger Ansatz ist belastbarer, weil jede Schicht eine andere Art von Drift erfasst.</p>
 <h2 id="gemeinsame-validierungsebenen">Gemeinsame Validierungsebenen</h2>
 <h3 id="spezifikation-und-anleitung">1. Spezifikation und Anleitung</h3>
 <p>Die erste Ebene definiert die Regel.</p>
@@ -129,13 +131,13 @@
 <h3 id="bereitstellungsprüfungen">6. Bereitstellungsprüfungen</h3>
 <p>Bereitstellungsworkflows bestätigen, dass die erstellten Artefakte weiterhin veröffentlichbar und strukturell einwandfrei sind.</p>
 <h2 id="wie-sich-die-ebenen-verhalten-sollten">Wie sich die Ebenen verhalten sollten</h2>
-<p>Die Schichten sollten sich gegenseitig verstärken, um:</p>
+<p>Die Schichten sollten sich in dieser Reihenfolge gegenseitig verstärken:</p>
 <ul>
 <li>Dokumente und Spezifikationen definieren Erwartungen</li>
 <li>Die Überprüfung interpretiert diese Erwartungen im Kontext</li>
 <li>Validierungsskripte und Tests automatisieren stabile Teile der Überprüfung</li>
 <li>CI führt diese Prüfungen konsequent durch</li>
-<li>Durch die Bereitstellung wird sichergestellt, dass die Ausgabe tatsächlich versendet werden kann</li>
+<li>die Bereitstellung stellt sicher, dass die Ausgabe tatsächlich ausgeliefert werden kann</li>
 </ul>
 <h2 id="gute-frühe-validierungsziele">Gute frühe Validierungsziele</h2>
 <p>Beispiele für starke Frühkandidaten sind:</p>

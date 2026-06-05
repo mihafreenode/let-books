@@ -11,34 +11,34 @@ topics:
 
 ## Résumé
 
-Le développement basé sur les spécifications est une approche dans laquelle des définitions explicites de produits et de flux de travail guident la mise en œuvre, la documentation, la révision et la vérification.
+Le développement basé sur les spécifications est une approche dans laquelle des définitions claires du produit et des flux de travail guident la mise en œuvre, la documentation, la révision et la vérification.
 
 ## Définition
 
-Dans cette approche, une spécification n’est pas seulement un artefact de planification initial. Il sert de référence permanente pour :
+Dans cette approche, une spécification n’est pas seulement un artefact initial de planification. Elle sert de point de référence permanent pour :
 
 - objectif du produit
 - limites du champ d'application
 - comportement requis
 - critères d'acceptation
-- revoir les normes
+- les critères de revue
 
 ## Pourquoi c'est important dans le travail assisté par l'IA
 
 L’IA augmente la vitesse de livraison, mais elle peut également augmenter la dérive des produits lorsque l’intention est vague.
 
-Le développement basé sur les spécifications aide en offrant aux équipes une source stable de vérité qui peut être examinée, mise à jour et utilisée pour évaluer les résultats générés.
+Le développement basé sur les spécifications aide en donnant aux équipes un repère stable qu’elles peuvent relire, mettre à jour et utiliser pour évaluer les résultats générés.
 
 ## Couches typiques
 
 Les couches courantes dans un système basé sur les spécifications comprennent :
 
 - spécification du produit
-- conseils de mise en œuvre
+- consignes d’implémentation
 - documentation actuelle
 - comportement de la démo ou de l'application
 - règles et tests de validation
-- Application CI/CD
+- application des règles via CI/CD
 
 ## Mode d'échec commun
 

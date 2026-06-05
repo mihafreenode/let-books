@@ -11,7 +11,7 @@ topics:
 
 ## Riepilogo
 
-I livelli di convalida sono i diversi modi in cui un progetto verifica se l'implementazione, la documentazione e gli artefatti di consegna corrispondono ancora alle regole previste e alle aspettative di qualità.
+I livelli di convalida sono i diversi modi in cui un progetto verifica se implementazione, documentazione e artefatti di consegna corrispondono ancora alle regole previste e alle aspettative di qualità.
 
 ## Perché i livelli sono importanti
 
@@ -21,7 +21,7 @@ Nessun singolo metodo di validazione è sufficiente.
 - I test da soli possono convalidare le ipotesi errate
 - La CI da sola non può definire le regole che dovrebbe applicare
 
-Un approccio a strati è più forte perché ogni strato rileva una diversa classe di deriva.
+Un approccio a strati è più solido perché ogni strato intercetta una forma diversa di deriva.
 
 ## Livelli di convalida comuni
 
@@ -53,13 +53,13 @@ I flussi di lavoro di distribuzione confermano che gli artefatti creati sono anc
 
 ## Come dovrebbero relazionarsi gli strati
 
-Gli strati dovrebbero rinforzarsi a vicenda in ordine:
+Gli strati dovrebbero rafforzarsi a vicenda in questo ordine:
 
 - documenti e specifiche definiscono le aspettative
 - la revisione interpreta tali aspettative nel contesto
 - script e test di validazione automatizzano le parti stabili della revisione
 - CI esegue tali controlli in modo coerente
-- la distribuzione garantisce che l'output possa effettivamente essere spedito
+- la distribuzione garantisce che l'output possa davvero essere pubblicato
 
 ## Buoni obiettivi di convalida anticipata
 
@@ -70,7 +70,7 @@ Esempi di forti candidati iniziali includono:
 - validità della sintassi
 - Collegamenti interni interrotti
 - citazioni editoriali vietate
-- Successo nella generazione dei metadati
+- generazione dei metadati riuscita
 
 Questi controlli tendono ad essere oggettivi e poco costosi.
 

@@ -11,17 +11,17 @@ topics:
 
 ## Resumen
 
-Las capas de validación son las diferentes formas en que un proyecto verifica si los artefactos de implementación, documentación y entrega aún coinciden con las reglas previstas y las expectativas de calidad.
+Las capas de validación son las distintas formas en que un proyecto comprueba si la implementación, la documentación y los artefactos de entrega siguen respondiendo a las reglas previstas y a las expectativas de calidad.
 
 ## Por qué son importantes las capas
 
-Ningún método de validación es suficiente.
+Ningún método de validación, por sí solo, es suficiente.
 
 - la documentación por sí sola no impone el comportamiento
 - Las pruebas por sí solas pueden validar las suposiciones erróneas.
 - CI por sí sola no puede definir las reglas que se supone debe hacer cumplir
 
-Un enfoque por capas es más eficaz porque cada capa capta una clase diferente de deriva.
+Un enfoque por capas es más sólido porque cada capa detecta una forma distinta de deriva.
 
 ## Capas de validación comunes
 
@@ -53,13 +53,13 @@ Los flujos de trabajo de implementación confirman que los artefactos creados a�
 
 ## Cómo deben relacionarse las capas
 
-Las capas deben reforzarse entre sí en orden:
+Las capas deberían reforzarse entre sí en este orden:
 
 - Los documentos y las especificaciones definen las expectativas.
 - La revisión interpreta esas expectativas en contexto.
 - Los scripts de validación y las pruebas automatizan partes estables de la revisión.
 - CI ejecuta esas comprobaciones de forma consistente
-- la implementación garantiza que la producción realmente pueda enviarse
+- el despliegue garantiza que la salida realmente pueda publicarse
 
 ## Buenos objetivos de validación temprana
 

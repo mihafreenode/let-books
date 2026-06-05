@@ -106,14 +106,16 @@
           </div>
             <hr class="content-header-divider">
           </header>
+<h2 id="resumen">Resumen</h2>
+<p class="lead">Las capas de validación son las distintas formas en que un proyecto comprueba si la implementación, la documentación y los artefactos de entrega siguen respondiendo a las reglas previstas y a las expectativas de calidad.</p>
 <h2 id="por-qué-son-importantes-las-capas">Por qué son importantes las capas</h2>
-<p class="lead">Ningún método de validación es suficiente.</p>
+<p>Ningún método de validación, por sí solo, es suficiente.</p>
 <ul>
 <li>la documentación por sí sola no impone el comportamiento</li>
 <li>Las pruebas por sí solas pueden validar las suposiciones erróneas.</li>
 <li>CI por sí sola no puede definir las reglas que se supone debe hacer cumplir</li>
 </ul>
-<p>Un enfoque por capas es más eficaz porque cada capa capta una clase diferente de deriva.</p>
+<p>Un enfoque por capas es más sólido porque cada capa detecta una forma distinta de deriva.</p>
 <h2 id="capas-de-validación-comunes">Capas de validación comunes</h2>
 <h3 id="especificaciones-y-orientación">1. Especificaciones y orientación</h3>
 <p>La primera capa define la regla.</p>
@@ -129,13 +131,13 @@
 <h3 id="comprobaciones-de-implementación">6. Comprobaciones de implementación</h3>
 <p>Los flujos de trabajo de implementación confirman que los artefactos creados aún son publicables y estructuralmente sólidos.</p>
 <h2 id="cómo-deben-relacionarse-las-capas">Cómo deben relacionarse las capas</h2>
-<p>Las capas deben reforzarse entre sí en orden:</p>
+<p>Las capas deberían reforzarse entre sí en este orden:</p>
 <ul>
 <li>Los documentos y las especificaciones definen las expectativas.</li>
 <li>La revisión interpreta esas expectativas en contexto.</li>
 <li>Los scripts de validación y las pruebas automatizan partes estables de la revisión.</li>
 <li>CI ejecuta esas comprobaciones de forma consistente</li>
-<li>la implementación garantiza que la producción realmente pueda enviarse</li>
+<li>el despliegue garantiza que la salida realmente pueda publicarse</li>
 </ul>
 <h2 id="buenos-objetivos-de-validación-temprana">Buenos objetivos de validación temprana</h2>
 <p>Ejemplos de candidatos iniciales sólidos incluyen:</p>

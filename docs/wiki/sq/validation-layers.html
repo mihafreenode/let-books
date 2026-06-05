@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shtresat e Validimit | LetBooks</title>
-    <meta name="description" content="Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.">
+    <title>Shtresat e validimit | LetBooks</title>
+    <meta name="description" content="Shtresat e validimit janë mënyrat e ndryshme se si një projekt kontrollon nëse artefaktet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë për cilësinë.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/validation-layers.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Shtresat e Validimit | LetBooks">
-    <meta property="og:description" content="Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.">
+    <meta property="og:title" content="Shtresat e validimit | LetBooks">
+    <meta property="og:description" content="Shtresat e validimit janë mënyrat e ndryshme se si një projekt kontrollon nëse artefaktet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë për cilësinë.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/validation-layers.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shtresat e Validimit | LetBooks">
-    <meta name="twitter:description" content="Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.">
+    <meta name="twitter:title" content="Shtresat e validimit | LetBooks">
+    <meta name="twitter:description" content="Shtresat e validimit janë mënyrat e ndryshme se si një projekt kontrollon nëse artefaktet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë për cilësinë.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sq/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Shtresat e Validimit</span>
+              <span aria-current="page">Shtresat e validimit</span>
             </nav>
-            <h1>Shtresat e Validimit</h1>
+            <h1>Shtresat e validimit</h1>
           <div class="content-page-meta">
             <span>Wiki</span>
             <span>Shqip</span>
           </div>
-          <p class="content-page-summary">Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.</p>
+          <p class="content-page-summary">Shtresat e validimit janë mënyrat e ndryshme se si një projekt kontrollon nëse artefaktet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë për cilësinë.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">CI/CD</span>
@@ -107,21 +107,21 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="pse-shtresat-kanë-rëndësi">Pse shtresat kanë rëndësi</h2>
-<p class="lead">Asnjë metodë e vetme e vërtetimit nuk është e mjaftueshme.</p>
+<p class="lead">Asnjë mënyrë e vetme validimi nuk mjafton.</p>
 <ul>
 <li>vetëm dokumentacioni nuk e detyron sjelljen</li>
 <li>vetëm testet mund të vërtetojnë supozimet e gabuara</li>
 <li>CI i vetëm nuk mund të përcaktojë rregullat që supozohet të zbatojë</li>
 </ul>
-<p>Një qasje e shtresuar është më e fortë sepse çdo shtresë kap një klasë të ndryshme zhvendosjeje.</p>
-<h2 id="shtresat-e-zakonshme-të-vërtetimit">Shtresat e zakonshme të vërtetimit</h2>
+<p>Një qasje me shtresa është më e fortë sepse çdo shtresë kap një lloj tjetër devijimi.</p>
+<h2 id="shtresat-e-zakonshme-të-validimit">Shtresat e zakonshme të validimit</h2>
 <h3 id="specifikimi-dhe-udhëzimi">1. Specifikimi dhe udhëzimi</h3>
 <p>Shtresa e parë përcakton rregullin.</p>
 <p>Pa këtë shtresë, kontrollet e mëvonshme mund të jenë strikte, por arbitrare.</p>
 <h3 id="rishikim-manual">2. Rishikim manual</h3>
 <p>Rishikimi njerëzor kontrollon qëllimin, rastet anësore dhe kuptimin e produktit që mund të mos jenë ende të automatizuara.</p>
 <h3 id="vleresimi-lokal">3. Vleresimi lokal</h3>
-<p>Skriptet dhe kontrollet e strukturuara kapin probleme të shpejta dhe të përsëritshme përpara se ndryshimet të arrijnë CI.</p>
+<p>Skriptet dhe kontrollet e strukturuara kapin shpejt probleme që përsëriten, përpara se ndryshimet të arrijnë te CI.</p>
 <h3 id="testet">4. Testet</h3>
 <p>Testet e ekzekutueshme verifikojnë sjelljen e pritshme, por vetëm kur ato janë në përputhje me specifikimet.</p>
 <h3 id="portat-ci">5. Portat CI</h3>
@@ -129,20 +129,20 @@
 <h3 id="kontrollet-e-vendosjes">6. Kontrollet e vendosjes</h3>
 <p>Rrjedhat e punës së vendosjes konfirmojnë se artefaktet e ndërtuara janë ende të botueshme dhe strukturore të shëndosha.</p>
 <h2 id="si-duhet-të-lidhen-shtresat">Si duhet të lidhen shtresat</h2>
-<p>Shtresat duhet të përforcojnë njëra-tjetrën sipas rendit:</p>
+<p>Shtresat duhet ta përforcojnë njëra-tjetrën në këtë rend:</p>
 <ul>
-<li>Dokumentet dhe specifikat përcaktojnë pritshmëritë</li>
+<li>dokumentet dhe specifikimet përcaktojnë pritshmëritë</li>
 <li>rishikimi i interpreton ato pritshmëri në kontekst</li>
-<li>Skriptet dhe testet e vlefshmërisë automatizojnë pjesë të qëndrueshme të rishikimit</li>
-<li>CI i kryen ato kontrolle në mënyrë të vazhdueshme</li>
-<li>vendosja siguron që produkti të mund të dërgohet</li>
+<li>skriptet dhe testet e validimit automatizojnë pjesët më të qëndrueshme të rishikimit</li>
+<li>CI i kryen këto kontrolle në mënyrë të qëndrueshme</li>
+<li>vendosja siguron që produkti i përfunduar të mund të publikohet</li>
 </ul>
-<h2 id="objektiva-të-mira-të-vërtetimit-të-hershëm">Objektiva të mira të vërtetimit të hershëm</h2>
+<h2 id="objektiva-të-mira-të-validimit-të-hershëm">Objektiva të mira të validimit të hershëm</h2>
 <p>Shembuj të kandidatëve të hershëm të fortë përfshijnë:</p>
 <ul>
 <li>prania e skedarit të kërkuar</li>
 <li>plotësia e lokalizimit</li>
-<li>vlefshmëria sintaksore</li>
+<li>vlefshmëria e sintaksës</li>
 <li>lidhjet e brendshme të prishura</li>
 <li>citate editoriale të ndaluara</li>
 <li>suksesi i gjenerimit të meta të dhënave</li>
@@ -154,9 +154,9 @@
 <li>rregullat e produktit dhe zbatimit në <code>AGENTS.md</code> dhe <code>AGENTS-Implementation.md</code></li>
 <li>vlefshmëria e zhvillimit dhe vendosjes në <code>docs/Development.md</code> dhe <code>docs/Deployment.md</code></li>
 <li>rregullat e provave editoriale në <code>docs/blog/README.md</code> dhe <code>docs/sources/README.md</code></li>
-<li>Udhëzimet e të mësuarit për CI të shkallëzuar dhe prezantimin e vlefshmërisë</li>
+<li>udhëzime mësimore për vendosjen graduale të CI-së dhe të validimit</li>
 </ul>
-<p>Kjo e bën vërtetimin një sistem të dokumentuar dhe jo vetëm një aspiratë të së ardhmes.</p>
+<p>Kjo e bën validimin një sistem të dokumentuar, jo thjesht një synim për të ardhmen.</p>
 <h2 id="faqe-të-ngjashme">Faqe të ngjashme</h2>
 <ul>
 <li><code>documentation-traceability.md</code></li>
@@ -202,7 +202,7 @@
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
                   <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../wiki/sq/documentation-traceability.html"><span>Gjurmueshmëria e dokumentacionit</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillimi i drejtuar nga Specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillimi i drejtuar nga specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../topics/sq/ai-assisted-implementation.html"><span>Implementimi i Ndihmuar nga AI</span><span class="topic-menu__meta">Tema</span></a>
                 </div>
                 <div class="topic-menu" id="related-ai-assisted-delivery-menu" data-topic-menu="related-ai-assisted-delivery" hidden>

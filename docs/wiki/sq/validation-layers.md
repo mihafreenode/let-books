@@ -1,29 +1,29 @@
 ---
-title: "Shtresat e Validimit"
+title: "Shtresat e validimit"
 summary: >-
-  Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.
+  Shtresat e validimit janë mënyrat e ndryshme se si një projekt kontrollon nëse artefaktet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë për cilësinë.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Shtresat e Validimit
+# Shtresat e validimit
 
 ## Përmbledhje
 
-Shtresat e vlefshmërisë janë mënyrat e ndryshme se si një projekt kontrollon nëse objektet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë e cilësisë.
+Shtresat e validimit janë mënyrat e ndryshme se si një projekt kontrollon nëse artefaktet e zbatimit, dokumentacionit dhe dorëzimit përputhen ende me rregullat e synuara dhe pritshmëritë për cilësinë.
 
 ## Pse shtresat kanë rëndësi
 
-Asnjë metodë e vetme e vërtetimit nuk është e mjaftueshme.
+Asnjë mënyrë e vetme validimi nuk mjafton.
 
 - vetëm dokumentacioni nuk e detyron sjelljen
 - vetëm testet mund të vërtetojnë supozimet e gabuara
 - CI i vetëm nuk mund të përcaktojë rregullat që supozohet të zbatojë
 
-Një qasje e shtresuar është më e fortë sepse çdo shtresë kap një klasë të ndryshme zhvendosjeje.
+Një qasje me shtresa është më e fortë sepse çdo shtresë kap një lloj tjetër devijimi.
 
-## Shtresat e zakonshme të vërtetimit
+## Shtresat e zakonshme të validimit
 
 ### 1. Specifikimi dhe udhëzimi
 
@@ -37,7 +37,7 @@ Rishikimi njerëzor kontrollon qëllimin, rastet anësore dhe kuptimin e produkt
 
 ### 3. Vleresimi lokal
 
-Skriptet dhe kontrollet e strukturuara kapin probleme të shpejta dhe të përsëritshme përpara se ndryshimet të arrijnë CI.
+Skriptet dhe kontrollet e strukturuara kapin shpejt probleme që përsëriten, përpara se ndryshimet të arrijnë te CI.
 
 ### 4. Testet
 
@@ -53,21 +53,21 @@ Rrjedhat e punës së vendosjes konfirmojnë se artefaktet e ndërtuara janë en
 
 ## Si duhet të lidhen shtresat
 
-Shtresat duhet të përforcojnë njëra-tjetrën sipas rendit:
+Shtresat duhet ta përforcojnë njëra-tjetrën në këtë rend:
 
-- Dokumentet dhe specifikat përcaktojnë pritshmëritë
+- dokumentet dhe specifikimet përcaktojnë pritshmëritë
 - rishikimi i interpreton ato pritshmëri në kontekst
-- Skriptet dhe testet e vlefshmërisë automatizojnë pjesë të qëndrueshme të rishikimit
-- CI i kryen ato kontrolle në mënyrë të vazhdueshme
-- vendosja siguron që produkti të mund të dërgohet
+- skriptet dhe testet e validimit automatizojnë pjesët më të qëndrueshme të rishikimit
+- CI i kryen këto kontrolle në mënyrë të qëndrueshme
+- vendosja siguron që produkti i përfunduar të mund të publikohet
 
-## Objektiva të mira të vërtetimit të hershëm
+## Objektiva të mira të validimit të hershëm
 
 Shembuj të kandidatëve të hershëm të fortë përfshijnë:
 
 - prania e skedarit të kërkuar
 - plotësia e lokalizimit
-- vlefshmëria sintaksore
+- vlefshmëria e sintaksës
 - lidhjet e brendshme të prishura
 - citate editoriale të ndaluara
 - suksesi i gjenerimit të meta të dhënave
@@ -81,9 +81,9 @@ Depoja e Let Books tashmë dokumenton disa shtresa, duke përfshirë:
 - rregullat e produktit dhe zbatimit në `AGENTS.md` dhe `AGENTS-Implementation.md`
 - vlefshmëria e zhvillimit dhe vendosjes në `docs/Development.md` dhe `docs/Deployment.md`
 - rregullat e provave editoriale në `docs/blog/README.md` dhe `docs/sources/README.md`
-- Udhëzimet e të mësuarit për CI të shkallëzuar dhe prezantimin e vlefshmërisë
+- udhëzime mësimore për vendosjen graduale të CI-së dhe të validimit
 
-Kjo e bën vërtetimin një sistem të dokumentuar dhe jo vetëm një aspiratë të së ardhmes.
+Kjo e bën validimin një sistem të dokumentuar, jo thjesht një synim për të ardhmen.
 
 ## Faqe të ngjashme
 

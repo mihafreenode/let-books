@@ -1,48 +1,48 @@
 ---
-title: "Zhvillimi i drejtuar nga Specifikimi"
+title: "Zhvillimi i drejtuar nga specifikimi"
 summary: >-
-  Zhvillimi i drejtuar nga Specifikimi është një qasje në të cilën përkufizimet e qarta të produktit dhe rrjedhës së punës udhëzojnë zbatimin, dokumentacionin, rishikimin dhe verifikimin.
+  Zhvillimi i drejtuar nga specifikimi është një qasje në të cilën përkufizimet e qarta të produktit dhe të rrjedhës së punës drejtojnë zbatimin, dokumentacionin, rishikimin dhe verifikimin.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Zhvillimi i drejtuar nga Specifikimi
+# Zhvillimi i drejtuar nga specifikimi
 
 ## Përmbledhje
 
-Zhvillimi i drejtuar nga Specifikimi është një qasje në të cilën përkufizimet e qarta të produktit dhe rrjedhës së punës udhëzojnë zbatimin, dokumentacionin, rishikimin dhe verifikimin.
+Zhvillimi i drejtuar nga specifikimi është një qasje në të cilën përkufizimet e qarta të produktit dhe të rrjedhës së punës drejtojnë zbatimin, dokumentacionin, rishikimin dhe verifikimin.
 
 ## Përkufizim
 
-Në këtë qasje, një specifikim nuk është vetëm një objekt fillestar i planifikimit. Ajo vepron si një referencë e vazhdueshme për:
+Në këtë qasje, një specifikim nuk është vetëm një dokument fillestar planifikimi. Ai shërben si pikë reference e qëndrueshme për:
 
 - qëllimi i produktit
 - kufijtë e fushëveprimit
 - sjellja e kërkuar
 - kriteret e pranimit
-- rishikoni standardet
+- kriteret e rishikimit
 
 ## Pse ka rëndësi në punën e asistuar nga AI
 
-AI rrit shpejtësinë e dorëzimit, por gjithashtu mund të rrisë zhvendosjen e produktit kur qëllimi është i paqartë.
+AI e rrit shpejtësinë e dorëzimit, por mund të shtojë edhe devijimin e produktit kur qëllimi nuk është i qartë.
 
-Zhvillimi i drejtuar nga specifikat ndihmon duke u dhënë ekipeve një burim të qëndrueshëm të së vërtetës që mund të rishikohet, përditësohet dhe përdoret për të vlerësuar rezultatin e krijuar.
+Zhvillimi i drejtuar nga specifikimi ndihmon duke u dhënë ekipeve një pikë të qëndrueshme reference që mund të rishikohet, përditësohet dhe përdoret për të vlerësuar rezultatin e krijuar.
 
 ## Shtresa tipike
 
-Shtresat e zakonshme në një sistem të drejtuar nga specifikat përfshijnë:
+Shtresat e zakonshme në një sistem të drejtuar nga specifikimi përfshijnë:
 
-- specifikimet e produktit
+- specifikimin e produktit
 - udhëzimet për zbatimin
 - Dokumentacioni i gjendjes aktuale
 - sjellje demo ose aplikacioni
-- rregullat dhe testet e vlefshmërisë
-- Zbatimi i CI/CD
+- rregullat dhe testet e validimit
+- zbatimin e rregullave përmes CI/CD
 
 ## Mënyra e zakonshme e dështimit
 
-Një mënyrë e zakonshme e dështimit po lejon që objekti më i dukshëm të bëhet burimi i paracaktuar i së vërtetës.
+Një mënyrë e zakonshme dështimi është të lihet që artefakti më i dukshëm të bëhet burimi i paracaktuar i së vërtetës.
 
 Shembuj:
 
@@ -51,11 +51,11 @@ Shembuj:
 - shkurtoren aktuale të zbatimit
 - një faqe dokumentacioni bajat
 
-Zhvillimi i drejtuar nga specifikat e zvogëlon këtë rrezik duke e bërë të qartë zinxhirin e synuar të autoritetit.
+Zhvillimi i drejtuar nga specifikimi e zvogëlon këtë rrezik duke e bërë të qartë zinxhirin e synuar të autoritetit.
 
 ## Let Books kontekst
 
-Në Let Books, zhvillimi i drejtuar nga specifikat mbështetet nga:
+Në Let Books, zhvillimi i drejtuar nga specifikimi mbështetet nga:
 
 - `AGENTS.md`
 - `AGENTS-Implementation.md`

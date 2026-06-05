@@ -106,14 +106,16 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="pourquoi-les-calques-sont-importants">Pourquoi les calques sont importants</h2>
-<p class="lead">Aucune méthode de validation unique ne suffit.</p>
+<h2 id="résumé">Résumé</h2>
+<p class="lead">Les couches de validation sont les différentes façons dont un projet vérifie si les artefacts de mise en œuvre, de documentation et de livraison correspondent toujours aux règles prévues et aux attentes de qualité.</p>
+<h2 id="pourquoi-les-couches-sont-importantes">Pourquoi les couches sont importantes</h2>
+<p>Aucune méthode de validation unique ne suffit.</p>
 <ul>
 <li>la documentation seule n’impose pas le comportement</li>
 <li>les tests seuls peuvent valider de fausses hypothèses</li>
 <li>CI ne peut pas à elle seule définir les règles qu’elle est censée faire respecter</li>
 </ul>
-<p>Une approche en couches est plus efficace car chaque couche capte une classe de dérive différente.</p>
+<p>Une approche en couches est plus solide car chaque couche capte une forme différente de dérive.</p>
 <h2 id="couches-de-validation-communes">Couches de validation communes</h2>
 <h3 id="spécifications-et-conseils">1. Spécifications et conseils</h3>
 <p>La première couche définit la règle.</p>
@@ -129,13 +131,13 @@
 <h3 id="vérifications-du-déploiement">6. Vérifications du déploiement</h3>
 <p>Les workflows de déploiement confirment que les artefacts créés sont toujours publiables et structurellement solides.</p>
 <h2 id="comment-les-calques-doivent-être-liés">Comment les calques doivent être liés</h2>
-<p>Les couches doivent se renforcer mutuellement dans l’ordre :</p>
+<p>Les couches doivent se renforcer mutuellement dans cet ordre :</p>
 <ul>
 <li>les documents et spécifications définissent les attentes</li>
 <li>l’examen interprète ces attentes dans leur contexte</li>
 <li>les scripts de validation et les tests automatisent les parties stables de la revue</li>
 <li>CI effectue ces contrôles de manière cohérente</li>
-<li>le déploiement garantit que la sortie peut réellement être expédiée</li>
+<li>le déploiement garantit que la sortie peut réellement être publiée</li>
 </ul>
 <h2 id="bons-objectifs-de-validation-précoce">Bons objectifs de validation précoce</h2>
 <p>Voici des exemples de premiers candidats solides :</p>

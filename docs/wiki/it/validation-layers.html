@@ -106,14 +106,16 @@
           </div>
             <hr class="content-header-divider">
           </header>
+<h2 id="riepilogo">Riepilogo</h2>
+<p class="lead">I livelli di convalida sono i diversi modi in cui un progetto verifica se implementazione, documentazione e artefatti di consegna corrispondono ancora alle regole previste e alle aspettative di qualità.</p>
 <h2 id="perché-i-livelli-sono-importanti">Perché i livelli sono importanti</h2>
-<p class="lead">Nessun singolo metodo di validazione è sufficiente.</p>
+<p>Nessun singolo metodo di validazione è sufficiente.</p>
 <ul>
 <li>La documentazione da sola non impone il comportamento</li>
 <li>I test da soli possono convalidare le ipotesi errate</li>
 <li>La CI da sola non può definire le regole che dovrebbe applicare</li>
 </ul>
-<p>Un approccio a strati è più forte perché ogni strato rileva una diversa classe di deriva.</p>
+<p>Un approccio a strati è più solido perché ogni strato intercetta una forma diversa di deriva.</p>
 <h2 id="livelli-di-convalida-comuni">Livelli di convalida comuni</h2>
 <h3 id="specifiche-e-linee-guida">1. Specifiche e linee guida</h3>
 <p>Il primo livello definisce la regola.</p>
@@ -129,13 +131,13 @@
 <h3 id="controlli-sullimplementazione">6. Controlli sull’implementazione</h3>
 <p>I flussi di lavoro di distribuzione confermano che gli artefatti creati sono ancora pubblicabili e strutturalmente validi.</p>
 <h2 id="come-dovrebbero-relazionarsi-gli-strati">Come dovrebbero relazionarsi gli strati</h2>
-<p>Gli strati dovrebbero rinforzarsi a vicenda in ordine:</p>
+<p>Gli strati dovrebbero rafforzarsi a vicenda in questo ordine:</p>
 <ul>
 <li>documenti e specifiche definiscono le aspettative</li>
 <li>la revisione interpreta tali aspettative nel contesto</li>
 <li>script e test di validazione automatizzano le parti stabili della revisione</li>
 <li>CI esegue tali controlli in modo coerente</li>
-<li>la distribuzione garantisce che l’output possa effettivamente essere spedito</li>
+<li>la distribuzione garantisce che l’output possa davvero essere pubblicato</li>
 </ul>
 <h2 id="buoni-obiettivi-di-convalida-anticipata">Buoni obiettivi di convalida anticipata</h2>
 <p>Esempi di forti candidati iniziali includono:</p>
@@ -145,7 +147,7 @@
 <li>validità della sintassi</li>
 <li>Collegamenti interni interrotti</li>
 <li>citazioni editoriali vietate</li>
-<li>Successo nella generazione dei metadati</li>
+<li>generazione dei metadati riuscita</li>
 </ul>
 <p>Questi controlli tendono ad essere oggettivi e poco costosi.</p>
 <h2 id="let-books-contesto">Let Books contesto</h2>

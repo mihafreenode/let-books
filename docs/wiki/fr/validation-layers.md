@@ -11,9 +11,9 @@ topics:
 
 ## Résumé
 
-Les couches de validation sont les différentes manières par lesquelles un projet vérifie si les artefacts de mise en œuvre, de documentation et de livraison correspondent toujours aux règles prévues et aux attentes en matière de qualité.
+Les couches de validation sont les différentes façons dont un projet vérifie si les artefacts de mise en œuvre, de documentation et de livraison correspondent toujours aux règles prévues et aux attentes de qualité.
 
-## Pourquoi les calques sont importants
+## Pourquoi les couches sont importantes
 
 Aucune méthode de validation unique ne suffit.
 
@@ -21,7 +21,7 @@ Aucune méthode de validation unique ne suffit.
 - les tests seuls peuvent valider de fausses hypothèses
 - CI ne peut pas à elle seule définir les règles qu'elle est censée faire respecter
 
-Une approche en couches est plus efficace car chaque couche capte une classe de dérive différente.
+Une approche en couches est plus solide car chaque couche capte une forme différente de dérive.
 
 ## Couches de validation communes
 
@@ -53,13 +53,13 @@ Les workflows de déploiement confirment que les artefacts créés sont toujours
 
 ## Comment les calques doivent être liés
 
-Les couches doivent se renforcer mutuellement dans l'ordre :
+Les couches doivent se renforcer mutuellement dans cet ordre :
 
 - les documents et spécifications définissent les attentes
 - l'examen interprète ces attentes dans leur contexte
 - les scripts de validation et les tests automatisent les parties stables de la revue
 - CI effectue ces contrôles de manière cohérente
-- le déploiement garantit que la sortie peut réellement être expédiée
+- le déploiement garantit que la sortie peut réellement être publiée
 
 ## Bons objectifs de validation précoce
 

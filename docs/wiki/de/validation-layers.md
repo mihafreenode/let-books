@@ -11,17 +11,17 @@ topics:
 
 ## Zusammenfassung
 
-Validierungsebenen sind die verschiedenen Methoden, mit denen ein Projekt überprüft, ob Implementierungs-, Dokumentations- und Bereitstellungsartefakte noch den beabsichtigten Regeln und Qualitätserwartungen entsprechen.
+Validierungsebenen sind die verschiedenen Wege, auf denen ein Projekt prüft, ob Implementierung, Dokumentation und Bereitstellungsartefakte noch den vorgesehenen Regeln und Qualitätserwartungen entsprechen.
 
 ## Warum Schichten wichtig sind
 
-Keine einzelne Validierungsmethode reicht aus.
+Keine einzelne Form der Validierung reicht aus.
 
 - Dokumentation allein erzwingt kein Verhalten
 - Tests allein können die falschen Annahmen bestätigen
 - CI allein kann nicht die Regeln definieren, die es durchsetzen soll
 
-Ein mehrschichtiger Ansatz ist stärker, da jede Schicht eine andere Driftklasse erfasst.
+Ein mehrschichtiger Ansatz ist belastbarer, weil jede Schicht eine andere Art von Drift erfasst.
 
 ## Gemeinsame Validierungsebenen
 
@@ -53,13 +53,13 @@ Bereitstellungsworkflows bestätigen, dass die erstellten Artefakte weiterhin ve
 
 ## Wie sich die Ebenen verhalten sollten
 
-Die Schichten sollten sich gegenseitig verstärken, um:
+Die Schichten sollten sich in dieser Reihenfolge gegenseitig verstärken:
 
 - Dokumente und Spezifikationen definieren Erwartungen
 - Die Überprüfung interpretiert diese Erwartungen im Kontext
 - Validierungsskripte und Tests automatisieren stabile Teile der Überprüfung
 - CI führt diese Prüfungen konsequent durch
-- Durch die Bereitstellung wird sichergestellt, dass die Ausgabe tatsächlich versendet werden kann
+- die Bereitstellung stellt sicher, dass die Ausgabe tatsächlich ausgeliefert werden kann
 
 ## Gute frühe Validierungsziele
 

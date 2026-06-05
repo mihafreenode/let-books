@@ -11,34 +11,34 @@ topics:
 
 ## Zusammenfassung
 
-Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem explizite Produkt- und Workflowdefinitionen die Implementierung, Dokumentation, Überprüfung und Verifizierung leiten.
+Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem klar formulierte Produkt- und Workflowdefinitionen die Implementierung, Dokumentation, Überprüfung und Verifikation leiten.
 
 ## Begriffsbestimmung
 
-Bei diesem Ansatz ist eine Spezifikation nicht nur ein anfängliches Planungsartefakt. Es dient als fortlaufende Referenz für:
+Bei diesem Ansatz ist eine Spezifikation nicht nur ein anfängliches Planungsartefakt. Sie dient als fortlaufender Bezugspunkt für:
 
 - Produktzweck
 - Geltungsbereichsgrenzen
 - erforderliches Verhalten
 - Akzeptanzkriterien
-- Überprüfungsstandards
+- Maßstäbe für die Überprüfung
 
 ## Warum es bei KI-gestützter Arbeit wichtig ist
 
 KI erhöht die Liefergeschwindigkeit, kann aber auch die Produktdrift verstärken, wenn die Absicht unklar ist.
 
-Die spezifikationsgesteuerte Entwicklung hilft, indem sie Teams eine stabile Quelle der Wahrheit bietet, die überprüft, aktualisiert und zur Bewertung der generierten Ergebnisse verwendet werden kann.
+Spezifikationsgesteuerte Entwicklung hilft, weil sie Teams einen stabilen Bezugspunkt gibt, den sie prüfen, aktualisieren und zur Bewertung generierter Ergebnisse heranziehen können.
 
 ## Typische Schichten
 
 Zu den üblichen Schichten in einem spezifikationsgesteuerten System gehören:
 
 - Produktspezifikation
-- Umsetzungsanleitung
+- Implementierungsleitfaden
 - Dokumentation des aktuellen Standes
 - Demo- oder Anwendungsverhalten
 - Validierungsregeln und Tests
-- CI/CD-Durchsetzung
+- Regeln, die über CI/CD durchgesetzt werden
 
 ## Häufiger Fehlermodus
 
@@ -51,7 +51,7 @@ Beispiele:
 - die aktuelle Implementierungsabkürzung
 - eine veraltete Dokumentationsseite
 
-Die spezifikationsgesteuerte Entwicklung verringert dieses Risiko, indem sie die beabsichtigte Autoritätskette explizit macht.
+Spezifikationsgesteuerte Entwicklung verringert dieses Risiko, indem sie die vorgesehene Autoritätskette klar sichtbar macht.
 
 ## Let Books Kontext
 
