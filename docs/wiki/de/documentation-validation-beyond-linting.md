@@ -30,8 +30,8 @@ Deshalb sollte Dokumentationsqualität als technische Disziplin mit mehreren Val
 
 Dieses mehrschichtige Modell ist in KI-gestützten Workflows noch wichtiger. Inhalte können schnell entworfen, schnell neu erzeugt und schnell lokalisiert werden. Das beschleunigt Feedbackschleifen, erhöht aber auch das Risiko, glatt wirkende Fehler auszuliefern, wenn die Pipeline nur Oberflächenformatierung testet.
 
-Themen sind ein gutes Beispiel. Als Topics in LetBooks zu einem eigenständigen Dokumentationstyp wurden, mussten sie Navigation, Suchindexierung, Sitemap-Generierung, Lokalisierungsbehandlung, Validierung der generierten Website und Druckprüfungen erben. Ein Pfad geringerer Qualität hätte eine neue Inhaltsoberfläche mit schwächeren Garantien als der Rest der Plattform geschaffen.
+Themen sind ein gutes Beispiel. Als Topics in LetBooks zu einem eigenständigen Dokumentationstyp wurden, mussten sie Navigation, Suchindexierung, Sitemap-Generierung, Lokalisierungsbehandlung, Validierung der generierten Website und Druckprüfungen erben. Ein Weg geringerer Qualität hätte eine neue Inhaltsoberfläche mit schwächeren Garantien geschaffen als der Rest der Plattform.
 
 Das Prinzip ist einfach: Jeder neue Dokumentationstyp muss vorhandene Validierung erben. So bleibt das Qualitätsmodell skalierbar. Statt für jeden neuen Bereich Ausnahmen zu erfinden, erweitert die Plattform dieselben Erwartungen auf jede leserorientierte Oberfläche.
 
-Dokumentationsqualität geht über Linting hinaus, weil Leser das gesamte System erleben und nicht nur die Quelldateien.
+Dokumentationsqualität geht über Linting hinaus, weil Leser das gesamte System erleben und nicht nur die Quelldateien sehen.

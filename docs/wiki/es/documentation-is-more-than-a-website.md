@@ -1,6 +1,6 @@
 ---
 title: "La documentación es más que un sitio web"
-summary: "Por qué la documentación debe diseñarse para lectura en línea, uso sin conexión, impresión y preservación a largo plazo, en lugar de tratarse como una superficie solo web."
+summary: "Por qué la documentación debe diseñarse para lectura en línea, uso sin conexión, impresión y preservación a largo plazo, en lugar de tratarse como algo destinado solo a la web."
 topics:
   - documentation
   - accessibility
@@ -24,6 +24,6 @@ El soporte de impresión también tiene valor de accesibilidad. Algunas personas
 
 LetBooks ahora trata esto de forma explícita. La plataforma de documentación debe funcionar en línea y sin conexión, y la impresión o la salida en PDF se consideran modos de uso compatibles. Por eso el modelo de impresión conserva el contenido, la atribución, los avisos de copyright y la exención de responsabilidad, mientras elimina el ruido de navegación, la interfaz de búsqueda y otros elementos interactivos que no ayudan en papel.
 
-Esta política también refleja una mentalidad de preservación. Un sistema de documentación que puede imprimirse limpiamente es más fácil de archivar, citar, circular en talleres y usar en contextos educativos. Así se vuelve menos dependiente de una sola superficie de entrega.
+Esta política también refleja una preocupación explícita por la preservación. Un sistema de documentación que puede imprimirse limpiamente es más fácil de archivar, citar, circular en talleres y usar en contextos educativos. Así se vuelve menos dependiente de una sola superficie de entrega.
 
 La documentación es, por tanto, más que un sitio web, porque el conocimiento que contiene debe sobrevivir a más de un modo de lectura.

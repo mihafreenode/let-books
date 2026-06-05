@@ -1,6 +1,6 @@
 ---
 title: "Dokumentation ist mehr als eine Website"
-summary: "Warum Dokumentation für Online-Lektüre, Offline-Nutzung, Druck und langfristige Bewahrung gestaltet werden sollte, statt nur als reine Web-Oberfläche zu gelten."
+summary: "Warum Dokumentation für Online-Lektüre, Offline-Nutzung, Druck und langfristige Bewahrung gestaltet werden sollte, statt nur als reine Webansicht behandelt zu werden."
 topics:
   - documentation
   - accessibility
@@ -24,6 +24,6 @@ Druckunterstützung hat auch einen Wert für die Barrierefreiheit. Manche Leser 
 
 LetBooks behandelt das inzwischen ausdrücklich so. Die Dokumentationsplattform soll online und offline funktionieren, und Druck oder PDF-Ausgabe gelten als unterstützte Nutzungsform. Deshalb behält das Druckmodell Inhalt, Attribution, Copyright-Hinweise und Haftungsausschluss bei, entfernt aber Navigationsballast, Suchoberfläche und andere interaktive Elemente, die auf Papier nicht helfen.
 
-Diese Richtlinie spiegelt auch ein Bewahrungsdenken wider. Ein Dokumentationssystem, das sauber gedruckt werden kann, lässt sich leichter archivieren, zitieren, in Workshops verteilen und in Bildungskontexten verwenden. Es wird damit weniger abhängig von einer einzigen Ausgabefläche.
+Diese Richtlinie spiegelt auch ein Denken im Sinn der Bewahrung wider. Ein Dokumentationssystem, das sauber gedruckt werden kann, lässt sich leichter archivieren, zitieren, in Workshops verteilen und in Bildungskontexten verwenden. Es wird damit weniger abhängig von einer einzigen Ausgabefläche.
 
 Dokumentation ist also mehr als eine Website, weil das darin enthaltene Wissen mehr als einen Lesemodus überdauern muss.

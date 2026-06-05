@@ -1,6 +1,6 @@
 ---
 title: "La documentation est plus qu'un site web"
-summary: "Pourquoi la documentation doit être conçue pour la lecture en ligne, l'usage hors ligne, l'impression et la conservation à long terme, au lieu d'être traitée comme une simple surface web."
+summary: "Pourquoi la documentation doit être conçue pour la lecture en ligne, l'usage hors ligne, l'impression et la conservation à long terme, au lieu d'être traitée comme quelque chose qui n'existe que sur le web."
 topics:
   - documentation
   - accessibility
@@ -24,6 +24,6 @@ La prise en charge de l'impression a aussi une valeur d'accessibilité. Certains
 
 LetBooks traite désormais cela explicitement. La plateforme documentaire doit fonctionner en ligne et hors ligne, et l'impression ou la sortie PDF sont considérées comme des modes d'usage pris en charge. C'est pourquoi le modèle d'impression conserve le contenu, l'attribution, les mentions de copyright et la clause de non-responsabilité, tout en supprimant le bruit de navigation, l'interface de recherche et les autres éléments interactifs qui n'aident pas sur papier.
 
-Cette politique reflète aussi une logique de préservation. Un système documentaire qui peut être imprimé proprement est plus facile à archiver, à citer, à diffuser dans des ateliers et à utiliser dans des contextes éducatifs. Il devient ainsi moins dépendant d'une seule surface de diffusion.
+Cette politique reflète aussi un souci explicite de préservation. Un système documentaire qui peut être imprimé proprement est plus facile à archiver, à citer, à diffuser dans des ateliers et à utiliser dans des contextes éducatifs. Il devient ainsi moins dépendant d'une seule surface de diffusion.
 
 La documentation est donc plus qu'un site web, parce que le savoir qu'elle contient doit survivre à plus d'un mode de lecture.
