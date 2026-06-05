@@ -132,8 +132,16 @@ El desarrollo guiado por especificaciones es la manera en que un equipo evita qu
 
 En los proyectos asistidos por IA, la especificación no es papeleo posterior. Es el límite, la memoria y el criterio de revisión que hacen fiable una entrega rápida.
 
+## Lecturas relacionadas
+
+- `../../wiki/spec-driven-development.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Otros idiomas
 
+- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Deutsch](../de/spec-driven-development-for-ai-projects.md)
 - [Italiano](../it/spec-driven-development-for-ai-projects.md)
@@ -144,4 +152,3 @@ En los proyectos asistidos por IA, la especificación no es papeleo posterior. E
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
 - [Македонски](../mk/spec-driven-development-for-ai-projects.md)
 - [Français](../fr/spec-driven-development-for-ai-projects.md)
-- [Español](../es/spec-driven-development-for-ai-projects.md)

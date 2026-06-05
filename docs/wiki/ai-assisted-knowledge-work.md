@@ -295,3 +295,4 @@ This page also includes later synthesis, editing, implementation experience, loc
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
+- `../blog/en/ai-as-an-oracle.md`

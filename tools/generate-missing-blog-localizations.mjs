@@ -99,6 +99,9 @@ const TITLES = {
   'united-in-diversity-and-open-source': {
     sl: 'Združeni v raznolikosti in odprti kodi', hr: 'Ujedinjeni u raznolikosti i otvorenom kodu', bs: 'Ujedinjeni u različitosti i otvorenom kodu', 'sr-Latn': 'Ujedinjeni u različitosti i otvorenom kodu', 'sr-Cyrl': 'Уједињени у различитости и отвореном коду', mk: 'Обединети во различноста и отворениот код', sq: 'Të bashkuar në larmi dhe në burim të hapur', de: 'In Vielfalt geeint und Open Source', it: 'Uniti nella diversità e nell’open source', fr: 'Unis dans la diversité et dans l’open source', es: 'Unidos en la diversidad y en el código abierto',
   },
+  'ai-as-an-oracle': {
+    sl: 'AI kot orakelj: zakaj je kultura preverjanja pomembnejša od pisanja pozivov', hr: 'AI kao proročište: zašto je kultura provjere važnija od promptanja', bs: 'AI kao proročište: zašto je kultura provjere važnija od promptanja', 'sr-Latn': 'AI kao proročište: zašto je kultura provere važnija od promptovanja', 'sr-Cyrl': 'AI као пророчиште: зашто је култура провере важнија од промптовања', mk: 'AI како оракул: зошто културата на проверка е поважна од промптирањето', sq: 'AI si orakull: pse kultura e verifikimit ka më shumë rëndësi se prompting-u', de: 'KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting', it: 'L\'IA come oracolo: perché la cultura della verifica conta più del prompting', fr: 'L\'IA comme oracle : pourquoi la culture de la vérification compte davantage que le prompting', es: 'La IA como oráculo: por qué la cultura de la verificación importa más que el prompting',
+  },
 };
 
 const ARTICLE_IDS = Object.keys(TITLES);

@@ -132,8 +132,16 @@ Lo sviluppo guidato dalle specifiche e il modo con cui un team impedisce che la 
 
 Nei progetti assistiti dall'IA, la specifica non e burocrazia a posteriori. E il confine, la memoria e lo standard di revisione che rendono affidabile una consegna veloce.
 
+## Letture correlate
+
+- `../../wiki/spec-driven-development.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Altre lingue
 
+- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Deutsch](../de/spec-driven-development-for-ai-projects.md)
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
@@ -142,6 +150,5 @@ Nei progetti assistiti dall'IA, la specifica non e burocrazia a posteriori. E il
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
 - [Македонски](../mk/spec-driven-development-for-ai-projects.md)
-- [Italiano](../it/spec-driven-development-for-ai-projects.md)
 - [Français](../fr/spec-driven-development-for-ai-projects.md)
 - [Español](../es/spec-driven-development-for-ai-projects.md)

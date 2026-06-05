@@ -23,6 +23,7 @@ Keep Slovenian article variants aligned with the canonical English source while 
 ## Related Articles
 
 - [ISBN ni podatkovna zbirka](isbn-not-a-database.md) — Zakaj so ISBNi identifikatorji in ne metapodatkovni sistemi
+- [AI kot orakelj: zakaj je kultura preverjanja pomembnejša od pozivanja](ai-as-an-oracle.md) — Zakaj je za inženirje bolj uporaben model črna skrinjica odgovorov, katere izhode je treba preverjati
 - [Razvoj na podlagi specifikacij za AI projekte](spec-driven-development-for-ai-projects.md) — Zakaj AI-podprto razvijanje potrebuje močnejše specifikacije in jasnejšo dokumentacijo
 - [Razvoj na podlagi specifikacij v Let Books](spec-driven-development-in-let-books.md) — Kako Let Books že uporablja specifikacije, dokumentacijo in demo omejitve kot usklajen sistem
 - [Dokumentacija je del izdelka](documentation-is-part-of-the-product.md) — Zakaj dokumentacija oblikuje implementacijo, pregled in zaupanje v izdelek

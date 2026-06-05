@@ -130,15 +130,22 @@ Dokumentimi nuk është i ndarë nga cilësia e produktit.
 
 Ai formëson implementimin, rishikimin, komunikimin, validimin dhe besimin afatgjatë. Në projektet e mbështetura nga AI, dokumentimi është pjesë e produktit sepse është pjesë e sistemit që pengon devijimin e produktit.
 
+## Lexime të lidhura
+
+- `../../wiki/documentation-traceability.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Gjuhë të tjera
 
+- [English](../en/documentation-is-part-of-the-product.md)
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)
 - [Hrvatski](../hr/documentation-is-part-of-the-product.md)
 - [Bosanski](../bs/documentation-is-part-of-the-product.md)
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
-- [Shqip](../sq/documentation-is-part-of-the-product.md)
 - [Deutsch](../de/documentation-is-part-of-the-product.md)
 - [Italiano](../it/documentation-is-part-of-the-product.md)
 - [Français](../fr/documentation-is-part-of-the-product.md)

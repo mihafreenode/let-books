@@ -130,8 +130,16 @@ La documentation n'est pas séparée de la qualité du produit.
 
 Elle façonne l'implémentation, la revue, la communication, la validation et la confiance à long terme. Dans les projets soutenus par l'IA, la documentation fait partie du produit parce qu'elle fait partie du système qui empêche la dérive du produit.
 
+## Lectures liées
+
+- `../../wiki/documentation-traceability.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Autres langues
 
+- [English](../en/documentation-is-part-of-the-product.md)
 - [Shqip](../sq/documentation-is-part-of-the-product.md)
 - [Deutsch](../de/documentation-is-part-of-the-product.md)
 - [Italiano](../it/documentation-is-part-of-the-product.md)
@@ -141,5 +149,4 @@ Elle façonne l'implémentation, la revue, la communication, la validation et la
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
-- [Français](../fr/documentation-is-part-of-the-product.md)
 - [Español](../es/documentation-is-part-of-the-product.md)

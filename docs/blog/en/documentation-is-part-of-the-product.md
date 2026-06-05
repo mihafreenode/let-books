@@ -130,6 +130,13 @@ Documentation is not separate from product quality.
 
 It shapes implementation, review, communication, validation, and long-term trust. In AI-assisted projects especially, documentation is part of the product because it is part of the system that keeps the product itself from drifting.
 
+## Related Reading
+
+- `../../wiki/documentation-traceability.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Other Languages
 
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)

@@ -130,12 +130,19 @@ Dokumentacija nije odvojena od kvaliteta proizvoda.
 
 Ona oblikuje implementaciju, pregled, komunikaciju, validaciju i dugoročno poverenje. U AI-podržanim projektima dokumentacija je deo proizvoda jer je deo sistema koji sprečava proizvodni odmak.
 
+## Povezano štivo
+
+- `../../wiki/documentation-traceability.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Drugi jezici
 
+- [English](../en/documentation-is-part-of-the-product.md)
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)
 - [Hrvatski](../hr/documentation-is-part-of-the-product.md)
 - [Bosanski](../bs/documentation-is-part-of-the-product.md)
-- [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
 - [Shqip](../sq/documentation-is-part-of-the-product.md)

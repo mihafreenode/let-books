@@ -132,8 +132,16 @@ Le développement guidé par les spécifications est la manière dont une équip
 
 Dans les projets assistés par l'IA, la spécification n'est pas de la paperasserie après coup. Elle est la frontière, la mémoire et la norme de revue qui rendent une livraison rapide digne de confiance.
 
+## Lectures liées
+
+- `../../wiki/spec-driven-development.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Autres langues
 
+- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Deutsch](../de/spec-driven-development-for-ai-projects.md)
 - [Italiano](../it/spec-driven-development-for-ai-projects.md)
@@ -143,5 +151,4 @@ Dans les projets assistés par l'IA, la spécification n'est pas de la paperasse
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
 - [Македонски](../mk/spec-driven-development-for-ai-projects.md)
-- [Français](../fr/spec-driven-development-for-ai-projects.md)
 - [Español](../es/spec-driven-development-for-ai-projects.md)

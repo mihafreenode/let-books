@@ -130,10 +130,16 @@ Razvoj na podlagi specifikacij je način, kako ekipa prepreči, da bi se hitrost
 
 V AI-podprtih projektih specifikacija ni birokracija za nazaj. Je meja, spomin in merilo pregleda, zaradi katerih je hitro dostavljanje vredno zaupanja.
 
+## Sorodno branje
+
+- `../../wiki/spec-driven-development.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Drugi jeziki
 
-- [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
-- [English](../sl/spec-driven-development-for-ai-projects.md)
+- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)
 - [Bosanski](../bs/spec-driven-development-for-ai-projects.md)
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)

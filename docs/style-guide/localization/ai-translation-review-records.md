@@ -102,6 +102,31 @@ Common hypotheses include:
 - Automated checks can catch missing strings and broken placeholders, but they often miss register, modality, and subtle terminology drift.
 - Reviewer rationale should be short but explicit so examples can train future reviewers and improve prompts or evaluation sets.
 
+## Slovenian engineering-essay review examples
+
+### Review record
+
+* Issue:
+  Original: `z vidika delujočega inženirja` / `praktični orakelj`
+  Corrected: `z inženirskega vidika v praksi deluje kot orakelj`
+  Error Category: register, literal translation, fluency
+  Root-Cause Hypothesis: English role label and noun phrase were transferred too literally into Slovenian.
+  Reviewer Rationale: A Slovenian engineer would normally rewrite the sentence instead of preserving the English phrasing.
+
+* Issue:
+  Original: `gledališče produktivnosti`
+  Corrected: `občutek produktivnosti` with a rewritten sentence about speed and visible output
+  Error Category: literal translation, register, collocation
+  Root-Cause Hypothesis: startup-style metaphor was translated word-for-word instead of being resolved by meaning.
+  Reviewer Rationale: The metaphor is understandable but unnatural in Slovenian technical writing, so the sentence should be rewritten.
+
+* Issue:
+  Original: `nepogajalske omejitve`
+  Corrected: `zahteve, od katerih ni mogoče odstopati`
+  Error Category: terminology, literal translation, domain-policy phrasing
+  Root-Cause Hypothesis: English management and engineering shorthand was mapped directly onto Slovenian morphology.
+  Reviewer Rationale: Slovenian technical writing normally expresses this idea through key requirements or non-optional constraints, not through a literal calque.
+
 ## Recommendation record
 
 Add examples like this to these resources:

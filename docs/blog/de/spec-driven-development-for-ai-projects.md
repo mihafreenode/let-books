@@ -132,8 +132,16 @@ Spezifikationsgetriebene Entwicklung ist die Art, wie ein Team verhindert, dass 
 
 In KI-gestützten Projekten ist die Spezifikation nicht nachträglicher Papierkram. Sie ist die Grenze, das Gedächtnis und der Prüfmaßstab, die schnelle Lieferung vertrauenswürdig machen.
 
+## Weiterführende Seiten
+
+- `../../wiki/spec-driven-development.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Andere Sprachen
 
+- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Shqip](../sq/spec-driven-development-for-ai-projects.md)
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
 - [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)

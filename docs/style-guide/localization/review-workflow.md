@@ -25,6 +25,7 @@ Before changing localized content, the reviewer must:
 - review localization review rules for the content type
 - explicitly consider whether known defect classes apply to the current content
 - check whether previously rejected wording patterns reappear in the current draft
+- check whether English idioms, metaphors, management jargon, or rhetorical phrasing were transferred too literally into Slovenian
 
 ## Review summary requirements
 
@@ -82,7 +83,7 @@ This keeps review work reusable for governance, training, QA calibration, and mo
 
 ## Review examples
 
-The Slovenian example in `ai-translation-review-records.md` shows a common pattern: broad meaning preserved, but native-speaker correction still required for grammar, modality, terminology, and register.
+The Slovenian examples in `ai-translation-review-records.md` show common patterns: broad meaning preserved, but native-speaker correction still required for grammar, modality, terminology, register, English metaphor transfer, and translated-English sentence structure.
 
 ## Related Pages
 

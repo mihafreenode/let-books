@@ -175,4 +175,5 @@ That principle applies to software, but it also applies well beyond software.
 - `../../wiki/ai-assisted-knowledge-work.md`
 - `../../wiki/spec-driven-development.md`
 - `../../learning/how-to-use-ai-workflows-for-non-software-knowledge-work.md`
+- `ai-as-an-oracle.md`
 - `governance-trust-and-security-in-ai-workflows.md`

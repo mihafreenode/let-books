@@ -130,8 +130,16 @@ Dokumentation ist nicht von Produktqualität getrennt.
 
 Sie prägt Implementierung, Review, Kommunikation, Validierung und langfristiges Vertrauen. In KI-gestützten Projekten ist Dokumentation Teil des Produkts, weil sie Teil des Systems ist, das Produktdrift verhindert.
 
+## Weiterführende Seiten
+
+- `../../wiki/documentation-traceability.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Andere Sprachen
 
+- [English](../en/documentation-is-part-of-the-product.md)
 - [Shqip](../sq/documentation-is-part-of-the-product.md)
 - [Slovenščina](../sl/documentation-is-part-of-the-product.md)
 - [Hrvatski](../hr/documentation-is-part-of-the-product.md)
@@ -139,7 +147,6 @@ Sie prägt Implementierung, Review, Kommunikation, Validierung und langfristiges
 - [Srpski (latinica)](../sr-Latn/documentation-is-part-of-the-product.md)
 - [Српски (ћирилица)](../sr-Cyrl/documentation-is-part-of-the-product.md)
 - [Македонски](../mk/documentation-is-part-of-the-product.md)
-- [Deutsch](../de/documentation-is-part-of-the-product.md)
 - [Italiano](../it/documentation-is-part-of-the-product.md)
 - [Français](../fr/documentation-is-part-of-the-product.md)
 - [Español](../es/documentation-is-part-of-the-product.md)

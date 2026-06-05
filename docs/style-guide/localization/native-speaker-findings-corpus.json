@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-06-03",
+  "updated_at": "2026-06-05",
   "findings": [
     {
       "id": "sl-parallel-structure-001",
@@ -143,6 +143,113 @@
       "review_guidance": "Resolve testing and evaluation vocabulary by software QA domain meaning first.",
       "prompt_guidance": "When translating benchmarking or evaluation text, treat 'fixture' as a reusable reference example or test artifact unless the physical domain is explicit.",
       "terminology_guidance": "Do not use infrastructure or wiring meanings for 'fixture' in QA, benchmarking, or LLM evaluation contexts."
+    },
+    {
+      "id": "sl-working-engineer-oracle-001",
+      "language": "sl",
+      "category": "translated-English engineering register",
+      "source_text": "But from the working engineer's perspective, it often behaves like a practical oracle:",
+      "localized_text": "Toda z vidika delujočega inženirja se pogosto vede kot praktični orakelj:",
+      "preferred_localized_text": "Z inženirskega vidika v praksi pogosto deluje kot orakelj:",
+      "explanation": "The literal transfer of both the role label and the noun phrase sounds translated from English even though the sentence is understandable.",
+      "status": "tracked",
+      "validator_possible": true,
+      "related_files": [
+        "docs/blog/sl/ai-as-an-oracle.md"
+      ],
+      "content_change_refs": [
+        "docs/blog/sl/ai-as-an-oracle.md"
+      ],
+      "recurrence_tags": [
+        "literal_translation",
+        "translationese_pattern",
+        "engineering_register"
+      ],
+      "date_added": "2026-06-05",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "validator",
+        "knowledge_corpus"
+      ],
+      "validator_match_type": "substring",
+      "validator_patterns": [
+        "delujočega inženirja",
+        "praktični orakelj"
+      ],
+      "review_guidance": "If Slovenian sounds like a direct copy of English role labels or rhetorical noun phrases, rewrite the sentence instead of polishing the literal translation.",
+      "prompt_guidance": "Prefer natural Slovenian technical phrasing such as 'z inženirskega vidika' and 'v praksi deluje kot orakelj' instead of literal English structure."
+    },
+    {
+      "id": "sl-productivity-theater-001",
+      "language": "sl",
+      "category": "literal metaphor transfer",
+      "source_text": "They encourage people to think first about delegation, fluency, or productivity theater.",
+      "localized_text": "Spodbujajo jih, da najprej razmišljajo o delegiranju, tekoče zvenečem izhodu ali gledališču produktivnosti.",
+      "preferred_localized_text": "Spodbujajo jih, da pozornost usmerijo v delegiranje nalog, hitrost ustvarjanja odgovorov in občutek produktivnosti, namesto v preverjanje pravilnosti rezultatov.",
+      "explanation": "The English metaphor 'productivity theater' becomes awkward in Slovenian. The right fix is to rewrite the sentence by meaning rather than preserve the metaphor.",
+      "status": "tracked",
+      "validator_possible": true,
+      "related_files": [
+        "docs/blog/sl/ai-as-an-oracle.md"
+      ],
+      "content_change_refs": [
+        "docs/blog/sl/ai-as-an-oracle.md"
+      ],
+      "recurrence_tags": [
+        "literal_translation",
+        "metaphor_transfer",
+        "management_jargon"
+      ],
+      "date_added": "2026-06-05",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "validator",
+        "knowledge_corpus"
+      ],
+      "validator_match_type": "substring",
+      "validator_patterns": [
+        "gledališče produktivnosti"
+      ],
+      "review_guidance": "When English uses startup or management metaphors, check whether Slovenian should preserve the metaphor at all or rewrite the sentence around the intended meaning.",
+      "prompt_guidance": "Do not translate 'productivity theater' literally into Slovenian. Rewrite the sentence so it expresses speed, visible output, or the feeling of productivity more naturally."
+    },
+    {
+      "id": "sl-non-negotiable-constraints-001",
+      "language": "sl",
+      "category": "literal engineering terminology",
+      "source_text": "whether it preserves non-negotiable constraints",
+      "localized_text": "ali ohranja nepogajalske omejitve",
+      "preferred_localized_text": "ali upošteva zahteve, od katerih ni mogoče odstopati",
+      "explanation": "The literal phrase sounds imported from English management language. Slovenian technical writing normally expresses this as key requirements or constraints that must be respected.",
+      "status": "tracked",
+      "validator_possible": true,
+      "related_files": [
+        "docs/blog/sl/ai-as-an-oracle.md"
+      ],
+      "content_change_refs": [
+        "docs/blog/sl/ai-as-an-oracle.md"
+      ],
+      "recurrence_tags": [
+        "literal_translation",
+        "terminology_drift",
+        "engineering_register"
+      ],
+      "date_added": "2026-06-05",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "validator",
+        "knowledge_corpus"
+      ],
+      "validator_match_type": "substring",
+      "validator_patterns": [
+        "nepogajalske omejitve",
+        "ohranja nepogajalske"
+      ],
+      "review_guidance": "Avoid direct calques of English engineering shorthand when Slovenian would naturally phrase the requirement through key constraints or non-optional requirements.",
+      "prompt_guidance": "Translate 'non-negotiable constraints' by meaning, for example as 'ključne omejitve' or 'zahteve, od katerih ni mogoče odstopati', not as a literal calque."
     },
     {
       "id": "cross-locale-source-english-001",

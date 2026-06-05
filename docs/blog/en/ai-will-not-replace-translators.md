@@ -139,6 +139,7 @@ The future is not translator versus AI. The practical future is AI-assisted loca
 - `../../wiki/let-books-localization-case-study.md`
 - `../../wiki/translation-quality-assurance.md`
 - `../../learning/how-to-review-ai-assisted-translations.md`
+- `ai-as-an-oracle.md`
 
 ## Other Languages
 

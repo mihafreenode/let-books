@@ -130,6 +130,13 @@ Spec-driven development is how a team keeps speed from turning into drift.
 
 In AI-assisted projects, the spec is not paperwork after the fact. It is the boundary, the memory, and the review standard that make fast delivery trustworthy.
 
+## Related Reading
+
+- `../../wiki/spec-driven-development.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Other Languages
 
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)

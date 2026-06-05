@@ -132,10 +132,17 @@ Razvoj vođen specifikacijom način je da tim spriječi da se brzina pretvori u 
 
 U projektima uz pomoć AI-ja specifikacija nije papirologija nakon činjenice. Ona je granica, memorija i standard pregleda koji brzo isporučivanje čine vjerodostojnim.
 
+## Povezano štivo
+
+- `../../wiki/spec-driven-development.md`
+- `../../wiki/validation-layers.md`
+- `ai-as-an-oracle.md`
+- `spec-driven-development-in-let-books.md`
+
 ## Drugi jezici
 
+- [English](../en/spec-driven-development-for-ai-projects.md)
 - [Slovenščina](../sl/spec-driven-development-for-ai-projects.md)
-- [Hrvatski](../hr/spec-driven-development-for-ai-projects.md)
 - [Bosanski](../bs/spec-driven-development-for-ai-projects.md)
 - [Srpski (latinica)](../sr-Latn/spec-driven-development-for-ai-projects.md)
 - [Српски (ћирилица)](../sr-Cyrl/spec-driven-development-for-ai-projects.md)
