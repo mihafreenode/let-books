@@ -15,16 +15,16 @@ Eine Produktspezifikation definiert, wofür ein Produkt gedacht ist, was es tun 
 
 ## Rolle
 
-Die Produktspezifikation ist die höchste praktische Beschreibung des beabsichtigten Produktverhaltens.
+Die Produktspezifikation ist die übergeordnete praktische Beschreibung des beabsichtigten Produktverhaltens.
 
 Es sollte Fragen beantworten wie:
 
 - warum das Produkt existiert
 - für wen es ist
-- welche Arbeitsabläufe erstklassig sind
+- welche Arbeitsabläufe im Mittelpunkt stehen
 - was auch unter Fehlerbedingungen funktionieren muss
 - was explizit außerhalb des Geltungsbereichs liegt
-- Welche Akzeptanzkriterien definieren eine sinnvolle Demo oder Veröffentlichung?
+- welche Akzeptanzkriterien eine sinnvolle Demo oder Veröffentlichung definieren
 
 ## Was in eine Produktspezifikation gehört
 
@@ -35,11 +35,11 @@ Typische Spezifikationsinhalte umfassen:
 - Domänenmodell
 - Workflow-Definitionen
 - Erwartungen an Privatsphäre und Sicherheit
-- Nicht-Ziele
+- was ausdrücklich nicht Ziel des Produkts ist
 - Anleitung zur Implementierungssequenz, sofern diese Auswirkungen auf den Umfang oder die Lieferreihenfolge hat
 - Akzeptanzkriterien
 
-Die Spezifikation sollte sich auf die Produktwahrheit konzentrieren, nicht auf jedes lokale Implementierungsdetail.
+Die Spezifikation sollte sich auf das Wesentliche am Produkt konzentrieren, nicht auf jedes lokale Implementierungsdetail.
 
 ## Was dort normalerweise nicht hingehört
 
@@ -69,7 +69,7 @@ Es definiert:
 - Manueller Workflow und AI-optionale Prinzipien
 - Akzeptanzkriterien für die erste Demo
 
-Das macht es zu mehr als nur einem Überblick. Es ist die wichtigste Produktautorität im Repository.
+Darum ist es mehr als nur ein Überblick. Es ist die wichtigste Produktreferenz im Repository.
 
 ## Verwandte Seiten
 

@@ -11,7 +11,7 @@ topics:
 
 ## Riepilogo
 
-Questa guida spiega come tradurre una specifica di prodotto in un piano di implementazione concreto senza perdere l'intento, i confini o le regole del flusso di lavoro che rendevano utile la specifica in primo luogo.
+Questa guida spiega come trasformare una specifica di prodotto in un piano di implementazione concreto senza perdere l'intento, i confini o le regole di flusso di lavoro che rendono utile la specifica.
 
 ## Perché questo passaggio è importante
 
@@ -38,7 +38,7 @@ Cerca:
 
 Queste sono le parti che dovrebbero sopravvivere al passaggio da specifica a piano.
 
-Se il piano le perde, di solito diventa una lista tecnica di cose da fare invece che un piano di consegna.
+Se il piano le perde, di solito si riduce a una lista tecnica di cose da fare invece che a un vero piano di consegna.
 
 ## Separa il piano in livelli
 
@@ -145,7 +145,7 @@ Per esempio, una sezione di consegna potrebbe essere:
 - persistere la copia fisica separatamente dai metadati bibliografici
 - aggiornare il testo della guida e le note di verifica
 
-Questo è molto più forte di una lista piatta come:
+Questo è molto più solido di un elenco piatto come:
 
 - creare un modulo
 - aggiungere una chiamata API

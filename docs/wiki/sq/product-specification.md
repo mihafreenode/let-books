@@ -15,13 +15,13 @@ Një specifikim produkti përcakton se për çfarë shërben një produkt, çfar
 
 ## Roli
 
-Specifikimi i produktit është përshkrimi praktik i nivelit më të lartë të sjelljes së produktit të synuar.
+Specifikimi i produktit është përshkrimi praktik i nivelit më të lartë të sjelljes së synuar të produktit.
 
 Ai duhet t'u përgjigjet pyetjeve të tilla si:
 
 - pse ekziston produkti
 - për kë është
-- cilat flukse pune janë të klasit të parë
+- cilat rrjedha pune janë më qendrore
 - çfarë duhet të funksionojë edhe në kushte dështimi
 - çfarë është shprehimisht jashtë fushëveprimit
 - cilat kritere pranimi përcaktojnë një demonstrim ose lëshim kuptimplotë
@@ -35,11 +35,11 @@ Përmbajtja tipike e specifikimeve përfshin:
 - modeli i domenit
 - përkufizimet e rrjedhës së punës
 - Pritshmëritë e privatësisë dhe sigurisë
-- jo gola
+- ato që nuk janë objektiv
 - Udhëzimet e sekuencës së zbatimit kur ajo ndikon në qëllimin ose porosinë e dorëzimit
 - kriteret e pranimit
 
-Specifikimet duhet të fokusohen në të vërtetën e produktit, jo në çdo detaj të zbatimit lokal.
+Specifikimi duhet të përqendrohet te ajo që e përcakton vërtet produktin, jo te çdo detaj i zbatimit lokal.
 
 ## Ajo që zakonisht nuk i përket atje
 
@@ -69,7 +69,7 @@ Ai përcakton:
 - Rrjedha e punës manuale dhe parimet opsionale të AI
 - kriteret e pranimit për demonstrimin e parë
 
-Kjo e bën atë më shumë se një pasqyrë. Është autoriteti kryesor i produktit në depo.
+Prandaj ai është më shumë se një pasqyrë e përgjithshme. Është pika kryesore e referencës për produktin në depo.
 
 ## Faqe të ngjashme
 

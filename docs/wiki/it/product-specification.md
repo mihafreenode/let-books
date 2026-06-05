@@ -15,13 +15,13 @@ Una specifica di prodotto definisce a cosa serve un prodotto, cosa deve fare, qu
 
 ## Ruolo
 
-La specifica del prodotto è la descrizione pratica di livello più elevato del comportamento previsto del prodotto.
+La specifica del prodotto è la descrizione pratica di più alto livello del comportamento previsto del prodotto.
 
 Dovrebbe rispondere a domande come:
 
 - perché il prodotto esiste
 - a chi è rivolto
-- quali flussi di lavoro sono di prima classe
+- quali flussi di lavoro sono davvero centrali
 - cosa deve funzionare anche in condizioni di guasto
 - cosa è esplicitamente fuori ambito
 - quali criteri di accettazione definiscono una demo o un rilascio significativo
@@ -35,11 +35,11 @@ Il contenuto tipico delle specifiche include:
 - modello di dominio
 - definizioni del flusso di lavoro
 - aspettative in materia di privacy e sicurezza
-- non-obiettivi
+- ciò che non rientra tra gli obiettivi
 - indicazioni sulla sequenza di implementazione laddove influiscono sull'ambito o sull'ordine di consegna
 - criteri di accettazione
 
-Le specifiche dovrebbero concentrarsi sulla verità del prodotto, non su tutti i dettagli dell'implementazione locale.
+La specifica dovrebbe concentrarsi su ciò che definisce davvero il prodotto, non su ogni dettaglio dell'implementazione locale.
 
 ## Ciò che di solito non appartiene a questo posto
 
@@ -69,7 +69,7 @@ Definisce:
 - flusso di lavoro manuale e principi AI-opzionali
 - criteri di accettazione per la prima demo
 
-Ciò lo rende più di una panoramica. È la principale autorità di prodotto nel repository.
+Per questo è più di una panoramica. È il riferimento principale sul prodotto nel repository.
 
 ## Pagine correlate
 

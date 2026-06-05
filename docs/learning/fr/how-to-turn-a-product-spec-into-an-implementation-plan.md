@@ -11,7 +11,7 @@ topics:
 
 ## Résumé
 
-Ce guide explique comment traduire une spécification produit en plan d’implémentation concret sans perdre l’intention, les limites ni les règles de flux de travail qui rendaient la spécification utile au départ.
+Ce guide explique comment transformer une spécification produit en plan d’implémentation concret sans perdre l’intention, les limites ni les règles de flux de travail qui donnent à la spécification sa valeur.
 
 ## Pourquoi cette étape compte
 
@@ -38,7 +38,7 @@ Recherchez :
 
 Ce sont les éléments qui doivent survivre au passage de la spécification au plan.
 
-Si le plan les perd, il devient généralement une liste technique de choses à faire plutôt qu’un plan de livraison.
+Si le plan les perd, il se transforme généralement en liste technique de tâches plutôt qu’en véritable plan de livraison.
 
 ## Séparer le plan en couches
 

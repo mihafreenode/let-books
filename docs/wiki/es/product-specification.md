@@ -15,13 +15,13 @@ Una especificación de producto define para qué sirve un producto, qué debe ha
 
 ## Rol
 
-La especificación del producto es la descripción práctica de más alto nivel del comportamiento previsto del producto.
+La especificación del producto es la descripción práctica de más alto nivel del comportamiento esperado del producto.
 
 Debe responder preguntas como:
 
 - por qué existe el producto
 - para quién es
-- qué flujos de trabajo son de primera clase
+- qué flujos de trabajo son realmente centrales
 - lo que debe funcionar incluso en condiciones de falla
 - lo que está explícitamente fuera de alcance
 - qué criterios de aceptación definen una demostración o lanzamiento significativo
@@ -35,11 +35,11 @@ El contenido de especificación típico incluye:
 - modelo de dominio
 - definiciones de flujo de trabajo
 - expectativas de privacidad y seguridad
-- no goles
+- lo que no forma parte de los objetivos
 - guía de secuencia de implementación cuando afecte el alcance o el orden de entrega
 - criterios de aceptación
 
-La especificación debe centrarse en la verdad del producto, no en todos los detalles de implementación local.
+La especificación debe centrarse en lo que define de verdad al producto, no en cada detalle de implementación local.
 
 ## Lo que normalmente no pertenece allí
 
@@ -69,7 +69,7 @@ Define:
 - flujo de trabajo manual y principios opcionales de IA
 - criterios de aceptación para la primera demostración
 
-Eso lo convierte en más que una descripción general. Es la principal autoridad del producto en el repositorio.
+Por eso es más que una visión general. Es la referencia principal sobre el producto en el repositorio.
 
 ## Páginas relacionadas
 

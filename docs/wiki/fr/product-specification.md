@@ -15,13 +15,13 @@ Une spécification de produit définit à quoi sert un produit, ce qu'il doit fa
 
 ## Rôle
 
-La spécification du produit constitue la description pratique du plus haut niveau du comportement prévu du produit.
+La spécification du produit constitue la description pratique la plus élevée du comportement attendu du produit.
 
 Il doit répondre à des questions telles que :
 
 - pourquoi le produit existe
-- à qui c'est
-- quels flux de travail sont de première classe
+- à qui il s'adresse
+- quels flux de travail sont vraiment centraux
 - ce qui doit fonctionner même dans des conditions de panne
 - ce qui est explicitement hors de portée
 - quels critères d'acceptation définissent une démo ou une version significative
@@ -35,11 +35,11 @@ Le contenu typique d’une spécification comprend :
 - modèle de domaine
 - définitions de flux de travail
 - les attentes en matière de confidentialité et de sécurité
-- non-objectifs
+- ce qui ne fait pas partie des objectifs
 - des conseils sur la séquence de mise en œuvre lorsque cela affecte la portée ou l'ordre de livraison
 - critères d'acceptation
 
-La spécification doit se concentrer sur la vérité du produit, et non sur tous les détails de mise en œuvre locale.
+La spécification doit rester centrée sur ce qui définit réellement le produit, et non sur chaque détail d'implémentation locale.
 
 ## Ce qui n'y appartient généralement pas
 
@@ -69,7 +69,7 @@ Il définit :
 - flux de travail manuel et principes facultatifs de l'IA
 - critères d'acceptation pour la première démo
 
-Cela en fait plus qu’un aperçu. Il s'agit de la principale autorité produit dans le référentiel.
+Cela en fait plus qu’un simple aperçu. C’est la référence principale sur le produit dans le dépôt.
 
 ## Pages connexes
 

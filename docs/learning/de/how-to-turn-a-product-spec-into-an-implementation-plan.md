@@ -11,7 +11,7 @@ topics:
 
 ## Zusammenfassung
 
-Dieser Leitfaden erklärt, wie man eine Produktspezifikation in einen konkreten Implementierungsplan übersetzt, ohne die Absicht, Grenzen oder Arbeitsablaufregeln zu verlieren, die die Spezifikation überhaupt erst nützlich gemacht haben.
+Dieser Leitfaden erklärt, wie sich eine Produktspezifikation in einen konkreten Implementierungsplan überführen lässt, ohne die Absicht, Grenzen oder Arbeitsablaufregeln zu verlieren, die die Spezifikation überhaupt erst nützlich machen.
 
 ## Warum dieser Schritt wichtig ist
 
@@ -38,7 +38,7 @@ Suchen Sie nach:
 
 Das sind die Teile, die den Übergang von der Spezifikation zum Plan überleben sollten.
 
-Wenn der Plan sie verliert, wird er meist zu einer technischen To-do-Liste statt zu einem Delivery-Plan.
+Wenn der Plan sie verliert, wird daraus meist eher eine technische Aufgabenliste als ein wirklicher Lieferplan.
 
 ## Den Plan in Ebenen gliedern
 
@@ -138,7 +138,7 @@ Verwenden Sie eine Struktur wie diese:
 5. Verifikationsstrategie
 6. erforderliche Dokumentationsaktualisierungen
 
-Ein Delivery-Slice könnte zum Beispiel sein:
+Ein Lieferabschnitt könnte zum Beispiel so aussehen:
 
 - Speicherort-Auswahl zum Intake-Ablauf hinzufügen
 - Speichern auch ohne erfolgreiche Metadatensuche erlauben
