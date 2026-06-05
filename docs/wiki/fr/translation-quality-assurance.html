@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assurance qualité des traductions | LetBooks</title>
-    <meta name="description" content="Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
+    <meta name="description" content="La QA de traduction combine validation automatisée, vérification orthographique, revue terminologique, contrôles d&#x27;accessibilité et jugement humain.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/fr/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Assurance qualité des traductions | LetBooks">
-    <meta property="og:description" content="Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
+    <meta property="og:description" content="La QA de traduction combine validation automatisée, vérification orthographique, revue terminologique, contrôles d&#x27;accessibilité et jugement humain.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/fr/translation-quality-assurance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Assurance qualité des traductions | LetBooks">
-    <meta name="twitter:description" content="Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.">
+    <meta name="twitter:description" content="La QA de traduction combine validation automatisée, vérification orthographique, revue terminologique, contrôles d&#x27;accessibilité et jugement humain.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Français</span>
           </div>
-          <p class="content-page-summary">Le contrôle qualité des traductions combine la validation automatisée, la vérification orthographique, la révision terminologique, les contrôles d&#x27;accessibilité et le jugement humain.</p>
+          <p class="content-page-summary">La QA de traduction combine validation automatisée, vérification orthographique, revue terminologique, contrôles d&#x27;accessibilité et jugement humain.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Sujets :</span>
               <span class="content-tag">Qualité de la traduction</span>
@@ -107,83 +107,137 @@
 <h2 id="vérifications-courantes">Vérifications courantes</h2>
 <ul>
 <li>traductions manquantes</li>
-<li>Fuite en anglais</li>
-<li>exhaustivité de la localisation destinée au lecteur</li>
-<li>incompatibilités d’espace réservé</li>
-<li>liens brisés</li>
+<li>fuites d’anglais</li>
+<li>complétude de la localisation visible par le lecteur</li>
+<li>parité structurelle par rapport à la sortie fraîchement générée</li>
+<li>lisibilité en langue maternelle et expression naturelle</li>
+<li>écarts de placeholders</li>
+<li>liens rompus</li>
 <li>dérive du glossaire</li>
 <li>couverture du texte d’accessibilité</li>
-<li>capture d’écran et parité du diagramme</li>
+<li>parité des captures d’écran et des diagrammes</li>
 </ul>
 <h2 id="exigence-de-sortie-fraîchement-générée">Exigence de sortie fraîchement générée</h2>
-<p class="lead">Avant la revue de parité structurelle, la revue sémantique ou la comparaison manuelle d’articles :</p>
+<p class="lead">Avant la revue de parité structurelle, la revue sémantique ou la comparaison manuelle des articles :</p>
 <ol type="1">
 <li>régénérez le site à partir de l’état actuel du dépôt</li>
 <li>exécutez les validateurs sur la sortie générée actuelle</li>
 <li>inspectez les artefacts HTML générés</li>
-<li>ce n’est qu’ensuite que vous effectuez l’évaluation manuelle de parité</li>
+<li>seulement ensuite, effectuez l’évaluation manuelle de la parité</li>
 </ol>
-<p>Cette règle existe parce que le Markdown source et la sortie générée peuvent diverger temporairement pendant le développement, et les constats QA doivent s’appuyer sur les artefacts actuels plutôt que sur des fichiers générés obsolètes.</p>
+<p>Cette règle existe parce que le Markdown source et la sortie générée peuvent diverger temporairement pendant le développement, et que les constats de QA doivent se fonder sur des artefacts actuels plutôt que sur des fichiers générés obsolètes.</p>
 <h2 id="revue-de-parité-structurelle">Revue de parité structurelle</h2>
-<p>La revue de parité structurelle doit rechercher les pertes de valeur pour le lecteur, même lorsque l’article localisé préserve encore globalement le sens.</p>
+<p>La revue de parité structurelle doit rechercher les pertes de valeur pour le lecteur même lorsque l’article localisé préserve encore globalement le sens.</p>
 <p>Les signaux typiques incluent :</p>
 <ul>
-<li>l’absence de sections majeures</li>
-<li>une hiérarchie de titres aplatie</li>
-<li>des exemples manquants</li>
-<li>des conseils pratiques trop compressés</li>
-<li>une discussion sur la gouvernance réduite</li>
-<li>des consignes de revue ou de validation raccourcies</li>
+<li>sections principales manquantes</li>
+<li>hiérarchie de titres effondrée</li>
+<li>exemples manquants</li>
+<li>guidage pratique comprimé</li>
+<li>discussion de gouvernance réduite</li>
+<li>consignes de revue ou de validation raccourcies</li>
 </ul>
-<p>Les avertissements des validateurs de parité structurelle sont des invites à la revue, pas une preuve automatique d’une mauvaise traduction. Ils doivent être interprétés avec le HTML généré et, si nécessaire, avec le rendu dans le navigateur.</p>
+<p>Les avertissements des validateurs de parité structurelle sont des invitations à la revue, pas une preuve automatique d’une mauvaise traduction. Ils doivent être interprétés avec le HTML généré et, si nécessaire, avec la sortie rendue dans le navigateur.</p>
+<h2 id="revue-de-lexpression-en-langue-maternelle">Revue de l’expression en langue maternelle</h2>
+<p>La QA de traduction doit aussi rechercher du texte techniquement correct mais qui n’est pas celui qu’un locuteur natif choisirait naturellement.</p>
+<p>Cela inclut :</p>
+<ul>
+<li>structure de phrase anglaise directe</li>
+<li>traduction directe d’idiomes anglais</li>
+<li>formulations qui sonnent traduites plutôt qu’écrites comme texte original</li>
+<li>terminologie qui continue à trahir la langue source</li>
+</ul>
+<p>Des exemples de ce modèle comprennent des formulations équivalentes à :</p>
+<ul>
+<li>contenu candidat</li>
+<li>stratégie de validation</li>
+<li>artefact de workflow</li>
+<li>outils sélectionnés</li>
+<li>compétences sélectionnées</li>
+</ul>
+<p>Ce ne sont pas toujours des erreurs de traduction. Ce sont souvent des cas où un locuteur natif réécrirait instinctivement la phrase.</p>
+<h2 id="test-de-préférence-du-locuteur-natif">Test de préférence du locuteur natif</h2>
+<p>Pour les sections de prose importantes, les reviewers devraient se demander :</p>
+<blockquote>
+<p>Si un locuteur natif compétent rédigeait cette idée à partir de zéro, l’écrirait-il probablement de cette façon ?</p>
+</blockquote>
+<p>Si ce n’est pas le cas, les reviewers devraient :</p>
+<ul>
+<li>préserver le sens</li>
+<li>préserver la parité sémantique</li>
+<li>préserver la parité structurelle</li>
+<li>améliorer la formulation</li>
+</ul>
+<p>Ce test est particulièrement utile pour :</p>
+<ul>
+<li>les introductions</li>
+<li>les résumés</li>
+<li>les explications pédagogiques</li>
+<li>les consignes pratiques</li>
+<li>les discussions de gouvernance</li>
+<li>les conclusions</li>
+</ul>
+<h2 id="revue-de-lexpression-naturelle">Revue de l’expression naturelle</h2>
+<p>Traitez une formulation techniquement correcte mais peu naturelle comme un problème de qualité.</p>
+<p>Les reviewers devraient préférer des formulations qui sonnent naturellement rédigées dans la langue cible, même lorsque la traduction d’origine est compréhensible.</p>
+<p>L’objectif n’est pas seulement une traduction correcte. L’objectif est un document qui donne l’impression d’avoir été écrit à l’origine pour des lecteurs natifs.</p>
+<p>Les améliorations de langage naturel ne doivent pas affaiblir :</p>
+<ul>
+<li>la parité sémantique</li>
+<li>la parité structurelle</li>
+<li>la couverture pédagogique</li>
+<li>les exemples</li>
+<li>les consignes pratiques</li>
+<li>les consignes de gouvernance</li>
+</ul>
 <h2 id="validateur-de-localisation-destiné-au-lecteur">Validateur de localisation destiné au lecteur</h2>
-<p>Une classe de validateur doit explicitement échouer à CI lorsqu’une page apparaît localisée mais expose toujours le contenu destiné au lecteur en langue source.</p>
+<p>Une classe de validateurs devrait explicitement faire échouer la CI lorsqu’une page semble localisée mais expose encore du contenu destiné au lecteur dans la langue source.</p>
 <p>Exemples qui devraient échouer :</p>
 <ul>
 <li>titre localisé avec résumé en anglais</li>
-<li>article localisé avec des balises anglaises</li>
-<li>article localisé avec des titres ou des listes en anglais</li>
-<li>article localisé avec légendes ou légendes en anglais</li>
-<li>article localisé avec des étiquettes de diagramme en anglais ou un texte alternatif</li>
-<li>des cartes de contenu connexe en langues mixtes</li>
+<li>article localisé avec tags en anglais</li>
+<li>article localisé avec titres ou listes en anglais</li>
+<li>article localisé avec callouts ou légendes en anglais</li>
+<li>article localisé avec étiquettes de diagramme en anglais ou texte alternatif</li>
+<li>cartes <code>related-content</code> en langues mixtes</li>
 </ul>
-<p>Il s’agit d’une condition d’échec, et pas seulement d’un avertissement, car les lecteurs considèrent ces pages comme visiblement inachevées.</p>
-<h2 id="audit-de-classe-de-défauts">Audit de classe de défauts</h2>
-<p>Le contrôle qualité de la traduction doit conserver des classes de défauts explicites avec :</p>
+<p>Il s’agit d’une condition d’échec, et pas simplement d’un avertissement, car les lecteurs perçoivent ces pages comme visiblement inachevées.</p>
+<h2 id="audit-des-classes-de-défauts">Audit des classes de défauts</h2>
+<p>La QA de traduction devrait maintenir des classes de défauts explicites avec les champs suivants :</p>
 <ul>
-<li>descriptif</li>
+<li>description</li>
 <li>nombre d’occurrences</li>
-<li>la cause première</li>
+<li>cause racine</li>
 <li>couverture du validateur</li>
-<li>risque de récidive</li>
-<li>plan de fermeture</li>
+<li>risque de récurrence</li>
+<li>plan de clôture</li>
 </ul>
-<p>Les catégories obligatoires incluent :</p>
+<p>Les catégories requises incluent :</p>
 <ul>
 <li>résumés non traduits</li>
-<li>corps non traduits</li>
-<li>publication de brouillon d’espace réservé</li>
+<li>corps de texte non traduits</li>
+<li>publication de brouillons avec placeholders</li>
 <li>métadonnées non traduites</li>
-<li>édition en langues mixtes</li>
-<li>futures classes découvertes</li>
+<li>publication en langues mixtes</li>
+<li>classes découvertes ultérieurement</li>
 </ul>
-<p>Une classe n’est fermée que lorsque son décompte atteint zéro et que CI l’empêche de revenir sans échec.</p>
-<h2 id="preuve-dexamen-humain">Preuve d’examen humain</h2>
-<p>L’assurance qualité des traductions doit également conserver de courts enregistrements de révision humaine pour les corrections représentatives assistées par l’IA.</p>
+<p>Une classe n’est close que lorsque son nombre d’occurrences atteint zéro et que la CI empêche son retour sans échec.</p>
+<h2 id="preuves-de-revue-humaine">Preuves de revue humaine</h2>
+<p>La QA de traduction devrait également conserver de courts enregistrements de revue humaine pour des corrections représentatives assistées par AI.</p>
 <p>Champs minimaux :</p>
 <ul>
 <li>texte original</li>
 <li>texte corrigé</li>
 <li>catégorie d’erreur</li>
-<li>hypothèse de cause profonde</li>
-<li>justification de l’examinateur</li>
+<li>hypothèse de cause racine</li>
+<li>justification du reviewer</li>
 </ul>
-<p>Les résultats des analyses réalisées auprès de locuteurs natifs doivent être conservés sous la forme d’un corpus croissant, et non sous la forme de notes isolées et ponctuelles. Les résultats répétés devraient être répercutés sur la conception du validateur, les conseils des contributeurs et les futures instructions des agents IA.</p>
-<p>Avant la validation finale d’une traduction assistée par l’IA, les relecteurs devraient :</p>
+<p>Les constats issus des revues de locuteurs natifs devraient être conservés comme un corpus croissant, et non comme des notes isolées sans suite. Les constats répétés devraient nourrir la conception des validateurs, la guidance des contributeurs et les futures instructions pour les agents AI.</p>
+<p>Avant de valider une traduction assistée par AI, les reviewers devraient :</p>
 <ul>
-<li>consulter les entrées pertinentes du corpus structuré des constats pour cette langue ou ce sujet</li>
-<li>vérifier les schémas de défauts récurrents issus des revues humaines</li>
-<li>confirmer que le brouillon actuel ne réintroduit pas de problèmes connus avant la validation</li>
+<li>lire les entrées pertinentes du corpus structuré de constats pour cette langue ou ce sujet</li>
+<li>vérifier les motifs récurrents de défauts issus des revues humaines</li>
+<li>confirmer que la version en cours ne réintroduit pas de problèmes connus avant validation</li>
 </ul>
 <p>Chaque défaut signalé par un locuteur natif devrait aussi être évalué au regard de :</p>
 <ul>
@@ -191,45 +245,45 @@
 <li>la mise à jour des consignes de revue</li>
 <li>la mise à jour des consignes terminologiques</li>
 <li>l’amélioration du prompt</li>
-<li>l’opportunité d’un validateur</li>
-<li>l’opportunité d’un test de régression</li>
+<li>l’opportunité pour un validateur</li>
+<li>l’opportunité pour un test de régression</li>
 </ul>
-<p>Cela est important car même lorsque le sens global est préservé, les traductions générées par l’IA peuvent nécessiter une révision par un locuteur natif pour corriger des problèmes subtils de grammaire, de modalité, de terminologie et de registre spécifique au domaine. Ces problèmes sont souvent difficiles à détecter uniquement grâce aux mesures de qualité automatisées.</p>
-<p>Les erreurs concrètes signalées par des locuteurs natifs ne sont pas seulement consultatives. Chacune d’elles devrait être corrigée, systématisée, laissée intentionnellement non résolue avec justification, ou encore explicitement suivie dans le corpus des constats.</p>
+<p>Cela a de l’importance parce que, même lorsque le sens global est préservé, les traductions générées par AI peuvent exiger une revue de locuteur natif pour corriger des problèmes subtils de grammaire, de modalité, de terminologie et de registre spécifique au domaine. Ces problèmes sont souvent difficiles à détecter avec des métriques automatisées de qualité seules.</p>
+<p>Les erreurs concrètement signalées ne sont pas seulement indicatives. Chacune devrait finir corrigée, systématisée, laissée volontairement non résolue avec justification, ou encore explicitement suivie dans le corpus des constats.</p>
 <h2 id="taxonomie-courante-des-erreurs-de-traduction-de-lia">Taxonomie courante des erreurs de traduction de l’IA</h2>
 <ul>
 <li>grammaire</li>
 <li>modalité</li>
 <li>terminologie</li>
-<li>s’inscrire</li>
-<li>maîtrise</li>
+<li>registre</li>
+<li>fluidité</li>
 <li>traduction littérale</li>
 <li>ambiguïté</li>
 <li>perte de contexte</li>
-<li>l’ordre des mots</li>
-<li>colocalisation</li>
-<li>scénario ou orthographe</li>
-<li>formulation de la politique de domaine</li>
+<li>ordre des mots</li>
+<li>collocation</li>
+<li>écriture ou orthographe</li>
+<li>formulation de politique de domaine</li>
 <li>formulation d’accessibilité</li>
 </ul>
 <h2 id="notation-de-référence-légère">Notation de référence légère</h2>
-<p>Pour une évaluation reproductible de la traduction IA, utilisez une rubrique légère de 0 à 3 au lieu de vous fier uniquement au jugement de réussite/échec.</p>
+<p>Pour une évaluation répétable des traductions AI, utilisez une rubrique légère de 0 à 3 au lieu de vous fier uniquement à un jugement réussite/échec.</p>
 <p>Dimensions recommandées :</p>
 <ul>
-<li>c’est-à-dire l’exactitude</li>
-<li>grammaire et maîtrise</li>
+<li>exactitude du sens</li>
+<li>grammaire et fluidité</li>
 <li>terminologie et adéquation au domaine</li>
-<li>s’inscrire et styler</li>
-<li>efforts de révision</li>
+<li>registre et style</li>
+<li>effort de revue</li>
 </ul>
-<p>Étiquettes de version recommandées :</p>
+<p>Libellés de publication recommandés :</p>
 <ul>
-<li>bloqueur</li>
+<li>bloquant</li>
 <li>révision majeure</li>
 <li>révision mineure</li>
-<li>prêt avec l’approbation de l’examen</li>
+<li>prêt avec validation de revue</li>
 </ul>
-<p>Cela crée des données adaptées aux tableaux de bord sans nécessiter un cadre de mesure de localisation lourd.</p>
+<p>Cela crée des données exploitables dans des scorecards sans nécessiter de cadre lourd de mesure de localisation.</p>
 <h2 id="pages-connexes">Pages connexes</h2>
 <ul>
 <li><code>localization-ci-cd.md</code></li>
@@ -266,7 +320,6 @@
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/fr/ai-will-not-replace-translators.html"><span>L&#x27;IA ne remplacera pas les traducteurs</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/fr/how-to-review-ai-assisted-translations.html"><span>Comment relire des traductions assistées par l&#x27;IA</span><span class="topic-menu__meta">Ressources d&#x27;apprentissage</span></a>
-                  <a href="../../wiki/fr/ai-assisted-translation-policy.html"><span>AI-Politique de traduction assistée</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>

@@ -28,10 +28,10 @@ Zato kvalitet dokumentacije treba tretirati kao inženjersku disciplinu sa više
 - Validacija generisanog HTML-a proverava da li je izvorni sadržaj postao ispravan izlaz.
 - Validacija štampe proverava da li podržani PDF i papirni izlazi ostaju upotrebljivi.
 
-Ovaj višeslojni model je još važniji u workflowima potpomognutim AI-jem. Sadržaj može brzo da se nacrta, brzo regeneriše i brzo lokalizuje. To ubrzava povratne petlje, ali i povećava rizik od objavljivanja uglađenih grešaka ako cevovod testira samo površinsko formatiranje.
+Ovaj višeslojni model je još važniji u workflowima potpomognutim AI-jem. Sadržaj može brzo da se pripremi kao nacrt, brzo regeneriše i brzo lokalizuje. To ubrzava povratne petlje, ali i povećava rizik od objavljivanja uglađenih grešaka ako cevovod testira samo površinsko formatiranje.
 
-Teme su dobar primer. Kada su Topics u LetBooksu postali prvoklasan tip dokumentacije, morali su da naslede navigaciju, indeksiranje pretrage, generisanje mape sajta, obradu lokalizacije, validaciju generisanog sajta i provere štampe. Put nižeg kvaliteta stvorio bi novu površinu sadržaja sa slabijim garancijama od ostatka platforme.
+Teme su dobar primer. Kada su Topics u LetBooksu postali punopravan tip dokumentacije, morali su da naslede navigaciju, indeksiranje pretrage, generisanje mape sajta, obradu lokalizacije, validaciju generisanog sajta i provere štampe. Put nižeg kvaliteta stvorio bi novu vrstu sadržaja sa slabijim garancijama od ostatka platforme.
 
-Princip je jednostavan: svaki novi tip dokumentacije mora da nasledi postojeću validaciju. Tako model kvaliteta ostaje skalabilan. Umesto izmišljanja izuzetaka za svaki novi odeljak, platforma ista očekivanja proširuje na svaku površinu namenjenu čitaocu.
+Princip je jednostavan: svaki novi tip dokumentacije mora da nasledi postojeću validaciju. Tako model kvaliteta ostaje skalabilan. Umesto izmišljanja izuzetaka za svaki novi odeljak, platforma ista očekivanja proširuje na svaki sadržaj namenjen čitaocu.
 
 Kvalitet dokumentacije ide dalje od lintovanja, jer čitaoci doživljavaju ceo sistem, a ne samo izvorne datoteke.

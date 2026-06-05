@@ -16,45 +16,67 @@ Upravljanje lokalizacije določa, kdo lahko predlaga, pregleda, odobri in izpodb
 ## Področja upravljanja
 
 - lastništvo vira
-- vloge vzdrževalcev jezika
-- terminološke odobritve
+- vloge skrbnikov jezika
+- odobritve terminologije
 - reševanje sporov
-- spremljanje stanja pregleda
-- spremljanje primerov iz pregledov, ki jih je mogoče znova uporabiti
-- svežina revizijskih artefaktov
+- sledenje stanju pregleda
+- sledenje primerom pregledov za ponovno uporabo
+- svežina preglednih artefaktov
 - obveznosti dokumentiranja orodij
+- kakovost pregleda v maternem jeziku
 
 ## Zakaj je pomembno
 
-Brez upravljanja se večjezična vsebina spreminja v tonu, terminologiji in pričakovanjih glede kakovosti.
+Brez upravljanja večjezična vsebina odstopa v tonu, terminologiji in pričakovanjih glede kakovosti.
 
-Upravljanje pregleda bi moralo tudi opredeliti, kako se primeri popravljanja s pomočjo AI shranjujejo in ponovno uporabljajo pri izobraževanju, kartah rezultatov in ocenjevanju.
+Upravljanje pregledov mora določati tudi, kako se primeri popravkov s pomočjo AI shranjujejo in ponovno uporabljajo pri usposabljanju, preglednicah rezultatov in vrednotenju.
 
-## Svežina revizijskih artefaktov
+## Svežina preglednih artefaktov
 
 Upravljanje mora od pregledovalcev zahtevati, da razlikujejo med:
 
 - izvornim Markdownom
-- generiranim HTML
-- objavljenim izhodom spletnega mesta
+- generiranim HTML-jem
+- izhodom objavljenega spletišča
 - v brskalniku izrisanim izhodom
 
-Pred potrditvijo paritete morajo pregledovalci potrditi, da so bili pregledovani generirani artefakti ponovno ustvarjeni iz trenutnega stanja repozitorija.
+Pred potrditvijo paritete morajo pregledovalci potrditi, da so bili pregledani generirani artefakti znova ustvarjeni iz trenutnega stanja repozitorija.
 
 ## Upravljanje orodij
 
-Novi generatorji, izrisovalniki, pretvorniki, validatorji, revizijska orodja in druga orodja za obdelavo vsebine morajo biti obravnavani kot upravljavski artefakti, ne le kot podrobnosti implementacije.
+Nove generatorje, izrisovalnike, pretvornike, validatorje, revizijska orodja in druga orodja za obdelavo vsebine je treba obravnavati kot artefakte upravljanja, ne le kot podrobnosti izvedbe.
 
-Niso popolni, dokler:
+Niso dokončani, dokler:
 
 - njihov namen in omejitve niso dokumentirani
 - njihova neočitna pravila in hevristike niso pojasnjeni
-- ustrezna dokumentacija delovnih tokov in validacije ni posodobljena
-- vzdrževalci ne morejo razlagati opozoril, napak in slepih peg brez rekonstruiranja namena zgolj iz kode
+- ustrezna dokumentacija potekov dela in preverjanja ni posodobljena
+- skrbniki ne morejo razlagati opozoril, napak in slepih točk, ne da bi namero rekonstruirali samo iz kode
+
+## Kakovost pregleda v maternem jeziku
+
+Upravljanje lokalizacije mora zahtevati pregled ne le zaradi pravilnosti, temveč tudi zaradi naravnega izražanja v maternem jeziku.
+
+Merilo je, da se mora lokaliziran dokument brati tako, kot da bi bil prvotno napisan v ciljnem jeziku.
+
+To pomeni, da morajo pregledovalci naslednje obravnavati kot ugotovitve kakovosti:
+
+- dobesedna angleška stavčna zgradba
+- neposredni prevodi angleških idiomov
+- jezik upravljanja ali korporativni jezik, ki zveni prevedeno
+- terminologija, ki po nepotrebnem ohranja izvorno formulacijo
+
+Upravljanje mora ta pregled najprej dati v prednost tudi za:
+
+- novo ustvarjeno vsebino
+- nedavno razširjeno vsebino
+- vsebino, ki se trenutno ureja
+
+Starejšo lokalizirano vsebino je treba nato sčasoma izboljševati postopno, ne pa z enim samim prepisom celotnega repozitorija.
 
 ## Sorodne strani
 
 - `translation-memory-and-glossaries.md`
 - `localization-maturity-model.md`
-- `../style-guide/localization/ai-translation-review-records.md`
-- `../style-guide/localization/review-workflow.md`
+- `../../style-guide/localization/ai-translation-review-records.md`
+- `../../style-guide/localization/review-workflow.md`

@@ -1,7 +1,7 @@
 ---
 title: "Qualitätssicherung der Übersetzung"
 summary: >-
-  Die Übersetzungsqualitätssicherung kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologieprüfung, Barrierefreiheitsprüfungen und menschliches Urteilsvermögen.
+  Übersetzungs-QA kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologie-Review, Prüfungen zur Barrierefreiheit und menschliches Urteilsvermögen.
 topics:
   - translation-quality
   - qa
@@ -11,151 +11,213 @@ topics:
 
 ## Zusammenfassung
 
-Die Übersetzungsqualitätssicherung kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologieprüfung, Barrierefreiheitsprüfungen und menschliches Urteilsvermögen.
+Übersetzungs-QA kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologie-Review, Prüfungen zur Barrierefreiheit und menschliches Urteilsvermögen.
 
-## Gemeinsame Schecks
+## Häufige Prüfungen
 
 - fehlende Übersetzungen
-- Englisches Leck
-- Vollständigkeit der leserorientierten Lokalisierung
-- Nichtübereinstimmung der Platzhalter
+- englische Leckstellen
+- leserseitige Vollständigkeit der Lokalisierung
+- strukturelle Parität gegenüber frisch generierter Ausgabe
+- muttersprachliche Lesbarkeit und natürlicher Ausdruck
+- Platzhalter-Abweichungen
 - defekte Links
 - Glossardrift
-- Barrierefreie Textabdeckung
-- Screenshot- und Diagrammparität
+- Abdeckung von Barrierefreiheits-Texten
+- Parität von Screenshots und Diagrammen
 
 ## Anforderung an frisch generierte Ausgaben
 
-Vor der strukturellen Paritätsprüfung, der semantischen Prüfung oder dem manuellen Artikelvergleich:
+Vor struktureller Paritätsprüfung, semantischem Review oder manuellem Artikelvergleich:
 
-1. generieren Sie die Website aus dem aktuellen Stand des Repositorys neu
-2. führen Sie Validatoren gegen die aktuell generierte Ausgabe aus
+1. generieren Sie die Site aus dem aktuellen Zustand des Repositorys neu
+2. führen Sie Validatoren gegen die aktuelle generierte Ausgabe aus
 3. prüfen Sie die generierten HTML-Artefakte
-4. führen Sie erst danach die manuelle Paritätsbewertung durch
+4. führen Sie erst dann die manuelle Paritätsbewertung durch
 
-Diese Regel gibt es, weil Quelldateien in Markdown und generierte Ausgaben während der Entwicklung vorübergehend auseinanderlaufen können und QA-Befunde sich auf aktuelle Artefakte statt auf veraltete generierte Dateien stützen sollten.
+Diese Regel existiert, weil Quell-Markdown und generierte Ausgabe während der Entwicklung vorübergehend auseinanderlaufen können und QA-Befunde auf aktuellen Artefakten statt auf veralteten generierten Dateien basieren sollten.
 
 ## Strukturelle Paritätsprüfung
 
-Die strukturelle Paritätsprüfung sollte nach Verlusten an Leserwert suchen, auch wenn der lokalisierte Artikel die Bedeutung im Großen und Ganzen noch bewahrt.
+Die strukturelle Paritätsprüfung sollte nach Verlusten an Leserwert suchen, auch wenn der lokalisierte Artikel die Bedeutung noch weitgehend bewahrt.
 
 Typische Signale sind:
 
 - fehlende Hauptabschnitte
-- zusammengefallene Überschriftenhierarchie
+- eingestürzte Überschriftenhierarchie
 - fehlende Beispiele
 - komprimierte praktische Anleitung
 - reduzierte Governance-Diskussion
 - verkürzte Review- oder Validierungsanleitung
 
-Warnungen von Validatoren für strukturelle Parität sind Prüfhinweise, kein automatischer Beweis für eine schlechte Übersetzung. Sie sollten zusammen mit dem generierten HTML und, falls nötig, mit der im Browser gerenderten Ausgabe interpretiert werden.
+Warnungen aus strukturellen Paritäts-Validatoren sind Prüfhinweise, kein automatischer Beweis für eine schlechte Übersetzung. Sie sollten zusammen mit dem generierten HTML und, wo nötig, mit im Browser gerenderter Ausgabe interpretiert werden.
+
+## Review des muttersprachlichen Ausdrucks
+
+Übersetzungs-QA sollte auch nach Text suchen, der technisch korrekt ist, aber nicht dem entspricht, was ein Muttersprachler natürlich wählen würde.
+
+Dazu gehören:
+
+- direkte englische Satzstruktur
+- direkte Übersetzung englischer Idiome
+- Formulierungen, die übersetzt statt originär verfasst klingen
+- Terminologie, die die Ausgangssprache noch erkennen lässt
+
+Beispiele für dieses Muster sind Formulierungen, die etwa Folgendem entsprechen:
+
+- Kandidateninhalt
+- Validierungsstrategie
+- Workflow-Artefakt
+- kuratierte Werkzeuge
+- kuratierte Skills
+
+Das sind nicht immer Übersetzungsfehler. Oft sind es Fälle, in denen ein Muttersprachler den Satz instinktiv umformulieren würde.
+
+## Präferenztest für Muttersprachler
+
+Bei wichtigen Prosateilen sollten Reviewer fragen:
+
+> Würde ein kompetenter Muttersprachler diese Idee wahrscheinlich so formulieren, wenn er sie von Grund auf neu schreiben würde?
+
+Wenn nicht, sollten Reviewer:
+
+- die Bedeutung bewahren
+- die semantische Parität bewahren
+- die strukturelle Parität bewahren
+- die Formulierung verbessern
+
+Dieser Test ist besonders nützlich für:
+
+- Einleitungen
+- Zusammenfassungen
+- pädagogische Erklärungen
+- praktische Anleitung
+- Governance-Diskussionen
+- Schlussabschnitte
+
+## Review des natürlichen Ausdrucks
+
+Behandeln Sie technisch korrekte, aber unnatürliche Formulierungen als Qualitätsproblem.
+
+Reviewer sollten Formulierungen bevorzugen, die in der Zielsprache natürlich verfasst klingen, auch wenn die ursprüngliche Übersetzung verständlich ist.
+
+Das Ziel ist nicht nur eine korrekte Übersetzung. Das Ziel ist ein Dokument, das sich so anfühlt, als sei es ursprünglich für muttersprachliche Leser geschrieben worden.
+
+Verbesserungen der natürlichen Sprache dürfen Folgendes nicht schwächen:
+
+- semantische Parität
+- strukturelle Parität
+- pädagogische Abdeckung
+- Beispiele
+- praktische Anleitung
+- Governance-Anleitung
 
 ## Lesergerichteter Lokalisierungsvalidator
 
-Eine Validatorklasse sollte CI explizit ausfallen lassen, wenn eine Seite lokalisiert erscheint, aber dennoch für den Leser sichtbare Inhalte in der Quellsprache bereitstellt.
+Eine Validator-Klasse sollte CI ausdrücklich fehlschlagen lassen, wenn eine Seite lokalisiert wirkt, aber weiterhin leserseitige Inhalte in der Ausgangssprache zeigt.
 
-Beispiele, die scheitern sollten:
+Beispiele, die fehlschlagen sollten:
 
-- Lokalisierter Titel mit englischer Zusammenfassung
-- Lokalisierter Artikel mit englischen Tags
+- lokalisierter Titel mit englischer Zusammenfassung
+- lokalisierter Artikel mit englischen Tags
 - lokalisierter Artikel mit englischen Überschriften oder Listen
-- Lokalisierter Artikel mit englischen Legenden oder Bildunterschriften
-- Lokalisierter Artikel mit englischen Diagrammbeschriftungen oder Alternativtext
-- Karten mit verwandten Inhalten in verschiedenen Sprachen
+- lokalisierter Artikel mit englischen Callouts oder Beschriftungen
+- lokalisierter Artikel mit englischen Diagrammbeschriftungen oder Alternativtext
+- `related-content`-Karten in gemischten Sprachen
 
-Hierbei handelt es sich um einen Fehlerzustand und nicht nur um eine Warnung, da Leser solche Seiten als sichtbar unvollendet empfinden.
+Das ist eine Fehlerbedingung und nicht nur eine Warnung, weil Leser solche Seiten als sichtbar unfertig wahrnehmen.
 
-## Prüfung der Fehlerklasse
+## Prüfung der Fehlerklassen
 
-Die Übersetzungsqualitätssicherung sollte explizite Fehlerklassen pflegen mit:
+Übersetzungs-QA sollte explizite Fehlerklassen mit folgenden Feldern pflegen:
 
 - Beschreibung
-- Anzahl der Vorkommnisse
+- Vorkommenszahl
 - Grundursache
 - Validator-Abdeckung
 - Wiederholungsrisiko
 - Schließungsplan
 
-Zu den erforderlichen Kategorien gehören:
+Erforderliche Kategorien sind:
 
 - unübersetzte Zusammenfassungen
-- unübersetzte Körper
-- Platzhalter-Entwurfsveröffentlichung
+- unübersetzte Haupttexte
+- Veröffentlichung von Platzhalterentwürfen
 - unübersetzte Metadaten
-- Veröffentlichung in gemischten Sprachen
-- Zukünftig entdeckte Klassen
+- gemischtsprachige Veröffentlichung
+- künftig entdeckte Klassen
 
-Eine Klasse wird nur geschlossen, wenn ihre Anzahl Null erreicht und CI verhindert, dass sie ohne Fehler zurückkehrt.
+Eine Klasse ist erst geschlossen, wenn ihre Anzahl null erreicht und CI ihre Rückkehr nicht mehr ohne Fehler zulässt.
 
-## Menschliche Überprüfungsbeweise
+## Nachweise menschlicher Reviews
 
-Die Übersetzungsqualitätssicherung sollte auch kurze Aufzeichnungen menschlicher Überprüfungen für repräsentative KI-gestützte Korrekturen aufbewahren.
+Übersetzungs-QA sollte außerdem kurze menschliche Review-Aufzeichnungen für repräsentative AI-gestützte Korrekturen bewahren.
 
-Mindestfelder:
+Minimale Felder:
 
 - Originaltext
-- Text korrigiert
+- korrigierter Text
 - Fehlerkategorie
-- Ursachenhypothese
-- Begründung des Rezensenten
+- Hypothese zur Grundursache
+- Begründung des Reviewers
 
-Die Ergebnisse der Überprüfung durch Muttersprachler sollten als wachsender Korpus und nicht als isolierte, einmalige Notizen aufbewahrt werden. Wiederholte Erkenntnisse sollten in das Design des Validators, die Anleitung der Mitwirkenden und zukünftige Anweisungen für KI-Agenten einfließen.
+Befunde aus Reviews durch Muttersprachler sollten als wachsendes Korpus erhalten bleiben, nicht als isolierte Einmalnotizen. Wiederkehrende Befunde sollten in Validator-Design, Mitwirkenden-Richtlinien und künftige Anweisungen für AI-Agenten zurückfließen.
 
-Vor der Freigabe einer KI-gestützten Übersetzung sollten Reviewer:
+Vor der Freigabe einer AI-gestützten Übersetzung sollten Reviewer:
 
-- relevante Einträge im strukturierten Erkenntniskorpus für diese Sprache oder dieses Thema prüfen
+- relevante Einträge aus dem strukturierten Befundkorpus für diese Sprache oder dieses Thema lesen
 - wiederkehrende Fehlermuster aus menschlichen Reviews prüfen
-- bestätigen, dass der aktuelle Entwurf vor der Freigabe keine bekannten Probleme erneut einführt
+- bestätigen, dass der aktuelle Entwurf bekannte Probleme vor der Freigabe nicht erneut einführt
 
-Jeder gemeldete muttersprachliche Defekt sollte außerdem im Hinblick auf Folgendes bewertet werden:
+Jeder gemeldete Muttersprachler-Defekt sollte außerdem bewertet werden im Hinblick auf:
 
-- Korrektur des Inhalts
-- Aktualisierung der Review-Leitlinien
-- Aktualisierung der Terminologie-Leitlinien
+- Inhaltskorrektur
+- Aktualisierung der Review-Richtlinien
+- Aktualisierung der Terminologie-Richtlinien
 - Verbesserung des Prompts
-- Möglichkeit für einen Validator
-- Möglichkeit für einen Regressionstest
+- Validator-Gelegenheit
+- Gelegenheit für einen Regressionstest
 
-Dies ist wichtig, denn selbst wenn die Gesamtbedeutung erhalten bleibt, erfordern KI-generierte Übersetzungen möglicherweise eine Überprüfung durch einen Muttersprachler, um subtile Probleme in Grammatik, Modalität, Terminologie und domänenspezifischem Register zu korrigieren. Diese Probleme lassen sich allein durch automatisierte Qualitätsmetriken oft nur schwer erkennen.
+Das ist wichtig, weil selbst dann, wenn die Gesamtbedeutung erhalten bleibt, von AI erzeugte Übersetzungen muttersprachliche Reviews erfordern können, um feine Probleme bei Grammatik, Modalität, Terminologie und domänenspezifischem Register zu korrigieren. Solche Probleme sind allein mit automatisierten Qualitätsmetriken oft schwer zu erkennen.
 
-Konkrete gemeldete Fehler von Muttersprachlern sind nicht nur beratend. Jeder einzelne sollte behoben, systematisiert, mit Begründung absichtlich ungelöst gelassen oder weiterhin ausdrücklich im Erkenntniskorpus nachverfolgt werden.
+Konkrete gemeldete Fehler sind nicht nur beratend. Jeder einzelne sollte entweder behoben, systematisiert, bewusst mit Begründung offengelassen oder weiterhin explizit im Befundkorpus verfolgt werden.
 
 ## Häufige Taxonomie von KI-Übersetzungsfehlern
 
 - Grammatik
 - Modalität
 - Terminologie
-- Registrieren
-- Geläufigkeit
+- Register
+- Flüssigkeit
 - wörtliche Übersetzung
 - Mehrdeutigkeit
 - Kontextverlust
-- Wortreihenfolge
+- Wortstellung
 - Kollokation
-- Schrift oder Rechtschreibung
-- Formulierung der Domänenrichtlinien
+- Schrift oder Orthografie
+- Formulierung von Domänenrichtlinien
 - Formulierung zur Barrierefreiheit
 
 ## Leichte Benchmark-Bewertung
 
-Für eine wiederholbare KI-Übersetzungsbewertung verwenden Sie eine einfache 0-3-Rubrik, anstatt sich nur auf die Beurteilung „Bestanden/Nicht bestanden“ zu verlassen.
+Für wiederholbare Bewertung von AI-Übersetzungen sollte eine leichte 0-bis-3-Rubrik verwendet werden, statt sich nur auf ein Bestanden/Nicht-bestanden-Urteil zu verlassen.
 
-Empfohlene Abmessungen:
+Empfohlene Dimensionen:
 
-- was Genauigkeit bedeutet
-- Grammatik und Sprachkompetenz
-- Terminologie und Domänenanpassung
-- registrieren und stylen
-- Überprüfungsaufwand
+- Bedeutungsgenauigkeit
+- Grammatik und Flüssigkeit
+- Terminologie und Domänenpassung
+- Register und Stil
+- Review-Aufwand
 
-Empfohlene Veröffentlichungsetiketten:
+Empfohlene Freigabe-Labels:
 
 - Blocker
-- große Überarbeitung
+- größere Überarbeitung
 - kleinere Überarbeitung
-- Bereit mit Freigabe der Überprüfung
+- mit Review-Freigabe bereit
 
-Dadurch werden Scorecard-freundliche Daten erstellt, ohne dass ein umfangreiches Lokalisierungs-Mess-Framework erforderlich ist.
+Das schafft scorecard-taugliche Daten, ohne ein schwergewichtiges Framework zur Lokalisierungsmessung zu benötigen.
 
 ## Verwandte Seiten
 

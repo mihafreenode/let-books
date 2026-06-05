@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Localización CI y CD | LetBooks</title>
-    <meta name="description" content="La localización CI/CD valida el contenido multilingüe continuamente para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten tempranamente.">
+    <meta name="description" content="La CI/CD de localización valida continuamente el contenido multilingüe para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten pronto.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/es/localization-ci-cd.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Localización CI y CD | LetBooks">
-    <meta property="og:description" content="La localización CI/CD valida el contenido multilingüe continuamente para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten tempranamente.">
+    <meta property="og:description" content="La CI/CD de localización valida continuamente el contenido multilingüe para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten pronto.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/es/localization-ci-cd.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Localización CI y CD | LetBooks">
-    <meta name="twitter:description" content="La localización CI/CD valida el contenido multilingüe continuamente para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten tempranamente.">
+    <meta name="twitter:description" content="La CI/CD de localización valida continuamente el contenido multilingüe para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten pronto.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,68 +97,76 @@
             <span>Wiki</span>
             <span>Español</span>
           </div>
-          <p class="content-page-summary">La localización CI/CD valida el contenido multilingüe continuamente para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten tempranamente.</p>
+          <p class="content-page-summary">La CI/CD de localización valida continuamente el contenido multilingüe para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten pronto.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temas:</span>
               <span class="content-tag">CI/CD</span>
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="cheques-deseados">Cheques deseados</h2>
+<h2 id="controles-deseados">Controles deseados</h2>
 <ul>
-<li>coherencia del inventario local</li>
-<li>generación reciente del sitio antes de la revisión de paridad</li>
-<li>validación de enlace</li>
+<li>coherencia del inventario de configuraciones regionales</li>
+<li>regeneración fresca del sitio antes de la revisión de paridad</li>
+<li>validación de enlaces</li>
 <li>generación de artículos y páginas</li>
-<li>corrector ortográfico donde esté disponible</li>
-<li>paridad de marcador de posición</li>
-<li>pruebas de humo de accesibilidad</li>
-<li>comprobaciones de cobertura de diagramas y capturas de pantalla</li>
+<li>revisión ortográfica cuando esté disponible</li>
+<li>paridad de marcadores de posición</li>
+<li>pruebas rápidas de accesibilidad</li>
+<li>comprobaciones de cobertura de capturas de pantalla y diagramas</li>
 </ul>
 <h2 id="regla-de-generación-reciente">Regla de generación reciente</h2>
-<p class="lead">Los flujos de CI y revisión de localización no deben basar los hallazgos de paridad en artefactos generados desactualizados.</p>
+<p class="lead">Los flujos de CI y revisión de localización no deben basar los hallazgos de paridad en artefactos generados obsoletos.</p>
 <p>Secuencia requerida:</p>
 <ol type="1">
-<li>generar el sitio a partir del estado actual del repositorio</li>
-<li>ejecutar los validadores sobre la salida recién generada</li>
-<li>cuando sea necesario, inspeccionar el HTML generado</li>
-<li>cuando sea necesario, inspeccionar la salida renderizada</li>
+<li>genere el sitio a partir del estado actual del repositorio</li>
+<li>ejecute los validadores sobre la salida recién generada</li>
+<li>inspeccione el HTML generado cuando sea necesario</li>
+<li>inspeccione la salida renderizada cuando sea necesario</li>
 </ol>
 <p>Esto importa porque el Markdown fuente, el HTML generado, la salida desplegada y el comportamiento renderizado en el navegador pueden divergir temporalmente durante el desarrollo.</p>
-<h2 id="progresión-de-clase-de-defecto">Progresión de clase de defecto</h2>
-<p>La CI de localización debe realizar un seguimiento de ambos:</p>
+<h2 id="prioridad-de-revisión">Prioridad de revisión</h2>
+<p>Aplique primero la revisión más estricta de paridad y en lengua materna a:</p>
+<ul>
+<li>contenido recién creado</li>
+<li>contenido ampliado recientemente</li>
+<li>contenido que se está editando actualmente</li>
+</ul>
+<p>Luego extienda progresivamente los mismos estándares de revisión al contenido localizado más antiguo.</p>
+<h2 id="progresión-de-clases-de-defectos">Progresión de clases de defectos</h2>
+<p>La CI de localización debe seguir ambas cosas:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
 </ul>
-<p>La deuda mide el trabajo restante en materia de fuente-contenido.</p>
-<p>Las clases de defectos abiertos miden si el sistema aún puede permitir que reaparezca una categoría de problema.</p>
-<p>Tan pronto como una clase de defecto llega a cero ocurrencias, su validador debe pasar de aviso a bloqueo cuando sea práctico.</p>
+<p>La deuda mide el trabajo pendiente sobre el contenido fuente.</p>
+<p>Las clases de defectos abiertas miden si el sistema aún puede permitir que vuelva a aparecer una categoría de problema.</p>
+<p>En cuanto una clase de defectos alcance cero ocurrencias, su validador debería pasar de consultivo a bloqueante cuando sea práctico.</p>
 <p>Ejemplos:</p>
 <ul>
-<li>publicación de borrador de marcador de posición</li>
-<li>resúmenes no traducidos</li>
-<li>metadatos no traducidos</li>
-<li>cuerpos no traducidos</li>
+<li>publicación de borradores con marcadores de posición</li>
+<li>resúmenes sin traducir</li>
+<li>metadatos sin traducir</li>
+<li>cuerpos de texto sin traducir</li>
 <li>publicación en idiomas mixtos</li>
 </ul>
-<p>CI no es sólo un guardián. Es el mecanismo que evita que las clases de defectos cerradas se vuelvan a abrir silenciosamente.</p>
-<h2 id="orden-de-generación-para-la-navegación-del-artículo.">Orden de generación para la navegación del artículo.</h2>
-<p>El contrato de navegación de artículos públicos vigente es:</p>
+<p>La CI no es solo un guardián. Es el mecanismo que evita que las clases de defectos cerradas se reabran en silencio.</p>
+<h2 id="orden-de-generación-para-la-navegación-de-artículos">Orden de generación para la navegación de artículos</h2>
+<p>El contrato actual de navegación pública de artículos es:</p>
 <ul>
 <li><code>post-article-nav</code></li>
 <li><code>related-content</code></li>
 <li><code>related-topic-nav</code></li>
 </ul>
-<p>La generación y validación deben realizarse en este orden:</p>
+<p>La generación y la validación deben ocurrir en este orden:</p>
 <ol type="1">
-<li>generar el HTML del artículo</li>
-<li>generar las páginas de índice</li>
-<li>ejecutar cualquier posprocesamiento de navegación restante solo si sigue siendo necesario</li>
-<li>validar la salida recién generada</li>
-<li>revisar el HTML generado o la salida renderizada si el flujo de trabajo requiere una evaluación humana de la paridad</li>
+<li>genere el HTML de los artículos</li>
+<li>genere las páginas de índice</li>
+<li>ejecute cualquier posprocesamiento de navegación restante solo si sigue siendo necesario</li>
+<li>valide la salida recién generada</li>
+<li>revise el HTML generado o la salida renderizada si el flujo de trabajo requiere una evaluación humana de la paridad</li>
 </ol>
-<p>Si un validador aún espera el bloque heredado <code>topic-nav</code>, actualice el validador al contrato actual en lugar de parchear el HTML generado.</p>
+<p>Si un validador todavía espera el bloque heredado <code>topic-nav</code>, actualice el validador al contrato actual en lugar de parchear el HTML generado.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

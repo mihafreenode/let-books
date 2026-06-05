@@ -81,6 +81,77 @@ Checks whether:
 
 Structural parity matters because a translation that technically exists and partially preserves meaning can still lose substantial reader value if it collapses navigability, conceptual separation, or instructional flow.
 
+## Native-Language First Principle
+
+Localized content should read as if it had originally been written in the target language.
+
+The goal is not literal translation. The goal is equivalent understanding for native readers.
+
+Reviewers should prioritize:
+
+- readability
+- clarity
+- educational value
+- natural phrasing
+
+over preserving English sentence structure.
+
+## Translation Of Meaning, Not Words
+
+Localization should preserve:
+
+- meaning
+- intent
+- educational value
+- structural parity
+
+It should not preserve English wording unnecessarily.
+
+Localized content may:
+
+- restructure sentences
+- merge or split clauses
+- change sentence order
+- replace literal translations with natural equivalents
+
+provided the original meaning remains intact.
+
+## Native-Speaker Preference Test
+
+For important prose sections, reviewers should ask:
+
+> If a competent native speaker were writing this idea from scratch, would they likely write it this way?
+
+If the answer is no, preserve the meaning but prefer the wording a native speaker would naturally choose.
+
+Apply this especially to:
+
+- introductions
+- summaries
+- educational explanations
+- practical guidance
+- governance discussions
+- conclusions
+
+## Literal Translation Detection
+
+Treat the following as review findings even when the text is technically understandable:
+
+- direct English sentence structure
+- direct translation of English idioms
+- wording that sounds translated rather than authored
+- terminology that reveals the source language
+
+Typical examples include terms such as:
+
+- candidate content
+- validation strategy
+- workflow artifact
+- curated tools
+- curated skills
+
+The exact replacement depends on context. The principle is more important than any single example.
+
 ## Files
 
 ```text

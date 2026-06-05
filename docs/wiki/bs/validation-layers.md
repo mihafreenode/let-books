@@ -1,21 +1,21 @@
 ---
-title: "Validacijski slojevi"
+title: "Slojevi provjere"
 summary: >-
-  Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.
+  Slojevi provjere su različiti načini na koje projekat provjerava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Validacijski slojevi
+# Slojevi provjere
 
 ## Sažetak
 
-Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.
+Slojevi provjere su različiti načini na koje projekat provjerava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.
 
 ## Zašto su slojevi važni
 
-Nijedan metod validacije nije dovoljan.
+Nijedna pojedinačna metoda provjere nije dovoljna.
 
 - dokumentacija sama po sebi ne sprovodi ponašanje
 - sami testovi mogu potvrditi pogrešne pretpostavke
@@ -23,7 +23,7 @@ Nijedan metod validacije nije dovoljan.
 
 Slojeviti pristup je jači jer svaki sloj hvata različitu klasu odstupanja.
 
-## Uobičajeni slojevi validacije
+## Uobičajeni slojevi provjere
 
 ### 1. Specifikacija i smjernice
 
@@ -49,11 +49,11 @@ CI čini provjere ponovljivim i vidljivim među suradnicima i okruženjima.
 
 ### 6. Provjere implementacije
 
-Tokovi rada implementacije potvrđuju da su izgrađeni artefakti još uvijek objavljeni i da su strukturalno zdravi.
+Tokovi rada implementacije potvrđuju da se izgrađeni artefakti i dalje mogu objaviti i da su strukturno zdravi.
 
 ## Kako bi slojevi trebali biti povezani
 
-Slojevi bi trebali ojačati jedan drugog kako bi:
+Slojevi bi trebali jačati jedan drugi ovim redoslijedom:
 
 - dokumenti i specifikacije definiraju očekivanja
 - pregled tumači ta očekivanja u kontekstu
@@ -83,7 +83,7 @@ Repozitorijum Let Books već dokumentuje nekoliko slojeva, uključujući:
 - pravila uredničkog dokaza u `docs/blog/README.md` i `docs/sources/README.md`
 - smjernice za učenje za fazni CI i uvođenje validacije
 
-To čini validaciju dokumentiranim sistemom, a ne samo budućom težnjom.
+To provjeru čini dokumentovanim sistemom, a ne samo budućom željom.
 
 ## Povezane stranice
 

@@ -28,10 +28,10 @@ Zato kvalitet dokumentacije treba tretirati kao inženjersku disciplinu sa više
 - Validacija generisanog HTML-a provjerava da li je izvorni sadržaj postao ispravan izlaz.
 - Validacija štampe provjerava da li podržani PDF i papirni izlazi ostaju upotrebljivi.
 
-Ovaj višeslojni model je još važniji u workflowima potpomognutim AI-jem. Sadržaj se može brzo skicirati, brzo regenerisati i brzo lokalizovati. To ubrzava povratne petlje, ali i povećava rizik od objavljivanja uglađenih grešaka ako cjevovod testira samo površinsko formatiranje.
+Ovaj višeslojni model je još važniji u workflowima potpomognutim AI-jem. Sadržaj se može brzo pripremiti kao nacrt, brzo regenerisati i brzo lokalizovati. To ubrzava povratne petlje, ali i povećava rizik od objavljivanja uglađenih grešaka ako cjevovod testira samo površinsko formatiranje.
 
-Teme su dobar primjer. Kada su Topics u LetBooksu postali prvorazredan tip dokumentacije, morali su naslijediti navigaciju, indeksiranje pretrage, generisanje sitemape, obradu lokalizacije, validaciju generisanog sajta i provjere štampe. Put nižeg kvaliteta stvorio bi novu površinu sadržaja sa slabijim garancijama od ostatka platforme.
+Teme su dobar primjer. Kada su Topics u LetBooksu postali punopravan tip dokumentacije, morali su naslijediti navigaciju, indeksiranje pretrage, generisanje sitemape, obradu lokalizacije, validaciju generisanog sajta i provjere štampe. Put nižeg kvaliteta stvorio bi novu vrstu sadržaja sa slabijim garancijama od ostatka platforme.
 
-Princip je jednostavan: svaki novi tip dokumentacije mora naslijediti postojeću validaciju. Tako model kvaliteta ostaje skalabilan. Umjesto izmišljanja izuzetaka za svaki novi odjeljak, platforma ista očekivanja proširuje na svaku površinu namijenjenu čitaocu.
+Princip je jednostavan: svaki novi tip dokumentacije mora naslijediti postojeću validaciju. Tako model kvaliteta ostaje skalabilan. Umjesto izmišljanja izuzetaka za svaki novi odjeljak, platforma ista očekivanja proširuje na svaki sadržaj namijenjen čitaocu.
 
 Kvalitet dokumentacije ide dalje od lintanja, jer čitaoci doživljavaju cijeli sistem, a ne samo izvorne datoteke.

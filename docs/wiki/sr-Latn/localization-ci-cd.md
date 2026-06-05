@@ -1,7 +1,7 @@
 ---
 title: "Lokalizacija CI i CD"
 summary: >-
-  Lokalizacija CI/CD kontinuirano potvrđuje višejezični sadržaj tako da se nedostajuća sredstva, pokvarene veze i regresije pristupačnosti rano uočavaju.
+  Lokalizacioni CI/CD kontinuirano proverava višejezični sadržaj kako bi se nedostajuća sredstva, pokvareni linkovi i regresije pristupačnosti otkrili rano.
 topics:
   - continuous-localization
   - qa
@@ -11,58 +11,68 @@ topics:
 
 ## Rezime
 
-Lokalizacija CI/CD kontinuirano potvrđuje višejezični sadržaj tako da se nedostajuća sredstva, pokvarene veze i regresije pristupačnosti rano uočavaju.
+Lokalizacioni CI/CD kontinuirano proverava višejezični sadržaj kako bi se nedostajuća sredstva, pokvareni linkovi i regresije pristupačnosti otkrili rano.
 
-## Željeni čekovi
+## Željene provere
 
-- doslednost inventara lokaliteta
+- doslednost popisa lokaliteta
 - sveže generisanje sajta pre pregleda pariteta
-- validacija veze
+- provera linkova
 - generisanje članaka i stranica
-- provera pravopisa tamo gde je dostupno
-- paritet čuvara mesta
-- ispitivanje dima pristupačnosti
-- provere snimaka ekrana i dijagrama
+- provera pravopisa gde je dostupna
+- paritet rezervisanih mesta
+- osnovni testovi pristupačnosti
+- provere pokrivenosti snimaka ekrana i dijagrama
 
 ## Pravilo svežeg generisanja
 
-CI i tokovi pregleda lokalizacije ne smeju da zasnivaju nalaze o paritetu na zastarelim generisanim artefaktima.
+Tokovi lokalizacionog CI-ja i pregleda ne smeju da zasnivaju nalaze o paritetu na zastarelim generisanim artefaktima.
 
-Obavezni redosled:
+Potreban redosled:
 
 1. generišite sajt iz trenutnog stanja repozitorijuma
 2. pokrenite validatore nad sveže generisanim izlazom
 3. po potrebi pregledajte generisani HTML
-4. po potrebi pregledajte prikazani izlaz
+4. po potrebi pregledajte renderovani izlaz
 
-Ovo je važno zato što izvorni Markdown, generisani HTML, objavljeni izlaz i ponašanje prikazano u pregledaču mogu privremeno da se raziđu tokom razvoja.
+Ovo je važno zato što izvorni Markdown, generisani HTML, objavljeni izlaz i ponašanje renderovano u pregledaču mogu privremeno da odstupaju tokom razvoja.
 
-## Progresija klase defekata
+## Prioritet pregleda
 
-CI lokalizacije treba da prati oba:
+Najstroži pregled na maternjem jeziku i pregled pariteta prvo primenite na:
+
+- novokreirani sadržaj
+- nedavno prošireni sadržaj
+- sadržaj koji se trenutno uređuje
+
+Zatim iste standarde pregleda postepeno proširite i na stariji lokalizovani sadržaj.
+
+## Progresija klasa defekata
+
+Lokalizacioni CI treba da prati i jedno i drugo:
 
 - `Localization Debt`
 - `Open Defect Classes`
 
-Mjeri duga preostali rad sa izvornim sadržajem.
+Dug meri preostali rad na izvornom sadržaju.
 
-Otvorene klase defekata mere da li sistem još uvek može da dozvoli da se kategorija problema ponovo pojavi.
+Otvorene klase defekata mere da li sistem i dalje dozvoljava da se neka kategorija problema ponovo pojavi.
 
-Čim klasa defekta dostigne nula pojavljivanja, njen validator bi trebalo da pređe sa savetodavnog na blokiranje gde je to praktično.
+Čim klasa defekata dostigne nula pojavljivanja, njen validator bi, gde je to praktično, trebalo da pređe iz savetodavnog u blokirajući režim rada.
 
 Primeri:
 
-- objavljivanje nacrta za čuvare mesta
+- objavljivanje zamenskog nacrta
 - neprevedeni rezimei
 - neprevedeni metapodaci
-- neprevedena tela
-- izdavaštvo na mešovitom jeziku
+- neprevedena tela teksta
+- objavljivanje na mešovitim jezicima
 
-CI nije samo čuvar kapije. To je mehanizam koji sprečava da se zatvorene klase defekata ponovo tiho otvaraju.
+CI nije samo čuvar prolaza. On je mehanizam koji sprečava da se zatvorene klase defekata tiho ponovo otvore.
 
-## Redosled generisanja za navigaciju po članku
+## Redosled generisanja za navigaciju članaka
 
-Trenutni ugovor o javnoj navigaciji članaka je:
+Trenutni ugovor javne navigacije članaka je:
 
 - `post-article-nav`
 - `related-content`
@@ -70,13 +80,13 @@ Trenutni ugovor o javnoj navigaciji članaka je:
 
 Generisanje i validacija treba da se odvijaju ovim redosledom:
 
-1. generišite HTML članka
+1. generišite HTML članaka
 2. generišite indeksne stranice
-3. pokrenite preostalu naknadnu obradu navigacije samo ako je i dalje potrebna
+3. pokrenite svaku preostalu naknadnu obradu navigacije samo ako je i dalje potrebna
 4. validirajte sveže generisani izlaz
-5. pregledajte generisani HTML ili prikazani izlaz ako tok rada zahteva ljudsku procenu pariteta
+5. pregledajte generisani HTML ili renderovani izlaz ako tok rada zahteva ljudsku procenu pariteta
 
-Ako validator i dalje očekuje zastareli blok `topic-nav`, ažurirajte validator na trenutni ugovor umesto zakrpanja generisanog HTML.
+Ako validator i dalje očekuje nasleđeni blok `topic-nav`, ažurirajte validator na trenutni ugovor umesto da krpite generisani HTML.
 
 ## Povezane stranice
 

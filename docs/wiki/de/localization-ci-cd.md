@@ -1,7 +1,7 @@
 ---
 title: "Lokalisierung CI und CD"
 summary: >-
-  Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.
+  Lokalisierungs-CI/CD validiert mehrsprachige Inhalte kontinuierlich, damit fehlende Assets, defekte Links und Regressionen bei der Barrierefreiheit früh erkannt werden.
 topics:
   - continuous-localization
   - qa
@@ -11,18 +11,18 @@ topics:
 
 ## Zusammenfassung
 
-Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.
+Lokalisierungs-CI/CD validiert mehrsprachige Inhalte kontinuierlich, damit fehlende Assets, defekte Links und Regressionen bei der Barrierefreiheit früh erkannt werden.
 
 ## Gewünschte Prüfungen
 
-- Konsistenz des lokalen Inventars
+- Konsistenz des Locale-Inventars
 - frische Site-Generierung vor der Paritätsprüfung
-- Linkvalidierung
-- Artikel- und Seitenerstellung
-- Rechtschreibprüfung, sofern verfügbar
-- Platzhalterparität
-- Rauchtests zur Zugänglichkeit
-- Überprüfung der Screenshot- und Diagrammabdeckung
+- Link-Validierung
+- Generierung von Artikeln und Seiten
+- Rechtschreibprüfung, wo verfügbar
+- Platzhalter-Parität
+- einfache Barrierefreiheits-Tests
+- Prüfungen zur Abdeckung von Screenshots und Diagrammen
 
 ## Regel für frische Generierung
 
@@ -30,39 +30,49 @@ Lokalisierungs-CI- und Review-Workflows dürfen Paritätsbefunde nicht auf veral
 
 Erforderliche Reihenfolge:
 
-1. die Site aus dem aktuellen Repository-Stand generieren
-2. Validatoren gegen die frisch generierte Ausgabe ausführen
-3. bei Bedarf generiertes HTML prüfen
-4. bei Bedarf gerenderte Ausgabe prüfen
+1. generieren Sie die Site aus dem aktuellen Zustand des Repositorys
+2. führen Sie Validatoren gegen die frisch generierte Ausgabe aus
+3. prüfen Sie bei Bedarf generiertes HTML
+4. prüfen Sie bei Bedarf gerenderte Ausgabe
 
 Das ist wichtig, weil Quell-Markdown, generiertes HTML, bereitgestellte Ausgabe und im Browser gerendertes Verhalten während der Entwicklung vorübergehend auseinanderlaufen können.
 
-## Fortschritt der Fehlerklasse
+## Prüfpriorität
 
-Lokalisierungs-CI sollte beides verfolgen:
+Wenden Sie die strengste muttersprachliche und Paritätsprüfung zuerst an auf:
+
+- neu erstellte Inhalte
+- kürzlich erweiterte Inhalte
+- Inhalte, die aktuell bearbeitet werden
+
+Erweitern Sie dieselben Review-Standards anschließend schrittweise auf ältere lokalisierte Inhalte.
+
+## Fortschritt von Fehlerklassen
+
+Lokalisierungs-CI sollte beides nachverfolgen:
 
 - `Localization Debt`
 - `Open Defect Classes`
 
-Die Verschuldung misst die verbleibende Quelleninhaltsarbeit.
+Der Schuldenstand misst die verbleibende Arbeit an Quellinhalten.
 
-Offene Fehlerklassen messen, ob das System das erneute Auftreten einer Problemkategorie noch zulassen kann.
+Offene Fehlerklassen messen, ob das System eine Problemkategorie weiterhin wieder auftreten lassen kann.
 
-Sobald eine Fehlerklasse null Vorkommnisse erreicht, sollte ihr Validator, soweit möglich, von der Empfehlung zur Blockierung übergehen.
+Sobald eine Fehlerklasse null Vorkommen erreicht, sollte ihr Validator, wo praktikabel, von beratend auf blockierend umgestellt werden.
 
 Beispiele:
 
-- Platzhalter-Entwurfsveröffentlichung
+- Veröffentlichung von Platzhalterentwürfen
 - unübersetzte Zusammenfassungen
 - unübersetzte Metadaten
-- unübersetzte Körper
-- Veröffentlichung in gemischten Sprachen
+- unübersetzte Haupttexte
+- gemischtsprachige Veröffentlichung
 
-CI ist nicht nur ein Gatekeeper. Es handelt sich um den Mechanismus, der verhindert, dass geschlossene Fehlerklassen stillschweigend erneut geöffnet werden.
+CI ist nicht nur ein Torwächter. Es ist der Mechanismus, der verhindert, dass geschlossene Fehlerklassen stillschweigend wieder geöffnet werden.
 
 ## Generierungsreihenfolge für die Artikelnavigation
 
-Der aktuelle Vertrag zur Navigation öffentlicher Artikel lautet:
+Der aktuelle Vertrag für die öffentliche Artikelnavigation lautet:
 
 - `post-article-nav`
 - `related-content`
@@ -70,13 +80,13 @@ Der aktuelle Vertrag zur Navigation öffentlicher Artikel lautet:
 
 Generierung und Validierung sollten in dieser Reihenfolge erfolgen:
 
-1. Artikel-HTML generieren
-2. Indexseiten generieren
-3. verbleibende Navigationsnachbearbeitung nur ausführen, wenn sie noch erforderlich ist
-4. frisch generierte Ausgabe validieren
-5. generiertes HTML oder gerenderte Ausgabe prüfen, wenn der Workflow eine menschliche Paritätsbewertung verlangt
+1. generieren Sie Artikel-HTML
+2. generieren Sie Indexseiten
+3. führen Sie verbleibende Navigations-Nachverarbeitung nur dann aus, wenn sie weiterhin erforderlich ist
+4. validieren Sie die frisch generierte Ausgabe
+5. prüfen Sie generiertes HTML oder gerenderte Ausgabe, wenn der Workflow eine menschliche Paritätsbewertung verlangt
 
-Wenn ein Validator immer noch den alten `topic-nav`-Block erwartet, aktualisieren Sie den Validator auf den aktuellen Vertrag, anstatt die generierten HTML zu patchen.
+Wenn ein Validator noch den veralteten Block `topic-nav` erwartet, aktualisieren Sie den Validator auf den aktuellen Vertrag, anstatt generiertes HTML zu flicken.
 
 ## Verwandte Seiten
 

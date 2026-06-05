@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lokalizimi CI dhe CD | LetBooks</title>
-    <meta name="description" content="Lokalizimi CI/CD vërteton vazhdimisht përmbajtjen shumëgjuhëshe, kështu që asetet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë kapen herët.">
+    <meta name="description" content="CI/CD i lokalizimit vërteton vazhdimisht përmbajtjen shumëgjuhëshe që burimet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë të kapen herët.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/localization-ci-cd.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Lokalizimi CI dhe CD | LetBooks">
-    <meta property="og:description" content="Lokalizimi CI/CD vërteton vazhdimisht përmbajtjen shumëgjuhëshe, kështu që asetet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë kapen herët.">
+    <meta property="og:description" content="CI/CD i lokalizimit vërteton vazhdimisht përmbajtjen shumëgjuhëshe që burimet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë të kapen herët.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/localization-ci-cd.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lokalizimi CI dhe CD | LetBooks">
-    <meta name="twitter:description" content="Lokalizimi CI/CD vërteton vazhdimisht përmbajtjen shumëgjuhëshe, kështu që asetet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë kapen herët.">
+    <meta name="twitter:description" content="CI/CD i lokalizimit vërteton vazhdimisht përmbajtjen shumëgjuhëshe që burimet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë të kapen herët.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Shqip</span>
           </div>
-          <p class="content-page-summary">Lokalizimi CI/CD vërteton vazhdimisht përmbajtjen shumëgjuhëshe, kështu që asetet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë kapen herët.</p>
+          <p class="content-page-summary">CI/CD i lokalizimit vërteton vazhdimisht përmbajtjen shumëgjuhëshe që burimet që mungojnë, lidhjet e prishura dhe regresionet e aksesueshmërisë të kapen herët.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">CI/CD</span>
@@ -106,59 +106,67 @@
           </header>
 <h2 id="kontrolle-të-dëshiruara">Kontrolle të dëshiruara</h2>
 <ul>
-<li>Konsistenca e inventarit lokal</li>
-<li>gjenerim i freskët i sajtit përpara rishikimit të barazisë</li>
-<li>vërtetimi i lidhjes</li>
-<li>gjenerimi i artikujve dhe faqeve</li>
-<li>kontrolloni drejtshkrimin ku është e mundur</li>
-<li>barazia e mbajtësve të vendit</li>
-<li>testet e tymit të aksesueshmërisë</li>
-<li>kontrollet e mbulimit të pamjes së ekranit dhe diagramit</li>
+<li>qëndrueshmëria e inventarit të lokaleve</li>
+<li>gjenerim i freskët i sajtit para rishikimit të paritetit</li>
+<li>vërtetim i lidhjeve</li>
+<li>gjenerim i artikujve dhe faqeve</li>
+<li>kontroll drejtshkrimor aty ku është i disponueshëm</li>
+<li>paritet i placeholder-ëve</li>
+<li>teste të shpejta të aksesueshmërisë</li>
+<li>kontrolle të mbulimit për pamjet e ekranit dhe diagramet</li>
 </ul>
 <h2 id="rregulli-i-gjenerimit-të-freskët">Rregulli i gjenerimit të freskët</h2>
-<p class="lead">Rrjedhat e CI-së dhe të rishikimit të lokalizimit nuk duhet t’i bazojnë gjetjet e barazisë në artefakte të gjeneruara të vjetruara.</p>
+<p class="lead">Flukset e CI-së dhe të rishikimit të lokalizimit nuk duhet t’i mbështesin gjetjet e paritetit te artefakte të gjeneruara të vjetruara.</p>
 <p>Rendi i kërkuar:</p>
 <ol type="1">
 <li>gjeneroni sajtin nga gjendja aktuale e depozitës</li>
-<li>ekzekutoni vërtetuesit kundrejt daljes së sapogjeneruar</li>
-<li>kur duhet, shqyrtoni HTML-në e gjeneruar</li>
-<li>kur duhet, shqyrtoni daljen e paraqitur</li>
+<li>ekzekutoni validuesit mbi daljen e sapogjeneruar</li>
+<li>inspektoni HTML-in e gjeneruar kur është e nevojshme</li>
+<li>inspektoni daljen e renderuar kur është e nevojshme</li>
 </ol>
-<p>Kjo ka rëndësi sepse Markdown-i burimor, HTML-ja e gjeneruar, dalja e publikuar dhe sjellja e paraqitur në shfletues mund të ndryshojnë përkohësisht gjatë zhvillimit.</p>
-<h2 id="përparim-i-klasës-së-defektit">Përparim i klasës së defektit</h2>
-<p>CI i lokalizimit duhet të gjurmojë të dyja:</p>
+<p>Kjo ka rëndësi sepse Markdown-i burimor, HTML-i i gjeneruar, dalja e publikuar dhe sjellja e renderuar në shfletues mund të ndryshojnë përkohësisht gjatë zhvillimit.</p>
+<h2 id="prioriteti-i-rishikimit">Prioriteti i rishikimit</h2>
+<p>Zbatoni së pari rishikimin më të fortë në gjuhën amtare dhe rishikimin e paritetit për:</p>
+<ul>
+<li>përmbajtje të krijuar rishtazi</li>
+<li>përmbajtje të zgjeruar së fundmi</li>
+<li>përmbajtje që po redaktohet aktualisht</li>
+</ul>
+<p>Pastaj shtrijini të njëjtat standarde rishikimi në mënyrë progresive edhe te përmbajtja më e vjetër e lokalizuar.</p>
+<h2 id="përparimi-i-klasave-të-defekteve">Përparimi i klasave të defekteve</h2>
+<p>CI-ja e lokalizimit duhet të ndjekë të dyja:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
 </ul>
-<p>Masat e borxhit të mbetura punë burimore-përmbajtje.</p>
-<p>Klasat e defekteve të hapura matin nëse sistemi mund të lejojë ende një kategori problemi të rishfaqet.</p>
-<p>Sapo një klasë defekti arrin zero dukuri, vërtetuesi i saj duhet të kalojë nga këshillimi në bllokues aty ku është praktike.</p>
+<p>Borxhi mat punën e mbetur mbi përmbajtjen burimore.</p>
+<p>Klasat e hapura të defekteve matin nëse sistemi ende mund të lejojë që një kategori problemi të rishfaqet.</p>
+<p>Sapo një klasë defekti të arrijë zero shfaqje, validuesi i saj duhet, kur është praktike, të kalojë nga këshillues në bllokues.</p>
 <p>Shembuj:</p>
 <ul>
-<li>botimi i draftit të vendmbajtësit</li>
+<li>publikim skice placeholder</li>
 <li>përmbledhje të papërkthyera</li>
-<li>meta të dhëna të papërkthyera</li>
-<li>trupa të papërkthyer</li>
-<li>botim në gjuhë të përzier</li>
+<li>metadata të papërkthyera</li>
+<li>trupa tekstesh të papërkthyer</li>
+<li>publikim me gjuhë të përziera</li>
 </ul>
-<p>CI nuk është vetëm një portier. Është mekanizmi që pengon klasat e mbyllura të defekteve të mos rihapen në heshtje.</p>
-<h2 id="rendi-i-gjeneratës-për-lundrimin-e-artikujve">Rendi i gjeneratës për lundrimin e artikujve</h2>
-<p>Kontrata aktuale e lundrimit të artikujve publik është:</p>
+<p>CI-ja nuk është vetëm portier. Ajo është mekanizmi që mban klasat e mbyllura të defekteve të mos rihapen në heshtje.</p>
+<h2 id="rendi-i-gjenerimit-për-navigimin-e-artikujve">Rendi i gjenerimit për navigimin e artikujve</h2>
+<p>Kontrata aktuale e navigimit publik të artikujve është:</p>
 <ul>
 <li><code>post-article-nav</code></li>
 <li><code>related-content</code></li>
 <li><code>related-topic-nav</code></li>
 </ul>
-<p>Gjenerimi dhe vërtetimi duhet të ndodhin në këtë rend:</p>
+<p>Gjenerimi dhe validimi duhet të ndodhin në këtë rend:</p>
 <ol type="1">
-<li>gjeneroni HTML-në e artikullit</li>
-<li>gjeneroni faqet e indeksit</li>
-<li>ekzekutoni çdo paspërpunim të mbetur të navigimit vetëm nëse kërkohet ende</li>
-<li>vërtetoni daljen e sapogjeneruar</li>
-<li>shqyrtoni HTML-në e gjeneruar ose daljen e paraqitur nëse rrjedha e punës kërkon vlerësim njerëzor të barazisë</li>
+<li>gjeneroni HTML-në e artikujve</li>
+<li>gjeneroni faqet indeks</li>
+<li>ekzekutoni çdo paspërpunim të mbetur të navigimit vetëm nëse është ende i nevojshëm</li>
+<li>validoni daljen e sapogjeneruar</li>
+<li>rishikoni HTML-në e gjeneruar ose daljen e renderuar nëse fluksi i punës kërkon vlerësim njerëzor të paritetit</li>
 </ol>
-<p>Nëse një vërtetues ende pret bllokun e trashëguar <code>topic-nav</code>, përditësoni verifikuesin me kontratën aktuale në vend që të korrigjoni HTML të krijuara.</p>
+<p>Nëse një validues ende pret bllokun e trashëguar <code>topic-nav</code>, përditësojeni validuesin sipas kontratës aktuale në vend që të arnoni HTML-në e gjeneruar.</p>
 <h2 id="faqe-të-ngjashme">Faqe të ngjashme</h2>
 <ul>
 <li><code>translation-quality-assurance.md</code></li>

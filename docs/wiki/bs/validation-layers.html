@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Validacijski slojevi | LetBooks</title>
-    <meta name="description" content="Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.">
+    <title>Slojevi provjere | LetBooks</title>
+    <meta name="description" content="Slojevi provjere su različiti načini na koje projekat provjerava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/bs/validation-layers.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Validacijski slojevi | LetBooks">
-    <meta property="og:description" content="Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.">
+    <meta property="og:title" content="Slojevi provjere | LetBooks">
+    <meta property="og:description" content="Slojevi provjere su različiti načini na koje projekat provjerava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/bs/validation-layers.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Validacijski slojevi | LetBooks">
-    <meta name="twitter:description" content="Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.">
+    <meta name="twitter:title" content="Slojevi provjere | LetBooks">
+    <meta name="twitter:description" content="Slojevi provjere su različiti načini na koje projekat provjerava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/bs/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Validacijski slojevi</span>
+              <span aria-current="page">Slojevi provjere</span>
             </nav>
-            <h1>Validacijski slojevi</h1>
+            <h1>Slojevi provjere</h1>
           <div class="content-page-meta">
             <span>Wiki</span>
             <span>Bosanski</span>
           </div>
-          <p class="content-page-summary">Validacijski slojevi su različiti načini na koje projekat provjerava da li se implementacija, dokumentacija i artefakti isporuke još uvijek podudaraju s predviđenim pravilima i očekivanjima kvaliteta.</p>
+          <p class="content-page-summary">Slojevi provjere su različiti načini na koje projekat provjerava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">CI/CD</span>
@@ -107,14 +107,14 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="zašto-su-slojevi-važni">Zašto su slojevi važni</h2>
-<p class="lead">Nijedan metod validacije nije dovoljan.</p>
+<p class="lead">Nijedna pojedinačna metoda provjere nije dovoljna.</p>
 <ul>
 <li>dokumentacija sama po sebi ne sprovodi ponašanje</li>
 <li>sami testovi mogu potvrditi pogrešne pretpostavke</li>
 <li>CI sama ne može definisati pravila koja bi trebalo da sprovodi</li>
 </ul>
 <p>Slojeviti pristup je jači jer svaki sloj hvata različitu klasu odstupanja.</p>
-<h2 id="uobičajeni-slojevi-validacije">Uobičajeni slojevi validacije</h2>
+<h2 id="uobičajeni-slojevi-provjere">Uobičajeni slojevi provjere</h2>
 <h3 id="specifikacija-i-smjernice">1. Specifikacija i smjernice</h3>
 <p>Prvi sloj definira pravilo.</p>
 <p>Bez ovog sloja, kasnije provjere mogu biti stroge, ali proizvoljne.</p>
@@ -127,9 +127,9 @@
 <h3 id="ci-kapije">5. CI kapije</h3>
 <p>CI čini provjere ponovljivim i vidljivim među suradnicima i okruženjima.</p>
 <h3 id="provjere-implementacije">6. Provjere implementacije</h3>
-<p>Tokovi rada implementacije potvrđuju da su izgrađeni artefakti još uvijek objavljeni i da su strukturalno zdravi.</p>
+<p>Tokovi rada implementacije potvrđuju da se izgrađeni artefakti i dalje mogu objaviti i da su strukturno zdravi.</p>
 <h2 id="kako-bi-slojevi-trebali-biti-povezani">Kako bi slojevi trebali biti povezani</h2>
-<p>Slojevi bi trebali ojačati jedan drugog kako bi:</p>
+<p>Slojevi bi trebali jačati jedan drugi ovim redoslijedom:</p>
 <ul>
 <li>dokumenti i specifikacije definiraju očekivanja</li>
 <li>pregled tumači ta očekivanja u kontekstu</li>
@@ -156,7 +156,7 @@
 <li>pravila uredničkog dokaza u <code>docs/blog/README.md</code> i <code>docs/sources/README.md</code></li>
 <li>smjernice za učenje za fazni CI i uvođenje validacije</li>
 </ul>
-<p>To čini validaciju dokumentiranim sistemom, a ne samo budućom težnjom.</p>
+<p>To provjeru čini dokumentovanim sistemom, a ne samo budućom željom.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

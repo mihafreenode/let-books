@@ -37,6 +37,16 @@ Required sequence:
 
 This matters because source Markdown, generated HTML, deployed output, and browser-rendered behavior can temporarily diverge during development.
 
+## Review priority
+
+Apply the strongest native-language and parity review first to:
+
+- newly created content
+- recently expanded content
+- content currently being edited
+
+Then extend the same review standards progressively to older localized content.
+
 ## Defect-class progression
 
 Localization CI should track both:

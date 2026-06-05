@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gouvernance de la localisation | LetBooks</title>
-    <meta name="description" content="La gouvernance de la localisation définit qui peut proposer, réviser, approuver et contester les modifications de contenu multilingue.">
+    <meta name="description" content="La gouvernance de la localisation définit qui peut proposer, relire, approuver et contester les modifications de contenu multilingue.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/fr/localization-governance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Gouvernance de la localisation | LetBooks">
-    <meta property="og:description" content="La gouvernance de la localisation définit qui peut proposer, réviser, approuver et contester les modifications de contenu multilingue.">
+    <meta property="og:description" content="La gouvernance de la localisation définit qui peut proposer, relire, approuver et contester les modifications de contenu multilingue.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/fr/localization-governance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gouvernance de la localisation | LetBooks">
-    <meta name="twitter:description" content="La gouvernance de la localisation définit qui peut proposer, réviser, approuver et contester les modifications de contenu multilingue.">
+    <meta name="twitter:description" content="La gouvernance de la localisation définit qui peut proposer, relire, approuver et contester les modifications de contenu multilingue.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,47 +97,65 @@
             <span>Wiki</span>
             <span>Français</span>
           </div>
-          <p class="content-page-summary">La gouvernance de la localisation définit qui peut proposer, réviser, approuver et contester les modifications de contenu multilingue.</p>
+          <p class="content-page-summary">La gouvernance de la localisation définit qui peut proposer, relire, approuver et contester les modifications de contenu multilingue.</p>
             <hr class="content-header-divider">
           </header>
 <h2 id="domaines-de-gouvernance">Domaines de gouvernance</h2>
 <ul>
-<li>propriété des sources</li>
-<li>rôles de responsable de la langue</li>
+<li>propriété de la source</li>
+<li>rôles des responsables de langue</li>
 <li>approbations terminologiques</li>
 <li>résolution des litiges</li>
-<li>suivi de l’état de révision</li>
-<li>suivi des exemples de révision réutilisables</li>
+<li>suivi de l’état de revue</li>
+<li>suivi des exemples de revue réutilisables</li>
 <li>fraîcheur des artefacts de revue</li>
 <li>obligations de documentation des outils</li>
+<li>qualité de la revue en langue maternelle</li>
 </ul>
 <h2 id="pourquoi-cest-important">Pourquoi c’est important</h2>
-<p class="lead">Sans gouvernance, le contenu multilingue dérive en termes de ton, de terminologie et d’attentes en matière de qualité.</p>
-<p>La gouvernance des examens doit également définir la manière dont les exemples de correction assistée par AI sont stockés et réutilisés dans les formations, les cartes de pointage et les travaux d’évaluation.</p>
+<p class="lead">Sans gouvernance, le contenu multilingue dérive en ton, en terminologie et en attentes de qualité.</p>
+<p>La gouvernance de revue devrait aussi définir comment les exemples de correction assistés par l’AI sont stockés et réutilisés dans la formation, les scorecards et le travail d’évaluation.</p>
 <h2 id="fraîcheur-des-artefacts-de-revue">Fraîcheur des artefacts de revue</h2>
-<p>La gouvernance doit exiger que les relecteurs distinguent :</p>
+<p>La gouvernance devrait exiger que les reviewers distinguent :</p>
 <ul>
 <li>le Markdown source</li>
 <li>le HTML généré</li>
 <li>la sortie du site déployé</li>
 <li>la sortie rendue dans le navigateur</li>
 </ul>
-<p>Avant la validation de parité, les relecteurs doivent confirmer que les artefacts générés qu’ils examinent ont été régénérés à partir de l’état actuel du dépôt.</p>
+<p>Avant toute validation de parité, les reviewers devraient confirmer que les artefacts générés examinés ont été régénérés à partir de l’état actuel du dépôt.</p>
 <h2 id="gouvernance-des-outils">Gouvernance des outils</h2>
-<p>Les nouveaux générateurs, moteurs de rendu, transformateurs, validateurs, outils d’audit et autres outils de traitement de contenu doivent être traités comme des artefacts de gouvernance, et non comme de simples détails d’implémentation.</p>
+<p>Les nouveaux générateurs, moteurs de rendu, transformateurs, validateurs, outils d’audit et autres outils de traitement de contenu devraient être traités comme des artefacts de gouvernance, pas seulement comme des détails d’implémentation.</p>
 <p>Ils ne sont pas complets tant que :</p>
 <ul>
-<li>leur finalité et leurs limites ne sont pas documentées</li>
+<li>leur objectif et leurs limites ne sont pas documentés</li>
 <li>leurs règles et heuristiques non évidentes ne sont pas expliquées</li>
-<li>la documentation pertinente des workflows et de la validation n’est pas mise à jour</li>
+<li>la documentation pertinente des workflows et de validation n’est pas mise à jour</li>
 <li>les mainteneurs ne peuvent pas interpréter les avertissements, les échecs et les angles morts sans reconstruire l’intention à partir du seul code</li>
 </ul>
+<h2 id="qualité-de-la-revue-en-langue-maternelle">Qualité de la revue en langue maternelle</h2>
+<p>La gouvernance de la localisation devrait exiger une revue non seulement pour la justesse, mais aussi pour l’expression naturelle dans la langue maternelle.</p>
+<p>Le standard est qu’un document localisé doit se lire comme s’il avait été rédigé à l’origine dans la langue cible.</p>
+<p>Cela signifie que les reviewers devraient considérer les points suivants comme des constats de qualité :</p>
+<ul>
+<li>structure de phrase anglaise littérale</li>
+<li>traduction directe d’idiomes anglais</li>
+<li>langage de gouvernance ou d’entreprise qui sonne traduit</li>
+<li>terminologie qui conserve inutilement la formulation source</li>
+</ul>
+<p>La gouvernance devrait aussi prioriser cette revue en premier pour :</p>
+<ul>
+<li>le contenu nouvellement créé</li>
+<li>le contenu récemment étendu</li>
+<li>le contenu en cours d’édition</li>
+</ul>
+<p>Le contenu localisé plus ancien devrait ensuite être amélioré progressivement au fil du temps plutôt qu’au moyen d’une réécriture unique à l’échelle du dépôt.</p>
 <h2 id="pages-connexes">Pages connexes</h2>
 <ul>
 <li><code>translation-memory-and-glossaries.md</code></li>
 <li><code>localization-maturity-model.md</code></li>
-<li><code>../style-guide/localization/ai-translation-review-records.md</code></li>
-<li><code>../style-guide/localization/review-workflow.md</code></li>
+<li><code>../../style-guide/localization/ai-translation-review-records.md</code></li>
+<li><code>../../style-guide/localization/review-workflow.md</code></li>
 </ul>
 
         <div class="post-article-nav">

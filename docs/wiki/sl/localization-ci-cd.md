@@ -13,11 +13,11 @@ topics:
 
 Lokalizacijski CI/CD neprekinjeno preverja večjezično vsebino, tako da se manjkajoča sredstva, nedelujoče povezave in regresije dostopnosti ujamejo zgodaj.
 
-## Želeni pregledi
+## Želena preverjanja
 
-- doslednost seznama jezikovnih različic
+- doslednost nabora jezikovnih različic
 - sveže generiranje spletnega mesta pred pregledom paritete
-- preverjanje povezave
+- preverjanje povezav
 - generiranje člankov in strani
 - preverjanje črkovanja, kjer je na voljo
 - pariteta nadomestnih znakov
@@ -33,36 +33,46 @@ Zahtevano zaporedje:
 1. generirajte spletno mesto iz trenutnega stanja repozitorija
 2. zaženite validatorje nad sveže generiranim izhodom
 3. po potrebi preglejte generirani HTML
-4. po potrebi preglejte izrisan izhod
+4. po potrebi preglejte izrisani izhod
 
 To je pomembno, ker se lahko izvorni Markdown, generirani HTML, objavljen izhod in v brskalniku izrisano vedenje med razvojem začasno razlikujejo.
 
-## Napredovanje razreda napak
+## Prednostni vrstni red pregledov
+
+Najstrožji pregled v maternem jeziku in pregled paritete najprej uporabite za:
+
+- novo ustvarjeno vsebino
+- nedavno razširjeno vsebino
+- vsebino, ki se trenutno ureja
+
+Nato enake standarde pregledovanja postopno razširite še na starejšo lokalizirano vsebino.
+
+## Napredovanje razredov napak
 
 Lokalizacijski CI bi moral slediti obema:
 
 - `Localization Debt`
 - `Open Defect Classes`
 
-Dolg meri preostalo izvorno vsebinsko delo.
+Dolg meri preostalo delo na izvorni vsebini.
 
-Odprti razredi napak merijo, ali lahko sistem še vedno dovoli, da se kategorija težave ponovno pojavi.
+Odprti razredi napak merijo, ali sistem še vedno dovoljuje, da se določena kategorija težave znova pojavi.
 
-Takoj, ko razred napak doseže nič pojavov, se mora njegov validator premakniti s svetovalnega na blokiranje, kjer je to praktično.
+Takoj ko razred napak doseže nič pojavitev, se mora njegov validator, kjer je to praktično, premakniti iz svetovalnega načina v blokirnega.
 
 Primeri:
 
-- nadomestna objava osnutka
+- objava nadomestnega osnutka
 - neprevedeni povzetki
 - neprevedeni metapodatki
-- neprevedena telesa
-- mešano jezikovno založništvo
+- neprevedena besedila
+- objava z mešanimi jeziki
 
-CI ni le vratar. To je mehanizem, ki preprečuje, da bi se zaprti razredi napak tiho ponovno odprli.
+CI ni le vratar. Je mehanizem, ki preprečuje, da bi se zaprti razredi napak tiho znova odprli.
 
 ## Vrstni red generiranja za krmarjenje po člankih
 
-Trenutna pogodba o krmarjenju po javnih člankih je:
+Trenutna pogodba za javno krmarjenje po člankih je:
 
 - `post-article-nav`
 - `related-content`
@@ -72,11 +82,11 @@ Generiranje in preverjanje morata potekati v tem vrstnem redu:
 
 1. generirajte HTML člankov
 2. generirajte indeksne strani
-3. zaženite morebitno preostalo naknadno obdelavo navigacije samo, če je še vedno potrebna
-4. preverite sveže generiran izhod
-5. preglejte generirani HTML ali izrisan izhod, če potek dela zahteva človeško oceno paritete
+3. izvedite morebitno preostalo naknadno obdelavo navigacije samo, če je še vedno potrebna
+4. preverite sveže generirani izhod
+5. preglejte generirani HTML ali izrisani izhod, če potek dela zahteva človeško oceno paritete
 
-Če validator še vedno pričakuje podedovan blok `topic-nav`, ga posodobite na trenutno pogodbo, namesto da popravljate ustvarjene HTML.
+Če validator še vedno pričakuje podedovani blok `topic-nav`, validator posodobite na trenutno pogodbo, namesto da popravljate generirani HTML.
 
 ## Sorodne strani
 

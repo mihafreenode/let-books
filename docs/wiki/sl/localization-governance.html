@@ -103,35 +103,53 @@
 <h2 id="področja-upravljanja">Področja upravljanja</h2>
 <ul>
 <li>lastništvo vira</li>
-<li>vloge vzdrževalcev jezika</li>
-<li>terminološke odobritve</li>
+<li>vloge skrbnikov jezika</li>
+<li>odobritve terminologije</li>
 <li>reševanje sporov</li>
-<li>spremljanje stanja pregleda</li>
-<li>spremljanje primerov iz pregledov, ki jih je mogoče znova uporabiti</li>
-<li>svežina revizijskih artefaktov</li>
+<li>sledenje stanju pregleda</li>
+<li>sledenje primerom pregledov za ponovno uporabo</li>
+<li>svežina preglednih artefaktov</li>
 <li>obveznosti dokumentiranja orodij</li>
+<li>kakovost pregleda v maternem jeziku</li>
 </ul>
 <h2 id="zakaj-je-pomembno">Zakaj je pomembno</h2>
-<p class="lead">Brez upravljanja se večjezična vsebina spreminja v tonu, terminologiji in pričakovanjih glede kakovosti.</p>
-<p>Upravljanje pregleda bi moralo tudi opredeliti, kako se primeri popravljanja s pomočjo AI shranjujejo in ponovno uporabljajo pri izobraževanju, kartah rezultatov in ocenjevanju.</p>
-<h2 id="svežina-revizijskih-artefaktov">Svežina revizijskih artefaktov</h2>
+<p class="lead">Brez upravljanja večjezična vsebina odstopa v tonu, terminologiji in pričakovanjih glede kakovosti.</p>
+<p>Upravljanje pregledov mora določati tudi, kako se primeri popravkov s pomočjo AI shranjujejo in ponovno uporabljajo pri usposabljanju, preglednicah rezultatov in vrednotenju.</p>
+<h2 id="svežina-preglednih-artefaktov">Svežina preglednih artefaktov</h2>
 <p>Upravljanje mora od pregledovalcev zahtevati, da razlikujejo med:</p>
 <ul>
 <li>izvornim Markdownom</li>
-<li>generiranim HTML</li>
-<li>objavljenim izhodom spletnega mesta</li>
+<li>generiranim HTML-jem</li>
+<li>izhodom objavljenega spletišča</li>
 <li>v brskalniku izrisanim izhodom</li>
 </ul>
-<p>Pred potrditvijo paritete morajo pregledovalci potrditi, da so bili pregledovani generirani artefakti ponovno ustvarjeni iz trenutnega stanja repozitorija.</p>
+<p>Pred potrditvijo paritete morajo pregledovalci potrditi, da so bili pregledani generirani artefakti znova ustvarjeni iz trenutnega stanja repozitorija.</p>
 <h2 id="upravljanje-orodij">Upravljanje orodij</h2>
-<p>Novi generatorji, izrisovalniki, pretvorniki, validatorji, revizijska orodja in druga orodja za obdelavo vsebine morajo biti obravnavani kot upravljavski artefakti, ne le kot podrobnosti implementacije.</p>
-<p>Niso popolni, dokler:</p>
+<p>Nove generatorje, izrisovalnike, pretvornike, validatorje, revizijska orodja in druga orodja za obdelavo vsebine je treba obravnavati kot artefakte upravljanja, ne le kot podrobnosti izvedbe.</p>
+<p>Niso dokončani, dokler:</p>
 <ul>
 <li>njihov namen in omejitve niso dokumentirani</li>
 <li>njihova neočitna pravila in hevristike niso pojasnjeni</li>
-<li>ustrezna dokumentacija delovnih tokov in validacije ni posodobljena</li>
-<li>vzdrževalci ne morejo razlagati opozoril, napak in slepih peg brez rekonstruiranja namena zgolj iz kode</li>
+<li>ustrezna dokumentacija potekov dela in preverjanja ni posodobljena</li>
+<li>skrbniki ne morejo razlagati opozoril, napak in slepih točk, ne da bi namero rekonstruirali samo iz kode</li>
 </ul>
+<h2 id="kakovost-pregleda-v-maternem-jeziku">Kakovost pregleda v maternem jeziku</h2>
+<p>Upravljanje lokalizacije mora zahtevati pregled ne le zaradi pravilnosti, temveč tudi zaradi naravnega izražanja v maternem jeziku.</p>
+<p>Merilo je, da se mora lokaliziran dokument brati tako, kot da bi bil prvotno napisan v ciljnem jeziku.</p>
+<p>To pomeni, da morajo pregledovalci naslednje obravnavati kot ugotovitve kakovosti:</p>
+<ul>
+<li>dobesedna angleška stavčna zgradba</li>
+<li>neposredni prevodi angleških idiomov</li>
+<li>jezik upravljanja ali korporativni jezik, ki zveni prevedeno</li>
+<li>terminologija, ki po nepotrebnem ohranja izvorno formulacijo</li>
+</ul>
+<p>Upravljanje mora ta pregled najprej dati v prednost tudi za:</p>
+<ul>
+<li>novo ustvarjeno vsebino</li>
+<li>nedavno razširjeno vsebino</li>
+<li>vsebino, ki se trenutno ureja</li>
+</ul>
+<p>Starejšo lokalizirano vsebino je treba nato sčasoma izboljševati postopno, ne pa z enim samim prepisom celotnega repozitorija.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

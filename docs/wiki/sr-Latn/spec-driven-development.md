@@ -1,7 +1,7 @@
 ---
 title: "Razvoj zasnovan na specifikacijama"
 summary: >-
-  Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.
+  Razvoj vođen specifikacijama je pristup u kojem jasno zapisane definicije proizvoda i toka rada usmeravaju implementaciju, dokumentaciju, pregled i proveru.
 topics:
   - spec-driven-development
   - documentation
@@ -11,23 +11,23 @@ topics:
 
 ## Rezime
 
-Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.
+Razvoj vođen specifikacijama je pristup u kojem jasno zapisane definicije proizvoda i toka rada usmeravaju implementaciju, dokumentaciju, pregled i proveru.
 
 ## Definicija
 
-U ovom pristupu, specifikacija nije samo početni artefakt planiranja. Deluje kao stalna referenca za:
+U ovom pristupu specifikacija nije samo početni planski dokument. Ona služi kao stalna referenca za:
 
 - namena proizvoda
 - granice obima
 - potrebno ponašanje
 - kriterijumi prihvatanja
-- preispitivanje standarda
+- merila za pregled
 
 ## Zašto je to važno u radu uz pomoć veštačke inteligencije
 
 AI povećava brzinu isporuke, ali takođe može povećati pomeranje proizvoda kada je namera nejasna.
 
-Razvoj zasnovan na specifikacijama pomaže time što timovima daje stabilan izvor istine koji se može pregledati, ažurirati i koristiti za procenu generisanog rezultata.
+Razvoj zasnovan na specifikacijama pomaže tako što timovima daje stabilno uporište koje može da se pregleda, ažurira i koristi za procenu generisanog rezultata.
 
 ## Tipični slojevi
 
@@ -38,11 +38,11 @@ Uobičajeni slojevi u sistemu vođenom specifikacijama uključuju:
 - dokumentacija o trenutnom stanju
 - ponašanje demonstracije ili aplikacije
 - pravila i testove validacije
-- Sprovođenje CI/CD
+- sprovođenje pravila u CI/CD
 
 ## Režim uobičajenog kvara
 
-Uobičajeni način neuspeha je dopuštanje da najvidljiviji artefakt postane podrazumevani izvor istine.
+Čest način da stvari krenu naopako jeste da najvidljiviji artefakt postane podrazumevani izvor istine.
 
 Primeri:
 
@@ -51,7 +51,7 @@ Primeri:
 - trenutna prečica za implementaciju
 - zastarela stranica sa dokumentacijom
 
-Specifično vođen razvoj smanjuje taj rizik tako što eksplicitno stavlja nameravani lanac ovlašćenja.
+Razvoj vođen specifikacijama smanjuje taj rizik tako što jasno određuje koji izvori imaju prednost pri odlučivanju.
 
 ## Let Books kontekst
 

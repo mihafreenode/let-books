@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sigurimi i cilësisë së përkthimit | LetBooks</title>
-    <meta name="description" content="QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
+    <meta name="description" content="QA e përkthimit kombinon validimin e automatizuar, kontrollin drejtshkrimor, rishikimin terminologjik, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sq/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Sigurimi i cilësisë së përkthimit | LetBooks">
-    <meta property="og:description" content="QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
+    <meta property="og:description" content="QA e përkthimit kombinon validimin e automatizuar, kontrollin drejtshkrimor, rishikimin terminologjik, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sq/translation-quality-assurance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sigurimi i cilësisë së përkthimit | LetBooks">
-    <meta name="twitter:description" content="QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
+    <meta name="twitter:description" content="QA e përkthimit kombinon validimin e automatizuar, kontrollin drejtshkrimor, rishikimin terminologjik, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Shqip</span>
           </div>
-          <p class="content-page-summary">QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.</p>
+          <p class="content-page-summary">QA e përkthimit kombinon validimin e automatizuar, kontrollin drejtshkrimor, rishikimin terminologjik, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Tema:</span>
               <span class="content-tag">Cilësia e përkthimit</span>
@@ -106,130 +106,184 @@
           </header>
 <h2 id="kontrolle-të-zakonshme">Kontrolle të zakonshme</h2>
 <ul>
-<li>Mungojnë përkthimet</li>
-<li>Rrjedhje angleze</li>
-<li>Plotësia e lokalizimit me pamje nga lexuesi</li>
-<li>mospërputhjet e mbajtësve të vendeve</li>
+<li>përkthime që mungojnë</li>
+<li>rrjedhje e anglishtes</li>
+<li>plotësia e lokalizimit të dukshëm për lexuesin</li>
+<li>paritet strukturor kundrejt daljes së gjeneruar rishtazi</li>
+<li>lexueshmëri në gjuhën amtare dhe shprehje natyrore</li>
+<li>mospërputhje të placeholder-ëve</li>
 <li>lidhje të prishura</li>
-<li>rrëshqitje e fjalorit</li>
-<li>Mbulimi i tekstit të aksesueshmërisë</li>
-<li>pamje e ekranit dhe barazia e diagramit</li>
+<li>devijim nga glosari</li>
+<li>mbulim i tekstit të aksesueshmërisë</li>
+<li>paritet i pamjeve të ekranit dhe diagrameve</li>
 </ul>
 <h2 id="kërkesa-për-dalje-të-gjeneruar-rishtazi">Kërkesa për dalje të gjeneruar rishtazi</h2>
 <p class="lead">Përpara rishikimit të paritetit strukturor, rishikimit semantik ose krahasimit manual të artikujve:</p>
 <ol type="1">
 <li>rigjeneroni sajtin nga gjendja aktuale e depozitës</li>
-<li>ekzekutoni validatorët mbi daljen aktuale të gjeneruar</li>
+<li>ekzekutoni validuesit mbi daljen aktuale të gjeneruar</li>
 <li>inspektoni artefaktet HTML të gjeneruara</li>
-<li>vetëm pastaj kryeni vlerësimin manual të paritetit</li>
+<li>vetëm atëherë kryeni vlerësimin manual të paritetit</li>
 </ol>
-<p>Ky rregull ekziston sepse Markdown-i burimor dhe dalja e gjeneruar mund të ndryshojnë përkohësisht gjatë zhvillimit, dhe gjetjet e QA-së duhet të bazohen në artefaktet aktuale, jo në skedarë të vjetëruar të gjeneruar.</p>
+<p>Ky rregull ekziston sepse Markdown-i burimor dhe dalja e gjeneruar mund të devijojnë përkohësisht gjatë zhvillimit, dhe gjetjet e QA-së duhet të bazohen në artefaktet aktuale, jo në skedarë të gjeneruar të vjetruar.</p>
 <h2 id="rishikimi-i-paritetit-strukturor">Rishikimi i paritetit strukturor</h2>
-<p>Rishikimi i paritetit strukturor duhet të kërkojë humbje të vlerës për lexuesin edhe kur artikulli i lokalizuar ende e ruan përgjithësisht kuptimin.</p>
+<p>Rishikimi i paritetit strukturor duhet të kërkojë humbje vlere për lexuesin edhe kur artikulli i lokalizuar ende e ruan në përgjithësi kuptimin.</p>
 <p>Sinjalet tipike përfshijnë:</p>
 <ul>
-<li>mungesë të seksioneve kryesore</li>
-<li>hierarki të ngjeshur të titujve</li>
-<li>mungesë të shembujve</li>
-<li>udhëzim praktik të kompresuar</li>
-<li>diskutim të reduktuar për qeverisjen</li>
+<li>mungesë seksionesh kryesore</li>
+<li>hierarki të shembur të titujve</li>
+<li>shembuj që mungojnë</li>
+<li>udhëzim praktik të ngjeshur</li>
+<li>diskutim të reduktuar mbi qeverisjen</li>
 <li>udhëzim të shkurtuar për rishikim ose validim</li>
 </ul>
-<p>Paralajmërimet nga validatorët e paritetit strukturor janë nxitje për rishikim, jo provë automatike e një përkthimi të dobët. Ato duhen interpretuar së bashku me HTML-në e gjeneruar dhe, kur nevojitet, me daljen e paraqitur në shfletues.</p>
+<p>Paralajmërimet nga validuesit e paritetit strukturor janë nxitje për rishikim, jo provë automatike e një përkthimi të dobët. Ato duhet të interpretohen së bashku me HTML-në e gjeneruar dhe, kur nevojitet, me daljen e renderuar në shfletues.</p>
+<h2 id="rishikimi-i-shprehjes-në-gjuhën-amtare">Rishikimi i shprehjes në gjuhën amtare</h2>
+<p>QA e përkthimit duhet të kërkojë edhe tekst që është teknikisht i saktë, por jo ai që një folës amtar do të zgjidhte natyrshëm.</p>
+<p>Kjo përfshin:</p>
+<ul>
+<li>strukturë fjalie të drejtpërdrejtë angleze</li>
+<li>përkthim të drejtpërdrejtë të idiomave angleze</li>
+<li>formulime që tingëllojnë të përkthyera në vend që të tingëllojnë si të shkruara nga autori</li>
+<li>terminologji që ende zbulon gjuhën burimore</li>
+</ul>
+<p>Shembuj të këtij modeli përfshijnë shprehje ekuivalente me:</p>
+<ul>
+<li>përmbajtje kandidate</li>
+<li>strategji validimi</li>
+<li>artefakt i fluksit të punës</li>
+<li>mjete të kuruara</li>
+<li>aftësi të kuruara</li>
+</ul>
+<p>Këto nuk janë gjithmonë gabime përkthimi. Shpesh janë raste ku një folës amtar do ta rishkruante instinktivisht fjalinë.</p>
+<h2 id="testi-i-preferencës-së-folësit-amtar">Testi i preferencës së folësit amtar</h2>
+<p>Për seksione të rëndësishme në prozë, rishikuesit duhet të pyesin:</p>
+<blockquote>
+<p>Nëse një folës amtar kompetent do ta shkruante këtë ide nga e para, a ka gjasa ta shkruante kështu?</p>
+</blockquote>
+<p>Nëse jo, rishikuesit duhet të:</p>
+<ul>
+<li>ruajnë kuptimin</li>
+<li>ruajnë paritetin semantik</li>
+<li>ruajnë paritetin strukturor</li>
+<li>përmirësojnë formulimin</li>
+</ul>
+<p>Ky test është veçanërisht i dobishëm për:</p>
+<ul>
+<li>hyrje</li>
+<li>përmbledhje</li>
+<li>shpjegime edukative</li>
+<li>udhëzim praktik</li>
+<li>diskutime qeverisëse</li>
+<li>përfundime</li>
+</ul>
+<h2 id="rishikimi-i-shprehjes-natyrore">Rishikimi i shprehjes natyrore</h2>
+<p>Trajtoni formulimin teknikisht të saktë por jo natyror si çështje cilësie.</p>
+<p>Rishikuesit duhet të preferojnë formulime që tingëllojnë si të shkruara natyrshëm në gjuhën synim, edhe kur përkthimi fillestar është i kuptueshëm.</p>
+<p>Qëllimi nuk është vetëm një përkthim i saktë. Qëllimi është një dokument që ndihet sikur është shkruar fillimisht për lexues amtarë.</p>
+<p>Përmirësimet në gjuhën natyrore nuk duhet të dobësojnë:</p>
+<ul>
+<li>paritetin semantik</li>
+<li>paritetin strukturor</li>
+<li>mbulimin edukativ</li>
+<li>shembujt</li>
+<li>udhëzimin praktik</li>
+<li>udhëzimin për qeverisje</li>
+</ul>
 <h2 id="vlerësuesi-i-lokalizimit-me-pamje-nga-lexuesi">Vlerësuesi i lokalizimit me pamje nga lexuesi</h2>
-<p>Një klasë e verifikuesit duhet të dështojë në mënyrë eksplicite CI kur një faqe shfaqet e lokalizuar, por ende ekspozon përmbajtjen e gjuhës burimore që përballet me lexuesin.</p>
+<p>Një klasë validuesish duhet ta dështojë në mënyrë të qartë CI-në kur një faqe duket e lokalizuar, por ende shfaq përmbajtje të dukshme për lexuesin në gjuhën burimore.</p>
 <p>Shembuj që duhet të dështojnë:</p>
 <ul>
 <li>titull i lokalizuar me përmbledhje në anglisht</li>
 <li>artikull i lokalizuar me etiketa në anglisht</li>
 <li>artikull i lokalizuar me tituj ose lista në anglisht</li>
-<li>artikull i lokalizuar me thirrje ose titra në anglisht</li>
-<li>artikull i lokalizuar me etiketa diagrame në anglisht ose tekst alt</li>
-<li>karta me përmbajtje të lidhur me gjuhë të përzier</li>
+<li>artikull i lokalizuar me callout-e ose captions në anglisht</li>
+<li>artikull i lokalizuar me etiketa diagrami në anglisht ose tekst alternativ</li>
+<li>karta <code>related-content</code> në gjuhë të përziera</li>
 </ul>
-<p>Ky është një kusht dështimi, jo thjesht një paralajmërim, sepse lexuesit i përjetojnë faqe të tilla si dukshëm të papërfunduara.</p>
+<p>Ky është kusht dështimi, jo vetëm paralajmërim, sepse lexuesit i përjetojnë këto faqe si dukshëm të papërfunduara.</p>
 <h2 id="auditimi-i-klasës-së-defektit">Auditimi i klasës së defektit</h2>
-<p>QA e përkthimit duhet të mbajë klasa të qarta defektesh me:</p>
+<p>QA e përkthimit duhet të mbajë klasa të qarta defektesh me fushat vijuese:</p>
 <ul>
 <li>përshkrim</li>
-<li>numërimi i dukurive</li>
-<li>shkaku rrënjësor</li>
-<li>Mbulimi i verifikuesit</li>
-<li>rreziku i përsëritjes</li>
-<li>plani i mbylljes</li>
+<li>numërim shfaqjesh</li>
+<li>shkak rrënjësor</li>
+<li>mbulim nga validuesi</li>
+<li>rrezik rikthimi</li>
+<li>plan mbylljeje</li>
 </ul>
 <p>Kategoritë e kërkuara përfshijnë:</p>
 <ul>
 <li>përmbledhje të papërkthyera</li>
-<li>trupa të papërkthyer</li>
-<li>botimi i draftit të vendmbajtësit</li>
-<li>meta të dhëna të papërkthyera</li>
-<li>botim në gjuhë të përzier</li>
-<li>klasat e zbuluara në të ardhmen</li>
+<li>trupa tekstesh të papërkthyer</li>
+<li>publikim skicash me placeholder</li>
+<li>metadata të papërkthyera</li>
+<li>publikim me gjuhë të përziera</li>
+<li>klasa të ardhshme të zbuluara</li>
 </ul>
-<p>Një klasë mbyllet vetëm kur numërimi i saj arrin zero dhe CI e pengon atë të kthehet pa dështim.</p>
+<p>Një klasë mbyllet vetëm kur numri i saj i shfaqjeve arrin në zero dhe CI e pengon rikthimin pa dështim.</p>
 <h2 id="prova-e-rishikimit-njerëzor">Prova e rishikimit njerëzor</h2>
-<p>Cilësia e Përkthimit duhet gjithashtu të ruajë të dhëna të shkurtra të rishikimit njerëzor për korrigjimet përfaqësuese të asistuara nga AI.</p>
+<p>QA e përkthimit duhet gjithashtu të ruajë shënime të shkurtra të rishikimit njerëzor për korrigjime përfaqësuese të asistuara nga AI.</p>
 <p>Fushat minimale:</p>
 <ul>
 <li>teksti origjinal</li>
 <li>teksti i korrigjuar</li>
-<li>kategori gabimi</li>
+<li>kategoria e gabimit</li>
 <li>hipoteza e shkakut rrënjësor</li>
-<li>arsyetimi recensues</li>
+<li>arsyetimi i rishikuesit</li>
 </ul>
-<p>Gjetjet e rishikimit nga folësit vendas duhet të ruhen si një korpus në rritje, jo si shënime të izoluara të njëhershme. Gjetjet e përsëritura duhet të ushqehen me dizajnin e verifikuesit, udhëzimet e kontribuesve dhe udhëzimet e ardhshme të agjentëve të AI.</p>
-<p>Përpara nënshkrimit përfundimtar të një përkthimi të asistuar nga AI, rishikuesit duhet të:</p>
+<p>Gjetjet nga rishikimet e folësve amtarë duhet të ruhen si një korpus në rritje, jo si shënime të izoluara njëherëshe. Gjetjet e përsëritura duhet të rikthehen në dizajnin e validuesve, udhëzimet për kontribuesit dhe udhëzimet e ardhshme për agjentët AI.</p>
+<p>Përpara miratimit përfundimtar të një përkthimi të asistuar nga AI, rishikuesit duhet të:</p>
 <ul>
-<li>shqyrtojnë hyrjet përkatëse në korpusin e strukturuar të gjetjeve për atë gjuhë ose temë</li>
-<li>kontrollojnë modelet e përsëritura të defekteve nga rishikimet njerëzore</li>
-<li>konfirmojnë që drafti aktual nuk rifut çështje të njohura para nënshkrimit</li>
+<li>lexojnë hyrjet përkatëse nga korpusi i strukturuar i gjetjeve për atë gjuhë ose temë</li>
+<li>kontrollojnë modelet e përsëritura të defekteve nga rishikimi njerëzor</li>
+<li>konfirmojnë që drafti aktual nuk rifut probleme të njohura përpara miratimit</li>
 </ul>
-<p>Çdo defekt i raportuar nga një folës amtar duhet gjithashtu të vlerësohet për:</p>
+<p>Çdo defekt i raportuar nga folësit amtarë duhet gjithashtu të vlerësohet për sa i përket:</p>
 <ul>
-<li>korrigjimin e përmbajtjes</li>
-<li>përditësimin e udhëzimeve të rishikimit</li>
-<li>përditësimin e udhëzimeve terminologjike</li>
-<li>përmirësimin e prompt-it</li>
-<li>mundësinë për validator</li>
-<li>mundësinë për test regresioni</li>
+<li>korrigjimit të përmbajtjes</li>
+<li>përditësimit të udhëzimit të rishikimit</li>
+<li>përditësimit të udhëzimit terminologjik</li>
+<li>përmirësimit të prompt-it</li>
+<li>mundësisë për validues</li>
+<li>mundësisë për test regresioni</li>
 </ul>
-<p>Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e krijuara nga AI mund të kërkojnë rishikim nga folësi amtare për të korrigjuar çështjet delikate në gramatikë, modalitet, terminologji dhe regjistër specifik të domenit. Këto çështje shpesh janë të vështira për t’u zbuluar vetëm nëpërmjet matjeve të automatizuara të cilësisë.</p>
-<p>Gabimet konkrete të raportuara nga folësit amtarë nuk janë vetëm këshilluese. Secila prej tyre duhet të përfundojë e korrigjuar, e sistematizuar, e lënë qëllimisht e pazgjidhur me arsyetim, ose ende e ndjekur shprehimisht në korpusin e gjetjeve.</p>
+<p>Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e gjeneruara nga AI mund të kërkojnë rishikim nga folës amtarë për të korrigjuar probleme delikate në gramatikë, modalitet, terminologji dhe regjistër specifik për domenin. Këto probleme shpesh janë të vështira për t’u zbuluar vetëm përmes metrikave të automatizuara të cilësisë.</p>
+<p>Gabimet konkrete të raportuara nuk janë vetëm këshilluese. Secili duhet të përfundojë i korrigjuar, i sistemuar, i lënë qëllimisht i pazgjidhur me arsyetim, ose ende i ndjekur në mënyrë të qartë në korpusin e gjetjeve.</p>
 <h2 id="taksonomia-e-gabimeve-të-zakonshme-të-përkthimit-të-ai">Taksonomia e gabimeve të zakonshme të përkthimit të AI</h2>
 <ul>
 <li>gramatikë</li>
-<li>modaliteti</li>
-<li>terminologjia</li>
-<li>regjistrohuni</li>
+<li>modalitet</li>
+<li>terminologji</li>
+<li>regjistër</li>
 <li>rrjedhshmëri</li>
 <li>përkthim fjalë për fjalë</li>
 <li>paqartësi</li>
-<li>humbje e kontekstit</li>
-<li>renditja e fjalëve</li>
-<li>bashkëvendosje</li>
-<li>shkrimi ose drejtshkrimi</li>
-<li>formulimi i politikave të domenit</li>
-<li>formulimi i aksesueshmërisë</li>
+<li>humbje konteksti</li>
+<li>rend fjalësh</li>
+<li>kolokacion</li>
+<li>shkrim ose drejtshkrim</li>
+<li>formulim i politikës së domenit</li>
+<li>formulim i aksesueshmërisë</li>
 </ul>
 <h2 id="rezultati-i-lehtë-i-pikës">Rezultati i lehtë i pikës</h2>
-<p>Për vlerësimin e përsëritshëm të përkthimit të AI, përdorni një rubrikë të lehtë 0-3 në vend që të mbështeteni vetëm në gjykimin kalim/dështim.</p>
+<p>Për vlerësim të përsëritshëm të përkthimit me AI, përdorni një rubrikë të lehtë 0-3 në vend që të mbështeteni vetëm te gjykimi kalon/dështon.</p>
 <p>Dimensionet e rekomanduara:</p>
 <ul>
-<li>do të thotë saktësi</li>
+<li>saktësia e kuptimit</li>
 <li>gramatika dhe rrjedhshmëria</li>
-<li>terminologjia dhe përshtatja e domenit</li>
-<li>regjistrimi dhe stili</li>
-<li>rishikoni përpjekjet</li>
+<li>terminologjia dhe përshtatja me domenin</li>
+<li>regjistri dhe stili</li>
+<li>përpjekja e rishikimit</li>
 </ul>
-<p>Etiketat e rekomanduara të lëshimit:</p>
+<p>Etiketat e rekomanduara të publikimit:</p>
 <ul>
 <li>bllokues</li>
-<li>rishikim i madh</li>
+<li>rishikim madhor</li>
 <li>rishikim i vogël</li>
-<li>gati me shenjë rishikimi</li>
+<li>gati me miratim rishikimi</li>
 </ul>
-<p>Kjo krijon të dhëna miqësore me kartën e rezultateve pa kërkuar një kornizë të matjes së lokalizimit të peshave të rënda.</p>
+<p>Kjo krijon të dhëna të përshtatshme për scorecard-e pa kërkuar një kornizë të rëndë matjeje të lokalizimit.</p>
 <h2 id="faqe-të-ngjashme">Faqe të ngjashme</h2>
 <ul>
 <li><code>localization-ci-cd.md</code></li>
@@ -266,7 +320,6 @@
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/sq/ai-will-not-replace-translators.html"><span>AI nuk do t&#x27;i zëvendësojë përkthyesit</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/sq/how-to-review-ai-assisted-translations.html"><span>Si të rishikohen përkthimet e ndihmuara nga AI</span><span class="topic-menu__meta">Materiale mësimore</span></a>
-                  <a href="../../wiki/sq/ai-assisted-translation-policy.html"><span>AI-Politika e përkthimit të asistuar</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>

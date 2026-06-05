@@ -28,10 +28,10 @@ Zato je treba kakovost dokumentacije obravnavati kot inženirsko disciplino z ve
 - Validacija ustvarjenega HTML-ja preveri, ali je izvorna vsebina postala pravilen izhod.
 - Validacija tiska preverja, ali ostajata podprta izvoz v PDF in tisk uporabna.
 
-Ta večplastni model je še pomembnejši v potekih dela, podprtih z AI. Vsebino je mogoče hitro osnutiti, hitro ponovno ustvariti in hitro lokalizirati. To pospeši povratne zanke, vendar tudi poveča tveganje, da bodo navidezno uglajene napake izdane, če cevovod testira le površinsko oblikovanje.
+Ta večplastni model je še pomembnejši v potekih dela, podprtih z AI. Vsebino je mogoče hitro pripraviti v osnutku, hitro ponovno ustvariti in hitro lokalizirati. To pospeši povratne zanke, vendar tudi poveča tveganje, da bodo navidezno uglajene napake izdane, če cevovod testira le površinsko oblikovanje.
 
-Teme so dober primer. Ko so Teme v LetBooks postale prvovrsten tip dokumentacije, so morale podedovati navigacijo, iskalno indeksiranje, ustvarjanje zemljevida strani, obravnavo lokalizacije, validacijo ustvarjenega spletnega mesta in preverjanja tiska. Pot z nižjo kakovostjo bi ustvarila novo vsebinsko površino s šibkejšimi zagotovili kot preostala platforma.
+Teme so dober primer. Ko so Teme v LetBooks postale prvovrsten tip dokumentacije, so morale podedovati navigacijo, iskalno indeksiranje, ustvarjanje zemljevida strani, obravnavo lokalizacije, validacijo ustvarjenega spletnega mesta in preverjanja tiska. Pot z nižjo kakovostjo bi ustvarila novo vrsto vsebine s šibkejšimi zagotovili kot preostala platforma.
 
-Načelo je preprosto: vsak nov tip dokumentacije mora podedovati obstoječo validacijo. Tako model kakovosti ostane razširljiv. Namesto da za vsak nov odsek izmišljamo izjeme, platforma enaka pričakovanja razširi na vsako bralcu namenjeno površino.
+Načelo je preprosto: vsak nov tip dokumentacije mora podedovati obstoječo validacijo. Tako model kakovosti ostane razširljiv. Namesto da za vsak nov odsek izmišljamo izjeme, platforma enaka pričakovanja razširi na vsako bralcu namenjeno vsebino.
 
 Kakovost dokumentacije presega lintanje, ker bralci doživljajo celoten sistem, ne le izvorne datoteke.

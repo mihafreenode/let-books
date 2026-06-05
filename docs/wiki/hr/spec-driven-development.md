@@ -1,7 +1,7 @@
 ---
 title: "Razvoj vođen specifikacijama"
 summary: >-
-  Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i tijeka rada vode implementaciju, dokumentaciju, pregled i provjeru.
+  Razvoj vođen specifikacijama je pristup u kojem jasno zapisane definicije proizvoda i tijeka rada usmjeravaju implementaciju, dokumentaciju, pregled i provjeru.
 topics:
   - spec-driven-development
   - documentation
@@ -11,23 +11,23 @@ topics:
 
 ## Sažetak
 
-Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i tijeka rada vode implementaciju, dokumentaciju, pregled i provjeru.
+Razvoj vođen specifikacijama je pristup u kojem jasno zapisane definicije proizvoda i tijeka rada usmjeravaju implementaciju, dokumentaciju, pregled i provjeru.
 
 ## Definicija
 
-U ovom pristupu, specifikacija nije samo početni artefakt planiranja. Djeluje kao stalna referenca za:
+U ovom pristupu specifikacija nije samo početni planski dokument. Djeluje kao stalna referenca za:
 
 - namjena proizvoda
 - granice djelokruga
 - potrebno ponašanje
 - kriteriji prihvatljivosti
-- pregled standarda
+- mjerila pregleda
 
 ## Zašto je to važno u radu uz pomoć umjetne inteligencije
 
 AI povećava brzinu isporuke, ali također može povećati odstupanje proizvoda kada je namjera nejasna.
 
-Razvoj vođen specifikacijama pomaže dajući timovima stabilan izvor istine koji se može pregledati, ažurirati i koristiti za procjenu generiranog rezultata.
+Razvoj vođen specifikacijama pomaže time što timovima daje stabilno uporište koje se može pregledati, ažurirati i koristiti za procjenu generiranog rezultata.
 
 ## Tipični slojevi
 
@@ -38,11 +38,11 @@ Uobičajeni slojevi u sustavu vođenom specifikacijama uključuju:
 - dokumentaciju o trenutnom stanju
 - demo ili ponašanje aplikacije
 - pravila i testovi validacije
-- Provedba CI/CD
+- provedba pravila u CI/CD-u
 
 ## Način uobičajenog kvara
 
-Uobičajen način neuspjeha je dopuštanje da najvidljiviji artefakt postane zadani izvor istine.
+Čest način da stvari krenu po zlu jest da najvidljiviji artefakt postane zadani izvor istine.
 
 Primjeri:
 
@@ -51,7 +51,7 @@ Primjeri:
 - trenutni prečac implementacije
 - ustajala stranica dokumentacije
 
-Razvoj vođen specifikacijama smanjuje taj rizik tako što namjeravani lanac ovlaštenja čini eksplicitnim.
+Razvoj vođen specifikacijama smanjuje taj rizik tako što jasno određuje koji izvori imaju prednost pri odlučivanju.
 
 ## Let Books kontekst
 

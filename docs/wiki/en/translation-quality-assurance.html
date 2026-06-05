@@ -112,6 +112,7 @@
 <li>English leakage</li>
 <li>reader-facing localization completeness</li>
 <li>structural parity against fresh generated output</li>
+<li>native-language readability and natural expression</li>
 <li>placeholder mismatches</li>
 <li>broken links</li>
 <li>glossary drift</li>
@@ -139,6 +140,58 @@
 <li>shortened review or validation guidance</li>
 </ul>
 <p>Warnings from structural parity validators are review prompts, not automatic proof of a bad translation. They should be interpreted together with the generated HTML and, where needed, browser-rendered output.</p>
+<h2 id="native-language-expression-review">Native-language expression review</h2>
+<p>Translation QA should also look for text that is technically correct but not what a native speaker would naturally choose.</p>
+<p>This includes:</p>
+<ul>
+<li>direct English sentence structure</li>
+<li>direct translation of English idioms</li>
+<li>wording that sounds translated rather than authored</li>
+<li>terminology that still reveals the source language</li>
+</ul>
+<p>Examples of the pattern include phrases equivalent to:</p>
+<ul>
+<li>candidate content</li>
+<li>validation strategy</li>
+<li>workflow artifact</li>
+<li>curated tools</li>
+<li>curated skills</li>
+</ul>
+<p>These are not always translation errors. They are often cases where a native speaker would instinctively rewrite the sentence.</p>
+<h2 id="native-speaker-preference-test">Native-speaker preference test</h2>
+<p>For important prose sections, reviewers should ask:</p>
+<blockquote>
+<p>If a competent native speaker were writing this idea from scratch, would they likely write it this way?</p>
+</blockquote>
+<p>If not, reviewers should:</p>
+<ul>
+<li>preserve the meaning</li>
+<li>preserve semantic parity</li>
+<li>preserve structural parity</li>
+<li>improve the phrasing</li>
+</ul>
+<p>This test is especially useful for:</p>
+<ul>
+<li>introductions</li>
+<li>summaries</li>
+<li>educational explanations</li>
+<li>practical guidance</li>
+<li>governance discussions</li>
+<li>conclusions</li>
+</ul>
+<h2 id="natural-expression-review">Natural expression review</h2>
+<p>Treat technically correct but unnatural wording as a quality issue.</p>
+<p>Reviewers should prefer wording that sounds naturally authored in the target language, even when the original translation is understandable.</p>
+<p>The goal is not only a correct translation. The goal is a document that feels as though it had originally been written for native readers.</p>
+<p>Natural-language improvements must not weaken:</p>
+<ul>
+<li>semantic parity</li>
+<li>structural parity</li>
+<li>educational coverage</li>
+<li>examples</li>
+<li>practical guidance</li>
+<li>governance guidance</li>
+</ul>
 <h2 id="reader-facing-localization-validator">Reader-facing localization validator</h2>
 <p>One validator class should explicitly fail CI when a page appears localized but still exposes source-language reader-facing content.</p>
 <p>Examples that should fail:</p>
@@ -267,6 +320,7 @@
                   <a href="../../learning/en/how-to-build-a-localization-pipeline.html"><span>How to Build a Localization Pipeline</span><span class="topic-menu__meta">Learning</span></a>
                   <a href="../../wiki/en/translation-memory-and-glossaries.html"><span>Translation Memory and Glossaries</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/en/localization-maturity-model.html"><span>Localization Maturity Model</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/en/documentation-validation-beyond-linting.html"><span>Documentation Validation Beyond Linting</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../topics/en/ai-assisted-translation.html"><span>AI-Assisted Translation</span><span class="topic-menu__meta">Topics</span></a>
                   <a href="../../topics/en/translation-memory.html"><span>Translation Memory</span><span class="topic-menu__meta">Topics</span></a>
                   <a href="../../topics/en/eu-multilingualism.html"><span>EU Multilingualism</span><span class="topic-menu__meta">Topics</span></a>
@@ -280,7 +334,6 @@
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/en/ai-will-not-replace-translators.html"><span>AI Will Not Replace Translators</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/en/how-to-review-ai-assisted-translations.html"><span>How to Review AI-Assisted Translations</span><span class="topic-menu__meta">Learning</span></a>
-                  <a href="../../wiki/en/ai-assisted-translation-policy.html"><span>AI-Assisted Translation Policy</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>

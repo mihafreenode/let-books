@@ -1,7 +1,7 @@
 ---
 title: "Zagotavljanje kakovosti prevodov"
 summary: >-
-  Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.
+  Zagotavljanje kakovosti prevodov združuje avtomatizirano preverjanje, preverjanje črkovanja, pregled terminologije, preverjanja dostopnosti in človeško presojo.
 topics:
   - translation-quality
   - qa
@@ -11,121 +11,183 @@ topics:
 
 ## Povzetek
 
-Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.
+Zagotavljanje kakovosti prevodov združuje avtomatizirano preverjanje, preverjanje črkovanja, pregled terminologije, preverjanja dostopnosti in človeško presojo.
 
 ## Pogosta preverjanja
 
 - manjkajoči prevodi
-- angleško uhajanje
-- popolnost lokalizacije, usmerjena k bralcu
+- uhajanje angleščine
+- celovitost lokalizacije za bralce
+- strukturna pariteta glede na sveže generirani izhod
+- berljivost v maternem jeziku in naravno izražanje
 - neujemanja nadomestnih znakov
-- prekinjene povezave
-- premik po glosarju
-- pokritost besedila dostopnosti
-- pariteta posnetka zaslona in diagrama
+- nedelujoče povezave
+- odmik od glosarja
+- pokritost besedila za dostopnost
+- pariteta posnetkov zaslona in diagramov
 
 ## Zahteva po sveže ustvarjenem izhodu
 
 Pred pregledom strukturne paritete, semantičnim pregledom ali ročno primerjavo člankov:
 
-1. znova ustvarite spletno mesto iz trenutnega stanja repozitorija
-2. zaženite validatorje nad trenutno ustvarjenim izhodom
-3. preglejte ustvarjene artefakte HTML
+1. znova generirajte spletno mesto iz trenutnega stanja repozitorija
+2. zaženite validatorje nad trenutnim generiranim izhodom
+3. preglejte generirane artefakte HTML
 4. šele nato izvedite ročno oceno paritete
 
-To pravilo obstaja zato, ker se lahko izvorni Markdown in ustvarjeni izhod med razvojem začasno razhajata, ugotovitve QA pa morajo temeljiti na trenutnih artefaktih in ne na zastarelih ustvarjenih datotekah.
+To pravilo obstaja zato, ker se lahko izvorni Markdown in generirani izhod med razvojem začasno razlikujeta, ugotovitve QA pa morajo temeljiti na trenutnih artefaktih in ne na zastarelih generiranih datotekah.
 
 ## Pregled strukturne paritete
 
-Pregled strukturne paritete mora iskati izgubo vrednosti za bralca tudi takrat, ko lokalizirani članek še vedno na splošno ohranja pomen.
+Pregled strukturne paritete mora iskati izgubo vrednosti za bralca tudi takrat, ko lokaliziran članek še vedno v grobem ohranja pomen.
 
 Tipični znaki vključujejo:
 
 - manjkajoče glavne razdelke
-- sploščeno hierarhijo naslovov
+- porušeno hierarhijo naslovov
 - manjkajoče primere
-- preveč strnjena praktična navodila
-- zmanjšano obravnavo upravljanja
-- skrajšana navodila za pregled ali validacijo
+- stisnjena praktična navodila
+- zmanjšano razpravo o upravljanju
+- skrajšana navodila za pregled ali preverjanje
 
-Opozorila validatorjev strukturne paritete so pozivi k pregledu, ne samodejen dokaz slabega prevoda. Razlagati jih je treba skupaj z ustvarjenim HTML-jem in po potrebi z izhodom, izrisanim v brskalniku.
+Opozorila validatorjev strukturne paritete so pozivi k pregledu, ne samodejni dokaz slabega prevoda. Razlagati jih je treba skupaj z generiranim HTML-jem in po potrebi z izhodom, izrisanim v brskalniku.
 
-## Obrnjeni k bralcu lokalizacijski validator
+## Pregled izražanja v maternem jeziku
 
-En razred validatorja bi moral izrecno zavrniti CI, ko je stran videti lokalizirana, vendar še vedno izpostavlja vsebino v izvornem jeziku, namenjeno bralcu.
+QA prevodov mora iskati tudi besedilo, ki je tehnično pravilno, vendar ga naravni govorec ne bi izbral spontano.
 
-Primeri, ki bi morali spodleteti:
+To vključuje:
+
+- neposredno angleško stavčno zgradbo
+- neposredni prevod angleških idiomov
+- besedilo, ki zveni prevedeno namesto avtorsko napisano
+- terminologijo, ki še vedno razkriva izvorni jezik
+
+Primeri takšnih vzorcev vključujejo izraze, enakovredne:
+
+- kandidatna vsebina
+- strategija preverjanja
+- artefakt poteka dela
+- kurirana orodja
+- kurirane veščine
+
+To niso vedno prevajalske napake. Pogosto gre za primere, kjer bi naravni govorec stavek instinktivno preoblikoval.
+
+## Preizkus prednosti naravnega govorca
+
+Pri pomembnih proznih razdelkih naj se pregledovalci vprašajo:
+
+> Če bi usposobljen naravni govorec to misel napisal iz nič, bi jo verjetno zapisal tako?
+
+Če ne, naj pregledovalci:
+
+- ohranijo pomen
+- ohranijo semantično pariteto
+- ohranijo strukturno pariteto
+- izboljšajo formulacijo
+
+Ta preizkus je posebej uporaben za:
+
+- uvode
+- povzetke
+- izobraževalna pojasnila
+- praktična navodila
+- razprave o upravljanju
+- zaključke
+
+## Pregled naravnega izražanja
+
+Tehnično pravilno, vendar nenaravno formulacijo obravnavajte kot težavo kakovosti.
+
+Pregledovalci naj dajejo prednost formulacijam, ki v ciljnem jeziku zvenijo naravno napisane, tudi kadar je izvorni prevod razumljiv.
+
+Cilj ni samo pravilen prevod. Cilj je dokument, ki deluje, kot da bi bil prvotno napisan za naravne bralce.
+
+Izboljšave naravnega jezika ne smejo oslabiti:
+
+- semantične paritete
+- strukturne paritete
+- izobraževalne pokritosti
+- primerov
+- praktičnih navodil
+- navodil za upravljanje
+
+## Validator lokalizacije, usmerjen k bralcu
+
+Ena vrsta validatorja mora v CI izrecno spodleteti, kadar je stran videti lokalizirana, vendar še vedno prikazuje bralcu namenjeno vsebino v izvornem jeziku.
+
+Primeri, ki morajo spodleteti:
 
 - lokaliziran naslov z angleškim povzetkom
 - lokaliziran članek z angleškimi oznakami
 - lokaliziran članek z angleškimi naslovi ali seznami
-- lokaliziran članek z angleškimi oblački ali napisi
+- lokaliziran članek z angleškimi poudarki ali napisi
 - lokaliziran članek z angleškimi oznakami diagramov ali nadomestnim besedilom
-- kartice s sorodno vsebino v mešanih jezikih
+- kartice `related-content` z mešanimi jeziki
 
-To je pogoj za napako, ne le opozorilo, saj bralci doživljajo takšne strani kot vidno nedokončane.
+To je pogoj za neuspeh, ne le opozorilo, saj bralci takšne strani doživljajo kot očitno nedokončane.
 
-## Revizija razreda napak
+## Revizija razredov napak
 
-QA prevajanja mora vzdrževati eksplicitne razrede napak z:
+QA prevodov mora vzdrževati izrecne razrede napak z naslednjimi podatki:
 
 - opis
-- število pojavov
+- število pojavitev
 - glavni vzrok
-- kritje validatorja
+- pokritost validatorja
 - tveganje ponovitve
-- načrt zapiranja
+- načrt zaprtja
 
 Zahtevane kategorije vključujejo:
 
-- neprevedeni povzetki
-- neprevedena telesa
-- nadomestna objava osnutka
-- neprevedeni metapodatki
-- mešano jezikovno založništvo
-- bodoči odkriti razredi
+- neprevedene povzetke
+- neprevedena besedila
+- objavo nadomestnih osnutkov
+- neprevedene metapodatke
+- objavo z mešanimi jeziki
+- prihodnje odkrite razrede
 
-Razred se zapre šele, ko njegovo število doseže nič in CI prepreči, da bi se vrnil brez napake.
+Razred je zaprt šele, ko njegovo število pojavitev doseže nič in CI prepreči, da bi se brez napake vrnil.
 
 ## Dokazi človeškega pregleda
 
-Zagotavljanje kakovosti prevodov bi moralo ohraniti tudi kratke zapise človeških pregledov za reprezentativne popravke s pomočjo umetne inteligence.
+QA prevodov mora hraniti tudi kratke zapise človeškega pregleda za reprezentativne popravke s pomočjo AI.
 
 Najmanjša polja:
 
-- izvirno besedilo
+- izvorno besedilo
 - popravljeno besedilo
-- kategorija napak
-- hipoteza o vzroku
-- utemeljitev recenzenta
+- kategorija napake
+- hipoteza o glavnem vzroku
+- utemeljitev pregledovalca
 
-Ugotovitve pregledov naravnih govorcev je treba ohraniti kot rastoči korpus, ne kot osamljene enkratne opombe. Ponavljajoče se ugotovitve bi se morale vrniti v zasnovo validatorja, smernice sodelujočih in prihodnja navodila agenta AI.
+Ugotovitve pregledov naravnih govorcev je treba ohranjati kot rastoči korpus, ne kot osamljene enkratne opombe. Ponavljajoče se ugotovitve se morajo vračati v zasnovo validatorjev, navodila za sodelujoče in prihodnja navodila za AI-agente.
 
-Pred potrditvijo pregleda prevoda, podprtega z AI, bi morali pregledovalci:
+Pred končno potrditvijo prevoda s pomočjo AI morajo pregledovalci:
 
-- pregledati ustrezne vnose v strukturiranem korpusu ugotovitev za ta jezik ali temo
+- prebrati ustrezne vnose iz strukturiranega korpusa ugotovitev za ta jezik ali temo
 - preveriti ponavljajoče se vzorce napak iz človeških pregledov
-- potrditi, da trenutni osnutek pred potrditvijo ne uvaja znova znanih težav
+- potrditi, da trenutni osnutek pred potrditvijo ne uvaja znanih težav nazaj
 
 Vsako prijavljeno napako naravnega govorca je treba oceniti tudi glede:
 
 - popravka vsebine
-- posodobitve smernic za pregledovanje
-- posodobitve terminoloških smernic
-- izboljšave poziva
-- možnosti za validator
-- možnosti za regresijski test
+- posodobitve navodil za pregled
+- posodobitve terminoloških navodil
+- izboljšanja poziva
+- priložnosti za validator
+- priložnosti za regresijski test
 
-To je pomembno, ker lahko prevodi, ustvarjeni z umetno inteligenco, tudi če je ohranjen splošni pomen, zahtevajo pregled maternega govorca, da se odpravijo subtilne težave v slovnici, modalnosti, terminologiji in registru, specifičnem za domeno. Te težave je pogosto težko zaznati samo z avtomatiziranimi meritvami kakovosti.
+To je pomembno, ker lahko tudi ob ohranjenem splošnem pomenu prevodi, ustvarjeni z AI, zahtevajo pregled naravnega govorca za odpravo subtilnih težav v slovnici, modalnosti, terminologiji in domensko specifičnem registru. Takšne težave je pogosto težko zaznati samo z avtomatiziranimi meritvami kakovosti.
 
-Konkretne prijavljene napake naravnih govorcev niso zgolj svetovalne. Vsaka mora biti odpravljena, sistematizirana, namerno nerešena z utemeljitvijo ali pa še vedno izrecno spremljana v korpusu ugotovitev.
+Konkretno prijavljene napake niso zgolj svetovalne. Vsaka mora biti popravljena, sistematizirana, namerno nerešena z utemeljitvijo ali pa še vedno izrecno sledena v korpusu ugotovitev.
 
-## Taksonomija pogostih napak prevoda AI
+## Taksonomija pogostih napak AI prevodov
 
 - slovnica
 - modalnost
 - terminologija
-- registracija
+- register
 - tekočnost
 - dobesedni prevod
 - dvoumnost
@@ -133,29 +195,29 @@ Konkretne prijavljene napake naravnih govorcev niso zgolj svetovalne. Vsaka mora
 - besedni red
 - kolokacija
 - pisava ali pravopis
-- ubeseditev pravilnika domene
-- besedilo dostopnosti
+- formulacija domenske politike
+- formulacija dostopnosti
 
-## Lahka primerjalna ocena
+## Lahko primerjalno ocenjevanje
 
-Za ponovljivo vrednotenje prevoda z umetno inteligenco uporabite lahkotno rubriko 0–3, namesto da se zanašate le na presojo uspešno/neuspešno.
+Za ponovljivo vrednotenje AI-prevodov uporabite lahkotno lestvico 0-3, namesto da bi se zanašali samo na presojo uspešno/neuspešno.
 
 Priporočene dimenzije:
 
-- kar pomeni natančnost
+- natančnost pomena
 - slovnica in tekočnost
-- terminologija in domensko prileganje
+- terminologija in ustreznost domeni
 - register in slog
-- prizadevanje za pregled
+- napor pregleda
 
 Priporočene oznake za izdajo:
 
 - blokator
 - večja revizija
 - manjša revizija
-- pripravljeno s prijavo pregleda
+- pripravljeno s potrditvijo pregleda
 
-To ustvarja podatke, ki so prijazni do kartice kazalnikov, ne da bi potrebovali težko ogrodje za lokalizacijo in merjenje.
+Tako nastanejo podatki, primerni za preglednice rezultatov, brez potrebe po težkem okviru za merjenje lokalizacije.
 
 ## Sorodne strani
 

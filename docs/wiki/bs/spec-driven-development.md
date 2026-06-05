@@ -1,7 +1,7 @@
 ---
 title: "Razvoj vođen specifikacijama"
 summary: >-
-  Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.
+  Razvoj vođen specifikacijama je pristup u kojem jasno zapisane definicije proizvoda i toka rada usmjeravaju implementaciju, dokumentaciju, pregled i provjeru.
 topics:
   - spec-driven-development
   - documentation
@@ -11,23 +11,23 @@ topics:
 
 ## Sažetak
 
-Razvoj vođen specifikacijama je pristup u kojem eksplicitne definicije proizvoda i toka posla vode implementaciju, dokumentaciju, pregled i verifikaciju.
+Razvoj vođen specifikacijama je pristup u kojem jasno zapisane definicije proizvoda i toka rada usmjeravaju implementaciju, dokumentaciju, pregled i provjeru.
 
 ## Definicija
 
-U ovom pristupu, specifikacija nije samo početni artefakt planiranja. Služi kao stalna referenca za:
+U ovom pristupu specifikacija nije samo početni planski dokument. Služi kao stalna referenca za:
 
 - svrha proizvoda
 - granice opsega
 - potrebno ponašanje
 - kriterijumi prihvatanja
-- revizija standarda
+- mjerila pregleda
 
 ## Zašto je to važno u radu uz pomoć umjetne inteligencije
 
-AI povećava brzinu isporuke, ali također može povećati pomak proizvoda kada je namjera nejasna.
+AI povećava brzinu isporuke, ali također može pojačati odstupanje od osnovne namjere kada ta namjera nije dovoljno jasna.
 
-Razvoj vođen specifikacijama pomaže dajući timovima stabilan izvor istine koji se može pregledati, ažurirati i koristiti za procjenu generisanog rezultata.
+Razvoj vođen specifikacijama pomaže time što timovima daje stabilno uporište koje se može pregledati, ažurirati i koristiti za procjenu generisanog rezultata.
 
 ## Tipični slojevi
 
@@ -38,24 +38,24 @@ Uobičajeni slojevi u sistemu vođenom specifikacijama uključuju:
 - dokumentacija o trenutnom stanju
 - demo ili ponašanje aplikacije
 - pravila i testove validacije
-- Provedba CI/CD
+- provođenje pravila u CI/CD-u
 
 ## Uobičajeni način kvara
 
-Uobičajeni način kvara je dopuštanje da najvidljiviji artefakt postane zadani izvor istine.
+Čest način da stvari krenu po zlu jeste da najvidljiviji artefakt postane zadani izvor istine.
 
-primjeri:
+Primjeri:
 
 - najnoviji upit
 - trenutni prototip
 - trenutna prečica za implementaciju
 - zastarjela stranica sa dokumentacijom
 
-Specifično vođen razvoj smanjuje taj rizik tako što eksplicitno čini predviđeni lanac ovlaštenja.
+Razvoj vođen specifikacijama smanjuje taj rizik tako što jasno određuje koji izvori imaju prednost pri odlučivanju.
 
 ## Let Books kontekst
 
-U Let Books, razvoj vođen specifikacijama je podržan od:
+U Let Booksu razvoj vođen specifikacijama podržavaju:
 
 - `AGENTS.md`
 - `AGENTS-Implementation.md`

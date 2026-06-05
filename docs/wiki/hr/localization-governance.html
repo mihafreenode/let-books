@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Upravljanje lokalizacijom | LetBooks</title>
-    <meta name="description" content="Upravljanje lokalizacijom definira tko može predložiti, pregledati, odobriti i osporavati izmjene višejezičnog sadržaja.">
+    <meta name="description" content="Upravljanje lokalizacijom definira tko može predlagati, pregledavati, odobravati i osporavati višejezične promjene sadržaja.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/hr/localization-governance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Upravljanje lokalizacijom | LetBooks">
-    <meta property="og:description" content="Upravljanje lokalizacijom definira tko može predložiti, pregledati, odobriti i osporavati izmjene višejezičnog sadržaja.">
+    <meta property="og:description" content="Upravljanje lokalizacijom definira tko može predlagati, pregledavati, odobravati i osporavati višejezične promjene sadržaja.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/hr/localization-governance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Upravljanje lokalizacijom | LetBooks">
-    <meta name="twitter:description" content="Upravljanje lokalizacijom definira tko može predložiti, pregledati, odobriti i osporavati izmjene višejezičnog sadržaja.">
+    <meta name="twitter:description" content="Upravljanje lokalizacijom definira tko može predlagati, pregledavati, odobravati i osporavati višejezične promjene sadržaja.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,41 +97,59 @@
             <span>Wiki</span>
             <span>Hrvatski</span>
           </div>
-          <p class="content-page-summary">Upravljanje lokalizacijom definira tko može predložiti, pregledati, odobriti i osporavati izmjene višejezičnog sadržaja.</p>
+          <p class="content-page-summary">Upravljanje lokalizacijom definira tko može predlagati, pregledavati, odobravati i osporavati višejezične promjene sadržaja.</p>
             <hr class="content-header-divider">
           </header>
 <h2 id="područja-upravljanja">Područja upravljanja</h2>
 <ul>
-<li>izvorno vlasništvo</li>
-<li>uloge održavatelja jezika</li>
-<li>terminološka odobrenja</li>
+<li>vlasništvo nad izvorom</li>
+<li>uloge jezičnih održavatelja</li>
+<li>odobrenja terminologije</li>
 <li>rješavanje sporova</li>
 <li>praćenje stanja pregleda</li>
-<li>praćenje primjera iz pregleda koji se mogu ponovno koristiti</li>
+<li>praćenje primjera pregleda za ponovnu uporabu</li>
 <li>svježina artefakata pregleda</li>
 <li>obveze dokumentiranja alata</li>
+<li>kvaliteta pregleda na materinskom jeziku</li>
 </ul>
 <h2 id="zašto-je-to-važno">Zašto je to važno</h2>
-<p class="lead">Bez upravljanja višejezični sadržaj mijenja se u tonu, terminologiji i očekivanjima kvalitete.</p>
-<p>Upravljanje pregledom također treba definirati kako se primjeri ispravljanja potpomognuti AI pohranjuju i ponovno koriste u obuci, tablicama rezultata i radu na evaluaciji.</p>
+<p class="lead">Bez upravljanja višejezični sadržaj odluta u tonu, terminologiji i očekivanjima kvalitete.</p>
+<p>Upravljanje pregledom također bi trebalo definirati kako se primjeri korekcija uz pomoć AI-ja pohranjuju i ponovno koriste u obuci, tablicama rezultata i evaluacijskom radu.</p>
 <h2 id="svježina-artefakata-pregleda">Svježina artefakata pregleda</h2>
-<p>Upravljanje treba zahtijevati da recenzenti razlikuju:</p>
+<p>Upravljanje bi trebalo zahtijevati da recenzenti razlikuju:</p>
 <ul>
 <li>izvorni Markdown</li>
 <li>generirani HTML</li>
-<li>objavljeni izlaz stranice</li>
-<li>u pregledniku prikazani izlaz</li>
+<li>izlaz objavljenog web-mjesta</li>
+<li>izlaz renderiran u pregledniku</li>
 </ul>
-<p>Prije potvrde pariteta, recenzenti trebaju potvrditi da su generirani artefakti koje pregledavaju ponovno generirani iz trenutačnog stanja repozitorija.</p>
+<p>Prije potvrde pariteta recenzenti bi trebali potvrditi da su pregledani generirani artefakti ponovno generirani iz trenutačnog stanja repozitorija.</p>
 <h2 id="upravljanje-alatima">Upravljanje alatima</h2>
-<p>Nove generatore, renderere, transformere, validatore, revizijske alate i druge alate za obradu sadržaja treba tretirati kao artefakte upravljanja, a ne samo kao detalje implementacije.</p>
-<p>Nisu potpuni dok:</p>
+<p>Nove generatore, renderere, transformatore, validatore, auditne alate i druge alate za obradu sadržaja treba tretirati kao artefakte upravljanja, a ne samo kao detalje implementacije.</p>
+<p>Oni nisu potpuni dok:</p>
 <ul>
 <li>njihova svrha i ograničenja nisu dokumentirani</li>
-<li>njihova neočita pravila i heuristike nisu objašnjeni</li>
+<li>njihova neočita pravila i heuristike nisu objašnjene</li>
 <li>relevantna dokumentacija o tijeku rada i validaciji nije ažurirana</li>
-<li>održavatelji ne mogu tumačiti upozorenja, neuspjehe i slijepe točke bez rekonstruiranja namjere samo iz koda</li>
+<li>održavatelji ne mogu tumačiti upozorenja, pogreške i slijepe točke bez rekonstruiranja namjere samo iz koda</li>
 </ul>
+<h2 id="kvaliteta-pregleda-na-materinskom-jeziku">Kvaliteta pregleda na materinskom jeziku</h2>
+<p>Upravljanje lokalizacijom trebalo bi zahtijevati pregled ne samo zbog točnosti nego i zbog prirodnog izražavanja na materinskom jeziku.</p>
+<p>Standard je da lokalizirani dokument treba zvučati kao da je izvorno napisan na ciljnom jeziku.</p>
+<p>To znači da bi recenzenti sljedeće trebali tretirati kao nalaze kvalitete:</p>
+<ul>
+<li>doslovnu englesku rečeničnu strukturu</li>
+<li>izravan prijevod engleskih idioma</li>
+<li>upravljački ili korporativni jezik koji zvuči prevedeno</li>
+<li>terminologiju koja nepotrebno zadržava izvorni izraz</li>
+</ul>
+<p>Upravljanje bi taj pregled također trebalo dati kao prioritet za:</p>
+<ul>
+<li>novostvoreni sadržaj</li>
+<li>nedavno prošireni sadržaj</li>
+<li>sadržaj koji se trenutačno uređuje</li>
+</ul>
+<p>Stariji lokalizirani sadržaj zatim bi trebalo poboljšavati postupno kroz vrijeme, a ne jednim cjelovitim prepisivanjem cijelog repozitorija.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

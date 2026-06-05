@@ -1,7 +1,7 @@
 ---
 title: "Garanzia di qualità della traduzione"
 summary: >-
-  Il QA della traduzione combina convalida automatizzata, controllo ortografico, revisione della terminologia, controlli di accessibilità e giudizio umano.
+  La QA della traduzione combina validazione automatizzata, controllo ortografico, revisione terminologica, verifiche di accessibilità e giudizio umano.
 topics:
   - translation-quality
   - qa
@@ -11,151 +11,213 @@ topics:
 
 ## Riepilogo
 
-Il QA della traduzione combina convalida automatizzata, controllo ortografico, revisione della terminologia, controlli di accessibilità e giudizio umano.
+La QA della traduzione combina validazione automatizzata, controllo ortografico, revisione terminologica, verifiche di accessibilità e giudizio umano.
 
 ## Controlli comuni
 
 - traduzioni mancanti
-- Perdita di inglese
-- completezza della localizzazione rivolta al lettore
-- Mancate corrispondenze dei segnaposto
+- fuoriuscita dell'inglese
+- completezza della localizzazione visibile al lettore
+- parità strutturale rispetto all'output appena generato
+- leggibilità nella lingua madre ed espressione naturale
+- incongruenze dei segnaposto
 - collegamenti interrotti
 - deriva del glossario
-- copertura testuale sull'accessibilità
+- copertura del testo di accessibilità
 - parità di screenshot e diagrammi
 
 ## Requisito di output generato di recente
 
 Prima della revisione della parità strutturale, della revisione semantica o del confronto manuale degli articoli:
 
-1. rigenerare il sito dallo stato attuale del repository
-2. eseguire i validatori sull'output generato corrente
-3. ispezionare gli artefatti HTML generati
-4. solo allora eseguire la valutazione manuale della parità
+1. rigenerate il sito dallo stato corrente del repository
+2. eseguite i validatori sull'output generato corrente
+3. esaminate gli artefatti HTML generati
+4. solo allora eseguite la valutazione manuale della parità
 
-Questa regola esiste perché il Markdown sorgente e l'output generato possono divergere temporaneamente durante lo sviluppo e i rilievi del QA devono basarsi sugli artefatti correnti, non su file generati obsoleti.
+Questa regola esiste perché Markdown sorgente e output generato possono divergere temporaneamente durante lo sviluppo e i rilievi QA dovrebbero basarsi sugli artefatti correnti, non su file generati obsoleti.
 
 ## Revisione della parità strutturale
 
-La revisione della parità strutturale dovrebbe cercare perdite di valore per il lettore anche quando l'articolo localizzato conserva ancora in generale il significato.
+La revisione della parità strutturale dovrebbe cercare la perdita di valore per il lettore anche quando l'articolo localizzato conserva ancora in larga misura il significato.
 
 I segnali tipici includono:
 
-- mancanza di sezioni principali
-- gerarchia delle intestazioni collassata
+- sezioni principali mancanti
+- gerarchia dei titoli collassata
 - esempi mancanti
 - guida pratica compressa
 - discussione sulla governance ridotta
-- guida alla revisione o alla validazione abbreviata
+- guida di revisione o validazione abbreviata
 
-Gli avvisi dei validatori di parità strutturale sono spunti per la revisione, non una prova automatica di una cattiva traduzione. Devono essere interpretati insieme all'HTML generato e, dove necessario, all'output renderizzato nel browser.
+Gli avvisi dei validatori di parità strutturale sono inviti alla revisione, non prova automatica di una cattiva traduzione. Devono essere interpretati insieme all'HTML generato e, dove necessario, all'output renderizzato nel browser.
+
+## Revisione dell'espressione nella lingua madre
+
+La QA della traduzione dovrebbe cercare anche testo che sia tecnicamente corretto ma non ciò che un madrelingua sceglierebbe in modo naturale.
+
+Questo include:
+
+- struttura della frase direttamente inglese
+- traduzione diretta di idiomi inglesi
+- formulazioni che suonano tradotte invece che scritte come testo originale
+- terminologia che continua a rivelare la lingua di origine
+
+Esempi di questo modello includono formulazioni equivalenti a:
+
+- contenuto candidato
+- strategia di validazione
+- artefatto del flusso di lavoro
+- strumenti curati
+- competenze curate
+
+Non si tratta sempre di errori di traduzione. Spesso sono casi in cui un madrelingua riscriverebbe istintivamente la frase.
+
+## Test di preferenza del madrelingua
+
+Per le sezioni di prosa importanti, i revisori dovrebbero chiedersi:
+
+> Se un madrelingua competente stesse scrivendo questa idea da zero, probabilmente la scriverebbe in questo modo?
+
+Se la risposta è no, i revisori dovrebbero:
+
+- preservare il significato
+- preservare la parità semantica
+- preservare la parità strutturale
+- migliorare la formulazione
+
+Questo test è particolarmente utile per:
+
+- introduzioni
+- riepiloghi
+- spiegazioni educative
+- guida pratica
+- discussioni di governance
+- conclusioni
+
+## Revisione dell'espressione naturale
+
+Trattate la formulazione tecnicamente corretta ma innaturale come un problema di qualità.
+
+I revisori dovrebbero preferire formulazioni che suonano naturalmente scritte nella lingua di destinazione, anche quando la traduzione originale è comprensibile.
+
+L'obiettivo non è solo una traduzione corretta. L'obiettivo è un documento che sembri scritto originariamente per lettori madrelingua.
+
+I miglioramenti del linguaggio naturale non devono indebolire:
+
+- la parità semantica
+- la parità strutturale
+- la copertura educativa
+- gli esempi
+- la guida pratica
+- la guida di governance
 
 ## Convalidatore della localizzazione rivolto al lettore
 
-Una classe di validazione dovrebbe fallire esplicitamente l'IC quando una pagina appare localizzata ma espone comunque contenuto rivolto al lettore nella lingua di origine.
+Una classe di validatori dovrebbe far fallire esplicitamente la CI quando una pagina sembra localizzata ma continua a esporre contenuti rivolti al lettore nella lingua di origine.
 
 Esempi che dovrebbero fallire:
 
-- Titolo localizzato con riassunto in inglese
-- articolo localizzato con tag inglesi
+- titolo localizzato con riepilogo in inglese
+- articolo localizzato con tag in inglese
 - articolo localizzato con titoli o elenchi in inglese
-- Articolo localizzato con richiami o didascalie in inglese
-- Articolo localizzato con etichette di diagrammi in inglese o testo alternativo
-- schede con contenuti correlati in lingue miste
+- articolo localizzato con callout o didascalie in inglese
+- articolo localizzato con etichette di diagrammi in inglese o testo alternativo
+- schede `related-content` in lingue miste
 
-Questa è una condizione di fallimento, non semplicemente un avvertimento, perché i lettori percepiscono tali pagine come visibilmente incompiute.
+Questa è una condizione di errore, non semplicemente un avviso, perché i lettori percepiscono tali pagine come visibilmente incompiute.
 
-## Audit della classe difetto
+## Audit della classe di difetto
 
-Il QA della traduzione dovrebbe mantenere classi di difetti esplicite con:
+La QA della traduzione dovrebbe mantenere classi di difetto esplicite con i seguenti campi:
 
 - descrizione
 - conteggio delle occorrenze
-- causa principale
+- causa radice
 - copertura del validatore
-- rischio di recidiva
+- rischio di ricorrenza
 - piano di chiusura
 
 Le categorie richieste includono:
 
-- riassunti non tradotti
-- corpi non tradotti
-- pubblicazione bozza segnaposto
+- riepiloghi non tradotti
+- corpi di testo non tradotti
+- pubblicazione di bozze segnaposto
 - metadati non tradotti
-- editoria in lingue miste
+- pubblicazione in lingue miste
 - classi future scoperte
 
-Una classe viene chiusa solo quando il suo conteggio raggiunge lo zero e CI ne impedisce il ritorno senza errori.
+Una classe è chiusa solo quando il suo conteggio raggiunge lo zero e la CI impedisce il suo ritorno senza fallimento.
 
 ## Prove di revisione umana
 
-Il controllo qualità della traduzione dovrebbe inoltre preservare brevi registrazioni di revisioni umane per correzioni rappresentative assistite dall’intelligenza artificiale.
+La QA della traduzione dovrebbe inoltre conservare brevi registrazioni di revisione umana per correzioni rappresentative assistite dall'AI.
 
 Campi minimi:
 
 - testo originale
 - testo corretto
 - categoria di errore
-- ipotesi della causa principale
+- ipotesi sulla causa radice
 - motivazione del revisore
 
-I risultati delle revisioni dei madrelingua dovrebbero essere preservati come un corpus in crescita, non come note isolate e una tantum. I risultati ripetuti dovrebbero avere un impatto sulla progettazione del validatore, sulla guida dei contributori e sulle future istruzioni dell'agente AI.
+I rilievi delle revisioni dei madrelingua dovrebbero essere conservati come un corpus in crescita, non come note isolate una tantum. I rilievi ricorrenti dovrebbero rifluire nella progettazione dei validatori, nella guida per i contributori e nelle future istruzioni per gli agenti AI.
 
-Prima del signoff di una traduzione assistita dall'AI, i revisori dovrebbero:
+Prima di approvare una traduzione assistita dall'AI, i revisori dovrebbero:
 
-- rivedere le voci pertinenti nel corpus strutturato dei rilievi per quella lingua o quel tema
-- controllare i modelli ricorrenti di difetti emersi dalle revisioni umane
-- confermare che la bozza attuale non reintroduca problemi noti prima del signoff
+- leggere le voci pertinenti del corpus strutturato dei rilievi per quella lingua o quel tema
+- controllare i modelli ricorrenti di difetti provenienti dalla revisione umana
+- confermare che la bozza corrente non reintroduca problemi noti prima dell'approvazione
 
 Ogni difetto segnalato da un madrelingua dovrebbe inoltre essere valutato rispetto a:
 
 - correzione del contenuto
-- aggiornamento della guida alla revisione
+- aggiornamento della guida di revisione
 - aggiornamento della guida terminologica
 - miglioramento del prompt
-- opportunità per un validatore
-- opportunità per un test di regressione
+- opportunità di validatore
+- opportunità di test di regressione
 
-Ciò è importante perché anche quando il significato generale viene preservato, le traduzioni generate dall’intelligenza artificiale possono richiedere la revisione da parte di un madrelingua per correggere sottili problemi di grammatica, modalità, terminologia e registro specifico del dominio. Questi problemi sono spesso difficili da rilevare solo attraverso i parametri di qualità automatizzati.
+Questo è importante perché, anche quando il significato complessivo è preservato, le traduzioni generate dall'AI possono richiedere la revisione di un madrelingua per correggere problemi sottili di grammatica, modalità, terminologia e registro specifico del dominio. Questi problemi sono spesso difficili da rilevare con le sole metriche automatizzate di qualità.
 
-Gli errori concreti segnalati dai madrelingua non sono solo indicativi. Ognuno di essi dovrebbe finire corretto, sistematizzato, intenzionalmente irrisolto con giustificazione, oppure ancora esplicitamente tracciato nel corpus dei rilievi.
+Gli errori concreti segnalati non sono solo indicativi. Ognuno dovrebbe finire corretto, sistematizzato, intenzionalmente lasciato irrisolto con motivazione, oppure ancora esplicitamente tracciato nel corpus dei rilievi.
 
 ## Tassonomia comune degli errori di traduzione dell'IA
 
 - grammatica
 - modalità
 - terminologia
-- registrarsi
-- scioltezza
+- registro
+- fluidità
 - traduzione letterale
 - ambiguità
 - perdita di contesto
 - ordine delle parole
 - collocazione
-- Scrittura o ortografia
-- formulazione della politica del dominio
-- formulazione dell'accessibilità
+- scrittura o ortografia
+- formulazione della policy di dominio
+- formulazione di accessibilità
 
 ## Punteggio benchmark leggero
 
-Per una valutazione ripetibile della traduzione AI, utilizzare una rubrica leggera 0-3 invece di fare affidamento solo sul giudizio superato/fallito.
+Per una valutazione ripetibile della traduzione AI, utilizzate una rubrica leggera da 0 a 3 invece di affidarvi solo a un giudizio superato/non superato.
 
 Dimensioni consigliate:
 
-- significa precisione
+- accuratezza del significato
 - grammatica e fluidità
-- terminologia e adattamento del dominio
+- terminologia e aderenza al dominio
 - registro e stile
-- rivedere lo sforzo
+- sforzo di revisione
 
 Etichette di rilascio consigliate:
 
 - bloccante
-- revisione importante
+- revisione maggiore
 - revisione minore
-- pronto con l'approvazione della revisione
+- pronto con approvazione della revisione
 
-Ciò crea dati compatibili con le scorecard senza richiedere un quadro di misurazione della localizzazione pesante.
+Questo crea dati adatti a scorecard senza richiedere un framework pesante di misurazione della localizzazione.
 
 ## Pagine correlate
 

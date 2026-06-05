@@ -19,6 +19,7 @@ Translation QA combines automated validation, spellcheck, terminology review, ac
 - English leakage
 - reader-facing localization completeness
 - structural parity against fresh generated output
+- native-language readability and natural expression
 - placeholder mismatches
 - broken links
 - glossary drift
@@ -50,6 +51,66 @@ Typical signals include:
 - shortened review or validation guidance
 
 Warnings from structural parity validators are review prompts, not automatic proof of a bad translation. They should be interpreted together with the generated HTML and, where needed, browser-rendered output.
+
+## Native-language expression review
+
+Translation QA should also look for text that is technically correct but not what a native speaker would naturally choose.
+
+This includes:
+
+- direct English sentence structure
+- direct translation of English idioms
+- wording that sounds translated rather than authored
+- terminology that still reveals the source language
+
+Examples of the pattern include phrases equivalent to:
+
+- candidate content
+- validation strategy
+- workflow artifact
+- curated tools
+- curated skills
+
+These are not always translation errors. They are often cases where a native speaker would instinctively rewrite the sentence.
+
+## Native-speaker preference test
+
+For important prose sections, reviewers should ask:
+
+> If a competent native speaker were writing this idea from scratch, would they likely write it this way?
+
+If not, reviewers should:
+
+- preserve the meaning
+- preserve semantic parity
+- preserve structural parity
+- improve the phrasing
+
+This test is especially useful for:
+
+- introductions
+- summaries
+- educational explanations
+- practical guidance
+- governance discussions
+- conclusions
+
+## Natural expression review
+
+Treat technically correct but unnatural wording as a quality issue.
+
+Reviewers should prefer wording that sounds naturally authored in the target language, even when the original translation is understandable.
+
+The goal is not only a correct translation. The goal is a document that feels as though it had originally been written for native readers.
+
+Natural-language improvements must not weaken:
+
+- semantic parity
+- structural parity
+- educational coverage
+- examples
+- practical guidance
+- governance guidance
 
 ## Reader-facing localization validator
 

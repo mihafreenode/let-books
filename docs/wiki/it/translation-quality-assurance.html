@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Garanzia di qualità della traduzione | LetBooks</title>
-    <meta name="description" content="Il QA della traduzione combina convalida automatizzata, controllo ortografico, revisione della terminologia, controlli di accessibilità e giudizio umano.">
+    <meta name="description" content="La QA della traduzione combina validazione automatizzata, controllo ortografico, revisione terminologica, verifiche di accessibilità e giudizio umano.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/it/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Garanzia di qualità della traduzione | LetBooks">
-    <meta property="og:description" content="Il QA della traduzione combina convalida automatizzata, controllo ortografico, revisione della terminologia, controlli di accessibilità e giudizio umano.">
+    <meta property="og:description" content="La QA della traduzione combina validazione automatizzata, controllo ortografico, revisione terminologica, verifiche di accessibilità e giudizio umano.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/it/translation-quality-assurance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Garanzia di qualità della traduzione | LetBooks">
-    <meta name="twitter:description" content="Il QA della traduzione combina convalida automatizzata, controllo ortografico, revisione della terminologia, controlli di accessibilità e giudizio umano.">
+    <meta name="twitter:description" content="La QA della traduzione combina validazione automatizzata, controllo ortografico, revisione terminologica, verifiche di accessibilità e giudizio umano.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Italiano</span>
           </div>
-          <p class="content-page-summary">Il QA della traduzione combina convalida automatizzata, controllo ortografico, revisione della terminologia, controlli di accessibilità e giudizio umano.</p>
+          <p class="content-page-summary">La QA della traduzione combina validazione automatizzata, controllo ortografico, revisione terminologica, verifiche di accessibilità e giudizio umano.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temi:</span>
               <span class="content-tag">Qualità della traduzione</span>
@@ -107,129 +107,183 @@
 <h2 id="controlli-comuni">Controlli comuni</h2>
 <ul>
 <li>traduzioni mancanti</li>
-<li>Perdita di inglese</li>
-<li>completezza della localizzazione rivolta al lettore</li>
-<li>Mancate corrispondenze dei segnaposto</li>
+<li>fuoriuscita dell’inglese</li>
+<li>completezza della localizzazione visibile al lettore</li>
+<li>parità strutturale rispetto all’output appena generato</li>
+<li>leggibilità nella lingua madre ed espressione naturale</li>
+<li>incongruenze dei segnaposto</li>
 <li>collegamenti interrotti</li>
 <li>deriva del glossario</li>
-<li>copertura testuale sull’accessibilità</li>
+<li>copertura del testo di accessibilità</li>
 <li>parità di screenshot e diagrammi</li>
 </ul>
 <h2 id="requisito-di-output-generato-di-recente">Requisito di output generato di recente</h2>
 <p class="lead">Prima della revisione della parità strutturale, della revisione semantica o del confronto manuale degli articoli:</p>
 <ol type="1">
-<li>rigenerare il sito dallo stato attuale del repository</li>
-<li>eseguire i validatori sull’output generato corrente</li>
-<li>ispezionare gli artefatti HTML generati</li>
-<li>solo allora eseguire la valutazione manuale della parità</li>
+<li>rigenerate il sito dallo stato corrente del repository</li>
+<li>eseguite i validatori sull’output generato corrente</li>
+<li>esaminate gli artefatti HTML generati</li>
+<li>solo allora eseguite la valutazione manuale della parità</li>
 </ol>
-<p>Questa regola esiste perché il Markdown sorgente e l’output generato possono divergere temporaneamente durante lo sviluppo e i rilievi del QA devono basarsi sugli artefatti correnti, non su file generati obsoleti.</p>
+<p>Questa regola esiste perché Markdown sorgente e output generato possono divergere temporaneamente durante lo sviluppo e i rilievi QA dovrebbero basarsi sugli artefatti correnti, non su file generati obsoleti.</p>
 <h2 id="revisione-della-parità-strutturale">Revisione della parità strutturale</h2>
-<p>La revisione della parità strutturale dovrebbe cercare perdite di valore per il lettore anche quando l’articolo localizzato conserva ancora in generale il significato.</p>
+<p>La revisione della parità strutturale dovrebbe cercare la perdita di valore per il lettore anche quando l’articolo localizzato conserva ancora in larga misura il significato.</p>
 <p>I segnali tipici includono:</p>
 <ul>
-<li>mancanza di sezioni principali</li>
-<li>gerarchia delle intestazioni collassata</li>
+<li>sezioni principali mancanti</li>
+<li>gerarchia dei titoli collassata</li>
 <li>esempi mancanti</li>
 <li>guida pratica compressa</li>
 <li>discussione sulla governance ridotta</li>
-<li>guida alla revisione o alla validazione abbreviata</li>
+<li>guida di revisione o validazione abbreviata</li>
 </ul>
-<p>Gli avvisi dei validatori di parità strutturale sono spunti per la revisione, non una prova automatica di una cattiva traduzione. Devono essere interpretati insieme all’HTML generato e, dove necessario, all’output renderizzato nel browser.</p>
+<p>Gli avvisi dei validatori di parità strutturale sono inviti alla revisione, non prova automatica di una cattiva traduzione. Devono essere interpretati insieme all’HTML generato e, dove necessario, all’output renderizzato nel browser.</p>
+<h2 id="revisione-dellespressione-nella-lingua-madre">Revisione dell’espressione nella lingua madre</h2>
+<p>La QA della traduzione dovrebbe cercare anche testo che sia tecnicamente corretto ma non ciò che un madrelingua sceglierebbe in modo naturale.</p>
+<p>Questo include:</p>
+<ul>
+<li>struttura della frase direttamente inglese</li>
+<li>traduzione diretta di idiomi inglesi</li>
+<li>formulazioni che suonano tradotte invece che scritte come testo originale</li>
+<li>terminologia che continua a rivelare la lingua di origine</li>
+</ul>
+<p>Esempi di questo modello includono formulazioni equivalenti a:</p>
+<ul>
+<li>contenuto candidato</li>
+<li>strategia di validazione</li>
+<li>artefatto del flusso di lavoro</li>
+<li>strumenti curati</li>
+<li>competenze curate</li>
+</ul>
+<p>Non si tratta sempre di errori di traduzione. Spesso sono casi in cui un madrelingua riscriverebbe istintivamente la frase.</p>
+<h2 id="test-di-preferenza-del-madrelingua">Test di preferenza del madrelingua</h2>
+<p>Per le sezioni di prosa importanti, i revisori dovrebbero chiedersi:</p>
+<blockquote>
+<p>Se un madrelingua competente stesse scrivendo questa idea da zero, probabilmente la scriverebbe in questo modo?</p>
+</blockquote>
+<p>Se la risposta è no, i revisori dovrebbero:</p>
+<ul>
+<li>preservare il significato</li>
+<li>preservare la parità semantica</li>
+<li>preservare la parità strutturale</li>
+<li>migliorare la formulazione</li>
+</ul>
+<p>Questo test è particolarmente utile per:</p>
+<ul>
+<li>introduzioni</li>
+<li>riepiloghi</li>
+<li>spiegazioni educative</li>
+<li>guida pratica</li>
+<li>discussioni di governance</li>
+<li>conclusioni</li>
+</ul>
+<h2 id="revisione-dellespressione-naturale">Revisione dell’espressione naturale</h2>
+<p>Trattate la formulazione tecnicamente corretta ma innaturale come un problema di qualità.</p>
+<p>I revisori dovrebbero preferire formulazioni che suonano naturalmente scritte nella lingua di destinazione, anche quando la traduzione originale è comprensibile.</p>
+<p>L’obiettivo non è solo una traduzione corretta. L’obiettivo è un documento che sembri scritto originariamente per lettori madrelingua.</p>
+<p>I miglioramenti del linguaggio naturale non devono indebolire:</p>
+<ul>
+<li>la parità semantica</li>
+<li>la parità strutturale</li>
+<li>la copertura educativa</li>
+<li>gli esempi</li>
+<li>la guida pratica</li>
+<li>la guida di governance</li>
+</ul>
 <h2 id="convalidatore-della-localizzazione-rivolto-al-lettore">Convalidatore della localizzazione rivolto al lettore</h2>
-<p>Una classe di validazione dovrebbe fallire esplicitamente l’IC quando una pagina appare localizzata ma espone comunque contenuto rivolto al lettore nella lingua di origine.</p>
+<p>Una classe di validatori dovrebbe far fallire esplicitamente la CI quando una pagina sembra localizzata ma continua a esporre contenuti rivolti al lettore nella lingua di origine.</p>
 <p>Esempi che dovrebbero fallire:</p>
 <ul>
-<li>Titolo localizzato con riassunto in inglese</li>
-<li>articolo localizzato con tag inglesi</li>
+<li>titolo localizzato con riepilogo in inglese</li>
+<li>articolo localizzato con tag in inglese</li>
 <li>articolo localizzato con titoli o elenchi in inglese</li>
-<li>Articolo localizzato con richiami o didascalie in inglese</li>
-<li>Articolo localizzato con etichette di diagrammi in inglese o testo alternativo</li>
-<li>schede con contenuti correlati in lingue miste</li>
+<li>articolo localizzato con callout o didascalie in inglese</li>
+<li>articolo localizzato con etichette di diagrammi in inglese o testo alternativo</li>
+<li>schede <code>related-content</code> in lingue miste</li>
 </ul>
-<p>Questa è una condizione di fallimento, non semplicemente un avvertimento, perché i lettori percepiscono tali pagine come visibilmente incompiute.</p>
-<h2 id="audit-della-classe-difetto">Audit della classe difetto</h2>
-<p>Il QA della traduzione dovrebbe mantenere classi di difetti esplicite con:</p>
+<p>Questa è una condizione di errore, non semplicemente un avviso, perché i lettori percepiscono tali pagine come visibilmente incompiute.</p>
+<h2 id="audit-della-classe-di-difetto">Audit della classe di difetto</h2>
+<p>La QA della traduzione dovrebbe mantenere classi di difetto esplicite con i seguenti campi:</p>
 <ul>
 <li>descrizione</li>
 <li>conteggio delle occorrenze</li>
-<li>causa principale</li>
+<li>causa radice</li>
 <li>copertura del validatore</li>
-<li>rischio di recidiva</li>
+<li>rischio di ricorrenza</li>
 <li>piano di chiusura</li>
 </ul>
 <p>Le categorie richieste includono:</p>
 <ul>
-<li>riassunti non tradotti</li>
-<li>corpi non tradotti</li>
-<li>pubblicazione bozza segnaposto</li>
+<li>riepiloghi non tradotti</li>
+<li>corpi di testo non tradotti</li>
+<li>pubblicazione di bozze segnaposto</li>
 <li>metadati non tradotti</li>
-<li>editoria in lingue miste</li>
+<li>pubblicazione in lingue miste</li>
 <li>classi future scoperte</li>
 </ul>
-<p>Una classe viene chiusa solo quando il suo conteggio raggiunge lo zero e CI ne impedisce il ritorno senza errori.</p>
+<p>Una classe è chiusa solo quando il suo conteggio raggiunge lo zero e la CI impedisce il suo ritorno senza fallimento.</p>
 <h2 id="prove-di-revisione-umana">Prove di revisione umana</h2>
-<p>Il controllo qualità della traduzione dovrebbe inoltre preservare brevi registrazioni di revisioni umane per correzioni rappresentative assistite dall’intelligenza artificiale.</p>
+<p>La QA della traduzione dovrebbe inoltre conservare brevi registrazioni di revisione umana per correzioni rappresentative assistite dall’AI.</p>
 <p>Campi minimi:</p>
 <ul>
 <li>testo originale</li>
 <li>testo corretto</li>
 <li>categoria di errore</li>
-<li>ipotesi della causa principale</li>
+<li>ipotesi sulla causa radice</li>
 <li>motivazione del revisore</li>
 </ul>
-<p>I risultati delle revisioni dei madrelingua dovrebbero essere preservati come un corpus in crescita, non come note isolate e una tantum. I risultati ripetuti dovrebbero avere un impatto sulla progettazione del validatore, sulla guida dei contributori e sulle future istruzioni dell’agente AI.</p>
-<p>Prima del signoff di una traduzione assistita dall’AI, i revisori dovrebbero:</p>
+<p>I rilievi delle revisioni dei madrelingua dovrebbero essere conservati come un corpus in crescita, non come note isolate una tantum. I rilievi ricorrenti dovrebbero rifluire nella progettazione dei validatori, nella guida per i contributori e nelle future istruzioni per gli agenti AI.</p>
+<p>Prima di approvare una traduzione assistita dall’AI, i revisori dovrebbero:</p>
 <ul>
-<li>rivedere le voci pertinenti nel corpus strutturato dei rilievi per quella lingua o quel tema</li>
-<li>controllare i modelli ricorrenti di difetti emersi dalle revisioni umane</li>
-<li>confermare che la bozza attuale non reintroduca problemi noti prima del signoff</li>
+<li>leggere le voci pertinenti del corpus strutturato dei rilievi per quella lingua o quel tema</li>
+<li>controllare i modelli ricorrenti di difetti provenienti dalla revisione umana</li>
+<li>confermare che la bozza corrente non reintroduca problemi noti prima dell’approvazione</li>
 </ul>
 <p>Ogni difetto segnalato da un madrelingua dovrebbe inoltre essere valutato rispetto a:</p>
 <ul>
 <li>correzione del contenuto</li>
-<li>aggiornamento della guida alla revisione</li>
+<li>aggiornamento della guida di revisione</li>
 <li>aggiornamento della guida terminologica</li>
 <li>miglioramento del prompt</li>
-<li>opportunità per un validatore</li>
-<li>opportunità per un test di regressione</li>
+<li>opportunità di validatore</li>
+<li>opportunità di test di regressione</li>
 </ul>
-<p>Ciò è importante perché anche quando il significato generale viene preservato, le traduzioni generate dall’intelligenza artificiale possono richiedere la revisione da parte di un madrelingua per correggere sottili problemi di grammatica, modalità, terminologia e registro specifico del dominio. Questi problemi sono spesso difficili da rilevare solo attraverso i parametri di qualità automatizzati.</p>
-<p>Gli errori concreti segnalati dai madrelingua non sono solo indicativi. Ognuno di essi dovrebbe finire corretto, sistematizzato, intenzionalmente irrisolto con giustificazione, oppure ancora esplicitamente tracciato nel corpus dei rilievi.</p>
+<p>Questo è importante perché, anche quando il significato complessivo è preservato, le traduzioni generate dall’AI possono richiedere la revisione di un madrelingua per correggere problemi sottili di grammatica, modalità, terminologia e registro specifico del dominio. Questi problemi sono spesso difficili da rilevare con le sole metriche automatizzate di qualità.</p>
+<p>Gli errori concreti segnalati non sono solo indicativi. Ognuno dovrebbe finire corretto, sistematizzato, intenzionalmente lasciato irrisolto con motivazione, oppure ancora esplicitamente tracciato nel corpus dei rilievi.</p>
 <h2 id="tassonomia-comune-degli-errori-di-traduzione-dellia">Tassonomia comune degli errori di traduzione dell’IA</h2>
 <ul>
 <li>grammatica</li>
 <li>modalità</li>
 <li>terminologia</li>
-<li>registrarsi</li>
-<li>scioltezza</li>
+<li>registro</li>
+<li>fluidità</li>
 <li>traduzione letterale</li>
 <li>ambiguità</li>
 <li>perdita di contesto</li>
 <li>ordine delle parole</li>
 <li>collocazione</li>
-<li>Scrittura o ortografia</li>
-<li>formulazione della politica del dominio</li>
-<li>formulazione dell’accessibilità</li>
+<li>scrittura o ortografia</li>
+<li>formulazione della policy di dominio</li>
+<li>formulazione di accessibilità</li>
 </ul>
 <h2 id="punteggio-benchmark-leggero">Punteggio benchmark leggero</h2>
-<p>Per una valutazione ripetibile della traduzione AI, utilizzare una rubrica leggera 0-3 invece di fare affidamento solo sul giudizio superato/fallito.</p>
+<p>Per una valutazione ripetibile della traduzione AI, utilizzate una rubrica leggera da 0 a 3 invece di affidarvi solo a un giudizio superato/non superato.</p>
 <p>Dimensioni consigliate:</p>
 <ul>
-<li>significa precisione</li>
+<li>accuratezza del significato</li>
 <li>grammatica e fluidità</li>
-<li>terminologia e adattamento del dominio</li>
+<li>terminologia e aderenza al dominio</li>
 <li>registro e stile</li>
-<li>rivedere lo sforzo</li>
+<li>sforzo di revisione</li>
 </ul>
 <p>Etichette di rilascio consigliate:</p>
 <ul>
 <li>bloccante</li>
-<li>revisione importante</li>
+<li>revisione maggiore</li>
 <li>revisione minore</li>
-<li>pronto con l’approvazione della revisione</li>
+<li>pronto con approvazione della revisione</li>
 </ul>
-<p>Ciò crea dati compatibili con le scorecard senza richiedere un quadro di misurazione della localizzazione pesante.</p>
+<p>Questo crea dati adatti a scorecard senza richiedere un framework pesante di misurazione della localizzazione.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -258,7 +312,6 @@
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/it/ai-will-not-replace-translators.html"><span>L&#x27;IA non sostituirà i traduttori</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/it/how-to-review-ai-assisted-translations.html"><span>Come revisionare le traduzioni assistite dall&#x27;IA</span><span class="topic-menu__meta">Materiale didattico</span></a>
-                  <a href="../../wiki/it/ai-assisted-translation-policy.html"><span>AI-Politica di traduzione assistita</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>

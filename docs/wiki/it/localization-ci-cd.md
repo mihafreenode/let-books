@@ -1,7 +1,7 @@
 ---
 title: "Localizzazione CI e CD"
 summary: >-
-  La localizzazione CI/CD convalida continuamente i contenuti multilingue in modo da individuare tempestivamente le risorse mancanti, i collegamenti interrotti e le regressioni sull'accessibilità.
+  La CI/CD della localizzazione convalida continuamente i contenuti multilingue in modo che asset mancanti, collegamenti interrotti e regressioni di accessibilità vengano individuati presto.
 topics:
   - continuous-localization
   - qa
@@ -11,72 +11,82 @@ topics:
 
 ## Riepilogo
 
-La localizzazione CI/CD convalida continuamente i contenuti multilingue in modo da individuare tempestivamente le risorse mancanti, i collegamenti interrotti e le regressioni sull'accessibilità.
+La CI/CD della localizzazione convalida continuamente i contenuti multilingue in modo che asset mancanti, collegamenti interrotti e regressioni di accessibilità vengano individuati presto.
 
 ## Controlli desiderati
 
-- Coerenza dell'inventario locale
-- generazione fresca del sito prima della revisione di parità
-- convalida del collegamento
+- coerenza dell'inventario delle impostazioni locali
+- rigenerazione fresca del sito prima della revisione di parità
+- validazione dei collegamenti
 - generazione di articoli e pagine
-- controllo ortografico ove disponibile
-- Parità segnaposto
-- prove di fumo di accessibilità
-- controlli di copertura di screenshot e diagrammi
+- controllo ortografico dove disponibile
+- parità dei segnaposto
+- controlli rapidi di accessibilità
+- verifiche di copertura di screenshot e diagrammi
 
 ## Regola della generazione fresca
 
-I flussi di CI e revisione della localizzazione non devono basare i risultati di parità su artefatti generati obsoleti.
+I flussi di lavoro di CI e revisione della localizzazione non devono basare i rilievi di parità su artefatti generati obsoleti.
 
 Sequenza richiesta:
 
-1. generare il sito dallo stato corrente del repository
-2. eseguire i validatori sull'output appena generato
-3. quando necessario, esaminare l'HTML generato
-4. quando necessario, esaminare l'output renderizzato
+1. generate il sito dallo stato corrente del repository
+2. eseguite i validatori sull'output appena generato
+3. ispezionate l'HTML generato quando necessario
+4. ispezionate l'output renderizzato quando necessario
 
 Questo è importante perché Markdown sorgente, HTML generato, output distribuito e comportamento renderizzato nel browser possono divergere temporaneamente durante lo sviluppo.
 
-## Progressione della classe difettosa
+## Priorità di revisione
 
-L'IC di localizzazione dovrebbe tenere traccia di entrambi:
+Applicate per primi il controllo di parità e la revisione nella lingua madre più rigorosi a:
+
+- contenuti creati di recente
+- contenuti ampliati di recente
+- contenuti attualmente in modifica
+
+Poi estendete progressivamente gli stessi standard di revisione ai contenuti localizzati più vecchi.
+
+## Progressione delle classi di difetto
+
+La CI della localizzazione dovrebbe tenere traccia di entrambi:
 
 - `Localization Debt`
 - `Open Defect Classes`
 
-Il debito misura il lavoro rimanente sul contenuto della fonte.
+Il debito misura il lavoro rimanente sul contenuto sorgente.
 
-Le classi di difetti aperte misurano se il sistema può ancora consentire la ricomparsa di una categoria di problema.
+Le classi di difetto aperte misurano se il sistema può ancora consentire il ritorno di una categoria di problema.
 
-Non appena una classe di difetti raggiunge zero occorrenze, il suo validatore dovrebbe passare dall'avviso al blocco, ove possibile.
+Non appena una classe di difetto raggiunge zero occorrenze, il suo validatore dovrebbe passare da consultivo a bloccante dove pratico.
 
 Esempi:
 
-- pubblicazione bozza segnaposto
-- riassunti non tradotti
+- pubblicazione di bozze segnaposto
+- riepiloghi non tradotti
 - metadati non tradotti
-- corpi non tradotti
-- editoria in lingue miste
+- corpi di testo non tradotti
+- pubblicazione in lingue miste
 
-CI non è solo un gatekeeper. È il meccanismo che impedisce alle classi di difetti chiuse di riaprirsi silenziosamente.
+La CI non è solo un guardiano. È il meccanismo che impedisce alle classi di difetto chiuse di riaprirsi silenziosamente.
 
 ## Ordine di generazione per la navigazione degli articoli
 
-L'attuale contratto di navigazione di articoli pubblici è:
+L'attuale contratto di navigazione pubblica degli articoli è:
 
 - `post-article-nav`
 - `related-content`
 - `related-topic-nav`
 
-La generazione e la convalida dovrebbero avvenire in questo ordine:
+Generazione e validazione dovrebbero avvenire in questo ordine:
 
-1. generare l'HTML dell'articolo
-2. generare le pagine indice
-3. eseguire l'eventuale post-elaborazione residua della navigazione solo se ancora necessaria
-4. convalidare l'output appena generato
-5. esaminare l'HTML generato o l'output renderizzato se il flusso di lavoro richiede una valutazione umana della parità
+1. generate l'HTML degli articoli
+2. generate le pagine indice
+3. eseguite ogni post-elaborazione residua della navigazione solo se ancora necessaria
+4. convalidate l'output appena generato
+5. riesaminate l'HTML generato o l'output renderizzato se il flusso di lavoro richiede una valutazione umana della parità
 
-Se un validatore si aspetta ancora il blocco legacy `topic-nav`, aggiorna il validatore al contratto corrente invece di applicare la patch generata HTML.
+Se un validatore si aspetta ancora il blocco legacy `topic-nav`, aggiornate il validatore al contratto corrente invece di correggere l'HTML generato.
 
 ## Pagine correlate
 

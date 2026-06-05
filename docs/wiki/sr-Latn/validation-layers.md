@@ -1,21 +1,21 @@
 ---
-title: "Slojevi za validaciju"
+title: "Slojevi provere"
 summary: >-
-  Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa predviđenim pravilima i očekivanjima kvaliteta.
+  Slojevi provere su različiti načini na koje projekat proverava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Slojevi za validaciju
+# Slojevi provere
 
 ## Rezime
 
-Slojevi validacije su različiti načini na koje projekat proverava da li se implementacija, dokumentacija i artefakti isporuke i dalje podudaraju sa predviđenim pravilima i očekivanjima kvaliteta.
+Slojevi provere su različiti načini na koje projekat proverava da li implementacija, dokumentacija i artefakti isporuke i dalje odgovaraju predviđenim pravilima i očekivanjima kvaliteta.
 
 ## Zašto su slojevi važni
 
-Nijedan metod validacije nije dovoljan.
+Nijedna pojedinačna metoda provere nije dovoljna.
 
 - dokumentacija sama po sebi ne sprovodi ponašanje
 - sami testovi mogu potvrditi pogrešne pretpostavke
@@ -23,7 +23,7 @@ Nijedan metod validacije nije dovoljan.
 
 Slojeviti pristup je jači jer svaki sloj hvata različitu klasu odstupanja.
 
-## Uobičajeni slojevi validacije
+## Uobičajeni slojevi provere
 
 ### 1. Specifikacija i uputstva
 
@@ -49,7 +49,7 @@ CI čini provere ponovljivim i vidljivim među saradnicima i okruženjima.
 
 ### 6. Provere primene
 
-Radni tokovi primene potvrđuju da su izgrađeni artefakti i dalje objavljeni i da su strukturalno zdravi.
+Radni tokovi primene potvrđuju da izgrađeni artefakti i dalje mogu da se objave i da su strukturno zdravi.
 
 ## Kako slojevi treba da se odnose
 
@@ -83,7 +83,7 @@ Repozitorijum Let Books već dokumentuje nekoliko slojeva, uključujući:
 - pravila uredničkog dokaza u `docs/blog/README.md` i `docs/sources/README.md`
 - uputstvo za učenje za postepeni CI i uvođenje validacije
 
-To čini validaciju dokumentovanim sistemom, a ne samo budućom težnjom.
+To proveru čini dokumentovanim sistemom, a ne samo budućom težnjom.
 
 ## Povezane stranice
 

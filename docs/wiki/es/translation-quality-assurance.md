@@ -1,7 +1,7 @@
 ---
 title: "Garantía de calidad de la traducción"
 summary: >-
-  El control de calidad de la traducción combina validación automatizada, corrección ortográfica, revisión terminológica, comprobaciones de accesibilidad y juicio humano.
+  La QA de traducción combina validación automatizada, corrección ortográfica, revisión terminológica, comprobaciones de accesibilidad y juicio humano.
 topics:
   - translation-quality
   - qa
@@ -11,18 +11,20 @@ topics:
 
 ## Resumen
 
-El control de calidad de la traducción combina validación automatizada, corrección ortográfica, revisión terminológica, comprobaciones de accesibilidad y juicio humano.
+La QA de traducción combina validación automatizada, corrección ortográfica, revisión terminológica, comprobaciones de accesibilidad y juicio humano.
 
 ## Controles comunes
 
 - traducciones faltantes
-- fuga inglesa
+- filtración de inglés
 - integridad de la localización de cara al lector
+- paridad estructural frente a la salida generada recientemente
+- legibilidad en lengua materna y expresión natural
 - discrepancias en los marcadores de posición
 - enlaces rotos
 - deriva del glosario
-- cobertura de texto de accesibilidad
-- paridad de captura de pantalla y diagrama
+- cobertura del texto de accesibilidad
+- paridad de capturas de pantalla y diagramas
 
 ## Requisito de salida generada recientemente
 
@@ -50,24 +52,84 @@ Las señales típicas incluyen:
 
 Las advertencias de los validadores de paridad estructural son avisos de revisión, no una prueba automática de una mala traducción. Deben interpretarse junto con el HTML generado y, cuando sea necesario, con la salida renderizada en el navegador.
 
+## Revisión de la expresión en lengua materna
+
+La QA de traducción también debe buscar texto que sea técnicamente correcto pero no lo que un hablante nativo elegiría de forma natural.
+
+Esto incluye:
+
+- estructura oracional inglesa directa
+- traducción directa de modismos ingleses
+- redacción que suena traducida en lugar de redactada originalmente
+- terminología que todavía revela el idioma de origen
+
+Ejemplos de este patrón incluyen frases equivalentes a:
+
+- contenido candidato
+- estrategia de validación
+- artefacto del flujo de trabajo
+- herramientas curadas
+- habilidades curadas
+
+No siempre se trata de errores de traducción. A menudo son casos en los que un hablante nativo reescribiría instintivamente la frase.
+
+## Prueba de preferencia del hablante nativo
+
+En las secciones importantes de prosa, los revisores deberían preguntarse:
+
+> Si un hablante nativo competente estuviera escribiendo esta idea desde cero, ¿probablemente la escribiría así?
+
+Si no, los revisores deberían:
+
+- preservar el significado
+- preservar la paridad semántica
+- preservar la paridad estructural
+- mejorar la redacción
+
+Esta prueba es especialmente útil para:
+
+- introducciones
+- resúmenes
+- explicaciones educativas
+- orientación práctica
+- debates de gobernanza
+- conclusiones
+
+## Revisión de la expresión natural
+
+Trate la redacción técnicamente correcta pero poco natural como un problema de calidad.
+
+Los revisores deberían preferir formulaciones que suenen escritas de forma natural en el idioma de destino, incluso cuando la traducción original sea comprensible.
+
+El objetivo no es solo una traducción correcta. El objetivo es un documento que se sienta como si hubiera sido escrito originalmente para lectores nativos.
+
+Las mejoras de lenguaje natural no deben debilitar:
+
+- la paridad semántica
+- la paridad estructural
+- la cobertura educativa
+- los ejemplos
+- la orientación práctica
+- la guía de gobernanza
+
 ## Validador de localización orientado al lector
 
-Una clase de validador debería fallar explícitamente en CI cuando una página aparece localizada pero aún expone contenido de cara al lector en el idioma de origen.
+Una clase de validadores debería hacer fallar explícitamente la CI cuando una página parece localizada pero aún expone contenido orientado al lector en el idioma de origen.
 
 Ejemplos que deberían fallar:
 
 - título localizado con resumen en inglés
 - artículo localizado con etiquetas en inglés
 - artículo localizado con títulos o listas en inglés
-- artículo localizado con leyendas o subtítulos en inglés
-- artículo localizado con etiquetas de diagrama en inglés o texto alternativo
-- tarjetas de contenido relacionado en varios idiomas
+- artículo localizado con avisos destacados o leyendas en inglés
+- artículo localizado con etiquetas de diagramas en inglés o texto alternativo
+- tarjetas `related-content` en idiomas mixtos
 
-Esta es una condición de falla, no simplemente una advertencia, porque los lectores experimentan estas páginas como visiblemente inacabadas.
+Esta es una condición de fallo, no simplemente una advertencia, porque los lectores experimentan esas páginas como visiblemente inacabadas.
 
-## Auditoría de clase de defecto
+## Auditoría de clases de defectos
 
-El control de calidad de la traducción debe mantener clases de defectos explícitas con:
+La QA de traducción debe mantener clases de defectos explícitas con los siguientes campos:
 
 - descripción
 - recuento de ocurrencias
@@ -79,17 +141,17 @@ El control de calidad de la traducción debe mantener clases de defectos explíc
 Las categorías requeridas incluyen:
 
 - resúmenes no traducidos
-- cuerpos no traducidos
-- publicación de borrador de marcador de posición
+- cuerpos de texto no traducidos
+- publicación de borradores con marcadores de posición
 - metadatos no traducidos
 - publicación en idiomas mixtos
-- futuras clases descubiertas
+- clases futuras descubiertas
 
-Una clase se cierra solo cuando su recuento llega a cero y CI impide que regrese sin fallar.
+Una clase solo se cierra cuando su recuento llega a cero y la CI impide que regrese sin fallar.
 
 ## Evidencia de revisión humana
 
-El control de calidad de la traducción también debe preservar registros breves de revisión humana para correcciones representativas asistidas por IA.
+La QA de traducción también debe conservar registros breves de revisión humana para correcciones representativas asistidas por IA.
 
 Campos mínimos:
 
@@ -99,15 +161,15 @@ Campos mínimos:
 - hipótesis de causa raíz
 - justificación del revisor
 
-Los resultados de las revisiones de hablantes nativos deben conservarse como un corpus en crecimiento, no como notas aisladas y únicas. Los hallazgos repetidos deberían retroalimentar el diseño del validador, la orientación de los contribuyentes y las futuras instrucciones de los agentes de IA.
+Los hallazgos de revisiones de hablantes nativos deben conservarse como un corpus en crecimiento, no como notas aisladas de una sola vez. Los hallazgos repetidos deberían retroalimentar el diseño del validador, la guía para colaboradores y las futuras instrucciones para agentes de IA.
 
-Antes de la aprobación final de una traducción asistida por IA, los revisores deberían:
+Antes de aprobar una traducción asistida por IA, los revisores deberían:
 
-- revisar las entradas pertinentes del corpus estructurado de hallazgos para ese idioma o tema
+- leer las entradas pertinentes del corpus estructurado de hallazgos para ese idioma o tema
 - comprobar los patrones recurrentes de defectos procedentes de revisiones humanas
 - confirmar que el borrador actual no reintroduce problemas conocidos antes de la aprobación
 
-Todo defecto reportado por un hablante nativo también debería evaluarse respecto de:
+Todo defecto reportado por un hablante nativo también debería evaluarse en cuanto a:
 
 - corrección del contenido
 - actualización de la guía de revisión
@@ -116,16 +178,16 @@ Todo defecto reportado por un hablante nativo también debería evaluarse respec
 - oportunidad para un validador
 - oportunidad para una prueba de regresión
 
-Esto es importante porque incluso cuando se preserva el significado general, las traducciones generadas por IA pueden requerir la revisión de un hablante nativo para corregir problemas sutiles en gramática, modalidad, terminología y registro específico del dominio. Estos problemas suelen ser difíciles de detectar únicamente mediante métricas de calidad automatizadas.
+Esto importa porque, incluso cuando se preserva el significado general, las traducciones generadas por IA pueden requerir la revisión de un hablante nativo para corregir problemas sutiles de gramática, modalidad, terminología y registro específico del dominio. Estos problemas suelen ser difíciles de detectar únicamente mediante métricas de calidad automatizadas.
 
-Los errores concretos reportados por hablantes nativos no son solo orientativos. Cada uno de ellos debería terminar corregido, sistematizado, intencionalmente no resuelto con justificación, o todavía seguido explícitamente en el corpus de hallazgos.
+Los errores concretos reportados no son solo orientativos. Cada uno debería terminar corregido, sistematizado, intencionalmente no resuelto con justificación, o todavía seguido explícitamente en el corpus de hallazgos.
 
 ## Taxonomía de errores de traducción de IA comunes
 
 - gramática
 - modalidad
 - terminología
-- registrarse
+- registro
 - fluidez
 - traducción literal
 - ambigüedad
@@ -138,11 +200,11 @@ Los errores concretos reportados por hablantes nativos no son solo orientativos.
 
 ## Puntuación de referencia ligera
 
-Para una evaluación repetible de la traducción de IA, utilice una rúbrica ligera de 0 a 3 en lugar de confiar únicamente en el criterio de aprobación/rechazo.
+Para una evaluación repetible de la traducción con IA, use una rúbrica ligera de 0 a 3 en lugar de confiar únicamente en el criterio de aprobado/reprobado.
 
 Dimensiones recomendadas:
 
-- significado precisión
+- precisión del significado
 - gramática y fluidez
 - terminología y adecuación al dominio
 - registro y estilo
@@ -151,11 +213,11 @@ Dimensiones recomendadas:
 Etiquetas de lanzamiento recomendadas:
 
 - bloqueador
-- revisión importante
+- revisión mayor
 - revisión menor
 - listo con aprobación de revisión
 
-Esto crea datos compatibles con cuadros de mando sin necesidad de un marco de medición de localización pesado.
+Esto crea datos compatibles con scorecards sin necesidad de un marco pesado de medición de localización.
 
 ## Páginas relacionadas
 

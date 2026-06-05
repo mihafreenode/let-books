@@ -1,7 +1,7 @@
 ---
 title: "Sigurimi i cilësisë së përkthimit"
 summary: >-
-  QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
+  QA e përkthimit kombinon validimin e automatizuar, kontrollin drejtshkrimor, rishikimin terminologjik, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
 topics:
   - translation-quality
   - qa
@@ -11,151 +11,213 @@ topics:
 
 ## Përmbledhje
 
-QA e përkthimit kombinon vërtetimin e automatizuar, kontrollin e drejtshkrimit, rishikimin e terminologjisë, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
+QA e përkthimit kombinon validimin e automatizuar, kontrollin drejtshkrimor, rishikimin terminologjik, kontrollet e aksesueshmërisë dhe gjykimin njerëzor.
 
 ## Kontrolle të zakonshme
 
-- Mungojnë përkthimet
-- Rrjedhje angleze
-- Plotësia e lokalizimit me pamje nga lexuesi
-- mospërputhjet e mbajtësve të vendeve
+- përkthime që mungojnë
+- rrjedhje e anglishtes
+- plotësia e lokalizimit të dukshëm për lexuesin
+- paritet strukturor kundrejt daljes së gjeneruar rishtazi
+- lexueshmëri në gjuhën amtare dhe shprehje natyrore
+- mospërputhje të placeholder-ëve
 - lidhje të prishura
-- rrëshqitje e fjalorit
-- Mbulimi i tekstit të aksesueshmërisë
-- pamje e ekranit dhe barazia e diagramit
+- devijim nga glosari
+- mbulim i tekstit të aksesueshmërisë
+- paritet i pamjeve të ekranit dhe diagrameve
 
 ## Kërkesa për dalje të gjeneruar rishtazi
 
 Përpara rishikimit të paritetit strukturor, rishikimit semantik ose krahasimit manual të artikujve:
 
 1. rigjeneroni sajtin nga gjendja aktuale e depozitës
-2. ekzekutoni validatorët mbi daljen aktuale të gjeneruar
+2. ekzekutoni validuesit mbi daljen aktuale të gjeneruar
 3. inspektoni artefaktet HTML të gjeneruara
-4. vetëm pastaj kryeni vlerësimin manual të paritetit
+4. vetëm atëherë kryeni vlerësimin manual të paritetit
 
-Ky rregull ekziston sepse Markdown-i burimor dhe dalja e gjeneruar mund të ndryshojnë përkohësisht gjatë zhvillimit, dhe gjetjet e QA-së duhet të bazohen në artefaktet aktuale, jo në skedarë të vjetëruar të gjeneruar.
+Ky rregull ekziston sepse Markdown-i burimor dhe dalja e gjeneruar mund të devijojnë përkohësisht gjatë zhvillimit, dhe gjetjet e QA-së duhet të bazohen në artefaktet aktuale, jo në skedarë të gjeneruar të vjetruar.
 
 ## Rishikimi i paritetit strukturor
 
-Rishikimi i paritetit strukturor duhet të kërkojë humbje të vlerës për lexuesin edhe kur artikulli i lokalizuar ende e ruan përgjithësisht kuptimin.
+Rishikimi i paritetit strukturor duhet të kërkojë humbje vlere për lexuesin edhe kur artikulli i lokalizuar ende e ruan në përgjithësi kuptimin.
 
 Sinjalet tipike përfshijnë:
 
-- mungesë të seksioneve kryesore
-- hierarki të ngjeshur të titujve
-- mungesë të shembujve
-- udhëzim praktik të kompresuar
-- diskutim të reduktuar për qeverisjen
+- mungesë seksionesh kryesore
+- hierarki të shembur të titujve
+- shembuj që mungojnë
+- udhëzim praktik të ngjeshur
+- diskutim të reduktuar mbi qeverisjen
 - udhëzim të shkurtuar për rishikim ose validim
 
-Paralajmërimet nga validatorët e paritetit strukturor janë nxitje për rishikim, jo provë automatike e një përkthimi të dobët. Ato duhen interpretuar së bashku me HTML-në e gjeneruar dhe, kur nevojitet, me daljen e paraqitur në shfletues.
+Paralajmërimet nga validuesit e paritetit strukturor janë nxitje për rishikim, jo provë automatike e një përkthimi të dobët. Ato duhet të interpretohen së bashku me HTML-në e gjeneruar dhe, kur nevojitet, me daljen e renderuar në shfletues.
+
+## Rishikimi i shprehjes në gjuhën amtare
+
+QA e përkthimit duhet të kërkojë edhe tekst që është teknikisht i saktë, por jo ai që një folës amtar do të zgjidhte natyrshëm.
+
+Kjo përfshin:
+
+- strukturë fjalie të drejtpërdrejtë angleze
+- përkthim të drejtpërdrejtë të idiomave angleze
+- formulime që tingëllojnë të përkthyera në vend që të tingëllojnë si të shkruara nga autori
+- terminologji që ende zbulon gjuhën burimore
+
+Shembuj të këtij modeli përfshijnë shprehje ekuivalente me:
+
+- përmbajtje kandidate
+- strategji validimi
+- artefakt i fluksit të punës
+- mjete të kuruara
+- aftësi të kuruara
+
+Këto nuk janë gjithmonë gabime përkthimi. Shpesh janë raste ku një folës amtar do ta rishkruante instinktivisht fjalinë.
+
+## Testi i preferencës së folësit amtar
+
+Për seksione të rëndësishme në prozë, rishikuesit duhet të pyesin:
+
+> Nëse një folës amtar kompetent do ta shkruante këtë ide nga e para, a ka gjasa ta shkruante kështu?
+
+Nëse jo, rishikuesit duhet të:
+
+- ruajnë kuptimin
+- ruajnë paritetin semantik
+- ruajnë paritetin strukturor
+- përmirësojnë formulimin
+
+Ky test është veçanërisht i dobishëm për:
+
+- hyrje
+- përmbledhje
+- shpjegime edukative
+- udhëzim praktik
+- diskutime qeverisëse
+- përfundime
+
+## Rishikimi i shprehjes natyrore
+
+Trajtoni formulimin teknikisht të saktë por jo natyror si çështje cilësie.
+
+Rishikuesit duhet të preferojnë formulime që tingëllojnë si të shkruara natyrshëm në gjuhën synim, edhe kur përkthimi fillestar është i kuptueshëm.
+
+Qëllimi nuk është vetëm një përkthim i saktë. Qëllimi është një dokument që ndihet sikur është shkruar fillimisht për lexues amtarë.
+
+Përmirësimet në gjuhën natyrore nuk duhet të dobësojnë:
+
+- paritetin semantik
+- paritetin strukturor
+- mbulimin edukativ
+- shembujt
+- udhëzimin praktik
+- udhëzimin për qeverisje
 
 ## Vlerësuesi i lokalizimit me pamje nga lexuesi
 
-Një klasë e verifikuesit duhet të dështojë në mënyrë eksplicite CI kur një faqe shfaqet e lokalizuar, por ende ekspozon përmbajtjen e gjuhës burimore që përballet me lexuesin.
+Një klasë validuesish duhet ta dështojë në mënyrë të qartë CI-në kur një faqe duket e lokalizuar, por ende shfaq përmbajtje të dukshme për lexuesin në gjuhën burimore.
 
 Shembuj që duhet të dështojnë:
 
 - titull i lokalizuar me përmbledhje në anglisht
 - artikull i lokalizuar me etiketa në anglisht
 - artikull i lokalizuar me tituj ose lista në anglisht
-- artikull i lokalizuar me thirrje ose titra në anglisht
-- artikull i lokalizuar me etiketa diagrame në anglisht ose tekst alt
-- karta me përmbajtje të lidhur me gjuhë të përzier
+- artikull i lokalizuar me callout-e ose captions në anglisht
+- artikull i lokalizuar me etiketa diagrami në anglisht ose tekst alternativ
+- karta `related-content` në gjuhë të përziera
 
-Ky është një kusht dështimi, jo thjesht një paralajmërim, sepse lexuesit i përjetojnë faqe të tilla si dukshëm të papërfunduara.
+Ky është kusht dështimi, jo vetëm paralajmërim, sepse lexuesit i përjetojnë këto faqe si dukshëm të papërfunduara.
 
 ## Auditimi i klasës së defektit
 
-QA e përkthimit duhet të mbajë klasa të qarta defektesh me:
+QA e përkthimit duhet të mbajë klasa të qarta defektesh me fushat vijuese:
 
 - përshkrim
-- numërimi i dukurive
-- shkaku rrënjësor
-- Mbulimi i verifikuesit
-- rreziku i përsëritjes
-- plani i mbylljes
+- numërim shfaqjesh
+- shkak rrënjësor
+- mbulim nga validuesi
+- rrezik rikthimi
+- plan mbylljeje
 
 Kategoritë e kërkuara përfshijnë:
 
 - përmbledhje të papërkthyera
-- trupa të papërkthyer
-- botimi i draftit të vendmbajtësit
-- meta të dhëna të papërkthyera
-- botim në gjuhë të përzier
-- klasat e zbuluara në të ardhmen
+- trupa tekstesh të papërkthyer
+- publikim skicash me placeholder
+- metadata të papërkthyera
+- publikim me gjuhë të përziera
+- klasa të ardhshme të zbuluara
 
-Një klasë mbyllet vetëm kur numërimi i saj arrin zero dhe CI e pengon atë të kthehet pa dështim.
+Një klasë mbyllet vetëm kur numri i saj i shfaqjeve arrin në zero dhe CI e pengon rikthimin pa dështim.
 
 ## Prova e rishikimit njerëzor
 
-Cilësia e Përkthimit duhet gjithashtu të ruajë të dhëna të shkurtra të rishikimit njerëzor për korrigjimet përfaqësuese të asistuara nga AI.
+QA e përkthimit duhet gjithashtu të ruajë shënime të shkurtra të rishikimit njerëzor për korrigjime përfaqësuese të asistuara nga AI.
 
 Fushat minimale:
 
 - teksti origjinal
 - teksti i korrigjuar
-- kategori gabimi
+- kategoria e gabimit
 - hipoteza e shkakut rrënjësor
-- arsyetimi recensues
+- arsyetimi i rishikuesit
 
-Gjetjet e rishikimit nga folësit vendas duhet të ruhen si një korpus në rritje, jo si shënime të izoluara të njëhershme. Gjetjet e përsëritura duhet të ushqehen me dizajnin e verifikuesit, udhëzimet e kontribuesve dhe udhëzimet e ardhshme të agjentëve të AI.
+Gjetjet nga rishikimet e folësve amtarë duhet të ruhen si një korpus në rritje, jo si shënime të izoluara njëherëshe. Gjetjet e përsëritura duhet të rikthehen në dizajnin e validuesve, udhëzimet për kontribuesit dhe udhëzimet e ardhshme për agjentët AI.
 
-Përpara nënshkrimit përfundimtar të një përkthimi të asistuar nga AI, rishikuesit duhet të:
+Përpara miratimit përfundimtar të një përkthimi të asistuar nga AI, rishikuesit duhet të:
 
-- shqyrtojnë hyrjet përkatëse në korpusin e strukturuar të gjetjeve për atë gjuhë ose temë
-- kontrollojnë modelet e përsëritura të defekteve nga rishikimet njerëzore
-- konfirmojnë që drafti aktual nuk rifut çështje të njohura para nënshkrimit
+- lexojnë hyrjet përkatëse nga korpusi i strukturuar i gjetjeve për atë gjuhë ose temë
+- kontrollojnë modelet e përsëritura të defekteve nga rishikimi njerëzor
+- konfirmojnë që drafti aktual nuk rifut probleme të njohura përpara miratimit
 
-Çdo defekt i raportuar nga një folës amtar duhet gjithashtu të vlerësohet për:
+Çdo defekt i raportuar nga folësit amtarë duhet gjithashtu të vlerësohet për sa i përket:
 
-- korrigjimin e përmbajtjes
-- përditësimin e udhëzimeve të rishikimit
-- përditësimin e udhëzimeve terminologjike
-- përmirësimin e prompt-it
-- mundësinë për validator
-- mundësinë për test regresioni
+- korrigjimit të përmbajtjes
+- përditësimit të udhëzimit të rishikimit
+- përditësimit të udhëzimit terminologjik
+- përmirësimit të prompt-it
+- mundësisë për validues
+- mundësisë për test regresioni
 
-Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e krijuara nga AI mund të kërkojnë rishikim nga folësi amtare për të korrigjuar çështjet delikate në gramatikë, modalitet, terminologji dhe regjistër specifik të domenit. Këto çështje shpesh janë të vështira për t'u zbuluar vetëm nëpërmjet matjeve të automatizuara të cilësisë.
+Kjo ka rëndësi sepse edhe kur kuptimi i përgjithshëm ruhet, përkthimet e gjeneruara nga AI mund të kërkojnë rishikim nga folës amtarë për të korrigjuar probleme delikate në gramatikë, modalitet, terminologji dhe regjistër specifik për domenin. Këto probleme shpesh janë të vështira për t'u zbuluar vetëm përmes metrikave të automatizuara të cilësisë.
 
-Gabimet konkrete të raportuara nga folësit amtarë nuk janë vetëm këshilluese. Secila prej tyre duhet të përfundojë e korrigjuar, e sistematizuar, e lënë qëllimisht e pazgjidhur me arsyetim, ose ende e ndjekur shprehimisht në korpusin e gjetjeve.
+Gabimet konkrete të raportuara nuk janë vetëm këshilluese. Secili duhet të përfundojë i korrigjuar, i sistemuar, i lënë qëllimisht i pazgjidhur me arsyetim, ose ende i ndjekur në mënyrë të qartë në korpusin e gjetjeve.
 
 ## Taksonomia e gabimeve të zakonshme të përkthimit të AI
 
 - gramatikë
-- modaliteti
-- terminologjia
-- regjistrohuni
+- modalitet
+- terminologji
+- regjistër
 - rrjedhshmëri
 - përkthim fjalë për fjalë
 - paqartësi
-- humbje e kontekstit
-- renditja e fjalëve
-- bashkëvendosje
-- shkrimi ose drejtshkrimi
-- formulimi i politikave të domenit
-- formulimi i aksesueshmërisë
+- humbje konteksti
+- rend fjalësh
+- kolokacion
+- shkrim ose drejtshkrim
+- formulim i politikës së domenit
+- formulim i aksesueshmërisë
 
 ## Rezultati i lehtë i pikës
 
-Për vlerësimin e përsëritshëm të përkthimit të AI, përdorni një rubrikë të lehtë 0-3 në vend që të mbështeteni vetëm në gjykimin kalim/dështim.
+Për vlerësim të përsëritshëm të përkthimit me AI, përdorni një rubrikë të lehtë 0-3 në vend që të mbështeteni vetëm te gjykimi kalon/dështon.
 
 Dimensionet e rekomanduara:
 
-- do të thotë saktësi
+- saktësia e kuptimit
 - gramatika dhe rrjedhshmëria
-- terminologjia dhe përshtatja e domenit
-- regjistrimi dhe stili
-- rishikoni përpjekjet
+- terminologjia dhe përshtatja me domenin
+- regjistri dhe stili
+- përpjekja e rishikimit
 
-Etiketat e rekomanduara të lëshimit:
+Etiketat e rekomanduara të publikimit:
 
 - bllokues
-- rishikim i madh
+- rishikim madhor
 - rishikim i vogël
-- gati me shenjë rishikimi
+- gati me miratim rishikimi
 
-Kjo krijon të dhëna miqësore me kartën e rezultateve pa kërkuar një kornizë të matjes së lokalizimit të peshave të rënda.
+Kjo krijon të dhëna të përshtatshme për scorecard-e pa kërkuar një kornizë të rëndë matjeje të lokalizimit.
 
 ## Faqe të ngjashme
 

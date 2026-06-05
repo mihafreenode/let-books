@@ -1,21 +1,21 @@
 ---
-title: "Plasti za preverjanje veljavnosti"
+title: "Plasti preverjanja"
 summary: >-
-  Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.
+  Plasti preverjanja so različni načini, s katerimi projekt preverja, ali implementacija, dokumentacija in dostavni artefakti še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Plasti za preverjanje veljavnosti
+# Plasti preverjanja
 
 ## Povzetek
 
-Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.
+Plasti preverjanja so različni načini, s katerimi projekt preverja, ali implementacija, dokumentacija in dostavni artefakti še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.
 
 ## Zakaj so plasti pomembne
 
-Nobena ena metoda potrjevanja ni dovolj.
+Nobena posamezna metoda preverjanja ni dovolj.
 
 - samo dokumentacija ne uveljavlja vedenja
 - sami testi lahko potrdijo napačne predpostavke
@@ -23,7 +23,7 @@ Nobena ena metoda potrjevanja ni dovolj.
 
 Večplastni pristop je močnejši, ker vsak sloj ujame drugačen razred zanašanja.
 
-## Skupne plasti preverjanja veljavnosti
+## Običajne plasti preverjanja
 
 ### 1. Specifikacija in navodila
 
@@ -57,7 +57,7 @@ Plasti naj se medsebojno krepijo v naslednjem vrstnem redu:
 
 - dokumenti in specifikacije določajo pričakovanja
 - pregled razlaga ta pričakovanja v kontekstu
-- validacijski skripti in testi avtomatizirajo stabilne dele pregleda
+- skripti za preverjanje in testi avtomatizirajo stabilne dele pregleda
 - CI te preglede izvaja dosledno
 - uvedba zagotavlja, da se izhod lahko dejansko pošlje
 
@@ -83,7 +83,7 @@ Repozitorij Let Books že dokumentira več plasti, vključno z:
 - pravila o uredniških dokazih v `docs/blog/README.md` in `docs/sources/README.md`
 - učne smernice za postopno uvedbo CI in validacije
 
-Zaradi tega veljavnost postane dokumentiran sistem in ne le prihodnost.
+Tako preverjanje postane dokumentiran sistem, ne le oddaljena namera.
 
 ## Sorodne strani
 

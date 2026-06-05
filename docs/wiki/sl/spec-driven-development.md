@@ -1,33 +1,33 @@
 ---
-title: "Razvoj, ki temelji na specifikacijah"
+title: "Razvoj na podlagi specifikacij"
 summary: >-
-  Razvoj, ki temelji na specifikacijah, je pristop, pri katerem eksplicitne definicije izdelkov in delovnih tokov vodijo implementacijo, dokumentacijo, pregled in preverjanje.
+  Razvoj na podlagi specifikacij je pristop, pri katerem jasno zapisane opredelitve izdelka in delovnih tokov usmerjajo implementacijo, dokumentacijo, pregled in preverjanje.
 topics:
   - spec-driven-development
   - documentation
   - product-quality
 ---
-# Razvoj, ki temelji na specifikacijah
+# Razvoj na podlagi specifikacij
 
 ## Povzetek
 
-Razvoj, ki temelji na specifikacijah, je pristop, pri katerem eksplicitne definicije izdelkov in delovnih tokov vodijo implementacijo, dokumentacijo, pregled in preverjanje.
+Razvoj na podlagi specifikacij je pristop, pri katerem jasno zapisane opredelitve izdelka in delovnih tokov usmerjajo implementacijo, dokumentacijo, pregled in preverjanje.
 
 ## Definicija
 
-Pri tem pristopu specifikacija ni samo artefakt začetnega načrtovanja. Deluje kot stalna referenca za:
+Pri tem pristopu specifikacija ni le začetni načrtovalni dokument. Deluje kot stalna referenca za:
 
 - namen izdelka
 - meje obsega
 - zahtevano vedenje
 - merila sprejemljivosti
-- pregled standardov
+- merila za pregled
 
 ## Zakaj je to pomembno pri delu s pomočjo umetne inteligence
 
 Umetna inteligenca poveča hitrost dostave, vendar lahko poveča tudi premikanje izdelka, kadar je namen nejasen.
 
-Razvoj, ki temelji na specifikacijah, pomaga tako, da daje ekipam stabilen vir resnice, ki ga je mogoče pregledati, posodobiti in uporabiti za ovrednotenje ustvarjenega rezultata.
+Razvoj na podlagi specifikacij ekipam daje stabilno izhodišče, ki ga je mogoče pregledati, posodobiti in uporabiti za presojo ustvarjenega rezultata.
 
 ## Tipične plasti
 
@@ -38,11 +38,11 @@ Pogosti sloji v sistemu, ki temelji na specifikacijah, vključujejo:
 - dokumentacijo o trenutnem stanju
 - obnašanje demo ali aplikacije
 - pravila validacije in testi
-- Uveljavljanje CI/CD
+- izvajanje pravil v CI/CD
 
 ## Način običajne napake
 
-Pogost način neuspeha je, da najvidnejši artefakt postane privzeti vir resnice.
+Pogost način zdrsa je, da najvidnejši artefakt postane privzeti vir resnice.
 
 Primeri:
 
@@ -51,7 +51,7 @@ Primeri:
 - trenutna bližnjica izvedbe
 - zastarela dokumentacijska stran
 
-Razvoj, ki temelji na specifikacijah, zmanjša to tveganje, tako da je namenska veriga avtoritet eksplicitna.
+Razvoj na podlagi specifikacij to tveganje zmanjša tako, da jasno določi, kateri viri imajo pri odločitvah prednost.
 
 ## Let Books kontekst
 

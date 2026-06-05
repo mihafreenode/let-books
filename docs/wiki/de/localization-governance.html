@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lokalisierungs-Governance | LetBooks</title>
-    <meta name="description" content="Die Lokalisierungsgovernance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.">
+    <meta name="description" content="Die Lokalisierungs-Governance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/de/localization-governance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Lokalisierungs-Governance | LetBooks">
-    <meta property="og:description" content="Die Lokalisierungsgovernance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.">
+    <meta property="og:description" content="Die Lokalisierungs-Governance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/de/localization-governance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lokalisierungs-Governance | LetBooks">
-    <meta name="twitter:description" content="Die Lokalisierungsgovernance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.">
+    <meta name="twitter:description" content="Die Lokalisierungs-Governance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,41 +97,59 @@
             <span>Wiki</span>
             <span>Deutsch</span>
           </div>
-          <p class="content-page-summary">Die Lokalisierungsgovernance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.</p>
+          <p class="content-page-summary">Die Lokalisierungs-Governance definiert, wer mehrsprachige Inhaltsänderungen vorschlagen, prüfen, genehmigen und anfechten kann.</p>
             <hr class="content-header-divider">
           </header>
 <h2 id="governance-bereiche">Governance-Bereiche</h2>
 <ul>
-<li>Quelleneigentum</li>
-<li>Rollen des Sprachbetreuers</li>
-<li>Terminologiegenehmigungen</li>
+<li>Eigentümerschaft der Quelle</li>
+<li>Rollen von Sprachverantwortlichen</li>
+<li>Terminologiefreigaben</li>
 <li>Streitbeilegung</li>
-<li>Nachverfolgung des Überprüfungsstatus</li>
-<li>wiederverwendbares Bewertungsbeispiel-Tracking</li>
+<li>Nachverfolgung des Review-Status</li>
+<li>Nachverfolgung wiederverwendbarer Review-Beispiele</li>
 <li>Aktualität von Review-Artefakten</li>
 <li>Dokumentationspflichten für Werkzeuge</li>
+<li>Qualität muttersprachlicher Reviews</li>
 </ul>
 <h2 id="warum-es-wichtig-ist">Warum es wichtig ist</h2>
-<p class="lead">Ohne Governance weichen Ton, Terminologie und Qualitätserwartungen bei mehrsprachigen Inhalten ab.</p>
-<p>Die Review-Governance sollte auch definieren, wie AI-unterstützte Korrekturbeispiele gespeichert und für Schulungen, Scorecards und Bewertungsarbeiten wiederverwendet werden.</p>
+<p>Ohne Governance driften mehrsprachige Inhalte bei Ton, Terminologie und Qualitätserwartungen auseinander.</p>
+<p>Review-Governance sollte außerdem festlegen, wie AI-gestützte Korrekturbeispiele gespeichert und über Schulungen, Scorecards und Evaluationsarbeit hinweg wiederverwendet werden.</p>
 <h2 id="aktualität-von-review-artefakten">Aktualität von Review-Artefakten</h2>
-<p>Die Governance sollte verlangen, dass Reviewer zwischen Folgendem unterscheiden:</p>
+<p>Governance sollte verlangen, dass Reviewer unterscheiden zwischen:</p>
 <ul>
 <li>Quell-Markdown</li>
 <li>generiertem HTML</li>
-<li>bereitgestellter Site-Ausgabe</li>
+<li>Ausgabe der bereitgestellten Site</li>
 <li>im Browser gerenderter Ausgabe</li>
 </ul>
-<p>Vor der Paritätsfreigabe sollten Reviewer bestätigen, dass die geprüften generierten Artefakte aus dem aktuellen Repository-Stand neu erzeugt wurden.</p>
+<p>Vor der Paritätsfreigabe sollten Reviewer bestätigen, dass die geprüften generierten Artefakte aus dem aktuellen Zustand des Repositorys neu erzeugt wurden.</p>
 <h2 id="tooling-governance">Tooling-Governance</h2>
 <p>Neue Generatoren, Renderer, Transformer, Validatoren, Audit-Werkzeuge und andere Werkzeuge zur Inhaltsverarbeitung sollten als Governance-Artefakte behandelt werden, nicht nur als Implementierungsdetails.</p>
-<p>Sie sind nicht vollständig, bis:</p>
+<p>Sie sind erst vollständig, wenn:</p>
 <ul>
 <li>ihr Zweck und ihre Grenzen dokumentiert sind</li>
 <li>ihre nicht offensichtlichen Regeln und Heuristiken erklärt sind</li>
 <li>relevante Workflow- und Validierungsdokumentation aktualisiert ist</li>
 <li>Maintainer Warnungen, Fehler und blinde Flecken interpretieren können, ohne die Absicht allein aus dem Code rekonstruieren zu müssen</li>
 </ul>
+<h2 id="qualität-muttersprachlicher-reviews">Qualität muttersprachlicher Reviews</h2>
+<p>Lokalisierungs-Governance sollte Reviews nicht nur auf Korrektheit, sondern auch auf natürliches muttersprachliches Formulieren verlangen.</p>
+<p>Der Maßstab ist, dass sich ein lokalisierter Text so lesen sollte, als wäre er ursprünglich in der Zielsprache verfasst worden.</p>
+<p>Das bedeutet, dass Reviewer Folgendes als Qualitätsbefunde behandeln sollten:</p>
+<ul>
+<li>wörtliche englische Satzstruktur</li>
+<li>direkte Übersetzung englischer Idiome</li>
+<li>Governance- oder Unternehmenssprache, die übersetzt klingt</li>
+<li>Terminologie, die unnötig an der Quellformulierung festhält</li>
+</ul>
+<p>Governance sollte diese Review außerdem zuerst priorisieren für:</p>
+<ul>
+<li>neu erstellte Inhalte</li>
+<li>kürzlich erweiterte Inhalte</li>
+<li>Inhalte, die aktuell bearbeitet werden</li>
+</ul>
+<p>Ältere lokalisierte Inhalte sollten anschließend schrittweise im Laufe der Zeit verbessert werden, statt in einem einzigen repository-weiten Neuaufschlag.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

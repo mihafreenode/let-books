@@ -28,10 +28,10 @@ Zato kvalitetu dokumentacije treba tretirati kao inženjersku disciplinu s više
 - Validacija generiranog HTML-a provjerava je li izvorni sadržaj postao ispravan izlaz.
 - Validacija ispisa provjerava ostaju li podržani PDF i papirnati izlazi upotrebljivi.
 
-Ovaj višeslojni model još je važniji u workflowima potpomognutima AI-jem. Sadržaj se može brzo nacrtati, brzo regenerirati i brzo lokalizirati. To ubrzava povratne petlje, ali i povećava rizik od objave uglađenih pogrešaka ako cjevovod testira samo površinsko formatiranje.
+Ovaj višeslojni model još je važniji u workflowima potpomognutima AI-jem. Sadržaj se može brzo pripremiti kao nacrt, brzo regenerirati i brzo lokalizirati. To ubrzava povratne petlje, ali i povećava rizik od objave uglađenih pogrešaka ako cjevovod testira samo površinsko formatiranje.
 
-Teme su dobar primjer. Kad su Topics u LetBooksu postali prvorazredna vrsta dokumentacije, morali su naslijediti navigaciju, indeksiranje pretrage, generiranje sitemape, rukovanje lokalizacijom, validaciju generiranog weba i provjere ispisa. Put niže kvalitete stvorio bi novu površinu sadržaja sa slabijim jamstvima od ostatka platforme.
+Teme su dobar primjer. Kad su Topics u LetBooksu postali punopravna vrsta dokumentacije, morali su naslijediti navigaciju, indeksiranje pretrage, generiranje sitemape, rukovanje lokalizacijom, validaciju generiranog weba i provjere ispisa. Put niže kvalitete stvorio bi novu vrstu sadržaja sa slabijim jamstvima od ostatka platforme.
 
-Načelo je jednostavno: svaka nova vrsta dokumentacije mora naslijediti postojeću validaciju. Tako model kvalitete ostaje skalabilan. Umjesto izmišljanja iznimaka za svaki novi odjeljak, platforma ista očekivanja proširuje na svaku površinu okrenutu čitatelju.
+Načelo je jednostavno: svaka nova vrsta dokumentacije mora naslijediti postojeću validaciju. Tako model kvalitete ostaje skalabilan. Umjesto izmišljanja iznimaka za svaki novi odjeljak, platforma ista očekivanja proširuje na svaki sadržaj namijenjen čitatelju.
 
 Kvaliteta dokumentacije ide dalje od lintanja, jer čitatelji doživljavaju cijeli sustav, a ne samo izvorne datoteke.

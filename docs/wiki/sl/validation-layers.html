@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Plasti za preverjanje veljavnosti | LetBooks</title>
-    <meta name="description" content="Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.">
+    <title>Plasti preverjanja | LetBooks</title>
+    <meta name="description" content="Plasti preverjanja so različni načini, s katerimi projekt preverja, ali implementacija, dokumentacija in dostavni artefakti še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sl/validation-layers.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Plasti za preverjanje veljavnosti | LetBooks">
-    <meta property="og:description" content="Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.">
+    <meta property="og:title" content="Plasti preverjanja | LetBooks">
+    <meta property="og:description" content="Plasti preverjanja so različni načini, s katerimi projekt preverja, ali implementacija, dokumentacija in dostavni artefakti še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sl/validation-layers.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Plasti za preverjanje veljavnosti | LetBooks">
-    <meta name="twitter:description" content="Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.">
+    <meta name="twitter:title" content="Plasti preverjanja | LetBooks">
+    <meta name="twitter:description" content="Plasti preverjanja so različni načini, s katerimi projekt preverja, ali implementacija, dokumentacija in dostavni artefakti še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sl/index.html">Wiki</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Plasti za preverjanje veljavnosti</span>
+              <span aria-current="page">Plasti preverjanja</span>
             </nav>
-            <h1>Plasti za preverjanje veljavnosti</h1>
+            <h1>Plasti preverjanja</h1>
           <div class="content-page-meta">
             <span>Wiki</span>
             <span>Slovenščina</span>
           </div>
-          <p class="content-page-summary">Validacijski sloji so različni načini, na katere projekt preverja, ali artefakti implementacije, dokumentacije in dostave še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.</p>
+          <p class="content-page-summary">Plasti preverjanja so različni načini, s katerimi projekt preverja, ali implementacija, dokumentacija in dostavni artefakti še vedno ustrezajo predvidenim pravilom in pričakovanjem kakovosti.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">CI/CD</span>
@@ -107,14 +107,14 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="zakaj-so-plasti-pomembne">Zakaj so plasti pomembne</h2>
-<p class="lead">Nobena ena metoda potrjevanja ni dovolj.</p>
+<p class="lead">Nobena posamezna metoda preverjanja ni dovolj.</p>
 <ul>
 <li>samo dokumentacija ne uveljavlja vedenja</li>
 <li>sami testi lahko potrdijo napačne predpostavke</li>
 <li>CI sama ne more določiti pravil, ki naj bi jih uveljavljala</li>
 </ul>
 <p>Večplastni pristop je močnejši, ker vsak sloj ujame drugačen razred zanašanja.</p>
-<h2 id="skupne-plasti-preverjanja-veljavnosti">Skupne plasti preverjanja veljavnosti</h2>
+<h2 id="običajne-plasti-preverjanja">Običajne plasti preverjanja</h2>
 <h3 id="specifikacija-in-navodila">1. Specifikacija in navodila</h3>
 <p>Prva plast določa pravilo.</p>
 <p>Brez tega sloja so kasnejša preverjanja lahko stroga, a poljubna.</p>
@@ -133,7 +133,7 @@
 <ul>
 <li>dokumenti in specifikacije določajo pričakovanja</li>
 <li>pregled razlaga ta pričakovanja v kontekstu</li>
-<li>validacijski skripti in testi avtomatizirajo stabilne dele pregleda</li>
+<li>skripti za preverjanje in testi avtomatizirajo stabilne dele pregleda</li>
 <li>CI te preglede izvaja dosledno</li>
 <li>uvedba zagotavlja, da se izhod lahko dejansko pošlje</li>
 </ul>
@@ -156,7 +156,7 @@
 <li>pravila o uredniških dokazih v <code>docs/blog/README.md</code> in <code>docs/sources/README.md</code></li>
 <li>učne smernice za postopno uvedbo CI in validacije</li>
 </ul>
-<p>Zaradi tega veljavnost postane dokumentiran sistem in ne le prihodnost.</p>
+<p>Tako preverjanje postane dokumentiran sistem, ne le oddaljena namera.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">

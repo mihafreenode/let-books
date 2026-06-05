@@ -1,7 +1,7 @@
 ---
 title: "Osiguranje kvalitete prijevoda"
 summary: >-
-  Translation QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.
+  QA prijevoda kombinira automatiziranu validaciju, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.
 topics:
   - translation-quality
   - qa
@@ -11,33 +11,35 @@ topics:
 
 ## Sažetak
 
-Translation QA kombinira automatiziranu provjeru valjanosti, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.
+QA prijevoda kombinira automatiziranu validaciju, provjeru pravopisa, terminološki pregled, provjere pristupačnosti i ljudsku prosudbu.
 
 ## Uobičajene provjere
 
-- nedostaju prijevodi
-- engleski leakage
-- potpunost lokalizacije okrenuta čitatelju
-- neslaganja rezerviranog mjesta
-- neispravne veze
-- glosary drift
-- pokrivenost teksta dostupnosti
-- paritet snimke zaslona i dijagrama
+- nedostajući prijevodi
+- curenje engleskog jezika
+- cjelovitost lokalizacije okrenute čitatelju
+- strukturni paritet prema svježe generiranom izlazu
+- čitljivost na materinskom jeziku i prirodan izraz
+- nepodudaranja rezerviranih mjesta
+- pokvarene poveznice
+- odstupanje od glosara
+- pokrivenost tekstom pristupačnosti
+- paritet snimaka zaslona i dijagrama
 
 ## Zahtjev za svježe generirani izlaz
 
 Prije pregleda strukturnog pariteta, semantičkog pregleda ili ručne usporedbe članaka:
 
 1. ponovno generirajte web-mjesto iz trenutačnog stanja repozitorija
-2. pokrenite validatore nad trenutačno generiranim izlazom
+2. pokrenite validatore nad trenutačnim generiranim izlazom
 3. pregledajte generirane HTML artefakte
 4. tek tada provedite ručnu procjenu pariteta
 
-Ovo pravilo postoji zato što se izvorni Markdown i generirani izlaz tijekom razvoja mogu privremeno razići, a nalazi QA-a trebaju se temeljiti na trenutačnim artefaktima, a ne na zastarjelim generiranim datotekama.
+Ovo pravilo postoji zato što izvorni Markdown i generirani izlaz mogu privremeno odstupati tijekom razvoja, a QA nalazi trebaju se temeljiti na trenutačnim artefaktima, a ne na zastarjelim generiranim datotekama.
 
 ## Pregled strukturnog pariteta
 
-Pregled strukturnog pariteta treba tražiti gubitak vrijednosti za čitatelja čak i kada lokalizirani članak još uvijek općenito zadržava značenje.
+Pregled strukturnog pariteta treba tražiti gubitak vrijednosti za čitatelja čak i kada lokalizirani članak još uvijek općenito čuva značenje.
 
 Tipični signali uključuju:
 
@@ -46,68 +48,128 @@ Tipični signali uključuju:
 - nedostajuće primjere
 - sažete praktične upute
 - smanjenu raspravu o upravljanju
-- skraćene smjernice za pregled ili validaciju
+- skraćene upute za pregled ili validaciju
 
-Upozorenja validatora strukturnog pariteta poticaji su za pregled, a ne automatski dokaz lošeg prijevoda. Treba ih tumačiti zajedno s generiranim HTML-om i, prema potrebi, izlazom prikazanim u pregledniku.
+Upozorenja validatora strukturnog pariteta poticaji su za pregled, a ne automatski dokaz lošeg prijevoda. Treba ih tumačiti zajedno s generiranim HTML-om i, po potrebi, s izlazom renderiranim u pregledniku.
+
+## Pregled izraza na materinskom jeziku
+
+QA prijevoda treba tražiti i tekst koji je tehnički točan, ali nije ono što bi izvorni govornik prirodno odabrao.
+
+To uključuje:
+
+- izravnu englesku rečeničnu strukturu
+- izravan prijevod engleskih idioma
+- formulacije koje zvuče prevedeno umjesto autorski napisano
+- terminologiju koja i dalje otkriva izvorni jezik
+
+Primjeri takvog obrasca uključuju izraze ekvivalentne sljedećem:
+
+- kandidatni sadržaj
+- strategija validacije
+- artefakt tijeka rada
+- kurirani alati
+- kurirane vještine
+
+To nisu uvijek prevoditeljske pogreške. Često su to slučajevi u kojima bi izvorni govornik instinktivno preoblikovao rečenicu.
+
+## Test preferencije izvornog govornika
+
+Za važne prozne odjeljke recenzenti bi se trebali zapitati:
+
+> Kada bi kompetentan izvorni govornik ovu ideju pisao od nule, bi li je vjerojatno ovako napisao?
+
+Ako ne, recenzenti bi trebali:
+
+- sačuvati značenje
+- sačuvati semantički paritet
+- sačuvati strukturni paritet
+- poboljšati formulaciju
+
+Ovaj je test posebno koristan za:
+
+- uvode
+- sažetke
+- obrazovna objašnjenja
+- praktične upute
+- rasprave o upravljanju
+- zaključke
+
+## Pregled prirodnog izražavanja
+
+Tretirajte tehnički točnu, ali neprirodnu formulaciju kao problem kvalitete.
+
+Recenzenti bi trebali dati prednost formulacijama koje zvuče prirodno napisano na ciljnom jeziku, čak i kada je izvorni prijevod razumljiv.
+
+Cilj nije samo točan prijevod. Cilj je dokument koji djeluje kao da je izvorno napisan za izvorne čitatelje.
+
+Poboljšanja prirodnog jezika ne smiju oslabiti:
+
+- semantički paritet
+- strukturni paritet
+- obrazovnu pokrivenost
+- primjere
+- praktične upute
+- smjernice upravljanja
 
 ## Validator lokalizacije okrenut čitatelju
 
-Jedna klasa validatora trebala bi izričito baciti CI kada se stranica čini lokaliziranom, ali još uvijek izlaže sadržaj na izvornom jeziku koji je okrenut čitatelju.
+Jedna klasa validatora trebala bi izričito srušiti CI kada stranica izgleda lokalizirano, ali i dalje izlaže sadržaj okrenut čitatelju na izvornom jeziku.
 
-Primjeri koji bi trebali propasti:
+Primjeri koji bi trebali pasti:
 
 - lokalizirani naslov s engleskim sažetkom
 - lokalizirani članak s engleskim oznakama
 - lokalizirani članak s engleskim naslovima ili popisima
-- lokalizirani članak s engleskim oblačićima ili opisima
-- lokalizirani članak s engleskim dijagramima ili alternativnim tekstom
-- kartice povezanog sadržaja na različitim jezicima
+- lokalizirani članak s engleskim istaknutim okvirima ili natpisima
+- lokalizirani članak s engleskim oznakama dijagrama ili alternativnim tekstom
+- kartice `related-content` na miješanim jezicima
 
-Ovo je stanje greške, a ne samo upozorenje, jer čitatelji takve stranice doživljavaju kao vidljivo nedovršene.
+Ovo je uvjet pada, a ne samo upozorenje, jer čitatelji takve stranice doživljavaju kao vidljivo nedovršene.
 
-## Revizija klase grešaka
+## Revizija klasa pogrešaka
 
-QA prijevoda treba održavati eksplicitne klase nedostataka sa:
+QA prijevoda treba održavati eksplicitne klase pogrešaka sa sljedećim poljima:
 
 - opis
 - broj pojavljivanja
-- temeljni uzrok
-- pokrivenost validatora
-- rizik od ponavljanja
+- glavni uzrok
+- pokrivenost validatorom
+- rizik ponavljanja
 - plan zatvaranja
 
-Obavezne kategorije uključuju:
+Obvezne kategorije uključuju:
 
-- neprevedeni sažeci
-- neprevedena tijela
-- mjesto za objavljivanje nacrta
-- neprevedeni metapodaci
-- mješovito jezično izdavaštvo
+- neprevedene sažetke
+- neprevedena tijela teksta
+- objavu nacrta rezerviranih mjesta
+- neprevedene metapodatke
+- objavu na miješanim jezicima
 - buduće otkrivene klase
 
-Klasa je zatvorena samo kada njezin broj dosegne nulu i CI je spriječi da se vrati bez greške.
+Klasa je zatvorena tek kada broj pojavljivanja dosegne nulu i kada CI spriječi njezin povratak bez pada.
 
 ## Dokazi ljudskog pregleda
 
-QA prijevoda također bi trebao sačuvati kratke zapise pregleda od strane ljudi za reprezentativne ispravke potpomognute umjetnom inteligencijom.
+QA prijevoda također treba čuvati kratke zapise ljudskog pregleda za reprezentativne korekcije uz pomoć AI-ja.
 
-Minimum polja:
+Minimalna polja:
 
 - izvorni tekst
-- ispravljen tekst
+- ispravljeni tekst
 - kategorija pogreške
-- hipoteza temeljnog uzroka
+- hipoteza glavnog uzroka
 - obrazloženje recenzenta
 
-Nalazi pregleda izvornih govornika trebali bi se sačuvati kao rastući korpus, a ne kao izolirane jednokratne bilješke. Ponovljeni nalazi trebali bi se vratiti u dizajn validatora, smjernice suradnika i buduće upute AI-agenta.
+Nalaze pregleda izvornih govornika treba čuvati kao rastući korpus, a ne kao izolirane jednokratne bilješke. Ponavljajući nalazi trebali bi se vraćati u dizajn validatora, smjernice za suradnike i buduće upute za AI agente.
 
-Prije odobrenja pregleda AI-potpomognutog prijevoda, recenzenti bi trebali:
+Prije konačne potvrde prijevoda uz pomoć AI-ja recenzenti bi trebali:
 
-- pregledati relevantne zapise u strukturiranom korpusu nalaza za taj jezik ili temu
-- provjeriti ponavljajuće obrasce grešaka iz ljudskih pregleda
-- potvrditi da trenutačni nacrt prije odobrenja ponovno ne uvodi poznate probleme
+- pročitati relevantne unose iz strukturiranog korpusa nalaza za taj jezik ili temu
+- provjeriti ponavljajuće obrasce nedostataka iz ljudskih pregleda
+- potvrditi da trenutačni nacrt prije potvrde ne uvodi ponovno poznate probleme
 
-Svaki prijavljeni kvar koji je uočio izvorni govornik treba također procijeniti s obzirom na:
+Svaki prijavljeni nedostatak izvornog govornika također treba procijeniti s obzirom na:
 
 - ispravak sadržaja
 - ažuriranje smjernica za pregled
@@ -116,16 +178,16 @@ Svaki prijavljeni kvar koji je uočio izvorni govornik treba također procijenit
 - priliku za validator
 - priliku za regresijski test
 
-To je važno jer čak i kada je cjelokupno značenje sačuvano, prijevodi generirani umjetnom inteligencijom mogu zahtijevati pregled izvornog govornika kako bi se ispravili suptilni problemi u gramatici, modalitetu, terminologiji i registru specifičnom za domenu. Te probleme često je teško otkriti samo pomoću automatiziranih metrika kvalitete.
+To je važno jer čak i kada je opće značenje sačuvano, prijevodi generirani AI-jem mogu zahtijevati pregled izvornog govornika kako bi se ispravili suptilni problemi u gramatici, modalnosti, terminologiji i registru specifičnom za domenu. Takve je probleme često teško otkriti samo automatiziranim mjerama kvalitete.
 
-Konkretno prijavljene pogreške izvornih govornika nisu samo savjetodavne. Svaka od njih trebala bi završiti ispravljena, sistematizirana, namjerno neriješena uz obrazloženje ili i dalje izričito praćena u korpusu nalaza.
+Konkretno prijavljene pogreške nisu samo savjetodavne. Svaka bi trebala završiti ispravljena, sistematizirana, namjerno neriješena s obrazloženjem ili i dalje izričito praćena u korpusu nalaza.
 
 ## Uobičajena taksonomija pogrešaka prijevoda umjetne inteligencije
 
 - gramatika
-- modalitet
+- modalnost
 - terminologija
-- registrirati se
+- registar
 - tečnost
 - doslovan prijevod
 - dvosmislenost
@@ -133,29 +195,29 @@ Konkretno prijavljene pogreške izvornih govornika nisu samo savjetodavne. Svaka
 - red riječi
 - kolokacija
 - pismo ili pravopis
-- formuliranje pravila domene
+- formulacija domenske politike
 - formulacija pristupačnosti
 
 ## Lagano referentno bodovanje
 
-Za ponovljivu procjenu prijevoda umjetne inteligencije upotrijebite laganu rubriku 0-3 umjesto da se oslanjate samo na procjenu prošao/nije prošao.
+Za ponovljivu evaluaciju AI-prijevoda koristite laganu rubriku od 0 do 3 umjesto oslanjanja samo na procjenu prolaza/pada.
 
 Preporučene dimenzije:
 
-- što znači točnost
+- točnost značenja
 - gramatika i tečnost
-- usklađenost terminologije i domene
+- terminologija i usklađenost s domenom
 - registar i stil
-- pregled truda
+- napor pregleda
 
-Preporučene oznake izdanja:
+Preporučene oznake za objavu:
 
 - blokator
 - velika revizija
 - manja revizija
-- spremno s potpisom pregleda
+- spremno uz potvrdu pregleda
 
-To stvara podatke prilagođene tablici rezultata bez potrebe za teškim okvirom za lokalizaciju i mjerenje.
+To stvara podatke prikladne za kartice rezultata bez potrebe za teškim okvirom za mjerenje lokalizacije.
 
 ## Povezane stranice
 

@@ -1,21 +1,21 @@
 ---
-title: "Slojevi provjere valjanosti"
+title: "Slojevi provjere"
 summary: >-
-  Slojevi valjanosti različiti su načini na koje projekt provjerava odgovaraju li implementacija, dokumentacija i artefakti isporuke i dalje predviđenim pravilima i očekivanjima kvalitete.
+  Slojevi provjere različiti su načini na koje projekt provjerava odgovaraju li implementacija, dokumentacija i artefakti isporuke i dalje predviđenim pravilima i očekivanjima kvalitete.
 topics:
   - validation
   - ci-cd
   - product-quality
 ---
-# Slojevi provjere valjanosti
+# Slojevi provjere
 
 ## Sažetak
 
-Slojevi valjanosti različiti su načini na koje projekt provjerava odgovaraju li implementacija, dokumentacija i artefakti isporuke i dalje predviđenim pravilima i očekivanjima kvalitete.
+Slojevi provjere različiti su načini na koje projekt provjerava odgovaraju li implementacija, dokumentacija i artefakti isporuke i dalje predviđenim pravilima i očekivanjima kvalitete.
 
 ## Zašto su slojevi važni
 
-Nijedna metoda provjere valjanosti nije dovoljna.
+Nijedna pojedinačna metoda provjere nije dovoljna.
 
 - sama dokumentacija ne nameće ponašanje
 - sami testovi mogu potvrditi pogrešne pretpostavke
@@ -23,7 +23,7 @@ Nijedna metoda provjere valjanosti nije dovoljna.
 
 Slojeviti pristup je jači jer svaki sloj hvata različitu klasu zanošenja.
 
-## Uobičajeni slojevi provjere valjanosti
+## Uobičajeni slojevi provjere
 
 ### 1. Specifikacija i smjernice
 
@@ -83,7 +83,7 @@ Repozitorij Let Books već dokumentira nekoliko slojeva, uključujući:
 - pravila uredničkog dokaza u `docs/blog/README.md` i `docs/sources/README.md`
 - smjernice za učenje za postupno uvođenje CI i validacije
 
-To provjeru valjanosti čini dokumentiranim sustavom, a ne samo budućom težnjom.
+To provjeru čini dokumentiranim sustavom, a ne samo željom za budućnost.
 
 ## Povezane stranice
 

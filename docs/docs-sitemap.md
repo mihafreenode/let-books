@@ -1,6 +1,6 @@
 # LetBooks Sitemap
 
-Generated: 2026-06-04
+Generated: 2026-06-05
 
 | Path | Type | Priority |
 |------|------|----------|

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lokalizacija CI i CD | LetBooks</title>
-    <meta name="description" content="Lokalizacija CI/CD kontinuirano potvrđuje višejezični sadržaj tako da se nedostajuća sredstva, pokvarene veze i regresije pristupačnosti rano uočavaju.">
+    <meta name="description" content="Lokalizacioni CI/CD kontinuirano proverava višejezični sadržaj kako bi se nedostajuća sredstva, pokvareni linkovi i regresije pristupačnosti otkrili rano.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Latn/localization-ci-cd.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Lokalizacija CI i CD | LetBooks">
-    <meta property="og:description" content="Lokalizacija CI/CD kontinuirano potvrđuje višejezični sadržaj tako da se nedostajuća sredstva, pokvarene veze i regresije pristupačnosti rano uočavaju.">
+    <meta property="og:description" content="Lokalizacioni CI/CD kontinuirano proverava višejezični sadržaj kako bi se nedostajuća sredstva, pokvareni linkovi i regresije pristupačnosti otkrili rano.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Latn/localization-ci-cd.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lokalizacija CI i CD | LetBooks">
-    <meta name="twitter:description" content="Lokalizacija CI/CD kontinuirano potvrđuje višejezični sadržaj tako da se nedostajuća sredstva, pokvarene veze i regresije pristupačnosti rano uočavaju.">
+    <meta name="twitter:description" content="Lokalizacioni CI/CD kontinuirano proverava višejezični sadržaj kako bi se nedostajuća sredstva, pokvareni linkovi i regresije pristupačnosti otkrili rano.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,54 +97,62 @@
             <span>Wiki</span>
             <span>Srpski (latinica)</span>
           </div>
-          <p class="content-page-summary">Lokalizacija CI/CD kontinuirano potvrđuje višejezični sadržaj tako da se nedostajuća sredstva, pokvarene veze i regresije pristupačnosti rano uočavaju.</p>
+          <p class="content-page-summary">Lokalizacioni CI/CD kontinuirano proverava višejezični sadržaj kako bi se nedostajuća sredstva, pokvareni linkovi i regresije pristupačnosti otkrili rano.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">CI/CD</span>
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="željeni-čekovi">Željeni čekovi</h2>
+<h2 id="željene-provere">Željene provere</h2>
 <ul>
-<li>doslednost inventara lokaliteta</li>
+<li>doslednost popisa lokaliteta</li>
 <li>sveže generisanje sajta pre pregleda pariteta</li>
-<li>validacija veze</li>
+<li>provera linkova</li>
 <li>generisanje članaka i stranica</li>
-<li>provera pravopisa tamo gde je dostupno</li>
-<li>paritet čuvara mesta</li>
-<li>ispitivanje dima pristupačnosti</li>
-<li>provere snimaka ekrana i dijagrama</li>
+<li>provera pravopisa gde je dostupna</li>
+<li>paritet rezervisanih mesta</li>
+<li>osnovni testovi pristupačnosti</li>
+<li>provere pokrivenosti snimaka ekrana i dijagrama</li>
 </ul>
 <h2 id="pravilo-svežeg-generisanja">Pravilo svežeg generisanja</h2>
-<p class="lead">CI i tokovi pregleda lokalizacije ne smeju da zasnivaju nalaze o paritetu na zastarelim generisanim artefaktima.</p>
-<p>Obavezni redosled:</p>
+<p class="lead">Tokovi lokalizacionog CI-ja i pregleda ne smeju da zasnivaju nalaze o paritetu na zastarelim generisanim artefaktima.</p>
+<p>Potreban redosled:</p>
 <ol type="1">
 <li>generišite sajt iz trenutnog stanja repozitorijuma</li>
 <li>pokrenite validatore nad sveže generisanim izlazom</li>
 <li>po potrebi pregledajte generisani HTML</li>
-<li>po potrebi pregledajte prikazani izlaz</li>
+<li>po potrebi pregledajte renderovani izlaz</li>
 </ol>
-<p>Ovo je važno zato što izvorni Markdown, generisani HTML, objavljeni izlaz i ponašanje prikazano u pregledaču mogu privremeno da se raziđu tokom razvoja.</p>
-<h2 id="progresija-klase-defekata">Progresija klase defekata</h2>
-<p>CI lokalizacije treba da prati oba:</p>
+<p>Ovo je važno zato što izvorni Markdown, generisani HTML, objavljeni izlaz i ponašanje renderovano u pregledaču mogu privremeno da odstupaju tokom razvoja.</p>
+<h2 id="prioritet-pregleda">Prioritet pregleda</h2>
+<p>Najstroži pregled na maternjem jeziku i pregled pariteta prvo primenite na:</p>
+<ul>
+<li>novokreirani sadržaj</li>
+<li>nedavno prošireni sadržaj</li>
+<li>sadržaj koji se trenutno uređuje</li>
+</ul>
+<p>Zatim iste standarde pregleda postepeno proširite i na stariji lokalizovani sadržaj.</p>
+<h2 id="progresija-klasa-defekata">Progresija klasa defekata</h2>
+<p>Lokalizacioni CI treba da prati i jedno i drugo:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
 </ul>
-<p>Mjeri duga preostali rad sa izvornim sadržajem.</p>
-<p>Otvorene klase defekata mere da li sistem još uvek može da dozvoli da se kategorija problema ponovo pojavi.</p>
-<p>Čim klasa defekta dostigne nula pojavljivanja, njen validator bi trebalo da pređe sa savetodavnog na blokiranje gde je to praktično.</p>
+<p>Dug meri preostali rad na izvornom sadržaju.</p>
+<p>Otvorene klase defekata mere da li sistem i dalje dozvoljava da se neka kategorija problema ponovo pojavi.</p>
+<p>Čim klasa defekata dostigne nula pojavljivanja, njen validator bi, gde je to praktično, trebalo da pređe iz savetodavnog u blokirajući režim rada.</p>
 <p>Primeri:</p>
 <ul>
-<li>objavljivanje nacrta za čuvare mesta</li>
+<li>objavljivanje zamenskog nacrta</li>
 <li>neprevedeni rezimei</li>
 <li>neprevedeni metapodaci</li>
-<li>neprevedena tela</li>
-<li>izdavaštvo na mešovitom jeziku</li>
+<li>neprevedena tela teksta</li>
+<li>objavljivanje na mešovitim jezicima</li>
 </ul>
-<p>CI nije samo čuvar kapije. To je mehanizam koji sprečava da se zatvorene klase defekata ponovo tiho otvaraju.</p>
-<h2 id="redosled-generisanja-za-navigaciju-po-članku">Redosled generisanja za navigaciju po članku</h2>
-<p>Trenutni ugovor o javnoj navigaciji članaka je:</p>
+<p>CI nije samo čuvar prolaza. On je mehanizam koji sprečava da se zatvorene klase defekata tiho ponovo otvore.</p>
+<h2 id="redosled-generisanja-za-navigaciju-članaka">Redosled generisanja za navigaciju članaka</h2>
+<p>Trenutni ugovor javne navigacije članaka je:</p>
 <ul>
 <li><code>post-article-nav</code></li>
 <li><code>related-content</code></li>
@@ -152,13 +160,13 @@
 </ul>
 <p>Generisanje i validacija treba da se odvijaju ovim redosledom:</p>
 <ol type="1">
-<li>generišite HTML članka</li>
+<li>generišite HTML članaka</li>
 <li>generišite indeksne stranice</li>
-<li>pokrenite preostalu naknadnu obradu navigacije samo ako je i dalje potrebna</li>
+<li>pokrenite svaku preostalu naknadnu obradu navigacije samo ako je i dalje potrebna</li>
 <li>validirajte sveže generisani izlaz</li>
-<li>pregledajte generisani HTML ili prikazani izlaz ako tok rada zahteva ljudsku procenu pariteta</li>
+<li>pregledajte generisani HTML ili renderovani izlaz ako tok rada zahteva ljudsku procenu pariteta</li>
 </ol>
-<p>Ako validator i dalje očekuje zastareli blok <code>topic-nav</code>, ažurirajte validator na trenutni ugovor umesto zakrpanja generisanog HTML.</p>
+<p>Ako validator i dalje očekuje nasleđeni blok <code>topic-nav</code>, ažurirajte validator na trenutni ugovor umesto da krpite generisani HTML.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -187,7 +195,7 @@
                 <div class="topic-menu" id="related-ci-cd-menu" data-topic-menu="related-ci-cd" hidden>
                   <a href="../../learning/sr-Latn/how-to-run-localization-qa-in-ci.html"><span>Kako sprovoditi lokalizacioni QA u CI-ju</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../learning/sr-Latn/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postepeno dodavati validaciona pravila i CI kapije</span><span class="topic-menu__meta">Materijali za učenje</span></a>
-                  <a href="../../wiki/sr-Latn/validation-layers.html"><span>Slojevi za validaciju</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/validation-layers.html"><span>Slojevi provere</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../topics/sr-Latn/validation-layers.html"><span>Validacioni slojevi</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>

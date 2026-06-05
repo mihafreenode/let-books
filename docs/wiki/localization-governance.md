@@ -23,6 +23,7 @@ Localization governance defines who can propose, review, approve, and dispute mu
 - reusable review-example tracking
 - review artifact freshness
 - tooling documentation obligations
+- native-language review quality
 
 ## Why it matters
 
@@ -51,6 +52,27 @@ They are not complete until:
 - their non-obvious rules and heuristics are explained
 - relevant workflow and validation documentation are updated
 - maintainers can interpret warnings, failures, and blind spots without reconstructing intent from code alone
+
+## Native-language review quality
+
+Localization governance should require review not only for correctness, but also for natural native-language expression.
+
+The standard is that a localized document should read as if it had originally been written in the target language.
+
+That means reviewers should treat the following as quality findings:
+
+- literal English sentence structure
+- direct translation of English idioms
+- translated-sounding governance or corporate language
+- terminology that preserves source wording unnecessarily
+
+Governance should also prioritize this review first for:
+
+- newly created content
+- recently expanded content
+- content currently being edited
+
+Older localized content should then be improved progressively over time rather than through a single repository-wide rewrite.
 
 ## Related Pages
 

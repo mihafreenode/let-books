@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zagotavljanje kakovosti prevodov | LetBooks</title>
-    <meta name="description" content="Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.">
+    <meta name="description" content="Zagotavljanje kakovosti prevodov združuje avtomatizirano preverjanje, preverjanje črkovanja, pregled terminologije, preverjanja dostopnosti in človeško presojo.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sl/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Zagotavljanje kakovosti prevodov | LetBooks">
-    <meta property="og:description" content="Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.">
+    <meta property="og:description" content="Zagotavljanje kakovosti prevodov združuje avtomatizirano preverjanje, preverjanje črkovanja, pregled terminologije, preverjanja dostopnosti in človeško presojo.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sl/translation-quality-assurance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Zagotavljanje kakovosti prevodov | LetBooks">
-    <meta name="twitter:description" content="Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.">
+    <meta name="twitter:description" content="Zagotavljanje kakovosti prevodov združuje avtomatizirano preverjanje, preverjanje črkovanja, pregled terminologije, preverjanja dostopnosti in človeško presojo.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Slovenščina</span>
           </div>
-          <p class="content-page-summary">Translation QA združuje samodejno preverjanje veljavnosti, preverjanje črkovanja, pregled terminologije, preverjanje dostopnosti in človeško presojo.</p>
+          <p class="content-page-summary">Zagotavljanje kakovosti prevodov združuje avtomatizirano preverjanje, preverjanje črkovanja, pregled terminologije, preverjanja dostopnosti in človeško presojo.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Kakovost prevajanja</span>
@@ -107,101 +107,155 @@
 <h2 id="pogosta-preverjanja">Pogosta preverjanja</h2>
 <ul>
 <li>manjkajoči prevodi</li>
-<li>angleško uhajanje</li>
-<li>popolnost lokalizacije, usmerjena k bralcu</li>
+<li>uhajanje angleščine</li>
+<li>celovitost lokalizacije za bralce</li>
+<li>strukturna pariteta glede na sveže generirani izhod</li>
+<li>berljivost v maternem jeziku in naravno izražanje</li>
 <li>neujemanja nadomestnih znakov</li>
-<li>prekinjene povezave</li>
-<li>premik po glosarju</li>
-<li>pokritost besedila dostopnosti</li>
-<li>pariteta posnetka zaslona in diagrama</li>
+<li>nedelujoče povezave</li>
+<li>odmik od glosarja</li>
+<li>pokritost besedila za dostopnost</li>
+<li>pariteta posnetkov zaslona in diagramov</li>
 </ul>
 <h2 id="zahteva-po-sveže-ustvarjenem-izhodu">Zahteva po sveže ustvarjenem izhodu</h2>
 <p class="lead">Pred pregledom strukturne paritete, semantičnim pregledom ali ročno primerjavo člankov:</p>
 <ol type="1">
-<li>znova ustvarite spletno mesto iz trenutnega stanja repozitorija</li>
-<li>zaženite validatorje nad trenutno ustvarjenim izhodom</li>
-<li>preglejte ustvarjene artefakte HTML</li>
+<li>znova generirajte spletno mesto iz trenutnega stanja repozitorija</li>
+<li>zaženite validatorje nad trenutnim generiranim izhodom</li>
+<li>preglejte generirane artefakte HTML</li>
 <li>šele nato izvedite ročno oceno paritete</li>
 </ol>
-<p>To pravilo obstaja zato, ker se lahko izvorni Markdown in ustvarjeni izhod med razvojem začasno razhajata, ugotovitve QA pa morajo temeljiti na trenutnih artefaktih in ne na zastarelih ustvarjenih datotekah.</p>
+<p>To pravilo obstaja zato, ker se lahko izvorni Markdown in generirani izhod med razvojem začasno razlikujeta, ugotovitve QA pa morajo temeljiti na trenutnih artefaktih in ne na zastarelih generiranih datotekah.</p>
 <h2 id="pregled-strukturne-paritete">Pregled strukturne paritete</h2>
-<p>Pregled strukturne paritete mora iskati izgubo vrednosti za bralca tudi takrat, ko lokalizirani članek še vedno na splošno ohranja pomen.</p>
+<p>Pregled strukturne paritete mora iskati izgubo vrednosti za bralca tudi takrat, ko lokaliziran članek še vedno v grobem ohranja pomen.</p>
 <p>Tipični znaki vključujejo:</p>
 <ul>
 <li>manjkajoče glavne razdelke</li>
-<li>sploščeno hierarhijo naslovov</li>
+<li>porušeno hierarhijo naslovov</li>
 <li>manjkajoče primere</li>
-<li>preveč strnjena praktična navodila</li>
-<li>zmanjšano obravnavo upravljanja</li>
-<li>skrajšana navodila za pregled ali validacijo</li>
+<li>stisnjena praktična navodila</li>
+<li>zmanjšano razpravo o upravljanju</li>
+<li>skrajšana navodila za pregled ali preverjanje</li>
 </ul>
-<p>Opozorila validatorjev strukturne paritete so pozivi k pregledu, ne samodejen dokaz slabega prevoda. Razlagati jih je treba skupaj z ustvarjenim HTML-jem in po potrebi z izhodom, izrisanim v brskalniku.</p>
-<h2 id="obrnjeni-k-bralcu-lokalizacijski-validator">Obrnjeni k bralcu lokalizacijski validator</h2>
-<p>En razred validatorja bi moral izrecno zavrniti CI, ko je stran videti lokalizirana, vendar še vedno izpostavlja vsebino v izvornem jeziku, namenjeno bralcu.</p>
-<p>Primeri, ki bi morali spodleteti:</p>
+<p>Opozorila validatorjev strukturne paritete so pozivi k pregledu, ne samodejni dokaz slabega prevoda. Razlagati jih je treba skupaj z generiranim HTML-jem in po potrebi z izhodom, izrisanim v brskalniku.</p>
+<h2 id="pregled-izražanja-v-maternem-jeziku">Pregled izražanja v maternem jeziku</h2>
+<p>QA prevodov mora iskati tudi besedilo, ki je tehnično pravilno, vendar ga naravni govorec ne bi izbral spontano.</p>
+<p>To vključuje:</p>
+<ul>
+<li>neposredno angleško stavčno zgradbo</li>
+<li>neposredni prevod angleških idiomov</li>
+<li>besedilo, ki zveni prevedeno namesto avtorsko napisano</li>
+<li>terminologijo, ki še vedno razkriva izvorni jezik</li>
+</ul>
+<p>Primeri takšnih vzorcev vključujejo izraze, enakovredne:</p>
+<ul>
+<li>kandidatna vsebina</li>
+<li>strategija preverjanja</li>
+<li>artefakt poteka dela</li>
+<li>kurirana orodja</li>
+<li>kurirane veščine</li>
+</ul>
+<p>To niso vedno prevajalske napake. Pogosto gre za primere, kjer bi naravni govorec stavek instinktivno preoblikoval.</p>
+<h2 id="preizkus-prednosti-naravnega-govorca">Preizkus prednosti naravnega govorca</h2>
+<p>Pri pomembnih proznih razdelkih naj se pregledovalci vprašajo:</p>
+<blockquote>
+<p>Če bi usposobljen naravni govorec to misel napisal iz nič, bi jo verjetno zapisal tako?</p>
+</blockquote>
+<p>Če ne, naj pregledovalci:</p>
+<ul>
+<li>ohranijo pomen</li>
+<li>ohranijo semantično pariteto</li>
+<li>ohranijo strukturno pariteto</li>
+<li>izboljšajo formulacijo</li>
+</ul>
+<p>Ta preizkus je posebej uporaben za:</p>
+<ul>
+<li>uvode</li>
+<li>povzetke</li>
+<li>izobraževalna pojasnila</li>
+<li>praktična navodila</li>
+<li>razprave o upravljanju</li>
+<li>zaključke</li>
+</ul>
+<h2 id="pregled-naravnega-izražanja">Pregled naravnega izražanja</h2>
+<p>Tehnično pravilno, vendar nenaravno formulacijo obravnavajte kot težavo kakovosti.</p>
+<p>Pregledovalci naj dajejo prednost formulacijam, ki v ciljnem jeziku zvenijo naravno napisane, tudi kadar je izvorni prevod razumljiv.</p>
+<p>Cilj ni samo pravilen prevod. Cilj je dokument, ki deluje, kot da bi bil prvotno napisan za naravne bralce.</p>
+<p>Izboljšave naravnega jezika ne smejo oslabiti:</p>
+<ul>
+<li>semantične paritete</li>
+<li>strukturne paritete</li>
+<li>izobraževalne pokritosti</li>
+<li>primerov</li>
+<li>praktičnih navodil</li>
+<li>navodil za upravljanje</li>
+</ul>
+<h2 id="validator-lokalizacije-usmerjen-k-bralcu">Validator lokalizacije, usmerjen k bralcu</h2>
+<p>Ena vrsta validatorja mora v CI izrecno spodleteti, kadar je stran videti lokalizirana, vendar še vedno prikazuje bralcu namenjeno vsebino v izvornem jeziku.</p>
+<p>Primeri, ki morajo spodleteti:</p>
 <ul>
 <li>lokaliziran naslov z angleškim povzetkom</li>
 <li>lokaliziran članek z angleškimi oznakami</li>
 <li>lokaliziran članek z angleškimi naslovi ali seznami</li>
-<li>lokaliziran članek z angleškimi oblački ali napisi</li>
+<li>lokaliziran članek z angleškimi poudarki ali napisi</li>
 <li>lokaliziran članek z angleškimi oznakami diagramov ali nadomestnim besedilom</li>
-<li>kartice s sorodno vsebino v mešanih jezikih</li>
+<li>kartice <code>related-content</code> z mešanimi jeziki</li>
 </ul>
-<p>To je pogoj za napako, ne le opozorilo, saj bralci doživljajo takšne strani kot vidno nedokončane.</p>
-<h2 id="revizija-razreda-napak">Revizija razreda napak</h2>
-<p>QA prevajanja mora vzdrževati eksplicitne razrede napak z:</p>
+<p>To je pogoj za neuspeh, ne le opozorilo, saj bralci takšne strani doživljajo kot očitno nedokončane.</p>
+<h2 id="revizija-razredov-napak">Revizija razredov napak</h2>
+<p>QA prevodov mora vzdrževati izrecne razrede napak z naslednjimi podatki:</p>
 <ul>
 <li>opis</li>
-<li>število pojavov</li>
+<li>število pojavitev</li>
 <li>glavni vzrok</li>
-<li>kritje validatorja</li>
+<li>pokritost validatorja</li>
 <li>tveganje ponovitve</li>
-<li>načrt zapiranja</li>
+<li>načrt zaprtja</li>
 </ul>
 <p>Zahtevane kategorije vključujejo:</p>
 <ul>
-<li>neprevedeni povzetki</li>
-<li>neprevedena telesa</li>
-<li>nadomestna objava osnutka</li>
-<li>neprevedeni metapodatki</li>
-<li>mešano jezikovno založništvo</li>
-<li>bodoči odkriti razredi</li>
+<li>neprevedene povzetke</li>
+<li>neprevedena besedila</li>
+<li>objavo nadomestnih osnutkov</li>
+<li>neprevedene metapodatke</li>
+<li>objavo z mešanimi jeziki</li>
+<li>prihodnje odkrite razrede</li>
 </ul>
-<p>Razred se zapre šele, ko njegovo število doseže nič in CI prepreči, da bi se vrnil brez napake.</p>
+<p>Razred je zaprt šele, ko njegovo število pojavitev doseže nič in CI prepreči, da bi se brez napake vrnil.</p>
 <h2 id="dokazi-človeškega-pregleda">Dokazi človeškega pregleda</h2>
-<p>Zagotavljanje kakovosti prevodov bi moralo ohraniti tudi kratke zapise človeških pregledov za reprezentativne popravke s pomočjo umetne inteligence.</p>
+<p>QA prevodov mora hraniti tudi kratke zapise človeškega pregleda za reprezentativne popravke s pomočjo AI.</p>
 <p>Najmanjša polja:</p>
 <ul>
-<li>izvirno besedilo</li>
+<li>izvorno besedilo</li>
 <li>popravljeno besedilo</li>
-<li>kategorija napak</li>
-<li>hipoteza o vzroku</li>
-<li>utemeljitev recenzenta</li>
+<li>kategorija napake</li>
+<li>hipoteza o glavnem vzroku</li>
+<li>utemeljitev pregledovalca</li>
 </ul>
-<p>Ugotovitve pregledov naravnih govorcev je treba ohraniti kot rastoči korpus, ne kot osamljene enkratne opombe. Ponavljajoče se ugotovitve bi se morale vrniti v zasnovo validatorja, smernice sodelujočih in prihodnja navodila agenta AI.</p>
-<p>Pred potrditvijo pregleda prevoda, podprtega z AI, bi morali pregledovalci:</p>
+<p>Ugotovitve pregledov naravnih govorcev je treba ohranjati kot rastoči korpus, ne kot osamljene enkratne opombe. Ponavljajoče se ugotovitve se morajo vračati v zasnovo validatorjev, navodila za sodelujoče in prihodnja navodila za AI-agente.</p>
+<p>Pred končno potrditvijo prevoda s pomočjo AI morajo pregledovalci:</p>
 <ul>
-<li>pregledati ustrezne vnose v strukturiranem korpusu ugotovitev za ta jezik ali temo</li>
+<li>prebrati ustrezne vnose iz strukturiranega korpusa ugotovitev za ta jezik ali temo</li>
 <li>preveriti ponavljajoče se vzorce napak iz človeških pregledov</li>
-<li>potrditi, da trenutni osnutek pred potrditvijo ne uvaja znova znanih težav</li>
+<li>potrditi, da trenutni osnutek pred potrditvijo ne uvaja znanih težav nazaj</li>
 </ul>
 <p>Vsako prijavljeno napako naravnega govorca je treba oceniti tudi glede:</p>
 <ul>
 <li>popravka vsebine</li>
-<li>posodobitve smernic za pregledovanje</li>
-<li>posodobitve terminoloških smernic</li>
-<li>izboljšave poziva</li>
-<li>možnosti za validator</li>
-<li>možnosti za regresijski test</li>
+<li>posodobitve navodil za pregled</li>
+<li>posodobitve terminoloških navodil</li>
+<li>izboljšanja poziva</li>
+<li>priložnosti za validator</li>
+<li>priložnosti za regresijski test</li>
 </ul>
-<p>To je pomembno, ker lahko prevodi, ustvarjeni z umetno inteligenco, tudi če je ohranjen splošni pomen, zahtevajo pregled maternega govorca, da se odpravijo subtilne težave v slovnici, modalnosti, terminologiji in registru, specifičnem za domeno. Te težave je pogosto težko zaznati samo z avtomatiziranimi meritvami kakovosti.</p>
-<p>Konkretne prijavljene napake naravnih govorcev niso zgolj svetovalne. Vsaka mora biti odpravljena, sistematizirana, namerno nerešena z utemeljitvijo ali pa še vedno izrecno spremljana v korpusu ugotovitev.</p>
-<h2 id="taksonomija-pogostih-napak-prevoda-ai">Taksonomija pogostih napak prevoda AI</h2>
+<p>To je pomembno, ker lahko tudi ob ohranjenem splošnem pomenu prevodi, ustvarjeni z AI, zahtevajo pregled naravnega govorca za odpravo subtilnih težav v slovnici, modalnosti, terminologiji in domensko specifičnem registru. Takšne težave je pogosto težko zaznati samo z avtomatiziranimi meritvami kakovosti.</p>
+<p>Konkretno prijavljene napake niso zgolj svetovalne. Vsaka mora biti popravljena, sistematizirana, namerno nerešena z utemeljitvijo ali pa še vedno izrecno sledena v korpusu ugotovitev.</p>
+<h2 id="taksonomija-pogostih-napak-ai-prevodov">Taksonomija pogostih napak AI prevodov</h2>
 <ul>
 <li>slovnica</li>
 <li>modalnost</li>
 <li>terminologija</li>
-<li>registracija</li>
+<li>register</li>
 <li>tekočnost</li>
 <li>dobesedni prevod</li>
 <li>dvoumnost</li>
@@ -209,27 +263,27 @@
 <li>besedni red</li>
 <li>kolokacija</li>
 <li>pisava ali pravopis</li>
-<li>ubeseditev pravilnika domene</li>
-<li>besedilo dostopnosti</li>
+<li>formulacija domenske politike</li>
+<li>formulacija dostopnosti</li>
 </ul>
-<h2 id="lahka-primerjalna-ocena">Lahka primerjalna ocena</h2>
-<p>Za ponovljivo vrednotenje prevoda z umetno inteligenco uporabite lahkotno rubriko 0–3, namesto da se zanašate le na presojo uspešno/neuspešno.</p>
+<h2 id="lahko-primerjalno-ocenjevanje">Lahko primerjalno ocenjevanje</h2>
+<p>Za ponovljivo vrednotenje AI-prevodov uporabite lahkotno lestvico 0-3, namesto da bi se zanašali samo na presojo uspešno/neuspešno.</p>
 <p>Priporočene dimenzije:</p>
 <ul>
-<li>kar pomeni natančnost</li>
+<li>natančnost pomena</li>
 <li>slovnica in tekočnost</li>
-<li>terminologija in domensko prileganje</li>
+<li>terminologija in ustreznost domeni</li>
 <li>register in slog</li>
-<li>prizadevanje za pregled</li>
+<li>napor pregleda</li>
 </ul>
 <p>Priporočene oznake za izdajo:</p>
 <ul>
 <li>blokator</li>
 <li>večja revizija</li>
 <li>manjša revizija</li>
-<li>pripravljeno s prijavo pregleda</li>
+<li>pripravljeno s potrditvijo pregleda</li>
 </ul>
-<p>To ustvarja podatke, ki so prijazni do kartice kazalnikov, ne da bi potrebovali težko ogrodje za lokalizacijo in merjenje.</p>
+<p>Tako nastanejo podatki, primerni za preglednice rezultatov, brez potrebe po težkem okviru za merjenje lokalizacije.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -258,7 +312,6 @@
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/sl/ai-will-not-replace-translators.html"><span>AI ne bo nadomestila prevajalcev</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/sl/how-to-review-ai-assisted-translations.html"><span>Kako pregledovati AI-podprte prevode</span><span class="topic-menu__meta">Učni vodniki</span></a>
-                  <a href="../../wiki/sl/ai-assisted-translation-policy.html"><span>AI Politika podprtega prevajanja</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>

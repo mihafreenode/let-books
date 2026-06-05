@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Qualitätssicherung der Übersetzung | LetBooks</title>
-    <meta name="description" content="Die Übersetzungsqualitätssicherung kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologieprüfung, Barrierefreiheitsprüfungen und menschliches Urteilsvermögen.">
+    <meta name="description" content="Übersetzungs-QA kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologie-Review, Prüfungen zur Barrierefreiheit und menschliches Urteilsvermögen.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/de/translation-quality-assurance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Qualitätssicherung der Übersetzung | LetBooks">
-    <meta property="og:description" content="Die Übersetzungsqualitätssicherung kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologieprüfung, Barrierefreiheitsprüfungen und menschliches Urteilsvermögen.">
+    <meta property="og:description" content="Übersetzungs-QA kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologie-Review, Prüfungen zur Barrierefreiheit und menschliches Urteilsvermögen.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/de/translation-quality-assurance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Qualitätssicherung der Übersetzung | LetBooks">
-    <meta name="twitter:description" content="Die Übersetzungsqualitätssicherung kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologieprüfung, Barrierefreiheitsprüfungen und menschliches Urteilsvermögen.">
+    <meta name="twitter:description" content="Übersetzungs-QA kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologie-Review, Prüfungen zur Barrierefreiheit und menschliches Urteilsvermögen.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,139 +97,193 @@
             <span>Wiki</span>
             <span>Deutsch</span>
           </div>
-          <p class="content-page-summary">Die Übersetzungsqualitätssicherung kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologieprüfung, Barrierefreiheitsprüfungen und menschliches Urteilsvermögen.</p>
+          <p class="content-page-summary">Übersetzungs-QA kombiniert automatisierte Validierung, Rechtschreibprüfung, Terminologie-Review, Prüfungen zur Barrierefreiheit und menschliches Urteilsvermögen.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">Übersetzungsqualität</span>
           </div>
             <hr class="content-header-divider">
           </header>
-<h2 id="gemeinsame-schecks">Gemeinsame Schecks</h2>
+<h2 id="häufige-prüfungen">Häufige Prüfungen</h2>
 <ul>
 <li>fehlende Übersetzungen</li>
-<li>Englisches Leck</li>
-<li>Vollständigkeit der leserorientierten Lokalisierung</li>
-<li>Nichtübereinstimmung der Platzhalter</li>
+<li>englische Leckstellen</li>
+<li>leserseitige Vollständigkeit der Lokalisierung</li>
+<li>strukturelle Parität gegenüber frisch generierter Ausgabe</li>
+<li>muttersprachliche Lesbarkeit und natürlicher Ausdruck</li>
+<li>Platzhalter-Abweichungen</li>
 <li>defekte Links</li>
 <li>Glossardrift</li>
-<li>Barrierefreie Textabdeckung</li>
-<li>Screenshot- und Diagrammparität</li>
+<li>Abdeckung von Barrierefreiheits-Texten</li>
+<li>Parität von Screenshots und Diagrammen</li>
 </ul>
 <h2 id="anforderung-an-frisch-generierte-ausgaben">Anforderung an frisch generierte Ausgaben</h2>
-<p class="lead">Vor der strukturellen Paritätsprüfung, der semantischen Prüfung oder dem manuellen Artikelvergleich:</p>
+<p>Vor struktureller Paritätsprüfung, semantischem Review oder manuellem Artikelvergleich:</p>
 <ol type="1">
-<li>generieren Sie die Website aus dem aktuellen Stand des Repositorys neu</li>
-<li>führen Sie Validatoren gegen die aktuell generierte Ausgabe aus</li>
+<li>generieren Sie die Site aus dem aktuellen Zustand des Repositorys neu</li>
+<li>führen Sie Validatoren gegen die aktuelle generierte Ausgabe aus</li>
 <li>prüfen Sie die generierten HTML-Artefakte</li>
-<li>führen Sie erst danach die manuelle Paritätsbewertung durch</li>
+<li>führen Sie erst dann die manuelle Paritätsbewertung durch</li>
 </ol>
-<p>Diese Regel gibt es, weil Quelldateien in Markdown und generierte Ausgaben während der Entwicklung vorübergehend auseinanderlaufen können und QA-Befunde sich auf aktuelle Artefakte statt auf veraltete generierte Dateien stützen sollten.</p>
+<p>Diese Regel existiert, weil Quell-Markdown und generierte Ausgabe während der Entwicklung vorübergehend auseinanderlaufen können und QA-Befunde auf aktuellen Artefakten statt auf veralteten generierten Dateien basieren sollten.</p>
 <h2 id="strukturelle-paritätsprüfung">Strukturelle Paritätsprüfung</h2>
-<p>Die strukturelle Paritätsprüfung sollte nach Verlusten an Leserwert suchen, auch wenn der lokalisierte Artikel die Bedeutung im Großen und Ganzen noch bewahrt.</p>
+<p>Die strukturelle Paritätsprüfung sollte nach Verlusten an Leserwert suchen, auch wenn der lokalisierte Artikel die Bedeutung noch weitgehend bewahrt.</p>
 <p>Typische Signale sind:</p>
 <ul>
 <li>fehlende Hauptabschnitte</li>
-<li>zusammengefallene Überschriftenhierarchie</li>
+<li>eingestürzte Überschriftenhierarchie</li>
 <li>fehlende Beispiele</li>
 <li>komprimierte praktische Anleitung</li>
 <li>reduzierte Governance-Diskussion</li>
 <li>verkürzte Review- oder Validierungsanleitung</li>
 </ul>
-<p>Warnungen von Validatoren für strukturelle Parität sind Prüfhinweise, kein automatischer Beweis für eine schlechte Übersetzung. Sie sollten zusammen mit dem generierten HTML und, falls nötig, mit der im Browser gerenderten Ausgabe interpretiert werden.</p>
-<h2 id="lesergerichteter-lokalisierungsvalidator">Lesergerichteter Lokalisierungsvalidator</h2>
-<p>Eine Validatorklasse sollte CI explizit ausfallen lassen, wenn eine Seite lokalisiert erscheint, aber dennoch für den Leser sichtbare Inhalte in der Quellsprache bereitstellt.</p>
-<p>Beispiele, die scheitern sollten:</p>
+<p>Warnungen aus strukturellen Paritäts-Validatoren sind Prüfhinweise, kein automatischer Beweis für eine schlechte Übersetzung. Sie sollten zusammen mit dem generierten HTML und, wo nötig, mit im Browser gerenderter Ausgabe interpretiert werden.</p>
+<h2 id="review-des-muttersprachlichen-ausdrucks">Review des muttersprachlichen Ausdrucks</h2>
+<p>Übersetzungs-QA sollte auch nach Text suchen, der technisch korrekt ist, aber nicht dem entspricht, was ein Muttersprachler natürlich wählen würde.</p>
+<p>Dazu gehören:</p>
 <ul>
-<li>Lokalisierter Titel mit englischer Zusammenfassung</li>
-<li>Lokalisierter Artikel mit englischen Tags</li>
-<li>lokalisierter Artikel mit englischen Überschriften oder Listen</li>
-<li>Lokalisierter Artikel mit englischen Legenden oder Bildunterschriften</li>
-<li>Lokalisierter Artikel mit englischen Diagrammbeschriftungen oder Alternativtext</li>
-<li>Karten mit verwandten Inhalten in verschiedenen Sprachen</li>
+<li>direkte englische Satzstruktur</li>
+<li>direkte Übersetzung englischer Idiome</li>
+<li>Formulierungen, die übersetzt statt originär verfasst klingen</li>
+<li>Terminologie, die die Ausgangssprache noch erkennen lässt</li>
 </ul>
-<p>Hierbei handelt es sich um einen Fehlerzustand und nicht nur um eine Warnung, da Leser solche Seiten als sichtbar unvollendet empfinden.</p>
-<h2 id="prüfung-der-fehlerklasse">Prüfung der Fehlerklasse</h2>
-<p>Die Übersetzungsqualitätssicherung sollte explizite Fehlerklassen pflegen mit:</p>
+<p>Beispiele für dieses Muster sind Formulierungen, die etwa Folgendem entsprechen:</p>
+<ul>
+<li>Kandidateninhalt</li>
+<li>Validierungsstrategie</li>
+<li>Workflow-Artefakt</li>
+<li>kuratierte Werkzeuge</li>
+<li>kuratierte Skills</li>
+</ul>
+<p>Das sind nicht immer Übersetzungsfehler. Oft sind es Fälle, in denen ein Muttersprachler den Satz instinktiv umformulieren würde.</p>
+<h2 id="präferenztest-für-muttersprachler">Präferenztest für Muttersprachler</h2>
+<p>Bei wichtigen Prosateilen sollten Reviewer fragen:</p>
+<blockquote>
+<p>Würde ein kompetenter Muttersprachler diese Idee wahrscheinlich so formulieren, wenn er sie von Grund auf neu schreiben würde?</p>
+</blockquote>
+<p>Wenn nicht, sollten Reviewer:</p>
+<ul>
+<li>die Bedeutung bewahren</li>
+<li>die semantische Parität bewahren</li>
+<li>die strukturelle Parität bewahren</li>
+<li>die Formulierung verbessern</li>
+</ul>
+<p>Dieser Test ist besonders nützlich für:</p>
+<ul>
+<li>Einleitungen</li>
+<li>Zusammenfassungen</li>
+<li>pädagogische Erklärungen</li>
+<li>praktische Anleitung</li>
+<li>Governance-Diskussionen</li>
+<li>Schlussabschnitte</li>
+</ul>
+<h2 id="review-des-natürlichen-ausdrucks">Review des natürlichen Ausdrucks</h2>
+<p>Behandeln Sie technisch korrekte, aber unnatürliche Formulierungen als Qualitätsproblem.</p>
+<p>Reviewer sollten Formulierungen bevorzugen, die in der Zielsprache natürlich verfasst klingen, auch wenn die ursprüngliche Übersetzung verständlich ist.</p>
+<p>Das Ziel ist nicht nur eine korrekte Übersetzung. Das Ziel ist ein Dokument, das sich so anfühlt, als sei es ursprünglich für muttersprachliche Leser geschrieben worden.</p>
+<p>Verbesserungen der natürlichen Sprache dürfen Folgendes nicht schwächen:</p>
+<ul>
+<li>semantische Parität</li>
+<li>strukturelle Parität</li>
+<li>pädagogische Abdeckung</li>
+<li>Beispiele</li>
+<li>praktische Anleitung</li>
+<li>Governance-Anleitung</li>
+</ul>
+<h2 id="lesergerichteter-lokalisierungsvalidator">Lesergerichteter Lokalisierungsvalidator</h2>
+<p>Eine Validator-Klasse sollte CI ausdrücklich fehlschlagen lassen, wenn eine Seite lokalisiert wirkt, aber weiterhin leserseitige Inhalte in der Ausgangssprache zeigt.</p>
+<p>Beispiele, die fehlschlagen sollten:</p>
+<ul>
+<li>lokalisierter Titel mit englischer Zusammenfassung</li>
+<li>lokalisierter Artikel mit englischen Tags</li>
+<li>lokalisierter Artikel mit englischen Überschriften oder Listen</li>
+<li>lokalisierter Artikel mit englischen Callouts oder Beschriftungen</li>
+<li>lokalisierter Artikel mit englischen Diagrammbeschriftungen oder Alternativtext</li>
+<li><code>related-content</code>-Karten in gemischten Sprachen</li>
+</ul>
+<p>Das ist eine Fehlerbedingung und nicht nur eine Warnung, weil Leser solche Seiten als sichtbar unfertig wahrnehmen.</p>
+<h2 id="prüfung-der-fehlerklassen">Prüfung der Fehlerklassen</h2>
+<p>Übersetzungs-QA sollte explizite Fehlerklassen mit folgenden Feldern pflegen:</p>
 <ul>
 <li>Beschreibung</li>
-<li>Anzahl der Vorkommnisse</li>
+<li>Vorkommenszahl</li>
 <li>Grundursache</li>
 <li>Validator-Abdeckung</li>
 <li>Wiederholungsrisiko</li>
 <li>Schließungsplan</li>
 </ul>
-<p>Zu den erforderlichen Kategorien gehören:</p>
+<p>Erforderliche Kategorien sind:</p>
 <ul>
 <li>unübersetzte Zusammenfassungen</li>
-<li>unübersetzte Körper</li>
-<li>Platzhalter-Entwurfsveröffentlichung</li>
+<li>unübersetzte Haupttexte</li>
+<li>Veröffentlichung von Platzhalterentwürfen</li>
 <li>unübersetzte Metadaten</li>
-<li>Veröffentlichung in gemischten Sprachen</li>
-<li>Zukünftig entdeckte Klassen</li>
+<li>gemischtsprachige Veröffentlichung</li>
+<li>künftig entdeckte Klassen</li>
 </ul>
-<p>Eine Klasse wird nur geschlossen, wenn ihre Anzahl Null erreicht und CI verhindert, dass sie ohne Fehler zurückkehrt.</p>
-<h2 id="menschliche-überprüfungsbeweise">Menschliche Überprüfungsbeweise</h2>
-<p>Die Übersetzungsqualitätssicherung sollte auch kurze Aufzeichnungen menschlicher Überprüfungen für repräsentative KI-gestützte Korrekturen aufbewahren.</p>
-<p>Mindestfelder:</p>
+<p>Eine Klasse ist erst geschlossen, wenn ihre Anzahl null erreicht und CI ihre Rückkehr nicht mehr ohne Fehler zulässt.</p>
+<h2 id="nachweise-menschlicher-reviews">Nachweise menschlicher Reviews</h2>
+<p>Übersetzungs-QA sollte außerdem kurze menschliche Review-Aufzeichnungen für repräsentative AI-gestützte Korrekturen bewahren.</p>
+<p>Minimale Felder:</p>
 <ul>
 <li>Originaltext</li>
-<li>Text korrigiert</li>
+<li>korrigierter Text</li>
 <li>Fehlerkategorie</li>
-<li>Ursachenhypothese</li>
-<li>Begründung des Rezensenten</li>
+<li>Hypothese zur Grundursache</li>
+<li>Begründung des Reviewers</li>
 </ul>
-<p>Die Ergebnisse der Überprüfung durch Muttersprachler sollten als wachsender Korpus und nicht als isolierte, einmalige Notizen aufbewahrt werden. Wiederholte Erkenntnisse sollten in das Design des Validators, die Anleitung der Mitwirkenden und zukünftige Anweisungen für KI-Agenten einfließen.</p>
-<p>Vor der Freigabe einer KI-gestützten Übersetzung sollten Reviewer:</p>
+<p>Befunde aus Reviews durch Muttersprachler sollten als wachsendes Korpus erhalten bleiben, nicht als isolierte Einmalnotizen. Wiederkehrende Befunde sollten in Validator-Design, Mitwirkenden-Richtlinien und künftige Anweisungen für AI-Agenten zurückfließen.</p>
+<p>Vor der Freigabe einer AI-gestützten Übersetzung sollten Reviewer:</p>
 <ul>
-<li>relevante Einträge im strukturierten Erkenntniskorpus für diese Sprache oder dieses Thema prüfen</li>
+<li>relevante Einträge aus dem strukturierten Befundkorpus für diese Sprache oder dieses Thema lesen</li>
 <li>wiederkehrende Fehlermuster aus menschlichen Reviews prüfen</li>
-<li>bestätigen, dass der aktuelle Entwurf vor der Freigabe keine bekannten Probleme erneut einführt</li>
+<li>bestätigen, dass der aktuelle Entwurf bekannte Probleme vor der Freigabe nicht erneut einführt</li>
 </ul>
-<p>Jeder gemeldete muttersprachliche Defekt sollte außerdem im Hinblick auf Folgendes bewertet werden:</p>
+<p>Jeder gemeldete Muttersprachler-Defekt sollte außerdem bewertet werden im Hinblick auf:</p>
 <ul>
-<li>Korrektur des Inhalts</li>
-<li>Aktualisierung der Review-Leitlinien</li>
-<li>Aktualisierung der Terminologie-Leitlinien</li>
+<li>Inhaltskorrektur</li>
+<li>Aktualisierung der Review-Richtlinien</li>
+<li>Aktualisierung der Terminologie-Richtlinien</li>
 <li>Verbesserung des Prompts</li>
-<li>Möglichkeit für einen Validator</li>
-<li>Möglichkeit für einen Regressionstest</li>
+<li>Validator-Gelegenheit</li>
+<li>Gelegenheit für einen Regressionstest</li>
 </ul>
-<p>Dies ist wichtig, denn selbst wenn die Gesamtbedeutung erhalten bleibt, erfordern KI-generierte Übersetzungen möglicherweise eine Überprüfung durch einen Muttersprachler, um subtile Probleme in Grammatik, Modalität, Terminologie und domänenspezifischem Register zu korrigieren. Diese Probleme lassen sich allein durch automatisierte Qualitätsmetriken oft nur schwer erkennen.</p>
-<p>Konkrete gemeldete Fehler von Muttersprachlern sind nicht nur beratend. Jeder einzelne sollte behoben, systematisiert, mit Begründung absichtlich ungelöst gelassen oder weiterhin ausdrücklich im Erkenntniskorpus nachverfolgt werden.</p>
+<p>Das ist wichtig, weil selbst dann, wenn die Gesamtbedeutung erhalten bleibt, von AI erzeugte Übersetzungen muttersprachliche Reviews erfordern können, um feine Probleme bei Grammatik, Modalität, Terminologie und domänenspezifischem Register zu korrigieren. Solche Probleme sind allein mit automatisierten Qualitätsmetriken oft schwer zu erkennen.</p>
+<p>Konkrete gemeldete Fehler sind nicht nur beratend. Jeder einzelne sollte entweder behoben, systematisiert, bewusst mit Begründung offengelassen oder weiterhin explizit im Befundkorpus verfolgt werden.</p>
 <h2 id="häufige-taxonomie-von-ki-übersetzungsfehlern">Häufige Taxonomie von KI-Übersetzungsfehlern</h2>
 <ul>
 <li>Grammatik</li>
 <li>Modalität</li>
 <li>Terminologie</li>
-<li>Registrieren</li>
-<li>Geläufigkeit</li>
+<li>Register</li>
+<li>Flüssigkeit</li>
 <li>wörtliche Übersetzung</li>
 <li>Mehrdeutigkeit</li>
 <li>Kontextverlust</li>
-<li>Wortreihenfolge</li>
+<li>Wortstellung</li>
 <li>Kollokation</li>
-<li>Schrift oder Rechtschreibung</li>
-<li>Formulierung der Domänenrichtlinien</li>
+<li>Schrift oder Orthografie</li>
+<li>Formulierung von Domänenrichtlinien</li>
 <li>Formulierung zur Barrierefreiheit</li>
 </ul>
 <h2 id="leichte-benchmark-bewertung">Leichte Benchmark-Bewertung</h2>
-<p>Für eine wiederholbare KI-Übersetzungsbewertung verwenden Sie eine einfache 0-3-Rubrik, anstatt sich nur auf die Beurteilung „Bestanden/Nicht bestanden“ zu verlassen.</p>
-<p>Empfohlene Abmessungen:</p>
+<p>Für wiederholbare Bewertung von AI-Übersetzungen sollte eine leichte 0-bis-3-Rubrik verwendet werden, statt sich nur auf ein Bestanden/Nicht-bestanden-Urteil zu verlassen.</p>
+<p>Empfohlene Dimensionen:</p>
 <ul>
-<li>was Genauigkeit bedeutet</li>
-<li>Grammatik und Sprachkompetenz</li>
-<li>Terminologie und Domänenanpassung</li>
-<li>registrieren und stylen</li>
-<li>Überprüfungsaufwand</li>
+<li>Bedeutungsgenauigkeit</li>
+<li>Grammatik und Flüssigkeit</li>
+<li>Terminologie und Domänenpassung</li>
+<li>Register und Stil</li>
+<li>Review-Aufwand</li>
 </ul>
-<p>Empfohlene Veröffentlichungsetiketten:</p>
+<p>Empfohlene Freigabe-Labels:</p>
 <ul>
 <li>Blocker</li>
-<li>große Überarbeitung</li>
+<li>größere Überarbeitung</li>
 <li>kleinere Überarbeitung</li>
-<li>Bereit mit Freigabe der Überprüfung</li>
+<li>mit Review-Freigabe bereit</li>
 </ul>
-<p>Dadurch werden Scorecard-freundliche Daten erstellt, ohne dass ein umfangreiches Lokalisierungs-Mess-Framework erforderlich ist.</p>
+<p>Das schafft scorecard-taugliche Daten, ohne ein schwergewichtiges Framework zur Lokalisierungsmessung zu benötigen.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -258,7 +312,6 @@
                 <div class="topic-menu" id="related-translation-quality-menu" data-topic-menu="related-translation-quality" hidden>
                   <a href="../../blog/de/ai-will-not-replace-translators.html"><span>KI wird Übersetzer nicht ersetzen</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/de/how-to-review-ai-assisted-translations.html"><span>Wie man KI-gestützte Übersetzungen prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
-                  <a href="../../wiki/de/ai-assisted-translation-policy.html"><span>AI-Richtlinie zur unterstützten Übersetzung</span><span class="topic-menu__meta">Wiki</span></a>
                 </div>
               </div>
             </div>

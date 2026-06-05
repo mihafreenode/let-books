@@ -1,7 +1,7 @@
 ---
 title: "Localización CI y CD"
 summary: >-
-  La localización CI/CD valida el contenido multilingüe continuamente para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten tempranamente.
+  La CI/CD de localización valida continuamente el contenido multilingüe para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten pronto.
 topics:
   - continuous-localization
   - qa
@@ -11,72 +11,82 @@ topics:
 
 ## Resumen
 
-La localización CI/CD valida el contenido multilingüe continuamente para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten tempranamente.
+La CI/CD de localización valida continuamente el contenido multilingüe para que los recursos faltantes, los enlaces rotos y las regresiones de accesibilidad se detecten pronto.
 
-## Cheques deseados
+## Controles deseados
 
-- coherencia del inventario local
-- generación reciente del sitio antes de la revisión de paridad
-- validación de enlace
+- coherencia del inventario de configuraciones regionales
+- regeneración fresca del sitio antes de la revisión de paridad
+- validación de enlaces
 - generación de artículos y páginas
-- corrector ortográfico donde esté disponible
-- paridad de marcador de posición
-- pruebas de humo de accesibilidad
-- comprobaciones de cobertura de diagramas y capturas de pantalla
+- revisión ortográfica cuando esté disponible
+- paridad de marcadores de posición
+- pruebas rápidas de accesibilidad
+- comprobaciones de cobertura de capturas de pantalla y diagramas
 
 ## Regla de generación reciente
 
-Los flujos de CI y revisión de localización no deben basar los hallazgos de paridad en artefactos generados desactualizados.
+Los flujos de CI y revisión de localización no deben basar los hallazgos de paridad en artefactos generados obsoletos.
 
 Secuencia requerida:
 
-1. generar el sitio a partir del estado actual del repositorio
-2. ejecutar los validadores sobre la salida recién generada
-3. cuando sea necesario, inspeccionar el HTML generado
-4. cuando sea necesario, inspeccionar la salida renderizada
+1. genere el sitio a partir del estado actual del repositorio
+2. ejecute los validadores sobre la salida recién generada
+3. inspeccione el HTML generado cuando sea necesario
+4. inspeccione la salida renderizada cuando sea necesario
 
 Esto importa porque el Markdown fuente, el HTML generado, la salida desplegada y el comportamiento renderizado en el navegador pueden divergir temporalmente durante el desarrollo.
 
-## Progresión de clase de defecto
+## Prioridad de revisión
 
-La CI de localización debe realizar un seguimiento de ambos:
+Aplique primero la revisión más estricta de paridad y en lengua materna a:
+
+- contenido recién creado
+- contenido ampliado recientemente
+- contenido que se está editando actualmente
+
+Luego extienda progresivamente los mismos estándares de revisión al contenido localizado más antiguo.
+
+## Progresión de clases de defectos
+
+La CI de localización debe seguir ambas cosas:
 
 - `Localization Debt`
 - `Open Defect Classes`
 
-La deuda mide el trabajo restante en materia de fuente-contenido.
+La deuda mide el trabajo pendiente sobre el contenido fuente.
 
-Las clases de defectos abiertos miden si el sistema aún puede permitir que reaparezca una categoría de problema.
+Las clases de defectos abiertas miden si el sistema aún puede permitir que vuelva a aparecer una categoría de problema.
 
-Tan pronto como una clase de defecto llega a cero ocurrencias, su validador debe pasar de aviso a bloqueo cuando sea práctico.
+En cuanto una clase de defectos alcance cero ocurrencias, su validador debería pasar de consultivo a bloqueante cuando sea práctico.
 
 Ejemplos:
 
-- publicación de borrador de marcador de posición
-- resúmenes no traducidos
-- metadatos no traducidos
-- cuerpos no traducidos
+- publicación de borradores con marcadores de posición
+- resúmenes sin traducir
+- metadatos sin traducir
+- cuerpos de texto sin traducir
 - publicación en idiomas mixtos
 
-CI no es sólo un guardián. Es el mecanismo que evita que las clases de defectos cerradas se vuelvan a abrir silenciosamente.
+La CI no es solo un guardián. Es el mecanismo que evita que las clases de defectos cerradas se reabran en silencio.
 
-## Orden de generación para la navegación del artículo.
+## Orden de generación para la navegación de artículos
 
-El contrato de navegación de artículos públicos vigente es:
+El contrato actual de navegación pública de artículos es:
 
 - `post-article-nav`
 - `related-content`
 - `related-topic-nav`
 
-La generación y validación deben realizarse en este orden:
+La generación y la validación deben ocurrir en este orden:
 
-1. generar el HTML del artículo
-2. generar las páginas de índice
-3. ejecutar cualquier posprocesamiento de navegación restante solo si sigue siendo necesario
-4. validar la salida recién generada
-5. revisar el HTML generado o la salida renderizada si el flujo de trabajo requiere una evaluación humana de la paridad
+1. genere el HTML de los artículos
+2. genere las páginas de índice
+3. ejecute cualquier posprocesamiento de navegación restante solo si sigue siendo necesario
+4. valide la salida recién generada
+5. revise el HTML generado o la salida renderizada si el flujo de trabajo requiere una evaluación humana de la paridad
 
-Si un validador aún espera el bloque heredado `topic-nav`, actualice el validador al contrato actual en lugar de parchear el HTML generado.
+Si un validador todavía espera el bloque heredado `topic-nav`, actualice el validador al contrato actual en lugar de parchear el HTML generado.
 
 ## Páginas relacionadas
 

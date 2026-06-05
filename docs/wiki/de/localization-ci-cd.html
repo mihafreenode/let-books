@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lokalisierung CI und CD | LetBooks</title>
-    <meta name="description" content="Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
+    <meta name="description" content="Lokalisierungs-CI/CD validiert mehrsprachige Inhalte kontinuierlich, damit fehlende Assets, defekte Links und Regressionen bei der Barrierefreiheit früh erkannt werden.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/de/localization-ci-cd.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Lokalisierung CI und CD | LetBooks">
-    <meta property="og:description" content="Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
+    <meta property="og:description" content="Lokalisierungs-CI/CD validiert mehrsprachige Inhalte kontinuierlich, damit fehlende Assets, defekte Links und Regressionen bei der Barrierefreiheit früh erkannt werden.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/de/localization-ci-cd.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lokalisierung CI und CD | LetBooks">
-    <meta name="twitter:description" content="Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.">
+    <meta name="twitter:description" content="Lokalisierungs-CI/CD validiert mehrsprachige Inhalte kontinuierlich, damit fehlende Assets, defekte Links und Regressionen bei der Barrierefreiheit früh erkannt werden.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Deutsch</span>
           </div>
-          <p class="content-page-summary">Lokalisierung CI/CD validiert kontinuierlich mehrsprachige Inhalte, sodass fehlende Assets, fehlerhafte Links und Rückschritte bei der Zugänglichkeit frühzeitig erkannt werden.</p>
+          <p class="content-page-summary">Lokalisierungs-CI/CD validiert mehrsprachige Inhalte kontinuierlich, damit fehlende Assets, defekte Links und Regressionen bei der Barrierefreiheit früh erkannt werden.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">CI/CD</span>
@@ -106,45 +106,53 @@
           </header>
 <h2 id="gewünschte-prüfungen">Gewünschte Prüfungen</h2>
 <ul>
-<li>Konsistenz des lokalen Inventars</li>
+<li>Konsistenz des Locale-Inventars</li>
 <li>frische Site-Generierung vor der Paritätsprüfung</li>
-<li>Linkvalidierung</li>
-<li>Artikel- und Seitenerstellung</li>
-<li>Rechtschreibprüfung, sofern verfügbar</li>
-<li>Platzhalterparität</li>
-<li>Rauchtests zur Zugänglichkeit</li>
-<li>Überprüfung der Screenshot- und Diagrammabdeckung</li>
+<li>Link-Validierung</li>
+<li>Generierung von Artikeln und Seiten</li>
+<li>Rechtschreibprüfung, wo verfügbar</li>
+<li>Platzhalter-Parität</li>
+<li>einfache Barrierefreiheits-Tests</li>
+<li>Prüfungen zur Abdeckung von Screenshots und Diagrammen</li>
 </ul>
 <h2 id="regel-für-frische-generierung">Regel für frische Generierung</h2>
-<p class="lead">Lokalisierungs-CI- und Review-Workflows dürfen Paritätsbefunde nicht auf veraltete generierte Artefakte stützen.</p>
+<p>Lokalisierungs-CI- und Review-Workflows dürfen Paritätsbefunde nicht auf veraltete generierte Artefakte stützen.</p>
 <p>Erforderliche Reihenfolge:</p>
 <ol type="1">
-<li>die Site aus dem aktuellen Repository-Stand generieren</li>
-<li>Validatoren gegen die frisch generierte Ausgabe ausführen</li>
-<li>bei Bedarf generiertes HTML prüfen</li>
-<li>bei Bedarf gerenderte Ausgabe prüfen</li>
+<li>generieren Sie die Site aus dem aktuellen Zustand des Repositorys</li>
+<li>führen Sie Validatoren gegen die frisch generierte Ausgabe aus</li>
+<li>prüfen Sie bei Bedarf generiertes HTML</li>
+<li>prüfen Sie bei Bedarf gerenderte Ausgabe</li>
 </ol>
 <p>Das ist wichtig, weil Quell-Markdown, generiertes HTML, bereitgestellte Ausgabe und im Browser gerendertes Verhalten während der Entwicklung vorübergehend auseinanderlaufen können.</p>
-<h2 id="fortschritt-der-fehlerklasse">Fortschritt der Fehlerklasse</h2>
-<p>Lokalisierungs-CI sollte beides verfolgen:</p>
+<h2 id="prüfpriorität">Prüfpriorität</h2>
+<p>Wenden Sie die strengste muttersprachliche und Paritätsprüfung zuerst an auf:</p>
+<ul>
+<li>neu erstellte Inhalte</li>
+<li>kürzlich erweiterte Inhalte</li>
+<li>Inhalte, die aktuell bearbeitet werden</li>
+</ul>
+<p>Erweitern Sie dieselben Review-Standards anschließend schrittweise auf ältere lokalisierte Inhalte.</p>
+<h2 id="fortschritt-von-fehlerklassen">Fortschritt von Fehlerklassen</h2>
+<p>Lokalisierungs-CI sollte beides nachverfolgen:</p>
 <ul>
 <li><code>Localization Debt</code></li>
 <li><code>Open Defect Classes</code></li>
 </ul>
-<p>Die Verschuldung misst die verbleibende Quelleninhaltsarbeit.</p>
-<p>Offene Fehlerklassen messen, ob das System das erneute Auftreten einer Problemkategorie noch zulassen kann.</p>
-<p>Sobald eine Fehlerklasse null Vorkommnisse erreicht, sollte ihr Validator, soweit möglich, von der Empfehlung zur Blockierung übergehen.</p>
+<p>Der Schuldenstand misst die verbleibende Arbeit an Quellinhalten.</p>
+<p>Offene Fehlerklassen messen, ob das System eine Problemkategorie weiterhin wieder auftreten lassen kann.</p>
+<p>Sobald eine Fehlerklasse null Vorkommen erreicht, sollte ihr Validator, wo praktikabel, von beratend auf blockierend umgestellt werden.</p>
 <p>Beispiele:</p>
 <ul>
-<li>Platzhalter-Entwurfsveröffentlichung</li>
+<li>Veröffentlichung von Platzhalterentwürfen</li>
 <li>unübersetzte Zusammenfassungen</li>
 <li>unübersetzte Metadaten</li>
-<li>unübersetzte Körper</li>
-<li>Veröffentlichung in gemischten Sprachen</li>
+<li>unübersetzte Haupttexte</li>
+<li>gemischtsprachige Veröffentlichung</li>
 </ul>
-<p>CI ist nicht nur ein Gatekeeper. Es handelt sich um den Mechanismus, der verhindert, dass geschlossene Fehlerklassen stillschweigend erneut geöffnet werden.</p>
+<p>CI ist nicht nur ein Torwächter. Es ist der Mechanismus, der verhindert, dass geschlossene Fehlerklassen stillschweigend wieder geöffnet werden.</p>
 <h2 id="generierungsreihenfolge-für-die-artikelnavigation">Generierungsreihenfolge für die Artikelnavigation</h2>
-<p>Der aktuelle Vertrag zur Navigation öffentlicher Artikel lautet:</p>
+<p>Der aktuelle Vertrag für die öffentliche Artikelnavigation lautet:</p>
 <ul>
 <li><code>post-article-nav</code></li>
 <li><code>related-content</code></li>
@@ -152,13 +160,13 @@
 </ul>
 <p>Generierung und Validierung sollten in dieser Reihenfolge erfolgen:</p>
 <ol type="1">
-<li>Artikel-HTML generieren</li>
-<li>Indexseiten generieren</li>
-<li>verbleibende Navigationsnachbearbeitung nur ausführen, wenn sie noch erforderlich ist</li>
-<li>frisch generierte Ausgabe validieren</li>
-<li>generiertes HTML oder gerenderte Ausgabe prüfen, wenn der Workflow eine menschliche Paritätsbewertung verlangt</li>
+<li>generieren Sie Artikel-HTML</li>
+<li>generieren Sie Indexseiten</li>
+<li>führen Sie verbleibende Navigations-Nachverarbeitung nur dann aus, wenn sie weiterhin erforderlich ist</li>
+<li>validieren Sie die frisch generierte Ausgabe</li>
+<li>prüfen Sie generiertes HTML oder gerenderte Ausgabe, wenn der Workflow eine menschliche Paritätsbewertung verlangt</li>
 </ol>
-<p>Wenn ein Validator immer noch den alten <code>topic-nav</code>-Block erwartet, aktualisieren Sie den Validator auf den aktuellen Vertrag, anstatt die generierten HTML zu patchen.</p>
+<p>Wenn ein Validator noch den veralteten Block <code>topic-nav</code> erwartet, aktualisieren Sie den Validator auf den aktuellen Vertrag, anstatt generiertes HTML zu flicken.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
