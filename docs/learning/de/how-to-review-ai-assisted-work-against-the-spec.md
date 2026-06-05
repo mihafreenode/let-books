@@ -11,13 +11,13 @@ topics:
 
 ## Zusammenfassung
 
-Dieser Leitfaden erklärt, wie man KI-gestützte Implementierung prüft, indem man sie mit Produktspezifikation, Arbeitsablaufregeln, Dokumentation und Validierungserwartungen abgleicht, statt nur zu beurteilen, ob die Ausgabe poliert oder technisch plausibel wirkt.
+Dieser Leitfaden erklärt, wie man KI-gestützte Implementierung prüft, indem man sie mit Produktspezifikation, Arbeitsablaufregeln, Dokumentation und Validierungserwartungen abgleicht, statt nur zu beurteilen, ob das Ergebnis poliert oder technisch plausibel wirkt.
 
 ## Warum das wichtig ist
 
 KI kann Code, Text, Tests und Interface-Änderungen sehr schnell erzeugen, die vollständig wirken.
 
-Diese Geschwindigkeit erzeugt ein Review-Risiko: Reviewer wechseln möglicherweise unbewusst von der Frage „Ist das das richtige Produktverhalten?“ zu der Frage „Wirkt das plausibel?“.
+Diese Geschwindigkeit schafft ein Review-Risiko: Prüfende wechseln möglicherweise unbewusst von der Frage „Ist das das richtige Produktverhalten?“ zu der Frage „Wirkt das plausibel?“.
 
 Das ist nicht dieselbe Frage.
 
@@ -34,7 +34,7 @@ Im Let-Books-Repository bedeutet das in der Regel:
 - `README.md` für die Darstellung des aktuellen Zustands
 - relevante Dokumentation unter `docs/` für Veröffentlichung, Verifikation oder Arbeitsablaufleitlinien
 
-Ohne diesen Schritt wird Review leicht subjektiv und lokal.
+Ohne diesen Schritt wird die Prüfung leicht subjektiv und rein lokal.
 
 ## In der richtigen Reihenfolge prüfen
 
@@ -150,7 +150,7 @@ Diese Fragen sind spezifisch genug, um Review zu leiten, und genau das sollte ei
 
 KI-gestütztes Review bedeutet nicht zu prüfen, ob der Assistent etwas Eindrucksvolles erzeugt hat. Es bedeutet zu prüfen, ob die Ausgabe noch zum beabsichtigten Produkt gehört.
 
-Die beste Review-Frage ist meist nicht „Funktioniert das?“. Sie lautet: „Entspricht das der Spezifikation, einschließlich der Teile, die leicht vergessen werden?“
+Die beste Prüfungsfrage lautet meist nicht „Funktioniert das?“, sondern: „Entspricht das der Spezifikation, auch in den Teilen, die leicht vergessen werden?“
 
 ## Weiterführende Lektüre
 

@@ -11,13 +11,13 @@ topics:
 
 ## Résumé
 
-Ce guide explique comment relire une implémentation assistée par IA en la comparant à la spécification produit, aux règles de flux de travail, à la documentation et aux attentes de validation, plutôt qu’en jugeant seulement si le résultat paraît soigné ou techniquement plausible.
+Ce guide explique comment relire une implémentation assistée par IA en la comparant à la spécification produit, aux règles de flux de travail, à la documentation et aux attentes de validation, plutôt qu’en jugeant seulement si le résultat semble soigné ou techniquement plausible.
 
 ## Pourquoi c’est important
 
 L’IA peut produire très rapidement du code, du texte, des tests et des changements d’interface qui semblent complets.
 
-Cette vitesse crée un risque de revue : les personnes qui relisent peuvent inconsciemment passer de la question « Est-ce le bon comportement produit ? » à la question « Est-ce que cela paraît raisonnable ? ».
+Cette vitesse crée un risque de revue : les personnes qui relisent peuvent glisser sans s’en rendre compte de la question « Est-ce le bon comportement produit ? » à la question « Est-ce que cela paraît raisonnable ? ».
 
 Ce n’est pas la même question.
 
@@ -34,7 +34,7 @@ Dans le dépôt Let Books, cela signifie généralement :
 - `README.md` pour la présentation de l’état actuel
 - la documentation pertinente sous `docs/` pour la publication, la vérification ou les consignes de flux de travail
 
-Sans cette étape, la revue devient facilement subjective et locale.
+Sans cette étape, la revue devient facilement subjective et trop locale.
 
 ## Relire dans le bon ordre
 
@@ -150,7 +150,7 @@ Ces questions sont suffisamment précises pour guider la revue, ce qui est exact
 
 La revue assistée par IA ne consiste pas à vérifier si l’assistant a produit quelque chose d’impressionnant. Elle consiste à vérifier si le résultat appartient toujours au produit visé.
 
-La meilleure question de revue n’est généralement pas « Est-ce que cela fonctionne ? ». C’est « Est-ce que cela correspond à la spécification, y compris aux parties qu’il est facile d’oublier ? ».
+La meilleure question de revue n’est généralement pas « Est-ce que cela fonctionne ? », mais « Est-ce que cela correspond à la spécification, y compris dans les parties qu’il est facile d’oublier ? ».
 
 ## Lectures complémentaires
 

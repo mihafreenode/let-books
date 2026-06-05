@@ -11,13 +11,13 @@ topics:
 
 ## Riepilogo
 
-Questa guida spiega come rivedere un'implementazione assistita dall'IA verificandola rispetto alla specifica di prodotto, alle regole del flusso di lavoro, alla documentazione e alle aspettative di validazione, invece di giudicare solo se l'output appare curato o tecnicamente plausibile.
+Questa guida spiega come rivedere un'implementazione assistita dall'IA verificandola rispetto alla specifica di prodotto, alle regole del flusso di lavoro, alla documentazione e alle aspettative di validazione, invece di giudicare solo se il risultato appare curato o tecnicamente plausibile.
 
 ## Perché conta
 
 L'IA può produrre molto rapidamente codice, testo, test e modifiche di interfaccia che sembrano complete.
 
-Questa velocità crea un rischio di revisione: i revisori possono passare inconsciamente dal chiedersi "È il comportamento di prodotto corretto?" al chiedersi "Sembra ragionevole?"
+Questa velocità crea un rischio nella revisione: chi rilegge può passare inconsciamente dal chiedersi "È il comportamento di prodotto corretto?" al chiedersi "Sembra ragionevole?"
 
 Non sono la stessa domanda.
 
@@ -34,7 +34,7 @@ Nel repository Let Books questo di solito significa:
 - `README.md` per la descrizione dello stato attuale
 - documentazione rilevante sotto `docs/` per linee guida di pubblicazione, verifica o flusso di lavoro
 
-Senza questo passaggio, la revisione diventa facilmente soggettiva e locale.
+Senza questo passaggio, la revisione diventa facilmente soggettiva e troppo legata al contesto immediato.
 
 ## Rivedi nell'ordine giusto
 
@@ -150,7 +150,7 @@ Queste domande sono abbastanza specifiche da guidare la revisione, che è esatta
 
 La revisione del lavoro assistito dall'IA non consiste nel controllare se l'assistente ha prodotto qualcosa di impressionante. Consiste nel controllare se l'output appartiene ancora al prodotto previsto.
 
-La migliore domanda di revisione di solito non è "Funziona?" ma "Corrisponde alla specifica, comprese le parti facili da dimenticare?"
+La domanda di revisione più utile di solito non è "Funziona?", ma "Corrisponde alla specifica, comprese le parti che è facile dimenticare?"
 
 ## Ulteriori letture
 

@@ -36,7 +36,7 @@ Utilisez les démos pour :
 - tester des hypothèses avec des utilisateurs
 - soutenir l'explication auprès des parties prenantes
 
-N'utilisez pas les démos comme remplacements silencieux des décisions produit.
+N'utilisez pas les démos comme substituts silencieux aux décisions produit.
 
 ## Quand la démo doit guider
 
