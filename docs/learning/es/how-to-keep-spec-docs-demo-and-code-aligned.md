@@ -129,7 +129,7 @@ El repositorio ya contiene una cadena de alineación útil:
 - `docs/` para reglas de conocimiento y publicación
 - documentación de despliegue y desarrollo para la guía de validación
 
-Esa estructura debe usarse de forma intencionada siempre que se añadan nuevas funciones, documentación o explicaciones públicas.
+Esa estructura debe usarse de forma deliberada cada vez que se añadan nuevas funciones, documentación o explicaciones públicas.
 
 ## Lista de comprobación
 

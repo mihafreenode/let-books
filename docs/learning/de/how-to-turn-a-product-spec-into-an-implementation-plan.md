@@ -17,7 +17,7 @@ Dieser Leitfaden erklärt, wie sich eine Produktspezifikation in einen konkreten
 
 Eine Spezifikation beschreibt, was das Produkt tun soll und warum es das tun soll.
 
-Ein Implementierungsplan beschreibt, wie das Team dieses Verhalten in einer Reihenfolge liefern wird, die überprüfbar, testbar und realistisch ist.
+Ein Implementierungsplan beschreibt, wie das Team dieses Verhalten in einer Reihenfolge umsetzt, die überprüfbar, testbar und realistisch ist.
 
 Viele Projekte scheitern in der Lücke zwischen diesen beiden Dokumenten.
 
@@ -153,7 +153,7 @@ Das ist deutlich stärker als eine flache Liste wie:
 
 ## Let-Books-Beispiel
 
-Das Repository enthält bereits die Roh-Eingaben für diesen Planungsstil:
+Das Repository enthält bereits die grundlegenden Bausteine für diesen Planungsstil:
 
 - `AGENTS.md` für Produktzweck, Arbeitsabläufe und Akzeptanzkriterien
 - `AGENTS-Implementation.md` für Delivery-Einschränkungen und Repository-Regeln

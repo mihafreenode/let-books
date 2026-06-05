@@ -15,7 +15,7 @@ Ce guide explique comment transformer une spécification produit en plan d’imp
 
 ## Pourquoi cette étape compte
 
-Une spécification décrit ce que le produit doit faire et pourquoi il doit le faire.
+Une spécification décrit ce que le produit doit faire et pour quelle raison.
 
 Un plan d’implémentation décrit comment l’équipe livrera ce comportement dans une séquence qui peut être revue, testée et réalisée de manière réaliste.
 
@@ -125,7 +125,7 @@ L’IA peut aider à produire rapidement un plan d’implémentation, mais elle 
 - des hypothèses cachées sur la disponibilité du backend ou la qualité des données
 - des plans qui semblent complets mais ignorent la documentation et la vérification
 
-Lorsque vous relisez un plan d’implémentation généré par IA, demandez-vous s’il reflète encore le véritable ensemble de règles produit.
+Lorsque vous relisez un plan d’implémentation généré par IA, demandez-vous s’il reflète encore le véritable ensemble de règles du produit.
 
 ## Un modèle pratique de planification
 
@@ -160,7 +160,7 @@ Le dépôt contient déjà les entrées brutes pour ce style de planification :
 - `README.md` pour les attentes sur l’état actuel
 - `docs/Development.md` et `docs/Deployment.md` pour le contexte de validation et de livraison
 
-Cela signifie que le plan d’implémentation n’a pas besoin d’inventer sa propre logique. Il doit traduire ces couches en une séquence de livraison cadrée.
+Cela signifie que le plan d’implémentation n’a pas à inventer sa propre logique. Il doit traduire ces couches en une séquence de livraison bien cadrée.
 
 ## Liste de contrôle de revue
 

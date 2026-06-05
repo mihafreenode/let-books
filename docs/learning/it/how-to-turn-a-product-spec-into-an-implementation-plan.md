@@ -17,7 +17,7 @@ Questa guida spiega come trasformare una specifica di prodotto in un piano di im
 
 Una specifica descrive che cosa il prodotto dovrebbe fare e perché dovrebbe farlo.
 
-Un piano di implementazione descrive come il team consegnerà quel comportamento in una sequenza che sia rivedibile, verificabile e realistica.
+Un piano di implementazione descrive come il team realizzerà quel comportamento in una sequenza che sia rivedibile, verificabile e realistica.
 
 Molti progetti falliscono proprio nel divario tra questi due documenti.
 
@@ -117,7 +117,7 @@ Questo metodo mantiene il piano legato a risultati osservabili invece che a disc
 
 ## Pianificazione assistita dall'IA: cosa osservare
 
-L'IA può aiutare a produrre rapidamente un piano di implementazione, ma spesso introduce problemi ricorrenti:
+L'IA può aiutare a preparare rapidamente un piano di implementazione, ma spesso introduce problemi ricorrenti:
 
 - astrazioni aggiuntive senza bisogno di prodotto
 - attività raggruppate per tecnologia invece che per flusso di lavoro
@@ -160,7 +160,7 @@ Il repository contiene già gli input grezzi per questo stile di pianificazione:
 - `README.md` per le aspettative sullo stato attuale
 - `docs/Development.md` e `docs/Deployment.md` per il contesto di validazione e consegna
 
-Questo significa che il piano di implementazione non deve inventare una propria logica. Dovrebbe tradurre questi livelli in una sequenza di consegna delimitata.
+Questo significa che il piano di implementazione non deve inventarsi una logica propria. Dovrebbe tradurre questi livelli in una sequenza di consegna ben delimitata.
 
 ## Checklist di revisione
 
