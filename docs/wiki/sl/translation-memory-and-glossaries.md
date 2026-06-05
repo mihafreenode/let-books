@@ -1,7 +1,7 @@
 ---
 title: "Pomnilnik prevodov in glosarji"
 summary: >-
-  Sistemi pomnilnika prevodov in glosarja izboljšajo doslednost, znižajo stroške pregleda in ohranijo institucionalne jezikovne odločitve.
+  Pomnilnik prevodov in glosarji izboljšajo doslednost, znižajo stroške pregleda in ohranijo institucionalne jezikovne odločitve.
 topics:
   - terminology
   - localization
@@ -11,13 +11,13 @@ topics:
 
 ## Povzetek
 
-Sistemi pomnilnika prevodov in glosarja izboljšajo doslednost, znižajo stroške pregleda in ohranijo institucionalne jezikovne odločitve.
+Pomnilnik prevodov in glosarji izboljšajo doslednost, znižajo stroške pregleda in ohranijo institucionalne jezikovne odločitve.
 
 ## Zakaj so pomembni
 
 - ponavljajoče se fraze ostanejo stabilne
 - manjše ekipe porabijo manj truda
-- tehnični besednjak postane učljiv
+- tehnično izrazje postane lažje dosledno uporabljati
 - nesoglasja recenzentov se sčasoma zmanjšajo
 
 ## Sorodne strani

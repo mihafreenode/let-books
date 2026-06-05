@@ -1,7 +1,7 @@
 ---
 title: "Memorija prevoda i pojmovnici"
 summary: >-
-  Sistemi prevodilačke memorije i glosara poboljšavaju konzistentnost, smanjuju troškove pregleda i čuvaju institucionalne jezičke odluke.
+  Prevodilačka memorija i pojmovnici poboljšavaju dosljednost, smanjuju troškove pregleda i čuvaju institucionalne jezičke odluke.
 topics:
   - terminology
   - localization
@@ -11,13 +11,13 @@ topics:
 
 ## Rezime
 
-Sistemi prevodilačke memorije i glosara poboljšavaju konzistentnost, smanjuju troškove pregleda i čuvaju institucionalne jezičke odluke.
+Prevodilačka memorija i pojmovnici poboljšavaju dosljednost, smanjuju troškove pregleda i čuvaju institucionalne jezičke odluke.
 
 ## Zašto su važni
 
 - ponovljene fraze ostaju stabilne
 - manji timovi troše manje truda
-- tehnički vokabular postaje poučan
+- tehničko nazivlje postaje lakše dosljedno primjenjivati
 - neslaganja recenzenta se vremenom smanjuju
 
 ## Povezane stranice

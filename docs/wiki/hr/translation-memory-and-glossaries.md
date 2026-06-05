@@ -1,7 +1,7 @@
 ---
 title: "Prijevodna memorija i glosari"
 summary: >-
-  Sustavi prijevodne memorije i glosara poboljšavaju dosljednost, smanjuju troškove pregleda i čuvaju institucionalne jezične odluke.
+  Prijevodna memorija i glosari poboljšavaju dosljednost, smanjuju troškove pregleda i čuvaju institucionalne jezične odluke.
 topics:
   - terminology
   - localization
@@ -11,13 +11,13 @@ topics:
 
 ## Sažetak
 
-Sustavi prijevodne memorije i glosara poboljšavaju dosljednost, smanjuju troškove pregleda i čuvaju institucionalne jezične odluke.
+Prijevodna memorija i glosari poboljšavaju dosljednost, smanjuju troškove pregleda i čuvaju institucionalne jezične odluke.
 
 ## Zašto su važni
 
 - fraze koje se ponavljaju ostaju stabilne
 - manji timovi troše manje truda
-- tehnički vokabular postaje poučljiv
+- tehničko nazivlje postaje lakše dosljedno primjenjivati
 - neslaganja recenzenta s vremenom se smanjuju
 
 ## Povezane stranice

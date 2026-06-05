@@ -1,7 +1,7 @@
 ---
 title: "Model zrelosti lokalizacije"
 summary: >-
-  Model zrelosti lokalizacije določa stopnje kakovosti, tako da se lahko pokritost prevodov sčasoma pošteno izboljša.
+  Model zrelosti lokalizacije določa stopnje kakovosti, da je mogoče pokritost prevodov skozi čas izboljševati na realen in pregleden način.
 topics:
   - localization
   - translation-quality
@@ -11,21 +11,21 @@ topics:
 
 ## Povzetek
 
-Model zrelosti lokalizacije določa stopnje kakovosti, tako da se lahko pokritost prevodov sčasoma pošteno izboljša.
+Model zrelosti lokalizacije določa stopnje kakovosti, da je mogoče pokritost prevodov skozi čas izboljševati na realen in pregleden način.
 
 ## Ravni
 
 - Raven 0: samo izvorni jezik
 - Raven 1: strojno preveden osnutek
-- 2. stopnja: preverjeno črkovanje
-- 3. stopnja: samodejno potrjeno QA
-- 4. stopnja: pregledana skupnost
-- 5. stopnja: pregledan materni govorec
-- 6. stopnja: strokovno pregledano
+- 2. stopnja: preverjen pravopis
+- 3. stopnja: samodejno potrjen QA
+- 4. stopnja: pregled skupnosti
+- 5. stopnja: pregled maternega govorca
+- 6. stopnja: strokovni pregled
 
 ## Zakaj je to pomembno
 
-Model pomaga projektom, da se izognejo napačni izbiri med popolno pariteto in nikakršno lokalizacijo.
+Model pomaga projektom, da se izognejo lažni izbiri med popolno pariteto in popolno odsotnostjo lokalizacije.
 
 ## Sorodne strani
 

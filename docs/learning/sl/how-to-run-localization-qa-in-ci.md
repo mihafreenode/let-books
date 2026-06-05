@@ -1,7 +1,7 @@
 ---
 title: "Kako izvajati lokalizacijski QA v CI"
 summary: >-
-  Ta vodič opisuje, kako ponavljajoča se pričakovanja glede pregleda lokalizacije pretvoriti v ponovljiva preverjanja v CI.
+  Ta vodič pojasnjuje, kako ponavljajoča se pričakovanja pri pregledu lokalizacije pretvoriti v ponovljiva preverjanja v CI.
 topics:
   - qa
   - ci-cd
@@ -11,14 +11,14 @@ topics:
 
 ## Povzetek
 
-Ta vodič opisuje, kako ponavljajoča se pričakovanja glede pregleda lokalizacije pretvoriti v ponovljiva preverjanja v CI.
+Ta vodič pojasnjuje, kako ponavljajoča se pričakovanja pri pregledu lokalizacije pretvoriti v ponovljiva preverjanja v CI.
 
 ## Začni s stabilnimi preverjanji
 
 - manjkajoče datoteke
 - manjkajoči prevodi
 - pokvarjene povezave
-- neujemanja zaradi nadomestnega besedila
+- neujemanja v nadomestnem besedilu
 - napačno oblikovani metapodatki
 
 ## Težja preverjanja dodaj pozneje
