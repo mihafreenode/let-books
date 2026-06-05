@@ -25,6 +25,8 @@ El patrón subyacente sigue siendo sólido incluso cuando cambian los productos 
 
 Esta página se centra en esos principios estables y no en una herramienta concreta de IA.
 
+> **Nota del autor / modelo mental útil:** Una forma práctica de pensar la IA es verla como un oráculo moderno. En informática, un oráculo es un sistema hipotético que responde a una clase de preguntas. En criptografía, un oráculo puede consultarse sin exponer su funcionamiento interno. Entran preguntas, salen respuestas y el interior permanece oculto. Precisamente por eso importan la confianza, la validación, la gobernanza y la responsabilidad.
+
 ## De la IA interactiva a los flujos de trabajo agénticos
 
 Muchas personas conocen primero el trabajo asistido por IA a través de sistemas interactivos basados en la web. Ese es un punto de partida razonable.
@@ -270,10 +272,26 @@ El trabajo de conocimiento asistido por IA se vuelve más fiable cuando objetivo
 
 Ese principio se aplica al software, pero también a la investigación, la docencia, la documentación, el trabajo de políticas, la redacción legal y otros procesos serios de escritura y revisión. Las herramientas cambiarán. La necesidad de especificaciones, contexto revisable, validación y límites de confianza gobernados probablemente seguirá existiendo.
 
+## Cómo trabajar con la IA
+
+- trata la IA como una colaboradora capaz, no como una autoridad
+- verifica las afirmaciones importantes
+- preserva el contexto importante
+- deja por escrito los objetivos y las suposiciones
+- revisa los resultados
+- mantén la responsabilidad de las decisiones en manos humanas
+
+## Material de apoyo
+
+El material de apoyo en `docs/supporting-material/spec_driven_workflow_thread.html` documenta una parte de la discusión y del proceso de refinamiento detrás de este artículo. Es un artefacto de flujo de trabajo, no la fuente única de todas las ideas del artículo.
+
+La transcripción incluye ideas incompletas, opiniones cambiantes, propuestas descartadas, redacción todavía tosca, erratas o errores de autocorrección y otras señales de refinamiento iterativo. Por eso, las conclusiones del artículo y las reflexiones del autor no son lo mismo que la transcripción.
+
+Esta página también incorpora síntesis posterior, edición, experiencia de implementación, revisiones de localización, trabajo de validación y reflexión personal. Algunas conclusiones surgieron después de que terminara la discusión registrada.
+
 ## Páginas relacionadas
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `../../supporting-material/spec_driven_workflow_thread.html`

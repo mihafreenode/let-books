@@ -25,6 +25,8 @@ The underlying pattern is durable even as individual AI products change:
 
 This page focuses on those stable principles rather than on any specific AI tool.
 
+> **Author note / useful mental model:** One practical way to think about AI is as a modern oracle. In computer science, an oracle is a hypothetical system that answers a class of questions. In cryptography, an oracle can be queried without exposing its internal operation. Questions go in, answers come out, and the internals remain hidden. That is why trust, validation, governance, and accountability matter.
+
 ## From Interactive AI to Agentic Workflows
 
 Many people first encounter AI-assisted work through interactive web-based systems. That is a reasonable starting point.
@@ -270,10 +272,26 @@ AI-assisted knowledge work becomes more reliable when goals, constraints, standa
 
 That principle applies to software, but it also applies to research, teaching, documentation, policy work, legal drafting, and other serious writing and review processes. Tools will change. The need for specifications, reviewable context, validation, and governed trust boundaries is likely to remain.
 
+## How to work with AI
+
+- treat AI as a capable collaborator, not an authority
+- verify important claims
+- preserve important context
+- write down goals and assumptions
+- review outputs
+- keep responsibility for decisions with humans
+
+## Supporting material
+
+The supporting material at `docs/supporting-material/spec_driven_workflow_thread.html` documents part of the discussion and refinement process behind this article. It is a workflow artifact, not the single source of every idea in the article.
+
+The transcript includes incomplete ideas, changing opinions, discarded proposals, rough wording, typos or autocorrect mistakes, and other signs of iterative refinement. The article conclusions and author reflections are not identical to the transcript.
+
+This page also includes later synthesis, editing, implementation experience, localization reviews, validation work, and personal reflection. Some conclusions emerged after the recorded discussion ended.
+
 ## Related Pages
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `docs/supporting-material/spec_driven_workflow_thread.html`

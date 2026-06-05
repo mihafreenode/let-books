@@ -25,6 +25,8 @@ Modeli themelor mbetet i qëndrueshëm edhe kur produktet individuale të AI ndr
 
 Kjo faqe përqendrohet te këto parime të qëndrueshme dhe jo te ndonjë mjet i veçantë AI.
 
+> **Shënim i autorit / model i dobishëm mendor:** Një mënyrë praktike për ta menduar AI-n është si një orakull modern. Në shkencat kompjuterike, një oracle është një sistem hipotetik që u përgjigjet një klase pyetjesh. Në kriptografi, një oracle mund të pyetet pa zbuluar funksionimin e tij të brendshëm. Pyetjet hyjnë, përgjigjet dalin dhe brendësia mbetet e fshehur. Pikërisht për këtë arsye kanë rëndësi besimi, verifikimi, qeverisja dhe përgjegjshmëria.
+
 ## Nga AI interaktiv te rrjedhat agjentike të punës
 
 Shumë njerëz e hasin për herë të parë punën e ndihmuar nga AI përmes sistemeve interaktive në ueb. Ky është një fillim i arsyeshëm.
@@ -270,10 +272,26 @@ Puna e dijes e ndihmuar nga AI bëhet më e besueshme kur qëllimet, kufizimet, 
 
 Ky parim vlen për softuerin, por vlen edhe për kërkimin, mësimdhënien, dokumentacionin, punën mbi politikat, hartimin ligjor dhe procese të tjera serioze të shkrimit dhe rishikimit. Mjetet do të ndryshojnë. Nevoja për specifikime, kontekst të rishikueshëm, validim dhe kufij të qeverisur besimi ka shumë gjasa të mbetet.
 
+## Si të punohet me AI-n
+
+- trajtojeni AI-n si një bashkëpunëtor të aftë, jo si autoritet
+- verifikoni pretendimet e rëndësishme
+- ruani kontekstin e rëndësishëm
+- shkruani qëllimet dhe supozimet
+- rishikoni rezultatet
+- mbajeni përgjegjësinë për vendimet te njerëzit
+
+## Material mbështetës
+
+Materiali mbështetës te `docs/supporting-material/spec_driven_workflow_thread.html` dokumenton një pjesë të diskutimit dhe të procesit të përpunimit pas këtij artikulli. Ai është një artefakt i rrjedhës së punës, jo burimi i vetëm i çdo ideje në artikull.
+
+Transkripti përmban ide të paplota, mendime që ndryshojnë, propozime të hedhura poshtë, formulime të papërpunuara, gabime shtypi ose gabime nga autocorrect-i dhe shenja të tjera të përpunimit iterativ. Prandaj përfundimet e artikullit dhe reflektimet e autorit nuk janë të njëjta me transkriptin.
+
+Kjo faqe përfshin gjithashtu sintezë të mëvonshme, redaktim, përvojë nga implementimi, rishikime lokalizimi, punë validimi dhe reflektim personal. Disa përfundime dolën vetëm pasi përfundoi diskutimi i regjistruar.
+
 ## Faqe të lidhura
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `../../supporting-material/spec_driven_workflow_thread.html`

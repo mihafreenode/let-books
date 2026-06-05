@@ -25,6 +25,8 @@ Lo schema di fondo resta valido anche quando cambiano i singoli prodotti di AI:
 
 Questa pagina si concentra su questi principi stabili piu che su uno specifico strumento di AI.
 
+> **Nota dell'autore / modello mentale utile:** Un modo pratico di pensare all'AI e vederla come un moderno oracolo. In informatica, un oracolo e un sistema ipotetico che risponde a una classe di domande. In crittografia, un oracolo puo essere interrogato senza esporre il suo funzionamento interno. Le domande entrano, le risposte escono e l'interno resta nascosto. Ecco perche contano fiducia, validazione, governance e responsabilita.
+
 ## Dall'AI interattiva ai workflow agentici
 
 Molte persone incontrano per la prima volta il lavoro assistito dall'AI tramite sistemi interattivi basati sul web. E' un punto di partenza ragionevole.
@@ -270,10 +272,26 @@ Il lavoro della conoscenza assistito dall'AI diventa piu affidabile quando obiet
 
 Questo principio vale per il software, ma anche per ricerca, insegnamento, documentazione, lavoro sulle policy, redazione legale e altri seri processi di scrittura e revisione. Gli strumenti cambieranno. E' probabile che resti la necessita di specifiche, contesto revisionabile, validazione e confini di fiducia governati.
 
+## Come lavorare con l'AI
+
+- trattare l'AI come una collaboratrice capace, non come un'autorita
+- verificare le affermazioni importanti
+- preservare il contesto importante
+- mettere per iscritto obiettivi e ipotesi
+- rivedere gli output
+- mantenere la responsabilita delle decisioni in capo agli esseri umani
+
+## Materiale di supporto
+
+Il materiale di supporto in `docs/supporting-material/spec_driven_workflow_thread.html` documenta una parte della discussione e del processo di affinamento dietro questo articolo. E un artefatto di workflow, non la fonte unica di ogni idea presente nell'articolo.
+
+La trascrizione contiene idee incomplete, opinioni che cambiano, proposte scartate, formulazioni grezze, refusi o errori di autocorrezione e altri segni di affinamento iterativo. Le conclusioni dell'articolo e le riflessioni dell'autore quindi non coincidono con la trascrizione.
+
+Questa pagina include anche sintesi successive, editing, esperienza di implementazione, revisioni di localizzazione, lavoro di validazione e riflessione personale. Alcune conclusioni sono emerse solo dopo la fine della discussione registrata.
+
 ## Pagine correlate
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `../supporting-material/spec_driven_workflow_thread.html`

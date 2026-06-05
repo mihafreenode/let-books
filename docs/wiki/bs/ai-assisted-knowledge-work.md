@@ -25,6 +25,8 @@ Osnovni obrazac ostaje koristan čak i kada se pojedini AI-proizvodi mijenjaju:
 
 Ova stranica fokusira se na ta stabilna načela, a ne na bilo koji pojedinačni AI-alat.
 
+> **Autorska napomena / koristan mentalni model:** Jedan praktičan način razmišljanja o AI-ju jeste da ga posmatramo kao savremeno proročište. U računarstvu je oracle hipotetički sistem koji odgovara na određenu klasu pitanja. U kriptografiji se oracle može upitati bez otkrivanja njegovog unutrašnjeg rada. Pitanja ulaze, odgovori izlaze, a unutrašnjost ostaje skrivena. Zato su povjerenje, provjera, upravljanje i odgovornost važni.
+
 ## Od interaktivnog AI-ja do agentnih radnih tokova
 
 Mnogi ljudi se s AI-potpomognutim radom prvi put susreću kroz interaktivne web sisteme. To je razuman početak.
@@ -270,10 +272,26 @@ AI-potpomognut rad sa znanjem postaje pouzdaniji kada su ciljevi, ograničenja, 
 
 To načelo važi za softver, ali i za istraživanje, podučavanje, dokumentaciju, rad na politikama, pravno pisanje i druge ozbiljne procese pisanja i pregleda. Alati će se mijenjati. Potreba za specifikacijama, preglednim kontekstom, validacijom i upravljanim granicama povjerenja vjerovatno će ostati.
 
+## Kako raditi s AI-jem
+
+- tretirajte AI kao sposobnog saradnika, a ne kao autoritet
+- provjerite važne tvrdnje
+- sačuvajte važan kontekst
+- zapišite ciljeve i pretpostavke
+- pregledajte rezultate
+- odgovornost za odluke zadržite kod ljudi
+
+## Popratni materijal
+
+Popratni materijal na `docs/supporting-material/spec_driven_workflow_thread.html` dokumentira dio rasprave i procesa dorade koji stoji iza ovog članka. To je artefakt radnog toka, a ne jedini izvor svake ideje u članku.
+
+Transkript sadrži nedovršene ideje, promjenjiva mišljenja, odbačene prijedloge, grube formulacije, tipfelere ili greške autokorekcije te druge tragove iterativne dorade. Zaključci članka i autorska razmišljanja zato nisu isto što i transkript.
+
+Ova stranica uključuje i kasniju sintezu, uredničko dotjerivanje, iskustvo iz implementacije, lokalizacijske preglede, validacijski rad i lično promišljanje. Neki zaključci pojavili su se tek nakon završetka zabilježene rasprave.
+
 ## Povezane stranice
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `../../supporting-material/spec_driven_workflow_thread.html`

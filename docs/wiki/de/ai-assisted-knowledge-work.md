@@ -25,6 +25,8 @@ Das zugrunde liegende Muster bleibt stabil, auch wenn sich einzelne KI-Produkte 
 
 Diese Seite konzentriert sich auf diese stabilen Prinzipien und nicht auf ein bestimmtes KI-Werkzeug.
 
+> **Persönliche Notiz / hilfreiches Denkmodell:** Eine praktische Art, über KI nachzudenken, ist, sie als modernes Orakel zu sehen. In der Informatik ist ein Orakel ein hypothetisches System, das eine Klasse von Fragen beantwortet. In der Kryptografie kann ein Orakel abgefragt werden, ohne seine interne Arbeitsweise offenzulegen. Fragen gehen hinein, Antworten kommen heraus, und das Innere bleibt verborgen. Genau deshalb sind Vertrauen, Validierung, Governance und Verantwortlichkeit wichtig.
+
 ## Von interaktiver KI zu agentischen Workflows
 
 Viele Menschen begegnen KI-gestützter Arbeit zuerst über interaktive webbasierte Systeme. Das ist ein vernünftiger Ausgangspunkt.
@@ -270,10 +272,26 @@ KI-gestützte Wissensarbeit wird verlässlicher, wenn Ziele, Grenzen, Standards,
 
 Dieses Prinzip gilt für Software, aber ebenso für Forschung, Lehre, Dokumentation, Policy-Arbeit, juristisches Schreiben und andere ernsthafte Schreib- und Review-Prozesse. Werkzeuge werden sich ändern. Der Bedarf an Spezifikationen, reviewbarem Kontext, Validierung und gesteuerten Vertrauensgrenzen wird voraussichtlich bestehen bleiben.
 
+## Wie man mit KI arbeitet
+
+- KI als fähige Kollaborationspartnerin sehen, nicht als Autorität
+- wichtige Aussagen überprüfen
+- wichtigen Kontext bewahren
+- Ziele und Annahmen festhalten
+- Ergebnisse prüfen
+- die Verantwortung für Entscheidungen bei Menschen belassen
+
+## Begleitmaterial
+
+Das Begleitmaterial unter `docs/supporting-material/spec_driven_workflow_thread.html` dokumentiert einen Teil der Diskussion und des Verfeinerungsprozesses hinter diesem Artikel. Es ist ein Workflow-Artefakt, nicht die einzige Quelle aller Gedanken im Artikel.
+
+Das Transkript enthält unvollständige Ideen, wechselnde Ansichten, verworfene Vorschläge, rohe Formulierungen, Tippfehler oder Autokorrekturfehler und andere Spuren iterativer Verfeinerung. Die Schlussfolgerungen des Artikels und die persönlichen Reflexionen des Autors sind daher nicht identisch mit dem Transkript.
+
+Diese Seite enthält außerdem spätere Synthese, redaktionelle Überarbeitung, Umsetzungserfahrung, Lokalisierungsreviews, Validierungsarbeit und persönliche Reflexion. Einige Schlussfolgerungen entstanden erst nach dem Ende der aufgezeichneten Diskussion.
+
 ## Verwandte Seiten
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `../../supporting-material/spec_driven_workflow_thread.html`

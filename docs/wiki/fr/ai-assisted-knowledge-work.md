@@ -25,6 +25,8 @@ Le modèle de fond reste durable même lorsque les produits d'IA individuels cha
 
 Cette page se concentre sur ces principes stables plutôt que sur un outil d'IA particulier.
 
+> **Note de l'auteur / modèle mental utile:** Une manière pratique de penser l'IA est de la voir comme un oracle moderne. En informatique, un oracle est un système hypothétique qui répond à une classe de questions. En cryptographie, un oracle peut être interrogé sans exposer son fonctionnement interne. Les questions entrent, les réponses sortent et l'intérieur reste caché. C'est précisément pour cela que la confiance, la validation, la gouvernance et la responsabilité comptent.
+
 ## De l'IA interactive aux workflows agentiques
 
 Beaucoup de personnes découvrent d'abord le travail assisté par l'IA via des systèmes interactifs sur le web. C'est un point de départ raisonnable.
@@ -270,10 +272,26 @@ Le travail de connaissance assisté par l'IA devient plus fiable lorsque les obj
 
 Ce principe s'applique au logiciel, mais aussi à la recherche, à l'enseignement, à la documentation, au travail sur les politiques, à la rédaction juridique et à d'autres processus sérieux de rédaction et de revue. Les outils changeront. Le besoin de spécifications, de contexte révisable, de validation et de frontières de confiance gouvernées a de fortes chances de rester.
 
+## Comment travailler avec l'IA
+
+- traiter l'IA comme une collaboratrice capable, pas comme une autorité
+- vérifier les affirmations importantes
+- préserver le contexte important
+- consigner les objectifs et les hypothèses
+- relire les résultats
+- laisser aux humains la responsabilité des décisions
+
+## Matériel d'appui
+
+Le matériel d'appui disponible à `docs/supporting-material/spec_driven_workflow_thread.html` documente une partie de la discussion et du processus d'affinement derrière cet article. C'est un artefact de workflow, et non la source unique de chaque idée présente dans l'article.
+
+La transcription contient des idées incomplètes, des opinions changeantes, des propositions abandonnées, des formulations encore brutes, des fautes de frappe ou d'autocorrection, ainsi que d'autres traces d'un affinement itératif. Les conclusions de l'article et les réflexions de l'auteur ne se confondent donc pas avec la transcription.
+
+Cette page inclut aussi une synthèse ultérieure, de l'édition, de l'expérience d'implémentation, des revues de localisation, du travail de validation et une réflexion personnelle. Certaines conclusions ont émergé après la fin de la discussion enregistrée.
+
 ## Pages liées
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `../../supporting-material/spec_driven_workflow_thread.html`

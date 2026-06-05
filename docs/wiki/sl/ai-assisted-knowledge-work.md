@@ -25,6 +25,8 @@ Osnovni vzorec ostaja uporaben tudi takrat, ko se posamezni AI-izdelki spreminja
 
 Ta stran se osredotoča na ta stabilna načela, ne na katerokoli posamezno AI-orodje.
 
+> **Avtorjeva opomba / uporaben miselni model:** Eden od praktičnih načinov razumevanja AI je, da nanj gledamo kot na sodoben orakelj. V računalništvu je orakelj hipotetičen sistem, ki odgovarja na določen razred vprašanj. V kriptografiji lahko orakelj poizvedujemo, ne da bi pri tem razkril svoje notranje delovanje. Vprašanja gredo noter, odgovori pridejo ven, notranjost pa ostane skrita. Prav zato so pomembni zaupanje, validacija, upravljanje in odgovornost.
+
 ## Od interaktivnega AI do agentskih delovnih tokov
 
 Veliko ljudi se z AI-podprtim delom prvič sreča prek interaktivnih spletnih sistemov. To je razumen začetek.
@@ -270,10 +272,26 @@ AI-podprto delo z znanjem postane zanesljivejše, ko so cilji, omejitve, standar
 
 To načelo velja za programsko opremo, velja pa tudi za raziskovanje, poučevanje, dokumentacijo, delo na politikah, pravno pisanje in druge resne procese pisanja ter pregleda. Orodja se bodo spreminjala. Potreba po specifikacijah, pregledljivem kontekstu, validaciji in upravljanih mejah zaupanja bo verjetno ostala.
 
+## Kako delati z AI
+
+- AI obravnavajte kot sposobnega sodelavca, ne kot avtoriteto
+- pomembne trditve preverite
+- ohranite pomemben kontekst
+- zapišite cilje in predpostavke
+- rezultate preglejte
+- odgovornost za odločitve naj ostane pri ljudeh
+
+## Podporno gradivo
+
+Podporno gradivo na `docs/supporting-material/spec_driven_workflow_thread.html` dokumentira del razprave in procesa izostrovanja, ki stoji za tem člankom. Gre za artefakt delovnega toka, ne pa za edini vir vseh idej v članku.
+
+Prepis vsebuje nepopolne ideje, spreminjajoča se stališča, opuščene predloge, grobo oblikovane povedi, tipkarske ali samodejno popravljene napake ter druge sledi iterativnega izboljševanja. Sklepi članka in avtorjevi premisleki zato niso enaki prepisu.
+
+Ta stran vključuje tudi poznejšo sintezo, uredniško obdelavo, izkušnje iz implementacije, lokalizacijske preglede, validacijsko delo in osebni razmislek. Nekateri zaključki so se izoblikovali šele po koncu posnete razprave.
+
 ## Povezane strani
 
 - `spec-driven-development.md`
 - `markdown-in-product-development.md`
 - `validation-layers.md`
 - `documentation-traceability.md`
-- `../../supporting-material/spec_driven_workflow_thread.html`
