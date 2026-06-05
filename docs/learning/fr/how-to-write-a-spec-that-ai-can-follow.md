@@ -87,7 +87,7 @@ Exemple :
 3. l’utilisateur peut enregistrer même si aucun fournisseur de métadonnées ne répond
 4. le livre apparaît dans l’emplacement sélectionné
 
-Les critères d’acceptation donnent aux personnes qui relisent et aux systèmes IA une cible stable.
+Les critères d’acceptation donnent aux personnes qui relisent et aux systèmes d’IA une cible stable.
 
 ## Ce qu’il faut éviter
 

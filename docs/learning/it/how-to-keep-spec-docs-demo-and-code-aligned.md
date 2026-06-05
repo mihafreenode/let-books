@@ -11,7 +11,7 @@ topics:
 
 ## Riepilogo
 
-Questa guida descrive un flusso di lavoro pratico per mantenere allineati nel tempo la specifica di prodotto, la documentazione, il comportamento della demo e il lavoro di implementazione.
+Questa guida descrive un flusso di lavoro pratico per mantenere nel tempo allineati la specifica di prodotto, la documentazione, il comportamento della demo e il lavoro di implementazione.
 
 ## Il problema centrale
 
@@ -129,7 +129,7 @@ Il repository contiene già una utile catena di allineamento:
 - `docs/` per regole di conoscenza e pubblicazione
 - documentazione di sviluppo e distribuzione per la guida sulla validazione
 
-Questa struttura dovrebbe essere usata intenzionalmente ogni volta che vengono aggiunte nuove funzionalità, documenti o spiegazioni pubbliche.
+Questa struttura andrebbe usata in modo intenzionale ogni volta che si aggiungono nuove funzionalità, documenti o spiegazioni pubbliche.
 
 ## Lista di controllo
 

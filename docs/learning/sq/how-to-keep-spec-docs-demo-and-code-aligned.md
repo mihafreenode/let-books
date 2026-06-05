@@ -11,7 +11,7 @@ topics:
 
 ## Përmbledhje
 
-Ky udhëzues përshkruan një rrjedhë pune praktike për të mbajtur të përafruara me kalimin e kohës specifikimin e produktit, dokumentacionin, sjelljen e demonstrimit dhe punën e implementimit.
+Ky udhëzues përshkruan një rrjedhë pune praktike për t'i mbajtur të përafruara me kalimin e kohës specifikimin e produktit, dokumentacionin, sjelljen e demonstrimit dhe punën e implementimit.
 
 ## Problemi kryesor
 

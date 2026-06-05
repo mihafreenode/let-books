@@ -1,7 +1,7 @@
 ---
 title: "Wie man eine Spezifikation schreibt, der KI folgen kann"
 summary: >-
-Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, damit eine KI-gestützte Implementierung an den tatsächlichen Produktzielen ausgerichtet bleibt, statt in generische Ergebnisse abzudriften.
+Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation so schreibt, dass eine KI-gestützte Implementierung an den tatsächlichen Produktzielen ausgerichtet bleibt, statt in generische Ergebnisse abzudriften.
 topics:
   - spec-writing
   - ai-assisted-delivery
@@ -87,7 +87,7 @@ Beispiel:
 3. Nutzer kann speichern, auch wenn kein Metadatenanbieter antwortet
 4. Buch erscheint am gewählten Ort
 
-Akzeptanzkriterien geben Reviewern und KI-Systemen ein stabiles Ziel.
+Akzeptanzkriterien geben Prüfenden und KI-Systemen ein stabiles Ziel.
 
 ## Was man vermeiden sollte
 

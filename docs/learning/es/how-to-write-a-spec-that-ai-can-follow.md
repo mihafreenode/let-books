@@ -40,7 +40,7 @@ Mejor:
 
 > Añadir un formulario de entrada rápida que permita a una persona donante catalogar una copia física de un libro en segundos mientras está de pie junto a una estantería o una caja.
 
-El propósito le dice a quien implementa qué debe optimizar.
+El propósito deja claro a quien implementa qué debe optimizar.
 
 ### 2. Límites de alcance
 

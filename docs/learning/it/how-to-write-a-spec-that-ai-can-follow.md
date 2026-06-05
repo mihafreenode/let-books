@@ -51,7 +51,7 @@ Esempio:
 - in ambito: foto della copertina, inserimento ISBN, posizione di archiviazione, salva e continua
 - fuori ambito: OCR, sincronizzazione cloud, flusso di revisione istituzionale
 
-Questo impedisce all'assistente di gonfiare un piccolo compito fino a trasformarlo in una mini-piattaforma.
+Questo evita che l'assistente trasformi inutilmente un piccolo compito in una mini-piattaforma.
 
 ### 3. Comportamento richiesto
 

@@ -24,7 +24,7 @@ Exemples :
 - le code implémente un raccourci pratique qui viole une règle produit
 - les contrôles de validation n’appliquent que la syntaxe, pas l’intention produit
 
-L’IA peut accélérer tout cela si le flux d’alignement est faible.
+L’IA peut encore accélérer tout cela si le flux d’alignement est faible.
 
 ## Le modèle d’alignement
 

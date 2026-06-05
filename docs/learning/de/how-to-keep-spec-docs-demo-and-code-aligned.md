@@ -11,7 +11,7 @@ topics:
 
 ## Zusammenfassung
 
-Dieser Leitfaden beschreibt einen praktischen Arbeitsablauf, mit dem Produktspezifikation, Dokumentation, Demo-Verhalten und Implementierungsarbeit auf Dauer aufeinander abgestimmt bleiben.
+Dieser Leitfaden beschreibt einen praktischen Arbeitsablauf, mit dem Produktspezifikation, Dokumentation, Demo-Verhalten und Implementierungsarbeit dauerhaft aufeinander abgestimmt bleiben.
 
 ## Das Kernproblem
 
@@ -36,7 +36,7 @@ Verwenden Sie diese Reihenfolge der Autorität:
 4. Demo- oder App-Verhalten
 5. Tests und Validierungsregeln
 
-Die unteren Ebenen sollten die oberen Ebenen unterstützen. Wenn sie in Konflikt geraten, aktualisieren Sie die Kette bewusst, statt standardmäßig das sichtbarste Artefakt gewinnen zu lassen.
+Die unteren Ebenen sollten die oberen Ebenen stützen. Wenn sie in Konflikt geraten, aktualisieren Sie die Kette bewusst, statt standardmäßig das sichtbarste Artefakt gewinnen zu lassen.
 
 ## Empfohlener Arbeitsablauf
 
