@@ -11,7 +11,7 @@ topics:
 
 ## Përmbledhje
 
-Ky udhëzues shpjegon si të shkruani një specifikim produkti ose veçorie që ndihmon implementimin e ndihmuar nga AI të mbetet i përafruar me qëllimet reale të produktit në vend që të devijojë drejt një rezultati të përgjithshëm.
+Ky udhëzues shpjegon si të shkruani një specifikim produkti ose veçorie në mënyrë që implementimi i ndihmuar nga AI të mbetet i përafruar me qëllimet reale të produktit, në vend që të rrëshqasë drejt një rezultati të përgjithshëm.
 
 ## Pse kjo ka rëndësi
 
@@ -24,7 +24,7 @@ Nëse një specifikim është i paqartë, AI shpesh i mbush boshllëqet me paraz
 - abstraksione të panevojshme
 - supozime të shpikura për atë që duhet të bëjë produkti
 
-Ky rezultat mund të duket i lëmuar dhe përsëri të jetë i gabuar.
+Ky rezultat mund të duket i rregullt dhe prapëseprapë të jetë i gabuar.
 
 ## Çfarë duhet të përfshijë një specifikim i dobishëm për AI
 
@@ -40,7 +40,7 @@ Më mirë:
 
 > Shto një formular të shpejtë regjistrimi që i lejon një dhuruesi të katalogojë një kopje fizike libri për disa sekonda ndërsa qëndron pranë një rafti ose kutie.
 
-Qëllimi i tregon implementuesit se për çfarë duhet të optimizojë.
+Qëllimi i tregon qartë implementuesit se për çfarë duhet të optimizojë.
 
 ### 2. Kufijtë e shtrirjes
 
@@ -118,7 +118,7 @@ Depoja tashmë e demonstron këtë model në disa nivele:
 - `AGENTS-Implementation.md` përcakton kufizimet taktike të dorëzimit
 - `README.md` ndan gjendjen aktuale nga drejtimi i ardhshëm
 
-Kjo qasje me shtresa është e dobishme sepse AI funksionon më mirë kur memoria e produktit është eksplicite dhe e rishikueshme.
+Kjo qasje me shtresa është e dobishme sepse AI funksionon më mirë kur ajo që e përcakton produktin është shkruar qartë dhe mbetet e rishikueshme.
 
 ## Ushtrim
 

@@ -15,7 +15,7 @@ Questa guida descrive un flusso di lavoro pratico per mantenere allineati nel te
 
 ## Il problema centrale
 
-La deriva del prodotto raramente inizia con un errore drammatico. Di solito comincia con piccoli disallineamenti.
+La deriva del prodotto raramente inizia con un errore drammatico. Più spesso comincia con piccoli scarti.
 
 Esempi:
 
@@ -24,7 +24,7 @@ Esempi:
 - il codice implementa una scorciatoia comoda che viola una regola del prodotto
 - i controlli di validazione applicano solo la sintassi, non l'intento del prodotto
 
-L'IA può accelerare tutto questo se il flusso di allineamento è debole.
+L'IA può accelerare ancora di più tutto questo se il flusso di allineamento è debole.
 
 ## Il modello di allineamento
 

@@ -11,7 +11,7 @@ topics:
 
 ## Zusammenfassung
 
-Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die dabei hilft, dass KI-gestützte Implementierung an echten Produktzielen ausgerichtet bleibt, statt in generische Ausgaben abzudriften.
+Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation so formuliert, dass eine KI-gestützte Implementierung an echten Produktzielen ausgerichtet bleibt, statt in generische Ergebnisse abzudriften.
 
 ## Warum das wichtig ist
 
@@ -24,7 +24,7 @@ Wenn eine Spezifikation vage ist, füllt KI Lücken oft mit plausiblen Standards
 - unnötigen Abstraktionen
 - erfundenen Annahmen darüber, was das Produkt tun soll
 
-Diese Ausgabe kann poliert aussehen und trotzdem falsch sein.
+Das Ergebnis kann ausgearbeitet wirken und trotzdem am Ziel vorbeigehen.
 
 ## Was eine nützliche KI-orientierte Spezifikation enthalten sollte
 
@@ -40,7 +40,7 @@ Besser:
 
 > Ein schnelles Intake-Formular hinzufügen, mit dem ein Spender ein physisches Buchexemplar in Sekunden katalogisieren kann, während er an einem Regal oder einer Box steht.
 
-Der Zweck sagt dem Implementierer, worauf optimiert werden soll.
+Der Zweck zeigt der implementierenden Person, worauf sie optimieren soll.
 
 ### 2. Umfangsgrenzen
 
@@ -118,7 +118,7 @@ Das Repository demonstriert dieses Muster bereits auf mehreren Ebenen:
 - `AGENTS-Implementation.md` definiert taktische Delivery-Einschränkungen
 - `README.md` trennt aktuellen Zustand von zukünftiger Richtung
 
-Dieser mehrschichtige Ansatz ist nützlich, weil KI besser arbeitet, wenn Produktgedächtnis explizit und überprüfbar ist.
+Dieser mehrschichtige Ansatz ist nützlich, weil KI besser arbeitet, wenn Wissen über das Produkt klar festgehalten und überprüfbar bleibt.
 
 ## Übung
 

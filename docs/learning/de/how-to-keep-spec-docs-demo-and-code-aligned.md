@@ -15,7 +15,7 @@ Dieser Leitfaden beschreibt einen praktischen Arbeitsablauf, um Produktspezifika
 
 ## Das Kernproblem
 
-Produktdrift beginnt selten mit einem dramatischen Fehler. Meist beginnt sie mit kleinen Fehlanpassungen.
+Produktdrift beginnt selten mit einem dramatischen Fehler. Meist fängt sie mit kleinen Unstimmigkeiten an.
 
 Beispiele:
 
@@ -24,7 +24,7 @@ Beispiele:
 - der Code implementiert eine bequeme Abkürzung, die gegen eine Produktregel verstößt
 - Validierungsprüfungen erzwingen nur Syntax, nicht Produktabsicht
 
-KI kann all das beschleunigen, wenn der Abstimmungsablauf schwach ist.
+KI kann all das zusätzlich beschleunigen, wenn der Abstimmungsablauf schwach ist.
 
 ## Das Abstimmungsmodell
 

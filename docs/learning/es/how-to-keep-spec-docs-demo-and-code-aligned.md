@@ -15,7 +15,7 @@ Esta guía describe un flujo de trabajo práctico para mantener alineados con el
 
 ## El problema central
 
-La deriva del producto rara vez empieza con un error dramático. Suele comenzar con pequeños desajustes.
+La deriva del producto rara vez empieza con un error dramático. Normalmente comienza con pequeños desajustes.
 
 Ejemplos:
 
@@ -24,7 +24,7 @@ Ejemplos:
 - el código implementa un atajo conveniente que viola una regla del producto
 - las comprobaciones de validación solo hacen cumplir la sintaxis, no la intención del producto
 
-La IA puede acelerar todo esto si el flujo de alineación es débil.
+La IA puede acelerar todavía más todo esto si el flujo de alineación es débil.
 
 ## El modelo de alineación
 

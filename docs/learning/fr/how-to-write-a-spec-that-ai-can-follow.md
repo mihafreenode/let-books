@@ -11,7 +11,7 @@ topics:
 
 ## Résumé
 
-Ce guide explique comment écrire une spécification produit ou fonctionnalité qui aide une implémentation assistée par IA à rester alignée sur de vrais objectifs produit au lieu de dériver vers une sortie générique.
+Ce guide explique comment rédiger une spécification produit ou de fonctionnalité de façon à ce qu’une implémentation assistée par IA reste alignée sur les vrais objectifs du produit, au lieu de glisser vers un résultat générique.
 
 ## Pourquoi c’est important
 
@@ -24,7 +24,7 @@ Si une spécification est vague, l’IA comble souvent les trous avec des valeur
 - des abstractions inutiles
 - des hypothèses inventées sur ce que le produit devrait faire
 
-Ce résultat peut avoir l’air soigné et être malgré tout faux.
+Le résultat peut sembler soigné tout en restant faux.
 
 ## Ce qu’une spécification utile orientée IA doit contenir
 
@@ -40,7 +40,7 @@ Meilleur :
 
 > Ajouter un formulaire de saisie rapide permettant à un donateur de cataloguer un exemplaire physique de livre en quelques secondes tout en se tenant près d’une étagère ou d’une boîte.
 
-La finalité indique à la personne qui implémente ce qu’il faut optimiser.
+La finalité indique clairement à la personne qui implémente ce qu’il faut optimiser.
 
 ### 2. Limites de périmètre
 
@@ -118,7 +118,7 @@ Le dépôt démontre déjà ce modèle à plusieurs niveaux :
 - `AGENTS-Implementation.md` définit les contraintes tactiques de livraison
 - `README.md` sépare l’état actuel de l’orientation future
 
-Cette approche en couches est utile parce que l’IA fonctionne mieux lorsque la mémoire produit est explicite et révisable.
+Cette approche en couches est utile parce que l’IA fonctionne mieux lorsque ce qui définit le produit est consigné clairement et reste révisable.
 
 ## Exercice
 

@@ -11,7 +11,7 @@ topics:
 
 ## Riepilogo
 
-Questa guida spiega come scrivere una specifica di prodotto o di funzionalità che aiuti l'implementazione assistita dall'IA a restare allineata agli obiettivi reali del prodotto invece di andare alla deriva verso un output generico.
+Questa guida spiega come scrivere una specifica di prodotto o di funzionalità in modo che l'implementazione assistita dall'IA resti allineata agli obiettivi reali del prodotto, invece di scivolare verso un output generico.
 
 ## Perché conta
 
@@ -24,7 +24,7 @@ Se una specifica è vaga, l'IA colmerà spesso le lacune con predefiniti plausib
 - astrazioni non necessarie
 - assunzioni inventate su ciò che il prodotto dovrebbe fare
 
-Questo output può apparire curato ed essere comunque sbagliato.
+Questo risultato può sembrare ben rifinito ed essere comunque sbagliato.
 
 ## Cosa dovrebbe includere una specifica utile per l'IA
 
@@ -40,7 +40,7 @@ Meglio:
 
 > Aggiungi un modulo di intake rapido che permetta a un donatore di catalogare una singola copia fisica di libro in pochi secondi mentre si trova vicino a uno scaffale o a una scatola.
 
-Lo scopo dice all'implementatore cosa ottimizzare.
+Lo scopo indica chiaramente a chi implementa su che cosa deve ottimizzare.
 
 ### 2. Confini dell'ambito
 
@@ -118,7 +118,7 @@ Il repository dimostra già questo modello a più livelli:
 - `AGENTS-Implementation.md` definisce vincoli tattici di consegna
 - `README.md` separa lo stato attuale dalla direzione futura
 
-Questo approccio stratificato è utile perché l'IA lavora meglio quando la memoria del prodotto è esplicita e rivedibile.
+Questo approccio a strati è utile perché l'IA lavora meglio quando ciò che definisce il prodotto è scritto in modo chiaro e può essere rivisto.
 
 ## Esercizio
 
