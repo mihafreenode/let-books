@@ -13,7 +13,7 @@ topics:
 
 Markdown es un formato práctico para almacenar la intención del producto, la documentación, las guías y las pruebas en un formato que sea revisable, portátil, diferenciable y fácil de conectar a los flujos de trabajo de validación.
 
-## Por qué es importante el artículo Markdown
+## Por qué Markdown es importante
 
 Markdown a menudo se trata como una conveniencia de escritura. En el trabajo basado en especificaciones, es más útil que eso.
 

@@ -22,7 +22,7 @@ Offre ai team un modo semplice per mantenere la conoscenza del prodotto vicino a
 Ciò è importante per:
 
 - specifiche
-- guida all'attuazione
+- guida all'implementazione
 - documentazione allo stato attuale
 - tutorial e pagine wiki
 - mappe delle fonti e note di evidenza

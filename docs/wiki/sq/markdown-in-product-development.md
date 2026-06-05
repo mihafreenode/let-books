@@ -15,7 +15,7 @@ Markdown është një format praktik për ruajtjen e qëllimit të produktit, do
 
 ## Pse Markdown ka rëndësi
 
-Markdown trajtohet shpesh si një lehtësi për të shkruar. Në punën e drejtuar nga specifikat, është më e dobishme se kaq.
+Markdown trajtohet shpesh si thjesht një lehtësi për të shkruar. Në punën e drejtuar nga specifikat, është më e dobishme se kaq.
 
 Ai u jep ekipeve një mënyrë të lehtë për të mbajtur njohuritë e produktit pranë depove pa e fshehur atë brenda mjeteve të pronarit ose dokumenteve të vështira për t'u rishikuar.
 

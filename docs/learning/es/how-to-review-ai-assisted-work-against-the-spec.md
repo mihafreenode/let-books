@@ -17,7 +17,7 @@ Esta guía explica cómo revisar una implementación asistida por IA comprobánd
 
 La IA puede producir código, texto, pruebas y cambios de interfaz que parecen completos con mucha rapidez.
 
-Esa velocidad crea un riesgo de revisión: quienes revisan pueden pasar sin darse cuenta de preguntar "¿Es este el comportamiento correcto del producto?" a preguntar "¿Esto parece razonable?".
+Esa velocidad crea un riesgo de revisión: quienes revisan pueden pasar sin darse cuenta de preguntarse "¿Es este el comportamiento correcto del producto?" a preguntarse "¿Esto parece razonable?".
 
 No son la misma pregunta.
 

@@ -15,7 +15,7 @@ Markdown est un format pratique pour stocker l'intention du produit, la document
 
 ## Pourquoi le Markdown est important
 
-Le Markdown est souvent traité comme une commodité d'écriture. Dans le travail axé sur les spécifications, c'est plus utile que cela.
+Le Markdown est souvent traité comme une simple commodité d'écriture. Dans le travail axé sur les spécifications, c'est plus utile que cela.
 
 Il offre aux équipes un moyen simple de conserver leurs connaissances sur les produits à proximité du référentiel sans les cacher dans des outils propriétaires ou des documents difficiles à consulter.
 

@@ -15,7 +15,7 @@ Markdown ist ein praktisches Format zum Speichern von Produktabsichten, Dokument
 
 ## Warum Markdown wichtig ist
 
-Markdown wird oft als Schreiberleichterung behandelt. Bei spezifikationsgesteuerter Arbeit ist es noch nützlicher.
+Markdown wird oft nur als Schreiberleichterung behandelt. Bei spezifikationsgesteuerter Arbeit ist es noch nützlicher.
 
 Es bietet Teams eine einfache Möglichkeit, Produktwissen in der Nähe des Repositorys aufzubewahren, ohne es in proprietären Tools oder schwer zu überprüfenden Dokumenten zu verstecken.
 
