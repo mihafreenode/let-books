@@ -110,7 +110,7 @@ Esa es la disciplina del oráculo. La respuesta debe comprobarse frente a un est
 
 ### Trabajo de conocimiento asistido por IA
 
-El trabajo de conocimiento asistido por IA se vuelve más fiable cuando existen artefactos duraderos, revisión explícita y estándares trazables alrededor del modelo. Una conversación por sí sola no es una fuente estable de verdad.
+El trabajo de conocimiento asistido por IA se vuelve más fiable cuando existen registros duraderos, revisión explícita y estándares trazables alrededor del modelo. Una conversación por sí sola no es una fuente estable de verdad.
 
 ### Gobernanza de la documentación
 
@@ -122,11 +122,11 @@ Los equipos añaden validadores porque la memoria y la seguridad excesiva son co
 
 ### Preservar el contexto y la justificación
 
-Una respuesta útil del oráculo todavía no basta por sí sola. Si el trabajo debe sobrevivir al tiempo y a los cambios de equipo, deben seguir visibles los supuestos, las pruebas, las notas de revisión y las razones para aceptar o rechazar la respuesta.
+Una respuesta útil del oráculo todavía no basta por sí sola. Si el trabajo debe sobrevivir al tiempo y a los cambios de equipo, deben seguir visibles los supuestos, los elementos de apoyo, las notas de revisión y las razones para aceptar o rechazar la respuesta.
 
 ### Localización y paridad semántica
 
-La localización es un buen ejemplo de por qué la verificación importa. Una traducción puede parecer fluida y aun así fallar en modalidad, terminología, corrección Unicode, texto de accesibilidad o paridad semántica con la fuente. En ese flujo, la salida de IA no es verdad de publicación. Es un borrador que requiere revisión.
+La localización es un buen ejemplo de por qué la verificación importa. Una traducción puede parecer fluida y aun así fallar en modalidad, terminología, corrección Unicode, texto de accesibilidad o paridad semántica con la fuente. En ese flujo, la salida de IA no es una versión lista para publicar. Es un borrador que requiere revisión.
 
 ## Ejemplos concretos
 

@@ -110,7 +110,7 @@ Voilà la discipline de l'oracle. La réponse doit être vérifiée par rapport 
 
 ### Travail de connaissance assisté par l'IA
 
-Le travail de connaissance assisté par l'IA devient plus fiable lorsqu'il existe autour du modèle des artefacts durables, une relecture explicite et des standards traçables. Une simple conversation n'est pas une source de vérité stable.
+Le travail de connaissance assisté par l'IA devient plus fiable lorsqu'il existe autour du modèle des éléments conservés dans le temps, une relecture explicite et des standards vérifiables. Une simple conversation n'est pas une source de vérité stable.
 
 ### Gouvernance de la documentation
 
@@ -126,7 +126,7 @@ Une réponse utile de l'oracle ne suffit pas à elle seule. Si le travail doit s
 
 ### Localisation et parité sémantique
 
-La localisation est un bon exemple de l'importance de la vérification. Une traduction peut sembler fluide et pourtant échouer sur la modalité, la terminologie, la correction Unicode, le texte d'accessibilité ou la parité sémantique avec la source. Dans ce flux, la sortie de l'IA n'est pas une vérité de publication. C'est un brouillon à relire.
+La localisation est un bon exemple de l'importance de la vérification. Une traduction peut sembler fluide et pourtant échouer sur la modalité, la terminologie, la correction Unicode, le texte d'accessibilité ou la parité sémantique avec la source. Dans ce flux, la sortie de l'IA n'est pas une version prête à publier. C'est un brouillon à relire.
 
 ## Exemples concrets
 

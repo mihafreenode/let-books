@@ -110,7 +110,7 @@ Das ist Orakel-Disziplin. Die Antwort muss an einem vorher festgelegten Standard
 
 ### KI-gestützte Wissensarbeit
 
-KI-gestützte Wissensarbeit wird verlässlicher, wenn es rund um das Modell dauerhafte Artefakte, explizite Reviews und nachvollziehbare Standards gibt. Konversation allein ist keine stabile Wahrheitsquelle.
+KI-gestützte Wissensarbeit wird verlässlicher, wenn es rund um das Modell dauerhafte Unterlagen, explizite Reviews und nachvollziehbare Standards gibt. Konversation allein ist keine stabile Wahrheitsquelle.
 
 ### Dokumentations-Governance
 
@@ -126,7 +126,7 @@ Eine nützliche Orakel-Antwort reicht für sich allein noch nicht aus. Wenn Arbe
 
 ### Lokalisierung und semantische Parität
 
-Lokalisierung ist ein gutes Beispiel dafür, warum Verifizierung wichtig ist. Eine Übersetzung kann flüssig wirken und trotzdem bei Modalität, Terminologie, Unicode-Korrektheit, Barrierefreiheits-Texten oder semantischer Parität mit der Quelle scheitern. In diesem Ablauf ist KI-Ausgabe keine Publikationswahrheit. Sie ist ein Entwurf, der geprüft werden muss.
+Lokalisierung ist ein gutes Beispiel dafür, warum Verifizierung wichtig ist. Eine Übersetzung kann flüssig wirken und trotzdem bei Modalität, Terminologie, Unicode-Korrektheit, Barrierefreiheits-Texten oder semantischer Parität mit der Quelle scheitern. In diesem Ablauf ist KI-Ausgabe keine veröffentlichungsreife Fassung. Sie ist ein Entwurf, der geprüft werden muss.
 
 ## Konkrete Beispiele
 

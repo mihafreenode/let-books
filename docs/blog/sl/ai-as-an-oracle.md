@@ -110,7 +110,7 @@ To je način razmišljanja, ki ga spodbuja model oraklja. Odgovor je treba preve
 
 ### AI-podprto delo z znanjem
 
-AI-podprto delo z znanjem postane bolj zanesljivo, ko okoli modela obstajajo trajni artefakti, izrecen pregled in sledljivi standardi. Pogovorni izhod sam po sebi ni stabilen vir resnice.
+AI-podprto delo z znanjem postane bolj zanesljivo, ko okoli modela obstajajo trajni zapisi, izrecen pregled in sledljivi standardi. Pogovorni izhod sam po sebi ni stabilen vir resnice.
 
 ### Upravljanje dokumentacije
 
@@ -122,11 +122,11 @@ Ekipe dodajajo validatorje zato, ker spomin in samozavest nista dobra nadomestka
 
 ### Ohranjanje konteksta in utemeljitve
 
-Uporaben odgovor oraklja sam po sebi še ni dovolj. Če naj delo ostane uporabno tudi čez čas in ob menjavah ekip, morajo ostati vidne spremljajoče predpostavke, dokazi, opombe pregledov in razlogi za sprejem ali zavrnitev odgovora.
+Uporaben odgovor oraklja sam po sebi še ni dovolj. Če naj delo ostane uporabno tudi čez čas in ob menjavah ekip, morajo ostati vidne spremljajoče predpostavke, podlage, opombe pregledov in razlogi za sprejem ali zavrnitev odgovora.
 
 ### Lokalizacija in semantična pariteta
 
-Lokalizacija je dober primer, zakaj je preverjanje pomembno. Prevod lahko zveni gladko in je kljub temu napačen pri modalnosti, terminologiji, zapisu Unicode, besedilih za dostopnost ali semantični pariteti z virom. V takem delovnem toku AI-izhod ni resnica za objavo. Je osnutek dokaznega gradiva, ki potrebuje pregled.
+Lokalizacija je dober primer, zakaj je preverjanje pomembno. Prevod lahko zveni gladko in je kljub temu napačen pri modalnosti, terminologiji, zapisu Unicode, besedilih za dostopnost ali semantični pariteti z virom. V takem delovnem toku AI-izhod ni resnica za objavo. Je osnutek, ki potrebuje pregled.
 
 ## Konkretni primeri
 

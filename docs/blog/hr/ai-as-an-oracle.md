@@ -110,7 +110,7 @@ To je disciplina proročišta. Odgovor se mora provjeriti prema unaprijed određ
 
 ### AI-potpomognut rad sa znanjem
 
-Rad sa znanjem uz pomoć AI-ja postaje pouzdaniji kada oko modela postoje trajni artefakti, izričit pregled i sljedivi standardi. Konverzacijski izlaz sam po sebi nije stabilan izvor istine.
+Rad sa znanjem uz pomoć AI-ja postaje pouzdaniji kada oko modela postoje trajni zapisi, izričit pregled i sljedivi standardi. Konverzacijski izlaz sam po sebi nije stabilan izvor istine.
 
 ### Upravljanje dokumentacijom
 
@@ -126,7 +126,7 @@ Koristan odgovor proročišta sam po sebi još nije dovoljan. Ako rad treba pre�
 
 ### Lokalizacija i semantički paritet
 
-Lokalizacija je dobar primjer zašto je provjera važna. Prijevod može zvučati tečno, a da ipak podbaci u modalnosti, terminologiji, ispravnosti Unicode zapisa, tekstu za pristupačnost ili semantičkom paritetu s izvornikom. U takvom procesu AI-izlaz nije objavna istina. To je nacrt koji treba pregledati.
+Lokalizacija je dobar primjer zašto je provjera važna. Prijevod može zvučati tečno, a da ipak podbaci u modalnosti, terminologiji, ispravnosti Unicode zapisa, tekstu za pristupačnost ili semantičkom paritetu s izvornikom. U takvom procesu AI-izlaz nije konačna verzija za objavu. To je nacrt koji treba pregledati.
 
 ## Konkretni primjeri
 
