@@ -1,7 +1,7 @@
 ---
 title: "Kako pretvoriti specifikaciju proizvoda u plan implementacije"
 summary: >-
-  Ovaj vodič objašnjava kako prevesti specifikaciju proizvoda u konkretan plan implementacije bez gubitka namjere, granica ili pravila toka rada koji su specifikaciju uopće učinili korisnom.
+  Ovaj vodič objašnjava kako specifikaciju proizvoda pretvoriti u konkretan plan implementacije, a da se pritom ne izgube namjera, granice ni pravila toka rada koja specifikaciji daju vrijednost.
 topics:
   - spec-writing
   - implementation-planning
@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Ovaj vodič objašnjava kako prevesti specifikaciju proizvoda u konkretan plan implementacije bez gubitka namjere, granica ili pravila toka rada koji su specifikaciju uopće učinili korisnom.
+Ovaj vodič objašnjava kako specifikaciju proizvoda pretvoriti u konkretan plan implementacije, a da se pritom ne izgube namjera, granice ni pravila toka rada koja specifikaciji daju vrijednost.
 
 ## Zašto je ovaj korak važan
 
@@ -19,7 +19,7 @@ Specifikacija opisuje šta proizvod treba raditi i zašto to treba raditi.
 
 Plan implementacije opisuje kako će tim isporučiti to ponašanje u slijedu koji je pregledljiv, testabilan i realističan.
 
-Mnogi projekti propadnu upravo u razmaku između ta dva dokumenta.
+Mnogi projekti zapnu upravo u prostoru između ta dva dokumenta.
 
 Specifikacija može biti dobra, ali plan postane previše neodređen, previše tehnički ili previše odvojen od korisničkih tokova rada. U radu uz podršku AI-ja to je još češće jer generisani kod može stvoriti utisak da se planiranje već dogodilo, iako zapravo nije.
 
@@ -38,7 +38,7 @@ Tražite:
 
 To su dijelovi koji trebaju preživjeti prelaz iz specifikacije u plan.
 
-Ako ih plan izgubi, obično postaje tehnički popis obaveza umjesto plana isporuke.
+Ako ih plan izgubi, obično se svede na tehnički popis obaveza umjesto na plan isporuke.
 
 ## Podijelite plan na slojeve
 
@@ -88,7 +88,7 @@ To je sloj u kojem plan postaje rasporediv.
 
 ## Neka plan oblikuju ograničenja
 
-Planovi implementacije često odstupaju kada se prepišu kao generički inženjerski koraci.
+Planovi implementacije često skrenu s pravog puta kada se prepišu u generičke inženjerske korake.
 
 Da biste to izbjegli, ključna ograničenja proizvoda držite vidljivima unutar plana.
 

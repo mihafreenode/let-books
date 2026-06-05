@@ -1,7 +1,7 @@
 ---
 title: "Specifikacija proizvoda"
 summary: >-
-  Specifikacija proizvoda definira čemu služi proizvod, šta mora raditi, koje granice mora poštovati i koji se rezultati računaju kao uspjeh.
+  Specifikacija proizvoda određuje čemu proizvod služi, šta mora raditi, koje granice mora poštovati i koji se rezultati smatraju uspjehom.
 topics:
   - product-specification
   - spec-writing
@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Specifikacija proizvoda definira čemu služi proizvod, šta mora raditi, koje granice mora poštovati i koji se rezultati računaju kao uspjeh.
+Specifikacija proizvoda određuje čemu proizvod služi, šta mora raditi, koje granice mora poštovati i koji se rezultati smatraju uspjehom.
 
 ## Uloga
 
@@ -21,7 +21,7 @@ Trebalo bi da odgovori na pitanja kao što su:
 
 - zašto proizvod postoji
 - za koga je
-- koji su tokovi rada prvoklasni
+- koji su tokovi rada najvažniji
 - šta mora raditi čak iu uslovima kvara
 - ono što je eksplicitno van okvira
 - koji kriterijumi prihvatanja definišu smisleni demo ili izdanje
@@ -35,11 +35,11 @@ Uobičajeni sadržaj specifikacije uključuje:
 - model domene
 - definicije toka posla
 - privatnost i sigurnosna očekivanja
-- ne-golovi
+- ono što nije cilj
 - smjernice za redoslijed implementacije gdje to utiče na obim ili redosled isporuke
 - kriterijumi prihvatanja
 
-Specifikacija bi se trebala fokusirati na istinu o proizvodu, a ne na svaki detalj lokalne implementacije.
+Specifikacija bi se trebala držati onoga što je suština proizvoda, a ne svakog detalja lokalne implementacije.
 
 ## Ono što obično ne pripada tamo
 
@@ -65,11 +65,11 @@ Definiše:
 
 - svrha projekta
 - model domena i toka posla
-- višezakupni i lokalizacijski pravac
+- smjer za rad s više zakupaca i lokalizaciju
 - ručni tok rada i AI-opcijski principi
 - kriteriji prihvatanja za prvi demo
 
-To ga čini više od pregleda. To je glavni autoritet proizvoda u spremištu.
+Zato je to više od običnog pregleda. To je glavni izvor autoriteta za proizvod u spremištu.
 
 ## Povezane stranice
 

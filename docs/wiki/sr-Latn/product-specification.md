@@ -1,7 +1,7 @@
 ---
 title: "Specifikacija proizvoda"
 summary: >-
-  Specifikacija proizvoda definiše čemu služi proizvod, šta mora da radi, koje granice mora da poštuje i koji se rezultati računaju kao uspeh.
+  Specifikacija proizvoda određuje čemu proizvod služi, šta mora da radi, koje granice mora da poštuje i koji se rezultati smatraju uspehom.
 topics:
   - product-specification
   - spec-writing
@@ -11,7 +11,7 @@ topics:
 
 ## Rezime
 
-Specifikacija proizvoda definiše čemu služi proizvod, šta mora da radi, koje granice mora da poštuje i koji se rezultati računaju kao uspeh.
+Specifikacija proizvoda određuje čemu proizvod služi, šta mora da radi, koje granice mora da poštuje i koji se rezultati smatraju uspehom.
 
 ## Uloga
 
@@ -21,7 +21,7 @@ Trebalo bi da odgovori na pitanja kao što su:
 
 - zašto proizvod postoji
 - za koga je
-- koji su tokovi rada prvoklasni
+- koji su tokovi rada najvažniji
 - šta mora da radi čak i pod uslovima kvara
 - ono što je izričito van okvira
 - koji kriterijumi prihvatanja definišu smislen demo ili izdanje
@@ -35,11 +35,11 @@ Tipičan sadržaj specifikacije uključuje:
 - model domena
 - definicije toka posla
 - privatnost i bezbednosna očekivanja
-- ne-ciljevi
+- ono što nije cilj
 - uputstvo za redosled implementacije gde utiče na obim ili redosled isporuke
 - kriterijumi prihvatanja
 
-Specifikacija treba da se fokusira na istinu o proizvodu, a ne na svaki detalj lokalne implementacije.
+Specifikacija treba da ostane usmerena na suštinu proizvoda, a ne na svaki detalj lokalne implementacije.
 
 ## Ono što obično ne pripada tamo
 
@@ -65,11 +65,11 @@ On definiše:
 
 - svrha projekta
 - model domena i toka posla
-- višezakupni i lokalizacioni pravac
+- smer za rad sa više zakupaca i lokalizaciju
 - ručni tok rada i AI-opcioni principi
 - kriterijumi prihvatanja za prvi demo
 
-To ga čini više od pregleda. To je glavni autoritet proizvoda u spremištu.
+Zato je to više od pregleda. To je glavni izvor autoriteta za proizvod u spremištu.
 
 ## Povezane stranice
 
