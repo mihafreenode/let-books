@@ -11,7 +11,7 @@ topics:
 
 ## Résumé
 
-Ce guide explique comment rédiger une spécification produit ou de fonctionnalité de façon à ce qu’une implémentation assistée par IA reste alignée sur les vrais objectifs du produit, au lieu de glisser vers un résultat générique.
+Ce guide explique comment rédiger une spécification produit ou de fonctionnalité de façon à ce qu’une implémentation assistée par IA reste alignée sur les objectifs réels du produit, au lieu de glisser vers un résultat générique.
 
 ## Pourquoi c’est important
 
@@ -51,7 +51,7 @@ Exemple :
 - dans le périmètre : photo de couverture, saisie d’ISBN, emplacement de stockage, enregistrer et continuer
 - hors périmètre : OCR, synchronisation cloud, flux de revue institutionnelle
 
-Cela empêche l’assistant de gonfler une petite tâche en mini-plateforme.
+Cela évite qu’un assistant transforme inutilement une petite tâche en mini-plateforme.
 
 ### 3. Comportement requis
 

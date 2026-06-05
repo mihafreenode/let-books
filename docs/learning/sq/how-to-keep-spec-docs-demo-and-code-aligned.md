@@ -11,7 +11,7 @@ topics:
 
 ## Përmbledhje
 
-Ky udhëzues përshkruan një rrjedhë pune praktike për të mbajtur me kalimin e kohës të përafruara specifikimin e produktit, dokumentacionin, sjelljen e demonstrimit dhe punën e implementimit.
+Ky udhëzues përshkruan një rrjedhë pune praktike për të mbajtur të përafruara me kalimin e kohës specifikimin e produktit, dokumentacionin, sjelljen e demonstrimit dhe punën e implementimit.
 
 ## Problemi kryesor
 
@@ -24,7 +24,7 @@ Shembuj:
 - kodi implementon një shkurtore të përshtatshme që shkel një rregull të produktit
 - kontrollet e validimit zbatojnë vetëm sintaksën, jo synimin e produktit
 
-AI mund t’i përshpejtojë të gjitha këto nëse rrjedha e përafrimit është e dobët.
+AI mund t’i përshpejtojë edhe më shumë të gjitha këto nëse rrjedha e përafrimit është e dobët.
 
 ## Modeli i përafrimit
 

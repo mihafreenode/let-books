@@ -11,13 +11,13 @@ topics:
 
 ## Riepilogo
 
-Questa guida spiega come scrivere una specifica di prodotto o di funzionalità in modo che l'implementazione assistita dall'IA resti allineata agli obiettivi reali del prodotto, invece di scivolare verso un output generico.
+Questa guida spiega come scrivere una specifica di prodotto o di funzionalità così che l'implementazione assistita dall'IA resti allineata agli obiettivi reali del prodotto, invece di scivolare verso un risultato generico.
 
 ## Perché conta
 
 L'IA può generare codice rapidamente, ma funziona al meglio quando il compito ha confini chiari.
 
-Se una specifica è vaga, l'IA colmerà spesso le lacune con predefiniti plausibili:
+Se una specifica è vaga, l'IA colmerà spesso le lacune con impostazioni plausibili prese come predefinite:
 
 - pattern architetturali comuni
 - flussi UI generici

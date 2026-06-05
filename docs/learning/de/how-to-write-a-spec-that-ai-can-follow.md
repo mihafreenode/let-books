@@ -1,7 +1,7 @@
 ---
 title: "Wie man eine Spezifikation schreibt, der KI folgen kann"
 summary: >-
-  Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, die dabei hilft, dass KI-gestützte Implementierung an echten Produktzielen ausgerichtet bleibt, statt in generische Ausgaben abzudriften.
+Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation schreibt, damit eine KI-gestützte Implementierung an den tatsächlichen Produktzielen ausgerichtet bleibt, statt in generische Ergebnisse abzudriften.
 topics:
   - spec-writing
   - ai-assisted-delivery
@@ -17,7 +17,7 @@ Dieser Leitfaden erklärt, wie man eine Produkt- oder Funktionsspezifikation so 
 
 KI kann schnell Code generieren, arbeitet aber am besten, wenn die Aufgabe klare Grenzen hat.
 
-Wenn eine Spezifikation vage ist, füllt KI Lücken oft mit plausiblen Standards:
+Wenn eine Spezifikation vage ist, füllt KI Lücken oft mit plausiblen Standardannahmen:
 
 - gängigen Architekturmustern
 - generischen UI-Abläufen
@@ -51,7 +51,7 @@ Beispiel:
 - im Umfang: Cover-Foto, ISBN-Eingabe, Speicherort, speichern und fortfahren
 - außerhalb des Umfangs: OCR, Cloud-Synchronisierung, institutioneller Review-Arbeitsablauf
 
-Das verhindert, dass der Assistent eine kleine Aufgabe zu einer Mini-Plattform aufbläht.
+So wird verhindert, dass der Assistent aus einer kleinen Aufgabe unnötig eine Mini-Plattform macht.
 
 ### 3. Erforderliches Verhalten
 

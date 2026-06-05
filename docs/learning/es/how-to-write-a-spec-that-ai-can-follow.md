@@ -11,11 +11,11 @@ topics:
 
 ## Resumen
 
-Esta guía explica cómo escribir una especificación de producto o de funcionalidad que ayude a que la implementación asistida por IA siga alineada con objetivos reales del producto en lugar de desviarse hacia resultados genéricos.
+Esta guía explica cómo escribir una especificación de producto o de funcionalidad para que la implementación asistida por IA siga alineada con los objetivos reales del producto en lugar de desviarse hacia resultados genéricos.
 
 ## Por qué importa esto
 
-La IA puede generar código rápidamente, pero funciona mejor cuando la tarea tiene límites claros.
+La IA puede generar código con rapidez, pero funciona mejor cuando la tarea tiene límites claros.
 
 Si una especificación es vaga, la IA suele rellenar los huecos con valores por defecto plausibles:
 

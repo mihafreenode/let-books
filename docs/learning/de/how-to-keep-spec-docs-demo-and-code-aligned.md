@@ -11,7 +11,7 @@ topics:
 
 ## Zusammenfassung
 
-Dieser Leitfaden beschreibt einen praktischen Arbeitsablauf, um Produktspezifikation, Dokumentation, Demo-Verhalten und Implementierungsarbeit im Laufe der Zeit aufeinander abgestimmt zu halten.
+Dieser Leitfaden beschreibt einen praktischen Arbeitsablauf, mit dem Produktspezifikation, Dokumentation, Demo-Verhalten und Implementierungsarbeit auf Dauer aufeinander abgestimmt bleiben.
 
 ## Das Kernproblem
 
@@ -64,7 +64,7 @@ Typische Beispiele:
 
 Erst wenn die Absicht klar ist, sollte die Demo oder App geändert werden.
 
-Das hilft, das häufige Muster zu verhindern, bei dem ein Prototyp stillschweigend zur Quelle der Wahrheit wird.
+Das hilft, das häufige Muster zu vermeiden, bei dem ein Prototyp stillschweigend zur Quelle der Wahrheit wird.
 
 ### 4. Validierung hinzufügen oder aktualisieren
 

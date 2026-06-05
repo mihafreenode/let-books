@@ -64,7 +64,7 @@ Esempi tipici:
 
 Solo dopo che l'intento è chiaro andrebbero modificati la demo o l'applicazione.
 
-Questo aiuta a prevenire il modello comune in cui un prototipo diventa silenziosamente la fonte di verità.
+Questo aiuta a prevenire il caso frequente in cui un prototipo diventa in silenzio la fonte di verità.
 
 ### 4. Aggiungi o aggiorna la validazione
 
