@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Слојеви за валидацију | LetBooks</title>
-    <meta name="description" content="Слојеви валидације су различити начини на које пројекат проверава да ли се имплементација, документација и артефакти испоруке и даље подударају са предвиђеним правилима и очекивањима квалитета.">
+    <title>Слојеви провере | LetBooks</title>
+    <meta name="description" content="Слојеви провере су различити начини на које пројекат проверава да ли имплементација, документација и артефакти испоруке и даље одговарају предвиђеним правилима и очекивањима квалитета.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Cyrl/validation-layers.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Слојеви за валидацију | LetBooks">
-    <meta property="og:description" content="Слојеви валидације су различити начини на које пројекат проверава да ли се имплементација, документација и артефакти испоруке и даље подударају са предвиђеним правилима и очекивањима квалитета.">
+    <meta property="og:title" content="Слојеви провере | LetBooks">
+    <meta property="og:description" content="Слојеви провере су различити начини на које пројекат проверава да ли имплементација, документација и артефакти испоруке и даље одговарају предвиђеним правилима и очекивањима квалитета.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Cyrl/validation-layers.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Слојеви за валидацију | LetBooks">
-    <meta name="twitter:description" content="Слојеви валидације су различити начини на које пројекат проверава да ли се имплементација, документација и артефакти испоруке и даље подударају са предвиђеним правилима и очекивањима квалитета.">
+    <meta name="twitter:title" content="Слојеви провере | LetBooks">
+    <meta name="twitter:description" content="Слојеви провере су различити начини на које пројекат проверава да ли имплементација, документација и артефакти испоруке и даље одговарају предвиђеним правилима и очекивањима квалитета.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/sr-Cyrl/index.html">Вики</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Слојеви за валидацију</span>
+              <span aria-current="page">Слојеви провере</span>
             </nav>
-            <h1>Слојеви за валидацију</h1>
+            <h1>Слојеви провере</h1>
           <div class="content-page-meta">
             <span>Вики</span>
             <span>Српски (ћирилица)</span>
           </div>
-          <p class="content-page-summary">Слојеви валидације су различити начини на које пројекат проверава да ли се имплементација, документација и артефакти испоруке и даље подударају са предвиђеним правилима и очекивањима квалитета.</p>
+          <p class="content-page-summary">Слојеви провере су различити начини на које пројекат проверава да ли имплементација, документација и артефакти испоруке и даље одговарају предвиђеним правилима и очекивањима квалитета.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теме:</span>
               <span class="content-tag">CI/CD</span>
@@ -107,19 +107,19 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="зашто-су-слојеви-важни">Зашто су слојеви важни</h2>
-<p class="lead">Ниједан метод валидације није довољан.</p>
+<p class="lead">Ниједан појединачни начин провере није довољан.</p>
 <ul>
 <li>документација сама по себи не спроводи понашање</li>
 <li>сами тестови могу потврдити погрешне претпоставке</li>
 <li>ЦИ сама не може да дефинише правила која би требало да спроводи</li>
 </ul>
 <p>Слојевити приступ је јачи јер сваки слој хвата различиту класу одступања.</p>
-<h2 id="уобичајени-слојеви-валидације">Уобичајени слојеви валидације</h2>
+<h2 id="уобичајени-слојеви-провере">Уобичајени слојеви провере</h2>
 <h3 id="спецификација-и-упутства">1. Спецификација и упутства</h3>
 <p>Први слој дефинише правило.</p>
 <p>Без овог слоја, касније провере могу бити строге, али произвољне.</p>
 <h3 id="ручни-преглед">2. Ручни преглед</h3>
-<p>Људски преглед проверава намеру, ивице случајева и значење производа који можда још нису аутоматизовани.</p>
+<p>Људски преглед проверава намеру, граничне случајеве и значење производа који можда још нису аутоматизовани.</p>
 <h3 id="локална-валидација">3. Локална валидација</h3>
 <p>Скрипте и структуриране провере откривају брзе, поновљиве проблеме пре него што промене стигну до ЦИ.</p>
 <h3 id="тестови">4. Тестови</h3>
@@ -127,7 +127,7 @@
 <h3 id="ци-капије">5. ЦИ капије</h3>
 <p>ЦИ чини провере поновљивим и видљивим међу сарадницима и окружењима.</p>
 <h3 id="провере-примене">6. Провере примене</h3>
-<p>Радни токови примене потврђују да су изграђени артефакти и даље објављени и да су структурално здрави.</p>
+<p>Радни токови примене потврђују да изграђени артефакти и даље могу да се објаве и да су структурно исправни.</p>
 <h2 id="како-слојеви-треба-да-се-односе">Како слојеви треба да се односе</h2>
 <p>Слојеви би требало да ојачавају један другог по редоследу:</p>
 <ul>
@@ -156,7 +156,7 @@
 <li>правила уредничког доказа у <code>docs/blog/README.md</code> и <code>docs/sources/README.md</code></li>
 <li>упутство за учење за постепени ЦИ и увођење валидације</li>
 </ul>
-<p>То чини валидацију документованим системом, а не само будућом тежњом.</p>
+<p>То проверу чини документованим системом, а не само нечим чему се тежи у будућности.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -206,7 +206,7 @@
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
                   <a href="../../blog/sr-Cyrl/documentation-is-part-of-the-product.html"><span>Документација је део производа</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../wiki/sr-Cyrl/documentation-traceability.html"><span>Сљедивост документације</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/sr-Cyrl/markdown-in-product-development.html"><span>Markdown у развоју производа</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/sr-Cyrl/spec-driven-development.html"><span>Развој заснован на спецификацијама</span><span class="topic-menu__meta">Вики</span></a>
                   <a href="../../topics/sr-Cyrl/ai-assisted-implementation.html"><span>Имплементација уз AI подршку</span><span class="topic-menu__meta">Теме</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>

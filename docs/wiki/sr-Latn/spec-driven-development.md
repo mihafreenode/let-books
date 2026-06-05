@@ -55,7 +55,7 @@ Razvoj vođen specifikacijama smanjuje taj rizik tako što jasno određuje koji 
 
 ## Let Books kontekst
 
-U Let Books, razvoj vođen specifikacijama je podržan od:
+U Let Books-u razvoj vođen specifikacijama podržavaju:
 
 - `AGENTS.md`
 - `AGENTS-Implementation.md`

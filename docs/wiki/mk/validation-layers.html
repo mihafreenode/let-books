@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Слоеви за валидација | LetBooks</title>
-    <meta name="description" content="Слоевите за валидација се различните начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака сè уште одговараат на предвидените правила и очекувањата за квалитет.">
+    <title>Слоеви на проверка | LetBooks</title>
+    <meta name="description" content="Слоевите на проверка се различни начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака и понатаму одговараат на предвидените правила и очекувањата за квалитет.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/mk/validation-layers.html">
@@ -29,16 +29,16 @@
     <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
-    <meta property="og:title" content="Слоеви за валидација | LetBooks">
-    <meta property="og:description" content="Слоевите за валидација се различните начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака сè уште одговараат на предвидените правила и очекувањата за квалитет.">
+    <meta property="og:title" content="Слоеви на проверка | LetBooks">
+    <meta property="og:description" content="Слоевите на проверка се различни начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака и понатаму одговараат на предвидените правила и очекувањата за квалитет.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/mk/validation-layers.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Слоеви за валидација | LetBooks">
-    <meta name="twitter:description" content="Слоевите за валидација се различните начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака сè уште одговараат на предвидените правила и очекувањата за квалитет.">
+    <meta name="twitter:title" content="Слоеви на проверка | LetBooks">
+    <meta name="twitter:description" content="Слоевите на проверка се различни начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака и понатаму одговараат на предвидените правила и очекувањата за квалитет.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -90,14 +90,14 @@
               <span aria-hidden="true">/</span>
               <a href="../../wiki/mk/index.html">Вики</a>
               <span aria-hidden="true">/</span>
-              <span aria-current="page">Слоеви за валидација</span>
+              <span aria-current="page">Слоеви на проверка</span>
             </nav>
-            <h1>Слоеви за валидација</h1>
+            <h1>Слоеви на проверка</h1>
           <div class="content-page-meta">
             <span>Вики</span>
             <span>Македонски</span>
           </div>
-          <p class="content-page-summary">Слоевите за валидација се различните начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака сè уште одговараат на предвидените правила и очекувањата за квалитет.</p>
+          <p class="content-page-summary">Слоевите на проверка се различни начини на кои проектот проверува дали имплементацијата, документацијата и артефактите за испорака и понатаму одговараат на предвидените правила и очекувањата за квалитет.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теми:</span>
               <span class="content-tag">CI/CD</span>
@@ -113,13 +113,13 @@
 <li>само тестовите може да ги потврдат погрешните претпоставки</li>
 <li>CI сам не може да ги дефинира правилата што треба да ги спроведува</li>
 </ul>
-<p>Слоевит пристап е посилен бидејќи секој слој фаќа различна класа на нанос.</p>
-<h2 id="вообичаени-слоеви-за-валидација">Вообичаени слоеви за валидација</h2>
+<p>Слоевитиот пристап е посилен затоа што секој слој фаќа различен вид отстапување.</p>
+<h2 id="вообичаени-слоеви-на-проверка">Вообичаени слоеви на проверка</h2>
 <h3 id="спецификација-и-насоки">1. Спецификација и насоки</h3>
 <p>Првиот слој го дефинира правилото.</p>
 <p>Без овој слој, подоцнежните проверки може да бидат строги, но произволни.</p>
 <h3 id="рачен-преглед">2. Рачен преглед</h3>
-<p>Човечкиот преглед ја проверува намерата, рабовите и значењето на производот што можеби сè уште не се автоматизирани.</p>
+<p>Човечкиот преглед ја проверува намерата, граничните случаи и значењето на производот што можеби сè уште не е автоматизирано.</p>
 <h3 id="локална-валидација">3. Локална валидација</h3>
 <p>Скриптите и структурираните проверки ги фаќаат брзите, повторливи проблеми пред промените да стигнат до CI.</p>
 <h3 id="тестови">4. Тестови</h3>
@@ -127,7 +127,7 @@
 <h3 id="ci-порти">5. CI порти</h3>
 <p>CI ги прави проверките повторливи и видливи низ соработниците и околините.</p>
 <h3 id="проверки-на-распоредување">6. Проверки на распоредување</h3>
-<p>Работните текови за распоредување потврдуваат дека изградените артефакти сè уште се објавуваат и структурно здрави.</p>
+<p>Работните текови за распоредување потврдуваат дека изградените артефакти и понатаму може да се објават и дека се структурно исправни.</p>
 <h2 id="како-треба-да-се-поврзат-слоевите">Како треба да се поврзат слоевите</h2>
 <p>Слоевите треба да се зајакнуваат едни со други по редослед:</p>
 <ul>
@@ -147,16 +147,16 @@
 <li>забранети уреднички цитати</li>
 <li>успех за генерирање метаподатоци</li>
 </ul>
-<p>Овие проверки имаат тенденција да бидат објективни и евтини.</p>
+<p>Овие проверки обично се објективни и не бараат многу трошок.</p>
 <h2 id="let-books-контекст">Let Books контекст</h2>
 <p>Репозиториумот Let Books веќе документира неколку слоеви, вклучувајќи:</p>
 <ul>
 <li>правила за производ и имплементација во <code>AGENTS.md</code> и <code>AGENTS-Implementation.md</code></li>
 <li>валидација на развој и распоредување во <code>docs/Development.md</code> и <code>docs/Deployment.md</code></li>
 <li>правила за уредувачки докази во <code>docs/blog/README.md</code> и <code>docs/sources/README.md</code></li>
-<li>Упатство за учење за етапно CI и валидација</li>
+<li>упатства за учење за постепено воведување на CI и валидација</li>
 </ul>
-<p>Тоа ја прави валидацијата документиран систем наместо само идна аспирација.</p>
+<p>Така проверката станува документиран систем, а не само нешто кон што се стремиме во иднина.</p>
 
         <div class="post-article-nav">
           <div class="language-alternatives">
@@ -206,7 +206,7 @@
                 <div class="topic-menu" id="related-product-quality-menu" data-topic-menu="related-product-quality" hidden>
                   <a href="../../blog/mk/documentation-is-part-of-the-product.html"><span>Документацијата е дел од производот</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../wiki/mk/documentation-traceability.html"><span>Следливост на документација</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/markdown-in-product-development.html"><span>Markdown во развој на производ</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој заснован на спецификации</span><span class="topic-menu__meta">Вики</span></a>
                   <a href="../../topics/mk/ai-assisted-implementation.html"><span>Имплементација со AI-поддршка</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
                 <div class="topic-menu" id="related-implementation-planning-menu" data-topic-menu="related-implementation-planning" hidden>
