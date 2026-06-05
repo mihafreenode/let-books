@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AI како оракул: зошто културата на проверка е поважна од промптирањето | LetBooks</title>
-    <meta name="description" content="">
+    <meta name="description" content="Корисен инженерски модел за AI не е колега ниту замена, туку оракул: може да биде многу корисен, но неговите одговори мора да се проверуваат.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/blog/mk/ai-as-an-oracle.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="AI како оракул: зошто културата на проверка е поважна од промптирањето | LetBooks">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Корисен инженерски модел за AI не е колега ниту замена, туку оракул: може да биде многу корисен, но неговите одговори мора да се проверуваат.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/blog/mk/ai-as-an-oracle.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI како оракул: зошто културата на проверка е поважна од промптирањето | LetBooks">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="Корисен инженерски модел за AI не е колега ниту замена, туку оракул: може да биде многу корисен, но неговите одговори мора да се проверуваат.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,6 +97,7 @@
             <span>Блог</span>
             <span>Македонски</span>
           </div>
+          <p class="content-page-summary">Корисен инженерски модел за AI не е колега ниту замена, туку оракул: може да биде многу корисен, но неговите одговори мора да се проверуваат.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Теми:</span>
               <span class="content-tag">Документација</span>
@@ -104,153 +105,152 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<p class="lead">Оваа локализирана објава е нацрт за целосна јазична покриеност. Канонската англиска содржина засега е задржана подолу додека не заврши природната јазична ревизија.</p>
-<p>AI is often described as a tool, an assistant, a colleague, or a replacement. Those metaphors are not always useless, but they often push engineers toward the wrong habit. They encourage people to think first about delegation, fluency, or productivity theater.</p>
-<p>A more useful engineering mental model is the oracle.</p>
-<p>The point of that analogy is not mysticism. It is operational discipline.</p>
-<h2 id="what-an-oracle-is">What an oracle is</h2>
-<p>In theoretical computer science, an oracle is a hypothetical black box that can answer a defined class of questions without revealing how it reached the answer.</p>
-<p>In cryptography, the word is used more practically for oracle-like services such as encryption or decryption oracles. A caller can submit an input and observe the output, while the internal mechanism remains hidden.</p>
-<p>An LLM is not literally a formal oracle in either of those senses. It is not part of a proof model, and it is not a cleanly bounded cryptographic primitive.</p>
-<p>But from the working engineer’s perspective, it often behaves like a practical oracle:</p>
+<p class="lead">За AI често се зборува како за алатка, помошник, колега или замена. Овие метафори не се нужно бескорисни, но инженерите често ги насочуваат кон погрешна навика. Го насочуваат вниманието кон делегирање, брзина на одговори и чувство на продуктивност, наместо кон проверка на исправноста на резултатите.</p>
+<p>Покорисен инженерски ментален модел е оракулот.</p>
+<p>Поентата на оваа аналогија не е мистика. Поентата е оперативна дисциплина.</p>
+<h2 id="што-е-оракул">Што е оракул</h2>
+<p>Во теоретската компјутерска наука, оракул е хипотетичка црна кутија што може да одговори на одредена класа прашања без да открие како дошла до одговорот.</p>
+<p>Во криптографијата, овој поим се користи попрактично, за услуги слични на оракул како што се оракули за шифрирање или дешифрирање. Повикувачот може да испрати влез и да го набљудува излезот, додека внатрешниот механизам останува скриен.</p>
+<p>LLM не е буквално формален оракул во ниту една од овие две смисли. Не е дел од доказен модел, ниту јасно ограничен криптографски примитив.</p>
+<p>Но од инженерска перспектива, во пракса често функционира како оракул:</p>
 <ul>
-<li>you ask a question</li>
-<li>a plausible answer comes back</li>
-<li>the internals are mostly opaque</li>
-<li>the answer may be useful without being trustworthy</li>
+<li>поставувате прашање</li>
+<li>добивате уверлив одговор</li>
+<li>внатрешноста на системот главно е непрозирна</li>
+<li>одговорот може да биде корисен, а сепак да не биде доверлив</li>
 </ul>
-<p>That last point matters most.</p>
-<h2 id="why-the-oracle-analogy-is-better">Why the oracle analogy is better</h2>
-<p>The oracle model points attention to the right engineering questions.</p>
-<p>The model is opaque. Even when we know something about training data, retrieval, tools, or surrounding system design, we usually do not have a reliable internal proof of why a specific answer appeared.</p>
-<p>The answers may be valuable, but they are not guaranteed correct. They may be incomplete, overconfident, context-sensitive, or subtly wrong in ways that are expensive to notice late.</p>
-<p>That means outputs should be treated as hypotheses, not facts.</p>
-<p>It also means verification is not an afterthought. Verification is part of the workflow itself.</p>
-<p>This is the real cultural shift. The problem is not that engineers need better prompting tricks. The problem is that many teams still lack a strong verification culture around AI-assisted work.</p>
-<h2 id="verification-culture-not-prompting-culture">Verification culture, not prompting culture</h2>
-<p>Prompting matters, but it is not the center of the problem.</p>
-<p>A narrow, well-scoped question is useful because it makes verification easier.</p>
-<p>A broad, theatrical prompt is dangerous because it encourages broad, theatrical trust.</p>
-<p>If a team treats AI interaction mainly as a prompting craft, it will tend to optimize for:</p>
+<p>Токму последната точка е најважна.</p>
+<h2 id="зошто-аналогијата-со-оракул-е-подобра">Зошто аналогијата со оракул е подобра</h2>
+<p>Моделот на оракул го насочува вниманието кон вистинските инженерски прашања.</p>
+<p>Моделот е непрозирен. Дури и кога знаеме нешто за податоците за тренирање, извлекувањето контекст, алатките или поширокиот дизајн на системот, обично немаме сигурно објаснување зошто се појавил токму одреден одговор.</p>
+<p>Одговорите можат да бидат вредни, но не се загарантирано точни. Можат да бидат нецелосни, премногу самоуверени, чувствителни на контекст или суптилно погрешни, а таквите грешки често се откриваат дури подоцна.</p>
+<p>Тоа значи дека излезите треба да се третираат како хипотези, а не како факти.</p>
+<p>Тоа исто така значи дека проверката не е нешто што доаѓа дури на крајот. Проверка е дел од самиот работен процес.</p>
+<p>Тука е вистинската културна промена. Проблемот не е во тоа што инженерите имаат потреба од подобра техника за пишување промптови. Проблемот е во тоа што на многу тимови сè уште им недостасува силна култура на проверка во работата со AI.</p>
+<h2 id="култура-на-проверка-а-не-култура-на-промптирање">Култура на проверка, а не култура на промптирање</h2>
+<p>Промптирањето е важно, но не е суштината на проблемот.</p>
+<p>Тесно и добро ограничено прашање е корисно затоа што ја олеснува проверката.</p>
+<p>Премногу широк промпт е опасен затоа што поттикнува претерана доверба во одговорот.</p>
+<p>Ако тимот интеракцијата со AI ја гледа првенствено како вештина на промптирање, обично ќе оптимизира за:</p>
 <ul>
-<li>fluency</li>
-<li>speed</li>
-<li>confidence</li>
-<li>apparent completeness</li>
+<li>течни одговори</li>
+<li>брзина</li>
+<li>самоуверен тон</li>
+<li>впечаток на целосност</li>
 </ul>
-<p>If a team treats AI interaction as oracle use, it will tend to optimize for:</p>
+<p>Ако пак тимот работата со AI ја гледа како користење оракул, обично ќе оптимизира за:</p>
 <ul>
-<li>clear questions</li>
-<li>bounded scope</li>
-<li>explicit assumptions</li>
-<li>independent checks</li>
-<li>preserved rationale</li>
-<li>repeatable validation</li>
+<li>јасни прашања</li>
+<li>ограничен опсег</li>
+<li>изречни претпоставки</li>
+<li>независни проверки</li>
+<li>запишано образложение на одлуките</li>
+<li>повторлива валидација</li>
 </ul>
-<p>That second list is closer to real engineering discipline.</p>
-<h2 id="how-this-fits-engineering-practice">How this fits engineering practice</h2>
-<h3 id="specification-driven-development">Specification-Driven Development</h3>
-<p>Specification-Driven Development already assumes that fast output is not the same as correct output. A written specification defines purpose, boundaries, workflows, and acceptance criteria before generated output is treated as a valid change.</p>
-<p>That is oracle discipline. The answer must be checked against a prior standard.</p>
-<h3 id="ai-assisted-knowledge-work">AI-assisted knowledge work</h3>
-<p>AI-assisted knowledge work becomes more dependable when durable artifacts, explicit review, and traceable standards exist around the model. Conversational output alone is not a stable source of truth.</p>
-<h3 id="documentation-governance">Documentation governance</h3>
-<p>Good engineering teams separate product specification, implementation guidance, public documentation, source maps, and generated artifacts. That separation matters because it keeps one plausible answer from silently becoming accepted truth.</p>
-<h3 id="validators-and-tests">Validators and tests</h3>
-<p>Teams keep adding validators because memory and confidence are weak controls. Link checks, structural checks, parity checks, metadata generation, tests, and publication validators turn verification into infrastructure.</p>
-<h3 id="preserving-context-and-rationale">Preserving context and rationale</h3>
-<p>A useful oracle answer is still not enough on its own. The surrounding assumptions, evidence, review notes, and reasons for accepting or rejecting the answer must remain visible if the work is going to survive time and team changes.</p>
-<h3 id="localization-and-semantic-parity">Localization and semantic parity</h3>
-<p>Localization is a strong example of why verification matters. A translation can look fluent and still fail on modality, terminology, Unicode correctness, accessibility text, or semantic parity with the source. In that workflow, AI output is not publication truth. It is draft evidence that must be reviewed.</p>
-<h2 id="concrete-examples">Concrete examples</h2>
-<p>The oracle model becomes clearer when the questions are concrete.</p>
-<h3 id="asking-ai-to-explain-code">Asking AI to explain code</h3>
-<p>An LLM may give a fast, coherent explanation of a function, data flow, or bug.</p>
-<p>What must be verified:</p>
+<p>Вториот список е многу поблизок до вистинска инженерска дисциплина.</p>
+<h2 id="како-изгледа-тоа-во-инженерската-практика">Како изгледа тоа во инженерската практика</h2>
+<h3 id="развој-воден-од-спецификација">Развој воден од спецификација</h3>
+<p>Развојот воден од спецификација веќе сам по себе тргнува од тоа дека брз излез не е исто што и исправен излез. Пишаната спецификација ги одредува целта, границите, работните текови и критериумите за прифаќање пред генерираниот излез да се прифати како валидна промена.</p>
+<p>Тоа е дисциплина на оракулот. Одговорот мора да се провери според однапред одреден стандард.</p>
+<h3 id="ai-поддржана-работа-со-знаење">AI-поддржана работа со знаење</h3>
+<p>Работата со знаење со помош на AI станува посигурна кога околу моделот постојат трајни артефакти, изречен преглед и следливи стандарди. Разговорниот излез сам по себе не е стабилен извор на вистина.</p>
+<h3 id="управување-со-документација">Управување со документација</h3>
+<p>Добрите инженерски тимови ја одвојуваат спецификацијата на производот, имплементациските насоки, јавната документација, мапите на извори и генерираните артефакти. Таа одвоеност е важна затоа што спречува еден уверлив одговор тивко да стане прифатена вистина.</p>
+<h3 id="валидатори-и-тестови">Валидатори и тестови</h3>
+<p>Тимовите воведуваат валидатори затоа што меморијата и самоувереноста се слаби контроли. Проверките на врски, структурните проверки, проверките на паритет, генерирањето метаподатоци, тестовите и валидаторите за објава ја претвораат проверката во инфраструктура.</p>
+<h3 id="зачувување-на-контекст-и-образложение">Зачувување на контекст и образложение</h3>
+<p>Корисен одговор од оракулот сам по себе сè уште не е доволен. Ако работата треба да го преживее времето и промените во тимот, видливи мора да останат претпоставките, доказите, белешките од прегледот и причините за прифаќање или одбивање на одговорот.</p>
+<h3 id="локализација-и-семантички-паритет">Локализација и семантички паритет</h3>
+<p>Локализацијата е добар пример зошто проверката е важна. Преводот може да звучи течно, а сепак да потфрли во модалност, терминологија, исправност на Unicode записот, текст за пристапност или семантички паритет со изворникот. Во таков процес AI-излезот не е објавна вистина. Тоа е нацрт што мора да се прегледа.</p>
+<h2 id="конкретни-примери">Конкретни примери</h2>
+<p>Моделот на оракул станува појасен кога прашањата стануваат конкретни.</p>
+<h3 id="кога-барате-од-ai-да-објасни-код">Кога барате од AI да објасни код</h3>
+<p>LLM може брзо и смислено да објасни функција, тек на податоци или баг.</p>
+<p>Што треба да се провери:</p>
 <ul>
-<li>whether the explanation matches the actual code path</li>
-<li>whether edge cases were omitted</li>
-<li>whether the answer confused current behavior with intended behavior</li>
-<li>whether the explanation ignored surrounding specifications, tests, or comments</li>
+<li>дали објаснувањето одговара на вистинската патека низ кодот</li>
+<li>дали се изоставени гранични случаи</li>
+<li>дали одговорот го помешал тековното однесување со намерното однесување</li>
+<li>дали објаснувањето ги игнорира околните спецификации, тестови или коментари</li>
 </ul>
-<p>Useful check:</p>
+<p>Корисен начин на проверка:</p>
 <ul>
-<li>read the referenced code</li>
-<li>compare the answer to existing tests</li>
-<li>check whether the explanation matches the documented workflow</li>
+<li>прочитајте го наведениот код</li>
+<li>споредете го одговорот со постојните тестови</li>
+<li>проверете дали објаснувањето одговара на документираниот работен тек</li>
 </ul>
-<h3 id="asking-ai-to-write-a-validator">Asking AI to write a validator</h3>
-<p>An LLM may produce a validator that looks clean and convincing.</p>
-<p>What must be verified:</p>
+<h3 id="кога-барате-од-ai-да-напише-валидатор">Кога барате од AI да напише валидатор</h3>
+<p>LLM може да произведе валидатор што изгледа уредно и уверливо.</p>
+<p>Што треба да се провери:</p>
 <ul>
-<li>whether the validator checks the real rule instead of a simplified proxy</li>
-<li>whether the rule produces false confidence</li>
-<li>whether important failure cases were missed</li>
-<li>whether the validator encodes the documented rule correctly</li>
+<li>дали валидаторот го проверува вистинското правило или само поедноставен приближок</li>
+<li>дали правилото создава лажно чувство на сигурност</li>
+<li>дали се пропуштени важни случаи на грешка</li>
+<li>дали валидаторот правилно го опишува документираното правило</li>
 </ul>
-<p>Useful check:</p>
+<p>Корисен начин на проверка:</p>
 <ul>
-<li>create positive and negative test cases</li>
-<li>run the validator against known failures</li>
-<li>inspect whether it protects the actual defect class you care about</li>
+<li>подгответе позитивни и негативни тест-примери</li>
+<li>пуштете го валидаторот врз познати неуспеси</li>
+<li>проверете дали навистина ја штити класата грешки што ве интересира</li>
 </ul>
-<h3 id="asking-ai-to-translate-documentation">Asking AI to translate documentation</h3>
-<p>An LLM may produce a polished translation quickly.</p>
-<p>What must be verified:</p>
+<h3 id="кога-барате-од-ai-да-преведе-документација">Кога барате од AI да преведе документација</h3>
+<p>LLM може многу брзо да произведе полиран превод.</p>
+<p>Што треба да се провери:</p>
 <ul>
-<li>semantic parity with the source</li>
-<li>terminology consistency</li>
-<li>script and Unicode correctness</li>
-<li>accessibility labels and metadata</li>
-<li>whether examples, related links, and supporting material remain aligned</li>
+<li>семантички паритет со изворникот</li>
+<li>терминолошка доследност</li>
+<li>исправност на писмото и Unicode записот</li>
+<li>ознаки за пристапност и метаподатоци</li>
+<li>дали примерите, поврзаните врски и придружните материјали остануваат усогласени</li>
 </ul>
-<p>Useful check:</p>
+<p>Корисен начин на проверка:</p>
 <ul>
-<li>run localization and parity validators</li>
-<li>compare source and target section structure</li>
-<li>get native-speaker review for important material</li>
+<li>пуштете валидатори за локализација и паритет</li>
+<li>споредете ја структурата на деловите во изворниот и целниот јазик</li>
+<li>обезбедете преглед од мајчин говорник за важна содржина</li>
 </ul>
-<h3 id="asking-ai-to-propose-architecture">Asking AI to propose architecture</h3>
-<p>An LLM may propose a layered architecture, service decomposition, or integration pattern that sounds reasonable.</p>
-<p>What must be verified:</p>
+<h3 id="кога-барате-од-ai-да-предложи-архитектура">Кога барате од AI да предложи архитектура</h3>
+<p>LLM може да предложи слоевита архитектура, раздвојување на сервиси или интеграциски образец што звучи разумно.</p>
+<p>Што треба да се провери:</p>
 <ul>
-<li>whether it matches the actual product scope</li>
-<li>whether it preserves non-negotiable constraints</li>
-<li>whether it adds unnecessary complexity</li>
-<li>whether it assumes infrastructure, budgets, or operational maturity that do not exist</li>
+<li>дали предлогот одговара на вистинскиот опсег на производот</li>
+<li>дали ги почитува барањата од кои не смее да се отстапи</li>
+<li>дали воведува непотребна сложеност</li>
+<li>дали претпоставува инфраструктура, буџети или оперативна зрелост што не постојат</li>
 </ul>
-<p>Useful check:</p>
+<p>Корисен начин на проверка:</p>
 <ul>
-<li>compare the proposal to the product specification</li>
-<li>test it against scope boundaries and acceptance criteria</li>
-<li>write down trade-offs before adopting it</li>
+<li>споредете го предлогот со спецификацијата на производот</li>
+<li>проверете го според границите на опсегот и критериумите за прифаќање</li>
+<li>запишете ги компромисите пред усвојување</li>
 </ul>
-<h2 id="what-verification-looks-like-in-practice">What verification looks like in practice</h2>
-<p>Verification does not always mean a formal proof. In real engineering work it usually means combining several weaker but practical checks.</p>
+<h2 id="како-изгледа-проверката-во-пракса">Како изгледа проверката во пракса</h2>
+<p>Проверката не значи секогаш формален доказ. Во вистинска инженерска работа најчесто значи комбинација од повеќе послаби, но корисни проверки.</p>
 <ul>
-<li>compare the answer to the specification</li>
-<li>inspect the relevant files</li>
-<li>run tests</li>
-<li>run validators</li>
-<li>check links and generated artifacts</li>
-<li>preserve review notes and rationale</li>
-<li>ask a narrower follow-up question when the first answer is too broad to verify cleanly</li>
+<li>споредете го одговорот со спецификацијата</li>
+<li>прегледајте ги релевантните датотеки</li>
+<li>пуштете тестови</li>
+<li>пуштете валидатори</li>
+<li>проверете ги врските и генерираните артефакти</li>
+<li>зачувајте ги белешките од прегледот и образложенијата</li>
+<li>поставете потесно дополнително прашање кога првиот одговор е премногу широк за чиста проверка</li>
 </ul>
-<p>This is why verification culture scales better than prompt craft. It creates reusable control points that survive individual conversations.</p>
-<h2 id="practical-takeaway">Practical takeaway</h2>
+<p>Затоа културата на проверка долгорочно скалира подобро од самата вештина на промптирање. Таа создава повторно употребливи контролни точки што ги надживуваат поединечните разговори.</p>
+<h2 id="практичен-заклучок">Практичен заклучок</h2>
 <ul>
-<li>Ask narrow questions.</li>
-<li>Record assumptions.</li>
-<li>Validate claims.</li>
-<li>Use tests and validators.</li>
-<li>Preserve rationale.</li>
-<li>Treat AI output as evidence, not truth.</li>
+<li>Поставувајте тесни прашања.</li>
+<li>Запишувајте ги претпоставките.</li>
+<li>Проверувајте ги тврдењата.</li>
+<li>Користете тестови и валидатори.</li>
+<li>Зачувајте го образложението.</li>
+<li>Третирајте го AI-излезот како доказен материјал, а не како вистина.</li>
 </ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>AI is neither a colleague nor a search engine.</p>
-<p>It is closer to an oracle: a black box that can answer remarkably difficult questions, provided you ask carefully and verify the answers.</p>
-<p>The challenge of AI-assisted engineering is not learning how to use the oracle. It is learning how not to trust it too much.</p>
-<h2 id="related-reading">Related Reading</h2>
+<h2 id="заклучок">Заклучок</h2>
+<p>AI не е ниту колега ниту пребарувач.</p>
+<p>Поблизок е до оракул: црна кутија што може да одговори на изненадувачки тешки прашања, под услов внимателно да прашате и да ги проверите одговорите.</p>
+<p>Предизвикот на AI-поддржаното инженерство не е да научиме како да го користиме оракулот. Предизвикот е да научиме како да не му веруваме премногу.</p>
+<h2 id="поврзано-четиво">Поврзано четиво</h2>
 <ul>
 <li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
 <li><code>../../wiki/spec-driven-development.md</code></li>
@@ -289,20 +289,20 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
-                  <a href="../../blog/mk/documentation-is-part-of-the-product.html"><span>Документацијата е дел од производот</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../blog/mk/spec-driven-development-for-ai-projects.html"><span>Развој воден од спецификации за AI проекти</span><span class="topic-menu__meta">Блог</span></a>
-                  <a href="../../blog/mk/spec-driven-development-in-let-books.html"><span>Развој воден од спецификации во Let Books</span><span class="topic-menu__meta">Блог</span></a>
+                  <a href="../../blog/mk/documentation-is-part-of-the-product.html"><span>Документацијата е дел од производот</span><span class="topic-menu__meta">Блог</span></a>
+                  <a href="../../blog/mk/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Кога демото е доказ, а кога не е</span><span class="topic-menu__meta">Блог</span></a>
                   <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../wiki/mk/documentation-is-more-than-a-website.html"><span>Документацијата е повеќе од веб-страница</span><span class="topic-menu__meta">Вики</span></a>
-                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој заснован на спецификации</span><span class="topic-menu__meta">Вики</span></a>
                   <a href="../../wiki/mk/markdown-in-product-development.html"><span>Markdown во развој на производ</span><span class="topic-menu__meta">Вики</span></a>
+                  <a href="../../wiki/mk/spec-driven-development.html"><span>Развој заснован на спецификации</span><span class="topic-menu__meta">Вики</span></a>
                   <a href="../../topics/mk/spec-driven-development.html"><span>Развој воден од спецификација</span><span class="topic-menu__meta">Теми</span></a>
                   <a href="../../topics/mk/documentation-traceability.html"><span>Следливост на документацијата</span><span class="topic-menu__meta">Теми</span></a>
                   <a href="../../topics/mk/book-metadata.html"><span>Метаподатоци за книга</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено да се додаваат правила за валидација и CI ограничувања</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html"><span>Како да се прегледува работа со помош на AI според спецификацијата</span><span class="topic-menu__meta">Материјали за учење</span></a>
+                  <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Како постепено да се додаваат правила за валидација и CI ограничувања</span><span class="topic-menu__meta">Материјали за учење</span></a>
                   <a href="../../topics/mk/demo-and-specification-alignment.html"><span>Усогласеност меѓу демо и спецификација</span><span class="topic-menu__meta">Теми</span></a>
                 </div>
               </div>

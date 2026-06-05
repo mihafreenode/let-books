@@ -112,7 +112,7 @@
 <p>V teoretični računalniški znanosti je orakelj hipotetična črna skrinjica, ki lahko odgovori na določen razred vprašanj, ne da bi razkrila, kako je prišla do odgovora.</p>
 <p>V kriptografiji se izraz uporablja bolj praktično za storitve, podobne oraklju, kot so šifrirni ali dešifrirni oraklji. Klicatelj lahko odda vhod in opazuje izhod, medtem ko notranji mehanizem ostaja skrit.</p>
 <p>LLM v nobenem od teh pomenov ni dobesedno formalni orakelj. Ni del dokaznega modela in ni jasno omejen kriptografski primitiv.</p>
-<p>Vendar z inženirskega vidika v praksi pogosto deluje kot orakelj:</p>
+<p>Z inženirskega vidika v praksi pogosto deluje kot orakelj:</p>
 <ul>
 <li>postavite vprašanje</li>
 <li>vrne se verjeten odgovor</li>
@@ -122,29 +122,29 @@
 <p>Prav zadnja točka je najpomembnejša.</p>
 <h2 id="zakaj-je-analogija-z-orakljem-boljša">Zakaj je analogija z orakljem boljša</h2>
 <p>Model oraklja usmeri pozornost na prava inženirska vprašanja.</p>
-<p>Model je nepregleden. Tudi kadar nekaj vemo o učnih podatkih, pridobivanju konteksta, orodjih ali širši zasnovi sistema, navadno nimamo zanesljive notranje razlage, zakaj se je pojavil točno določen odgovor.</p>
-<p>Odgovori so lahko dragoceni, vendar niso zajamčeno pravilni. Lahko so nepopolni, preveč samozavestni, občutljivi na kontekst ali subtilno napačni na načine, ki jih pozno opazimo drago.</p>
+<p>Model je nepregleden. Tudi kadar nekaj vemo o učnih podatkih, pridobivanju konteksta, orodjih ali širši zasnovi sistema, navadno nimamo zanesljive razlage, zakaj se je pojavil prav tak odgovor.</p>
+<p>Odgovori so lahko dragoceni, vendar niso zajamčeno pravilni. Lahko so nepopolni, preveč samozavestni, občutljivi na kontekst ali subtilno napačni, pri čemer takšne napake pogosto odkrijemo šele pozneje.</p>
 <p>To pomeni, da je treba izhode obravnavati kot hipoteze, ne kot dejstva.</p>
 <p>Pomeni pa tudi, da preverjanje ni nekaj, na kar pomislimo šele na koncu. Preverjanje je del samega delovnega toka.</p>
 <p>To je resnični kulturni premik. Problem ni v tem, da inženirji potrebujejo bolj dovršene načine pisanja pozivov. Problem je v tem, da mnogim ekipam pri AI-podprtem delu še vedno manjka močna kultura preverjanja.</p>
-<h2 id="kultura-preverjanja-ne-kultura-pisanja-pozivov">Kultura preverjanja, ne kultura pisanja pozivov</h2>
-<p>Pisanje pozivov je pomembno, vendar ni središče problema.</p>
+<h2 id="kultura-preverjanja-ne-osredotočenost-na-pozive">Kultura preverjanja, ne osredotočenost na pozive</h2>
+<p>Oblikovanje navodil za model je pomembno, vendar ni središče problema.</p>
 <p>Ozko in dobro omejeno vprašanje je uporabno zato, ker olajša preverjanje.</p>
-<p>Preširoko zastavljen poziv pa je nevaren zato, ker spodbuja pretirano zaupanje v odgovor.</p>
-<p>Če ekipa delo z AI obravnava predvsem kot veščino pisanja pozivov, bo navadno optimizirala za:</p>
+<p>Preširoko zastavljeno navodilo pa je nevarno zato, ker spodbuja pretirano zaupanje v odgovor.</p>
+<p>Če ekipa delo z AI obravnava predvsem kot sposobnost oblikovanja navodil za model, bo navadno optimizirala za:</p>
 <ul>
 <li>tekoče zveneče odgovore</li>
 <li>hitrost</li>
 <li>samozavesten ton</li>
 <li>vtis popolnosti</li>
 </ul>
-<p>Če pa AI-interakcijo obravnava kot uporabo oraklja, bo navadno optimizirala za:</p>
+<p>Če pa ekipa delo z AI razume kot uporabo oraklja, bo navadno optimizirala za:</p>
 <ul>
 <li>jasna vprašanja</li>
 <li>omejen obseg</li>
 <li>eksplicitne predpostavke</li>
 <li>neodvisna preverjanja</li>
-<li>ohranjeno razlago odločitev</li>
+<li>zapisano utemeljitev odločitev</li>
 <li>ponovljivo validacijo</li>
 </ul>
 <p>Ta drugi seznam je bistveno bližje resnični inženirski disciplini.</p>
@@ -153,15 +153,15 @@
 <p>Razvoj na podlagi specifikacij že sam po sebi predpostavlja, da hiter izhod ni isto kot pravilen izhod. Pisna specifikacija določa namen, meje, delovne tokove in sprejemna merila, še preden se generirani izhod obravnava kot veljavna sprememba.</p>
 <p>To je način razmišljanja, ki ga spodbuja model oraklja. Odgovor je treba preveriti glede na vnaprej določen standard.</p>
 <h3 id="ai-podprto-delo-z-znanjem">AI-podprto delo z znanjem</h3>
-<p>AI-podprto delo z znanjem postane bolj zanesljivo, ko okoli modela obstajajo trajni artefakti, ekspliciten pregled in sledljivi standardi. Pogovorni izhod sam po sebi ni stabilen vir resnice.</p>
+<p>AI-podprto delo z znanjem postane bolj zanesljivo, ko okoli modela obstajajo trajni zapisi, izrecen pregled in sledljivi standardi. Pogovorni izhod sam po sebi ni stabilen vir resnice.</p>
 <h3 id="upravljanje-dokumentacije">Upravljanje dokumentacije</h3>
 <p>Dobre inženirske ekipe ločujejo specifikacijo izdelka, implementacijska navodila, javno dokumentacijo, izvorne zemljevide in generirane artefakte. Ta ločitev je pomembna zato, ker preprečuje, da bi en verjeten odgovor tiho postal sprejeta resnica.</p>
 <h3 id="validatorji-in-testi">Validatorji in testi</h3>
 <p>Ekipe dodajajo validatorje zato, ker spomin in samozavest nista dobra nadomestka za preverjanje. Preverjanja povezav, strukturna preverjanja, preverjanja paritete, generiranje metapodatkov, testi in validatorji objav spreminjajo preverjanje v infrastrukturo.</p>
 <h3 id="ohranjanje-konteksta-in-utemeljitve">Ohranjanje konteksta in utemeljitve</h3>
-<p>Uporaben odgovor oraklja sam po sebi še ni dovolj. Če naj delo preživi čas in menjave ekip, morajo ostati vidne tudi spremljajoče predpostavke, dokazi, opombe pregledov in razlogi za sprejem ali zavrnitev odgovora.</p>
+<p>Uporaben odgovor oraklja sam po sebi še ni dovolj. Če naj delo ostane uporabno tudi čez čas in ob menjavah ekip, morajo ostati vidne spremljajoče predpostavke, podlage, opombe pregledov in razlogi za sprejem ali zavrnitev odgovora.</p>
 <h3 id="lokalizacija-in-semantična-pariteta">Lokalizacija in semantična pariteta</h3>
-<p>Lokalizacija je močan primer, zakaj je preverjanje pomembno. Prevod lahko zveni gladko in je kljub temu napačen glede modalnosti, terminologije, pravilnosti Unicode, besedil za dostopnost ali semantične paritete z virom. V takem delovnem toku AI-izhod ni resnica za objavo. Je osnutek dokaznega gradiva, ki potrebuje pregled.</p>
+<p>Lokalizacija je dober primer, zakaj je preverjanje pomembno. Prevod lahko zveni gladko in je kljub temu napačen pri modalnosti, terminologiji, zapisu Unicode, besedilih za dostopnost ali semantični pariteti z virom. V takem delovnem toku AI-izhod ni resnica za objavo. Je osnutek, ki potrebuje pregled.</p>
 <h2 id="konkretni-primeri">Konkretni primeri</h2>
 <p>Model oraklja postane jasnejši, ko so vprašanja konkretna.</p>
 <h3 id="ko-ai-prosite-naj-razloži-kodo">Ko AI prosite, naj razloži kodo</h3>
@@ -180,7 +180,7 @@
 <li>preverite, ali razlaga ustreza dokumentiranemu delovnemu toku</li>
 </ul>
 <h3 id="ko-ai-prosite-naj-napiše-validator">Ko AI prosite, naj napiše validator</h3>
-<p>LLM lahko izdela validator, ki deluje urejeno in prepričljivo.</p>
+<p>LLM lahko izdela validator, ki deluje prepričljivo.</p>
 <p>Kaj je treba preveriti:</p>
 <ul>
 <li>ali validator preverja resnično pravilo in ne poenostavljen približek</li>
@@ -195,7 +195,7 @@
 <li>preverite, ali res ščiti razred napak, ki vas zanima</li>
 </ul>
 <h3 id="ko-ai-prosite-naj-prevede-dokumentacijo">Ko AI prosite, naj prevede dokumentacijo</h3>
-<p>LLM lahko zelo hitro izdela uglajen prevod.</p>
+<p>LLM lahko zelo hitro pripravi prepričljiv prevod.</p>
 <p>Kaj je treba preveriti:</p>
 <ul>
 <li>semantično pariteto z virom</li>
@@ -215,7 +215,7 @@
 <p>Kaj je treba preveriti:</p>
 <ul>
 <li>ali se ujema z dejanskim obsegom izdelka</li>
-<li>ali ohranja nepogajalske omejitve</li>
+<li>ali upošteva zahteve, od katerih ni mogoče odstopati</li>
 <li>ali dodaja nepotrebno kompleksnost</li>
 <li>ali predpostavlja infrastrukturo, proračune ali operativno zrelost, ki ne obstajajo</li>
 </ul>
@@ -226,7 +226,7 @@
 <li>pred sprejetjem zapišite kompromise</li>
 </ul>
 <h2 id="kako-je-preverjanje-videti-v-praksi">Kako je preverjanje videti v praksi</h2>
-<p>Preverjanje ne pomeni vedno formalnega dokaza. Pri resničnem inženirskem delu navadno pomeni kombinacijo več šibkejših, vendar praktičnih preverjanj.</p>
+<p>Preverjanje ne pomeni vedno formalnega dokaza. V inženirski praksi navadno pomeni kombinacijo več šibkejših, vendar uporabnih preverjanj.</p>
 <ul>
 <li>primerjajte odgovor s specifikacijo</li>
 <li>preglejte ustrezne datoteke</li>
@@ -236,7 +236,7 @@
 <li>ohranite opombe pregledov in utemeljitev</li>
 <li>postavite ožje nadaljnje vprašanje, kadar je prvi odgovor preširok za čisto preverjanje</li>
 </ul>
-<p>Prav zato kultura preverjanja dolgoročno deluje bolje kot osredotočenost na vedno novo pisanje pozivov. Ustvarja ponovno uporabne nadzorne točke, ki preživijo posamezne pogovore.</p>
+<p>Prav zato je kultura preverjanja dolgoročno koristnejša kot nenehno piljenje navodil za model. Ustvarja ponovno uporabne nadzorne točke, ki preživijo posamezne pogovore.</p>
 <h2 id="praktični-povzetek">Praktični povzetek</h2>
 <ul>
 <li>Postavljajte ozka vprašanja.</li>
@@ -289,20 +289,20 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
-                  <a href="../../blog/sl/documentation-is-part-of-the-product.html"><span>Dokumentacija je del izdelka</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/sl/spec-driven-development-for-ai-projects.html"><span>Razvoj na podlagi specifikacij za AI projekte</span><span class="topic-menu__meta">Blog</span></a>
-                  <a href="../../blog/sl/spec-driven-development-in-let-books.html"><span>Razvoj na podlagi specifikacij v Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sl/documentation-is-part-of-the-product.html"><span>Dokumentacija je del izdelka</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kdaj je demo dokaz in kdaj ni</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohranjati usklajenost specifikacije, dokumentacije, predstavitve in kode</span><span class="topic-menu__meta">Učni vodniki</span></a>
                   <a href="../../wiki/sl/documentation-is-more-than-a-website.html"><span>Dokumentacija ni samo spletna stran</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj na podlagi specifikacij</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/sl/markdown-in-product-development.html"><span>Markdown v razvoju izdelkov</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj na podlagi specifikacij</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../topics/sl/spec-driven-development.html"><span>Razvoj, voden s specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
                   <a href="../../topics/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
                   <a href="../../topics/sl/book-metadata.html"><span>Metapodatki o knjigi</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postopno dodajati validacijska pravila in vrata v CI</span><span class="topic-menu__meta">Učni vodniki</span></a>
                   <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati delo s pomočjo AI glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Kako postopno dodajati validacijska pravila in vrata v CI</span><span class="topic-menu__meta">Učni vodniki</span></a>
                   <a href="../../topics/sl/demo-and-specification-alignment.html"><span>Usklajenost med demo prikazom in specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
                 </div>
               </div>

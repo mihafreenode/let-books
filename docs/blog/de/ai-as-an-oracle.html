@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting | LetBooks</title>
-    <meta name="description" content="">
+    <meta name="description" content="Ein nützliches technisches Modell für KI ist nicht Kollege oder Ersatz, sondern Orakel: hilfreich, intransparent und nur mit Verifizierung brauchbar.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/blog/de/ai-as-an-oracle.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting | LetBooks">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="Ein nützliches technisches Modell für KI ist nicht Kollege oder Ersatz, sondern Orakel: hilfreich, intransparent und nur mit Verifizierung brauchbar.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/blog/de/ai-as-an-oracle.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting | LetBooks">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="Ein nützliches technisches Modell für KI ist nicht Kollege oder Ersatz, sondern Orakel: hilfreich, intransparent und nur mit Verifizierung brauchbar.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,6 +97,7 @@
             <span>Blog</span>
             <span>Deutsch</span>
           </div>
+          <p class="content-page-summary">Ein nützliches technisches Modell für KI ist nicht Kollege oder Ersatz, sondern Orakel: hilfreich, intransparent und nur mit Verifizierung brauchbar.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Themen:</span>
               <span class="content-tag">Dokumentation</span>
@@ -104,153 +105,152 @@
           </div>
             <hr class="content-header-divider">
           </header>
-<p class="lead">Dieser lokalisierte Beitrag ist ein Entwurf für vollständige Sprachabdeckung. Der kanonische englische Inhalt bleibt vorerst unten erhalten, bis die natürliche sprachliche Überprüfung abgeschlossen ist.</p>
-<p>AI is often described as a tool, an assistant, a colleague, or a replacement. Those metaphors are not always useless, but they often push engineers toward the wrong habit. They encourage people to think first about delegation, fluency, or productivity theater.</p>
-<p>A more useful engineering mental model is the oracle.</p>
-<p>The point of that analogy is not mysticism. It is operational discipline.</p>
-<h2 id="what-an-oracle-is">What an oracle is</h2>
-<p>In theoretical computer science, an oracle is a hypothetical black box that can answer a defined class of questions without revealing how it reached the answer.</p>
-<p>In cryptography, the word is used more practically for oracle-like services such as encryption or decryption oracles. A caller can submit an input and observe the output, while the internal mechanism remains hidden.</p>
-<p>An LLM is not literally a formal oracle in either of those senses. It is not part of a proof model, and it is not a cleanly bounded cryptographic primitive.</p>
-<p>But from the working engineer’s perspective, it often behaves like a practical oracle:</p>
+<p class="lead">Über KI wird oft als Werkzeug, Assistent, Kollege oder Ersatz gesprochen. Diese Metaphern sind nicht völlig nutzlos, aber sie lenken Ingenieurinnen und Ingenieure oft in die falsche Richtung. Sie verlagern die Aufmerksamkeit auf Delegation, Antwortgeschwindigkeit und den Eindruck von Produktivität statt auf die Prüfung der Ergebnisse.</p>
+<p>Ein nützlicheres technisches Denkmodell ist das Orakel.</p>
+<p>Der Punkt dieser Analogie ist nicht Mystik. Es geht um operative Disziplin.</p>
+<h2 id="was-ein-orakel-ist">Was ein Orakel ist</h2>
+<p>In der theoretischen Informatik ist ein Orakel eine hypothetische Blackbox, die eine bestimmte Klasse von Fragen beantworten kann, ohne offenzulegen, wie sie zu ihrer Antwort gelangt.</p>
+<p>In der Kryptografie wird der Begriff praktischer verwendet, etwa für Dienste wie Verschlüsselungs- oder Entschlüsselungsorakel. Ein Aufrufer kann eine Eingabe senden und die Ausgabe beobachten, während der innere Mechanismus verborgen bleibt.</p>
+<p>Ein LLM ist in keinem dieser beiden Sinne buchstäblich ein formales Orakel. Es ist weder Teil eines Beweismodells noch ein klar abgegrenztes kryptografisches Primitive.</p>
+<p>Aus technischer Sicht verhält es sich in der Praxis aber oft wie ein Orakel:</p>
 <ul>
-<li>you ask a question</li>
-<li>a plausible answer comes back</li>
-<li>the internals are mostly opaque</li>
-<li>the answer may be useful without being trustworthy</li>
+<li>man stellt eine Frage</li>
+<li>man erhält eine plausible Antwort</li>
+<li>die inneren Abläufe bleiben weitgehend undurchsichtig</li>
+<li>die Antwort kann nützlich sein, ohne vertrauenswürdig zu sein</li>
 </ul>
-<p>That last point matters most.</p>
-<h2 id="why-the-oracle-analogy-is-better">Why the oracle analogy is better</h2>
-<p>The oracle model points attention to the right engineering questions.</p>
-<p>The model is opaque. Even when we know something about training data, retrieval, tools, or surrounding system design, we usually do not have a reliable internal proof of why a specific answer appeared.</p>
-<p>The answers may be valuable, but they are not guaranteed correct. They may be incomplete, overconfident, context-sensitive, or subtly wrong in ways that are expensive to notice late.</p>
-<p>That means outputs should be treated as hypotheses, not facts.</p>
-<p>It also means verification is not an afterthought. Verification is part of the workflow itself.</p>
-<p>This is the real cultural shift. The problem is not that engineers need better prompting tricks. The problem is that many teams still lack a strong verification culture around AI-assisted work.</p>
-<h2 id="verification-culture-not-prompting-culture">Verification culture, not prompting culture</h2>
-<p>Prompting matters, but it is not the center of the problem.</p>
-<p>A narrow, well-scoped question is useful because it makes verification easier.</p>
-<p>A broad, theatrical prompt is dangerous because it encourages broad, theatrical trust.</p>
-<p>If a team treats AI interaction mainly as a prompting craft, it will tend to optimize for:</p>
+<p>Gerade der letzte Punkt ist entscheidend.</p>
+<h2 id="warum-die-orakel-analogie-besser-ist">Warum die Orakel-Analogie besser ist</h2>
+<p>Das Orakel-Modell lenkt den Blick auf die richtigen technischen Fragen.</p>
+<p>Das Modell ist intransparent. Selbst wenn wir etwas über Trainingsdaten, Kontextabruf, Werkzeuge oder das umgebende Systemdesign wissen, haben wir in der Regel keine belastbare Erklärung dafür, warum genau diese Antwort erschienen ist.</p>
+<p>Die Antworten können wertvoll sein, aber sie sind nicht garantiert korrekt. Sie können unvollständig, übermäßig selbstsicher, kontextabhängig oder subtil falsch sein, und solche Fehler werden oft erst später entdeckt.</p>
+<p>Das bedeutet, dass Ausgaben als Hypothesen und nicht als Fakten behandelt werden sollten.</p>
+<p>Es bedeutet auch, dass Verifizierung kein nachgelagerter Schritt ist. Sie gehört in den Arbeitsablauf selbst.</p>
+<p>Hier liegt der eigentliche kulturelle Wandel. Das Problem ist nicht, dass Ingenieurinnen und Ingenieure bessere Prompt-Techniken brauchen. Das Problem ist, dass vielen Teams noch immer eine starke Verifizierungskultur für KI-gestützte Arbeit fehlt.</p>
+<h2 id="verifizierungskultur-statt-prompting-kultur">Verifizierungskultur statt Prompting-Kultur</h2>
+<p>Prompting ist wichtig, aber nicht der Kern des Problems.</p>
+<p>Eine enge, klar abgegrenzte Frage ist hilfreich, weil sie die Verifizierung erleichtert.</p>
+<p>Ein zu breiter Prompt ist gefährlich, weil er zu viel Vertrauen in die Antwort fördert.</p>
+<p>Wenn ein Team die Arbeit mit KI vor allem als Prompting-Kunst versteht, optimiert es meist auf:</p>
 <ul>
-<li>fluency</li>
-<li>speed</li>
-<li>confidence</li>
-<li>apparent completeness</li>
+<li>sprachliche Glätte</li>
+<li>Geschwindigkeit</li>
+<li>selbstsicheren Ton</li>
+<li>den Eindruck von Vollständigkeit</li>
 </ul>
-<p>If a team treats AI interaction as oracle use, it will tend to optimize for:</p>
+<p>Wenn ein Team KI dagegen als Orakel nutzt, optimiert es eher auf:</p>
 <ul>
-<li>clear questions</li>
-<li>bounded scope</li>
-<li>explicit assumptions</li>
-<li>independent checks</li>
-<li>preserved rationale</li>
-<li>repeatable validation</li>
+<li>klare Fragen</li>
+<li>begrenzten Umfang</li>
+<li>explizite Annahmen</li>
+<li>unabhängige Prüfungen</li>
+<li>festgehaltene Begründungen</li>
+<li>wiederholbare Validierung</li>
 </ul>
-<p>That second list is closer to real engineering discipline.</p>
-<h2 id="how-this-fits-engineering-practice">How this fits engineering practice</h2>
-<h3 id="specification-driven-development">Specification-Driven Development</h3>
-<p>Specification-Driven Development already assumes that fast output is not the same as correct output. A written specification defines purpose, boundaries, workflows, and acceptance criteria before generated output is treated as a valid change.</p>
-<p>That is oracle discipline. The answer must be checked against a prior standard.</p>
-<h3 id="ai-assisted-knowledge-work">AI-assisted knowledge work</h3>
-<p>AI-assisted knowledge work becomes more dependable when durable artifacts, explicit review, and traceable standards exist around the model. Conversational output alone is not a stable source of truth.</p>
-<h3 id="documentation-governance">Documentation governance</h3>
-<p>Good engineering teams separate product specification, implementation guidance, public documentation, source maps, and generated artifacts. That separation matters because it keeps one plausible answer from silently becoming accepted truth.</p>
-<h3 id="validators-and-tests">Validators and tests</h3>
-<p>Teams keep adding validators because memory and confidence are weak controls. Link checks, structural checks, parity checks, metadata generation, tests, and publication validators turn verification into infrastructure.</p>
-<h3 id="preserving-context-and-rationale">Preserving context and rationale</h3>
-<p>A useful oracle answer is still not enough on its own. The surrounding assumptions, evidence, review notes, and reasons for accepting or rejecting the answer must remain visible if the work is going to survive time and team changes.</p>
-<h3 id="localization-and-semantic-parity">Localization and semantic parity</h3>
-<p>Localization is a strong example of why verification matters. A translation can look fluent and still fail on modality, terminology, Unicode correctness, accessibility text, or semantic parity with the source. In that workflow, AI output is not publication truth. It is draft evidence that must be reviewed.</p>
-<h2 id="concrete-examples">Concrete examples</h2>
-<p>The oracle model becomes clearer when the questions are concrete.</p>
-<h3 id="asking-ai-to-explain-code">Asking AI to explain code</h3>
-<p>An LLM may give a fast, coherent explanation of a function, data flow, or bug.</p>
-<p>What must be verified:</p>
+<p>Die zweite Liste liegt näher an echter technischer Disziplin.</p>
+<h2 id="wie-das-in-der-praxis-aussieht">Wie das in der Praxis aussieht</h2>
+<h3 id="spezifikationsgetriebene-entwicklung">Spezifikationsgetriebene Entwicklung</h3>
+<p>Spezifikationsgetriebene Entwicklung geht bereits davon aus, dass schnelle Ausgabe nicht mit korrekter Ausgabe gleichzusetzen ist. Eine schriftliche Spezifikation definiert Zweck, Grenzen, Arbeitsabläufe und Abnahmekriterien, bevor generierte Ausgaben als gültige Änderung akzeptiert werden.</p>
+<p>Das ist Orakel-Disziplin. Die Antwort muss an einem vorher festgelegten Standard gemessen werden.</p>
+<h3 id="ki-gestützte-wissensarbeit">KI-gestützte Wissensarbeit</h3>
+<p>KI-gestützte Wissensarbeit wird verlässlicher, wenn es rund um das Modell dauerhafte Unterlagen, explizite Reviews und nachvollziehbare Standards gibt. Konversation allein ist keine stabile Wahrheitsquelle.</p>
+<h3 id="dokumentations-governance">Dokumentations-Governance</h3>
+<p>Gute Teams trennen Produktspezifikation, Implementierungsleitlinien, öffentliche Dokumentation, Source Maps und erzeugte Artefakte. Diese Trennung ist wichtig, damit nicht eine plausible Antwort stillschweigend zur akzeptierten Wahrheit wird.</p>
+<h3 id="validatoren-und-tests">Validatoren und Tests</h3>
+<p>Teams führen Validatoren ein, weil Gedächtnis und Selbstsicherheit schwache Kontrollen sind. Link-Prüfungen, Strukturprüfungen, Paritätsprüfungen, Metadatengenerierung, Tests und Publikationsvalidatoren machen Verifizierung zu Infrastruktur.</p>
+<h3 id="kontext-und-begründung-bewahren">Kontext und Begründung bewahren</h3>
+<p>Eine nützliche Orakel-Antwort reicht für sich allein noch nicht aus. Wenn Arbeit Zeit und Teamwechsel überstehen soll, müssen Annahmen, Belege, Review-Notizen und Gründe für Annahme oder Ablehnung sichtbar bleiben.</p>
+<h3 id="lokalisierung-und-semantische-parität">Lokalisierung und semantische Parität</h3>
+<p>Lokalisierung ist ein gutes Beispiel dafür, warum Verifizierung wichtig ist. Eine Übersetzung kann flüssig wirken und trotzdem bei Modalität, Terminologie, Unicode-Korrektheit, Barrierefreiheits-Texten oder semantischer Parität mit der Quelle scheitern. In diesem Ablauf ist KI-Ausgabe keine veröffentlichungsreife Fassung. Sie ist ein Entwurf, der geprüft werden muss.</p>
+<h2 id="konkrete-beispiele">Konkrete Beispiele</h2>
+<p>Das Orakel-Modell wird klarer, wenn die Fragen konkret werden.</p>
+<h3 id="wenn-man-ki-bittet-code-zu-erklären">Wenn man KI bittet, Code zu erklären</h3>
+<p>Ein LLM kann schnell und schlüssig eine Funktion, einen Datenfluss oder einen Fehler erklären.</p>
+<p>Was geprüft werden muss:</p>
 <ul>
-<li>whether the explanation matches the actual code path</li>
-<li>whether edge cases were omitted</li>
-<li>whether the answer confused current behavior with intended behavior</li>
-<li>whether the explanation ignored surrounding specifications, tests, or comments</li>
+<li>ob die Erklärung dem tatsächlichen Codepfad entspricht</li>
+<li>ob Randfälle ausgelassen wurden</li>
+<li>ob aktuelle und beabsichtigte Logik verwechselt wurden</li>
+<li>ob Spezifikationen, Tests oder Kommentare ignoriert wurden</li>
 </ul>
-<p>Useful check:</p>
+<p>Nützliche Prüfung:</p>
 <ul>
-<li>read the referenced code</li>
-<li>compare the answer to existing tests</li>
-<li>check whether the explanation matches the documented workflow</li>
+<li>den referenzierten Code lesen</li>
+<li>die Antwort mit vorhandenen Tests vergleichen</li>
+<li>prüfen, ob die Erklärung zum dokumentierten Ablauf passt</li>
 </ul>
-<h3 id="asking-ai-to-write-a-validator">Asking AI to write a validator</h3>
-<p>An LLM may produce a validator that looks clean and convincing.</p>
-<p>What must be verified:</p>
+<h3 id="wenn-man-ki-bittet-einen-validator-zu-schreiben">Wenn man KI bittet, einen Validator zu schreiben</h3>
+<p>Ein LLM kann einen Validator erzeugen, der sauber und überzeugend aussieht.</p>
+<p>Was geprüft werden muss:</p>
 <ul>
-<li>whether the validator checks the real rule instead of a simplified proxy</li>
-<li>whether the rule produces false confidence</li>
-<li>whether important failure cases were missed</li>
-<li>whether the validator encodes the documented rule correctly</li>
+<li>ob der Validator die echte Regel prüft oder nur einen vereinfachten Ersatz</li>
+<li>ob die Regel falsche Sicherheit erzeugt</li>
+<li>ob wichtige Fehlerfälle fehlen</li>
+<li>ob der Validator die dokumentierte Regel korrekt abbildet</li>
 </ul>
-<p>Useful check:</p>
+<p>Nützliche Prüfung:</p>
 <ul>
-<li>create positive and negative test cases</li>
-<li>run the validator against known failures</li>
-<li>inspect whether it protects the actual defect class you care about</li>
+<li>positive und negative Testfälle erstellen</li>
+<li>den Validator gegen bekannte Fehler laufen lassen</li>
+<li>prüfen, ob er tatsächlich die relevante Fehlerklasse schützt</li>
 </ul>
-<h3 id="asking-ai-to-translate-documentation">Asking AI to translate documentation</h3>
-<p>An LLM may produce a polished translation quickly.</p>
-<p>What must be verified:</p>
+<h3 id="wenn-man-ki-bittet-dokumentation-zu-übersetzen">Wenn man KI bittet, Dokumentation zu übersetzen</h3>
+<p>Ein LLM kann sehr schnell eine glatte Übersetzung liefern.</p>
+<p>Was geprüft werden muss:</p>
 <ul>
-<li>semantic parity with the source</li>
-<li>terminology consistency</li>
-<li>script and Unicode correctness</li>
-<li>accessibility labels and metadata</li>
-<li>whether examples, related links, and supporting material remain aligned</li>
+<li>semantische Parität mit der Quelle</li>
+<li>terminologische Konsistenz</li>
+<li>Schrift- und Unicode-Korrektheit</li>
+<li>Barrierefreiheits-Texte und Metadaten</li>
+<li>ob Beispiele, weiterführende Links und Begleitmaterial abgestimmt bleiben</li>
 </ul>
-<p>Useful check:</p>
+<p>Nützliche Prüfung:</p>
 <ul>
-<li>run localization and parity validators</li>
-<li>compare source and target section structure</li>
-<li>get native-speaker review for important material</li>
+<li>Lokalisierungs- und Paritätsvalidatoren ausführen</li>
+<li>die Abschnittsstruktur von Quelle und Zielsprache vergleichen</li>
+<li>bei wichtigem Material Review durch Muttersprachler einholen</li>
 </ul>
-<h3 id="asking-ai-to-propose-architecture">Asking AI to propose architecture</h3>
-<p>An LLM may propose a layered architecture, service decomposition, or integration pattern that sounds reasonable.</p>
-<p>What must be verified:</p>
+<h3 id="wenn-man-ki-bittet-architektur-vorzuschlagen">Wenn man KI bittet, Architektur vorzuschlagen</h3>
+<p>Ein LLM kann eine Schichtenarchitektur, Service-Zerlegung oder ein Integrationsmuster vorschlagen, das vernünftig klingt.</p>
+<p>Was geprüft werden muss:</p>
 <ul>
-<li>whether it matches the actual product scope</li>
-<li>whether it preserves non-negotiable constraints</li>
-<li>whether it adds unnecessary complexity</li>
-<li>whether it assumes infrastructure, budgets, or operational maturity that do not exist</li>
+<li>ob der Vorschlag zum tatsächlichen Produktumfang passt</li>
+<li>ob er nicht verhandelbare Anforderungen respektiert</li>
+<li>ob er unnötige Komplexität einführt</li>
+<li>ob er Infrastruktur, Budgets oder operative Reife voraussetzt, die nicht existieren</li>
 </ul>
-<p>Useful check:</p>
+<p>Nützliche Prüfung:</p>
 <ul>
-<li>compare the proposal to the product specification</li>
-<li>test it against scope boundaries and acceptance criteria</li>
-<li>write down trade-offs before adopting it</li>
+<li>den Vorschlag mit der Produktspezifikation vergleichen</li>
+<li>ihn an Umfangsgrenzen und Abnahmekriterien prüfen</li>
+<li>vor der Übernahme die Trade-offs festhalten</li>
 </ul>
-<h2 id="what-verification-looks-like-in-practice">What verification looks like in practice</h2>
-<p>Verification does not always mean a formal proof. In real engineering work it usually means combining several weaker but practical checks.</p>
+<h2 id="wie-verifizierung-praktisch-aussieht">Wie Verifizierung praktisch aussieht</h2>
+<p>Verifizierung bedeutet nicht immer einen formalen Beweis. In echter technischer Arbeit bedeutet sie meist die Kombination mehrerer schwächerer, aber nützlicher Prüfungen.</p>
 <ul>
-<li>compare the answer to the specification</li>
-<li>inspect the relevant files</li>
-<li>run tests</li>
-<li>run validators</li>
-<li>check links and generated artifacts</li>
-<li>preserve review notes and rationale</li>
-<li>ask a narrower follow-up question when the first answer is too broad to verify cleanly</li>
+<li>die Antwort mit der Spezifikation vergleichen</li>
+<li>relevante Dateien prüfen</li>
+<li>Tests ausführen</li>
+<li>Validatoren ausführen</li>
+<li>Links und erzeugte Artefakte prüfen</li>
+<li>Review-Notizen und Begründungen bewahren</li>
+<li>eine engere Folgefrage stellen, wenn die erste Antwort zu breit ist</li>
 </ul>
-<p>This is why verification culture scales better than prompt craft. It creates reusable control points that survive individual conversations.</p>
-<h2 id="practical-takeaway">Practical takeaway</h2>
+<p>Deshalb skaliert Verifizierungskultur langfristig besser als bloße Prompting-Fertigkeit. Sie schafft wiederverwendbare Kontrollpunkte, die einzelne Gespräche überdauern.</p>
+<h2 id="praktische-schlussfolgerung">Praktische Schlussfolgerung</h2>
 <ul>
-<li>Ask narrow questions.</li>
-<li>Record assumptions.</li>
-<li>Validate claims.</li>
-<li>Use tests and validators.</li>
-<li>Preserve rationale.</li>
-<li>Treat AI output as evidence, not truth.</li>
+<li>Enge Fragen stellen.</li>
+<li>Annahmen festhalten.</li>
+<li>Behauptungen prüfen.</li>
+<li>Tests und Validatoren verwenden.</li>
+<li>Begründungen bewahren.</li>
+<li>KI-Ausgabe als Beleg behandeln, nicht als Wahrheit.</li>
 </ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>AI is neither a colleague nor a search engine.</p>
-<p>It is closer to an oracle: a black box that can answer remarkably difficult questions, provided you ask carefully and verify the answers.</p>
-<p>The challenge of AI-assisted engineering is not learning how to use the oracle. It is learning how not to trust it too much.</p>
-<h2 id="related-reading">Related Reading</h2>
+<h2 id="fazit">Fazit</h2>
+<p>KI ist weder Kollege noch Suchmaschine.</p>
+<p>Sie ist eher ein Orakel: eine Blackbox, die erstaunlich schwierige Fragen beantworten kann, sofern man sorgfältig fragt und die Antworten überprüft.</p>
+<p>Die Herausforderung KI-gestützter Technik besteht nicht darin, zu lernen, wie man das Orakel benutzt. Sie besteht darin, zu lernen, ihm nicht zu sehr zu vertrauen.</p>
+<h2 id="weiterführende-seiten">Weiterführende Seiten</h2>
 <ul>
 <li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
 <li><code>../../wiki/spec-driven-development.md</code></li>
@@ -289,20 +289,20 @@
               </div>
               <div class="topic-menu-layer">
                 <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
-                  <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-for-ai-projects.html"><span>Spezifikationsgetriebene Entwicklung für KI-Projekte</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
                   <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../wiki/de/documentation-is-more-than-a-website.html"><span>Dokumentation ist mehr als eine Website</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/de/markdown-in-product-development.html"><span>Markdown in der Produktentwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../topics/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Themen</span></a>
                   <a href="../../topics/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Themen</span></a>
                   <a href="../../topics/de/book-metadata.html"><span>Buchmetadaten</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
                 <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
-                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie man Validierungsregeln und CI-Gates schrittweise hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-add-validation-rules-and-ci-gates-in-stages.html"><span>Wie man Validierungsregeln und CI-Gates schrittweise hinzufügt</span><span class="topic-menu__meta">Lernmaterial</span></a>
                   <a href="../../topics/de/demo-and-specification-alignment.html"><span>Abgleich von Demo und Spezifikation</span><span class="topic-menu__meta">Themen</span></a>
                 </div>
               </div>
