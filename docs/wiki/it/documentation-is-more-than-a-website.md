@@ -1,6 +1,6 @@
 ---
 title: "La documentazione è più di un sito web"
-summary: "Perché la documentazione dovrebbe essere progettata per la lettura online, l'uso offline, la stampa e la conservazione a lungo termine, invece di essere trattata come una superficie solo web."
+summary: "Perché la documentazione dovrebbe essere progettata per la lettura online, l'uso offline, la stampa e la conservazione a lungo termine, invece di essere trattata come qualcosa destinato solo al web."
 topics:
   - documentation
   - accessibility

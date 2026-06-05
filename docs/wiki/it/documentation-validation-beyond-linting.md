@@ -30,8 +30,8 @@ Per questo la qualità della documentazione dovrebbe essere trattata come una di
 
 Questo modello a più livelli è ancora più importante nei workflow assistiti dall'IA. I contenuti possono essere abbozzati rapidamente, rigenerati rapidamente e localizzati rapidamente. Questo accelera i cicli di feedback, ma aumenta anche il rischio di pubblicare errori dall'aspetto rifinito se la pipeline verifica solo la formattazione superficiale.
 
-I Topics sono un buon esempio. Quando in LetBooks sono diventati un tipo di documentazione di prima classe, hanno dovuto ereditare navigazione, indicizzazione della ricerca, generazione della sitemap, gestione della localizzazione, validazione del sito generato e controlli di stampa. Un percorso di qualità ridotta avrebbe creato una nuova superficie di contenuto con garanzie più deboli rispetto al resto della piattaforma.
+I Topics sono un buon esempio. Quando in LetBooks sono diventati un tipo di documentazione di prima classe, hanno dovuto ereditare navigazione, indicizzazione della ricerca, generazione della sitemap, gestione della localizzazione, validazione del sito generato e controlli di stampa. Un percorso di qualità inferiore avrebbe creato una nuova superficie di contenuto con garanzie più deboli rispetto al resto della piattaforma.
 
-Il principio è semplice: ogni nuovo tipo di documentazione deve ereditare la validazione esistente. Così il modello di qualità resta scalabile. Invece di inventare eccezioni per ogni nuova sezione, la piattaforma estende le stesse aspettative a ogni superficie rivolta al lettore.
+Il principio è semplice: ogni nuovo tipo di documentazione deve ereditare la validazione esistente. Così il modello di qualità resta scalabile. Invece di inventare eccezioni per ogni nuova sezione, la piattaforma estende le stesse aspettative a ogni contenuto rivolto al lettore.
 
 La qualità della documentazione va oltre il linting, perché i lettori sperimentano l'intero sistema, non solo i file sorgente.
