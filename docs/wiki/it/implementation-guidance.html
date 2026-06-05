@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guida all&#x27;implementazione | LetBooks</title>
-    <meta name="description" content="La guida all&#x27;implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all&#x27;interno dell&#x27;attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.">
+    <meta name="description" content="La guida all&#x27;implementazione definisce come un team dovrebbe svolgere il lavoro nel repository o nell&#x27;ambiente di consegna attuale, senza sostituire la specifica del prodotto.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/it/implementation-guidance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Guida all&#x27;implementazione | LetBooks">
-    <meta property="og:description" content="La guida all&#x27;implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all&#x27;interno dell&#x27;attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.">
+    <meta property="og:description" content="La guida all&#x27;implementazione definisce come un team dovrebbe svolgere il lavoro nel repository o nell&#x27;ambiente di consegna attuale, senza sostituire la specifica del prodotto.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/it/implementation-guidance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Guida all&#x27;implementazione | LetBooks">
-    <meta name="twitter:description" content="La guida all&#x27;implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all&#x27;interno dell&#x27;attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.">
+    <meta name="twitter:description" content="La guida all&#x27;implementazione definisce come un team dovrebbe svolgere il lavoro nel repository o nell&#x27;ambiente di consegna attuale, senza sostituire la specifica del prodotto.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Italiano</span>
           </div>
-          <p class="content-page-summary">La guida all&#x27;implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all&#x27;interno dell&#x27;attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.</p>
+          <p class="content-page-summary">La guida all&#x27;implementazione definisce come un team dovrebbe svolgere il lavoro nel repository o nell&#x27;ambiente di consegna attuale, senza sostituire la specifica del prodotto.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Temi:</span>
               <span class="content-tag">Pianificazione dell&#x27;implementazione</span>
@@ -117,7 +117,7 @@
 <li>dove le regole tattiche dovrebbero vivere man mano che il progetto evolve</li>
 </ul>
 <h2 id="differenza-rispetto-alle-specifiche-del-prodotto">Differenza rispetto alle specifiche del prodotto</h2>
-<p>Il disciplinare di produzione definisce cosa è il prodotto e cosa deve raggiungere.</p>
+<p>La specifica del prodotto definisce che cosa sia il prodotto e che cosa debba ottenere.</p>
 <p>La guida all’implementazione definisce il modo in cui i contributori dovrebbero svolgere il lavoro nell’attuale contesto di fornitura.</p>
 <p>Questa distinzione è utile perché non tutte le regole del repository sono una verità sul prodotto, e non tutte le verità sul prodotto dovrebbero essere sepolte in note tattiche.</p>
 <h2 id="esempi-comuni">Esempi comuni</h2>
@@ -130,14 +130,14 @@
 <li>regole di modifica o di generazione del codice</li>
 <li>politiche dell’evidenza per la scrittura pubblica</li>
 </ul>
-<p>Queste regole spesso convivono bene nei Markdown perché devono rimanere rivedibili, facili da aggiornare e vicine al resto del contesto del repository.</p>
+<p>Queste regole spesso funzionano bene in Markdown perché devono restare facili da rivedere, aggiornare e consultare insieme al resto del contesto del repository.</p>
 <h2 id="perché-è-importante-nel-lavoro-assistito-dallintelligenza-artificiale">Perché è importante nel lavoro assistito dall’intelligenza artificiale</h2>
 <p>Gli assistenti AI spesso seguono le istruzioni concrete più vicine. Se le regole specifiche del repository sono implicite, l’output diventa rapidamente incoerente.</p>
 <p>Le linee guida per l’implementazione rendono tali regole visibili senza inquinare le specifiche del prodotto con dettagli tattici.</p>
 <p>In pratica, ciò significa che un file di orientamento Markdown può svolgere due compiti contemporaneamente:</p>
 <ul>
 <li>spiegare il flusso di lavoro a un collaboratore umano</li>
-<li>indirizzare un agente AI verso gli strumenti, la sequenza e i vincoli preferiti</li>
+<li>indirizzare un agente AI verso gli strumenti preferiti, il giusto ordine di lavoro e i relativi vincoli</li>
 </ul>
 <h2 id="let-books-contesto">Let Books contesto</h2>
 <p>Nei Let Books, <code>AGENTS-Implementation.md</code> è il livello di guida tattica.</p>
@@ -153,7 +153,7 @@
 <li>Politica sulle prove del blog</li>
 </ul>
 <p>Ciò lo rende il complemento operativo del <code>AGENTS.md</code> e non il suo sostituto.</p>
-<p>Altre indicazioni Markdown contenute nel pronti contro termine rafforzano lo stesso schema. Ad esempio:</p>
+<p>Altre indicazioni in Markdown presenti nel repository rafforzano lo stesso schema. Ad esempio:</p>
 <ul>
 <li><code>docs/android-debugging.md</code> indirizza le scelte del flusso di lavoro di debug come i flussi di lavoro di collegamento CDP rispetto a quelli di patch sorgente</li>
 <li><code>docs/style-guide/publishing/ubuntu-tooling.md</code> documenta gli strumenti previsti per la pubblicazione, la verifica, gli screenshot, il controllo ortografico e il debug del dispositivo</li>

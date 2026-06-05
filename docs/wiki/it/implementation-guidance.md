@@ -1,7 +1,7 @@
 ---
 title: "Guida all'implementazione"
 summary: >-
-  La guida all'implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all'interno dell'attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.
+  La guida all'implementazione definisce come un team dovrebbe svolgere il lavoro nel repository o nell'ambiente di consegna attuale, senza sostituire la specifica del prodotto.
 topics:
   - implementation-planning
   - spec-driven-development
@@ -11,7 +11,7 @@ topics:
 
 ## Riepilogo
 
-La guida all'implementazione definisce il modo in cui un team dovrebbe fornire il lavoro all'interno dell'attuale repository o ambiente di consegna senza sostituire le specifiche del prodotto stesso.
+La guida all'implementazione definisce come un team dovrebbe svolgere il lavoro nel repository o nell'ambiente di consegna attuale, senza sostituire la specifica del prodotto.
 
 ## Ruolo
 
@@ -27,7 +27,7 @@ Aiuta a rispondere a domande come:
 
 ## Differenza rispetto alle specifiche del prodotto
 
-Il disciplinare di produzione definisce cosa è il prodotto e cosa deve raggiungere.
+La specifica del prodotto definisce che cosa sia il prodotto e che cosa debba ottenere.
 
 La guida all’implementazione definisce il modo in cui i contributori dovrebbero svolgere il lavoro nell’attuale contesto di fornitura.
 
@@ -44,7 +44,7 @@ Le linee guida per l'implementazione spesso includono:
 - regole di modifica o di generazione del codice
 - politiche dell'evidenza per la scrittura pubblica
 
-Queste regole spesso convivono bene nei Markdown perché devono rimanere rivedibili, facili da aggiornare e vicine al resto del contesto del repository.
+Queste regole spesso funzionano bene in Markdown perché devono restare facili da rivedere, aggiornare e consultare insieme al resto del contesto del repository.
 
 ## Perché è importante nel lavoro assistito dall'intelligenza artificiale
 
@@ -55,7 +55,7 @@ Le linee guida per l’implementazione rendono tali regole visibili senza inquin
 In pratica, ciò significa che un file di orientamento Markdown può svolgere due compiti contemporaneamente:
 
 - spiegare il flusso di lavoro a un collaboratore umano
-- indirizzare un agente AI verso gli strumenti, la sequenza e i vincoli preferiti
+- indirizzare un agente AI verso gli strumenti preferiti, il giusto ordine di lavoro e i relativi vincoli
 
 ## Let Books contesto
 
@@ -74,7 +74,7 @@ Copre aree come:
 
 Ciò lo rende il complemento operativo del `AGENTS.md` e non il suo sostituto.
 
-Altre indicazioni Markdown contenute nel pronti contro termine rafforzano lo stesso schema. Ad esempio:
+Altre indicazioni in Markdown presenti nel repository rafforzano lo stesso schema. Ad esempio:
 
 - `docs/android-debugging.md` indirizza le scelte del flusso di lavoro di debug come i flussi di lavoro di collegamento CDP rispetto a quelli di patch sorgente
 - `docs/style-guide/publishing/ubuntu-tooling.md` documenta gli strumenti previsti per la pubblicazione, la verifica, gli screenshot, il controllo ortografico e il debug del dispositivo

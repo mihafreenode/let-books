@@ -1,7 +1,7 @@
 ---
 title: "Guía de implementación"
 summary: >-
-  La guía de implementación define cómo un equipo debe entregar el trabajo dentro del repositorio o entorno de entrega actual sin reemplazar la especificación del producto en sí.
+  La guía de implementación define cómo un equipo debe realizar el trabajo dentro del repositorio o del entorno de entrega actual, sin sustituir la propia especificación del producto.
 topics:
   - implementation-planning
   - spec-driven-development
@@ -11,7 +11,7 @@ topics:
 
 ## Resumen
 
-La guía de implementación define cómo un equipo debe entregar el trabajo dentro del repositorio o entorno de entrega actual sin reemplazar la especificación del producto en sí.
+La guía de implementación define cómo un equipo debe realizar el trabajo dentro del repositorio o del entorno de entrega actual, sin sustituir la propia especificación del producto.
 
 ## Rol
 
@@ -44,7 +44,7 @@ La guía de implementación a menudo incluye:
 - reglas de edición o generación de código
 - políticas de evidencia para la escritura pública
 
-Estas reglas a menudo se encuentran bien en Markdown porque deben seguir siendo revisables, fáciles de actualizar y cercanas al resto del contexto del repositorio.
+Estas reglas suelen funcionar bien en Markdown porque deben seguir siendo revisables, fáciles de actualizar y próximas al resto del contexto del repositorio.
 
 ## Por qué es importante el trabajo asistido por IA
 
@@ -52,10 +52,10 @@ Los asistentes de IA suelen seguir las instrucciones concretas más cercanas. Si
 
 La guía de implementación hace que esas reglas sean visibles sin contaminar las especificaciones del producto con detalles tácticos.
 
-En la práctica, esto significa que un expediente de orientación del artículo Markdown puede realizar dos tareas a la vez:
+En la práctica, esto significa que un archivo de orientación en Markdown puede cumplir dos funciones a la vez:
 
 - explicar el flujo de trabajo a un colaborador humano
-- Dirigir a un agente de IA hacia las herramientas, secuencias y limitaciones preferidas.
+- dirigir a un agente de IA hacia las herramientas preferidas, la secuencia adecuada y las limitaciones correspondientes
 
 ## Let Books contexto
 

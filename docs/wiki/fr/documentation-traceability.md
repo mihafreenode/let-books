@@ -1,7 +1,7 @@
 ---
 title: "Traçabilité documentaire"
 summary: >-
-  La traçabilité de la documentation consiste à faire en sorte que les déclarations importantes, les descriptions de flux de travail et les attentes en matière de qualité soient traçables jusqu'à des preuves stables du référentiel et des décisions explicites.
+  La traçabilité de la documentation consiste à relier de manière fiable les affirmations importantes, les descriptions de flux de travail et les attentes de qualité à des preuves stables dans le dépôt et à des décisions clairement prises.
 topics:
   - documentation
   - product-quality
@@ -11,7 +11,7 @@ topics:
 
 ## Résumé
 
-La traçabilité de la documentation consiste à faire en sorte que les déclarations importantes, les descriptions de flux de travail et les attentes en matière de qualité soient traçables jusqu'à des preuves stables du référentiel et des décisions explicites.
+La traçabilité de la documentation consiste à relier de manière fiable les affirmations importantes, les descriptions de flux de travail et les attentes de qualité à des preuves stables dans le dépôt et à des décisions clairement prises.
 
 ## Pourquoi c'est important
 
@@ -30,13 +30,13 @@ La traçabilité est particulièrement importante dans le travail assisté par l
 
 Une bonne traçabilité de la documentation comprend généralement :
 
-- une chaîne d'autorité connue
+- une chaîne d'autorité clairement définie
 - des références stables aux documents ou spécifications pertinents
 - séparation claire entre l'état actuel et les projets futurs
 - distinction explicite entre la documentation canonique et l'état d'implémentation
 - des cartes sources ou des notes de preuves pour des articles publics importants
 
-Cela s’avère également de plus en plus utile lorsque la documentation est suffisamment spécifique pour guider le travail assisté par l’IA, et pas seulement l’interprétation humaine.
+Cela devient aussi de plus en plus utile lorsque la documentation est assez précise pour guider le travail assisté par l’IA, et pas seulement l’interprétation humaine.
 
 ## Un modèle d'autorité simple
 

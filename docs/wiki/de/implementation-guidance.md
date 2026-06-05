@@ -1,7 +1,7 @@
 ---
 title: "Implementierungsleitfaden"
 summary: >-
-  Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.
+  Der Implementierungsleitfaden beschreibt, wie ein Team im aktuellen Repository oder in der vorhandenen Auslieferungsumgebung arbeiten soll, ohne die Produktspezifikation selbst zu ersetzen.
 topics:
   - implementation-planning
   - spec-driven-development
@@ -11,19 +11,19 @@ topics:
 
 ## Zusammenfassung
 
-Die Implementierungsanleitung definiert, wie ein Team Arbeit innerhalb des aktuellen Repositorys oder der Bereitstellungsumgebung bereitstellen soll, ohne die Produktspezifikation selbst zu ersetzen.
+Der Implementierungsleitfaden beschreibt, wie ein Team im aktuellen Repository oder in der vorhandenen Auslieferungsumgebung arbeiten soll, ohne die Produktspezifikation selbst zu ersetzen.
 
 ## Rolle
 
 Die Implementierungsanleitung befindet sich unterhalb der Produktspezifikation.
 
-Es hilft bei der Beantwortung von Fragen wie:
+Er hilft bei Fragen wie:
 
 - wie öffentliche Namensgebung funktionieren sollte
 - wie Dokumente strukturiert sein sollten
 - welche Überprüfungserwartungen jetzt gelten
 - welche Repository-spezifischen Regeln Mitwirkende befolgen sollten
-- Wo taktische Regeln gelten sollten, während sich das Projekt weiterentwickelt
+- wo taktische Regeln festgehalten werden sollten, während sich das Projekt weiterentwickelt
 
 ## Abweichung von der Produktspezifikation
 
@@ -44,7 +44,7 @@ Zu den Implementierungsleitfäden gehören häufig:
 - Bearbeitungs- oder Codegenerierungsregeln
 - Evidenzrichtlinien für öffentliches Schreiben
 
-Diese Regeln funktionieren oft gut in Markdown, da sie überprüfbar, leicht zu aktualisieren und nah am Rest des Repository-Kontexts bleiben müssen.
+Solche Regeln funktionieren in Markdown oft besonders gut, weil sie überprüfbar, leicht zu aktualisieren und nah am übrigen Repository-Kontext bleiben müssen.
 
 ## Warum es bei KI-gestützter Arbeit wichtig ist
 
@@ -54,8 +54,8 @@ Implementierungsleitfäden machen diese Regeln sichtbar, ohne die Produktspezifi
 
 In der Praxis bedeutet das, dass eine Markdown-Leitfadendatei zwei Aufgaben gleichzeitig erledigen kann:
 
-- Erklären Sie einem menschlichen Mitarbeiter den Arbeitsablauf
-- Lenken Sie einen KI-Agenten zu den bevorzugten Werkzeugen, Abläufen und Einschränkungen
+- einem menschlichen Mitwirkenden den Arbeitsablauf erklären
+- einen KI-Agenten zu den bevorzugten Werkzeugen, Abläufen und Einschränkungen führen
 
 ## Let Books Kontext
 

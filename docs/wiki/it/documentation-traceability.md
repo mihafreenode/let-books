@@ -1,7 +1,7 @@
 ---
 title: "Tracciabilità della documentazione"
 summary: >-
-  La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità riconducibili a prove stabili del repository e decisioni esplicite.
+  La tracciabilità della documentazione significa poter collegare in modo affidabile affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità a prove stabili presenti nel repository e a decisioni chiaramente assunte.
 topics:
   - documentation
   - product-quality
@@ -11,7 +11,7 @@ topics:
 
 ## Riepilogo
 
-La tracciabilità della documentazione è la pratica di rendere affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità riconducibili a prove stabili del repository e decisioni esplicite.
+La tracciabilità della documentazione significa poter collegare in modo affidabile affermazioni importanti, descrizioni del flusso di lavoro e aspettative di qualità a prove stabili presenti nel repository e a decisioni chiaramente assunte.
 
 ## Perché è importante
 
@@ -30,13 +30,13 @@ La tracciabilità è particolarmente importante nel lavoro assistito dall’inte
 
 Una buona tracciabilità della documentazione solitamente include:
 
-- una catena di autorità conosciuta
+- una catena di autorità chiaramente definita
 - riferimenti stabili a documenti o specifiche pertinenti
 - chiara separazione tra stato attuale e piani futuri
 - distinzione esplicita tra documentazione canonica e stato di attuazione
 - mappe delle fonti o note di evidenza per articoli pubblici sostanziali
 
-È inoltre sempre più utile quando la documentazione è sufficientemente specifica da guidare il lavoro assistito dall’intelligenza artificiale, non solo dall’interpretazione umana.
+È inoltre sempre più utile quando la documentazione è abbastanza precisa da orientare il lavoro assistito dall’intelligenza artificiale, e non solo l’interpretazione umana.
 
 ## Un semplice modello di autorità
 

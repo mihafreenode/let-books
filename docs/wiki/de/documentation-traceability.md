@@ -1,7 +1,7 @@
 ---
 title: "Rückverfolgbarkeit der Dokumentation"
 summary: >-
-  Unter Dokumentationsrückverfolgbarkeit versteht man die Praxis, wichtige Behauptungen, Arbeitsablaufbeschreibungen und Qualitätserwartungen auf stabile Repository-Beweise und explizite Entscheidungen zurückzuführen.
+  Rückverfolgbarkeit in der Dokumentation bedeutet, dass sich wichtige Aussagen, Ablaufbeschreibungen und Qualitätserwartungen verlässlich mit stabilen Nachweisen im Repository und klar getroffenen Entscheidungen verbinden lassen.
 topics:
   - documentation
   - product-quality
@@ -11,7 +11,7 @@ topics:
 
 ## Zusammenfassung
 
-Unter Dokumentationsrückverfolgbarkeit versteht man die Praxis, wichtige Behauptungen, Arbeitsablaufbeschreibungen und Qualitätserwartungen auf stabile Repository-Beweise und explizite Entscheidungen zurückzuführen.
+Rückverfolgbarkeit in der Dokumentation bedeutet, dass sich wichtige Aussagen, Ablaufbeschreibungen und Qualitätserwartungen verlässlich mit stabilen Nachweisen im Repository und klar getroffenen Entscheidungen verbinden lassen.
 
 ## Warum es wichtig ist
 
@@ -30,13 +30,13 @@ Bei KI-gestützter Arbeit ist die Rückverfolgbarkeit besonders wichtig, da gene
 
 Zu einer guten Rückverfolgbarkeit der Dokumentation gehören in der Regel:
 
-- eine bekannte Autoritätskette
-- Stabile Verweise auf relevante Dokumente oder Spezifikationen
-- Klare Trennung zwischen Ist-Zustand und Zukunftsplänen
+- eine klar definierte Autoritätskette
+- stabile Verweise auf relevante Dokumente oder Spezifikationen
+- klare Trennung zwischen Ist-Zustand und künftigen Plänen
 - explizite Unterscheidung zwischen kanonischer Dokumentation und Umsetzungsstatus
 - Quellenkarten oder Beweisnotizen für wesentliche öffentliche Artikel
 
-Es wird auch immer nützlicher, wenn die Dokumentation spezifisch genug ist, um die KI-gestützte Arbeit zu leiten und nicht nur die menschliche Interpretation.
+Es wird außerdem immer nützlicher, wenn die Dokumentation präzise genug ist, um KI-gestützte Arbeit zu steuern und nicht nur menschliche Interpretation zu unterstützen.
 
 ## Ein einfaches Autoritätsmodell
 
@@ -64,7 +64,7 @@ Bei der Rückverfolgbarkeit geht es nicht nur darum, einer Person zu helfen, zu 
 
 Wenn in der Dokumentation die Reihenfolge der Arbeitsabläufe, Werkzeugpräferenzen, Umgebungseinschränkungen und Autoritätsgrenzen klar angegeben sind, kann sie sowohl als Betriebskontext für Agenten als auch als erklärender Kontext für Personen verwendet werden.
 
-Dies ist wichtig, da Agenten oft auf der Grundlage der konkretesten Anweisungen in der Nähe handeln. Nachvollziehbare Markdown helfen dabei, die richtige Anleitung sichtbar zu machen.
+Das ist wichtig, weil Agenten oft den konkretesten Anweisungen folgen, die gerade greifbar sind. Nachvollziehbares Markdown hilft dabei, die richtige Anleitung sichtbar zu machen.
 
 ## Let Books Kontext
 

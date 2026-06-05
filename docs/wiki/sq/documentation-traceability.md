@@ -1,7 +1,7 @@
 ---
 title: "Gjurmueshmëria e dokumentacionit"
 summary: >-
-  Gjurmueshmëria e dokumentacionit është praktika e bërjes së pretendimeve të rëndësishme, përshkrimeve të rrjedhës së punës dhe pritshmërive të cilësisë të gjurmueshme nga evidenca e qëndrueshme e depove dhe vendimet e qarta.
+  Gjurmueshmëria e dokumentacionit do të thotë që pretendimet e rëndësishme, përshkrimet e rrjedhës së punës dhe pritshmëritë për cilësinë të lidhen në mënyrë të besueshme me prova të qëndrueshme në depo dhe me vendime të marra qartë.
 topics:
   - documentation
   - product-quality
@@ -11,7 +11,7 @@ topics:
 
 ## Përmbledhje
 
-Gjurmueshmëria e dokumentacionit është praktika e bërjes së pretendimeve të rëndësishme, përshkrimeve të rrjedhës së punës dhe pritshmërive të cilësisë të gjurmueshme nga evidenca e qëndrueshme e depove dhe vendimet e qarta.
+Gjurmueshmëria e dokumentacionit do të thotë që pretendimet e rëndësishme, përshkrimet e rrjedhës së punës dhe pritshmëritë për cilësinë të lidhen në mënyrë të besueshme me prova të qëndrueshme në depo dhe me vendime të marra qartë.
 
 ## Pse ka rëndësi
 
@@ -30,13 +30,13 @@ Gjurmueshmëria është veçanërisht e rëndësishme në punën e asistuar nga 
 
 Gjurmueshmëria e mirë e dokumentacionit zakonisht përfshin:
 
-- një zinxhir i njohur autoriteti
+- një zinxhir autoriteti i përcaktuar qartë
 - referenca të qëndrueshme ndaj dokumenteve ose specifikave përkatëse
 - ndarje e qartë midis planeve të gjendjes aktuale dhe planeve të ardhshme
 - dallimi i qartë ndërmjet dokumentacionit kanonik dhe statusit të zbatimit
 - harta burimore ose shënime provash për artikuj të rëndësishëm publik
 
-Është gjithashtu gjithnjë e më i dobishëm kur dokumentacioni është mjaft specifik për të udhëhequr punën e asistuar nga AI, jo vetëm interpretimin njerëzor.
+Është gjithashtu gjithnjë e më e dobishme që dokumentacioni të jetë mjaft i saktë për të drejtuar punën e asistuar nga AI, jo vetëm interpretimin njerëzor.
 
 ## Një model i thjeshtë autoriteti
 
@@ -60,7 +60,7 @@ Kjo e bën shkrimin publik më të mirëmbajtur dhe më pak të brishtë me kali
 
 ## Gjurmueshmëria si për agjentët ashtu edhe për njerëzit
 
-Gjurmueshmëria nuk ka të bëjë vetëm me ndihmën e një personi të kuptojë se nga ka ardhur një pretendim. Ai gjithashtu ndihmon një agjent të AI të përcaktojë se cilat artefakte të depove duhet të udhëheqin veprimin.
+Gjurmueshmëria nuk shërben vetëm që një njeri të kuptojë se nga vjen një pretendim. Ajo ndihmon edhe një agjent të AI të përcaktojë se cilat artefakte të depos duhet të udhëheqin veprimin e radhës.
 
 Kur dokumentacioni shpreh qartë rendin e rrjedhës së punës, preferencat e veglave, kufizimet e mjedisit dhe kufijtë e autoritetit, ai bëhet i përdorshëm si kontekst operacional për agjentët, si dhe si kontekst shpjegues për njerëzit.
 
