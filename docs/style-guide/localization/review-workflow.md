@@ -27,6 +27,31 @@ Before changing localized content, the reviewer must:
 - check whether previously rejected wording patterns reappear in the current draft
 - check whether English idioms, metaphors, management jargon, or rhetorical phrasing were transferred too literally into Slovenian
 
+## Tone Inflation Checklist
+
+Use this checklist when reviewing recently created or recently expanded localized content.
+
+Check whether the translation unintentionally:
+
+- increases authority beyond the source
+- increases certainty beyond the source
+- introduces legal, compliance, audit, or evidentiary tone not present in the source
+- introduces academic or governance jargon where the source is simpler
+- replaces a practical word with a more formal or institution-sounding one
+
+Common examples to review carefully:
+
+- `evidence` rendered as something closer to legal proof than supporting material
+- `artifact` rendered as jargon when `record`, `document`, or `material` would be clearer
+- `draft` rendered as if it were formal evidence or official publication text
+- English governance or management language translated into wording that sounds more authoritative than the original
+
+Preferred reviewer action:
+
+- make targeted edits
+- preserve the author's intended meaning and strength
+- prefer natural reader-facing wording over terminology fidelity when literal wording changes connotation
+
 ## Review summary requirements
 
 When producing a review summary, reviewers should state:
