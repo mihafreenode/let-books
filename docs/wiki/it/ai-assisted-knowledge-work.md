@@ -99,9 +99,9 @@ L'AI interattiva resta utile anche nei workflow maturi, ma i progetti piu grandi
 
 Il contesto e finito. Anche quando i sistemi moderni possono elaborare grandi quantita di informazioni, resta poco pratico mantenere continuamente presenti in una singola conversazione tutte le specifiche, i rilievi, le fonti, i commenti di revisione e i documenti di supporto. Quando un progetto cresce, il problema non e solo la quantita totale. Il problema e la rilevanza.
 
-Per questo molti workflow agentici si basano sul retrieval. Invece di cercare di mantenere tutto contemporaneamente in vista, il sistema conserva artefatti durevoli e recupera il materiale piu rilevante quando serve. L'obiettivo non e necessariamente fornire piu informazioni tutte insieme, ma fornire le informazioni giuste quando servono.
+Per questo molti workflow agentici si basano sul retrieval. Invece di cercare di mantenere tutto contemporaneamente in vista, il sistema conserva materiali durevoli e recupera il materiale piu rilevante quando serve. L'obiettivo non e necessariamente fornire piu informazioni tutte insieme, ma fornire le informazioni giuste quando servono.
 
-L'accesso agli strumenti e il secondo limite. Le piattaforme web interattive di solito offrono strumenti curati pensati per funzionare in modo affidabile per un pubblico ampio. Questa curatela ha vantaggi reali:
+L'accesso agli strumenti e il secondo limite. Le piattaforme web interattive di solito offrono strumenti selezionati con cura, pensati per funzionare in modo affidabile per un pubblico ampio. Questa selezione ha vantaggi reali:
 
 - affidabilita
 - manutenzione

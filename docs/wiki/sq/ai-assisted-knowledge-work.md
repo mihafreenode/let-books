@@ -99,9 +99,9 @@ AI interaktiv mbetet i dobishëm edhe në rrjedha të pjekura pune, por projekte
 
 Konteksti është i fundëm. Edhe kur sistemet moderne mund të përpunojnë sasi të mëdha informacioni, prapë është jopraktike të mbash çdo specifikim, gjetje, burim, koment rishikimi dhe dokument mbështetës vazhdimisht të pranishëm në një bisedë të vetme. Ndërsa projekti rritet, problemi nuk është vetëm sasia totale. Problemi është rëndësia.
 
-Për këtë arsye shumë rrjedha agjentike pune mbështeten te rikthimi. Në vend që të përpiqet të mbajë gjithçka njëkohësisht në pamje aktive, sistemi ruan artefakte të qëndrueshme dhe rikthen materialet më të rëndësishme kur duhen. Qëllimi nuk është domosdoshmërisht të ofrojë më shumë informacion menjëherë, por të ofrojë informacionin e duhur në momentin kur nevojitet.
+Për këtë arsye shumë rrjedha agjentike pune mbështeten te rikthimi. Në vend që të përpiqet të mbajë gjithçka njëkohësisht në pamje aktive, sistemi ruan materiale të qëndrueshme dhe rikthen materialet më të rëndësishme kur duhen. Qëllimi nuk është domosdoshmërisht të ofrojë më shumë informacion menjëherë, por të ofrojë informacionin e duhur në momentin kur nevojitet.
 
-Qasja te mjetet është kufizimi i dytë. Platformat interaktive në ueb zakonisht ofrojnë mjete të kuruara të synuara të funksionojnë me besueshmëri për audienca të gjera. Kjo kurim ka përparësi reale:
+Qasja te mjetet është kufizimi i dytë. Platformat interaktive në ueb zakonisht ofrojnë mjete të përzgjedhura me kujdes, të synuara të funksionojnë me besueshmëri për audienca të gjera. Kjo qasje ka përparësi reale:
 
 - besueshmëri
 - mirëmbajtje

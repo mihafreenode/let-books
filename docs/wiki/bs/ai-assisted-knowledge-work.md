@@ -53,7 +53,7 @@ U svim tim slučajevima specifikacija pomaže pomjeriti rad od nejasnih promptov
 
 ### Markdown kao trajan format za znanje
 
-U praksi mnogi timovi specifikacije, bilješke, preglede, nalaze, promptove i artefakte radnog toka pohranjuju u Markdownu. Markdown nije jedini koristan format, ali je često praktičan jer je:
+U praksi mnogi timovi specifikacije, bilješke, preglede, nalaze, promptove i zapise o radnom toku pohranjuju u Markdownu. Markdown nije jedini koristan format, ali je često praktičan jer je:
 
 - čitljiv bez specijaliziranog softvera
 - dovoljno strojno čitljiv za automatizaciju
@@ -61,7 +61,7 @@ U praksi mnogi timovi specifikacije, bilješke, preglede, nalaze, promptove i ar
 - prenosiv između alata i platformi
 - izdržljiv kroz duži vremenski period
 
-Te osobine su važne u AI-potpomognutom radu jer je kontekst vrijedan samo ako se može sačuvati, ponovo pregledati i ponovo upotrijebiti. Markdown olakšava čuvanje više od samog završnog isporučivog artefakta. Može sačuvati ciljeve, pretpostavke, ograničenja, nalaze pregleda, pravila objavljivanja, rezultate validacije i odluke zajedno s njihovim obrazloženjem.
+Te osobine su važne u AI-potpomognutom radu jer je kontekst vrijedan samo ako se može sačuvati, ponovo pregledati i ponovo upotrijebiti. Markdown olakšava čuvanje više od samog završnog isporučivog dokumenta. Može sačuvati ciljeve, pretpostavke, ograničenja, nalaze pregleda, pravila objavljivanja, rezultate validacije i odluke zajedno s njihovim obrazloženjem.
 
 To koristi ljudima jer poboljšava sljedivost i pregled. Koristi i AI-sistemima jer važan kontekst ostaje u formatu koji je razmjerno lako citirati, pretraživati, sažimati i ponovo dohvaćati.
 
@@ -99,9 +99,9 @@ Interaktivni AI ostaje koristan i u zrelijim radnim tokovima, ali veći projekti
 
 Kontekst je ograničen. Čak i kada savremeni sistemi mogu obraditi velike količine informacija, i dalje je nepraktično u jednom razgovoru stalno držati svaku specifikaciju, nalaz, izvor, komentar pregleda i pomoćni dokument. Kako projekt raste, problem nije samo ukupna količina. Problem je i relevantnost.
 
-Zato mnogi agentni radni tokovi koriste ponovno dohvaćanje. Umjesto da pokušavaju sve stalno držati u aktivnom vidokrugu, sistem pohranjuje trajne artefakte i po potrebi dohvaća najrelevantniji materijal. Cilj nije nužno dati više informacija odjednom, nego dati prave informacije onda kada su potrebne.
+Zato mnogi agentni radni tokovi koriste ponovno dohvaćanje. Umjesto da pokušavaju sve stalno držati u aktivnom vidokrugu, sistem pohranjuje trajne zapise i po potrebi dohvaća najrelevantniji materijal. Cilj nije nužno dati više informacija odjednom, nego dati prave informacije onda kada su potrebne.
 
-Drugo ograničenje su alati. Interaktivne web platforme obično nude kurirane alate dizajnirane da pouzdano rade za široku publiku. Takav kurirani pristup ima stvarne prednosti:
+Drugo ograničenje su alati. Interaktivne web platforme obično nude pažljivo odabrane alate dizajnirane da pouzdano rade za široku publiku. Takav pristup ima stvarne prednosti:
 
 - pouzdanost
 - održavanje
@@ -175,7 +175,7 @@ Izuzeci mogu uključivati:
 - kod
 - nazive protokola
 
-Cilj nije jezička čistota. Cilj je smanjiti trenje za čitaoca i artefakte radnog toka zadržati razumljivima na njegovom radnom jeziku.
+Cilj nije jezička čistota. Cilj je smanjiti trenje za čitaoca i zapise o radnom toku zadržati razumljivima na njegovom radnom jeziku.
 
 ### Sažeta studija slučaja radnog toka
 
@@ -283,7 +283,7 @@ To načelo važi za softver, ali i za istraživanje, podučavanje, dokumentaciju
 
 ## Popratni materijal
 
-Popratni materijal na `docs/supporting-material/spec_driven_workflow_thread.html` dokumentira dio rasprave i procesa dorade koji stoji iza ovog članka. To je artefakt radnog toka, a ne jedini izvor svake ideje u članku.
+Popratni materijal na `docs/supporting-material/spec_driven_workflow_thread.html` dokumentira dio rasprave i procesa dorade koji stoji iza ovog članka. To je zapis radnog toka, a ne jedini izvor svake ideje u članku.
 
 Transkript sadrži nedovršene ideje, promjenjiva mišljenja, odbačene prijedloge, grube formulacije, tipfelere ili greške autokorekcije te druge tragove iterativne dorade. Zaključci članka i autorska razmišljanja zato nisu isto što i transkript.
 

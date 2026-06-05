@@ -99,9 +99,9 @@ L'IA interactive reste utile même dans des workflows plus matures, mais les pro
 
 Le contexte est fini. Même lorsque des systèmes modernes peuvent traiter de grandes quantités d'information, il reste peu pratique de garder en permanence chaque spécification, constat, source, commentaire de revue et document d'appui dans une seule conversation. À mesure qu'un projet grandit, le problème n'est pas seulement la quantité totale. Le problème est aussi la pertinence.
 
-C'est pourquoi beaucoup de workflows agentiques reposent sur la récupération. Au lieu d'essayer de tout garder simultanément en vue active, le système stocke des artefacts durables et récupère les éléments les plus pertinents au moment opportun. L'objectif n'est pas nécessairement de fournir plus d'informations d'un coup, mais de fournir les bonnes informations quand elles sont nécessaires.
+C'est pourquoi beaucoup de workflows agentiques reposent sur la récupération. Au lieu d'essayer de tout garder simultanément en vue active, le système stocke des éléments durables et récupère les éléments les plus pertinents au moment opportun. L'objectif n'est pas nécessairement de fournir plus d'informations d'un coup, mais de fournir les bonnes informations quand elles sont nécessaires.
 
-L'accès aux outils est la deuxième limite. Les plateformes web interactives proposent généralement des outils curés conçus pour fonctionner de manière fiable pour un large public. Cette sélection présente de vrais avantages:
+L'accès aux outils est la deuxième limite. Les plateformes web interactives proposent généralement des outils soigneusement sélectionnés, conçus pour fonctionner de manière fiable pour un large public. Cette sélection présente de vrais avantages:
 
 - fiabilité
 - entretien

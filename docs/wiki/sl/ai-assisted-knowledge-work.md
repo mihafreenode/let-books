@@ -53,7 +53,7 @@ V vseh teh primerih specifikacija pomaga delo premakniti stran od nejasnih poziv
 
 ### Markdown kot trajen format za znanje
 
-V praksi mnogo ekip specifikacije, opombe, preglede, ugotovitve, pozive in artefakte delovnega toka hrani v Markdownu. Markdown ni edini uporaben format, vendar je pogosto praktičen, ker je:
+V praksi mnogo ekip specifikacije, opombe, preglede, ugotovitve, pozive in zapise o delovnem toku hrani v Markdownu. Markdown ni edini uporaben format, vendar je pogosto praktičen, ker je:
 
 - berljiv brez specializirane programske opreme
 - dovolj strojno berljiv za avtomatizacijo
@@ -99,9 +99,9 @@ Interaktivni AI ostaja uporaben tudi v zrelejših delovnih tokovih, vendar večj
 
 Kontekst je omejen. Tudi kadar sodobni sistemi lahko obdelajo velike količine informacij, je še vedno nepraktično, da bi v enem samem pogovoru stalno držali vsako specifikacijo, ugotovitev, vir, komentar pregleda in podporni dokument. Ko projekt raste, težava ni le skupna količina. Težava je tudi relevantnost.
 
-Zato mnogi agentski delovni tokovi uporabljajo ponovno pridobivanje. Namesto da bi poskušali imeti vse ves čas v aktivnem vidnem polju, sistem hrani trajne artefakte in ob potrebi pridobi najrelevantnejši material. Cilj ni nujno prikazati več informacij naenkrat, temveč prikazati prave informacije v trenutku, ko so potrebne.
+Zato mnogi agentski delovni tokovi uporabljajo ponovno pridobivanje. Namesto da bi poskušali imeti vse ves čas v aktivnem vidnem polju, sistem hrani trajne zapise in ob potrebi pridobi najrelevantnejši material. Cilj ni nujno prikazati več informacij naenkrat, temveč prikazati prave informacije v trenutku, ko so potrebne.
 
-Druga omejitev so orodja. Interaktivne spletne platforme navadno ponujajo kurirana orodja, zasnovana za zanesljivo uporabo pri širokem občinstvu. Tak kuriran pristop ima resnične prednosti:
+Druga omejitev so orodja. Interaktivne spletne platforme navadno ponujajo skrbno izbrana orodja, zasnovana za zanesljivo uporabo pri širokem občinstvu. Tak pristop ima resnične prednosti:
 
 - zanesljivost
 - vzdrževanje
@@ -175,7 +175,7 @@ Izjeme lahko vključujejo:
 - kodo
 - imena protokolov
 
-Cilj ni jezikovna čistost. Cilj je zmanjšati trenje za bralca in artefakte delovnega toka ohraniti razumljive v njegovem delovnem jeziku.
+Cilj ni jezikovna čistost. Cilj je zmanjšati trenje za bralca in zapise o delovnem toku ohraniti razumljive v njegovem delovnem jeziku.
 
 ### Strnjena študija primera delovnega toka
 
@@ -283,7 +283,7 @@ To načelo velja za programsko opremo, velja pa tudi za raziskovanje, poučevanj
 
 ## Podporno gradivo
 
-Podporno gradivo na `docs/supporting-material/spec_driven_workflow_thread.html` dokumentira del razprave in procesa izostrovanja, ki stoji za tem člankom. Gre za artefakt delovnega toka, ne pa za edini vir vseh idej v članku.
+Podporno gradivo na `docs/supporting-material/spec_driven_workflow_thread.html` dokumentira del razprave in procesa izostrovanja, ki stoji za tem člankom. Gre za zapis delovnega toka, ne pa za edini vir vseh idej v članku.
 
 Prepis vsebuje nepopolne ideje, spreminjajoča se stališča, opuščene predloge, grobo oblikovane povedi, tipkarske ali samodejno popravljene napake ter druge sledi iterativnega izboljševanja. Sklepi članka in avtorjevi premisleki zato niso enaki prepisu.
 

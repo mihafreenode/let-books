@@ -99,9 +99,9 @@ Interaktive KI bleibt auch in reiferen Workflows nützlich, aber größere Proje
 
 Kontext ist endlich. Selbst wenn moderne Systeme große Informationsmengen verarbeiten können, ist es dennoch unpraktisch, jede Spezifikation, jeden Befund, jede Quelle, jeden Review-Kommentar und jedes Hintergrunddokument dauerhaft in einer einzigen Unterhaltung präsent zu halten. Wenn ein Projekt wächst, geht es nicht nur um die Gesamtmenge. Das Problem ist auch die Relevanz.
 
-Deshalb stützen sich viele agentische Workflows auf Retrieval. Statt zu versuchen, alles gleichzeitig aktiv sichtbar zu halten, speichert das System dauerhafte Artefakte und ruft bei Bedarf die relevantesten Materialien ab. Das Ziel ist nicht unbedingt, mehr Information auf einmal bereitzustellen, sondern die richtige Information dann bereitzustellen, wenn sie gebraucht wird.
+Deshalb stützen sich viele agentische Workflows auf Retrieval. Statt zu versuchen, alles gleichzeitig aktiv sichtbar zu halten, speichert das System dauerhafte Unterlagen und ruft bei Bedarf die relevantesten Materialien ab. Das Ziel ist nicht unbedingt, mehr Information auf einmal bereitzustellen, sondern die richtige Information dann bereitzustellen, wenn sie gebraucht wird.
 
-Werkzeugzugriff ist die zweite Grenze. Interaktive Webplattformen bieten meist kuratierte Werkzeuge, die für ein breites Publikum verlässlich funktionieren sollen. Diese Kuratierung hat echte Vorteile:
+Werkzeugzugriff ist die zweite Grenze. Interaktive Webplattformen bieten meist sorgfältig ausgewählte Werkzeuge, die für ein breites Publikum verlässlich funktionieren sollen. Diese Auswahl hat echte Vorteile:
 
 - Verlässlichkeit
 - Wartbarkeit

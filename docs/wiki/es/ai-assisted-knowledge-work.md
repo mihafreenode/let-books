@@ -99,9 +99,9 @@ La IA interactiva sigue siendo útil incluso en flujos maduros, pero los proyect
 
 El contexto es finito. Aunque los sistemas modernos puedan procesar grandes cantidades de información, sigue siendo poco práctico mantener continuamente presentes en una sola conversación todas las especificaciones, hallazgos, fuentes, comentarios de revisión y documentos de apoyo. A medida que un proyecto crece, el problema no es solo la cantidad total. El problema es la relevancia.
 
-Por eso muchos flujos de trabajo agénticos se apoyan en la recuperación. En lugar de intentar mantener todo a la vista activa al mismo tiempo, el sistema almacena artefactos duraderos y recupera los materiales más relevantes cuando hacen falta. El objetivo no es necesariamente aportar más información a la vez, sino aportar la información correcta cuando se necesita.
+Por eso muchos flujos de trabajo agénticos se apoyan en la recuperación. En lugar de intentar mantener todo a la vista activa al mismo tiempo, el sistema conserva materiales duraderos y recupera los materiales más relevantes cuando hacen falta. El objetivo no es necesariamente aportar más información a la vez, sino aportar la información correcta cuando se necesita.
 
-El acceso a herramientas es la segunda limitación. Las plataformas web interactivas suelen ofrecer herramientas curadas para funcionar de manera fiable con públicos amplios. Esa curación tiene ventajas reales:
+El acceso a herramientas es la segunda limitación. Las plataformas web interactivas suelen ofrecer herramientas cuidadosamente seleccionadas para funcionar de manera fiable con públicos amplios. Esa selección tiene ventajas reales:
 
 - fiabilidad
 - mantenimiento
