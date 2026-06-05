@@ -224,7 +224,7 @@ Voilà pourquoi la culture de la vérification passe mieux à l'échelle que la 
 - Préserver les justifications.
 - Traiter la sortie de l'IA comme un élément de preuve, pas comme la vérité.
 
-## Conclusion
+## En conclusion
 
 L'IA n'est ni un collègue ni un moteur de recherche.
 
