@@ -19,11 +19,11 @@ La guida all'implementazione si trova sotto la specifica del prodotto.
 
 Aiuta a rispondere a domande come:
 
-- come dovrebbe funzionare la denominazione pubblica
+- come dovrebbe funzionare la denominazione pubblica del prodotto
 - come dovrebbero essere strutturati i documenti
-- quali aspettative di verifica si applicano ora
+- quali controlli sono richiesti in questo momento
 - quali regole specifiche del repository dovrebbero seguire i contributori
-- dove le regole tattiche dovrebbero vivere man mano che il progetto evolve
+- dove convenga documentare le regole tattiche man mano che il progetto evolve
 
 ## Differenza rispetto alle specifiche del prodotto
 
@@ -38,11 +38,11 @@ Questa distinzione è utile perché non tutte le regole del repository sono una 
 Le linee guida per l'implementazione spesso includono:
 
 - regole di denominazione e branding
-- norme di attuazione della documentazione
+- regole operative per la documentazione
 - vincoli di sito statico o demo
 - verifica delle aspettative
 - regole di modifica o di generazione del codice
-- politiche dell'evidenza per la scrittura pubblica
+- criteri sulle prove da citare nella scrittura pubblica
 
 Queste regole spesso funzionano bene in Markdown perché devono restare facili da rivedere, aggiornare e consultare insieme al resto del contesto del repository.
 

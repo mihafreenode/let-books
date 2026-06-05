@@ -1,7 +1,7 @@
 ---
 title: "Implementierungsleitfaden"
 summary: >-
-  Der Implementierungsleitfaden beschreibt, wie ein Team im aktuellen Repository oder in der vorhandenen Auslieferungsumgebung arbeiten soll, ohne die Produktspezifikation selbst zu ersetzen.
+  Der Implementierungsleitfaden beschreibt, wie ein Team im aktuellen Repository oder in der bestehenden Auslieferungsumgebung arbeiten soll, ohne die Produktspezifikation selbst zu ersetzen.
 topics:
   - implementation-planning
   - spec-driven-development
@@ -19,10 +19,10 @@ Die Implementierungsanleitung befindet sich unterhalb der Produktspezifikation.
 
 Er hilft bei Fragen wie:
 
-- wie öffentliche Namensgebung funktionieren sollte
+- wie die öffentliche Benennung funktionieren sollte
 - wie Dokumente strukturiert sein sollten
-- welche Überprüfungserwartungen jetzt gelten
-- welche Repository-spezifischen Regeln Mitwirkende befolgen sollten
+- welche Prüfanforderungen aktuell gelten
+- welche repository-spezifischen Regeln Mitwirkende befolgen sollten
 - wo taktische Regeln festgehalten werden sollten, während sich das Projekt weiterentwickelt
 
 ## Abweichung von der Produktspezifikation
@@ -42,7 +42,7 @@ Zu den Implementierungsleitfäden gehören häufig:
 - Einschränkungen für statische Sites oder Demos
 - Verifizierungserwartungen
 - Bearbeitungs- oder Codegenerierungsregeln
-- Evidenzrichtlinien für öffentliches Schreiben
+- Richtlinien für Nachweise in öffentlichen Texten
 
 Solche Regeln funktionieren in Markdown oft besonders gut, weil sie überprüfbar, leicht zu aktualisieren und nah am übrigen Repository-Kontext bleiben müssen.
 

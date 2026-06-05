@@ -21,8 +21,8 @@ Leser können nicht sagen:
 
 - ob eine Aussage aktuell ist
 - ob ein Verhalten beabsichtigt ist
-- ob ein Anspruch auf die Produktspezifikation oder einen Implementierungsfehler zurückzuführen ist
-- ob ein öffentlicher Artikel die genehmigte Produktrichtung widerspiegelt
+- ob eine Aussage auf die Produktspezifikation oder auf einen Implementierungsfehler zurückgeht
+- ob ein öffentlicher Artikel die freigegebene Produktrichtung widerspiegelt
 
 Bei KI-gestützter Arbeit ist die Rückverfolgbarkeit besonders wichtig, da generierte Inhalte auch dann zuverlässig klingen können, wenn sie nicht auf der richtigen Quelle basieren.
 
@@ -54,7 +54,7 @@ Dies hilft Teams bei der Entscheidung, welches Artefakt welche Frage beantworten
 
 Öffentliche Artikel, Aufsätze und Lehrmaterialien sollten sich nicht auf eine gerade in der Nähe befindliche Quelldatei verlassen.
 
-Stattdessen sollten sie stabile Dokumentations- und Spezifikationsreferenzen bevorzugen und Quellkarten verwenden, wenn die Ansprüche erheblich sind.
+Stattdessen sollten sie stabile Dokumentation und Spezifikationsverweise bevorzugen und Quellkarten verwenden, wenn die Aussagen besonders wichtig sind.
 
 Dadurch wird öffentliches Schreiben wartungsfreundlicher und im Laufe der Zeit weniger brüchig.
 

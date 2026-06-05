@@ -21,9 +21,9 @@ Ayuda a responder preguntas como:
 
 - cómo debería funcionar la denominación pública
 - cómo deben estructurarse los documentos
-- qué expectativas de verificación se aplican ahora
+- qué comprobaciones se exigen en este momento
 - qué reglas específicas del repositorio deben seguir los contribuyentes
-- dónde deberían residir las reglas tácticas a medida que evoluciona el proyecto
+- dónde conviene dejar por escrito las reglas tácticas a medida que evoluciona el proyecto
 
 ## Diferencia con respecto a la especificación del producto
 
@@ -38,11 +38,11 @@ Esta distinción es útil porque no todas las reglas del repositorio son una ver
 La guía de implementación a menudo incluye:
 
 - reglas de denominación y marca
-- reglas de implementación de la documentación
+- reglas operativas para la documentación
 - restricciones de sitio estático o demostración
 - expectativas de verificación
 - reglas de edición o generación de código
-- políticas de evidencia para la escritura pública
+- criterios sobre las pruebas que deben citarse en la escritura pública
 
 Estas reglas suelen funcionar bien en Markdown porque deben seguir siendo revisables, fáciles de actualizar y próximas al resto del contexto del repositorio.
 

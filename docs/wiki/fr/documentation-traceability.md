@@ -21,8 +21,8 @@ Les lecteurs ne peuvent pas dire :
 
 - si une déclaration est à jour
 - si un comportement est intentionnel
-- si une réclamation provient d'une spécification du produit ou d'un accident de mise en œuvre
-- si un article public reflète l'orientation du produit approuvée
+- si une affirmation provient de la spécification du produit ou d'une erreur de mise en œuvre
+- si un article public reflète l'orientation du produit déjà approuvée
 
 La traçabilité est particulièrement importante dans le travail assisté par l’IA, car le contenu généré peut sembler fiable même s’il n’est pas fondé sur la bonne source.
 
@@ -54,7 +54,7 @@ Cela aide les équipes à décider quel artefact doit répondre à quelle questi
 
 Les articles publics, les essais et le matériel pédagogique ne doivent pas s'appuyer sur le fichier source qui se trouve à proximité.
 
-Au lieu de cela, ils devraient préférer une documentation stable et des références de spécifications, et utiliser des cartes sources lorsque les revendications sont substantielles.
+Ils devraient plutôt s'appuyer sur une documentation stable et sur des références aux spécifications, et utiliser des cartes sources lorsque les affirmations sont importantes.
 
 Cela rend l’écriture publique plus facile à maintenir et moins fragile au fil du temps.
 

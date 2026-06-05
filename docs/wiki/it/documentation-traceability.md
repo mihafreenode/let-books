@@ -21,8 +21,8 @@ I lettori non possono dire:
 
 - se una dichiarazione è attuale
 - se un comportamento è intenzionale
-- se un reclamo deriva dalle specifiche del prodotto o da un incidente di implementazione
-- se un articolo pubblico riflette la direzione del prodotto approvata
+- se un'affermazione deriva dalla specifica del prodotto o da un errore di implementazione
+- se un articolo pubblico riflette la direzione del prodotto già approvata
 
 La tracciabilità è particolarmente importante nel lavoro assistito dall’intelligenza artificiale perché il contenuto generato può sembrare sicuro anche quando non è radicato nella fonte giusta.
 
@@ -48,7 +48,7 @@ Un modello utile è:
 4. comportamento dimostrativo o di implementazione
 5. test e risultati di validazione
 
-Ciò aiuta i team a decidere quale artefatto dovrebbe rispondere a quale domanda.
+Questo aiuta i team a capire quale artefatto dovrebbe rispondere a quale domanda.
 
 ## Scrittura pubblica e tracciabilità
 

@@ -21,8 +21,8 @@ Lexuesit nuk mund të thonë:
 
 - nëse një deklaratë është aktuale
 - nëse një sjellje është e qëllimshme
-- nëse një pretendim vjen nga specifikimi i produktit ose aksidenti i zbatimit
-- nëse një artikull publik pasqyron drejtimin e miratuar të produktit
+- nëse një pretendim vjen nga specifikimi i produktit apo nga një gabim gjatë zbatimit
+- nëse një artikull publik pasqyron drejtimin e produktit të miratuar tashmë
 
 Gjurmueshmëria është veçanërisht e rëndësishme në punën e asistuar nga AI sepse përmbajtja e krijuar mund të tingëllojë e sigurt edhe kur nuk është e bazuar në burimin e duhur.
 
@@ -30,7 +30,7 @@ Gjurmueshmëria është veçanërisht e rëndësishme në punën e asistuar nga 
 
 Gjurmueshmëria e mirë e dokumentacionit zakonisht përfshin:
 
-- një zinxhir autoriteti i përcaktuar qartë
+- një zinxhir autoriteti të përcaktuar qartë
 - referenca të qëndrueshme ndaj dokumenteve ose specifikave përkatëse
 - ndarje e qartë midis planeve të gjendjes aktuale dhe planeve të ardhshme
 - dallimi i qartë ndërmjet dokumentacionit kanonik dhe statusit të zbatimit
