@@ -102,6 +102,9 @@ const TITLES = {
   'ai-as-an-oracle': {
     sl: 'AI kot orakelj: zakaj je kultura preverjanja pomembnejša od pisanja pozivov', hr: 'AI kao proročište: zašto je kultura provjere važnija od promptanja', bs: 'AI kao proročište: zašto je kultura provjere važnija od promptanja', 'sr-Latn': 'AI kao proročište: zašto je kultura provere važnija od promptovanja', 'sr-Cyrl': 'AI као пророчиште: зашто је култура провере важнија од промптовања', mk: 'AI како оракул: зошто културата на проверка е поважна од промптирањето', sq: 'AI si orakull: pse kultura e verifikimit ka më shumë rëndësi se prompting-u', de: 'KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting', it: 'L\'IA come oracolo: perché la cultura della verifica conta più del prompting', fr: 'L\'IA comme oracle : pourquoi la culture de la vérification compte davantage que le prompting', es: 'La IA como oráculo: por qué la cultura de la verificación importa más que el prompting',
   },
+  'responsibility-after-intelligence': {
+    sl: 'Odgovornost po inteligenci', hr: 'Odgovornost nakon inteligencije', bs: 'Odgovornost nakon inteligencije', 'sr-Latn': 'Odgovornost posle inteligencije', 'sr-Cyrl': 'Одговорност после интелигенције', mk: 'Одговорност по интелигенцијата', sq: 'Përgjegjësia pas inteligjencës', de: 'Verantwortung nach der Intelligenz', it: 'Responsabilità dopo l\'intelligenza', fr: 'Responsabilité après l\'intelligence', es: 'Responsabilidad después de la inteligencia',
+  },
 };
 
 const ARTICLE_IDS = Object.keys(TITLES);

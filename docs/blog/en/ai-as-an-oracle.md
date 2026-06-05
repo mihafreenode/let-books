@@ -240,6 +240,7 @@ The challenge of AI-assisted engineering is not learning how to use the oracle. 
 - `../../wiki/documentation-traceability.md`
 - `../../wiki/localization-governance.md`
 - `../../wiki/let-books-localization-case-study.md`
+- `responsibility-after-intelligence.md`
 - `ai-workflows-beyond-software.md`
 - `spec-driven-development-for-ai-projects.md`
 - `documentation-is-part-of-the-product.md`

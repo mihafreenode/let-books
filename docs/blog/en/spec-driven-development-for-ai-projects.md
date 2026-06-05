@@ -135,6 +135,7 @@ In AI-assisted projects, the spec is not paperwork after the fact. It is the bou
 - `../../wiki/spec-driven-development.md`
 - `../../wiki/validation-layers.md`
 - `ai-as-an-oracle.md`
+- `responsibility-after-intelligence.md`
 - `spec-driven-development-in-let-books.md`
 
 ## Other Languages

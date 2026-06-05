@@ -132,4 +132,5 @@ As automation increases, governance becomes more valuable because it is what kee
 - `../../wiki/localization-governance.md`
 - `../../learning/how-to-use-ai-workflows-for-non-software-knowledge-work.md`
 - `ai-as-an-oracle.md`
+- `responsibility-after-intelligence.md`
 - `ai-workflows-beyond-software.md`

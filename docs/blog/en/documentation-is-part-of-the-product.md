@@ -135,6 +135,7 @@ It shapes implementation, review, communication, validation, and long-term trust
 - `../../wiki/documentation-traceability.md`
 - `../../wiki/validation-layers.md`
 - `ai-as-an-oracle.md`
+- `responsibility-after-intelligence.md`
 - `spec-driven-development-in-let-books.md`
 
 ## Other Languages

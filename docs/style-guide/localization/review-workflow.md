@@ -52,6 +52,104 @@ Preferred reviewer action:
 - preserve the author's intended meaning and strength
 - prefer natural reader-facing wording over terminology fidelity when literal wording changes connotation
 
+## Rhetorical Rhythm Checklist
+
+Check whether the translation preserves English rhetorical rhythm too literally.
+
+Watch for:
+
+- very short repeated sentences
+- one-line paragraphs that sound abrupt in the target language
+- repeated sentence openings
+- English emphasis achieved through fragmentation rather than natural phrasing
+
+Review whether the target language would more naturally:
+
+- combine short sentences
+- use commas or conjunctions
+- turn fragments into a list
+- keep emphasis while smoothing the rhythm
+
+Translate the rhetorical effect, not the exact sentence cadence.
+
+## Enumeration Checklist
+
+Check repeated English enumeration patterns such as:
+
+- `To engineers.`
+- `To teachers.`
+- `To editors.`
+
+Many target languages will prefer:
+
+- a single sentence
+- a coordinated list
+- comma-separated phrases
+
+Preserve the emphasis, but do not preserve English formatting if it reads as translationese.
+
+## Literal Governance Vocabulary Checklist
+
+Review governance phrasing that is easy to translate too literally.
+
+Examples:
+
+- `approval boundaries`
+- `approval workflows`
+- `escalation paths`
+- `lines of responsibility`
+- `process mechanics`
+- `planning artifacts`
+
+Prefer natural governance language used by native speakers. Translate the function of the term, not its surface form.
+
+## Literal AI Terminology Checklist
+
+Review AI-adjacent wording that often drifts into awkward literal translation.
+
+Examples:
+
+- `plausibility`
+- `fluency`
+- `smooth`
+- `seamless`
+- `evidence`
+- `artifact`
+- `curated`
+
+Translate the intended meaning in context rather than the nearest dictionary equivalent.
+
+## Artificial Noun Phrase Checklist
+
+Watch for understandable but unnatural noun phrases that reveal the source language.
+
+Examples:
+
+- `procesna mehanika`
+- `potrditveni delovni tokovi`
+- `načrtovalni artefakti`
+- `validacijske strategije`
+
+When a phrase sounds translated even though it is semantically correct, rewrite it into a form a native speaker would naturally use.
+
+## Source Map Terminology Review
+
+Review translations of `source map` and `source maps` before translating them literally.
+
+Do not assume every use refers to a JavaScript or CSS debugging artifact.
+
+Distinguish the context:
+
+- In software build or debugging contexts, a source-code-oriented translation may be correct.
+- In documentation, governance, localization, provenance, or traceability contexts, prefer wording that reflects mapping claims back to sources, documenting origins, or tracking evidence.
+
+Possible direction depending on locale and context:
+
+- `source map` as debugging metadata: source-code map terminology
+- `source map` as documentation provenance: source-reference map, source record, source traceability wording
+
+Translate the function, not the label. The reader should understand the concept immediately without reconstructing the original English phrase.
+
 ## Review summary requirements
 
 When producing a review summary, reviewers should state:
