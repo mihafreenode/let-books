@@ -1,7 +1,7 @@
 ---
 title: "Uputstvo za implementaciju"
 summary: >-
-  Smernice za implementaciju definišu kako tim treba da isporuči rad unutar trenutnog spremišta ili okruženja isporuke bez zamene same specifikacije proizvoda.
+  Smernice za implementaciju određuju kako tim treba da obavlja posao u okviru trenutnog repozitorijuma ili okruženja isporuke, a da pritom ne zameni samu specifikaciju proizvoda.
 topics:
   - implementation-planning
   - spec-driven-development
@@ -11,17 +11,17 @@ topics:
 
 ## Rezime
 
-Smernice za implementaciju definišu kako tim treba da isporuči rad unutar trenutnog spremišta ili okruženja isporuke bez zamene same specifikacije proizvoda.
+Smernice za implementaciju određuju kako tim treba da obavlja posao u okviru trenutnog repozitorijuma ili okruženja isporuke, a da pritom ne zameni samu specifikaciju proizvoda.
 
 ## Uloga
 
-Smernice za primenu nalaze se ispod specifikacije proizvoda.
+Smernice za implementaciju nalaze se ispod specifikacije proizvoda.
 
-Pomaže u odgovoru na pitanja kao što su:
+Pomažu u odgovoru na pitanja kao što su:
 
 - kako treba da funkcioniše javno imenovanje
 - kako dokumenti treba da budu strukturirani
-- koja očekivanja verifikacije sada važe
+- koja se očekivanja provere trenutno primenjuju
 - koja pravila specifična za spremište saradnici treba da poštuju
 - gde taktička pravila treba da žive kako se projekat razvija
 
@@ -44,18 +44,18 @@ Uputstvo za primenu često uključuje:
 - pravila za uređivanje ili generisanje koda
 - politike dokaza za javno pisanje
 
-Ova pravila često dobro žive u Markdown jer moraju da ostanu pregledna, laka za ažuriranje i bliska ostatku konteksta spremišta.
+Takva pravila često najbolje funkcionišu u Markdownu jer moraju da ostanu pregledna, laka za ažuriranje i bliska ostatku konteksta repozitorijuma.
 
 ## Zašto je to važno u radu uz pomoć veštačke inteligencije
 
 AI asistenti često prate najbliža konkretna uputstva. Ako su pravila specifična za spremište implicitna, izlaz brzo postaje nedosledan.
 
-Smernice za primenu čine ta pravila vidljivima bez zagađivanja specifikacije proizvoda taktičkim detaljima.
+Smernice za implementaciju čine ta pravila vidljivima bez zatrpavanja specifikacije proizvoda taktičkim detaljima.
 
 U praksi, to znači da datoteka sa uputstvima iz Markdown može obavljati dva posla odjednom:
 
-- objasnite tok posla ljudskom saradniku
-- usmerite AI agenta prema željenim alatima, sekvenci i ograničenjima
+- objasniti tok rada ljudskom saradniku
+- usmeriti AI agenta ka željenim alatima, redosledu i ograničenjima
 
 ## Let Books kontekst
 

@@ -1,7 +1,7 @@
 ---
 title: "Smjernice za provedbu"
 summary: >-
-  Smjernice za implementaciju definiraju kako tim treba isporučiti posao unutar trenutnog repozitorija ili okruženja isporuke bez zamjene same specifikacije proizvoda.
+  Smjernice za implementaciju određuju kako tim treba obavljati posao unutar trenutačnog repozitorija ili okruženja isporuke, a da pritom ne zamijeni samu specifikaciju proizvoda.
 topics:
   - implementation-planning
   - spec-driven-development
@@ -11,17 +11,17 @@ topics:
 
 ## Sažetak
 
-Smjernice za implementaciju definiraju kako tim treba isporučiti posao unutar trenutnog repozitorija ili okruženja isporuke bez zamjene same specifikacije proizvoda.
+Smjernice za implementaciju određuju kako tim treba obavljati posao unutar trenutačnog repozitorija ili okruženja isporuke, a da pritom ne zamijeni samu specifikaciju proizvoda.
 
 ## Uloga
 
 Smjernice za implementaciju nalaze se ispod specifikacije proizvoda.
 
-Pomaže odgovoriti na pitanja kao što su:
+Pomažu odgovoriti na pitanja kao što su:
 
 - kako bi javno imenovanje trebalo funkcionirati
 - kako bi dokumenti trebali biti strukturirani
-- koja se očekivanja od verifikacije sada primjenjuju
+- koja se očekivanja provjere trenutačno primjenjuju
 - koja bi pravila specifična za repozitorij suradnici trebali slijediti
 - gdje bi taktička pravila trebala živjeti kako se projekt razvija
 
@@ -44,7 +44,7 @@ Smjernice za implementaciju često uključuju:
 - pravila za uređivanje ili generiranje koda
 - politike dokaza za javno pisanje
 
-Ova pravila često dobro žive u Markdown jer moraju ostati pregledna, laka za ažuriranje i bliska ostatku konteksta repozitorija.
+Takva pravila često najbolje funkcioniraju u Markdownu jer moraju ostati pregledna, laka za ažuriranje i bliska ostatku konteksta repozitorija.
 
 ## Zašto je to važno u radu uz pomoć umjetne inteligencije
 
@@ -54,8 +54,8 @@ Smjernice za implementaciju čine ta pravila vidljivima bez zagađivanja specifi
 
 U praksi to znači da datoteka s uputama Markdown može obavljati dva posla odjednom:
 
-- objasni tijek rada ljudskom suradniku
-- usmjerite AI agenta prema željenim alatima, redoslijedu i ograničenjima
+- objasniti tijek rada ljudskom suradniku
+- usmjeriti AI agenta prema željenim alatima, redoslijedu i ograničenjima
 
 ## Let Books kontekst
 

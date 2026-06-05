@@ -1,7 +1,7 @@
 ---
 title: "Sledljivost dokumentacije"
 summary: >-
-  Sledljivost dokumentacije je praksa, s katero so pomembne trditve, opisi delovnih tokov in pričakovanja glede kakovosti sledljivi nazaj do stabilnih repozitorijskih dokazov in izrecnih odločitev.
+  Sledljivost dokumentacije pomeni, da je mogoče pomembne trditve, opise delovnih tokov in pričakovanja glede kakovosti zanesljivo povezati s stabilnimi dokazi v repozitoriju in z jasno sprejetimi odločitvami.
 topics:
   - documentation
   - product-quality
@@ -11,7 +11,7 @@ topics:
 
 ## Povzetek
 
-Sledljivost dokumentacije je praksa, s katero so pomembne trditve, opisi delovnih tokov in pričakovanja glede kakovosti sledljivi nazaj do stabilnih repozitorijskih dokazov in izrecnih odločitev.
+Sledljivost dokumentacije pomeni, da je mogoče pomembne trditve, opise delovnih tokov in pričakovanja glede kakovosti zanesljivo povezati s stabilnimi dokazi v repozitoriju in z jasno sprejetimi odločitvami.
 
 ## Zakaj je pomembno
 
@@ -30,7 +30,7 @@ Sledljivost je še posebej pomembna pri delu s pomočjo umetne inteligence, saj 
 
 Dobra sledljivost dokumentacije običajno vključuje:
 
-- znana veriga organov
+- jasno določena veriga avtoritete
 - stabilne reference na ustrezne dokumente ali specifikacije
 - jasno ločevanje med trenutnim stanjem in prihodnjimi načrti
 - izrecno razlikovanje med kanonično dokumentacijo in statusom izvedbe

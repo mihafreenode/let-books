@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Uputstvo za implementaciju | LetBooks</title>
-    <meta name="description" content="Smernice za implementaciju definišu kako tim treba da isporuči rad unutar trenutnog spremišta ili okruženja isporuke bez zamene same specifikacije proizvoda.">
+    <meta name="description" content="Smernice za implementaciju određuju kako tim treba da obavlja posao u okviru trenutnog repozitorijuma ili okruženja isporuke, a da pritom ne zameni samu specifikaciju proizvoda.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="application-name" content="LetBooks">
     <link rel="canonical" href="https://letbooks.org/docs/wiki/sr-Latn/implementation-guidance.html">
@@ -30,7 +30,7 @@
     <link rel="manifest" href="../../../favicon/site.webmanifest">
     <meta name="theme-color" content="#0f5b45">
     <meta property="og:title" content="Uputstvo za implementaciju | LetBooks">
-    <meta property="og:description" content="Smernice za implementaciju definišu kako tim treba da isporuči rad unutar trenutnog spremišta ili okruženja isporuke bez zamene same specifikacije proizvoda.">
+    <meta property="og:description" content="Smernice za implementaciju određuju kako tim treba da obavlja posao u okviru trenutnog repozitorijuma ili okruženja isporuke, a da pritom ne zameni samu specifikaciju proizvoda.">
     <meta property="og:image" content="https://letbooks.org/og-image.png">
     <meta property="og:image:alt" content="LetBooks social preview image">
     <meta property="og:url" content="https://letbooks.org/docs/wiki/sr-Latn/implementation-guidance.html">
@@ -38,7 +38,7 @@
     <meta property="og:site_name" content="LetBooks">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Uputstvo za implementaciju | LetBooks">
-    <meta name="twitter:description" content="Smernice za implementaciju definišu kako tim treba da isporuči rad unutar trenutnog spremišta ili okruženja isporuke bez zamene same specifikacije proizvoda.">
+    <meta name="twitter:description" content="Smernice za implementaciju određuju kako tim treba da obavlja posao u okviru trenutnog repozitorijuma ili okruženja isporuke, a da pritom ne zameni samu specifikaciju proizvoda.">
     <meta name="twitter:image" content="https://letbooks.org/og-image.png">
     <meta name="twitter:image:alt" content="LetBooks social preview image">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -97,7 +97,7 @@
             <span>Wiki</span>
             <span>Srpski (latinica)</span>
           </div>
-          <p class="content-page-summary">Smernice za implementaciju definišu kako tim treba da isporuči rad unutar trenutnog spremišta ili okruženja isporuke bez zamene same specifikacije proizvoda.</p>
+          <p class="content-page-summary">Smernice za implementaciju određuju kako tim treba da obavlja posao u okviru trenutnog repozitorijuma ili okruženja isporuke, a da pritom ne zameni samu specifikaciju proizvoda.</p>
           <div class="content-tags" aria-label="Topics">
             <span class="content-tags__label">Teme:</span>
               <span class="content-tag">Planiranje implementacije</span>
@@ -107,12 +107,12 @@
             <hr class="content-header-divider">
           </header>
 <h2 id="uloga">Uloga</h2>
-<p class="lead">Smernice za primenu nalaze se ispod specifikacije proizvoda.</p>
-<p>Pomaže u odgovoru na pitanja kao što su:</p>
+<p class="lead">Smernice za implementaciju nalaze se ispod specifikacije proizvoda.</p>
+<p>Pomažu u odgovoru na pitanja kao što su:</p>
 <ul>
 <li>kako treba da funkcioniše javno imenovanje</li>
 <li>kako dokumenti treba da budu strukturirani</li>
-<li>koja očekivanja verifikacije sada važe</li>
+<li>koja se očekivanja provere trenutno primenjuju</li>
 <li>koja pravila specifična za spremište saradnici treba da poštuju</li>
 <li>gde taktička pravila treba da žive kako se projekat razvija</li>
 </ul>
@@ -130,14 +130,14 @@
 <li>pravila za uređivanje ili generisanje koda</li>
 <li>politike dokaza za javno pisanje</li>
 </ul>
-<p>Ova pravila često dobro žive u Markdown jer moraju da ostanu pregledna, laka za ažuriranje i bliska ostatku konteksta spremišta.</p>
+<p>Takva pravila često najbolje funkcionišu u Markdownu jer moraju da ostanu pregledna, laka za ažuriranje i bliska ostatku konteksta repozitorijuma.</p>
 <h2 id="zašto-je-to-važno-u-radu-uz-pomoć-veštačke-inteligencije">Zašto je to važno u radu uz pomoć veštačke inteligencije</h2>
 <p>AI asistenti često prate najbliža konkretna uputstva. Ako su pravila specifična za spremište implicitna, izlaz brzo postaje nedosledan.</p>
-<p>Smernice za primenu čine ta pravila vidljivima bez zagađivanja specifikacije proizvoda taktičkim detaljima.</p>
+<p>Smernice za implementaciju čine ta pravila vidljivima bez zatrpavanja specifikacije proizvoda taktičkim detaljima.</p>
 <p>U praksi, to znači da datoteka sa uputstvima iz Markdown može obavljati dva posla odjednom:</p>
 <ul>
-<li>objasnite tok posla ljudskom saradniku</li>
-<li>usmerite AI agenta prema željenim alatima, sekvenci i ograničenjima</li>
+<li>objasniti tok rada ljudskom saradniku</li>
+<li>usmeriti AI agenta ka željenim alatima, redosledu i ograničenjima</li>
 </ul>
 <h2 id="let-books-kontekst">Let Books kontekst</h2>
 <p>U Let Books, <code>AGENTS-Implementation.md</code> je sloj taktičkog navođenja.</p>
@@ -202,7 +202,7 @@
                   <a href="../../learning/sr-Latn/how-to-use-ai-workflows-for-non-software-knowledge-work.html"><span>Kako koristiti AI radne tokove za nesoftverski rad sa znanjem</span><span class="topic-menu__meta">Materijali za učenje</span></a>
                   <a href="../../wiki/sr-Latn/product-specification.html"><span>Specifikacija proizvoda</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../wiki/sr-Latn/documentation-traceability.html"><span>Sljedivost dokumentacije</span><span class="topic-menu__meta">Wiki</span></a>
-                  <a href="../../wiki/sr-Latn/demo-spec-alignment.html"><span>Usklađenost između dema i specifikacije</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sr-Latn/spec-driven-development.html"><span>Razvoj zasnovan na specifikacijama</span><span class="topic-menu__meta">Wiki</span></a>
                   <a href="../../topics/sr-Latn/demo-and-specification-alignment.html"><span>Usklađenost demoa i specifikacije</span><span class="topic-menu__meta">Teme</span></a>
                   <a href="../../topics/sr-Latn/ai-assisted-implementation.html"><span>Implementacija uz AI podršku</span><span class="topic-menu__meta">Teme</span></a>
                   <a href="../../topics/sr-Latn/spec-driven-development.html"><span>Razvoj vođen specifikacijom</span><span class="topic-menu__meta">Teme</span></a>

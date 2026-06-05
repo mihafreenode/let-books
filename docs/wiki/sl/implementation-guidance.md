@@ -1,7 +1,7 @@
 ---
 title: "Navodila za izvajanje"
 summary: >-
-  Navodila za implementacijo opredeljujejo, kako naj ekipa izvaja delo znotraj trenutnega repozitorija ali okolja dostave, ne da bi zamenjala samo specifikacijo izdelka.
+  Navodila za implementacijo določajo, kako naj ekipa izvaja delo v trenutnem repozitoriju ali dostavnem okolju, ne da bi s tem nadomestila samo specifikacijo izdelka.
 topics:
   - implementation-planning
   - spec-driven-development
@@ -11,11 +11,11 @@ topics:
 
 ## Povzetek
 
-Navodila za implementacijo opredeljujejo, kako naj ekipa izvaja delo znotraj trenutnega repozitorija ali okolja dostave, ne da bi zamenjala samo specifikacijo izdelka.
+Navodila za implementacijo določajo, kako naj ekipa izvaja delo v trenutnem repozitoriju ali dostavnem okolju, ne da bi s tem nadomestila samo specifikacijo izdelka.
 
 ## Vloga
 
-Navodila za izvedbo so pod specifikacijo izdelka.
+Navodila za implementacijo sodijo pod specifikacijo izdelka.
 
 Pomaga odgovoriti na vprašanja, kot so:
 
@@ -23,13 +23,13 @@ Pomaga odgovoriti na vprašanja, kot so:
 - kako naj bodo dokumenti strukturirani
 - katera pričakovanja glede preverjanja veljajo zdaj
 - katera pravila, specifična za repozitorij, morajo upoštevati avtorji prispevkov
-- kje bi morala živeti taktična pravila, ko se projekt razvija
+- kje naj bodo zapisana taktična pravila, ko se projekt razvija
 
 ## Razlika od specifikacije izdelka
 
 Specifikacija izdelka določa, kaj je izdelek in kaj mora doseči.
 
-Smernice za implementacijo določajo, kako naj sodelujoči izvajajo delo v trenutnem kontekstu dostave.
+Navodila za implementacijo določajo, kako naj sodelujoči opravljajo delo v trenutnem kontekstu dostave.
 
 To razlikovanje je uporabno, ker ni vsako pravilo repozitorija resnica o izdelku in ne sme biti vsaka resnica o izdelku zakopana v taktične opombe.
 
@@ -44,7 +44,7 @@ Navodila za izvajanje pogosto vključujejo:
 - pravila urejanja ali generiranja kode
 - dokazne politike za javno pisanje
 
-Ta pravila pogosto dobro živijo v Markdown, ker morajo ostati pregledna, enostavna za posodabljanje in blizu preostalega konteksta repozitorija.
+Takšna pravila so pogosto najbolj uporabna v Markdownu, ker morajo ostati pregledna, enostavna za posodabljanje in blizu preostalega konteksta repozitorija.
 
 ## Zakaj je to pomembno pri delu s pomočjo umetne inteligence
 

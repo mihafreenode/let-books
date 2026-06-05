@@ -1,7 +1,7 @@
 ---
 title: "Sljedivost dokumentacije"
 summary: >-
-  Sljedivost dokumentacije je praksa da se važne tvrdnje, opisi tijeka rada i očekivanja kvalitete mogu pratiti unatrag do stabilnih repozitorija dokaza i izričitih odluka.
+  Sljedivost dokumentacije znači da se važne tvrdnje, opisi tijeka rada i očekivanja kvalitete mogu pouzdano povezati sa stabilnim dokazima u repozitoriju i jasno donesenim odlukama.
 topics:
   - documentation
   - product-quality
@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Sljedivost dokumentacije je praksa da se važne tvrdnje, opisi tijeka rada i očekivanja kvalitete mogu pratiti unatrag do stabilnih repozitorija dokaza i izričitih odluka.
+Sljedivost dokumentacije znači da se važne tvrdnje, opisi tijeka rada i očekivanja kvalitete mogu pouzdano povezati sa stabilnim dokazima u repozitoriju i jasno donesenim odlukama.
 
 ## Zašto je to važno
 
@@ -30,7 +30,7 @@ Sljedivost je posebno važna u radu potpomognutom umjetnom inteligencijom jer ge
 
 Dobra sljedivost dokumentacije obično uključuje:
 
-- poznati lanac autoriteta
+- jasno određen lanac autoriteta
 - stabilne reference na relevantne dokumente ili specifikacije
 - jasno odvajanje trenutnog stanja od budućih planova
 - izričita razlika između kanonske dokumentacije i statusa provedbe

@@ -1,7 +1,7 @@
 ---
 title: "Sljedivost dokumentacije"
 summary: >-
-  Sljedivost dokumentacije je praksa da se važne tvrdnje, opisi toka posla i očekivanja kvaliteta mogu pratiti do stabilnih dokaza repozitorija i eksplicitnih odluka.
+  Sljedivost dokumentacije znači da se važne tvrdnje, opisi toka rada i očekivanja kvaliteta mogu pouzdano povezati sa stabilnim dokazima u repozitoriju i jasno donesenim odlukama.
 topics:
   - documentation
   - product-quality
@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Sljedivost dokumentacije je praksa da se važne tvrdnje, opisi toka posla i očekivanja kvaliteta mogu pratiti do stabilnih dokaza repozitorija i eksplicitnih odluka.
+Sljedivost dokumentacije znači da se važne tvrdnje, opisi toka rada i očekivanja kvaliteta mogu pouzdano povezati sa stabilnim dokazima u repozitoriju i jasno donesenim odlukama.
 
 ## Zašto je važno
 
@@ -30,13 +30,13 @@ Sljedivost je posebno važna u radu uz pomoć umjetne inteligencije jer generira
 
 Dobra sljedivost dokumentacije obično uključuje:
 
-- poznati lanac autoriteta
+- jasno određen lanac autoriteta
 - stabilne reference na relevantne dokumente ili specifikacije
 - jasno razdvajanje trenutnog stanja i budućih planova
 - eksplicitna razlika između kanonske dokumentacije i statusa implementacije
 - izvorne mape ili bilješke o dokazima za značajne javne članke
 
-Takođe je sve korisnije kada je dokumentacija dovoljno specifična da vodi rad uz pomoć veštačke inteligencije, a ne samo ljudsko tumačenje.
+Takođe postaje sve korisnije kada je dokumentacija dovoljno precizna da usmjerava rad uz pomoć vještačke inteligencije, a ne samo ljudsko tumačenje.
 
 ## Jednostavan model autoriteta
 
@@ -60,11 +60,11 @@ To čini javno pisanje s vremenom lakše održavanim i manje krhkim.
 
 ## Sljedivost za agente kao i za ljude
 
-Sljedivost nije samo pomoć osobi da shvati odakle je potraživanje došlo. Također pomaže AI agentu da odredi koji artefakti spremišta trebaju voditi akciju.
+Sljedivost ne služi samo tome da čovjeku pojasni odakle neka tvrdnja dolazi. Ona takođe pomaže AI agentu da odredi koji artefakti spremišta treba da usmjeravaju narednu radnju.
 
 Kada dokumentacija jasno navodi redosled toka posla, preferencije alata, ograničenja okruženja i granice ovlašćenja, ona postaje upotrebljiva kao operativni kontekst za agente, kao i kontekst objašnjenja za ljude.
 
-Ovo je važno jer agenti često djeluju prema najkonkretnijim uputama u blizini. Prativi Markdown pomaže da ispravna instrukcija bude vidljiva.
+Ovo je važno jer agenti često djeluju prema najkonkretnijim uputama koje su im pri ruci. Sledljiv Markdown pomaže da prava uputa bude jasno vidljiva.
 
 ## Let Books kontekst
 
