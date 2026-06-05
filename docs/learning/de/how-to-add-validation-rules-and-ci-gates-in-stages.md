@@ -19,9 +19,9 @@ Teams wissen oft, dass sie stärkere Validierung brauchen, machen aber einen von
 
 Entweder lassen sie Qualitätsprüfungen zu lange informell, oder sie versuchen, auf einmal ein großes starres CI-System einzuführen, und erzeugen Frustration.
 
-Ein schrittweiser Ansatz funktioniert besser.
+Ein schrittweiser Ansatz funktioniert in der Regel besser.
 
-Er ermöglicht es dem Projekt, wiederkehrende Erwartungen aus Reviews im Laufe der Zeit in wiederholbare Prüfungen zu überführen.
+So kann ein Projekt wiederkehrende Erwartungen aus Reviews nach und nach in wiederholbare Prüfungen überführen.
 
 ## Von wiederkehrenden Fehlern ausgehen
 

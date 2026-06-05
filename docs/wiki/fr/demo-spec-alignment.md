@@ -25,7 +25,7 @@ Les démos sont utiles parce qu'elles rendent les flux de travail concrets. Elle
 4. démo ou comportement de l'implémentation
 5. validation et tests
 
-Cet ordre ne signifie pas que les démos sont secondaires. Il signifie qu'elles doivent être interprétées dans un système de décision documenté.
+Cet ordre ne signifie pas que les démos sont secondaires. Il signifie qu’il faut les interpréter dans un cadre de décision documenté.
 
 ## Usage sain des démos
 
@@ -50,7 +50,7 @@ Autrement dit, la démo peut inspirer la décision suivante, mais la décision m
 
 ## Contexte Let Books
 
-Le dépôt Let Books distingue déjà les preuves documentaires canoniques du statut d'implémentation pour les écrits publics. C'est un garde-fou utile, car cela évite que des prototypes deviennent par accident une autorité éditoriale.
+Le dépôt Let Books distingue déjà les preuves documentaires canoniques du statut d'implémentation pour les écrits publics. C’est un garde-fou utile, car il évite que des prototypes deviennent par accident une autorité éditoriale.
 
 ## Pages Associées
 

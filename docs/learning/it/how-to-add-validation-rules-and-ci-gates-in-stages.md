@@ -34,7 +34,7 @@ Chiediti:
 - quale struttura deve restare coerente in tutto il repository
 - quali controlli di qualità farebbero risparmiare tempo ai revisori
 
-Se lo stesso problema compare piu volte, e un buon candidato per l'automazione.
+Se lo stesso problema compare più volte, è un buon candidato per l'automazione.
 
 ## La validazione dovrebbe seguire la catena di autorità
 

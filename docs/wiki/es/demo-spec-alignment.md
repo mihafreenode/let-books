@@ -25,7 +25,7 @@ Las demos son útiles porque hacen concretos los flujos de trabajo. Son arriesga
 4. demo o comportamiento de la implementación
 5. validación y pruebas
 
-Este orden no significa que las demos no importen. Significa que deben interpretarse dentro de un sistema de decisiones documentado.
+Este orden no significa que las demos no importen. Significa que deben interpretarse dentro de un marco de decisión documentado.
 
 ## Uso saludable de las demos
 
@@ -50,7 +50,7 @@ En otras palabras, la demo puede inspirar la siguiente decisión, pero la decisi
 
 ## Contexto de Let Books
 
-El repositorio de Let Books ya distingue entre evidencia documental canónica y estado de implementación para la escritura pública. Esa es una protección útil porque evita que los prototipos se conviertan por accidente en autoridad editorial.
+El repositorio de Let Books ya distingue entre evidencia documental canónica y estado de implementación para la escritura pública. Esa es una protección útil porque evita que los prototipos se conviertan por accidente en una autoridad editorial.
 
 ## Páginas Relacionadas
 
