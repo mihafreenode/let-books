@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Ovaj vodič opisuje praktičan tok rada za dugoročno održavanje usklađenosti specifikacije proizvoda, dokumentacije, ponašanja demonstracije i implementacionog rada.
+Ovaj vodič opisuje praktičan tok rada za dugoročno održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demonstracije i implementacije.
 
 ## Osnovni problem
 
@@ -24,7 +24,7 @@ Primeri:
 - kod implementira zgodnu prečicu koja krši pravilo proizvoda
 - validacione provere sprovode samo sintaksu, a ne nameru proizvoda
 
-AI može ubrzati sve ovo ako je tok usklađivanja slab.
+AI može sve ovo dodatno ubrzati ako je tok usklađivanja slab.
 
 ## Model usklađivanja
 
@@ -36,7 +36,7 @@ Koristite ovaj redosled autoriteta:
 4. ponašanje demonstracije ili aplikacije
 5. testovi i validaciona pravila
 
-Niži slojevi treba da podržavaju više slojeve. Ako su u sukobu, ažurirajte lanac namerno umesto da podrazumevano pobedi najvidljiviji artefakt.
+Niži slojevi treba da podržavaju više slojeve. Ako su u sukobu, lanac treba namerno ažurirati umesto da podrazumevano pobedi samo najvidljiviji artefakt.
 
 ## Preporučeni tok rada
 

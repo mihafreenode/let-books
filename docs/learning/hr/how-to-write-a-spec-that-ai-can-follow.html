@@ -106,12 +106,14 @@
           </div>
             <hr class="content-header-divider">
           </header>
+<h2 id="sažetak">Sažetak</h2>
+<p class="lead">Ovaj vodič objašnjava kako napisati specifikaciju proizvoda ili funkcionalnosti tako da implementacija uz podršku AI-ja ostane usklađena sa stvarnim ciljevima proizvoda, umjesto da sklizne prema generičkom rezultatu.</p>
 <h2 id="zašto-je-to-važno">Zašto je to važno</h2>
-<p class="lead">AI može brzo generirati kod, ali najbolje radi kada zadatak ima jasne granice.</p>
+<p>AI može brzo generirati kod, ali najbolje radi kada zadatak ima jasne granice.</p>
 <p>Ako je specifikacija nejasna, AI će često praznine popuniti uvjerljivim zadanim obrascima:</p>
 <ul>
 <li>uobičajenim arhitekturnim obrascima</li>
-<li>generičkim UI tokovima</li>
+<li>generičkim tokovima korisničkog sučelja</li>
 <li>nepotrebnim apstrakcijama</li>
 <li>izmišljenim pretpostavkama o tome što bi proizvod trebao raditi</li>
 </ul>
@@ -127,7 +129,7 @@
 <blockquote>
 <p>Dodaj brzi obrazac za unos koji donatoru omogućuje da katalogizira jedan fizički primjerak knjige u nekoliko sekundi dok stoji pokraj police ili kutije.</p>
 </blockquote>
-<p>Svrha implementatoru govori za što treba optimizirati.</p>
+<p>Svrha implementatoru jasno pokazuje što treba optimizirati.</p>
 <h3 id="granice-opsega">2. Granice opsega</h3>
 <p>Navedite što je unutar, a što izvan opsega.</p>
 <p>Primjer:</p>
@@ -135,7 +137,7 @@
 <li>unutar opsega: fotografija naslovnice, unos ISBN-a, lokacija pohrane, spremi i nastavi</li>
 <li>izvan opsega: OCR, sinkronizacija s oblakom, institucionalni tijek pregleda</li>
 </ul>
-<p>To sprječava pomoćnika da mali zadatak napuše u mini-platformu.</p>
+<p>To sprječava pomoćnika da mali zadatak nepotrebno pretvori u mini-platformu.</p>
 <h3 id="obavezno-ponašanje">3. Obavezno ponašanje</h3>
 <p>Navedite pravila o kojima nema pregovora.</p>
 <p>Primjeri iz pristupa Let Books:</p>
@@ -191,7 +193,7 @@
 <li><code>AGENTS-Implementation.md</code> definira taktička ograničenja isporuke</li>
 <li><code>README.md</code> razdvaja trenutačno stanje od budućeg smjera</li>
 </ul>
-<p>Taj slojeviti pristup koristan je jer AI radi bolje kada je memorija proizvoda izričita i pregledljiva.</p>
+<p>Taj slojeviti pristup koristan je jer AI radi bolje kada su pravila i pamćenje proizvoda zapisani jasno i pregledno.</p>
 <h2 id="vježba">Vježba</h2>
 <p>Uzmite jednu funkcionalnost Let Books, poput skeniranja QR koda kutije ili uvoza Excel odluka, i napišite jednoslojnu specifikaciju koristeći gornju strukturu.</p>
 <p>Zatim zamolite pomoćnika za kodiranje da je implementira.</p>

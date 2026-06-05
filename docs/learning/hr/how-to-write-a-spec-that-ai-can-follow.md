@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Ovaj vodič objašnjava kako napisati specifikaciju proizvoda ili funkcionalnosti koja pomaže da implementacija uz podršku AI-ja ostane usklađena sa stvarnim ciljevima proizvoda umjesto da odluta prema generičkom rezultatu.
+Ovaj vodič objašnjava kako napisati specifikaciju proizvoda ili funkcionalnosti tako da implementacija uz podršku AI-ja ostane usklađena sa stvarnim ciljevima proizvoda, umjesto da sklizne prema generičkom rezultatu.
 
 ## Zašto je to važno
 
@@ -20,7 +20,7 @@ AI može brzo generirati kod, ali najbolje radi kada zadatak ima jasne granice.
 Ako je specifikacija nejasna, AI će često praznine popuniti uvjerljivim zadanim obrascima:
 
 - uobičajenim arhitekturnim obrascima
-- generičkim UI tokovima
+- generičkim tokovima korisničkog sučelja
 - nepotrebnim apstrakcijama
 - izmišljenim pretpostavkama o tome što bi proizvod trebao raditi
 
@@ -40,7 +40,7 @@ Bolje:
 
 > Dodaj brzi obrazac za unos koji donatoru omogućuje da katalogizira jedan fizički primjerak knjige u nekoliko sekundi dok stoji pokraj police ili kutije.
 
-Svrha implementatoru govori za što treba optimizirati.
+Svrha implementatoru jasno pokazuje što treba optimizirati.
 
 ### 2. Granice opsega
 
@@ -51,7 +51,7 @@ Primjer:
 - unutar opsega: fotografija naslovnice, unos ISBN-a, lokacija pohrane, spremi i nastavi
 - izvan opsega: OCR, sinkronizacija s oblakom, institucionalni tijek pregleda
 
-To sprječava pomoćnika da mali zadatak napuše u mini-platformu.
+To sprječava pomoćnika da mali zadatak nepotrebno pretvori u mini-platformu.
 
 ### 3. Obavezno ponašanje
 
@@ -118,7 +118,7 @@ Repozitorij već pokazuje taj obrazac na više razina:
 - `AGENTS-Implementation.md` definira taktička ograničenja isporuke
 - `README.md` razdvaja trenutačno stanje od budućeg smjera
 
-Taj slojeviti pristup koristan je jer AI radi bolje kada je memorija proizvoda izričita i pregledljiva.
+Taj slojeviti pristup koristan je jer AI radi bolje kada su pravila i pamćenje proizvoda zapisani jasno i pregledno.
 
 ## Vježba
 

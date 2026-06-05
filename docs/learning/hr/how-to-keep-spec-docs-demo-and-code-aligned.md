@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Ovaj vodič opisuje praktičan tijek rada za održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demoa i implementacije kroz vrijeme.
+Ovaj vodič opisuje praktičan tijek rada za dugoročno održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demoa i implementacije.
 
 ## Srž problema
 
@@ -24,7 +24,7 @@ Primjeri:
 - kod implementira zgodan prečac koji krši pravilo proizvoda
 - validacijske provjere provode samo sintaksu, a ne namjeru proizvoda
 
-AI može ubrzati sve to ako je tijek usklađivanja slab.
+AI može sve to dodatno ubrzati ako je tijek usklađivanja slab.
 
 ## Model usklađivanja
 
@@ -36,7 +36,7 @@ Koristite ovaj redoslijed autoriteta:
 4. ponašanje demoa ili aplikacije
 5. testovi i validacijska pravila
 
-Niže razine trebaju podržavati više razine. Ako su u sukobu, namjerno ažurirajte lanac umjesto da zadani pobjednik postane artefakt koji je samo najvidljiviji.
+Niže razine trebaju podupirati više razine. Ako su u sukobu, namjerno ažurirajte cijeli lanac umjesto da po zadanom pobijedi artefakt koji je samo najvidljiviji.
 
 ## Preporučeni tijek rada
 

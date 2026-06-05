@@ -11,7 +11,7 @@ topics:
 
 ## Sažetak
 
-Ovaj vodič objašnjava kako napisati specifikaciju proizvoda ili funkcionalnosti koja pomaže da implementacija uz podršku AI-ja ostane usklađena sa stvarnim ciljevima proizvoda umjesto da odluta prema generičkom rezultatu.
+Ovaj vodič objašnjava kako napisati specifikaciju proizvoda ili funkcionalnosti tako da implementacija uz podršku AI-ja ostane usklađena sa stvarnim ciljevima proizvoda, umjesto da sklizne prema generičkom rezultatu.
 
 ## Zašto je to važno
 
@@ -20,7 +20,7 @@ AI može brzo generisati kod, ali najbolje radi kada zadatak ima jasne granice.
 Ako je specifikacija nejasna, AI će često praznine popuniti uvjerljivim podrazumijevanim obrascima:
 
 - uobičajenim arhitektonskim obrascima
-- generičkim UI tokovima
+- generičkim tokovima korisničkog interfejsa
 - nepotrebnim apstrakcijama
 - izmišljenim pretpostavkama o tome šta bi proizvod trebao raditi
 
@@ -40,7 +40,7 @@ Bolje:
 
 > Dodaj brzu formu za unos koja donatoru omogućava da katalogizira jedan fizički primjerak knjige za nekoliko sekundi dok stoji pored police ili kutije.
 
-Svrha implementatoru govori za šta treba optimizovati.
+Svrha implementatoru jasno pokazuje šta treba optimizovati.
 
 ### 2. Granice opsega
 
@@ -51,7 +51,7 @@ Primjer:
 - unutar opsega: fotografija naslovnice, unos ISBN-a, lokacija pohrane, sačuvaj i nastavi
 - izvan opsega: OCR, cloud sinhronizacija, institucionalni tok pregleda
 
-To sprječava asistenta da mali zadatak napuše u mini-platformu.
+To sprječava asistenta da mali zadatak nepotrebno pretvori u mini-platformu.
 
 ### 3. Obavezno ponašanje
 
@@ -118,7 +118,7 @@ Repozitorij već pokazuje ovaj obrazac na više nivoa:
 - `AGENTS-Implementation.md` definiše taktička ograničenja isporuke
 - `README.md` razdvaja trenutno stanje od budućeg smjera
 
-Taj slojeviti pristup koristan je jer AI radi bolje kada je memorija proizvoda izričita i pregledljiva.
+Taj slojeviti pristup koristan je jer AI radi bolje kada su pravila i pamćenje proizvoda zapisani jasno i pregledno.
 
 ## Vježba
 

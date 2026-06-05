@@ -106,8 +106,10 @@
           </div>
             <hr class="content-header-divider">
           </header>
+<h2 id="sažetak">Sažetak</h2>
+<p class="lead">Ovaj vodič opisuje praktičan tok rada za dugoročno održavanje usklađenosti između specifikacije proizvoda, dokumentacije, ponašanja demonstracije i implementacije.</p>
 <h2 id="osnovni-problem">Osnovni problem</h2>
-<p class="lead">Odstupanje proizvoda retko počinje dramatičnom greškom. Obično počinje malim neusklađenostima.</p>
+<p>Odstupanje proizvoda retko počinje dramatičnom greškom. Obično počinje malim neusklađenostima.</p>
 <p>Primeri:</p>
 <ul>
 <li>demonstracija doda novi tok rada, ali se specifikacija nikada ne ažurira</li>
@@ -115,7 +117,7 @@
 <li>kod implementira zgodnu prečicu koja krši pravilo proizvoda</li>
 <li>validacione provere sprovode samo sintaksu, a ne nameru proizvoda</li>
 </ul>
-<p>AI može ubrzati sve ovo ako je tok usklađivanja slab.</p>
+<p>AI može sve ovo dodatno ubrzati ako je tok usklađivanja slab.</p>
 <h2 id="model-usklađivanja">Model usklađivanja</h2>
 <p>Koristite ovaj redosled autoriteta:</p>
 <ol type="1">
@@ -125,7 +127,7 @@
 <li>ponašanje demonstracije ili aplikacije</li>
 <li>testovi i validaciona pravila</li>
 </ol>
-<p>Niži slojevi treba da podržavaju više slojeve. Ako su u sukobu, ažurirajte lanac namerno umesto da podrazumevano pobedi najvidljiviji artefakt.</p>
+<p>Niži slojevi treba da podržavaju više slojeve. Ako su u sukobu, lanac treba namerno ažurirati umesto da podrazumevano pobedi samo najvidljiviji artefakt.</p>
 <h2 id="preporučeni-tok-rada">Preporučeni tok rada</h2>
 <h3 id="počnite-od-promene-u-specifikaciji">1. Počnite od promene u specifikaciji</h3>
 <p>Ako se menja korisniku vidljiv tok rada ili pravilo proizvoda, prvo ažurirajte odgovarajuću specifikaciju ili smernice.</p>
