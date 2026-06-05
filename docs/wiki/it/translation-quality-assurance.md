@@ -67,9 +67,9 @@ Esempi di questo modello includono formulazioni equivalenti a:
 
 - contenuto candidato
 - strategia di validazione
-- artefatto del flusso di lavoro
-- strumenti curati
-- competenze curate
+- documento del flusso di lavoro
+- strumenti selezionati con cura
+- competenze selezionate con cura
 
 Non si tratta sempre di errori di traduzione. Spesso sono casi in cui un madrelingua riscriverebbe istintivamente la frase.
 

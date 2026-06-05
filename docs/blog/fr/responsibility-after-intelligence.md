@@ -85,7 +85,7 @@ Mais les questions les plus importantes sur l'IA ne sont peut-être pas techniqu
 
 Ce sont peut-être des questions de responsabilité.
 
-À mesure que les systèmes deviennent plus capables, le jugement humain, l'accountability, la gouvernance et la supervision ne deviennent pas moins importants. Ils deviennent plus importants.
+À mesure que les systèmes deviennent plus capables, le jugement humain, la responsabilité, la gouvernance et la supervision ne deviennent pas moins importants. Ils deviennent plus importants.
 
 Cela se comprend facilement de travers. On suppose souvent que si un système semble plus intelligent, le rôle humain devrait diminuer proportionnellement. Mais dans de nombreux domaines sérieux, c'est l'inverse qui est vrai.
 

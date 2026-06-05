@@ -67,9 +67,9 @@ Primeri takšnih vzorcev vključujejo izraze, enakovredne:
 
 - kandidatna vsebina
 - strategija preverjanja
-- artefakt poteka dela
-- kurirana orodja
-- kurirane veščine
+- zapis poteka dela
+- skrbno izbrana orodja
+- skrbno izbrane veščine
 
 To niso vedno prevajalske napake. Pogosto gre za primere, kjer bi naravni govorec stavek instinktivno preoblikoval.
 

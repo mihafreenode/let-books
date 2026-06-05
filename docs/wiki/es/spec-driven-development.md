@@ -15,7 +15,7 @@ El desarrollo basado en especificaciones es un enfoque en el que definiciones ex
 
 ## Definición
 
-En este enfoque, una especificación no es sólo un artefacto de planificación inicial. Actúa como referencia permanente para:
+En este enfoque, una especificación no es sólo un documento inicial de planificación. Actúa como referencia permanente para:
 
 - propósito del producto
 - límites del alcance

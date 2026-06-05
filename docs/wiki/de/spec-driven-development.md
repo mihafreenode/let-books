@@ -15,7 +15,7 @@ Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem klar formulierte Pr
 
 ## Begriffsbestimmung
 
-Bei diesem Ansatz ist eine Spezifikation nicht nur ein anfängliches Planungsartefakt. Sie dient als fortlaufender Bezugspunkt für:
+Bei diesem Ansatz ist eine Spezifikation nicht nur ein anfängliches Planungsdokument. Sie dient als fortlaufender Bezugspunkt für:
 
 - Produktzweck
 - Geltungsbereichsgrenzen

@@ -67,9 +67,9 @@ Primeri takvog obrasca uključuju izraze ekvivalentne sledećem:
 
 - kandidatni sadržaj
 - strategija validacije
-- artefakt toka rada
-- kurirani alati
-- kurirane veštine
+- zapis toka rada
+- pažljivo odabrani alati
+- pažljivo odabrane veštine
 
 To nisu uvek prevodilačke greške. Često su to slučajevi u kojima bi izvorni govornik instinktivno preoblikovao rečenicu.
 

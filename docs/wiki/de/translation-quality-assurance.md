@@ -67,9 +67,9 @@ Beispiele für dieses Muster sind Formulierungen, die etwa Folgendem entsprechen
 
 - Kandidateninhalt
 - Validierungsstrategie
-- Workflow-Artefakt
-- kuratierte Werkzeuge
-- kuratierte Skills
+- Workflow-Dokument
+- sorgfältig ausgewählte Werkzeuge
+- sorgfältig ausgewählte Skills
 
 Das sind nicht immer Übersetzungsfehler. Oft sind es Fälle, in denen ein Muttersprachler den Satz instinktiv umformulieren würde.
 

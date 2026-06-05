@@ -67,9 +67,9 @@ Shembuj të këtij modeli përfshijnë shprehje ekuivalente me:
 
 - përmbajtje kandidate
 - strategji validimi
-- artefakt i fluksit të punës
-- mjete të kuruara
-- aftësi të kuruara
+- dokument i fluksit të punës
+- mjete të përzgjedhura me kujdes
+- aftësi të përzgjedhura me kujdes
 
 Këto nuk janë gjithmonë gabime përkthimi. Shpesh janë raste ku një folës amtar do ta rishkruante instinktivisht fjalinë.
 

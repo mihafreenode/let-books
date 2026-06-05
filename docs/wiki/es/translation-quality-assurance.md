@@ -67,9 +67,9 @@ Ejemplos de este patrón incluyen frases equivalentes a:
 
 - contenido candidato
 - estrategia de validación
-- artefacto del flujo de trabajo
-- herramientas curadas
-- habilidades curadas
+- documento del flujo de trabajo
+- herramientas cuidadosamente seleccionadas
+- habilidades cuidadosamente seleccionadas
 
 No siempre se trata de errores de traducción. A menudo son casos en los que un hablante nativo reescribiría instintivamente la frase.
 
