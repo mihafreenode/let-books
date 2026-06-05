@@ -55,9 +55,9 @@ Los flujos de trabajo de implementación confirman que los artefactos creados a�
 
 Las capas deberían reforzarse entre sí en este orden:
 
-- Los documentos y las especificaciones definen las expectativas.
-- La revisión interpreta esas expectativas en contexto.
-- Los scripts de validación y las pruebas automatizan partes estables de la revisión.
+- los documentos y las especificaciones definen las expectativas
+- la revisión interpreta esas expectativas en contexto
+- los scripts de validación y las pruebas automatizan partes estables de la revisión
 - CI ejecuta esas comprobaciones de forma consistente
 - el despliegue garantiza que la salida realmente pueda publicarse
 

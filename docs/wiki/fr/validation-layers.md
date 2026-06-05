@@ -1,7 +1,7 @@
 ---
 title: "Couches de validation"
 summary: >-
-  Les couches de validation sont les différentes manières par lesquelles un projet vérifie si les artefacts de mise en œuvre, de documentation et de livraison correspondent toujours aux règles prévues et aux attentes en matière de qualité.
+  Les couches de validation sont les différentes façons dont un projet vérifie si les artefacts de mise en œuvre, de documentation et de livraison correspondent toujours aux règles prévues et aux attentes de qualité.
 topics:
   - validation
   - ci-cd
@@ -80,7 +80,7 @@ Le référentiel Let Books documente déjà plusieurs couches, notamment :
 
 - règles de produit et de mise en œuvre aux `AGENTS.md` et `AGENTS-Implementation.md`
 - validation du développement et du déploiement aux `docs/Development.md` et `docs/Deployment.md`
-- les règles de preuve éditoriale aux `docs/blog/README.md` et `docs/sources/README.md`
+- règles de preuve éditoriale dans `docs/blog/README.md` et `docs/sources/README.md`
 - conseils d'apprentissage pour le déploiement par étapes de CI et de validation
 
 Cela fait de la validation un système documenté plutôt qu’une simple aspiration future.

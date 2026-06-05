@@ -1,7 +1,7 @@
 ---
 title: "Spezifikationsgesteuerte Entwicklung"
 summary: >-
-  Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem explizite Produkt- und Workflowdefinitionen die Implementierung, Dokumentation, Überprüfung und Verifizierung leiten.
+  Spezifikationsgesteuerte Entwicklung ist ein Ansatz, bei dem klar formulierte Produkt- und Workflowdefinitionen die Implementierung, Dokumentation, Überprüfung und Verifikation leiten.
 topics:
   - spec-driven-development
   - documentation
@@ -42,7 +42,7 @@ Zu den üblichen Schichten in einem spezifikationsgesteuerten System gehören:
 
 ## Häufiger Fehlermodus
 
-Ein häufiger Fehlermodus besteht darin, dass das sichtbarste Artefakt zur Standardquelle der Wahrheit wird.
+Ein häufiger Fehlermodus besteht darin, dass das sichtbarste Artefakt zur voreingestellten Quelle der Wahrheit wird.
 
 Beispiele:
 

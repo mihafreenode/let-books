@@ -36,7 +36,7 @@ Shtresat e zakonshme në një sistem të drejtuar nga specifikimi përfshijnë:
 - specifikimin e produktit
 - udhëzimet për zbatimin
 - Dokumentacioni i gjendjes aktuale
-- sjellje demo ose aplikacioni
+- sjelljen e demonstrimit ose të aplikacionit
 - rregullat dhe testet e validimit
 - zbatimin e rregullave përmes CI/CD
 
@@ -49,7 +49,7 @@ Shembuj:
 - kërkesa e fundit
 - prototipi aktual
 - shkurtoren aktuale të zbatimit
-- një faqe dokumentacioni bajat
+- një faqe dokumentacioni të vjetëruar
 
 Zhvillimi i drejtuar nga specifikimi e zvogëlon këtë rrezik duke e bërë të qartë zinxhirin e synuar të autoritetit.
 

@@ -1,7 +1,7 @@
 ---
 title: "Sviluppo basato sulle specifiche"
 summary: >-
-  Lo sviluppo basato sulle specifiche è un approccio in cui definizioni esplicite di prodotto e flusso di lavoro guidano l'implementazione, la documentazione, la revisione e la verifica.
+  Lo sviluppo basato sulle specifiche è un approccio in cui definizioni chiare di prodotto e flusso di lavoro guidano l'implementazione, la documentazione, la revisione e la verifica.
 topics:
   - spec-driven-development
   - documentation
@@ -21,7 +21,7 @@ In questo approccio, una specifica non è solo un artefatto iniziale di pianific
 - confini dell'ambito
 - comportamento richiesto
 - criteri di accettazione
-- i criteri di revisione
+- criteri di revisione
 
 ## Perché è importante nel lavoro assistito dall'intelligenza artificiale
 
@@ -55,7 +55,7 @@ Lo sviluppo basato sulle specifiche riduce questo rischio rendendo esplicita la 
 
 ## Let Books contesto
 
-Nel Let Books lo sviluppo basato sulle specifiche è supportato da:
+In Let Books lo sviluppo basato sulle specifiche è supportato da:
 
 - `AGENTS.md`
 - `AGENTS-Implementation.md`

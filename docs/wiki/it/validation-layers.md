@@ -1,7 +1,7 @@
 ---
 title: "Livelli di convalida"
 summary: >-
-  I livelli di convalida sono i diversi modi in cui un progetto verifica se l'implementazione, la documentazione e gli artefatti di consegna corrispondono ancora alle regole previste e alle aspettative di qualità.
+  I livelli di convalida sono i diversi modi in cui un progetto verifica se implementazione, documentazione e artefatti di consegna continuano a rispettare le regole previste e le aspettative di qualità.
 topics:
   - validation
   - ci-cd
@@ -68,7 +68,7 @@ Esempi di forti candidati iniziali includono:
 - presenza del file richiesto
 - completezza della localizzazione
 - validità della sintassi
-- Collegamenti interni interrotti
+- collegamenti interni interrotti
 - citazioni editoriali vietate
 - generazione dei metadati riuscita
 
@@ -78,7 +78,7 @@ Questi controlli tendono ad essere oggettivi e poco costosi.
 
 Il repository Let Books documenta già diversi livelli, tra cui:
 
-- norme di prodotto e di attuazione ai `AGENTS.md` e `AGENTS-Implementation.md`
+- regole di prodotto e di implementazione in `AGENTS.md` e `AGENTS-Implementation.md`
 - convalida dello sviluppo e dell'implementazione nei `docs/Development.md` e `docs/Deployment.md`
 - norme sulla prova editoriale nei `docs/blog/README.md` e `docs/sources/README.md`
 - guida all'apprendimento per l'IC graduale e l'implementazione della convalida

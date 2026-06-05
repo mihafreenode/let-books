@@ -1,7 +1,7 @@
 ---
 title: "Validierungsebenen"
 summary: >-
-  Validierungsebenen sind die verschiedenen Methoden, mit denen ein Projekt überprüft, ob Implementierungs-, Dokumentations- und Bereitstellungsartefakte noch den beabsichtigten Regeln und Qualitätserwartungen entsprechen.
+  Validierungsebenen sind die verschiedenen Wege, auf denen ein Projekt prüft, ob Implementierung, Dokumentation und Bereitstellungsartefakte noch den vorgesehenen Regeln und Qualitätserwartungen entsprechen.
 topics:
   - validation
   - ci-cd
@@ -21,7 +21,7 @@ Keine einzelne Form der Validierung reicht aus.
 - Tests allein können die falschen Annahmen bestätigen
 - CI allein kann nicht die Regeln definieren, die es durchsetzen soll
 
-Ein mehrschichtiger Ansatz ist belastbarer, weil jede Schicht eine andere Art von Drift erfasst.
+Ein mehrschichtiger Ansatz ist belastbarer, weil jede Schicht eine andere Form von Drift erfasst.
 
 ## Gemeinsame Validierungsebenen
 
@@ -70,7 +70,7 @@ Beispiele für starke Frühkandidaten sind:
 - Syntaxgültigkeit
 - Defekte interne Links
 - Verbotene redaktionelle Zitate
-- Erfolg bei der Generierung von Metadaten
+- erfolgreiche Metadaten-Generierung
 
 Diese Kontrollen sind in der Regel objektiv und kostengünstig.
 

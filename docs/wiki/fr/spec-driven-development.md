@@ -1,7 +1,7 @@
 ---
 title: "Développement basé sur les spécifications"
 summary: >-
-  Le développement basé sur les spécifications est une approche dans laquelle des définitions explicites de produits et de flux de travail guident la mise en œuvre, la documentation, la révision et la vérification.
+  Le développement basé sur les spécifications est une approche dans laquelle des définitions claires du produit et des flux de travail guident la mise en œuvre, la documentation, la révision et la vérification.
 topics:
   - spec-driven-development
   - documentation
@@ -51,7 +51,7 @@ Exemples :
 - le raccourci d'implémentation actuel
 - une page de documentation obsolète
 
-Le développement basé sur les spécifications réduit ce risque en rendant explicite la chaîne d'autorité prévue.
+Le développement basé sur les spécifications réduit ce risque en rendant visible la chaîne d'autorité prévue.
 
 ## Let Books contexte
 
