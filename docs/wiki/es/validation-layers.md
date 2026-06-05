@@ -80,8 +80,8 @@ El repositorio Let Books ya documenta varias capas, entre ellas:
 
 - normas de producto y de implementación en `AGENTS.md` y `AGENTS-Implementation.md`
 - validación de desarrollo e implementación en `docs/Development.md` y `docs/Deployment.md`
-- normas de evidencia editorial en `docs/blog/README.md` y `docs/sources/README.md`
-- guía de aprendizaje para la implementación de validación y CI por etapas
+- reglas sobre evidencia editorial en `docs/blog/README.md` y `docs/sources/README.md`
+- guía práctica para introducir validación y CI por etapas
 
 Eso hace que la validación sea un sistema documentado y no sólo una aspiración futura.
 

@@ -42,7 +42,7 @@ I livelli comuni in un sistema basato sulle specifiche includono:
 
 ## Modalità di errore comune
 
-Una modalità di fallimento comune è lasciare che l'artefatto più visibile diventi la fonte di verità predefinita.
+Un modo frequente di sbagliare è lasciare che l'artefatto più visibile diventi la fonte di verità predefinita.
 
 Esempi:
 

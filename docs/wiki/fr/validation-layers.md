@@ -81,7 +81,7 @@ Le référentiel Let Books documente déjà plusieurs couches, notamment :
 - règles de produit et de mise en œuvre aux `AGENTS.md` et `AGENTS-Implementation.md`
 - validation du développement et du déploiement aux `docs/Development.md` et `docs/Deployment.md`
 - règles de preuve éditoriale dans `docs/blog/README.md` et `docs/sources/README.md`
-- conseils d'apprentissage pour le déploiement par étapes de CI et de validation
+- guide d'apprentissage pour introduire CI et validation par étapes
 
 Cela fait de la validation un système documenté plutôt qu’une simple aspiration future.
 

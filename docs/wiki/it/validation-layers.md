@@ -72,7 +72,7 @@ Esempi di forti candidati iniziali includono:
 - citazioni editoriali vietate
 - generazione dei metadati riuscita
 
-Questi controlli tendono ad essere oggettivi e poco costosi.
+Questi controlli tendono a essere oggettivi e poco costosi.
 
 ## Let Books contesto
 
@@ -81,7 +81,7 @@ Il repository Let Books documenta già diversi livelli, tra cui:
 - regole di prodotto e di implementazione in `AGENTS.md` e `AGENTS-Implementation.md`
 - convalida dello sviluppo e dell'implementazione nei `docs/Development.md` e `docs/Deployment.md`
 - norme sulla prova editoriale nei `docs/blog/README.md` e `docs/sources/README.md`
-- guida all'apprendimento per l'IC graduale e l'implementazione della convalida
+- guida pratica per introdurre gradualmente CI e validazione
 
 Ciò rende la convalida un sistema documentato e non solo un’aspirazione futura.
 

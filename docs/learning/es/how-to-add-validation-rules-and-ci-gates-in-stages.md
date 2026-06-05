@@ -19,7 +19,7 @@ Los equipos suelen saber que necesitan una validación más sólida, pero comete
 
 O bien dejan los controles de calidad informales durante demasiado tiempo, o bien intentan introducir de golpe un sistema de CI grande y rígido y generan frustración.
 
-Un enfoque por etapas funciona mejor.
+Un enfoque por etapas suele funcionar mejor.
 
 Permite que el proyecto convierta expectativas de revisión repetidas en comprobaciones repetibles con el tiempo.
 
@@ -80,7 +80,7 @@ Esta etapa reduce errores evitables antes incluso de que se ejecute la CI.
 
 Ejecuta la comprobación en CI, aunque al principio no bloquee.
 
-Esto da al equipo visibilidad sobre la frecuencia con la que falla la regla y sobre si la propia comprobación necesita ajustes.
+Esto permite al equipo ver con qué frecuencia falla la regla y si la propia comprobación todavía necesita ajustes.
 
 ### Etapa 4: control bloqueante en CI
 

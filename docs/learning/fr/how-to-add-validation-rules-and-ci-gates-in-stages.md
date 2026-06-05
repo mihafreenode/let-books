@@ -19,7 +19,7 @@ Les équipes savent souvent qu’elles ont besoin d’une validation plus solide
 
 Soit elles laissent les contrôles qualité informels trop longtemps, soit elles essaient d’introduire d’un seul coup un grand système CI rigide et créent de la frustration.
 
-Une approche progressive fonctionne mieux.
+Une approche progressive donne en général de meilleurs résultats.
 
 Elle permet au projet de transformer au fil du temps des attentes de revue répétées en contrôles répétables.
 
@@ -80,7 +80,7 @@ Cette étape réduit les erreurs évitables avant même que la CI ne s’exécut
 
 Exécutez le contrôle dans la CI, même s’il n’est pas encore bloquant au départ.
 
-Cela donne à l’équipe de la visibilité sur la fréquence des échecs de la règle et sur le besoin éventuel d’affiner le contrôle lui-même.
+Cela permet à l’équipe de voir à quelle fréquence la règle échoue et si le contrôle lui-même doit encore être affiné.
 
 ### Étape 4 : garde-fou CI bloquant
 

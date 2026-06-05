@@ -27,7 +27,7 @@ Bei diesem Ansatz ist eine Spezifikation nicht nur ein anfängliches Planungsart
 
 KI erhöht die Liefergeschwindigkeit, kann aber auch die Produktdrift verstärken, wenn die Absicht unklar ist.
 
-Spezifikationsgesteuerte Entwicklung hilft, weil sie Teams einen stabilen Bezugspunkt gibt, den sie prüfen, aktualisieren und zur Bewertung generierter Ergebnisse heranziehen können.
+Spezifikationsgesteuerte Entwicklung hilft, weil sie Teams einen stabilen Bezugspunkt gibt, den sie prüfen, aktualisieren und zur Bewertung erzeugter Ergebnisse heranziehen können.
 
 ## Typische Schichten
 

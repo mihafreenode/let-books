@@ -78,10 +78,10 @@ Diese Kontrollen sind in der Regel objektiv und kostengünstig.
 
 Das Let Books-Repository dokumentiert bereits mehrere Schichten, darunter:
 
-- Produkt- und Umsetzungsregeln in `AGENTS.md` und `AGENTS-Implementation.md`
-- Entwicklungs- und Bereitstellungsvalidierung in `docs/Development.md` und `docs/Deployment.md`
+- Produkt- und Implementierungsregeln in `AGENTS.md` und `AGENTS-Implementation.md`
+- Validierungsregeln für Entwicklung und Bereitstellung in `docs/Development.md` und `docs/Deployment.md`
 - Redaktionelle Beweisregeln in `docs/blog/README.md` und `docs/sources/README.md`
-- Lernanleitung für die schrittweise Einführung von CI und Validierung
+- Lernleitfaden für die schrittweise Einführung von CI und Validierung
 
 Das macht die Validierung zu einem dokumentierten System und nicht nur zu einem zukünftigen Ziel.
 

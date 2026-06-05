@@ -51,7 +51,7 @@ Exemples :
 - le raccourci d'implémentation actuel
 - une page de documentation obsolète
 
-Le développement basé sur les spécifications réduit ce risque en rendant visible la chaîne d'autorité prévue.
+Le développement basé sur les spécifications réduit ce risque en rendant clairement visible la chaîne d'autorité prévue.
 
 ## Let Books contexte
 
