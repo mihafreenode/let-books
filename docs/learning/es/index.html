@@ -79,28 +79,111 @@
           </div>
         </div>
       </header>
-      <main>
+                  <main>
         <section class="section">
           <div class="section-header">
             <h1>Guías de aprendizaje</h1>
             <p>Guías estructuradas para redactar especificaciones, planificar la implementación y mantener alineados documentación, demo y código.</p>
           </div>
-          <ul>
-              <li><a href="how-to-add-validation-rules-and-ci-gates-in-stages.html">Cómo añadir reglas de validación y controles de CI por etapas</a></li>
-              <li><a href="how-to-build-a-localization-pipeline.html">Cómo construir una canalización de localización</a></li>
-              <li><a href="how-to-design-english-source-content-for-translation.html">Cómo diseñar contenido fuente en inglés para traducción</a></li>
-              <li><a href="how-to-keep-spec-docs-demo-and-code-aligned.html">Cómo mantener alineados la especificación, la documentación, la demo y el código</a></li>
-              <li><a href="how-to-localize-accessibility-content.html">Cómo localizar contenido de accesibilidad</a></li>
-              <li><a href="how-to-localize-diagrams-and-screenshots.html">Cómo localizar diagramas y capturas de pantalla</a></li>
-              <li><a href="how-to-manage-terminology-across-languages.html">Cómo gestionar la terminología entre idiomas</a></li>
-              <li><a href="how-to-measure-translation-maturity.html">Cómo medir la madurez de traducción</a></li>
-              <li><a href="how-to-review-ai-assisted-translations.html">Cómo revisar traducciones asistidas por IA</a></li>
-              <li><a href="how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a></li>
-              <li><a href="how-to-run-localization-qa-in-ci.html">Cómo ejecutar QA de localización en CI</a></li>
-              <li><a href="how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a></li>
-              <li><a href="how-to-use-ai-workflows-for-non-software-knowledge-work.html">Cómo usar flujos de trabajo de IA para trabajo de conocimiento fuera del software</a></li>
-              <li><a href="how-to-write-a-spec-that-ai-can-follow.html">Cómo escribir una especificación que la IA pueda seguir</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Tipo de contenido">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/es/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link is-active" href="../../learning/es/index.html" data-content-switcher-link data-content-type="learning" aria-current="page">Material de aprendizaje</a>
+              <a class="content-type-switcher__link" href="../../wiki/es/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/es/index.html" data-content-switcher-link data-content-type="topics">Temas</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Material de aprendizaje reciente</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">
+                <span class="recent-content-card__type">Material de aprendizaje</span>
+                <h3>Cómo revisar trabajo asistido por IA frente a la especificación</h3>
+              <p>Esta guía explica cómo revisar una implementación asistida por IA comprobándola frente a la especificación del producto, las reglas del flujo de trabajo, la documentación y las expectativas de validación, en lugar de juzgar solo si el resultado parece pulido o técnicamente plausible.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+                <span class="recent-content-card__type">Material de aprendizaje</span>
+                <h3>Cómo añadir reglas de validación y controles de CI por etapas</h3>
+              <p>Esta guía explica cómo añadir reglas de validación y comprobaciones de CI de forma incremental para que un proyecto pueda mejorar la consistencia y reducir la deriva sin intentar automatizarlo todo de una vez.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html">
+                <span class="recent-content-card__type">Material de aprendizaje</span>
+                <h3>Cómo escribir una especificación que la IA pueda seguir</h3>
+              <p>Esta guía explica cómo escribir una especificación de producto o de funcionalidad que ayude a que la implementación asistida por IA siga alineada con objetivos reales del producto en lugar de desviarse hacia resultados genéricos.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">
+                <span class="recent-content-card__type">Material de aprendizaje</span>
+                <h3>Cómo mantener alineados la especificación, la documentación, la demo y el código</h3>
+              <p>Esta guía describe un flujo de trabajo práctico para mantener alineados con el tiempo la especificación del producto, la documentación, el comportamiento de la demo y el trabajo de implementación.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Explorar por tema</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-learning-es-demo-alignment-menu">Alineación de la demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-learning-es-translation-quality-menu">Calidad de la traducción</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-learning-es-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-learning-es-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-learning-es-documentation-menu">Documentación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-learning-es-ai-assisted-delivery-menu">Entrega asistida por IA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-learning-es-project-management-menu">Gestión del proyecto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-learning-es-implementation-planning-menu">Planificación de la implementación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-learning-es-spec-writing-menu">Redacción de especificaciones</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-learning-es-product-review-menu">Revisión del producto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-es-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-learning-es-validation-menu">Validación</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-learning-es-demo-alignment-menu" data-topic-menu="index-learning-es-demo-alignment" hidden>
+                      <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">Cómo mantener alineados la especificación, la documentación, la demo y el código</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-translation-quality-menu" data-topic-menu="index-learning-es-translation-quality" hidden>
+                      <a href="../../learning/es/how-to-measure-translation-maturity.html">Cómo medir la madurez de traducción</a>
+                      <a href="../../learning/es/how-to-review-ai-assisted-translations.html">Cómo revisar traducciones asistidas por IA</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-ci-cd-menu" data-topic-menu="index-learning-es-ci-cd" hidden>
+                      <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">Cómo añadir reglas de validación y controles de CI por etapas</a>
+                      <a href="../../learning/es/how-to-run-localization-qa-in-ci.html">Cómo ejecutar QA de localización en CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-spec-driven-development-menu" data-topic-menu="index-learning-es-spec-driven-development" hidden>
+                      <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">Cómo añadir reglas de validación y controles de CI por etapas</a>
+                      <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">Cómo mantener alineados la especificación, la documentación, la demo y el código</a>
+                      <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a>
+                      <a href="../../learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html">Cómo usar flujos de trabajo de IA para trabajo de conocimiento fuera del software</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-documentation-menu" data-topic-menu="index-learning-es-documentation" hidden>
+                      <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html">Cómo escribir una especificación que la IA pueda seguir</a>
+                      <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html">Cómo mantener alineados la especificación, la documentación, la demo y el código</a>
+                      <a href="../../learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html">Cómo usar flujos de trabajo de IA para trabajo de conocimiento fuera del software</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-ai-assisted-delivery-menu" data-topic-menu="index-learning-es-ai-assisted-delivery" hidden>
+                      <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html">Cómo escribir una especificación que la IA pueda seguir</a>
+                      <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-project-management-menu" data-topic-menu="index-learning-es-project-management" hidden>
+                      <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-implementation-planning-menu" data-topic-menu="index-learning-es-implementation-planning" hidden>
+                      <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-spec-writing-menu" data-topic-menu="index-learning-es-spec-writing" hidden>
+                      <a href="../../learning/es/how-to-turn-a-product-spec-into-an-implementation-plan.html">Cómo convertir una especificación de producto en un plan de implementación</a>
+                      <a href="../../learning/es/how-to-design-english-source-content-for-translation.html">Cómo diseñar contenido fuente en inglés para traducción</a>
+                      <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html">Cómo escribir una especificación que la IA pueda seguir</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-product-review-menu" data-topic-menu="index-learning-es-product-review" hidden>
+                      <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html">Cómo revisar trabajo asistido por IA frente a la especificación</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-es-validation-menu" data-topic-menu="index-learning-es-validation" hidden>
+                      <a href="../../learning/es/how-to-add-validation-rules-and-ci-gates-in-stages.html">Cómo añadir reglas de validación y controles de CI por etapas</a>
+                      <a href="../../learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html">Cómo usar flujos de trabajo de IA para trabajo de conocimiento fuera del software</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

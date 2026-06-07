@@ -79,28 +79,111 @@
           </div>
         </div>
       </header>
-      <main>
+                  <main>
         <section class="section">
           <div class="section-header">
             <h1>Водичи за учење</h1>
             <p>Структурирани водичи за пишување спецификации, планирање имплементација и усогласување на документација, демо и код.</p>
           </div>
-          <ul>
-              <li><a href="how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a></li>
-              <li><a href="how-to-build-a-localization-pipeline.html">Како да изградите локализациски процес</a></li>
-              <li><a href="how-to-design-english-source-content-for-translation.html">Како да обликувате англиска изворна содржина за превод</a></li>
-              <li><a href="how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</a></li>
-              <li><a href="how-to-localize-accessibility-content.html">Како да локализирате содржина за пристапност</a></li>
-              <li><a href="how-to-localize-diagrams-and-screenshots.html">Како да локализирате дијаграми и снимки од екран</a></li>
-              <li><a href="how-to-manage-terminology-across-languages.html">Како да управувате со терминологија низ јазици</a></li>
-              <li><a href="how-to-measure-translation-maturity.html">Како да мерите зрелост на преводите</a></li>
-              <li><a href="how-to-review-ai-assisted-translations.html">Како да се прегледуваат преводи со помош на AI</a></li>
-              <li><a href="how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува работа со помош на AI според спецификацијата</a></li>
-              <li><a href="how-to-run-localization-qa-in-ci.html">Како да спроведувате локализациски QA во CI</a></li>
-              <li><a href="how-to-turn-a-product-spec-into-an-implementation-plan.html">Како спецификацијата на производот да се претвори во план за имплементација</a></li>
-              <li><a href="how-to-use-ai-workflows-for-non-software-knowledge-work.html">Како да се користат AI работни текови за несофтверска работа со знаење</a></li>
-              <li><a href="how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Вид на содржина">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/mk/index.html" data-content-switcher-link data-content-type="blog">Блог</a>
+              <a class="content-type-switcher__link is-active" href="../../learning/mk/index.html" data-content-switcher-link data-content-type="learning" aria-current="page">Материјали за учење</a>
+              <a class="content-type-switcher__link" href="../../wiki/mk/index.html" data-content-switcher-link data-content-type="wiki">Вики</a>
+              <a class="content-type-switcher__link" href="../../topics/mk/index.html" data-content-switcher-link data-content-type="topics">Теми</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Неодамнешни материјали за учење</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</h3>
+              <p>Овој водич опишува практичен тек на работа за одржување усогласеност меѓу спецификацијата на производот, документацијата, однесувањето на демото и имплементацијата со текот на времето.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/mk/how-to-run-localization-qa-in-ci.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>Како да спроведувате локализациски QA во CI</h3>
+              <p>Овој водич покажува како повторливите очекувања при преглед на локализацијата да се претворат во повторливи CI проверки.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>Како да се користат AI работни текови за несофтверска работа со знаење</h3>
+              <p>Овој водич објаснува како работните текови водени од спецификации и потпомогнати со AI да се применат на пишување, истражување, настава, политики и друга несофтверска работа без зависност од некоја единечна алатка.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/mk/how-to-review-ai-assisted-translations.html">
+                <span class="recent-content-card__type">Материјали за учење</span>
+                <h3>Како да се прегледуваат преводи со помош на AI</h3>
+              <p>Овој водич објаснува како да се прегледуваат преводи генерирани со AI во однос на значење, терминологија, пристапност, тон и потребниот човечки преглед.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Прелистај по теми</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-learning-mk-ai-assisted-delivery-menu">AI испорака</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-learning-mk-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-learning-mk-validation-menu">Валидација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-learning-mk-documentation-menu">Документација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-learning-mk-translation-quality-menu">Квалитет на превод</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-learning-mk-spec-writing-menu">Пишување спецификации</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-learning-mk-implementation-planning-menu">Планирање на имплементација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-learning-mk-product-review-menu">Преглед на производот</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-learning-mk-spec-driven-development-menu">Развој воден од спецификации</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-learning-mk-project-management-menu">Управување со проект</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-mk-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-learning-mk-demo-alignment-menu">Усогласеност на демото</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-learning-mk-ai-assisted-delivery-menu" data-topic-menu="index-learning-mk-ai-assisted-delivery" hidden>
+                      <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува работа со помош на AI според спецификацијата</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-ci-cd-menu" data-topic-menu="index-learning-mk-ci-cd" hidden>
+                      <a href="../../learning/mk/how-to-run-localization-qa-in-ci.html">Како да спроведувате локализациски QA во CI</a>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-validation-menu" data-topic-menu="index-learning-mk-validation" hidden>
+                      <a href="../../learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html">Како да се користат AI работни текови за несофтверска работа со знаење</a>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-documentation-menu" data-topic-menu="index-learning-mk-documentation" hidden>
+                      <a href="../../learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html">Како да се користат AI работни текови за несофтверска работа со знаење</a>
+                      <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-translation-quality-menu" data-topic-menu="index-learning-mk-translation-quality" hidden>
+                      <a href="../../learning/mk/how-to-measure-translation-maturity.html">Како да мерите зрелост на преводите</a>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-translations.html">Како да се прегледуваат преводи со помош на AI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-spec-writing-menu" data-topic-menu="index-learning-mk-spec-writing" hidden>
+                      <a href="../../learning/mk/how-to-design-english-source-content-for-translation.html">Како да обликувате англиска изворна содржина за превод</a>
+                      <a href="../../learning/mk/how-to-write-a-spec-that-ai-can-follow.html">Како да се напише спецификација што AI може да ја следи</a>
+                      <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html">Како спецификацијата на производот да се претвори во план за имплементација</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-implementation-planning-menu" data-topic-menu="index-learning-mk-implementation-planning" hidden>
+                      <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html">Како спецификацијата на производот да се претвори во план за имплементација</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-product-review-menu" data-topic-menu="index-learning-mk-product-review" hidden>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува работа со помош на AI според спецификацијата</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-spec-driven-development-menu" data-topic-menu="index-learning-mk-spec-driven-development" hidden>
+                      <a href="../../learning/mk/how-to-use-ai-workflows-for-non-software-knowledge-work.html">Како да се користат AI работни текови за несофтверска работа со знаење</a>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</a>
+                      <a href="../../learning/mk/how-to-review-ai-assisted-work-against-the-spec.html">Како да се прегледува работа со помош на AI според спецификацијата</a>
+                      <a href="../../learning/mk/how-to-add-validation-rules-and-ci-gates-in-stages.html">Како постепено да се додаваат правила за валидација и CI ограничувања</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-project-management-menu" data-topic-menu="index-learning-mk-project-management" hidden>
+                      <a href="../../learning/mk/how-to-turn-a-product-spec-into-an-implementation-plan.html">Како спецификацијата на производот да се претвори во план за имплементација</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-mk-demo-alignment-menu" data-topic-menu="index-learning-mk-demo-alignment" hidden>
+                      <a href="../../learning/mk/how-to-keep-spec-docs-demo-and-code-aligned.html">Како да се одржуваат усогласени спецификацијата, документацијата, демото и кодот</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

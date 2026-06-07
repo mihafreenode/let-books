@@ -79,45 +79,124 @@
           </div>
         </div>
       </header>
-      <main>
+                  <main>
         <section class="section">
           <div class="section-header">
             <h1>Temi</h1>
             <p>Panoramiche concettuali che collegano blog, pagine wiki di riferimento e materiale didattico in un livello comune di orientamento.</p>
           </div>
-          <div class="topic-index-grid">
-          <details class="topic-category" open>
-            <summary>Sviluppo guidato da specifiche</summary>
-            <ul class="topic-index-list">
-              <li><a href="spec-driven-development.html">Sviluppo guidato dalle specifiche</a></li>
-              <li><a href="ai-assisted-implementation.html">Implementazione assistita dall'IA</a></li>
-              <li><a href="demo-and-specification-alignment.html">Allineamento tra demo e specifica</a></li>
-              <li><a href="validation-layers.html">Livelli di validazione</a></li>
-              <li><a href="documentation-traceability.html">Tracciabilità della documentazione</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Localizzazione su scala</summary>
-            <ul class="topic-index-list">
-              <li><a href="localization-at-scale.html">Localizzazione su larga scala</a></li>
-              <li><a href="ai-assisted-translation.html">Traduzione assistita dall'IA</a></li>
-              <li><a href="translation-memory.html">Memoria di traduzione</a></li>
-              <li><a href="regional-languages.html">Lingue regionali</a></li>
-              <li><a href="eu-multilingualism.html">Multilinguismo dell'UE</a></li>
-              <li><a href="mother-tongue-user-experience.html">Esperienza utente nella lingua madre</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Metadati librari e bibliotecari</summary>
-            <ul class="topic-index-list">
-              <li><a href="isbn.html">ISBN</a></li>
-              <li><a href="book-metadata.html">Metadati del libro</a></li>
-              <li><a href="edition-vs-physical-copy.html">Edizione vs copia fisica</a></li>
-              <li><a href="cataloging.html">Catalogazione</a></li>
-              <li><a href="donation-workflows.html">Workflow di donazione</a></li>
-            </ul>
-          </details>
-          </div>
+          <nav class="content-type-switcher" aria-label="Tipo di contenuto">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/it/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/it/index.html" data-content-switcher-link data-content-type="learning">Materiale didattico</a>
+              <a class="content-type-switcher__link" href="../../wiki/it/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link is-active" href="../../topics/it/index.html" data-content-switcher-link data-content-type="topics" aria-current="page">Temi</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Temi recenti</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../topics/it/translation-memory.html">
+                <span class="recent-content-card__type">Temi</span>
+                <h3>Memoria di traduzione</h3>
+              <p>Che cos&#x27;è la translation memory, in che cosa eccelle e perché resta utile anche nei workflow di traduzione assistita dall&#x27;IA.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/it/validation-layers.html">
+                <span class="recent-content-card__type">Temi</span>
+                <h3>Livelli di validazione</h3>
+              <p>Come più fasi di validazione riducono classi diverse di errore nei contenuti, nell&#x27;output generato, nell&#x27;implementazione e nei workflow di rilascio.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/it/spec-driven-development.html">
+                <span class="recent-content-card__type">Temi</span>
+                <h3>Sviluppo guidato dalle specifiche</h3>
+              <p>Perché le specifiche agiscono come modello operativo pratico per implementazione, revisione e comunicazione invece che come una documentazione separata aggiunta in ritardo.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/it/regional-languages.html">
+                <span class="recent-content-card__type">Temi</span>
+                <h3>Lingue regionali</h3>
+              <p>Perché il supporto delle lingue regionali richiede più di ampie etichette di mercato e spesso dipende da scrittura, istruzione e contesto istituzionale.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Sfoglia per argomento</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-topics-it-demo-alignment-menu">Allineamento del demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-topics-it-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-topics-it-ai-assisted-delivery-menu">Consegna con AI</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-topics-it-documentation-menu">Documentazione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-topics-it-book-donation-menu">Donazione di libri</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-topics-it-isbn-metadata-menu">ISBN e metadati</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-topics-it-product-quality-menu">Qualità del prodotto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-topics-it-translation-quality-menu">Qualità della traduzione</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-topics-it-library-systems-menu">Sistemi bibliotecari</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-topics-it-product-specification-menu">Specifica di prodotto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-topics-it-spec-driven-development-menu">Sviluppo guidato dalle specifiche</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-it-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-topics-it-validation-menu">Validazione</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-topics-it-demo-alignment-menu" data-topic-menu="index-topics-it-demo-alignment" hidden>
+                      <a href="../../topics/it/demo-and-specification-alignment.html">Allineamento tra demo e specifica</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-ci-cd-menu" data-topic-menu="index-topics-it-ci-cd" hidden>
+                      <a href="../../topics/it/validation-layers.html">Livelli di validazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-ai-assisted-delivery-menu" data-topic-menu="index-topics-it-ai-assisted-delivery" hidden>
+                      <a href="../../topics/it/ai-assisted-implementation.html">Implementazione assistita dall&#x27;IA</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-documentation-menu" data-topic-menu="index-topics-it-documentation" hidden>
+                      <a href="../../topics/it/cataloging.html">Catalogazione</a>
+                      <a href="../../topics/it/book-metadata.html">Metadati del libro</a>
+                      <a href="../../topics/it/spec-driven-development.html">Sviluppo guidato dalle specifiche</a>
+                      <a href="../../topics/it/documentation-traceability.html">Tracciabilità della documentazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-book-donation-menu" data-topic-menu="index-topics-it-book-donation" hidden>
+                      <a href="../../topics/it/cataloging.html">Catalogazione</a>
+                      <a href="../../topics/it/edition-vs-physical-copy.html">Edizione vs copia fisica</a>
+                      <a href="../../topics/it/isbn.html">ISBN</a>
+                      <a href="../../topics/it/donation-workflows.html">Workflow di donazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-isbn-metadata-menu" data-topic-menu="index-topics-it-isbn-metadata" hidden>
+                      <a href="../../topics/it/edition-vs-physical-copy.html">Edizione vs copia fisica</a>
+                      <a href="../../topics/it/isbn.html">ISBN</a>
+                      <a href="../../topics/it/book-metadata.html">Metadati del libro</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-product-quality-menu" data-topic-menu="index-topics-it-product-quality" hidden>
+                      <a href="../../topics/it/ai-assisted-implementation.html">Implementazione assistita dall&#x27;IA</a>
+                      <a href="../../topics/it/validation-layers.html">Livelli di validazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-translation-quality-menu" data-topic-menu="index-topics-it-translation-quality" hidden>
+                      <a href="../../topics/it/translation-memory.html">Memoria di traduzione</a>
+                      <a href="../../topics/it/ai-assisted-translation.html">Traduzione assistita dall&#x27;IA</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-library-systems-menu" data-topic-menu="index-topics-it-library-systems" hidden>
+                      <a href="../../topics/it/cataloging.html">Catalogazione</a>
+                      <a href="../../topics/it/edition-vs-physical-copy.html">Edizione vs copia fisica</a>
+                      <a href="../../topics/it/isbn.html">ISBN</a>
+                      <a href="../../topics/it/book-metadata.html">Metadati del libro</a>
+                      <a href="../../topics/it/donation-workflows.html">Workflow di donazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-product-specification-menu" data-topic-menu="index-topics-it-product-specification" hidden>
+                      <a href="../../topics/it/spec-driven-development.html">Sviluppo guidato dalle specifiche</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-spec-driven-development-menu" data-topic-menu="index-topics-it-spec-driven-development" hidden>
+                      <a href="../../topics/it/demo-and-specification-alignment.html">Allineamento tra demo e specifica</a>
+                      <a href="../../topics/it/ai-assisted-implementation.html">Implementazione assistita dall&#x27;IA</a>
+                      <a href="../../topics/it/spec-driven-development.html">Sviluppo guidato dalle specifiche</a>
+                      <a href="../../topics/it/documentation-traceability.html">Tracciabilità della documentazione</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-it-validation-menu" data-topic-menu="index-topics-it-validation" hidden>
+                      <a href="../../topics/it/demo-and-specification-alignment.html">Allineamento tra demo e specifica</a>
+                      <a href="../../topics/it/validation-layers.html">Livelli di validazione</a>
+                      <a href="../../topics/it/documentation-traceability.html">Tracciabilità della documentazione</a>
+                      <a href="../../topics/it/donation-workflows.html">Workflow di donazione</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

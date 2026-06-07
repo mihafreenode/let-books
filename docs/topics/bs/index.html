@@ -79,45 +79,124 @@
           </div>
         </div>
       </header>
-      <main>
+                  <main>
         <section class="section">
           <div class="section-header">
             <h1>Teme</h1>
             <p>Konceptualni pregledi koji povezuju blog, wiki referentne stranice i vodiče za učenje u zajednički orijentacijski sloj.</p>
           </div>
-          <div class="topic-index-grid">
-          <details class="topic-category" open>
-            <summary>Razvoj vođen specifikacijom</summary>
-            <ul class="topic-index-list">
-              <li><a href="spec-driven-development.html">Razvoj vođen specifikacijom</a></li>
-              <li><a href="ai-assisted-implementation.html">Implementacija uz AI podršku</a></li>
-              <li><a href="demo-and-specification-alignment.html">Usklađenost demoa i specifikacije</a></li>
-              <li><a href="validation-layers.html">Validacijski slojevi</a></li>
-              <li><a href="documentation-traceability.html">Sljedivost dokumentacije</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Lokalizacija u obimu</summary>
-            <ul class="topic-index-list">
-              <li><a href="localization-at-scale.html">Lokalizacija u velikom obimu</a></li>
-              <li><a href="ai-assisted-translation.html">Prevođenje uz AI podršku</a></li>
-              <li><a href="translation-memory.html">Prevodilačka memorija</a></li>
-              <li><a href="regional-languages.html">Regionalni jezici</a></li>
-              <li><a href="eu-multilingualism.html">Višejezičnost EU</a></li>
-              <li><a href="mother-tongue-user-experience.html">Korisničko iskustvo na maternjem jeziku</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Metapodaci o knjigama i bibliotekama</summary>
-            <ul class="topic-index-list">
-              <li><a href="isbn.html">ISBN</a></li>
-              <li><a href="book-metadata.html">Metapodaci o knjizi</a></li>
-              <li><a href="edition-vs-physical-copy.html">Izdanje nasuprot fizičkom primjerku</a></li>
-              <li><a href="cataloging.html">Katalogizacija</a></li>
-              <li><a href="donation-workflows.html">Tokovi rada za donacije</a></li>
-            </ul>
-          </details>
-          </div>
+          <nav class="content-type-switcher" aria-label="Vrsta sadržaja">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/bs/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/bs/index.html" data-content-switcher-link data-content-type="learning">Materijali za učenje</a>
+              <a class="content-type-switcher__link" href="../../wiki/bs/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link is-active" href="../../topics/bs/index.html" data-content-switcher-link data-content-type="topics" aria-current="page">Teme</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Nedavne teme</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../topics/bs/edition-vs-physical-copy.html">
+                <span class="recent-content-card__type">Teme</span>
+                <h3>Izdanje nasuprot fizičkom primjerku</h3>
+              <p>Zašto su bibliografsko izdanje i pojedinačno pohranjena knjiga povezani entiteti, ali ih ne treba tretirati kao isti zapis.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/bs/book-metadata.html">
+                <span class="recent-content-card__type">Teme</span>
+                <h3>Metapodaci o knjizi</h3>
+              <p>Kako opisne informacije o knjizi podržavaju otkrivanje, pregled i odluke o donacijama te zašto su metapodaci širi od bilo kojeg pojedinačnog identifikatora.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/bs/isbn.html">
+                <span class="recent-content-card__type">Teme</span>
+                <h3>ISBN</h3>
+              <p>Šta ISBN identifikuje, šta ne može identifikovati i zašto ostaje koristan, a da nije dovoljan za potpune tokove rada pri rukovanju knjigama.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/bs/mother-tongue-user-experience.html">
+                <span class="recent-content-card__type">Teme</span>
+                <h3>Korisničko iskustvo na maternjem jeziku</h3>
+              <p>Zašto korisnici često bolje razumiju, više vjeruju i bolje pamte tokove rada kada je kritičan sadržaj dostupan na jeziku na kojem prirodno razmišljaju.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Pregledaj po temama</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-topics-bs-ai-assisted-delivery-menu">AI isporuka</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-topics-bs-library-systems-menu">Bibliotečki sistemi</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-topics-bs-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-topics-bs-documentation-menu">Dokumentacija</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-topics-bs-book-donation-menu">Donacija knjiga</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-topics-bs-isbn-metadata-menu">ISBN i metapodaci</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-topics-bs-translation-quality-menu">Kvalitet prevođenja</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-topics-bs-product-quality-menu">Kvalitet proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-topics-bs-spec-driven-development-menu">Razvoj vođen specifikacijama</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-topics-bs-product-specification-menu">Specifikacija proizvoda</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-topics-bs-demo-alignment-menu">Usklađenost demoa</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-bs-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-topics-bs-validation-menu">Validacija</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-topics-bs-ai-assisted-delivery-menu" data-topic-menu="index-topics-bs-ai-assisted-delivery" hidden>
+                      <a href="../../topics/bs/ai-assisted-implementation.html">Implementacija uz AI podršku</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-library-systems-menu" data-topic-menu="index-topics-bs-library-systems" hidden>
+                      <a href="../../topics/bs/isbn.html">ISBN</a>
+                      <a href="../../topics/bs/edition-vs-physical-copy.html">Izdanje nasuprot fizičkom primjerku</a>
+                      <a href="../../topics/bs/cataloging.html">Katalogizacija</a>
+                      <a href="../../topics/bs/book-metadata.html">Metapodaci o knjizi</a>
+                      <a href="../../topics/bs/donation-workflows.html">Tokovi rada za donacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-ci-cd-menu" data-topic-menu="index-topics-bs-ci-cd" hidden>
+                      <a href="../../topics/bs/validation-layers.html">Validacijski slojevi</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-documentation-menu" data-topic-menu="index-topics-bs-documentation" hidden>
+                      <a href="../../topics/bs/cataloging.html">Katalogizacija</a>
+                      <a href="../../topics/bs/book-metadata.html">Metapodaci o knjizi</a>
+                      <a href="../../topics/bs/spec-driven-development.html">Razvoj vođen specifikacijom</a>
+                      <a href="../../topics/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-book-donation-menu" data-topic-menu="index-topics-bs-book-donation" hidden>
+                      <a href="../../topics/bs/isbn.html">ISBN</a>
+                      <a href="../../topics/bs/edition-vs-physical-copy.html">Izdanje nasuprot fizičkom primjerku</a>
+                      <a href="../../topics/bs/cataloging.html">Katalogizacija</a>
+                      <a href="../../topics/bs/donation-workflows.html">Tokovi rada za donacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-isbn-metadata-menu" data-topic-menu="index-topics-bs-isbn-metadata" hidden>
+                      <a href="../../topics/bs/isbn.html">ISBN</a>
+                      <a href="../../topics/bs/edition-vs-physical-copy.html">Izdanje nasuprot fizičkom primjerku</a>
+                      <a href="../../topics/bs/book-metadata.html">Metapodaci o knjizi</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-translation-quality-menu" data-topic-menu="index-topics-bs-translation-quality" hidden>
+                      <a href="../../topics/bs/translation-memory.html">Prevodilačka memorija</a>
+                      <a href="../../topics/bs/ai-assisted-translation.html">Prevođenje uz AI podršku</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-product-quality-menu" data-topic-menu="index-topics-bs-product-quality" hidden>
+                      <a href="../../topics/bs/ai-assisted-implementation.html">Implementacija uz AI podršku</a>
+                      <a href="../../topics/bs/validation-layers.html">Validacijski slojevi</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-spec-driven-development-menu" data-topic-menu="index-topics-bs-spec-driven-development" hidden>
+                      <a href="../../topics/bs/ai-assisted-implementation.html">Implementacija uz AI podršku</a>
+                      <a href="../../topics/bs/spec-driven-development.html">Razvoj vođen specifikacijom</a>
+                      <a href="../../topics/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                      <a href="../../topics/bs/demo-and-specification-alignment.html">Usklađenost demoa i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-product-specification-menu" data-topic-menu="index-topics-bs-product-specification" hidden>
+                      <a href="../../topics/bs/spec-driven-development.html">Razvoj vođen specifikacijom</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-demo-alignment-menu" data-topic-menu="index-topics-bs-demo-alignment" hidden>
+                      <a href="../../topics/bs/demo-and-specification-alignment.html">Usklađenost demoa i specifikacije</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-bs-validation-menu" data-topic-menu="index-topics-bs-validation" hidden>
+                      <a href="../../topics/bs/documentation-traceability.html">Sljedivost dokumentacije</a>
+                      <a href="../../topics/bs/donation-workflows.html">Tokovi rada za donacije</a>
+                      <a href="../../topics/bs/demo-and-specification-alignment.html">Usklađenost demoa i specifikacije</a>
+                      <a href="../../topics/bs/validation-layers.html">Validacijski slojevi</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

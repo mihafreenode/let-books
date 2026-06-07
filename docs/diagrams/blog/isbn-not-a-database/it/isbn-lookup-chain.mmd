@@ -4,14 +4,14 @@ title: Catena di ricerca metadati ISBN
 flowchart TD
     A(["ISBN inserito"]) --> B[Normalizza e convalida]
     B --> C{Carattere di<br/>controllo valido?}
-    C -->|No| D["Mostra errore di validazione"]
+    C -->|No| D["Mostra errore"]
     D --> E["Inserimento manuale<br/>(sempre disponibile)"]
     C -->|Sì| F["Interroga Open Library"]
     F --> G{Metadati utili<br/>trovati?}
-    G -->|Sì| H["Restituisci metadati<br/>Fornitore: Open Library"]
+    G -->|Sì| H["Restituisci metadati<br/>Fonte: Open Library"]
     G -->|No / Non disponibile| I["Interroga API<br/>metadati Let Books"]
     I --> J{Metadati utili<br/>trovati?}
-    J -->|Sì| K["Restituisci metadati<br/>Fornitore: Let Books API"]
+    J -->|Sì| K["Restituisci metadati<br/>Fonte: Let Books API"]
     J -->|No / Non disponibile| E
 
     style H fill:#e8f5e9,stroke:#2e7d32

@@ -79,34 +79,122 @@
           </div>
         </div>
       </header>
-      <main>
+                  <main>
         <section class="section">
           <div class="section-header">
             <h1>Blog</h1>
             <p>Articles de blog sur le développement piloté par les spécifications, les métadonnées, la documentation et les projets assistés par IA.</p>
           </div>
-          <ul>
-              <li><a href="ai-as-an-oracle.html">L&#x27;IA comme oracle : pourquoi la culture de la vérification compte davantage que le prompting</a></li>
-              <li><a href="ai-will-not-replace-translators.html">L&#x27;IA ne remplacera pas les traducteurs</a></li>
-              <li><a href="ai-workflows-beyond-software.html">Les workflows d&#x27;IA au-delà du logiciel</a></li>
-              <li><a href="documentation-is-part-of-the-product.html">La documentation fait partie du produit</a></li>
-              <li><a href="economics-of-localization.html">Économie de la localisation</a></li>
-              <li><a href="extracting-use-cases-from-a-working-demo.html">Extraire des cas d’usage à partir d’une démo fonctionnelle</a></li>
-              <li><a href="future-of-continuous-localization.html">Avenir de la localisation continue</a></li>
-              <li><a href="governance-trust-and-security-in-ai-workflows.html">Gouvernance, confiance et sécurité dans les workflows d&#x27;IA</a></li>
-              <li><a href="isbn-not-a-database.html">L&#x27;ISBN n&#x27;est pas une base de données</a></li>
-              <li><a href="localization-at-scale.html">La localisation à grande échelle</a></li>
-              <li><a href="multilingual-accessibility.html">Accessibilité multilingue</a></li>
-              <li><a href="preserving-smaller-languages-in-the-digital-age.html">Préserver les langues plus petites à l’ère numérique</a></li>
-              <li><a href="responsibility-after-intelligence.html">Responsabilité après l&#x27;intelligence</a></li>
-              <li><a href="spec-driven-development-for-ai-projects.html">Développement guidé par les spécifications pour les projets d&#x27;IA</a></li>
-              <li><a href="spec-driven-development-in-let-books.html">Développement guidé par les spécifications dans Let Books</a></li>
-              <li><a href="the-cost-of-english-only-software.html">Le coût d’un logiciel uniquement en anglais</a></li>
-              <li><a href="translation-and-learning.html">Traduction et apprentissage</a></li>
-              <li><a href="united-in-diversity-and-open-source.html">Unis dans la diversité et dans l&#x27;open source</a></li>
-              <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Quand la démo est une preuve et quand elle ne l&#x27;est pas</a></li>
-              <li><a href="why-every-language-matters.html">Pourquoi chaque langue compte</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Type de contenu">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link is-active" href="../../blog/fr/index.html" data-content-switcher-link data-content-type="blog" aria-current="page">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/fr/index.html" data-content-switcher-link data-content-type="learning">Ressources d&#x27;apprentissage</a>
+              <a class="content-type-switcher__link" href="../../wiki/fr/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/fr/index.html" data-content-switcher-link data-content-type="topics">Sujets</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Articles récents</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../blog/fr/extracting-use-cases-from-a-working-demo.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Extraire des cas d’usage à partir d’une démo fonctionnelle</h3>
+              <p>Comment un prototype statique peut révéler les cas d’usage durables d’un produit lorsque l’équipe traite les écrans comme des indices et les capacités extraites comme ce qu’il faut préserver.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/fr/responsibility-after-intelligence.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Responsabilité après l&#x27;intelligence</h3>
+              <p>À mesure que l&#x27;IA devient plus capable, les questions les plus profondes portent de moins en moins sur la seule capacité technique et de plus en plus sur le jugement humain, la responsabilité, la gouvernance et la dignité.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/fr/ai-as-an-oracle.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>L&#x27;IA comme oracle : pourquoi la culture de la vérification compte davantage que le prompting</h3>
+              <p>Un bon modèle d&#x27;ingénierie pour l&#x27;IA n&#x27;est ni collègue ni remplaçant, mais oracle : utile, opaque et toujours à vérifier.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/fr/spec-driven-development-for-ai-projects.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Développement guidé par les spécifications pour les projets d&#x27;IA</h3>
+              <p>Pourquoi le développement assisté par l&#x27;IA a besoin de spécifications plus fortes, d&#x27;une documentation plus claire et de règles explicites de vérification plutôt que d&#x27;un processus plus lâche.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Parcourir par sujet</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-blog-fr-demo-alignment-menu">Alignement de la démo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-blog-fr-documentation-menu">Documentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-blog-fr-book-donation-menu">Don de livres</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-blog-fr-spec-driven-development-menu">Développement piloté par les spécifications</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-blog-fr-isbn-metadata-menu">ISBN et métadonnées</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-blog-fr-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-blog-fr-ai-assisted-delivery-menu">Livraison assistée par IA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-blog-fr-translation-quality-menu">Qualité de la traduction</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-blog-fr-product-quality-menu">Qualité du produit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-blog-fr-product-review-menu">Revue du produit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-blog-fr-library-systems-menu">Systèmes de bibliothèque</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-fr-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-blog-fr-validation-menu">Validation</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-blog-fr-demo-alignment-menu" data-topic-menu="index-blog-fr-demo-alignment" hidden>
+                      <a href="../../blog/fr/spec-driven-development-in-let-books.html">Développement guidé par les spécifications dans Let Books</a>
+                      <a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html">Extraire des cas d’usage à partir d’une démo fonctionnelle</a>
+                      <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">Quand la démo est une preuve et quand elle ne l&#x27;est pas</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-documentation-menu" data-topic-menu="index-blog-fr-documentation" hidden>
+                      <a href="../../blog/fr/spec-driven-development-in-let-books.html">Développement guidé par les spécifications dans Let Books</a>
+                      <a href="../../blog/fr/spec-driven-development-for-ai-projects.html">Développement guidé par les spécifications pour les projets d&#x27;IA</a>
+                      <a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html">Extraire des cas d’usage à partir d’une démo fonctionnelle</a>
+                      <a href="../../blog/fr/governance-trust-and-security-in-ai-workflows.html">Gouvernance, confiance et sécurité dans les workflows d&#x27;IA</a>
+                      <a href="../../blog/fr/ai-as-an-oracle.html">L&#x27;IA comme oracle : pourquoi la culture de la vérification compte davantage que le prompting</a>
+                      <a href="../../blog/fr/documentation-is-part-of-the-product.html">La documentation fait partie du produit</a>
+                      <a href="../../blog/fr/ai-workflows-beyond-software.html">Les workflows d&#x27;IA au-delà du logiciel</a>
+                      <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">Quand la démo est une preuve et quand elle ne l&#x27;est pas</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-book-donation-menu" data-topic-menu="index-blog-fr-book-donation" hidden>
+                      <a href="../../blog/fr/isbn-not-a-database.html">L&#x27;ISBN n&#x27;est pas une base de données</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-spec-driven-development-menu" data-topic-menu="index-blog-fr-spec-driven-development" hidden>
+                      <a href="../../blog/fr/spec-driven-development-in-let-books.html">Développement guidé par les spécifications dans Let Books</a>
+                      <a href="../../blog/fr/spec-driven-development-for-ai-projects.html">Développement guidé par les spécifications pour les projets d&#x27;IA</a>
+                      <a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html">Extraire des cas d’usage à partir d’une démo fonctionnelle</a>
+                      <a href="../../blog/fr/ai-as-an-oracle.html">L&#x27;IA comme oracle : pourquoi la culture de la vérification compte davantage que le prompting</a>
+                      <a href="../../blog/fr/documentation-is-part-of-the-product.html">La documentation fait partie du produit</a>
+                      <a href="../../blog/fr/ai-workflows-beyond-software.html">Les workflows d&#x27;IA au-delà du logiciel</a>
+                      <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">Quand la démo est une preuve et quand elle ne l&#x27;est pas</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-isbn-metadata-menu" data-topic-menu="index-blog-fr-isbn-metadata" hidden>
+                      <a href="../../blog/fr/isbn-not-a-database.html">L&#x27;ISBN n&#x27;est pas une base de données</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-let-books-menu" data-topic-menu="index-blog-fr-let-books" hidden>
+                      <a href="../../blog/fr/spec-driven-development-in-let-books.html">Développement guidé par les spécifications dans Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-ai-assisted-delivery-menu" data-topic-menu="index-blog-fr-ai-assisted-delivery" hidden>
+                      <a href="../../blog/fr/spec-driven-development-for-ai-projects.html">Développement guidé par les spécifications pour les projets d&#x27;IA</a>
+                      <a href="../../blog/fr/documentation-is-part-of-the-product.html">La documentation fait partie du produit</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-translation-quality-menu" data-topic-menu="index-blog-fr-translation-quality" hidden>
+                      <a href="../../blog/fr/ai-will-not-replace-translators.html">L&#x27;IA ne remplacera pas les traducteurs</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-product-quality-menu" data-topic-menu="index-blog-fr-product-quality" hidden>
+                      <a href="../../blog/fr/documentation-is-part-of-the-product.html">La documentation fait partie du produit</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-product-review-menu" data-topic-menu="index-blog-fr-product-review" hidden>
+                      <a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html">Extraire des cas d’usage à partir d’une démo fonctionnelle</a>
+                      <a href="../../blog/fr/when-the-demo-is-evidence-and-when-it-is-not.html">Quand la démo est une preuve et quand elle ne l&#x27;est pas</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-library-systems-menu" data-topic-menu="index-blog-fr-library-systems" hidden>
+                      <a href="../../blog/fr/isbn-not-a-database.html">L&#x27;ISBN n&#x27;est pas une base de données</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-fr-validation-menu" data-topic-menu="index-blog-fr-validation" hidden>
+                      <a href="../../blog/fr/spec-driven-development-for-ai-projects.html">Développement guidé par les spécifications pour les projets d&#x27;IA</a>
+                      <a href="../../blog/fr/ai-workflows-beyond-software.html">Les workflows d&#x27;IA au-delà du logiciel</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

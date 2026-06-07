@@ -79,41 +79,132 @@
           </div>
         </div>
       </header>
-      <main>
+                  <main>
         <section class="section">
           <div class="section-header">
             <h1>Wiki</h1>
             <p>Páginas de referencia permanentes sobre desarrollo guiado por especificaciones, trazabilidad de documentación, capas de validación y temas relacionados.</p>
           </div>
-          <ul>
-              <li><a href="ai-assisted-knowledge-work.html">Trabajo de conocimiento asistido por IA</a></li>
-              <li><a href="ai-assisted-translation-policy.html">AI-Política de Traducción Asistida</a></li>
-              <li><a href="demo-spec-alignment.html">Alineación entre demo y especificación</a></li>
-              <li><a href="documentation-is-more-than-a-website.html">La documentación es más que un sitio web</a></li>
-              <li><a href="documentation-traceability.html">Trazabilidad de la documentación</a></li>
-              <li><a href="documentation-validation-beyond-linting.html">Validación de documentación más allá del linting</a></li>
-              <li><a href="implementation-guidance.html">Guía de implementación</a></li>
-              <li><a href="language-support-matrix.html">Matriz de soporte lingüístico</a></li>
-              <li><a href="let-books-accessibility-and-localization.html">Let Books Accesibilidad y Localización</a></li>
-              <li><a href="let-books-localization-architecture.html">Let Books Arquitectura de localización</a></li>
-              <li><a href="let-books-localization-case-study.html">Let Books Estudio de caso de localización</a></li>
-              <li><a href="let-books-localization-lessons-learned.html">Let Books Lecciones aprendidas de localización</a></li>
-              <li><a href="localization-at-scale.html">Localización a escala</a></li>
-              <li><a href="localization-ci-cd.html">Localización CI y CD</a></li>
-              <li><a href="localization-governance.html">Gobernanza de la localización</a></li>
-              <li><a href="localization-maturity-model.html">Modelo de madurez de localización</a></li>
-              <li><a href="localization-roadmap.html">Hoja de ruta de localización</a></li>
-              <li><a href="markdown-in-product-development.html">Markdown en Desarrollo de productos</a></li>
-              <li><a href="multilingual-accessibility.html">Accesibilidad multilingüe</a></li>
-              <li><a href="multilingual-public-interest-software.html">Software multilingüe de interés público</a></li>
-              <li><a href="non-text-asset-localization.html">Localización de activos no textuales</a></li>
-              <li><a href="product-specification.html">Especificación de producto</a></li>
-              <li><a href="spec-driven-development.html">Desarrollo basado en especificaciones</a></li>
-              <li><a href="translation-memory-and-glossaries.html">Memorias de traducción y glosarios</a></li>
-              <li><a href="translation-quality-assurance.html">Garantía de calidad de la traducción</a></li>
-              <li><a href="unicode-and-script-correctness.html">Unicode y corrección del guión</a></li>
-              <li><a href="validation-layers.html">Capas de validación</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Tipo de contenido">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/es/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/es/index.html" data-content-switcher-link data-content-type="learning">Material de aprendizaje</a>
+              <a class="content-type-switcher__link is-active" href="../../wiki/es/index.html" data-content-switcher-link data-content-type="wiki" aria-current="page">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/es/index.html" data-content-switcher-link data-content-type="topics">Temas</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Entradas wiki recientes</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../wiki/es/translation-quality-assurance.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Garantía de calidad de la traducción</h3>
+              <p>La QA de traducción combina validación automatizada, corrección ortográfica, revisión terminológica, comprobaciones de accesibilidad y juicio humano.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/es/spec-driven-development.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Desarrollo basado en especificaciones</h3>
+              <p>El desarrollo basado en especificaciones es un enfoque en el que definiciones explícitas de productos y flujos de trabajo guían la implementación, documentación, revisión y verificación.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/es/ai-assisted-knowledge-work.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Trabajo de conocimiento asistido por IA</h3>
+              <p>Los flujos de trabajo guiados por especificaciones también se aplican fuera del software: ayudan a estructurar la escritura, la investigación, la documentación, el trabajo de políticas y otras actividades intensivas en conocimiento asistidas por IA mediante intención explícita, validación y revisión gobernada.</p>
+              </a>
+              <a class="recent-content-card" href="../../wiki/es/markdown-in-product-development.html">
+                <span class="recent-content-card__type">Wiki</span>
+                <h3>Markdown en Desarrollo de productos</h3>
+              <p>Markdown es un formato práctico para almacenar la intención del producto, la documentación, las guías y la evidencia en un formato revisable, portátil, diferenciable y fácil de conectar a los flujos de trabajo de validación.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Explorar por tema</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-wiki-es-demo-alignment-menu">Alineación de la demo</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-wiki-es-translation-quality-menu">Calidad de la traducción</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-wiki-es-product-quality-menu">Calidad del producto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-wiki-es-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-wiki-es-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-wiki-es-documentation-menu">Documentación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-wiki-es-product-specification-menu">Especificación del producto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-wiki-es-project-management-menu">Gestión del proyecto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-wiki-es-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-wiki-es-implementation-planning-menu">Planificación de la implementación</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-wiki-es-spec-writing-menu">Redacción de especificaciones</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-wiki-es-product-review-menu">Revisión del producto</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-wiki-es-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-wiki-es-validation-menu">Validación</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-wiki-es-demo-alignment-menu" data-topic-menu="index-wiki-es-demo-alignment" hidden>
+                      <a href="../../wiki/es/demo-spec-alignment.html">Alineación entre demo y especificación</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-translation-quality-menu" data-topic-menu="index-wiki-es-translation-quality" hidden>
+                      <a href="../../wiki/es/ai-assisted-translation-policy.html">AI-Política de Traducción Asistida</a>
+                      <a href="../../wiki/es/translation-quality-assurance.html">Garantía de calidad de la traducción</a>
+                      <a href="../../wiki/es/localization-maturity-model.html">Modelo de madurez de localización</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-product-quality-menu" data-topic-menu="index-wiki-es-product-quality" hidden>
+                      <a href="../../wiki/es/validation-layers.html">Capas de validación</a>
+                      <a href="../../wiki/es/spec-driven-development.html">Desarrollo basado en especificaciones</a>
+                      <a href="../../wiki/es/markdown-in-product-development.html">Markdown en Desarrollo de productos</a>
+                      <a href="../../wiki/es/documentation-traceability.html">Trazabilidad de la documentación</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-ci-cd-menu" data-topic-menu="index-wiki-es-ci-cd" hidden>
+                      <a href="../../wiki/es/validation-layers.html">Capas de validación</a>
+                      <a href="../../wiki/es/localization-ci-cd.html">Localización CI y CD</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-spec-driven-development-menu" data-topic-menu="index-wiki-es-spec-driven-development" hidden>
+                      <a href="../../wiki/es/demo-spec-alignment.html">Alineación entre demo y especificación</a>
+                      <a href="../../wiki/es/spec-driven-development.html">Desarrollo basado en especificaciones</a>
+                      <a href="../../wiki/es/product-specification.html">Especificación de producto</a>
+                      <a href="../../wiki/es/implementation-guidance.html">Guía de implementación</a>
+                      <a href="../../wiki/es/documentation-is-more-than-a-website.html">La documentación es más que un sitio web</a>
+                      <a href="../../wiki/es/markdown-in-product-development.html">Markdown en Desarrollo de productos</a>
+                      <a href="../../wiki/es/ai-assisted-knowledge-work.html">Trabajo de conocimiento asistido por IA</a>
+                      <a href="../../wiki/es/documentation-traceability.html">Trazabilidad de la documentación</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-documentation-menu" data-topic-menu="index-wiki-es-documentation" hidden>
+                      <a href="../../wiki/es/spec-driven-development.html">Desarrollo basado en especificaciones</a>
+                      <a href="../../wiki/es/documentation-is-more-than-a-website.html">La documentación es más que un sitio web</a>
+                      <a href="../../wiki/es/markdown-in-product-development.html">Markdown en Desarrollo de productos</a>
+                      <a href="../../wiki/es/ai-assisted-knowledge-work.html">Trabajo de conocimiento asistido por IA</a>
+                      <a href="../../wiki/es/documentation-traceability.html">Trazabilidad de la documentación</a>
+                      <a href="../../wiki/es/documentation-validation-beyond-linting.html">Validación de documentación más allá del linting</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-product-specification-menu" data-topic-menu="index-wiki-es-product-specification" hidden>
+                      <a href="../../wiki/es/product-specification.html">Especificación de producto</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-project-management-menu" data-topic-menu="index-wiki-es-project-management" hidden>
+                      <a href="../../wiki/es/implementation-guidance.html">Guía de implementación</a>
+                      <a href="../../wiki/es/localization-roadmap.html">Hoja de ruta de localización</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-let-books-menu" data-topic-menu="index-wiki-es-let-books" hidden>
+                      <a href="../../wiki/es/let-books-accessibility-and-localization.html">Let Books Accesibilidad y Localización</a>
+                      <a href="../../wiki/es/let-books-localization-architecture.html">Let Books Arquitectura de localización</a>
+                      <a href="../../wiki/es/let-books-localization-case-study.html">Let Books Estudio de caso de localización</a>
+                      <a href="../../wiki/es/let-books-localization-lessons-learned.html">Let Books Lecciones aprendidas de localización</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-implementation-planning-menu" data-topic-menu="index-wiki-es-implementation-planning" hidden>
+                      <a href="../../wiki/es/implementation-guidance.html">Guía de implementación</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-spec-writing-menu" data-topic-menu="index-wiki-es-spec-writing" hidden>
+                      <a href="../../wiki/es/product-specification.html">Especificación de producto</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-product-review-menu" data-topic-menu="index-wiki-es-product-review" hidden>
+                      <a href="../../wiki/es/demo-spec-alignment.html">Alineación entre demo y especificación</a>
+                      <a href="../../wiki/es/let-books-localization-lessons-learned.html">Let Books Lecciones aprendidas de localización</a>
+                    </div>
+                    <div class="topic-menu" id="index-wiki-es-validation-menu" data-topic-menu="index-wiki-es-validation" hidden>
+                      <a href="../../wiki/es/validation-layers.html">Capas de validación</a>
+                      <a href="../../wiki/es/documentation-validation-beyond-linting.html">Validación de documentación más allá del linting</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

@@ -79,45 +79,124 @@
           </div>
         </div>
       </header>
-      <main>
+                  <main>
         <section class="section">
           <div class="section-header">
             <h1>Теми</h1>
             <p>Концептуални прегледи што ги поврзуваат блогот, вики-референците и материјалите за учење во заеднички слој за ориентација.</p>
           </div>
-          <div class="topic-index-grid">
-          <details class="topic-category" open>
-            <summary>Развој воден од спецификации</summary>
-            <ul class="topic-index-list">
-              <li><a href="spec-driven-development.html">Развој воден од спецификација</a></li>
-              <li><a href="ai-assisted-implementation.html">Имплементација со AI-поддршка</a></li>
-              <li><a href="demo-and-specification-alignment.html">Усогласеност меѓу демо и спецификација</a></li>
-              <li><a href="validation-layers.html">Слоеви на валидација</a></li>
-              <li><a href="documentation-traceability.html">Следливост на документацијата</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Локализација во размер</summary>
-            <ul class="topic-index-list">
-              <li><a href="localization-at-scale.html">Локализација во голем обем</a></li>
-              <li><a href="ai-assisted-translation.html">Преведување со AI-поддршка</a></li>
-              <li><a href="translation-memory.html">Преведувачка меморија</a></li>
-              <li><a href="regional-languages.html">Регионални јазици</a></li>
-              <li><a href="eu-multilingualism.html">Повеќејазичност на ЕУ</a></li>
-              <li><a href="mother-tongue-user-experience.html">Корисничко искуство на мајчин јазик</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Метаподатоци за книги и библиотеки</summary>
-            <ul class="topic-index-list">
-              <li><a href="isbn.html">ISBN</a></li>
-              <li><a href="book-metadata.html">Метаподатоци за книга</a></li>
-              <li><a href="edition-vs-physical-copy.html">Издание наспроти физички примерок</a></li>
-              <li><a href="cataloging.html">Каталогизација</a></li>
-              <li><a href="donation-workflows.html">Текови на работа за донации</a></li>
-            </ul>
-          </details>
-          </div>
+          <nav class="content-type-switcher" aria-label="Вид на содржина">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/mk/index.html" data-content-switcher-link data-content-type="blog">Блог</a>
+              <a class="content-type-switcher__link" href="../../learning/mk/index.html" data-content-switcher-link data-content-type="learning">Материјали за учење</a>
+              <a class="content-type-switcher__link" href="../../wiki/mk/index.html" data-content-switcher-link data-content-type="wiki">Вики</a>
+              <a class="content-type-switcher__link is-active" href="../../topics/mk/index.html" data-content-switcher-link data-content-type="topics" aria-current="page">Теми</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Неодамнешни теми</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../topics/mk/edition-vs-physical-copy.html">
+                <span class="recent-content-card__type">Теми</span>
+                <h3>Издание наспроти физички примерок</h3>
+              <p>Зошто библиографското издание и поединечната складирана книга се поврзани ентитети, но не треба да се третираат како ист запис.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/mk/book-metadata.html">
+                <span class="recent-content-card__type">Теми</span>
+                <h3>Метаподатоци за книга</h3>
+              <p>Како описните информации за книга поддржуваат откривање, преглед и одлуки за донации, и зошто метаподатоците се пошироки од кој било поединечен идентификатор.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/mk/isbn.html">
+                <span class="recent-content-card__type">Теми</span>
+                <h3>ISBN</h3>
+              <p>Што идентификува ISBN, што не може да идентификува и зошто останува корисен, без да биде доволен за целосни текови на работа при ракување со книги.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/mk/mother-tongue-user-experience.html">
+                <span class="recent-content-card__type">Теми</span>
+                <h3>Корисничко искуство на мајчин јазик</h3>
+              <p>Зошто корисниците често подобро ги разбираат, повеќе им веруваат и подобро ги паметат тековите на работа кога критичната содржина е достапна на јазикот на кој природно размислуваат.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Прелистај по теми</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-topics-mk-ai-assisted-delivery-menu">AI испорака</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-topics-mk-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-topics-mk-isbn-metadata-menu">ISBN и метаподатоци</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-topics-mk-library-systems-menu">Библиотечни системи</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-topics-mk-validation-menu">Валидација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-topics-mk-documentation-menu">Документација</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-topics-mk-book-donation-menu">Донација на книги</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-topics-mk-translation-quality-menu">Квалитет на превод</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-topics-mk-product-quality-menu">Квалитет на производот</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-topics-mk-spec-driven-development-menu">Развој воден од спецификации</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-topics-mk-product-specification-menu">Спецификација на производот</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-mk-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-topics-mk-demo-alignment-menu">Усогласеност на демото</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-topics-mk-ai-assisted-delivery-menu" data-topic-menu="index-topics-mk-ai-assisted-delivery" hidden>
+                      <a href="../../topics/mk/ai-assisted-implementation.html">Имплементација со AI-поддршка</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-ci-cd-menu" data-topic-menu="index-topics-mk-ci-cd" hidden>
+                      <a href="../../topics/mk/validation-layers.html">Слоеви на валидација</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-isbn-metadata-menu" data-topic-menu="index-topics-mk-isbn-metadata" hidden>
+                      <a href="../../topics/mk/isbn.html">ISBN</a>
+                      <a href="../../topics/mk/edition-vs-physical-copy.html">Издание наспроти физички примерок</a>
+                      <a href="../../topics/mk/book-metadata.html">Метаподатоци за книга</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-library-systems-menu" data-topic-menu="index-topics-mk-library-systems" hidden>
+                      <a href="../../topics/mk/isbn.html">ISBN</a>
+                      <a href="../../topics/mk/edition-vs-physical-copy.html">Издание наспроти физички примерок</a>
+                      <a href="../../topics/mk/cataloging.html">Каталогизација</a>
+                      <a href="../../topics/mk/book-metadata.html">Метаподатоци за книга</a>
+                      <a href="../../topics/mk/donation-workflows.html">Текови на работа за донации</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-validation-menu" data-topic-menu="index-topics-mk-validation" hidden>
+                      <a href="../../topics/mk/documentation-traceability.html">Следливост на документацијата</a>
+                      <a href="../../topics/mk/validation-layers.html">Слоеви на валидација</a>
+                      <a href="../../topics/mk/donation-workflows.html">Текови на работа за донации</a>
+                      <a href="../../topics/mk/demo-and-specification-alignment.html">Усогласеност меѓу демо и спецификација</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-documentation-menu" data-topic-menu="index-topics-mk-documentation" hidden>
+                      <a href="../../topics/mk/cataloging.html">Каталогизација</a>
+                      <a href="../../topics/mk/book-metadata.html">Метаподатоци за книга</a>
+                      <a href="../../topics/mk/spec-driven-development.html">Развој воден од спецификација</a>
+                      <a href="../../topics/mk/documentation-traceability.html">Следливост на документацијата</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-book-donation-menu" data-topic-menu="index-topics-mk-book-donation" hidden>
+                      <a href="../../topics/mk/isbn.html">ISBN</a>
+                      <a href="../../topics/mk/edition-vs-physical-copy.html">Издание наспроти физички примерок</a>
+                      <a href="../../topics/mk/cataloging.html">Каталогизација</a>
+                      <a href="../../topics/mk/donation-workflows.html">Текови на работа за донации</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-translation-quality-menu" data-topic-menu="index-topics-mk-translation-quality" hidden>
+                      <a href="../../topics/mk/translation-memory.html">Преведувачка меморија</a>
+                      <a href="../../topics/mk/ai-assisted-translation.html">Преведување со AI-поддршка</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-product-quality-menu" data-topic-menu="index-topics-mk-product-quality" hidden>
+                      <a href="../../topics/mk/ai-assisted-implementation.html">Имплементација со AI-поддршка</a>
+                      <a href="../../topics/mk/validation-layers.html">Слоеви на валидација</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-spec-driven-development-menu" data-topic-menu="index-topics-mk-spec-driven-development" hidden>
+                      <a href="../../topics/mk/ai-assisted-implementation.html">Имплементација со AI-поддршка</a>
+                      <a href="../../topics/mk/spec-driven-development.html">Развој воден од спецификација</a>
+                      <a href="../../topics/mk/documentation-traceability.html">Следливост на документацијата</a>
+                      <a href="../../topics/mk/demo-and-specification-alignment.html">Усогласеност меѓу демо и спецификација</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-product-specification-menu" data-topic-menu="index-topics-mk-product-specification" hidden>
+                      <a href="../../topics/mk/spec-driven-development.html">Развој воден од спецификација</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-mk-demo-alignment-menu" data-topic-menu="index-topics-mk-demo-alignment" hidden>
+                      <a href="../../topics/mk/demo-and-specification-alignment.html">Усогласеност меѓу демо и спецификација</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

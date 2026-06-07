@@ -4,14 +4,14 @@ title: ISBN-Metadaten-Suchkette
 flowchart TD
     A(["ISBN eingegeben"]) --> B[Normalisieren und validieren]
     B --> C{Prüfziffer<br/>gültig?}
-    C -->|Nein| D["Validierungsfehler anzeigen"]
+    C -->|Nein| D["Fehler anzeigen"]
     D --> E["Manuelle Eingabe<br/>(immer verfügbar)"]
     C -->|Ja| F["Open Library abfragen"]
     F --> G{Nützliche<br/>Metadaten gefunden?}
-    G -->|Ja| H["Metadaten zurückgeben<br/>Anbieter: Open Library"]
+    G -->|Ja| H["Metadaten zurückgeben<br/>Quelle: Open Library"]
     G -->|Nein / Nicht verfügbar| I["Let Books<br/>Metadaten-API abfragen"]
     I --> J{Nützliche<br/>Metadaten gefunden?}
-    J -->|Ja| K["Metadaten zurückgeben<br/>Anbieter: Let Books API"]
+    J -->|Ja| K["Metadaten<br/>Let Books API"]
     J -->|Nein / Nicht verfügbar| E
 
     style H fill:#e8f5e9,stroke:#2e7d32

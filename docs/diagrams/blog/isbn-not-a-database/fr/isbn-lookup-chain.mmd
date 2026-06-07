@@ -4,14 +4,14 @@ title: Chaîne de recherche de métadonnées ISBN
 flowchart TD
     A(["ISBN saisi"]) --> B[Normaliser et valider]
     B --> C{Chiffre de<br/>contrôle valide?}
-    C -->|Non| D["Afficher l'erreur de validation"]
+    C -->|Non| D["Afficher l'erreur"]
     D --> E["Saisie manuelle<br/>(toujours disponible)"]
     C -->|Oui| F["Interroger Open Library"]
     F --> G{Métadonnées utiles<br/>trouvées?}
-    G -->|Oui| H["Retourner métadonnées<br/>Fournisseur: Open Library"]
+    G -->|Oui| H["Retourner métadonnées<br/>Source: Open Library"]
     G -->|Non / Indisponible| I["Interroger l'API<br/>métadonnées Let Books"]
     I --> J{Métadonnées utiles<br/>trouvées?}
-    J -->|Oui| K["Retourner métadonnées<br/>Fournisseur: Let Books API"]
+    J -->|Oui| K["Métadonnées<br/>Let Books API"]
     J -->|Non / Indisponible| E
 
     style H fill:#e8f5e9,stroke:#2e7d32
