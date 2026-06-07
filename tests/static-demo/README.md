@@ -29,6 +29,21 @@ Protects:
 - expected JSON locale loading path
 - absence of deprecated runtime Serbian transliteration behavior
 
+### `scenarios/`
+
+Purpose:
+- holds draft Playwright-backed scenario tutorials for the static demo.
+
+Protects:
+- the connection between documented use cases and observable demo behavior
+- durable user-facing anchors for core workflows
+- early smoke coverage for scenario intent without freezing current UI details
+
+Notes:
+- these scripts are intentionally non-blocking and are not wired into CI as strict gates yet
+- they should be treated as executable tutorials and future smoke-test candidates
+- they must stay aligned with `docs/use-cases/` rather than with incidental layout structure
+
 ## Related Validators
 
 - `tools/validate_environment.py`
@@ -43,3 +58,5 @@ Protects:
 This test does not evaluate translation quality, UI layout, or full user interaction inside the demo.
 
 It is intentionally a smoke test for localization completeness and runtime contract stability.
+
+The draft scenario layer under `scenarios/` goes further into interaction, but it still avoids strict parity claims, layout assertions, and hard dependencies on current seeded ordering or generated identifiers.

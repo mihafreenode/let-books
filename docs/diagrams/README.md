@@ -15,6 +15,18 @@ Use this area for architecture diagrams, workflow diagrams, mental models, and t
 - generated SVG outputs where appropriate
 - per-diagram notes about provenance and intended use
 
+The repository currently uses Mermaid source plus rendered SVG output.
+
+Prefer Mermaid for new diagrams unless the repository standard changes.
+
+## Maintenance Rule
+
+The Mermaid `.mmd` source file is authoritative.
+
+If a diagram `.mmd` file changes, regenerate and commit the matching `.svg` in the same change.
+
+Do not leave Mermaid source and published SVG artifacts out of sync.
+
 ## Localization
 
 Each blog article has its own diagram directory under `blog/<article-id>/`.
@@ -24,10 +36,10 @@ Structure:
 ```
 blog/<article-id>/
   en/
-    diagram-name.d2       # source
+    diagram-name.mmd      # source
     diagram-name.svg      # rendered
   sl/
-    diagram-name.d2
+    diagram-name.mmd
     diagram-name.svg
   ...
 ```
@@ -49,6 +61,9 @@ Localized articles reference diagrams from their language-specific subdirectory.
 |---|---|
 | [isbn-lookup-chain.svg](isbn-lookup-chain.svg) | ISBN metadata lookup fallback chain |
 | [isbn-vs-physical-book.svg](isbn-vs-physical-book.svg) | Edition-level identifier vs instance-level tracking |
+| [use-case-overview.svg](use-case-overview.svg) | Primary use-case overview for durable workflow intent |
+| [use-case-capability-relationships.svg](use-case-capability-relationships.svg) | Relationship map between intake, storage, oversight, and external review |
+| [use-case-automation-parity-chain.svg](use-case-automation-parity-chain.svg) | Governance chain from use case to automation and future parity |
 
 Source files are in `source/` (Mermaid `.mmd` format).
 
@@ -57,7 +72,24 @@ Regenerate SVG output:
 ```bash
 mmdc -i source/isbn-lookup-chain.mmd -o isbn-lookup-chain.svg -t neutral -b transparent -w 700
 mmdc -i source/isbn-vs-physical-book.mmd -o isbn-vs-physical-book.svg -t neutral -b transparent -w 800
+mmdc -i source/use-case-overview.mmd -o use-case-overview.svg -t neutral -b transparent -w 980
+mmdc -i source/use-case-capability-relationships.mmd -o use-case-capability-relationships.svg -t neutral -b transparent -w 1180
+mmdc -i source/use-case-automation-parity-chain.mmd -o use-case-automation-parity-chain.svg -t neutral -b transparent -w 1280
 ```
+
+Or render the current use-case governance set with:
+
+```bash
+bash scripts/render-use-case-diagrams.sh
+```
+
+### Ubuntu Tooling
+
+These diagrams render on Ubuntu with Mermaid CLI available as `mmdc`.
+
+If `mmdc` is not already installed in your environment, install Mermaid CLI before regeneration.
+
+The repository does not yet wire use-case diagram regeneration into CI, so local regeneration remains a contributor responsibility when diagram sources change.
 
 ### Localized Diagrams
 

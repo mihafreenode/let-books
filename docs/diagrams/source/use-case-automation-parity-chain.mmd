@@ -1,0 +1,15 @@
+---
+title: Use-Case To Automation And Parity Chain
+---
+flowchart LR
+    A["Use Case<br/>durable user goal"] --> B["Automation Contract<br/>draft runtime anchors"]
+    B --> C["Static-Demo Scenario Test<br/>tutorial and smoke candidate"]
+    C --> D["Future Blazor Workflow<br/>same intended outcome"]
+    D --> E["Future Parity Review<br/>compare outcome and behavior"]
+
+    F["Non-goals for parity<br/>DOM structure<br/>CSS layout<br/>component hierarchy"] -. "not compared" .-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution
