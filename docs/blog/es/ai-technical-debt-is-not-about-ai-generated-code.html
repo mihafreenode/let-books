@@ -109,7 +109,7 @@
 <p>Ese modo de fallo existía mucho antes de los asistentes de código. Los equipos siempre han entregado sistemas cuya intención original vivía en una reunión, en una pizarra, en un comentario de ticket o en la cabeza de un ingeniero. El código permanecía. La explicación no. Un año después, la implementación puede seguir funcionando, las pruebas pueden seguir pasando y, aun así, la parte más cara del sistema ya no es el código. Es la comprensión que falta a su alrededor.</p>
 <p>Por eso la “deuda técnica de la IA” no trata principalmente de si un modelo escribió algunas líneas de código. Trata de si el razonamiento que produjo esas líneas se preserva, se revisa y se mantiene accesible. Si ese razonamiento sigue siendo invisible, los mantenedores heredan sintaxis más arqueología. Si se vuelve visible, heredan algo imperfecto pero revisable.</p>
 <h2 id="la-comparación-equivocada">La comparación equivocada</h2>
-<p>Muchas críticas comparan la justificación generada por IA con un estándar ideal de justificación humana perfectamente escrita: ADR limpios, comentarios cuidados, documentación actualizada, notas reflexivas sobre tradeoffs y mensajes de commit precisos. Así no se ven la mayoría de los repositorios después de unos años de presión por entregar.</p>
+<p>Muchas críticas comparan la justificación generada por IA con un estándar ideal de justificación humana perfectamente escrita: ADR limpios, comentarios cuidados, documentación actualizada, notas reflexivas sobre concesiones y mensajes de commit precisos. Así no se ven la mayoría de los repositorios después de unos años de presión por entregar.</p>
 <p>La comparación real suele ser contra algo mucho más desordenado:</p>
 <ul>
 <li>documentación ausente</li>
@@ -186,7 +186,7 @@
 <ul>
 <li>justificación</li>
 <li>supuestos</li>
-<li>tradeoffs</li>
+<li>concesiones</li>
 <li>casos límite</li>
 <li>cambios de documentación</li>
 <li>impactos en casos de uso</li>
@@ -259,7 +259,7 @@
 <ul>
 <li>intención inferida</li>
 <li>supuestos</li>
-<li>tradeoffs</li>
+<li>concesiones</li>
 <li>casos límite</li>
 <li>impacto documental</li>
 <li>notas de confianza</li>
@@ -290,7 +290,7 @@
 <li>¿Se capturaron los casos límite importantes?</li>
 <li>¿Se revisaron los documentos afectados?</li>
 <li>¿Se revisaron los casos de uso afectados?</li>
-<li>¿Se capturaron los tradeoffs?</li>
+<li>¿Se recogieron las concesiones?</li>
 </ul>
 <p>Históricamente, las revisiones de completitud eran caras de hacer de forma consistente porque producir los gradniki subyacentes era caro. Los primeros borradores generados pueden hacerlas prácticas a una escala que antes era difícil de justificar.</p>
 <h2 id="esto-está-más-cerca-de-la-práctica-de-ingeniería-existente-de-lo-que-parece">Esto está más cerca de la práctica de ingeniería existente de lo que parece</h2>
@@ -316,7 +316,7 @@
 <li>intención inferida</li>
 <li>supuestos clave</li>
 <li>casos límite importantes</li>
-<li>tradeoffs o alternativas descartadas</li>
+<li>concesiones o alternativas descartadas</li>
 <li>impacto documental o en casos de uso</li>
 <li>nivel de confianza y preguntas abiertas</li>
 </ul>

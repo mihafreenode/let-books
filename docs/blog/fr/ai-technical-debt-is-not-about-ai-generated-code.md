@@ -228,8 +228,8 @@ Aujourd'hui, beaucoup de PR ne transportent effectivement qu'une seule charge ut
 
 Charge utile d'implémentation
 
-- code
-- tests
+- implémentation
+- jeux de vérification
 
 C'est viable, mais léger. On préserve le comportement sans forcément préserver pourquoi ce comportement existe.
 
@@ -250,7 +250,7 @@ Ce n'est pas du formalisme pour le formalisme. C'est une tentative pour empêche
 
 Le contraste est simple.
 
-![Schéma code seul contre compréhension préservée](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/fr/code-only-vs-preserved-understanding.svg)
+![Schéma implémentation seule contre compréhension préservée](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/fr/code-only-vs-preserved-understanding.svg)
 
 Dans le chemin de gauche, le dépôt accumule du comportement et perd son contexte. Dans le chemin de droite, le dépôt accumule du comportement ainsi qu'au moins une ébauche révisable de l'intention, des hypothèses et de la justification.
 
@@ -313,7 +313,7 @@ Par exemple, un modèle de PR pourrait exiger une courte section relue couvrant 
 
 Ces sections n'ont pas besoin d'être longues. Elles doivent être suffisamment présentes pour qu'un autre ingénieur puisse les contester. Elles peuvent être des premières versions générées, mais elles doivent être relues avec le même sérieux que le code.
 
-## Conclusion
+## Pour conclure
 
 Le titre de cet article est volontairement plus étroit que sa conclusion. Le vrai risque n'est pas la syntaxe générée par l'IA. Le vrai risque est la dette de compréhension : des implémentations qui survivent alors que le raisonnement qui les sous-tend a disparu.
 

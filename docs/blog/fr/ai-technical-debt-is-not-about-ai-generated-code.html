@@ -250,8 +250,8 @@
 <p>Aujourd’hui, beaucoup de PR ne transportent effectivement qu’une seule charge utile : l’implémentation.</p>
 <p>Charge utile d’implémentation</p>
 <ul>
-<li>code</li>
-<li>tests</li>
+<li>implémentation</li>
+<li>jeux de vérification</li>
 </ul>
 <p>C’est viable, mais léger. On préserve le comportement sans forcément préserver pourquoi ce comportement existe.</p>
 <p>Un modèle de PR plus solide transporterait une seconde charge utile à côté de la première.</p>
@@ -268,8 +268,8 @@
 <p>Ce n’est pas du formalisme pour le formalisme. C’est une tentative pour empêcher les dépôts de retomber dans code plus folklore. Si le code change mais que la charge utile de compréhension est absente, les mainteneurs finissent encore par rétroconcevoir du silence.</p>
 <p>Le contraste est simple.</p>
 <figure>
-<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/fr/code-only-vs-preserved-understanding.svg" alt="Schéma code seul contre compréhension préservée" />
-<figcaption aria-hidden="true">Schéma code seul contre compréhension préservée</figcaption>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/fr/code-only-vs-preserved-understanding.svg" alt="Schéma implémentation seule contre compréhension préservée" />
+<figcaption aria-hidden="true">Schéma implémentation seule contre compréhension préservée</figcaption>
 </figure>
 <p>Dans le chemin de gauche, le dépôt accumule du comportement et perd son contexte. Dans le chemin de droite, le dépôt accumule du comportement ainsi qu’au moins une ébauche révisable de l’intention, des hypothèses et de la justification.</p>
 <h2 id="la-revue-de-justesse-et-la-revue-de-complétude-sont-deux-tâches-différentes">La revue de justesse et la revue de complétude sont deux tâches différentes</h2>
@@ -321,7 +321,7 @@
 <li>niveau de confiance et questions ouvertes</li>
 </ul>
 <p>Ces sections n’ont pas besoin d’être longues. Elles doivent être suffisamment présentes pour qu’un autre ingénieur puisse les contester. Elles peuvent être des premières versions générées, mais elles doivent être relues avec le même sérieux que le code.</p>
-<h2 id="conclusion">Conclusion</h2>
+<h2 id="pour-conclure">Pour conclure</h2>
 <p>Le titre de cet article est volontairement plus étroit que sa conclusion. Le vrai risque n’est pas la syntaxe générée par l’IA. Le vrai risque est la dette de compréhension : des implémentations qui survivent alors que le raisonnement qui les sous-tend a disparu.</p>
 <p>La question la plus intéressante est de savoir si les dépôts vont commencer à traiter le raisonnement, les hypothèses, les cas limites et l’intention comme des gradniki de première classe à côté de l’implémentation.</p>
 <p>Historiquement, beaucoup d’équipes perdaient l’intention parce que la préserver était coûteuse. Aujourd’hui, en générer une première version coûte peu. Cela ne résout pas le problème. Cela change ce qui est économiquement praticable.</p>

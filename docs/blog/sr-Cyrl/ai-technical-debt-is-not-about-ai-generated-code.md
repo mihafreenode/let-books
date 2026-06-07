@@ -226,7 +226,7 @@ status: draft
 
 Данас многи PR-ови практично носе један пакет: имплементацију.
 
-Implementacijski paket
+Имплементациони пакет
 
 - код
 - тестови
@@ -250,7 +250,7 @@ Implementacijski paket
 
 Контраст је једноставан.
 
-![Code only versus preserved understanding diagram](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sr-Cyrl/code-only-vs-preserved-understanding.svg)
+![Дијаграм само имплементација наспрам сачуваног разумевања](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sr-Cyrl/code-only-vs-preserved-understanding.svg)
 
 На левој путањи репозиторијум гомила имплементирану логику и губи контекст. На десној је гомила заједно са макар нацртом намере, претпоставки и образложења који може да се прегледа.
 

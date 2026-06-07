@@ -250,7 +250,7 @@ Ovo nije papirologija radi papirologije. To je pokušaj da repozitorijumi ne skl
 
 Kontrast je jednostavan.
 
-![Code only versus preserved understanding diagram](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sr-Latn/code-only-vs-preserved-understanding.svg)
+![Dijagram samo implementacija naspram sačuvanog razumevanja](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sr-Latn/code-only-vs-preserved-understanding.svg)
 
 Na levoj putanji repozitorijum gomila implementiranu logiku i gubi kontekst. Na desnoj je gomila zajedno sa makar nacrtom namere, pretpostavki i obrazloženja koji može da se pregleda.
 

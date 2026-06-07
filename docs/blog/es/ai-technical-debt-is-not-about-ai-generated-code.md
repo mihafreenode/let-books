@@ -50,7 +50,7 @@ Por eso la "deuda técnica de la IA" no trata principalmente de si un modelo esc
 
 ## La comparación equivocada
 
-Muchas críticas comparan la justificación generada por IA con un estándar ideal de justificación humana perfectamente escrita: ADR limpios, comentarios cuidados, documentación actualizada, notas reflexivas sobre tradeoffs y mensajes de commit precisos. Así no se ven la mayoría de los repositorios después de unos años de presión por entregar.
+Muchas críticas comparan la justificación generada por IA con un estándar ideal de justificación humana perfectamente escrita: ADR limpios, comentarios cuidados, documentación actualizada, notas reflexivas sobre concesiones y mensajes de commit precisos. Así no se ven la mayoría de los repositorios después de unos años de presión por entregar.
 
 La comparación real suele ser contra algo mucho más desordenado:
 
@@ -146,7 +146,7 @@ La IA cambia esa economía porque, una vez que el contexto de implementación ya
 
 - justificación
 - supuestos
-- tradeoffs
+- concesiones
 - casos límite
 - cambios de documentación
 - impactos en casos de uso
@@ -239,7 +239,7 @@ Carga de comprensión
 
 - intención inferida
 - supuestos
-- tradeoffs
+- concesiones
 - casos límite
 - impacto documental
 - notas de confianza
@@ -274,7 +274,7 @@ La revisión de completitud pregunta:
 - ¿Se capturaron los casos límite importantes?
 - ¿Se revisaron los documentos afectados?
 - ¿Se revisaron los casos de uso afectados?
-- ¿Se capturaron los tradeoffs?
+- ¿Se recogieron las concesiones?
 
 Históricamente, las revisiones de completitud eran caras de hacer de forma consistente porque producir los gradniki subyacentes era caro. Los primeros borradores generados pueden hacerlas prácticas a una escala que antes era difícil de justificar.
 
@@ -307,7 +307,7 @@ Por ejemplo, una plantilla de PR podría exigir una sección breve y revisada qu
 - intención inferida
 - supuestos clave
 - casos límite importantes
-- tradeoffs o alternativas descartadas
+- concesiones o alternativas descartadas
 - impacto documental o en casos de uso
 - nivel de confianza y preguntas abiertas
 
