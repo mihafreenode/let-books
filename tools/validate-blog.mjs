@@ -65,6 +65,38 @@ let missingDraftDiagrams = 0;
 let editorialFilesChecked = 0;
 let forbiddenEditorialSourceRefs = 0;
 
+// Warning-only heuristics for localized Mermaid labels. These thresholds are intentionally
+// conservative review signals, not correctness rules. They help surface diagrams that are more
+// likely to need rendered visual review because translated labels have become long or dense.
+const LONG_MERMAID_LABEL_TOTAL_CHARS = 42;
+const LONG_MERMAID_LABEL_LINE_CHARS = 24;
+
+// Language-specific review hints should stay small, curated, and non-blocking. The goal is to
+// flag wording that often sounds translated in practice, not to claim that every match is wrong.
+// Human review remains authoritative for whether a term is natural in context.
+const sloveneTranslationSmellRules = [
+  {
+    label: 'literal artifact terminology',
+    regex: /\bartefakt(?:i|ov|om|a)?\b/gi,
+    hint: 'Prefer context-appropriate wording such as "plast", "gradnik", or "rezultat" when that better matches the meaning.',
+  },
+  {
+    label: 'awkward use-case hierarchy wording',
+    regex: /vrhnji primer uporabe/gi,
+    hint: 'Prefer more natural wording such as "samostojen primer uporabe" when the meaning fits.',
+  },
+  {
+    label: 'awkward parity-gate wording',
+    regex: /paritetna zapora/gi,
+    hint: 'Prefer review-oriented wording such as "preverjanje paritete" when the meaning fits.',
+  },
+  {
+    label: 'awkward Blazor flow wording',
+    regex: /Blazor tok/gi,
+    hint: 'Prefer "tok v Blazorju" or "implementacija v Blazorju" where the sentence allows it.',
+  },
+];
+
 const SOURCES_DIR = path.join(DOCS_DIR, 'sources');
 const ALLOWED_EDITORIAL_EVIDENCE_ROOT_FILES = new Set([
   'AGENTS.md',
@@ -440,9 +472,78 @@ function validateMarkdownFile(filePath) {
   if (isEditorialMarkdownFile(filePath)) {
     validateEditorialSourcePolicy(filePath, content);
     validateEditorialFrontmatterPolicy(filePath, frontmatter);
+    validateTranslationSmellHints(filePath, content);
   }
   for (const ref of extractMarkdownRefs(content)) {
     validateResolvedRef(filePath, ref.href, ref.type);
+  }
+}
+
+function fileLocale(filePath) {
+  const normalized = rel(filePath).replace(/\\/g, '/');
+  const match = normalized.match(/^docs\/(?:blog|sources)\/([^/]+)\//);
+  return match ? match[1] : null;
+}
+
+function validateTranslationSmellHints(filePath, content) {
+  const locale = fileLocale(filePath);
+  if (locale !== 'sl') {
+    return;
+  }
+
+  // This validator intentionally emits hints only for Slovenian today because the repository has
+  // already documented concrete examples there. Additional language-specific review lists should
+  // be added only when real recurring issues have been observed and documented.
+  for (const rule of sloveneTranslationSmellRules) {
+    const matches = [...content.matchAll(rule.regex)];
+    if (!matches.length) continue;
+    const uniqueMatches = [...new Set(matches.map((m) => m[0]))].join(', ');
+    warn(`${rel(filePath)}: contains Slovenian review candidate(s) for ${rule.label}: ${uniqueMatches}. ${rule.hint}`);
+  }
+}
+
+function decodeMermaidLabelText(raw) {
+  return raw
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .trim();
+}
+
+function extractMermaidLabels(content) {
+  const labels = [];
+  // Mermaid labels most commonly appear in ["..."] node declarations in this repository. A
+  // narrow extractor is more stable than trying to parse Mermaid syntax generically.
+  const regex = /\["([\s\S]*?)"\]/g;
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    const text = decodeMermaidLabelText(match[1]);
+    if (text) labels.push(text);
+  }
+  return labels;
+}
+
+function validateLocalizedDiagramLabelHints(sourcePath, lang) {
+  if (lang === 'en' || !isFile(sourcePath)) {
+    return;
+  }
+
+  // Long-label warnings stay non-blocking because label length alone does not prove a broken
+  // diagram. The real goal is to nominate review candidates before rendered clipping or crowding
+  // becomes easy to miss in localized documentation.
+  const content = readCachedFile(sourcePath);
+  const labels = extractMermaidLabels(content);
+  for (const label of labels) {
+    const lines = label.split('\n').map((line) => line.trim()).filter(Boolean);
+    const longestLine = lines.reduce((max, line) => Math.max(max, line.length), 0);
+    const totalChars = lines.join(' ').length;
+    if (totalChars > LONG_MERMAID_LABEL_TOTAL_CHARS || longestLine > LONG_MERMAID_LABEL_LINE_CHARS) {
+      const compact = label.replace(/\s+/g, ' ').trim();
+      warn(`${rel(sourcePath)}: Mermaid label may be too long for localized rendered review (total ${totalChars}, longest line ${longestLine}): "${compact}"`);
+    }
   }
 }
 
@@ -652,6 +753,8 @@ function validateLocalizedDiagrams(article, lang, mdPath, frontmatter) {
       fail(`${rel(mdPath)}: non-English page ("${lang}") references English diagram "${rel(resolvedSvg)}"`);
       englishLeaks++;
     }
+
+    validateLocalizedDiagramLabelHints(sourcePath, lang);
   }
 }
 

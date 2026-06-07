@@ -1,0 +1,14 @@
+---
+title: Use-Case Overview
+---
+flowchart TD
+    A["Receive Books<br/>Into The Collection"] --> B["Catalog<br/>Physical Books"]
+    A --> C["Organize And Inspect<br/>Physical Storage"]
+    B --> D["Review<br/>Collection State"]
+    C --> D
+    D --> E["Share A Collection<br/>For External Review<br/>And Capture Decisions"]
+    B --> E
+    C --> E
+
+    classDef core fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    class A,B,C,D,E core

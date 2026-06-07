@@ -1,0 +1,15 @@
+---
+title: Vom Use Case zu Automatisierung und Parität
+---
+flowchart TB
+    A["Use Case<br/>dauerhafte Absicht"] --> B["Automatisierungs-<br/>vertrag"]
+    B --> C["Entwurfs-Szenariotest"]
+    C --> D["Künftige Blazor-<br/>Implementierung"]
+    D --> E["Paritätsreview"]
+
+    F["Nicht nach<br/>DOM, CSS<br/>oder Komponenten"] -.-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution

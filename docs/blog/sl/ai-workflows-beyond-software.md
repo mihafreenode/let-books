@@ -42,7 +42,7 @@ Enaka specifikacijsko vodena logika velja tudi za raziskovanje, akademsko pisanj
 
 ## Specifikacije niso samo za funkcionalnosti
 
-V programski opremi specifikacija pogosto opisuje vedenje sistema. Zunaj programske opreme pa lahko opisuje predvidene lastnosti dokumenta ali drugega artefakta znanja.
+V programski opremi specifikacija pogosto opisuje vedenje sistema. Zunaj programske opreme pa lahko opisuje predvidene lastnosti dokumenta ali drugega gradnika znanja.
 
 To lahko vključuje:
 
@@ -86,7 +86,7 @@ Napaka ni v tem, da začnete tam. Napaka je v domnevi, da je produktiven prvi ko
 
 ## Zakaj je ohranjanje konteksta pomembno
 
-Tradicionalni dokumentni procesi pogosto ohranijo le končni artefakt. Osnutek se prepisuje, komentarji izginejo, razloge za pomembne odločitve pa je pozneje težko obnoviti.
+Tradicionalni dokumentni procesi pogosto ohranijo le končni rezultat. Osnutek se prepisuje, komentarji izginejo, razloge za pomembne odločitve pa je pozneje težko obnoviti.
 
 Specifikacijsko vodeni AI-delovni tokovi spodbujajo ohranitev večjega dela spremljajočega konteksta:
 

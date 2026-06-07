@@ -1,0 +1,15 @@
+---
+title: Del caso de uso a la automatización y la paridad
+---
+flowchart TB
+    A["Caso de uso<br/>intención duradera"] --> B["Contrato de<br/>automatización"]
+    B --> C["Borrador de prueba<br/>de escenario"]
+    C --> D["Futura implementación<br/>en Blazor"]
+    D --> E["Revisión de paridad"]
+
+    F["No basado en<br/>DOM, CSS<br/>ni componentes"] -.-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution

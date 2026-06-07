@@ -15,6 +15,12 @@ Use this area to standardize how topics move from repository evidence to approve
 - Do not use `static-demo/`, future app source files, or test code as quoted repository evidence in public articles.
 - CI validation in `tools/validate-blog.mjs` should fail when editorial content cites app/source paths instead of docs/specs.
 - Semantic localization validation should warn on likely parity drift and fail only when a localized article appears to have lost a major concept or conclusion from the English source.
+- Publication review should include rendered output checks for diagrams and other generated visual assets where practical.
+- Do not approve localized publication work solely because the source text was translated. Review the final published result.
+- Meaning parity and natural language usage matter more than literal word-by-word correspondence.
+- Review high-visibility localized text more aggressively because awkward wording is more exposed in titles, headings, summaries, labels, and navigation.
+- Treat translated-sounding wording as a review signal even when the wording is technically correct.
+- Published Mermaid diagrams should follow the repository rendering standard: `htmlLabels: false`, unless a documented exception explains why HTML labels are required.
 
 ## Structure
 

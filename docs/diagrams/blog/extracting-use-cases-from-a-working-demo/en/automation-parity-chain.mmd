@@ -1,0 +1,15 @@
+---
+title: Use Case To Automation And Parity
+---
+flowchart TB
+    A["Use Case<br/>durable intent"] --> B["Automation Contract<br/>draft runtime anchors"]
+    B --> C["Draft Scenario Test"]
+    C --> D["Future Blazor<br/>implementation"]
+    D --> E["Parity review"]
+
+    F["Not based on<br/>DOM, CSS,<br/>or components"] -.-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution

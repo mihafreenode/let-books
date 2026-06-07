@@ -38,7 +38,7 @@ status: draft
 
 # Razvoj na podlagi specifikacij v Let Books
 
-Let Books je uporaben študijski primer razvoja na podlagi specifikacij, ker repozitorij že vsebuje več plasti produktnega namena, ne le implementacijskih artefaktov.
+Let Books je uporaben študijski primer razvoja na podlagi specifikacij, ker repozitorij že vsebuje več plasti produktnega namena, ne le implementacijskih gradnikov.
 
 Projekt še ni polna gostovana aplikacija. Trenutno vključuje produktno specifikacijo, implementacijska navodila, javno dokumentacijo in statični lokalni demo. Zaradi tega je dober primer, kako lahko projekt ostane usklajen, še preden obstaja končni produkcijski sklad.
 

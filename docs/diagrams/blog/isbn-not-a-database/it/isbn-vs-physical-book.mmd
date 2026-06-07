@@ -1,28 +1,22 @@
 ---
-title: ISBN vs copia fisica del libro
+title: ISBN a confronto con la copia fisica del libro
 ---
-flowchart LR
-    subgraph ISBN["ISBN (identificatore dell'edizione)"]
+flowchart TB
+    subgraph ISBN["ISBN / edizione"]
         direction TB
-        I1["Titolo"]
-        I2["Autore(i)"]
-        I3["Editore"]
-        I4["Anno di pubblicazione"]
-        I5["Lingua"]
-        I6["ISBN-10 / ISBN-13"]
+        I1["Identità condivisa"]
+        I2["Titolo, autori,<br/>editore"]
+        I3["Anno, lingua,<br/>ISBN"]
     end
 
-    subgraph Physical["Copia fisica del libro (istanza)"]
+    subgraph Physical["Copia fisica"]
         direction TB
-        P1["Condizioni<br/>(come nuovo / buono / scarso)"]
-        P2["Provenienza<br/>(firma, timbro, storia)"]
-        P3["Ubicazione di archiviazione<br/>(stanza → scaffale → scatola)"]
-        P4["Stato della donazione<br/>(offerto, richiesto, ritirato)"]
-        P5["Foto<br/>(copertina, frontespizio, danni)"]
-        P6["Note private"]
+        P1["Condizioni e<br/>provenienza"]
+        P2["Collocazione e<br/>stato della donazione"]
+        P3["Foto e<br/>note private"]
     end
 
-    ISBN -.->|"identifica<br/>l'edizione"| Physical
+    I3 -.->|"non descrive<br/>una sola copia"| P1
 
     style ISBN fill:#e3f2fd,stroke:#1565c0
     style Physical fill:#f3e5f5,stroke:#7b1fa2

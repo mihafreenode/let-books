@@ -1,0 +1,15 @@
+---
+title: Од случаја употребе до аутоматизације и паритета
+---
+flowchart TB
+    A["Случај употребе<br/>трајна намера"] --> B["Уговор за<br/>аутоматизацију"]
+    B --> C["Нацрт сценаријског теста"]
+    C --> D["Будућа Blazor<br/>имплементација"]
+    D --> E["Преглед паритета"]
+
+    F["Не пореди<br/>DOM, CSS<br/>ни компоненте"] -.-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution

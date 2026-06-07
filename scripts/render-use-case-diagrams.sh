@@ -22,10 +22,13 @@ fi
 root_dir="$(dirname "$0")/.."
 diagrams_dir="$root_dir/docs/diagrams"
 source_dir="$diagrams_dir/source"
+config_file="$root_dir/tools/mermaid-render-config.json"
 
-mmdc -i "$source_dir/use-case-overview.mmd" -o "$diagrams_dir/use-case-overview.svg" -t neutral -b transparent -w 980
-mmdc -i "$source_dir/use-case-capability-relationships.mmd" -o "$diagrams_dir/use-case-capability-relationships.svg" -t neutral -b transparent -w 1180
-mmdc -i "$source_dir/use-case-automation-parity-chain.mmd" -o "$diagrams_dir/use-case-automation-parity-chain.svg" -t neutral -b transparent -w 1280
+# Use the shared Mermaid render config so committed SVGs prefer plain SVG text labels over
+# foreignObject-backed HTML labels. This is safer for published diagrams embedded via <img>.
+mmdc -i "$source_dir/use-case-overview.mmd" -o "$diagrams_dir/use-case-overview.svg" -t neutral -b transparent -w 980 -c "$config_file"
+mmdc -i "$source_dir/use-case-capability-relationships.mmd" -o "$diagrams_dir/use-case-capability-relationships.svg" -t neutral -b transparent -w 1180 -c "$config_file"
+mmdc -i "$source_dir/use-case-automation-parity-chain.mmd" -o "$diagrams_dir/use-case-automation-parity-chain.svg" -t neutral -b transparent -w 1280 -c "$config_file"
 
 printf 'Rendered use-case diagrams into %s
 ' "$diagrams_dir"

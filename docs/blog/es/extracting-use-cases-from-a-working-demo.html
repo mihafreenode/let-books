@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Extraer casos de uso de una demo funcional | LetBooks</title>
+    <meta name="description" content="Como un prototipo estatico puede revelar los casos de uso duraderos de un producto cuando el equipo trata las pantallas como evidencia y las capacidades extraidas como aquello que conviene preservar.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/es/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/extracting-use-cases-from-a-working-demo.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Extraer casos de uso de una demo funcional | LetBooks">
+    <meta property="og:description" content="Como un prototipo estatico puede revelar los casos de uso duraderos de un producto cuando el equipo trata las pantallas como evidencia y las capacidades extraidas como aquello que conviene preservar.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/es/extracting-use-cases-from-a-working-demo.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Extraer casos de uso de una demo funcional | LetBooks">
+    <meta name="twitter:description" content="Como un prototipo estatico puede revelar los casos de uso duraderos de un producto cuando el equipo trata las pantallas como evidencia y las capacidades extraidas como aquello que conviene preservar.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="es">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/es/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../es/index.html">Documentación</a>
+            <a class="nav-link" href="../../blog/es/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/es/index.html">Material de aprendizaje</a>
+            <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/es/index.html">Temas</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/extracting-use-cases-from-a-working-demo.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/extracting-use-cases-from-a-working-demo.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/extracting-use-cases-from-a-working-demo.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">FR</a>
+              <a class="lang-link is-current" href="../../blog/es/extracting-use-cases-from-a-working-demo.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Todos los idiomas</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../es/index.html">Documentación</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/es/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Extraer casos de uso de una demo funcional</span>
+            </nav>
+            <h1>Extraer casos de uso de una demo funcional</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Español</span>
+          </div>
+          <p class="content-page-summary">Como un prototipo estatico puede revelar los casos de uso duraderos de un producto cuando el equipo trata las pantallas como evidencia y las capacidades extraidas como aquello que conviene preservar.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temas:</span>
+              <span class="content-tag">Alineación de la demo</span>
+              <span class="content-tag">Documentación</span>
+              <span class="content-tag">Revisión del producto</span>
+              <span class="content-tag">Desarrollo guiado por especificaciones</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Hay un argumento conocido en el trabajo de software: primero deberían venir los casos de uso y después los prototipos. En principio suena ordenado. En la práctica, los equipos suelen empezar con materiales más ásperos que eso. Pueden tener una especificación general, una idea de producto, algunas restricciones y un prototipo que empieza a revelar comportamiento real antes de que la capa final de casos de uso esté escrita con claridad.</p>
+<p>Eso no significa automáticamente que el proceso esté mal. A veces es precisamente el prototipo lo que ayuda a dejar al descubierto los casos de uso reales.</p>
+<p>El paso importante es lo que ocurre después.</p>
+<p>Si el conocimiento útil del producto queda atrapado dentro de pantallas, rutas y flujos temporales, sigue siendo frágil. Si el equipo extrae casos de uso duraderos del prototipo y de la especificación general, ese conocimiento se vuelve mucho más fácil de preservar, revisar, automatizar y reimplementar más adelante.</p>
+<h2 id="el-proceso-no-se-diseñó-se-descubrió">El proceso no se diseñó, se descubrió</h2>
+<p>Este artículo no describe una metodología que existiera en forma completa desde el principio.</p>
+<p>La secuencia fue emergiendo poco a poco mientras se resolvían problemas prácticos alrededor de una demo estática y una especificación de producto más amplia.</p>
+<p>La demo ya contenía conocimiento útil del producto. Mostraba flujos a los que la gente podía reaccionar. Revelaba qué acciones parecían centrales, cuáles parecían secundarias y en qué puntos el producto trataba realmente de logística de almacenamiento, catalogación o revisión más que de una pantalla concreta.</p>
+<p>Pero esa comprensión se estaba distribuyendo por demasiados lugares a la vez:</p>
+<ul>
+<li>pantallas dentro de la demo</li>
+<li>nombres de rutas y flujos locales</li>
+<li>notas de producto y texto de especificación</li>
+<li>discusiones de revisión</li>
+<li>pruebas tempranas e ideas de validación</li>
+</ul>
+<p>Esa distribución era el verdadero problema.</p>
+<p>El objetivo pasó a ser preservar la comprensión sin fingir que la UI actual ya era definitiva.</p>
+<h2 id="el-problema-las-demos-muestran-comportamiento-pero-no-preservan-intención">El problema: las demos muestran comportamiento, pero no preservan intención</h2>
+<p>Una demo funcional resulta convincente porque convierte una idea en algo visible. La gente puede señalarla, probarla, criticarla y reaccionar a su secuencia de pasos.</p>
+<p>Eso es valioso. También es incompleto.</p>
+<p>La demo muestra una expresión actual del comportamiento. No les dice automáticamente a los futuros mantenedores qué parte de ese comportamiento era esencial, qué parte era una superficie de entrada, qué parte era una comodidad temporal y qué parte era simplemente un atajo local de implementación.</p>
+<p>Esa distinción importa todavía más en el trabajo asistido por IA, donde el código visible y la UI visible pueden acumularse más rápido que la memoria duradera del producto.</p>
+<h2 id="las-preguntas-que-impulsaron-el-proceso">Las preguntas que impulsaron el proceso</h2>
+<p>La cadena de artefactos no apareció de golpe. Cada capa respondió a una pregunta práctica y luego dejó ver la siguiente capa que faltaba.</p>
+<p>Una forma útil de describir la secuencia es:</p>
+<p>Problema -&gt; Artefacto -&gt; Nuevo problema -&gt; Nuevo artefacto</p>
+<p>El flujo general fue más o menos este:</p>
+<ol type="1">
+<li><p>Las pantallas estaban cambiando rápidamente.
+Eso hacía que la documentación pantalla por pantalla fuera una mala capa de preservación.
+Por eso el primer artefacto duradero pasó a ser los casos de uso.</p></li>
+<li><p>Los casos de uso eran útiles para las personas, pero todavía no eran lo bastante concretos para una automatización ligera en el navegador.
+Por eso el siguiente artefacto pasó a ser los contratos de automatización.</p></li>
+<li><p>Los contratos de automatización eran más claros que los casos de uso en bruto, pero seguían necesitando ejemplos ejecutables.
+Por eso el siguiente artefacto pasó a ser los borradores de pruebas de escenario.</p></li>
+<li><p>Una vez que existían varios artefactos relacionados, sus relaciones resultaban más difíciles de explicar solo con prosa.
+Por eso el siguiente artefacto pasó a ser los diagramas.</p></li>
+<li><p>Cuando apareció en el horizonte la idea de una futura implementación en Blazor, surgió otra pregunta:
+¿cómo comparar la implementación futura con la demo sin comparar árboles DOM ni el diseño visual?
+Esa pregunta introdujo la idea de paridad.</p></li>
+</ol>
+<p>Nada de eso requería un gran marco metodológico. Era una respuesta a preguntas de ingeniería concretas:</p>
+<ul>
+<li>¿Cómo preservamos la comprensión mientras la demo sigue evolucionando?</li>
+<li>¿Cómo describimos flujos de trabajo sin documentar cada pantalla?</li>
+<li>¿Cómo podrían esos flujos convertirse más adelante en tutoriales ejecutables?</li>
+<li>¿Cómo evitamos acoplar las pruebas a la UI de hoy?</li>
+<li>¿Cómo podría compararse una implementación futura con la demo sin comparar estructuras DOM?</li>
+</ul>
+<h2 id="la-trampa-la-documentación-de-pantallas-se-degrada-rápido">La trampa: la documentación de pantallas se degrada rápido</h2>
+<p>Una respuesta tentadora es documentar las pantallas con mucho detalle. Eso suele parecer responsable porque parece preciso.</p>
+<p>Normalmente es la capa equivocada.</p>
+<p>Si la documentación dice que el panel contiene determinadas tarjetas, o que la ruta del escáner se abre desde un botón exacto, o que cierta pantalla tiene una disposición concreta de controles, la documentación puede quedarse obsoleta en cuanto la UI mejora.</p>
+<p>El resultado es un tipo falso de precisión: muy específica, pero poco duradera.</p>
+<p>La distinción útil era simple: una pantalla no es un caso de uso. Una ruta no es un caso de uso. Un escáner no es un caso de uso. La exportación a Excel no es un caso de uso.</p>
+<p>Esas son superficies de implementación.</p>
+<p>Los casos de uso son las cosas que deberían seguir existiendo después de un rediseño.</p>
+<h2 id="el-movimiento-extraer-capacidades-de-la-demo-y-de-la-especificación">El movimiento: extraer capacidades de la demo y de la especificación</h2>
+<p>El movimiento práctico en Let Books no fue fingir que la demo no contenía conocimiento de producto. Claramente lo contenía. El movimiento fue plantear una pregunta más difícil:</p>
+<p>Si la UI se rediseñara el año que viene, ¿qué objetivos de usuario y qué capacidades de negocio tendrían que seguir existiendo?</p>
+<p>Esa pregunta cambió la forma del modelo.</p>
+<p>El panel dejó de tratarse como un caso de uso y pasó a tratarse como lo que realmente era: una superficie de entrada a flujos más amplios.</p>
+<p>El escaneo de ISBN dejó de tratarse como un caso de uso de nivel superior y pasó a ser una subcapacidad de la catalogación.</p>
+<p>La exportación e importación de Excel dejaron de tratarse como botones de archivo y pasaron a formar parte de una capacidad más amplia: compartir una colección para revisión externa y capturar de vuelta las decisiones dentro del sistema.</p>
+<p>Los casos de uso duraderos pasaron a ser:</p>
+<ul>
+<li>Recibir libros en la colección</li>
+<li>Catalogar libros físicos</li>
+<li>Organizar e inspeccionar el almacenamiento físico</li>
+<li>Revisar el estado de la colección</li>
+<li>Compartir una colección para revisión externa y capturar decisiones</li>
+</ul>
+<p>Esa lista está mucho menos atada a un único prototipo. También es mucho más útil para futuros mantenedores y revisores.</p>
+<h2 id="ejemplo-extraer-un-caso-de-uso-de-la-demo">Ejemplo: extraer un caso de uso de la demo</h2>
+<p>Uno de los ejemplos más claros de este proyecto fue <code>UC-003 Organizar e inspeccionar el almacenamiento físico</code>.</p>
+<p>Si una persona mirara solo la demo actual, los elementos visibles más evidentes serían cosas como:</p>
+<ul>
+<li>una vista de cajas</li>
+<li>pantallas de detalle de caja</li>
+<li>filtros para distintos estados</li>
+<li>acciones relacionadas con QR</li>
+<li>enlaces desde el contexto de la caja hacia el alta y la edición</li>
+</ul>
+<p>Una primera conclusión muy natural sería:</p>
+<p><code>Necesitamos una pantalla de cajas.</code></p>
+<p>Eso era comprensible, pero estaba demasiado cerca de la UI actual.</p>
+<p>El pensamiento en términos de casos de uso reformuló la pregunta.</p>
+<p>El requisito real no era que tuviera que existir una pantalla concreta. El requisito real era que los usuarios pudieran trabajar desde el contexto del almacenamiento físico.</p>
+<p>Dicho de otro modo: el producto tenía que preservar la relación entre la colección digital y las cajas, estanterías y contenedores reales donde los libros vivían de verdad.</p>
+<p>Eso produjo un caso de uso mucho más duradero.</p>
+<p>Aquí hay un extracto abreviado del documento real del caso de uso:</p>
+<blockquote>
+<p><strong>Propósito</strong></p>
+<p>Mantener una relación útil entre la colección digital y los contenedores, estanterías y cajas físicas reales donde se almacenan los libros.</p>
+<p><strong>Objetivo del usuario</strong></p>
+<p>Encontrar libros, entender qué hay dentro de un contenedor y trabajar desde el contexto real de almacenamiento en lugar de hacerlo solo desde registros abstractos.</p>
+<p><strong>Escenario principal de éxito</strong></p>
+<p>El usuario trabaja desde un contexto de almacenamiento físico, como una caja.</p>
+<p>El usuario inspecciona el contenido de ese contenedor y entiende qué libros están presentes, en qué estado se encuentran y qué acciones podrían hacer falta después.</p>
+<p>El usuario continúa desde ese contexto de almacenamiento hacia el alta, la edición o el trabajo posterior de recogida sin perder la relación entre el registro digital y la ubicación física.</p>
+</blockquote>
+<p>Conviene fijarse también en lo que falta.</p>
+<p>El caso de uso no describe:</p>
+<ul>
+<li>rutas</li>
+<li>pantallas</li>
+<li>tarjetas</li>
+<li>filtros</li>
+<li>colocación de botones</li>
+<li>jerarquía de componentes</li>
+<li>diseño CSS</li>
+</ul>
+<p>Esas cosas pueden aparecer en la demo, pero no son la capacidad que se está preservando.</p>
+<p>La demo contenía cajas, pantallas de cajas, acciones QR, filtros y navegación relacionada con el almacenamiento.</p>
+<p>El caso de uso extraído preservaba en cambio la capacidad subyacente: trabajar desde el contexto del almacenamiento físico.</p>
+<p>Eso es más fuerte que una descripción de pantalla porque sobrevive a un rediseño.</p>
+<p>Las rutas pueden cambiar. Los diseños pueden cambiar. Las tarjetas pueden desaparecer. Los filtros pueden cambiar. La pila tecnológica puede cambiar.</p>
+<p>Pero el caso de uso puede seguir siendo válido porque la intención subyacente del flujo de trabajo es la misma: los usuarios necesitan trabajar desde el contexto real de almacenamiento en vez de reconstruirlo a partir de registros abstractos.</p>
+<p>Ese es el significado práctico de preservar la intención en lugar de la implementación.</p>
+<h2 id="por-qué-algunas-cosas-visibles-se-rechazaron-como-casos-de-uso">Por qué algunas cosas visibles se rechazaron como casos de uso</h2>
+<p>Aquí el prototipo fue realmente útil, porque volvió visibles las abstracciones equivocadas.</p>
+<p>Varios posibles casos de uso resultaron estar demasiado cerca de la superficie actual de implementación.</p>
+<ul>
+<li>El dashboard pasó a ser una superficie de entrada en lugar de un caso de uso, porque un dashboard es solo una forma de entrar en flujos más amplios. La capacidad duradera era revisar el estado de la colección.</li>
+<li>El escaneo de ISBN pasó a ser una subcapacidad de la catalogación, porque el trabajo real no es escanear. El trabajo real es convertir un libro físico en un registro útil.</li>
+<li>La exportación y la importación pasaron a ser revisión externa y captura de decisiones, porque el intercambio de archivos era solo un mecanismo de transporte dentro de un flujo de revisión más amplio.</li>
+<li>Las rutas y las pantallas siguieron siendo detalles de implementación, porque cabe esperar que cambien mientras que la capacidad subyacente debería seguir siendo reconocible.</li>
+</ul>
+<p>Esas distinciones importan porque preservan el valor de la revisión a través de los rediseños.</p>
+<p>Si un equipo documenta el dashboard como caso de uso, cada rediseño del dashboard parece una deriva del producto aunque el flujo real siga intacto.</p>
+<p>Si un equipo documenta el escaneo de ISBN como caso de uso, cualquier futura vía OCR, fallback manual o vía de enriquecimiento mejorada parece un producto distinto cuando en realidad solo es otra forma de apoyar la catalogación.</p>
+<p>Si un equipo documenta los botones de exportación como caso de uso, un futuro portal para revisores parece reemplazar el flujo de trabajo cuando quizá en realidad esté preservando la misma capacidad de negocio bajo otra forma.</p>
+<p>Así es como suele funcionar en la práctica la extracción de casos de uso. La primera pasada suena demasiado cerca de la UI. La mejor pasada suena más cerca del producto.</p>
+<p>El prototipo no sustituyó el pensamiento. Le dio al pensamiento algo concreto que refinar.</p>
+<h2 id="los-diagramas-mapas-de-capacidades-no-mapas-de-pantallas">Los diagramas: mapas de capacidades, no mapas de pantallas</h2>
+<p>Una vez que los casos de uso extraídos quedaron más claros, el siguiente paso no fue dibujar un diagrama de rutas. Fue dibujar diagramas conceptuales duraderos.</p>
+<p>Son diagramas de capacidades, no mapas de pantallas.</p>
+<p>No describen botones, páginas, rutas ni jerarquía de componentes. Describen capacidades duraderas y relaciones de gobernanza que deberían sobrevivir incluso si la UI se rediseña.</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/es/use-case-overview.svg" alt="Diagrama general de casos de uso" />
+<figcaption aria-hidden="true">Diagrama general de casos de uso</figcaption>
+</figure>
+<p>El primer diagrama es una vista general de casos de uso.</p>
+<p>Muestra las principales capacidades duraderas en un pequeño mapa conceptual.</p>
+<p>Por qué existe:
+- para dar a mantenedores y revisores una visión rápida del conjunto principal de capacidades del producto</p>
+<p>Qué problema resuelve:
+- sustituye referencias verbales dispersas por una imagen compartida de la capa principal de casos de uso</p>
+<p>Qué no describe de forma intencionada:
+- páginas, rutas, ubicación de botones, detalles de secuencia ni el diseño visual actual</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/es/capability-relationships.svg" alt="Diagrama de relaciones entre capacidades" />
+<figcaption aria-hidden="true">Diagrama de relaciones entre capacidades</figcaption>
+</figure>
+<p>El segundo diagrama muestra relaciones entre capacidades.</p>
+<p>Explica que intake, catalogación, almacenamiento físico, supervisión de la colección y revisión externa están relacionados, pero no son la misma preocupación.</p>
+<p>Por qué existe:
+- para mostrar que el producto no es un único flujo largo e indiferenciado</p>
+<p>Qué problema resuelve:
+- facilita explicar por qué algunas funciones visibles pertenecen a capacidades más amplias en lugar de sostenerse por sí solas</p>
+<p>Qué no describe de forma intencionada:
+- pantallas concretas, temporización, navegación o la composición actual de la demo</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/es/automation-parity-chain.svg" alt="Diagrama de la cadena de automatización y paridad" />
+<figcaption aria-hidden="true">Diagrama de la cadena de automatización y paridad</figcaption>
+</figure>
+<p>El tercer diagrama muestra la cadena de gobernanza: caso de uso, contrato de automatización, borrador de prueba de escenario, futuro flujo en Blazor y futura revisión de paridad.</p>
+<p>Por qué existe:
+- para mostrar cómo un prototipo puede conducir a artefactos de ingeniería mantenibles en lugar de quedarse como una demo aislada</p>
+<p>Qué problema resuelve:
+- explica cómo el proyecto puede pasar de la documentación conceptual a ejemplos ejecutables y más tarde a la comparación entre implementaciones sin tratar la estructura DOM como si fuera la verdad</p>
+<p>Qué no describe de forma intencionada:
+- selectores exactos, código exacto de pruebas ni una política CI final</p>
+<p>Esa cadena importa porque convierte un prototipo en un puente en lugar de en un callejón sin salida.</p>
+<p>Los archivos fuente de estos diagramas siguen siendo archivos Mermaid editables. Los SVG confirmados son artefactos publicados. Esa separación es útil porque mantiene el concepto fácil de actualizar sin tratar la imagen renderizada como la verdadera fuente de autoridad.</p>
+<h2 id="la-evolución-del-repositorio">La evolución del repositorio</h2>
+<p>Una forma útil de ver el resultado es como una cadena de comprensión preservada:</p>
+<p>Idea / especificación aproximada -&gt; demo estática -&gt; casos de uso extraídos -&gt; diagramas -&gt; contratos de automatización -&gt; borradores de pruebas de escenario -&gt; futura implementación en Blazor -&gt; futura revisión de paridad</p>
+<p>Cada capa preserva comprensión en un nivel distinto.</p>
+<ul>
+<li>La especificación aproximada preserva el propósito, el alcance y los límites del producto.</li>
+<li>La demo estática preserva el comportamiento visible del flujo de trabajo y la fricción práctica.</li>
+<li>Los casos de uso preservan la intención duradera.</li>
+<li>Los diagramas preservan modelos mentales compartidos.</li>
+<li>Los contratos de automatización preservan anclas provisionales de ejecución sin congelar el diseño.</li>
+<li>Los borradores de pruebas de escenario preservan ejemplos tutoriales ejecutables.</li>
+<li>La futura implementación en Blazor preservará el comportamiento del producto en otra pila.</li>
+<li>La futura revisión de paridad puede preservar la alineación de resultados sin exigir una estructura DOM idéntica.</li>
+</ul>
+<p>Por eso importa la secuencia. Ningún artefacto por sí solo resuelve todo el problema. Juntos reducen el redescubrimiento.</p>
+<h2 id="el-resultado-práctico-de-los-casos-de-uso-a-los-ejemplos-ejecutables">El resultado práctico: de los casos de uso a los ejemplos ejecutables</h2>
+<p>Después de que existieran los casos de uso, otras capas resultaron más fáciles de estructurar.</p>
+<p>Cada caso de uso podía llevar un contrato ligero de automatización:</p>
+<ul>
+<li>la mejor ruta actual de inicio en la demo estática</li>
+<li>anclas estables visibles para el usuario</li>
+<li>acciones principales del usuario</li>
+<li>observaciones esperadas</li>
+<li>fragilidad conocida</li>
+</ul>
+<p>Eso todavía no es una puerta de paridad. Es una capa puente.</p>
+<p>A partir de ahí podían escribirse escenarios de Playwright en borrador como candidatos de humo con estilo tutorial. Esa distinción es importante. Estos scripts de escenario no son puertas finales de CI. Son explicaciones ejecutables de los casos de uso documentados en la demo actual.</p>
+<p>Más adelante, cuando exista la implementación en Blazor, esa misma capa de casos de uso podrá sostener una pregunta de paridad mucho más seria:</p>
+<p>¿Puede el usuario seguir logrando el mismo resultado aunque hayan cambiado la UI, la estructura de rutas y la jerarquía de componentes?</p>
+<p>Ese es un objetivo de paridad mucho más sano que comparar la estructura DOM o el diseño al píxel.</p>
+<h2 id="la-afirmación-modesta">La afirmación modesta</h2>
+<p>Esta no es la única manera de trabajar. Algunos equipos seguirán escribiendo casos de uso limpios antes de que exista un prototipo. A veces eso es lo correcto.</p>
+<p>Pero cuando un proyecto ya tiene una especificación aproximada y una demo estática funcional, extraer después casos de uso duraderos puede ser un movimiento muy práctico.</p>
+<p>Respeta lo que reveló el prototipo sin dejar que el prototipo se convierta silenciosamente en toda la definición del producto.</p>
+<p>No sustituye a la ingeniería de requisitos, la investigación con usuarios ni el trabajo formal de especificación.</p>
+<p>Es simplemente una forma de extraer comprensión duradera de un prototipo que ya está enseñando algo real sobre el producto.</p>
+<p>Si este enfoque ayuda a preservar la intención, mejorar la comunicación y reducir el redescubrimiento de decisiones importantes, probablemente habrá merecido la pena.</p>
+<p>Para colegas, estudiantes y futuros agentes de IA, ese es el beneficio real. El conocimiento del producto deja de vivir solo en la demo. Se vuelve visible en los casos de uso, visible en los diagramas, visible en los contratos de automatización, visible en los tutoriales de escenario y, más adelante, visible en la revisión de paridad entre prototipo e implementación.</p>
+<p>Eso no vuelve rígido al proyecto. Permite que la UI cambie sin perder la razón por la que el proyecto existe.</p>
+<h2 id="lecturas-relacionadas">Lecturas relacionadas</h2>
+<ul>
+<li><code>when-the-demo-is-evidence-and-when-it-is-not.md</code></li>
+<li><code>spec-driven-development-for-ai-projects.md</code></li>
+<li><code>spec-driven-development-in-let-books.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Otros idiomas</h2>
+            <ul>
+              <li><a href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/extracting-use-cases-from-a-working-demo.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/extracting-use-cases-from-a-working-demo.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/extracting-use-cases-from-a-working-demo.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">Français</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Contenido relacionado</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Alineación de la demo</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Documentación</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Revisión del producto</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Cuándo la demo es evidencia y cuándo no lo es</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/es/spec-driven-development-in-let-books.html"><span>Desarrollo guiado por especificaciones en Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Cómo mantener alineados la especificación, la documentación, la demo y el código</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../wiki/es/demo-spec-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/es/demo-and-specification-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../topics/es/ai-assisted-implementation.html"><span>Implementación asistida por IA</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/es/documentation-is-part-of-the-product.html"><span>La documentación es parte del producto</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/es/ai-as-an-oracle.html"><span>La IA como oráculo: por qué la cultura de la verificación importa más que el prompting</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/es/how-to-use-ai-workflows-for-non-software-knowledge-work.html"><span>Cómo usar flujos de trabajo de IA para trabajo de conocimiento fuera del software</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html"><span>Cómo escribir una especificación que la IA pueda seguir</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../wiki/es/documentation-is-more-than-a-website.html"><span>La documentación es más que un sitio web</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/markdown-in-product-development.html"><span>Markdown en Desarrollo de productos</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/spec-driven-development.html"><span>Desarrollo basado en especificaciones</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/es/spec-driven-development.html"><span>Desarrollo guiado por especificaciones</span><span class="topic-menu__meta">Temas</span></a>
+                  <a href="../../topics/es/documentation-traceability.html"><span>Trazabilidad de la documentación</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
+                  <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html"><span>Cómo revisar trabajo asistido por IA frente a la especificación</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</p>
+            <p class="footer-note">Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</p>
+            <p class="footer-microcopy">Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../es/index.html">Vista general</a>
+              <a href="../../topics/es/index.html">Temas</a>
+              <a href="../../index.html">Página de inicio</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Todos los idiomas</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

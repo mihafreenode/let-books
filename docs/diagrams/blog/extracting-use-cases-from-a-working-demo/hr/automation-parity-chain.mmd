@@ -1,0 +1,15 @@
+---
+title: Od slučaja uporabe do automatizacije i pariteta
+---
+flowchart TB
+    A["Slučaj uporabe<br/>trajna namjera"] --> B["Ugovor za<br/>automatizaciju"]
+    B --> C["Nacrt scenarijskog testa"]
+    C --> D["Buduća Blazor<br/>implementacija"]
+    D --> E["Pregled pariteta"]
+
+    F["Ne uspoređuje<br/>DOM, CSS<br/>ni komponente"] -.-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution

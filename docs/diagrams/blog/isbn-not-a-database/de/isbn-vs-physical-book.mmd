@@ -1,28 +1,22 @@
 ---
-title: ISBN vs. physisches Buchexemplar
+title: ISBN im Vergleich zum physischen Buchexemplar
 ---
-flowchart LR
-    subgraph ISBN["ISBN (Ausgabeebenen-Identifikator)"]
+flowchart TB
+    subgraph ISBN["ISBN / Ausgabe"]
         direction TB
-        I1["Titel"]
-        I2["Autor(en)"]
-        I3["Verlag"]
-        I4["Erscheinungsjahr"]
-        I5["Sprache"]
-        I6["ISBN-10 / ISBN-13"]
+        I1["Gemeinsame Identität"]
+        I2["Titel, Autor:innen,<br/>Verlag"]
+        I3["Jahr, Sprache,<br/>ISBN"]
     end
 
-    subgraph Physical["Physisches Buchexemplar (Instanz)"]
+    subgraph Physical["Physisches Exemplar"]
         direction TB
-        P1["Zustand<br/>(wie neu / gut / schlecht)"]
-        P2["Herkunft<br/>(Signatur, Stempel, Geschichte)"]
-        P3["Lagerort<br/>(Raum → Regal → Kiste)"]
-        P4["Spendenstatus<br/>(angeboten, angefragt, abgeholt)"]
-        P5["Fotos<br/>(Cover, Titelseite, Schäden)"]
-        P6["Private Notizen"]
+        P1["Zustand und<br/>Herkunft"]
+        P2["Lagerort und<br/>Spendenstatus"]
+        P3["Fotos und<br/>private Notizen"]
     end
 
-    ISBN -.->|"identifiziert<br/>die Ausgabe"| Physical
+    I3 -.->|"beschreibt kein<br/>einzelnes Exemplar"| P1
 
     style ISBN fill:#e3f2fd,stroke:#1565c0
     style Physical fill:#f3e5f5,stroke:#7b1fa2

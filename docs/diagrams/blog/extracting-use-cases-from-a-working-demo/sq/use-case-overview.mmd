@@ -1,0 +1,14 @@
+---
+title: Përmbledhje e rasteve të përdorimit
+---
+flowchart TD
+    A["Marrja e librave<br/>në koleksion"] --> B["Katalogimi i<br/>librave fizikë"]
+    A --> C["Ruajtja<br/>fizike"]
+    B --> D["Rishikimi i gjendjes<br/>së koleksionit"]
+    C --> D
+    D --> E["Rishikim i<br/>jashtëm"]
+    B --> E
+    C --> E
+
+    classDef core fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    class A,B,C,D,E core

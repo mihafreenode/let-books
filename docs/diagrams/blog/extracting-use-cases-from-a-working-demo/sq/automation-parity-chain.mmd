@@ -1,0 +1,15 @@
+---
+title: Nga rasti i përdorimit te automatizimi dhe pariteti
+---
+flowchart TB
+    A["Rasti i përdorimit<br/>qëllim i qëndrueshëm"] --> B["Kontratë<br/>automatizimi"]
+    B --> C["Draft testi skenarik"]
+    C --> D["Implementimi i ardhshëm<br/>në Blazor"]
+    D --> E["Rishikimi i paritetit"]
+
+    F["Jo i bazuar në<br/>DOM, CSS<br/>ose komponentë"] -.-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution

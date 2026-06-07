@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nxjerrja e rasteve të përdorimit nga një demo funksionale | LetBooks</title>
+    <meta name="description" content="Si një prototip statik mund të zbulojë rastet e qëndrueshme të përdorimit të një produkti kur ekipi i trajton ekranet si dëshmi dhe aftësitë e nxjerra si atë që duhet ruajtur.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/sq/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/extracting-use-cases-from-a-working-demo.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Nxjerrja e rasteve të përdorimit nga një demo funksionale | LetBooks">
+    <meta property="og:description" content="Si një prototip statik mund të zbulojë rastet e qëndrueshme të përdorimit të një produkti kur ekipi i trajton ekranet si dëshmi dhe aftësitë e nxjerra si atë që duhet ruajtur.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/sq/extracting-use-cases-from-a-working-demo.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nxjerrja e rasteve të përdorimit nga një demo funksionale | LetBooks">
+    <meta name="twitter:description" content="Si një prototip statik mund të zbulojë rastet e qëndrueshme të përdorimit të një produkti kur ekipi i trajton ekranet si dëshmi dhe aftësitë e nxjerra si atë që duhet ruajtur.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="sq">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/sq/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sq/index.html">Dokumentim</a>
+            <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
+            <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/extracting-use-cases-from-a-working-demo.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">МК</a>
+              <a class="lang-link is-current" href="../../blog/sq/extracting-use-cases-from-a-working-demo.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/extracting-use-cases-from-a-working-demo.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/extracting-use-cases-from-a-working-demo.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sq/index.html">Dokumentim</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/sq/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Nxjerrja e rasteve të përdorimit nga një demo funksionale</span>
+            </nav>
+            <h1>Nxjerrja e rasteve të përdorimit nga një demo funksionale</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Si një prototip statik mund të zbulojë rastet e qëndrueshme të përdorimit të një produkti kur ekipi i trajton ekranet si dëshmi dhe aftësitë e nxjerra si atë që duhet ruajtur.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Tema:</span>
+              <span class="content-tag">Përputhja e demove</span>
+              <span class="content-tag">Dokumentim</span>
+              <span class="content-tag">Rishikimi i produktit</span>
+              <span class="content-tag">Zhvillim i drejtuar nga specifikimet</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Ekziston një argument i njohur në punën me softuer: rastet e përdorimit duhet të vijnë të parat, ndërsa prototipet duhet të vijnë më pas. Në parim kjo tingëllon e rregullt. Në praktikë, ekipet shpesh fillojnë me materiale më të papërpunuara. Mund të kenë një specifikim të përgjithshëm, një ide produkti, disa kufizime dhe një prototip që fillon të zbulojë sjellje reale përpara se shtresa përfundimtare e rasteve të përdorimit të jetë shkruar qartë.</p>
+<p>Kjo nuk do të thotë automatikisht se procesi është i gabuar. Ndonjëherë është pikërisht prototipi ai që ndihmon të zbulohen rastet reale të përdorimit.</p>
+<p>Hapi i rëndësishëm është ai që vjen më pas.</p>
+<p>Nëse njohuria e dobishme për produktin mbetet e bllokuar brenda ekraneve, rrugëve dhe rrjedhave të përkohshme, ajo mbetet e brishtë. Nëse ekipi nxjerr raste të qëndrueshme përdorimi nga prototipi dhe nga specifikimi i përgjithshëm, ajo njohuri bëhet shumë më e lehtë për t’u ruajtur, rishikuar, automatizuar dhe më vonë riimplementuar.</p>
+<h2 id="procesi-nuk-u-projektua-por-u-zbulua">Procesi nuk u projektua, por u zbulua</h2>
+<p>Ky artikull nuk përshkruan një metodologji që ka ekzistuar në formë të plotë që në fillim.</p>
+<p>Rendi i këtyre artefakteve u formua gradualisht gjatë zgjidhjes së problemeve praktike rreth një demoje statike dhe një specifikimi më të gjerë të produktit.</p>
+<p>Demoja tashmë përmbante njohuri të dobishme për produktin. Ajo tregonte rrjedha ndaj të cilave njerëzit mund të reagonin. Zbulonte cilat veprime dukeshin qendrore, cilat dytësore dhe ku produkti kishte të bënte në të vërtetë me logjistikën e ruajtjes, katalogimin ose rishikimin, e jo me një ekran të vetëm.</p>
+<p>Por ky kuptim po shpërndahej në shumë vende njëkohësisht:</p>
+<ul>
+<li>ekranet në demo</li>
+<li>emrat e rrugëve dhe rrjedhat lokale</li>
+<li>shënimet e produktit dhe teksti i specifikimit</li>
+<li>diskutimet e rishikimit</li>
+<li>testet e hershme dhe idetë për validim</li>
+</ul>
+<p>Ky shpërndarim ishte problemi i vërtetë.</p>
+<p>Qëllimi u bë ruajtja e kuptimit pa pretenduar se ndërfaqja aktuale ishte përfundimtare.</p>
+<h2 id="problemi-demot-tregojnë-sjellje-por-nuk-ruajnë-qëllimin">Problemi: demot tregojnë sjellje, por nuk ruajnë qëllimin</h2>
+<p>Një demo funksionale është bindëse sepse e kthen një ide në diçka të dukshme. Njerëzit mund ta tregojnë me gisht, ta provojnë, ta kritikojnë dhe të reagojnë ndaj sekuencës së hapave të saj.</p>
+<p>Kjo ka vlerë. Por është e paplotë.</p>
+<p>Demoja tregon një shprehje të tanishme të sjelljes. Nuk u tregon automatikisht mirëmbajtësve të ardhshëm cila pjesë e kësaj sjelljeje ishte thelbësore, cila pjesë ishte një sipërfaqe hyrëse, cila ishte një komoditet i përkohshëm dhe cila ishte thjesht një shkurtore lokale implementimi.</p>
+<p>Ky dallim ka edhe më shumë rëndësi në punën e ndihmuar nga AI, ku kodi i dukshëm dhe ndërfaqja e dukshme mund të grumbullohen më shpejt se kujtesa e qëndrueshme e produktit.</p>
+<h2 id="pyetjet-që-e-shtynë-procesin">Pyetjet që e shtynë procesin</h2>
+<p>Zinxhiri i artefakteve nuk u shfaq menjëherë. Çdo shtresë iu përgjigj një pyetjeje praktike dhe më pas nxori në pah shtresën tjetër që mungonte.</p>
+<p>Një mënyrë e dobishme për ta përshkruar sekuencën është:</p>
+<p>Problem -&gt; Artefakt -&gt; Problem i ri -&gt; Artefakt i ri</p>
+<p>Rrjedha e përgjithshme dukej kështu:</p>
+<ol type="1">
+<li><p>Ekranet po ndryshonin shpejt.
+Kjo e bënte dokumentimin ekran pas ekrani një shtresë të dobët ruajtjeje.
+Prandaj artefakti i parë i qëndrueshëm u bënë rastet e përdorimit.</p></li>
+<li><p>Rastet e përdorimit ishin të dobishme për njerëzit, por ende jo mjaftueshëm konkrete për automatizim të lehtë në shfletues.
+Prandaj artefakti tjetër u bënë kontratat e automatizimit.</p></li>
+<li><p>Kontratat e automatizimit ishin më të qarta se rastet e përdorimit të papërpunuara, por kishin ende nevojë për shembuj të ekzekutueshëm.
+Prandaj artefakti tjetër u bënë draftet e testeve skenarike.</p></li>
+<li><p>Pasi ekzistonin disa artefakte të lidhura, marrëdhëniet mes tyre u bënë më të vështira për t’u shpjeguar vetëm me prozë.
+Prandaj artefakti tjetër u bënë diagramet.</p></li>
+<li><p>Pasi në horizont hyri ideja e një implementimi të ardhshëm në Blazor, u shfaq edhe një pyetje tjetër:
+si mund të krahasohej implementimi i ardhshëm me demon pa krahasuar pemët DOM ose paraqitjen vizuale?
+Kjo pyetje solli mendimin për paritetin.</p></li>
+</ol>
+<p>Asgjë nga kjo nuk kërkonte një kornizë madhështore. Ishte përgjigje ndaj pyetjeve konkrete inxhinierike:</p>
+<ul>
+<li>Si e ruajmë kuptimin ndërsa demoja ende evoluon?</li>
+<li>Si i përshkruajmë rrjedhat e punës pa dokumentuar çdo ekran?</li>
+<li>Si mund të bëheshin më vonë këto rrjedha mësime të ekzekutueshme?</li>
+<li>Si shmangim lidhjen e testeve me UI-në e sotme?</li>
+<li>Si mund të krahasohej një implementim i ardhshëm me demon pa krahasuar struktura DOM?</li>
+</ul>
+<h2 id="gracka-dokumentimi-i-ekraneve-vjetrohet-shpejt">Gracka: dokumentimi i ekraneve vjetrohet shpejt</h2>
+<p>Një reagim tundues është dokumentimi i hollësishëm i ekraneve. Kjo shpesh duket e përgjegjshme sepse duket e saktë.</p>
+<p>Zakonisht është shtresa e gabuar.</p>
+<p>Nëse dokumentimi thotë se paneli kryesor përmban karta të caktuara, ose se rruga e skanerit hapet nga një buton i vetëm, ose se një ekran i caktuar ka një renditje specifike kontrollesh, dokumentimi mund të vjetrohet në çastin që ndërfaqja përmirësohet.</p>
+<p>Rezultati është një lloj i rremë saktësie: shumë specifik, por jo shumë i qëndrueshëm.</p>
+<p>Dallimi i dobishëm ishte i thjeshtë: një ekran nuk është rast përdorimi. Një rrugë nuk është rast përdorimi. Një skaner nuk është rast përdorimi. Eksporti në Excel nuk është rast përdorimi.</p>
+<p>Këto janë sipërfaqe implementimi.</p>
+<p>Rastet e përdorimit janë gjërat që duhet të ekzistojnë ende edhe pas një ridizajnimi.</p>
+<h2 id="lëvizja-nxirrni-aftësitë-nga-demoja-dhe-nga-specifikimi">Lëvizja: nxirrni aftësitë nga demoja dhe nga specifikimi</h2>
+<p>Lëvizja praktike në Let Books nuk ishte të pretendohej se demoja nuk kishte njohuri për produktin. E kishte qartë. Lëvizja ishte të shtrohej një pyetje më e vështirë:</p>
+<p>Nëse UI do të ridizajnohej vitin e ardhshëm, cilat qëllime të përdoruesit dhe cilat aftësi biznesi do të duhej të ekzistonin ende?</p>
+<p>Kjo pyetje ndryshoi formën e modelit.</p>
+<p>Paneli kryesor nuk u trajtua më si rast përdorimi dhe u bë ajo që ishte në të vërtetë: një sipërfaqe hyrëse drejt rrjedhave më të gjera.</p>
+<p>Skanimi ISBN nuk u trajtua më si rast përdorimi i nivelit të lartë dhe u bë një nën-aftësi e katalogimit.</p>
+<p>Eksporti dhe importi në Excel nuk u trajtuan më si butona skedarësh, por si pjesë e një aftësie më të gjerë: ndarja e një koleksioni për rishikim të jashtëm dhe rikthimi i vendimeve në sistem.</p>
+<p>Rastet e qëndrueshme të përdorimit u bënë:</p>
+<ul>
+<li>Marrja e librave në koleksion</li>
+<li>Katalogimi i librave fizikë</li>
+<li>Organizimi dhe inspektimi i ruajtjes fizike</li>
+<li>Rishikimi i gjendjes së koleksionit</li>
+<li>Ndarja e një koleksioni për rishikim të jashtëm dhe kapja e vendimeve</li>
+</ul>
+<p>Kjo listë është shumë më pak e lidhur me një prototip të vetëm. Është gjithashtu shumë më e dobishme për mirëmbajtësit dhe rishikuesit e ardhshëm.</p>
+<h2 id="shembull-nxjerrja-e-një-rasti-përdorimi-nga-demoja">Shembull: Nxjerrja e një rasti përdorimi nga demoja</h2>
+<p>Një nga shembujt më të qartë në këtë projekt ishte <code>UC-003 Organizimi dhe inspektimi i ruajtjes fizike</code>.</p>
+<p>Nëse një lexues do të shihte vetëm demon aktuale, elementet më të dukshme do të ishin gjëra si:</p>
+<ul>
+<li>një pamje e kutive</li>
+<li>ekranet e detajeve të kutive</li>
+<li>filtra për gjendje të ndryshme</li>
+<li>veprime të lidhura me QR</li>
+<li>lidhje nga konteksti i kutisë drejt futjes dhe redaktimit</li>
+</ul>
+<p>Një përfundim i parë shumë natyror do të ishte:</p>
+<p><code>Na duhet një ekran për kutitë.</code></p>
+<p>Kjo ishte e kuptueshme, por tepër afër UI-së aktuale.</p>
+<p>Mendimi me raste përdorimi e riformuloi pyetjen.</p>
+<p>Kërkesa reale nuk ishte që duhej të ekzistonte një ekran i caktuar. Kërkesa reale ishte që përdoruesit duhej të mund të punonin nga konteksti i ruajtjes fizike.</p>
+<p>Me fjalë të tjera, produkti duhej të ruante marrëdhënien mes koleksionit digjital dhe kutive, rafteve dhe kontejnerëve realë ku librat ndodheshin vërtet.</p>
+<p>Kjo prodhoi një rast përdorimi shumë më të qëndrueshëm.</p>
+<p>Këtu është një fragment i shkurtuar nga dokumenti real i rastit të përdorimit:</p>
+<blockquote>
+<p><strong>Qëllimi</strong></p>
+<p>Të ruhet një marrëdhënie e dobishme midis koleksionit digjital dhe kontejnerëve, rafteve dhe kutive reale ku ruhen librat.</p>
+<p><strong>Qëllimi i përdoruesit</strong></p>
+<p>Të gjejë libra, të kuptojë çfarë ka brenda një kontejneri dhe të punojë nga konteksti real i ruajtjes, jo vetëm nga regjistra abstraktë.</p>
+<p><strong>Skenari kryesor i suksesit</strong></p>
+<p>Përdoruesi punon nga një kontekst fizik ruajtjeje, si p.sh. një kuti.</p>
+<p>Përdoruesi inspekton përmbajtjen e atij kontejneri dhe kupton cilët libra janë të pranishëm, në çfarë gjendjeje ndodhen dhe cilat veprime mund të duhen më tej.</p>
+<p>Përdoruesi vazhdon nga ai kontekst ruajtjeje drejt futjes, redaktimit ose punës së mëvonshme të tërheqjes, pa e humbur marrëdhënien midis regjistrit digjital dhe vendndodhjes fizike.</p>
+</blockquote>
+<p>Vlen të vërehet edhe ajo që mungon.</p>
+<p>Rasti i përdorimit nuk përshkruan:</p>
+<ul>
+<li>rrugë</li>
+<li>ekrane</li>
+<li>karta</li>
+<li>filtra</li>
+<li>vendosje butonash</li>
+<li>hierarki komponentësh</li>
+<li>layout CSS</li>
+</ul>
+<p>Këto gjëra mund të shfaqen në demo, por nuk janë aftësia që po ruhet.</p>
+<p>Demoja përmbante kuti, ekrane kutish, veprime QR, filtra dhe navigim të lidhur me ruajtjen.</p>
+<p>Rasti i nxjerrë i përdorimit ruante në vend të kësaj aftësinë themelore: punën nga konteksti i ruajtjes fizike.</p>
+<p>Kjo është më e fortë se një përshkrim ekrani, sepse i mbijeton ridizajnimit.</p>
+<p>Rrugët mund të ndryshojnë. Layout-et mund të ndryshojnë. Kartat mund të zhduken. Filtrat mund të ndryshojnë. Teknologjia mund të ndryshojë.</p>
+<p>Por rasti i përdorimit mund të mbetet ende i vlefshëm, sepse qëllimi themelor i rrjedhës së punës mbetet i njëjtë: përdoruesit duhet të jenë në gjendje të punojnë nga konteksti real i ruajtjes në vend që ta rindërtojnë atë nga regjistra abstraktë.</p>
+<p>Ky është kuptimi praktik i ruajtjes së qëllimit në vend të implementimit.</p>
+<h2 id="pse-disa-gjëra-të-dukshme-u-hodhën-poshtë-si-raste-përdorimi">Pse disa gjëra të dukshme u hodhën poshtë si raste përdorimi</h2>
+<p>Këtu prototipi ishte vërtet i dobishëm, sepse i bëri të dukshme abstraksionet e gabuara.</p>
+<p>Disa kandidatë për raste përdorimi rezultuan tepër afër sipërfaqes aktuale të implementimit.</p>
+<ul>
+<li>Dashboard-i u bë një sipërfaqe hyrëse dhe jo një rast përdorimi, sepse një dashboard është vetëm një mënyrë për të hyrë në rrjedha më të gjera. Aftësia e qëndrueshme ishte rishikimi i gjendjes së koleksionit.</li>
+<li>Skanimi ISBN u bë një nën-aftësi e katalogimit, sepse puna reale nuk është skanimi. Puna reale është ta kthesh një libër fizik në një regjistër të përdorshëm.</li>
+<li>Eksporti dhe importi u bënë rishikim i jashtëm dhe kapje vendimesh, sepse shkëmbimi i skedarëve ishte vetëm një mekanizëm transporti brenda një rrjedhe më të gjerë rishikimi.</li>
+<li>Rrugët dhe ekranet mbetën detaje implementimi, sepse pritet të ndryshojnë ndërsa aftësia bazë duhet të mbetet e njohshme.</li>
+</ul>
+<p>Këto dallime kanë rëndësi sepse ruajnë vlerën e rishikimit edhe përtej ridizajnimeve.</p>
+<p>Nëse një ekip e dokumenton dashboard-in si rast përdorimi, çdo ridizajnim i dashboard-it duket si devijim i produktit edhe kur rrjedha reale mbetet e paprekur.</p>
+<p>Nëse një ekip e dokumenton skanimin ISBN si rast përdorimi, atëherë çdo rrugë e ardhshme OCR, rrugë manuale rezervë ose rrugë më e mirë pasurimi duket si një produkt tjetër, kur në të vërtetë është vetëm një mënyrë tjetër për të mbështetur katalogimin.</p>
+<p>Nëse një ekip dokumenton butonat e eksportit si rast përdorimi, atëherë një portal i ardhshëm për rishikuesit duket sikur po zëvendëson rrjedhën e punës, kur në fakt mund të jetë duke ruajtur të njëjtën aftësi biznesi në një formë tjetër.</p>
+<p>Kështu funksionon shpesh në praktikë nxjerrja e rasteve të përdorimit. Kalimi i parë tingëllon shumë pranë UI-së. Kalimi më i mirë tingëllon më pranë produktit.</p>
+<p>Prototipi nuk e zëvendësoi mendimin. I dha mendimit diçka konkrete për ta rafinuar.</p>
+<h2 id="diagramet-harta-aftësish-jo-harta-ekranesh">Diagramet: harta aftësish, jo harta ekranesh</h2>
+<p>Pasi rastet e nxjerra të përdorimit u bënë më të qarta, hapi tjetër nuk ishte të vizatohej një diagram rrugësh. Ishte të vizatoheshin diagrame konceptuale të qëndrueshme.</p>
+<p>Këto janë diagrame aftësish, jo harta ekranesh.</p>
+<p>Ato nuk përshkruajnë butona, faqe, rrugë apo hierarki komponentësh. Ato përshkruajnë aftësitë e qëndrueshme dhe marrëdhëniet e qeverisjes që duhet të mbijetojnë edhe nëse UI ridizajnohet.</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/sq/use-case-overview.svg" alt="Diagrami i përmbledhjes së rasteve të përdorimit" />
+<figcaption aria-hidden="true">Diagrami i përmbledhjes së rasteve të përdorimit</figcaption>
+</figure>
+<p>Diagrami i parë është një përmbledhje e rasteve të përdorimit.</p>
+<p>Ai tregon aftësitë kryesore të qëndrueshme në një hartë të vogël konceptuale.</p>
+<p>Pse ekziston:
+- për t’u dhënë mirëmbajtësve dhe rishikuesve një pamje të shpejtë të grupit kryesor të aftësive të produktit</p>
+<p>Çfarë problemi zgjidh:
+- zëvendëson referencat verbale të shpërndara me një figurë të përbashkët të shtresës kryesore të rasteve të përdorimit</p>
+<p>Çfarë nuk përshkruan me qëllim:
+- faqe, rrugë, vendndodhje butonash, detaje sekuence apo layout-in vizual aktual</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/sq/capability-relationships.svg" alt="Diagrami i marrëdhënieve mes aftësive" />
+<figcaption aria-hidden="true">Diagrami i marrëdhënieve mes aftësive</figcaption>
+</figure>
+<p>Diagrami i dytë tregon marrëdhëniet mes aftësive.</p>
+<p>Ai shpjegon se futja, katalogimi, ruajtja fizike, mbikëqyrja e koleksionit dhe rishikimi i jashtëm janë çështje të lidhura, por jo identike.</p>
+<p>Pse ekziston:
+- për të treguar se produkti nuk është një rrjedhë e vetme e gjatë dhe e padiferencuar</p>
+<p>Çfarë problemi zgjidh:
+- e bën më të lehtë të shpjegohet pse disa veçori të dukshme bëjnë pjesë nën aftësi më të mëdha në vend që të qëndrojnë më vete</p>
+<p>Çfarë nuk përshkruan me qëllim:
+- ekrane konkrete, kohëzim, navigim apo përbërjen aktuale të demos</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/sq/automation-parity-chain.svg" alt="Diagrami i zinxhirit të automatizimit dhe paritetit" />
+<figcaption aria-hidden="true">Diagrami i zinxhirit të automatizimit dhe paritetit</figcaption>
+</figure>
+<p>Diagrami i tretë tregon zinxhirin e qeverisjes: rasti i përdorimit, kontrata e automatizimit, draft testi skenarik, rrjedha e ardhshme në Blazor dhe rishikimi i ardhshëm i paritetit.</p>
+<p>Pse ekziston:
+- për të treguar se si një prototip mund të çojë te artefakte inxhinierike të mirëmbajtshme në vend që të mbetet një demo e izoluar</p>
+<p>Çfarë problemi zgjidh:
+- shpjegon se si projekti mund të kalojë nga dokumentimi konceptual te shembujt e ekzekutueshëm dhe më vonë te krahasimi i implementimeve pa e trajtuar strukturën DOM si të vërtetën</p>
+<p>Çfarë nuk përshkruan me qëllim:
+- selektorë të saktë, kod të saktë testesh ose një politikë përfundimtare CI</p>
+<p>Ky zinxhir ka rëndësi sepse e kthen prototipin në një urë, jo në një rrugë pa dalje.</p>
+<p>Skedarët burimorë të këtyre diagrameve mbeten skedarë Mermaid të redaktueshëm. SVG-të e commit-uara janë artefakte të publikuara. Kjo ndarje është e dobishme sepse e mban konceptin të lehtë për t’u përditësuar pa e trajtuar imazhin e renderuar si burimin e vërtetë të së vërtetës.</p>
+<h2 id="evolucioni-i-depos">Evolucioni i depos</h2>
+<p>Një mënyrë e dobishme për ta parë rezultatin është si një zinxhir kuptimi të ruajtur:</p>
+<p>Ide / specifikim i papërpunuar -&gt; demo statike -&gt; raste të nxjerra përdorimi -&gt; diagrame -&gt; kontrata automatizimi -&gt; drafte testesh skenarike -&gt; implementim i ardhshëm në Blazor -&gt; rishikim i ardhshëm i paritetit</p>
+<p>Çdo shtresë ruan kuptimin në një nivel tjetër.</p>
+<ul>
+<li>Specifikimi i papërpunuar ruan qëllimin, fushën dhe kufijtë e produktit.</li>
+<li>Demoja statike ruan sjelljen e dukshme të rrjedhës së punës dhe fërkimin praktik.</li>
+<li>Rastet e përdorimit ruajnë qëllimin e qëndrueshëm.</li>
+<li>Diagramet ruajnë modelet mendore të përbashkëta.</li>
+<li>Kontratat e automatizimit ruajnë ankorat draft të ekzekutimit pa ngrirë layout-in.</li>
+<li>Draftet e testeve skenarike ruajnë shembuj tutorialë të ekzekutueshëm.</li>
+<li>Implementimi i ardhshëm në Blazor do të ruajë sjelljen e produktit në një stack tjetër.</li>
+<li>Rishikimi i ardhshëm i paritetit mund të ruajë përputhjen e rezultateve pa kërkuar strukturë identike DOM.</li>
+</ul>
+<p>Pikërisht për këtë rendi ka rëndësi. Asnjë artefakt i vetëm nuk e zgjidh të gjithë problemin. Së bashku ato reduktojnë rizbulimin.</p>
+<h2 id="rezultati-praktik-nga-rastet-e-përdorimit-te-shembujt-e-ekzekutueshëm">Rezultati praktik: nga rastet e përdorimit te shembujt e ekzekutueshëm</h2>
+<p>Pasi ekzistonin rastet e përdorimit, shtresat e tjera u bënë më të lehta për t’u strukturuar.</p>
+<p>Çdo rast përdorimi mund të mbante një kontratë të lehtë automatizimi:</p>
+<ul>
+<li>rruga aktualisht më e mirë e nisjes në demon statike</li>
+<li>ankora të qëndrueshme të dukshme për përdoruesin</li>
+<li>veprimet kryesore të përdoruesit</li>
+<li>vëzhgimet e pritshme</li>
+<li>brishtësia e njohur</li>
+</ul>
+<p>Kjo nuk është ende një portë pariteti. Është një shtresë ure.</p>
+<p>Prej andej mund të shkruheshin skenarë draft në Playwright si kandidatë smoke në stil tutoriali. Ky është një dallim i rëndësishëm. Këto skripte skenarësh nuk janë ende porta përfundimtare CI. Ato janë shpjegime të ekzekutueshme të rasteve të dokumentuara të përdorimit në demon aktuale.</p>
+<p>Më vonë, kur të ekzistojë implementimi në Blazor, e njëjta shtresë e rasteve të përdorimit mund të mbështesë një pyetje më serioze për paritetin:</p>
+<p>A mund ta arrijë përdoruesi ende të njëjtin rezultat, edhe nëse UI-ja, struktura e rrugëve dhe hierarkia e komponentëve kanë ndryshuar?</p>
+<p>Ky është një objektiv pariteti shumë më i shëndetshëm sesa krahasimi i strukturës DOM ose i layout-it me pikselë.</p>
+<h2 id="pretendimi-modest">Pretendimi modest</h2>
+<p>Kjo nuk është mënyra e vetme për të punuar. Disa ekipe do të vazhdojnë të shkruajnë raste të pastra përdorimi përpara se të ekzistojë një prototip. Ndonjëherë kjo është gjëja e duhur.</p>
+<p>Por kur një projekt ka tashmë një specifikim të papërpunuar dhe një demo statike funksionale, nxjerrja e rasteve të qëndrueshme të përdorimit më pas mund të jetë një lëvizje shumë praktike.</p>
+<p>Ajo respekton atë që zbuloi prototipi pa e lënë prototipin të bëhet në heshtje i gjithë përkufizimi i produktit.</p>
+<p>Nuk është zëvendësim për inxhinierinë e kërkesave, kërkimin me përdorues ose punën formale të specifikimit.</p>
+<p>Është thjesht një mënyrë për të nxjerrë kuptim të qëndrueshëm nga një prototip që tashmë po mëson diçka reale rreth produktit.</p>
+<p>Nëse kjo qasje ndihmon të ruhet qëllimi, të përmirësohet komunikimi dhe të reduktohet rizbulimi i vendimeve të rëndësishme, ndoshta ia ka vlejtur.</p>
+<p>Për kolegët, studentët dhe agjentët e ardhshëm AI, ky është përfitimi i vërtetë. Njohuria për produktin pushon së jetuari vetëm në demo. Ajo bëhet e dukshme në rastet e përdorimit, e dukshme në diagrame, e dukshme në kontratat e automatizimit, e dukshme në tutorialet skenarike dhe, me kohë, e dukshme në rishikimin e paritetit midis prototipit dhe implementimit.</p>
+<p>Kjo nuk e bën projektin të ngurtë. I lejon UI-së të ndryshojë pa humbur arsyen pse projekti ekziston.</p>
+<h2 id="lexim-i-ndërlidhur">Lexim i ndërlidhur</h2>
+<ul>
+<li><code>when-the-demo-is-evidence-and-when-it-is-not.md</code></li>
+<li><code>spec-driven-development-for-ai-projects.md</code></li>
+<li><code>spec-driven-development-in-let-books.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Gjuhë të tjera</h2>
+            <ul>
+              <li><a href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/extracting-use-cases-from-a-working-demo.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/de/extracting-use-cases-from-a-working-demo.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/extracting-use-cases-from-a-working-demo.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Përmbajtje të ngjashme</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentim</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Përputhja e demove</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Rishikimi i produktit</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Zhvillim i drejtuar nga specifikimet</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sq/ai-as-an-oracle.html"><span>AI si orakull: pse kultura e verifikimit ka më shumë rëndësi se prompting-u</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sq/how-to-use-ai-workflows-for-non-software-knowledge-work.html"><span>Si të përdoren rrjedhat e punës me AI për punë të dijes jashtë softuerit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-write-a-spec-that-ai-can-follow.html"><span>Si të shkruani një specifikim që AI mund ta ndjekë</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../wiki/sq/documentation-is-more-than-a-website.html"><span>Dokumentacioni është më shumë se një faqe interneti</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/markdown-in-product-development.html"><span>Markdown në Zhvillimin e produktit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillimi i drejtuar nga specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/spec-driven-development.html"><span>Zhvillimi i Udhëhequr nga Specifikimi</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/documentation-traceability.html"><span>Gjurmueshmëria e Dokumentacionit</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kur demoja është provë dhe kur nuk është</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sq/spec-driven-development-in-let-books.html"><span>Zhvillim i udhëhequr nga specifikimi në Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbani të përafruara specifikimin, dokumentacionin, demonstrimin dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../wiki/sq/demo-spec-alignment.html"><span>Përputhja e demos me specifikimin</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/demo-and-specification-alignment.html"><span>Përputhja e Demos dhe Specifikimit</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
+                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../topics/sq/ai-assisted-implementation.html"><span>Implementimi i Ndihmuar nga AI</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
+            <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
+              <a href="../../index.html">Faqja kryesore</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

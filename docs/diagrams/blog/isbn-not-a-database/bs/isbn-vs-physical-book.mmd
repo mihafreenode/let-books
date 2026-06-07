@@ -1,28 +1,22 @@
 ---
 title: ISBN u odnosu na fizički primjerak knjige
 ---
-flowchart LR
-    subgraph ISBN["ISBN (identifikator izdanja)"]
+flowchart TB
+    subgraph ISBN["ISBN / izdanje"]
         direction TB
-        I1["Naslov"]
-        I2["Autor(i)"]
-        I3["Izdavač"]
-        I4["Godina izdanja"]
-        I5["Jezik"]
-        I6["ISBN-10 / ISBN-13"]
+        I1["Zajednički identitet"]
+        I2["Naslov, autori,<br/>izdavač"]
+        I3["Godina, jezik,<br/>ISBN"]
     end
 
-    subgraph Physical["Fizički primjerak knjige (instanca)"]
+    subgraph Physical["Fizički primjerak"]
         direction TB
-        P1["Stanje<br/>(kao nov / dobro / loše)"]
-        P2["Provinijencija<br/>(potpis, pečat, historija)"]
-        P3["Lokacija pohrane<br/>(soba → polica → kutija)"]
-        P4["Status donacije<br/>(ponuđeno, zatraženo, preuzeto)"]
-        P5["Fotografije<br/>(naslovnica, naslovna strana, oštećenja)"]
-        P6["Privatne bilješke"]
+        P1["Stanje i<br/>provenijencija"]
+        P2["Lokacija i<br/>status donacije"]
+        P3["Fotografije i<br/>privatne bilješke"]
     end
 
-    ISBN -.->|"identificira<br/>izdanje"| Physical
+    I3 -.->|"ne opisuje<br/>jedan primjerak"| P1
 
     style ISBN fill:#e3f2fd,stroke:#1565c0
     style Physical fill:#f3e5f5,stroke:#7b1fa2

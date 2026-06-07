@@ -1,0 +1,14 @@
+---
+title: Panoramica dei casi d'uso
+---
+flowchart TD
+    A["Ricevere libri<br/>nella collezione"] --> B["Catalogare libri<br/>fisici"]
+    A --> C["Stoccaggio<br/>fisico"]
+    B --> D["Rivedere lo stato<br/>della collezione"]
+    C --> D
+    D --> E["Review<br/>esterna"]
+    B --> E
+    C --> E
+
+    classDef core fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    class A,B,C,D,E core

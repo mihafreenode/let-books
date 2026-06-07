@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Use Cases aus einem funktionierenden Demo ableiten | LetBooks</title>
+    <meta name="description" content="Wie ein statischer Prototyp die dauerhaft relevanten Use Cases eines Produkts sichtbar machen kann, wenn das Team Bildschirme als Evidenz behandelt und die abgeleiteten Fähigkeiten als das, was bewahrt werden soll.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/de/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/extracting-use-cases-from-a-working-demo.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Use Cases aus einem funktionierenden Demo ableiten | LetBooks">
+    <meta property="og:description" content="Wie ein statischer Prototyp die dauerhaft relevanten Use Cases eines Produkts sichtbar machen kann, wenn das Team Bildschirme als Evidenz behandelt und die abgeleiteten Fähigkeiten als das, was bewahrt werden soll.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/de/extracting-use-cases-from-a-working-demo.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Use Cases aus einem funktionierenden Demo ableiten | LetBooks">
+    <meta name="twitter:description" content="Wie ein statischer Prototyp die dauerhaft relevanten Use Cases eines Produkts sichtbar machen kann, wenn das Team Bildschirme als Evidenz behandelt und die abgeleiteten Fähigkeiten als das, was bewahrt werden soll.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="de">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/de/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../de/index.html">Doku</a>
+            <a class="nav-link" href="../../blog/de/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/de/index.html">Lernmaterial</a>
+            <a class="nav-link" href="../../wiki/de/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/de/index.html">Themen</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/extracting-use-cases-from-a-working-demo.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/extracting-use-cases-from-a-working-demo.html" lang="sq">SQ</a>
+              <a class="lang-link is-current" href="../../blog/de/extracting-use-cases-from-a-working-demo.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/extracting-use-cases-from-a-working-demo.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Alle Sprachen</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../de/index.html">Doku</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/de/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Use Cases aus einem funktionierenden Demo ableiten</span>
+            </nav>
+            <h1>Use Cases aus einem funktionierenden Demo ableiten</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Deutsch</span>
+          </div>
+          <p class="content-page-summary">Wie ein statischer Prototyp die dauerhaft relevanten Use Cases eines Produkts sichtbar machen kann, wenn das Team Bildschirme als Evidenz behandelt und die abgeleiteten Fähigkeiten als das, was bewahrt werden soll.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Themen:</span>
+              <span class="content-tag">Demo-Abgleich</span>
+              <span class="content-tag">Dokumentation</span>
+              <span class="content-tag">Produktprüfung</span>
+              <span class="content-tag">Spezifikationsgetriebene Entwicklung</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Es gibt ein vertrautes Argument in der Softwarearbeit: Erst sollten die Use Cases kommen, danach die Prototypen. In der Theorie klingt das ordentlich. In der Praxis beginnen Teams haeufig mit roherem Material. Sie haben vielleicht eine allgemeine Spezifikation, eine Produktidee, einige Randbedingungen und einen Prototyp, der bereits reales Verhalten sichtbar macht, bevor die letzte Use-Case-Schicht sauber formuliert ist.</p>
+<p>Das bedeutet nicht automatisch, dass der Prozess falsch ist. Manchmal ist gerade der Prototyp das, was die echten Use Cases erst freilegt.</p>
+<p>Der wichtige Schritt ist, was danach geschieht.</p>
+<p>Wenn nuetzliches Produktwissen in Bildschirmen, Routen und temporaeren Flows eingeschlossen bleibt, bleibt es fragil. Wenn das Team aus dem Prototyp und der allgemeinen Spezifikation dauerhafte Use Cases ableitet, laesst sich dieses Wissen deutlich leichter bewahren, reviewen, automatisieren und spaeter neu implementieren.</p>
+<h2 id="der-prozess-wurde-entdeckt-nicht-entworfen">Der Prozess wurde entdeckt, nicht entworfen</h2>
+<p>Dieser Artikel beschreibt keine Methodik, die von Anfang an in vollstaendiger Form vorlag.</p>
+<p>Die Reihenfolge entstand schrittweise, waehrend praktische Probleme rund um ein statisches Demo und eine breitere Produktspezifikation geloest wurden.</p>
+<p>Das Demo enthielt bereits nuetzliches Produktwissen. Es zeigte Flows, auf die Menschen reagieren konnten. Es machte sichtbar, welche Aktionen zentral wirkten, welche eher nachrangig waren und an welchen Stellen es dem Produkt eigentlich um Lagerlogistik, Katalogisierung oder Review ging und nicht um einen bestimmten Bildschirm.</p>
+<p>Dieses Verstaendnis begann sich jedoch gleichzeitig ueber zu viele Orte zu verteilen:</p>
+<ul>
+<li>Bildschirme im Demo</li>
+<li>Routennamen und lokale Flows</li>
+<li>Produktnotizen und Spezifikationstext</li>
+<li>Review-Diskussionen</li>
+<li>fruehe Tests und Validierungsideen</li>
+</ul>
+<p>Diese Verteilung war das eigentliche Problem.</p>
+<p>Das Ziel wurde deshalb, Verstaendnis zu bewahren, ohne so zu tun, als waere die aktuelle UI bereits final.</p>
+<h2 id="das-problem-demos-zeigen-verhalten-aber-sie-bewahren-keine-absicht">Das Problem: Demos zeigen Verhalten, aber sie bewahren keine Absicht</h2>
+<p>Ein funktionierendes Demo ist ueberzeugend, weil es eine Idee in etwas Sichtbares verwandelt. Menschen koennen darauf zeigen, es ausprobieren, kritisieren und auf seine Abfolge von Schritten reagieren.</p>
+<p>Das ist wertvoll. Es ist auch unvollstaendig.</p>
+<p>Das Demo zeigt eine aktuelle Auspraegung von Verhalten. Es sagt kuenftigen Maintainerinnen und Maintainern aber nicht automatisch, welcher Teil dieses Verhaltens wesentlich war, welcher Teil nur eine Einstiegssurface war, welcher Teil eine temporaere Bequemlichkeit und welcher Teil lediglich eine lokale Implementierungsabkuerzung.</p>
+<p>Diese Unterscheidung ist in KI-gestuetzter Arbeit noch wichtiger, weil sichtbarer Code und sichtbare UI schneller anwachsen koennen als dauerhaftes Produktgedaechtnis.</p>
+<h2 id="die-fragen-die-den-prozess-vorangetrieben-haben">Die Fragen, die den Prozess vorangetrieben haben</h2>
+<p>Die Artefaktkette ist nicht auf einmal entstanden. Jede Schicht beantwortete eine praktische Frage und legte dann die naechste fehlende Schicht frei.</p>
+<p>Eine nuetzliche Beschreibung der Sequenz ist:</p>
+<p>Problem -&gt; Artefakt -&gt; Neues Problem -&gt; Neues Artefakt</p>
+<p>Der grobe Ablauf sah so aus:</p>
+<ol type="1">
+<li><p>Bildschirme veraenderten sich schnell.
+Dadurch war Bildschirm-fuer-Bildschirm-Dokumentation eine schlechte Bewahrungsschicht.
+Das erste dauerhafte Artefakt wurden daher Use Cases.</p></li>
+<li><p>Die Use Cases waren fuer Menschen nuetzlich, aber noch nicht konkret genug fuer leichte Browser-Automatisierung.
+Das naechste Artefakt wurden daher Automatisierungsvertraege.</p></li>
+<li><p>Die Automatisierungsvertraege waren klarer als rohe Use Cases, brauchten aber immer noch ausfuehrbare Beispiele.
+Das naechste Artefakt wurden daher Entwurfs-Szenariotests.</p></li>
+<li><p>Sobald mehrere zusammenhaengende Artefakte existierten, wurden ihre Beziehungen in Prosa allein schwerer zu erklaeren.
+Das naechste Artefakt wurden daher Diagramme.</p></li>
+<li><p>Als die Idee einer spaeteren Blazor-Implementierung hinzukam, tauchte eine weitere Frage auf:
+Wie koennte die kuenftige Implementierung mit dem Demo verglichen werden, ohne DOM-Baeume oder visuelles Layout zu vergleichen?
+Diese Frage fuehrte zum Paritaetsdenken.</p></li>
+</ol>
+<p>Nichts davon verlangte ein grosses Framework. Es war eine Reaktion auf konkrete Engineering-Fragen:</p>
+<ul>
+<li>Wie bewahren wir Verstaendnis, waehrend sich ein Demo noch weiterentwickelt?</li>
+<li>Wie beschreiben wir Workflows, ohne jeden Bildschirm zu dokumentieren?</li>
+<li>Wie koennten diese Workflows spaeter zu ausfuehrbaren Tutorials werden?</li>
+<li>Wie vermeiden wir, Tests an die heutige UI zu koppeln?</li>
+<li>Wie koennte eine kuenftige Implementierung mit dem Demo verglichen werden, ohne DOM-Strukturen zu vergleichen?</li>
+</ul>
+<h2 id="die-falle-bildschirmdokumentation-verrottet-schnell">Die Falle: Bildschirmdokumentation verrottet schnell</h2>
+<p>Eine naheliegende Reaktion ist, die Bildschirme detailliert zu dokumentieren. Das wirkt oft verantwortungsvoll, weil es praezise aussieht.</p>
+<p>Meist ist es die falsche Schicht.</p>
+<p>Wenn die Dokumentation sagt, dass das Dashboard bestimmte Karten enthaelt, oder dass sich die Scanner-Route ueber genau einen Button oeffnet, oder dass ein bestimmter Bildschirm eine konkrete Anordnung von Steuerelementen hat, kann die Dokumentation in dem Moment veralten, in dem die UI verbessert wird.</p>
+<p>Das Ergebnis ist eine falsche Art von Praezision: sehr spezifisch, aber nicht sehr dauerhaft.</p>
+<p>Die hilfreiche Unterscheidung war einfach: Ein Bildschirm ist kein Use Case. Eine Route ist kein Use Case. Ein Scanner ist kein Use Case. Ein Excel-Export ist kein Use Case.</p>
+<p>Das sind Implementierungsoberflaechen.</p>
+<p>Die Use Cases sind die Dinge, die auch nach einem Redesign noch existieren sollten.</p>
+<h2 id="der-schritt-faehigkeiten-aus-demo-und-spezifikation-herausloesen">Der Schritt: Faehigkeiten aus Demo und Spezifikation herausloesen</h2>
+<p>Der praktische Schritt in Let Books bestand nicht darin, so zu tun, als enthalte das Demo kein Produktwissen. Das tat es offensichtlich. Der Schritt bestand darin, eine schwierigere Frage zu stellen:</p>
+<p>Wenn die UI naechstes Jahr neu gestaltet wuerde, welche Nutzerziele und Business-Faehigkeiten muessten dann immer noch existieren?</p>
+<p>Diese Frage veraenderte die Form des Modells.</p>
+<p>Das Dashboard wurde nicht mehr als Use Case behandelt, sondern als das, was es wirklich war: eine Einstiegssurface in breitere Workflows.</p>
+<p>ISBN-Scanning wurde nicht mehr als Top-Level-Use-Case behandelt, sondern als Teilfaehigkeit der Katalogisierung.</p>
+<p>Excel-Export und -Import wurden nicht mehr als Dateibuttons behandelt, sondern als Teil einer groesseren Faehigkeit: eine Sammlung fuer externes Review freigeben und Entscheidungen wieder ins System zurueckfuehren.</p>
+<p>Die dauerhaften Use Cases wurden:</p>
+<ul>
+<li>Buecher in die Sammlung aufnehmen</li>
+<li>Physische Buecher katalogisieren</li>
+<li>Physische Lagerung organisieren und pruefen</li>
+<li>Sammlungszustand ueberpruefen</li>
+<li>Eine Sammlung fuer externes Review teilen und Entscheidungen erfassen</li>
+</ul>
+<p>Diese Liste ist viel weniger an einen einzelnen Prototypen gebunden. Sie ist auch deutlich hilfreicher fuer kuenftige Maintainerinnen, Maintainer und Reviewer.</p>
+<h2 id="beispiel-einen-use-case-aus-dem-demo-ableiten">Beispiel: Einen Use Case aus dem Demo ableiten</h2>
+<p>Eines der klarsten Beispiele in diesem Projekt war <code>UC-003 Physische Lagerung organisieren und pruefen</code>.</p>
+<p>Wenn jemand nur auf das aktuelle Demo geschaut haette, waeren die offensichtlichsten sichtbaren Elemente Dinge gewesen wie:</p>
+<ul>
+<li>eine Boxen-Ansicht</li>
+<li>Detailansichten fuer Boxen</li>
+<li>Filter fuer verschiedene Zustaende</li>
+<li>QR-bezogene Aktionen</li>
+<li>Links aus dem Box-Kontext in Erfassung und Bearbeitung</li>
+</ul>
+<p>Ein sehr natuerliches erstes Fazit waere gewesen:</p>
+<p><code>Wir brauchen einen Boxen-Bildschirm.</code></p>
+<p>Das war nachvollziehbar, aber zu nah an der aktuellen UI.</p>
+<p>Use-Case-Denken rahmte die Frage anders.</p>
+<p>Die eigentliche Anforderung war nicht, dass ein bestimmter Bildschirm existieren musste. Die eigentliche Anforderung war, dass Nutzerinnen und Nutzer aus dem physischen Lagerkontext heraus arbeiten koennen mussten.</p>
+<p>Anders gesagt: Das Produkt musste die Beziehung zwischen der digitalen Sammlung und den realen Boxen, Regalen und Behaeltern erhalten, in denen die Buecher tatsaechlich lagen.</p>
+<p>Dadurch entstand ein deutlich robusterer Use Case.</p>
+<p>Hier ist ein verkuerzter Auszug aus dem echten Use-Case-Dokument:</p>
+<blockquote>
+<p><strong>Zweck</strong></p>
+<p>Eine nuetzliche Beziehung zwischen der digitalen Sammlung und den realen physischen Behaeltern, Regalen und Boxen erhalten, in denen Buecher gelagert werden.</p>
+<p><strong>Nutzerziel</strong></p>
+<p>Buecher finden, verstehen, was sich in einem Behaelter befindet, und aus dem realen Lagerkontext heraus arbeiten statt nur mit abstrakten Datensaetzen.</p>
+<p><strong>Hauptszenario fuer Erfolg</strong></p>
+<p>Die Nutzerin oder der Nutzer arbeitet aus einem physischen Lagerkontext wie etwa einer Box.</p>
+<p>Sie oder er prueft den Inhalt dieses Behaelters und versteht, welche Buecher vorhanden sind, in welchem Zustand sie sich befinden und welche naechsten Schritte noetig sein koennten.</p>
+<p>Aus diesem Lagerkontext heraus geht die Arbeit in Erfassung, Bearbeitung oder spaetere Entnahme ueber, ohne dass die Beziehung zwischen digitalem Datensatz und physischem Ort verloren geht.</p>
+</blockquote>
+<p>Bemerkenswert ist auch, was fehlt.</p>
+<p>Der Use Case beschreibt nicht:</p>
+<ul>
+<li>Routen</li>
+<li>Bildschirme</li>
+<li>Karten</li>
+<li>Filter</li>
+<li>Button-Platzierung</li>
+<li>Komponenten-Hierarchie</li>
+<li>CSS-Layout</li>
+</ul>
+<p>Diese Dinge koennen im Demo auftauchen, aber sie sind nicht die Faehigkeit, die bewahrt werden soll.</p>
+<p>Das Demo enthielt Boxen, Box-Bildschirme, QR-Aktionen, Filter und lagerbezogene Navigation.</p>
+<p>Der abgeleitete Use Case bewahrte stattdessen die zugrunde liegende Faehigkeit: aus physischem Lagerkontext heraus zu arbeiten.</p>
+<p>Das ist staerker als eine Bildschirmbeschreibung, weil es ein Redesign ueberlebt.</p>
+<p>Routen koennen sich aendern. Layouts koennen sich aendern. Karten koennen verschwinden. Filter koennen sich aendern. Der Technologie-Stack kann sich aendern.</p>
+<p>Der Use Case kann dennoch gueltig bleiben, weil die zugrunde liegende Workflow-Absicht gleich bleibt: Nutzerinnen und Nutzer muessen aus realem Lagerkontext heraus arbeiten koennen, statt ihn aus abstrakten Datensaetzen rekonstruieren zu muessen.</p>
+<p>Das ist die praktische Bedeutung davon, Absicht statt Implementierung zu bewahren.</p>
+<h2 id="warum-einige-sichtbare-dinge-als-use-cases-verworfen-wurden">Warum einige sichtbare Dinge als Use Cases verworfen wurden</h2>
+<p>Hier war der Prototyp wirklich hilfreich, weil er die falschen Abstraktionen sichtbar machte.</p>
+<p>Mehrere Kandidaten fuer Use Cases erwiesen sich als zu nah an der aktuellen Implementierungsoberflaeche.</p>
+<ul>
+<li>Dashboard wurde zu einer Einstiegssurface statt zu einem Use Case, weil ein Dashboard nur ein Weg ist, in breitere Workflows einzusteigen. Die dauerhafte Faehigkeit war die Ueberpruefung des Sammlungszustands.</li>
+<li>ISBN-Scanning wurde zu einer Teilfaehigkeit der Katalogisierung, weil die eigentliche Aufgabe nicht das Scannen ist. Die eigentliche Aufgabe ist, aus einem physischen Buch einen nutzbaren Datensatz zu machen.</li>
+<li>Export und Import wurden zu externem Review und Entscheidungserfassung, weil Dateiaustausch nur ein Transportmechanismus innerhalb eines groesseren Review-Workflows war.</li>
+<li>Routen und Bildschirme blieben Implementierungsdetails, weil sie sich erwartungsgemaess aendern, waehrend die zugrunde liegende Faehigkeit erkennbar bleiben sollte.</li>
+</ul>
+<p>Diese Unterscheidungen sind wichtig, weil sie Review-Wert ueber Redesigns hinweg erhalten.</p>
+<p>Wenn ein Team das Dashboard als Use Case dokumentiert, sieht jedes Dashboard-Redesign wie Produktdrift aus, auch wenn der eigentliche Workflow intakt ist.</p>
+<p>Wenn ein Team ISBN-Scanning als Use Case dokumentiert, dann wirkt jeder kuenftige OCR-Pfad, manuelle Fallback oder verbesserte Enrichment-Pfad wie ein anderes Produkt, obwohl es in Wirklichkeit nur ein anderer Weg ist, Katalogisierung zu unterstuetzen.</p>
+<p>Wenn ein Team Export-Buttons als Use Case dokumentiert, wirkt ein kuenftiges Reviewer-Portal so, als ersetze es den Workflow, obwohl es moeglicherweise dieselbe Business-Faehigkeit in anderer Form bewahrt.</p>
+<p>So funktioniert Use-Case-Extraktion in der Praxis oft. Der erste Entwurf klingt nah an der UI. Der bessere Entwurf klingt naeher am Produkt.</p>
+<p>Der Prototyp ersetzte das Denken nicht. Er gab dem Denken etwas Konkretes, das verfeinert werden konnte.</p>
+<h2 id="die-diagramme-faehigkeitskarten-keine-bildschirmkarten">Die Diagramme: Faehigkeitskarten, keine Bildschirmkarten</h2>
+<p>Sobald die abgeleiteten Use Cases klarer waren, bestand der naechste Schritt nicht darin, ein Routendiagramm zu zeichnen. Der naechste Schritt war, dauerhafte Konzeptdiagramme zu zeichnen.</p>
+<p>Das sind Faehigkeitsdiagramme, keine Bildschirmkarten.</p>
+<p>Sie beschreiben keine Buttons, Seiten, Routen oder Komponenten-Hierarchie. Sie beschreiben dauerhafte Faehigkeiten und Governance-Beziehungen, die ueberleben sollten, selbst wenn die UI neu gestaltet wird.</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/de/use-case-overview.svg" alt="Use-Case-Ueberblicksdiagramm" />
+<figcaption aria-hidden="true">Use-Case-Ueberblicksdiagramm</figcaption>
+</figure>
+<p>Das erste Diagramm ist ein Use-Case-Ueberblick.</p>
+<p>Es zeigt die primaeren dauerhaften Faehigkeiten in einer kleinen konzeptionellen Karte.</p>
+<p>Warum es existiert:
+- um Maintainerinnen, Maintainern und Reviewern einen schnellen Ueberblick ueber das produktseitige Faehigkeitsset zu geben</p>
+<p>Welches Problem es loest:
+- es ersetzt verstreute verbale Verweise durch ein gemeinsames Bild der primaeren Use-Case-Schicht</p>
+<p>Was es bewusst nicht beschreibt:
+- Seiten, Routen, Button-Positionen, Sequenzdetails oder das aktuelle visuelle Layout</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/de/capability-relationships.svg" alt="Diagramm der Faehigkeitsbeziehungen" />
+<figcaption aria-hidden="true">Diagramm der Faehigkeitsbeziehungen</figcaption>
+</figure>
+<p>Das zweite Diagramm zeigt Faehigkeitsbeziehungen.</p>
+<p>Es erklaert, dass Erfassung, Katalogisierung, physische Lagerung, Sammlungsaufsicht und externes Review zusammenhaengen, aber nicht dasselbe sind.</p>
+<p>Warum es existiert:
+- um zu zeigen, dass das Produkt nicht ein einziger langer undifferenzierter Flow ist</p>
+<p>Welches Problem es loest:
+- es macht leichter erklaerbar, warum manche sichtbaren Features unter groessere Faehigkeiten gehoeren, statt fuer sich allein zu stehen</p>
+<p>Was es bewusst nicht beschreibt:
+- konkrete Bildschirme, Timing, Navigation oder die aktuelle Zusammensetzung des Demos</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/de/automation-parity-chain.svg" alt="Diagramm der Automatisierungs- und Paritaetskette" />
+<figcaption aria-hidden="true">Diagramm der Automatisierungs- und Paritaetskette</figcaption>
+</figure>
+<p>Das dritte Diagramm zeigt die Governance-Kette: Use Case, Automatisierungsvertrag, Entwurfs-Szenariotest, kuenftiger Blazor-Workflow und kuenftiges Paritaetsreview.</p>
+<p>Warum es existiert:
+- um zu zeigen, wie ein Prototyp in wartbare Engineering-Artefakte fuehren kann, statt ein isoliertes Demo zu bleiben</p>
+<p>Welches Problem es loest:
+- es erklaert, wie sich das Projekt von konzeptioneller Dokumentation zu ausfuehrbaren Beispielen und spaeter zu Implementierungsvergleich bewegen kann, ohne DOM-Struktur als Wahrheit zu behandeln</p>
+<p>Was es bewusst nicht beschreibt:
+- exakte Selektoren, exakten Testcode oder eine finale CI-Policy</p>
+<p>Diese Kette ist wichtig, weil sie aus einem Prototypen eine Bruecke statt einer Sackgasse macht.</p>
+<p>Die Quelldateien dieser Diagramme bleiben bearbeitbare Mermaid-Dateien. Die eingecheckten SVGs sind publizierte Artefakte. Diese Trennung ist nuetzlich, weil sie das Konzept leicht aktualisierbar haelt, ohne das gerenderte Bild als eigentliche Wahrheitsquelle zu behandeln.</p>
+<h2 id="die-entwicklung-des-repositorys">Die Entwicklung des Repositorys</h2>
+<p>Ein hilfreicher Blick auf das Ergebnis ist die Kette bewahrten Verstaendnisses:</p>
+<p>Idee / grobe Spezifikation -&gt; statisches Demo -&gt; abgeleitete Use Cases -&gt; Diagramme -&gt; Automatisierungsvertraege -&gt; Entwurfs-Szenariotests -&gt; kuenftige Blazor-Implementierung -&gt; kuenftiges Paritaetsreview</p>
+<p>Jede Schicht bewahrt Verstaendnis auf einer anderen Ebene.</p>
+<ul>
+<li>Die grobe Spezifikation bewahrt Produktzweck, Umfang und Grenzen.</li>
+<li>Das statische Demo bewahrt sichtbares Workflow-Verhalten und praktische Reibung.</li>
+<li>Die Use Cases bewahren dauerhafte Absicht.</li>
+<li>Die Diagramme bewahren gemeinsame mentale Modelle.</li>
+<li>Die Automatisierungsvertraege bewahren Entwurfs-Laufzeitanker, ohne das Layout einzufrieren.</li>
+<li>Die Entwurfs-Szenariotests bewahren ausfuehrbare Tutorial-Beispiele.</li>
+<li>Die kuenftige Blazor-Implementierung wird Produktverhalten in einem anderen Stack bewahren.</li>
+<li>Kuenftiges Paritaetsreview kann Ergebnis-Ausrichtung bewahren, ohne identische DOM-Struktur zu verlangen.</li>
+</ul>
+<p>Deshalb ist diese Sequenz wichtig. Kein einzelnes Artefakt loest das ganze Problem. Zusammen verringern sie Wiederentdeckung.</p>
+<h2 id="das-praktische-ergebnis-von-use-cases-zu-ausfuehrbaren-beispielen">Das praktische Ergebnis: von Use Cases zu ausfuehrbaren Beispielen</h2>
+<p>Nachdem die Use Cases existierten, liessen sich auch andere Schichten leichter strukturieren.</p>
+<p>Jeder Use Case konnte einen leichten Automatisierungsvertrag tragen:</p>
+<ul>
+<li>beste aktuelle Start-Route im statischen Demo</li>
+<li>stabile nutzersichtbare Anker</li>
+<li>zentrale Nutzeraktionen</li>
+<li>erwartete Beobachtungen</li>
+<li>bekannte Fragilitaet</li>
+</ul>
+<p>Das ist noch kein Paritaets-Gate. Es ist eine Brueckenschicht.</p>
+<p>Von dort aus konnten Playwright-Entwurfsszenarien als tutorialartige Smoke-Kandidaten geschrieben werden. Das ist eine wichtige Unterscheidung. Diese Szenario-Skripte sind noch keine finalen CI-Gates. Sie sind ausfuehrbare Erklaerungen der dokumentierten Use Cases im aktuellen Demo.</p>
+<p>Spaeter, wenn die Blazor-Implementierung existiert, kann dieselbe Use-Case-Schicht eine ernstere Paritaetsfrage tragen:</p>
+<p>Kann die Nutzerin oder der Nutzer immer noch dasselbe Ergebnis erreichen, auch wenn sich UI, Routenstruktur und Komponenten-Hierarchie geaendert haben?</p>
+<p>Das ist ein viel gesuenderes Paritaetsziel als der Vergleich von DOM-Struktur oder Pixel-Layout.</p>
+<h2 id="der-bescheidene-anspruch">Der bescheidene Anspruch</h2>
+<p>Das ist nicht die einzige Art zu arbeiten. Manche Teams werden weiterhin saubere Use Cases schreiben, bevor ein Prototyp ueberhaupt existiert. Manchmal ist das richtig.</p>
+<p>Wenn ein Projekt aber bereits eine grobe Spezifikation und ein funktionierendes statisches Demo hat, kann das nachtraegliche Ableiten dauerhafter Use Cases ein sehr praktischer Schritt sein.</p>
+<p>Es respektiert, was der Prototyp sichtbar gemacht hat, ohne zuzulassen, dass der Prototyp stillschweigend zur gesamten Produktdefinition wird.</p>
+<p>Es ist kein Ersatz fuer Requirements Engineering, User Research oder formale Spezifikationsarbeit.</p>
+<p>Es ist einfach eine Moeglichkeit, dauerhaftes Verstaendnis aus einem Prototypen zu gewinnen, der bereits etwas Reales ueber das Produkt lehrt.</p>
+<p>Wenn der Ansatz hilft, Absicht zu bewahren, Kommunikation zu verbessern und die Wiederentdeckung wichtiger Entscheidungen zu verringern, war er wahrscheinlich sinnvoll.</p>
+<p>Fuer Kolleginnen, Kollegen, Studierende und kuenftige KI-Agenten ist das der eigentliche Nutzen. Produktwissen lebt dann nicht mehr nur im Demo. Es wird sichtbar in den Use Cases, sichtbar in den Diagrammen, sichtbar in den Automatisierungsvertraegen, sichtbar in den Szenario-Tutorials und spaeter sichtbar im Paritaetsreview zwischen Prototyp und Implementierung.</p>
+<p>Das macht das Projekt nicht starr. Es erlaubt der UI, sich zu aendern, ohne den Grund zu verlieren, warum das Projekt ueberhaupt existiert.</p>
+<h2 id="weiterfuehrende-lektuere">Weiterfuehrende Lektuere</h2>
+<ul>
+<li><code>when-the-demo-is-evidence-and-when-it-is-not.md</code></li>
+<li><code>spec-driven-development-for-ai-projects.md</code></li>
+<li><code>spec-driven-development-in-let-books.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Andere Sprachen</h2>
+            <ul>
+              <li><a href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/extracting-use-cases-from-a-working-demo.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/extracting-use-cases-from-a-working-demo.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/extracting-use-cases-from-a-working-demo.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Verwandte Inhalte</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Demo-Abgleich</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentation</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Produktprüfung</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Spezifikationsgetriebene Entwicklung</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Wann das Demo ein Beleg ist und wann nicht</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/de/spec-driven-development-in-let-books.html"><span>Spezifikationsgetriebene Entwicklung in Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/de/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Wie man Spezifikation, Dokumentation, Demo und Code aufeinander abstimmt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../wiki/de/demo-spec-alignment.html"><span>Abgleich Von Demo Und Spezifikation</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/demo-and-specification-alignment.html"><span>Abgleich von Demo und Spezifikation</span><span class="topic-menu__meta">Themen</span></a>
+                </div>
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/de/documentation-is-part-of-the-product.html"><span>Dokumentation ist Teil des Produkts</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/de/ai-as-an-oracle.html"><span>KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/de/how-to-use-ai-workflows-for-non-software-knowledge-work.html"><span>Wie man KI-Workflows für Wissensarbeit außerhalb der Softwareentwicklung nutzt</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../learning/de/how-to-write-a-spec-that-ai-can-follow.html"><span>Wie man eine Spezifikation schreibt, der KI folgen kann</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                  <a href="../../wiki/de/documentation-is-more-than-a-website.html"><span>Dokumentation ist mehr als eine Website</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/markdown-in-product-development.html"><span>Markdown in der Produktentwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/de/spec-driven-development.html"><span>Spezifikationsgesteuerte Entwicklung</span><span class="topic-menu__meta">Themen</span></a>
+                  <a href="../../topics/de/documentation-traceability.html"><span>Rückverfolgbarkeit der Dokumentation</span><span class="topic-menu__meta">Themen</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
+                  <a href="../../learning/de/how-to-review-ai-assisted-work-against-the-spec.html"><span>Wie man KI-gestützte Arbeit gegen die Spezifikation prüft</span><span class="topic-menu__meta">Lernmaterial</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../topics/de/ai-assisted-implementation.html"><span>KI-gestützte Implementierung</span><span class="topic-menu__meta">Themen</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Eine praktische Plattform zum Katalogisieren, Anbieten und Auffinden von Bildungsbüchern.</p>
+            <p class="footer-note">Urheberrecht © Let Books Mitwirkende. Die Weiterverwendung folgt der Repository-Lizenz, sofern auf der Seite nichts anderes angegeben ist.</p>
+            <p class="footer-microcopy">Früher Alpha-Prototyp. Dokumentation und UI-Texte sind KI-gestützt. In Beispielen erwähnte Institutionen und Integrationen sind konzeptionell und bedeuten keine Partnerschaft oder Unterstützung.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../de/index.html">Übersicht</a>
+              <a href="../../topics/de/index.html">Themen</a>
+              <a href="../../index.html">Startseite</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Alle Sprachen</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

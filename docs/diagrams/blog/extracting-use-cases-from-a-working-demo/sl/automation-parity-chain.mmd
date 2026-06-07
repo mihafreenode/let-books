@@ -1,0 +1,15 @@
+---
+title: Primer uporabe do avtomatizacije in paritete
+---
+flowchart TB
+    A["Primer uporabe<br/>trajen namen"] --> B["Avtomatizacijska pogodba<br/>stabilne točke"]
+    B --> C["Osnutni scenarijski test"]
+    C --> D["Prihodnja implementacija<br/>v Blazorju"]
+    D --> E["Pregled paritete"]
+
+    F["Ne na podlagi<br/>DOM, CSS<br/>ali komponent"] -.-> E
+
+    classDef primary fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    classDef caution fill:#ffebee,stroke:#c62828,color:#521010
+    class A,B,C,D,E primary
+    class F caution

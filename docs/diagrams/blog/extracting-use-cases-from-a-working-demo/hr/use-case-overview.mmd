@@ -1,0 +1,14 @@
+---
+title: Pregled slučajeva uporabe
+---
+flowchart TD
+    A["Zaprimanje<br/>knjiga"] --> B["Katalogizacija<br/>knjiga"]
+    A --> C["Organizacija i<br/>pregled pohrane"]
+    B --> D["Pregled stanja<br/>zbirke"]
+    C --> D
+    D --> E["Vanjski pregled<br/>i odluke"]
+    B --> E
+    C --> E
+
+    classDef core fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    class A,B,C,D,E core

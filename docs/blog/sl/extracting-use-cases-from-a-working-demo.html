@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Izluščanje primerov uporabe iz delujočega dema | LetBooks</title>
+    <meta name="description" content="Kako lahko statični prototip pomaga razkriti resnične trajne primere uporabe produkta, če ekipa zaslone obravnava kot dokaz, bistvene zmožnosti pa kot tisto, kar je treba ohraniti.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/sl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/extracting-use-cases-from-a-working-demo.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/extracting-use-cases-from-a-working-demo.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Izluščanje primerov uporabe iz delujočega dema | LetBooks">
+    <meta property="og:description" content="Kako lahko statični prototip pomaga razkriti resnične trajne primere uporabe produkta, če ekipa zaslone obravnava kot dokaz, bistvene zmožnosti pa kot tisto, kar je treba ohraniti.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/sl/extracting-use-cases-from-a-working-demo.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Izluščanje primerov uporabe iz delujočega dema | LetBooks">
+    <meta name="twitter:description" content="Kako lahko statični prototip pomaga razkriti resnične trajne primere uporabe produkta, če ekipa zaslone obravnava kot dokaz, bistvene zmožnosti pa kot tisto, kar je treba ohraniti.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="sl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/sl/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sl/index.html">Dokumentacija</a>
+            <a class="nav-link" href="../../blog/sl/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sl/index.html">Učni vodniki</a>
+            <a class="nav-link" href="../../wiki/sl/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sl/index.html">Teme</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">EN</a>
+              <a class="lang-link is-current" href="../../blog/sl/extracting-use-cases-from-a-working-demo.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/extracting-use-cases-from-a-working-demo.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/extracting-use-cases-from-a-working-demo.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/extracting-use-cases-from-a-working-demo.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Vsi jeziki</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sl/index.html">Dokumentacija</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/sl/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Izluščanje primerov uporabe iz delujočega dema</span>
+            </nav>
+            <h1>Izluščanje primerov uporabe iz delujočega dema</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Slovenščina</span>
+          </div>
+          <p class="content-page-summary">Kako lahko statični prototip pomaga razkriti resnične trajne primere uporabe produkta, če ekipa zaslone obravnava kot dokaz, bistvene zmožnosti pa kot tisto, kar je treba ohraniti.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Teme:</span>
+              <span class="content-tag">Usklajenost demota</span>
+              <span class="content-tag">Dokumentacija</span>
+              <span class="content-tag">Pregled izdelka</span>
+              <span class="content-tag">Razvoj na podlagi specifikacij</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">V razvoju programske opreme se pogosto sliši trditev, da morajo primeri uporabe nastati najprej, prototipi pa šele zatem. Načeloma to zveni urejeno. V praksi pa ekipe pogosto začnejo z bolj grobim materialom. Imajo splošnejšo specifikacijo, produktno idejo, nekaj omejitev in prototip, ki začne razkrivati resnično vedenje, še preden je končna plast primerov uporabe jasno zapisana.</p>
+<p>To še ne pomeni nujno, da je proces napačen. Včasih je prav prototip tisti, ki pomaga razkriti resnične primere uporabe.</p>
+<p>Pomemben je naslednji korak.</p>
+<p>Če uporabno znanje o produktu ostane ujeto v zaslonih, poteh in začasnih tokovih, ostane krhko. Če ekipa iz prototipa in splošnejše specifikacije izlušči trajne primere uporabe, postane to znanje veliko lažje ohraniti, pregledovati, avtomatizirati in pozneje ponovno implementirati.</p>
+<h2 id="proces-ni-bil-načrtovan-ampak-odkrit">Proces ni bil načrtovan, ampak odkrit</h2>
+<p>Ta članek ne opisuje metodologije, ki bi bila od začetka v celoti zasnovana in zapisana.</p>
+<p>Zaporedje teh gradnikov je nastajalo postopoma, med reševanjem praktičnih težav okoli statičnega dema in širše produktne specifikacije.</p>
+<p>Demo je že vseboval koristno znanje o produktu. Pokazal je tokove, na katere so se ljudje lahko odzvali. Razkril je, katere akcije delujejo kot osrednje, katere kot postranske in kje je produkt v resnici bolj povezan s shranjevanjem, katalogizacijo ali pregledom kot pa z enim samim zaslonom.</p>
+<p>Težava je bila v tem, da se je to razumevanje začelo razprševati na preveč mest hkrati:</p>
+<ul>
+<li>po zaslonih v demu</li>
+<li>po imenih poti in lokalnih tokovih</li>
+<li>po produktnih zapiskih in specifikaciji</li>
+<li>po pregledih in pogovorih</li>
+<li>po prvih testih in idejah za validacijo</li>
+</ul>
+<p>Pravi problem torej ni bil, da demo ne bi povedal ničesar koristnega. Problem je bil, da je razumevanje postajalo razdrobljeno.</p>
+<p>Cilj je zato postal ohraniti razumevanje, ne da bi se pretvarjali, da je trenutni uporabniški vmesnik že dokončen.</p>
+<h2 id="problem-demo-pokaže-vedenje-ne-ohrani-pa-namena">Problem: demo pokaže vedenje, ne ohrani pa namena</h2>
+<p>Delujoč demo je prepričljiv zato, ker idejo spremeni v nekaj vidnega. Ljudje lahko nanj pokažejo, ga preizkusijo, kritizirajo in se odzovejo na njegovo zaporedje korakov.</p>
+<p>To je dragoceno. Je pa nepopolno.</p>
+<p>Demo pokaže eno trenutno obliko vedenja. Ne pove pa sam od sebe prihodnjim vzdrževalcem, kateri del tega vedenja je bil bistven, kateri del je bil samo vstopna točka, kateri del začasna priročnost in kateri del zgolj lokalna bližnjica v izvedbi.</p>
+<p>Ta razlika je še pomembnejša pri delu z AI-podporo, kjer se lahko vidna koda in vidni vmesniki kopičijo hitreje kot trajen produktni spomin.</p>
+<h2 id="vprašanja-ki-so-vodila-proces">Vprašanja, ki so vodila proces</h2>
+<p>Posamezne plasti niso nastale naenkrat. Vsaka plast je odgovorila na konkretno vprašanje in hkrati odprla naslednjo vrzel.</p>
+<p>Uporaben opis tega zaporedja je:</p>
+<p>Problem -&gt; Plast -&gt; Nov problem -&gt; Naslednja plast</p>
+<p>Grobo je potekalo takole:</p>
+<ol type="1">
+<li><p>Zasloni so se hitro spreminjali.
+To je pomenilo, da dokumentiranje zaslon za zaslonom ni dobra plast za ohranjanje razumevanja.
+Prva trajnejša plast so zato postali primeri uporabe.</p></li>
+<li><p>Primeri uporabe so bili uporabni za ljudi, vendar še niso bili dovolj konkretni za preprostejšo avtomatizacijo v brskalniku.
+Naslednja plast so zato postale avtomatizacijske pogodbe.</p></li>
+<li><p>Avtomatizacijske pogodbe so bile jasnejše od golih primerov uporabe, vendar so še vedno potrebovale izvedljive primere.
+Naslednja plast so zato postali osnutki scenarijskih testov.</p></li>
+<li><p>Ko se je nabralo več povezanih plasti, je njihova razmerja postalo težje razložiti samo s prozo.
+Naslednja plast so zato postali diagrami.</p></li>
+<li><p>Ko se je pojavila misel na prihodnjo implementacijo v Blazorju, se je pojavilo še eno vprašanje:
+kako bi prihodnjo implementacijo primerjali z demom, ne da bi primerjali DOM drevesa ali vizualno postavitev?
+Iz tega se je razvilo razmišljanje o preverjanju paritete.</p></li>
+</ol>
+<p>Za to ni bila potrebna velika metodologija. Šlo je za odziv na povsem konkretna inženirska vprašanja:</p>
+<ul>
+<li>Kako ohraniti razumevanje, medtem ko se demo še spreminja?</li>
+<li>Kako opisati delovne tokove, ne da bi dokumentirali vsak zaslon posebej?</li>
+<li>Kako bi ti tokovi lahko pozneje postali izvedljive učne skripte?</li>
+<li>Kako se izogniti temu, da teste premočno privežemo na današnji uporabniški vmesnik?</li>
+<li>Kako bi prihodnjo implementacijo primerjali z demom, ne da bi primerjali DOM strukturo?</li>
+</ul>
+<h2 id="past-dokumentiranje-zaslonov-hitro-zastari">Past: dokumentiranje zaslonov hitro zastari</h2>
+<p>Ena od skušnjav je, da se zasloni zelo natančno dokumentirajo. To se pogosto zdi odgovorno, ker deluje natančno.</p>
+<p>Običajno pa je to napačna plast.</p>
+<p>Če dokumentacija pravi, da nadzorna plošča vsebuje točno določene kartice, da se pot skenerja odpre iz enega samega gumba ali da ima posamezen zaslon določeno razporeditev kontrol, lahko dokumentacija zastari v trenutku, ko se vmesnik izboljša.</p>
+<p>Rezultat je lažna natančnost: zelo specifična, a ne prav trajna.</p>
+<p>Koristna razlika je bila preprosta: zaslon ni primer uporabe. Pot ni primer uporabe. Skener ni primer uporabe. Excel izvoz ni primer uporabe.</p>
+<p>To so implementacijske podrobnosti.</p>
+<p>Primeri uporabe so stvari, ki bi morale še vedno obstajati tudi po prenovi vmesnika.</p>
+<h2 id="premik-iz-dema-in-specifikacije-prepoznati-trajne-zmožnosti">Premik: iz dema in specifikacije prepoznati trajne zmožnosti</h2>
+<p>Praktični premik v Let Books ni bil v tem, da bi se pretvarjali, da demo ne vsebuje produktnega znanja. Očitno ga je. Premik je bil v postavitvi težjega vprašanja:</p>
+<p>Če bi uporabniški vmesnik prihodnje leto popolnoma prenovili, kateri uporabniški cilji in poslovne zmožnosti bi še vedno morali obstajati?</p>
+<p>To vprašanje je spremenilo obliko modela.</p>
+<p>Nadzorna plošča ni več veljala za primer uporabe, temveč za to, kar v resnici je: vstopno točko v širše delovne tokove.</p>
+<p>ISBN skeniranje ni bilo več obravnavano kot samostojen primer uporabe, ampak kot podzmožnost katalogizacije.</p>
+<p>Excel izvoz in uvoz nista bila več obravnavana kot datotečna gumba, ampak kot del širše zmožnosti: deliti zbirko za zunanji pregled in zajeti odločitve nazaj v sistem.</p>
+<p>Trajni primeri uporabe so postali:</p>
+<ul>
+<li>Sprejem knjig v zbirko</li>
+<li>Katalogizacija fizičnih knjig</li>
+<li>Organiziranje in pregled fizičnega shranjevanja</li>
+<li>Pregled stanja zbirke</li>
+<li>Deljenje zbirke za zunanji pregled in zajem odločitev</li>
+</ul>
+<p>Tak seznam je veliko manj vezan na en sam prototip. Hkrati je veliko uporabnejši za prihodnje vzdrževalce in pregledovalce.</p>
+<h2 id="primer-kako-iz-dema-nastane-primer-uporabe">Primer: kako iz dema nastane primer uporabe</h2>
+<p>Eden najjasnejših primerov v tem projektu je bil <code>UC-003 Organiziranje in pregled fizičnega shranjevanja</code>.</p>
+<p>Če bi bralec gledal samo trenutni demo, bi najprej opazil predvsem stvari, kot so:</p>
+<ul>
+<li>pogled na škatle</li>
+<li>zasloni s podrobnostmi škatle</li>
+<li>filtri za različna stanja</li>
+<li>QR akcije</li>
+<li>povezave iz konteksta škatle v vnos in urejanje knjig</li>
+</ul>
+<p>Zelo naraven prvi sklep bi bil:</p>
+<p><code>Potrebujemo zaslon za škatle.</code></p>
+<p>Tak sklep je razumljiv, vendar je preveč vezan na trenutni uporabniški vmesnik.</p>
+<p>Razmišljanje v primerih uporabe zato vprašanje obrne drugače.</p>
+<p>Prava zahteva ni, da mora obstajati točno določen zaslon. Prava zahteva je, da uporabnik lahko dela iz fizičnega konteksta shranjevanja.</p>
+<p>Povedano drugače: produkt mora ohraniti razmerje med digitalno zbirko in resničnimi škatlami, policami in drugimi mesti, kjer knjige dejansko stojijo.</p>
+<p>Iz tega je nastal veliko trdnejši primer uporabe.</p>
+<p>Tu je skrajšan izsek iz dejanskega dokumenta s primerom uporabe:</p>
+<blockquote>
+<p><strong>Namen</strong></p>
+<p>Ohranjati uporabno povezavo med digitalno zbirko in dejanskimi fizičnimi zabojniki, policami ter škatlami, kjer so knjige shranjene.</p>
+<p><strong>Uporabniški cilj</strong></p>
+<p>Najti knjige, razumeti, kaj se nahaja v posameznem zabojniku, ter delati iz resničnega konteksta shranjevanja namesto zgolj iz abstraktnih zapisov.</p>
+<p><strong>Glavni uspešni scenarij</strong></p>
+<p>Uporabnik dela iz fizičnega konteksta shranjevanja, na primer izbrane škatle.</p>
+<p>Pregleda njeno vsebino ter razume, katere knjige so v njej, v kakšnem stanju so in kateri koraki so morda potrebni naslednji.</p>
+<p>Iz tega konteksta nadaljuje z vnosom, urejanjem ali kasnejšim prevzemom knjig, ne da bi se izgubila povezava med digitalnim zapisom in fizično lokacijo.</p>
+</blockquote>
+<p>Opaziti je vredno tudi to, česa v njem ni.</p>
+<p>Primer uporabe ne opisuje:</p>
+<ul>
+<li>poti</li>
+<li>zaslonov</li>
+<li>kartic</li>
+<li>filtrov</li>
+<li>postavitve gumbov</li>
+<li>hierarhije komponent</li>
+<li>CSS postavitve</li>
+</ul>
+<p>Te stvari se lahko pojavijo v demu, vendar niso zmožnost, ki jo želimo ohraniti.</p>
+<p>Demo je vseboval škatle, zaslone s podrobnostmi škatel, QR akcije, filtre in navigacijo, povezano s shranjevanjem.</p>
+<p>Izluščeni primer uporabe pa je ohranil osnovno zmožnost: delo iz fizičnega konteksta shranjevanja.</p>
+<p>To je močnejše od opisa zaslona, ker preživi prenovo.</p>
+<p>Poti se lahko spremenijo. Postavitve se lahko spremenijo. Kartice lahko izginejo. Filtri se lahko spremenijo. Tehnološki sklad se lahko zamenja.</p>
+<p>Primer uporabe pa lahko ostane veljaven, ker je osnovni namen delovnega toka enak: uporabnik mora delati iz resničnega konteksta shranjevanja, namesto da ga naknadno rekonstruira iz abstraktnih zapisov.</p>
+<p>Prav to v praksi pomeni ohranjati namen, ne implementacije.</p>
+<h2 id="zakaj-določene-stvari-niso-postale-primeri-uporabe">Zakaj določene stvari niso postale primeri uporabe</h2>
+<p>Tu je bil prototip resnično koristen, ker je pomagal razkriti tudi napačne abstrakcije.</p>
+<p>Več kandidatov za primere uporabe se je izkazalo za preveč vezane na trenutno izvedbo.</p>
+<ul>
+<li>Dashboard je postal vstopna točka in ne primer uporabe, ker je nadzorna plošča le eden od načinov vstopa v širše tokove. Trajna zmožnost je bil pregled stanja zbirke.</li>
+<li>ISBN skeniranje je postalo podzmožnost katalogizacije, ker resnično opravilo ni skeniranje samo po sebi. Resnično opravilo je pretvoriti fizično knjigo v uporaben zapis.</li>
+<li>Izvoz in uvoz sta postala zunanji pregled in zajem odločitev, ker je izmenjava datotek samo en mehanizem znotraj širšega procesa pregleda.</li>
+<li>Poti in zasloni so ostali implementacijske podrobnosti, ker je pričakovano, da se bodo spreminjali, osnovna zmožnost pa mora ostati prepoznavna.</li>
+</ul>
+<p>Te razlike so pomembne zato, ker ohranijo vrednost pregleda tudi čez prenove.</p>
+<p>Če ekipa dashboard dokumentira kot primer uporabe, potem je vsaka prenova dashboarda videti kot odmik produkta, tudi kadar je resnični delovni tok ostal enak.</p>
+<p>Če ekipa ISBN skeniranje dokumentira kot primer uporabe, potem je vsaka prihodnja OCR pot, ročni fallback ali izboljšana obogatitev videti kot drug produkt, čeprav gre v resnici samo za drug način podpore katalogizaciji.</p>
+<p>Če ekipa izvozne gumbe dokumentira kot primer uporabe, potem prihodnji portal za pregledovalce deluje, kot da nadomešča delovni tok, čeprav morda samo ohranja isto poslovno zmožnost v drugi obliki.</p>
+<p>Tako pogosto poteka izluščanje primerov uporabe v praksi. Prvi poskus zveni preblizu vmesniku. Boljši poskus zveni bližje produktu.</p>
+<p>Prototip ni nadomestil razmišljanja. Razmišljanju je dal nekaj konkretnega, kar je bilo mogoče izostriti.</p>
+<h2 id="kaj-prikazujejo-diagrami">Kaj prikazujejo diagrami</h2>
+<p>Ko so bili izluščeni primeri uporabe jasnejši, naslednji korak ni bil risanje diagrama poti. Naslednji korak je bil risanje trajnih konceptualnih diagramov.</p>
+<p>To so diagrami zmožnosti in razmerij, ne zemljevidi zaslonov.</p>
+<p>Ne opisujejo gumbov, strani, poti ali hierarhije komponent. Opisujejo trajne zmožnosti in razmerja upravljanja, ki bi morala preživeti tudi tedaj, ko se uporabniški vmesnik prenovi.</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/sl/use-case-overview.svg" alt="Diagram pregleda primerov uporabe" />
+<figcaption aria-hidden="true">Diagram pregleda primerov uporabe</figcaption>
+</figure>
+<p>Prvi diagram je pregled primerov uporabe.</p>
+<p>Prikazuje glavne trajne zmožnosti v enem majhnem konceptualnem zemljevidu.</p>
+<p>Zakaj obstaja:
+- da vzdrževalcem in pregledovalcem hitro pokaže osnovni nabor produktnih zmožnosti</p>
+<p>Kateri problem rešuje:
+- razpršene besedne opise nadomesti z eno skupno sliko primarne plasti primerov uporabe</p>
+<p>Česa namenoma ne opisuje:
+- strani, poti, položajev gumbov, zaporedja korakov ali trenutne vizualne postavitve</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/sl/capability-relationships.svg" alt="Diagram razmerij med zmožnostmi" />
+<figcaption aria-hidden="true">Diagram razmerij med zmožnostmi</figcaption>
+</figure>
+<p>Drugi diagram prikazuje razmerja med zmožnostmi.</p>
+<p>Pojasni, da vnos, katalogizacija, fizično shranjevanje, pregled zbirke in zunanji pregled niso ista stvar, čeprav so med seboj povezani.</p>
+<p>Zakaj obstaja:
+- da pokaže, da produkt ni en sam dolg, nediferenciran tok</p>
+<p>Kateri problem rešuje:
+- olajša razlago, zakaj nekatere vidne funkcije sodijo pod večje zmožnosti in ne stojijo same zase</p>
+<p>Česa namenoma ne opisuje:
+- konkretnih zaslonov, časovnega poteka, navigacije ali trenutne sestave dema</p>
+<figure>
+<img src="../../diagrams/blog/extracting-use-cases-from-a-working-demo/sl/automation-parity-chain.svg" alt="Diagram verige avtomatizacije in paritete" />
+<figcaption aria-hidden="true">Diagram verige avtomatizacije in paritete</figcaption>
+</figure>
+<p>Tretji diagram prikazuje verigo upravljanja: primer uporabe, avtomatizacijska pogodba, osnutni scenarijski test, prihodnji tok v Blazorju in prihodnji pregled paritete.</p>
+<p>Zakaj obstaja:
+- da pokaže, kako lahko prototip vodi v vzdrževane inženirske plasti, namesto da ostane osamljen demo</p>
+<p>Kateri problem rešuje:
+- pojasni, kako se projekt lahko premakne od konceptualne dokumentacije do izvedljivih primerov in pozneje do primerjave implementacij, ne da bi DOM strukturo obravnaval kot resnico</p>
+<p>Česa namenoma ne opisuje:
+- točnih selektorjev, točne testne kode ali končne politike za CI</p>
+<p>Ta veriga je pomembna zato, ker iz prototipa naredi povezavo do naslednjih razvojnih korakov, ne slepe ulice.</p>
+<p>Izvorne datoteke teh diagramov ostanejo urejane Mermaid datoteke. Shranjeni SVG-ji so objavljeni izrisi. Ta razdelitev je uporabna, ker ohranja koncept enostavno posodobljiv, ne da bi upodobljeno sliko obravnavali kot pravi izvor.</p>
+<h2 id="evolucija-repozitorija">Evolucija repozitorija</h2>
+<p>Koristno je, če rezultat pogledamo kot verigo ohranjenega razumevanja:</p>
+<p>Ideja / groba specifikacija -&gt; statični demo -&gt; izluščeni primeri uporabe -&gt; diagrami -&gt; avtomatizacijske pogodbe -&gt; osnutki scenarijskih testov -&gt; prihodnja Blazor implementacija -&gt; prihodnji pregled paritete</p>
+<p>Vsaka plast ohranja razumevanje na drugi ravni.</p>
+<ul>
+<li>Groba specifikacija ohranja namen produkta, obseg in meje.</li>
+<li>Statični demo ohranja viden potek delovnega toka in praktične težave.</li>
+<li>Primeri uporabe ohranjajo trajen namen.</li>
+<li>Diagrami ohranjajo skupne mentalne modele.</li>
+<li>Avtomatizacijske pogodbe ohranjajo osnutne stabilne točke, ne da bi zamrznile postavitev.</li>
+<li>Osnutki scenarijskih testov ohranjajo izvedljive učne primere.</li>
+<li>Prihodnja implementacija v Blazorju bo ohranjala produktno vedenje v drugem tehnološkem skladu.</li>
+<li>Prihodnji pregled paritete lahko ohranja usklajenost rezultatov, ne da bi zahteval enako DOM strukturo.</li>
+</ul>
+<p>Prav zato je zaporedje pomembno. Nobena posamezna plast ne reši celotnega problema. Skupaj pa zmanjšajo potrebo po ponovnem odkrivanju že sprejetih odločitev.</p>
+<h2 id="praktični-rezultat-od-primerov-uporabe-do-izvedljivih-primerov">Praktični rezultat: od primerov uporabe do izvedljivih primerov</h2>
+<p>Ko so primeri uporabe obstajali, so postale tudi druge plasti lažje za strukturiranje.</p>
+<p>Vsak primer uporabe je lahko dobil lahko avtomatizacijsko pogodbo:</p>
+<ul>
+<li>trenutno najboljšo začetno pot v statičnem demu</li>
+<li>stabilna uporabniško vidna sidra</li>
+<li>glavna uporabniška dejanja</li>
+<li>pričakovana opažanja</li>
+<li>znano krhkost</li>
+</ul>
+<p>To še ni strogo preverjanje paritete. Gre za vmesni korak med dokumentacijo in avtomatizacijo.</p>
+<p>Od tam naprej je bilo mogoče napisati osnutne Playwright scenarije kot učne osnutke in kandidate za smoke teste. Ta razlika je pomembna. Ti scenarijski skripti še niso končna stroga preverjanja v CI. So izvedljive razlage dokumentiranih primerov uporabe v trenutnem demu.</p>
+<p>Pozneje, ko bo obstajala implementacija v Blazorju, bo ista plast primerov uporabe podpirala veliko resnejše vprašanje paritete:</p>
+<p>Ali lahko uporabnik še vedno doseže enak rezultat, tudi če so se uporabniški vmesnik, poti in hierarhija komponent spremenili?</p>
+<p>To je veliko bolj zdrav cilj paritete kot primerjava DOM-strukture ali postavitve po pikah.</p>
+<h2 id="skromna-omejitev-pristopa">Skromna omejitev pristopa</h2>
+<p>To ni edini način dela. Nekatere ekipe bodo še vedno napisale jasne primere uporabe, preden bo prototip sploh obstajal. Včasih je to prava odločitev.</p>
+<p>Toda kadar projekt že ima grobo specifikacijo in delujoč statični demo, je lahko izluščanje trajnih primerov uporabe naknadno zelo praktična poteza.</p>
+<p>Spoštuje tisto, kar je prototip razkril, ne da bi prototip tiho spremenil v celotno definicijo produkta.</p>
+<p>To ni nadomestilo za requirements engineering, uporabniške raziskave ali formalno specifikacijsko delo.</p>
+<p>Je samo eden od načinov, kako iz prototipa, ki že uči nekaj resničnega o produktu, izluščiti trajnejše razumevanje.</p>
+<p>Če tak pristop pomaga ohraniti namen, izboljša komunikacijo in zmanjša potrebo po ponovnem odkrivanju pomembnih odločitev, je verjetno že dosegel svoj namen.</p>
+<p>Za sodelavce, študente in prihodnje AI-agente je ravno to resnična korist. Znanje o produktu ne živi več samo v demu. Postane vidno v primerih uporabe, vidno v diagramih, vidno v avtomatizacijskih pogodbah, vidno v scenarijskih učnih skriptah in pozneje vidno v pregledu paritete med prototipom in implementacijo.</p>
+<p>To projekta ne naredi togega. Vmesnik se lahko spreminja, ne da bi se pri tem izgubil razlog, zaradi katerega projekt sploh obstaja.</p>
+<h2 id="sorodno-branje">Sorodno branje</h2>
+<ul>
+<li><code>when-the-demo-is-evidence-and-when-it-is-not.md</code></li>
+<li><code>spec-driven-development-for-ai-projects.md</code></li>
+<li><code>spec-driven-development-in-let-books.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Drugi jeziki</h2>
+            <ul>
+              <li><a href="../../blog/en/extracting-use-cases-from-a-working-demo.html" lang="en">English</a></li>
+              <li><a href="../../blog/hr/extracting-use-cases-from-a-working-demo.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/extracting-use-cases-from-a-working-demo.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/extracting-use-cases-from-a-working-demo.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/extracting-use-cases-from-a-working-demo.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/extracting-use-cases-from-a-working-demo.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/extracting-use-cases-from-a-working-demo.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/extracting-use-cases-from-a-working-demo.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/extracting-use-cases-from-a-working-demo.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/extracting-use-cases-from-a-working-demo.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/extracting-use-cases-from-a-working-demo.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Sorodne vsebine</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentacija</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="related-product-review-menu">Pregled izdelka</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Razvoj na podlagi specifikacij</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="related-demo-alignment-menu">Usklajenost demota</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/sl/documentation-is-part-of-the-product.html"><span>Dokumentacija je del izdelka</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sl/ai-as-an-oracle.html"><span>AI kot orakelj: zakaj je kultura preverjanja pomembnejša od pisanja pozivov</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sl/how-to-use-ai-workflows-for-non-software-knowledge-work.html"><span>Kako uporabljati AI-delovne tokove za neprogramsko delo z znanjem</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikacijo, ki ji lahko AI sledi</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../wiki/sl/documentation-is-more-than-a-website.html"><span>Dokumentacija ni samo spletna stran</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/markdown-in-product-development.html"><span>Markdown v razvoju izdelkov</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj na podlagi specifikacij</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sl/spec-driven-development.html"><span>Razvoj, voden s specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+                <div class="topic-menu" id="related-product-review-menu" data-topic-menu="related-product-review" hidden>
+                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati delo s pomočjo AI glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../topics/sl/ai-assisted-implementation.html"><span>Implementacija z AI-podporo</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+                <div class="topic-menu" id="related-demo-alignment-menu" data-topic-menu="related-demo-alignment" hidden>
+                  <a href="../../blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kdaj je demo dokaz in kdaj ni</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sl/spec-driven-development-in-let-books.html"><span>Razvoj na podlagi specifikacij v Let Books</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohranjati usklajenost specifikacije, dokumentacije, predstavitve in kode</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../wiki/sl/demo-spec-alignment.html"><span>Usklajenost med demom in specifikacijo</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sl/demo-and-specification-alignment.html"><span>Usklajenost med demo prikazom in specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.</p>
+            <p class="footer-note">Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.</p>
+            <p class="footer-microcopy">Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sl/index.html">Pregled</a>
+              <a href="../../topics/sl/index.html">Teme</a>
+              <a href="../../index.html">Domača stran</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Vsi jeziki</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

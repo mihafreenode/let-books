@@ -1,0 +1,14 @@
+---
+title: Use-Case-Überblick
+---
+flowchart TD
+    A["Bücher in die<br/>Sammlung aufnehmen"] --> B["Physische Bücher<br/>katalogisieren"]
+    A --> C["Lagerung<br/>prüfen"]
+    B --> D["Sammlungszustand<br/>prüfen"]
+    C --> D
+    D --> E["Sammlung für<br/>externes Review"]
+    B --> E
+    C --> E
+
+    classDef core fill:#e8f5e9,stroke:#2e7d32,color:#16351f
+    class A,B,C,D,E core

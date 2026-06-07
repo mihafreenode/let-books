@@ -564,6 +564,13 @@ Use the article `id` from `articles.json` as the diagram folder key.
 - For Serbian Cyrillic and Macedonian, ensure proper script and terminology.
 - For Slovenian, preserve `č`, `š`, `ž`.
 - Use correct Unicode for all languages.
+- Review the final rendered output, not only the Mermaid source.
+- A localized diagram is not complete if rendered text is clipped, truncated, crowded, overlapping, or unreadable.
+- Prefer shorter natural labels, better line breaks, and better structure before increasing SVG width.
+- Treat rendered visual correctness as part of localization correctness.
+- Review high-visibility text more aggressively: titles, headings, summaries, labels, navigation text, and glossary-like terms.
+- Treat translated-sounding wording as a review signal even when terminology is technically correct.
+- Prefer meaning parity, natural usage, and audience understanding over mechanical wording parity.
 
 ### Article update rules
 
@@ -588,6 +595,18 @@ Use the article `id` from `articles.json` as the diagram folder key.
 ### Rendering
 
 Prefer the existing diagram format (currently Mermaid via `mmdc`). Do not replace diagrams with screenshots. Do not duplicate English SVG text without localizing it.
+
+For Mermaid diagrams intended for publication, use the repository rendering standard:
+
+- `htmlLabels: false`
+
+This avoids `foreignObject`-based HTML labels and prefers native SVG text rendering, which is safer for localized diagrams embedded in generated documentation.
+
+When prompting an agent or adding a new Mermaid render command, include the equivalent of:
+
+`Render Mermaid diagrams using htmlLabels: false unless there is a documented reason to use HTML labels.`
+
+Do not treat `htmlLabels: false` as a substitute for diagram-quality review. Even with safer rendering, diagrams still need to be simple, readable, not overly wide, and suitable for desktop, mobile, and print.
 
 ## Blog Evidence Policy
 

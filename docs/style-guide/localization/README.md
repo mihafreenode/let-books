@@ -37,6 +37,204 @@ Keep translations traceable, script-correct, structurally aligned with canonical
 - Reader-facing content must be fully localized before a page is considered complete.
 - Fix localization issues at the highest-level source first. Do not patch generated HTML when the markdown source or metadata is still incomplete.
 
+## Rendered Output Rule
+
+Localization is not complete merely because the source text was translated.
+
+For all rendered content, including:
+
+- Mermaid diagrams
+- SVG diagrams
+- charts
+- generated graphics
+- image overlays
+- visual labels
+- generated documentation assets
+
+reviewers must verify that:
+
+- translated text remains fully visible
+- text is not clipped
+- text is not truncated
+- text does not overlap
+- text remains readable
+- spacing remains reasonable
+- visual hierarchy remains understandable
+
+Localized labels may require:
+
+- shorter wording
+- line breaks
+- different node sizes
+- different layout direction
+- different spacing
+
+For localized Mermaid diagrams, native SVG text rendering is the repository standard.
+
+Published Mermaid diagrams should be rendered with:
+
+- `htmlLabels: false`
+
+because translated text often changes length, wrapping, and spacing requirements in ways that make `foreignObject`-based HTML labels more fragile.
+
+Any intentional exception should be documented explicitly.
+
+When translated labels become too long, prefer:
+
+- shorter natural wording
+- concept-level simplification
+- line breaks
+- restructuring the diagram
+
+before:
+
+- increasing diagram width
+- shrinking text
+- accepting crowded layouts
+
+A diagram label should preserve the concept. It does not need to preserve the full article wording.
+
+If a translated diagram appears to clip labels despite sufficient node space, review Mermaid rendering mode before redesigning the content.
+
+Visual correctness is part of localization quality.
+
+A linguistically correct translation that produces a visually broken diagram is not considered complete.
+
+Source files remain authoritative.
+Generated outputs must be regenerated and reviewed after localization changes.
+
+## Natural Technical Language Rule
+
+Do not mechanically translate technical terms simply because a direct equivalent exists.
+
+Review whether the translated wording:
+
+- sounds natural to experienced practitioners
+- preserves meaning
+- preserves intent
+- preserves appropriate formality
+- matches common usage within the target language community
+- improves understanding instead of merely matching words
+
+Prefer concept translation over word translation.
+
+The primary review question should be:
+
+`Would an experienced practitioner naturally explain the concept this way?`
+
+rather than:
+
+`Did we translate every word?`
+
+When a literal translation sounds:
+
+- awkward
+- translated
+- overly formal
+- uncommon
+- misleading
+
+prefer a more natural equivalent while preserving meaning.
+
+Terminology parity is not the goal.
+Meaning parity and natural usage are the goal.
+
+## High-Visibility Text Rule
+
+Not all text carries equal localization risk.
+
+Apply stricter review to:
+
+- article titles
+- headings
+- summaries
+- diagram labels
+- navigation text
+- topic names
+- button labels
+- table headers
+- glossary terms
+
+These locations have less surrounding context and expose awkward wording more quickly.
+
+A phrase that is acceptable inside a paragraph may still be poor as a heading, summary, or diagram label.
+
+## Translation-Smell Review
+
+Reviewers should actively look for wording that:
+
+- sounds translated rather than naturally written
+- preserves words while weakening understanding
+- preserves terminology while reducing readability
+- is technically correct but uncommon among practitioners
+- follows source wording too closely at the expense of the target language
+
+These are review signals, not automatic errors.
+
+Language-specific guidance may maintain examples of:
+
+- suspicious terms
+- awkward literal translations
+- recurring false friends
+- over-formal constructions
+- terminology that requires manual review
+
+When an English metaphor is not commonly used by practitioners in the target language, prefer translating the underlying concept rather than the metaphor itself.
+
+Example directions for Slovenian review:
+
+- `bridge layer` -> `vmesni korak`, `prehod med ...`, `povezovalni korak`
+- `entry surface` -> `vstopna točka`, `izhodišče`
+- `implementation surface` -> `implementacija`, `način izvedbe`, `uporabniški vmesnik` where appropriate
+- `artifact chain` -> `zaporedje gradnikov`, `plasti`, `dokumenti`
+
+Review question:
+
+`Would a Slovenian developer naturally say this during a technical discussion?`
+
+If not, prefer the underlying concept over the translated metaphor.
+
+### Slovenian example
+
+The English word `artifact` should not automatically become `artefakt`.
+
+Choose context-appropriate alternatives such as:
+
+- `plast`
+- `gradnik`
+- `rezultat`
+- `dokument`
+- `zapis`
+- `datoteka`
+- `ustvarjeni izhod`
+- `objavljena različica`
+
+depending on what is actually being described.
+
+## Natural Practitioner Review Pass
+
+Localization review should include a dedicated pass that asks:
+
+`Would a native practitioner naturally write this?`
+
+The relevant practitioner depends on the audience, for example:
+
+- engineer
+- developer
+- librarian
+- educator
+- administrator
+- domain specialist
+
+The goal is not terminology parity.
+
+The goal is:
+
+- meaning parity
+- strength parity
+- natural usage
+- audience appropriateness
+
 ## Multilingual Article Requirements
 
 Every blog article published in this repository must follow these rules:
@@ -99,6 +297,22 @@ A localized page is considered complete only when reader-facing content is local
 - localized breadcrumbs where variants exist
 
 Allowed exceptions are limited to quotations, explicitly discussed source material, clearly marked intentional non-translation, proper nouns, and technical identifiers.
+
+When an article quotes a repository artifact such as a use case, automation contract, ADR, validator, governance note, or similar engineering document, localized articles should prefer a localized excerpt whenever an equivalent localized rendering can reasonably be maintained.
+
+Reader-facing localization completeness also includes rendered visual quality.
+
+A localized page is not considered complete if a translated diagram, SVG, chart, or other visual asset is clipped, crowded, unreadable, or visibly broken in the final rendered output.
+
+Localization is finished only when:
+
+- meaning is preserved
+- terminology is appropriate
+- rendered content is readable
+- diagrams remain usable
+- navigation remains understandable
+- generated outputs remain correct
+- the content feels naturally written in the target language
 
 ### 5. Localized Source-Map Stubs
 
@@ -165,6 +379,10 @@ Track maturity by locale and by content category where practical.
 - Fail CI when a known fixed regression reappears where practical.
 - Require explicit justification for intentionally unresolved findings.
 - Treat mixed-language publishing as a production bug, not as an editorial inconvenience.
+- Review both meaning quality and rendered visual quality before approving localized content.
+- Prioritize recent and actively maintained content for rendered-output review when repository-wide review is not yet complete.
+- Fix obvious low-risk wording and visual issues proactively.
+- Avoid large-scale mechanical replacements that improve term uniformity while harming natural language quality.
 
 ## Source-First Remediation Workflow
 
@@ -192,6 +410,16 @@ Run validation
 ↓
 Repeat until clean
 ```
+
+For rendered visual defects, the preferred remediation order is:
+
+1. improve label wording
+2. add better line breaks
+3. improve diagram structure
+4. adjust spacing or layout direction
+5. increase render width only if the above are insufficient
+
+Do not use larger SVG widths as the default fix for translated diagrams.
 
 ## Localization Debt And Defect Classes
 
@@ -251,6 +479,28 @@ Preferred order:
 5. fix individual content files family by family
 
 When the same correction appears more than three times, stop and determine whether it should become a generator rule, validator rule, workflow rule, or policy rule.
+
+Where practical, validators and review workflows should encourage:
+
+- rendered-content review
+- natural-language review
+- terminology review
+- visual localization review
+
+- high-visibility text review
+- translation-smell review
+
+not merely source-text translation parity.
+
+Validators may also emit warnings for:
+
+- suspicious translated-sounding terminology
+- unusually long diagram labels
+- localization risk indicators
+- generated-content review candidates
+
+Validators should not attempt to rewrite language automatically.
+Human review remains authoritative.
 
 ## Native-Speaker Review Corpus Categories
 

@@ -39,6 +39,13 @@ It now also hosts the English-first Localization at Scale article series.
 - Localized articles should preserve the same core arguments, examples, cautions, and conclusions as the English source.
 - They may merge sections or use different wording when the same meaning remains available to the reader.
 - When parity is missing, prefer targeted additions over full rewrites.
+- Localization review is not complete until the final rendered page is also reviewed.
+- Diagram labels, captions, alt text, and other generated visual elements must be checked in their rendered form, not only in source markdown.
+- A linguistically correct translation that produces clipped, crowded, truncated, or unreadable visual output is not considered complete.
+- Review natural technical language, not only term-by-term correspondence.
+- Apply stricter wording review to titles, headings, summaries, topic labels, navigation text, and diagram labels.
+- Prefer meaning parity, strength parity, and natural usage over mechanical sentence or terminology matching.
+- When an article quotes a repository artifact such as a use case, automation contract, ADR, validator, governance note, or similar engineering document, localized variants should prefer a localized excerpt whenever an equivalent localized rendering can reasonably be maintained.
 
 ## Related Topics
 
