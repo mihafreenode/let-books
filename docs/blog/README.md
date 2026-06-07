@@ -47,6 +47,17 @@ It now also hosts the English-first Localization at Scale article series.
 - Prefer meaning parity, strength parity, and natural usage over mechanical sentence or terminology matching.
 - When an article quotes a repository artifact such as a use case, automation contract, ADR, validator, governance note, or similar engineering document, localized variants should prefer a localized excerpt whenever an equivalent localized rendering can reasonably be maintained.
 
+## Article Shape
+
+- Prefer a smaller number of substantial sections over many micro-sections.
+- Use headings to separate major ideas, not each intermediate step in an argument.
+- Let related paragraphs build on one another so the reader can follow the reasoning chain.
+- Prefer connected prose for explanation; use lists only when they improve clarity for requirements, examples, alternatives, checklists, or comparisons.
+- When adjacent sections are part of the same reasoning chain, consider merging them.
+- A strong article should preserve not only conclusions, but also the reasoning that produced them.
+
+Avoid article shapes that read like presentation slides, meeting notes, or social-media fragments when the goal is durable engineering writing.
+
 ## Related Topics
 
 - Publishing workflow

@@ -21,6 +21,10 @@ Use this area to standardize how topics move from repository evidence to approve
 - Review high-visibility localized text more aggressively because awkward wording is more exposed in titles, headings, summaries, labels, and navigation.
 - Treat translated-sounding wording as a review signal even when the wording is technically correct.
 - Published Mermaid diagrams should follow the repository rendering standard: `htmlLabels: false`, unless a documented exception explains why HTML labels are required.
+- Publication review should reject avoidable micro-section fragmentation when it weakens explanation or obscures the reasoning chain.
+- Review article structure for durable teaching value, not only scanability.
+- If a sequence of short sections is really one argument, prefer merging them into a more coherent section before publication.
+- Lists are acceptable when they improve clarity, but explanatory reasoning should remain in prose when the article is teaching how a conclusion was reached.
 
 ## Structure
 

@@ -40,6 +40,13 @@ Editorial evidence rule:
 - Avoid brittle source-code line references.
 - Replace the example evidence, sources, and diagrams above with article-specific doc/spec references before publishing.
 
+Writing structure rule:
+- Prefer connected reasoning over fragmented formatting.
+- Use a smaller number of substantial sections.
+- Do not add a heading for every intermediate thought.
+- Let paragraphs develop an argument across observation, implication, example, refinement, and conclusion when appropriate.
+- Use lists for requirements, examples, alternatives, checklists, or comparisons, not as a substitute for explanatory prose.
+
 Multilingual requirements (see docs/style-guide/localization/README.md):
 - Every article must have language_variants frontmatter listing all 12 locales.
 - canonical_language should remain `en` in translated variants when English is the canonical source.
@@ -51,13 +58,17 @@ Multilingual requirements (see docs/style-guide/localization/README.md):
 
 Intro paragraph.
 
-## Section Heading
+## Major Argument Or Theme
 
-Write claims so they can be traced to specs and docs.
+Develop one coherent idea across multiple connected paragraphs. Explain what was observed, why it matters, how the example supports the point, and how the conclusion follows.
+
+## Supporting Example Or Counterpoint
+
+Use this section only when it advances the same article-level argument. Merge it with the previous section if the split does not help the reader.
 
 ## Implementation Status
 
-If needed, note whether the feature is implemented yet.
+Optional. Use only when implementation status materially helps the reader interpret the argument.
 
 ## Other Languages
 

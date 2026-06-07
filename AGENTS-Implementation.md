@@ -317,6 +317,21 @@ Avoid:
 - Be explicit that exchange, delivery arrangements, and agreements happen outside the platform unless a later feature explicitly changes that
 - The institutions guide should be led by library workflows while explicitly including schools, universities, archives, and NGOs
 
+## Durable Engineering Writing
+
+When writing articles, essays, learning guides, or other explanatory documentation, prefer connected reasoning over fragmented formatting.
+
+- Preserve reasoning, not only conclusions
+- Prefer a smaller number of substantial sections over many micro-sections
+- Use headings for major idea boundaries, not every intermediate thought
+- Let related paragraphs build on each other so the reader can follow the argument
+- Use lists for requirements, examples, alternatives, checklists, or comparisons when they genuinely improve clarity
+- Do not replace explanatory prose with bullets when the goal is to teach or preserve understanding
+
+Avoid slide-like article shapes such as repeated short heading plus short paragraph patterns when the content is meant to function as durable engineering writing.
+
+For AI-assisted drafting, treat this as a default prompting rule: the generated article should read like an engineering essay that explains what was observed, why it matters, and how the conclusion was reached.
+
 ## README Rules
 
 - `README.md` should always reflect the current repository/application status
