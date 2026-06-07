@@ -79,28 +79,171 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Learning Guides</h1>
             <p>Structured guides for writing specs, planning implementation, and keeping documentation, demos, and code aligned.</p>
           </div>
-          <ul>
-              <li><a href="how-to-add-validation-rules-and-ci-gates-in-stages.html">How to Add Validation Rules and CI Gates in Stages</a></li>
-              <li><a href="how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a></li>
-              <li><a href="how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a></li>
-              <li><a href="how-to-keep-spec-docs-demo-and-code-aligned.html">How to Keep Spec, Docs, Demo, and Code Aligned</a></li>
-              <li><a href="how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a></li>
-              <li><a href="how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a></li>
-              <li><a href="how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a></li>
-              <li><a href="how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a></li>
-              <li><a href="how-to-review-ai-assisted-translations.html">How to Review AI-Assisted Translations</a></li>
-              <li><a href="how-to-review-ai-assisted-work-against-the-spec.html">How to Review AI-Assisted Work Against the Spec</a></li>
-              <li><a href="how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a></li>
-              <li><a href="how-to-turn-a-product-spec-into-an-implementation-plan.html">How to Turn a Product Spec into an Implementation Plan</a></li>
-              <li><a href="how-to-use-ai-workflows-for-non-software-knowledge-work.html">How to Use AI Workflows for Non-Software Knowledge Work</a></li>
-              <li><a href="how-to-write-a-spec-that-ai-can-follow.html">How to Write a Spec That AI Can Follow</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Content type">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/en/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link is-active" href="../../learning/en/index.html" data-content-switcher-link data-content-type="learning" aria-current="page">Learning</a>
+              <a class="content-type-switcher__link" href="../../wiki/en/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/en/index.html" data-content-switcher-link data-content-type="topics">Topics</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Recent Learning Material</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html">
+                <span class="recent-content-card__type">Learning</span>
+                <h3>How to Use AI Workflows for Non-Software Knowledge Work</h3>
+              <p>This guide explains how to apply specification-driven, AI-assisted workflows to writing, research, teaching, policy, and other non-software work without depending on any single tool.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">
+                <span class="recent-content-card__type">Learning</span>
+                <h3>How to Add Validation Rules and CI Gates in Stages</h3>
+              <p>This guide explains how to add validation rules and CI checks incrementally so a project can improve consistency and reduce drift without trying to automate everything at once.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-review-ai-assisted-translations.html">
+                <span class="recent-content-card__type">Learning</span>
+                <h3>How to Review AI-Assisted Translations</h3>
+              <p>This guide explains how to review AI-generated translation drafts for meaning, terminology, accessibility, and tone.</p>
+              </a>
+              <a class="recent-content-card" href="../../learning/en/how-to-design-english-source-content-for-translation.html">
+                <span class="recent-content-card__type">Learning</span>
+                <h3>How to Design English Source Content for Translation</h3>
+              <p>This guide shows how to write English canonical content that is easier to translate, review, and validate later.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Browse by topic</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-accessibility" data-topic-slug="accessibility" aria-expanded="false" aria-controls="index-learning-en-accessibility-menu">Accessibility</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-ai-assisted-workflows" data-topic-slug="ai-assisted-workflows" aria-expanded="false" aria-controls="index-learning-en-ai-assisted-workflows-menu">ai assisted workflows</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-learning-en-ai-assisted-delivery-menu">AI Delivery</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-ai-assisted-translation" data-topic-slug="ai-assisted-translation" aria-expanded="false" aria-controls="index-learning-en-ai-assisted-translation-menu">AI-Assisted Translation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-learning-en-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-continuous-localization" data-topic-slug="continuous-localization" aria-expanded="false" aria-controls="index-learning-en-continuous-localization-menu">Continuous Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-learning-en-demo-alignment-menu">Demo Alignment</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-diagrams" data-topic-slug="diagrams" aria-expanded="false" aria-controls="index-learning-en-diagrams-menu">Diagrams</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-learning-en-documentation-menu">Documentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-education" data-topic-slug="education" aria-expanded="false" aria-controls="index-learning-en-education-menu">Education</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-engineering-systems" data-topic-slug="engineering-systems" aria-expanded="false" aria-controls="index-learning-en-engineering-systems-menu">Engineering Systems</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-governance" data-topic-slug="governance" aria-expanded="false" aria-controls="index-learning-en-governance-menu">Governance</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-implementation-planning" data-topic-slug="implementation-planning" aria-expanded="false" aria-controls="index-learning-en-implementation-planning-menu">Implementation Planning</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-localization" data-topic-slug="localization" aria-expanded="false" aria-controls="index-learning-en-localization-menu">Localization</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-localized-alt-text" data-topic-slug="localized-alt-text" aria-expanded="false" aria-controls="index-learning-en-localized-alt-text-menu">Localized Alt Text</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-learning-en-product-review-menu">Product Review</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-project-management" data-topic-slug="project-management" aria-expanded="false" aria-controls="index-learning-en-project-management-menu">Project Management</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-qa" data-topic-slug="qa" aria-expanded="false" aria-controls="index-learning-en-qa-menu">QA</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-spec-writing" data-topic-slug="spec-writing" aria-expanded="false" aria-controls="index-learning-en-spec-writing-menu">Spec Writing</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-learning-en-spec-driven-development-menu">Spec-Driven Development</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-sustainability" data-topic-slug="sustainability" aria-expanded="false" aria-controls="index-learning-en-sustainability-menu">Sustainability</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-terminology" data-topic-slug="terminology" aria-expanded="false" aria-controls="index-learning-en-terminology-menu">Terminology</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-learning-en-translation-quality-menu">Translation Quality</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-learning-en-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-learning-en-validation-menu">Validation</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-learning-en-accessibility-menu" data-topic-menu="index-learning-en-accessibility" hidden>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-ai-assisted-workflows-menu" data-topic-menu="index-learning-en-ai-assisted-workflows" hidden>
+                      <a href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html">How to Use AI Workflows for Non-Software Knowledge Work</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-ai-assisted-delivery-menu" data-topic-menu="index-learning-en-ai-assisted-delivery" hidden>
+                      <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html">How to Review AI-Assisted Work Against the Spec</a>
+                      <a href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html">How to Write a Spec That AI Can Follow</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-ai-assisted-translation-menu" data-topic-menu="index-learning-en-ai-assisted-translation" hidden>
+                      <a href="../../learning/en/how-to-review-ai-assisted-translations.html">How to Review AI-Assisted Translations</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-ci-cd-menu" data-topic-menu="index-learning-en-ci-cd" hidden>
+                      <a href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">How to Add Validation Rules and CI Gates in Stages</a>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-continuous-localization-menu" data-topic-menu="index-learning-en-continuous-localization" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-demo-alignment-menu" data-topic-menu="index-learning-en-demo-alignment" hidden>
+                      <a href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">How to Keep Spec, Docs, Demo, and Code Aligned</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-diagrams-menu" data-topic-menu="index-learning-en-diagrams" hidden>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-documentation-menu" data-topic-menu="index-learning-en-documentation" hidden>
+                      <a href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">How to Keep Spec, Docs, Demo, and Code Aligned</a>
+                      <a href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html">How to Use AI Workflows for Non-Software Knowledge Work</a>
+                      <a href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html">How to Write a Spec That AI Can Follow</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-education-menu" data-topic-menu="index-learning-en-education" hidden>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-engineering-systems-menu" data-topic-menu="index-learning-en-engineering-systems" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-governance-menu" data-topic-menu="index-learning-en-governance" hidden>
+                      <a href="../../learning/en/how-to-review-ai-assisted-translations.html">How to Review AI-Assisted Translations</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-implementation-planning-menu" data-topic-menu="index-learning-en-implementation-planning" hidden>
+                      <a href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html">How to Turn a Product Spec into an Implementation Plan</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-localization-menu" data-topic-menu="index-learning-en-localization" hidden>
+                      <a href="../../learning/en/how-to-build-a-localization-pipeline.html">How to Build a Localization Pipeline</a>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                      <a href="../../learning/en/how-to-localize-diagrams-and-screenshots.html">How to Localize Diagrams and Screenshots</a>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-localized-alt-text-menu" data-topic-menu="index-learning-en-localized-alt-text" hidden>
+                      <a href="../../learning/en/how-to-localize-accessibility-content.html">How to Localize Accessibility Content</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-product-review-menu" data-topic-menu="index-learning-en-product-review" hidden>
+                      <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html">How to Review AI-Assisted Work Against the Spec</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-project-management-menu" data-topic-menu="index-learning-en-project-management" hidden>
+                      <a href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html">How to Turn a Product Spec into an Implementation Plan</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-qa-menu" data-topic-menu="index-learning-en-qa" hidden>
+                      <a href="../../learning/en/how-to-run-localization-qa-in-ci.html">How to Run Localization QA in CI</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-spec-writing-menu" data-topic-menu="index-learning-en-spec-writing" hidden>
+                      <a href="../../learning/en/how-to-design-english-source-content-for-translation.html">How to Design English Source Content for Translation</a>
+                      <a href="../../learning/en/how-to-turn-a-product-spec-into-an-implementation-plan.html">How to Turn a Product Spec into an Implementation Plan</a>
+                      <a href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html">How to Write a Spec That AI Can Follow</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-spec-driven-development-menu" data-topic-menu="index-learning-en-spec-driven-development" hidden>
+                      <a href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">How to Add Validation Rules and CI Gates in Stages</a>
+                      <a href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html">How to Keep Spec, Docs, Demo, and Code Aligned</a>
+                      <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html">How to Review AI-Assisted Work Against the Spec</a>
+                      <a href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html">How to Use AI Workflows for Non-Software Knowledge Work</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-sustainability-menu" data-topic-menu="index-learning-en-sustainability" hidden>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-terminology-menu" data-topic-menu="index-learning-en-terminology" hidden>
+                      <a href="../../learning/en/how-to-manage-terminology-across-languages.html">How to Manage Terminology Across Languages</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-translation-quality-menu" data-topic-menu="index-learning-en-translation-quality" hidden>
+                      <a href="../../learning/en/how-to-measure-translation-maturity.html">How to Measure Translation Maturity</a>
+                      <a href="../../learning/en/how-to-review-ai-assisted-translations.html">How to Review AI-Assisted Translations</a>
+                    </div>
+                    <div class="topic-menu" id="index-learning-en-validation-menu" data-topic-menu="index-learning-en-validation" hidden>
+                      <a href="../../learning/en/how-to-add-validation-rules-and-ci-gates-in-stages.html">How to Add Validation Rules and CI Gates in Stages</a>
+                      <a href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html">How to Use AI Workflows for Non-Software Knowledge Work</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

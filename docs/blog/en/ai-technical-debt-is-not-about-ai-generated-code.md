@@ -1,6 +1,19 @@
 ---
 article_id: ai-technical-debt-is-not-about-ai-generated-code
 canonical_language: en
+language_variants:
+  - ../en/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../sl/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../hr/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../bs/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../mk/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../sq/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../de/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../it/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../fr/ai-technical-debt-is-not-about-ai-generated-code.md
+  - ../es/ai-technical-debt-is-not-about-ai-generated-code.md
 title: AI Technical Debt Is Not About AI-Generated Code
 summary: The larger long-term risk in AI-assisted delivery is not generated syntax but implementations that survive after the reasoning behind them has disappeared.
 topics:

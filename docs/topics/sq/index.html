@@ -79,45 +79,124 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Tema</h1>
             <p>Përmbledhje konceptuale që lidhin blogun, faqet e wiki-t dhe materialin mësimor në një shtresë të përbashkët orientimi.</p>
           </div>
-          <div class="topic-index-grid">
-          <details class="topic-category" open>
-            <summary>Zhvillim i drejtuar nga specifikimet</summary>
-            <ul class="topic-index-list">
-              <li><a href="spec-driven-development.html">Zhvillimi i Udhëhequr nga Specifikimi</a></li>
-              <li><a href="ai-assisted-implementation.html">Implementimi i Ndihmuar nga AI</a></li>
-              <li><a href="demo-and-specification-alignment.html">Përputhja e Demos dhe Specifikimit</a></li>
-              <li><a href="validation-layers.html">Shtresat e Validimit</a></li>
-              <li><a href="documentation-traceability.html">Gjurmueshmëria e Dokumentacionit</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Lokalizimi në shkallë</summary>
-            <ul class="topic-index-list">
-              <li><a href="localization-at-scale.html">Lokalizimi në Shkallë</a></li>
-              <li><a href="ai-assisted-translation.html">Përkthimi i Ndihmuar nga AI</a></li>
-              <li><a href="translation-memory.html">Kujtesa e Përkthimit</a></li>
-              <li><a href="regional-languages.html">Gjuhët Rajonale</a></li>
-              <li><a href="eu-multilingualism.html">Shumëgjuhësia e BE-së</a></li>
-              <li><a href="mother-tongue-user-experience.html">Përvoja e Përdoruesit në Gjuhën Amtare</a></li>
-            </ul>
-          </details>
-          <details class="topic-category">
-            <summary>Metadata për libra dhe biblioteka</summary>
-            <ul class="topic-index-list">
-              <li><a href="isbn.html">ISBN</a></li>
-              <li><a href="book-metadata.html">Metadata e Librit</a></li>
-              <li><a href="edition-vs-physical-copy.html">Botimi kundrejt Kopjes Fizike</a></li>
-              <li><a href="cataloging.html">Katalogimi</a></li>
-              <li><a href="donation-workflows.html">Rrjedhat e Punës së Dhurimit</a></li>
-            </ul>
-          </details>
-          </div>
+          <nav class="content-type-switcher" aria-label="Lloji i përmbajtjes">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link" href="../../blog/sq/index.html" data-content-switcher-link data-content-type="blog">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/sq/index.html" data-content-switcher-link data-content-type="learning">Materiale mësimore</a>
+              <a class="content-type-switcher__link" href="../../wiki/sq/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link is-active" href="../../topics/sq/index.html" data-content-switcher-link data-content-type="topics" aria-current="page">Tema</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Temat e fundit</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../topics/sq/validation-layers.html">
+                <span class="recent-content-card__type">Tema</span>
+                <h3>Shtresat e Validimit</h3>
+              <p>Si disa faza validimi i reduktojnë klasa të ndryshme gabimesh në përmbajtje, në rezultatet e gjeneruara, në implementim dhe në rrjedhat e publikimit.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/sq/translation-memory.html">
+                <span class="recent-content-card__type">Tema</span>
+                <h3>Kujtesa e Përkthimit</h3>
+              <p>Çfarë është kujtesa e përkthimit, çfarë bën mirë dhe pse mbetet e dobishme edhe në rrjedhat e punës së përkthimit të ndihmuar nga AI.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/sq/spec-driven-development.html">
+                <span class="recent-content-card__type">Tema</span>
+                <h3>Zhvillimi i Udhëhequr nga Specifikimi</h3>
+              <p>Pse specifikimet veprojnë si model praktik operimi për implementim, rishikim dhe komunikim, e jo si një mendim i vonshëm i veçuar për dokumentacionin.</p>
+              </a>
+              <a class="recent-content-card" href="../../topics/sq/regional-languages.html">
+                <span class="recent-content-card__type">Tema</span>
+                <h3>Gjuhët Rajonale</h3>
+              <p>Pse mbështetja për gjuhët rajonale kërkon më shumë sesa etiketa të gjera tregu dhe shpesh varet nga shkrimi, arsimi dhe konteksti institucional.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Shfleto sipas temës</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-ci-cd" data-topic-slug="ci-cd" aria-expanded="false" aria-controls="index-topics-sq-ci-cd-menu">CI/CD</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-topics-sq-product-quality-menu">Cilësia e produktit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-topics-sq-translation-quality-menu">Cilësia e përkthimit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-topics-sq-book-donation-menu">Dhurim librash</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-topics-sq-documentation-menu">Dokumentim</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-topics-sq-ai-assisted-delivery-menu">Dorëzim me AI</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-topics-sq-isbn-metadata-menu">ISBN dhe metadata</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-topics-sq-demo-alignment-menu">Përputhja e demove</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-topics-sq-library-systems-menu">Sisteme bibliotekare</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-product-specification" data-topic-slug="product-specification" aria-expanded="false" aria-controls="index-topics-sq-product-specification-menu">Specifikimi i produktit</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-topics-sq-validation-menu">Validim</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-topics-sq-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-topics-sq-spec-driven-development-menu">Zhvillim i drejtuar nga specifikimet</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-topics-sq-ci-cd-menu" data-topic-menu="index-topics-sq-ci-cd" hidden>
+                      <a href="../../topics/sq/validation-layers.html">Shtresat e Validimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-product-quality-menu" data-topic-menu="index-topics-sq-product-quality" hidden>
+                      <a href="../../topics/sq/ai-assisted-implementation.html">Implementimi i Ndihmuar nga AI</a>
+                      <a href="../../topics/sq/validation-layers.html">Shtresat e Validimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-translation-quality-menu" data-topic-menu="index-topics-sq-translation-quality" hidden>
+                      <a href="../../topics/sq/translation-memory.html">Kujtesa e Përkthimit</a>
+                      <a href="../../topics/sq/ai-assisted-translation.html">Përkthimi i Ndihmuar nga AI</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-book-donation-menu" data-topic-menu="index-topics-sq-book-donation" hidden>
+                      <a href="../../topics/sq/edition-vs-physical-copy.html">Botimi kundrejt Kopjes Fizike</a>
+                      <a href="../../topics/sq/isbn.html">ISBN</a>
+                      <a href="../../topics/sq/cataloging.html">Katalogimi</a>
+                      <a href="../../topics/sq/donation-workflows.html">Rrjedhat e Punës së Dhurimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-documentation-menu" data-topic-menu="index-topics-sq-documentation" hidden>
+                      <a href="../../topics/sq/documentation-traceability.html">Gjurmueshmëria e Dokumentacionit</a>
+                      <a href="../../topics/sq/cataloging.html">Katalogimi</a>
+                      <a href="../../topics/sq/book-metadata.html">Metadata e Librit</a>
+                      <a href="../../topics/sq/spec-driven-development.html">Zhvillimi i Udhëhequr nga Specifikimi</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-ai-assisted-delivery-menu" data-topic-menu="index-topics-sq-ai-assisted-delivery" hidden>
+                      <a href="../../topics/sq/ai-assisted-implementation.html">Implementimi i Ndihmuar nga AI</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-isbn-metadata-menu" data-topic-menu="index-topics-sq-isbn-metadata" hidden>
+                      <a href="../../topics/sq/edition-vs-physical-copy.html">Botimi kundrejt Kopjes Fizike</a>
+                      <a href="../../topics/sq/isbn.html">ISBN</a>
+                      <a href="../../topics/sq/book-metadata.html">Metadata e Librit</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-demo-alignment-menu" data-topic-menu="index-topics-sq-demo-alignment" hidden>
+                      <a href="../../topics/sq/demo-and-specification-alignment.html">Përputhja e Demos dhe Specifikimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-library-systems-menu" data-topic-menu="index-topics-sq-library-systems" hidden>
+                      <a href="../../topics/sq/edition-vs-physical-copy.html">Botimi kundrejt Kopjes Fizike</a>
+                      <a href="../../topics/sq/isbn.html">ISBN</a>
+                      <a href="../../topics/sq/cataloging.html">Katalogimi</a>
+                      <a href="../../topics/sq/book-metadata.html">Metadata e Librit</a>
+                      <a href="../../topics/sq/donation-workflows.html">Rrjedhat e Punës së Dhurimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-product-specification-menu" data-topic-menu="index-topics-sq-product-specification" hidden>
+                      <a href="../../topics/sq/spec-driven-development.html">Zhvillimi i Udhëhequr nga Specifikimi</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-validation-menu" data-topic-menu="index-topics-sq-validation" hidden>
+                      <a href="../../topics/sq/documentation-traceability.html">Gjurmueshmëria e Dokumentacionit</a>
+                      <a href="../../topics/sq/demo-and-specification-alignment.html">Përputhja e Demos dhe Specifikimit</a>
+                      <a href="../../topics/sq/donation-workflows.html">Rrjedhat e Punës së Dhurimit</a>
+                      <a href="../../topics/sq/validation-layers.html">Shtresat e Validimit</a>
+                    </div>
+                    <div class="topic-menu" id="index-topics-sq-spec-driven-development-menu" data-topic-menu="index-topics-sq-spec-driven-development" hidden>
+                      <a href="../../topics/sq/documentation-traceability.html">Gjurmueshmëria e Dokumentacionit</a>
+                      <a href="../../topics/sq/ai-assisted-implementation.html">Implementimi i Ndihmuar nga AI</a>
+                      <a href="../../topics/sq/demo-and-specification-alignment.html">Përputhja e Demos dhe Specifikimit</a>
+                      <a href="../../topics/sq/spec-driven-development.html">Zhvillimi i Udhëhequr nga Specifikimi</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

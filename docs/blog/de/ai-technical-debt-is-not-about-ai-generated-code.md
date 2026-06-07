@@ -87,7 +87,7 @@ Deshalb ist der Begriff Verständnisschulden nützlich. Historisch sprachen wir 
 
 Betrachten wir ein Ticket in einem SaaS-Abrechnungssystem:
 
-> Suspend workspace access when an invoice is more than 30 days overdue. Finance contacts must still be able to download invoices and update payment details. Enterprise workspaces marked for manual renewal review must not be auto-suspended.
+> Den Zugriff auf den Workspace sperren, wenn eine Rechnung mehr als 30 Tage überfällig ist. Finance Contacts müssen weiterhin Rechnungen herunterladen und Zahlungsdaten aktualisieren können. Enterprise-Workspaces, die für eine manuelle Verlängerungsprüfung markiert sind, dürfen nicht automatisch gesperrt werden.
 
 Dieses Ticket ist nicht ungewöhnlich. Es enthält Geschäftsregeln, Ausnahmen und Wörter, die offensichtlich wirken, bis jemand sie in Code übersetzen muss.
 

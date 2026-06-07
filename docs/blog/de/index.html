@@ -79,35 +79,124 @@
           </div>
         </div>
       </header>
-      <main>
+            <main>
         <section class="section">
           <div class="section-header">
             <h1>Blog</h1>
             <p>Blog-Artikel über spezifikationsgesteuerte Entwicklung, Metadaten, Dokumentation und KI-gestützte Projekte.</p>
           </div>
-          <ul>
-              <li><a href="ai-as-an-oracle.html">KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting</a></li>
-              <li><a href="ai-technical-debt-is-not-about-ai-generated-code.html">KI-technische Schulden haben nichts mit KI-generiertem Code zu tun</a></li>
-              <li><a href="ai-will-not-replace-translators.html">KI wird Übersetzer nicht ersetzen</a></li>
-              <li><a href="ai-workflows-beyond-software.html">KI-Workflows außerhalb der Softwareentwicklung</a></li>
-              <li><a href="documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a></li>
-              <li><a href="economics-of-localization.html">Ökonomie der Lokalisierung</a></li>
-              <li><a href="extracting-use-cases-from-a-working-demo.html">Use Cases aus einem funktionierenden Demo ableiten</a></li>
-              <li><a href="future-of-continuous-localization.html">Zukunft der kontinuierlichen Lokalisierung</a></li>
-              <li><a href="governance-trust-and-security-in-ai-workflows.html">Governance, Vertrauen und Sicherheit in KI-Workflows</a></li>
-              <li><a href="isbn-not-a-database.html">ISBN ist keine Datenbank</a></li>
-              <li><a href="localization-at-scale.html">Lokalisierung im großen Maßstab</a></li>
-              <li><a href="multilingual-accessibility.html">Mehrsprachige Barrierefreiheit</a></li>
-              <li><a href="preserving-smaller-languages-in-the-digital-age.html">Kleinere Sprachen im digitalen Zeitalter bewahren</a></li>
-              <li><a href="responsibility-after-intelligence.html">Verantwortung nach der Intelligenz</a></li>
-              <li><a href="spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a></li>
-              <li><a href="spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a></li>
-              <li><a href="the-cost-of-english-only-software.html">Die Kosten rein englischer Software</a></li>
-              <li><a href="translation-and-learning.html">Übersetzung und Lernen</a></li>
-              <li><a href="united-in-diversity-and-open-source.html">Vereint in Vielfalt und Open Source</a></li>
-              <li><a href="when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a></li>
-              <li><a href="why-every-language-matters.html">Warum jede Sprache wichtig ist</a></li>
-          </ul>
+          <nav class="content-type-switcher" aria-label="Inhaltstyp">
+            <div class="content-type-switcher__group">
+              <a class="content-type-switcher__link is-active" href="../../blog/de/index.html" data-content-switcher-link data-content-type="blog" aria-current="page">Blog</a>
+              <a class="content-type-switcher__link" href="../../learning/de/index.html" data-content-switcher-link data-content-type="learning">Lernmaterial</a>
+              <a class="content-type-switcher__link" href="../../wiki/de/index.html" data-content-switcher-link data-content-type="wiki">Wiki</a>
+              <a class="content-type-switcher__link" href="../../topics/de/index.html" data-content-switcher-link data-content-type="topics">Themen</a>
+            </div>
+          </nav>
+          <section class="recent-content-section">
+            <div class="section-header">
+              <h2>Neueste Artikel</h2>
+            </div>
+            <div class="recent-content-grid">
+              <a class="recent-content-card" href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>KI-technische Schulden haben nichts mit KI-generiertem Code zu tun</h3>
+              <p>Das größere langfristige Risiko bei KI-gestützter Entwicklung ist nicht erzeugte Syntax, sondern Implementierungen, die weiterbestehen, nachdem die Begründung dahinter verschwunden ist.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/de/extracting-use-cases-from-a-working-demo.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Use Cases aus einem funktionierenden Demo ableiten</h3>
+              <p>Wie ein statischer Prototyp die dauerhaft relevanten Use Cases eines Produkts sichtbar machen kann, wenn das Team Bildschirme als Evidenz behandelt und die abgeleiteten Fähigkeiten als das, was bewahrt werden soll.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/de/responsibility-after-intelligence.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>Verantwortung nach der Intelligenz</h3>
+              <p>Je leistungsfähiger KI wird, desto weniger sind die tiefsten Fragen Fragen der technischen Leistungsfaehigkeit und desto mehr Fragen des menschlichen Urteils, der Verantwortlichkeit, der Governance und der Wuerde.</p>
+              </a>
+              <a class="recent-content-card" href="../../blog/de/ai-as-an-oracle.html">
+                <span class="recent-content-card__type">Blog</span>
+                <h3>KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting</h3>
+              <p>Ein nützliches technisches Modell für KI ist nicht Kollege oder Ersatz, sondern Orakel: hilfreich, intransparent und nur mit Verifizierung brauchbar.</p>
+              </a>
+            </div>
+          </section>
+          <section class="related-content related-content--index">
+            <h2 class="related-content__title">Nach Themen durchsuchen</h2>
+                <div class="related-topic-nav" data-topic-menu-group>
+                  <div class="topic-pill-row">
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-library-systems" data-topic-slug="library-systems" aria-expanded="false" aria-controls="index-blog-de-library-systems-menu">Bibliothekssysteme</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-book-donation" data-topic-slug="book-donation" aria-expanded="false" aria-controls="index-blog-de-book-donation-menu">Buchspende</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-demo-alignment" data-topic-slug="demo-alignment" aria-expanded="false" aria-controls="index-blog-de-demo-alignment-menu">Demo-Abgleich</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="index-blog-de-documentation-menu">Dokumentation</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-isbn-metadata" data-topic-slug="isbn-metadata" aria-expanded="false" aria-controls="index-blog-de-isbn-metadata-menu">ISBN und Metadaten</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-ai-assisted-delivery" data-topic-slug="ai-assisted-delivery" aria-expanded="false" aria-controls="index-blog-de-ai-assisted-delivery-menu">KI-gestützte Lieferung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-let-books" data-topic-slug="let-books" aria-expanded="false" aria-controls="index-blog-de-let-books-menu">Let Books</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-product-review" data-topic-slug="product-review" aria-expanded="false" aria-controls="index-blog-de-product-review-menu">Produktprüfung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-product-quality" data-topic-slug="product-quality" aria-expanded="false" aria-controls="index-blog-de-product-quality-menu">Produktqualität</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="index-blog-de-spec-driven-development-menu">Spezifikationsgetriebene Entwicklung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-validation" data-topic-slug="validation" aria-expanded="false" aria-controls="index-blog-de-validation-menu">Validierung</button>
+                    <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="index-blog-de-translation-quality" data-topic-slug="translation-quality" aria-expanded="false" aria-controls="index-blog-de-translation-quality-menu">Übersetzungsqualität</button>
+                  </div>
+                  <div class="topic-menu-layer">
+                    <div class="topic-menu" id="index-blog-de-library-systems-menu" data-topic-menu="index-blog-de-library-systems" hidden>
+                      <a href="../../blog/de/isbn-not-a-database.html">ISBN ist keine Datenbank</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-book-donation-menu" data-topic-menu="index-blog-de-book-donation" hidden>
+                      <a href="../../blog/de/isbn-not-a-database.html">ISBN ist keine Datenbank</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-demo-alignment-menu" data-topic-menu="index-blog-de-demo-alignment" hidden>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                      <a href="../../blog/de/extracting-use-cases-from-a-working-demo.html">Use Cases aus einem funktionierenden Demo ableiten</a>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-documentation-menu" data-topic-menu="index-blog-de-documentation" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                      <a href="../../blog/de/governance-trust-and-security-in-ai-workflows.html">Governance, Vertrauen und Sicherheit in KI-Workflows</a>
+                      <a href="../../blog/de/ai-as-an-oracle.html">KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting</a>
+                      <a href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html">KI-technische Schulden haben nichts mit KI-generiertem Code zu tun</a>
+                      <a href="../../blog/de/ai-workflows-beyond-software.html">KI-Workflows außerhalb der Softwareentwicklung</a>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                      <a href="../../blog/de/extracting-use-cases-from-a-working-demo.html">Use Cases aus einem funktionierenden Demo ableiten</a>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-isbn-metadata-menu" data-topic-menu="index-blog-de-isbn-metadata" hidden>
+                      <a href="../../blog/de/isbn-not-a-database.html">ISBN ist keine Datenbank</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-ai-assisted-delivery-menu" data-topic-menu="index-blog-de-ai-assisted-delivery" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-let-books-menu" data-topic-menu="index-blog-de-let-books" hidden>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-product-review-menu" data-topic-menu="index-blog-de-product-review" hidden>
+                      <a href="../../blog/de/extracting-use-cases-from-a-working-demo.html">Use Cases aus einem funktionierenden Demo ableiten</a>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-product-quality-menu" data-topic-menu="index-blog-de-product-quality" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-spec-driven-development-menu" data-topic-menu="index-blog-de-spec-driven-development" hidden>
+                      <a href="../../blog/de/documentation-is-part-of-the-product.html">Dokumentation ist Teil des Produkts</a>
+                      <a href="../../blog/de/ai-as-an-oracle.html">KI als Orakel: Warum Verifizierungskultur wichtiger ist als Prompting</a>
+                      <a href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html">KI-technische Schulden haben nichts mit KI-generiertem Code zu tun</a>
+                      <a href="../../blog/de/ai-workflows-beyond-software.html">KI-Workflows außerhalb der Softwareentwicklung</a>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                      <a href="../../blog/de/spec-driven-development-in-let-books.html">Spezifikationsgetriebene Entwicklung in Let Books</a>
+                      <a href="../../blog/de/extracting-use-cases-from-a-working-demo.html">Use Cases aus einem funktionierenden Demo ableiten</a>
+                      <a href="../../blog/de/when-the-demo-is-evidence-and-when-it-is-not.html">Wann das Demo ein Beleg ist und wann nicht</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-validation-menu" data-topic-menu="index-blog-de-validation" hidden>
+                      <a href="../../blog/de/ai-workflows-beyond-software.html">KI-Workflows außerhalb der Softwareentwicklung</a>
+                      <a href="../../blog/de/spec-driven-development-for-ai-projects.html">Spezifikationsgetriebene Entwicklung für KI-Projekte</a>
+                    </div>
+                    <div class="topic-menu" id="index-blog-de-translation-quality-menu" data-topic-menu="index-blog-de-translation-quality" hidden>
+                      <a href="../../blog/de/ai-will-not-replace-translators.html">KI wird Übersetzer nicht ersetzen</a>
+                    </div>
+                  </div>
+                </div>
+          </section>
         </section>
       </main>
       <footer class="site-footer">

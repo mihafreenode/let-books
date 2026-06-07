@@ -138,7 +138,7 @@
 <h2 id="realističan-primer-suspenzija-pristupa-nije-isto-što-i-potpuna-blokada">Realističan primer: suspenzija pristupa nije isto što i potpuna blokada</h2>
 <p>Uzmimo tiket u SaaS sistemu za naplatu:</p>
 <blockquote>
-<p>Suspend workspace access when an invoice is more than 30 days overdue. Finance contacts must still be able to download invoices and update payment details. Enterprise workspaces marked for manual renewal review must not be auto-suspended.</p>
+<p>Suspendovati pristup workspace-u kada je faktura u kašnjenju duže od 30 dana. Kontakti za finansije moraju i dalje moći da preuzmu fakture i ažuriraju podatke za plaćanje. Enterprise workspace-i označeni za ručnu proveru obnove ne smeju automatski da se suspenduju.</p>
 </blockquote>
 <p>Taj tiket nije neobičan. Ima poslovna pravila, izuzetke i reči koje deluju očigledno sve dok neko ne mora da ih prevede u kod.</p>
 <p>AI-potpomognuti tok rada mogao bi pre implementacije da izvede sledeći nacrt namere:</p>
@@ -197,7 +197,7 @@
 <p>Ta promena je važna jer problem često nije bio filozofski, nego ekonomski. Timovi nisu uvek gubili nameru zato što su mrzeli dokumentaciju. Gubili su je zato što je njeno očuvanje bilo skupo, remetilo tok rada i lako se odlagalo. Danas je generisanje prvog nacrta tog razumevanja dovoljno jeftino da stari izgovori zvuče manje ubedljivo.</p>
 <h2 id="mnogi-produkcioni-defekti-počinju-kao-pretpostavke-koje-nedostaju">Mnogi produkcioni defekti počinju kao pretpostavke koje nedostaju</h2>
 <p>Produkcioni defekti se često opisuju kao greške u kodiranju, ali mnogi počinju ranije. Počinju kao pretpostavke koje nikada nisu postale dovoljno vidljive da bi bile pregledane.</p>
-<p>Servis pretpostavlja da vremenske oznake dolaze u UTC-u dok regionalna integracija ne počne da šalje lokalno vreme. Tok rada pretpostavlja da korisnik ima jedan aktivan ugovor dok enterprise nalozi ne uvedu preklapajuće obnove. Posao za usklađivanje pretpostavlja da su upstream ID-jevi jedinstveni dok dva tenant-a slučajno ne употребе isti spoljni ključ.</p>
+<p>Servis pretpostavlja da vremenske oznake dolaze u UTC-u dok regionalna integracija ne počne da šalje lokalno vreme. Tok rada pretpostavlja da korisnik ima jedan aktivan ugovor dok enterprise nalozi ne uvedu preklapajuće obnove. Posao za usklađivanje pretpostavlja da su upstream ID-jevi jedinstveni dok dva tenant-a slučajno ne upotrebe isti spoljni ključ.</p>
 <p>Kasnije to izgleda kao implementacioni bag, ali dublji problem je što pretpostavke nikada nisu bile dovoljno jasno zabeležene da bi mogle da budu osporene.</p>
 <p>Isto važi i za rubne slučajeve. Rubni slučajevi koji nisu zabeleženi verovatno neće biti pravilno implementirani, jer ih niko nije eksplicitno pregledao. Čak ni odlični inženjeri ne mogu da se odbrane od scenarija koji se nikada nisu pojavili tokom dizajna ili code review-a.</p>
 <p>Ovde generisana analiza može praktično da pomogne. Zamislimo da pregled izmene uključuje nacrt liste verovatnih pretpostavki, graničnih uslova, scenarija otkaza, spoljnih zavisnosti i neobrađenih rubnih slučajeva. Ta lista će sadržati greške. Dobro. Greške mogu da se pregledaju.</p>

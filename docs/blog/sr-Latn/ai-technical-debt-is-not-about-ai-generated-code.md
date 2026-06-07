@@ -87,7 +87,7 @@ Zato je dug razumevanja koristan termin. Istorijski smo govorili o dugu implemen
 
 Uzmimo tiket u SaaS sistemu za naplatu:
 
-> Suspend workspace access when an invoice is more than 30 days overdue. Finance contacts must still be able to download invoices and update payment details. Enterprise workspaces marked for manual renewal review must not be auto-suspended.
+> Suspendovati pristup workspace-u kada je faktura u kašnjenju duže od 30 dana. Kontakti za finansije moraju i dalje moći da preuzmu fakture i ažuriraju podatke za plaćanje. Enterprise workspace-i označeni za ručnu proveru obnove ne smeju automatski da se suspenduju.
 
 Taj tiket nije neobičan. Ima poslovna pravila, izuzetke i reči koje deluju očigledno sve dok neko ne mora da ih prevede u kod.
 
@@ -161,7 +161,7 @@ Ta promena je važna jer problem često nije bio filozofski, nego ekonomski. Tim
 
 Produkcioni defekti se često opisuju kao greške u kodiranju, ali mnogi počinju ranije. Počinju kao pretpostavke koje nikada nisu postale dovoljno vidljive da bi bile pregledane.
 
-Servis pretpostavlja da vremenske oznake dolaze u UTC-u dok regionalna integracija ne počne da šalje lokalno vreme. Tok rada pretpostavlja da korisnik ima jedan aktivan ugovor dok enterprise nalozi ne uvedu preklapajuće obnove. Posao za usklađivanje pretpostavlja da su upstream ID-jevi jedinstveni dok dva tenant-a slučajno ne употребе isti spoljni ključ.
+Servis pretpostavlja da vremenske oznake dolaze u UTC-u dok regionalna integracija ne počne da šalje lokalno vreme. Tok rada pretpostavlja da korisnik ima jedan aktivan ugovor dok enterprise nalozi ne uvedu preklapajuće obnove. Posao za usklađivanje pretpostavlja da su upstream ID-jevi jedinstveni dok dva tenant-a slučajno ne upotrebe isti spoljni ključ.
 
 Kasnije to izgleda kao implementacioni bag, ali dublji problem je što pretpostavke nikada nisu bile dovoljno jasno zabeležene da bi mogle da budu osporene.
 

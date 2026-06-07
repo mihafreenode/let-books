@@ -87,7 +87,7 @@ Per questo il termine debito di comprensione è utile. Storicamente parlavamo di
 
 Consideriamo un ticket in un sistema SaaS di billing:
 
-> Suspend workspace access when an invoice is more than 30 days overdue. Finance contacts must still be able to download invoices and update payment details. Enterprise workspaces marked for manual renewal review must not be auto-suspended.
+> Sospendere l'accesso al workspace quando una fattura è in ritardo di oltre 30 giorni. I contatti per la finanza devono comunque poter scaricare le fatture e aggiornare i dati di pagamento. I workspace Enterprise contrassegnati per una revisione manuale del rinnovo non devono essere sospesi automaticamente.
 
 Non è un ticket insolito. Ha regole di business, eccezioni e parole che sembrano ovvie finché qualcuno non deve tradurle in codice.
 
