@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Technical Debt Is Not About AI-Generated Code | LetBooks</title>
+    <meta name="description" content="The larger long-term risk in AI-assisted delivery is not generated syntax but implementations that survive after the reasoning behind them has disappeared.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="AI Technical Debt Is Not About AI-Generated Code | LetBooks">
+    <meta property="og:description" content="The larger long-term risk in AI-assisted delivery is not generated syntax but implementations that survive after the reasoning behind them has disappeared.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Technical Debt Is Not About AI-Generated Code | LetBooks">
+    <meta name="twitter:description" content="The larger long-term risk in AI-assisted delivery is not generated syntax but implementations that survive after the reasoning behind them has disappeared.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="en">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/en/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../en/index.html">Docs</a>
+            <a class="nav-link" href="../../blog/en/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/en/index.html">Learning</a>
+            <a class="nav-link" href="../../wiki/en/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/en/index.html">Topics</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link is-current" href="../../blog/en/ai-technical-debt-is-not-about-ai-generated-code.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/ai-technical-debt-is-not-about-ai-generated-code.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">All languages</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../en/index.html">Docs</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/en/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">AI Technical Debt Is Not About AI-Generated Code</span>
+            </nav>
+            <h1>AI Technical Debt Is Not About AI-Generated Code</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>English</span>
+          </div>
+          <p class="content-page-summary">The larger long-term risk in AI-assisted delivery is not generated syntax but implementations that survive after the reasoning behind them has disappeared.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Topics:</span>
+              <span class="content-tag">ai assisted workflows</span>
+              <span class="content-tag">Documentation</span>
+              <span class="content-tag">maintainability</span>
+              <span class="content-tag">Spec-Driven Development</span>
+              <span class="content-tag">verification</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">A common argument about AI-generated code goes like this: the real danger is that future maintainers inherit code they did not write and do not understand. That concern is reasonable, but it points at the wrong object. In many systems, the larger problem is older and more familiar. Implementations survive while understanding disappears.</p>
+<p>That failure mode existed long before code assistants. Teams have always shipped systems whose original intent lived in a meeting, a whiteboard, a ticket comment, or one engineer’s head. The code remained. The explanation did not. A year later, the implementation might still work, tests might still pass, and yet the most expensive part of the system is no longer the code. It is the missing understanding around it.</p>
+<p>That is why “AI technical debt” is not mainly about whether a model wrote some lines of code. It is about whether the reasoning that produced those lines gets preserved, reviewed, and kept accessible. If that reasoning remains invisible, maintainers inherit syntax plus archaeology. If it becomes visible, they inherit something imperfect but reviewable.</p>
+<h2 id="the-wrong-comparison">The wrong comparison</h2>
+<p>Many critiques compare AI-generated rationale against an ideal standard of perfectly written human rationale: clean ADRs, careful comments, up-to-date docs, thoughtful tradeoff notes, and crisp commit messages. That is not how most repositories actually look after a few years of delivery pressure.</p>
+<p>The real comparison is usually against something much messier:</p>
+<ul>
+<li>missing documentation</li>
+<li>inaccessible ticket systems</li>
+<li>vague commit messages</li>
+<li>departed employees</li>
+<li>tribal knowledge</li>
+<li>undocumented assumptions</li>
+<li>reverse-engineering behavior from code</li>
+</ul>
+<p>Against that baseline, imperfect preserved reasoning can be valuable. Future maintainers may prefer a flawed explanation they can challenge over complete silence they can only guess at.</p>
+<h2 id="from-implementation-debt-to-understanding-debt">From implementation debt to understanding debt</h2>
+<p>Technical debt has usually been framed as implementation debt: rushed code, duplication, poor abstractions, missing tests, brittle dependencies, shortcuts that later become expensive. That framing still matters. Bad implementations are still bad.</p>
+<p>But many organizations are running into a different cost center. The expensive thing is not syntax. It is understanding.</p>
+<p>When a system becomes hard to change, the real blockers are often questions like these:</p>
+<ul>
+<li>Why was this decision made?</li>
+<li>Which constraints were real and which were accidental?</li>
+<li>Which edge cases were considered?</li>
+<li>Which ones were ignored?</li>
+<li>What external assumptions does this logic depend on?</li>
+<li>What should future maintainers be afraid to break?</li>
+</ul>
+<p>Compilers do not answer those questions. Tests answer only some of them. Static analysis answers even fewer. So teams answer them the expensive way: by reconstructing intent from code, logs, half-remembered ticket threads, and the confidence level of whoever has been around the longest.</p>
+<p>That is why understanding debt is a useful term. Historically we talked about implementation debt because broken code was visible. Increasingly, many teams may discover that the more persistent cost is preserved behavior without preserved reasoning.</p>
+<h2 id="a-realistic-example-access-suspension-is-not-the-same-as-total-lockout">A realistic example: access suspension is not the same as total lockout</h2>
+<p>Consider a ticket in a SaaS billing system:</p>
+<blockquote>
+<p>Suspend workspace access when an invoice is more than 30 days overdue. Finance contacts must still be able to download invoices and update payment details. Enterprise workspaces marked for manual renewal review must not be auto-suspended.</p>
+</blockquote>
+<p>That ticket is not unusual. It has business rules, exceptions, and words that look obvious until someone has to translate them into code.</p>
+<p>An AI-assisted workflow might infer the following intent draft before implementation:</p>
+<ul>
+<li>goal: stop normal product usage for delinquent accounts</li>
+<li>exception: keep some billing access available</li>
+<li>trigger: invoice overdue by more than 30 days</li>
+<li>non-goal: manually reviewed enterprise renewals</li>
+</ul>
+<p>It might also make its implicit assumptions explicit:</p>
+<ul>
+<li>overdue is calculated from the invoice due date</li>
+<li>suspension applies to all users except the workspace owner</li>
+<li>read-only product access is not required</li>
+<li>API tokens should continue to work because the ticket mentions user access, not integrations</li>
+<li>enterprise manual review is a workspace-level flag checked before suspension</li>
+</ul>
+<p>That list is not authoritative. It is useful because a reviewer can attack it.</p>
+<p>In a real review, a staff engineer or product manager might respond like this:</p>
+<ul>
+<li>finance contacts are not just the workspace owner; multiple finance admins can exist</li>
+<li>API tokens must not continue to work, because data export is still product usage</li>
+<li>audit-history screens must remain visible to finance admins so they can reconcile disputed charges</li>
+<li>the 30-day clock starts from the latest unpaid invoice after credit memos are applied, not from the original invoice date</li>
+<li>enterprise manual review is not a simple boolean; the billing service exposes a renewal state enum</li>
+</ul>
+<p>Now compare two worlds.</p>
+<p>In the first world, those assumptions were never written down. The code gets reviewed directly, the reviewer focuses on control flow and tests, and everyone hopes the business rule was understood correctly.</p>
+<p>In the second world, the assumptions became visible before the code was merged. The reviewer does not need to guess what the implementer thought. The misunderstanding is already exposed.</p>
+<p>That does not guarantee correctness. But it creates a review opportunity that invisible reasoning never creates.</p>
+<p>The resulting implementation understanding becomes far more precise:</p>
+<ul>
+<li>suspend normal product access after the latest unpaid invoice remains overdue beyond 30 days</li>
+<li>preserve billing and audit access for users with finance-admin privileges</li>
+<li>block API tokens during suspension</li>
+<li>skip auto-suspension when the billing renewal state is <code>ManualReview</code></li>
+<li>add tests for multiple finance admins, credit memo adjustments, and suspended-token behavior</li>
+</ul>
+<p>Notice what changed. The implementation might still end up being only a few conditionals and tests. The large improvement is not syntactic. It is that reasoning became visible enough to correct before production.</p>
+<h2 id="the-economics-have-changed">The economics have changed</h2>
+<p>This is the part many AI discussions miss.</p>
+<p>Historically, implementation could be produced while preserving intent remained expensive. Engineers could write code and tests and move on. But writing the surrounding artifacts often required another hour or three of concentrated work: update an ADR, capture constraints, note rejected alternatives, list edge cases, record documentation impact, and explain what future maintainers should not casually simplify.</p>
+<p>Teams knew those things were useful. They skipped them anyway, often rationally. When deadlines were real, working code plus minimal commentary beat working code plus durable understanding. That tradeoff accumulated understanding debt.</p>
+<p>AI changes the economics because once implementation context already exists, generating a first draft of preserved understanding becomes cheap. If a model has the ticket, the specification, the changed files, the tests, and relevant architecture notes, then a draft of the following may require only modest additional cost:</p>
+<ul>
+<li>rationale</li>
+<li>assumptions</li>
+<li>tradeoffs</li>
+<li>edge cases</li>
+<li>documentation changes</li>
+<li>use-case impacts</li>
+<li>confidence notes</li>
+<li>open questions</li>
+</ul>
+<p>That does not eliminate human effort. It changes where the effort goes. The challenge shifts from authoring to reviewing and validating.</p>
+<p>That shift matters because the old failure mode was often economic, not philosophical. Teams did not always lose intent because they hated documentation. They lost intent because preserving it was costly, interruptive, and easy to postpone. Today, generating a first draft of that understanding is cheap enough that the old excuse gets weaker.</p>
+<h2 id="many-production-defects-start-as-missing-assumptions">Many production defects start as missing assumptions</h2>
+<p>Production defects are often described as coding failures, but many begin earlier. They begin as assumptions that never became visible enough to review.</p>
+<p>A service assumes timestamps arrive in UTC until a regional integration starts sending local time. A workflow assumes a user has one active contract until enterprise accounts introduce overlapping renewals. A reconciliation job assumes upstream IDs are unique until two tenants happen to reuse the same external key.</p>
+<p>These later look like implementation bugs, but the deeper issue is that the assumptions were never recorded clearly enough to be challenged.</p>
+<p>The same is true for edge cases. Edge cases that are not recorded are unlikely to be implemented correctly, because nobody explicitly reviewed them. Even excellent engineers cannot defend against scenarios that never surfaced during design or code review.</p>
+<p>This is where generated analysis can help in a practical way. Suppose a change review includes a draft list of likely assumptions, boundary conditions, failure scenarios, external dependencies, and unhandled edge cases. The list will contain mistakes. Good. Mistakes can be reviewed.</p>
+<p>A reviewer can then say:</p>
+<ul>
+<li>assumption 2 is wrong; users can hold multiple active contracts</li>
+<li>you missed the legal retention rule</li>
+<li>the external API does not guarantee ordering</li>
+<li>this path must work during partial outage</li>
+<li>the dangerous case is stale replicated data, not null input</li>
+</ul>
+<p>The implementation may or may not change immediately. But the misunderstanding becomes visible before production. A silent misunderstanding is expensive. A visible misunderstanding is reviewable.</p>
+<h2 id="reviews-need-two-loops-not-one">Reviews need two loops, not one</h2>
+<p>Traditional review often jumps straight from specification to implementation. The reviewer asks whether the code works, whether the tests are sufficient, and whether the change seems safe.</p>
+<p>That is still necessary, but it leaves a large blind spot: the reviewer often does not see the intermediate reasoning that turned a request into an implementation strategy.</p>
+<p>In a stronger review model, there are two loops.</p>
+<p>The first is a human review loop that evaluates the inferred intent before the conversation collapses into code. Instead of jumping directly from specification to implementation, the reviewer can inspect:</p>
+<p>Specification -&gt; Inferred Intent</p>
+<p>That changes the questions:</p>
+<ul>
+<li>Did we infer the right thing?</li>
+<li>Is this what the requester actually wanted?</li>
+<li>Are the assumptions correct?</li>
+<li>Are important edge cases missing?</li>
+<li>Did we misunderstand the business rule?</li>
+</ul>
+<p>The second is a layer-comparison loop. A model can assist here, but the important idea is the comparison itself, not the tool. The review checks consistency across layers that humans already care about:</p>
+<ul>
+<li>specification -&gt; intent</li>
+<li>intent -&gt; implementation</li>
+<li>specification -&gt; implementation</li>
+</ul>
+<p>That comparison can surface several useful defect classes:</p>
+<ul>
+<li>requirements that were missed</li>
+<li>invented requirements that never existed</li>
+<li>weakened constraints</li>
+<li>assumptions discussed in prose but not reflected in code</li>
+<li>edge cases that were named but never implemented</li>
+<li>tests missing for important assumptions</li>
+</ul>
+<p>Blue nodes below represent source-of-truth requests, orange nodes preserved understanding, green nodes implementation artifacts, purple review loops, and red maintainability risk.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/en/review-loops.svg" alt="Review loops diagram" />
+<figcaption aria-hidden="true">Review loops diagram</figcaption>
+</figure>
+<p>The value here is not tool authority. The value is that the reasoning becomes visible enough to review.</p>
+<h2 id="a-pull-request-may-need-two-payloads">A pull request may need two payloads</h2>
+<p>This becomes concrete in pull requests.</p>
+<p>Today, many PRs effectively carry one payload: implementation.</p>
+<p>Implementation Payload</p>
+<ul>
+<li>code</li>
+<li>tests</li>
+</ul>
+<p>That is workable, but it is thin. It preserves behavior without necessarily preserving why that behavior exists.</p>
+<p>A stronger PR model would carry a second payload alongside the first.</p>
+<p>Understanding Payload</p>
+<ul>
+<li>inferred intent</li>
+<li>assumptions</li>
+<li>tradeoffs</li>
+<li>edge cases</li>
+<li>documentation impact</li>
+<li>confidence notes</li>
+</ul>
+<p>Some of those artifacts may be generated. All of them should be human-reviewed when they matter.</p>
+<p>This is not paperwork for its own sake. It is an attempt to keep repositories from collapsing back into code plus folklore. If the code changes but the understanding payload is absent, maintainers still end up reverse-engineering silence.</p>
+<p>The contrast is simple.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/en/code-only-vs-preserved-understanding.svg" alt="Code only versus preserved understanding diagram" />
+<figcaption aria-hidden="true">Code only versus preserved understanding diagram</figcaption>
+</figure>
+<p>In the left path, the repository accumulates behavior and loses context. In the right path, the repository accumulates behavior plus at least a reviewable draft of intent, assumptions, and rationale.</p>
+<h2 id="correctness-review-and-completeness-review-are-different-jobs">Correctness review and completeness review are different jobs</h2>
+<p>This leads to an important distinction.</p>
+<p>Correctness review asks:</p>
+<ul>
+<li>Does it compile?</li>
+<li>Do tests pass?</li>
+<li>Is it secure?</li>
+<li>Does it follow standards?</li>
+<li>Is the observed behavior correct?</li>
+</ul>
+<p>Completeness review asks:</p>
+<ul>
+<li>Is intent preserved?</li>
+<li>Are assumptions recorded?</li>
+<li>Are constraints recorded?</li>
+<li>Were important edge cases captured?</li>
+<li>Were affected documents reviewed?</li>
+<li>Were affected use cases reviewed?</li>
+<li>Were tradeoffs captured?</li>
+</ul>
+<p>Historically, completeness reviews were expensive to do consistently because producing the underlying artifacts was expensive. Generated first drafts may make them practical at a scale that was previously hard to justify.</p>
+<h2 id="this-is-closer-to-existing-engineering-practice-than-it-sounds">This is closer to existing engineering practice than it sounds</h2>
+<p>None of this requires a new belief system. Most of the relevant artifacts are already familiar:</p>
+<ul>
+<li>use cases</li>
+<li>ADRs</li>
+<li>architecture notes</li>
+<li>comments that explain why</li>
+<li>operational runbooks</li>
+<li>validation rules</li>
+<li>automation contracts</li>
+<li>design rationale</li>
+<li>documentation updates</li>
+</ul>
+<p>The shift is not conceptual. It is economic. Teams have always known these artifacts matter. They often failed to maintain them because the effort was high and the immediate delivery value was low.</p>
+<p>That is why this argument should stay modest. AI-generated reasoning is not automatically correct. AI-generated documentation is not authoritative. Documentation does not replace engineering judgment. AI does not eliminate technical debt.</p>
+<p>What these workflows may do is make it cheap enough to preserve a draft of the understanding that teams used to leave behind.</p>
+<h2 id="a-practical-repository-takeaway">A practical repository takeaway</h2>
+<p>The most practical next step is not to demand perfect design prose on every change. It is to add a small understanding checklist to the places where teams already review work.</p>
+<p>For example, a PR template could require a short reviewed section covering:</p>
+<ul>
+<li>inferred intent</li>
+<li>key assumptions</li>
+<li>important edge cases</li>
+<li>tradeoffs or rejected alternatives</li>
+<li>documentation or use-case impact</li>
+<li>confidence level and open questions</li>
+</ul>
+<p>Those sections do not need to be long. They need to be present enough that another engineer can challenge them. They may be generated first drafts, but they should be reviewed with the same seriousness as code.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The title of this article is deliberately narrower than its conclusion. The real risk is not AI-generated syntax. The real risk is understanding debt: implementations that survive after the reasoning behind them has disappeared.</p>
+<p>The more interesting question is whether repositories will begin treating reasoning, assumptions, edge cases, and intent as first-class artifacts alongside implementation.</p>
+<p>Historically, many teams lost intent because preserving it was expensive. Today, generating a first draft of it is cheap. That does not solve the problem. It changes what is economically practical.</p>
+<p>Future maintainers may still complain about generated rationale. They may find mistakes in it. They may disagree with the assumptions it lists. They may delete half of it during review.</p>
+<p>And they might still prefer reviewing imperfect reasoning to reverse-engineering silence.</p>
+<h2 id="related-reading">Related Reading</h2>
+<ul>
+<li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
+<li><code>../../wiki/spec-driven-development.md</code></li>
+<li><code>../../wiki/documentation-traceability.md</code></li>
+<li><code>../../wiki/validation-layers.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+<li><code>ai-as-an-oracle.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Other languages</h2>
+            <ul>
+              <li><a href="../../blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/ai-technical-debt-is-not-about-ai-generated-code.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Related content</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-ai-assisted-workflows" data-topic-slug="ai-assisted-workflows" aria-expanded="false" aria-controls="related-ai-assisted-workflows-menu">ai assisted workflows</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Documentation</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Spec-Driven Development</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-ai-assisted-workflows-menu" data-topic-menu="related-ai-assisted-workflows" hidden>
+                  <a href="../../blog/en/ai-as-an-oracle.html"><span>AI as an Oracle: Why Verification Culture Matters More Than Prompting</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/en/ai-workflows-beyond-software.html"><span>AI Workflows Beyond Software</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/en/governance-trust-and-security-in-ai-workflows.html"><span>Governance, Trust, and Security in AI Workflows</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/en/how-to-use-ai-workflows-for-non-software-knowledge-work.html"><span>How to Use AI Workflows for Non-Software Knowledge Work</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../wiki/en/ai-assisted-knowledge-work.html"><span>AI-Assisted Knowledge Work</span><span class="topic-menu__meta">Wiki</span></a>
+                </div>
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/en/documentation-is-part-of-the-product.html"><span>Documentation Is Part of the Product</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/en/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>How to Keep Spec, Docs, Demo, and Code Aligned</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../learning/en/how-to-write-a-spec-that-ai-can-follow.html"><span>How to Write a Spec That AI Can Follow</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../wiki/en/documentation-is-more-than-a-website.html"><span>Documentation Is More Than a Website</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/en/markdown-in-product-development.html"><span>Markdown in Product Development</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/en/spec-driven-development.html"><span>Spec-Driven Development</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/en/spec-driven-development.html"><span>Spec-Driven Development</span><span class="topic-menu__meta">Topics</span></a>
+                  <a href="../../topics/en/documentation-traceability.html"><span>Documentation Traceability</span><span class="topic-menu__meta">Topics</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../learning/en/how-to-review-ai-assisted-work-against-the-spec.html"><span>How to Review AI-Assisted Work Against the Spec</span><span class="topic-menu__meta">Learning</span></a>
+                  <a href="../../topics/en/ai-assisted-implementation.html"><span>AI-Assisted Implementation</span><span class="topic-menu__meta">Topics</span></a>
+                  <a href="../../topics/en/demo-and-specification-alignment.html"><span>Demo and Specification Alignment</span><span class="topic-menu__meta">Topics</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>A practical platform for cataloging, offering, and retrieving educational books.</p>
+            <p class="footer-note">Copyright © Let Books contributors. Reuse follows repository licensing unless a page states otherwise.</p>
+            <p class="footer-microcopy">Early alpha prototype. Documentation and UI text are AI-assisted. Institutions and integrations mentioned in examples are conceptual only and do not imply partnership or endorsement.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../en/index.html">Overview</a>
+              <a href="../../topics/en/index.html">Topics</a>
+              <a href="../../index.html">Project home</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">All languages</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

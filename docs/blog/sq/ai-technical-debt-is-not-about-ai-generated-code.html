@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Borxhi teknik i AI-së nuk ka të bëjë me kodin e gjeneruar nga AI | LetBooks</title>
+    <meta name="description" content="Rreziku më i madh afatgjatë në zhvillimin me ndihmën e AI-së nuk është sintaksa e gjeneruar, por implementimet që mbeten pasi arsyetimi pas tyre është zhdukur.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Borxhi teknik i AI-së nuk ka të bëjë me kodin e gjeneruar nga AI | LetBooks">
+    <meta property="og:description" content="Rreziku më i madh afatgjatë në zhvillimin me ndihmën e AI-së nuk është sintaksa e gjeneruar, por implementimet që mbeten pasi arsyetimi pas tyre është zhdukur.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Borxhi teknik i AI-së nuk ka të bëjë me kodin e gjeneruar nga AI | LetBooks">
+    <meta name="twitter:description" content="Rreziku më i madh afatgjatë në zhvillimin me ndihmën e AI-së nuk është sintaksa e gjeneruar, por implementimet që mbeten pasi arsyetimi pas tyre është zhdukur.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="sq">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/sq/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sq/index.html">Dokumentim</a>
+            <a class="nav-link" href="../../blog/sq/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sq/index.html">Materiale mësimore</a>
+            <a class="nav-link" href="../../wiki/sq/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sq/index.html">Tema</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/ai-technical-debt-is-not-about-ai-generated-code.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">МК</a>
+              <a class="lang-link is-current" href="../../blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/ai-technical-debt-is-not-about-ai-generated-code.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sq/index.html">Dokumentim</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/sq/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Borxhi teknik i AI-së nuk ka të bëjë me kodin e gjeneruar nga AI</span>
+            </nav>
+            <h1>Borxhi teknik i AI-së nuk ka të bëjë me kodin e gjeneruar nga AI</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Shqip</span>
+          </div>
+          <p class="content-page-summary">Rreziku më i madh afatgjatë në zhvillimin me ndihmën e AI-së nuk është sintaksa e gjeneruar, por implementimet që mbeten pasi arsyetimi pas tyre është zhdukur.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Tema:</span>
+              <span class="content-tag">Dokumentim</span>
+              <span class="content-tag">Zhvillim i drejtuar nga specifikimet</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Një argument i zakonshëm për kodin e gjeneruar nga AI thotë kështu: rreziku i vërtetë është që mirëmbajtësit e ardhshëm të trashëgojnë kod që nuk e kanë shkruar dhe nuk e kuptojnë. Ky shqetësim është i arsyeshëm, por ai e ka objektivin gabim. Në shumë sisteme, problemi më i madh është më i vjetër dhe më i njohur. Implementimet mbijetojnë, ndërsa kuptimi zhduket.</p>
+<p>Ky mënyrë dështimi ka ekzistuar shumë përpara asistentëve të kodit. Ekipet gjithmonë kanë dorëzuar sisteme, qëllimi fillestar i të cilave jetonte në një takim, në një tabelë të bardhë, në një koment të një ticketi, ose në kokën e një inxhinieri. Kodi mbeti. Shpjegimi jo. Një vit më vonë, implementimi mund të vazhdojë të funksionojë, testet mund të vazhdojnë të kalojnë, e megjithatë pjesa më e shtrenjtë e sistemit nuk është më kodi. Është kuptimi që mungon rreth tij.</p>
+<p>Prandaj, “borxhi teknik i AI-së” nuk ka të bëjë kryesisht me faktin nëse një model shkroi disa rreshta kodi. Ka të bëjë me faktin nëse arsyetimi që i prodhoi ato rreshta ruhet, rishikohet dhe mbahet i qasshëm. Nëse ai arsyetim mbetet i padukshëm, mirëmbajtësit trashëgojnë sintaksë plus arkeologji. Nëse bëhet i dukshëm, ata trashëgojnë diçka të papërsosur, por të rishikueshme.</p>
+<h2 id="krahasimi-i-gabuar">Krahasimi i gabuar</h2>
+<p>Shumë kritika e krahasojnë arsyetimin e gjeneruar nga AI me një standard ideal të arsyetimit njerëzor të shkruar në mënyrë të përkryer: ADR të pastra, komente të kujdesshme, dokumentacion të përditësuar, shënime të menduara për kompromiset dhe commit messages të qarta. Por kështu nuk duken shumica e repositorëve pas disa vitesh presioni për dorëzim.</p>
+<p>Krahasimi real zakonisht është me diçka shumë më të çrregullt:</p>
+<ul>
+<li>dokumentacion që mungon</li>
+<li>sisteme të ticket-eve që nuk janë të qasshme</li>
+<li>commit messages të paqarta</li>
+<li>punonjës që janë larguar</li>
+<li>dije e mbajtur vetëm nga grupi</li>
+<li>supozime të padokumentuara</li>
+<li>nxjerrje e sjelljes nga kodi përmes inxhinierisë së kundërt</li>
+</ul>
+<p>Përballë këtij realiteti, edhe arsyetimi i ruajtur në mënyrë jo të përsosur mund të ketë vlerë. Mirëmbajtësit e ardhshëm mund të preferojnë një shpjegim me të meta që mund ta sfidojnë, sesa heshtje të plotë për të cilën mund vetëm të hamendësojnë.</p>
+<h2 id="nga-borxhi-i-implementimit-te-borxhi-i-të-kuptuarit">Nga borxhi i implementimit te borxhi i të kuptuarit</h2>
+<p>Borxhi teknik zakonisht është përkufizuar si borxh implementimi: kod i shkruar me nxitim, dublim, abstraksione të dobëta, teste që mungojnë, varësi të brishta, shkurtore që më vonë bëhen të kushtueshme. Kjo kornizë mbetet e rëndësishme. Implementimet e këqija mbeten të këqija.</p>
+<p>Por shumë organizata po përballen me një qendër tjetër kostoje. Gjëja e shtrenjtë nuk është sintaksa. Është kuptimi.</p>
+<p>Kur një sistem bëhet i vështirë për t’u ndryshuar, pengesat reale shpesh janë pyetje si këto:</p>
+<ul>
+<li>Pse u mor ky vendim?</li>
+<li>Cilat kufizime ishin reale dhe cilat ishin aksidentale?</li>
+<li>Cilat raste skajore u morën parasysh?</li>
+<li>Cilat u injoruan?</li>
+<li>Nga cilat supozime të jashtme varet kjo logjikë?</li>
+<li>Çfarë duhet të kenë frikë mirëmbajtësit e ardhshëm të mos e prishin?</li>
+</ul>
+<p>Kompajlerët nuk u përgjigjen këtyre pyetjeve. Testet u përgjigjen vetëm disa prej tyre. Analiza statike edhe më pak. Prandaj ekipet u përgjigjen në mënyrën e shtrenjtë: duke rindërtuar qëllimin nga kodi, log-et, fijet gjysmë të harruara të ticket-eve dhe niveli i sigurisë së kujtdo që ka qëndruar më gjatë.</p>
+<p>Prandaj “borxhi i të kuptuarit” është një term i dobishëm. Historikisht kemi folur për borxhin e implementimit sepse kodi i prishur ishte i dukshëm. Gjithnjë e më shumë ekipe mund të zbulojnë se kostoja më e qëndrueshme është sjellja e ruajtur pa arsyetimin e ruajtur.</p>
+<h2 id="një-shembull-realist-pezullimi-i-aksesit-nuk-është-njësoj-si-bllokimi-total">Një shembull realist: pezullimi i aksesit nuk është njësoj si bllokimi total</h2>
+<p>Merrni parasysh një ticket në një sistem faturimi SaaS:</p>
+<blockquote>
+<p>Pezullo aksesin e workspace-it kur një faturë është më shumë se 30 ditë me vonesë. Kontaktet e financës duhet të jenë ende në gjendje të shkarkojnë faturat dhe të përditësojnë të dhënat e pagesës. Workspace-et enterprise të shënuara për rishikim manual të rinovimit nuk duhet të pezullohen automatikisht.</p>
+</blockquote>
+<p>Ky ticket nuk është i pazakontë. Ai ka rregulla biznesi, përjashtime dhe fjalë që duken të qarta derisa dikush duhet t’i përkthejë në kod.</p>
+<p>Një rrjedhë pune me ndihmën e AI-së mund të nxjerrë draftin e mëposhtëm të qëllimit para implementimit:</p>
+<ul>
+<li>qëllimi: të ndalohet përdorimi normal i produktit për llogaritë me vonesë pagese</li>
+<li>përjashtimi: të mbahet i disponueshëm një pjesë e aksesit të faturimit</li>
+<li>shkaktari: faturë me vonesë më shumë se 30 ditë</li>
+<li>jo-qëllim: rinovime enterprise që janë në rishikim manual</li>
+</ul>
+<p>Mund edhe t’i bëjë të qarta supozimet e veta të nënkuptuara:</p>
+<ul>
+<li>vonesa llogaritet nga data e afatit të faturës</li>
+<li>pezullimi zbatohet për të gjithë përdoruesit, përveç pronarit të workspace-it</li>
+<li>qasja vetëm-për-lexim në produkt nuk kërkohet</li>
+<li>token-et e API-së duhet të vazhdojnë të funksionojnë sepse ticket-i përmend aksesin e përdoruesit, jo integrimet</li>
+<li>rishikimi manual enterprise është një flag në nivel workspace-i që kontrollohet përpara pezullimit</li>
+</ul>
+<p>Kjo listë nuk është autoritative. Është e dobishme sepse një rishikues mund ta sulmojë.</p>
+<p>Në një rishikim real, një staff engineer ose product manager mund të përgjigjet kështu:</p>
+<ul>
+<li>kontaktet e financës nuk janë vetëm pronari i workspace-it; mund të ekzistojnë disa finance admin</li>
+<li>token-et e API-së nuk duhet të vazhdojnë të funksionojnë, sepse eksporti i të dhënave është ende përdorim i produktit</li>
+<li>ekranet e historikut të auditimit duhet të mbeten të dukshme për finance admin-at që të mund të rakordojnë faturat e kontestuara</li>
+<li>afati 30-ditor fillon nga fatura më e fundit e papaguar pasi të jenë aplikuar credit memo-t, jo nga data fillestare e faturës</li>
+<li>rishikimi manual enterprise nuk është një boolean i thjeshtë; shërbimi i faturimit ekspozon një enum për gjendjen e rinovimit</li>
+</ul>
+<p>Tani krahasoni dy botë.</p>
+<p>Në botën e parë, këto supozime nuk u shkruan kurrë. Kodi rishikohet drejtpërdrejt, rishikuesi fokusohet te rrjedha e kontrollit dhe testet, dhe të gjithë shpresojnë që rregulli i biznesit është kuptuar saktë.</p>
+<p>Në botën e dytë, supozimet u bënë të dukshme para se kodi të bashkohej. Rishikuesi nuk ka nevojë të hamendësojë çfarë mendoi implementuesi. Keqkuptimi tashmë është ekspozuar.</p>
+<p>Kjo nuk garanton saktësi. Por krijon një mundësi rishikimi që arsyetimi i padukshëm nuk e krijon kurrë.</p>
+<p>Kuptimi që rezulton për implementimin bëhet shumë më i saktë:</p>
+<ul>
+<li>pezullo aksesin normal në produkt pasi fatura më e fundit e papaguar të mbetet me vonesë më shumë se 30 ditë</li>
+<li>ruaj aksesin e faturimit dhe auditimit për përdoruesit me privilegje finance-admin</li>
+<li>blloko token-et e API-së gjatë pezullimit</li>
+<li>kalo pezullimin automatik kur gjendja e rinovimit të faturimit është <code>ManualReview</code></li>
+<li>shto teste për finance admin-a të shumtë, rregullime me credit memo dhe sjelljen e token-eve të pezulluara</li>
+</ul>
+<p>Vëreni çfarë ndryshoi. Implementimi mund të përfundojë ende si vetëm disa kushte dhe teste. Përmirësimi i madh nuk është sintaksor. Përmirësimi i madh është që arsyetimi u bë mjaftueshëm i dukshëm për t’u korrigjuar para prodhimit.</p>
+<h2 id="ekonomia-ka-ndryshuar">Ekonomia ka ndryshuar</h2>
+<p>Kjo është pjesa që shumë diskutime për AI-në e humbasin.</p>
+<p>Historikisht, implementimi mund të prodhohej ndërsa ruajtja e qëllimit mbetej e shtrenjtë. Inxhinierët mund të shkruanin kod dhe teste dhe të vazhdonin përpara. Por shkrimi i gradnikëve përreth shpesh kërkonte edhe një ose tre orë pune të përqendruar: përditësim të një ADR-je, kapje të kufizimeve, shënim të alternativave të refuzuara, listim të rasteve skajore, regjistrim të ndikimit në dokumentacion dhe shpjegim se çfarë mirëmbajtësit e ardhshëm nuk duhet ta thjeshtojnë pa kujdes.</p>
+<p>Ekipet e dinin se këto gjëra ishin të dobishme. Prapëseprapë i kalonin, shpesh në mënyrë racionale. Kur afatet ishin reale, kod funksional plus koment minimal fitonte ndaj kodit funksional plus kuptim të qëndrueshëm. Ky kompromis grumbullonte borxh të të kuptuarit.</p>
+<p>AI-ja e ndryshon ekonominë sepse sapo konteksti i implementimit ekziston tashmë, gjenerimi i një drafti të parë të kuptimit të ruajtur bëhet i lirë. Nëse një model ka ticket-in, specifikimin, skedarët e ndryshuar, testet dhe shënimet përkatëse arkitekturore, atëherë një draft i sa vijon mund të kërkojë vetëm kosto shtesë modeste:</p>
+<ul>
+<li>arsyetim</li>
+<li>supozime</li>
+<li>kompromise</li>
+<li>raste skajore</li>
+<li>ndryshime në dokumentacion</li>
+<li>ndikime në use case-e</li>
+<li>shënime besueshmërie</li>
+<li>pyetje të hapura</li>
+</ul>
+<p>Kjo nuk e eliminon punën njerëzore. E ndryshon vendin ku shkon ajo punë. Sfida zhvendoset nga autorësia te rishikimi dhe validimi.</p>
+<p>Ky zhvendosje ka rëndësi sepse mënyra e vjetër e dështimit shpesh ishte ekonomike, jo filozofike. Ekipet nuk e humbnin gjithmonë qëllimin sepse e urrenin dokumentacionin. E humbnin sepse ruajtja e tij ishte e kushtueshme, ndërprerëse dhe e lehtë për t’u shtyrë. Sot, gjenerimi i një drafti të parë të atij kuptimi është mjaftueshëm i lirë sa justifikimi i vjetër bëhet më i dobët.</p>
+<h2 id="shumë-defekte-në-prodhim-fillojnë-si-supozime-që-mungojnë">Shumë defekte në prodhim fillojnë si supozime që mungojnë</h2>
+<p>Defektet në prodhim shpesh përshkruhen si dështime kodimi, por shumë prej tyre fillojnë më herët. Fillojnë si supozime që nuk u bënë kurrë mjaftueshëm të dukshme për t’u rishikuar.</p>
+<p>Një shërbim supozon se timestamp-et vijnë në UTC derisa një integrim rajonal fillon të dërgojë kohë lokale. Një rrjedhë pune supozon se një përdorues ka një kontratë aktive derisa llogaritë enterprise sjellin rinovime të mbivendosura. Një proces rakordimi supozon se ID-të e burimit upstream janë unike derisa dy tenants rastisin të ripërdorin të njëjtin çelës të jashtëm.</p>
+<p>Më vonë këto duken si bug-e implementimi, por problemi më i thellë është se supozimet nuk u regjistruan kurrë mjaftueshëm qartë për t’u sfiduar.</p>
+<p>E njëjta gjë vlen për rastet skajore. Rastet skajore që nuk regjistrohen nuk ka gjasa të implementohen saktë, sepse askush nuk i rishikoi në mënyrë eksplicite. Edhe inxhinierët shumë të mirë nuk mund të mbrohen nga skenarë që nuk dolën kurrë në sipërfaqe gjatë dizajnit ose code review-së.</p>
+<p>Këtu analiza e gjeneruar mund të ndihmojë në mënyrë praktike. Supozoni se një rishikim ndryshimi përfshin një listë-draft të supozimeve të mundshme, kushteve kufitare, skenarëve të dështimit, varësive të jashtme dhe rasteve skajore të patrajtuara. Lista do të përmbajë gabime. Mirë. Gabimet mund të rishikohen.</p>
+<p>Një rishikues mund të thotë pastaj:</p>
+<ul>
+<li>supozimi 2 është i gabuar; përdoruesit mund të kenë disa kontrata aktive</li>
+<li>ju mungoi rregulli i ruajtjes ligjore</li>
+<li>API-ja e jashtme nuk garanton renditje</li>
+<li>kjo rrugë duhet të funksionojë edhe gjatë ndërprerjes së pjesshme</li>
+<li>rasti i rrezikshëm nuk është hyrja <code>null</code>, por të dhëna të replikuara të vjetruara</li>
+</ul>
+<p>Implementimi mund të ndryshojë menjëherë ose jo. Por keqkuptimi bëhet i dukshëm para prodhimit. Një keqkuptim i heshtur është i kushtueshëm. Një keqkuptim i dukshëm mund të rishikohet.</p>
+<h2 id="rishikimet-kanë-nevojë-për-dy-qarqe-jo-një">Rishikimet kanë nevojë për dy qarqe, jo një</h2>
+<p>Rishikimi tradicional shpesh kalon drejtpërdrejt nga specifikimi te implementimi. Rishikuesi pyet nëse kodi funksionon, nëse testet janë të mjaftueshme dhe nëse ndryshimi duket i sigurt.</p>
+<p>Kjo mbetet e nevojshme, por lë një pikë të madhe të verbër: rishikuesi shpesh nuk e sheh arsyetimin ndërmjetës që e ktheu një kërkesë në një strategji implementimi.</p>
+<p>Në një model më të fortë rishikimi, ka dy qarqe.</p>
+<p>I pari është një qark rishikimi njerëzor që vlerëson qëllimin e nxjerrë para se biseda të shembet në kod. Në vend që të kalohet drejtpërdrejt nga specifikimi te implementimi, rishikuesi mund të shqyrtojë:</p>
+<p>Specifikimi -&gt; Qëllimi i nxjerrë</p>
+<p>Kjo i ndryshon pyetjet:</p>
+<ul>
+<li>A nxorëm gjënë e duhur?</li>
+<li>A është kjo vërtet ajo që kërkuesi donte?</li>
+<li>A janë supozimet të sakta?</li>
+<li>A mungojnë raste të rëndësishme skajore?</li>
+<li>A e keqkuptuam rregullin e biznesit?</li>
+</ul>
+<p>I dyti është një qark krahasimi mes shtresave. Një model mund të ndihmojë këtu, por ideja e rëndësishme është vetë krahasimi, jo mjeti. Rishikimi kontrollon përputhshmërinë nëpër shtresa që njerëzve tashmë u interesojnë:</p>
+<ul>
+<li>specifikimi -&gt; qëllimi</li>
+<li>qëllimi -&gt; implementimi</li>
+<li>specifikimi -&gt; implementimi</li>
+</ul>
+<p>Ky krahasim mund të nxjerrë në pah disa klasa të dobishme defektesh:</p>
+<ul>
+<li>kërkesa që u humbën</li>
+<li>kërkesa të shpikura që nuk kanë ekzistuar kurrë</li>
+<li>kufizime të dobësuara</li>
+<li>supozime të diskutuar në prozë por të pa pasqyruara në kod</li>
+<li>raste skajore që u përmendën por nuk u implementuan kurrë</li>
+<li>teste që mungojnë për supozime të rëndësishme</li>
+</ul>
+<p>Nyjet blu më poshtë përfaqësojnë kërkesa burimore, nyjet portokalli përfaqësojnë kuptimin e ruajtur, nyjet jeshile gradnikët e implementimit, nyjet vjollcë qarqet e rishikimit dhe nyjet e kuqe rrezikun për mirëmbajtje.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sq/review-loops.svg" alt="Diagrami i qarqeve të rishikimit" />
+<figcaption aria-hidden="true">Diagrami i qarqeve të rishikimit</figcaption>
+</figure>
+<p>Vlera këtu nuk është autoriteti i mjetit. Vlera është se arsyetimi bëhet mjaftueshëm i dukshëm për t’u rishikuar.</p>
+<h2 id="një-pull-request-mund-të-ketë-nevojë-për-dy-paketa">Një pull request mund të ketë nevojë për dy paketa</h2>
+<p>Kjo bëhet konkrete në pull request-e.</p>
+<p>Sot, shumë PR-e në thelb mbajnë një paketë: implementimin.</p>
+<p>Paketa e implementimit</p>
+<ul>
+<li>kod</li>
+<li>teste</li>
+</ul>
+<p>Kjo është e përdorshme, por e hollë. Ruhet sjellja pa ruajtur domosdoshmërisht pse ekziston ajo sjellje.</p>
+<p>Një model më i fortë PR-je do të mbante edhe një paketë të dytë krahas së parës.</p>
+<p>Paketa e të kuptuarit</p>
+<ul>
+<li>qëllimi i nxjerrë</li>
+<li>supozime</li>
+<li>kompromise</li>
+<li>raste skajore</li>
+<li>ndikimi në dokumentacion</li>
+<li>shënime besueshmërie</li>
+</ul>
+<p>Disa nga këto gradnike mund të jenë të gjeneruara. Të gjitha duhet të rishikohen nga njerëz kur kanë rëndësi.</p>
+<p>Kjo nuk është burokraci për hir të burokracisë. Është një përpjekje për të mos lejuar që repositorët të shemben sërish në kod plus folklor. Nëse kodi ndryshon, por paketa e të kuptuarit mungon, mirëmbajtësit përsëri përfundojnë duke bërë inxhinieri të kundërt mbi heshtjen.</p>
+<p>Kontrasti është i thjeshtë.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sq/code-only-vs-preserved-understanding.svg" alt="Diagrami kod i vetëm kundrejt të kuptuarit të ruajtur" />
+<figcaption aria-hidden="true">Diagrami kod i vetëm kundrejt të kuptuarit të ruajtur</figcaption>
+</figure>
+<p>Në rrugën e majtë, repositori grumbullon sjellje dhe humbet kontekst. Në rrugën e djathtë, repositori grumbullon sjellje plus të paktën një draft të rishikueshëm të qëllimit, supozimeve dhe arsyetimit.</p>
+<h2 id="rishikimi-i-korrektësisë-dhe-rishikimi-i-plotësisë-janë-punë-të-ndryshme">Rishikimi i korrektësisë dhe rishikimi i plotësisë janë punë të ndryshme</h2>
+<p>Kjo çon te një dallim i rëndësishëm.</p>
+<p>Rishikimi i korrektësisë pyet:</p>
+<ul>
+<li>A kompilojnë?</li>
+<li>A kalojnë testet?</li>
+<li>A është i sigurt?</li>
+<li>A i ndjek standardet?</li>
+<li>A është e saktë sjellja e vëzhguar?</li>
+</ul>
+<p>Rishikimi i plotësisë pyet:</p>
+<ul>
+<li>A është ruajtur qëllimi?</li>
+<li>A janë regjistruar supozimet?</li>
+<li>A janë regjistruar kufizimet?</li>
+<li>A janë kapur rastet e rëndësishme skajore?</li>
+<li>A janë rishikuar dokumentet e prekura?</li>
+<li>A janë rishikuar use case-et e prekura?</li>
+<li>A janë kapur kompromiset?</li>
+</ul>
+<p>Historikisht, rishikimet e plotësisë kanë qenë të shtrenjta për t’u bërë në mënyrë të qëndrueshme sepse prodhimi i gradnikëve themelorë ishte i kushtueshëm. Draftet e para të gjeneruara mund t’i bëjnë ato praktike në një shkallë që më parë ishte e vështirë të justifikohej.</p>
+<h2 id="kjo-është-më-afër-praktikës-ekzistuese-inxhinierike-sesa-tingëllon">Kjo është më afër praktikës ekzistuese inxhinierike sesa tingëllon</h2>
+<p>Asgjë nga kjo nuk kërkon një sistem të ri besimi. Shumica e gradnikëve përkatës tashmë janë të njohura:</p>
+<ul>
+<li>use case-e</li>
+<li>ADR</li>
+<li>shënime arkitekturore</li>
+<li>komente që shpjegojnë pse</li>
+<li>runbook-e operative</li>
+<li>rregulla validimi</li>
+<li>kontrata automatizimi</li>
+<li>arsyetim dizajni</li>
+<li>përditësime dokumentacioni</li>
+</ul>
+<p>Ndryshimi nuk është konceptual. Është ekonomik. Ekipet e kanë ditur gjithmonë që këto gradnike kanë rëndësi. Shpesh nuk i kanë mirëmbajtur sepse kostoja ishte e lartë dhe vlera e menjëhershme për dorëzim ishte e ulët.</p>
+<p>Prandaj ky argument duhet të mbetet modest. Arsyetimi i gjeneruar nga AI nuk është automatikisht i saktë. Dokumentacioni i gjeneruar nga AI nuk është autoritativ. Dokumentacioni nuk e zëvendëson gjykimin inxhinierik. AI-ja nuk e eliminon borxhin teknik.</p>
+<p>Ajo që mund të bëjnë këto rrjedha pune është ta bëjnë mjaftueshëm të lirë ruajtjen e një drafti të atij kuptimi që ekipet dikur e linin pas.</p>
+<h2 id="një-përfundim-praktik-për-repositorët">Një përfundim praktik për repositorët</h2>
+<p>Hapi më praktik i radhës nuk është të kërkohet prozë perfekte dizajni për çdo ndryshim. Është të shtohet një checklist e vogël e të kuptuarit në vendet ku ekipet tashmë e rishikojnë punën.</p>
+<p>Për shembull, një template PR-je mund të kërkojë një seksion të shkurtër të rishikuar që mbulon:</p>
+<ul>
+<li>qëllimin e nxjerrë</li>
+<li>supozimet kyçe</li>
+<li>rastet e rëndësishme skajore</li>
+<li>kompromise ose alternativa të refuzuara</li>
+<li>ndikimin në dokumentacion ose use case-e</li>
+<li>nivelin e besueshmërisë dhe pyetjet e hapura</li>
+</ul>
+<p>Këto seksione nuk kanë nevojë të jenë të gjata. Ato duhet të jenë mjaftueshëm të pranishme që një inxhinier tjetër t’i sfidojë. Mund të jenë drafte të para të gjeneruara, por duhet të rishikohen me të njëjtën seriozitet si kodi.</p>
+<h2 id="përfundim">Përfundim</h2>
+<p>Titulli i këtij artikulli është qëllimisht më i ngushtë se përfundimi i tij. Rreziku real nuk është sintaksa e gjeneruar nga AI. Rreziku real është borxhi i të kuptuarit: implementime që mbeten pasi arsyetimi pas tyre është zhdukur.</p>
+<p>Pyetja më interesante është nëse repositorët do të fillojnë ta trajtojnë arsyetimin, supozimet, rastet skajore dhe qëllimin si gradnike të klasit të parë përkrah vetë implementimit.</p>
+<p>Historikisht, shumë ekipe e humbën qëllimin sepse ruajtja e tij ishte e kushtueshme. Sot, gjenerimi i një drafti të parë të tij është i lirë. Kjo nuk e zgjidh problemin. E ndryshon atë që është ekonomikisht praktike.</p>
+<p>Mirëmbajtësit e ardhshëm mund të ankohen ende për arsyetimin e gjeneruar. Mund të gjejnë gabime në të. Mund të mos bien dakord me supozimet që ai rendit. Mund të fshijnë gjysmën e tij gjatë rishikimit.</p>
+<p>Dhe prapëseprapë mund të preferojnë të rishikojnë arsyetim të papërsosur sesa të bëjnë inxhinieri të kundërt mbi heshtjen.</p>
+<h2 id="lexim-i-ndërlidhur">Lexim i ndërlidhur</h2>
+<ul>
+<li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
+<li><code>../../wiki/spec-driven-development.md</code></li>
+<li><code>../../wiki/documentation-traceability.md</code></li>
+<li><code>../../wiki/validation-layers.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+<li><code>ai-as-an-oracle.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Gjuhë të tjera</h2>
+            <ul>
+              <li><a href="../../blog/en/ai-technical-debt-is-not-about-ai-generated-code.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/ai-technical-debt-is-not-about-ai-generated-code.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Përmbajtje të ngjashme</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentim</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Zhvillim i drejtuar nga specifikimet</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/sq/documentation-is-part-of-the-product.html"><span>Dokumentimi është pjesë e produktit</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sq/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kur demoja është provë dhe kur nuk është</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sq/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Si të mbani të përafruara specifikimin, dokumentacionin, demonstrimin dhe kodin</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../learning/sq/how-to-write-a-spec-that-ai-can-follow.html"><span>Si të shkruani një specifikim që AI mund ta ndjekë</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../wiki/sq/documentation-is-more-than-a-website.html"><span>Dokumentacioni është më shumë se një faqe interneti</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/markdown-in-product-development.html"><span>Markdown në Zhvillimin e produktit</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sq/spec-driven-development.html"><span>Zhvillimi i drejtuar nga specifikimi</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sq/spec-driven-development.html"><span>Zhvillimi i Udhëhequr nga Specifikimi</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/documentation-traceability.html"><span>Gjurmueshmëria e Dokumentacionit</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../learning/sq/how-to-review-ai-assisted-work-against-the-spec.html"><span>Si të rishikoni punë të ndihmuar nga AI kundrejt specifikimit</span><span class="topic-menu__meta">Materiale mësimore</span></a>
+                  <a href="../../topics/sq/ai-assisted-implementation.html"><span>Implementimi i Ndihmuar nga AI</span><span class="topic-menu__meta">Tema</span></a>
+                  <a href="../../topics/sq/demo-and-specification-alignment.html"><span>Përputhja e Demos dhe Specifikimit</span><span class="topic-menu__meta">Tema</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Një platformë praktike për katalogim, ofrim dhe gjetje librash edukativë.</p>
+            <p class="footer-note">Të drejtat e autorit © kontribuesit e Let Books. Ripërdorimi ndjek licencimin e depos nëse faqja nuk thotë ndryshe.</p>
+            <p class="footer-microcopy">Prototip i hershëm alfa. Dokumentacioni dhe teksti i ndërfaqes janë të ndihmuara nga AI. Institucionet dhe integrimet e përmendura në shembuj janë konceptuale dhe nuk nënkuptojnë partneritet ose mbështetje.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sq/index.html">Përmbledhje</a>
+              <a href="../../topics/sq/index.html">Tema</a>
+              <a href="../../index.html">Faqja kryesore</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Të gjitha gjuhët</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

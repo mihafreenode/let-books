@@ -26,6 +26,10 @@ This guide defines baseline translation expectations for Let Books knowledge con
 - if a sentence sounds translated from English, rewrite it instead of preserving the source structure
 - prefer natural Slovenian technical writing over literal English rhetorical phrasing, even when the literal wording is grammatically correct
 - do not translate management, startup, or AI-community jargon word-for-word when a Slovenian engineer would naturally express the idea differently
+- a translation can preserve broad meaning and still fail review if a native engineer would not naturally say it in technical discussion
+- prefer concept fidelity and engineering meaning over wording fidelity, especially in role names, workflow language, economic tradeoff phrasing, and business-rule examples
+- if source wording itself is weak, improve the source meaning and then localize the improved idea instead of preserving weak phrasing for parity
+- treat translated metaphors, copied English sentence structure, and visually incorrect diagram references as localization defects, not stylistic preferences
 
 ## Example categories to watch
 
@@ -50,6 +54,8 @@ Concrete patterns to avoid:
   Preferred direction: rewrite the sentence to express the intended meaning such as speed, visible output, or the feeling of productivity
 - `non-negotiable constraints` translated literally as `nepogajalske omejitve`
   Preferred direction: `ključne omejitve`, `zahteve, od katerih ni mogoče odstopati`, or another natural formulation that expresses binding constraints
+- generic `behavior` translated mechanically as `vedenje`
+  Preferred direction: choose the term by context, for example `delovanje`, `način delovanja`, `obnašanje sistema`, or `implementirana logika`
 
 General review rule:
 

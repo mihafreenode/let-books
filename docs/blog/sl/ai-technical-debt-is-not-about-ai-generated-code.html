@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="sl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tehnični dolg pri AI ni povezan z AI-generirano kodo | LetBooks</title>
+    <meta name="description" content="Večje dolgoročno tveganje pri AI-podprtem razvoju ni generirana sintaksa, temveč implementacije, ki preživijo tudi potem, ko razumevanje njihovega nastanka izgine.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="Tehnični dolg pri AI ni povezan z AI-generirano kodo | LetBooks">
+    <meta property="og:description" content="Večje dolgoročno tveganje pri AI-podprtem razvoju ni generirana sintaksa, temveč implementacije, ki preživijo tudi potem, ko razumevanje njihovega nastanka izgine.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tehnični dolg pri AI ni povezan z AI-generirano kodo | LetBooks">
+    <meta name="twitter:description" content="Večje dolgoročno tveganje pri AI-podprtem razvoju ni generirana sintaksa, temveč implementacije, ki preživijo tudi potem, ko razumevanje njihovega nastanka izgine.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="sl">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/sl/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../sl/index.html">Dokumentacija</a>
+            <a class="nav-link" href="../../blog/sl/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/sl/index.html">Učni vodniki</a>
+            <a class="nav-link" href="../../wiki/sl/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/sl/index.html">Teme</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/ai-technical-debt-is-not-about-ai-generated-code.html" lang="en">EN</a>
+              <a class="lang-link is-current" href="../../blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">FR</a>
+              <a class="lang-link" href="../../blog/es/ai-technical-debt-is-not-about-ai-generated-code.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Vsi jeziki</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../sl/index.html">Dokumentacija</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/sl/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Tehnični dolg pri AI ni povezan z AI-generirano kodo</span>
+            </nav>
+            <h1>Tehnični dolg pri AI ni povezan z AI-generirano kodo</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Slovenščina</span>
+          </div>
+          <p class="content-page-summary">Večje dolgoročno tveganje pri AI-podprtem razvoju ni generirana sintaksa, temveč implementacije, ki preživijo tudi potem, ko razumevanje njihovega nastanka izgine.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Teme:</span>
+              <span class="content-tag">Dokumentacija</span>
+              <span class="content-tag">Razvoj na podlagi specifikacij</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Pogost argument o AI-generirani kodi je naslednji: resnična nevarnost je v tem, da prihodnji vzdrževalci podedujejo kodo, ki je niso napisali in je ne razumejo. Ta skrb je razumna, vendar meri v napačen cilj. V mnogih sistemih je večji problem starejši in bolj znan. Implementacije preživijo, razumevanje pa izgine.</p>
+<p>Ta način odpovedi je obstajal že dolgo pred pomočniki za pisanje kode. Ekipe so vedno dostavljale sisteme, katerih prvotni namen je živel v sestanku, na tabli, v komentarju na nalogi ali v glavi posameznega inženirja. Koda je ostala. Razlaga ni. Leto pozneje je implementacija morda še vedno pravilna, testi morda še vedno uspešno tečejo, vendar najdražji del sistema ni več koda. Najdražje je manjkajoče razumevanje okoli nje.</p>
+<p>Zato »tehnični dolg pri AI« ni predvsem vprašanje tega, ali je model napisal nekaj vrstic kode. Gre za to, ali se razmišljanje, ki je te vrstice ustvarilo, ohrani, pregleda in ostane dostopno. Če to razmišljanje ostane nevidno, vzdrževalci podedujejo sintakso in arheologijo. Če postane vidno, podedujejo nekaj nepopolnega, vendar pregledljivega.</p>
+<h2 id="napačna-primerjava">Napačna primerjava</h2>
+<p>Veliko kritik primerja AI-generirano utemeljitev z idealnim standardom popolno napisane človeške utemeljitve: čisti arhitekturni odločitveni zapisi (ADR-ji), skrbni komentarji, ažurna dokumentacija, premišljene opombe o kompromisih in jasna sporočila v commitih. Tako pa večina repozitorijev po nekaj letih pritiska rokov v resnici ne izgleda.</p>
+<p>Resnična primerjava je navadno precej bolj neurejena:</p>
+<ul>
+<li>manjkajoča dokumentacija</li>
+<li>stari sistemi za naloge, do katerih ni več dostopa</li>
+<li>nejasna sporočila commitov</li>
+<li>sodelavci, ki so že odšli</li>
+<li>plemensko znanje</li>
+<li>nezapisane predpostavke</li>
+<li>rekonstruiranje delovanja sistema iz kode</li>
+</ul>
+<p>Na takem ozadju je lahko nepopolno ohranjeno razmišljanje zelo dragoceno. Prihodnji vzdrževalci bodo morda raje imeli pomanjkljivo razlago, ki jo lahko izpodbijajo, kot popolno tišino, o kateri lahko le ugibajo.</p>
+<h2 id="od-implementacijskega-dolga-do-dolga-razumevanja">Od implementacijskega dolga do dolga razumevanja</h2>
+<p>Tehnični dolg je bil navadno opisan kot implementacijski dolg: na hitro napisana koda, podvajanje, slabe abstrakcije, manjkajoči testi, krhke odvisnosti, bližnjice, ki pozneje postanejo drage. Tak okvir je še vedno uporaben. Slabe implementacije so še vedno slabe.</p>
+<p>Toda v številnih organizacijah se pojavlja drugačno stroškovno središče. Draga ni sintaksa. Drago je razumevanje.</p>
+<p>Ko postane sistem težko spreminjati, so resnične ovire pogosto vprašanja, kot so:</p>
+<ul>
+<li>Zakaj je bila ta odločitev sprejeta?</li>
+<li>Katere omejitve so bile resnične in katere naključne?</li>
+<li>Kateri robni primeri so bili upoštevani?</li>
+<li>Kateri so bili prezrti?</li>
+<li>Od katerih zunanjih predpostavk je odvisna ta logika?</li>
+<li>Česa naj se prihodnji vzdrževalci bojijo pokvariti?</li>
+</ul>
+<p>Na takšna vprašanja ne odgovorijo ne prevajalnik, ne testi, ne statična analiza. Zato ekipe odgovarjajo na dražji način: z rekonstrukcijo namena iz kode, dnevnikov, napol pozabljenih razprav v starih nalogah in samozavesti tistega, ki je najdlje v ekipi.</p>
+<p>Zato je izraz dolg razumevanja uporaben. Zgodovinsko smo govorili o implementacijskem dolgu, ker je bila pokvarjena koda vidna. Vse več organizacij pa bo morda ugotovilo, da dolgoročno več stane ohranjeno delovanje sistema brez ohranjene razlage.</p>
+<h2 id="realističen-primer-začasna-ustavitev-dostopa-ni-isto-kot-popolna-blokada">Realističen primer: začasna ustavitev dostopa ni isto kot popolna blokada</h2>
+<p>Predstavljajte si nalogo v SaaS-sistemu za obračunavanje:</p>
+<blockquote>
+<p>Začasno ustavi dostop do delovnega prostora, ko je račun zapadel več kot 30 dni. Finančni kontakti morajo še vedno imeti možnost prenosa računov in posodabljanja plačilnih podatkov. Delovni prostori enterprise, označeni za ročni pregled podaljšanja, se ne smejo samodejno ustaviti.</p>
+</blockquote>
+<p>Takšna naloga ni nič nenavadnega. Vsebuje poslovna pravila, izjeme in besede, ki se zdijo očitne, dokler jih nekdo ne poskusi prevesti v kodo.</p>
+<p>AI-podprt delovni tok bi lahko pred implementacijo izluščil naslednji osnutek namena:</p>
+<ul>
+<li>cilj: ustaviti običajen dostop do produkta za neplačane račune</li>
+<li>izjema: ohraniti del dostopa, povezan z obračunavanjem</li>
+<li>sprožilec: račun je zapadel za več kot 30 dni</li>
+<li>ne-cilj: delovni prostori enterprise, pri katerih je podaljšanje v ročnem pregledu</li>
+</ul>
+<p>Lahko bi tudi eksplicitno zapisal svoje implicitne predpostavke:</p>
+<ul>
+<li>zapadlost se izračuna od datuma zapadlosti računa</li>
+<li>ustavitev velja za vse uporabnike razen lastnika delovnega prostora</li>
+<li>dostop do produkta samo za branje ni potreben</li>
+<li>API-žetoni naj ostanejo aktivni, ker naloga govori o uporabniškem dostopu, ne o integracijah</li>
+<li>ročni pregled za enterprise je zastavica na ravni delovnega prostora, ki se preveri pred ustavitvijo</li>
+</ul>
+<p>Ta seznam ni avtoritativen. Uporaben je zato, ker ga je mogoče v pregledu takoj izpodbijati.</p>
+<p>V resničnem pregledu bi lahko starejši inženir ali produktni vodja odgovoril takole:</p>
+<ul>
+<li>kontakt za finance ni nujno samo lastnik delovnega prostora; takšnih uporabnikov je lahko več</li>
+<li>API-žetoni ne smejo ostati aktivni, ker je izvoz podatkov še vedno uporaba produkta</li>
+<li>zasloni z revizijsko zgodovino morajo ostati vidni uporabnikom, ki skrbijo za finance, da lahko usklajujejo sporne račune</li>
+<li>30-dnevni rok začne teči od najnovejšega neporavnanega računa po upoštevanju dobropisov, ne od prvotnega datuma zapadlosti</li>
+<li>ročni pregled za enterprise ni preprosta logična zastavica; storitev za obračunavanje izpostavlja enum za stanje podaljšanja</li>
+</ul>
+<p>Zdaj primerjajte dva svetova.</p>
+<p>V prvem svetu te predpostavke niso bile nikoli zapisane. Koda se pregleda neposredno, tisti, ki spremembo pregleduje, se osredotoči na tok izvajanja in teste, vsi pa upajo, da je bilo poslovno pravilo pravilno razumljeno.</p>
+<p>V drugem svetu so predpostavke postale vidne še pred združitvijo kode. Tistemu, ki spremembo pregleduje, ni treba ugibati, kaj je imel avtor spremembe v mislih. Nesporazum je že izpostavljen.</p>
+<p>To še ne zagotavlja pravilnosti. Ustvari pa priložnost za pregled, ki je nevidno razmišljanje nikoli ne ustvari.</p>
+<p>Nastalo razumevanje implementacije postane precej natančnejše:</p>
+<ul>
+<li>ustavi običajen dostop do produkta, ko je najnovejši neporavnani račun v zamudi več kot 30 dni</li>
+<li>ohrani dostop do obračunavanja in revizije za uporabnike z vlogo skrbnika za finance</li>
+<li>med ustavitvijo blokiraj API-žetone</li>
+<li>preskoči samodejno ustavitev, kadar je stanje podaljšanja v obračunavanju <code>ManualReview</code></li>
+<li>dodaj teste za več uporabnikov v vlogi skrbnika za finance, prilagoditve zaradi dobropisov in to, kaj se zgodi z blokiranimi žetoni</li>
+</ul>
+<p>Pomembno je, kaj se je spremenilo. Implementacija je lahko na koncu še vedno le nekaj pogojnih stavkov in testov. Veliko izboljšanje ni sintaktično. Izboljšanje je v tem, da je razmišljanje postalo dovolj vidno, da ga je bilo mogoče popraviti pred produkcijo.</p>
+<h2 id="ekonomika-se-je-spremenila">Ekonomika se je spremenila</h2>
+<p>To je del, ki ga mnoge razprave o AI spregledajo.</p>
+<p>Zgodovinsko je bilo mogoče izdelati implementacijo, medtem ko je bilo ohranjanje namena drago. Inženirji so lahko napisali kodo in teste ter šli naprej. Pisanje spremljajočih gradnikov pa je pogosto zahtevalo še dodatno uro ali tri zbranega dela: posodobiti ADR, zajeti omejitve, zapisati zavrnjene alternative, našteti robne primere, opisati vpliv na dokumentacijo in pojasniti, česa prihodnji vzdrževalci ne smejo kar tako poenostaviti.</p>
+<p>Ekipe so vedele, da so te stvari koristne. Kljub temu so jih pogosto preskakovale, in to racionalno. Ko so roki res pritiskali, je delujoča koda z minimalno razlago premagala delujočo kodo s trajnejšim razumevanjem. Tak kompromis je kopičil dolg razumevanja.</p>
+<p>AI spreminja ekonomiko zato, ker postane prvi osnutek ohranjenega razumevanja poceni takoj, ko kontekst implementacije že obstaja. Če ima model nalogo, specifikacijo, spremenjene datoteke, teste in ustrezne arhitekturne opombe, potem lahko osnutek naslednjih gradnikov zahteva le zmeren dodaten strošek:</p>
+<ul>
+<li>utemeljitev</li>
+<li>predpostavke</li>
+<li>kompromise</li>
+<li>robne primere</li>
+<li>spremembe dokumentacije</li>
+<li>vplive na primere uporabe</li>
+<li>opombe o stopnji zaupanja</li>
+<li>odprta vprašanja</li>
+</ul>
+<p>To ne odpravi človeškega napora. Spremeni pa, kam je ta napor usmerjen. Izziv se premakne od pisanja k pregledu in validaciji.</p>
+<p>Ta premik je pomemben, ker težava pogosto ni bila filozofska, ampak ekonomska. Ekipe namena niso vedno izgubljale zato, ker bi sovražile dokumentacijo. Izgubljale so ga zato, ker je bilo ohranjanje drago, prekinjalo tok dela in ga je bilo lahko odložiti. Danes je prvi osnutek tega razumevanja dovolj poceni, da so stari izgovori manj prepričljivi.</p>
+<h2 id="veliko-produkcijskih-napak-se-začne-kot-manjkajoče-predpostavke">Veliko produkcijskih napak se začne kot manjkajoče predpostavke</h2>
+<p>Produkcijske napake so pogosto opisane kot napake v kodiranju, vendar se mnoge začnejo prej. Začnejo se kot predpostavke, ki nikoli niso postale dovolj vidne, da bi jih lahko pregledali.</p>
+<p>Storitev predpostavi, da časovni žigi vedno prihajajo v UTC, dokler regionalna integracija ne začne pošiljati lokalnega časa. Delovni tok predpostavi, da ima uporabnik eno aktivno pogodbo, dokler enterprise računi ne uvedejo prekrivajočih se podaljšanj. Usklajevalno opravilo predpostavi, da so zunanji identifikatorji enolični, dokler dva tenant-a po naključju ne uporabita istega ključa.</p>
+<p>Pozneje je vse to videti kot implementacijska napaka, globlji problem pa je, da predpostavke nikoli niso bile dovolj jasno zapisane, da bi jih kdo izpodbijal.</p>
+<p>Enako velja za robne primere. Robni primeri, ki niso zapisani, bodo zelo verjetno napačno implementirani, ker jih nihče ni izrecno pregledal. Tudi odlični inženirji se ne morejo braniti pred scenariji, ki se med načrtovanjem ali pregledom kode nikoli niso pojavili.</p>
+<p>Tu lahko generirana analiza pomaga na zelo praktičen način. Predstavljajte si, da pregled spremembe vključuje osnutek seznama verjetnih predpostavk, mejnih pogojev, scenarijev odpovedi, zunanjih odvisnosti in neobravnavanih robnih primerov. Seznam bo vseboval napake. Prav. Napake je mogoče pregledati.</p>
+<p>Tisti, ki spremembo pregleduje, lahko nato reče:</p>
+<ul>
+<li>druga predpostavka je napačna; uporabniki imajo lahko več aktivnih pogodb</li>
+<li>spregledali ste pravilo zakonske hrambe</li>
+<li>zunanji API ne zagotavlja vrstnega reda</li>
+<li>ta pot mora delovati tudi med delnim izpadom</li>
+<li>nevaren primer ni <code>null</code> vhod, ampak zastareli replikirani podatki</li>
+</ul>
+<p>Implementacija se lahko nato spremeni ali pa tudi ne. Pomembno je, da nesporazum postane viden pred produkcijo. Skrit nesporazum je drag. Ko postane viden, ga je mogoče pregledati.</p>
+<h2 id="pregledi-potrebujejo-dve-zanki-ne-ene">Pregledi potrebujejo dve zanki, ne ene</h2>
+<p>Tradicionalni pregled pogosto preskoči neposredno od specifikacije do implementacije. Pri tem se običajno sprašujemo, ali koda deluje, ali so testi zadostni in ali je sprememba videti varna.</p>
+<p>To je še vedno potrebno, vendar pusti veliko slepo pego: pogosto ni vidno vmesno razmišljanje, ki je zahtevo pretvorilo v strategijo implementacije.</p>
+<p>V močnejšem modelu pregleda obstajata dve zanki.</p>
+<p>Prva je človeška pregledna zanka, ki oceni izpeljani namen, še preden se pogovor sesede v kodo. Namesto neposrednega skoka od specifikacije k implementaciji lahko tisti, ki spremembo pregleduje, pregleda:</p>
+<p>Specifikacija -&gt; Izpeljani namen</p>
+<p>To spremeni vprašanja:</p>
+<ul>
+<li>Ali smo izpeljali pravo stvar?</li>
+<li>Je to res tisto, kar je naročnik želel?</li>
+<li>Ali so predpostavke pravilne?</li>
+<li>Ali manjkajo pomembni robni primeri?</li>
+<li>Ali smo narobe razumeli poslovno pravilo?</li>
+</ul>
+<p>Druga je zanka primerjave plasti. Model lahko pri tem pomaga, vendar je pomembna primerjava sama, ne orodje. Pregled preverja skladnost med plastmi, ki so ljudem že tako ali tako pomembne:</p>
+<ul>
+<li>specifikacija -&gt; namen</li>
+<li>namen -&gt; implementacija</li>
+<li>specifikacija -&gt; implementacija</li>
+</ul>
+<p>Takšna primerjava lahko odkrije več uporabnih razredov napak:</p>
+<ul>
+<li>zahteve, ki so bile spregledane</li>
+<li>izmišljene zahteve, ki nikoli niso obstajale</li>
+<li>oslabljene omejitve</li>
+<li>predpostavke, zapisane v prozi, vendar ne odražene v kodi</li>
+<li>robne primere, ki so bili omenjeni, vendar nikoli implementirani</li>
+<li>manjkajoče teste za pomembne predpostavke</li>
+</ul>
+<p>Modri elementi v spodnjem diagramu predstavljajo zahteve ali izvor resnice, oranžni ohranjeno razumevanje, zeleni implementacijske gradnike, vijolični pregledne zanke, rdeči pa vzdrževalno tveganje.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sl/review-loops.svg" alt="Diagram preglednih zank" />
+<figcaption aria-hidden="true">Diagram preglednih zank</figcaption>
+</figure>
+<p>Vrednost tukaj ni v avtoriteti orodja. Vrednost je v tem, da razmišljanje postane dovolj vidno, da ga je mogoče pregledati.</p>
+<h2 id="pull-request-bo-morda-potreboval-dva-paketa">Pull request bo morda potreboval dva paketa</h2>
+<p>To postane zelo konkretno pri pull requestih.</p>
+<p>Danes mnogi PR-ji v praksi nosijo en sam paket: implementacijo.</p>
+<p>Implementacijski paket</p>
+<ul>
+<li>koda</li>
+<li>testi</li>
+</ul>
+<p>To je uporabno, vendar ne pove dovolj. Ohranja delovanje sistema, ne da bi nujno ohranilo tudi razlog, zakaj je takšno.</p>
+<p>Močnejši model PR-ja bi poleg prvega nosil še drugi paket.</p>
+<p>Paket razumevanja</p>
+<ul>
+<li>izpeljani namen</li>
+<li>predpostavke</li>
+<li>kompromisi</li>
+<li>robni primeri</li>
+<li>vpliv na dokumentacijo</li>
+<li>opombe o stopnji zaupanja</li>
+</ul>
+<p>Nekateri od teh gradnikov so lahko generirani. Vsi pa morajo biti človeško pregledani, kadar so pomembni.</p>
+<p>To ni birokracija zaradi birokracije same. Gre za poskus, da se repozitoriji ne bi sesedli nazaj v kodo in folkloro. Če se koda spremeni, paket razumevanja pa manjka, vzdrževalci še vedno končajo pri obratnem sklepanju iz tišine.</p>
+<p>Kontrast je preprost.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sl/code-only-vs-preserved-understanding.svg" alt="Diagram samo koda proti ohranjenemu razumevanju" />
+<figcaption aria-hidden="true">Diagram samo koda proti ohranjenemu razumevanju</figcaption>
+</figure>
+<p>V prvem delu diagrama repozitorij kopiči implementirano logiko in izgublja kontekst. V drugem delu jo kopiči skupaj z vsaj pregledljivim osnutkom namena, predpostavk in utemeljitve.</p>
+<h2 id="pregled-pravilnosti-in-pregled-celovitosti-sta-različni-nalogi">Pregled pravilnosti in pregled celovitosti sta različni nalogi</h2>
+<p>To vodi do pomembne razlike.</p>
+<p>Pregled pravilnosti sprašuje:</p>
+<ul>
+<li>Ali se prevede?</li>
+<li>Ali testi uspejo?</li>
+<li>Ali je varno?</li>
+<li>Ali sledi standardom?</li>
+<li>Ali je opaženo delovanje pravilno?</li>
+</ul>
+<p>Pregled celovitosti sprašuje:</p>
+<ul>
+<li>Ali je namen ohranjen?</li>
+<li>Ali so predpostavke zapisane?</li>
+<li>Ali so omejitve zapisane?</li>
+<li>Ali so bili zajeti pomembni robni primeri?</li>
+<li>Ali so bili pregledani prizadeti dokumenti?</li>
+<li>Ali so bili pregledani prizadeti primeri uporabe?</li>
+<li>Ali so bili zajeti kompromisi?</li>
+</ul>
+<p>Zgodovinsko je bilo preglede celovitosti težko izvajati dosledno, ker je bila izdelava osnovnih gradnikov draga. Generirani prvi osnutki jih lahko naredijo praktične v obsegu, ki ga je bilo prej težko upravičiti.</p>
+<h2 id="to-je-bližje-obstoječi-inženirski-praksi-kot-se-sliši">To je bližje obstoječi inženirski praksi, kot se sliši</h2>
+<p>Nič od tega ne zahteva novega sistema verovanja. Večina relevantnih gradnikov je že dobro znana:</p>
+<ul>
+<li>primeri uporabe</li>
+<li>arhitekturni odločitveni zapisi (ADR-ji)</li>
+<li>arhitekturne opombe</li>
+<li>komentarji, ki pojasnjujejo zakaj</li>
+<li>operativni runbooki</li>
+<li>validacijska pravila</li>
+<li>avtomatizacijske pogodbe</li>
+<li>načrtovalska utemeljitev</li>
+<li>posodobitve dokumentacije</li>
+</ul>
+<p>Premik ni konceptualen. Je ekonomski. Ekipe že dolgo vedo, da so ti gradniki pomembni. Pogosto jih niso vzdrževale, ker je bil napor velik, neposredna vrednost za dostavo pa majhna.</p>
+<p>Zato mora ta argument ostati skromen. AI-generirano razmišljanje ni samodejno pravilno. AI-generirana dokumentacija ni avtoritativna. Dokumentacija ne nadomesti inženirske presoje. AI ne odpravi tehničnega dolga.</p>
+<p>Kar ti delovni tokovi lahko naredijo, je to, da postane dovolj poceni ohraniti osnutek razumevanja, ki so ga ekipe prej puščale za seboj.</p>
+<h2 id="praktičen-sklep-za-repozitorij">Praktičen sklep za repozitorij</h2>
+<p>Najbolj praktičen naslednji korak ni zahteva po popolni razlagi zasnove pri vsaki spremembi. Bolj smiselno je dodati kratek kontrolni seznam razumevanja na mesta, kjer ekipe že zdaj pregledujejo spremembe.</p>
+<p>Na primer, predloga za PR lahko zahteva kratek pregledan razdelek, ki zajema:</p>
+<ul>
+<li>izpeljani namen</li>
+<li>ključne predpostavke</li>
+<li>pomembne robne primere</li>
+<li>kompromise ali zavrnjene alternative</li>
+<li>vpliv na dokumentacijo ali primere uporabe</li>
+<li>stopnjo zaupanja in odprta vprašanja</li>
+</ul>
+<p>Ti razdelki niso nujno dolgi. Morajo pa biti prisotni v tolikšni meri, da jih lahko drug inženir izpodbija. Lahko so generirani prvi osnutki, vendar jih je treba pregledati z enako resnostjo kot kodo.</p>
+<h2 id="zaključek">Zaključek</h2>
+<p>Naslov tega članka je namenoma ožji od njegovega zaključka. Resnično tveganje ni AI-generirana sintaksa. Resnično tveganje je dolg razumevanja: implementacije, ki preživijo tudi potem, ko razmišljanje za njimi izgine.</p>
+<p>Bolj zanimivo vprašanje je, ali bodo repozitoriji začeli razmišljanje, predpostavke, robne primere in namen obravnavati kot prvovrstne gradnike ob sami implementaciji.</p>
+<p>Zgodovinsko so številne ekipe izgubljale namen zato, ker ga je bilo drago ohranjati. Danes je prvi osnutek tega dovolj poceni, da se ekonomska računica spremeni, čeprav problem s tem še ni rešen.</p>
+<p>Prihodnji vzdrževalci se bodo morda še vedno pritoževali nad samodejno ustvarjeno utemeljitvijo. Morda bodo v njej našli napake. Morda se ne bodo strinjali z navedenimi predpostavkami. Morda bodo med pregledom izbrisali polovico vsega.</p>
+<p>In kljub temu bodo morda raje pregledovali nepopolno razmišljanje, kot pa iz tišine obratno sklepali o namenu.</p>
+<h2 id="sorodno-branje">Sorodno branje</h2>
+<ul>
+<li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
+<li><code>../../wiki/spec-driven-development.md</code></li>
+<li><code>../../wiki/documentation-traceability.md</code></li>
+<li><code>../../wiki/validation-layers.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+<li><code>ai-as-an-oracle.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Drugi jeziki</h2>
+            <ul>
+              <li><a href="../../blog/en/ai-technical-debt-is-not-about-ai-generated-code.html" lang="en">English</a></li>
+              <li><a href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">Français</a></li>
+              <li><a href="../../blog/es/ai-technical-debt-is-not-about-ai-generated-code.html" lang="es">Español</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Sorodne vsebine</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Dokumentacija</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Razvoj na podlagi specifikacij</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/sl/documentation-is-part-of-the-product.html"><span>Dokumentacija je del izdelka</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/sl/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Kdaj je demo dokaz in kdaj ni</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/sl/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Kako ohranjati usklajenost specifikacije, dokumentacije, predstavitve in kode</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../learning/sl/how-to-write-a-spec-that-ai-can-follow.html"><span>Kako napisati specifikacijo, ki ji lahko AI sledi</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../wiki/sl/documentation-is-more-than-a-website.html"><span>Dokumentacija ni samo spletna stran</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/markdown-in-product-development.html"><span>Markdown v razvoju izdelkov</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/sl/spec-driven-development.html"><span>Razvoj na podlagi specifikacij</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/sl/spec-driven-development.html"><span>Razvoj, voden s specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/documentation-traceability.html"><span>Sledljivost dokumentacije</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../learning/sl/how-to-review-ai-assisted-work-against-the-spec.html"><span>Kako pregledovati delo s pomočjo AI glede na specifikacijo</span><span class="topic-menu__meta">Učni vodniki</span></a>
+                  <a href="../../topics/sl/ai-assisted-implementation.html"><span>Implementacija z AI-podporo</span><span class="topic-menu__meta">Teme</span></a>
+                  <a href="../../topics/sl/demo-and-specification-alignment.html"><span>Usklajenost med demo prikazom in specifikacijo</span><span class="topic-menu__meta">Teme</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Praktična platforma za katalogizacijo, ponujanje in iskanje izobraževalnih knjig.</p>
+            <p class="footer-note">Avtorske pravice © sodelujoči pri Let Books. Ponovna uporaba sledi licenciranju repozitorija, razen če je na strani navedeno drugače.</p>
+            <p class="footer-microcopy">Zgodnji alfa prototip. Dokumentacija in besedilo uporabniškega vmesnika sta podprta z AI. Ustanove in integracije, omenjene v primerih, so zgolj konceptualne in ne pomenijo partnerstva ali podpore.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../sl/index.html">Pregled</a>
+              <a href="../../topics/sl/index.html">Teme</a>
+              <a href="../../index.html">Domača stran</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Vsi jeziki</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

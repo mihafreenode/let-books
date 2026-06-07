@@ -1,0 +1,41 @@
+%% Blue = specification or source of truth.
+%% Orange = inferred intent and preserved understanding.
+%% Green = implementation artifacts.
+%% Purple = review and validation loops.
+%% Red = maintainability risk.
+%% Mermaid source is authoritative. Render with htmlLabels: false via tools/mermaid-render-config.json.
+flowchart LR
+    subgraph LEFT[Code Only]
+        LSPEC[Ticket]
+        LCODE[Code and Tests]
+        LMAINT[Future Maintainer]
+        LRISK[Reverse-Engineering Silence]
+
+        LSPEC --> LCODE --> LMAINT --> LRISK
+    end
+
+    subgraph RIGHT[Code Plus Preserved Understanding]
+        RSPEC[Ticket]
+        RINTENT[Intent]
+        RASSUME[Assumptions and Edge Cases]
+        RCODE[Code and Tests]
+        RREVIEW{{Human and AI Review}}
+        RMAINT[Future Maintainer]
+
+        RSPEC --> RINTENT --> RASSUME --> RCODE --> RMAINT
+        RINTENT --> RREVIEW
+        RASSUME --> RREVIEW
+        RCODE --> RREVIEW
+    end
+
+    classDef source fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#0f172a;
+    classDef understanding fill:#fed7aa,stroke:#ea580c,stroke-width:2px,color:#0f172a;
+    classDef implementation fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+    classDef review fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#0f172a;
+    classDef risk fill:#fecaca,stroke:#dc2626,stroke-width:2px,color:#0f172a;
+
+    class LSPEC,RSPEC source;
+    class RINTENT,RASSUME understanding;
+    class LCODE,RCODE,RMAINT implementation;
+    class RREVIEW review;
+    class LRISK risk;

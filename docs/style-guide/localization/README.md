@@ -492,6 +492,17 @@ Where practical, validators and review workflows should encourage:
 
 not merely source-text translation parity.
 
+Natural technical language is part of correctness.
+
+For publication-quality content, reviewers should ask questions such as:
+
+- Would a native engineer naturally write or say this in a technical discussion?
+- Does the wording preserve the engineering concept rather than the source-language sentence shape?
+- Do role names, business terminology, and process language sound authored in the target language rather than translated into it?
+- Do diagram references still match the rendered artifact direction, layout, and labels?
+
+Meaning-preserving but translated-sounding wording should still fail review when it reads unlike native technical writing.
+
 Validators may also emit warnings for:
 
 - suspicious translated-sounding terminology

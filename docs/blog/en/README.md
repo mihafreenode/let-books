@@ -31,6 +31,7 @@ Write the approved source version of each article here before localization.
  - [Spec-Driven Development in Let Books](spec-driven-development-in-let-books.md) — How the project already uses specs, docs, and demo constraints as a delivery system
  - [Documentation Is Part of the Product](documentation-is-part-of-the-product.md) — Why current, reviewable documentation is part of reliable software delivery
  - [When the Demo Is Evidence and When It Is Not](when-the-demo-is-evidence-and-when-it-is-not.md) — How to keep demos useful without letting prototypes silently rewrite the product
+ - [AI Technical Debt Is Not About AI-Generated Code](ai-technical-debt-is-not-about-ai-generated-code.md) — Why the larger maintainability risk is preserved behavior without preserved reasoning
 
 ## Related Learning Guides
 

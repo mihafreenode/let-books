@@ -1,0 +1,43 @@
+---
+title: Pregledne zanke
+---
+%% Blue = specification or source of truth.
+%% Orange = inferred intent and preserved understanding.
+%% Green = implementation artifacts.
+%% Purple = review and validation loops.
+%% Red = maintainability risk.
+%% Mermaid source is authoritative. Render with htmlLabels: false via tools/mermaid-render-config.json.
+flowchart TD
+    SPEC[Specifikacija ali naloga]
+    INTENT[Izpeljani namen]
+    ASSUME[Predpostavke in robni primeri]
+    IMPL[Implementacija]
+    TESTS[Testi]
+
+    HREVIEW{{Človeški pregled\nSpecifikacija do namena}}
+    AIREVIEW{{Primerjava plasti\nmed pregledom}}
+    RISK[Nevidno razmišljanje\npostane vzdrževalno tveganje]
+
+    SPEC --> INTENT --> ASSUME --> IMPL --> TESTS
+    INTENT -. Če ni ohranjen .-> RISK
+    ASSUME -. Če niso ohranjeni .-> RISK
+
+    SPEC --> HREVIEW
+    INTENT --> HREVIEW
+
+    SPEC -. primerjaj .-> AIREVIEW
+    INTENT -. primerjaj .-> AIREVIEW
+    IMPL -. primerjaj .-> AIREVIEW
+    TESTS -. primerjaj .-> AIREVIEW
+
+    classDef source fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#0f172a;
+    classDef understanding fill:#fed7aa,stroke:#ea580c,stroke-width:2px,color:#0f172a;
+    classDef implementation fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#0f172a;
+    classDef review fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#0f172a;
+    classDef risk fill:#fecaca,stroke:#dc2626,stroke-width:2px,color:#0f172a;
+
+    class SPEC source;
+    class INTENT,ASSUME understanding;
+    class IMPL,TESTS implementation;
+    class HREVIEW,AIREVIEW review;
+    class RISK risk;

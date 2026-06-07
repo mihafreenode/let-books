@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La deuda técnica de la IA no trata sobre el código generado por IA | LetBooks</title>
+    <meta name="description" content="El mayor riesgo a largo plazo en la entrega asistida por IA no es la sintaxis generada, sino las implementaciones que sobreviven cuando el razonamiento que las produjo ya ha desaparecido.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="LetBooks">
+    <link rel="canonical" href="https://letbooks.org/docs/blog/es/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="x-default" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="en" href="https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sl" href="https://letbooks.org/docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="hr" href="https://letbooks.org/docs/blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="bs" href="https://letbooks.org/docs/blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Latn" href="https://letbooks.org/docs/blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sr-Cyrl" href="https://letbooks.org/docs/blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="mk" href="https://letbooks.org/docs/blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="sq" href="https://letbooks.org/docs/blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="de" href="https://letbooks.org/docs/blog/de/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="it" href="https://letbooks.org/docs/blog/it/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="fr" href="https://letbooks.org/docs/blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="alternate" hreflang="es" href="https://letbooks.org/docs/blog/es/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <link rel="icon" href="../../../favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../../../favicon/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../../../favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="../../../favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../../../favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="../../../favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../../../favicon/site.webmanifest">
+    <meta name="theme-color" content="#0f5b45">
+    <meta property="og:title" content="La deuda técnica de la IA no trata sobre el código generado por IA | LetBooks">
+    <meta property="og:description" content="El mayor riesgo a largo plazo en la entrega asistida por IA no es la sintaxis generada, sino las implementaciones que sobreviven cuando el razonamiento que las produjo ya ha desaparecido.">
+    <meta property="og:image" content="https://letbooks.org/og-image.png">
+    <meta property="og:image:alt" content="LetBooks social preview image">
+    <meta property="og:url" content="https://letbooks.org/docs/blog/es/ai-technical-debt-is-not-about-ai-generated-code.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="LetBooks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La deuda técnica de la IA no trata sobre el código generado por IA | LetBooks">
+    <meta name="twitter:description" content="El mayor riesgo a largo plazo en la entrega asistida por IA no es la sintaxis generada, sino las implementaciones que sobreviven cuando el razonamiento que las produjo ya ha desaparecido.">
+    <meta name="twitter:image" content="https://letbooks.org/og-image.png">
+    <meta name="twitter:image:alt" content="LetBooks social preview image">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+    <script src="../../assets/js/docs-lang.js" defer></script>
+  </head>
+  <body data-page-type="article" data-content-type="blog" data-locale="es">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand-link" href="../../blog/es/index.html">
+            <img class="brand-mark" src="../../assets/images/logo-mark-symbol.svg" alt="Let Books">
+            <span class="brand-copy">
+              <strong>Let Books</strong>
+              <span>Blog</span>
+            </span>
+          </a>
+          <div class="header-nav">
+            <a class="nav-link" href="../../es/index.html">Documentación</a>
+            <a class="nav-link" href="../../blog/es/index.html">Blog</a>
+            <a class="nav-link" href="../../learning/es/index.html">Material de aprendizaje</a>
+            <a class="nav-link" href="../../wiki/es/index.html">Wiki</a>
+            <a class="nav-link" href="../../topics/es/index.html">Temas</a>
+            <a class="nav-link" href="https://github.com/mihafreenode/let-books">GitHub</a>
+            <div class="lang-switch" aria-label="Language options">
+              <a class="lang-link" href="../../blog/en/ai-technical-debt-is-not-about-ai-generated-code.html" lang="en">EN</a>
+              <a class="lang-link" href="../../blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sl">SL</a>
+              <a class="lang-link" href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">HR</a>
+              <a class="lang-link" href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">BS</a>
+              <a class="lang-link" href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">SR</a>
+              <a class="lang-link" href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">СР</a>
+              <a class="lang-link" href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">МК</a>
+              <a class="lang-link" href="../../blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sq">SQ</a>
+              <a class="lang-link" href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">DE</a>
+              <a class="lang-link" href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">IT</a>
+              <a class="lang-link" href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">FR</a>
+              <a class="lang-link is-current" href="../../blog/es/ai-technical-debt-is-not-about-ai-generated-code.html" lang="es">ES</a>
+              <a class="lang-link" href="../../index.html">Todos los idiomas</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <article class="section blog-article docs-article">
+          <header class="content-page-header">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="../../es/index.html">Documentación</a>
+              <span aria-hidden="true">/</span>
+              <a href="../../blog/es/index.html">Blog</a>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">La deuda técnica de la IA no trata sobre el código generado por IA</span>
+            </nav>
+            <h1>La deuda técnica de la IA no trata sobre el código generado por IA</h1>
+          <div class="content-page-meta">
+            <span>Blog</span>
+            <span>Español</span>
+          </div>
+          <p class="content-page-summary">El mayor riesgo a largo plazo en la entrega asistida por IA no es la sintaxis generada, sino las implementaciones que sobreviven cuando el razonamiento que las produjo ya ha desaparecido.</p>
+          <div class="content-tags" aria-label="Topics">
+            <span class="content-tags__label">Temas:</span>
+              <span class="content-tag">Documentación</span>
+              <span class="content-tag">Desarrollo guiado por especificaciones</span>
+          </div>
+            <hr class="content-header-divider">
+          </header>
+<p class="lead">Un argumento común sobre el código generado por IA dice algo así: el verdadero peligro es que los futuros mantenedores hereden código que no escribieron y que no entienden. Esa preocupación es razonable, pero apunta al objeto equivocado. En muchos sistemas, el problema mayor es más antiguo y más conocido. Las implementaciones sobreviven mientras la comprensión desaparece.</p>
+<p>Ese modo de fallo existía mucho antes de los asistentes de código. Los equipos siempre han entregado sistemas cuya intención original vivía en una reunión, en una pizarra, en un comentario de ticket o en la cabeza de un ingeniero. El código permanecía. La explicación no. Un año después, la implementación puede seguir funcionando, las pruebas pueden seguir pasando y, aun así, la parte más cara del sistema ya no es el código. Es la comprensión que falta a su alrededor.</p>
+<p>Por eso la “deuda técnica de la IA” no trata principalmente de si un modelo escribió algunas líneas de código. Trata de si el razonamiento que produjo esas líneas se preserva, se revisa y se mantiene accesible. Si ese razonamiento sigue siendo invisible, los mantenedores heredan sintaxis más arqueología. Si se vuelve visible, heredan algo imperfecto pero revisable.</p>
+<h2 id="la-comparación-equivocada">La comparación equivocada</h2>
+<p>Muchas críticas comparan la justificación generada por IA con un estándar ideal de justificación humana perfectamente escrita: ADR limpios, comentarios cuidados, documentación actualizada, notas reflexivas sobre tradeoffs y mensajes de commit precisos. Así no se ven la mayoría de los repositorios después de unos años de presión por entregar.</p>
+<p>La comparación real suele ser contra algo mucho más desordenado:</p>
+<ul>
+<li>documentación ausente</li>
+<li>sistemas de tickets inaccesibles</li>
+<li>mensajes de commit vagos</li>
+<li>empleados que ya se fueron</li>
+<li>conocimiento tribal</li>
+<li>supuestos no documentados</li>
+<li>ingeniería inversa del comportamiento a partir del código</li>
+</ul>
+<p>Frente a esa línea base, el razonamiento preservado aunque imperfecto puede ser valioso. Los futuros mantenedores pueden preferir una explicación defectuosa que puedan cuestionar antes que un silencio total sobre el que solo pueden adivinar.</p>
+<h2 id="de-la-deuda-de-implementación-a-la-deuda-de-comprensión">De la deuda de implementación a la deuda de comprensión</h2>
+<p>La deuda técnica normalmente se ha planteado como deuda de implementación: código apresurado, duplicación, malas abstracciones, pruebas ausentes, dependencias frágiles, atajos que luego salen caros. Ese marco sigue importando. Las malas implementaciones siguen siendo malas.</p>
+<p>Pero muchas organizaciones se están encontrando con otro centro de coste. Lo caro no es la sintaxis. Es la comprensión.</p>
+<p>Cuando un sistema se vuelve difícil de cambiar, los verdaderos bloqueos suelen parecerse a estas preguntas:</p>
+<ul>
+<li>¿Por qué se tomó esta decisión?</li>
+<li>¿Qué restricciones eran reales y cuáles accidentales?</li>
+<li>¿Qué casos límite se consideraron?</li>
+<li>¿Cuáles se ignoraron?</li>
+<li>¿De qué supuestos externos depende esta lógica?</li>
+<li>¿Qué deberían temer romper los futuros mantenedores?</li>
+</ul>
+<p>Los compiladores no responden a esas preguntas. Las pruebas responden solo a algunas. El análisis estático responde a menos todavía. Así que los equipos las responden de la manera cara: reconstruyendo la intención a partir del código, logs, hilos de tickets medio recordados y el nivel de confianza de quien lleva más tiempo allí.</p>
+<p>Por eso deuda de comprensión es un término útil. Históricamente hablábamos de deuda de implementación porque el código roto era visible. Cada vez más, muchos equipos pueden descubrir que el coste más persistente es comportamiento preservado sin razonamiento preservado.</p>
+<h2 id="un-ejemplo-realista-suspender-acceso-no-es-lo-mismo-que-bloqueo-total">Un ejemplo realista: suspender acceso no es lo mismo que bloqueo total</h2>
+<p>Considera un ticket en un sistema de facturación SaaS:</p>
+<blockquote>
+<p>Suspender el acceso al workspace cuando una factura tenga más de 30 días de retraso. Los contactos de finanzas deben poder seguir descargando facturas y actualizando los datos de pago. Los workspaces Enterprise marcados para revisión manual de renovación no deben suspenderse automáticamente.</p>
+</blockquote>
+<p>Ese ticket no es raro. Tiene reglas de negocio, excepciones y palabras que parecen obvias hasta que alguien tiene que traducirlas a código.</p>
+<p>Un flujo asistido por IA podría inferir el siguiente borrador de intención antes de implementar:</p>
+<ul>
+<li>objetivo: detener el uso normal del producto para cuentas morosas</li>
+<li>excepción: mantener disponible cierto acceso de facturación</li>
+<li>disparador: factura vencida por más de 30 días</li>
+<li>no objetivo: renovaciones Enterprise revisadas manualmente</li>
+</ul>
+<p>También podría hacer explícitos sus supuestos implícitos:</p>
+<ul>
+<li>el retraso se calcula desde la fecha de vencimiento de la factura</li>
+<li>la suspensión se aplica a todos los usuarios excepto al propietario del workspace</li>
+<li>no hace falta acceso de solo lectura al producto</li>
+<li>los tokens de API deben seguir funcionando porque el ticket menciona acceso de usuario, no integraciones</li>
+<li>la revisión manual de Enterprise es una bandera a nivel de workspace que se comprueba antes de suspender</li>
+</ul>
+<p>Esa lista no es autoritativa. Es útil porque un revisor puede atacarla.</p>
+<p>En una revisión real, un staff engineer o un product manager podría responder así:</p>
+<ul>
+<li>los contactos de finanzas no son solo el propietario del workspace; puede haber varios administradores de finanzas</li>
+<li>los tokens de API no deben seguir funcionando, porque exportar datos sigue siendo uso del producto</li>
+<li>las pantallas del historial de auditoría deben seguir visibles para los administradores de finanzas para que puedan conciliar cargos disputados</li>
+<li>el reloj de 30 días empieza en la factura impagada más reciente después de aplicar notas de crédito, no en la fecha original de la factura</li>
+<li>la revisión manual Enterprise no es un simple booleano; el servicio de facturación expone un enum de estado de renovación</li>
+</ul>
+<p>Ahora compara dos mundos.</p>
+<p>En el primer mundo, esos supuestos nunca se escribieron. El código se revisa directamente, el revisor se centra en el flujo de control y en las pruebas, y todos esperan que la regla de negocio se haya entendido correctamente.</p>
+<p>En el segundo mundo, los supuestos se vuelven visibles antes de fusionar el código. El revisor no necesita adivinar qué pensaba quien implementó. El malentendido ya está expuesto.</p>
+<p>Eso no garantiza corrección. Pero sí crea una oportunidad de revisión que el razonamiento invisible nunca crea.</p>
+<p>La comprensión resultante de la implementación se vuelve mucho más precisa:</p>
+<ul>
+<li>suspender el acceso normal al producto después de que la factura impagada más reciente siga vencida durante más de 30 días</li>
+<li>preservar el acceso de facturación y auditoría para usuarios con privilegios de finance-admin</li>
+<li>bloquear los tokens de API durante la suspensión</li>
+<li>omitir la suspensión automática cuando el estado de renovación de facturación sea <code>ManualReview</code></li>
+<li>añadir pruebas para varios administradores de finanzas, ajustes por notas de crédito y comportamiento de tokens suspendidos</li>
+</ul>
+<p>Fíjate en lo que cambió. La implementación final puede seguir siendo solo unas pocas condiciones y pruebas. La gran mejora no es sintáctica. Es que el razonamiento se volvió lo bastante visible como para corregirse antes de producción.</p>
+<h2 id="la-economía-ha-cambiado">La economía ha cambiado</h2>
+<p>Esta es la parte que muchas discusiones sobre IA pasan por alto.</p>
+<p>Históricamente, la implementación podía producirse mientras que preservar la intención seguía siendo caro. Los ingenieros podían escribir código y pruebas y pasar a otra cosa. Pero escribir los gradniki alrededor solía exigir otra hora o tres de trabajo concentrado: actualizar un ADR, capturar restricciones, anotar alternativas descartadas, listar casos límite, registrar impacto documental y explicar qué no deberían simplificar a la ligera los futuros mantenedores.</p>
+<p>Los equipos sabían que esas cosas eran útiles. Aun así las omitían, muchas veces de forma racional. Cuando los plazos eran reales, código funcionando con comentarios mínimos ganaba frente a código funcionando con comprensión duradera. Ese tradeoff acumulaba deuda de comprensión.</p>
+<p>La IA cambia esa economía porque, una vez que el contexto de implementación ya existe, generar un primer borrador de la comprensión preservada se vuelve barato. Si un modelo tiene el ticket, la especificación, los archivos modificados, las pruebas y las notas de arquitectura relevantes, entonces un borrador de lo siguiente puede requerir solo un coste adicional modesto:</p>
+<ul>
+<li>justificación</li>
+<li>supuestos</li>
+<li>tradeoffs</li>
+<li>casos límite</li>
+<li>cambios de documentación</li>
+<li>impactos en casos de uso</li>
+<li>notas de confianza</li>
+<li>preguntas abiertas</li>
+</ul>
+<p>Eso no elimina el esfuerzo humano. Cambia dónde se aplica ese esfuerzo. El reto se desplaza de redactar a revisar y validar.</p>
+<p>Ese cambio importa porque el modo de fallo anterior a menudo era económico, no filosófico. Los equipos no siempre perdían la intención porque odiaran la documentación. La perdían porque preservarla era costoso, interrumpía y era fácil aplazarla. Hoy, generar un primer borrador de esa comprensión es lo bastante barato como para que la vieja excusa pierda fuerza.</p>
+<h2 id="muchos-fallos-en-producción-empiezan-como-supuestos-no-visibles">Muchos fallos en producción empiezan como supuestos no visibles</h2>
+<p>Los fallos en producción suelen describirse como errores de programación, pero muchos empiezan antes. Empiezan como supuestos que nunca llegaron a ser lo bastante visibles como para revisarse.</p>
+<p>Un servicio asume que los timestamps llegan en UTC hasta que una integración regional empieza a enviar hora local. Un workflow asume que un usuario tiene un único contrato activo hasta que las cuentas Enterprise introducen renovaciones solapadas. Un job de conciliación asume que los IDs de upstream son únicos hasta que dos tenants reutilizan la misma clave externa por casualidad.</p>
+<p>Después, todo eso parece un bug de implementación, pero el problema más profundo es que los supuestos nunca se registraron con suficiente claridad como para poder cuestionarlos.</p>
+<p>Lo mismo ocurre con los casos límite. Los casos límite que no se registran difícilmente se implementarán bien, porque nadie los revisó explícitamente. Ni siquiera excelentes ingenieros pueden defenderse frente a escenarios que nunca aparecieron durante el diseño o la revisión de código.</p>
+<p>Aquí es donde el análisis generado puede ayudar de forma práctica. Supongamos que una revisión de cambio incluye una lista borrador de supuestos probables, condiciones de frontera, escenarios de fallo, dependencias externas y casos límite no manejados. La lista contendrá errores. Bien. Los errores se pueden revisar.</p>
+<p>Un revisor puede entonces decir:</p>
+<ul>
+<li>el supuesto 2 es incorrecto; los usuarios pueden tener varios contratos activos</li>
+<li>faltó la regla de retención legal</li>
+<li>la API externa no garantiza el orden</li>
+<li>esta ruta debe funcionar durante una caída parcial</li>
+<li>el caso peligroso son los datos replicados obsoletos, no una entrada nula</li>
+</ul>
+<p>La implementación puede cambiar inmediatamente o no. Pero el malentendido se vuelve visible antes de producción. Un malentendido silencioso es caro. Un malentendido visible es revisable.</p>
+<h2 id="las-revisiones-necesitan-dos-bucles-no-uno">Las revisiones necesitan dos bucles, no uno</h2>
+<p>La revisión tradicional suele saltar directamente de la especificación a la implementación. El revisor pregunta si el código funciona, si las pruebas son suficientes y si el cambio parece seguro.</p>
+<p>Eso sigue siendo necesario, pero deja un punto ciego importante: el revisor a menudo no ve el razonamiento intermedio que convirtió una solicitud en una estrategia de implementación.</p>
+<p>En un modelo de revisión más fuerte, hay dos bucles.</p>
+<p>El primero es un bucle de revisión humana que evalúa la intención inferida antes de que la conversación colapse en código. En lugar de pasar directamente de la especificación a la implementación, el revisor puede inspeccionar:</p>
+<p>Especificación -&gt; Intención inferida</p>
+<p>Eso cambia las preguntas:</p>
+<ul>
+<li>¿Inferimos lo correcto?</li>
+<li>¿Es realmente lo que quería quien hizo la solicitud?</li>
+<li>¿Son correctos los supuestos?</li>
+<li>¿Faltan casos límite importantes?</li>
+<li>¿Entendimos mal la regla de negocio?</li>
+</ul>
+<p>El segundo es un bucle de comparación entre capas. Un modelo puede ayudar aquí, pero la idea importante es la comparación en sí, no la herramienta. La revisión comprueba consistencia entre capas que ya importan a los humanos:</p>
+<ul>
+<li>especificación -&gt; intención</li>
+<li>intención -&gt; implementación</li>
+<li>especificación -&gt; implementación</li>
+</ul>
+<p>Esa comparación puede sacar a la luz varias clases útiles de defectos:</p>
+<ul>
+<li>requisitos omitidos</li>
+<li>requisitos inventados que nunca existieron</li>
+<li>restricciones debilitadas</li>
+<li>supuestos discutidos en prosa pero no reflejados en código</li>
+<li>casos límite mencionados pero nunca implementados</li>
+<li>pruebas faltantes para supuestos importantes</li>
+</ul>
+<p>Los nodos azules de abajo representan solicitudes fuente de verdad, los nodos naranjas gradniki de comprensión preservada, los nodos verdes gradniki de implementación, los nodos morados bucles de revisión y el nodo rojo riesgo de mantenibilidad.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/es/review-loops.svg" alt="Diagrama de bucles de revisión" />
+<figcaption aria-hidden="true">Diagrama de bucles de revisión</figcaption>
+</figure>
+<p>El valor aquí no está en la autoridad de la herramienta. El valor está en que el razonamiento se vuelve lo bastante visible como para revisarse.</p>
+<h2 id="una-pull-request-puede-necesitar-dos-cargas">Una pull request puede necesitar dos cargas</h2>
+<p>Esto se vuelve concreto en las pull requests.</p>
+<p>Hoy, muchas PR llevan en la práctica una sola carga: implementación.</p>
+<p>Carga de implementación</p>
+<ul>
+<li>código</li>
+<li>pruebas</li>
+</ul>
+<p>Eso es viable, pero insuficiente. Preserva comportamiento sin preservar necesariamente por qué existe ese comportamiento.</p>
+<p>Un modelo de PR más fuerte llevaría una segunda carga junto a la primera.</p>
+<p>Carga de comprensión</p>
+<ul>
+<li>intención inferida</li>
+<li>supuestos</li>
+<li>tradeoffs</li>
+<li>casos límite</li>
+<li>impacto documental</li>
+<li>notas de confianza</li>
+</ul>
+<p>Algunos de esos gradniki pueden generarse. Todos deberían revisarse por humanos cuando importan.</p>
+<p>Esto no es papeleo por el papeleo. Es un intento de evitar que los repositorios vuelvan a colapsar en código más folclore. Si el código cambia pero falta la carga de comprensión, los mantenedores siguen terminando en ingeniería inversa del silencio.</p>
+<p>El contraste es simple.</p>
+<figure>
+<img src="../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/es/code-only-vs-preserved-understanding.svg" alt="Diagrama de código solo frente a comprensión preservada" />
+<figcaption aria-hidden="true">Diagrama de código solo frente a comprensión preservada</figcaption>
+</figure>
+<p>En el camino de la izquierda, el repositorio acumula comportamiento y pierde contexto. En el camino de la derecha, el repositorio acumula comportamiento más, al menos, un borrador revisable de intención, supuestos y justificación.</p>
+<h2 id="la-revisión-de-corrección-y-la-revisión-de-completitud-son-trabajos-distintos">La revisión de corrección y la revisión de completitud son trabajos distintos</h2>
+<p>Esto lleva a una distinción importante.</p>
+<p>La revisión de corrección pregunta:</p>
+<ul>
+<li>¿Compila?</li>
+<li>¿Pasan las pruebas?</li>
+<li>¿Es seguro?</li>
+<li>¿Sigue los estándares?</li>
+<li>¿Es correcto el comportamiento observado?</li>
+</ul>
+<p>La revisión de completitud pregunta:</p>
+<ul>
+<li>¿Se preserva la intención?</li>
+<li>¿Se registran los supuestos?</li>
+<li>¿Se registran las restricciones?</li>
+<li>¿Se capturaron los casos límite importantes?</li>
+<li>¿Se revisaron los documentos afectados?</li>
+<li>¿Se revisaron los casos de uso afectados?</li>
+<li>¿Se capturaron los tradeoffs?</li>
+</ul>
+<p>Históricamente, las revisiones de completitud eran caras de hacer de forma consistente porque producir los gradniki subyacentes era caro. Los primeros borradores generados pueden hacerlas prácticas a una escala que antes era difícil de justificar.</p>
+<h2 id="esto-está-más-cerca-de-la-práctica-de-ingeniería-existente-de-lo-que-parece">Esto está más cerca de la práctica de ingeniería existente de lo que parece</h2>
+<p>Nada de esto requiere un nuevo sistema de creencias. La mayoría de los gradniki relevantes ya son familiares:</p>
+<ul>
+<li>casos de uso</li>
+<li>ADR</li>
+<li>notas de arquitectura</li>
+<li>comentarios que explican el porqué</li>
+<li>runbooks operativos</li>
+<li>reglas de validación</li>
+<li>contratos de automatización</li>
+<li>justificación de diseño</li>
+<li>actualizaciones de documentación</li>
+</ul>
+<p>El cambio no es conceptual. Es económico. Los equipos siempre han sabido que estos gradniki importan. Muchas veces no lograban mantenerlos porque el esfuerzo era alto y el valor inmediato para la entrega era bajo.</p>
+<p>Por eso este argumento debe mantenerse modesto. El razonamiento generado por IA no es automáticamente correcto. La documentación generada por IA no es autoritativa. La documentación no sustituye el criterio de ingeniería. La IA no elimina la deuda técnica.</p>
+<p>Lo que estos workflows sí pueden hacer es volver lo bastante barato preservar un borrador de la comprensión que los equipos antes dejaban atrás.</p>
+<h2 id="una-conclusión-práctica-para-el-repositorio">Una conclusión práctica para el repositorio</h2>
+<p>El siguiente paso más práctico no es exigir prosa de diseño perfecta en cada cambio. Es añadir una pequeña checklist de comprensión en los lugares donde los equipos ya revisan trabajo.</p>
+<p>Por ejemplo, una plantilla de PR podría exigir una sección breve y revisada que cubra:</p>
+<ul>
+<li>intención inferida</li>
+<li>supuestos clave</li>
+<li>casos límite importantes</li>
+<li>tradeoffs o alternativas descartadas</li>
+<li>impacto documental o en casos de uso</li>
+<li>nivel de confianza y preguntas abiertas</li>
+</ul>
+<p>Esas secciones no tienen que ser largas. Tienen que estar lo bastante presentes como para que otro ingeniero pueda cuestionarlas. Pueden ser primeros borradores generados, pero deben revisarse con la misma seriedad que el código.</p>
+<h2 id="conclusión">Conclusión</h2>
+<p>El título de este artículo es deliberadamente más estrecho que su conclusión. El riesgo real no es la sintaxis generada por IA. El riesgo real es la deuda de comprensión: implementaciones que sobreviven después de que el razonamiento detrás de ellas haya desaparecido.</p>
+<p>La pregunta más interesante es si los repositorios empezarán a tratar el razonamiento, los supuestos, los casos límite y la intención como gradniki de primera clase junto con la implementación.</p>
+<p>Históricamente, muchos equipos perdían la intención porque preservarla era caro. Hoy, generar un primer borrador cuesta poco. Eso no resuelve el problema. Cambia lo que es económicamente práctico.</p>
+<p>Los futuros mantenedores pueden seguir quejándose de la justificación generada. Pueden encontrar errores en ella. Pueden discrepar de los supuestos que enumera. Pueden borrar la mitad durante la revisión.</p>
+<p>Y aun así podrían preferir revisar razonamiento imperfecto antes que hacer ingeniería inversa del silencio.</p>
+<h2 id="lecturas-relacionadas">Lecturas relacionadas</h2>
+<ul>
+<li><code>../../wiki/ai-assisted-knowledge-work.md</code></li>
+<li><code>../../wiki/spec-driven-development.md</code></li>
+<li><code>../../wiki/documentation-traceability.md</code></li>
+<li><code>../../wiki/validation-layers.md</code></li>
+<li><code>documentation-is-part-of-the-product.md</code></li>
+<li><code>ai-as-an-oracle.md</code></li>
+</ul>
+
+        <div class="post-article-nav">
+          <div class="language-alternatives">
+            <h2>Otros idiomas</h2>
+            <ul>
+              <li><a href="../../blog/en/ai-technical-debt-is-not-about-ai-generated-code.html" lang="en">English</a></li>
+              <li><a href="../../blog/sl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sl">Slovenščina</a></li>
+              <li><a href="../../blog/hr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="hr">Hrvatski</a></li>
+              <li><a href="../../blog/bs/ai-technical-debt-is-not-about-ai-generated-code.html" lang="bs">Bosanski</a></li>
+              <li><a href="../../blog/sr-Latn/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Latn">Srpski (latinica)</a></li>
+              <li><a href="../../blog/sr-Cyrl/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sr-Cyrl">Српски (ћирилица)</a></li>
+              <li><a href="../../blog/mk/ai-technical-debt-is-not-about-ai-generated-code.html" lang="mk">Македонски</a></li>
+              <li><a href="../../blog/sq/ai-technical-debt-is-not-about-ai-generated-code.html" lang="sq">Shqip</a></li>
+              <li><a href="../../blog/de/ai-technical-debt-is-not-about-ai-generated-code.html" lang="de">Deutsch</a></li>
+              <li><a href="../../blog/it/ai-technical-debt-is-not-about-ai-generated-code.html" lang="it">Italiano</a></li>
+              <li><a href="../../blog/fr/ai-technical-debt-is-not-about-ai-generated-code.html" lang="fr">Français</a></li>
+            </ul>
+          </div>
+          <section class="related-content">
+            <h2 class="related-content__title">Contenido relacionado</h2>
+            <div class="related-topic-nav" data-topic-menu-group>
+              <div class="topic-pill-row">
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-spec-driven-development" data-topic-slug="spec-driven-development" aria-expanded="false" aria-controls="related-spec-driven-development-menu">Desarrollo guiado por especificaciones</button>
+                <button type="button" class="topic-pill topic-pill-button" data-topic-trigger="related-documentation" data-topic-slug="documentation" aria-expanded="false" aria-controls="related-documentation-menu">Documentación</button>
+              </div>
+              <div class="topic-menu-layer">
+                <div class="topic-menu" id="related-spec-driven-development-menu" data-topic-menu="related-spec-driven-development" hidden>
+                  <a href="../../learning/es/how-to-review-ai-assisted-work-against-the-spec.html"><span>Cómo revisar trabajo asistido por IA frente a la especificación</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../topics/es/demo-and-specification-alignment.html"><span>Alineación entre demo y especificación</span><span class="topic-menu__meta">Temas</span></a>
+                  <a href="../../topics/es/ai-assisted-implementation.html"><span>Implementación asistida por IA</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+                <div class="topic-menu" id="related-documentation-menu" data-topic-menu="related-documentation" hidden>
+                  <a href="../../blog/es/documentation-is-part-of-the-product.html"><span>La documentación es parte del producto</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../blog/es/when-the-demo-is-evidence-and-when-it-is-not.html"><span>Cuándo la demo es evidencia y cuándo no lo es</span><span class="topic-menu__meta">Blog</span></a>
+                  <a href="../../learning/es/how-to-keep-spec-docs-demo-and-code-aligned.html"><span>Cómo mantener alineados la especificación, la documentación, la demo y el código</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../learning/es/how-to-write-a-spec-that-ai-can-follow.html"><span>Cómo escribir una especificación que la IA pueda seguir</span><span class="topic-menu__meta">Material de aprendizaje</span></a>
+                  <a href="../../wiki/es/documentation-is-more-than-a-website.html"><span>La documentación es más que un sitio web</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/spec-driven-development.html"><span>Desarrollo basado en especificaciones</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../wiki/es/markdown-in-product-development.html"><span>Markdown en Desarrollo de productos</span><span class="topic-menu__meta">Wiki</span></a>
+                  <a href="../../topics/es/spec-driven-development.html"><span>Desarrollo guiado por especificaciones</span><span class="topic-menu__meta">Temas</span></a>
+                  <a href="../../topics/es/documentation-traceability.html"><span>Trazabilidad de la documentación</span><span class="topic-menu__meta">Temas</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            <h3>Let Books</h3>
+            <p>Una plataforma práctica para catalogar, ofrecer y recuperar libros educativos.</p>
+            <p class="footer-note">Copyright © colaboradores de Let Books. La reutilización sigue la licencia del repositorio salvo que la página indique lo contrario.</p>
+            <p class="footer-microcopy">Prototipo alfa temprano. La documentación y los textos de interfaz están asistidos por IA. Las instituciones e integraciones mencionadas en los ejemplos son conceptuales y no implican asociación ni respaldo.</p>
+          </div>
+          <div>
+            <div class="footer-links">
+              <a href="../../es/index.html">Vista general</a>
+              <a href="../../topics/es/index.html">Temas</a>
+              <a href="../../index.html">Página de inicio</a>
+              <a href="../../../static-demo/">Demo</a>
+            </div>
+            <div class="language-list" style="margin-top: 1rem;">
+              <a href="../../index.html">Todos los idiomas</a>
+            </div>
+            <div class="language-list" data-equivalent-language-list style="margin-top: 0.85rem;"></div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

@@ -206,7 +206,16 @@ This keeps review work reusable for governance, training, QA calibration, and mo
 
 ## Review examples
 
-The Slovenian examples in `ai-translation-review-records.md` show common patterns: broad meaning preserved, but native-speaker correction still required for grammar, modality, terminology, register, English metaphor transfer, and translated-English sentence structure.
+The Slovenian examples in `ai-translation-review-records.md` show common patterns: broad meaning preserved, but native-speaker correction still required for grammar, modality, terminology, register, English metaphor transfer, translated-English sentence structure, and technical-writing naturalness.
+
+Publication-quality review must also check whether the localized text sounds like natural technical writing in the target language, not only whether it preserves broad meaning.
+
+Review prompts should explicitly ask:
+
+- Would a native engineer naturally say this?
+- Is the engineering concept clear without copying the source-language sentence structure?
+- Do role names, process terms, and business examples sound native in context?
+- Do rendered diagrams and their textual references still match orientation and layout?
 
 ## Related Pages
 

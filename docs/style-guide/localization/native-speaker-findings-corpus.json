@@ -290,6 +290,42 @@
           "docs/blog/en/why-every-language-matters.md"
         ]
       }
+    },
+    {
+      "id": "sl-native-engineering-register-001",
+      "language": "sl",
+      "category": "native technical register over literal parity",
+      "source_text": "A translation may preserve broad meaning but still sound unlike something a Slovenian engineer would naturally write or say in a technical discussion.",
+      "localized_text": "Prevedevalnik na ta vprašanja ne odgovori. ... napol pozabljenih nitk v sistemu za naloge ... vztrajnejši strošek ... To je uporabno, vendar tanko.",
+      "preferred_localized_text": "Na takšna vprašanja ne odgovorijo ne prevajalnik, ne testi, ne statična analiza. ... napol pozabljenih razprav v starih nalogah ... dolgoročno več stane ... To je uporabno, vendar ne pove dovolj.",
+      "explanation": "The draft preserved broad meaning, but several phrases still sounded translated from English rather than authored as natural Slovenian technical prose. Native-speaker review must judge technical register, role clarity, process language, business-rule wording, and diagram references, not only semantic parity.",
+      "status": "tracked",
+      "validator_possible": false,
+      "related_files": [
+        "docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.md"
+      ],
+      "content_change_refs": [
+        "docs/blog/sl/ai-technical-debt-is-not-about-ai-generated-code.md",
+        "docs/style-guide/localization/translation-style-guide.md",
+        "docs/style-guide/localization/review-workflow.md",
+        "docs/style-guide/localization/README.md"
+      ],
+      "recurrence_tags": [
+        "engineering_register",
+        "literal_translation",
+        "diagram_text_mismatch",
+        "business_rule_fluency",
+        "previously_reported_defect"
+      ],
+      "date_added": "2026-06-07",
+      "system_actions": [
+        "fixed",
+        "guidance",
+        "knowledge_corpus"
+      ],
+      "review_guidance": "Ask whether a native engineer would naturally say the sentence in technical discussion. If not, rewrite by concept rather than preserving source wording.",
+      "prompt_guidance": "Prefer native technical phrasing, clear role naming, and visually accurate diagram references over literal translation parity.",
+      "terminology_guidance": "Meaning-preserving but translated-sounding technical prose is still a localization defect if it does not read like native engineering writing. When English uses broad terms such as 'behavior', resolve them by context into natural Slovenian engineering language such as 'delovanje', 'način delovanja', or 'implementirana logika' instead of defaulting to 'vedenje'."
     }
   ]
 }
