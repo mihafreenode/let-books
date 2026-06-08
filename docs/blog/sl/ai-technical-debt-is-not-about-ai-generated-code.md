@@ -303,6 +303,20 @@ Na primer, predloga za PR lahko zahteva kratek pregledan razdelek, ki zajema:
 
 Ti razdelki niso nujno dolgi. Morajo pa biti prisotni v tolikšni meri, da jih lahko drug inženir izpodbija. Lahko so generirani prvi osnutki, vendar jih je treba pregledati z enako resnostjo kot kodo.
 
+Majhen primer iz same priprave tega članka to pokaže zelo konkretno. Pri pregledu lokalizacije je ena prevedena datoteka Markdown ohranila pravilno besedilo, vendar je po nesreči en element seznama ugnezdila pod drugega. Neposreden popravek je bil preprost: seznam je bilo treba poravnati. Veliko pomembnejši pa je bil zapis, zakaj je to sploh pomembno. V validatorju je bila na primer ohranjena naslednja razlaga:
+
+```text
+Struktura seznama je del vsebinske pravilnosti, ne zgolj oblikovanja.
+
+Če izvorni članek uporablja raven seznam, lokalizirana različica pa po nesreči ugnezdi posamezen element, bralci ne vidijo več iste strukture.
+
+Ta lahka preverba ščiti pred pogosto napako pri lokalizaciji, ki smo jo v praksi že opazili.
+```
+
+Ta razlaga ni ostala ujeta v komentarju pri pregledu. Postala je del dokumentacije, del validatorja in del prihodnjih pregledov.
+
+Napaka je bila enkratna. Razumevanje, zakaj je bila pomembna, pa je postalo trajnejše.
+
 ## Zaključek
 
 Naslov tega članka je namenoma ožji od njegovega zaključka. Resnično tveganje ni AI-generirana sintaksa. Resnično tveganje je dolg razumevanja: implementacije, ki preživijo tudi potem, ko razmišljanje za njimi izgine.
