@@ -39,6 +39,33 @@ CI/CD governance is the capability of making automation trustworthy through:
 
 Another repository would want this because CI/CD is often the final enforcement layer for repository guarantees.
 
+### User-Facing Output Validation
+
+Generated user-facing outputs should be validated in forms close to actual user consumption.
+
+Examples may include:
+
+- websites
+- generated documentation
+- PDFs
+- static exports
+- generated application assets
+
+The exact validation method is implementation-specific. The rule is that source-level success alone is not enough when users ultimately consume a rendered or generated form.
+
+Why this rule exists:
+
+- source and generated artifacts can both look correct while still failing in the form users actually receive
+
+Risks prevented:
+
+- publishable-looking outputs that fail in real consumption paths
+- CI pipelines that validate intermediate artifacts but not delivered ones
+
+Relationship to existing guidance:
+
+- extends the existing rebuild-before-publish and staged-validation model to the final user-facing form of generated outputs
+
 ## Repository Adaptation
 
 Let Books currently implements this skill through:
@@ -75,6 +102,7 @@ Let Books currently implements this skill through:
 - validate automation files themselves
 - regenerate derived outputs in CI and deploy workflows
 - run validators and tests in deliberate order
+- validate generated user-facing outputs in a form close to consumption when they are part of the delivery surface
 - block publish when trusted rebuild and revalidation do not pass
 
 ## Expected Artifacts
@@ -97,6 +125,7 @@ Let Books currently implements this skill through:
 - workflow linting
 - build and generation checks
 - validator and test execution on fresh artifacts
+- user-facing output checks on generated deliverables where applicable
 
 ### CI Enforcement
 
@@ -112,6 +141,7 @@ Let Books currently implements this skill through:
 - merged or published artifacts come from current trusted source state
 - automation layer remains syntactically and operationally healthy
 - validators and tests run in an order that preserves meaning
+- generated user-facing outputs are validated close to their delivered form when relevant
 - deployment does not bypass required validation
 
 ## Failure Modes

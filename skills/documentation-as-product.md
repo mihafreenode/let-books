@@ -39,6 +39,30 @@ Documentation as product is the capability of giving docs the same seriousness a
 
 Another repository would want this when documentation affects adoption, operations, education, compliance, or public credibility.
 
+### Evidence-Backed Publication
+
+Public documentation should distinguish clearly between:
+
+- verified evidence
+- interpretation
+- future plans
+
+High-impact claims should remain traceable to supporting evidence through references, evidence notes, source maps, or equivalent repository-specific approaches.
+
+Why this rule exists:
+
+- user-facing documentation often mixes facts, interpretation, and aspiration unless publication rules make the distinction explicit
+
+Risks prevented:
+
+- overstated claims
+- brittle public explanations tied to unstable implementation detail
+- documentation that sounds authoritative without being reviewable
+
+Relationship to existing guidance:
+
+- strengthens the existing documentation-as-product expectation that public writing must remain maintainable and evidence-backed
+
 ## Repository Adaptation
 
 Let Books currently implements this skill through:
@@ -86,6 +110,7 @@ Let Books currently implements this skill through:
 - define documentation structure and publication rules
 - generate derived docs artifacts consistently
 - validate both source and generated output
+- keep high-impact published claims traceable to supporting evidence
 - review rendered docs behavior in a browser when required
 - treat docs failures as product failures where appropriate
 
@@ -93,6 +118,7 @@ Let Books currently implements this skill through:
 
 - docs structure guidance
 - generated docs assets and indexes
+- evidence notes, source maps, or equivalent traceability artifacts for substantial public claims where needed
 - publication validators
 - browser-facing tests
 - deployment workflow that treats docs as publishable output
@@ -102,6 +128,7 @@ Let Books currently implements this skill through:
 ### Manual Review
 
 - review article structure and claims
+- review whether claims, interpretation, and future plans are clearly distinguished
 - review generated HTML where needed
 - review rendered layout, print, and navigation behavior
 

@@ -41,6 +41,74 @@ Engineering governance is the capability of structuring a repository so that:
 
 Another repository would want this because it lowers the cost of correct decisions, makes AI-assisted work safer, and keeps engineering intent recoverable over time.
 
+### Authority Hierarchy
+
+When making high-impact decisions or public claims, approved specifications, governance artifacts, and current-state documentation should outrank:
+
+- demos and prototypes
+- generated outputs
+- tests and validation results
+- implementation details
+
+Why this rule exists:
+
+- visible artifacts are often mistaken for authoritative ones
+- generated or executable surfaces can lag behind approved intent
+
+Risks prevented:
+
+- accidental source-of-truth drift
+- public claims based on implementation accidents
+- AI or human reviewers following the most concrete artifact instead of the right one
+
+Relationship to existing guidance:
+
+- strengthens the existing authority-chain and evidence-backed-claims guidance already present in this skill
+
+### Demo And Prototype Boundaries
+
+Demonstrations, prototypes, and current builds provide evidence about implementation status. They do not automatically become the authoritative description of intended behavior.
+
+Why this rule exists:
+
+- demos are useful because they are concrete, but that concreteness can outweigh approved product intent unless boundaries are explicit
+
+Risks prevented:
+
+- demos silently replacing product decisions
+- reviewers treating temporary behavior as approved direction
+
+Relationship to existing guidance:
+
+- refines the source-of-truth order already documented in this skill
+
+### Evidence Expectations
+
+Substantial claims should remain traceable to supporting evidence.
+
+Portable mechanisms may include:
+
+- source maps
+- evidence notes
+- stable references
+- equivalent repository-specific traceability artifacts
+
+The mechanism is implementation-specific. The rule is that important claims should be reviewable against stable supporting evidence.
+
+Why this rule exists:
+
+- claims are easier to publish than to verify later
+- traceability matters more when content is AI-assisted, editorial, or externally consumed
+
+Risks prevented:
+
+- brittle or ungrounded public claims
+- expensive rediscovery of why a statement was considered true
+
+Relationship to existing guidance:
+
+- makes the existing evidence-backed-claims expectation explicit enough for authoritative use
+
 ## Repository Adaptation
 
 Let Books currently implements this skill through:
@@ -63,6 +131,7 @@ Let Books currently implements this skill through:
 - `docs/blog/README.md`
 - `docs/sources/README.md`
 - `docs/supporting-material/portable-skills-conversation-log.html`
+- `docs/supporting-material/portable-skills-transcript-part-2-reconstructed.html`
 - `docs/supporting-material/conversation-log-rendering-rules.html`
 - `tools/README.md`
 - `tests/README.md`
@@ -84,6 +153,7 @@ Let Books currently implements this skill through:
 - document evidence rules
 - preserve rationale near tools, tests, workflows, and docs
 - keep current state separate from future plans
+- distinguish implementation evidence from authoritative intent
 - make validators and tests explain what guarantee they protect
 - use automation to reinforce stable parts of the governance model
 
@@ -101,6 +171,7 @@ Let Books currently implements this skill through:
 ### Manual Review
 
 - review whether claims cite the right authority layer
+- review whether demos or generated outputs are being treated as stronger authority than approved guidance
 - review whether repository docs still describe actual behavior
 - review whether significant workflows preserve rationale and purpose
 
@@ -122,6 +193,7 @@ Let Books currently implements this skill through:
 
 - contributors can identify the correct source of truth quickly
 - public claims remain evidence-backed
+- demos and generated artifacts are interpreted as evidence, not as automatic authority
 - validators and workflows are understandable as policy mechanisms
 - important reasoning is not recoverable only from git history or tribal memory
 

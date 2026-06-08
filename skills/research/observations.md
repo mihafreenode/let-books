@@ -7,3 +7,4 @@
 - README files for tools, tests, scripts, and workflows act as knowledge-preservation layers rather than simple catalogs.
 - The strongest portable pattern is not a single validator or workflow. It is the governance pattern that makes those artifacts traceable and explainable.
 - The new supporting-material HTML files show that the repository is also preserving analysis conversations and rendering conventions as reusable knowledge artifacts, which strengthens the governance and future-article angle without creating a separate skill.
+- The reconstructed transcript continuation further supports treating conversation preservation as a supporting governance artifact rather than as a new standalone skill.

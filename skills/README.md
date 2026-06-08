@@ -175,6 +175,7 @@ Shared package metadata is documented in:
 The repository also contains supporting-material artifacts that preserve the extraction conversation and how it was rendered for later review or article development:
 
 - `docs/supporting-material/portable-skills-conversation-log.html`
+- `docs/supporting-material/portable-skills-transcript-part-2-reconstructed.html`
 - `docs/supporting-material/conversation-log-rendering-rules.html`
 
 These are evidence and research artifacts. They are not portable skills by themselves.

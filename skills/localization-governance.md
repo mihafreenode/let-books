@@ -40,6 +40,33 @@ Localization governance is the capability of running multilingual work with:
 
 Another repository would want this because file presence alone does not create trustworthy multilingual delivery.
 
+### Content Family Completeness
+
+Related content should be treated as a unit.
+
+A localization effort is not complete when newly introduced:
+
+- examples
+- arguments
+- sections
+- supporting material
+
+remain untranslated or semantically unavailable in related localized variants that are expected to stay aligned.
+
+Why this rule exists:
+
+- localization drift often appears through adjacent content that is technically present but no longer complete as a family
+
+Risks prevented:
+
+- partially updated localized article families
+- silent omission of new substantive source content
+- misleading impressions of parity based only on file presence
+
+Relationship to existing guidance:
+
+- extends this skill's parity and coverage expectations from single files to related content sets
+
 ## Repository Adaptation
 
 Let Books currently implements this skill through:
@@ -92,6 +119,7 @@ Let Books currently implements this skill through:
 
 - publish localization rules
 - review localized content against canonical sources
+- treat related content updates as family-level review candidates when they are expected to stay aligned
 - preserve representative findings
 - classify repeated failures into defect classes
 - automate objective checks
@@ -136,6 +164,7 @@ Let Books currently implements this skill through:
 
 - every supported locale has reader-usable content
 - localized readers retain the same core understanding as source readers
+- related localized content stays substantively complete when canonical content families evolve
 - repeated defect patterns are preserved and reduced over time
 - defect classes close only when recurrence is actually prevented
 

@@ -26,6 +26,8 @@ The repository adaptation contains:
 - current folder structures
 - current conventions
 
+Supporting-material transcript artifacts can travel with the package as provenance or research context, but they should remain clearly separate from the portable skill definitions themselves.
+
 That separation matters because a future repository may want the capability without inheriting the exact Let Books implementation.
 
 ## Expected Reuse Scenarios
