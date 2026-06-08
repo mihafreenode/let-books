@@ -70,8 +70,7 @@ jobs:
 
       - name: Install actionlint
         run: |
-          ACTIONLINT_SCRIPT_URL="https://raw.githubusercontent.com/\
-          rhysd/actionlint/main/scripts/download-actionlint.bash"
+          ACTIONLINT_SCRIPT_URL="https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash"
           curl -sSfL "$ACTIONLINT_SCRIPT_URL" | bash
           sudo mv actionlint /usr/local/bin/
 
