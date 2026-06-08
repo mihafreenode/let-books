@@ -313,6 +313,20 @@ Na primjer, PR predložak mogao bi zahtijevati kratak pregledani odjeljak koji p
 
 Ti odjeljci ne moraju biti dugi. Moraju biti dovoljno prisutni da ih drugi inženjer može osporiti. Mogu biti generirani prvi nacrti, ali ih treba pregledati s istom ozbiljnošću kao i kod.
 
+Malen primjer iz same pripreme ovog članka to pokazuje vrlo konkretno. Tijekom pregleda lokalizacije jedna je prevedena Markdown datoteka zadržala ispravno značenje, ali je slučajno uvukla jednu stavku popisa pod drugu. Neposredni popravak bio je jednostavan: popis je trebalo izravnati. Mnogo važnije bilo je sačuvati objašnjenje zašto je to uopće važno. U validatoru je, primjerice, ostalo zapisano sljedeće:
+
+```text
+Struktura popisa dio je sadržajne ispravnosti, a ne samo oblikovanja.
+
+Ako izvorni članak koristi ravan popis, a lokalizirana verzija slučajno ugnijezdi jednu stavku, čitatelji više ne vide istu strukturu.
+
+Ova lagana provjera štiti od čestih grešaka u uvlaci koje smo već vidjeli u lokaliziranim člancima.
+```
+
+To objašnjenje nije ostalo zarobljeno u komentaru pri pregledu. Postalo je dio dokumentacije, dio validatora i dio budućih pregleda.
+
+Greška je bila jednokratna. Razumijevanje zašto je bila važna postalo je trajnije.
+
 ## Zaključak
 
 Naslov ovog članka namjerno je uži od njegova zaključka. Stvarni rizik nije AI-generirana sintaksa. Stvarni rizik je dug razumijevanja: implementacije koje ostaju nakon što obrazloženje iza njih nestane.

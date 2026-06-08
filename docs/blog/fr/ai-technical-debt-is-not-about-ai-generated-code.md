@@ -313,6 +313,20 @@ Par exemple, un modèle de PR pourrait exiger une courte section relue couvrant 
 
 Ces sections n'ont pas besoin d'être longues. Elles doivent être suffisamment présentes pour qu'un autre ingénieur puisse les contester. Elles peuvent être des premières versions générées, mais elles doivent être relues avec le même sérieux que le code.
 
+Un petit exemple tiré du processus de publication de cet article rend l'idée très concrète. Pendant la revue de localisation, un fichier Markdown traduit a conservé le bon sens, mais a accidentellement imbriqué un élément de liste sous un autre. La correction immédiate était simple : il fallait remettre la liste à plat. Plus précieux encore était de conserver l'explication de pourquoi cela compte. Dans le validateur, par exemple, l'explication suivante est restée :
+
+```text
+La structure d'une liste fait partie de la correction du contenu, et pas seulement de la mise en forme.
+
+Si l'article source utilise une liste à plat et qu'un article localisé imbrique accidentellement un élément, les lecteurs ne voient plus la même structure.
+
+Cette vérification légère protège contre des erreurs d'indentation fréquentes que nous avons déjà observées dans des articles localisés.
+```
+
+Cette explication n'est pas restée prisonnière d'un commentaire de revue. Elle est devenue une partie de la documentation, une partie du validateur et une partie des revues futures.
+
+Le bug était ponctuel. La compréhension de son importance, elle, est devenue plus durable.
+
 ## Pour conclure
 
 Le titre de cet article est volontairement plus étroit que sa conclusion. Le vrai risque n'est pas la syntaxe générée par l'IA. Le vrai risque est la dette de compréhension : des implémentations qui survivent alors que le raisonnement qui les sous-tend a disparu.

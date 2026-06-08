@@ -313,6 +313,20 @@ Për shembull, një template PR-je mund të kërkojë një seksion të shkurtër
 
 Këto seksione nuk kanë nevojë të jenë të gjata. Ato duhet të jenë mjaftueshëm të pranishme që një inxhinier tjetër t'i sfidojë. Mund të jenë drafte të para të gjeneruara, por duhet të rishikohen me të njëjtën seriozitet si kodi.
 
+Një shembull i vogël nga vetë përgatitja e këtij artikulli e bën këtë shumë konkret. Gjatë rishikimit të lokalizimit, një skedar Markdown i përkthyer ruajti kuptimin e duhur, por futi pa dashje një pikë të listës poshtë një tjetre. Rregullimi i menjëhershëm ishte i thjeshtë: lista duhej rrafshuar. Më e vlefshme ishte ruajtja e shpjegimit pse kjo ka rëndësi. Në validator, për shembull, mbeti i shkruar ky shpjegim:
+
+```text
+Struktura e listës është pjesë e saktësisë së përmbajtjes, jo vetëm e formatimit.
+
+Nëse artikulli burimor përdor një listë të sheshtë, ndërsa versioni i lokalizuar fut pa dashje një element brenda një tjetri, lexuesit nuk shohin më të njëjtën strukturë.
+
+Ky kontroll i lehtë mbron nga gabime të zakonshme të futjes së hapësirave që i kemi parë tashmë në artikujt e lokalizuar.
+```
+
+Ky shpjegim nuk mbeti i bllokuar në një koment rishikimi. U bë pjesë e dokumentacionit, pjesë e validatorit dhe pjesë e rishikimeve të ardhshme.
+
+Gabimi ishte i vetëm. Të kuptuarit pse kishte rëndësi u bë më i qëndrueshëm.
+
 ## Përfundim
 
 Titulli i këtij artikulli është qëllimisht më i ngushtë se përfundimi i tij. Rreziku real nuk është sintaksa e gjeneruar nga AI. Rreziku real është borxhi i të kuptuarit: implementime që mbeten pasi arsyetimi pas tyre është zhdukur.

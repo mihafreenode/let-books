@@ -312,6 +312,15 @@ This includes:
 
 Translated wording may differ. Accidental structural drift should not.
 
+The same rule applies to newly added substantive content.
+
+If a source article gains a new example, argument, explanatory subsection, case study, quoted artifact, diagram explanation, warning, or limitation discussion, supported localized variants must either:
+
+- contain an equivalent localized addition
+- or explicitly document why the addition is intentionally omitted
+
+Silent omission is localization debt.
+
 Allowed exceptions are limited to quotations, explicitly discussed source material, clearly marked intentional non-translation, proper nouns, and technical identifiers.
 
 When an article quotes a repository artifact such as a use case, automation contract, ADR, validator, governance note, or similar engineering document, localized articles should prefer a localized excerpt whenever an equivalent localized rendering can reasonably be maintained.

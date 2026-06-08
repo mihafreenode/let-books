@@ -321,6 +321,14 @@
 <li>livello di confidenza e domande aperte</li>
 </ul>
 <p>Queste sezioni non devono essere lunghe. Devono essere abbastanza presenti da permettere a un altro ingegnere di contestarle. Possono essere prime bozze generate, ma dovrebbero essere revisionate con la stessa serietà del codice.</p>
+<p>Un piccolo esempio tratto proprio dal processo di pubblicazione di questo articolo rende il punto molto concreto. Durante la revisione della localizzazione, un file Markdown tradotto ha mantenuto il significato corretto, ma ha annidato per errore una voce di elenco sotto un’altra. La correzione immediata è stata semplice: l’elenco andava riportato a una struttura piatta. Più prezioso, però, è stato conservare la spiegazione del perché questo conti davvero. Nel validatore, per esempio, è rimasta questa spiegazione:</p>
+<pre class="text"><code>La struttura di un elenco fa parte della correttezza del contenuto, non è soltanto formattazione.
+
+Se l&#39;articolo sorgente usa un elenco piatto e una versione localizzata annida per errore una voce, i lettori non vedono più la stessa struttura.
+
+Questo controllo leggero protegge da comuni errori di rientro che abbiamo già osservato negli articoli localizzati.</code></pre>
+<p>Questa spiegazione non è rimasta intrappolata in un commento di review. È diventata parte della documentazione, parte del validatore e parte delle review future.</p>
+<p>L’errore è stato occasionale. La comprensione del perché fosse importante è diventata più durevole.</p>
 <h2 id="conclusione">Conclusione</h2>
 <p>Il titolo di questo articolo è volutamente più stretto della sua conclusione. Il vero rischio non è la sintassi generata dall’IA. Il vero rischio è il debito di comprensione: implementazioni che sopravvivono dopo che il ragionamento che le sosteneva è scomparso.</p>
 <p>La domanda più interessante è se i repository inizieranno a trattare ragionamento, assunzioni, edge case e intento come gradniki di prima classe accanto all’implementazione.</p>

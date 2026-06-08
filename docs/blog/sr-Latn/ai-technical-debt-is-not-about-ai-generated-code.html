@@ -321,6 +321,14 @@
 <li>nivo pouzdanja i otvorena pitanja</li>
 </ul>
 <p>Ti odeljci ne moraju biti dugi. Moraju biti dovoljno prisutni da drugi inženjer može da ih ospori. Mogu biti generisani prvi nacrti, ali treba da budu pregledani sa istom ozbiljnošću kao i kod.</p>
+<p>Mali primer iz same pripreme ovog članka to pokazuje vrlo konkretno. Tokom pregleda lokalizacije jedan prevedeni Markdown fajl zadržao je ispravno značenje, ali je slučajno uvukao jednu stavku liste pod drugu. Neposredna ispravka bila je jednostavna: listu je trebalo izravnati. Mnogo važnije bilo je sačuvati objašnjenje zašto je to uopšte važno. U validatoru je, recimo, ostalo zapisano sledeće:</p>
+<pre class="text"><code>Struktura liste deo je sadržajne ispravnosti, a ne samo formatiranja.
+
+Ako izvorni članak koristi ravnu listu, a lokalizovana verzija slučajno ugnjezdi jednu stavku, čitaoci više ne vide istu strukturu.
+
+Ova lagana provera štiti od čestih grešaka u uvlačenju koje smo već viđali u lokalizovanim člancima.</code></pre>
+<p>To objašnjenje nije ostalo zarobljeno u komentaru tokom pregleda. Postalo je deo dokumentacije, deo validatora i deo budućih pregleda.</p>
+<p>Greška je bila jednokratna. Razumevanje zašto je bila važna postalo je trajnije.</p>
 <h2 id="zaključak">Zaključak</h2>
 <p>Naslov ovog članka je namerno uži od njegovog zaključka. Stvarni rizik nije AI-generisana sintaksa. Stvarni rizik je dug razumevanja: implementacije koje opstanu nakon što rezonovanje iza njih nestane.</p>
 <p>Zanimljivije pitanje je da li će repozitorijumi početi da tretiraju rezonovanje, pretpostavke, rubne slučajeve i nameru kao prvoklasne gradnike uz implementaciju.</p>

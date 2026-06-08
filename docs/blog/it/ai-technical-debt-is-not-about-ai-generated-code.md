@@ -313,6 +313,20 @@ Per esempio, un template di PR potrebbe richiedere una breve sezione revisionata
 
 Queste sezioni non devono essere lunghe. Devono essere abbastanza presenti da permettere a un altro ingegnere di contestarle. Possono essere prime bozze generate, ma dovrebbero essere revisionate con la stessa serietà del codice.
 
+Un piccolo esempio tratto proprio dal processo di pubblicazione di questo articolo rende il punto molto concreto. Durante la revisione della localizzazione, un file Markdown tradotto ha mantenuto il significato corretto, ma ha annidato per errore una voce di elenco sotto un'altra. La correzione immediata è stata semplice: l'elenco andava riportato a una struttura piatta. Più prezioso, però, è stato conservare la spiegazione del perché questo conti davvero. Nel validatore, per esempio, è rimasta questa spiegazione:
+
+```text
+La struttura di un elenco fa parte della correttezza del contenuto, non è soltanto formattazione.
+
+Se l'articolo sorgente usa un elenco piatto e una versione localizzata annida per errore una voce, i lettori non vedono più la stessa struttura.
+
+Questo controllo leggero protegge da comuni errori di rientro che abbiamo già osservato negli articoli localizzati.
+```
+
+Questa spiegazione non è rimasta intrappolata in un commento di review. È diventata parte della documentazione, parte del validatore e parte delle review future.
+
+L'errore è stato occasionale. La comprensione del perché fosse importante è diventata più durevole.
+
 ## Conclusione
 
 Il titolo di questo articolo è volutamente più stretto della sua conclusione. Il vero rischio non è la sintassi generata dall'IA. Il vero rischio è il debito di comprensione: implementazioni che sopravvivono dopo che il ragionamento che le sosteneva è scomparso.

@@ -543,10 +543,11 @@ Why It Exists:
 - Some regressions preserve file presence while silently losing examples, warnings, or structurally important passages.
 
 Detects / Enforces:
-- Enforces body-size heuristics, heading retention, blockquote/list retention, and bespoke semantic checkpoints for important articles.
+- Enforces body-size heuristics, heading retention, blockquote/list retention, source-expansion heuristics for newly added substantive blocks, and bespoke semantic checkpoints for important articles.
 
 Limitations:
 - Some rules are article-specific and intentionally opinionated.
+- Heuristic source-expansion checks flag likely missing examples or explanations for review; they do not prove semantic equivalence.
 
 Related Tools:
 - `validate-content-parity.mjs`

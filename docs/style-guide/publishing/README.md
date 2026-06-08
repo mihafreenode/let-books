@@ -19,6 +19,7 @@ Use this area to standardize how topics move from repository evidence to approve
 - Do not approve localized publication work solely because the source text was translated. Review the final published result.
 - Meaning parity and natural language usage matter more than literal word-by-word correspondence.
 - Document structure is not merely formatting. Publication review should reject accidental drift in list nesting, blockquotes, code examples, or heading structure between the canonical source and localized Markdown unless there is an explicit localization reason.
+- Publication review should also reject silent omission of newly added substantive source content. A localized article is not complete if the canonical version gained a new example, quoted artifact, warning, or explanatory block and the localized variant never absorbed that addition or explicitly documented the omission.
 - Review high-visibility localized text more aggressively because awkward wording is more exposed in titles, headings, summaries, labels, and navigation.
 - Treat translated-sounding wording as a review signal even when the wording is technically correct.
 - Published Mermaid diagrams should follow the repository rendering standard: `htmlLabels: false`, unless a documented exception explains why HTML labels are required.

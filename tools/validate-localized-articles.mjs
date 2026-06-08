@@ -11,9 +11,14 @@
  * Detects / Enforces:
  * - Enforces body-size heuristics, heading retention, and strong article-specific semantic
  *   checkpoints.
+ * - Warns when the English source appears to have gained a new substantive example, quoted
+ *   artifact, code-style excerpt, diagram discussion, or other explanatory block that never made
+ *   it into a localized variant.
  *
  * Limitations:
  * - Heuristic and partially article-specific by design.
+ * - This validator cannot prove semantic equivalence. It can only flag likely cases where source
+ *   expansion was not propagated.
  *
  * Related:
  * - tools/README.md
@@ -33,6 +38,7 @@ const args = process.argv.slice(2);
 const reportFile = readArg('--report-file');
 const jsonReportFile = readArg('--json-report-file');
 const requireFullCoverage = args.includes('--require-full-coverage');
+const includes = readArgs('--include');
 
 const errors = [];
 const warnings = [];
@@ -132,6 +138,9 @@ function main() {
     for (const fileName of englishFiles) {
       const articleId = fileName.replace(/\.md$/, '');
       const englishPath = path.join(englishDir, fileName);
+      if (!matchesInclude(rel(englishPath))) {
+        continue;
+      }
       const englishContent = fs.readFileSync(englishPath, 'utf8');
       const englishBody = stripFrontmatter(englishContent);
       const englishStats = collectStats(englishBody);
@@ -140,6 +149,9 @@ function main() {
         if (locale === 'en') continue;
 
         const localizedPath = getLocalizedPath(contentType, locale, fileName);
+        if (!matchesInclude(rel(localizedPath)) && includes.length > 0) {
+          continue;
+        }
         if (!fs.existsSync(localizedPath)) {
           missingCoverage.push({ contentType, articleId, locale, path: rel(localizedPath) });
           if (requireFullCoverage) {
@@ -178,6 +190,12 @@ function main() {
 
         if (orderedListGap) {
           reasons.push('missing one or more numbered sections present in English');
+          severity = 'warning';
+        }
+
+        const substantiveExpansionReasons = detectLikelyMissingSourceExpansion(englishStats, localizedStats);
+        if (substantiveExpansionReasons.length > 0) {
+          reasons.push(...substantiveExpansionReasons);
           severity = 'warning';
         }
 
@@ -229,6 +247,17 @@ function readArg(name) {
   return args[index + 1] ?? null;
 }
 
+function readArgs(name) {
+  const values = [];
+  for (let index = 0; index < args.length; index += 1) {
+    if (args[index] === name && args[index + 1]) {
+      values.push(args[index + 1]);
+      index += 1;
+    }
+  }
+  return values;
+}
+
 function getEnglishDir(contentType) {
   return contentType === 'blog'
     ? path.join(DOCS_DIR, contentType, 'en')
@@ -245,6 +274,7 @@ function stripFrontmatter(content) {
 }
 
 function collectStats(body) {
+  const sections = collectSections(body);
   return {
     wordCount: countWords(body),
     // Count only major `##` sections. H2 density is a more stable cross-locale proxy for article
@@ -252,7 +282,136 @@ function collectStats(body) {
     headingCount: (body.match(/^##\s+/gm) ?? []).length,
     blockquoteCount: (body.match(/^>\s+/gm) ?? []).length,
     orderedListCount: (body.match(/^\d+\.\s+/gm) ?? []).length,
+    sections,
   };
+}
+
+function collectSections(body) {
+  const lines = body.split(/\r?\n/);
+  const headingIndexes = [];
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const match = /^##\s+(.+?)\s*$/.exec(lines[index]);
+    if (match) {
+      headingIndexes.push({ title: match[1].trim(), line: index });
+    }
+  }
+
+  const sections = [];
+  for (let index = 0; index < headingIndexes.length; index += 1) {
+    const current = headingIndexes[index];
+    const next = headingIndexes[index + 1];
+    const start = current.line + 1;
+    const end = next ? next.line : lines.length;
+    const sectionLines = lines.slice(start, end);
+    const text = sectionLines.join('\n').trim();
+
+    sections.push({
+      title: current.title,
+      wordCount: countWords(text),
+      blockquoteCount: (text.match(/^>\s+/gm) ?? []).length,
+      fencedBlockCount: countFencedBlocks(sectionLines),
+      imageRefCount: (text.match(/^!\[[^\]]*\]\([^)]*\)/gm) ?? []).length,
+      paragraphBlockCount: countParagraphBlocks(sectionLines),
+    });
+  }
+
+  return sections;
+}
+
+function countFencedBlocks(lines) {
+  let count = 0;
+  let inFence = false;
+  for (const line of lines) {
+    if (/^```/.test(line.trim())) {
+      inFence = !inFence;
+      if (!inFence) {
+        count += 1;
+      }
+    }
+  }
+  return count;
+}
+
+function countParagraphBlocks(lines) {
+  let count = 0;
+  let inParagraph = false;
+  let inFence = false;
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (/^```/.test(line)) {
+      inFence = !inFence;
+      inParagraph = false;
+      continue;
+    }
+
+    if (inFence) {
+      continue;
+    }
+
+    if (!line) {
+      inParagraph = false;
+      continue;
+    }
+
+    if (/^(#|>|-|\*|\d+\.|!\[)/.test(line)) {
+      inParagraph = false;
+      continue;
+    }
+
+    if (!inParagraph) {
+      count += 1;
+      inParagraph = true;
+    }
+  }
+
+  return count;
+}
+
+function detectLikelyMissingSourceExpansion(sourceStats, localizedStats) {
+  const reasons = [];
+  const alignedCount = Math.min(sourceStats.sections.length, localizedStats.sections.length);
+
+  for (let index = 0; index < alignedCount; index += 1) {
+    const sourceSection = sourceStats.sections[index];
+    const localizedSection = localizedStats.sections[index];
+    const wordRatio = ratio(localizedSection.wordCount, sourceSection.wordCount || 1);
+
+    // This check protects against a subtle but recurring localization failure: the source article
+    // gains a new example, quoted artifact, validator comment, or diagram explanation inside an
+    // existing section, while the localized file remains structurally valid and fully translated
+    // but silently loses that added argument. Structure-only review will often miss this because
+    // the heading still exists. The heuristic therefore looks for block-level signals of expansion
+    // inside corresponding sections.
+
+    const missingFencedArtifact = sourceSection.fencedBlockCount > localizedSection.fencedBlockCount;
+    const missingQuoteArtifact = sourceSection.blockquoteCount > localizedSection.blockquoteCount;
+    const missingDiagramDiscussion = sourceSection.imageRefCount > localizedSection.imageRefCount;
+    const sourceHasMeaningfulExpansion = sourceSection.wordCount >= 90 && sourceSection.paragraphBlockCount >= 2;
+
+    if (
+      sourceHasMeaningfulExpansion
+      && wordRatio < 0.78
+      && (missingFencedArtifact || missingQuoteArtifact || missingDiagramDiscussion)
+    ) {
+      const missingKinds = [];
+      if (missingFencedArtifact) missingKinds.push('fenced example/comment block');
+      if (missingQuoteArtifact) missingKinds.push('quote block');
+      if (missingDiagramDiscussion) missingKinds.push('diagram reference/discussion');
+      reasons.push(
+        `section "${sourceSection.title}" may be missing a substantive source addition `
+        + `(${missingKinds.join(', ')}; localized/source words ${localizedSection.wordCount}/${sourceSection.wordCount}, ratio ${wordRatio.toFixed(2)})`,
+      );
+    }
+  }
+
+  return reasons;
+}
+
+function matchesInclude(relativePath) {
+  if (includes.length === 0) return true;
+  return includes.some((token) => relativePath.includes(token));
 }
 
 function countWords(body) {

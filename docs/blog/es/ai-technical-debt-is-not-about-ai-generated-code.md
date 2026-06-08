@@ -313,6 +313,20 @@ Por ejemplo, una plantilla de PR podría exigir una sección breve y revisada qu
 
 Esas secciones no tienen que ser largas. Tienen que estar lo bastante presentes como para que otro ingeniero pueda cuestionarlas. Pueden ser primeros borradores generados, pero deben revisarse con la misma seriedad que el código.
 
+Un ejemplo pequeño tomado del propio proceso de publicación de este artículo vuelve esto muy concreto. Durante la revisión de localización, un archivo Markdown traducido conservó el significado correcto, pero por accidente anidó un elemento de lista debajo de otro. La corrección inmediata fue simple: había que volver a dejar la lista plana. Más valioso fue conservar la explicación de por qué eso importa. En el validador, por ejemplo, quedó esta explicación:
+
+```text
+La estructura de una lista forma parte de la corrección del contenido, no es solo formato.
+
+Si el artículo fuente usa una lista plana y un artículo localizado anida por error uno de sus elementos, los lectores dejan de ver la misma estructura.
+
+Esta comprobación ligera protege contra errores frecuentes de sangrado que ya hemos observado en artículos localizados.
+```
+
+Esa explicación no quedó atrapada en un comentario de revisión. Pasó a formar parte de la documentación, del validador y de las revisiones futuras.
+
+El error fue puntual. La comprensión de por qué importaba se volvió más duradera.
+
 ## Conclusión
 
 El título de este artículo es deliberadamente más estrecho que su conclusión. El riesgo real no es la sintaxis generada por IA. El riesgo real es la deuda de comprensión: implementaciones que sobreviven después de que el razonamiento detrás de ellas haya desaparecido.

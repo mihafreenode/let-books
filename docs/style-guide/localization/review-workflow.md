@@ -224,6 +224,10 @@ If a diagram changes orientation, structure, labels, or meaning, review all asso
 
 The same rule applies to lists, examples, and quoted blocks: translated prose may vary, but accidental Markdown structure drift is still a defect.
 
+Review for source-content expansion as well.
+
+If the canonical article gains a new example, quoted artifact, warning, diagram explanation, or other substantive block inside an existing section, localized variants should be reviewed for equivalent coverage even when heading structure still matches.
+
 ## Related Pages
 
 - `ai-translation-review-records.md`
