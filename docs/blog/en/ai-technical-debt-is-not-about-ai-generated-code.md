@@ -315,13 +315,11 @@ Those sections do not need to be long. They need to be present enough that anoth
 
 A small example from this article's own publication process makes the point concrete. During localization review, one translated Markdown file kept the right wording but accidentally nested one list item under another. The immediate fix was to flatten the list. The more valuable fix was preserving why it mattered. The validator now carries that explanation explicitly:
 
-```text
-List structure is part of content correctness, not mere formatting.
-
-If the source article uses a flat list and a localized article accidentally nests an item, readers no longer see the same structure.
-
-This lightweight check protects against the common indentation mistakes we have already observed in localized articles.
-```
+> List structure is part of content correctness, not mere formatting.
+>
+> If the source article uses a flat list and a localized article accidentally nests an item, readers no longer see the same structure.
+>
+> This lightweight check protects against the common indentation mistakes we have already observed in localized articles.
 
 That explanation did not stay trapped in a review thread. It became part of the documentation, part of the validator, and part of future reviews. The bug was one-off. The durable artifact was the preserved understanding of why it mattered.
 

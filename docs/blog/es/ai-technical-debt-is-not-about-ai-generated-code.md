@@ -315,13 +315,11 @@ Esas secciones no tienen que ser largas. Tienen que estar lo bastante presentes 
 
 Un ejemplo pequeño tomado del propio proceso de publicación de este artículo vuelve esto muy concreto. Durante la revisión de localización, un archivo Markdown traducido conservó el significado correcto, pero por accidente anidó un elemento de lista debajo de otro. La corrección inmediata fue simple: había que volver a dejar la lista plana. Más valioso fue conservar la explicación de por qué eso importa. En el validador, por ejemplo, quedó esta explicación:
 
-```text
-La estructura de una lista forma parte de la corrección del contenido, no es solo formato.
-
-Si el artículo fuente usa una lista plana y un artículo localizado anida por error uno de sus elementos, los lectores dejan de ver la misma estructura.
-
-Esta comprobación ligera protege contra errores frecuentes de sangrado que ya hemos observado en artículos localizados.
-```
+> La estructura de una lista forma parte de la corrección del contenido, no es solo formato.
+>
+> Si el artículo fuente usa una lista plana y un artículo localizado anida por error uno de sus elementos, los lectores dejan de ver la misma estructura.
+>
+> Esta comprobación ligera protege contra errores frecuentes de sangrado que ya hemos observado en artículos localizados.
 
 Esa explicación no quedó atrapada en un comentario de revisión. Pasó a formar parte de la documentación, del validador y de las revisiones futuras.
 

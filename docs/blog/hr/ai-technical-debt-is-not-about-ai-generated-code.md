@@ -315,13 +315,11 @@ Ti odjeljci ne moraju biti dugi. Moraju biti dovoljno prisutni da ih drugi inže
 
 Malen primjer iz same pripreme ovog članka to pokazuje vrlo konkretno. Tijekom pregleda lokalizacije jedna je prevedena Markdown datoteka zadržala ispravno značenje, ali je slučajno uvukla jednu stavku popisa pod drugu. Neposredni popravak bio je jednostavan: popis je trebalo izravnati. Mnogo važnije bilo je sačuvati objašnjenje zašto je to uopće važno. U validatoru je, primjerice, ostalo zapisano sljedeće:
 
-```text
-Struktura popisa dio je sadržajne ispravnosti, a ne samo oblikovanja.
-
-Ako izvorni članak koristi ravan popis, a lokalizirana verzija slučajno ugnijezdi jednu stavku, čitatelji više ne vide istu strukturu.
-
-Ova lagana provjera štiti od čestih grešaka u uvlaci koje smo već vidjeli u lokaliziranim člancima.
-```
+> Struktura popisa dio je sadržajne ispravnosti, a ne samo oblikovanja.
+>
+> Ako izvorni članak koristi ravan popis, a lokalizirana verzija slučajno ugnijezdi jednu stavku, čitatelji više ne vide istu strukturu.
+>
+> Ova lagana provjera štiti od čestih grešaka u uvlaci koje smo već vidjeli u lokaliziranim člancima.
 
 To objašnjenje nije ostalo zarobljeno u komentaru pri pregledu. Postalo je dio dokumentacije, dio validatora i dio budućih pregleda.
 

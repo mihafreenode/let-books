@@ -315,13 +315,11 @@ Ti odeljci ne moraju biti dugi. Moraju biti dovoljno prisutni da drugi inženjer
 
 Mali primer iz same pripreme ovog članka to pokazuje vrlo konkretno. Tokom pregleda lokalizacije jedan prevedeni Markdown fajl zadržao je ispravno značenje, ali je slučajno uvukao jednu stavku liste pod drugu. Neposredna ispravka bila je jednostavna: listu je trebalo izravnati. Mnogo važnije bilo je sačuvati objašnjenje zašto je to uopšte važno. U validatoru je, recimo, ostalo zapisano sledeće:
 
-```text
-Struktura liste deo je sadržajne ispravnosti, a ne samo formatiranja.
-
-Ako izvorni članak koristi ravnu listu, a lokalizovana verzija slučajno ugnjezdi jednu stavku, čitaoci više ne vide istu strukturu.
-
-Ova lagana provera štiti od čestih grešaka u uvlačenju koje smo već viđali u lokalizovanim člancima.
-```
+> Struktura liste deo je sadržajne ispravnosti, a ne samo formatiranja.
+>
+> Ako izvorni članak koristi ravnu listu, a lokalizovana verzija slučajno ugnjezdi jednu stavku, čitaoci više ne vide istu strukturu.
+>
+> Ova lagana provera štiti od čestih grešaka u uvlačenju koje smo već viđali u lokalizovanim člancima.
 
 To objašnjenje nije ostalo zarobljeno u komentaru tokom pregleda. Postalo je deo dokumentacije, deo validatora i deo budućih pregleda.
 

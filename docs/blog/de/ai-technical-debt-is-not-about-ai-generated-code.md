@@ -315,13 +315,11 @@ Diese Abschnitte müssen nicht lang sein. Sie müssen präsent genug sein, dass 
 
 Ein kleines Beispiel aus dem Veröffentlichungsprozess dieses Artikels macht den Punkt sehr konkret. Während des Lokalisierungsreviews hat eine übersetzte Markdown-Datei die richtige Bedeutung beibehalten, aber versehentlich einen Listenpunkt unter einen anderen eingerückt. Die unmittelbare Korrektur war einfach: Die Liste musste wieder flach gemacht werden. Wertvoller war, die Begründung dafür festzuhalten, warum das überhaupt wichtig ist. Im Validator blieb zum Beispiel folgende Erklärung erhalten:
 
-```text
-Listenstruktur ist Teil der inhaltlichen Korrektheit und nicht bloß Formatierung.
-
-Wenn der Quellartikel eine flache Liste verwendet und ein lokalisierter Artikel versehentlich einen Eintrag verschachtelt, sehen Leserinnen und Leser nicht mehr dieselbe Struktur.
-
-Diese leichte Prüfung schützt vor häufigen Einrückungsfehlern, die wir in lokalisierten Artikeln bereits beobachtet haben.
-```
+> Listenstruktur ist Teil der inhaltlichen Korrektheit und nicht bloß Formatierung.
+>
+> Wenn der Quellartikel eine flache Liste verwendet und ein lokalisierter Artikel versehentlich einen Eintrag verschachtelt, sehen Leserinnen und Leser nicht mehr dieselbe Struktur.
+>
+> Diese leichte Prüfung schützt vor häufigen Einrückungsfehlern, die wir in lokalisierten Artikeln bereits beobachtet haben.
 
 Diese Erklärung blieb nicht in einem Review-Kommentar stecken. Sie wurde Teil der Dokumentation, Teil des Validators und Teil zukünftiger Reviews.
 
