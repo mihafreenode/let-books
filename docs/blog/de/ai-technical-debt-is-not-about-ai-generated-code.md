@@ -252,7 +252,7 @@ Der Kontrast ist einfach.
 
 ![Diagramm Code allein versus erhaltenes Verständnis](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/de/code-only-vs-preserved-understanding.svg)
 
-Im linken Pfad bewahrt das Repository Code und Tests, verliert aber die Begründung darum herum. Im rechten Pfad bewahrt es Code und Tests zusammen mit zumindest einem prüfbaren Entwurf von Absicht, Annahmen und Begründung.
+Im oberen Pfad bewahrt das Repository Code und Tests zusammen mit zumindest einem prüfbaren Entwurf von Absicht, Annahmen und Begründung. Im unteren Pfad bleiben Code und Tests erhalten, aber ein großer Teil des umgebenden Verständnisses nicht.
 
 ## Korrektheitsreview und Vollständigkeitsreview sind unterschiedliche Aufgaben
 

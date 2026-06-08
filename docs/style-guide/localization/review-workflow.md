@@ -217,6 +217,10 @@ Review prompts should explicitly ask:
 - Do role names, process terms, and business examples sound native in context?
 - Do rendered diagrams and their textual references still match orientation and layout?
 
+Treat text that explains a diagram as part of the diagram itself.
+
+If a diagram changes orientation, structure, labels, or meaning, review all associated explanatory prose, captions, alt text, and localized variants before considering the review complete.
+
 ## Related Pages
 
 - `ai-translation-review-records.md`

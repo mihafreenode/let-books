@@ -242,7 +242,7 @@ Kontrast je preprost.
 
 ![Diagram samo koda proti ohranjenemu razumevanju](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/sl/code-only-vs-preserved-understanding.svg)
 
-V prvem delu diagrama repozitorij ohrani kodo in teste, izgubi pa razlago, zakaj so takšni. V drugem delu ohrani kodo in teste skupaj z vsaj pregledljivim osnutkom namena, predpostavk in utemeljitve.
+V zgornjem delu diagrama repozitorij ohrani kodo in teste skupaj z vsaj pregledljivim osnutkom namena, predpostavk in utemeljitve. V spodnjem delu koda in testi ostanejo, velik del razumevanja okoli njiju pa ne.
 
 ## Pregled pravilnosti in pregled celovitosti sta različni nalogi
 
