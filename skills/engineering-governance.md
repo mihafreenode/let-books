@@ -132,6 +132,7 @@ Let Books currently implements this skill through:
 - `docs/sources/README.md`
 - `docs/supporting-material/portable-skills-conversation-log.html`
 - `docs/supporting-material/portable-skills-transcript-part-2-reconstructed.html`
+- `docs/supporting-material/portable-skills-transcript-part-3.html`
 - `docs/supporting-material/conversation-log-rendering-rules.html`
 - `tools/README.md`
 - `tests/README.md`

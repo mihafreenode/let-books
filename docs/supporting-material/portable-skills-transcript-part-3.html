@@ -1,0 +1,2303 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portable Engineering Skills — Transcript Part 3</title>
+<style>
+:root{--bg:#f7f4ef;--ink:#24201c;--muted:#6f665c;--border:#d8d0c6;--user:#fff4d0;--assistant:#eef6ff;--accent-user:#d99000;--accent-assistant:#2c83c5;--accent-paste:#d79a2b;--artifact:#171717}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55}main{max-width:1180px;margin:0 auto;padding:34px 20px 90px}h1{margin:0 0 6px;font-size:34px}.subtitle{color:var(--muted);margin:0 0 22px}.legend{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}.badge{border:1px solid var(--border);border-radius:999px;background:#fff;padding:6px 12px;font-size:13px}.toc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:24px}.toc ol{columns:2;padding-left:22px;margin-bottom:0}.toc a{color:#7a3d00;text-decoration:none}.entry{border:1px solid var(--border);border-left:7px solid #aaa;border-radius:14px;margin:18px 0;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.04);overflow:hidden}.entry.user{background:var(--user);border-left-color:var(--accent-user)}.entry.assistant{background:var(--assistant);border-left-color:var(--accent-assistant)}.entry.paste{background:#0c0c0c;border-color:#2b2b2b;border-left-color:var(--accent-paste);color:#e7e0d2}summary{cursor:pointer;list-style:none;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}summary::-webkit-details-marker{display:none}.num{min-width:2.5em;color:var(--muted);font-weight:700}.entry.paste .num{color:#b8aa90}.meta{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:4px}.entry.paste .meta{color:#d79a2b}.title{font-size:18px;font-weight:750}.content{padding:0 18px 18px}.plain,.artifact,.opencode{white-space:pre-wrap;overflow:auto;margin:0;border-radius:10px;padding:15px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:13px;line-height:1.48}.plain{background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.08)}.artifact{background:var(--artifact);color:#eaeaea;border:1px solid #333}.opencode{background:#050505;color:#d6d0c8;border:1px solid #252525;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);font-weight:600}.opencode .thinking{color:#b9b1a7;font-style:italic}.opencode .term-heading{color:#f4a62a;font-weight:800}.opencode .numbered{color:#f2dcc0}.opencode .dash{color:#e6d0b8}.opencode .tool{color:#a8a8a8}.opencode .term-heading,.opencode .numbered,.opencode .dash,.opencode .tool,.opencode .thinking{display:block}.copy-note{font-size:12px;color:#6b6259;margin:0 0 8px;font-weight:700}.markdown-body{background:rgba(255,255,255,.42);border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:16px 18px}.markdown-body h1,.markdown-body h2,.markdown-body h3{line-height:1.25;margin-top:1.2em}.markdown-body h1:first-child,.markdown-body h2:first-child,.markdown-body h3:first-child{margin-top:0}.markdown-body pre{background:#151515;color:#eee;border-radius:8px;padding:12px;overflow:auto}.markdown-body code{background:rgba(0,0,0,.08);padding:1px 4px;border-radius:4px}.markdown-body pre code{background:transparent;padding:0}.markdown-body blockquote{border-left:4px solid #bbb;margin-left:0;padding-left:12px;color:#555}.markdown-body table{border-collapse:collapse;width:100%;margin:12px 0;background:white}.markdown-body th,.markdown-body td{border:1px solid #ccc;padding:6px 8px;text-align:left}.footer{margin-top:36px;color:var(--muted);font-size:13px}@media(max-width:760px){main{padding:20px 12px 70px}.toc ol{columns:1}.title{font-size:16px}}
+</style>
+</head><body><main>
+<h1>Portable Engineering Skills — Transcript Part 3</h1>
+<p class="subtitle">Expandable transcript-style continuation. Assistant discussion is rendered as Markdown. Generated prompts are preserved as raw copy-paste artifacts. Pasted agent output uses terminal/OpenCode-style formatting.</p>
+<div class="legend"><span class="badge">🟡 Your question / direction</span><span class="badge">🔵 Assistant reply rendered as Markdown</span><span class="badge">🟣 Pasted agent output in terminal style</span><span class="badge">Prompt artifacts stay raw</span></div>
+<section class="toc"><strong>Contents</strong><ol>
+<li><a href="#e1">Current state and next steps summary</a></li>
+<li><a href="#e2">Recommended audit framework</a></li>
+<li><a href="#e3">Start with plan: ask for prompt</a></li>
+<li><a href="#e4">Planning-only migration audit prompt</a></li>
+<li><a href="#e5">Pasted migration audit output with screenshots</a></li>
+<li><a href="#e6">Read of first-pass audit and next registry step</a></li>
+<li><a href="#e7">Plan or build?</a></li>
+<li><a href="#e8">Rule registry prompt</a></li>
+<li><a href="#e9">Pasted agent output — rule registry</a></li>
+<li><a href="#e10">Review of registry and next skill-spec step</a></li>
+<li><a href="#e11">Pasted agent output — skill outlines</a></li>
+<li><a href="#e12">Review of skill outlines and ownership matrix recommendation</a></li>
+<li><a href="#e13">Ask for ownership matrix prompt</a></li>
+<li><a href="#e14">Ownership matrix prompt</a></li>
+<li><a href="#e15">Pasted agent output — ownership matrix</a></li>
+<li><a href="#e16">Phase 1 extraction design prompt</a></li>
+<li><a href="#e17">Save transcript request</a></li>
+</ol></section>
+<section id="e1" class="entry user"><details open>
+<summary><span class="num">1.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Current state and next steps summary</div></span></summary>
+<div class="content"><pre class="plain"># Portable Engineering Skills — Current State and Next Steps
+
+## What Was Accomplished
+
+We extracted a first version of a portable skill system from the Let Books repository.
+
+Current skill catalog:
+
+1. Engineering Governance
+2. Localization Governance
+3. Documentation as Product
+4. CI/CD Governance
+
+Key finding:
+
+Engineering Governance emerged as a meta-skill that appears to underpin the others.
+
+Proposed hierarchy:
+
+Engineering Governance
+├── Localization Governance
+├── Documentation as Product
+└── CI/CD Governance
+
+Additional work completed:
+
+* Added skills/ directory
+* Added maturity model
+* Added portability review
+* Added packaging and adoption documentation
+* Added Apache-2.0 licensing
+* Added versioning and manifest metadata
+* Added provenance information
+
+The skill package is now considered ready for migration planning.
+
+---
+
+## Important Architectural Decision
+
+Validator Engineering was not retained as a top-level skill.
+
+Reason:
+
+The same principles appeared across:
+
+* validators
+* tests
+* workflows
+* documentation
+* governance artifacts
+* review procedures
+
+The capability is broader than validators and is now treated as part of Engineering Governance.
+
+---
+
+## Current Hypothesis
+
+Skills may become the reusable asset.
+
+Instead of copying:
+
+* validators
+* prompts
+* guidance documents
+* workflow snippets
+
+future repositories may install:
+
+* Engineering Governance
+* Localization Governance
+* Documentation as Product
+* CI/CD Governance
+
+and then adapt implementation details locally.
+
+---
+
+## Next Experiment
+
+Do not create more skills yet.
+
+Instead:
+
+1. Audit existing Let Books guidance.
+2. Determine what belongs inside skills.
+3. Determine what remains repository-specific.
+4. Make skills the primary source of reusable guidance.
+5. Leave only repository adaptations in Let Books.
+
+Classification for every rule:
+
+* Move To Skill
+* Keep As Repository Adaptation
+* Duplicate And Reference
+* Remove As Redundant
+
+---
+
+## Immediate Goal
+
+Use Let Books as the first consumer of its own skills.
+
+Success criterion:
+
+A large portion of:
+
+* AGENTS.md
+* AGENTS-Implementation.md
+* governance documents
+* contributor guidance
+* localization guidance
+* validation guidance
+* documentation guidance
+
+should become references to skills rather than containing duplicated guidance.
+
+---
+
+## Deliverable For Next Session
+
+Create a migration audit:
+
+For every guidance document:
+
+* identify rules
+* map each rule to a skill
+* identify gaps
+* identify duplicates
+* propose migration order
+
+Output:
+
+* migration-audit.md
+* skill-mapping.md
+* repository-adaptations.md
+* migration-plan.md
+
+No repository changes yet.
+
+First produce the audit and migration plan.</pre></div></details></section>
+<section id="e2" class="entry assistant"><details>
+<summary><span class="num">2.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Recommended audit framework</div></span></summary>
+<div class="content"><div class="markdown-body"><p>This looks like the correct next step.</p>
+<p>The first extraction phase answered <em>&quot;What portable skills exist?&quot;</em></p>
+<p>The next phase should answer:</p>
+<blockquote>
+<p><em>&quot;What guidance actually belongs inside those skills, and what remains specific to Let Books?&quot;</em></p>
+</blockquote>
+<p>I would slightly strengthen the audit goal.</p>
+<p>Instead of only classifying documents, classify individual rules and guidance fragments.</p>
+<p>Many documents are mixed:</p>
+<ul>
+<li>some content is portable governance</li>
+<li>some content is Let Books implementation</li>
+<li>some content is historical</li>
+<li>some content is duplicated</li>
+</ul>
+<p>The audit should therefore operate at rule level, not document level.</p>
+<hr />
+<h1>Recommended Audit Framework</h1>
+<h2>Classification Categories</h2>
+<p>Every identified rule receives exactly one primary classification:</p>
+<h3>Move To Skill</h3>
+<p>Portable guidance that should become part of a reusable skill.</p>
+<p>Examples:</p>
+<ul>
+<li>preserve context</li>
+<li>validate early</li>
+<li>document non-obvious decisions</li>
+<li>localization parity principles</li>
+<li>reviewer workflow expectations</li>
+<li>CI governance principles</li>
+</ul>
+<hr />
+<h3>Keep As Repository Adaptation</h3>
+<p>Guidance that depends on Let Books structure.</p>
+<p>Examples:</p>
+<ul>
+<li>specific folder names</li>
+<li>specific validator commands</li>
+<li>current workflow names</li>
+<li>current content organization</li>
+</ul>
+<hr />
+<h3>Duplicate And Reference</h3>
+<p>Useful when:</p>
+<ul>
+<li>skill owns the rule</li>
+<li>repository still needs a local adaptation</li>
+</ul>
+<p>Example:</p>
+<p>Skill:</p>
+<blockquote>
+<p>Localization changes should propagate to all supported locales.</p>
+</blockquote>
+<p>Repository adaptation:</p>
+<blockquote>
+<p>Let Books currently supports: en, sl, hr, bs, sr-Latn, sr-Cyrl, mk, sq, fr, de, it, es.</p>
+</blockquote>
+<hr />
+<h3>Remove As Redundant</h3>
+<p>Rules that:</p>
+<ul>
+<li>duplicate another rule</li>
+<li>no longer match current architecture</li>
+<li>became obsolete after skill extraction</li>
+</ul>
+<hr />
+<h1>Suggested Deliverables</h1>
+<h2>migration-audit.md</h2>
+<p>Inventory.</p>
+<p>Structure:</p>
+<pre><code class="language-text">Document
+├── Rule
+├── Classification
+├── Skill
+└── Notes
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">AGENTS.md
+
+Rule:
+Preserve Context
+
+Classification:
+Move To Skill
+
+Skill:
+Engineering Governance
+
+Notes:
+Already appears repeatedly elsewhere.
+</code></pre>
+<hr />
+<h2>skill-mapping.md</h2>
+<p>Skill-centric view.</p>
+<p>Structure:</p>
+<pre><code class="language-text">Engineering Governance
+├── Rule A
+├── Rule B
+├── Rule C
+
+Localization Governance
+├── Rule A
+├── Rule B
+</code></pre>
+<p>This becomes the basis for future skill content.</p>
+<hr />
+<h2>repository-adaptations.md</h2>
+<p>Everything intentionally remaining in Let Books.</p>
+<p>Structure:</p>
+<pre><code class="language-text">Skill Reference
+
+Repository Adaptation
+
+Reason
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">Localization Governance
+
+Adaptation:
+Supported locale list
+
+Reason:
+Repository-specific.
+</code></pre>
+<hr />
+<h2>migration-plan.md</h2>
+<p>Execution order.</p>
+<p>Recommended order:</p>
+<h3>Phase 1</h3>
+<p>Engineering Governance</p>
+<p>Reason:</p>
+<p>Most duplicated.
+Most foundational.</p>
+<hr />
+<h3>Phase 2</h3>
+<p>Localization Governance</p>
+<p>Reason:</p>
+<p>Large amount of repeated guidance.
+Already fairly mature.</p>
+<hr />
+<h3>Phase 3</h3>
+<p>Documentation as Product</p>
+<p>Reason:</p>
+<p>Depends on Engineering Governance concepts.</p>
+<hr />
+<h3>Phase 4</h3>
+<p>CI/CD Governance</p>
+<p>Reason:</p>
+<p>Contains most repository-specific implementation details and will likely need the most adaptation work.</p>
+<hr />
+<h1>Additional Gap Analysis</h1>
+<p>While auditing, explicitly identify guidance that currently has no clear owner.</p>
+<p>Useful section:</p>
+<pre><code class="language-text">Potential New Skill Candidates
+</code></pre>
+<p>Not to create now.</p>
+<p>Only record.</p>
+<p>Examples that may emerge:</p>
+<ul>
+<li>Review Governance</li>
+<li>Knowledge Preservation</li>
+<li>AI-Assisted Development</li>
+<li>Testing &amp; Validation Strategy</li>
+<li>Architectural Decision Management</li>
+</ul>
+<p>The instruction should remain:</p>
+<blockquote>
+<p>Do not create new skills during this audit.
+Only record recurring clusters that do not fit existing skills.</p>
+</blockquote>
+<hr />
+<h1>Success Criterion</h1>
+<p>I would redefine success slightly:</p>
+<p>Instead of:</p>
+<blockquote>
+<p>&quot;A large portion of AGENTS.md becomes references.&quot;</p>
+</blockquote>
+<p>Use:</p>
+<blockquote>
+<p>&quot;Every reusable rule has a single authoritative home, and repository documents primarily contain adaptations, examples, and references.&quot;</p>
+</blockquote>
+<p>That prevents moving duplication from one place to another and turns Let Books into the first real consumer of:</p>
+<ul>
+<li>Engineering Governance</li>
+<li>Localization Governance</li>
+<li>Documentation as Product</li>
+<li>CI/CD Governance</li>
+</ul>
+<p>which is the strongest validation that the skill model is actually portable.</p>
+</div></div></details></section>
+<section id="e3" class="entry user"><details>
+<summary><span class="num">3.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Start with plan: ask for prompt</div></span></summary>
+<div class="content"><pre class="plain">i'd start with plan, what would prompt be?</pre></div></details></section>
+<section id="e4" class="entry assistant"><details>
+<summary><span class="num">4.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Planning-only migration audit prompt</div></span></summary>
+<div class="content"><div class="copy-note">Raw prompt artifact — Markdown is preserved for copy/paste.</div><pre class="artifact">I'd make the first prompt explicitly **planning-only** and forbid any repository changes. The goal is to force analysis before refactoring.
+
+:::writing{variant="document" id="58241"}
+# Portable Skills Migration Audit — Planning Phase Only
+
+Context:
+
+The repository now contains an initial portable skills system with the following skills:
+
+- Engineering Governance
+- Localization Governance
+- Documentation as Product
+- CI/CD Governance
+
+Engineering Governance is currently considered the foundational meta-skill.
+
+No repository changes are allowed in this phase.
+
+Do not move files.
+Do not rewrite documents.
+Do not create new skills.
+Do not modify guidance.
+
+Your task is to produce a migration audit and migration plan only.
+
+## Objective
+
+Determine which existing guidance should become part of portable skills and which guidance should remain repository-specific.
+
+The long-term goal is for the repository to become a consumer of its own skills.
+
+Repository documents should eventually contain primarily:
+
+- repository adaptations
+- repository-specific procedures
+- references to skills
+
+Portable guidance should have a single authoritative home inside the skills system.
+
+## Audit Scope
+
+Review all governance and guidance sources, including but not limited to:
+
+- AGENTS.md
+- AGENTS-Implementation.md
+- governance documents
+- contributor guidance
+- localization guidance
+- validation guidance
+- documentation guidance
+- workflow guidance
+- review guidance
+- architecture guidance
+- onboarding guidance
+
+Also identify any other documents that function as guidance, standards, policy, governance, or process documentation.
+
+## Classification Model
+
+For every identified rule, recommendation, requirement, standard, principle, workflow expectation, review expectation, or governance statement, assign one primary classification:
+
+### Move To Skill
+
+Portable guidance that should become part of a reusable skill.
+
+### Keep As Repository Adaptation
+
+Repository-specific guidance that depends on:
+
+- repository structure
+- implementation details
+- file locations
+- supported locales
+- workflow names
+- tooling choices
+- deployment architecture
+
+### Duplicate And Reference
+
+Skill should become authoritative, but the repository should retain a localized adaptation or example.
+
+### Remove As Redundant
+
+Duplicated, obsolete, superseded, or unnecessary guidance.
+
+## Rule-Level Analysis
+
+Do not classify entire documents as a unit.
+
+Analyze individual rules and guidance fragments.
+
+A single document may contain rules belonging to multiple classifications.
+
+## Gap Analysis
+
+Identify:
+
+- duplicated guidance
+- conflicting guidance
+- guidance without a clear owner
+- guidance that appears in multiple places
+- guidance that is implicitly assumed but not formally documented
+
+Do not create new skills.
+
+If recurring clusters appear that do not fit existing skills, record them as:
+
+"Potential Future Skill Candidates"
+
+without proposing implementation.
+
+## Deliverables
+
+Produce the following documents:
+
+### migration-audit.md
+
+For each document:
+
+- rule
+- classification
+- proposed skill ownership
+- rationale
+
+### skill-mapping.md
+
+For each existing skill:
+
+- rules proposed for migration
+- source locations
+- duplication notes
+
+### repository-adaptations.md
+
+Repository-specific guidance that should remain outside skills.
+
+Include rationale.
+
+### migration-plan.md
+
+Recommended migration sequence.
+
+For each phase include:
+
+- scope
+- expected benefit
+- dependencies
+- migration risk
+- validation approach
+
+## Migration Strategy
+
+Prefer:
+
+1. Engineering Governance
+2. Localization Governance
+3. Documentation as Product
+4. CI/CD Governance
+
+unless audit findings justify a different order.
+
+## Success Criteria
+
+Success is not measured by how much content moves.
+
+Success is measured by:
+
+- single ownership of reusable guidance
+- reduced duplication
+- clearer separation between portable skills and repository adaptations
+- a realistic migration roadmap
+
+Planning and analysis only.
+
+No repository modifications.
+No file creation outside the requested audit deliverables.
+No implementation work.
+:::
+
+This prompt should produce the first serious inventory. After that, the next prompt can be much narrower:
+
+&gt; "Execute Phase 1 only: Engineering Governance extraction. Preserve behavior. Produce proposed diffs before applying changes."
+
+That keeps the migration incremental instead of trying to rewrite the repository in one pass.</pre></div></details></section>
+<section id="e5" class="entry user"><details>
+<summary><span class="num">5.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Pasted migration audit output with screenshots</div></span></summary>
+<div class="content"><pre class="opencode">I’m doing a read-only migration audit across the governance surface and will return an execution-ready plan with document-by-document rule classification, skill mapping, repository adaptations, and phased migration order.
+│ Explore Task — Portable migration audit
+└ 56 toolcalls · 19m 39s
+→ Read AGENTS.md [offset=1, limit=260]
+→ Read README.md [offset=1, limit=240]
+→ Read tests/README.md [offset=1, limit=240]
+→ Read docs/wiki/documentation-validation-beyond-linting.md [offset=1, limit=220]
+→ Read docs/style-guide/publishing/README.md [offset=1, limit=220]
+ctrl+x down view subagents
+
+Thinking: Structuring final answer
+I need to mention that I can't create files due to the current plan mode. I should provide details on migration audits, skill mapping, repository adaptations, and the migration plan in response to the request. Organizing this under headings that correspond to the requested documents will help make it clearer. I also think it's important to include a note stating there are no repository changes. Let’s synthesize everything from the task result and previous readings.
+
+Migration Audit
+migration-audit.md
+AGENTS.md
+- Rule: Keep product/spec guidance separate from tactical implementation guidance.
+- Classification: Move To Skill
+- Proposed skill: Engineering Governance
+- Rationale: Portable authority-boundary rule.
+- Rule: Prefer real-device validation for camera/barcode/QR workflows.
+- Classification: Keep As Repository Adaptation
+- Rationale: Tied to Let Books mobile scanning behavior.
+- Rule: .po files are for app UI only; book metadata translations belong in the database.
+- Classification: Keep As Repository Adaptation
+- Rationale: Domain/data-model specific.
+- Rule: All user-visible text and accessibility text must be localizable; preserve Unicode/script correctness.
+- Classification: Duplicate And Reference
+- Proposed skill: Localization Governance
+- Rationale: Portable rule, repeated elsewhere.
+- Rule: README/docs must describe current state clearly and avoid misleading framing.
+- Classification: Duplicate And Reference
+- Proposed skill: Documentation as Product
+- Rationale: Portable docs-quality rule.
+- Rule: CI should build/test/lint/validate docs and localization.
+- Classification: Duplicate And Reference
+- Proposed skill: CI/CD Governance
+- Rationale: Skill should own the generic rule; repo keeps local pipeline references.
+- Rule: Keep changes small, write tests with features, update docs for user-visible changes.
+- Classification: Move To Skill
+- Proposed skill: Engineering Governance
+- Rationale: Portable engineering practice.
+AGENTS-Implementation.md
+- Rule: Public-facing name is Let Books.
+- Classification: Keep As Repository Adaptation
+- Rule: Public docs use static HTML, shared assets, repo-relative references.
+- Classification: Duplicate And Reference
+- Proposed skill: Documentation as Product
+- Rationale: Generic docs-product pattern plus local implementation.
+- Rule: /, /docs/, /static-demo/ have distinct roles.
+- Classification: Keep As Repository Adaptation
+- Rule: Static pages need canonical metadata, hreflang, social tags, generator-backed regeneration.
+- Classification: Move To Skill
+- Proposed skill: Documentation as Product
+- Rule: Static demo stays local-only/offline-first PWA.
+- Classification: Keep As Repository Adaptation
+- Rule: Scanner/camera/dashboard visual behavior rules.
+- Classification: Keep As Repository Adaptation
+- Rule: Localization/accessibility must preserve separate locales, Unicode fidelity, localized ARIA/alt text, responsive accessibility.
+- Classification: Duplicate And Reference
+- Proposed skill: Localization Governance
+- Rule: Track localization debt and defect classes; remediate source-first; process families together.
+- Classification: Duplicate And Reference
+- Proposed skill: Localization Governance
+- Rule: Durable engineering writing should prefer connected reasoning over micro-sections.
+- Classification: Duplicate And Reference
+- Proposed skill: Documentation as Product
+- Rule: README must reflect current state, separate implemented vs planned.
+- Classification: Duplicate And Reference
+- Proposed skill: Documentation as Product
+- Rule: Prefer real-device Android validation, CDP attachment, runtime instrumentation.
+- Classification: Keep As Repository Adaptation
+- Rule: Preserve engineering knowledge in validators, tests, comments, workflows, docs; prefer validator-first enforcement.
+- Classification: Move To Skill
+- Proposed skill: Engineering Governance
+- Rule: Non-trivial validators and tests need purpose/why/protected behavior/limitations documentation.
+- Classification: Move To Skill
+- Proposed skill: Engineering Governance
+- Rule: Localized diagrams must be rendered/reviewed visually; htmlLabels: false by default.
+- Classification: Duplicate And Reference
+- Proposed skill: Localization Governance
+- Rationale: Rendered-localization rule is portable; exact Mermaid default may stay as local adaptation if desired.
+- Rule: Public blog/source-map evidence must cite specs/docs, not app/demo/tool/test source.
+- Classification: Move To Skill
+- Proposed skill: Documentation as Product
+README.md
+- Rule: Root README must show current repo status and identify static-demo/ as current executable deliverable.
+- Classification: Keep As Repository Adaptation
+- Rule: Docs are static multilingual portal under /docs/; demo is separate.
+- Classification: Duplicate And Reference
+- Proposed skill: Documentation as Product
+- Rule: Verification ISBNs and metadata fallback chain.
+- Classification: Keep As Repository Adaptation
+- Rule: Use AGENTS.md + AGENTS-Implementation.md together; keep tactical guidance out of product spec.
+- Classification: Duplicate And Reference
+- Proposed skill: Engineering Governance
+- Rule: Real-device mobile debugging is preferred and documented separately.
+- Classification: Keep As Repository Adaptation
+docs/README.md
+- Rule: Treat docs as a traceable reusable knowledge platform.
+- Classification: Move To Skill
+- Proposed skill: Documentation as Product
+- Rule: Track Localization Debt and Open Defect Classes.
+- Classification: Duplicate And Reference
+- Proposed skill: Localization Governance
+- Rule: Local docs taxonomy/content families/locales.
+- Classification: Keep As Repository Adaptation
+docs/Development.md
+- Rule: Local preview commands and repo layout for docs/demo development.
+- Classification: Keep As Repository Adaptation
+- Rule: Workflow/tooling descriptions here are canonical.
+- Classification: Remove As Redundant
+- Rationale: Conflicts with workflow README/current workflows.
+docs/Deployment.md
+- Rule: GitHub Pages deployment setup steps.
+- Classification: Keep As Repository Adaptation
+- Rule: Current workflow behavior described here.
+- Classification: Remove As Redundant
+- Rationale: Better owned by workflow README and workflow files.
+docs/style-guide/localization/README.md
+- Rule: English canonical source authority; translations are first-class but derived.
+- Classification: Move To Skill
+- Proposed skill: Localization Governance
+- Rule: Localization includes accessibility text, diagrams, metadata, captions, governance.
+- Classification: Move To Skill
+- Proposed skill: Localization Governance
+- Rule: Semantic parity over literal parity.
+- Classification: Move To Skill
+- Proposed skill: Localization Governance
+- Rule: Rendered output must be reviewed; visually broken localized diagrams are incomplete.
+- Classification: Move To Skill
+- Proposed skill: Localization Governance
+- Rule: Source-first remediation.
+- Classification: Move To Skill
+- Proposed skill: Localization Governance
+- Rule: Defect classes, debt tracking, family processing, AI-agent workflow.
+- Classification: Move To Skill
+- Proposed skill: Localization Governance
+- Rule: 12-locale frontmatter/path/footer contracts.
+- Classification: Keep As Repository Adaptation
+...
+</pre></div></details></section>
+<section id="e6" class="entry assistant"><details>
+<summary><span class="num">6.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Read of first-pass audit and next registry step</div></span></summary>
+<div class="content"><div class="markdown-body"><p>This is actually a pretty good first-pass audit. A few things stand out.</p>
+<h3>1. Engineering Governance is getting even stronger</h3>
+<p>The audit is finding ownership for things like:</p>
+<ul>
+<li>authority boundaries</li>
+<li>validator-first thinking</li>
+<li>preserving context</li>
+<li>documenting intent</li>
+<li>tests as governance artifacts</li>
+<li>change discipline</li>
+<li>knowledge preservation</li>
+</ul>
+<p>Those are not localization rules.
+They are not documentation rules.
+They are not CI rules.</p>
+<p>They really do look like the substrate underneath everything else.</p>
+<p>The audit is therefore strengthening, not weakening, the hypothesis:</p>
+<pre><code class="language-text">Engineering Governance
+├── Localization Governance
+├── Documentation as Product
+└── CI/CD Governance
+</code></pre>
+<hr />
+<h3>2. You may be extracting &quot;Knowledge Preservation&quot; without naming it</h3>
+<p>I notice repeated findings like:</p>
+<ul>
+<li>preserve reasoning</li>
+<li>document validator purpose</li>
+<li>explain tests</li>
+<li>preserve engineering decisions</li>
+<li>record defect classes</li>
+<li>track localization debt</li>
+<li>cite evidence</li>
+</ul>
+<p>Those keep appearing under different labels.</p>
+<p>I would not create a new skill now.</p>
+<p>But I would add a section to the audit:</p>
+<pre><code class="language-text">Recurring Themes
+
+- Authority Boundaries
+- Validation Before Trust
+- Knowledge Preservation
+- Evidence-Based Documentation
+- Traceability
+</code></pre>
+<p>Then see whether they naturally remain inside Engineering Governance.</p>
+<hr />
+<h3>3. Be careful with Documentation as Product</h3>
+<p>Some items marked:</p>
+<pre><code class="language-text">Move To Skill
+</code></pre>
+<p>might actually be:</p>
+<pre><code class="language-text">Duplicate And Reference
+</code></pre>
+<p>Example:</p>
+<blockquote>
+<p>Static pages need canonical metadata, hreflang, social tags.</p>
+</blockquote>
+<p>The principle is portable.</p>
+<p>But:</p>
+<ul>
+<li>exact metadata fields</li>
+<li>generation approach</li>
+<li>implementation mechanism</li>
+</ul>
+<p>usually stay local.</p>
+<p>So I'd expect:</p>
+<pre><code class="language-text">Documentation as Product:
+- public content should be discoverable
+- multilingual content should expose language relationships
+- published artifacts require metadata
+
+Repository:
+- exact hreflang implementation
+- exact generator
+- exact metadata schema
+</code></pre>
+<hr />
+<h3>4. Localization Governance looks ready for extraction</h3>
+<p>The audit repeatedly identifies:</p>
+<ul>
+<li>semantic parity</li>
+<li>source-first remediation</li>
+<li>rendered review</li>
+<li>accessibility localization</li>
+<li>review workflow</li>
+<li>defect tracking</li>
+</ul>
+<p>Those already form a coherent portable body.</p>
+<p>Localization Governance may actually be the easiest skill to extract because it already behaves like a self-contained discipline.</p>
+<hr />
+<h3>5. The migration order is probably correct</h3>
+<p>I agree with:</p>
+<ol>
+<li>Engineering Governance</li>
+<li>Localization Governance</li>
+<li>Documentation as Product</li>
+<li>CI/CD Governance</li>
+</ol>
+<p>but I would slightly redefine Phase 1.</p>
+<p>Current:</p>
+<pre><code class="language-text">Move authority-chain, validator-first, test/tool documentation...
+</code></pre>
+<p>I would rename it:</p>
+<pre><code class="language-text">Phase 1 — Governance Core Extraction
+</code></pre>
+<p>and make its output:</p>
+<pre><code class="language-text">engineering-governance/
+├── principles.md
+├── validation.md
+├── knowledge-preservation.md
+├── change-management.md
+└── review-model.md
+</code></pre>
+<p>because that's what the audit is actually discovering.</p>
+<hr />
+<h3>6. Biggest risk I see</h3>
+<p>The audit is still document-centric.</p>
+<p>The next pass should identify:</p>
+<pre><code class="language-text">Canonical Rule
+Referenced By
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-text">Rule:
+Preserve Context
+
+Found In:
+- AGENTS.md
+- AGENTS-Implementation.md
+- validator comments
+- documentation standards
+- contributor guidance
+</code></pre>
+<p>Once you see that graph, extraction becomes obvious.</p>
+<p>Without that graph you risk moving whole sections instead of moving the actual rule.</p>
+<hr />
+<h3>What I'd do next</h3>
+<p>Before any migration:</p>
+<p><strong>Generate one additional artifact.</strong></p>
+<pre><code class="language-text">rule-registry.md
+</code></pre>
+<p>Columns:</p>
+<pre><code class="language-text">Rule
+Current Locations
+Proposed Owner
+Classification
+Migration Phase
+</code></pre>
+<p>That becomes the authoritative extraction map.</p>
+<p>After that, Phase 1 can be executed mechanically with much less risk because you'll know exactly which rule is canonical and which copies become references.</p>
+<p>The audit already feels far enough along that the next deliverable should probably be:</p>
+<blockquote>
+<p>Build <code>rule-registry.md</code> from the audit and identify the top 20 most duplicated governance rules across the repository.</p>
+</blockquote>
+<p>That will likely reveal whether Engineering Governance is truly one skill or a cluster of several future skills hiding behind one name.</p>
+</div></div></details></section>
+<section id="e7" class="entry user"><details>
+<summary><span class="num">7.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Plan or build?</div></span></summary>
+<div class="content"><pre class="plain">plan or build? prompt?</pre></div></details></section>
+<section id="e8" class="entry assistant"><details>
+<summary><span class="num">8.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Rule registry prompt</div></span></summary>
+<div class="content"><div class="copy-note">Raw prompt artifact — Markdown is preserved for copy/paste.</div><pre class="artifact">I would **not build yet**.
+
+The audit has already discovered classifications. The next highest-value artifact is the **rule registry**, because it turns the audit into something executable.
+
+So I'd do:
+
+### Prompt: Build Rule Registry (Still Read-Only)
+
+:::writing{variant="document" id="64182"}
+The migration audit is complete.
+
+Do not modify the repository.
+
+Do not move files.
+
+Do not create or update skills.
+
+Your task is to construct a canonical governance rule registry from the audit findings.
+
+## Objective
+
+Identify the actual reusable rules that exist across the repository.
+
+The repository currently contains many documents that repeat the same principles using different wording.
+
+We now want to identify:
+
+- the canonical rule
+- all locations where it appears
+- proposed ownership
+- migration priority
+
+This is still analysis only.
+
+No repository changes.
+
+## Input Sources
+
+Use findings from:
+
+- migration-audit.md
+- skill-mapping.md
+- repository-adaptations.md
+- migration-plan.md
+
+and any referenced governance documents.
+
+## Output
+
+Create:
+
+### rule-registry.md
+
+For each rule include:
+
+- Rule ID
+- Canonical Rule Name
+- Description
+- Current Locations
+- Proposed Owner
+- Classification
+- Migration Phase
+- Notes
+
+Example:
+
+Rule ID:
+EG-001
+
+Canonical Rule:
+Preserve Context
+
+Description:
+Important decisions should retain enough reasoning that future maintainers do not need to reconstruct intent.
+
+Current Locations:
+- AGENTS.md
+- AGENTS-Implementation.md
+- validator documentation
+- contributor guidance
+
+Proposed Owner:
+Engineering Governance
+
+Classification:
+Move To Skill
+
+Migration Phase:
+1
+
+Notes:
+Highly duplicated foundational rule.
+
+## Consolidation Rules
+
+Merge equivalent rules.
+
+Do not create separate entries for wording variations.
+
+Example:
+
+- Preserve Context
+- Record Reasoning
+- Explain Why
+- Document Decisions
+
+may represent a single canonical rule.
+
+Document aliases if necessary.
+
+## Duplication Analysis
+
+For each rule record:
+
+- duplication count
+- most authoritative current location
+- candidate future authoritative location
+
+Highlight:
+
+### Top 20 Most Duplicated Rules
+
+sorted by frequency.
+
+## Deliver Additional Summary
+
+Produce:
+
+### extraction-candidates.md
+
+Rank rules by extraction value.
+
+For each candidate estimate:
+
+- duplication reduction
+- expected maintenance reduction
+- migration complexity
+- risk
+
+## Success Criteria
+
+Success is a repository-wide map of reusable governance rules.
+
+The goal is to identify:
+
+- what actually exists
+- where it exists
+- who should own it
+
+before any migration work begins.
+
+No repository modifications.
+No skill modifications.
+Analysis only.
+:::
+
+After that, I'd switch from **planning** to **execution**:
+
+&gt; Execute Phase 1 only. Extract Engineering Governance from the rule registry. Generate proposed diffs but do not apply them.
+
+That keeps you from jumping straight from audit to refactor. The registry becomes the bridge.</pre></div></details></section>
+<section id="e9" class="entry user"><details>
+<summary><span class="num">9.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Pasted agent output — rule registry</div></span></summary>
+<div class="content"><pre class="opencode">Thinking: Planning rule extraction
+I need to focus on planning and reading to create a canonical rule registry. It seems I can’t create files, but I might use tasks to gather information effectively. Leveraging previous audit results could be beneficial here. I think I'll produce content for the rule-registry.md and extraction-candidates.md. It might be helpful to consolidate rules using a task and see if I can ask about merging equivalent rules and ranking the top 20 duplicates.
+I’m consolidating the migration-audit findings into a canonical rule registry so the repeated wording collapses into a single reusable rule map before any migration starts.
+│ Explore Task — Consolidate governance rules
+└ 37 toolcalls · 8m 21s
+ctrl+x down view subagents
+Thinking: Considering registry responses
+I should prepare responses that include canonical registry and extraction candidates in markdown format — keeping it concise, of course. I need to clarify that creating files isn't possible due to plan mode constraints. I also need to provide content for both rule-registry.md and extraction-candidates.md, and maybe I can include the top 20 duplicates. Let's work on crafting a well-structured output to meet these requirements!
+Plan mode is active, so I did not create rule-registry.md or extraction-candidates.md. Below is the canonical content those files should contain.
+rule-registry.md
+Registry Notes
+- Equivalent wording has been merged into canonical rules.
+- Duplication counts are approximate file-instance counts.
+- “Current Locations” lists the most important sources rather than every localized mirror unless the mirrors materially repeat the rule.
+Canonical Rule Registry
+Rule ID	Canonical Rule Name	Description	Current Locations
+EG-001	Explicit Authority Chain	Define which artifacts are authoritative for product intent, implementation guidance, current state, runtime evidence, and validation.	AGENTS.md, AGENTS-Implementation.md, README.md, docs/wiki/spec-driven-development.md, docs/wiki/documentation-traceability.md, docs/spec-driven-content-program.md
+DG-001	Stable Documentation Evidence Over Source Code	Public claims should cite stable docs/specs rather than nearby implementation, demo, test, or tool source.	AGENTS-Implementation.md, docs/blog/README.md, docs/sources/README.md, docs/style-guide/writing/README.md, docs/wiki/documentation-traceability.md
+EG-002	Knowledge Stays Close To Governed Artifacts	Preserve rationale near tools, tests, workflows, and docs; treat them as repository memory.	tools/README.md, tests/README.md, .github/workflows/README.md, AGENTS-Implementation.md
+EG-003	Validator-First Governance	Prefer automated checks over human memory whenever a recurring rule can be enforced.	tools/README.md, tests/README.md, .github/workflows/README.md, AGENTS-Implementation.md, docs/localization-at-scale-program.md, docs/localization-audit-report.md, docs/wiki/validation-layers.md
+EG-004	Layered Validation Model	Use guidance, review, validators, tests, CI, and deployment as complementary validation layers.	tests/README.md, .github/workflows/README.md, docs/localization-maintenance-system.md, docs/wiki/validation-layers.md
+CG-001	Workflow Self-Validation	Validate workflow definitions and automation health, not only the product outputs.	.github/workflows/README.md
+CG-002	Fresh Artifact Review	Review and sign off only on freshly regenerated artifacts, not stale generated outputs.	.github/workflows/README.md, docs/localization-maintenance-system.md, docs/wiki/localization-ci-cd.md, docs/wiki/localization-governance.md
+LG-001	Source-First Remediation	Fix problems at the highest-level source first instead of patching generated outputs.	AGENTS-Implementation.md, docs/localization-maintenance-system.md, docs/localization-audit-report.md, docs/style-guide/localization/README.md
+LG-002	Track Debt Separately From Defect Classes	Distinguish unfinished content work from systemic gaps that still allow recurrence.	AGENTS-Implementation.md, docs/README.md, docs/localization-at-scale-program.md, docs/localization-audit-report.md, docs/wiki/localization-ci-cd.md, docs/style-guide/localization/README.md
+CG-003	Closed Defects Become Blocking	When a defect class reaches zero, make detection blocking in CI and keep regression coverage.	AGENTS-Implementation.md, docs/localization-audit-report.md, docs/localization-at-scale-program.md, docs/wiki/localization-ci-cd.md
+LG-003	Explicit Canonical Source For Multilingual Content	Define a canonical source while still treating translations as first-class deliverables.	docs/blog/README.md, docs/style-guide/localization/README.md, docs/localization-at-scale-program.md
+LG-004	Published Locale Coverage And Parity	Public-facing published content should meet defined multilingual coverage and parity expectations.	AGENTS-Implementation.md, docs/blog/README.md, docs/style-guide/localization/README.md, docs/localization-at-scale-program.md
+LG-005	AI Output Is Draft-Only Until Review	AI-generated translation or enrichment may assist drafting but does not become final truth without review.	AGENTS.md, AGENTS-Implementation.md, docs/style-guide/localization/README.md, docs/localization-maintenance-system.md, docs/wiki/localization-governance.md
+LG-006	Meaning And Naturalness Over Literal Wording	Preserve meaning, strength, and native-language naturalness rather than literal wording.	docs/blog/README.md, docs/style-guide/localization/README.md, docs/localization-maintenance-system.md, docs/wiki/localization-governance.md
+LG-007	Rendered Output Is Part Of Localization Quality	Review final rendered visuals, metadata, and accessibility surfaces, not just source text.	AGENTS-Implementation.md, docs/blog/README.md, docs/style-guide/localization/README.md, docs/localization-maintenance-system.md
+LG-008	Distinct Locale/Script Identity With Unicode Fidelity	Treat script/locale variants as separate locales and preserve native orthography and Unicode.	AGENTS.md, AGENTS-Implementation.md, README.md, docs/style-guide/localization/README.md, docs/wiki/unicode-and-script-correctness.md
+LG-009	Localize All User-Facing And Accessibility Text	All user-visible text and accessibility metadata must be localizable.	AGENTS.md, AGENTS-Implementation.md, docs/style-guide/localization/README.md
+EG-005	Manual Core Workflow Must Work Without AI	Core workflows should remain usable when paid AI is disabled.	AGENTS.md, README.md, AGENTS-Implementation.md
+EG-006	AI Suggestions Are Not Facts	AI output should be presented as suggestions with review and provenance, not as unquestioned truth.	AGENTS.md, AGENTS-Implementation.md, README.md
+EG-007	Real-Device Verification For Hardware Workflows	For camera, scanner, or hardware-dependent behavior, prefer real-device validation over emulation-only checks.	AGENTS.md, AGENTS-Implementation.md, README.md, docs/android-debugging.md
+---
+Top 20 Most Duplicated Rules
+Rank	Rule ID	Canonical Rule
+1	EG-001	Explicit Authority Chain
+2	EG-003	Validator-First Governance
+3	DG-001	Stable Documentation Evidence Over Source Code
+4	EG-002	Knowledge Stays Close To Governed Artifacts
+5	EG-004	Layered Validation Model
+6	LG-005	AI Output Is Draft-Only Until Review
+7	LG-008	Distinct Locale/Script Identity With Unicode Fidelity
+8	CG-002	Fresh Artifact Review
+9	LG-006	Meaning And Naturalness Over Literal Wording
+10	LG-002	Track Debt Separately From Defect Classes
+11	LG-001	Source-First Remediation
+12	CG-003	Closed Defects Become Blocking
+13	LG-004	Published Locale Coverage And Parity
+14	LG-007	Rendered Output Is Part Of Localization Quality
+15	LG-003	Explicit Canonical Source For Multilingual Content
+16	LG-009	Localize All User-Facing And Accessibility Text
+17	EG-005	Manual Core Workflow Must Work Without AI
+18	EG-006	AI Suggestions Are Not Facts
+19	EG-007	Real-Device Verification For Hardware Workflows
+20	CG-001	Workflow Self-Validation
+---
+extraction-candidates.md
+Ranking Criteria
+- Duplication reduction
+- Expected maintenance reduction
+- Migration complexity
+- Risk
+Ranked Extraction Candidates
+Rank	Candidate	Rules Covered	Duplication Reduction
+1	Localization Core Governance Registry	LG-001, LG-002, LG-003, LG-004, LG-005, LG-006, LG-007, LG-008, LG-009	Very high
+2	Authority And Evidence Registry	EG-001, DG-001	Very high
+3	Validation Governance Registry	EG-002, EG-003, EG-004	High
+4	CI/CD Freshness And Closure Registry	CG-001, CG-002, CG-003	Medium
+5	AI-Assisted Quality Baseline Registry	LG-005, EG-006, EG-005	Medium
+6	Locale And Script Correctness Registry	LG-008	Medium
+7	Translation Quality Registry	LG-006, LG-007	Medium
+8	Source-First Remediation And Defect Accounting Registry	LG-001, LG-002, CG-003	Medium
+9	Hardware Workflow Verification Registry	EG-007	Low
+10	Manual-Without-AI Resilience Registry	EG-005	Low
+---
+Recommended Interpretation
+Highest-value canonical rules to stabilize first
+1. EG-001 Explicit Authority Chain
+2. DG-001 Stable Documentation Evidence Over Source Code
+3. EG-003 Validator-First Governance
+4. EG-004 Layered Validation Model
+5. CG-002 Fresh Artifact Review
+6. LG-006 Meaning And Naturalness Over Literal Wording
+7. LG-008 Distinct Locale/Script Identity With Unicode Fidelity
+Why these first
+- they have the highest duplication
+- they cut across multiple documents
+- they clarify ownership quickly
+- they reduce the largest maintenance burden if migrated later
+Key Ownership Summary
+Engineering Governance
+Owns:
+- authority hierarchy
+- knowledge preservation near governed artifacts
+- validator-first policy
+- layered validation
+- AI suggestion/review boundary
+- manual-without-AI resilience principle
+Localization Governance
+Owns:
+- canonical multilingual source model
+- parity/completeness
+- debt and defect-class accounting
+- natural-language quality
+- rendered-output localization quality
+- locale/script correctness
+- accessibility text localization
+- AI-draft-only translation model
+Documentation as Product
+Owns:
+- evidence-backed publication
+- stable documentation evidence over source code
+- current vs future distinction in public docs
+- traceable substantial claims
+CI/CD Governance
+Owns:
+- workflow self-validation
+- fresh-artifact review
+- rebuild-before-deploy
+- closed defect classes becoming blocking
+- user-facing output validation in delivery pipelines
+Bottom Line
+The registry shows that the repository already has a small number of highly repeated reusable governance rules.
+The strongest extraction targets are not entire documents. They are:
+- authority
+- evidence
+- validation layering
+- localization quality/completeness
+- artifact freshness
+Those are the rules most worth making singular and authoritative before any migration begins.
+If you want, I can next turn this into a more compact phase-by-phase canonical rule set:
+- Phase 1 rules only
+- Phase 2 rules only
+- Phase 3 rules only
+- Phase 4 rules only
+That would make later migration execution easier without changing the repository yet.</pre></div></details></section>
+<section id="e10" class="entry assistant"><details>
+<summary><span class="num">10.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Review of registry and next skill-spec step</div></span></summary>
+<div class="content"><div class="markdown-body"><p>This is where I'd stop planning and start <strong>planning the extraction</strong>, not extracting yet.</p>
+<p>The audit is good, but I see two issues before Phase 1:</p>
+<h3>1. Some rules are still too solution-oriented</h3>
+<p>For example:</p>
+<pre><code class="language-text">DG-001 Stable Documentation Evidence Over Source Code
+</code></pre>
+<p>is probably not a fundamental rule.</p>
+<p>The deeper rule may be:</p>
+<pre><code class="language-text">Claims should be supported by stable evidence.
+</code></pre>
+<p>Documentation happens to be the preferred evidence source in Let Books.</p>
+<p>Likewise:</p>
+<pre><code class="language-text">CG-002 Fresh Artifact Review
+</code></pre>
+<p>might really be:</p>
+<pre><code class="language-text">Review the artifact that will actually be shipped.
+</code></pre>
+<p>Those distinctions matter because skills should own principles, while repositories own implementations.</p>
+<hr />
+<h3>2. You're very close to a skill outline already</h3>
+<p>The registry almost <em>is</em> Engineering Governance.</p>
+<p>For example:</p>
+<pre><code class="language-text">Engineering Governance
+
+Authority
+- Explicit Authority Chain
+
+Validation
+- Validator-First Governance
+- Layered Validation
+
+Knowledge Preservation
+- Knowledge Stays Close To Governed Artifacts
+
+Human Oversight
+- AI Suggestions Are Not Facts
+- Manual Core Workflow Must Work Without AI
+
+Verification
+- Real-Device Verification For Hardware Workflows
+</code></pre>
+<p>That's much closer to a reusable skill than a list of rules.</p>
+<hr />
+<h2>My next prompt</h2>
+<p>Not &quot;execute migration&quot;.</p>
+<p>Not &quot;extract skill&quot;.</p>
+<p>I'd ask it to derive the <strong>canonical skill specifications</strong> from the registry.</p>
+<p>Something like:</p>
+<p>:::writing{variant=&quot;document&quot; id=&quot;51472&quot;}
+Using the completed migration audit and rule registry:</p>
+<p>Do not modify the repository.</p>
+<p>Do not move files.</p>
+<p>Do not update skills.</p>
+<p>Do not generate diffs.</p>
+<p>Your task is to design the canonical structure of each existing skill.</p>
+<p>Existing skills:</p>
+<ul>
+<li>Engineering Governance</li>
+<li>Localization Governance</li>
+<li>Documentation as Product</li>
+<li>CI/CD Governance</li>
+</ul>
+<p>For each skill:</p>
+<ol>
+<li>Identify its mission.</li>
+<li>Identify its governing principles.</li>
+<li>Group rules into coherent sections.</li>
+<li>Identify dependencies on other skills.</li>
+<li>Identify rules that do not fit cleanly.</li>
+<li>Identify rules that are actually repository adaptations.</li>
+<li>Identify missing principles implied by existing rules.</li>
+</ol>
+<p>Output:</p>
+<ul>
+<li>engineering-governance-outline.md</li>
+<li>localization-governance-outline.md</li>
+<li>documentation-as-product-outline.md</li>
+<li>cicd-governance-outline.md</li>
+</ul>
+<p>For each outline include:</p>
+<ul>
+<li>Purpose</li>
+<li>Scope</li>
+<li>Principles</li>
+<li>Practices</li>
+<li>Validation Expectations</li>
+<li>Boundaries</li>
+<li>Dependencies</li>
+<li>Non-Goals</li>
+</ul>
+<p>The goal is to define what each skill should contain before any extraction begins.</p>
+<p>No repository modifications.
+No migration.
+No file changes.
+Design only.
+:::</p>
+<p>Why this step?</p>
+<p>Because once those four outlines exist, extraction becomes almost mechanical:</p>
+<pre><code class="language-text">Rule Registry
+      ↓
+Skill Outlines
+      ↓
+Migration Diffs
+      ↓
+Repository Cleanup
+</code></pre>
+<p>Right now you have the registry, but you still don't have a clear definition of what each skill actually is. That's the last major planning artifact I'd want before Phase 1 extraction.</p>
+</div></div></details></section>
+<section id="e11" class="entry user"><details>
+<summary><span class="num">11.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Pasted agent output — skill outlines</div></span></summary>
+<div class="content"><pre class="opencode">Thinking: Planning structured outlines
+I need to provide planned outlines without creating any files. I think I can use the information I already have, which should be enough to create a final product that's concise but still organized. It's interesting to see how I can take what’s available and shape it into something clear and useful. Let's aim to keep it simple and to the point for the user!
+Below is the design-only canonical structure for each existing skill.
+engineering-governance-outline.md
+Purpose
+Define how a repository establishes trustworthy sources of truth, preserves engineering intent, and turns recurring expectations into durable, reviewable, enforceable guidance.
+Scope
+Includes:
+- authority hierarchy
+- spec vs implementation boundary
+- rationale preservation
+- validator/test/workflow documentation norms
+- evidence expectations for important claims
+- layered validation as governance pattern
+- AI-assisted engineering boundaries
+- “small, reviewable changes” style of execution
+Excludes:
+- product/domain rules
+- repo topology
+- deployment platform specifics
+- locale-specific translation rules
+Principles
+- Authority must be explicit.
+- The most visible artifact must not become truth by accident.
+- Important claims should remain traceable to stable evidence.
+- Knowledge should stay close to the artifact it governs.
+- Repeated failures should graduate from memory into enforcement.
+- Validators, tests, workflows, and docs are governance artifacts, not just implementation details.
+- AI assistance does not remove the need for review, provenance, or explanation.
+- Current state and future plans must remain distinct.
+Practices
+1. Authority And Source Of Truth
+- define authority order across spec, governance docs, implementation guidance, code, tests, demos, and generated artifacts
+- clarify that demos/prototypes provide evidence, not automatic authority
+- keep implementation guidance below product/spec authority
+2. Evidence And Traceability
+- require evidence-backed claims for high-impact statements
+- prefer stable docs/specs over volatile implementation artifacts
+- use source maps, evidence notes, or equivalent mechanisms where needed
+3. Knowledge Preservation
+- document why a validator, workflow, or test exists
+- preserve assumptions, limits, and intended guarantees
+- treat comments, README layers, and review notes as engineering memory
+4. Validator-First Governance
+- prefer automated enforcement over tribal memory for recurring failures
+- define when a rule should become a validator, test, or CI gate
+5. Layered Validation
+- organize quality as guidance -&gt; review -&gt; validators -&gt; tests -&gt; CI -&gt; deploy
+- make clear what each layer is responsible for
+6. AI-Assisted Work Governance
+- keep AI-generated or AI-assisted changes reviewable
+- require small, auditable changes
+- require tests/docs updates for user-visible behavior where appropriate
+Validation Expectations
+- authority order can be explained by contributors
+- public/high-impact claims can be traced to stable evidence
+- validators/tests/workflows document protected guarantees
+- recurring failure patterns are moved into stronger enforcement layers
+- governance docs and implementation reality do not drift silently
+Boundaries
+Belongs here:
+- portable governance rules
+- artifact documentation norms
+- cross-cutting review and traceability expectations
+Does not belong here:
+- Let Books branding
+- specific folders like /docs/ or /static-demo/
+- specific ISBNs, CI job names, generator files
+- locale list or language-specific anti-patterns
+Dependencies
+- Foundational meta-skill
+- No parent dependency
+- Supports:
+  - Localization Governance
+  - Documentation as Product
+  - CI/CD Governance
+Non-Goals
+- not a product spec
+- not a repo operations manual
+- not a CI implementation guide
+- not a localization style guide
+Rules That Do Not Fit Cleanly
+- “real-device validation for hardware workflows” may fit here as a general verification principle, but much of it is repo-specific operational guidance
+- “manual workflow without AI” is portable in principle, but may be partly product-philosophy rather than pure governance
+Rules That Are Actually Repository Adaptations
+- AGENTS split between AGENTS.md and AGENTS-Implementation.md
+- specific supporting-material transcript handling
+- static-demo authority examples tied to Let Books
+- exact repo documentation layers by path
+Missing Principles Implied By Existing Rules
+- governance artifacts should have explicit owners
+- stale governance text should be considered a defect, not a minor docs issue
+- local examples should be clearly marked as examples, not universal rules
+---
+localization-governance-outline.md
+Purpose
+Define how multilingual content remains semantically faithful, naturally expressed, complete, reviewable, and enforceable across source, generated, and rendered forms.
+Scope
+Includes:
+- canonical source model
+- parity and completeness expectations
+- native-language quality expectations
+- rendered-output localization quality
+- localization review workflows
+- defect classes and debt tracking
+- locale/script correctness
+- AI-assisted translation review boundaries
+Excludes:
+- exact locale list
+- repo-specific frontmatter/path conventions
+- language-specific anti-pattern corpora as top-level rules
+- generator-specific contracts
+Principles
+- Canonical source authority must be explicit.
+- Semantic fidelity matters more than literal wording.
+- Natural native-language expression matters, not just correctness.
+- Localization completeness is measured by reader experience, not file presence.
+- Related content should remain complete as a family.
+- Rendered output is part of localization quality.
+- Unicode and script correctness are part of quality, not polish.
+- AI output is draft-only until reviewed.
+- Repeated localization failures should be preserved and systematized.
+Practices
+1. Canonical Source And Translation Authority
+- define the canonical source for multilingual variants
+- treat translations as first-class deliverables while preserving source authority
+2. Semantic Parity
+- review meaning, emphasis, warnings, and conclusions
+- reject literal but misleading equivalence
+3. Native-Language Quality
+- detect translationese, inflated tone, unnatural governance language, and awkward phrasing
+- prioritize high-visibility text review
+4. Content Family Completeness
+- treat related examples, sections, supporting blocks, and adjacent content as a unit
+- do not consider a localization complete if newly added substantive source material is absent from aligned variants
+5. Rendered Localization Quality
+- review final diagrams, labels, metadata, ARIA/alt text, and other user-facing output
+- validate beyond Markdown/source text alone
+6. Locale And Script Correctness
+- preserve distinct locale/script identity
+- enforce Unicode fidelity and native orthography
+7. Debt, Defect Classes, And Findings
+- separate unfinished coverage from systemic defect classes
+- record reusable findings
+- close defect classes only when recurrence is prevented
+8. Source-First Remediation
+- fix problems upstream before patching downstream generated output
+9. AI-Assisted Localization Governance
+- allow draft assistance
+- require human review for quality and acceptance
+- preserve structured review artifacts where useful
+Validation Expectations
+- localized readers retain the same core understanding as source readers
+- rendered localized output is usable and complete
+- defect classes and debt are tracked separately
+- family-level drift is detectable
+- script/Unicode correctness is preserved
+- review findings feed future guidance or enforcement
+Boundaries
+Belongs here:
+- reusable multilingual quality governance
+- review heuristics
+- completeness rules
+- rendered-output localization expectations
+Does not belong here:
+- current locale list
+- language_variants format
+- exact diagram folder paths
+- Slovenian-only anti-pattern catalogs as core rules
+Dependencies
+- Depends on Engineering Governance
+- Works closely with:
+  - Documentation as Product
+  - CI/CD Governance
+Non-Goals
+- not a glossary package
+- not a locale-specific style guide bundle
+- not a translation vendor workflow
+- not a generator spec
+Rules That Do Not Fit Cleanly
+- Mermaid htmlLabels: false is partly portable as a rendered-output safeguard, but mostly an implementation convention
+- language-specific anti-pattern examples are useful, but better treated as adaptation packs
+Rules That Are Actually Repository Adaptations
+- supported locale inventory
+- exact docs tree and localized asset strategy
+- article-family file contracts
+- current findings corpus schema details
+Missing Principles Implied By Existing Rules
+- localized omissions should be explicitly declared if intentional
+- high-visibility surfaces may deserve stricter review than low-visibility ones
+- new content types should inherit existing localization expectations by default
+---
+documentation-as-product-outline.md
+Purpose
+Define how documentation and public knowledge surfaces are treated as product artifacts with quality, evidence, structure, rendering, and publication standards.
+Scope
+Includes:
+- docs as product framing
+- evidence-backed publication
+- current-state vs future-plan distinctions
+- rendered-output review
+- content structure and readability expectations
+- metadata and publication integrity
+- durable reasoning in engineering writing
+Excludes:
+- exact site topology
+- specific generators and file names
+- GitHub Pages specifics
+- product-domain content decisions
+Principles
+- Documentation is part of the product, not commentary after the fact.
+- Public claims should remain evidence-backed.
+- Readers consume rendered output, not just source files.
+- Documentation should distinguish verified evidence, interpretation, and future plans.
+- Structure should improve understanding, not merely scanability.
+- Metadata, navigation, and publication integrity are product quality concerns.
+- New documentation types should inherit existing quality expectations.
+Practices
+1. Documentation As Delivery Surface
+- define docs as a maintained output with explicit quality expectations
+- treat docs failures as product failures when appropriate
+2. Evidence-Backed Publication
+- require high-impact claims to remain traceable
+- prefer specs/docs over code/demo/test artifacts for public product claims
+- distinguish evidence, interpretation, and future plans
+3. Current State Accuracy
+- ensure README/docs describe implemented reality accurately
+- avoid presenting planned behavior as existing behavior
+4. Rendered Output Review
+- validate generated pages, print output, navigation, diagrams, and visual surfaces in their consumed form
+5. Content Structure And Reasoning Quality
+- prefer connected reasoning over fragmented micro-sections
+- use lists to support clarity, not replace explanation
+- review for durable teaching value, not just superficial formatting
+6. Publication Metadata And Navigation Integrity
+- require metadata, language linkage, navigation consistency, and discoverability controls where relevant
+Validation Expectations
+- public documentation can be defended with stable evidence
+- readers can distinguish facts from plans
+- rendered docs behave correctly
+- content structure supports comprehension
+- navigation and metadata remain reliable after generation changes
+Boundaries
+Belongs here:
+- docs-quality and publication rules
+- evidence-backed public writing
+- rendered-output expectations
+- readability and reasoning guidance
+Does not belong here:
+- exact /docs/ layout
+- specific SEO generator implementation
+- localized asset folder conventions
+- repo root/site split details
+Dependencies
+- Depends on Engineering Governance
+- Interacts with:
+  - Localization Governance
+  - CI/CD Governance
+Non-Goals
+- not a marketing strategy
+- not a static site generator spec
+- not a repo onboarding guide
+- not a content taxonomy definition
+Rules That Do Not Fit Cleanly
+- some public-writing evidence rules could live partly in Engineering Governance and partly here
+- source-map mechanism specifics are implementation choices, even if evidence-traceability belongs here
+Rules That Are Actually Repository Adaptations
+- index.html / docs/index.html / static-demo/ split
+- exact canonical URL and branding setup
+- exact docs generator stack
+- current topic/article registry contracts
+Missing Principles Implied By Existing Rules
+- documentation debt should be treated explicitly where product claims drift
+- high-impact reader-facing surfaces may need stricter review than low-impact notes
+- generated docs should not create a weaker quality path than hand-authored docs
+---
+cicd-governance-outline.md
+Purpose
+Define how CI/CD serves as the trusted enforcement layer for repository guarantees by validating automation, freshness, ordering, and user-facing outputs before merge or publish.
+Scope
+Includes:
+- workflow self-validation
+- staged validation order
+- rebuild-before-publish/deploy
+- fresh-artifact guarantees
+- user-facing output validation in delivered form
+- defect-class enforcement in CI where practical
+Excludes:
+- specific CI platform files
+- exact workflow names
+- deployment provider setup
+- local run commands
+Principles
+- Automation is part of governance, not just execution.
+- CI should validate both product outputs and the automation itself.
+- Generated artifacts should be trusted only when freshly rebuilt.
+- Validation order matters.
+- User-facing generated outputs should be validated near actual consumption form.
+- Stable closed defects should become blocking where practical.
+- Deployment should distrust unverified prior artifacts.
+Practices
+1. Workflow Self-Validation
+- lint/validate workflow definitions and pipeline configuration
+- treat automation health as a first-class concern
+2. Fresh-Artifact Enforcement
+- rebuild and regenerate before validation and publish
+- avoid signoff on stale generated assets
+3. Staged Validation Order
+- define order such as workflow validation -&gt; generation -&gt; validators -&gt; tests -&gt; delivered-form checks -&gt; publish
+4. User-Facing Output Validation
+- validate websites, docs, PDFs, static exports, or generated assets close to the form users receive
+5. Defect Closure Enforcement
+- once a recurring defect class is closed, promote its detection into blocking automation where justified
+6. Deployment Trust Boundaries
+- deployment should revalidate or trust only clearly defined verified artifacts
+- do not assume earlier pipeline state is still sufficient
+Validation Expectations
+- workflow config is valid
+- validators run on current artifacts
+- publishable outputs are checked in delivered form
+- deployment does not bypass required checks
+- enforcement order remains explicit and reviewable
+Boundaries
+Belongs here:
+- reusable automation governance
+- freshness and ordering rules
+- portable deployment trust principles
+Does not belong here:
+- ci.yml / docs.yml specifics
+- GitHub Pages mechanics
+- exact action/tool names
+- local preview commands
+Dependencies
+- Depends on Engineering Governance
+- Enforces rules originating in:
+  - Localization Governance
+  - Documentation as Product
+Non-Goals
+- not a CI vendor manual
+- not a workflow catalog
+- not a deployment setup checklist
+- not a browser-testing tool guide
+Rules That Do Not Fit Cleanly
+- browser-facing validation belongs here as a delivery-form principle, but exact browser tooling belongs in repo adaptations
+- some localization-specific CI rules may need dual reference from Localization Governance and CI/CD Governance
+Rules That Are Actually Repository Adaptations
+- GitHub Actions file layout
+- Pages deploy strategy
+- exact pipeline step names
+- specific validator command chain
+Missing Principles Implied By Existing Rules
+- enforcement cost should be proportional to defect recurrence and delivery risk
+- CI rules should be periodically reviewed for staleness as pipelines evolve
+- artifact freshness should apply equally to generated docs, localized outputs, and packaged deliverables
+Cross-Skill Dependency Summary
+Foundational
+- Engineering Governance
+Built on top
+- Localization Governance
+- Documentation as Product
+- CI/CD Governance
+Main relationship
+- Engineering Governance defines authority, traceability, rationale preservation, and layered enforcement
+- Localization Governance applies those patterns to multilingual content
+- Documentation as Product applies them to docs/public knowledge surfaces
+- CI/CD Governance operationalizes them in automation
+Rules Most Likely To Need Boundary Decisions Later
+1. evidence-backed publication
+- split between Engineering Governance and Documentation as Product
+2. rendered-output localization checks
+- split between Localization Governance and CI/CD Governance
+3. real-device verification
+- split between Engineering Governance and repository-specific mobile/debugging adaptation
+Bottom Line
+The four-skill model is structurally sound.
+If later extraction begins, the cleanest ownership model is:
+- Engineering Governance: cross-cutting truth, reasoning, artifact governance
+- Localization Governance: multilingual quality/completeness/naturalness
+- Documentation as Product: public documentation quality and evidence-backed publication
+- CI/CD Governance: enforcement, freshness, validation order, publish trust boundaries
+If you want, I can next turn this into a section-by-section proposed table of contents for each skill, still in planning mode only.</pre></div></details></section>
+<section id="e12" class="entry assistant"><details>
+<summary><span class="num">12.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Review of skill outlines and ownership matrix recommendation</div></span></summary>
+<div class="content"><div class="markdown-body"><p>This is much closer to the point where I'd approve moving from <strong>audit</strong> to <strong>design</strong>.</p>
+<p>The biggest improvement over the registry is that these outlines introduce <strong>boundaries</strong> and <strong>non-goals</strong>. That's what prevents skill sprawl later.</p>
+<p>A few observations:</p>
+<h3>Engineering Governance</h3>
+<p>This feels almost complete.</p>
+<p>The only thing I'd probably elevate into an explicit principle is:</p>
+<pre><code class="language-text">Governance should scale through systems, not memory.
+</code></pre>
+<p>You already have:</p>
+<ul>
+<li>validator-first</li>
+<li>layered validation</li>
+<li>knowledge preservation</li>
+</ul>
+<p>but they all seem to derive from that larger idea.</p>
+<hr />
+<h3>Localization Governance</h3>
+<p>This is the cleanest skill.</p>
+<p>It has:</p>
+<ul>
+<li>clear mission</li>
+<li>clear scope</li>
+<li>clear boundaries</li>
+<li>obvious dependencies</li>
+</ul>
+<p>I could almost imagine extracting it immediately.</p>
+<p>One thing I would add:</p>
+<pre><code class="language-text">Localization requirements apply by default to new content types.
+</code></pre>
+<p>That principle keeps future content families from escaping governance accidentally.</p>
+<hr />
+<h3>Documentation as Product</h3>
+<p>This is where I would be most careful.</p>
+<p>I suspect there are actually two layers hiding inside:</p>
+<pre><code class="language-text">Documentation Quality
+</code></pre>
+<p>and</p>
+<pre><code class="language-text">Documentation Publication
+</code></pre>
+<p>The current outline combines both.</p>
+<p>That's probably fine for now, but I'd keep an eye on it.</p>
+<hr />
+<h3>CI/CD Governance</h3>
+<p>This looks more like an enforcement skill than a governance skill.</p>
+<p>Not wrong.</p>
+<p>Just interesting.</p>
+<p>It appears to own:</p>
+<pre><code class="language-text">freshness
+ordering
+automation trust
+promotion to blocking
+</code></pre>
+<p>rather than broader engineering principles.</p>
+<p>That actually helps separation.</p>
+<hr />
+<h2>What I'd do next</h2>
+<p>Not extraction.</p>
+<p>Not migration.</p>
+<p>I'd ask for a <strong>skill ownership matrix</strong>.</p>
+<p>Something like:</p>
+<pre><code class="language-text">Rule
+Primary Owner
+Secondary References
+</code></pre>
+<p>For example:</p>
+<p>| Rule | Owner | References |
+|--------|--------|--------|
+| Semantic parity | Localization Governance | Documentation as Product |
+| Evidence-backed claims | Documentation as Product | Engineering Governance |
+| Validator-first | Engineering Governance | CI/CD Governance |
+| Fresh artifacts | CI/CD Governance | Documentation as Product |</p>
+<p>That sounds trivial, but it's usually where hidden overlaps appear.</p>
+<p>Once you have:</p>
+<pre><code class="language-text">Audit
+→ Rule Registry
+→ Skill Outlines
+→ Ownership Matrix
+</code></pre>
+<p>the extraction becomes largely mechanical.</p>
+<p>At that point I'd finally allow:</p>
+<pre><code class="language-text">Phase 1:
+Extract Engineering Governance
+Generate diffs only
+No repository modifications yet
+</code></pre>
+<p>because you'd have enough design artifacts to avoid discovering ownership conflicts halfway through the migration.</p>
+<p>So my recommendation is:</p>
+<p><strong>One more planning artifact: ownership matrix. Then start Phase 1 extraction proposals.</strong></p>
+</div></div></details></section>
+<section id="e13" class="entry user"><details>
+<summary><span class="num">13.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Ask for ownership matrix prompt</div></span></summary>
+<div class="content"><pre class="plain">prompt?</pre></div></details></section>
+<section id="e14" class="entry assistant"><details>
+<summary><span class="num">14.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Ownership matrix prompt</div></span></summary>
+<div class="content"><div class="copy-note">Raw prompt artifact — Markdown is preserved for copy/paste.</div><pre class="artifact">Yes. I'd make this the last planning prompt before extraction.
+
+:::writing{variant="document" id="73418"}
+Using the completed migration audit, rule registry, extraction candidates, and skill outlines:
+
+Do not modify the repository.
+
+Do not move files.
+
+Do not update skills.
+
+Do not generate migration diffs.
+
+Do not create new skills.
+
+This is still a design and governance exercise.
+
+## Objective
+
+Create a canonical ownership matrix for all identified governance rules.
+
+The goal is to ensure every reusable rule has exactly one primary owner while allowing other skills to reference it when necessary.
+
+This exercise exists to prevent ownership conflicts before migration begins.
+
+## Existing Skills
+
+- Engineering Governance
+- Localization Governance
+- Documentation as Product
+- CI/CD Governance
+
+Engineering Governance is currently considered the foundational meta-skill.
+
+Do not challenge this assumption unless strong evidence emerges.
+
+## Ownership Rules
+
+Every rule must have:
+
+### Primary Owner
+
+Exactly one skill owns the rule.
+
+The owner:
+
+- defines the rule
+- maintains the rule
+- provides authoritative wording
+- resolves future conflicts
+
+### Secondary References
+
+Zero or more skills may reference the rule.
+
+Referenced skills:
+
+- may depend on the rule
+- may apply the rule
+- may extend it through local practices
+
+They do not own it.
+
+## Required Deliverable
+
+Create:
+
+### skill-ownership-matrix.md
+
+Columns:
+
+| Rule ID | Canonical Rule | Primary Owner | Secondary References | Rationale |
+
+Example:
+
+| EG-003 | Validator-First Governance | Engineering Governance | CI/CD Governance | Foundational governance principle enforced through automation |
+
+## Ownership Validation
+
+For every rule verify:
+
+- exactly one primary owner exists
+- ownership is consistent with skill scope
+- ownership does not create circular authority
+- ownership minimizes duplication
+
+## Cross-Skill Dependency Analysis
+
+Create:
+
+### dependency-matrix.md
+
+For each skill identify:
+
+#### Owns
+
+Rules it defines.
+
+#### Consumes
+
+Rules owned by another skill but required for operation.
+
+Example:
+
+Engineering Governance
+
+Owns:
+- Authority Chain
+- Validator-First Governance
+- Knowledge Preservation
+
+Consumes:
+- none
+
+Localization Governance
+
+Owns:
+- Semantic Parity
+- Source-First Remediation
+- Locale/Script Correctness
+
+Consumes:
+- Authority Chain
+- Validator-First Governance
+- Layered Validation
+
+## Overlap Review
+
+Identify rules that may reasonably belong to more than one skill.
+
+Examples:
+
+- Evidence-backed publication
+- Rendered-output validation
+- Fresh artifact review
+- Real-device verification
+
+For each overlap:
+
+- recommend primary owner
+- explain alternatives considered
+- explain why ownership was assigned
+
+## Boundary Stress Test
+
+For each skill answer:
+
+### What clearly belongs here?
+
+### What clearly does not belong here?
+
+### What is most likely to drift into this skill incorrectly in the future?
+
+## Success Criteria
+
+Success is achieved when:
+
+- every rule has one owner
+- skill boundaries are explicit
+- dependencies are understood
+- future extraction can proceed without ownership disputes
+
+No repository changes.
+
+No migration.
+
+No extraction.
+
+Design only.
+:::
+
+After that, I'd stop creating planning artifacts.
+
+The next prompt should be:
+
+&gt; "Execute Phase 1 design review. Produce the proposed Engineering Governance skill structure and repository impact analysis. No changes yet."
+
+At that point you'll have enough governance metadata that further planning has diminishing returns.</pre></div></details></section>
+<section id="e15" class="entry user"><details>
+<summary><span class="num">15.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Pasted agent output — ownership matrix</div></span></summary>
+<div class="content"><pre class="opencode">Thinking: Preparing ownership and dependency matrices
+I need to create an ownership matrix and a dependency matrix based on my previous findings, without making any file edits. It's essential to be concise but thorough in my response. I might mention that these will be saved into a file later. This way, I can ensure that the user gets a clear understanding of ownership and dependencies without overwhelming them with unnecessary details.
+Below is the planned content for the two requested design documents.
+skill-ownership-matrix.md
+Rule ID	Canonical Rule
+EG-001	Explicit Authority Chain
+DG-001	Stable Documentation Evidence Over Source Code
+EG-002	Knowledge Stays Close To Governed Artifacts
+EG-003	Validator-First Governance
+EG-004	Layered Validation Model
+CG-001	Workflow Self-Validation
+CG-002	Fresh Artifact Review
+LG-001	Source-First Remediation
+LG-002	Track Debt Separately From Defect Classes
+CG-003	Closed Defects Become Blocking
+LG-003	Explicit Canonical Source For Multilingual Content
+LG-004	Published Locale Coverage And Parity
+LG-005	AI Output Is Draft-Only Until Review
+LG-006	Meaning And Naturalness Over Literal Wording
+LG-007	Rendered Output Is Part Of Localization Quality
+LG-008	Distinct Locale/Script Identity With Unicode Fidelity
+LG-009	Localize All User-Facing And Accessibility Text
+EG-005	Manual Core Workflow Must Work Without AI
+EG-006	AI Suggestions Are Not Facts
+EG-007	Real-Device Verification For Hardware Workflows
+Ownership Validation
+- Every rule has exactly one primary owner.
+- No circular authority is created:
+  - Engineering Governance defines foundational rules.
+  - Other skills consume those foundations but do not redefine them.
+- Duplication is minimized by assigning:
+  - truth/authority/validation architecture to Engineering Governance
+  - multilingual quality/completeness to Localization Governance
+  - public docs/publication evidence to Documentation as Product
+  - freshness/enforcement/workflow trust to CI/CD Governance
+---
+dependency-matrix.md
+Engineering Governance
+Owns
+- EG-001 Explicit Authority Chain
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+- EG-005 Manual Core Workflow Must Work Without AI
+- EG-006 AI Suggestions Are Not Facts
+- EG-007 Real-Device Verification For Hardware Workflows
+Consumes
+- none
+Localization Governance
+Owns
+- LG-001 Source-First Remediation
+- LG-002 Track Debt Separately From Defect Classes
+- LG-003 Explicit Canonical Source For Multilingual Content
+- LG-004 Published Locale Coverage And Parity
+- LG-005 AI Output Is Draft-Only Until Review
+- LG-006 Meaning And Naturalness Over Literal Wording
+- LG-007 Rendered Output Is Part Of Localization Quality
+- LG-008 Distinct Locale/Script Identity With Unicode Fidelity
+- LG-009 Localize All User-Facing And Accessibility Text
+Consumes
+- EG-001 Explicit Authority Chain
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+- EG-006 AI Suggestions Are Not Facts
+- CG-002 Fresh Artifact Review
+- CG-003 Closed Defects Become Blocking
+Documentation as Product
+Owns
+- DG-001 Stable Documentation Evidence Over Source Code
+Consumes
+- EG-001 Explicit Authority Chain
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- EG-004 Layered Validation Model
+- CG-002 Fresh Artifact Review
+- LG-007 Rendered Output Is Part Of Localization Quality
+- LG-009 Localize All User-Facing And Accessibility Text
+CI/CD Governance
+Owns
+- CG-001 Workflow Self-Validation
+- CG-002 Fresh Artifact Review
+- CG-003 Closed Defects Become Blocking
+Consumes
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- LG-002 Track Debt Separately From Defect Classes
+- LG-007 Rendered Output Is Part Of Localization Quality
+---
+Overlap Review
+DG-001 Stable Documentation Evidence Over Source Code
+- Recommended owner: Documentation as Product
+- Alternative considered: Engineering Governance
+- Why not Engineering Governance:
+  - the broader authority-chain rule already lives there
+  - this narrower rule is specifically about public documentation and publication evidence
+- Why Documentation as Product:
+  - it governs public claims, docs quality, and evidence-backed publication
+LG-007 Rendered Output Is Part Of Localization Quality
+- Recommended owner: Localization Governance
+- Alternative considered: Documentation as Product or CI/CD Governance
+- Why not Documentation as Product:
+  - docs consume this, but the rule is fundamentally about multilingual quality
+- Why not CI/CD Governance:
+  - CI/CD enforces rendered checks but does not define multilingual correctness
+- Why Localization Governance:
+  - the expectation is about what counts as complete localized output
+CG-002 Fresh Artifact Review
+- Recommended owner: CI/CD Governance
+- Alternative considered: Localization Governance
+- Why not Localization Governance:
+  - localization is a major consumer, but freshness is a pipeline trust rule with broader applicability
+- Why CI/CD Governance:
+  - it defines when and how outputs are regenerated and trusted before review/publish
+EG-007 Real-Device Verification For Hardware Workflows
+- Recommended owner: Engineering Governance
+- Alternative considered: CI/CD Governance
+- Why not CI/CD Governance:
+  - this is a verification principle, not mainly an automation rule
+- Why Engineering Governance:
+  - it is a cross-cutting truth about what evidence counts for device-dependent behavior
+LG-005 AI Output Is Draft-Only Until Review vs EG-006 AI Suggestions Are Not Facts
+- Recommended ownership:
+  - EG-006 owns the broad AI-governance rule
+  - LG-005 owns the multilingual specialization
+- Why both are not duplicates:
+  - EG-006 is cross-domain
+  - LG-005 is domain-specific and operationalized in localization review
+---
+Boundary Stress Test
+Engineering Governance
+What clearly belongs here?
+- authority chains
+- rationale preservation
+- validator-first policy
+- layered validation
+- general AI-review boundaries
+- tests/tools/workflows as governance artifacts
+What clearly does not belong here?
+- locale-specific translation quality rules
+- publishing metadata details
+- CI implementation specifics
+- Let Books product/domain rules
+What is most likely to drift here incorrectly in the future?
+- documentation-style specifics
+- CI execution details
+- mobile debugging procedures
+- localization-specific heuristics
+---
+Localization Governance
+What clearly belongs here?
+- semantic parity
+- native-language naturalness
+- family completeness
+- rendered localization quality
+- locale/script correctness
+- accessibility text localization
+- defect classes and localization debt
+What clearly does not belong here?
+- exact locale lists
+- path/frontmatter contracts
+- CI workflow names
+- language-specific anti-pattern corpora as universal rules
+What is most likely to drift here incorrectly in the future?
+- repo-specific localization tooling
+- generator file contracts
+- docs publication mechanics
+- generic AI-governance rules better owned by Engineering Governance
+---
+Documentation as Product
+What clearly belongs here?
+- docs as delivery surface
+- evidence-backed publication
+- current vs future distinction in docs
+- rendered publication review
+- reasoning quality in engineering writing
+- public claims traceability
+What clearly does not belong here?
+- root/docs/static-demo topology
+- generator implementation details
+- localization-specific parity heuristics
+- CI mechanics
+What is most likely to drift here incorrectly in the future?
+- marketing/branding policy
+- site-specific navigation structure
+- localization rendered-output rules that belong in Localization Governance
+- broad authority rules that belong in Engineering Governance
+---
+CI/CD Governance
+What clearly belongs here?
+- workflow self-validation
+- fresh-artifact trust boundaries
+- rebuild-before-publish
+- staged validation order
+- automated enforcement of closed defects
+- delivered-form validation of generated outputs
+What clearly does not belong here?
+- exact workflow file names
+- Pages deployment setup
+- exact command lines
+- localization quality definitions
+- documentation evidence rules
+What is most likely to drift here incorrectly in the future?
+- validator design rules from Engineering Governance
+- docs publication content rules from Documentation as Product
+- repository-specific operational runbooks
+---
+Final Ownership Recommendation
+The ownership model is sound if treated as:
+- Engineering Governance: defines foundational truth, validation architecture, and governance behavior
+- Localization Governance: defines multilingual correctness, completeness, and review quality
+- Documentation as Product: defines public documentation quality and evidence-backed publication
+- CI/CD Governance: defines enforcement, freshness, and trust boundaries in automation
+Most Important Boundary Rule
+When deciding ownership:
+- if the rule defines how truth, rationale, or validation works across the repository, it belongs to Engineering Governance
+- if the rule defines multilingual correctness or localization completeness, it belongs to Localization Governance
+- if the rule defines public documentation quality or publication evidence, it belongs to Documentation as Product
+- if the rule defines automation trust, ordering, freshness, or blocking enforcement, it belongs to CI/CD Governance
+If you want, I can next turn this into a migration-ready ownership checklist that could be used during later extraction work, still without modifying the repository.</pre></div></details></section>
+<section id="e16" class="entry assistant"><details>
+<summary><span class="num">16.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Phase 1 extraction design prompt</div></span></summary>
+<div class="content"><div class="copy-note">Raw prompt artifact — Markdown is preserved for copy/paste.</div><pre class="artifact">At this point I would stop generating governance artifacts and start extraction design.
+
+You now have:
+
+```text id="9kphrk"
+Audit
+    ↓
+Rule Registry
+    ↓
+Skill Outlines
+    ↓
+Ownership Matrix
+```
+
+That's enough architecture to avoid accidental rework.
+
+The next prompt I'd use is:
+
+:::writing{variant="document" id="48193"}
+Using:
+
+- migration-audit.md
+- rule-registry.md
+- skill outlines
+- ownership matrix
+- dependency matrix
+
+Do not modify the repository.
+
+Do not move files.
+
+Do not update existing skills.
+
+Do not generate commits.
+
+Do not generate patches.
+
+This is a Phase 1 extraction design review.
+
+## Objective
+
+Determine exactly what Engineering Governance would contain if it became the authoritative owner of its assigned rules.
+
+The goal is to prepare extraction, not perform extraction.
+
+## Inputs
+
+Engineering Governance owns:
+
+- EG-001 Explicit Authority Chain
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+- EG-005 Manual Core Workflow Must Work Without AI
+- EG-006 AI Suggestions Are Not Facts
+- EG-007 Real-Device Verification For Hardware Workflows
+
+Use the ownership matrix as authoritative.
+
+## Deliverables
+
+### engineering-governance-canonical.md
+
+For each owned rule provide:
+
+- canonical wording
+- rationale
+- examples
+- anti-patterns
+- validation expectations
+
+Consolidate overlapping rules where appropriate.
+
+Do not preserve duplication merely because it currently exists.
+
+### engineering-governance-source-map.md
+
+For every Engineering Governance rule identify:
+
+- current locations
+- primary current source
+- duplicate locations
+- repository-specific adaptations
+- migration complexity
+
+### engineering-governance-extraction-impact.md
+
+For each affected document estimate:
+
+- content likely to move
+- content likely to remain
+- expected duplication reduction
+- migration risk
+
+Do not propose edits yet.
+
+Do not generate diffs.
+
+Do not rewrite files.
+
+## Repository Adaptation Review
+
+Identify guidance that should remain in Let Books even after extraction.
+
+Examples:
+
+- repository topology
+- AGENTS structure
+- static-demo specifics
+- mobile debugging procedures
+- exact validator names
+- exact workflow names
+
+Explain why each remains local.
+
+## Extraction Readiness Assessment
+
+Answer:
+
+- Is Engineering Governance sufficiently defined to extract?
+- Which rules are stable?
+- Which rules still have ambiguous ownership?
+- What information is still missing?
+
+## Success Criteria
+
+Success is a complete extraction design package for Engineering Governance.
+
+No repository modifications.
+
+No skill modifications.
+
+No migration execution.
+
+Design only.
+:::
+
+After that, I'd start Phase 1.
+
+Not planning Phase 1.
+
+Actually designing the extraction package.
+
+Everything after this is likely to produce diminishing returns until you see what the first extraction would look like in practice.</pre></div></details></section>
+<section id="e17" class="entry user"><details>
+<summary><span class="num">17.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Save transcript request</div></span></summary>
+<div class="content"><pre class="plain">save transcript to portable-skills-transcript-part-3.html according to attached rules</pre></div></details></section>
+<p class="footer">Generated as part 3 of the portable engineering skills transcript. Source style copied from the attached conversation log.</p>
+</main></body></html>

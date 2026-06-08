@@ -23,7 +23,7 @@ This note records how the portable engineering governance skill is implemented s
 - source maps under `docs/sources/`
 - scenario README under `tests/static-demo/scenarios/README.md`
 - layered documentation of tools, tests, scripts, and workflows
-- supporting-material HTML logs under `docs/supporting-material/` that preserve extraction reasoning, reconstructed transcript material, and rendering rules for future reuse
+- supporting-material HTML logs under `docs/supporting-material/` that preserve extraction reasoning, reconstructed transcript material, later planning-phase transcripts, and rendering rules for future reuse
 
 ## Repository-Specific Risks Managed
 
