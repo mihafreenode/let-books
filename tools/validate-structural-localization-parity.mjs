@@ -25,7 +25,8 @@
  *
  * Detects / Enforces:
  * - Warns on heading-count loss, heading-depth collapse, suspicious body compression,
- *   section-level compression, and likely missing major sections.
+ *   section-level compression, likely missing major sections, and obvious list-structure drift
+ *   such as accidental nested bullets in localized Markdown where the source list is flat.
  * - Emits review-oriented findings rather than hard failures by default.
  *
  * Limitations:
@@ -38,10 +39,13 @@
  * - Legitimate editorial restructuring where a localized article preserves value with fewer
  *   headings.
  * - Source sections that are naturally shorter in another language without losing substance.
+ * - Intentional list restructuring that was made for a documented localization reason.
  *
  * Expected False Negatives:
  * - Articles that preserve heading shape while still degrading prose quality or teaching value.
  * - Cases where structurally similar sections omit subtle examples or nuanced guidance.
+ * - Complex Markdown constructs where a human would still need to judge whether the structure is
+ *   intentionally equivalent.
  *
  * Warning vs Failure Interpretation:
  * - Warnings indicate likely structural review targets.
@@ -237,6 +241,7 @@ function analyzeDocument(body) {
       orderedListCount: (sectionText.match(/^\d+\.\s+/gm) ?? []).length,
       bulletListCount: (sectionText.match(/^[-*]\s+/gm) ?? []).length,
       blockquoteCount: (sectionText.match(/^>\s+/gm) ?? []).length,
+      listBlocks: collectListBlocks(sectionLines),
       educationalSignals: collectEducationalSignals(current.title, sectionText),
     });
   }
@@ -317,6 +322,7 @@ function compareStructure({ sourcePath, localizedPath, locale, contentType, sour
     const subsectionLoss = sourceSection.subheadingCount > 0 && localizedSection.subheadingCount === 0;
     const listLoss = sourceSection.orderedListCount > localizedSection.orderedListCount
       || sourceSection.blockquoteCount > localizedSection.blockquoteCount;
+    const listDrift = compareListBlocks(sourceSection.listBlocks, localizedSection.listBlocks);
 
     // Section-level checks are where most educational-structure loss is expected to appear.
     // A localized article can keep the overall file size while still flattening one major section
@@ -332,6 +338,15 @@ function compareStructure({ sourcePath, localizedPath, locale, contentType, sour
       for (const signal of sourceSection.educationalSignals) {
         recommendedReviewAreas.add(signal);
       }
+    }
+
+    // List shape is part of content correctness, not mere formatting. If the source article
+    // teaches with a flat sibling list and a localized Markdown file accidentally nests one item,
+    // readers no longer see the same structure. This lightweight check protects against the common
+    // indentation mistakes we have already observed in localized articles.
+    for (const issue of listDrift) {
+      reasons.push(`section "${sourceSection.title}" list structure drift: ${issue}`);
+      recommendedReviewAreas.add('markdown structure');
     }
   }
 
@@ -379,6 +394,108 @@ function compareStructure({ sourcePath, localizedPath, locale, contentType, sour
     recommendedReviewAreas: [...recommendedReviewAreas].sort(),
     reasons,
   };
+}
+
+function collectListBlocks(sectionLines) {
+  const blocks = [];
+  let inFence = false;
+  let current = null;
+
+  for (let index = 0; index < sectionLines.length; index += 1) {
+    const line = sectionLines[index];
+    if (/^```/.test(line.trim())) {
+      inFence = !inFence;
+      if (!inFence) {
+        current = null;
+      }
+      continue;
+    }
+
+    if (inFence) {
+      continue;
+    }
+
+    const match = /^(\s*)([-*]|\d+\.)\s+(.+?)\s*$/.exec(line);
+    if (!match) {
+      // The validator is intentionally lightweight: once a block is interrupted by non-list text,
+      // we treat the next list as a new block. That is enough to catch accidental nesting and list
+      // type drift without trying to fully model every Markdown edge case.
+      if (line.trim() !== '') {
+        current = null;
+      }
+      continue;
+    }
+
+    const indent = match[1].replace(/\t/g, '    ').length;
+    const depth = Math.floor(indent / 2);
+    const marker = match[2];
+    const itemText = match[3].trim();
+    const kind = /\d+\./.test(marker) ? 'ordered' : 'unordered';
+
+    if (!current) {
+      current = {
+        kind,
+        itemCount: 0,
+        maxDepth: 0,
+        depthSequence: [],
+        sampleItems: [],
+      };
+      blocks.push(current);
+    }
+
+    current.itemCount += 1;
+    current.maxDepth = Math.max(current.maxDepth, depth);
+    current.depthSequence.push(depth);
+    if (current.sampleItems.length < 3) {
+      current.sampleItems.push(itemText);
+    }
+  }
+
+  return blocks;
+}
+
+function compareListBlocks(sourceBlocks, localizedBlocks) {
+  const issues = [];
+  if (sourceBlocks.length === 0 && localizedBlocks.length === 0) {
+    return issues;
+  }
+
+  if (sourceBlocks.length !== localizedBlocks.length) {
+    issues.push(`expected ${sourceBlocks.length} list block(s), found ${localizedBlocks.length}`);
+  }
+
+  const alignedCount = Math.min(sourceBlocks.length, localizedBlocks.length);
+  for (let index = 0; index < alignedCount; index += 1) {
+    const source = sourceBlocks[index];
+    const localized = localizedBlocks[index];
+
+    if (source.kind !== localized.kind) {
+      issues.push(`expected ${source.kind} list, found ${localized.kind} list`);
+    }
+
+    if (source.itemCount !== localized.itemCount) {
+      issues.push(`expected ${source.itemCount} list item(s), found ${localized.itemCount}`);
+    }
+
+    if (source.maxDepth !== localized.maxDepth) {
+      issues.push(
+        `expected max nesting depth ${source.maxDepth}, found ${localized.maxDepth} `
+        + `(source examples: ${formatSamples(source.sampleItems)}; localized examples: ${formatSamples(localized.sampleItems)})`,
+      );
+    }
+
+    const sourceDepths = source.depthSequence.join(',');
+    const localizedDepths = localized.depthSequence.join(',');
+    if (sourceDepths !== localizedDepths) {
+      issues.push(`expected depth sequence [${sourceDepths}], found [${localizedDepths}]`);
+    }
+  }
+
+  return issues;
+}
+
+function formatSamples(items) {
+  return items.map((item) => `"${item}"`).join('; ');
 }
 
 function ratio(left, right) {

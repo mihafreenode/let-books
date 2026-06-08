@@ -346,6 +346,10 @@ Checks include:
 - heading depth distribution
 - major section coverage
 - suspicious section-level compression
+- list nesting depth drift
+- list item count drift within corresponding sections
+- ordered versus unordered list drift
+- accidental nested lists where the source is flat
 - likely missing educational structure
 - recommended review areas such as examples, governance discussion, practical takeaways, review guidance, and validation guidance
 

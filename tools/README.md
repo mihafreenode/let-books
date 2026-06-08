@@ -565,13 +565,15 @@ Why It Exists:
 - Some localized articles keep partial meaning while collapsing section hierarchy, dropping examples, compressing case studies, or flattening practical guidance into short summaries.
 
 Detects / Enforces:
-- Warns on heading-count loss, heading-depth collapse, suspicious body compression, major-section coverage loss, and likely missing educational sections.
+- Warns on heading-count loss, heading-depth collapse, suspicious body compression, major-section coverage loss, likely missing educational sections, and accidental list-structure drift such as nested localized bullets where the source list is flat.
 
 Limitations:
 - Heuristic and review-oriented. It identifies likely degraded structure rather than proving exact translation defects.
+- The list checks are intentionally lightweight and will not model every Markdown edge case or every justified editorial restructuring.
 
 Interpretation:
 - Warnings mean the localized article should be reviewed for structural compression or missing reader value.
+- Warnings about list shape mean the localized Markdown may have changed sibling structure, nesting depth, or ordered/unordered intent compared with the canonical source.
 - The validator does not fail by default; use `--warning-fail-threshold` when a workflow wants warnings to become blocking after a chosen count.
 
 Expected False Positives:
@@ -589,6 +591,9 @@ Related Tools:
 
 Operational Rule:
 - Use this validator on freshly generated artifacts during review workflows. Source Markdown, generated HTML, and browser-rendered output can temporarily diverge during development.
+
+Example command:
+- `node tools/validate-structural-localization-parity.mjs --include ai-technical-debt-is-not-about-ai-generated-code`
 
 Reuse Potential:
 - High.

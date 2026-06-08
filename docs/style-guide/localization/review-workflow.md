@@ -216,10 +216,13 @@ Review prompts should explicitly ask:
 - Is the engineering concept clear without copying the source-language sentence structure?
 - Do role names, process terms, and business examples sound native in context?
 - Do rendered diagrams and their textual references still match orientation and layout?
+- Did the localized Markdown accidentally change list nesting, quote structure, or other section shape compared with the canonical source?
 
 Treat text that explains a diagram as part of the diagram itself.
 
 If a diagram changes orientation, structure, labels, or meaning, review all associated explanatory prose, captions, alt text, and localized variants before considering the review complete.
+
+The same rule applies to lists, examples, and quoted blocks: translated prose may vary, but accidental Markdown structure drift is still a defect.
 
 ## Related Pages
 

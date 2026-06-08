@@ -296,6 +296,22 @@ A localized page is considered complete only when reader-facing content is local
 - related-content descriptions
 - localized breadcrumbs where variants exist
 
+Localized Markdown must also preserve the structural shape of the canonical source unless a documented localization reason exists.
+
+This includes:
+
+- heading hierarchy
+- list nesting
+- ordered vs unordered lists
+- blockquotes
+- code blocks
+- tables
+- diagram references
+- image placement
+- excerpt blocks
+
+Translated wording may differ. Accidental structural drift should not.
+
 Allowed exceptions are limited to quotations, explicitly discussed source material, clearly marked intentional non-translation, proper nouns, and technical identifiers.
 
 When an article quotes a repository artifact such as a use case, automation contract, ADR, validator, governance note, or similar engineering document, localized articles should prefer a localized excerpt whenever an equivalent localized rendering can reasonably be maintained.
@@ -313,6 +329,7 @@ Localization is finished only when:
 - navigation remains understandable
 - generated outputs remain correct
 - the content feels naturally written in the target language
+- Markdown structure remains intentionally aligned with the canonical source
 
 ### 5. Localized Source-Map Stubs
 
@@ -380,6 +397,7 @@ Track maturity by locale and by content category where practical.
 - Require explicit justification for intentionally unresolved findings.
 - Treat mixed-language publishing as a production bug, not as an editorial inconvenience.
 - Review both meaning quality and rendered visual quality before approving localized content.
+- Review Markdown structure as content correctness, not as cosmetic formatting.
 - Prioritize recent and actively maintained content for rendered-output review when repository-wide review is not yet complete.
 - Fix obvious low-risk wording and visual issues proactively.
 - Avoid large-scale mechanical replacements that improve term uniformity while harming natural language quality.
