@@ -1,0 +1,3768 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Portable Engineering Skills — Conversation Log</title>
+<style>
+:root{--bg:#f7f4ef;--ink:#24201c;--muted:#6f665c;--border:#d8d0c6;--user:#fff4d0;--assistant:#eef6ff;--accent-user:#d99000;--accent-assistant:#2c83c5;--accent-paste:#d79a2b;--artifact:#171717}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55}main{max-width:1180px;margin:0 auto;padding:34px 20px 90px}h1{margin:0 0 6px;font-size:34px}.subtitle{color:var(--muted);margin:0 0 22px}.legend{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}.badge{border:1px solid var(--border);border-radius:999px;background:#fff;padding:6px 12px;font-size:13px}.toc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:24px}.toc ol{columns:2;padding-left:22px;margin-bottom:0}.toc a{color:#7a3d00;text-decoration:none}.entry{border:1px solid var(--border);border-left:7px solid #aaa;border-radius:14px;margin:18px 0;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.04);overflow:hidden}.entry.user{background:var(--user);border-left-color:var(--accent-user)}.entry.assistant{background:var(--assistant);border-left-color:var(--accent-assistant)}.entry.paste{background:#0c0c0c;border-color:#2b2b2b;border-left-color:var(--accent-paste);color:#e7e0d2}summary{cursor:pointer;list-style:none;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}summary::-webkit-details-marker{display:none}.num{min-width:2.5em;color:var(--muted);font-weight:700}.entry.paste .num{color:#b8aa90}.meta{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:4px}.entry.paste .meta{color:#d79a2b}.title{font-size:18px;font-weight:750}.content{padding:0 18px 18px}.plain,.artifact,.opencode{white-space:pre-wrap;overflow:auto;margin:0;border-radius:10px;padding:15px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:13px;line-height:1.48}.plain{background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.08)}.artifact{background:var(--artifact);color:#eaeaea;border:1px solid #333}.opencode{background:#050505;color:#d6d0c8;border:1px solid #252525;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);font-weight:600}.opencode .thinking{color:#b9b1a7;font-style:italic}.opencode .term-heading{color:#f4a62a;font-weight:800}.opencode .numbered{color:#f2dcc0}.opencode .dash{color:#e6d0b8}.opencode .tool{color:#a8a8a8}.opencode .term-heading,.opencode .numbered,.opencode .dash,.opencode .tool,.opencode .thinking{display:block}.copy-note{font-size:12px;color:#6b6259;margin:0 0 8px;font-weight:700}.markdown-body{background:rgba(255,255,255,.42);border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:16px 18px}.markdown-body h1,.markdown-body h2,.markdown-body h3{line-height:1.25;margin-top:1.2em}.markdown-body h1:first-child,.markdown-body h2:first-child,.markdown-body h3:first-child{margin-top:0}.markdown-body pre{background:#151515;color:#eee;border-radius:8px;padding:12px;overflow:auto}.markdown-body code{background:rgba(0,0,0,.08);padding:1px 4px;border-radius:4px}.markdown-body pre code{background:transparent;padding:0}.markdown-body blockquote{border-left:4px solid #bbb;margin-left:0;padding-left:12px;color:#555}.markdown-body table{border-collapse:collapse;width:100%;margin:12px 0;background:white}.markdown-body th,.markdown-body td{border:1px solid #ccc;padding:6px 8px;text-align:left}.footer{margin-top:36px;color:var(--muted);font-size:13px}@media(max-width:760px){main{padding:20px 12px 70px}.toc ol{columns:1}.title{font-size:16px}}
+</style></head><body><main>
+<h1>Portable Engineering Skills — Conversation Log</h1>
+<p class="subtitle">Expandable transcript-style log. Assistant discussion is rendered as Markdown. Generated prompts are preserved as raw copy-paste artifacts. Pasted agent output uses terminal/OpenCode-style formatting.</p>
+<div class="legend"><span class="badge">🟡 Your question / direction</span><span class="badge">🔵 Assistant reply rendered as Markdown</span><span class="badge">🟣 Pasted agent output in terminal style</span><span class="badge">Prompt artifacts stay raw</span></div>
+<section class="toc"><strong>Contents</strong><ol>
+<li><a href="#e1">Starting idea</a></li>
+<li><a href="#e2">Initial framing: Engineering Governance Skills</a></li>
+<li><a href="#e3">Requested two deliverables</a></li>
+<li><a href="#e4">Two deliverables and step-one prompt</a></li>
+<li><a href="#e5">Article should remain provisional</a></li>
+<li><a href="#e6">Article caution: experiment, not manifesto</a></li>
+<li><a href="#e7">Anything else?</a></li>
+<li><a href="#e8">Additional observations</a></li>
+<li><a href="#e9">Portability emphasized</a></li>
+<li><a href="#e10">Portability principle</a></li>
+<li><a href="#e11">Asked for one big prompt</a></li>
+<li><a href="#e12">Prompt v1: Extract Reusable Engineering Skills From This Repository</a></li>
+<li><a href="#e13">Granularity correction</a></li>
+<li><a href="#e14">Few big skills principle</a></li>
+<li><a href="#e15">Install into new repository</a></li>
+<li><a href="#e16">Installability test</a></li>
+<li><a href="#e17">Auto-install question</a></li>
+<li><a href="#e18">Skill install/init mode</a></li>
+<li><a href="#e19">Pasted agent output 1 — initial extraction / 6-skill inventory</a></li>
+<li><a href="#e20">Pasted agent output 2 — 6-skill read-only assessment</a></li>
+<li><a href="#e21">Pasted agent output 3 — consolidation to 4 skills</a></li>
+<li><a href="#e22">Pasted agent output 4 — meta-skill / governance template review</a></li>
+<li><a href="#e23">Observation: Validator Engineering should be broader</a></li>
+<li><a href="#e24">Validator Engineering absorbed into Traceable Engineering Governance</a></li>
+<li><a href="#e25">Plan request</a></li>
+<li><a href="#e26">Plan to extract skills and preserve article material</a></li>
+<li><a href="#e27">One big prompt request</a></li>
+<li><a href="#e28">Final big prompt: Extract Portable Engineering Skills, Repository Adaptations, And Research Notes</a></li>
+<li><a href="#e29">HTML log request</a></li>
+<li><a href="#e30">HTML log created</a></li>
+<li><a href="#e31">Correction: wants exact replies and expandable text</a></li>
+<li><a href="#e32">Regenerated exact transcript-style log</a></li>
+<li><a href="#e33">Updated full log with expandable exact-text sections</a></li>
+<li><a href="#e34">Requested OpenCode styling for pasted agent output</a></li>
+<li><a href="#e35">Updated pasted agent sections with terminal/OpenCode styling</a></li>
+<li><a href="#e36">Markdown rendering rule correction</a></li>
+<li><a href="#e37">Rendering rules explanation</a></li>
+<li><a href="#e38">Save rendering rules as HTML</a></li>
+<li><a href="#e39">Saved rendering rules as HTML</a></li>
+<li><a href="#e40">Generate updated log</a></li>
+</ol></section>
+<section id="e1" class="entry user"><details open>
+<summary><span class="num">1.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Starting idea</div></span></summary>
+<div class="content"><pre class="plain">i am thinking how to convert guidance and validators into reusable skills. it should also produce a blog article.
+
+candidates are: 1. auto-comment critical parts of code (regex, intent...) and auto-generate PR artifacts proposed in https://letbooks.org/docs/blog/en/ai-technical-debt-is-not-about-ai-generated-code.html, 2. auto-translate, using tools, ai review and translation parity checks....</pre></div></details></section>
+<section id="e2" class="entry assistant"><details>
+<summary><span class="num">2.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Initial framing: Engineering Governance Skills</div></span></summary>
+<div class="content"><div class="markdown-body"><p>I think you're converging on something larger than &quot;validators&quot; and larger than &quot;prompts&quot;.</p>
+<p>What you actually have are <strong>Engineering Governance Skills</strong>.</p>
+<p>A skill is:</p>
+<ul>
+<li>a repeatable engineering practice</li>
+<li>with documented intent</li>
+<li>with automation support</li>
+<li>with validation</li>
+<li>with artifacts that survive the AI session</li>
+</ul>
+<p>The interesting thing is that the AI doesn't perform the task directly. It performs the task <em>through the skill</em>.</p>
+<p>For example:</p>
+<h2>Skill: Code Documentation Preservation</h2>
+<h3>Purpose</h3>
+<p>Prevent knowledge loss when AI or humans modify code.</p>
+<h3>Inputs</h3>
+<ul>
+<li>source code</li>
+<li>diff</li>
+<li>repository conventions</li>
+</ul>
+<h3>Actions</h3>
+<ul>
+<li>identify non-obvious logic</li>
+<li>explain regexes</li>
+<li>explain heuristics</li>
+<li>explain assumptions</li>
+<li>explain edge cases</li>
+<li>explain why a validator exists</li>
+</ul>
+<h3>Artifacts</h3>
+<ul>
+<li>code comments</li>
+<li>README updates</li>
+<li>maintainer notes</li>
+<li>ADR entries (if needed)</li>
+</ul>
+<h3>Validators</h3>
+<ul>
+<li>comment coverage checks</li>
+<li>README presence checks</li>
+<li>documentation drift checks</li>
+</ul>
+<h3>Output</h3>
+<p>Repository remains understandable after AI-generated changes.</p>
+<hr />
+<h2>Skill: Localization Governance</h2>
+<h3>Purpose</h3>
+<p>Keep all language variants semantically aligned.</p>
+<h3>Inputs</h3>
+<ul>
+<li>source locale</li>
+<li>target locales</li>
+<li>translation memory</li>
+<li>localization guidelines</li>
+</ul>
+<h3>Actions</h3>
+<ul>
+<li>machine translation</li>
+<li>AI review</li>
+<li>terminology enforcement</li>
+<li>semantic review</li>
+<li>parity verification</li>
+</ul>
+<h3>Artifacts</h3>
+<ul>
+<li>translated files</li>
+<li>review findings</li>
+<li>localization reports</li>
+<li>terminology exceptions</li>
+</ul>
+<h3>Validators</h3>
+<ul>
+<li>localization completeness</li>
+<li>parity validation</li>
+<li>untranslated text detection</li>
+<li>semantic review checks</li>
+</ul>
+<h3>Output</h3>
+<p>Localized repositories evolve together instead of drifting apart.</p>
+<hr />
+<h2>Skill: Technical Debt Prevention</h2>
+<p>This one is particularly interesting because it combines your blog article ideas.</p>
+<h3>Purpose</h3>
+<p>Ensure AI-generated changes leave behind enough context.</p>
+<h3>Inputs</h3>
+<ul>
+<li>pull request</li>
+<li>specification</li>
+<li>implementation</li>
+</ul>
+<h3>Actions</h3>
+<p>Generate:</p>
+<ul>
+<li>assumptions</li>
+<li>risks</li>
+<li>alternatives considered</li>
+<li>confidence level</li>
+<li>open questions</li>
+<li>validation evidence</li>
+</ul>
+<h3>Artifacts</h3>
+<p>The exact PR artifacts from your article:</p>
+<ul>
+<li>Implementation Summary</li>
+<li>Assumptions</li>
+<li>Risks</li>
+<li>Validation</li>
+<li>Open Questions</li>
+<li>Confidence Assessment</li>
+</ul>
+<h3>Validators</h3>
+<p>Check that:</p>
+<ul>
+<li>non-trivial changes contain rationale</li>
+<li>validation evidence exists</li>
+<li>assumptions are recorded</li>
+</ul>
+<h3>Output</h3>
+<p>Future maintainers inherit reasoning instead of only code.</p>
+<hr />
+<p>The pattern becomes:</p>
+<pre><code class="language-text">Prompt
+  ↓
+Skill
+  ↓
+Artifacts
+  ↓
+Validators
+  ↓
+Repository Knowledge
+</code></pre>
+<p>rather than:</p>
+<pre><code class="language-text">Prompt
+  ↓
+Code
+</code></pre>
+<p>which is where most AI-assisted development currently stops.</p>
+<hr />
+<p>The blog article almost writes itself:</p>
+<h1>AI Skills Are More Valuable Than AI Prompts</h1>
+<p>The first wave of AI-assisted development focused on prompts.</p>
+<p>The second wave focused on agents.</p>
+<p>The more durable idea may be neither.</p>
+<p>What organizations actually need are reusable engineering skills.</p>
+<p>A prompt tells an AI what to do once.</p>
+<p>A skill tells an AI how an organization repeatedly performs a category of work.</p>
+<p>A good skill contains:</p>
+<ul>
+<li>guidance</li>
+<li>examples</li>
+<li>required artifacts</li>
+<li>validation rules</li>
+<li>success criteria</li>
+</ul>
+<p>The result is that knowledge survives the model, the session, and eventually even the people who originally created it.</p>
+<p>A translation skill can preserve localization quality.</p>
+<p>A documentation skill can preserve maintainability.</p>
+<p>A review skill can preserve engineering judgment.</p>
+<p>A technical debt prevention skill can preserve context.</p>
+<p>The AI becomes replaceable. The skill remains.</p>
+<p>That may be the more important asset.</p>
+<hr />
+<p>What I find particularly interesting in the Let Books repository is that many things already exist in embryonic form:</p>
+<ul>
+<li>localization guidelines</li>
+<li>parity validators</li>
+<li>semantic review checks</li>
+<li>documentation standards</li>
+<li>PR artifact requirements</li>
+<li>educational code comments</li>
+<li>governance diagrams</li>
+</ul>
+<p>Viewed separately, they look like tooling.</p>
+<p>Viewed together, they start to resemble a library of reusable engineering skills that can be applied to future repositories, future AI systems, and even future organizations.</p>
+</div></div></details></section>
+<section id="e3" class="entry user"><details>
+<summary><span class="num">3.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Requested two deliverables</div></span></summary>
+<div class="content"><pre class="plain">i would like both extracted skills and article content. step one is to extract and document skills, next step would be to see, if this repository can be moved to use those skills instead of current guidance markdown + tools scripts</pre></div></details></section>
+<section id="e4" class="entry assistant"><details>
+<summary><span class="num">4.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Two deliverables and step-one prompt</div></span></summary>
+<div class="content"><div class="copy-note">Raw prompt artifact — Markdown is preserved for copy/paste.</div><pre class="artifact">Yes. I would split it into **two deliverables**:
+
+1. **Reusable skills extracted from the repo**
+2. **Blog article explaining why this matters**
+
+Here is a good prompt for step one.
+
+```text
+You are working in the `let-books` repository.
+
+Goal: extract the existing guidance, validators, review practices, and repository conventions into reusable engineering skills.
+
+Do not remove or rewrite the existing system yet. This is a documentation and architecture step only.
+
+## Task
+
+Create a new `skills/` directory that documents reusable skills currently embedded across:
+
+- guidance Markdown files
+- validator scripts
+- localization tooling
+- tests
+- CI workflows
+- blog/wiki/learning content conventions
+- PR artifact expectations
+- code-commenting standards
+
+## Required output
+
+Create at least these skill documents:
+
+- `skills/code-documentation-preservation.md`
+- `skills/localization-governance.md`
+- `skills/content-parity-governance.md`
+- `skills/pr-knowledge-artifacts.md`
+- `skills/validator-design-and-maintenance.md`
+- `skills/repository-governance-overview.md`
+
+Each skill document should contain:
+
+1. Purpose  
+2. When to use it  
+3. Inputs  
+4. Expected actions  
+5. Required artifacts  
+6. Validators/checks involved  
+7. Success criteria  
+8. Failure modes  
+9. Current repository sources from which the skill was extracted  
+10. Notes for future migration into executable/reusable skills
+
+## Important
+
+Do not invent an idealized system. Extract what the repository already does or clearly intends to do.
+
+Where the current implementation is incomplete, mark it explicitly as:
+
+- existing
+- partial
+- missing
+- proposed
+
+## Also create
+
+Create `skills/README.md` explaining:
+
+- what a skill means in this repository
+- how skills differ from prompts
+- how skills differ from validators
+- how skills differ from documentation
+- how the current repository could later migrate from scattered guidance and scripts to skill-based workflows
+
+## Validation
+
+After creating the files:
+
+- run existing docs/content/localization validators where applicable
+- do not relax validation rules
+- report which files were added
+- report which existing guidance sources were mapped into skills
+- report open questions for the next migration phase
+
+Do not migrate tooling yet. This step only extracts and documents the skills.
+```
+
+For the article, I’d frame it like this:
+
+```markdown
+# From Prompts to Skills
+
+Most teams start AI-assisted development with prompts.
+
+That is natural. A prompt is the easiest unit of instruction: fix this bug, translate this file, review this code, explain this regex.
+
+But prompts are fragile. They live in chat history, issue comments, pull request discussions, or somebody’s memory. They solve today’s task, but they do not automatically become tomorrow’s engineering practice.
+
+The more durable unit is the skill.
+
+A skill is not just a prompt. It is a reusable way of doing work. It contains guidance, examples, expected artifacts, validators, failure modes, and success criteria.
+
+For example, a repository may already have a localization skill without calling it that. It may contain translation guidelines, terminology rules, parity checks, untranslated-text detectors, semantic review notes, and CI validation. Together, those pieces describe how localization should be done.
+
+The same applies to code documentation. A repository may require comments around regexes, validators, heuristics, assumptions, and non-obvious intent. That is not merely “add comments.” It is a skill for preserving maintainer knowledge.
+
+The same applies to pull requests. If every significant AI-assisted change must record assumptions, validation evidence, risks, open questions, and confidence level, then the repository has a skill for preventing AI technical debt.
+
+The important shift is this:
+
+A prompt tells an AI what to do once.
+
+A skill tells an AI how a team repeatedly performs a kind of work.
+
+That distinction matters because models change. Agents change. Tooling changes. But the engineering judgment embedded in a good skill can survive all of them.
+
+In this view, validators are not separate from documentation. They are executable parts of a skill.
+
+Guidelines are not passive notes. They are the human-readable part of a skill.
+
+Tests are not just correctness checks. They are memory, written in executable form.
+
+The goal is not to make AI autonomous. The goal is to make engineering practice reusable.
+
+A mature AI-assisted repository should therefore not only contain source code. It should contain reusable skills: localization governance, content parity, validator design, documentation preservation, pull request knowledge artifacts, and release checks.
+
+That is where AI becomes less like a clever assistant and more like a disciplined participant in an engineering system.
+
+The AI becomes replaceable.
+
+The skill remains.
+```
+
+And for step two later, the migration question becomes:
+
+**Can `skills/` become the source of truth, while current Markdown guidance and scripts become implementations of those skills?**</pre></div></details></section>
+<section id="e5" class="entry user"><details>
+<summary><span class="num">5.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Article should remain provisional</div></span></summary>
+<div class="content"><pre class="plain">yes, that would be part of later revision of article, don&#x27;t have all the answers yet</pre></div></details></section>
+<section id="e6" class="entry assistant"><details>
+<summary><span class="num">6.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Article caution: experiment, not manifesto</div></span></summary>
+<div class="content"><div class="markdown-body"><p>I actually think that's the right order.</p>
+<p>If you write the article now as &quot;skills are the future&quot;, you're making claims you haven't validated yet.</p>
+<p>The stronger article is:</p>
+<blockquote>
+<p>We extracted a set of engineering skills from a real repository. We then asked whether the repository itself could be simplified by treating those skills as first-class assets.</p>
+</blockquote>
+<p>That's an experiment, not a manifesto.</p>
+<p>What I would avoid for now:</p>
+<ul>
+<li>&quot;Skills replace prompts.&quot;</li>
+<li>&quot;Skills replace documentation.&quot;</li>
+<li>&quot;Skills replace validators.&quot;</li>
+<li>&quot;Skills are the next evolution of AI development.&quot;</li>
+</ul>
+<p>You don't know that yet.</p>
+<p>What you do know is something much more defensible:</p>
+<ul>
+<li>guidance exists</li>
+<li>validators exist</li>
+<li>tests exist</li>
+<li>review practices exist</li>
+<li>they overlap</li>
+<li>many appear to describe the same engineering behavior from different angles</li>
+</ul>
+<p>That observation alone is interesting.</p>
+<p>For example, your localization system already looks suspiciously skill-like:</p>
+<p>| Component | Purpose |
+|------------|------------|
+| localization guidelines | human guidance |
+| translation tooling | execution |
+| parity validator | enforcement |
+| semantic review | quality control |
+| findings corpus | institutional memory |
+| tests | regression protection |</p>
+<p>That's almost a complete skill lifecycle already.</p>
+<p>Likewise for documentation preservation:</p>
+<p>| Component | Purpose |
+|------------|------------|
+| code comment standards | guidance |
+| README requirements | artifacts |
+| reviewer expectations | review |
+| validator comments | educational context |
+| tests documenting intent | regression protection |</p>
+<p>Again, it looks less like random files and more like a coherent capability.</p>
+<p>The article could therefore start much more cautiously:</p>
+<blockquote>
+<p>While reviewing a repository that had accumulated localization guidance, validation tooling, review procedures, educational code comments, and documentation standards, I noticed something curious. Many of these artifacts appeared to be describing the same engineering practices from different perspectives.</p>
+</blockquote>
+<p>Then:</p>
+<blockquote>
+<p>We began extracting those practices into explicit skills, not because we knew skills were the correct abstraction, but because we wanted to see whether the repository itself could be described more clearly.</p>
+</blockquote>
+<p>Only after extraction do you ask:</p>
+<blockquote>
+<p>Could validators become executable parts of skills?</p>
+<p>Could guidance become human-readable parts of skills?</p>
+<p>Could tests become regression protection for skills?</p>
+<p>Could repositories eventually organize governance around skills rather than scattered documents and scripts?</p>
+</blockquote>
+<p>Those are genuinely interesting questions.</p>
+<p>And they fit very well with another recurring theme in Let Books:</p>
+<blockquote>
+<p>Preserve lessons in increasingly durable forms.</p>
+</blockquote>
+<p>A bug becomes a test.</p>
+<p>A review finding becomes a validator.</p>
+<p>A convention becomes guidance.</p>
+<p>A repeated practice might eventually become a skill.</p>
+<p>That progression feels much easier to defend than claiming a new methodology from the outset.</p>
+</div></div></details></section>
+<section id="e7" class="entry user"><details>
+<summary><span class="num">7.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Anything else?</div></span></summary>
+<div class="content"><pre class="plain">anything else?</pre></div></details></section>
+<section id="e8" class="entry assistant"><details>
+<summary><span class="num">8.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Additional observations</div></span></summary>
+<div class="content"><div class="markdown-body"><p>A few things jump out that make this potentially more interesting than just &quot;organizing prompts better&quot;.</p>
+<h3>1. Skills may be the missing layer between principles and tooling</h3>
+<p>Right now many repositories have:</p>
+<pre><code class="language-text">Principles
+    ↓
+Scripts
+</code></pre>
+<p>or</p>
+<pre><code class="language-text">Guidelines
+    ↓
+Validators
+</code></pre>
+<p>There is often no explicit representation of the engineering capability being implemented.</p>
+<p>For example:</p>
+<pre><code class="language-text">Principle:
+Preserve localization quality.
+
+Implementation:
+- translation prompts
+- parity validator
+- untranslated-text validator
+- terminology guidance
+- review process
+</code></pre>
+<p>The thing in the middle is never named.</p>
+<p>The skill is effectively:</p>
+<pre><code class="language-text">Localization Governance
+</code></pre>
+<p>which happens to be implemented through all those artifacts.</p>
+<hr />
+<h3>2. Skills may expose duplication</h3>
+<p>One thing I'd expect after extraction:</p>
+<p>You will discover the same rule appears in 4 places.</p>
+<p>Example:</p>
+<pre><code class="language-text">localization guideline
+↓
+review checklist
+↓
+validator comment
+↓
+test description
+</code></pre>
+<p>all saying the same thing.</p>
+<p>That's actually useful.</p>
+<p>Because then the question becomes:</p>
+<blockquote>
+<p>Which of these is the source of truth?</p>
+</blockquote>
+<p>A skill document may become the answer.</p>
+<hr />
+<h3>3. Skills may explain validators better than validators explain themselves</h3>
+<p>A validator often answers:</p>
+<blockquote>
+<p>What failed?</p>
+</blockquote>
+<p>A skill answers:</p>
+<blockquote>
+<p>Why does this matter?</p>
+</blockquote>
+<p>For example:</p>
+<pre><code class="language-text">validate_translation_parity.py
+</code></pre>
+<p>can tell you:</p>
+<blockquote>
+<p>Missing localized variant.</p>
+</blockquote>
+<p>The skill can explain:</p>
+<blockquote>
+<p>New examples and arguments must propagate across locales because otherwise readers receive materially different content.</p>
+</blockquote>
+<p>That rationale is often scattered today.</p>
+<hr />
+<h3>4. Skills have maturity levels</h3>
+<p>I would absolutely add this.</p>
+<p>Something like:</p>
+<pre><code class="language-text">Level 0
+Human convention
+
+Level 1
+Documented guidance
+
+Level 2
+Examples exist
+
+Level 3
+Validator exists
+
+Level 4
+CI enforced
+
+Level 5
+Auto-remediation exists
+</code></pre>
+<p>Then you can say:</p>
+<pre><code class="language-text">Localization Governance: Level 4
+
+Documentation Preservation: Level 2
+
+PR Knowledge Artifacts: Level 1
+</code></pre>
+<p>That gives you a roadmap.</p>
+<hr />
+<h3>5. Some validators may disappear</h3>
+<p>This is a dangerous but interesting possibility.</p>
+<p>Once a skill is explicit, you might discover:</p>
+<pre><code class="language-text">Validator A
+Validator B
+Validator C
+</code></pre>
+<p>are all enforcing different symptoms of the same underlying rule.</p>
+<p>Skill extraction may reveal simplifications.</p>
+<p>Not guaranteed, but worth watching for.</p>
+<hr />
+<h3>6. Skills can be portable between repositories</h3>
+<p>This is the part I find most promising.</p>
+<p>Today your localization tooling is tightly coupled to Let Books.</p>
+<p>But a skill could become:</p>
+<pre><code class="language-text">Localization Governance Skill
+</code></pre>
+<p>with:</p>
+<ul>
+<li>guidance</li>
+<li>examples</li>
+<li>validators</li>
+<li>review process</li>
+<li>expected artifacts</li>
+</ul>
+<p>Then another repository could adopt it.</p>
+<p>Same for:</p>
+<pre><code class="language-text">Documentation Preservation Skill
+Technical Debt Prevention Skill
+Validator Design Skill
+</code></pre>
+<p>At that point you're no longer sharing scripts.</p>
+<p>You're sharing engineering practices.</p>
+<hr />
+<h3>7. The article might end up not being about AI</h3>
+<p>This would be my strongest caution.</p>
+<p>Your first instinct is:</p>
+<blockquote>
+<p>AI Skills</p>
+</blockquote>
+<p>But after looking at the repository, I suspect the deeper idea is:</p>
+<blockquote>
+<p>Encoding engineering practices as reusable assets.</p>
+</blockquote>
+<p>AI just makes the need visible because AI amplifies inconsistency and forgetfulness.</p>
+<p>The core idea may survive even if the word AI disappears from the article.</p>
+<p>Something like:</p>
+<blockquote>
+<p>Repositories preserve code very well. They are less effective at preserving engineering practices. Skills may be one way to preserve those practices in a reusable form.</p>
+</blockquote>
+<p>That feels like a more durable idea than yet another article about prompting or agents.</p>
+<p>And it aligns nicely with several themes already present in Let Books:</p>
+<ul>
+<li>documentation as memory</li>
+<li>validators as executable lessons</li>
+<li>regression tests as preserved learning</li>
+<li>governance as knowledge preservation</li>
+</ul>
+<p>Skills could be the next step in that progression rather than a completely new concept.</p>
+</div></div></details></section>
+<section id="e9" class="entry user"><details>
+<summary><span class="num">9.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Portability emphasized</div></span></summary>
+<div class="content"><pre class="plain">agree, but especially this matters to me: 6. Skills can be portable between repositories &lt;- for next projects, some closed-source, i&#x27;d reuse this already tested skill. i am fair, this is open to everyone. this part.</pre></div></details></section>
+<section id="e10" class="entry assistant"><details>
+<summary><span class="num">10.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Portability principle</div></span></summary>
+<div class="content"><div class="markdown-body"><p>I think that's the strongest practical motivation, and it's much less speculative than most AI discussions.</p>
+<p>You're not trying to invent a new methodology.</p>
+<p>You're trying to answer a very concrete problem:</p>
+<blockquote>
+<p>&quot;I've spent considerable effort discovering which practices work. How do I reuse those practices in the next repository without copying half the repository?&quot;</p>
+</blockquote>
+<p>Today, if you start a new project, you probably end up copying pieces such as:</p>
+<ul>
+<li>localization guidelines</li>
+<li>parity validators</li>
+<li>review prompts</li>
+<li>CI checks</li>
+<li>documentation standards</li>
+<li>PR templates</li>
+<li>educational comment conventions</li>
+<li>repository READMEs</li>
+<li>workflow documentation</li>
+</ul>
+<p>That's a lot of duplication.</p>
+<p>What you really want to copy is:</p>
+<pre><code class="language-text">Localization Governance
+Documentation Preservation
+Knowledge Artifact Generation
+Content Parity Governance
+Validator Design
+</code></pre>
+<p>The implementation details may differ.</p>
+<p>The skill should remain.</p>
+<p>For example:</p>
+<pre><code class="language-text">Project A
+-----------
+Markdown
+20 languages
+Static site
+
+Localization Governance Skill
+    implemented by:
+    - validator A
+    - validator B
+    - workflow C
+</code></pre>
+<pre><code class="language-text">Project B
+-----------
+.NET ERP
+3 languages
+Internal documentation
+
+Localization Governance Skill
+    implemented by:
+    - validator X
+    - workflow Y
+</code></pre>
+<p>The skill is the same.</p>
+<p>The tooling is different.</p>
+<p>That distinction is important.</p>
+<hr />
+<p>Another interesting observation:</p>
+<p>Most open-source projects share <strong>code</strong>.</p>
+<p>Very few share <strong>engineering practices in reusable form</strong>.</p>
+<p>For example, you can import:</p>
+<ul>
+<li>logging libraries</li>
+<li>testing frameworks</li>
+<li>authentication packages</li>
+</ul>
+<p>But there is no equivalent:</p>
+<pre><code class="language-text">Install Localization Governance v1.3
+Install Documentation Preservation v2.1
+Install Knowledge Artifact Generation v1.0
+</code></pre>
+<p>Yet that's arguably where a lot of organizational knowledge lives.</p>
+<hr />
+<p>I would even be careful about calling them &quot;AI Skills&quot;.</p>
+<p>The portability value exists even without AI.</p>
+<p>Imagine:</p>
+<pre><code class="language-text">skills/
+    localization-governance/
+    documentation-preservation/
+    knowledge-artifacts/
+</code></pre>
+<p>Each contains:</p>
+<pre><code class="language-text">README
+principles
+examples
+review criteria
+expected artifacts
+validator requirements
+reference implementations
+</code></pre>
+<p>Then a repository chooses:</p>
+<pre><code class="language-yaml">enabled_skills:
+  - localization-governance
+  - documentation-preservation
+</code></pre>
+<p>and either humans, AI agents, or automation implement them.</p>
+<p>The skill becomes the portable asset.</p>
+<hr />
+<p>This also explains why extracting skills before rewriting anything is the correct order.</p>
+<p>Because the first question is not:</p>
+<blockquote>
+<p>Can we replace the current validators?</p>
+</blockquote>
+<p>The first question is:</p>
+<blockquote>
+<p>What reusable capability have we actually built?</p>
+</blockquote>
+<p>Only after you can answer that should you ask:</p>
+<blockquote>
+<p>How should it be packaged?</p>
+</blockquote>
+<p>Maybe it becomes:</p>
+<ul>
+<li>Markdown documentation</li>
+<li>Git submodule</li>
+<li>npm package</li>
+<li>Python package</li>
+<li>MCP server</li>
+<li>AI agent capability</li>
+<li>GitHub Action</li>
+<li>repository template</li>
+</ul>
+<p>You don't know yet.</p>
+<p>But if the skill definition is good, all of those become implementation choices rather than the thing itself.</p>
+<p>That is what makes it portable.</p>
+<p>The repository stops being merely a project.</p>
+<p>It starts becoming a source of reusable engineering practices that can be carried into future open-source and closed-source work without dragging the entire codebase along.</p>
+</div></div></details></section>
+<section id="e11" class="entry user"><details>
+<summary><span class="num">11.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Asked for one big prompt</div></span></summary>
+<div class="content"><pre class="plain">okey, so can we start with a good one big prompt? :)</pre></div></details></section>
+<section id="e12" class="entry assistant"><details>
+<summary><span class="num">12.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Prompt v1: Extract Reusable Engineering Skills From This Repository</div></span></summary>
+<div class="content"><div class="copy-note">Raw prompt artifact — Markdown is preserved for copy/paste.</div><pre class="artifact">Yes. I&#x27;d make the first prompt deliberately **discovery-oriented**, not migration-oriented.
+
+The biggest risk is that an agent starts inventing a skill system instead of extracting what already exists.
+
+Something like this:
+
+```markdown
+# Extract Reusable Engineering Skills From This Repository
+
+You are acting as an engineering governance analyst.
+
+Your task is NOT to redesign the repository.
+
+Your task is NOT to migrate tooling.
+
+Your task is NOT to invent a new methodology.
+
+Your task is to discover, document, and extract the reusable engineering skills that already exist within the repository.
+
+---
+
+## Goal
+
+Identify engineering practices that appear repeatedly across:
+
+- documentation
+- guidance
+- validators
+- tests
+- CI workflows
+- review procedures
+- prompts
+- examples
+- repository conventions
+
+and document them as reusable skills.
+
+The purpose is to understand which engineering capabilities could eventually be reused in future repositories, including repositories with different technologies, different languages, or different business domains.
+
+At this stage, extraction and documentation are the only goals.
+
+Do not perform migrations.
+
+Do not remove existing guidance.
+
+Do not rewrite validators.
+
+Do not change repository behavior.
+
+---
+
+# Definition Of A Skill
+
+For this exercise, a skill is:
+
+A reusable engineering capability that combines some or all of:
+
+- principles
+- guidance
+- examples
+- expected artifacts
+- review practices
+- validators
+- tests
+- automation
+
+to consistently achieve a particular engineering outcome.
+
+Examples:
+
+- Localization Governance
+- Documentation Preservation
+- Content Parity Governance
+- Technical Debt Prevention
+- Validator Design
+- Knowledge Preservation
+
+A skill is NOT:
+
+- a script
+- a validator
+- a workflow
+- a prompt
+- a document
+
+Those may be implementations or components of a skill.
+
+---
+
+# Repository Analysis
+
+Search the repository for:
+
+## Guidance Sources
+
+Examples:
+
+- README files
+- docs/
+- governance documents
+- contributor guidance
+- review procedures
+- prompts
+- checklists
+- architecture notes
+
+## Validation Sources
+
+Examples:
+
+- tools/
+- validators
+- quality checks
+- parity checks
+- localization checks
+- CI validation
+- workflow gates
+
+## Evidence Of Review Practices
+
+Examples:
+
+- PR artifact requirements
+- review templates
+- reviewer instructions
+- validation summaries
+- assumptions/risks sections
+- confidence reporting
+
+## Knowledge Preservation Practices
+
+Examples:
+
+- code comments
+- validator comments
+- educational comments
+- tests that explain intent
+- documentation requirements
+- architecture records
+- workflow documentation
+
+---
+
+# Skill Extraction
+
+For each discovered skill create:
+
+skills/&lt;skill-name&gt;.md
+
+Use the following structure.
+
+## Purpose
+
+What engineering outcome does the skill attempt to achieve?
+
+## Why It Exists
+
+What failure or recurring problem is this skill trying to prevent?
+
+## Current Repository Evidence
+
+List all relevant sources:
+
+- guidance files
+- validators
+- tests
+- workflows
+- examples
+
+Be specific.
+
+## Inputs
+
+What information is required?
+
+## Expected Actions
+
+What actions are performed?
+
+## Expected Artifacts
+
+What outputs should exist?
+
+## Validation
+
+What checks currently verify this skill?
+
+Distinguish between:
+
+- manual review
+- automated validation
+- CI enforcement
+
+## Success Criteria
+
+How do we know the skill worked?
+
+## Failure Modes
+
+How can the skill fail?
+
+## Maturity Assessment
+
+Assign one:
+
+- Emerging
+- Partial
+- Established
+- Mature
+
+Explain why.
+
+## Portability Assessment
+
+Describe:
+
+- what is repository-specific
+- what appears reusable across repositories
+- what would need adaptation in another repository
+
+## Open Questions
+
+Questions that should be answered before attempting future migration into a standalone reusable skill.
+
+---
+
+# Repository-Wide Overview
+
+Create:
+
+skills/README.md
+
+Document:
+
+## What Is A Skill?
+
+Explain the repository definition.
+
+## Why Extract Skills?
+
+Explain the difference between:
+
+- principles
+- guidance
+- validators
+- workflows
+- skills
+
+## Discovered Skills
+
+Provide a catalog.
+
+For each skill include:
+
+- purpose
+- maturity
+- primary evidence sources
+
+## Dependency Map
+
+Describe relationships between skills.
+
+Example:
+
+Documentation Preservation
+    supports
+Validator Design
+
+Validator Design
+    supports
+Localization Governance
+
+Localization Governance
+    supports
+Content Parity Governance
+
+Use actual findings rather than assumptions.
+
+---
+
+# Skill Maturity Model
+
+Create:
+
+skills/SKILL_MATURITY_MODEL.md
+
+Use:
+
+Level 0 - Informal
+Practice exists mostly as convention.
+
+Level 1 - Documented
+Guidance exists.
+
+Level 2 - Repeatable
+Examples and procedures exist.
+
+Level 3 - Validated
+Automated checks exist.
+
+Level 4 - Enforced
+CI or workflow enforcement exists.
+
+Level 5 - Self-Improving
+Findings, reviews, or historical lessons are systematically fed back into the skill.
+
+Assess discovered skills against this model.
+
+---
+
+# Important Constraints
+
+Do not invent skills that are not supported by repository evidence.
+
+Prefer extraction over interpretation.
+
+When uncertain:
+
+- mark assumptions
+- record evidence
+- record confidence level
+
+Do not claim a skill exists merely because it sounds useful.
+
+Every extracted skill must be traceable to actual repository artifacts.
+
+---
+
+# Deliverable
+
+Produce:
+
+- skills/README.md
+- skills/SKILL_MATURITY_MODEL.md
+- one document per discovered skill
+
+Then provide:
+
+1. Discovered skills
+2. Evidence supporting each skill
+3. Maturity assessment
+4. Portability assessment
+5. Candidate future standalone skills
+6. Open questions before migration
+
+The objective is to understand what reusable engineering capabilities already exist in this repository and which of them could realistically be reused in future repositories.
+```
+
+What I like about this version is that it is very close to how you&#x27;ve approached localization and governance work already:
+
+- extract reality first,
+- document it,
+- validate it,
+- only then discuss architecture changes.
+
+That makes the resulting article much stronger because it can say:
+
+&gt; &quot;We analyzed a real repository and extracted N reusable engineering skills.&quot;
+
+instead of:
+
+&gt; &quot;Here&#x27;s a new framework I invented.&quot;</pre></div></details></section>
+<section id="e13" class="entry user"><details>
+<summary><span class="num">13.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Granularity correction</div></span></summary>
+<div class="content"><pre class="plain">perhaps also say: i&#x27;d rather have few big skills. like localization skill, auto-docuement skill ?</pre></div></details></section>
+<section id="e14" class="entry assistant"><details>
+<summary><span class="num">14.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Few big skills principle</div></span></summary>
+<div class="content"><div class="markdown-body"><p>Yes, and I would explicitly put that in the prompt.</p>
+<p>Otherwise agents tend to produce:</p>
+<pre><code class="language-text">Localization Review Skill
+Localization Translation Skill
+Localization Validation Skill
+Localization Parity Skill
+Localization Terminology Skill
+Localization Findings Skill
+</code></pre>
+<p>which is just your current implementation sliced into pieces.</p>
+<p>That misses the point.</p>
+<p>You are trying to identify <strong>capabilities</strong>, not individual tools.</p>
+<p>I would add something like:</p>
+<hr />
+<h2>Skill Granularity</h2>
+<p>Prefer a small number of high-value skills over many narrowly scoped skills.</p>
+<p>The goal is not to create one skill per validator, workflow, script, or document.</p>
+<p>The goal is to identify reusable engineering capabilities.</p>
+<p>Bad examples:</p>
+<ul>
+<li>Translation Parity Skill</li>
+<li>Untranslated Text Detection Skill</li>
+<li>Localization Review Skill</li>
+<li>Terminology Enforcement Skill</li>
+</ul>
+<p>These are likely components of a larger capability.</p>
+<p>Better example:</p>
+<ul>
+<li>Localization Governance</li>
+</ul>
+<p>which may include:</p>
+<ul>
+<li>translation</li>
+<li>review</li>
+<li>terminology</li>
+<li>parity validation</li>
+<li>findings collection</li>
+<li>CI enforcement</li>
+</ul>
+<p>as parts of a single skill.</p>
+<p>Likewise:</p>
+<p>Bad examples:</p>
+<ul>
+<li>Regex Commenting Skill</li>
+<li>README Skill</li>
+<li>Test Comment Skill</li>
+<li>Workflow Comment Skill</li>
+</ul>
+<p>Better example:</p>
+<ul>
+<li>Documentation Preservation</li>
+</ul>
+<p>which may include:</p>
+<ul>
+<li>educational code comments</li>
+<li>README requirements</li>
+<li>validator explanations</li>
+<li>workflow documentation</li>
+<li>maintainer notes</li>
+</ul>
+<p>as parts of the same capability.</p>
+<p>Likewise:</p>
+<p>Bad examples:</p>
+<ul>
+<li>Assumptions Skill</li>
+<li>Risks Skill</li>
+<li>Confidence Skill</li>
+<li>Validation Summary Skill</li>
+</ul>
+<p>Better example:</p>
+<ul>
+<li>Knowledge Artifact Generation</li>
+</ul>
+<p>or</p>
+<ul>
+<li>Technical Debt Prevention</li>
+</ul>
+<p>which includes all of those artifacts.</p>
+<hr />
+<h2>Default Bias</h2>
+<p>When uncertain:</p>
+<p>Prefer merging related practices into a larger skill.</p>
+<p>Do not split a skill unless:</p>
+<ul>
+<li>it has a distinct purpose</li>
+<li>it solves a different engineering problem</li>
+<li>it could realistically be adopted independently</li>
+</ul>
+<p>A future repository should reasonably be able to say:</p>
+<p>&quot;We use Localization Governance.&quot;</p>
+<p>&quot;We use Documentation Preservation.&quot;</p>
+<p>&quot;We use Knowledge Artifact Generation.&quot;</p>
+<p>without needing to understand the underlying implementation details.</p>
+<hr />
+<p>Honestly, looking at Let Books today, I'd expect maybe <strong>5–8 major skills</strong>, not 20–30.</p>
+<p>Something like:</p>
+<ol>
+<li><p><strong>Localization Governance</strong></p>
+<ul>
+<li>translation</li>
+<li>review</li>
+<li>parity</li>
+<li>terminology</li>
+<li>findings</li>
+<li>CI</li>
+</ul>
+</li>
+<li><p><strong>Documentation Preservation</strong></p>
+<ul>
+<li>code comments</li>
+<li>workflow docs</li>
+<li>READMEs</li>
+<li>maintainer guidance</li>
+<li>educational comments</li>
+</ul>
+</li>
+<li><p><strong>Knowledge Artifact Generation</strong></p>
+<ul>
+<li>assumptions</li>
+<li>risks</li>
+<li>confidence</li>
+<li>open questions</li>
+<li>validation summaries</li>
+</ul>
+</li>
+<li><p><strong>Validator Engineering</strong></p>
+<ul>
+<li>validator design</li>
+<li>validator documentation</li>
+<li>validator tests</li>
+<li>validator findings corpus</li>
+<li>validator governance</li>
+</ul>
+</li>
+<li><p><strong>Content Governance</strong></p>
+<ul>
+<li>parity</li>
+<li>structure</li>
+<li>links</li>
+<li>generated content validation</li>
+<li>repository consistency</li>
+</ul>
+</li>
+<li><p><strong>Engineering Governance</strong></p>
+<ul>
+<li>the meta-skill</li>
+<li>principles</li>
+<li>review standards</li>
+<li>repository-wide policies</li>
+</ul>
+</li>
+</ol>
+<p>Maybe 7–8 after discovery, but probably not much more.</p>
+<p>If the extraction process produces 25 skills, that's usually evidence that it extracted implementation details instead of reusable capabilities.</p>
+</div></div></details></section>
+<section id="e15" class="entry user"><details>
+<summary><span class="num">15.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Install into new repository</div></span></summary>
+<div class="content"><pre class="plain">i agree. point is i&#x27;d copy skills i&#x27;d need to new repository and only tell init, i want you to use this skills, save it in AGENTS, README, whatever. from now on, this is how it goes</pre></div></details></section>
+<section id="e16" class="entry assistant"><details>
+<summary><span class="num">16.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Installability test</div></span></summary>
+<div class="content"><div class="markdown-body"><p>Exactly.</p>
+<p>And that realization actually gives a very useful test for whether something is a skill or not.</p>
+<p>Ask:</p>
+<blockquote>
+<p>&quot;Would I deliberately copy this into a new repository and tell future humans and AI agents to follow it?&quot;</p>
+</blockquote>
+<p>If the answer is yes, it's probably a skill.</p>
+<p>If the answer is:</p>
+<blockquote>
+<p>&quot;No, that's just an implementation detail.&quot;</p>
+</blockquote>
+<p>then it's probably not.</p>
+<p>For example:</p>
+<h3>Not a skill</h3>
+<pre><code class="language-text">validate_translation_parity.py
+</code></pre>
+<p>You would not tell a new repository:</p>
+<blockquote>
+<p>Use validate_translation_parity.py.</p>
+</blockquote>
+<p>You might not even be using Markdown anymore.</p>
+<hr />
+<h3>Skill</h3>
+<pre><code class="language-text">Localization Governance
+</code></pre>
+<p>You absolutely might tell a new repository:</p>
+<blockquote>
+<p>This repository uses the Localization Governance skill.</p>
+<p>New content must propagate to supported languages.
+Semantic meaning must remain aligned.
+Translation quality must be reviewed.
+Localization regressions should be detected automatically.</p>
+</blockquote>
+<p>How that is implemented is a separate question.</p>
+<hr />
+<p>Same thing here:</p>
+<h3>Not a skill</h3>
+<pre><code class="language-text">test_validate_language_quality.py
+</code></pre>
+<h3>Skill</h3>
+<pre><code class="language-text">Documentation Preservation
+</code></pre>
+<p>The skill survives:</p>
+<ul>
+<li>Python</li>
+<li>JavaScript</li>
+<li>.NET</li>
+<li>Markdown</li>
+<li>GitHub</li>
+<li>GitLab</li>
+<li>future tooling</li>
+</ul>
+<hr />
+<p>I think your eventual repository structure might look more like:</p>
+<pre><code class="language-text">skills/
+    localization-governance/
+    documentation-preservation/
+    knowledge-artifacts/
+    validator-engineering/
+    content-governance/
+
+agents/
+    AGENTS.md
+</code></pre>
+<p>Then AGENTS.md becomes surprisingly small:</p>
+<pre><code class="language-text">This repository uses:
+
+- Localization Governance
+- Documentation Preservation
+- Knowledge Artifact Generation
+- Validator Engineering
+
+Read the skill definitions before making changes.
+
+All work must comply with enabled skills.
+</code></pre>
+<p>The important shift is:</p>
+<p>Today:</p>
+<pre><code class="language-text">AGENTS.md
+    contains rules
+</code></pre>
+<p>Future:</p>
+<pre><code class="language-text">AGENTS.md
+    references skills
+
+Skills
+    contain rules
+</code></pre>
+<p>That is much more scalable.</p>
+<hr />
+<p>Another thing I like is that skills become versionable.</p>
+<p>Imagine:</p>
+<pre><code class="language-text">skills/
+    localization-governance/
+        skill.md
+        examples/
+        validators/
+</code></pre>
+<p>Later:</p>
+<pre><code class="language-text">Localization Governance v1
+Localization Governance v2
+</code></pre>
+<p>You discover a better review process.</p>
+<p>You improve the skill.</p>
+<p>Future repositories inherit the improvement.</p>
+<p>That's much closer to how software libraries evolve.</p>
+<hr />
+<p>And perhaps the most interesting part:</p>
+<p>The repository stops being merely:</p>
+<pre><code class="language-text">code
+</code></pre>
+<p>or even</p>
+<pre><code class="language-text">code + documentation
+</code></pre>
+<p>It becomes:</p>
+<pre><code class="language-text">code
++
+reusable engineering practices
+</code></pre>
+<p>which is a much more transferable asset.</p>
+<p>A closed-source ERP and an open-source documentation site may share almost no code.</p>
+<p>But they may share:</p>
+<ul>
+<li>Documentation Preservation</li>
+<li>Knowledge Artifact Generation</li>
+<li>Validator Engineering</li>
+</ul>
+<p>nearly unchanged.</p>
+<p>That is a much stronger form of reuse than copying scripts between repositories.</p>
+<p>At that point, the repository isn't just teaching people how the software works.</p>
+<p>It's teaching future repositories how engineering should be performed.</p>
+</div></div></details></section>
+<section id="e17" class="entry user"><details>
+<summary><span class="num">17.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Auto-install question</div></span></summary>
+<div class="content"><pre class="plain">can skill auto-install or present such guidance? :)</pre></div></details></section>
+<section id="e18" class="entry assistant"><details>
+<summary><span class="num">18.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Skill install/init mode</div></span></summary>
+<div class="content"><div class="markdown-body"><p>Yes — that’s probably the right direction.</p>
+<p>A mature skill should have an <strong>install/init mode</strong>, not only a document.</p>
+<p>Something like:</p>
+<pre><code class="language-text">Use the Localization Governance skill in this repository.
+Initialize it for this project.
+</code></pre>
+<p>Then the skill should:</p>
+<pre><code class="language-text">1. Inspect repository type
+2. Detect docs/content/code layout
+3. Ask minimal questions only if needed
+4. Add or update AGENTS.md
+5. Add skill reference to README/contributor docs
+6. Add project-specific config
+7. Add starter validators/checks where applicable
+8. Add CI hooks if the repository uses CI
+9. Produce an adoption report
+</code></pre>
+<p>So each portable skill could contain:</p>
+<pre><code class="language-text">skills/localization-governance/
+  skill.md
+  install.md
+  config.schema.json
+  examples/
+  templates/
+    AGENTS.fragment.md
+    README.fragment.md
+    ci.github-actions.yml
+  validators/
+    reference-implementation/
+  adoption-checklist.md
+</code></pre>
+<p>Important distinction:</p>
+<pre><code class="language-text">skill.md
+</code></pre>
+<p>says <strong>what good looks like</strong>.</p>
+<pre><code class="language-text">install.md
+</code></pre>
+<p>says <strong>how to adopt it in a repository</strong>.</p>
+<pre><code class="language-text">validators/`
+</code></pre>
+<p>are optional/reference implementations, not the skill itself.</p>
+<p>So yes, the skill can “present guidance” by generating repository-local files like:</p>
+<pre><code class="language-text">AGENTS.md
+README.md
+CONTRIBUTING.md
+docs/governance/localization.md
+</code></pre>
+<p>and can “auto-install” by adding:</p>
+<pre><code class="language-text">tools/
+.github/workflows/
+package scripts
+test fixtures
+</code></pre>
+<p>But I’d keep the first version modest:</p>
+<pre><code class="language-text">Skill v1 install = guidance + checklist + AGENTS references
+Skill v2 install = optional validators
+Skill v3 install = CI integration
+</code></pre>
+<p>That avoids overbuilding too early.</p>
+<p>The key phrase for the prompt:</p>
+<blockquote>
+<p>A portable skill should include adoption guidance. Where reasonable, document how the skill could initialize itself into a new repository by adding AGENTS.md guidance, README references, configuration, starter checks, and an adoption report. Do not implement auto-install yet, but design the skill so future auto-install is possible.</p>
+</blockquote>
+</div></div></details></section>
+<section id="e19" class="entry paste"><details>
+<summary><span class="num">19.</span><span><div class="meta">🟣 Pasted agent output</div><div class="title">Pasted agent output 1 — initial extraction / 6-skill inventory</div></span></summary>
+<div class="content"><pre class="opencode"><span class="thinking">Thinking: Refining Skill Sets</span>
+I&#x27;m considering how to categorize skills without making it overwhelming. I think a streamlined approach might be best, ideally focusing on 4 or 5 larger skill areas, like Localization Governance, Documentation Publishing, and Validation-First Engineering Governance, which includes CI/CD aspects, yet I noticed overlapping categories. 
+The user requested documentation linked to each skill and a dependency map, so I need to base these skills on solid evidence while keeping it coherent.
+<span class="thinking">Thinking: Streamlining Skills Assessment</span>
+I&#x27;m considering five key skill areas: Localization Governance, Documentation Publishing Governance, Validator Engineering, Repository Knowledge Preservation, and Spec-Driven Traceability. It’s important to note that browser regression and CI should be considered subcomponents rather than separate skills.
+I want to assess maturity on a Level 0-5 scale. For Localization Governance, I’m thinking Level 5 for self-improvement, given its complex reports and audits. Documentation Publishing might rate at Level 4, maybe even Level 5, with CI and reusable docs, but self-improvement isn’t as clear. I’m weighing Validator Engineering as Level 4 or 5 too.
+<span class="tool">→ Read AGENTS-Implementation.md [offset=620, limit=60]</span>
+<span class="tool">→ Read docs/Development.md [offset=1, limit=180]</span>
+<span class="tool">→ Read docs/Deployment.md [offset=1, limit=180]</span>
+<span class="thinking">Thinking: Evaluating meaningful skills</span>
+The user asked for a small number of large, meaningful skills. I think six could work well if the evidence is strong and reusable in the future. Some options I’m considering include:
+<span class="numbered">1. Localization Governance and Continuous Localization QA</span>
+<span class="numbered">2. Documentation-as-Product Publishing</span>
+<span class="numbered">3. Validator Engineering and Layered Validation</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">5. Engineering Knowledge Preservation</span>
+<span class="numbered">6. Spec-Driven Traceability and Demo Alignment</span>
+It’s interesting how these align with maturity model levels, suggesting where they stand in terms of growth and implementation.
+/agents      
+Switch agent
+/compact     
+Compact session
+/connect     
+Connect provider
+/copy        
+Copy session transcript
+/editor      
+Open editor
+/exit        
+Exit the app
+/export      
+Export session transcript
+/fork        
+Fork from message
+/help        
+Help
+/init        
+guided AGENTS.md setup
+/mcps        
+Toggle MCPs
+/models      
+Switch model
+/new         
+New session
+/rename      
+Rename session
+/review      
+review changes [commit|branch|pr], defaults to uncommitted
+/sessions    
+Switch session
+/share       
+Share session
+/skills      
+Skills
+/status      
+View status
+/themes      
+Switch theme
+/thinking    
+Hide thinking
+/timeline    
+Jump to message
+/timestamps  
+Show timestamps
+/undo        
+Undo previous message
+/variants    
+Switch model variant
+Plan 
+GPT-5.4
+OpenAI
+<span class="thinking">Thinking: Assessing automation and maturity levels</span>
+I&#x27;m thinking about the level of automation in my validation process. It seems like we&#x27;re at a Partial to Established level, given that there&#x27;s limited automation. For Knowledge Preservation, although we have consistent documentation and some automated tests, there&#x27;s no comprehensive enforcement across all tools, so I&#x27;d say it&#x27;s Partial-Established. 
+Spec-Driven Traceability looks established due to its authority chain, while Documentation-as-Product Publishing might be Mature, given the presence of generators and validators. Also, I need to identify potential standalone skills and consider adopting things like AGENTS.md and CI integration.
+<span class="term-heading">Constraint</span>
+I did not create skills/ yet because this turn is under a read-only plan-mode constraint. I inspected the repository and prepared an implementation-ready extraction plan with evidence-backed skill boundaries.
+<span class="term-heading">Recommended Skill Set</span>
+<span class="numbered">1. localization-governance-and-continuous-qa</span>
+<span class="dash">- Purpose: Govern multilingual content as an engineering system with parity, review, defect tracking, and CI enforcement.</span>
+<span class="dash">- Maturity: Mature</span>
+<span class="dash">- Portability: High</span>
+<span class="numbered">2. documentation-as-product-publishing</span>
+<span class="dash">- Purpose: Treat docs and public knowledge surfaces as product artifacts with structured generation, metadata, navigation, and publication rules.</span>
+<span class="dash">- Maturity: Mature</span>
+<span class="dash">- Portability: High for docs-heavy repos</span>
+<span class="numbered">3. validator-engineering-and-layered-validation</span>
+<span class="dash">- Purpose: Design validators as documented governance artifacts and use layered checks rather than single-tool linting.</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Portability: High</span>
+<span class="numbered">4. governed-ci-cd-and-deployment-safety</span>
+<span class="dash">- Purpose: Rebuild, revalidate, and self-check automation before publish; enforce fresh-artifact review and workflow correctness.</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Portability: High</span>
+<span class="numbered">5. repository-knowledge-preservation</span>
+<span class="dash">- Purpose: Preserve rationale, assumptions, failures, heuristics, and review knowledge in docs, comments, validators, tests, and workflows.</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Portability: High</span>
+<span class="numbered">6. spec-driven-traceability-and-demo-alignment</span>
+<span class="dash">- Purpose: Keep specs, docs, editorial claims, demo behavior, and scenario/tutorial artifacts aligned under an explicit authority chain.</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Portability: Medium-high</span>
+<span class="term-heading">Strong Evidence Per Skill</span>
+<span class="numbered">1. Localization Governance and Continuous QA</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - docs/localization-at-scale-program.md</span>
+<span class="dash">  - docs/localization-maintenance-system.md</span>
+<span class="dash">  - docs/localization-audit-report.md</span>
+<span class="dash">  - docs/wiki/localization-governance.md</span>
+<span class="dash">  - docs/wiki/localization-ci-cd.md</span>
+<span class="dash">  - docs/wiki/translation-quality-assurance.md</span>
+<span class="dash">  - docs/style-guide/localization/README.md</span>
+<span class="dash">  - docs/style-guide/localization/review-workflow.md</span>
+<span class="dash">  - docs/style-guide/localization/semantic-parity.md</span>
+<span class="dash">  - docs/style-guide/localization/ai-translation-review-records.md</span>
+<span class="dash">  - docs/style-guide/localization/language-maintainers.md</span>
+<span class="dash">  - docs/style-guide/localization/native-speaker-findings-corpus.json</span>
+<span class="dash">- Validators and tooling:</span>
+<span class="dash">  - tools/validate_translation_parity.py</span>
+<span class="dash">  - tools/validate-localized-articles.mjs</span>
+<span class="dash">  - tools/validate-structural-localization-parity.mjs</span>
+<span class="dash">  - tools/validate-localization-completeness.mjs</span>
+<span class="dash">  - tools/validate_language_quality.py</span>
+<span class="dash">  - tools/audit_translation_warnings.py</span>
+<span class="dash">  - tools/audit_translation_parity.py</span>
+<span class="dash">  - tools/audit-localized-markdown-sources.mjs</span>
+<span class="dash">  - tools/localization_alignment.py</span>
+<span class="dash">  - tools/generate_translation_sidecars.py</span>
+<span class="dash">  - tools/localization_mt_draft.py</span>
+<span class="dash">  - tools/localization_patch_assist.py</span>
+<span class="dash">  - tools/summarize_native_speaker_findings.py</span>
+<span class="dash">- Tests:</span>
+<span class="dash">  - tools/tests/test_validate_translation_parity.py</span>
+<span class="dash">  - tools/tests/test_validate_language_quality.py</span>
+<span class="dash">  - tools/tests/test_localization_alignment.py</span>
+<span class="dash">  - tools/tests/test_native_speaker_findings_corpus.py</span>
+<span class="dash">  - tools/tests/test_summarize_native_speaker_findings.py</span>
+<span class="dash">- CI:</span>
+<span class="dash">  - .github/workflows/ci.yml</span>
+<span class="dash">  - .github/workflows/docs.yml</span>
+<span class="numbered">2. Documentation-as-Product Publishing</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - AGENTS-Implementation.md sections on documentation rules, public/docs split, navigation, metadata, README rules, content rules</span>
+<span class="dash">  - README.md</span>
+<span class="dash">  - docs/Development.md</span>
+<span class="dash">  - docs/Deployment.md</span>
+<span class="dash">  - docs/blog/README.md</span>
+<span class="dash">  - docs/sources/README.md</span>
+<span class="dash">- Generators:</span>
+<span class="dash">  - tools/generate_docs_content.py</span>
+<span class="dash">  - tools/generate-static-seo.mjs</span>
+<span class="dash">  - tools/generate-index-pages.mjs</span>
+<span class="dash">  - tools/generate-search-index.mjs</span>
+<span class="dash">  - tools/generate-sitemap.mjs</span>
+<span class="dash">  - tools/generate-articles-json.mjs</span>
+<span class="dash">  - tools/generate-topic-nav.mjs</span>
+<span class="dash">  - tools/docs-config.json</span>
+<span class="dash">- Validators:</span>
+<span class="dash">  - tools/validate-blog.mjs</span>
+<span class="dash">  - tools/validate-generated-site-structure.mjs</span>
+<span class="dash">- Runtime checks:</span>
+<span class="dash">  - tests/docs/layout-validation.cjs</span>
+<span class="dash">  - tests/docs/print-validation.cjs</span>
+<span class="dash">  - tests/docs/language-selector-smoke.js</span>
+<span class="dash">  - tests/docs/blog-language-selector.js</span>
+<span class="dash">- CI/deploy:</span>
+<span class="dash">  - .github/workflows/ci.yml</span>
+<span class="dash">  - .github/workflows/docs.yml</span>
+<span class="numbered">3. Validator Engineering and Layered Validation</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - AGENTS-Implementation.md sections:</span>
+<span class="dash">    - Validator Documentation</span>
+<span class="dash">    - Test Documentation</span>
+<span class="dash">    - Educational Comments</span>
+<span class="dash">    - Validator-First Knowledge Preservation</span>
+<span class="dash">  - docs/wiki/validation-layers.md</span>
+<span class="dash">  - docs/wiki/documentation-validation-beyond-linting.md</span>
+<span class="dash">  - tools/README.md</span>
+<span class="dash">  - tests/README.md</span>
+<span class="dash">  - .github/workflows/README.md</span>
+<span class="dash">- Evidence in validator headers:</span>
+<span class="dash">  - tools/validate_translation_parity.py</span>
+<span class="dash">  - tools/validate_language_quality.py</span>
+<span class="dash">  - tools/summarize_native_speaker_findings.py</span>
+<span class="dash">  - tools/validate_layout_structure.py</span>
+<span class="dash">  - tools/validate_environment.py</span>
+<span class="dash">- Tests validating validators and supporting artifacts:</span>
+<span class="dash">  - tools/tests/test_validate_translation_parity.py</span>
+<span class="dash">  - tools/tests/test_native_speaker_findings_corpus.py</span>
+<span class="dash">  - tools/tests/test_summarize_native_speaker_findings.py</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - .github/workflows/README.md</span>
+<span class="dash">  - docs/wiki/localization-ci-cd.md</span>
+<span class="dash">  - docs/wiki/validation-layers.md</span>
+<span class="dash">  - docs/Deployment.md</span>
+<span class="dash">- Workflow evidence:</span>
+<span class="dash">  - .github/workflows/ci.yml</span>
+<span class="dash">  - .github/workflows/docs.yml</span>
+<span class="dash">- Distinctive practices:</span>
+<span class="dash">  - workflow self-validation with actionlint and yamllint</span>
+<span class="dash">  - fresh-artifact rebuild before validation</span>
+<span class="dash">  - deployment rebuild rather than trusting prior CI artifacts</span>
+<span class="dash">  - browser validation inside deploy pipeline</span>
+<span class="dash">  - required output existence checks</span>
+<span class="numbered">5. Repository Knowledge Preservation</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - PRINCIPLES.md</span>
+<span class="dash">  - AGENTS-Implementation.md sections:</span>
+<span class="dash">    - Engineering Knowledge Preservation</span>
+<span class="dash">    - Validator Documentation</span>
+<span class="dash">    - Test Documentation</span>
+<span class="dash">    - Educational Comments</span>
+<span class="dash">    - Reusable Engineering Practices</span>
+<span class="dash">  - tools/README.md</span>
+<span class="dash">  - tests/README.md</span>
+<span class="dash">  - .github/workflows/README.md</span>
+<span class="dash">  - scripts/README.md</span>
+<span class="dash">- Concrete preservation artifacts:</span>
+<span class="dash">  - validator file headers</span>
+<span class="dash">  - test comments in tools/tests/test_native_speaker_findings_corpus.py</span>
+<span class="dash">  - findings corpus: docs/style-guide/localization/native-speaker-findings-corpus.json</span>
+<span class="dash">  - audit report: docs/localization-audit-report.md</span>
+<span class="dash">  - source maps under docs/sources/</span>
+<span class="numbered">6. Spec-Driven Traceability and Demo Alignment</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - AGENTS.md</span>
+<span class="dash">  - AGENTS-Implementation.md</span>
+<span class="dash">  - docs/wiki/spec-driven-development.md</span>
+<span class="dash">  - docs/wiki/documentation-traceability.md</span>
+<span class="dash">  - docs/wiki/demo-spec-alignment.md</span>
+<span class="dash">  - docs/blog/README.md</span>
+<span class="dash">  - docs/sources/README.md</span>
+<span class="dash">- Enforcement/support:</span>
+<span class="dash">  - AGENTS-Implementation.md blog evidence policy</span>
+<span class="dash">  - tools/validate-blog.mjs policy enforcement</span>
+<span class="dash">- Scenario/demo alignment:</span>
+<span class="dash">  - tests/static-demo/scenarios/README.md</span>
+<span class="dash">  - draft scenario files under tests/static-demo/scenarios/</span>
+<span class="term-heading">Recommended Files To Create</span>
+<span class="dash">- skills/README.md</span>
+<span class="dash">- skills/SKILL_MATURITY_MODEL.md</span>
+<span class="dash">- skills/localization-governance-and-continuous-qa.md</span>
+<span class="dash">- skills/documentation-as-product-publishing.md</span>
+<span class="dash">- skills/validator-engineering-and-layered-validation.md</span>
+<span class="dash">- skills/governed-ci-cd-and-deployment-safety.md</span>
+<span class="dash">- skills/repository-knowledge-preservation.md</span>
+<span class="dash">- skills/spec-driven-traceability-and-demo-alignment.md</span>
+Maturity Model Mapping
+<span class="numbered">1. Localization Governance and Continuous QA</span>
+<span class="dash">- Level 5: Self-Improving</span>
+<span class="dash">- Reason: explicit defect classes, audit report, findings corpus, tests, CI, and feedback loops that update guidance and validators.</span>
+<span class="numbered">2. Documentation-as-Product Publishing</span>
+<span class="dash">- Level 4: Enforced</span>
+<span class="dash">- Reason: strong docs/generation/validation/deploy pipeline, but less explicit closed-loop learning than localization.</span>
+<span class="numbered">3. Validator Engineering and Layered Validation</span>
+<span class="dash">- Level 4: Enforced</span>
+<span class="dash">- Reason: documented standards, repeatable design pattern, tests, and CI enforcement.</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="dash">- Level 4: Enforced</span>
+<span class="dash">- Reason: rebuild-before-deploy and workflow self-validation are actively enforced in CI.</span>
+<span class="numbered">5. Repository Knowledge Preservation</span>
+<span class="dash">- Level 2 to 3</span>
+<span class="dash">- Reason: heavily documented and repeated, but not comprehensively auto-enforced across all artifacts.</span>
+<span class="numbered">6. Spec-Driven Traceability and Demo Alignment</span>
+<span class="dash">- Level 2 to 3</span>
+<span class="dash">- Reason: clearly documented and partially enforced through evidence rules and scenario conventions, but not uniformly validated.</span>
+<span class="term-heading">Portability Assessment</span>
+Most Portable
+<span class="dash">- Localization Governance and Continuous QA</span>
+<span class="dash">- Validator Engineering and Layered Validation</span>
+<span class="dash">- Governed CI/CD and Deployment Safety</span>
+<span class="dash">- Repository Knowledge Preservation</span>
+Portable With Adaptation
+<span class="dash">- Documentation-as-Product Publishing</span>
+<span class="dash">- Spec-Driven Traceability and Demo Alignment</span>
+Repository-Specific Parts To Isolate
+<span class="dash">- Let Books locale set and script-specific rules</span>
+<span class="dash">- current docs tree layout under docs/blog, docs/wiki, docs/learning, docs/topics</span>
+<span class="dash">- current static site generator contracts</span>
+<span class="dash">- current article registry and diagram localization conventions</span>
+<span class="dash">- current static-demo scenario identifiers and domain workflows</span>
+Likely Future Standalone Skills
+<span class="numbered">1. Localization Governance and Continuous QA</span>
+<span class="numbered">2. Validator Engineering and Layered Validation</span>
+<span class="numbered">3. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">4. Repository Knowledge Preservation</span>
+Adoption / Installation Concepts
+For future repositories, these skills would likely install via:
+<span class="dash">- AGENTS.md or equivalent authority document</span>
+<span class="dash">- CONTRIBUTING.md updates</span>
+<span class="dash">- README.md references</span>
+<span class="dash">- tools/README.md, tests/README.md, .github/workflows/README.md</span>
+<span class="dash">- starter validator headers and test templates</span>
+<span class="dash">- shared CI workflow templates</span>
+<span class="dash">- optional findings corpus and audit report formats</span>
+<span class="dash">- machine-readable config like tools/docs-config.json</span>
+<span class="dash">- spec/evidence policy docs for public writing</span>
+Important Open Questions Before Extraction
+<span class="numbered">1. Should documentation-as-product-publishing and governed-ci-cd-and-deployment-safety remain separate, or be merged for future reuse?</span>
+<span class="numbered">2. Is repository-knowledge-preservation a standalone skill, or a required section inside every other skill?</span>
+<span class="numbered">3. Should the future standalone form target only documentation-heavy repos, or also software repos with smaller docs surfaces?</span>
+<span class="numbered">4. How much of the localization stack depends on this repo’s exact docs tree versus a reusable content model?</span>
+<span class="numbered">5. Which parts of validate-blog.mjs are general governance checks versus Let Books-specific editorial policy?</span>
+<span class="numbered">6. Should the maturity model live per skill document only, or also in a central comparison matrix?</span>
+<span class="numbered">7. Do you want the extracted skills written as neutral reusable assets, or explicitly documented as “extracted from Let Books evidence”?</span>
+Recommended Next Step
+If you want, I can take this exact inventory and write the skills/ directory now in a follow-up turn once write access is allowed.</pre></div></details></section>
+<section id="e20" class="entry paste"><details>
+<summary><span class="num">20.</span><span><div class="meta">🟣 Pasted agent output</div><div class="title">Pasted agent output 2 — 6-skill read-only assessment</div></span></summary>
+<div class="content"><pre class="opencode"><span class="term-heading">Read-Only Assessment</span>
+I did not create skills/ because plan mode is active and file edits are forbidden. I analyzed the repository and narrowed the portable skill set to 6 major skills that pass the install-in-a-new-repo test.
+<span class="term-heading">Final Skill Catalog</span>
+<span class="numbered">1. localization-governance</span>
+<span class="numbered">2. documentation-as-product</span>
+<span class="numbered">3. validator-engineering</span>
+<span class="numbered">4. governed-ci-cd-and-deployment-safety</span>
+<span class="numbered">5. repository-knowledge-preservation</span>
+<span class="numbered">6. spec-driven-traceability-and-demo-alignment</span>
+These are the skills I would carry forward. I would not extract narrow items like translation parity, workflow commenting, GitHub Pages publishing, or a single validator as standalone skills.
+<span class="term-heading">Why These 6</span>
+<span class="dash">- They are supported by multiple artifact types: principles, guidance, validators, tests, workflows, and audits.</span>
+<span class="dash">- They solve recurring problems beyond this repo.</span>
+<span class="dash">- They can be intentionally installed in other repositories.</span>
+<span class="dash">- Narrower practices fit inside them as components.</span>
+<span class="term-heading">Evidence Supporting Each Skill</span>
+<span class="numbered">1. Localization Governance</span>
+<span class="dash">- Core guidance:</span>
+<span class="dash">  - docs/localization-at-scale-program.md</span>
+<span class="dash">  - docs/localization-maintenance-system.md</span>
+<span class="dash">  - docs/localization-audit-report.md</span>
+<span class="dash">  - docs/wiki/localization-governance.md</span>
+<span class="dash">  - docs/wiki/localization-ci-cd.md</span>
+<span class="dash">  - docs/wiki/translation-quality-assurance.md</span>
+<span class="dash">  - docs/style-guide/localization/README.md</span>
+<span class="dash">  - docs/style-guide/localization/review-workflow.md</span>
+<span class="dash">  - docs/style-guide/localization/semantic-parity.md</span>
+<span class="dash">  - docs/style-guide/localization/ai-translation-review-records.md</span>
+<span class="dash">  - docs/style-guide/localization/language-maintainers.md</span>
+<span class="dash">- Reusable operational artifacts:</span>
+<span class="dash">  - docs/style-guide/localization/native-speaker-findings-corpus.json</span>
+<span class="dash">  - docs/style-guide/localization/contributor-workflow.md</span>
+<span class="dash">- Validators and automation:</span>
+<span class="dash">  - tools/validate_translation_parity.py</span>
+<span class="dash">  - tools/validate-localized-articles.mjs</span>
+<span class="dash">  - tools/validate-structural-localization-parity.mjs</span>
+<span class="dash">  - tools/validate-localization-completeness.mjs</span>
+<span class="dash">  - tools/validate_language_quality.py</span>
+<span class="dash">  - tools/audit_translation_warnings.py</span>
+<span class="dash">  - tools/audit_translation_parity.py</span>
+<span class="dash">  - tools/audit-localized-markdown-sources.mjs</span>
+<span class="dash">  - tools/localization_alignment.py</span>
+<span class="dash">  - tools/generate_translation_sidecars.py</span>
+<span class="dash">  - tools/localization_mt_draft.py</span>
+<span class="dash">  - tools/localization_patch_assist.py</span>
+<span class="dash">  - tools/summarize_native_speaker_findings.py</span>
+<span class="dash">- Tests:</span>
+<span class="dash">  - tools/tests/test_validate_translation_parity.py</span>
+<span class="dash">  - tools/tests/test_validate_language_quality.py</span>
+<span class="dash">  - tools/tests/test_localization_alignment.py</span>
+<span class="dash">  - tools/tests/test_native_speaker_findings_corpus.py</span>
+<span class="dash">  - tools/tests/test_summarize_native_speaker_findings.py</span>
+<span class="dash">- CI:</span>
+<span class="dash">  - .github/workflows/ci.yml</span>
+<span class="dash">  - .github/workflows/docs.yml</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="dash">- Principles and guidance:</span>
+<span class="dash">  - PRINCIPLES.md</span>
+<span class="dash">  - AGENTS-Implementation.md</span>
+<span class="dash">  - README.md</span>
+<span class="dash">  - docs/Development.md</span>
+<span class="dash">  - docs/Deployment.md</span>
+<span class="dash">  - docs/blog/README.md</span>
+<span class="dash">  - docs/sources/README.md</span>
+<span class="dash">- Site/document generation:</span>
+<span class="dash">  - tools/generate_docs_content.py</span>
+<span class="dash">  - tools/generate-static-seo.mjs</span>
+<span class="dash">  - tools/generate-index-pages.mjs</span>
+<span class="dash">  - tools/generate-search-index.mjs</span>
+<span class="dash">  - tools/generate-sitemap.mjs</span>
+<span class="dash">  - tools/generate-articles-json.mjs</span>
+<span class="dash">  - tools/generate-topic-nav.mjs</span>
+<span class="dash">  - tools/docs-config.json</span>
+<span class="dash">- Publication validators:</span>
+<span class="dash">  - tools/validate-blog.mjs</span>
+<span class="dash">  - tools/validate-generated-site-structure.mjs</span>
+<span class="dash">- Browser/runtime checks:</span>
+<span class="dash">  - tests/docs/layout-validation.cjs</span>
+<span class="dash">  - tests/docs/print-validation.cjs</span>
+<span class="dash">  - tests/docs/language-selector-smoke.js</span>
+<span class="dash">  - tests/docs/blog-language-selector.js</span>
+<span class="numbered">3. Validator Engineering</span>
+<span class="dash">- Meta-guidance:</span>
+<span class="dash">  - AGENTS-Implementation.md sections Validator Documentation, Educational Comments, Validator-First Knowledge Preservation</span>
+<span class="dash">  - tools/README.md</span>
+<span class="dash">  - docs/wiki/validation-layers.md</span>
+<span class="dash">  - docs/wiki/documentation-validation-beyond-linting.md</span>
+<span class="dash">- Validator implementation style:</span>
+<span class="dash">  - header-based rationale in tools/validate_translation_parity.py</span>
+<span class="dash">  - header-based rationale in tools/validate_language_quality.py</span>
+<span class="dash">  - header-based rationale in tools/summarize_native_speaker_findings.py</span>
+<span class="dash">  - header-based rationale in tools/validate_layout_structure.py</span>
+<span class="dash">  - header-based rationale in tools/validate_environment.py</span>
+<span class="dash">- Validator tests:</span>
+<span class="dash">  - tools/tests/test_validate_translation_parity.py</span>
+<span class="dash">  - tools/tests/test_native_speaker_findings_corpus.py</span>
+<span class="dash">  - tools/tests/test_summarize_native_speaker_findings.py</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="dash">- Governance docs:</span>
+<span class="dash">  - .github/workflows/README.md</span>
+<span class="dash">  - docs/wiki/localization-ci-cd.md</span>
+<span class="dash">  - docs/wiki/validation-layers.md</span>
+<span class="dash">  - docs/Deployment.md</span>
+<span class="dash">- Strong workflow evidence:</span>
+<span class="dash">  - .github/workflows/ci.yml</span>
+<span class="dash">  - .github/workflows/docs.yml</span>
+<span class="dash">- Portable patterns present:</span>
+<span class="dash">  - workflow self-validation</span>
+<span class="dash">  - rebuild-before-deploy</span>
+<span class="dash">  - fresh-artifact review rule</span>
+<span class="dash">  - layered validation ordering</span>
+<span class="dash">  - browser-facing validation in pipeline</span>
+<span class="numbered">5. Repository Knowledge Preservation</span>
+<span class="dash">- Principles:</span>
+<span class="dash">  - PRINCIPLES.md</span>
+<span class="dash">- Implementation guidance:</span>
+<span class="dash">  - AGENTS-Implementation.md sections Engineering Knowledge Preservation, Test Documentation, Educational Comments, Reusable Engineering Practices</span>
+<span class="dash">- Preservation layer docs:</span>
+<span class="dash">  - tools/README.md</span>
+<span class="dash">  - tests/README.md</span>
+<span class="dash">  - .github/workflows/README.md</span>
+<span class="dash">  - scripts/README.md</span>
+<span class="dash">- Structured preserved knowledge:</span>
+<span class="dash">  - docs/localization-audit-report.md</span>
+<span class="dash">  - docs/style-guide/localization/native-speaker-findings-corpus.json</span>
+<span class="dash">  - docs/sources/README.md</span>
+<span class="dash">- Evidence in tests/comments:</span>
+<span class="dash">  - tools/tests/test_native_speaker_findings_corpus.py</span>
+<span class="numbered">6. Spec-Driven Traceability and Demo Alignment</span>
+<span class="dash">- Authority-chain guidance:</span>
+<span class="dash">  - AGENTS.md</span>
+<span class="dash">  - AGENTS-Implementation.md</span>
+<span class="dash">  - docs/wiki/spec-driven-development.md</span>
+<span class="dash">  - docs/wiki/documentation-traceability.md</span>
+<span class="dash">  - docs/wiki/demo-spec-alignment.md</span>
+<span class="dash">  - docs/blog/README.md</span>
+<span class="dash">  - docs/sources/README.md</span>
+<span class="dash">- Enforcement:</span>
+<span class="dash">  - AGENTS-Implementation.md blog evidence policy</span>
+<span class="dash">  - tools/validate-blog.mjs</span>
+<span class="dash">- Demo/use-case alignment:</span>
+<span class="dash">  - tests/static-demo/scenarios/README.md</span>
+<span class="dash">  - tests/static-demo/scenarios/*.draft.js</span>
+<span class="term-heading">Maturity Assessment</span>
+Using the requested qualitative model:
+<span class="numbered">1. Localization Governance</span>
+<span class="dash">- Maturity: Mature</span>
+<span class="dash">- Why: documented system, repeatable procedures, validators, tests, CI enforcement, audit report, findings corpus, defect-class closure model.</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="dash">- Maturity: Mature</span>
+<span class="dash">- Why: explicit rules, generators, validators, browser checks, deployment integration, strong product framing for docs.</span>
+<span class="numbered">3. Validator Engineering</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Why: strong standards and tests exist, but this is more a practiced discipline than a separately enforced repo-wide installable package.</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Why: clearly enforced in workflows with strong rationale and ordering; self-improvement exists but less explicitly than localization.</span>
+<span class="numbered">5. Repository Knowledge Preservation</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Why: heavily documented and widely practiced, but only parts are automatically checked.</span>
+<span class="numbered">6. Spec-Driven Traceability and Demo Alignment</span>
+<span class="dash">- Maturity: Established</span>
+<span class="dash">- Why: strong authority model and evidence rules, but enforcement is partial and more policy-driven than fully automated.</span>
+Level Mapping for skills/SKILL_MATURITY_MODEL.md
+<span class="numbered">1. Localization Governance</span>
+<span class="dash">- Level 5 Self-Improving</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="dash">- Level 4 Enforced</span>
+<span class="numbered">3. Validator Engineering</span>
+<span class="dash">- Level 3 Validated to Level 4 Enforced</span>
+<span class="dash">- I would record Level 3.5 conceptually, but in the file I would choose Level 3 or 4.</span>
+<span class="dash">- Recommended final label: Level 3 Validated</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="dash">- Level 4 Enforced</span>
+<span class="numbered">5. Repository Knowledge Preservation</span>
+<span class="dash">- Level 2 Repeatable or Level 3 Validated</span>
+<span class="dash">- Recommended final label: Level 2 Repeatable</span>
+<span class="numbered">6. Spec-Driven Traceability and Demo Alignment</span>
+<span class="dash">- Level 2 Repeatable</span>
+Portability Review
+<span class="numbered">1. Localization Governance</span>
+<span class="dash">- Would I install this in a new repository? Yes.</span>
+<span class="dash">- ERP: Yes, if multilingual or regulated.</span>
+<span class="dash">- Web app: Yes.</span>
+<span class="dash">- Documentation repo: Yes, strongly.</span>
+<span class="dash">- Internal business app: Yes, if multilingual or cross-region.</span>
+<span class="dash">- Universally reusable:</span>
+<span class="dash">  - review workflow</span>
+<span class="dash">  - defect classes</span>
+<span class="dash">  - findings corpus concept</span>
+<span class="dash">  - semantic vs structural parity distinction</span>
+<span class="dash">  - fresh-artifact review rule</span>
+<span class="dash">- Let Books specific:</span>
+<span class="dash">  - locale set</span>
+<span class="dash">  - script-specific guidance</span>
+<span class="dash">  - exact docs tree</span>
+<span class="dash">  - specific validators and article families</span>
+<span class="dash">- Adaptation required:</span>
+<span class="dash">  - supported locales</span>
+<span class="dash">  - content types</span>
+<span class="dash">  - validator thresholds</span>
+<span class="dash">  - review corpus schema details</span>
+<span class="dash">- Confidence: High</span>
+<span class="dash">- True skill or implementation detail? True skill.</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="dash">- Would I install this in a new repository? Yes.</span>
+<span class="dash">- ERP: Yes, for internal/external docs.</span>
+<span class="dash">- Web app: Yes.</span>
+<span class="dash">- Documentation repo: Yes, strongly.</span>
+<span class="dash">- Internal business app: Yes, if docs are operationally important.</span>
+<span class="dash">- Universally reusable:</span>
+<span class="dash">  - docs treated as product surface</span>
+<span class="dash">  - generated metadata and navigation</span>
+<span class="dash">  - docs publication validation</span>
+<span class="dash">  - browser checks for docs</span>
+<span class="dash">- Let Books specific:</span>
+<span class="dash">  - static HTML architecture</span>
+<span class="dash">  - current folder structure</span>
+<span class="dash">  - multilingual site details</span>
+<span class="dash">- Adaptation required:</span>
+<span class="dash">  - generator approach</span>
+<span class="dash">  - publishing target</span>
+<span class="dash">  - site structure</span>
+<span class="dash">- Confidence: High</span>
+<span class="dash">- True skill or implementation detail? True skill.</span>
+<span class="numbered">3. Validator Engineering</span>
+<span class="dash">- Would I install this in a new repository? Yes.</span>
+<span class="dash">- ERP: Yes.</span>
+<span class="dash">- Web app: Yes.</span>
+<span class="dash">- Documentation repo: Yes.</span>
+<span class="dash">- Internal business app: Yes.</span>
+<span class="dash">- Universally reusable:</span>
+<span class="dash">  - validator headers</span>
+<span class="dash">  - rationale documentation</span>
+<span class="dash">  - limits and related-files sections</span>
+<span class="dash">  - validator-first learning capture</span>
+<span class="dash">  - test-the-validator pattern</span>
+<span class="dash">- Let Books specific:</span>
+<span class="dash">  - concrete validator subjects</span>
+<span class="dash">- Adaptation required:</span>
+<span class="dash">  - validator templates</span>
+<span class="dash">  - repo-specific enforcement targets</span>
+<span class="dash">- Confidence: High</span>
+<span class="dash">- True skill or implementation detail? True skill.</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="dash">- Would I install this in a new repository? Yes.</span>
+<span class="dash">- ERP: Yes.</span>
+<span class="dash">- Web app: Yes.</span>
+<span class="dash">- Documentation repo: Yes.</span>
+<span class="dash">- Internal business app: Yes.</span>
+<span class="dash">- Universally reusable:</span>
+<span class="dash">  - rebuild-before-deploy</span>
+<span class="dash">  - workflow self-validation</span>
+<span class="dash">  - fresh-artifact rule</span>
+<span class="dash">  - deployment as independent trust boundary</span>
+<span class="dash">- Let Books specific:</span>
+<span class="dash">  - GitHub Pages deployment</span>
+<span class="dash">  - exact commands and tools</span>
+<span class="dash">- Adaptation required:</span>
+<span class="dash">  - target CI platform</span>
+<span class="dash">  - deployment mechanism</span>
+<span class="dash">  - environment/tooling stack</span>
+<span class="dash">- Confidence: High</span>
+<span class="dash">- True skill or implementation detail? True skill.</span>
+<span class="numbered">5. Repository Knowledge Preservation</span>
+<span class="dash">- Would I install this in a new repository? Yes.</span>
+<span class="dash">- ERP: Yes.</span>
+<span class="dash">- Web app: Yes.</span>
+<span class="dash">- Documentation repo: Yes.</span>
+<span class="dash">- Internal business app: Yes.</span>
+<span class="dash">- Universally reusable:</span>
+<span class="dash">  - preserve rationale near implementation</span>
+<span class="dash">  - comments explain why, not what</span>
+<span class="dash">  - tests as executable memory</span>
+<span class="dash">  - workflow/tool/test README layers</span>
+<span class="dash">- Let Books specific:</span>
+<span class="dash">  - findings corpus structure</span>
+<span class="dash">  - current directory conventions</span>
+<span class="dash">- Adaptation required:</span>
+<span class="dash">  - documentation conventions</span>
+<span class="dash">  - storage locations for preserved knowledge</span>
+<span class="dash">- Confidence: High</span>
+<span class="dash">- True skill or implementation detail? True skill.</span>
+<span class="numbered">6. Spec-Driven Traceability and Demo Alignment</span>
+<span class="dash">- Would I install this in a new repository? Yes, but more selectively.</span>
+<span class="dash">- ERP: Yes.</span>
+<span class="dash">- Web app: Yes.</span>
+<span class="dash">- Documentation repo: Maybe.</span>
+<span class="dash">- Internal business app: Yes.</span>
+<span class="dash">- Universally reusable:</span>
+<span class="dash">  - authority chain</span>
+<span class="dash">  - current-state vs future-plan separation</span>
+<span class="dash">  - evidence rules</span>
+<span class="dash">  - demo is not silent authority</span>
+<span class="dash">- Let Books specific:</span>
+<span class="dash">  - blog evidence policy specifics</span>
+<span class="dash">  - current demo/use-case structure</span>
+<span class="dash">- Adaptation required:</span>
+<span class="dash">  - canonical sources</span>
+<span class="dash">  - traceability artifacts</span>
+<span class="dash">  - demo/test linkage</span>
+<span class="dash">- Confidence: Medium-high</span>
+<span class="dash">- True skill or implementation detail? True skill.</span>
+<span class="term-heading">Dependency Map</span>
+This is the dependency structure I would document in skills/README.md.
+<span class="dash">- repository-knowledge-preservation supports everything else.</span>
+<span class="dash">  - Evidence: PRINCIPLES.md, AGENTS-Implementation.md, tools/README.md, tests/README.md, .github/workflows/README.md</span>
+<span class="dash">- validator-engineering supports:</span>
+<span class="dash">  - localization-governance</span>
+<span class="dash">  - documentation-as-product</span>
+<span class="dash">  - governed-ci-cd-and-deployment-safety</span>
+<span class="dash">  - Evidence: validator standards in AGENTS-Implementation.md, validator catalog in tools/README.md</span>
+<span class="dash">- governed-ci-cd-and-deployment-safety enforces:</span>
+<span class="dash">  - localization-governance</span>
+<span class="dash">  - documentation-as-product</span>
+<span class="dash">  - parts of validator-engineering</span>
+<span class="dash">  - Evidence: .github/workflows/ci.yml, .github/workflows/docs.yml</span>
+<span class="dash">- spec-driven-traceability-and-demo-alignment supports:</span>
+<span class="dash">  - documentation-as-product</span>
+<span class="dash">  - localization-governance</span>
+<span class="dash">  - repository-knowledge-preservation</span>
+<span class="dash">  - Evidence: docs/wiki/spec-driven-development.md, docs/wiki/documentation-traceability.md, docs/wiki/demo-spec-alignment.md</span>
+<span class="dash">- documentation-as-product depends on:</span>
+<span class="dash">  - validator-engineering</span>
+<span class="dash">  - governed-ci-cd-and-deployment-safety</span>
+<span class="dash">  - repository-knowledge-preservation</span>
+<span class="dash">- localization-governance depends on:</span>
+<span class="dash">  - documentation-as-product</span>
+<span class="dash">  - validator-engineering</span>
+<span class="dash">  - governed-ci-cd-and-deployment-safety</span>
+<span class="dash">  - repository-knowledge-preservation</span>
+<span class="term-heading">Candidate Standalone Skills</span>
+These are the most realistic future standalone portable skills:
+<span class="numbered">1. Localization Governance</span>
+<span class="numbered">2. Validator Engineering</span>
+<span class="numbered">3. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">4. Repository Knowledge Preservation</span>
+These could become reusable skill packages with:
+<span class="dash">- AGENTS.md integration</span>
+<span class="dash">- CONTRIBUTING.md guidance</span>
+<span class="dash">- validator templates</span>
+<span class="dash">- CI templates</span>
+<span class="dash">- findings/audit templates</span>
+<span class="dash">- starter review checklists</span>
+Documentation as Product is also strong, but more likely as a specialized package for docs-heavy repositories.
+Spec-Driven Traceability and Demo Alignment is portable, but it may be better as a policy/guidance skill rather than a validator-heavy package.
+What I Would Create In Write Phase
+If write access is enabled, I would create:
+<span class="dash">- skills/README.md</span>
+<span class="dash">- skills/SKILL_MATURITY_MODEL.md</span>
+<span class="dash">- skills/PORTABILITY_REVIEW.md</span>
+<span class="dash">- skills/localization-governance.md</span>
+<span class="dash">- skills/documentation-as-product.md</span>
+<span class="dash">- skills/validator-engineering.md</span>
+<span class="dash">- skills/governed-ci-cd-and-deployment-safety.md</span>
+<span class="dash">- skills/repository-knowledge-preservation.md</span>
+<span class="dash">- skills/spec-driven-traceability-and-demo-alignment.md</span>
+Recommended Document Shape
+For each skill doc:
+<span class="dash">- use the exact required headings from your prompt</span>
+<span class="dash">- keep evidence concrete and file-based</span>
+<span class="dash">- explicitly answer Would I Install This In A New Repository?</span>
+<span class="dash">- separate reusable parts from Let Books-specific parts</span>
+<span class="dash">- keep confidence honest</span>
+For skills/SKILL_MATURITY_MODEL.md:
+<span class="dash">- define Levels 0 to 5 exactly as requested</span>
+<span class="dash">- include a table mapping each skill to one level</span>
+<span class="dash">- include short rationale per skill</span>
+For skills/PORTABILITY_REVIEW.md:
+<span class="dash">- one section per skill</span>
+<span class="dash">- answer all four repository-type install questions explicitly</span>
+<span class="dash">- include a final verdict line:</span>
+<span class="dash">  - Portable skill</span>
+<span class="dash">  - Portable with adaptation</span>
+<span class="dash">  - Better treated as implementation detail</span>
+<span class="dash">- in this repo, I expect all 6 to remain skills, not implementation details</span>
+<span class="term-heading">Open Questions Before Future Migration</span>
+<span class="numbered">1. Should repository-knowledge-preservation remain a standalone skill, or be embedded as a mandatory section inside every future skill package?</span>
+<span class="numbered">2. Should documentation-as-product target only public docs systems, or also internal operational documentation repos?</span>
+<span class="numbered">3. How much of localization-governance should stay documentation-centric versus being generalized to application UI, support content, and product surfaces?</span>
+<span class="numbered">4. Should future standalone skills include starter validators, or stay guidance-first with optional enforcement modules?</span>
+<span class="numbered">5. Is spec-driven-traceability-and-demo-alignment strong enough to stand alone, or should it merge into a broader engineering-governance skill in future packaging?</span>
+<span class="numbered">6. Do you want the extracted docs to read as neutral portable assets, or explicitly as “extracted from Let Books repository evidence”?</span>
+<span class="term-heading">Implementation Plan If You Enable Write Mode</span>
+<span class="numbered">1. Create skills/</span>
+<span class="numbered">2. Write skills/README.md first to lock the shared vocabulary and dependency map</span>
+<span class="numbered">3. Write skills/SKILL_MATURITY_MODEL.md</span>
+<span class="numbered">4. Write the 6 skill documents</span>
+<span class="numbered">5. Write skills/PORTABILITY_REVIEW.md last, using the finalized skill set as the review baseline</span>
+If you want, the next step can be either:
+<span class="numbered">1. keep refining the skill boundaries in read-only mode, or</span>
+<span class="numbered">2. switch out of plan mode and I’ll generate the actual skills/*.md files.</span></pre></div></details></section>
+<section id="e21" class="entry paste"><details>
+<summary><span class="num">21.</span><span><div class="meta">🟣 Pasted agent output</div><div class="title">Pasted agent output 3 — consolidation to 4 skills</div></span></summary>
+<div class="content"><pre class="opencode"><span class="thinking">Thinking: Preparing revised catalog</span>
+I need to come up with a revised catalog based on what the user wants. I’m thinking about doing a little extra reading, but it seems like I already have enough evidence to proceed. It might turn out that I don’t need to use any tools. I should definitely follow the user’s structure to ensure it meets their expectations. So, let’s focus on crafting something concise yet informative!
+Original Catalog
+<span class="numbered">1. Localization Governance</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="numbered">3. Validator Engineering</span>
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">5. Traceable Engineering Governance</span>
+Problems With Original Catalog
+<span class="numbered">1. Validator Engineering may be too narrow.</span>
+<span class="dash">- Much of its evidence is really governance evidence expressed through validators.</span>
+<span class="dash">- The repo documents purpose, limits, related artifacts, and tests not because validators are special in isolation, but because the repository treats enforcement as part of governed engineering knowledge.</span>
+<span class="numbered">2. Governed CI/CD and Deployment Safety may be partly implementation-shaped.</span>
+<span class="dash">- CI/CD safety is portable.</span>
+<span class="dash">- But some evidence is tied to this repo’s static-site publishing and GitHub Pages workflow.</span>
+<span class="dash">- It is still a valid skill, but only if framed as automation governance, not deployment mechanics.</span>
+<span class="numbered">3. Documentation as Product is strong, but narrower than the others.</span>
+<span class="dash">- It is clearly portable for docs-heavy repos.</span>
+<span class="dash">- It is less universal for a public library or backend-only service.</span>
+<span class="dash">- Still valid, but should not absorb unrelated governance skills.</span>
+<span class="numbered">4. Traceable Engineering Governance is doing a lot of work.</span>
+<span class="dash">- It already contains authority chains, evidence policy, demo/spec alignment, and preserved rationale.</span>
+<span class="dash">- That makes it a likely parent capability.</span>
+<span class="dash">- It raises the question of whether Validator Engineering should sit inside it instead of standing alone.</span>
+<span class="numbered">5. Original catalog still had some repo-shape leakage.</span>
+<span class="dash">- Especially around validators/workflows as first-class categories rather than evidence of broader capabilities.</span>
+---
+Challenge Per Original Skill
+<span class="numbered">1. Localization Governance</span>
+Why is this a skill?
+<span class="dash">- It is a reusable capability for running multilingual engineering content with review, parity, audit, and recurrence control.</span>
+Why is this not merely an implementation?
+<span class="dash">- The validators, findings corpus, review workflow, and defect classes all support a larger operating model.</span>
+<span class="dash">- Another repo could adopt the same capability with different tools.</span>
+What would be lost if it disappeared?
+<span class="dash">- Controlled multilingual quality.</span>
+<span class="dash">- Semantic parity expectations.</span>
+<span class="dash">- Defect-class closure discipline.</span>
+<span class="dash">- Reuse of native-speaker findings.</span>
+Repository adaptations currently implementing it
+<span class="dash">- docs/localization-at-scale-program.md</span>
+<span class="dash">- docs/localization-maintenance-system.md</span>
+<span class="dash">- docs/localization-audit-report.md</span>
+<span class="dash">- docs/style-guide/localization/*</span>
+<span class="dash">- docs/wiki/localization-ci-cd.md</span>
+<span class="dash">- docs/wiki/translation-quality-assurance.md</span>
+<span class="dash">- tools/validate_translation_parity.py</span>
+<span class="dash">- tools/validate-localization-completeness.mjs</span>
+<span class="dash">- tools/validate_language_quality.py</span>
+<span class="dash">- tools/summarize_native_speaker_findings.py</span>
+<span class="dash">- localization-related tests and CI</span>
+Verdict
+<span class="dash">- Definitely a skill.</span>
+---
+<span class="numbered">2. Documentation as Product</span>
+Why is this a skill?
+<span class="dash">- It is a reusable capability for treating documentation as a maintained product surface rather than passive repository text.</span>
+Why is this not merely an implementation?
+<span class="dash">- The generators, validators, structure rules, and browser checks support a broader discipline: documentation has quality, rendering, navigation, metadata, and publication standards.</span>
+What would be lost if it disappeared?
+<span class="dash">- Product-level expectations for docs.</span>
+<span class="dash">- Rendered-output validation.</span>
+<span class="dash">- Structured publication quality.</span>
+<span class="dash">- Durable docs/user-facing content governance.</span>
+Repository adaptations currently implementing it
+<span class="dash">- docs/blog/README.md</span>
+<span class="dash">- docs/sources/README.md</span>
+<span class="dash">- docs/Development.md</span>
+<span class="dash">- docs/Deployment.md</span>
+<span class="dash">- tools/generate_docs_content.py</span>
+<span class="dash">- tools/generate-static-seo.mjs</span>
+<span class="dash">- tools/validate-blog.mjs</span>
+<span class="dash">- tools/validate-generated-site-structure.mjs</span>
+<span class="dash">- tests/docs/*</span>
+Verdict
+<span class="dash">- A skill, but somewhat domain-specific to repos where docs are first-class.</span>
+---
+<span class="numbered">3. Validator Engineering</span>
+Why is this a skill?
+<span class="dash">- In the strongest version, it means designing validators as governed, documented, testable enforcement assets.</span>
+Why is this not merely an implementation?
+<span class="dash">- It might not be standalone.</span>
+<span class="dash">- The repo’s validator discipline mirrors broader knowledge-governance principles.</span>
+What would be lost if it disappeared?
+<span class="dash">- Clear rationale around automated checks.</span>
+<span class="dash">- Maintainable enforcement artifacts.</span>
+<span class="dash">- Validator explainability and trust.</span>
+Repository adaptations currently implementing it
+<span class="dash">- AGENTS-Implementation.md validator documentation sections</span>
+<span class="dash">- tools/README.md</span>
+<span class="dash">- validator file headers</span>
+<span class="dash">- validator tests under tools/tests/*</span>
+Verdict
+<span class="dash">- Weakest standalone candidate.</span>
+<span class="dash">- Strong evidence exists, but it may be a sub-skill of broader engineering governance rather than an independently installed skill.</span>
+---
+<span class="numbered">4. Governed CI/CD and Deployment Safety</span>
+Why is this a skill?
+<span class="dash">- It is a reusable capability for using automation as a trust boundary: rebuild, validate, and verify before publish.</span>
+Why is this not merely an implementation?
+<span class="dash">- GitHub Actions is an implementation.</span>
+<span class="dash">- Fresh-artifact validation, workflow self-validation, and enforcement sequencing are the portable capability.</span>
+What would be lost if it disappeared?
+<span class="dash">- Reliable enforcement at integration time.</span>
+<span class="dash">- Confidence that generated/published artifacts reflect current validated state.</span>
+<span class="dash">- Protection against decayed automation.</span>
+Repository adaptations currently implementing it
+<span class="dash">- .github/workflows/ci.yml</span>
+<span class="dash">- .github/workflows/docs.yml</span>
+<span class="dash">- .github/workflows/README.md</span>
+<span class="dash">- docs/wiki/localization-ci-cd.md</span>
+<span class="dash">- docs/Deployment.md</span>
+Verdict
+<span class="dash">- A real skill, if framed broadly.</span>
+<span class="dash">- Not just “GitHub Pages publishing”.</span>
+---
+<span class="numbered">5. Traceable Engineering Governance</span>
+Why is this a skill?
+<span class="dash">- It is a reusable capability for governing engineering work through explicit sources of truth, durable evidence, preserved rationale, and controlled relationships between specs, docs, demos, and automation.</span>
+Why is this not merely an implementation?
+<span class="dash">- The repo implements it in many forms, but the capability survives any specific repo structure or toolchain.</span>
+What would be lost if it disappeared?
+<span class="dash">- Authority-chain clarity.</span>
+<span class="dash">- Evidence-backed claims.</span>
+<span class="dash">- Separation of current state from future intent.</span>
+<span class="dash">- Durable reasoning and traceability.</span>
+<span class="dash">- Safer AI-assisted or documentation-heavy workflows.</span>
+Repository adaptations currently implementing it
+<span class="dash">- AGENTS.md</span>
+<span class="dash">- AGENTS-Implementation.md</span>
+<span class="dash">- PRINCIPLES.md</span>
+<span class="dash">- docs/wiki/spec-driven-development.md</span>
+<span class="dash">- docs/wiki/documentation-traceability.md</span>
+<span class="dash">- docs/wiki/demo-spec-alignment.md</span>
+<span class="dash">- docs/wiki/ai-assisted-knowledge-work.md</span>
+<span class="dash">- docs/blog/README.md</span>
+<span class="dash">- docs/sources/README.md</span>
+<span class="dash">- tests/static-demo/scenarios/README.md</span>
+<span class="dash">- policy enforcement in tools/validate-blog.mjs</span>
+Verdict
+<span class="dash">- Definitely a skill.</span>
+<span class="dash">- Strong candidate for absorbing Validator Engineering.</span>
+---
+Special Review: Is Validator Engineering Truly Standalone?
+Conclusion
+<span class="dash">- Probably not as a final top-level skill.</span>
+Why
+<span class="dash">- The same principles behind validator engineering appear across:</span>
+<span class="dash">  - documentation policy</span>
+<span class="dash">  - workflow policy</span>
+<span class="dash">  - tests</span>
+<span class="dash">  - educational comments</span>
+<span class="dash">  - findings/audit loops</span>
+<span class="dash">  - evidence and traceability rules</span>
+The repository does not treat validators as an isolated discipline. It treats them as one enforcement form inside a broader governed-engineering system.
+Evidence
+<span class="dash">- AGENTS-Implementation.md ties validators to:</span>
+<span class="dash">  - knowledge preservation</span>
+<span class="dash">  - educational comments</span>
+<span class="dash">  - test documentation</span>
+<span class="dash">  - workflow expectations</span>
+<span class="dash">- tools/README.md, tests/README.md, .github/workflows/README.md all use the same pattern:</span>
+<span class="dash">  - purpose</span>
+<span class="dash">  - why it exists</span>
+<span class="dash">  - what it protects</span>
+<span class="dash">  - reuse potential</span>
+<span class="dash">- docs/wiki/validation-layers.md and docs/wiki/documentation-validation-beyond-linting.md position validators as one layer of a broader system, not the system itself.</span>
+Decision
+<span class="dash">- Merge Validator Engineering into a broader governance skill.</span>
+---
+<span class="term-heading">Consolidation Decisions</span>
+<span class="numbered">1. Keep Localization Governance standalone.</span>
+<span class="dash">- Strongly portable.</span>
+<span class="dash">- Large enough to survive migration.</span>
+<span class="dash">- Not just a validator collection.</span>
+<span class="numbered">2. Keep Documentation as Product standalone.</span>
+<span class="dash">- Strong and distinct.</span>
+<span class="dash">- Portable to docs-heavy and product-facing repos.</span>
+<span class="dash">- Not merely a subset of governance, because it governs a specific surface: documentation as product output.</span>
+<span class="numbered">3. Keep Governed CI/CD and Deployment Safety standalone.</span>
+<span class="dash">- Portable as automation governance.</span>
+<span class="dash">- Distinct from traceability because it is about enforcement and publish-time trust.</span>
+<span class="numbered">4. Merge Validator Engineering into Traceable Engineering Governance.</span>
+<span class="dash">- They would almost always be installed together.</span>
+<span class="dash">- Validator discipline in this repo is clearly part of a broader governance model.</span>
+Final Reduced Catalog
+<span class="numbered">1. Localization Governance</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="numbered">3. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">4. Traceable Engineering Governance</span>
+This is smaller, clearer, and more portable than the original catalog.
+---
+Final Catalog
+<span class="numbered">1. Localization Governance</span>
+Purpose
+<span class="dash">- Govern multilingual engineering and documentation content so that coverage, meaning, quality, and recurrence control are managed systematically.</span>
+Why future repositories would install it
+<span class="dash">- To avoid fragmented translation work, English leakage, semantic drift, weak review loops, and repeated localization defects.</span>
+Core capability
+<span class="dash">- A governed multilingual content system with:</span>
+<span class="dash">  - coverage expectations</span>
+<span class="dash">  - semantic and structural parity rules</span>
+<span class="dash">  - review workflows</span>
+<span class="dash">  - defect-class tracking</span>
+<span class="dash">  - preserved reviewer findings</span>
+<span class="dash">  - automation where appropriate</span>
+Typical implementations
+<span class="dash">- locale policy docs</span>
+<span class="dash">- review checklists</span>
+<span class="dash">- parity validators</span>
+<span class="dash">- language-quality checks</span>
+<span class="dash">- findings corpus</span>
+<span class="dash">- CI blocking for closed defect classes</span>
+Repository evidence
+<span class="dash">- docs/localization-at-scale-program.md</span>
+<span class="dash">- docs/localization-maintenance-system.md</span>
+<span class="dash">- docs/localization-audit-report.md</span>
+<span class="dash">- docs/style-guide/localization/*</span>
+<span class="dash">- docs/wiki/localization-ci-cd.md</span>
+<span class="dash">- docs/wiki/translation-quality-assurance.md</span>
+<span class="dash">- tools/validate_translation_parity.py</span>
+<span class="dash">- tools/validate-localization-completeness.mjs</span>
+<span class="dash">- tools/validate_language_quality.py</span>
+<span class="dash">- tools/summarize_native_speaker_findings.py</span>
+<span class="dash">- related tests and workflows</span>
+Maturity
+<span class="dash">- Mature</span>
+Portability
+<span class="dash">- High</span>
+Confidence
+<span class="dash">- High</span>
+Core skill
+<span class="dash">- Govern localization as an engineering quality system.</span>
+Repository adaptation
+<span class="dash">- Let Books implements it through docs-localized Markdown, locale-specific review guidance, parity validators, findings corpus, and CI checks.</span>
+---
+<span class="numbered">2. Documentation as Product</span>
+Purpose
+<span class="dash">- Treat documentation and public knowledge artifacts as product surfaces with structure, rendering, navigation, accessibility, and publication quality requirements.</span>
+Why future repositories would install it
+<span class="dash">- To prevent documentation from becoming an ungoverned byproduct.</span>
+<span class="dash">- Especially useful when docs are user-facing, operationally critical, or central to adoption.</span>
+Core capability
+<span class="dash">- Documentation has:</span>
+<span class="dash">  - product-level quality standards</span>
+<span class="dash">  - explicit structure</span>
+<span class="dash">  - rendering and navigation expectations</span>
+<span class="dash">  - validation against generated output</span>
+<span class="dash">  - publication workflow discipline</span>
+Typical implementations
+<span class="dash">- content structure rules</span>
+<span class="dash">- docs generators</span>
+<span class="dash">- publication validators</span>
+<span class="dash">- rendered-output checks</span>
+<span class="dash">- layout/browser validation</span>
+<span class="dash">- SEO/navigation metadata generation when relevant</span>
+Repository evidence
+<span class="dash">- docs/blog/README.md</span>
+<span class="dash">- docs/sources/README.md</span>
+<span class="dash">- docs/Development.md</span>
+<span class="dash">- docs/Deployment.md</span>
+<span class="dash">- tools/generate_docs_content.py</span>
+<span class="dash">- tools/generate-static-seo.mjs</span>
+<span class="dash">- tools/validate-blog.mjs</span>
+<span class="dash">- tools/validate-generated-site-structure.mjs</span>
+<span class="dash">- tests/docs/*</span>
+Maturity
+<span class="dash">- Mature</span>
+Portability
+<span class="dash">- Medium-high</span>
+Confidence
+<span class="dash">- High</span>
+Core skill
+<span class="dash">- Manage documentation as a maintained product artifact.</span>
+Repository adaptation
+<span class="dash">- Let Books implements it through a generated multilingual docs site, metadata generation, navigation rules, blog/source-map policy, and rendered-page validation.</span>
+---
+<span class="numbered">3. Governed CI/CD and Deployment Safety</span>
+Purpose
+<span class="dash">- Use CI/CD as a trust and enforcement layer that validates current artifacts, validates the automation itself, and prevents stale or unsafe publication paths.</span>
+Why future repositories would install it
+<span class="dash">- To ensure that what gets merged or published is what was actually rebuilt and checked under current rules.</span>
+Core capability
+<span class="dash">- Automation is governed through:</span>
+<span class="dash">  - rebuild-before-validate rules</span>
+<span class="dash">  - fresh-artifact checks</span>
+<span class="dash">  - enforcement sequencing</span>
+<span class="dash">  - workflow self-validation</span>
+<span class="dash">  - publish-time trust boundaries</span>
+Typical implementations
+<span class="dash">- CI pipelines</span>
+<span class="dash">- deployment workflows</span>
+<span class="dash">- workflow linting</span>
+<span class="dash">- staged validation order</span>
+<span class="dash">- artifact verification steps</span>
+Repository evidence
+<span class="dash">- .github/workflows/ci.yml</span>
+<span class="dash">- .github/workflows/docs.yml</span>
+<span class="dash">- .github/workflows/README.md</span>
+<span class="dash">- docs/wiki/localization-ci-cd.md</span>
+<span class="dash">- docs/Deployment.md</span>
+Maturity
+<span class="dash">- Established</span>
+Portability
+<span class="dash">- High</span>
+Confidence
+<span class="dash">- High</span>
+Core skill
+<span class="dash">- Govern automation so it can be trusted as an enforcement path.</span>
+Repository adaptation
+<span class="dash">- Let Books implements it with GitHub Actions, workflow linting, fresh generation before checks, and deployment validation for a static site/docs pipeline.</span>
+---
+<span class="numbered">4. Traceable Engineering Governance</span>
+Purpose
+<span class="dash">- Govern engineering work through explicit sources of truth, preserved rationale, evidence-backed claims, documented authority chains, and controlled relationships among specs, docs, demos, tests, and automation.</span>
+Why future repositories would install it
+<span class="dash">- To reduce source-of-truth drift, tribal knowledge, accidental policy changes, weak AI-assisted workflows, and untraceable decisions.</span>
+Core capability
+<span class="dash">- Engineering decisions and claims are:</span>
+<span class="dash">  - traceable</span>
+<span class="dash">  - authority-ordered</span>
+<span class="dash">  - backed by durable artifacts</span>
+<span class="dash">  - separated between current state and future plans</span>
+<span class="dash">  - enforced or reinforced through review, tests, and validators</span>
+Typical implementations
+<span class="dash">- AGENTS or governance docs</span>
+<span class="dash">- evidence policies</span>
+<span class="dash">- traceability guides</span>
+<span class="dash">- source maps</span>
+<span class="dash">- scenario/use-case alignment docs</span>
+<span class="dash">- validator standards</span>
+<span class="dash">- tests that preserve policy-critical shape</span>
+<span class="dash">- README layers for tools/tests/workflows</span>
+Repository evidence
+<span class="dash">- AGENTS.md</span>
+<span class="dash">- AGENTS-Implementation.md</span>
+<span class="dash">- PRINCIPLES.md</span>
+<span class="dash">- docs/wiki/spec-driven-development.md</span>
+<span class="dash">- docs/wiki/documentation-traceability.md</span>
+<span class="dash">- docs/wiki/demo-spec-alignment.md</span>
+<span class="dash">- docs/wiki/ai-assisted-knowledge-work.md</span>
+<span class="dash">- docs/blog/README.md</span>
+<span class="dash">- docs/sources/README.md</span>
+<span class="dash">- tests/static-demo/scenarios/README.md</span>
+<span class="dash">- tools/README.md</span>
+<span class="dash">- tests/README.md</span>
+<span class="dash">- .github/workflows/README.md</span>
+<span class="dash">- scripts/README.md</span>
+<span class="dash">- tools/validate-blog.mjs</span>
+<span class="dash">- validator headers and validator tests across tools/*</span>
+Maturity
+<span class="dash">- Established</span>
+Portability
+<span class="dash">- High</span>
+Confidence
+<span class="dash">- Medium-high</span>
+Core skill
+<span class="dash">- Preserve trustworthy engineering intent and evidence across artifacts.</span>
+Repository adaptation
+<span class="dash">- Let Books implements it through AGENTS-based authority, source-map policies, demo/spec alignment, validator documentation standards, and preserved rationale across docs, tools, tests, and workflows.</span>
+---
+Core Skills vs Repository Adaptations
+Core skills that survive migration
+<span class="numbered">1. Localization Governance</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="numbered">3. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">4. Traceable Engineering Governance</span>
+Repository adaptations that should not be mistaken for the skills
+<span class="dash">- specific validators like validate_translation_parity.py</span>
+<span class="dash">- specific GitHub Actions jobs</span>
+<span class="dash">- GitHub Pages deployment</span>
+<span class="dash">- current locale list</span>
+<span class="dash">- current docs folder layout</span>
+<span class="dash">- current static-demo scenario structure</span>
+<span class="dash">- current source-map format</span>
+---
+Dependency Structure
+A light hierarchy is supported by the evidence:
+Traceable Engineering Governance
+├── Localization Governance
+├── Documentation as Product
+└── Governed CI/CD and Deployment Safety
+Why this structure is supported:
+<span class="dash">- Governance docs define authority, evidence, preservation, and validation philosophy.</span>
+<span class="dash">- Localization inherits those ideas and adds multilingual-specific rules.</span>
+<span class="dash">- Documentation-as-product inherits those ideas and applies them to docs surfaces.</span>
+<span class="dash">- CI/CD safety is the enforcement layer that operationalizes parts of the governance model.</span>
+A second valid view:
+Traceable Engineering Governance
+<span class="tool">→ supplies authority, evidence, rationale, validator discipline</span>
+Documentation as Product
+<span class="tool">→ applies governance to docs surfaces</span>
+Localization Governance
+<span class="tool">→ applies governance to multilingual content</span>
+Governed CI/CD and Deployment Safety
+<span class="tool">→ enforces all three where automatable</span>
+---
+**What Would Be Lost If The Final Skills Disappeared**
+<span class="numbered">1. `Localization Governance`</span>
+<span class="dash">- multilingual quality system</span>
+<span class="dash">- defect-class closure model</span>
+<span class="dash">- parity expectations</span>
+<span class="dash">- preserved reviewer knowledge</span>
+<span class="numbered">2. `Documentation as Product`</span>
+<span class="dash">- product-level documentation quality</span>
+<span class="dash">- rendered-output discipline</span>
+<span class="dash">- structured publishing expectations</span>
+<span class="numbered">3. `Governed CI/CD and Deployment Safety`</span>
+<span class="dash">- trustworthy enforcement path</span>
+<span class="dash">- fresh-artifact assurance</span>
+<span class="dash">- automation trust boundaries</span>
+<span class="numbered">4. `Traceable Engineering Governance`</span>
+<span class="dash">- authority-chain clarity</span>
+<span class="dash">- evidence-backed claims</span>
+<span class="dash">- preserved rationale</span>
+<span class="dash">- controlled relationship between docs/specs/demo/tests/automation</span>
+---
+<span class="term-heading">Open Questions</span>
+<span class="numbered">1. Is Documentation as Product universal enough to remain standalone, or should future packaging treat it as a specialization of governance for docs-heavy repos?</span>
+<span class="numbered">2. Is Governed CI/CD and Deployment Safety broad enough to stay separate, or should it become the enforcement subsection of a larger governance skill pack?</span>
+<span class="numbered">3. For future standalone packaging, what is the minimum viable install shape for Traceable Engineering Governance:</span>
+<span class="dash">- policy docs only</span>
+<span class="dash">- policy plus templates</span>
+<span class="dash">- policy plus starter validators</span>
+<span class="dash">- policy plus CI examples</span>
+<span class="numbered">4. Should future repositories adopt Localization Governance as one skill, or as a base skill with optional language-specific modules?</span>
+<span class="numbered">5. Is there enough evidence to define a future umbrella skill called Engineering Governance, with the final four as installable submodules, or would that be inventing too much structure beyond the repo?</span>
+<span class="term-heading">Bottom Line</span>
+The original catalog was close, but one skill was over-promoted from implementation discipline into top-level skill status.
+Best reduced catalog
+<span class="numbered">1. Localization Governance</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="numbered">3. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">4. Traceable Engineering Governance</span>
+That is the smallest set that still represents durable, portable engineering capabilities rather than repository-specific organization.</pre></div></details></section>
+<section id="e22" class="entry paste"><details>
+<summary><span class="num">22.</span><span><div class="meta">🟣 Pasted agent output</div><div class="title">Pasted agent output 4 — meta-skill / governance template review</div></span></summary>
+<div class="content"><pre class="opencode"><span class="term-heading">Current Skill Catalog</span>
+<span class="numbered">1. Localization Governance</span>
+<span class="numbered">2. Documentation as Product</span>
+<span class="numbered">3. Governed CI/CD and Deployment Safety</span>
+<span class="numbered">4. Traceable Engineering Governance</span>
+<span class="term-heading">Governance Template Candidates</span>
+Strong candidate
+<span class="dash">- Traceable Engineering Governance</span>
+Weak/conditional candidates
+<span class="dash">- Documentation as Product</span>
+<span class="dash">- Governed CI/CD and Deployment Safety</span>
+Localization Governance looks more like a domain application of a broader pattern than a template in its own right.
+---
+<span class="term-heading">Evidence Supporting Each Candidate</span>
+Traceable Engineering Governance
+This is the strongest template candidate because it defines cross-cutting structure, not just one problem domain.
+Evidence:
+<span class="dash">- AGENTS.md</span>
+<span class="dash">- AGENTS-Implementation.md</span>
+<span class="dash">- PRINCIPLES.md</span>
+<span class="dash">- docs/wiki/spec-driven-development.md</span>
+<span class="dash">- docs/wiki/documentation-traceability.md</span>
+<span class="dash">- docs/wiki/demo-spec-alignment.md</span>
+<span class="dash">- docs/wiki/ai-assisted-knowledge-work.md</span>
+<span class="dash">- docs/blog/README.md</span>
+<span class="dash">- docs/sources/README.md</span>
+<span class="dash">- tools/README.md</span>
+<span class="dash">- tests/README.md</span>
+<span class="dash">- .github/workflows/README.md</span>
+<span class="dash">- scripts/README.md</span>
+What it defines:
+<span class="dash">- authority order</span>
+<span class="dash">- source-of-truth rules</span>
+<span class="dash">- evidence policy</span>
+<span class="dash">- current-state vs future-plan separation</span>
+<span class="dash">- rationale preservation</span>
+<span class="dash">- validator documentation norms</span>
+<span class="dash">- test documentation norms</span>
+<span class="dash">- review and traceability expectations</span>
+That is template behavior, not just one skill among peers.
+Documentation as Product
+This may be a specialized template for documentation-heavy surfaces, but not clearly the parent of other skills.
+Evidence:
+<span class="dash">- docs/blog/README.md</span>
+<span class="dash">- docs/sources/README.md</span>
+<span class="dash">- docs/Development.md</span>
+<span class="dash">- docs/Deployment.md</span>
+<span class="dash">- tools/validate-blog.mjs</span>
+<span class="dash">- tools/validate-generated-site-structure.mjs</span>
+<span class="dash">- tests/docs/*</span>
+What it defines:
+<span class="dash">- docs-specific structure</span>
+<span class="dash">- generated-output expectations</span>
+<span class="dash">- publication rules</span>
+<span class="dash">- rendered review requirements</span>
+This is a strong specialized skill, but the structure appears inherited from broader governance.
+Governed CI/CD and Deployment Safety
+This is mostly an enforcement specialization, not a template for other skills.
+Evidence:
+<span class="dash">- .github/workflows/ci.yml</span>
+<span class="dash">- .github/workflows/docs.yml</span>
+<span class="dash">- .github/workflows/README.md</span>
+<span class="dash">- docs/wiki/localization-ci-cd.md</span>
+<span class="dash">- docs/Deployment.md</span>
+What it defines:
+<span class="dash">- fresh-generation rule</span>
+<span class="dash">- enforcement sequencing</span>
+<span class="dash">- workflow self-validation</span>
+<span class="dash">- publish-time trust boundaries</span>
+This feels like a governance application to automation.
+---
+Skill Construction Pattern Review
+Across the extracted skills, the same structure appears repeatedly:
+<span class="numbered">1. Principles</span>
+<span class="numbered">2. Guidance</span>
+<span class="numbered">3. Expected artifacts</span>
+<span class="numbered">4. Validation</span>
+<span class="numbered">5. Enforcement</span>
+<span class="numbered">6. Feedback / preservation</span>
+Traceable Engineering Governance
+<span class="dash">- Principles:</span>
+<span class="dash">  - source of truth</span>
+<span class="dash">  - authority chains</span>
+<span class="dash">  - traceability</span>
+<span class="dash">  - preserved rationale</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - AGENTS.md</span>
+<span class="dash">  - AGENTS-Implementation.md</span>
+<span class="dash">  - wiki pages on spec-driven development and traceability</span>
+<span class="dash">- Artifacts:</span>
+<span class="dash">  - specs, source maps, README layers, scenario docs</span>
+<span class="dash">- Validation:</span>
+<span class="dash">  - policy validators like tools/validate-blog.mjs</span>
+<span class="dash">  - test shape checks</span>
+<span class="dash">- Enforcement:</span>
+<span class="dash">  - workflow checks</span>
+<span class="dash">  - documented evidence policy</span>
+Localization Governance
+<span class="dash">- Principles:</span>
+<span class="dash">  - semantic parity</span>
+<span class="dash">  - coverage</span>
+<span class="dash">  - defect-class closure</span>
+<span class="dash">  - native-speaker review</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - docs/style-guide/localization/*</span>
+<span class="dash">  - docs/localization-at-scale-program.md</span>
+<span class="dash">- Artifacts:</span>
+<span class="dash">  - localized files</span>
+<span class="dash">  - findings corpus</span>
+<span class="dash">  - audit report</span>
+<span class="dash">- Validation:</span>
+<span class="dash">  - parity, completeness, language-quality validators</span>
+<span class="dash">- Enforcement:</span>
+<span class="dash">  - CI blocking for closed classes</span>
+<span class="dash">  - workflow docs</span>
+Documentation as Product
+<span class="dash">- Principles:</span>
+<span class="dash">  - docs are product artifacts</span>
+<span class="dash">  - rendered output matters</span>
+<span class="dash">  - publication quality matters</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - docs READMEs</span>
+<span class="dash">  - deployment/development docs</span>
+<span class="dash">- Artifacts:</span>
+<span class="dash">  - generated HTML</span>
+<span class="dash">  - source maps</span>
+<span class="dash">  - article registries</span>
+<span class="dash">- Validation:</span>
+<span class="dash">  - blog/site structure validators</span>
+<span class="dash">  - browser checks</span>
+<span class="dash">- Enforcement:</span>
+<span class="dash">  - generation + validation in workflows</span>
+Governed CI/CD and Deployment Safety
+<span class="dash">- Principles:</span>
+<span class="dash">  - rebuild before validate</span>
+<span class="dash">  - do not trust stale artifacts</span>
+<span class="dash">  - validate automation too</span>
+<span class="dash">- Guidance:</span>
+<span class="dash">  - workflow README</span>
+<span class="dash">  - CI/CD wiki guidance</span>
+<span class="dash">- Artifacts:</span>
+<span class="dash">  - workflow files</span>
+<span class="dash">  - generated artifacts</span>
+<span class="dash">- Validation:</span>
+<span class="dash">  - actionlint/yamllint, build/generation checks</span>
+<span class="dash">- Enforcement:</span>
+<span class="dash">  - blocking CI/deploy paths</span>
+Conclusion: multiple skills use the same construction pattern. That strongly suggests a higher-level governance pattern is shaping them.
+---
+Dependency Analysis
+Does Localization Governance depend on Traceable Engineering Governance?
+Yes.
+Evidence:
+<span class="dash">- docs/localization-at-scale-program.md uses defect classes, audits, preserved findings, and explicit closure rules.</span>
+<span class="dash">- docs/style-guide/localization/review-workflow.md requires checking prior findings and documenting considered defect classes.</span>
+<span class="dash">- docs/wiki/localization-ci-cd.md uses the same validation/enforcement logic seen in broader governance docs.</span>
+<span class="dash">- AGENTS-Implementation.md explicitly connects localization work to preserved findings, guidance updates, and CI closure.</span>
+Interpretation:
+<span class="dash">- Localization is not just translation QA.</span>
+<span class="dash">- It inherits the repository’s general governance pattern: explicit rules, durable artifacts, validator-backed review, and recurrence prevention.</span>
+Does Documentation as Product depend on Traceable Engineering Governance?
+Yes.
+Evidence:
+<span class="dash">- docs/blog/README.md defines canonical evidence sources and forbids using code as editorial authority.</span>
+<span class="dash">- docs/sources/README.md defines traceability requirements.</span>
+<span class="dash">- docs/wiki/demo-spec-alignment.md and docs/wiki/documentation-traceability.md set authority order and evidence expectations.</span>
+<span class="dash">- tools/validate-blog.mjs enforces part of that evidence policy.</span>
+Interpretation:
+<span class="dash">- Documentation-as-product in this repo is built on traceability and authority rules, not just content publishing.</span>
+Does Governed CI/CD and Deployment Safety depend on Traceable Engineering Governance?
+Yes, partially.
+Evidence:
+<span class="dash">- docs/wiki/localization-ci-cd.md frames CI as a mechanism that preserves closed defect classes.</span>
+<span class="dash">- .github/workflows/README.md is documented in the same “why/protects/failure impact” style.</span>
+<span class="dash">- workflow checks exist to enforce content, docs, and publication rules defined elsewhere.</span>
+Interpretation:
+<span class="dash">- CI/CD here is mostly the enforcement arm of broader governance rather than an independent philosophy.</span>
+---
+Installation Order Analysis
+Traceable Engineering Governance
+<span class="dash">- Would I install this first? Usually yes.</span>
+<span class="dash">- Could other skills be installed without it? Technically yes, but they would be weaker and more ad hoc.</span>
+<span class="dash">- Does it establish rules used by other skills? Yes.</span>
+<span class="dash">- Does it feel foundational? Yes.</span>
+Localization Governance
+<span class="dash">- Would I install this first? Only in a multilingual repo.</span>
+<span class="dash">- Could other skills be installed without it? Yes.</span>
+<span class="dash">- Does it establish rules used by other skills? No, it mostly consumes broader governance rules.</span>
+<span class="dash">- Does it feel foundational? No.</span>
+Documentation as Product
+<span class="dash">- Would I install this first? Only in docs-heavy repos.</span>
+<span class="dash">- Could other skills be installed without it? Yes.</span>
+<span class="dash">- Does it establish rules used by other skills? Not usually.</span>
+<span class="dash">- Does it feel foundational? No, except in documentation-centered repositories.</span>
+Governed CI/CD and Deployment Safety
+<span class="dash">- Would I install this first? Often early, but after basic governance expectations are known.</span>
+<span class="dash">- Could other skills be installed without it? Yes, but with weaker enforcement.</span>
+<span class="dash">- Does it establish rules used by other skills? It enforces rules more than defines them.</span>
+<span class="dash">- Does it feel foundational? Foundational operationally, but not conceptually primary.</span>
+---
+<span class="term-heading">Revised Skill Model</span>
+A layered model is better supported than a flat model.
+Traceable Engineering Governance
+├── Localization Governance
+├── Documentation as Product
+└── Governed CI/CD and Deployment Safety
+More precise interpretation:
+Traceable Engineering Governance
+<span class="tool">→ defines the pattern:</span>
+  principles
+  authority
+  evidence
+  artifacts
+  validation
+  enforcement
+Localization Governance
+<span class="tool">→ applies that pattern to multilingual content</span>
+Documentation as Product
+<span class="tool">→ applies that pattern to documentation surfaces</span>
+Governed CI/CD and Deployment Safety
+<span class="tool">→ applies that pattern to automation and publication paths</span>
+This model fits the evidence better than treating all four as equal peers.
+---
+<span class="term-heading">Meta-Skill Recommendation</span>
+Traceable Engineering Governance is best classified as a governance template and meta-skill.
+Why:
+<span class="dash">- It defines reusable structure used repeatedly elsewhere.</span>
+<span class="dash">- It supplies the authority chain, evidence model, rationale preservation, validator norms, and review expectations that other skills reuse.</span>
+<span class="dash">- The other skills look like domain-specific applications of that pattern.</span>
+It is not just a normal sibling skill.
+Best label:
+<span class="dash">- meta-skill</span>
+<span class="dash">- governance template</span>
+I would avoid calling it merely a “parent skill” unless you want packaging language. Conceptually, “governance template” is the most accurate.
+---
+<span class="term-heading">What This Means For Packaging</span>
+If these become portable packages later, the likely install model is:
+<span class="numbered">1. Install Traceable Engineering Governance first</span>
+<span class="numbered">2. Add optional specializations:</span>
+<span class="dash">   - Localization Governance</span>
+<span class="dash">   - Documentation as Product</span>
+<span class="dash">   - Governed CI/CD and Deployment Safety</span>
+That is more portable than shipping all four as equal standalone units.
+---
+<span class="term-heading">Open Questions</span>
+<span class="numbered">1. Should Governed CI/CD and Deployment Safety remain a top-level skill, or become the enforcement module of Traceable Engineering Governance?</span>
+<span class="numbered">2. Should Documentation as Product remain standalone, or be treated as a domain specialization only for docs-heavy repositories?</span>
+<span class="numbered">3. Is there enough evidence to define a future package model of:</span>
+<span class="dash">   - one base governance template</span>
+<span class="dash">   - several optional domain modules</span>
+<span class="numbered">4. What is the minimum installable form of Traceable Engineering Governance in a new repository:</span>
+<span class="dash">   - policy docs only</span>
+<span class="dash">   - policy + templates</span>
+<span class="dash">   - policy + validators</span>
+<span class="dash">   - policy + CI examples</span>
+<span class="numbered">5. Does Localization Governance need its own base package, or should it explicitly declare dependence on the governance template?</span>
+<span class="term-heading">Bottom Line</span>
+The evidence supports a layered model, not a flat one.
+<span class="dash">- Traceable Engineering Governance is the strongest meta-skill / governance template candidate.</span>
+<span class="dash">- Localization Governance, Documentation as Product, and Governed CI/CD and Deployment Safety are best understood as specialized applications of that governance pattern.</span></pre></div></details></section>
+<section id="e23" class="entry user"><details>
+<summary><span class="num">23.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Observation: Validator Engineering should be broader</div></span></summary>
+<div class="content"><pre class="plain">Thinking: Structuring Engineering Governance Skills
+I&#x27;m considering merging the concepts of repository knowledge preservation and spec-driven traceability into Engineering Governance, but it&#x27;s a bit broad. I think I need to narrow it down to around five essential skills. These might include Localization Governance, Documentation as a Product, Validator Engineering, CI/CD Governance and Deployment Safety, plus Knowledge Preservation merged with Spec-Driven Governance. Would these two always be installed together? Likely in serious repositories. I&#x27;ll propose a final skill set and outline each core skill&#x27;s definition, structured clearly as a plan.
+...
+
+my observation, instead of &quot;validatior engineering&quot; i would rather see this is as part of Traceable Engineering Governance for all code produced, not just validator, c# src/, CI workflows..</pre></div></details></section>
+<section id="e24" class="entry assistant"><details>
+<summary><span class="num">24.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Validator Engineering absorbed into Traceable Engineering Governance</div></span></summary>
+<div class="content"><div class="markdown-body"><p>I agree, and I think that's an important correction.</p>
+<p>&quot;Validator Engineering&quot; feels like an implementation-centric name.</p>
+<p>The pattern you've been pushing for is much broader:</p>
+<ul>
+<li>code comments explain intent</li>
+<li>tests explain protected behavior</li>
+<li>validators explain claims and assumptions</li>
+<li>workflows explain why steps exist</li>
+<li>specs explain rationale</li>
+<li>PR artifacts explain decisions</li>
+<li>findings corpora preserve lessons</li>
+<li>documentation explains authority chains</li>
+</ul>
+<p>That's not validator engineering.</p>
+<p>That's:</p>
+<pre><code class="language-text">Traceable Engineering Governance
+</code></pre>
+<p>or perhaps:</p>
+<pre><code class="language-text">Engineering Knowledge Governance
+</code></pre>
+<p>The validator is just one manifestation.</p>
+<p>For example, if you start a new .NET ERP project tomorrow:</p>
+<p>You probably want:</p>
+<pre><code class="language-text">Traceable Engineering Governance
+</code></pre>
+<p>to apply to:</p>
+<pre><code class="language-text">src/
+tests/
+tools/
+.github/workflows/
+docs/
+specs/
+</code></pre>
+<p>not only:</p>
+<pre><code class="language-text">tools/validate_*.py
+</code></pre>
+<p>The skill would contain principles such as:</p>
+<ul>
+<li>important decisions should be traceable</li>
+<li>non-obvious logic should explain intent</li>
+<li>tests should document protected behavior</li>
+<li>validators should explain claims</li>
+<li>workflows should explain why they exist</li>
+<li>assumptions should survive implementation</li>
+<li>future maintainers should not reverse-engineer rationale from commit history alone</li>
+</ul>
+<p>Then:</p>
+<pre><code class="language-text">validator headers
+workflow README files
+educational comments
+test comments
+PR artifacts
+audit reports
+ADR-style notes
+</code></pre>
+<p>become repository adaptations of the same skill.</p>
+<hr />
+<p>I would probably reshape the catalog to:</p>
+<h3>1. Localization Governance</h3>
+<p>Multilingual content as an engineering system.</p>
+<hr />
+<h3>2. Documentation as Product</h3>
+<p>Documentation treated as a maintained product surface.</p>
+<hr />
+<h3>3. Traceable Engineering Governance</h3>
+<p>Preserve rationale, intent, assumptions, evidence, decisions, and protected behavior across code, tests, validators, workflows, specifications, and documentation.</p>
+<p>This would absorb:</p>
+<ul>
+<li>Repository Knowledge Preservation</li>
+<li>Validator Engineering</li>
+<li>much of Spec-Driven Traceability</li>
+</ul>
+<hr />
+<h3>4. Governed CI/CD and Deployment Safety</h3>
+<p>Enforcement, trust boundaries, rebuild-before-deploy, automation governance.</p>
+<hr />
+<p>And possibly:</p>
+<h3>5. Engineering Governance</h3>
+<p>The meta-skill.</p>
+<p>Authority chains.</p>
+<p>Standards.</p>
+<p>Review expectations.</p>
+<p>How skills themselves are adopted.</p>
+<hr />
+<p>Interestingly, this starts looking a lot like layers:</p>
+<pre><code class="language-text">Engineering Governance
+    │
+    ├── Localization Governance
+    ├── Documentation as Product
+    ├── Traceable Engineering Governance
+    └── Governed CI/CD and Deployment Safety
+</code></pre>
+<p>which feels closer to what you've actually been building.</p>
+<p>Because when I look at the educational comments initiative, the validator documentation initiative, the workflow README initiative, the test documentation initiative, and the PR artifact initiative, I don't see five different skills.</p>
+<p>I see one recurring idea:</p>
+<blockquote>
+<p>Important engineering knowledge should remain discoverable after the original author, AI session, or implementation context is gone.</p>
+</blockquote>
+<p>That's much bigger than validators. It's governance.</p>
+</div></div></details></section>
+<section id="e25" class="entry user"><details>
+<summary><span class="num">25.</span><span><div class="meta">🟡 User question / direction</div><div class="title">Plan request</div></span></summary>
+<div class="content"><pre class="plain">so what is plan now to extract skills and log enough information that article can be created later?</pre></div></details></section>
+<section id="e26" class="entry assistant"><details>
+<summary><span class="num">26.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Plan to extract skills and preserve article material</div></span></summary>
+<div class="content"><div class="markdown-body"><p>I think you've reached the point where you should stop refining theory and start creating artifacts.</p>
+<p>The next goal is not:</p>
+<blockquote>
+<p>&quot;Find the perfect skill model.&quot;</p>
+</blockquote>
+<p>The next goal is:</p>
+<blockquote>
+<p>&quot;Capture enough evidence that future-us can write the article honestly.&quot;</p>
+</blockquote>
+<p>The article should emerge from the extraction, not the other way around.</p>
+<p>My suggested plan:</p>
+<h3>Phase 1 — Extract Skills (Current)</h3>
+<p>Create:</p>
+<pre><code class="language-text">skills/
+├── README.md
+├── SKILL_MATURITY_MODEL.md
+├── PORTABILITY_REVIEW.md
+├── engineering-governance.md
+├── localization-governance.md
+├── documentation-as-product.md
+└── ci-cd-governance.md
+</code></pre>
+<p>The important thing is:</p>
+<p><strong>Every claim must be linked to repository evidence.</strong></p>
+<p>Not:</p>
+<pre><code class="language-text">Localization Governance is important.
+</code></pre>
+<p>But:</p>
+<pre><code class="language-text">Evidence:
+- docs/localization-at-scale-program.md
+- tools/validate_translation_parity.py
+- ...
+</code></pre>
+<p>This becomes your future article's research material.</p>
+<hr />
+<h3>Phase 2 — Extract Repository Adaptations</h3>
+<p>Create:</p>
+<pre><code class="language-text">skills/adaptations/
+├── let-books/
+│   ├── engineering-governance.md
+│   ├── localization-governance.md
+│   ├── documentation-as-product.md
+│   └── ci-cd-governance.md
+</code></pre>
+<p>Because I think later you'll discover:</p>
+<pre><code class="language-text">Skill
+≠
+Current Implementation
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-text">Localization Governance
+</code></pre>
+<p>is portable.</p>
+<pre><code class="language-text">validate_translation_parity.py
+</code></pre>
+<p>is a Let Books adaptation.</p>
+<p>This distinction is likely article material.</p>
+<hr />
+<h3>Phase 3 — Create Skill Installation Notes</h3>
+<p>Not implementation.</p>
+<p>Just:</p>
+<pre><code class="language-text">skills/install/
+├── engineering-governance.md
+├── localization-governance.md
+...
+</code></pre>
+<p>Each answers:</p>
+<pre><code class="language-text">If I start a new repository,
+what would I install?
+</code></pre>
+<p>For example:</p>
+<pre><code class="language-text">Engineering Governance
+
+Required:
+- AGENTS.md section
+- README section
+- review expectations
+
+Optional:
+- validators
+- CI integration
+</code></pre>
+<p>This tests portability.</p>
+<hr />
+<h3>Phase 4 — Create Research Notes For Article</h3>
+<p>This is the part I think most people skip.</p>
+<p>Create:</p>
+<pre><code class="language-text">skills/research/
+├── observations.md
+├── surprises.md
+├── open-questions.md
+├── failed-ideas.md
+</code></pre>
+<p>Log things like:</p>
+<pre><code class="language-text">Observation:
+Validator Engineering was not a standalone skill.
+
+Reason:
+Evidence showed the same pattern in
+validators, tests, workflows, and docs.
+
+Result:
+Merged into Engineering Governance.
+</code></pre>
+<p>or:</p>
+<pre><code class="language-text">Observation:
+Repository adaptations were often mistaken
+for skills.
+
+Example:
+validate_translation_parity.py
+
+Result:
+Introduced Core Skill vs Repository Adaptation.
+</code></pre>
+<p>These notes become gold when writing the article later.</p>
+<hr />
+<h3>Phase 5 — Validate In Another Repository</h3>
+<p>This is probably the most important step.</p>
+<p>Take:</p>
+<pre><code class="language-text">Engineering Governance
+</code></pre>
+<p>and install it into:</p>
+<ul>
+<li>ERP repo</li>
+<li>DMS repo</li>
+<li>small utility repo</li>
+</ul>
+<p>Then document:</p>
+<pre><code class="language-text">What transferred unchanged?
+What required adaptation?
+What failed?
+What was unnecessary?
+</code></pre>
+<p>Without this phase, the article is still mostly theory.</p>
+<p>With this phase, the article becomes:</p>
+<blockquote>
+<p>We extracted skills from one repository and tested whether they could be reused elsewhere.</p>
+</blockquote>
+<p>That's much stronger.</p>
+<hr />
+<h3>Phase 6 — Only Then Write The Article</h3>
+<p>By then you'll have actual evidence.</p>
+<p>The article outline almost writes itself:</p>
+<pre><code class="language-text">1. Why we started
+2. What we extracted
+3. What surprised us
+4. Skills vs implementations
+5. Skills vs validators
+6. Skills vs prompts
+7. What transferred to another repository
+8. What didn't
+9. Open questions
+</code></pre>
+<p>Notice what's missing:</p>
+<pre><code class="language-text">Skills are the future.
+</code></pre>
+<p>You won't need to claim that.</p>
+<p>You'll be able to say:</p>
+<blockquote>
+<p>We extracted four portable engineering skills from a real repository. Some transferred surprisingly well. Some did not. Here is what we learned.</p>
+</blockquote>
+<p>That's a much stronger engineering article.</p>
+<p>And honestly, if I were creating the next prompt, I would stop asking for more skill discovery and ask for:</p>
+<blockquote>
+<p>Generate the actual <code>skills/</code> directory, plus <code>skills/research/</code> notes capturing decisions, merges, rejected skills, surprises, and open questions.</p>
+</blockquote>
+<p>Because <strong>those research notes are what will make the eventual article credible.</strong></p>
+</div></div></details></section>
+<section id="e27" class="entry user"><details>
+<summary><span class="num">27.</span><span><div class="meta">🟡 User question / direction</div><div class="title">One big prompt request</div></span></summary>
+<div class="content"><pre class="plain">one big prompt</pre></div></details></section>
+<section id="e28" class="entry assistant"><details>
+<summary><span class="num">28.</span><span><div class="meta">🔵 Assistant reply</div><div class="title">Final big prompt: Extract Portable Engineering Skills, Repository Adaptations, And Research Notes</div></span></summary>
+<div class="content"><div class="copy-note">Raw prompt artifact — Markdown is preserved for copy/paste.</div><pre class="artifact"># Extract Portable Engineering Skills, Repository Adaptations, And Research Notes
+
+You are acting as an engineering governance analyst.
+
+Your task is to discover, document, and extract reusable engineering skills that already exist within this repository.
+
+This is an analysis, documentation, and knowledge-extraction exercise.
+
+Do NOT redesign the repository.
+
+Do NOT migrate tooling.
+
+Do NOT remove existing guidance.
+
+Do NOT rewrite validators.
+
+Do NOT change repository behavior.
+
+The goal is to understand which engineering capabilities have emerged, which are portable, and which could realistically be reused in future repositories.
+
+The secondary goal is to preserve enough evidence, observations, decisions, and open questions that a future blog article can be written from the results.
+
+---
+
+# Important Context
+
+Treat this repository as a source of accumulated engineering knowledge.
+
+We are not trying to document the repository.
+
+We are trying to identify reusable engineering practices that can be carried into:
+
+- open-source repositories
+- closed-source repositories
+- ERP systems
+- documentation systems
+- internal business applications
+- future projects with different technologies
+
+The repository is evidence.
+
+The skills are the extraction.
+
+---
+
+# Definition Of A Skill
+
+A skill is a reusable engineering capability.
+
+A skill may combine:
+
+- principles
+- guidance
+- examples
+- expected artifacts
+- review procedures
+- validators
+- tests
+- automation
+
+A skill is NOT:
+
+- a validator
+- a script
+- a workflow
+- a prompt
+- a README
+- a CI job
+
+Those are implementations or components of a skill.
+
+---
+
+# Portability Test
+
+Every proposed skill must pass:
+
+&gt; If I started a completely different repository tomorrow, would I intentionally install this skill?
+
+Examples:
+
+Good candidates:
+
+- Engineering Governance
+- Localization Governance
+- Documentation as Product
+- CI/CD Governance
+
+Poor candidates:
+
+- Translation Parity Validator
+- README Documentation
+- Workflow Commenting
+- GitHub Pages Publishing
+- Language Quality Checker
+
+Those are usually implementations.
+
+---
+
+# Skill Granularity
+
+Prefer a small number of large skills.
+
+Target:
+
+3–6 major skills.
+
+Avoid:
+
+- one skill per validator
+- one skill per workflow
+- one skill per tool
+- one skill per document
+
+When uncertain:
+
+merge related practices into larger capabilities.
+
+---
+
+# Governance Template Review
+
+Determine whether any extracted skill functions as a governance template or meta-skill.
+
+Specifically investigate whether:
+
+Engineering Governance
+
+or
+
+Traceable Engineering Governance
+
+acts as a reusable pattern used to construct other skills.
+
+Look for recurring structures such as:
+
+Principles
+↓
+Guidance
+↓
+Artifacts
+↓
+Validation
+↓
+Enforcement
+↓
+Feedback / Learning
+
+If multiple skills follow the same structure:
+
+document the relationship.
+
+Do not force a hierarchy.
+
+Use repository evidence.
+
+---
+
+# Core Skill vs Repository Adaptation
+
+This distinction is mandatory.
+
+Every extracted skill must contain:
+
+## Core Skill
+
+The reusable capability.
+
+Should remain valid across repositories.
+
+## Repository Adaptation
+
+How this repository currently implements that capability.
+
+Examples:
+
+- validators
+- workflows
+- CI
+- folder structure
+- review procedures
+- tooling
+
+Repository adaptations are evidence of the skill.
+
+They are not the skill itself.
+
+---
+
+# Repository Investigation
+
+Search for evidence across:
+
+- AGENTS.md
+- AGENTS-Implementation.md
+- PRINCIPLES.md
+- README files
+- docs/
+- tools/
+- tests/
+- workflows
+- style guides
+- audit reports
+- findings corpora
+- contributor guidance
+- prompts
+- review procedures
+
+---
+
+# Create Skills Directory
+
+Create:
+
+skills/
+
+Recommended structure:
+
+skills/
+├── README.md
+├── SKILL_MATURITY_MODEL.md
+├── PORTABILITY_REVIEW.md
+├── engineering-governance.md
+├── localization-governance.md
+├── documentation-as-product.md
+├── ci-cd-governance.md
+├── adaptations/
+└── research/
+
+Use actual discovered skill names if evidence supports different names.
+
+---
+
+# Required Structure For Every Skill
+
+## Purpose
+
+What engineering outcome does this skill achieve?
+
+## Problem Being Solved
+
+What recurring failure or risk does it prevent?
+
+## Core Skill
+
+Describe the reusable capability.
+
+Avoid repository-specific details.
+
+## Repository Adaptation
+
+Describe how this repository currently implements it.
+
+## Current Repository Evidence
+
+List:
+
+- files
+- validators
+- tests
+- workflows
+- guidance
+
+Be specific.
+
+## Inputs
+
+## Expected Actions
+
+## Expected Artifacts
+
+## Validation
+
+### Manual Review
+
+### Automated Validation
+
+### CI Enforcement
+
+### Existing Gaps
+
+## Success Criteria
+
+## Failure Modes
+
+## Maturity Assessment
+
+Choose:
+
+- Emerging
+- Partial
+- Established
+- Mature
+
+Explain why.
+
+## Portability Assessment
+
+### Would I Install This In A New Repository?
+
+### ERP
+
+### Web Application
+
+### Documentation Repository
+
+### Internal Business Application
+
+### Repository-Specific Parts
+
+### Reusable Parts
+
+### Adaptation Requirements
+
+### Confidence Level
+
+## Future Installation Concept
+
+Do NOT implement.
+
+Describe how a future repository could adopt this skill.
+
+Examples:
+
+- AGENTS.md
+- CONTRIBUTING.md
+- README.md
+- templates
+- validators
+- CI integration
+
+## Open Questions
+
+---
+
+# Create Adaptation Documents
+
+Create:
+
+skills/adaptations/
+
+Document how each extracted skill is implemented specifically in this repository.
+
+Example:
+
+skills/adaptations/localization-governance-let-books.md
+
+Include:
+
+- repository-specific validators
+- repository-specific workflows
+- repository-specific conventions
+- repository-specific folder structures
+- repository-specific review processes
+
+The goal is to separate:
+
+portable skill
+
+from
+
+current implementation.
+
+---
+
+# Create Research Notes
+
+Create:
+
+skills/research/
+
+These notes are extremely important.
+
+Their purpose is to preserve observations for a future article.
+
+Create:
+
+skills/research/observations.md
+skills/research/surprises.md
+skills/research/skill-merges.md
+skills/research/rejected-skills.md
+skills/research/open-questions.md
+skills/research/future-experiments.md
+
+---
+
+# Research Notes Content
+
+## observations.md
+
+Record important discoveries.
+
+Examples:
+
+- recurring governance patterns
+- repeated structures
+- portability findings
+- implementation vs skill distinctions
+
+## surprises.md
+
+Record unexpected findings.
+
+Examples:
+
+- validators were not standalone skills
+- governance patterns appeared repeatedly
+- documentation and code followed similar rules
+
+## skill-merges.md
+
+Document:
+
+- candidate skills
+- why they were merged
+- evidence supporting the merge
+
+Example:
+
+Validator Engineering
++
+Knowledge Preservation
+=
+Engineering Governance
+
+Reason:
+same principles appeared across validators, tests, workflows, and docs.
+
+## rejected-skills.md
+
+Record candidate skills that were rejected.
+
+For each:
+
+- proposed name
+- why it looked like a skill
+- why it was rejected
+- what larger skill absorbed it
+
+## open-questions.md
+
+Record unresolved questions.
+
+Do not force answers.
+
+## future-experiments.md
+
+Record future validation ideas.
+
+Examples:
+
+- install skill into ERP repository
+- install skill into DMS repository
+- compare required adaptations
+- determine minimum install footprint
+
+---
+
+# Create Portability Review
+
+Create:
+
+skills/PORTABILITY_REVIEW.md
+
+For every skill answer:
+
+1. Would I intentionally install this in a new repository?
+2. Would I install it in:
+   - ERP
+   - web application
+   - documentation repository
+   - internal business application
+3. Which parts are universally reusable?
+4. Which parts are repository-specific?
+5. Is this truly a skill or merely an implementation?
+
+Be critical.
+
+Reducing skill count is preferred over inflating it.
+
+---
+
+# Create Skill Maturity Model
+
+Create:
+
+skills/SKILL_MATURITY_MODEL.md
+
+Level 0 — Informal
+
+Practice exists mainly as convention.
+
+Level 1 — Documented
+
+Guidance exists.
+
+Level 2 — Repeatable
+
+Examples and procedures exist.
+
+Level 3 — Validated
+
+Automated checks exist.
+
+Level 4 — Enforced
+
+CI or workflow enforcement exists.
+
+Level 5 — Self-Improving
+
+Findings, audits, reviews, or accumulated lessons systematically improve the skill.
+
+Assess every extracted skill.
+
+---
+
+# Produce Final Analysis
+
+After all extraction work is complete:
+
+Provide:
+
+## Final Skill Catalog
+
+## Governance Template Candidates
+
+## Meta-Skill Assessment
+
+Explicitly answer:
+
+Is Engineering Governance (or Traceable Engineering Governance):
+
+- a normal skill
+- a parent skill
+- a governance template
+- a meta-skill
+
+Support the conclusion with evidence.
+
+## Dependency Structure
+
+Show relationships between skills.
+
+## Skill Installation Order
+
+For a new repository:
+
+Which skill should be installed first?
+
+Which skills are optional?
+
+Which skills depend on others?
+
+## Candidate Portable Skill Packages
+
+Which skills appear mature enough to become reusable packages?
+
+## Open Questions
+
+## Recommended Next Experiment
+
+Focus on validating portability in a different repository.
+
+---
+
+# Important Constraints
+
+Do not invent a methodology.
+
+Do not optimize for elegant diagrams.
+
+Do not mirror the current repository structure.
+
+Do not create one skill per implementation.
+
+Prefer discovering durable engineering capabilities.
+
+Every skill must be supported by repository evidence.
+
+Every skill must pass the portability test.
+
+Every skill must distinguish:
+
+- Core Skill
+- Repository Adaptation
+
+Every significant conclusion should be supported by evidence.
+
+The extraction itself should generate enough structured information that a future blog article can be written from the findings, surprises, rejected ideas, merge decisions, and portability experiments without needing to rediscover the reasoning.
+```
+
+This prompt should generate not only the first version of `skills/`, but also the raw material for at least 2–3 future articles:
+- skills vs implementations,
+- governance as a reusable asset,
+- portability of engineering practices across repositories.</pre></div></details></section>
+<div class="footer">Generated 2026-06-08T11:13:54. Sections are collapsible; pasted agent output is intentionally not Markdown-rendered.</div>
+</main></body></html>
