@@ -339,7 +339,7 @@ status: draft
 
 И можда ће ипак више волети да прегледају несавршено резоновање него да обрнуто закључују из тишине.
 
-## Related Reading
+## Повезано штиво
 
 - `../../wiki/ai-assisted-knowledge-work.md`
 - `../../wiki/spec-driven-development.md`

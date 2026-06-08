@@ -339,7 +339,7 @@ Budući održavaoci možda će se i dalje žaliti na generisano obrazloženje. M
 
 I možda će ipak više voleti da pregledaju nesavršeno rezonovanje nego da obrnuto zaključuju iz tišine.
 
-## Related Reading
+## Povezano štivo
 
 - `../../wiki/ai-assisted-knowledge-work.md`
 - `../../wiki/spec-driven-development.md`
