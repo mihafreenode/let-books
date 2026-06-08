@@ -286,7 +286,7 @@ Ništa od ovoga ne traži novi sustav vjerovanja. Većina relevantnih gradnika v
 - ADR-ovi
 - arhitekturne bilješke
 - komentari koji objašnjavaju zašto
-  - operativni priručnici
+- operativni priručnici
 - pravila validacije
 - ugovori automatizacije
 - projektno obrazloženje
