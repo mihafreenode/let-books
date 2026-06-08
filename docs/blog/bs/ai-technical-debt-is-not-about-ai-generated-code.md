@@ -252,7 +252,7 @@ Kontrast je jednostavan.
 
 ![Dijagram samo kod nasuprot sačuvanom razumijevanju](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/bs/code-only-vs-preserved-understanding.svg)
 
-Na lijevoj putanji repozitorij gomila implementiranu logiku i gubi kontekst. Na desnoj putanji gomila je zajedno s barem nacrtom namjere, pretpostavki i obrazloženja koji se može pregledati.
+Na lijevoj putanji repozitorij zadržava kod i testove, ali gubi objašnjenje zašto su takvi. Na desnoj ih zadržava zajedno s barem nacrtom namjere, pretpostavki i obrazloženja koji se može pregledati.
 
 ## Pregled ispravnosti i pregled potpunosti nisu isti posao
 

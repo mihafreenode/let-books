@@ -252,7 +252,7 @@ The contrast is simple.
 
 ![Code only versus preserved understanding diagram](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/en/code-only-vs-preserved-understanding.svg)
 
-In the left path, the repository accumulates behavior and loses context. In the right path, the repository accumulates behavior plus at least a reviewable draft of intent, assumptions, and rationale.
+In the left path, the repository preserves code and tests but loses the reasoning around them. In the right path, it preserves code and tests alongside at least a reviewable draft of intent, assumptions, and rationale.
 
 ## Correctness review and completeness review are different jobs
 

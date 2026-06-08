@@ -252,7 +252,7 @@ Il contrasto è semplice.
 
 ![Diagramma codice soltanto versus comprensione preservata](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/it/code-only-vs-preserved-understanding.svg)
 
-Nel percorso di sinistra il repository accumula comportamento e perde contesto. Nel percorso di destra il repository accumula comportamento più almeno una bozza revisionabile di intento, assunzioni e motivazione.
+Nel percorso di sinistra il repository conserva codice e test, ma perde la spiegazione del perché siano fatti così. Nel percorso di destra conserva codice e test insieme ad almeno una bozza revisionabile di intento, assunzioni e motivazione.
 
 ## Review di correttezza e review di completezza sono lavori diversi
 

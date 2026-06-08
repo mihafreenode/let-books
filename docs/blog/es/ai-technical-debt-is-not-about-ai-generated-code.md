@@ -252,7 +252,7 @@ El contraste es simple.
 
 ![Diagrama de código solo frente a comprensión preservada](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/es/code-only-vs-preserved-understanding.svg)
 
-En el camino de la izquierda, el repositorio acumula comportamiento y pierde contexto. En el camino de la derecha, el repositorio acumula comportamiento más, al menos, un borrador revisable de intención, supuestos y justificación.
+En el camino de la izquierda, el repositorio conserva código y pruebas, pero pierde la explicación que los rodea. En el camino de la derecha, conserva código y pruebas junto con, al menos, un borrador revisable de intención, supuestos y justificación.
 
 ## La revisión de corrección y la revisión de completitud son trabajos distintos
 

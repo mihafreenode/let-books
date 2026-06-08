@@ -252,7 +252,7 @@ Le contraste est simple.
 
 ![Schéma implémentation seule contre compréhension préservée](../../diagrams/blog/ai-technical-debt-is-not-about-ai-generated-code/fr/code-only-vs-preserved-understanding.svg)
 
-Dans le chemin de gauche, le dépôt accumule du comportement et perd son contexte. Dans le chemin de droite, le dépôt accumule du comportement ainsi qu'au moins une ébauche révisable de l'intention, des hypothèses et de la justification.
+Dans le chemin de gauche, le dépôt conserve le code et les tests, mais perd l'explication qui les entoure. Dans le chemin de droite, il conserve le code et les tests avec au moins une ébauche révisable de l'intention, des hypothèses et de la justification.
 
 ## La revue de justesse et la revue de complétude sont deux tâches différentes
 
