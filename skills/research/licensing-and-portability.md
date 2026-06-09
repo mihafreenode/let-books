@@ -26,7 +26,7 @@ The repository adaptation contains:
 - current folder structures
 - current conventions
 
-Supporting-material transcript artifacts can travel with the package as provenance or research context, but they should remain clearly separate from the portable skill definitions themselves. Multi-part transcripts may be useful for article development, governance history, boundary-decision context, or audit traceability without becoming part of the canonical skill definitions.
+Supporting-material transcript artifacts can travel with the package as provenance or research context, but they should remain clearly separate from the portable skill definitions themselves. Multi-part transcripts may be useful for article development, governance history, boundary-decision context, extraction history, or audit traceability without becoming part of the canonical skill definitions.
 
 That separation matters because a future repository may want the capability without inheriting the exact Let Books implementation.
 

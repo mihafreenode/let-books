@@ -10,3 +10,4 @@
 - The reconstructed transcript continuation further supports treating conversation preservation as a supporting governance artifact rather than as a new standalone skill.
 - The Part 3 transcript adds migration-audit and ownership-design provenance, reinforcing that supporting-material artifacts can preserve governance evolution across multiple analysis phases.
 - The Part 4 transcript preserves an important boundary challenge: `EG-005` and `EG-007` may be valid under Engineering Governance now while still being plausible future candidates for resilience or verification-focused skills.
+- The Part 5 transcript preserves the transition from audit to actual extraction and then to agent-skill pilot validation, which is useful evidence that the governance package can move from analysis into practical reuse.

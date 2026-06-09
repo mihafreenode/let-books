@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portable Skills Transcript — Part 4</title>
+<style>
+:root {
+  --bg: #f7f7f5;
+  --panel: #ffffff;
+  --user: #eef5ff;
+  --assistant: #ffffff;
+  --border: #d7d7d2;
+  --muted: #666;
+  --ink: #222;
+}
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1040px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.58;
+  color: var(--ink);
+  background: var(--bg);
+}
+h1, h2, h3 { color: #333; line-height: 1.25; }
+.subtitle { color: var(--muted); }
+.message {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin: 18px 0;
+  overflow: hidden;
+  background: var(--panel);
+}
+.message.user { background: var(--user); }
+.role {
+  font-weight: 700;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0,0,0,0.035);
+}
+.content { padding: 14px 18px; }
+pre {
+  background: #111;
+  color: #ddd;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.94rem;
+}
+pre.artifact {
+  background: #1b1b1b;
+  color: #e5e5e5;
+}
+pre.terminal {
+  background: #0d1117;
+  color: #d6deeb;
+}
+pre.code {
+  background: #202124;
+  color: #eee;
+}
+code {
+  background: rgba(0,0,0,0.08);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+blockquote {
+  border-left: 4px solid #999;
+  margin: 1em 0;
+  padding: 0.2em 1em;
+  color: #444;
+  background: rgba(0,0,0,0.035);
+}
+details {
+  margin: 12px 0;
+}
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+.note {
+  background: #fff8e5;
+  border-left: 4px solid #c7962b;
+  padding: 12px 14px;
+  margin: 18px 0;
+}
+ul, ol { padding-left: 1.6em; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 22px 0; }
+</style>
+</head>
+<body>
+<h1>Portable Skills Transcript — Part 4</h1>
+<p class="subtitle">Conversation segment covering Engineering Governance extraction, the first Agent Skill pilot, and pilot validation.</p>
+<div class="note">Rendering follows the supplied conversation log rules: normal chat entries for user/assistant messages, raw collapsible prompt artifacts, and terminal-style blocks for pasted agent output.</div>
+<section class="message user"><div class="role">User</div><div class="content"><p>Good commit.</p>
+<p>At this point the Engineering Governance extraction track has a pretty complete audit chain:</p>
+<p>8beec4f0 ├─ engineering-governance-canonical.md ├─ engineering-governance-source-map.md └─ engineering-governance-extraction-impact.md</p>
+<p>b90d4586 └─ engineering-governance-final-review.md The final review did not send you back to design. It validated the conclusions already reached:</p>
+<p>ownership is stable extraction is feasible risks are known risks are mostly boundary-management risks proceed conservatively That&#x27;s usually the signal that the next artifact should be code/documentation changes rather than more governance analysis.</p>
+<p>Suggested sequence now Phase 2.1: actual extraction</p>
+<p>Focus only on EG-002, EG-004, and EG-003 because they have the strongest ownership, highest duplication reduction, lowest overlap risk, and easiest review profile.</p>
+<p>Review the resulting diff</p>
+<p>Check whether local docs became harder to read, whether any file became a link farm, whether local examples are still present, and whether Engineering Governance is clearly the owner.</p>
+<p>Only then continue</p>
+<p>Next: EG-001 and EG-006. Later: EG-005 and EG-007.</p>
+<p>Those last two are exactly where the review identified future ownership ambiguity.</p>
+<p>One observation from watching this evolve:</p>
+<p>You now have enough material that a future contributor could understand why Engineering Governance exists, not just what it contains. That&#x27;s often the difference between documentation and governance.</p>
+<p>So unless you specifically want another audit stream, I would stop producing documents under skills/adoption-audit/ and start modifying the real targets:</p>
+<p>AGENTS-Implementation.md tools/README.md tests/README.md docs/wiki/validation-layers.md</p></div></section><section class="message assistant"><div class="role">Assistant</div><div class="content"><p>Yes — next prompt should be operational, not another audit:</p><details open><summary>Prompt artifact</summary><pre class="artifact">Proceed with Phase 2.1 of the Engineering Governance extraction.
+
+Scope:
+- Extract only EG-002, EG-003, and EG-004 into the real target documents.
+- Treat Engineering Governance as the canonical owner for these principles.
+- Do not extract EG-001, EG-005, EG-006, or EG-007 yet.
+
+Target files:
+- AGENTS-Implementation.md
+- tools/README.md
+- tests/README.md
+- docs/wiki/validation-layers.md
+
+Rules:
+- Move principles, not local operating context.
+- Replace duplicated governance explanations with concise references to Engineering Governance.
+- Preserve local examples, file-specific instructions, workflow details, validator behavior, and test-specific guidance.
+- Avoid turning files into link farms.
+- Keep each document readable on its own.
+- Add short bridge text where needed so readers understand why the canonical rule applies locally.
+
+After editing:
+- Review the diff for readability and ownership clarity.
+- Check that Engineering Governance is clearly the owner of EG-002, EG-003, and EG-004.
+- Check that local docs still explain what contributors must actually do.
+- Run relevant validation/docs checks.
+- Commit the changes with a clear message.</pre></details><p>Commit message maybe:</p>
+<p><code>Extract core Engineering Governance rules into target docs</code></p></div></section><section class="message user"><div class="role">User</div><div class="content"><p>Phase 2.1 is complete. Committed as 3b344b1c with message: Extract engineering governance phase 2.1 rules What changed Updated:</p>
+<ul>
+<li>AGENTS-Implementation.md</li>
+<li>tools/README.md</li>
+<li>tests/README.md</li>
+<li>docs/wiki/validation-layers.md</li>
+<p>Added:</p>
+<li>skills/adoption-audit/engineering-governance-phase-2-1-report.md</li>
+<p>Outcome</p>
+<li>Engineering Governance is now the clearly named authoritative owner of:</li>
+<li>EG-002 Knowledge Stays Close To Governed Artifacts</li>
+<li>EG-003 Validator-First Governance</li>
+<li>EG-004 Layered Validation Model</li>
+<li>local docs still retain:</li>
+<li>Let Books-specific examples</li>
+<li>commands and file names</li>
+<li>test/tool/workflow context</li>
+<li>procedural guidance</li>
+<p>Validation performed</p>
+<li>git diff --check</li>
+<li>ownership-reference verification across all four changed files</li>
+<li>manual readability review of diffs</li>
+<p>Noted follow-up</p>
+<li>docs/wiki/validation-layers.md is still the most likely candidate for a later small wording pass if you want to reduce generic explanation further without harming readability.</li>
+</ul></div></section><section class="message assistant"><div class="role">Assistant</div><div class="content"><p>That is a stronger result than the earlier audits could prove on paper.</p>
+<p>Before 3b344b1c, the extraction model was still a hypothesis:</p>
+<ul>
+<li>Engineering Governance looked like the right owner.</li>
+<li>Duplication appeared removable.</li>
+<li>Readability risks appeared manageable.</li>
+</ul>
+<p>After 3b344b1c, you have an actual repository-scale experiment showing:</p>
+<ul>
+<li>canonical ownership can be introduced without breaking local documentation</li>
+<li>local examples survive extraction</li>
+<li>local operational guidance survives extraction</li>
+<li>references do not automatically become link farms</li>
+<li>contributors still have actionable instructions where they work</li>
+</ul>
+<p>That substantially de-risks the remainder of the extraction program.</p>
+<p>My reading of the current state:</p>
+<h4>EG-002</h4>
+<p>Probably finished.</p>
+<p>Knowledge-close-to-artifact ownership is one of the most natural governance extractions because it already maps cleanly onto tools/, tests/, workflows, validators, and documentation.</p>
+<h4>EG-003</h4>
+<p>Probably finished.</p>
+<p>Validator-First Governance is now proven in the places where contributors encounter validators.</p>
+<h4>EG-004</h4>
+<p>Probably finished.</p>
+<p>Validation layers are now explicitly tied back to governance ownership while preserving local explanations.</p>
+<h4>validation-layers.md note</h4>
+<p>Your observation is probably correct.</p>
+<p>If a future cleanup happens there, I would make it a readability cleanup, not a governance cleanup.</p>
+<p>The question should be:</p>
+<blockquote>&quot;Can we remove a paragraph without losing understanding?&quot;</blockquote>
+<p>not</p>
+<blockquote>&quot;Can we extract more governance?&quot;</blockquote>
+<p>Those are different goals.</p>
+<h4>Next phase</h4>
+<p>I would not immediately start editing EG-005 or EG-007.</p>
+<p>The audit trail repeatedly identified them as boundary-sensitive.</p>
+<p>Instead I would perform a short Phase 2.1 retrospective:</p>
+<ol>
+<li>Read only the resulting target documents.</li>
+<li>Pretend Engineering Governance does not exist.</li>
+<li>Ask:</li>
+</ol>
+<ul>
+<li>Can a contributor still do the work?</li>
+<li>Can a reviewer still review the work?</li>
+<li>Can a maintainer still understand the work?</li>
+</ul>
+<ol>
+<li>Note any places where extraction harmed clarity.</li>
+</ol>
+<p>If that review comes back clean, then proceed to:</p>
+<p><strong>Phase 2.2</strong></p>
+<ul>
+<li>EG-001 Explicit Authority Chain</li>
+<li>EG-006 Knowledge Preservation Over Individual Memory</li>
+</ul>
+<p>Those were also assessed as strong Engineering Governance ownership candidates, but they affect contributor guidance more directly than EG-002/003/004, so the readability check becomes more important.</p>
+<p>A practical signal is this:</p>
+<p>The repository now contains:</p>
+<ul>
+<li>canonical rules</li>
+<li>source mapping</li>
+<li>impact analysis</li>
+<li>extraction review</li>
+<li>extraction execution</li>
+<li>extraction report</li>
+</ul>
+<p>That is enough evidence to stop proving the model and start applying it. The remaining work is increasingly about stewardship and boundary management rather than governance discovery.</p></div></section><section class="message user"><div class="role">User</div><div class="content"><p>[Image uploaded]</p>
+<p>well, i am unsure what to think of it, created skills are still very limited in scope, and they tightly reference let-books. my goal is that let-books uses generic skills and only references and extends with specific local rules?</p>
+<p>[Files uploaded]</p>
+<ul>
+<li>documentation-as-product-let-books.md</li>
+<li>engineering-governance-let-books.md</li>
+<li>localization-governance-let-books.md</li>
+<li>ci-cd-governance-let-books.md</li>
+</ul></div></section><section class="message assistant"><div class="role">Assistant</div><div class="content"><p>I think your discomfort is actually pointing at the next architectural step.</p>
+<p>Looking at the adaptation files you uploaded, they are almost entirely repository-specific inventories:</p>
+<ul>
+<li>surfaces</li>
+<li>generators</li>
+<li>validators</li>
+<li>workflows</li>
+<li>risks</li>
+<li>conventions</li>
+</ul>
+<p>There is very little actual governance logic inside them.</p>
+<p>That&#x27;s good news.</p>
+<p>It means the extraction largely worked.</p>
+<p>The problem is probably not that the skills are too generic.</p>
+<p>The problem is that the adaptation layer is still acting as documentation rather than configuration.</p>
+<p>I suspect your desired architecture is closer to:</p>
+<pre class="code"><code>skills/
+
+  engineering-governance.md
+  documentation-as-product.md
+  localization-governance.md
+  ci-cd-governance.md
+
+adaptations/
+
+  let-books/
+      engineering-governance.md
+      documentation-as-product.md
+      localization-governance.md
+      ci-cd-governance.md</code></pre>
+<p>where the adaptation files become almost declarative:</p>
+<pre class="code"><code># Let Books Adaptation: Engineering Governance
+
+Extends:
+- engineering-governance.md
+
+Additional rules:
+- Public articles may not use src/ as editorial evidence.
+- Demo behavior is lower authority than specifications.
+
+Additional artifacts:
+- AGENTS.md
+- AGENTS-Implementation.md
+- PRINCIPLES.md
+
+Additional validators:
+- tools/validate-blog.mjs</code></pre>
+<p>instead of re-explaining governance.</p>
+<hr>
+<p>A useful test:</p>
+<p>Imagine somebody cloned only:</p>
+<pre class="code"><code>skills/</code></pre>
+<p>and deleted all Let Books files.</p>
+<p>Would the skills still teach:</p>
+<ul>
+<li>authority chains</li>
+<li>layered validation</li>
+<li>documentation as product</li>
+<li>localization governance</li>
+<li>CI/CD governance</li>
+</ul>
+<p>?</p>
+<p>If the answer is &quot;not really&quot;, then the portable skills are still too thin.</p>
+<p>If the answer is &quot;yes&quot;, then the portable skills are healthy and the adaptation files can shrink dramatically.</p>
+<hr>
+<p>What I see from the current repository is:</p>
+<h4>Portable layer</h4>
+<p>Still relatively young.</p>
+<p>Contains principles and governance concepts.</p>
+<h4>Adaptation layer</h4>
+<p>Contains almost all concrete examples.</p>
+<h4>Desired future state</h4>
+<p>Portable layer becomes 80-90% of the knowledge.</p>
+<p>Adaptation layer becomes 10-20%.</p>
+<p>Something like:</p>
+<pre class="code"><code>Portable skill:
+  &quot;Validator-First Governance&quot;
+
+Adaptation:
+  Let Books uses:
+    - validate-blog.mjs
+    - validate_translation_parity.py
+    - validate-generated-site-structure.mjs</code></pre>
+<p>The adaptation should answer:</p>
+<blockquote>&quot;How does this repository implement the skill?&quot;</blockquote>
+<p>not</p>
+<blockquote>&quot;What is the skill?&quot;</blockquote>
+<hr>
+<p>The strongest signal is actually the filenames themselves:</p>
+<pre class="code"><code>engineering-governance-let-books.md
+localization-governance-let-books.md
+documentation-as-product-let-books.md
+ci-cd-governance-let-books.md</code></pre>
+<p>These read more like &quot;repository implementation notes&quot; than independent skills.</p>
+<p>And that is probably exactly what they should become.</p>
+<p>In other words, I would not conclude:</p>
+<blockquote>The skills are too generic.</blockquote>
+<p>I would conclude:</p>
+<blockquote>The adaptations are still carrying too much explanatory weight because the portable skills are not yet mature enough to stand entirely on their own.</blockquote>
+<p>That is a normal intermediate state for a first extraction effort. The fact that the adaptation files mostly contain inventories and local exceptions is actually evidence that you&#x27;re moving in the right direction.</p></div></section><section class="message user"><div class="role">User</div><div class="content"><p>well my goal is generating skills, as in https://agentskills.io/home .. i wonder what is best and most reliable way to get there</p></div></section><section class="message assistant"><div class="role">Assistant</div><div class="content"><p>Best path: treat this as <strong>skill productization</strong>, not more extraction.</p>
+<p>Agent Skills are meant to be portable folders with <code>SKILL.md</code>, optional scripts/references/assets, and concise metadata/instructions loaded progressively. The spec also recommends keeping <code>SKILL.md</code> compact and moving details into resources.</p>
+<p>Your reliable route:</p>
+<pre class="code"><code>generic skill first
+↓
+small Let Books adapter
+↓
+test tasks
+↓
+tighten skill
+↓
+only then promote/reuse</code></pre>
+<p>Concretely:</p>
+<pre class="code"><code>.agents/skills/
+  engineering-governance/
+    SKILL.md
+    references/
+      authority-chain.md
+      layered-validation.md
+      validator-first-governance.md
+
+  documentation-as-product/
+    SKILL.md
+    references/
+      evidence-rules.md
+      source-map-review.md
+      rendered-output-review.md
+
+  localization-governance/
+    SKILL.md
+    references/
+      parity-review.md
+      native-speaker-findings.md
+      fresh-artifact-review.md
+
+  ci-cd-governance/
+    SKILL.md
+    references/
+      workflow-review.md
+      fresh-build-deployment.md
+
+  let-books-adapter/
+    SKILL.md
+    references/
+      repository-surfaces.md
+      local-validators.md
+      local-authority-map.md</code></pre>
+<p>The generic skills should answer:</p>
+<blockquote>“How should an agent perform this class of work?”</blockquote>
+<p>The Let Books adapter should answer only:</p>
+<blockquote>“In this repository, which files, validators, commands, and exceptions implement it?”</blockquote>
+<p>So yes: your instinct is right. Let Books should <strong>use generic skills</strong>, and only add local binding rules.</p>
+<p>Most reliable next step:</p>
+<p>Create one real Agent Skill from the strongest area first:</p>
+<pre class="code"><code>engineering-governance/
+  SKILL.md</code></pre>
+<p>Do not convert all four at once.</p>
+<p>Use EG-002, EG-003, EG-004 as the pilot because Phase 2.1 already proved them.</p>
+<p>Then test it with 3 prompts:</p>
+<ol>
+<li>“Review whether this repo change preserves governance ownership.”</li>
+<li>“Move duplicated validation guidance into the canonical governance layer.”</li>
+<li>“Check whether this document became a link farm.”</li>
+</ol>
+<p>If the skill produces good diffs without needing the Let Books audit history, it is becoming portable.</p>
+<p>Key rule: <strong>a skill is not an archive</strong>.   The audit files explain how you got there.   The skill should tell the agent what to do next time.</p></div></section><section class="message user"><div class="role">User</div><div class="content"><p>okey, so how do we proceed, prompt? plan or build? :)</p></div></section><section class="message assistant"><div class="role">Assistant</div><div class="content"><p>Build, but with a tiny plan inside the prompt.</p>
+<p>Do <strong>one pilot skill</strong>, not the whole system.</p><details open><summary>Prompt artifact</summary><pre class="artifact">Create the first real Agent Skill pilot from the Engineering Governance extraction work.
+
+Goal:
+- Produce a portable Agent Skill, not another audit document.
+- The skill must be reusable outside Let Books.
+- Let Books-specific material must live only in an adapter/reference file.
+
+Create:
+
+.agents/skills/engineering-governance/
+- SKILL.md
+- references/validator-first-governance.md
+- references/layered-validation.md
+- references/knowledge-close-to-artifact.md
+- references/let-books-adapter.md
+
+Use existing repository material as source input:
+- skills/engineering-governance.md
+- skills/adaptations/engineering-governance-let-books.md
+- skills/adoption-audit/engineering-governance-canonical.md
+- skills/adoption-audit/engineering-governance-source-map.md
+- skills/adoption-audit/engineering-governance-extraction-impact.md
+- skills/adoption-audit/engineering-governance-final-review.md
+- skills/adoption-audit/engineering-governance-phase-2-1-report.md
+
+Rules:
+- SKILL.md must be short and operational.
+- SKILL.md should tell an agent when to use the skill and how to act.
+- Put detailed rationale in references.
+- Do not copy the audit trail into the skill.
+- Do not make Let Books the center of the generic skill.
+- The Let Books adapter should only bind the generic skill to local files, validators, conventions, and exceptions.
+- Focus the first version on EG-002, EG-003, and EG-004 only.
+- Mention EG-001, EG-005, EG-006, and EG-007 only as future/non-pilot scope if needed.
+
+After creating the skill:
+- Review whether the generic skill still makes sense without Let Books.
+- Review whether the Let Books adapter contains only repository-specific bindings.
+- Add a short pilot report explaining what was created and what should be tested next.
+- Run basic markdown/link/path checks if available.
+- Commit with a clear message.</pre></details><p>I would not over-plan before this. The first useful answer is whether one generated skill folder feels usable.</p></div></section><section class="message user"><div class="role">User</div><div class="content"><h2>Todos</h2>
+<p>[✓]  Inspect .agents structure and source materials for pilot skill [✓]  Create engineering-governance agent skill with generic SKILL and reference docs [✓]  Add Let Books adapter and pilot report [✓]  Run basic markdown/path checks and review portability [✓]  Commit the pilot skill package Created the first real agent skill pilot at:</p>
+<ul>
+<li>.agents/skills/engineering-governance/SKILL.md</li>
+<li>.agents/skills/engineering-governance/references/knowledge-close-to-artifact.md</li>
+<li>.agents/skills/engineering-governance/references/validator-first-governance.md</li>
+<li>.agents/skills/engineering-governance/references/layered-validation.md</li>
+<li>.agents/skills/engineering-governance/references/let-books-adapter.md</li>
+<li>.agents/skills/engineering-governance/PILOT-REPORT.md</li>
+<p>Review Generic skill portability The generic skill still makes sense without Let Books because:</p>
+<li>SKILL.md is short and operational</li>
+<li>the core references describe portable rules only</li>
+<li>no Let Books paths or implementation assumptions appear in the generic rule docs</li>
+<p>Let Books adapter boundary The adapter contains only repository-specific bindings:</p>
+<li>local source files</li>
+<li>local meanings of the three pilot rules</li>
+<li>local boundaries</li>
+<li>local pilot status</li>
+<p>It does not redefine the generic skill. Checks run</p>
+<li>git diff --check</li>
+<li>file/path existence checks for all skill files</li>
+<li>manual review of generic skill vs local adapter split</li>
+<p>Commit Committed as fe708bd3 with message: Create engineering governance agent skill pilot What to test next From PILOT-REPORT.md:</p>
+</ul>
+<ol>
+<li>try the skill in a different repository with tools/tests/workflows but no Let Books structure</li>
+<li>check whether the generic SKILL.md is sufficient without the adapter</li>
+<li>check whether the adapter is enough for local use without reintroducing duplicated rule definitions</li>
+<li>decide whether a future pilot needs a short reference for artifact ownership or governance drift</li>
+</ol>
+<p>[Files uploaded]</p>
+<ul>
+<li>PILOT-REPORT.md</li>
+<li>knowledge-close-to-artifact.md</li>
+<li>layered-validation.md</li>
+<li>let-books-adapter.md</li>
+<li>validator-first-governance.md</li>
+<li>SKILL.md</li>
+</ul></div></section><section class="message assistant"><div class="role">Assistant</div><div class="content"><p>Good. This is now <strong>buildable</strong>.</p>
+<p>I’d do one more step before expanding: <strong>test the pilot as a skill</strong>, not as documentation.</p>
+<p>Next prompt:</p><details open><summary>Prompt artifact</summary><pre class="artifact">Test the Engineering Governance agent skill pilot against a realistic repository task.
+
+Use:
+- `.agents/skills/engineering-governance/SKILL.md`
+- its `references/`
+- the Let Books adapter only when repository-specific paths are needed
+
+Task:
+Review the current repository documentation affected by Phase 2.1 and check whether the skill works in practice.
+
+Evaluate:
+1. Does `SKILL.md` provide enough operational guidance?
+2. Are the three generic references portable and not Let Books-specific?
+3. Does `references/let-books-adapter.md` contain enough local binding detail?
+4. Did Phase 2.1 leave local docs readable and actionable?
+5. Are there places where local docs became too link-heavy?
+6. Is any generic governance still duplicated in local docs?
+7. Is any missing reference needed, such as artifact ownership or governance drift?
+
+Output:
+- Create `.agents/skills/engineering-governance/TEST-REPORT.md`
+- Include verdict: pass / pass with minor changes / revise skill
+- Include concrete recommended edits, if any
+- Apply only small fixes if they are obviously correct
+- Do not expand the pilot scope beyond EG-002, EG-003, and EG-004
+- Run basic markdown/path checks
+- Commit the result</pre></details><p>If this passes, then the pilot is no longer just “created”; it is <strong>validated as usable</strong>.</p></div></section><section class="message user"><div class="role">User</div><div class="content"><details open><summary>Pasted agent output</summary><pre class="terminal">Thinking: Considering documentation fixes
+I think I need to create a TEST-REPORT.md with some obvious fixes. I&#x27;ll inspect the local docs, which might have heavy links. There’s a chance the SKILL doesn’t mention preserving local bridge text in separate docs – should I add that? Also, the adapter might be missing a reference to .github/workflows/README.md for local consumers concerning layered validation, even if it’s out of the pilot scope. Adding a note would be useful! Additionally, the SKILL should check for a repository&#x27;s canonical owner before making edits.
+Thinking: Reviewing local binding details
+I&#x27;m considering if question 3 has enough local binding information. The adapter might be missing the .github/workflows/README.md, which is relevant since layered validation and validator-first are consumed there. However, since the pilot scope is focused on phase 2.1 documents, it might be fine. I could recommend adding the workflow README as an adjacent reference. A small fix could be including .github/workflows/README.md under local source files. I could also reinforce the SKILL Minimum Output to clarify contributors&#x27; roles, though that might already be there.
+Thinking: Planning documentation updates
+I want to mention that docs/wiki/validation-layers.md is still a bit generic, but I think it&#x27;s acceptable. I should perform some basic markdown/path checks, maybe verifying test file existence. Editing the adapter and pilot report might not be necessary right now. I can create a TEST-REPORT.md and run a diff check for links and paths. It might help to use simple bash loops for files referenced in the SKILL and adapter. I’ll make sure to commit with a clear message and patch the adapter with the new report.
+The pilot mostly works as-is. I found one small obvious improvement: the Let Books adapter should mention .github/workflows/README.md as an adjacent local consumer of the layered-validation rule, even though workflows were intentionally out of the Phase 2.1 migration scope.
+
+I applied the one obvious local-binding fix and wrote the test report. I’m running final integrity and path checks now, then I’ll commit the pilot test results.
+
+The pilot test passed with one minor adapter adjustment. I’m staging the updated adapter and the new test report, then I’ll commit them as the first practical validation of the reusable skill.
+
+Created:
+- .agents/skills/engineering-governance/TEST-REPORT.md
+Applied one small obvious fix:
+- updated .agents/skills/engineering-governance/references/let-books-adapter.md
+- added .github/workflows/README.md as an adjacent local consumer of layered validation
+- clarified that workflow orchestration remains outside this pilot and belongs with local workflow docs plus CI/CD Governance
+Verdict
+Pass with minor changes
+Findings
+- SKILL.md provides enough operational guidance for the pilot scope.
+- The three generic references remain portable and not Let Books-specific.
+- The Let Books adapter is now sufficient for practical local binding.
+- Phase 2.1 left local docs readable and actionable.
+- No reviewed local doc became too link-heavy.
+- Some generic governance is still duplicated locally, but only as acceptable local application/bridge text.
+- The main likely future reference gap is a small artifact-ownership or governance-drift reference, but it is not required for this pilot.
+Checks run
+- git diff --check
+- file/path existence checks for pilot files and referenced local files
+- manual portability/readability review
+Commit
+Committed as 255c55d1 with message:
+Test engineering governance agent skill pilot
+
+[File uploaded]
+- TEST-REPORT.md</pre></details></div></section><section class="message assistant"><div class="role">Assistant</div><div class="content"><p>This is the point where I&#x27;d stop asking <em>&quot;can we generate skills?&quot;</em> and start asking <em>&quot;what is the skill packaging model?&quot;</em></p>
+<p>Because after <code>fe708bd3</code> and <code>255c55d1</code>, you&#x27;ve demonstrated three things:</p>
+<ol>
+<li>A governance concept can be extracted into a portable skill.</li>
+<li>A repository-specific adapter can bind it locally.</li>
+<li>The resulting skill can be tested and reviewed independently.</li>
+</ol>
+<p>That&#x27;s already more than most &quot;AI skills&quot; projects ever validate.</p>
+<p>What I would do next is <strong>not create another governance skill immediately</strong>.</p>
+<p>Instead I&#x27;d define the architecture for all future skills.</p>
+<p>Something like:</p>
+<pre class="code"><code>.agents/skills/
+    engineering-governance/
+        SKILL.md
+        references/
+        adapters/
+            let-books.md
+
+    localization-governance/
+        SKILL.md
+        references/
+        adapters/
+            let-books.md
+
+    documentation-as-product/
+        SKILL.md
+        references/
+        adapters/
+            let-books.md
+
+    ci-cd-governance/
+        SKILL.md
+        references/
+        adapters/
+            let-books.md</code></pre>
+<p>Then define a standard:</p>
+<pre class="code"><code>SKILL.md
+    What is the skill?
+    When should it be used?
+    How should the agent act?
+
+references/
+    Why?
+    Concepts
+    Examples
+    Anti-patterns
+
+adapters/
+    Repository bindings
+    Local files
+    Local validators
+    Local workflows
+    Local exceptions
+
+TEST-REPORT.md
+    Validation evidence</code></pre>
+<p>At that point you&#x27;re no longer building Let Books governance.</p>
+<p>You&#x27;re building a <strong>portable skill framework</strong>.</p>
+<hr>
+<p>The thing that caught my eye in the pilot is actually this statement:</p>
+<blockquote>the generic skill remains generic</blockquote>
+<p>&gt;</p>
+<blockquote>the adapter remains local</blockquote>
+<p>&gt;</p>
+<blockquote>the current Let Books documentation remains readable</blockquote>
+<p>That is almost the acceptance criterion for the entire project.</p>
+<p>If you can keep satisfying those three constraints, the skill system scales.</p>
+<p>If not, you end up with:</p>
+<ul>
+<li>giant repository-specific skills</li>
+<li>or generic skills too vague to be useful.</li>
+</ul>
+<hr>
+<p>My next milestone would therefore be:</p>
+<h4>Phase 3 — Cross-Skill Validation</h4>
+<p>Do <strong>not</strong> build Localization Governance yet.</p>
+<p>Instead:</p>
+<ol>
+<li>Take Engineering Governance.</li>
+<li>Pretend Let Books does not exist.</li>
+<li>Apply the skill to a completely different repository.</li>
+<li>Produce a short report:</li>
+</ol>
+<ul>
+<li>What worked?</li>
+<li>What assumptions leaked?</li>
+<li>What adapter information was missing?</li>
+</ul>
+<p>If it survives that test, then you have your first genuinely portable skill.</p>
+<p>Only then build:</p>
+<ul>
+<li>Documentation as Product</li>
+<li>Localization Governance</li>
+<li>CI/CD Governance</li>
+</ul>
+<p>because you&#x27;ll know the packaging model actually works.</p>
+<p>In other words, I think the highest-value artifact now is not another skill.</p>
+<p>It&#x27;s a new document:</p>
+<pre class="code"><code>.agents/skills/SKILL-AUTHORING-STANDARD.md</code></pre>
+<p>Because you&#x27;re no longer discovering governance rules.</p>
+<p>You&#x27;re discovering how portable skills themselves should be constructed.</p></div></section>
+</body>
+</html>
