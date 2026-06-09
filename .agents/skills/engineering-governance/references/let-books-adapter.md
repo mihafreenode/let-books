@@ -10,6 +10,7 @@ Primary local files that apply this pilot scope:
 - `tools/README.md`
 - `tests/README.md`
 - `docs/wiki/validation-layers.md`
+- `.github/workflows/README.md`
 - `skills/engineering-governance.md`
 
 ## Local Meanings
@@ -35,6 +36,10 @@ In Let Books, this currently appears through:
 - `docs/wiki/validation-layers.md`
 - test README ordering notes
 - workflow and tooling documentation that distinguish source checks, generated-output checks, browser/runtime checks, and deployment/publish checks
+
+Note:
+
+- `.github/workflows/README.md` is an important adjacent consumer of this rule, but workflow-specific orchestration remains outside this pilot and belongs in local workflow documentation plus `CI/CD Governance`
 
 ## Local Boundaries
 
