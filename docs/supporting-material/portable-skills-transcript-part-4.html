@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portable Skills Transcript — Part 4</title>
+<style>
+:root {
+  --bg: #f7f7f8;
+  --panel: #ffffff;
+  --border: #d0d7de;
+  --text: #24292f;
+  --muted: #57606a;
+  --user: #eef6ff;
+  --assistant: #ffffff;
+  --terminal: #111111;
+  --terminalText: #dddddd;
+  --artifact: #1b1b1b;
+  --artifactText: #f0f0f0;
+  --accent: #d97706;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+h1,h2,h3 { color: #333; line-height: 1.25; }
+h1 { border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
+.meta, .note {
+  background: #f5f5f5;
+  padding: 12px 14px;
+  border-left: 4px solid #888;
+  margin: 16px 0 24px;
+}
+.meta { border-left-color: var(--accent); }
+.turn {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  margin: 18px 0;
+  overflow: hidden;
+}
+.role {
+  font-weight: bold;
+  padding: 9px 13px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  background: #f6f8fa;
+}
+.turn.user .role { background: #ddf4ff; color: #0969da; }
+.turn.assistant .role { background: #fff8f0; color: #9a6700; }
+.content { padding: 14px 16px; }
+pre {
+  background: var(--terminal);
+  color: var(--terminalText);
+  padding: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  border-radius: 8px;
+  font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.45;
+}
+pre.artifact {
+  background: var(--artifact);
+  color: var(--artifactText);
+}
+details {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 12px 0;
+  background: #fafafa;
+}
+summary {
+  cursor: pointer;
+  padding: 10px 12px;
+  font-weight: bold;
+  color: var(--muted);
+}
+details pre { margin: 0; border-radius: 0 0 8px 8px; }
+blockquote {
+  border-left: 4px solid var(--border);
+  margin: 1em 0;
+  padding-left: 1em;
+  color: var(--muted);
+}
+code {
+  background: #f6f8fa;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+}
+pre code { background: transparent; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th,td { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+th { background: #f6f8fa; }
+.small { color: var(--muted); font-size: 0.93em; }
+</style>
+</head>
+<body>
+<h1>Portable Skills Transcript — Part 4</h1>
+
+<div class="meta">
+  <strong>Scope:</strong> This transcript continues the Engineering Governance extraction discussion around the Phase 1 design package, final review, Phase 2 planning, and the decision to begin conservative extraction.
+</div>
+
+<div class="note">
+  Rendering follows the provided conversation-log rules: user messages are normal entries, assistant discussion is rendered as HTML, prompt artifacts are preserved as raw collapsible blocks, and pasted agent output is preserved in terminal-style blocks.
+</div>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <details open>
+      <summary>Pasted agent output</summary>
+      <pre>Created the Phase 1 Engineering Governance extraction design package under skills/adoption-audit/:
+- engineering-governance-canonical.md
+- engineering-governance-source-map.md
+- engineering-governance-extraction-impact.md
+What’s Included
+engineering-governance-canonical.md
+Defines what Engineering Governance would authoritatively contain, organized into:
+- Authority, Evidence, And Truth Boundaries
+- Knowledge Preservation In Governed Artifacts
+- Product Resilience And Reality-Based Verification
+For each owned rule it includes:
+- canonical wording
+- rationale
+- examples
+- anti-patterns
+- validation expectations
+engineering-governance-source-map.md
+Maps each Engineering Governance rule to:
+- current locations
+- strongest current source
+- duplicates
+- Let Books-specific adaptations
+- migration complexity
+engineering-governance-extraction-impact.md
+Estimates, per affected document:
+- content likely to move
+- content likely to remain
+- duplication reduction
+- migration risk
+Also includes:
+- repository adaptation review
+- extraction readiness assessment
+Readiness Summary
+Engineering Governance is sufficiently defined for extraction planning.
+Most stable extraction targets:
+1. EG-001 Explicit Authority Chain
+2. EG-002 Knowledge Stays Close To Governed Artifacts
+3. EG-003 Validator-First Governance
+4. EG-004 Layered Validation Model
+Rules needing more boundary care during later migration:
+1. EG-005 Manual Core Workflow Must Work Without AI`
+2. EG-007 Real-Device Verification For Hardware Workflows`
+These are still valid Engineering Governance rules, but they sit closer to product philosophy and operational procedure than the rest.</pre>
+    </details>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>This looks like a fairly clean extraction candidate.</p>
+    <p>My main observation is that the proposed Engineering Governance scope is converging around a very specific question:</p>
+    <blockquote>How do we ensure that engineering knowledge remains authoritative, verifiable, maintainable, and resilient over time?</blockquote>
+    <p>The strongest rules fit that theme naturally:</p>
+    <table>
+      <tr><th>Rule</th><th>Fit</th></tr>
+      <tr><td>EG-001 Explicit Authority Chain</td><td>Core governance</td></tr>
+      <tr><td>EG-002 Knowledge Stays Close To Governed Artifacts</td><td>Core governance</td></tr>
+      <tr><td>EG-003 Validator-First Governance</td><td>Core governance</td></tr>
+      <tr><td>EG-004 Layered Validation Model</td><td>Core governance</td></tr>
+    </table>
+    <p>These feel like foundational governance primitives rather than project-specific practices.</p>
+    <h3>EG-005 Manual Core Workflow Must Work Without AI</h3>
+    <p>This is valid, but it is arguably not governance-first. It is closer to operational resilience, AI adoption policy, business continuity, and tool dependency management.</p>
+    <p>A useful test:</p>
+    <blockquote>If AI disappeared tomorrow, would this rule still be necessary?</blockquote>
+    <p>Yes.</p>
+    <blockquote>Is the rule primarily about preserving authoritative knowledge?</blockquote>
+    <p>Not really.</p>
+    <p>I could see this living in a future Product Resilience, Human Oversight, or AI-Assisted Engineering skill rather than Engineering Governance itself.</p>
+    <h3>EG-007 Real-Device Verification For Hardware Workflows</h3>
+    <p>This one feels even less governance-oriented. It is essentially:</p>
+    <blockquote>Reality beats simulation.</blockquote>
+    <p>That's an important engineering principle, but it is more about validation strategy than governance.</p>
+    <p>I would expect it under something like Product Validation, Reality-Based Verification, or Hardware Quality Assurance rather than the same skill that owns authority chains and documentation truth boundaries.</p>
+    <h3>Possible Extraction Boundary</h3>
+    <p>If I were drawing the boundary today:</p>
+    <p><strong>Engineering Governance owns:</strong> authority hierarchy, source-of-truth rules, knowledge placement, documentation ownership, validation architecture, evidence requirements, defect governance, workflow governance.</p>
+    <p><strong>Product Resilience owns:</strong> manual fallback capability, AI independence, operational continuity, graceful degradation.</p>
+    <p><strong>Reality-Based Verification owns:</strong> real-device testing, production-like testing, simulation limitations, verification hierarchy.</p>
+    <p>That separation would make each skill easier to reason about and avoid a future “miscellaneous engineering wisdom” bucket.</p>
+    <h3>Readiness Assessment</h3>
+    <table>
+      <tr><th>Area</th><th>Readiness</th></tr>
+      <tr><td>Canonical rule set</td><td>High</td></tr>
+      <tr><td>Source mapping</td><td>High</td></tr>
+      <tr><td>Duplication analysis</td><td>High</td></tr>
+      <tr><td>Ownership boundaries</td><td>Medium</td></tr>
+      <tr><td>Migration execution</td><td>Medium-High</td></tr>
+    </table>
+    <p>The key remaining decision is not whether Engineering Governance can be extracted. It's whether EG-005 and EG-007 belong there permanently, or whether they are temporary residents that will later migrate into separate resilience/verification skills.</p>
+    <p>My inclination would be to extract them for now, but explicitly mark them as:</p>
+    <blockquote>Provisional ownership — subject to future Product Resilience and Reality-Based Verification skill extraction.</blockquote>
+    <p>That preserves current knowledge while keeping future decomposition paths open.</p>
+  </div>
+</section>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <details open>
+      <summary>Pasted agent output</summary>
+      <pre>Committed as 8beec4f0 with message:
+Add engineering governance extraction design audit
+Included:
+- Phase 1 Engineering Governance extraction design docs under skills/adoption-audit/
+- Part 3 transcript artifact under docs/supporting-material/
+- supporting-material provenance/reference updates in the skills docs</pre>
+    </details>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>That looks like a sensible checkpoint commit.</p>
+    <h3>1. Design before migration</h3>
+    <p>The extraction audit exists before content movement begins. That reduces the risk of moving rules twice, creating new duplication during extraction, or discovering ownership conflicts halfway through migration.</p>
+    <p>The presence of canonical definition, source map, and impact analysis means the extraction is being treated as a governance change rather than a file reorganization.</p>
+    <h3>2. Transcript preserved as supporting material</h3>
+    <p>Putting the Part 3 transcript under <code>docs/supporting-material/</code> is consistent with the direction you've been evolving:</p>
+    <ul>
+      <li>canonical knowledge stays in skills</li>
+      <li>rationale and discussion remain discoverable</li>
+      <li>provenance is preserved</li>
+      <li>future maintainers can trace decisions</li>
+    </ul>
+    <p>That aligns well with EG-002 without polluting canonical skills with conversational history.</p>
+    <h3>3. Provenance links are becoming first-class</h3>
+    <p>The interesting pattern emerging across the repository is:</p>
+    <pre><code>Canonical rule
+    ↓
+Source map
+    ↓
+Supporting material
+    ↓
+Transcript / discussion</code></pre>
+    <p>That starts looking less like documentation and more like an evidence chain.</p>
+    <h3>4. Extraction is becoming auditable</h3>
+    <p>Before this work, Engineering Governance was largely implicit. Now there is enough material to answer what Engineering Governance owns, what it does not own, where duplicated content exists, migration complexity, and expected impact.</p>
+    <h3>What I'd expect next</h3>
+    <ol>
+      <li>Approve canonical ownership boundaries.</li>
+      <li>Extract EG-001 through EG-004 into authoritative Engineering Governance content.</li>
+      <li>Replace duplicated copies with references.</li>
+      <li>Run dependency and ownership review again.</li>
+      <li>Reassess whether EG-005 and EG-007 stay or become future extraction candidates.</li>
+    </ol>
+    <pre><code>Engineering Governance
+├── Authority Chain
+├── Evidence Rules
+├── Knowledge Preservation
+├── Validation Governance
+└── Governance Boundaries
+
+Product Resilience (future)
+├── AI Independence
+├── Manual Fallback
+└── Operational Continuity
+
+Reality-Based Verification (future)
+├── Real Device Testing
+├── Simulation Limits
+└── Verification Hierarchy</code></pre>
+    <p>At that point the repository starts looking less like a collection of skills and more like a governed knowledge system with explicit ownership boundaries.</p>
+  </div>
+</section>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <p>so prompt now? or do i need to review something?</p>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>I would not jump straight to extraction yet.</p>
+    <p>The audit work suggests you're at a <strong>review and boundary-confirmation checkpoint</strong>, not an implementation checkpoint.</p>
+    <h3>Highest-value review questions</h3>
+    <p><strong>1. Does every rule have exactly one owner?</strong></p>
+    <p>For each EG rule ask whether Engineering Governance is the natural long-term owner, temporarily here, and whether a future maintainer would know where to add related rules.</p>
+    <p>The biggest focus should be EG-005 and EG-007.</p>
+    <p><strong>2. Are any rules missing?</strong></p>
+    <p>Ask what governance principles are repeatedly referenced elsewhere but absent from Engineering Governance, whether hidden governance rules still live in other skills, and whether governance concepts only exist as examples or validator behavior.</p>
+    <p><strong>3. Is the ownership boundary understandable?</strong></p>
+    <blockquote>Give a new contributor the Engineering Governance skill and ask: “What belongs here and what does not?”</blockquote>
+    <p><strong>4. Can duplication actually be removed?</strong></p>
+    <p>The source map should identify canonical source, references, and duplicated wording. Before extraction, confirm affected skills can safely switch to references without losing readability.</p>
+    <p>After that review, I'd move directly into extraction.</p>
+    <details open>
+      <summary>Prompt artifact</summary>
+      <pre class="artifact">Perform a final pre-extraction review of the Engineering Governance extraction package.
+
+Review:
+- skills/adoption-audit/engineering-governance-canonical.md
+- skills/adoption-audit/engineering-governance-source-map.md
+- skills/adoption-audit/engineering-governance-extraction-impact.md
+
+Goals:
+
+1. Validate ownership boundaries.
+   - Confirm each Engineering Governance rule has a clear long-term owner.
+   - Identify rules that appear better suited to future skills such as Product Resilience, Reality-Based Verification, Operational Governance, or similar domains.
+   - Highlight any rules with ambiguous ownership.
+
+2. Validate completeness.
+   - Identify governance concepts that are referenced elsewhere but missing from Engineering Governance.
+   - Identify rules that exist implicitly in validators, workflows, examples, or guidance but are not represented canonically.
+
+3. Validate extraction safety.
+   - Confirm that planned content movement will not remove important context.
+   - Confirm that duplicated content can be replaced with references without reducing maintainability.
+   - Identify migration risks not already documented.
+
+4. Produce a final extraction readiness assessment.
+   - Ready
+   - Ready with minor adjustments
+   - Needs additional design work
+
+Do not modify repository files.
+
+Create a review report under skills/adoption-audit/engineering-governance-final-review.md containing:
+- ownership findings
+- completeness findings
+- extraction safety findings
+- recommended adjustments
+- final readiness verdict
+
+Be conservative.
+Prefer identifying boundary problems before extraction rather than after migration.</pre>
+    </details>
+    <p>If that review comes back “Ready” or “Ready with minor adjustments”, I would proceed with extraction. If it comes back with substantial ownership concerns, fix those first.</p>
+  </div>
+</section>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <details open>
+      <summary>Pasted agent output: Engineering Governance Final Review</summary>
+      <pre>Engineering Governance Final Review
+Scope
+Reviewed:
+- skills/adoption-audit/engineering-governance-canonical.md
+- skills/adoption-audit/engineering-governance-source-map.md
+- skills/adoption-audit/engineering-governance-extraction-impact.md
+Reference context:
+- current skills/engineering-governance.md
+- prior ownership and dependency decisions from the audit and rule-registry work
+This review is conservative and focused on pre-extraction risk.
+Ownership Findings
+Stable ownership
+These rules have clear long-term ownership in Engineering Governance:
+EG-001 Explicit Authority Chain
+Why ownership is clear:
+- foundational cross-skill rule
+- governs how specs, docs, implementation, tests, demos, and generated artifacts relate
+- all other skills consume this rule rather than redefining it
+Assessment:
+- strong fit
+- no meaningful ownership ambiguity
+EG-002 Knowledge Stays Close To Governed Artifacts
+Why ownership is clear:
+- cross-cutting governance rule applying equally to tools, tests, workflows, and docs
+- not specific to localization, publication, or CI mechanics
+Assessment:
+- strong fit
+- should remain owned here
+EG-003 Validator-First Governance
+Why ownership is clear:
+- foundational principle about when recurring failures should graduate into enforcement
+- CI/CD consumes it, but does not define it
+- localization uses it heavily, but as a specialization
+Assessment:
+- strong fit
+- no ownership change recommended
+EG-004 Layered Validation Model
+Why ownership is clear:
+- defines the architecture of validation across guidance, review, validators, tests, CI, and deployment
+- all other skills consume this model
+Assessment:
+- strong fit
+- should remain authoritative here
+EG-006 AI Suggestions Are Not Facts
+Why ownership is clear:
+- generic AI-governance rule
+- localization has a specialized “draft-only until review” version, but the broad principle belongs in Engineering Governance
+Assessment:
+- strong fit
+- specialization split is healthy
+Ownership is valid but should be treated carefully
+EG-005 Manual Core Workflow Must Work Without AI
+Why it is still acceptable here:
+- reusable resilience principle
+- provides a governance-level distinction between enhancement and dependency
+Why ownership is somewhat ambiguous:
+- it reads partly as product philosophy
+- in some repositories this might be framed under product resilience or operational resilience rather than governance
+Assessment:
+- acceptable current owner: Engineering Governance
+- wording discipline is required to keep it portable and non-domain-specific
+EG-007 Real-Device Verification For Hardware Workflows
+Why it can remain here:
+- broad verification principle about what counts as trustworthy evidence
+- not inherently a CI/CD or mobile-debugging implementation rule
+Why ownership is ambiguous:
+- strong pull toward future domains such as:
+  - Reality-Based Verification
+  - Operational Governance
+  - Mobile/Device Debugging Governance
+- concrete examples are very implementation-heavy
+Assessment:
+- acceptable current owner: Engineering Governance
+- this is the rule most likely to be reassigned if a future specialized skill family emerges
+Completeness Findings
+Canonically represented well
+The package already captures these concepts strongly enough for extraction design:
+- authority ordering across artifact types
+- demos as evidence, not automatic authority
+- evidence-backed claims
+- rationale preservation close to governed artifacts
+- validator-first enforcement
+- layered validation
+- AI output requiring review and provenance
+- optional AI versus core workflow resilience
+- real-device evidence for hardware-dependent workflows
+Concepts referenced elsewhere but only partially represented
+These are not severe gaps, but they are thinner than ideal in the Engineering Governance package.
+1. Artifact ownership and stewardship
+Observed in repo patterns:
+- many docs imply that governance artifacts need maintainers or clear owners
+- stale governance is treated as harmful in practice
+Current status:
+- implicit
+- not explicitly canonicalized in Engineering Governance
+Why it matters:
+- once rules move into skills, ownership clarity matters more
+Assessment:
+- not a blocker
+- useful future refinement
+2. Governance drift as a defect class
+Observed in:
+- repeated concern about stale docs, stale workflows, stale duplicated guidance
+Current status:
+- implied through failure modes and migration-risk analysis
+- not expressed as a canonical rule
+Why it matters:
+- extraction will increase the importance of detecting stale references and obsolete local copies
+Assessment:
+- not a blocker
+- should eventually be made explicit, probably as a sub-rule under knowledge preservation or authority maintenance
+3. Local examples versus canonical rules
+Observed need:
+- extraction-impact analysis assumes local examples remain after generic rules move
+- canonical docs do not yet state a rule about how local examples should relate to portable authority
+Current status:
+- implicit in adaptation boundaries
+- not explicit in canonical wording
+Assessment:
+- moderate usefulness
+- not required before extraction, but helpful to avoid over-thinning local docs
+Rules implicit in repo materials but not strongly canonicalized
+These are present indirectly in validators, workflows, or guide structure:
+- stale duplicate guidance should eventually be deprecated or removed after authoritative extraction
+- governance references should point to a single owner, not parallel local restatements
+- supporting evidence should remain stable enough to survive generated-output churn
+These are more migration-governance concerns than missing Engineering Governance core rules.
+Extraction Safety Findings
+Safe areas
+These parts look safe to extract and reference authoritatively:
+EG-001 Explicit Authority Chain
+Why safe:
+- already repeated in several places with mostly consistent meaning
+- repository-specific content can remain as examples and local adaptations
+Risk level:
+- low to medium
+EG-002 Knowledge Stays Close To Governed Artifacts
+Why safe:
+- clearly portable
+- local catalogs can remain while generic rationale moves out
+Risk level:
+- low
+EG-003 Validator-First Governance
+Why safe:
+- already normalized conceptually across tools/tests/workflows
+- strong duplication reduction with low meaning loss
+Risk level:
+- medium
+- must avoid pulling CI/CD-specific orchestration details into the canonical rule
+EG-004 Layered Validation Model
+Why safe:
+- near-direct portable rule
+- local stage/tool examples can stay local
+Risk level:
+- low
+EG-006 AI Suggestions Are Not Facts
+Why safe:
+- concise and portable
+- current repo-specific provenance examples can remain local
+Risk level:
+- low
+Areas requiring caution
+EG-005 Manual Core Workflow Must Work Without AI
+Extraction risk:
+- if moved too aggressively, local product philosophy may get flattened into generic wording
+- some Let Books-specific examples may still be needed in repo docs to preserve practical meaning
+Recommended caution:
+- extract the principle
+- retain local workflow examples and product rationale in the repository
+EG-007 Real-Device Verification For Hardware Workflows
+Extraction risk:
+- portable principle is clear
+- local procedures are deeply implementation-specific
+- too much movement could strip useful operational context from Let Books docs
+Recommended caution:
+- extract only the evidence principle
+- retain all procedural/debugging specifics locally
+Additional migration risks not yet emphasized enough
+1. Boundary drift between Engineering Governance and Documentation as Product
+Risk:
+- authority/evidence language overlaps heavily with docs/publication traceability
+Potential failure:
+- local docs may not know whether to reference Engineering Governance or Documentation as Product for claim-support rules
+Recommendation:
+- keep the distinction explicit:
+  - Engineering Governance owns general evidence and authority
+  - Documentation as Product owns publication-facing application of those rules
+2. Boundary drift between Engineering Governance and CI/CD Governance
+Risk:
+- validator-first and layered validation are foundational, but workflow README material may blur into CI/CD specifics
+Potential failure:
+- migration could move too much orchestration detail into Engineering Governance
+Recommendation:
+- keep Engineering Governance at the principle/architecture layer
+- keep freshness/order/deploy trust specifics in CI/CD Governance
+3. Over-thinning AGENTS.md and AGENTS-Implementation.md
+Risk:
+- those files contain both portable rules and local operating context
+- removing too much generic wording could make them harder to use without enough local bridge text
+Recommendation:
+- extraction should leave short repository-facing summaries and explicit skill references
+- do not turn core local documents into bare link stubs
+4. Missing adaptation registry
+Risk:
+- after extraction, contributors may not know which guidance intentionally remains local
+Recommendation:
+- not required before Phase 1 extraction begins
+- but should exist before later cleanup phases
+Recommended Adjustments
+Minor adjustment 1
+Clarify in the eventual extracted form that:
+- Engineering Governance owns general evidence and authority rules
+- Documentation as Product owns the public-documentation application of those rules
+Reason:
+- reduces future overlap disputes
+Minor adjustment 2
+Keep EG-005 framed as a governance principle about enhancement vs dependency, not as Let Books product philosophy.
+Reason:
+- preserves portability
+- avoids accidental domain lock-in
+Minor adjustment 3
+Keep EG-007 framed as an evidence-quality rule, not a debugging-method rule.
+Reason:
+- preserves long-term fit under Engineering Governance
+- prevents accidental migration of device procedure details
+Minor adjustment 4
+When extraction happens, require repository-facing references to preserve:
+- local examples
+- local exceptions
+- local file/path/tool names
+Reason:
+- prevents maintainability loss from over-abstraction
+Final Readiness Verdict
+Ready with minor adjustments
+Reasoning:
+- Engineering Governance is sufficiently defined for authoritative extraction design
+- the core rules are stable and clearly owned
+- the main risks are boundary and phrasing risks, not missing-rule risks
+- no major additional design work is required before extraction planning proceeds
+Stable Rules
+Most stable:
+- EG-001 Explicit Authority Chain
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+- EG-006 AI Suggestions Are Not Facts
+Stable with careful framing:
+- EG-005 Manual Core Workflow Must Work Without AI
+- EG-007 Real-Device Verification For Hardware Workflows
+Ambiguous Ownership Summary
+Most ambiguous:
+- EG-007 Real-Device Verification For Hardware Workflows
+Mildly ambiguous:
+- EG-005 Manual Core Workflow Must Work Without AI
+Not ambiguous:
+- EG-001
+- EG-002
+- EG-003
+- EG-004
+- EG-006
+Bottom Line
+Engineering Governance is ready to serve as the authoritative owner of its assigned rules if extraction remains conservative:
+- move principles, not procedures
+- preserve local examples and operating context
+- keep overlap boundaries explicit with Documentation as Product and CI/CD Governance
+If you want, the next planning-only step should be the same final review for Localization Governance, because that is the next highest-value and highest-duplication extraction target.</pre>
+    </details>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>This is a good result.</p>
+    <p>The review did <strong>not</strong> find a structural problem. It found no major ownership conflicts, no missing foundational governance concepts, no extraction blockers, and only boundary and phrasing concerns.</p>
+    <p>The key sentence is:</p>
+    <blockquote><strong>Ready with minor adjustments</strong></blockquote>
+    <p>Not “needs redesign”, not “ownership unclear”, not “missing rules”.</p>
+    <h3>What I would do next</h3>
+    <p>Skip another review round. Move directly into a <strong>Phase 2 extraction plan</strong>.</p>
+    <details open>
+      <summary>Prompt artifact</summary>
+      <pre class="artifact">Using:
+- skills/adoption-audit/engineering-governance-canonical.md
+- skills/adoption-audit/engineering-governance-source-map.md
+- skills/adoption-audit/engineering-governance-extraction-impact.md
+- skills/adoption-audit/engineering-governance-final-review.md
+
+Create a Phase 2 Engineering Governance extraction plan.
+
+Goals:
+
+1. Define the target authoritative structure for Engineering Governance.
+2. Identify content that should move into Engineering Governance.
+3. Identify content that should remain local as:
+   - examples
+   - implementation details
+   - repository-specific adaptations
+   - operational procedures
+4. Identify files that should be converted from duplicated guidance to references.
+5. Define migration order that minimizes risk.
+6. Define validation steps after each migration stage.
+7. Define rollback strategy if ownership or readability problems are discovered.
+
+Important constraints:
+
+- Move principles, not procedures.
+- Preserve local examples.
+- Preserve local operating context.
+- Do not create documentation that consists only of links.
+- Keep Engineering Governance focused on authority, evidence, validation architecture, and knowledge preservation.
+- Keep CI/CD specifics in CI/CD Governance.
+- Keep publication-facing concerns in Documentation as Product.
+
+Produce:
+
+skills/adoption-audit/engineering-governance-phase-2-plan.md
+
+Include:
+- migration phases
+- affected files
+- expected duplication reduction
+- validation checklist
+- risk assessment
+- recommended first extraction candidate</pre>
+    </details>
+    <p>Personally, I would expect the first actual extraction to be EG-001 and EG-002, because they have high stability, low ambiguity, strong duplication reduction, and low risk of over-extraction.</p>
+    <p>I'd leave EG-005 and EG-007 for the end, exactly as the review suggests.</p>
+    <p>After Engineering Governance is extracted, the next high-value target is probably <strong>Localization Governance</strong>, because that's where you've repeatedly found duplicated rationale, validator explanations, review guidance, parity rules, and adaptation logic.</p>
+  </div>
+</section>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <details open>
+      <summary>Pasted agent output: Phase 2 Plan</summary>
+      <pre>Plan mode is active, so I did not create skills/adoption-audit/engineering-governance-phase-2-plan.md.
+Below is the planned content for that file.
+---
+Engineering Governance Phase 2 Plan
+Purpose
+This plan defines how to make Engineering Governance the authoritative owner of its assigned rules while preserving Let Books-specific context, examples, procedures, and operational detail in repository-local documentation.
+This is an extraction plan only.
+No migration is performed here.
+Scope
+Engineering Governance owns:
+- EG-001 Explicit Authority Chain
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+- EG-005 Manual Core Workflow Must Work Without AI
+- EG-006 AI Suggestions Are Not Facts
+- EG-007 Real-Device Verification For Hardware Workflows
+Extraction Principles
+- Move principles, not procedures.
+- Preserve local examples.
+- Preserve local operating context.
+- Do not replace useful local guidance with link-only stubs.
+- Keep Engineering Governance focused on:
+  - authority
+  - evidence
+  - validation architecture
+  - knowledge preservation
+  - general AI-review boundaries
+  - reality-based verification principles
+- Keep CI/CD specifics in CI/CD Governance.
+- Keep publication-facing evidence and writing concerns in Documentation as Product.
+- Keep product/domain philosophy and implementation mechanics in Let Books adaptations.
+Target Authoritative Structure For Engineering Governance
+The extracted authoritative structure should be organized into these sections.
+1. Authority, Evidence, And Truth Boundaries
+Contains:
+- EG-001 Explicit Authority Chain
+- EG-006 AI Suggestions Are Not Facts
+Purpose:
+- define how repositories decide what is authoritative
+- distinguish evidence from truth
+- require reviewable support for important claims
+2. Knowledge Preservation In Governed Artifacts
+Contains:
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+Purpose:
+- define how governance is preserved near tools, tests, workflows, and docs
+- explain when recurring problems should become automation
+- define complementary validation layers
+3. Product Resilience And Reality-Based Verification
+Contains:
+- EG-005 Manual Core Workflow Must Work Without AI
+- EG-007 Real-Device Verification For Hardware Workflows
+Purpose:
+- define resilience and evidence-quality principles without embedding Let Books-specific procedures
+Content That Should Move Into Engineering Governance
+High-confidence migration content
+From AGENTS.md
+Move:
+- product/spec vs tactical implementation boundary as a portable governance rule
+- AI output as suggestion, not fact
+- non-AI core workflow resilience principle
+- real-device verification principle in general form
+Do not move:
+- Let Books product purpose
+- domain model
+- Excel and donation workflow specifics
+- exact localization/product constraints tied to book donation domain
+From AGENTS-Implementation.md
+Move:
+- knowledge-preservation rules for validators, tests, workflows, and docs
+- validator-first governance
+- non-trivial artifact documentation norms
+- generic authority/evidence boundary language
+Do not move:
+- branding rules
+- site topology
+- static-demo architecture
+- mobile debugging procedures
+- exact tooling choices
+- repo-specific path and structure contracts
+From README.md
+Move:
+- only portable governance framing where duplicated:
+  - AI is optional for core workflow
+  - implementation guidance sits below authoritative product/spec guidance
+  - general real-device verification rule
+Do not move:
+- repo status
+- site structure
+- static demo description
+- ISBN examples
+- local setup and preview instructions
+From docs/wiki/spec-driven-development.md
+Move:
+- explicit source-of-truth ordering
+- warning against defaulting to the most visible artifact
+Do not move:
+- Let Books-specific examples if they are needed as local explanation
+From docs/wiki/documentation-traceability.md
+Move:
+- only the generic authority-chain aspects that belong to Engineering Governance
+Do not move:
+- public-writing and publication-facing evidence rules that belong to Documentation as Product
+From docs/wiki/validation-layers.md
+Move:
+- layered validation model in generic form
+Do not move:
+- repo-specific examples unless retained as adaptation examples
+From tools/README.md
+Move:
+- keep knowledge close to tools
+- validator-first governance
+- documentation expectations for non-trivial tools
+Do not move:
+- tool catalog
+- validator names
+- local commands
+From tests/README.md
+Move:
+- tests as executable documentation/repository memory
+- validator/test/documentation relationship where expressed as a governance principle
+Do not move:
+- test families
+- commands
+- local runtime guarantees
+From .github/workflows/README.md
+Move:
+- only generic knowledge-preservation framing where it belongs to Engineering Governance
+Do not move:
+- workflow self-validation
+- freshness gates
+- rebuild-before-deploy
+- browser-facing CI orchestration
+- exact workflow sequencing
+- current workflow file names
+Those belong in CI/CD Governance or local workflow adaptations.
+Content That Should Remain Local
+Repository-specific adaptations
+Remain local because they depend on Let Books structure or implementation:
+- exact AGENTS.md / AGENTS-Implementation.md split
+- /, /docs/, /static-demo/ topology
+- current public URLs
+- current validator names and catalogs
+- current workflow names and orchestration details
+- exact test commands
+- exact generator names and output contracts
+Local examples
+Remain local because they illustrate portable rules in Let Books context:
+- static demo as example of prototype evidence vs authority
+- donation and cataloging workflow examples for AI-optional operation
+- barcode/camera/QR examples for real-device verification
+- validator and test examples tied to specific Let Books guarantees
+Operational procedures
+Remain local because they are implementation and environment specific:
+- Android/ADB/CDP debugging
+- mobile runtime troubleshooting
+- local preview/deploy instructions
+- GitHub Pages setup steps
+Files That Should Become “Reference + Local Adaptation”
+These files should retain local context while delegating portable rule ownership to Engineering Governance.
+High-priority reference targets
+- AGENTS.md
+- AGENTS-Implementation.md
+- README.md
+- docs/wiki/spec-driven-development.md
+- docs/wiki/validation-layers.md
+- tools/README.md
+- tests/README.md
+Medium-priority reference targets
+- docs/wiki/documentation-traceability.md
+- .github/workflows/README.md
+These need more careful boundary handling because they overlap with other skills.
+Migration Phases
+Phase 2.1: Stable Core Rule Extraction Design
+Scope:
+- EG-001
+- EG-002
+- EG-003
+- EG-004
+Affected files:
+- AGENTS.md
+- AGENTS-Implementation.md
+- docs/wiki/spec-driven-development.md
+- docs/wiki/validation-layers.md
+- tools/README.md
+- tests/README.md
+Expected duplication reduction:
+- High
+Risk:
+- Low to Medium
+Why first:
+- these are the most stable and least boundary-ambiguous Engineering Governance rules
+Phase 2.2: AI Governance Clarification
+Scope:
+- EG-006
+Affected files:
+- AGENTS.md
+- AGENTS-Implementation.md
+- README.md
+Expected duplication reduction:
+- Medium
+Risk:
+- Low
+Why second:
+- compact rule
+- strong portability
+- low implementation entanglement
+Phase 2.3: Product Resilience Principle Extraction
+Scope:
+- EG-005
+Affected files:
+- AGENTS.md
+- README.md
+- AGENTS-Implementation.md
+Expected duplication reduction:
+- Low to Medium
+Risk:
+- Medium
+Why third:
+- portable, but closer to product philosophy
+- easier to over-generalize or strip useful local motivation
+Phase 2.4: Reality-Based Verification Principle Extraction
+Scope:
+- EG-007
+Affected files:
+- AGENTS.md
+- README.md
+- AGENTS-Implementation.md
+- docs/android-debugging.md
+Expected duplication reduction:
+- Low
+Risk:
+- Medium to High
+Why last:
+- highest ownership-boundary risk
+- strongest pull toward future specialized skills
+- local procedure detail must remain intact
+Affected Files Summary
+Highest impact
+- AGENTS-Implementation.md
+- tools/README.md
+- tests/README.md
+High impact
+- AGENTS.md
+- docs/wiki/spec-driven-development.md
+- docs/wiki/validation-layers.md
+Medium impact
+- README.md
+- docs/wiki/documentation-traceability.md
+- .github/workflows/README.md
+Low impact
+- docs/android-debugging.md
+Expected Duplication Reduction
+Highest duplication reduction
+- authority chain and source-of-truth wording
+- validator-first governance wording
+- layered validation wording
+- knowledge-preservation wording across tools/tests/workflows
+Lower duplication reduction
+- non-AI workflow resilience
+- real-device verification
+These are still important, but less duplicated.
+Validation Checklist
+Run after each migration stage.
+Rule ownership validation
+- exactly one authoritative owner remains for each migrated rule
+- local docs no longer restate the full portable rule unnecessarily
+- references point to the correct skill
+Readability validation
+- local docs remain understandable without requiring constant back-and-forth reading
+- no important local examples are lost
+- no document becomes a thin shell of links only
+Boundary validation
+- CI/CD specifics stay out of Engineering Governance
+- publication-facing rules stay out of Engineering Governance
+- local repo topology and procedures remain local
+Consistency validation
+- no conflicting wording remains between local docs and skill wording
+- examples still reflect actual repository behavior
+- local adaptation notes still make sense after generic wording is referenced
+Maintenance validation
+- reviewers can tell what changed:
+  - portable rule ownership
+  - local adaptation
+  - remaining repo-specific guidance
+- duplicated rule text is reduced without reducing clarity
+Risk Assessment
+Low-risk rule clusters
+- EG-002
+- EG-003
+- EG-004
+Reason:
+- strongly portable
+- repeated consistently
+- clearly distinct from repo implementation details
+Medium-risk rule clusters
+- EG-001
+- EG-006
+- EG-005
+Reason:
+- portable, but can overlap with Documentation as Product or product-philosophy language
+Highest-risk rule cluster
+- EG-007
+Reason:
+- portable principle is clear
+- local implementation detail is extensive
+- easiest place to accidentally remove useful operational guidance
+Rollback Strategy
+If extraction creates ownership or readability problems:
+Immediate rollback trigger examples
+- local docs become hard to use without opening multiple skill files
+- contributors cannot tell whether a rule is local or portable
+- a migrated rule removes essential Let Books context
+- overlap with Documentation as Product or CI/CD Governance becomes unclear
+Rollback approach
+1. keep the extracted canonical rule in Engineering Governance
+2. restore a short localized explanation in the affected repo document
+3. mark the local explanation explicitly as:
+   - repository adaptation
+   - local example
+   - local operating note
+4. do not reintroduce full duplicated portable wording unless absolutely necessary
+Preferred rollback style
+- restore local bridge text
+- not full rule duplication
+This preserves ownership while recovering usability.
+Recommended First Extraction Candidate
+Recommended first extraction candidate: EG-002 Knowledge Stays Close To Governed Artifacts`
+Why:
+- lowest complexity
+- strong portability
+- clearly repeated across:
+  - AGENTS-Implementation.md
+  - tools/README.md
+  - tests/README.md
+  - .github/workflows/README.md
+- low risk of crossing into other skills
+- high readability benefit if made canonical
+Recommended second candidate
+- EG-004 Layered Validation Model`
+Recommended third candidate
+- EG-003 Validator-First Governance`
+These three together establish the governance backbone with minimal boundary risk.
+Final Recommendation
+Proceed conservatively in this order:
+1. EG-002 Knowledge Stays Close To Governed Artifacts
+2. EG-004 Layered Validation Model
+3. EG-003 Validator-First Governance
+4. EG-001 Explicit Authority Chain
+5. EG-006 AI Suggestions Are Not Facts
+6. EG-005 Manual Core Workflow Must Work Without AI
+7. EG-007 Real-Device Verification For Hardware Workflows
+This order minimizes risk by:
+- extracting the most stable, clearly portable rules first
+- delaying product-philosophy and operations-adjacent rules until boundaries are tested
+Readiness Summary
+Engineering Governance Phase 2 extraction planning is ready.
+Caveat:
+- extraction execution should remain conservative and preserve local bridge text, examples, and operating context at every step.
+If you want, the next planning-only step should be a stage-by-stage extraction checklist for EG-002, EG-004, and EG-003 specifically.</pre>
+    </details>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>At this point I would stop planning and start extracting.</p>
+    <p>You now have:</p>
+    <ol>
+      <li>Canonical definition</li>
+      <li>Source map</li>
+      <li>Impact analysis</li>
+      <li>Final review</li>
+      <li>Phase 2 migration plan</li>
+    </ol>
+    <p>All of them converge on essentially the same conclusion:</p>
+    <blockquote>Engineering Governance ownership is understood well enough to begin conservative extraction.</blockquote>
+    <p>If you keep asking for more planning documents, you'll start producing governance about governance.</p>
+    <h3>What I would do next</h3>
+    <p>Create a prompt that actually performs <strong>Phase 2.1</strong>.</p>
+    <p>Start only with EG-002, EG-004, and EG-003. Not EG-005. Not EG-007. Not even EG-001 yet. Those three are the safest extraction candidates.</p>
+    <details open>
+      <summary>Prompt artifact</summary>
+      <pre class="artifact">Execute Phase 2.1 Engineering Governance extraction.
+
+Inputs:
+- skills/engineering-governance.md
+- skills/adoption-audit/engineering-governance-canonical.md
+- skills/adoption-audit/engineering-governance-source-map.md
+- skills/adoption-audit/engineering-governance-final-review.md
+- skills/adoption-audit/engineering-governance-phase-2-plan.md
+
+Scope:
+- EG-002 Knowledge Stays Close To Governed Artifacts
+- EG-003 Validator-First Governance
+- EG-004 Layered Validation Model
+
+Goals:
+
+1. Make Engineering Governance the authoritative owner of these rules.
+2. Remove unnecessary duplicated portable wording from repository documents.
+3. Preserve:
+   - local examples
+   - local procedures
+   - local operating context
+   - Let Books-specific adaptations
+4. Replace duplicated portable wording with concise references and adaptation notes where appropriate.
+5. Do not modify ownership of:
+   - EG-001
+   - EG-005
+   - EG-006
+   - EG-007
+
+Constraints:
+
+- Move principles, not procedures.
+- Do not create link-only documents.
+- Preserve readability for contributors reading local docs.
+- Keep CI/CD orchestration details in CI/CD Governance and workflow documentation.
+- Keep implementation details in local documentation.
+- Keep repository-specific examples local.
+
+Required output:
+
+1. Perform the extraction.
+2. Update affected files.
+3. Produce:
+   skills/adoption-audit/engineering-governance-phase-2-1-report.md
+
+The report must include:
+- files changed
+- wording removed
+- wording retained locally
+- references introduced
+- duplication reduction achieved
+- readability risks
+- boundary concerns discovered during migration
+
+After modifications:
+- review all changed files for ownership consistency
+- verify no document became a thin shell of references
+- verify local examples remain intact
+- verify Engineering Governance is now the sole authoritative owner of EG-002, EG-003, and EG-004</pre>
+    </details>
+    <p>After that, I'd review the actual diff, not generate another plan. The diff will tell you more than five additional audit documents ever will.</p>
+  </div>
+</section>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <details open>
+      <summary>Pasted agent output</summary>
+      <pre>Created skills/adoption-audit/engineering-governance-final-review.md.
+Verdict
+Ready with minor adjustments
+Main findings
+- EG-001, EG-002, EG-003, EG-004, and EG-006 have strong, stable ownership in Engineering Governance.
+- EG-005 and especially EG-007 are valid there, but need careful phrasing to avoid drifting into product philosophy or operational/mobile-debugging territory.
+- No major missing-rule problem was found.
+- The main pre-extraction risk is boundary drift:
+  - Engineering Governance vs Documentation as Product for evidence/traceability wording
+  - Engineering Governance vs CI/CD Governance for validation/orchestration wording
+Key recommendation
+Proceed conservatively:
+- move principles, not procedures
+- preserve local bridge text, examples, and operating context
+- do not let local docs collapse into link-only shells
+If you want, I can also commit this final review report.</pre>
+    </details>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>Yes, I'd commit it.</p>
+    <p>The review has crossed the threshold from “working notes” to “governance artifact”:</p>
+    <ul>
+      <li>it records the extraction readiness decision</li>
+      <li>it documents ownership rationale</li>
+      <li>it records identified risks</li>
+      <li>it explains why extraction can proceed</li>
+      <li>future maintainers will want to know why EG-005 and EG-007 were left where they are</li>
+    </ul>
+    <p>Without the commit, that reasoning exists only in conversation history.</p>
+    <p>A commit message like this would be reasonable:</p>
+    <pre><code>Add Engineering Governance final extraction readiness review
+
+Includes:
+- ownership validation
+- completeness review
+- extraction safety assessment
+- boundary analysis with Documentation as Product and CI/CD Governance
+- extraction readiness verdict and recommendations</code></pre>
+    <p>After that, I would stop producing review artifacts and start Phase 2.1 extraction work.</p>
+    <pre><code>engineering-governance-canonical.md
+engineering-governance-source-map.md
+engineering-governance-extraction-impact.md
+engineering-governance-final-review.md</code></pre>
+    <p>This forms a complete audit trail: what Engineering Governance is, where its content currently lives, what extraction will affect, and why extraction is considered safe.</p>
+  </div>
+</section>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <details open>
+      <summary>Pasted agent output</summary>
+      <pre>Committed as b90d4586 with message:
+Add Engineering Governance final extraction readiness review
+Included:
+- ownership validation
+- completeness review
+- extraction safety assessment
+- boundary analysis with Documentation as Product and CI/CD Governance
+- extraction readiness verdict and recommendations</pre>
+    </details>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>Good commit.</p>
+    <p>At this point the Engineering Governance extraction track has a pretty complete audit chain:</p>
+    <pre><code>8beec4f0
+├─ engineering-governance-canonical.md
+├─ engineering-governance-source-map.md
+└─ engineering-governance-extraction-impact.md
+
+b90d4586
+└─ engineering-governance-final-review.md</code></pre>
+    <p>The final review did <strong>not</strong> send you back to design. It validated the conclusions already reached:</p>
+    <ul>
+      <li>ownership is stable</li>
+      <li>extraction is feasible</li>
+      <li>risks are known</li>
+      <li>risks are mostly boundary-management risks</li>
+      <li>proceed conservatively</li>
+    </ul>
+    <p>That's usually the signal that the next artifact should be code/documentation changes rather than more governance analysis.</p>
+    <h3>Suggested sequence now</h3>
+    <p><strong>Phase 2.1: actual extraction</strong></p>
+    <p>Focus only on EG-002, EG-004, and EG-003 because they have the strongest ownership, highest duplication reduction, lowest overlap risk, and easiest review profile.</p>
+    <p><strong>Review the resulting diff</strong></p>
+    <p>Check whether local docs became harder to read, whether any file became a link farm, whether local examples are still present, and whether Engineering Governance is clearly the owner.</p>
+    <p><strong>Only then continue</strong></p>
+    <p>Next: EG-001 and EG-006. Later: EG-005 and EG-007.</p>
+    <p>Those last two are exactly where the review identified future ownership ambiguity.</p>
+    <p>One observation from watching this evolve:</p>
+    <p>You now have enough material that a future contributor could understand <em>why</em> Engineering Governance exists, not just <em>what</em> it contains. That's often the difference between documentation and governance.</p>
+    <p>So unless you specifically want another audit stream, I would stop producing documents under <code>skills/adoption-audit/</code> and start modifying the real targets:</p>
+    <ul>
+      <li><code>AGENTS-Implementation.md</code></li>
+      <li><code>tools/README.md</code></li>
+      <li><code>tests/README.md</code></li>
+      <li><code>docs/wiki/validation-layers.md</code></li>
+    </ul>
+    <p>Those files will tell you whether the extraction model actually works.</p>
+  </div>
+</section>
+
+<section class="turn user">
+  <div class="role">User</div>
+  <div class="content">
+    <p>save transcript as portable-skills-transcript-part-4.html according to rendering rules</p>
+  </div>
+</section>
+
+<section class="turn assistant">
+  <div class="role">Assistant</div>
+  <div class="content">
+    <p>I created this HTML transcript artifact according to the uploaded rendering rules.</p>
+  </div>
+</section>
+
+</body>
+</html>

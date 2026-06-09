@@ -177,6 +177,7 @@ The repository also contains supporting-material artifacts that preserve the ext
 - `docs/supporting-material/portable-skills-conversation-log.html`
 - `docs/supporting-material/portable-skills-transcript-part-2-reconstructed.html`
 - `docs/supporting-material/portable-skills-transcript-part-3.html`
+- `docs/supporting-material/portable-skills-transcript-part-4.html`
 - `docs/supporting-material/conversation-log-rendering-rules.html`
 
 These are evidence and research artifacts. They are not portable skills by themselves.
