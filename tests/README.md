@@ -19,6 +19,18 @@ The goal is not only to catch failures.
 
 The goal is to preserve why those failures matter.
 
+`Engineering Governance` is the authoritative owner of the portable rules behind this area, especially:
+
+- keeping knowledge close to governed artifacts
+- preferring validator-first enforcement for recurring objective failures
+- using layered validation rather than relying on a single check type
+
+See:
+
+- `skills/engineering-governance.md`
+
+This README explains how those rules apply specifically to Let Books runtime and browser-facing verification.
+
 ## Why The Repository Contains Tests
 
 This repository already has a strong validator layer under `tools/`.
@@ -37,6 +49,8 @@ Examples:
 Tests keep those repository guarantees close to the behavior they protect.
 
 ## Knowledge Preservation Hierarchy
+
+This hierarchy is the Let Books test-layer adaptation of the broader Engineering Governance rule that knowledge should stay close to the artifact it governs.
 
 For test knowledge preservation, prefer:
 
@@ -94,7 +108,9 @@ These tests help protect repository promises such as:
 
 ## Relationship To Validators
 
-Repository governance follows this order:
+`Engineering Governance` owns the portable layered-validation model.
+
+For Let Books test work, use the following local interpretation:
 
 1. validator or automated check
 2. regression test

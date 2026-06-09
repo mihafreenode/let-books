@@ -375,6 +375,18 @@ Do not duplicate the full ADB/mobile setup workflow here. Keep all camera/barcod
 
 ## Engineering Knowledge Preservation
 
+`Engineering Governance` is the authoritative owner of the portable rules behind this section, especially:
+
+- keeping knowledge close to governed artifacts
+- preferring validator-first governance for recurring objective failures
+- using layered validation rather than relying on a single enforcement form
+
+See:
+
+- `skills/engineering-governance.md`
+
+This section records how Let Books applies those rules to implementation guidance, validators, tests, comments, and reusable patterns.
+
 Documentation is not the only place where engineering knowledge should live.
 
 Comments, validators, tests, regression tests, workflows, and repository tooling should preserve important engineering context.
@@ -393,7 +405,9 @@ Future maintainers should not need to reconstruct intent from commit history.
 
 ## Validator Documentation
 
-Every non-trivial validator should contain concise documentation.
+Engineering Governance owns the general rule.
+
+For Let Books validators, the local minimum documentation set is:
 
 Prefer short, practical explanations aimed at intermediate and senior engineers.
 
@@ -418,7 +432,9 @@ A future maintainer should understand the validator without reverse-engineering 
 
 ## Test Documentation
 
-Tests should document repository behavior, not merely implementation details.
+Engineering Governance owns the portable principle that tests should preserve governed behavior and intent.
+
+For Let Books, tests should document repository behavior, not merely implementation details.
 
 For significant tests include concise comments describing:
 
@@ -435,6 +451,8 @@ Regression tests should additionally document:
 The goal is for maintainers to understand what real-world problem a test prevents.
 
 ## Educational Comments
+
+Engineering Governance owns the portable expectation that governed artifacts should preserve enough reasoning to remain understandable.
 
 Repository tooling should be approachable to engineers unfamiliar with the project.
 
@@ -468,7 +486,7 @@ The repository should gradually become easier to understand for both human maint
 
 ## Reusable Engineering Practices
 
-When a solution proves valuable beyond a single feature, consider whether it represents a reusable engineering pattern.
+When a Let Books solution proves valuable beyond a single feature, consider whether it represents a reusable engineering pattern or a future skills/adaptation candidate.
 
 Examples:
 
@@ -501,9 +519,11 @@ Prefer proven patterns over speculative frameworks.
 
 ## Validator-First Knowledge Preservation
 
-When a recurring failure, regression, inconsistency, or maintenance burden is discovered, prefer capturing the lesson as an automated validator or check whenever practical.
+Engineering Governance owns the validator-first principle.
 
-Order of preference:
+When a recurring Let Books failure, regression, inconsistency, or maintenance burden is discovered, prefer capturing the lesson as an automated validator or check whenever practical.
+
+Default local graduation order:
 
 1. Validator or automated check
 2. Regression test

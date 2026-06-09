@@ -15,7 +15,19 @@ It contains:
 
 This directory is not just a script dump. It is repository memory.
 
-The long-term standard is:
+`Engineering Governance` is the authoritative owner of the portable governance rules behind this area, especially:
+
+- keeping knowledge close to governed artifacts
+- preferring validators and automated checks over human memory for recurring objective failures
+- treating validation as a layered system rather than a single gate
+
+See:
+
+- `skills/engineering-governance.md`
+
+This README applies those rules to the Let Books tooling layer and preserves the local context contributors need when working in `tools/`.
+
+The local tooling standard is:
 
 1. keep knowledge close to the implementation
 2. prefer validators and automated checks over human memory
@@ -24,6 +36,10 @@ The long-term standard is:
 5. avoid speculative frameworks when a documented script is enough
 
 ## Engineering Knowledge Preservation Standard
+
+`Engineering Governance` defines the portable principle.
+
+This section defines the Let Books tooling adaptation of that principle.
 
 Priority order for preserving engineering knowledge:
 
@@ -47,11 +63,13 @@ Comments should explain implementation choices.
 Tests should demonstrate protected behavior.
 Validators should enforce guarantees.
 
-When a recurring failure or maintenance burden can be checked automatically, prefer adding or extending a validator before writing prose-only guidance.
+When a recurring tooling failure or maintenance burden can be checked automatically, prefer adding or extending a validator before writing prose-only guidance.
 
 ## Tooling Ecosystem
 
-The tooling stack follows a layered pattern:
+The tooling stack applies the repository's layered validation model to Let Books documentation, localization, and generated-site tooling.
+
+Local toolchain order:
 
 1. maintain localized Markdown sources
 2. generate structured HTML and discovery artifacts

@@ -13,7 +13,15 @@ topics:
 
 Validation layers are the different ways a project checks whether implementation, documentation, and delivery artifacts still match intended rules and quality expectations.
 
-## Why layers matter
+`Engineering Governance` is the authoritative owner of the portable layered-validation rule used by this repository.
+
+See:
+
+- `skills/engineering-governance.md`
+
+This page explains how Let Books applies that rule to its current documentation, localization, validation, and delivery surfaces.
+
+## Why layers matter in Let Books
 
 No single validation method is enough.
 
